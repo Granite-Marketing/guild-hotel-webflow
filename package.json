@@ -17,6 +17,7 @@
     "factory:snapshot": "node ./scripts/factory/inspect-webflow.mjs",
     "factory:drift": "node ./scripts/factory/diff-webflow-state.mjs",
     "test": "npx playwright test",
+    "test:fixtures": "npx playwright test --config playwright.fixtures.config.ts",
     "test:capture": "npx playwright test --grep 'capture'",
     "test:regression": "npx playwright test --grep 'regression'",
     "test:update-baseline": "npx playwright test --update-snapshots",
