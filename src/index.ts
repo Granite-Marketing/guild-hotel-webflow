@@ -41,6 +41,7 @@ import { swiperSliders } from '$utils/swiperSliders'
  *   import { finsweetRefresh } from '$utils/finsweetRefresh'         // slot F
  *   import { filterActiveState } from '$utils/filterActiveState'     // slot F
  *   import { scrollTextReveal } from '$utils/scrollTextReveal'       // slot G
+ *   import { historyStickyYear } from '$utils/historyStickyYear'     // slot G (history page: sticky year + collapse gallery)
  *   import { imageStackCollapse } from '$utils/imageStackCollapse'   // slot G
  */
 
@@ -70,6 +71,6 @@ window.Webflow.push(() => {
 
   // ScrollTrigger-creating reveals last, after DOM-mutating modules settle.
   gsapBasicAnimations()
-  // slot G: scrollTextReveal()
+  // slot G: scrollTextReveal(), historyStickyYear()
   // slot G: imageStackCollapse() (enable once a page carries [data-image-stack-collapse])
 })
