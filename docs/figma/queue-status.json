@@ -1,5 +1,5 @@
 {
-  "_readme": "Orchestrator ledger for docs/figma/HANDOVER.md. Status: todo | in-progress | waiting-approval | blocked | review | done. Update in the same commit as the work it records.",
+  "_readme": "Orchestrator ledger for docs/figma/HANDOVER.md. Status: todo | in-progress | waiting-approval | blocked | review | done. Update in the same commit as the work it records. Wave 2 entries (X01, C01, P012 to P026, K01) are run by docs/figma/HANDOVER-wave2.md.",
   "entries": [
     {
       "id": "D01",
@@ -255,7 +255,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P012",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q012-shared-cta-booking-newsletter.md",
       "surface": "designer",
@@ -263,7 +265,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q012/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "xhigh",
       "modelReason": "24 instances, 1 variants: the class family every page reuses"
@@ -278,7 +280,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P013",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q013-shared-footer-links.md",
       "surface": "designer",
@@ -286,7 +290,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q013/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "xhigh",
       "modelReason": "24 instances, 1 variants: the class family every page reuses"
@@ -301,7 +305,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P014",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q014-shared-hero-fullbleed-centered.md",
       "surface": "designer",
@@ -309,7 +315,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q014/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "xhigh",
       "modelReason": "24 instances, 3 variants: the class family every page reuses"
@@ -324,7 +330,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P015",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q015-shared-faq-accordion.md",
       "surface": "designer",
@@ -332,7 +340,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q015/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "xhigh",
       "modelReason": "21 instances, 1 variants: the class family every page reuses"
@@ -347,7 +355,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P016",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q016-shared-script-intro-centered.md",
       "surface": "designer",
@@ -355,7 +365,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q016/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "12 instances, 2 variants"
@@ -370,7 +380,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P017",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q017-shared-split-image-text-light.md",
       "surface": "designer",
@@ -378,7 +390,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q017/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "xhigh",
       "modelReason": "19 instances, 6 variants: the class family every page reuses"
@@ -393,7 +405,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P018",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q018-shared-gallery-mosaic-captioned.md",
       "surface": "designer",
@@ -401,7 +415,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q018/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "10 instances, 1 variants"
@@ -416,7 +430,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P019",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q019-shared-map-feature.md",
       "surface": "designer",
@@ -424,7 +440,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q019/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "9 instances, 3 variants"
@@ -439,7 +455,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P020",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q020-shared-image-trio-text.md",
       "surface": "designer",
@@ -447,7 +465,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q020/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "9 instances, 3 variants"
@@ -462,7 +480,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P021",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q021-shared-venue-card-fullbleed.md",
       "surface": "designer",
@@ -470,7 +490,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q021/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "xhigh",
       "modelReason": "29 instances, 6 variants: the class family every page reuses"
@@ -485,7 +505,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P022",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q022-shared-form-split-script-contact.md",
       "surface": "designer",
@@ -493,7 +515,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q022/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "6 instances, 2 variants"
@@ -508,7 +530,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P023",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q023-shared-tab-pills-intro.md",
       "surface": "designer",
@@ -516,7 +540,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q023/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "5 instances, 3 variants"
@@ -531,7 +555,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P024",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q024-shared-image-inset-single.md",
       "surface": "designer",
@@ -539,7 +565,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q024/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "4 instances, 2 variants"
@@ -554,7 +580,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P025",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q025-shared-article-card-staggered.md",
       "surface": "designer",
@@ -562,7 +590,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q025/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "11 instances, 2 variants"
@@ -577,7 +605,9 @@
         "Q002",
         "Q003",
         "Q004",
-        "D02"
+        "D02",
+        "P026",
+        "K01"
       ],
       "brief": "docs/figma/briefs/Q026-shared-timeline-scatter-images.md",
       "surface": "designer",
@@ -585,7 +615,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q026/ (HANDOVER-wave2.md section 5 step 5)",
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "2 instances, 2 variants"
@@ -607,7 +637,8 @@
         "Q017",
         "Q018",
         "Q020",
-        "D02"
+        "D02",
+        "C01"
       ],
       "brief": "docs/figma/briefs/Q027-cms-dining.md",
       "surface": "designer",
@@ -640,7 +671,8 @@
         "Q020",
         "Q021",
         "Q022",
-        "D02"
+        "D02",
+        "C01"
       ],
       "brief": "docs/figma/briefs/Q028-cms-legal-corporate.md",
       "surface": "designer",
@@ -669,7 +701,8 @@
         "Q015",
         "Q023",
         "Q025",
-        "D02"
+        "D02",
+        "C01"
       ],
       "brief": "docs/figma/briefs/Q029-cms-happenings-blog-collection.md",
       "surface": "designer",
@@ -698,7 +731,8 @@
         "Q016",
         "Q017",
         "Q024",
-        "D02"
+        "D02",
+        "C01"
       ],
       "brief": "docs/figma/briefs/Q030-cms-happenings-blog-indiv.md",
       "surface": "designer",
@@ -1213,6 +1247,374 @@
       "model": "claude-opus-5-5",
       "effort": "xhigh",
       "modelReason": "GSAP module with scroll or filter logic"
+    },
+    {
+      "id": "X01",
+      "title": "Probe: Data API builders without the Designer",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [],
+      "brief": "docs/figma/prep/X01-data-api-probe.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Needs Stephen's yes for the probe page and its cleanup",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Probe design and judging evidence; small write surface"
+    },
+    {
+      "id": "C01",
+      "title": "CMS collections and seed items from cms-proposal.md",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [],
+      "brief": "docs/figma/prep/C01-cms-collections.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Starts only after Stephen approves cms-proposal.md; record that in decisions.md",
+      "model": "claude-sonnet-5-5",
+      "effort": "medium",
+      "modelReason": "Mechanical once the proposal is approved"
+    },
+    {
+      "id": "P012",
+      "title": "Build plan for Q012: cta-booking-newsletter (24 instances)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q012",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "Same as Q012: the plan holds the structural decisions"
+    },
+    {
+      "id": "P013",
+      "title": "Build plan for Q013: footer-links (24 instances)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q013",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "Same as Q013: the plan holds the structural decisions"
+    },
+    {
+      "id": "P014",
+      "title": "Build plan for Q014: hero-fullbleed-centered (24 instances, 3 variants)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q014",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "Same as Q014: the plan holds the structural decisions"
+    },
+    {
+      "id": "P015",
+      "title": "Build plan for Q015: faq-accordion (21 instances)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q015",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "Same as Q015: the plan holds the structural decisions"
+    },
+    {
+      "id": "P016",
+      "title": "Build plan for Q016: script-intro-centered (12 instances, 2 variants)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q016",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Same as Q016: the plan holds the structural decisions"
+    },
+    {
+      "id": "P017",
+      "title": "Build plan for Q017: split-image-text-light (19 instances, 6 variants)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q017",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "Same as Q017: the plan holds the structural decisions"
+    },
+    {
+      "id": "P018",
+      "title": "Build plan for Q018: gallery-mosaic-captioned (10 instances)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q018",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Same as Q018: the plan holds the structural decisions"
+    },
+    {
+      "id": "P019",
+      "title": "Build plan for Q019: map-feature (9 instances, 3 variants)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q019",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Same as Q019: the plan holds the structural decisions"
+    },
+    {
+      "id": "P020",
+      "title": "Build plan for Q020: image-trio-text (9 instances, 3 variants)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q020",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Same as Q020: the plan holds the structural decisions"
+    },
+    {
+      "id": "P021",
+      "title": "Build plan for Q021: venue-card-fullbleed (29 instances, 6 variants)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q021",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "Same as Q021: the plan holds the structural decisions"
+    },
+    {
+      "id": "P022",
+      "title": "Build plan for Q022: form-split-script-contact (6 instances, 2 variants)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q022",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Same as Q022: the plan holds the structural decisions"
+    },
+    {
+      "id": "P023",
+      "title": "Build plan for Q023: tab-pills-intro (5 instances, 3 variants)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q023",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Same as Q023: the plan holds the structural decisions"
+    },
+    {
+      "id": "P024",
+      "title": "Build plan for Q024: image-inset-single (4 instances, 2 variants)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q024",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Same as Q024: the plan holds the structural decisions"
+    },
+    {
+      "id": "P025",
+      "title": "Build plan for Q025: article-card-staggered (11 instances, 2 variants)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q025",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Same as Q025: the plan holds the structural decisions"
+    },
+    {
+      "id": "P026",
+      "title": "Build plan for Q026: timeline-scatter-images (2 instances, 2 variants)",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "D01",
+        "D02"
+      ],
+      "brief": "docs/figma/prep/P-build-plan.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/P-build-plan.md for entry Q026",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Same as Q026: the plan holds the structural decisions"
+    },
+    {
+      "id": "K01",
+      "title": "Reconcile build plans: shared classes, live variable names, D02 merges",
+      "type": "prep",
+      "lane": "agent",
+      "dependsOn": [
+        "P012",
+        "P013",
+        "P014",
+        "P015",
+        "P016",
+        "P017",
+        "P018",
+        "P019",
+        "P020",
+        "P021",
+        "P022",
+        "P023",
+        "P024",
+        "P025",
+        "P026",
+        "Q001"
+      ],
+      "brief": "docs/figma/prep/K01-reconcile-plans.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Cross-plan judgment on naming and merges"
     },
     {
       "id": "R01",
