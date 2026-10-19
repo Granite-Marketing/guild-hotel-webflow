@@ -1,0 +1,1227 @@
+{
+  "entry": "Q022",
+  "component": "form-split-script-contact",
+  "buildOn": {
+    "page": "meetings-collection",
+    "pageId": "6ad66fd96684c3e22ea4d417",
+    "pageSlug": "/meetings",
+    "section": "meetings-collection/06-request-for-proposal"
+  },
+  "reusedClasses": [
+    "padding-global",
+    "padding-section-large",
+    "container-large",
+    "heading-style-h1",
+    "heading-style-h2",
+    "heading-style-h4",
+    "text-size-medium",
+    "text-size-regular",
+    "button"
+  ],
+  "familyClasses": [
+    {
+      "name": "section_form-split-script-contact",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "background-color": "var(--color-neutral-100)",
+          "color": "var(--color-neutral-900)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "form-split-script-contact_component",
+      "styles": {
+        "desktop": {
+          "display": "grid",
+          "grid-template-columns": "minmax(0, 0.785fr) minmax(0, 1fr)",
+          "column-gap": "0rem",
+          "row-gap": "4rem",
+          "align-items": "start"
+        },
+        "tablet": {
+          "grid-template-columns": "minmax(0, 1fr)"
+        },
+        "mobileLandscape": {
+          "row-gap": "3rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "form-split-script-contact_content",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "flex-start",
+          "row-gap": "2.25rem",
+          "padding-right": "2rem"
+        },
+        "tablet": {
+          "padding-right": "0rem"
+        },
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "is-centered",
+      "comboOn": "form-split-script-contact_content",
+      "why": "contact/01-contact-us centres the text column against the media block",
+      "styles": {
+        "desktop": {
+          "align-self": "center"
+        },
+        "tablet": {
+          "align-self": "start"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_header",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "max-width": "100%"
+        }
+      }
+    },
+    {
+      "name": "is-rotated",
+      "comboOn": "form-split-script-contact_header",
+      "why": "the five Morello instances tilt the script heading by -7.5deg (Figma rotation -0.131 rad); other Morello 60 text on the site is not rotated, so the tilt stays in this family",
+      "styles": {
+        "desktop": {
+          "transform": "rotate(-7.5deg)",
+          "transform-origin": "0% 100%",
+          "padding-top": "0.5rem"
+        },
+        "mobilePortrait": {
+          "transform": "rotate(-6deg)"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_paragraph",
+      "styles": {
+        "desktop": {
+          "max-width": "31rem",
+          "color": "var(--color-accent)"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_details",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "2rem",
+          "margin-top": "1.25rem"
+        },
+        "mobilePortrait": {
+          "row-gap": "1.5rem",
+          "margin-top": "0.5rem"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_detail",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "0.625rem"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_detail-label",
+      "styles": {
+        "desktop": {
+          "color": "var(--color-accent)"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_detail-value",
+      "styles": {
+        "desktop": {
+          "color": "var(--color-accent)"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_links",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-wrap": "wrap",
+          "column-gap": "2.5rem",
+          "row-gap": "1rem"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_link",
+      "styles": {
+        "desktop": {
+          "color": "var(--color-neutral-900)",
+          "text-decoration": "underline",
+          "text-underline-offset": "0.2em"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_form-block",
+      "styles": {
+        "desktop": {
+          "width": "100%",
+          "margin-top": "1.25rem",
+          "margin-bottom": "0rem"
+        },
+        "tablet": {
+          "margin-top": "0rem"
+        }
+      }
+    },
+    {
+      "name": "is-offset",
+      "comboOn": "form-split-script-contact_form-block",
+      "why": "when the left column has a paragraph (press, legal, corporate) the form starts level with the paragraph, not the heading",
+      "styles": {
+        "desktop": {
+          "margin-top": "6.5rem"
+        },
+        "tablet": {
+          "margin-top": "0rem"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_form",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "1.875rem"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_fieldsets",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "6.6875rem"
+        },
+        "tablet": {
+          "row-gap": "4.5rem"
+        },
+        "mobilePortrait": {
+          "row-gap": "3.5rem"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_fieldset",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "3rem"
+        },
+        "mobilePortrait": {
+          "row-gap": "2rem"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_fieldset-header",
+      "styles": {
+        "desktop": {
+          "color": "var(--color-neutral-900)"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_fields",
+      "styles": {
+        "desktop": {
+          "display": "grid",
+          "grid-template-columns": "minmax(0, 1fr) minmax(0, 1fr)",
+          "column-gap": "3rem",
+          "row-gap": "1.8125rem"
+        },
+        "mobileLandscape": {
+          "grid-template-columns": "minmax(0, 1fr)"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_field",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "min-width": "0rem"
+        }
+      }
+    },
+    {
+      "name": "is-full",
+      "comboOn": "form-split-script-contact_field",
+      "why": "full-width rows (company, nature of the shoot, additional details)",
+      "styles": {
+        "desktop": {
+          "grid-column": "1 / -1"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_input",
+      "styles": {
+        "desktop": {
+          "width": "100%",
+          "height": "1.8125rem",
+          "margin-bottom": "0rem",
+          "padding": "0rem 0rem 0.4375rem 0rem",
+          "border-width": "0rem 0rem 1px 0rem",
+          "border-style": "solid",
+          "border-color": "rgba(38, 33, 24, 0.35)",
+          "border-radius": "0rem",
+          "background-color": "transparent",
+          "font-family": "var(--font-style-body)",
+          "font-size": "1.125rem",
+          "line-height": "1.2",
+          "color": "var(--color-neutral-900)"
+        }
+      },
+      "states": {
+        "placeholder": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1.125rem",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase",
+          "color": "var(--color-neutral-900)",
+          "opacity": "1"
+        },
+        "focus": {
+          "border-color": "var(--color-accent)",
+          "outline-style": "none"
+        }
+      }
+    },
+    {
+      "name": "is-textarea",
+      "comboOn": "form-split-script-contact_input",
+      "why": "multi-line field (additional details, details, special requirements)",
+      "styles": {
+        "desktop": {
+          "height": "8.8125rem",
+          "min-height": "8.8125rem",
+          "resize": "none"
+        },
+        "mobilePortrait": {
+          "height": "6rem",
+          "min-height": "6rem"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_footer",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "justify-content": "flex-end"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_message",
+      "styles": {
+        "desktop": {
+          "padding": "1.5rem",
+          "background-color": "var(--color-neutral-900)",
+          "color": "var(--color-neutral-100)",
+          "text-align": "left"
+        }
+      }
+    },
+    {
+      "name": "form-split-script-contact_media",
+      "styles": {
+        "desktop": {
+          "width": "100%",
+          "aspect-ratio": "905 / 726",
+          "margin": "0rem",
+          "background-color": "#d9d9d9",
+          "overflow": "hidden"
+        }
+      }
+    }
+  ],
+  "proposedShared": [
+    {
+      "name": "text-style-script",
+      "comboOn": "heading-style-h1",
+      "why": "Morello 60/72 is used 53 times site-wide (figma/tokens.json textStyles) and the mapping says: apply heading-style-h1 plus a combo with only the differing properties; Relume has no script class",
+      "styles": {
+        "desktop": {
+          "font-family": "Morello, cursive",
+          "font-size": "3.75rem",
+          "font-weight": "400",
+          "line-height": "1.2",
+          "letter-spacing": "0em",
+          "text-transform": "none"
+        },
+        "tablet": {
+          "font-size": "3.25rem"
+        },
+        "mobilePortrait": {
+          "font-size": "2.5rem"
+        }
+      }
+    },
+    {
+      "name": "text-style-caps-caption-16",
+      "comboOn": "text-size-regular",
+      "why": "CAPS-CAPTION-16 is used 242 times site-wide; figma/tokens.json suggests this exact combo on text-size-regular",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1rem",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase"
+        }
+      }
+    },
+    {
+      "name": "is-clipped",
+      "comboOn": "button",
+      "why": "the dark clipped-corner button (figma/vectors/vector-25-234x37-309-728.svg) appears in 4 shared-component briefs; one button modifier instead of a per-family button",
+      "styles": {
+        "desktop": {
+          "padding": "0.5625rem 1.1875rem",
+          "border-width": "0rem",
+          "border-radius": "0rem",
+          "background-color": "var(--color-neutral-900)",
+          "color": "var(--color-neutral-100)",
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1rem",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase",
+          "text-align": "center",
+          "clip-path": "polygon(0 0.75rem, 0.6875rem 0, calc(100% - 0.6875rem) 0, 100% 0.75rem, 100% calc(100% - 0.75rem), calc(100% - 0.6875rem) 100%, 0.6875rem 100%, 0 calc(100% - 0.75rem))"
+        }
+      }
+    }
+  ],
+  "variables": [
+    "color-neutral-100",
+    "color-neutral-900",
+    "color-accent",
+    "font-style-heading",
+    "font-style-body"
+  ],
+  "tree": [
+    {
+      "tag": "section",
+      "element": "Section",
+      "classes": [
+        "section_form-split-script-contact"
+      ],
+      "attributes": {},
+      "children": [
+        {
+          "tag": "div",
+          "classes": [
+            "padding-global",
+            "padding-section-large"
+          ],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "container-large"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "article",
+                  "classes": [
+                    "form-split-script-contact_component"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "form-split-script-contact_content"
+                      ],
+                      "optionalClasses": [
+                        "is-centered"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "header",
+                          "classes": [
+                            "form-split-script-contact_header",
+                            "is-rotated"
+                          ],
+                          "note": "is-rotated only with the script heading",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "element": "Heading",
+                              "classes": [
+                                "heading-style-h1",
+                                "text-style-script"
+                              ],
+                              "altClasses": [
+                                "heading-style-h2"
+                              ],
+                              "note": "script: heading-style-h1 + text-style-script; caps (contact): heading-style-h2 only, tag h1 on the contact page",
+                              "prop": "heading",
+                              "attributes": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "form-split-script-contact_paragraph",
+                            "text-size-medium"
+                          ],
+                          "optional": true,
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "p",
+                              "element": "Paragraph",
+                              "classes": [],
+                              "prop": "paragraph",
+                              "attributes": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "form-split-script-contact_details"
+                          ],
+                          "optional": true,
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "div",
+                              "classes": [
+                                "form-split-script-contact_detail"
+                              ],
+                              "repeat": true,
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "classes": [
+                                    "form-split-script-contact_detail-label",
+                                    "text-size-regular",
+                                    "text-style-caps-caption-16"
+                                  ],
+                                  "attributes": {},
+                                  "children": []
+                                },
+                                {
+                                  "tag": "div",
+                                  "classes": [
+                                    "form-split-script-contact_detail-value",
+                                    "text-size-medium"
+                                  ],
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "tag": "p",
+                                      "element": "Paragraph",
+                                      "classes": [],
+                                      "attributes": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "form-split-script-contact_links"
+                          ],
+                          "optional": true,
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "a",
+                              "element": "TextLink",
+                              "classes": [
+                                "form-split-script-contact_link",
+                                "text-size-regular",
+                                "text-style-caps-caption-16"
+                              ],
+                              "repeat": true,
+                              "attributes": {
+                                "target": "_blank",
+                                "rel": "noopener"
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "element": "FormWrapper",
+                      "classes": [
+                        "form-split-script-contact_form-block"
+                      ],
+                      "optional": true,
+                      "note": "absent on contact/01-contact-us, which shows the media block instead",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "form",
+                          "element": "FormForm",
+                          "classes": [
+                            "form-split-script-contact_form"
+                          ],
+                          "attributes": {
+                            "name": "per instance, see instances[].content.formName"
+                          },
+                          "children": [
+                            {
+                              "tag": "div",
+                              "classes": [
+                                "form-split-script-contact_fieldsets"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "classes": [
+                                    "form-split-script-contact_fieldset"
+                                  ],
+                                  "repeat": true,
+                                  "attributes": {
+                                    "role": "group",
+                                    "aria-labelledby": "{fieldset heading id}"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "header",
+                                      "classes": [
+                                        "form-split-script-contact_fieldset-header"
+                                      ],
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "tag": "h3",
+                                          "element": "Heading",
+                                          "classes": [
+                                            "heading-style-h4"
+                                          ],
+                                          "attributes": {
+                                            "id": "{form}-{fieldset}-heading"
+                                          },
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "classes": [
+                                        "form-split-script-contact_fields"
+                                      ],
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "tag": "div",
+                                          "classes": [
+                                            "form-split-script-contact_field"
+                                          ],
+                                          "optionalClasses": [
+                                            "is-full"
+                                          ],
+                                          "repeat": true,
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "tag": "input",
+                                              "element": "FormTextInput",
+                                              "classes": [
+                                                "form-split-script-contact_input"
+                                              ],
+                                              "note": "delete the default FormBlockLabel; the visible label is the placeholder and the accessible name is aria-label",
+                                              "attributes": {
+                                                "name": "{field.name}",
+                                                "type": "{field.type}",
+                                                "placeholder": "{field.label}",
+                                                "aria-label": "{field.label}"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "div",
+                                          "classes": [
+                                            "form-split-script-contact_field",
+                                            "is-full"
+                                          ],
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "tag": "textarea",
+                                              "element": "FormTextarea",
+                                              "classes": [
+                                                "form-split-script-contact_input",
+                                                "is-textarea"
+                                              ],
+                                              "attributes": {
+                                                "name": "{field.name}",
+                                                "placeholder": "{field.label}",
+                                                "aria-label": "{field.label}"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "footer",
+                              "classes": [
+                                "form-split-script-contact_footer"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "input",
+                                  "element": "FormButton",
+                                  "classes": [
+                                    "button",
+                                    "is-clipped"
+                                  ],
+                                  "attributes": {
+                                    "type": "submit",
+                                    "value": "submit your request",
+                                    "data-wait": "sending"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "element": "FormSuccessMessage",
+                          "classes": [
+                            "form-split-script-contact_message"
+                          ],
+                          "attributes": {},
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "element": "FormErrorMessage",
+                          "classes": [
+                            "form-split-script-contact_message"
+                          ],
+                          "attributes": {},
+                          "children": []
+                        }
+                      ],
+                      "optionalClasses": [
+                        "is-offset"
+                      ]
+                    },
+                    {
+                      "tag": "figure",
+                      "classes": [
+                        "form-split-script-contact_media"
+                      ],
+                      "optional": true,
+                      "note": "contact/01-contact-us only: #D9D9D9 placeholder rectangle (905x726) in the design; content is an open question",
+                      "attributes": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": "base",
+      "on": "section_form-split-script-contact",
+      "styleDeltas": {},
+      "crop": "figma/pages/guidelines/sections/06-photoshoot-request/section.webp"
+    },
+    {
+      "modifier": "is-tall",
+      "on": "section_form-split-script-contact",
+      "styleDeltas": {
+        "desktop": {
+          "padding-top": "10.75rem",
+          "padding-bottom": "8.25rem"
+        },
+        "tablet": {
+          "padding-top": "2rem",
+          "padding-bottom": "2rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "0rem",
+          "padding-bottom": "0rem"
+        }
+      },
+      "crop": "figma/pages/meetings-collection/sections/06-request-for-proposal/section.webp"
+    }
+  ],
+  "props": [
+    {
+      "name": "heading",
+      "type": "text",
+      "element": "form-split-script-contact_header > h2"
+    },
+    {
+      "name": "paragraph",
+      "type": "text",
+      "element": "form-split-script-contact_paragraph > p",
+      "optional": true
+    },
+    {
+      "name": "showParagraph",
+      "type": "visibility",
+      "element": "form-split-script-contact_paragraph"
+    },
+    {
+      "name": "details",
+      "type": "slot",
+      "element": "form-split-script-contact_details",
+      "optional": true
+    },
+    {
+      "name": "links",
+      "type": "slot",
+      "element": "form-split-script-contact_links",
+      "optional": true
+    },
+    {
+      "name": "form",
+      "type": "slot",
+      "element": "form-split-script-contact_form-block",
+      "note": "fields differ on every instance, so the form is a slot, not props"
+    }
+  ],
+  "assets": [],
+  "instances": [
+    {
+      "page": "meetings-collection",
+      "pageId": "6ad66fd96684c3e22ea4d417",
+      "section": "meetings-collection/06-request-for-proposal",
+      "variant": "is-tall",
+      "content": {
+        "headingStyle": "script",
+        "heading": "Request for Proposal",
+        "formName": "Meetings RFP",
+        "fieldsets": [
+          {
+            "heading": "contact information",
+            "fields": [
+              {
+                "label": "First Name",
+                "name": "first-name",
+                "type": "text"
+              },
+              {
+                "label": "Last Name",
+                "name": "last-name",
+                "type": "text"
+              },
+              {
+                "label": "Email Address",
+                "name": "email",
+                "type": "email"
+              },
+              {
+                "label": "Phone Number",
+                "name": "phone",
+                "type": "tel"
+              },
+              {
+                "label": "Company or Organization",
+                "name": "company",
+                "type": "text",
+                "full": true
+              }
+            ]
+          },
+          {
+            "heading": "event details",
+            "fields": [
+              {
+                "label": "Event Date",
+                "name": "event-date",
+                "type": "text"
+              },
+              {
+                "label": "Number of people",
+                "name": "number-of-people",
+                "type": "number"
+              },
+              {
+                "label": "Start Time",
+                "name": "start-time",
+                "type": "text"
+              },
+              {
+                "label": "End Time",
+                "name": "end-time",
+                "type": "text"
+              },
+              {
+                "label": "Additional Details",
+                "name": "additional-details",
+                "type": "textarea",
+                "full": true
+              }
+            ]
+          }
+        ],
+        "submit": "submit your request"
+      }
+    },
+    {
+      "page": "guidelines",
+      "pageId": "6ad66fd44c7f57894534ada5",
+      "section": "guidelines/06-photoshoot-request",
+      "variant": "base",
+      "content": {
+        "headingStyle": "script",
+        "heading": "Photoshoot Request",
+        "formName": "Photoshoot Request",
+        "fieldsets": [
+          {
+            "heading": "contact information",
+            "fields": [
+              {
+                "label": "First Name",
+                "name": "first-name",
+                "type": "text"
+              },
+              {
+                "label": "Last Name",
+                "name": "last-name",
+                "type": "text"
+              },
+              {
+                "label": "Email Address",
+                "name": "email",
+                "type": "email"
+              },
+              {
+                "label": "Phone Number",
+                "name": "phone",
+                "type": "tel"
+              },
+              {
+                "label": "Company or Organization",
+                "name": "company",
+                "type": "text",
+                "full": true
+              }
+            ]
+          },
+          {
+            "heading": "shoot details",
+            "fields": [
+              {
+                "label": "Nature of the shoot",
+                "name": "nature-of-shoot",
+                "type": "text",
+                "full": true
+              },
+              {
+                "label": "shoot Date",
+                "name": "shoot-date",
+                "type": "text"
+              },
+              {
+                "label": "Number of people",
+                "name": "number-of-people",
+                "type": "number"
+              },
+              {
+                "label": "Start Time",
+                "name": "start-time",
+                "type": "text"
+              },
+              {
+                "label": "End Time",
+                "name": "end-time",
+                "type": "text"
+              },
+              {
+                "label": "Additional Details",
+                "name": "additional-details",
+                "type": "textarea",
+                "full": true
+              }
+            ]
+          }
+        ],
+        "submit": "submit your request"
+      }
+    },
+    {
+      "page": "press",
+      "pageId": "6ad66fd5735773f253406642",
+      "section": "press/08-press-enquiries",
+      "variant": "base",
+      "content": {
+        "headingStyle": "script",
+        "heading": "Press Enquiries",
+        "paragraph": "Proin sed nisl nisi. Quisque porttitor, nisl sed eleifend mattis, risus tellus pulvinar metus, a lacinia lacus neque sit amet purus. Donec efficitur leo sed urna tempus, eu congue ex convallis.",
+        "details": [
+          {
+            "label": "email",
+            "value": "press@theguildhotel.com",
+            "href": "mailto:press@theguildhotel.com"
+          }
+        ],
+        "formName": "Press Enquiry",
+        "fieldsets": [
+          {
+            "heading": "contact information",
+            "fields": [
+              {
+                "label": "First Name",
+                "name": "first-name",
+                "type": "text"
+              },
+              {
+                "label": "Last Name",
+                "name": "last-name",
+                "type": "text"
+              },
+              {
+                "label": "Email Address",
+                "name": "email",
+                "type": "email"
+              },
+              {
+                "label": "Phone Number",
+                "name": "phone",
+                "type": "tel"
+              },
+              {
+                "label": "organization",
+                "name": "organization",
+                "type": "text"
+              },
+              {
+                "label": "expected publish date",
+                "name": "publish-date",
+                "type": "text"
+              },
+              {
+                "label": "details",
+                "name": "details",
+                "type": "textarea",
+                "full": true
+              }
+            ]
+          }
+        ],
+        "submit": "submit your request",
+        "formModifier": "is-offset"
+      }
+    },
+    {
+      "page": "contact",
+      "pageId": "6ad66fd8e0b7968459e18f22",
+      "section": "contact/01-contact-us",
+      "variant": "base",
+      "content": {
+        "headingStyle": "caps",
+        "headingTag": "h1",
+        "heading": "contact us",
+        "contentModifier": "is-centered",
+        "details": [
+          {
+            "label": "address",
+            "value": "500 W. Broadway San Diego, CA 92101"
+          },
+          {
+            "label": "general enquiries",
+            "value": "Phone: (619) 795-6000\nEmail: info@theguildhotel.com"
+          },
+          {
+            "label": "groups, meetings & events",
+            "value": "Email: sales@theguildhotel.com"
+          },
+          {
+            "label": "Reservation Billing Questions",
+            "value": "Email: billing@theguildhotel.com"
+          }
+        ],
+        "links": [
+          {
+            "label": "instagram",
+            "href": "TBD"
+          },
+          {
+            "label": "facebook",
+            "href": "TBD"
+          }
+        ],
+        "form": null,
+        "media": "placeholder"
+      }
+    },
+    {
+      "page": "legal",
+      "pageId": "CMS template page, created in Q028",
+      "section": "legal/12-a-landmark-reimagined",
+      "variant": "base",
+      "content": {
+        "headingStyle": "script",
+        "heading": "Request for Proposal",
+        "paragraph": "Proin sed nisl nisi. Quisque porttitor, nisl sed eleifend mattis, risus tellus pulvinar metus, a lacinia lacus neque sit amet purus. Donec efficitur leo sed urna tempus, eu congue ex convallis.",
+        "details": [
+          {
+            "label": "Trial Team Concierge",
+            "value": "legalteams@theguildhotel.com",
+            "href": "mailto:legalteams@theguildhotel.com"
+          },
+          {
+            "label": "24/7 Emergency Booking Available",
+            "value": "+ 1 (619) 975-6000",
+            "href": "tel:+16199756000"
+          },
+          {
+            "label": "address",
+            "value": "500 W. Broadway, San Diego, CA 92101"
+          }
+        ],
+        "formName": "Legal RFP",
+        "fieldsets": [
+          {
+            "heading": "contact information",
+            "fields": [
+              {
+                "label": "First Name",
+                "name": "first-name",
+                "type": "text"
+              },
+              {
+                "label": "Last Name",
+                "name": "last-name",
+                "type": "text"
+              },
+              {
+                "label": "Email Address",
+                "name": "email",
+                "type": "email"
+              },
+              {
+                "label": "Phone Number",
+                "name": "phone",
+                "type": "tel"
+              },
+              {
+                "label": "law firm",
+                "name": "law-firm",
+                "type": "text"
+              },
+              {
+                "label": "team size",
+                "name": "team-size",
+                "type": "number"
+              },
+              {
+                "label": "check-in date",
+                "name": "check-in-date",
+                "type": "text"
+              },
+              {
+                "label": "check-out date",
+                "name": "check-out-date",
+                "type": "text"
+              },
+              {
+                "label": "special requirements",
+                "name": "special-requirements",
+                "type": "textarea",
+                "full": true
+              }
+            ]
+          }
+        ],
+        "submit": "submit your request",
+        "formModifier": "is-offset"
+      }
+    },
+    {
+      "page": "corporate",
+      "pageId": "CMS template page, created in Q028",
+      "section": "corporate/12-a-landmark-reimagined",
+      "variant": "base",
+      "content": {
+        "sameAs": "legal/12-a-landmark-reimagined",
+        "note": "identical content in the snapshot; reuse the legal instance (a Webflow component with no props would do)"
+      }
+    }
+  ],
+  "openQuestions": [
+    "Webflow component shape: the five forms have different fields, so a single component with text props cannot hold them. Proposal: one Webflow component with slots for the form, details and links, and component variants for script heading (h1 style + text-style-script + is-rotated) versus caps heading (heading-style-h2, contact page). If slots are not wanted, reuse the class family without a component and make only the identical legal/corporate pair a component.",
+    "contact/01-contact-us: what fills the grey #D9D9D9 placeholder (905x726)? A map embed, an image, or something else. The plan keeps an empty figure with the placeholder colour.",
+    "contact/01-contact-us: instagram and facebook URLs are not in the design.",
+    "Form handling: where should the five forms submit (Webflow form notifications to which address, or an external endpoint)? Field names in instances are proposals.",
+    "Date and time fields: native type=date and type=time inputs replace the placeholder with the browser picker, which breaks the design. The plan uses type=text; confirm, or accept native pickers.",
+    "Container width: the Figma frame is 1600 wide with content about 1482 wide (about 59px gutters), wider than container-large (80rem). The plan uses container-large, so at 1440 the content is 1280 wide. K01 may want one site-wide wider container.",
+    "is-clipped button: Webflow's style panel may not expose clip-path. If it does not, the Designer session adds the clip-path rule through a site-wide custom CSS embed, or uses the vector-25 SVG as a stretched background image."
+  ],
+  "deviations": [
+    "Colour #2B2927 (form labels, fieldset headings) has no variable; the plan uses color-neutral-900 (#262118), the nearest token. Visual difference is negligible.",
+    "contact/01-contact-us labels use EYEBROW-CAPS (18px) in Figma; the plan uses text-style-caps-caption-16 (16px) for every detail label so the class family stays one set. Its heading uses heading-style-h2 in color-neutral-900 rather than color-accent (#29310C).",
+    "legal and corporate specs include an 'A Landmark Reimagined' heading (Sackers 40, cream) above the section bounds; it sits on the dark background of the previous band and is not part of this component. The brief's 'sackers-40' heading size therefore is not used.",
+    "contact/01-contact-us spec includes the guild-nav-full-dark nav instance; the nav is a separate global component and is excluded.",
+    "Field labels are rendered as styled placeholders with aria-label as the accessible name, matching the design (label sits on the underline), instead of visible label elements.",
+    "Instance vertical spacing in the base crops varies (top 94px to 219px); the plan uses padding-section-large for every base instance.",
+    "Field underlines in Figma are #262118 rectangles but render as a light hairline in the crops; the plan uses rgba(38, 33, 24, 0.35) (color-neutral-900 at 35%). No variable exists for it; the Designer may use the neutral-900 variable with alpha if available.",
+    "The submit button and caps labels render narrower in the preview than Figma (button about 197px vs 234px) because Copperplate stands in for Sackers Heavy Gothic; padding follows the Figma vector exactly, so recheck on the live site with the real font before changing it."
+  ]
+}
