@@ -1,0 +1,382 @@
+{
+  "entry": "Q026",
+  "component": "timeline-scatter-images",
+  "buildOn": {
+    "page": "guidelines",
+    "pageId": "6ad66fd44c7f57894534ada5",
+    "section": "guidelines/04-work-from-our-collaborators"
+  },
+  "reusedClasses": [
+    "padding-global",
+    "padding-section-large",
+    "heading-style-h3",
+    "heading-style-h4",
+    "text-weight-normal",
+    "text-size-regular",
+    "u-image"
+  ],
+  "familyClasses": [
+    {
+      "name": "section_timeline-scatter-images",
+      "styles": {
+        "desktop": { "background-color": "var(--color-neutral-100)" },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "timeline-scatter-images_component",
+      "styles": {
+        "desktop": { "position": "relative" },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "timeline-scatter-images_header",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "top": "0.375rem",
+          "left": "0",
+          "right": "0",
+          "z-index": "1",
+          "text-align": "center"
+        },
+        "tablet": {},
+        "mobileLandscape": { "position": "static", "margin-bottom": "2rem" },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "timeline-scatter-images_heading",
+      "styles": {
+        "desktop": { "margin-top": "0", "margin-bottom": "0", "font-family": "var(--font-style-heading)", "color": "var(--color-accent)" },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "timeline-scatter-images_list",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "flex-start",
+          "row-gap": "2.375rem"
+        },
+        "tablet": {},
+        "mobileLandscape": { "row-gap": "2rem" },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "timeline-scatter-images_item",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "1rem",
+          "width": "100%",
+          "margin": "0"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "timeline-scatter-images_image-wrap",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "overflow": "hidden",
+          "width": "100%",
+          "aspect-ratio": "4 / 3",
+          "background-color": "#d9d9d9"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "timeline-scatter-images_image",
+      "styles": {
+        "desktop": { "width": "100%", "height": "100%", "object-fit": "cover" },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "timeline-scatter-images_caption",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "left": "1.25rem",
+          "bottom": "1.25rem",
+          "z-index": "1",
+          "margin": "0",
+          "color": "var(--color-accent)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    }
+  ],
+  "proposedShared": [
+    {
+      "name": "text-style-caps-caption-16",
+      "comboOn": "text-size-regular",
+      "why": "figma/tokens.json CAPS-CAPTION-16 (Sackers Heavy Gothic 16/19.2, -0.48px), 182 uses site-wide; proposed combo name comes from tokens.json",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1rem",
+          "line-height": "1.2",
+          "font-weight": "400",
+          "letter-spacing": "-0.03em"
+        }
+      }
+    },
+    {
+      "name": "text-style-eyebrow-caps",
+      "comboOn": "text-size-regular",
+      "why": "figma/tokens.json EYEBROW-CAPS (Sackers Heavy Gothic 18/21.6, -0.54px), 393 uses site-wide; brief and tokens.json both name this combo",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1.125rem",
+          "line-height": "1.2",
+          "font-weight": "400",
+          "letter-spacing": "-0.03em"
+        }
+      }
+    }
+  ],
+  "variables": [
+    "color-neutral-100",
+    "color-neutral-900",
+    "color-accent",
+    "font-style-heading"
+  ],
+  "tree": [
+    {
+      "tag": "section",
+      "classes": ["section_timeline-scatter-images"],
+      "attributes": {},
+      "children": [
+        {
+          "tag": "div",
+          "classes": ["padding-global", "padding-section-large"],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "div",
+              "classes": ["timeline-scatter-images_component"],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "header",
+                  "classes": ["timeline-scatter-images_header"],
+                  "attributes": {},
+                  "optional": "heading",
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "classes": ["timeline-scatter-images_heading"],
+                      "attributes": {},
+                      "slot": "heading",
+                      "note": "Add heading-style-h4 or heading-style-h3 plus text-weight-normal per instance (heading size is content, not a variant).",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "classes": ["timeline-scatter-images_list"],
+                  "attributes": { "role": "list" },
+                  "note": "Webflow component slot: instances add, remove and reorder items here.",
+                  "children": [
+                    {
+                      "tag": "figure",
+                      "classes": ["timeline-scatter-images_item"],
+                      "attributes": { "role": "listitem" },
+                      "slot": "item",
+                      "repeat": "items",
+                      "note": "One size modifier (is-xsmall to is-xlarge), at most one offset modifier (is-inset, is-center, is-end) and optionally is-lift, per instance item.",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": ["timeline-scatter-images_image-wrap"],
+                          "attributes": {},
+                          "slot": "image-wrap",
+                          "note": "Carries the same size modifier as its item; it sets aspect-ratio.",
+                          "children": [
+                            {
+                              "tag": "img",
+                              "classes": ["u-image", "timeline-scatter-images_image"],
+                              "attributes": { "loading": "lazy" },
+                              "optional": "image",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "figcaption",
+                          "classes": ["timeline-scatter-images_caption"],
+                          "attributes": {},
+                          "slot": "caption",
+                          "optional": "caption",
+                          "note": "Add text-size-regular plus text-style-caps-caption-16 (base) or text-style-eyebrow-caps (is-tall).",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": "is-tall",
+      "on": "section_timeline-scatter-images",
+      "styleDeltas": {},
+      "crop": "figma/pages/neighborhood/sections/07-beyond-downtown-san-diego/section.webp",
+      "note": "Marker only; the deltas sit on the child elements below, which carry is-tall too (Webflow cannot style a child from a parent combo)."
+    },
+    {
+      "modifier": "is-tall",
+      "on": "timeline-scatter-images_header",
+      "styleDeltas": {
+        "desktop": { "position": "static", "padding-left": "8.5%", "margin-bottom": "2rem", "text-align": "left" },
+        "mobileLandscape": { "padding-left": "0" }
+      },
+      "crop": "figma/pages/neighborhood/sections/07-beyond-downtown-san-diego/section.webp"
+    },
+    {
+      "modifier": "is-tall",
+      "on": "timeline-scatter-images_heading",
+      "styleDeltas": { "desktop": { "color": "var(--color-neutral-900)" } },
+      "crop": "figma/pages/neighborhood/sections/07-beyond-downtown-san-diego/section.webp"
+    },
+    {
+      "modifier": "is-tall",
+      "on": "timeline-scatter-images_list",
+      "styleDeltas": {
+        "desktop": { "row-gap": "3.125rem" },
+        "mobileLandscape": { "row-gap": "2rem" }
+      },
+      "crop": "figma/pages/neighborhood/sections/07-beyond-downtown-san-diego/section.webp"
+    },
+    {
+      "modifier": "is-tall",
+      "on": "timeline-scatter-images_caption",
+      "styleDeltas": { "desktop": { "position": "static" } },
+      "crop": "figma/pages/neighborhood/sections/07-beyond-downtown-san-diego/section.webp"
+    },
+    { "modifier": "is-xsmall", "on": "timeline-scatter-images_item", "scope": "item", "styleDeltas": { "desktop": { "width": "17%" }, "mobileLandscape": { "width": "70%" } } },
+    { "modifier": "is-small", "on": "timeline-scatter-images_item", "scope": "item", "styleDeltas": { "desktop": { "width": "23.4%" }, "mobileLandscape": { "width": "70%" } } },
+    { "modifier": "is-medium", "on": "timeline-scatter-images_item", "scope": "item", "styleDeltas": { "desktop": { "width": "30.7%" }, "mobileLandscape": { "width": "70%" } } },
+    { "modifier": "is-large", "on": "timeline-scatter-images_item", "scope": "item", "styleDeltas": { "desktop": { "width": "40.5%" }, "mobileLandscape": { "width": "85%" } } },
+    { "modifier": "is-xlarge", "on": "timeline-scatter-images_item", "scope": "item", "styleDeltas": { "desktop": { "width": "48.9%" }, "mobileLandscape": { "width": "100%" } } },
+    { "modifier": "is-inset", "on": "timeline-scatter-images_item", "scope": "item", "styleDeltas": { "desktop": { "margin-left": "8.5%" }, "mobileLandscape": { "margin-left": "0" } } },
+    { "modifier": "is-center", "on": "timeline-scatter-images_item", "scope": "item", "styleDeltas": { "desktop": { "margin-left": "42.6%" }, "mobileLandscape": { "margin-left": "15%" } } },
+    { "modifier": "is-end", "on": "timeline-scatter-images_item", "scope": "item", "styleDeltas": { "desktop": { "margin-left": "auto" } } },
+    { "modifier": "is-lift", "on": "timeline-scatter-images_item", "scope": "item", "styleDeltas": { "desktop": { "margin-top": "-16%" }, "mobileLandscape": { "margin-top": "0" } } },
+    { "modifier": "is-xsmall", "on": "timeline-scatter-images_image-wrap", "scope": "item", "styleDeltas": { "desktop": { "aspect-ratio": "259 / 466" } } },
+    { "modifier": "is-small", "on": "timeline-scatter-images_image-wrap", "scope": "item", "styleDeltas": { "desktop": { "aspect-ratio": "356 / 466" } } },
+    { "modifier": "is-medium", "on": "timeline-scatter-images_image-wrap", "scope": "item", "styleDeltas": { "desktop": { "aspect-ratio": "1 / 1" } } },
+    { "modifier": "is-large", "on": "timeline-scatter-images_image-wrap", "scope": "item", "styleDeltas": { "desktop": { "aspect-ratio": "615 / 466" } } },
+    { "modifier": "is-xlarge", "on": "timeline-scatter-images_image-wrap", "scope": "item", "styleDeltas": { "desktop": { "aspect-ratio": "744 / 524" } } }
+  ],
+  "props": [
+    { "name": "heading", "type": "text", "element": "timeline-scatter-images_heading" },
+    { "name": "showHeading", "type": "visibility", "element": "timeline-scatter-images_header" },
+    { "name": "items", "type": "slot", "element": "timeline-scatter-images_list" }
+  ],
+  "assets": [],
+  "instances": [
+    {
+      "page": "guidelines",
+      "section": "guidelines/04-work-from-our-collaborators",
+      "variant": "base",
+      "content": {
+        "sectionModifiers": [],
+        "heading": "work from our collaborators",
+        "headingClasses": ["heading-style-h4", "text-weight-normal"],
+        "items": [
+          { "caption": "@username", "modifiers": ["is-small"], "wrapModifiers": ["is-small"], "captionClasses": ["text-size-regular", "text-style-caps-caption-16"] },
+          { "caption": "@username", "modifiers": ["is-large", "is-end", "is-lift"], "wrapModifiers": ["is-large"], "captionClasses": ["text-size-regular", "text-style-caps-caption-16"] },
+          { "caption": "@username", "modifiers": ["is-xsmall", "is-inset"], "wrapModifiers": ["is-xsmall"], "captionClasses": ["text-size-regular", "text-style-caps-caption-16"] },
+          { "caption": "@username", "modifiers": ["is-medium", "is-center", "is-lift"], "wrapModifiers": ["is-medium"], "captionClasses": ["text-size-regular", "text-style-caps-caption-16"] }
+        ]
+      }
+    },
+    {
+      "page": "neighborhood",
+      "section": "neighborhood/07-beyond-downtown-san-diego",
+      "variant": "is-tall",
+      "content": {
+        "sectionModifiers": ["is-tall"],
+        "heading": "beyond downtown san diego",
+        "headingClasses": ["heading-style-h3", "text-weight-normal"],
+        "items": [
+          { "caption": "Coronado Beach", "modifiers": ["is-xlarge", "is-inset"], "wrapModifiers": ["is-xlarge"], "captionClasses": ["text-size-regular", "text-style-eyebrow-caps"] },
+          { "caption": "oceanside", "modifiers": ["is-xlarge", "is-end"], "wrapModifiers": ["is-xlarge"], "captionClasses": ["text-size-regular", "text-style-eyebrow-caps"] },
+          { "caption": "Coronado Beach", "modifiers": ["is-xlarge", "is-inset"], "wrapModifiers": ["is-xlarge"], "captionClasses": ["text-size-regular", "text-style-eyebrow-caps"] },
+          { "caption": "oceanside", "modifiers": ["is-xlarge", "is-end"], "wrapModifiers": ["is-xlarge"], "captionClasses": ["text-size-regular", "text-style-eyebrow-caps"] }
+        ]
+      }
+    }
+  ],
+  "openQuestions": [
+    "Image source: both Figma instances are grey #D9D9D9 placeholders with no image fills and figma/assets.json has no entry for either section. Who supplies the photos (collaborator UGC / Instagram embed for guidelines, location photos for neighborhood), and should the guidelines list become a CMS collection list instead of static slot items?",
+    "Brief says base text is left-aligned, but the guidelines spec has the heading textAlignHorizontal CENTER and centred on the frame. The plan centres the base heading; confirm.",
+    "Scroll reveal: no animation notes exist for either section. Add the global .fade-in / .slide-in reveal to items, or leave static?",
+    "#D9D9D9 placeholder fill on the image wrap has no variable. Keep it as a raw placeholder until photos land, or drop the fill once real images exist?"
+  ],
+  "deviations": [
+    "Edge gutter: padding-global is 2rem; Figma items touch 40px (2.5rem) from the 1600 frame edge. Horizontal offsets and widths are percentages of the list width, so they scale with the viewport.",
+    "Base vertical overlap uses one is-lift value (-16% of list width). Figma lifts item 2 by about 271px and item 4 by about 221px at 1600 (17.8% and 14.5%); each lands about 25px off.",
+    "is-tall uses one 3.125rem gap between items; Figma has 50px, 50px and 117px. The 117px gap before the last item is treated as drift.",
+    "Vertical padding: padding-section-large (7rem) top and bottom; the crops show about 115px top and 99px bottom on guidelines and 133px top and 90px bottom on neighborhood.",
+    "Mobile (767 and below) is not in Figma. Items keep their alternate offsets at reduced widths (70%, 85% or 100%), lifts reset to 0 and the base heading drops into flow above the list."
+  ],
+  "buildNotes": [
+    "Webflow combo chains: create each item modifier on a scratch element holding only timeline-scatter-images_item plus that one modifier (and likewise for image-wrap), then stack them on the real items. Styling a three-class chain directly creates a selector that only matches that exact chain.",
+    "The is-tall modifier goes on the section, header, heading, list and every caption of that instance; the section carries no styles itself.",
+    "Set the item tag to figure and the caption tag to figcaption in the Designer; element_builder creates DivBlocks.",
+    "No runtime module data attributes: none of A01 to A05 fits a static scattered or zig-zag gallery."
+  ],
+  "previewBaseline": {
+    "note": "Preview-only stand-ins for reused Relume classes and variables (values from figma/tokens.json, docs/reference/breakpoints.md and CLAUDE.md). The real build reuses the live classes; Sackers Heavy Gothic is not available locally, so the preview falls back and uppercases to mimic the caps face.",
+    "variables": {
+      "color-neutral-100": "#f4efdf",
+      "color-neutral-900": "#262118",
+      "color-accent": "#29310c",
+      "font-style-heading": "'Sackers Heavy Gothic', Copperplate, 'Copperplate Gothic Light', 'Arial', sans-serif"
+    },
+    "reset": "*, *::before, *::after { box-sizing: border-box; }\nbody { margin: 0; font-family: Arial, sans-serif; }\n/* Preview-only: stand-in for the all-caps Sackers face. */\n.timeline-scatter-images_heading, .timeline-scatter-images_caption { text-transform: uppercase; }",
+    "classes": [
+      { "name": "padding-global", "styles": { "desktop": { "padding-left": "2rem", "padding-right": "2rem" } } },
+      { "name": "padding-section-large", "styles": { "desktop": { "padding-top": "7rem", "padding-bottom": "7rem" }, "tablet": { "padding-top": "5rem", "padding-bottom": "5rem" }, "mobileLandscape": { "padding-top": "3.5rem", "padding-bottom": "3.5rem" }, "mobilePortrait": { "padding-top": "2.5rem", "padding-bottom": "2.5rem" } } },
+      { "name": "heading-style-h3", "styles": { "desktop": { "font-size": "1.875rem", "line-height": "1", "letter-spacing": "-0.05em" } } },
+      { "name": "heading-style-h4", "styles": { "desktop": { "font-size": "1.5rem", "line-height": "1.2" } } },
+      { "name": "text-weight-normal", "styles": { "desktop": { "font-weight": "400" } } },
+      { "name": "text-size-regular", "styles": { "desktop": { "font-size": "1rem" } } },
+      { "name": "u-image", "styles": { "desktop": { "display": "block", "max-width": "100%" } } }
+    ]
+  }
+}
