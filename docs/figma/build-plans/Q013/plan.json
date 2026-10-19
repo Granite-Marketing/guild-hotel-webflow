@@ -1,0 +1,1463 @@
+{
+  "entry": "Q013",
+  "component": "footer-links",
+  "buildOn": {
+    "page": "home",
+    "pageId": "6ad64060ae8eac6d7b7c4241",
+    "section": "home/19-the-hotel"
+  },
+  "reusedClasses": [
+    "padding-global"
+  ],
+  "familyClasses": [
+    {
+      "name": "section_footer-links",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "display": "flex",
+          "flex-direction": "column",
+          "min-height": "43.75rem",
+          "overflow": "hidden",
+          "color": "var(--color-neutral-100)",
+          "background-color": "var(--color-neutral-900)"
+        },
+        "tablet": {
+          "min-height": "auto"
+        }
+      }
+    },
+    {
+      "name": "footer-links_background",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "inset": "0",
+          "z-index": "0",
+          "margin": "0"
+        }
+      }
+    },
+    {
+      "name": "footer-links_background-image",
+      "styles": {
+        "desktop": {
+          "width": "100%",
+          "height": "100%",
+          "object-fit": "cover",
+          "object-position": "50% 80%",
+          "display": "block"
+        }
+      }
+    },
+    {
+      "name": "footer-links_overlay",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "inset": "0",
+          "background-color": "rgba(0, 0, 0, 0.2)",
+          "background-image": "linear-gradient(180deg, rgba(0, 0, 0, 0.56) 0%, rgba(0, 0, 0, 0.65) 22%)"
+        }
+      }
+    },
+    {
+      "name": "footer-links_padding",
+      "comboOf": "padding-global",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "z-index": "1",
+          "display": "flex",
+          "flex-direction": "column",
+          "flex-grow": "1"
+        }
+      }
+    },
+    {
+      "name": "footer-links_component",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "justify-content": "space-between",
+          "flex-grow": "1",
+          "row-gap": "5rem",
+          "padding-top": "12.5rem",
+          "padding-bottom": "2.5rem",
+          "margin": "0"
+        },
+        "tablet": {
+          "padding-top": "8rem",
+          "row-gap": "4rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "5rem",
+          "row-gap": "3.5rem"
+        },
+        "mobilePortrait": {
+          "padding-top": "4rem",
+          "padding-bottom": "2rem"
+        }
+      }
+    },
+    {
+      "name": "footer-links_columns",
+      "styles": {
+        "desktop": {
+          "display": "grid",
+          "grid-template-columns": "0.87fr 1fr 1fr 1fr max-content",
+          "column-gap": "2rem",
+          "row-gap": "3rem",
+          "align-items": "start"
+        },
+        "tablet": {
+          "grid-template-columns": "1fr 1fr 1fr"
+        },
+        "mobileLandscape": {
+          "grid-template-columns": "1fr 1fr",
+          "column-gap": "1.5rem",
+          "row-gap": "2.5rem"
+        }
+      }
+    },
+    {
+      "name": "footer-links_column",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "2rem"
+        },
+        "mobileLandscape": {
+          "row-gap": "1.25rem"
+        }
+      }
+    },
+    {
+      "name": "footer-links_column-header",
+      "styles": {
+        "desktop": {
+          "margin": "0"
+        }
+      }
+    },
+    {
+      "name": "footer-links_column-heading",
+      "styles": {
+        "desktop": {
+          "margin-top": "0",
+          "margin-bottom": "0",
+          "color": "inherit"
+        }
+      }
+    },
+    {
+      "name": "footer-links_list",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "0.75rem",
+          "margin": "0",
+          "padding-left": "0",
+          "list-style-type": "none"
+        }
+      }
+    },
+    {
+      "name": "footer-links_list-item",
+      "styles": {
+        "desktop": {
+          "margin": "0",
+          "padding": "0"
+        }
+      }
+    },
+    {
+      "name": "footer-links_link",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "color": "inherit",
+          "text-decoration": "none",
+          "transition": "opacity 200ms ease"
+        },
+        "mobilePortrait": {
+          "line-height": "1.2"
+        }
+      },
+      "states": {
+        "hover": {
+          "opacity": "0.7"
+        }
+      }
+    },
+    {
+      "name": "footer-links_bottom",
+      "styles": {
+        "desktop": {
+          "display": "grid",
+          "grid-template-columns": "1fr auto 1fr",
+          "align-items": "end",
+          "column-gap": "2rem"
+        },
+        "mobileLandscape": {
+          "grid-template-columns": "1fr",
+          "justify-items": "start",
+          "row-gap": "1.5rem"
+        }
+      }
+    },
+    {
+      "name": "footer-links_legal",
+      "styles": {
+        "desktop": {
+          "justify-self": "start"
+        }
+      }
+    },
+    {
+      "name": "footer-links_logo",
+      "styles": {
+        "desktop": {
+          "margin": "0",
+          "width": "9.5rem",
+          "justify-self": "center"
+        },
+        "mobileLandscape": {
+          "justify-self": "start",
+          "order": "-1"
+        }
+      }
+    },
+    {
+      "name": "footer-links_logo-image",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "100%",
+          "height": "auto"
+        }
+      }
+    },
+    {
+      "name": "footer-links_credit",
+      "styles": {
+        "desktop": {
+          "justify-self": "end",
+          "text-align": "right"
+        },
+        "mobileLandscape": {
+          "justify-self": "start",
+          "text-align": "left"
+        }
+      }
+    },
+    {
+      "name": "footer-links_text",
+      "styles": {
+        "desktop": {
+          "margin-top": "0",
+          "margin-bottom": "0"
+        }
+      }
+    },
+    {
+      "name": "footer-links_credit-link",
+      "styles": {
+        "desktop": {
+          "color": "inherit",
+          "text-decoration": "underline",
+          "text-underline-offset": "0.15em"
+        }
+      }
+    }
+  ],
+  "proposedShared": [
+    {
+      "name": "text-style-eyebrow-caps",
+      "why": "EYEBROW-CAPS Figma style; tokens.json suggests this combo for every eyebrow and column heading site-wide",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-weight": "400",
+          "font-size": "1.125rem",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase"
+        }
+      }
+    },
+    {
+      "name": "text-style-caption",
+      "why": "Sackers 14/14 tracked caption, 648 uses site-wide (tokens.json suggestedComboClass)",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-weight": "400",
+          "font-size": "0.875rem",
+          "line-height": "1",
+          "letter-spacing": "0.05em",
+          "text-transform": "lowercase"
+        }
+      }
+    },
+    {
+      "name": "text-style-legal",
+      "why": "Sackers 14/14 with no tracking, 96 uses site-wide (copyright and credit lines); standalone so it never fights text-style-caption over letter-spacing",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-weight": "400",
+          "font-size": "0.875rem",
+          "line-height": "1",
+          "letter-spacing": "0em",
+          "text-transform": "lowercase"
+        }
+      }
+    }
+  ],
+  "variables": [
+    "color-neutral-100",
+    "color-neutral-900",
+    "font-style-heading"
+  ],
+  "tree": [
+    {
+      "tag": "section",
+      "classes": [
+        "section_footer-links"
+      ],
+      "attributes": {
+        "role": "contentinfo"
+      },
+      "children": [
+        {
+          "tag": "figure",
+          "classes": [
+            "footer-links_background"
+          ],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "img",
+              "classes": [
+                "footer-links_background-image"
+              ],
+              "attributes": {
+                "src": "assets/images/27078587832153ecb831134d89bff71b2b68f548.jpg",
+                "alt": "",
+                "loading": "lazy",
+                "width": "1601",
+                "height": "1678"
+              },
+              "assetSlot": "background",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "classes": [
+                "footer-links_overlay"
+              ],
+              "attributes": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "padding-global",
+            "footer-links_padding"
+          ],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "article",
+              "classes": [
+                "footer-links_component"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "nav",
+                  "classes": [
+                    "footer-links_columns"
+                  ],
+                  "attributes": {
+                    "aria-label": "Footer"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "footer-links_column"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "header",
+                          "classes": [
+                            "footer-links_column-header"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "classes": [
+                                "footer-links_column-heading",
+                                "text-style-eyebrow-caps"
+                              ],
+                              "attributes": {},
+                              "text": "the hotel",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "ul",
+                          "classes": [
+                            "footer-links_list"
+                          ],
+                          "attributes": {
+                            "role": "list"
+                          },
+                          "children": [
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "/rooms"
+                                  },
+                                  "text": "rooms",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "/history"
+                                  },
+                                  "text": "history",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "amenities",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "services",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "corporate",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "/gallery"
+                                  },
+                                  "text": "gallery",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "/press"
+                                  },
+                                  "text": "press",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "/contact"
+                                  },
+                                  "text": "contact",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "footer-links_column"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "header",
+                          "classes": [
+                            "footer-links_column-header"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "classes": [
+                                "footer-links_column-heading",
+                                "text-style-eyebrow-caps"
+                              ],
+                              "attributes": {},
+                              "text": "experience",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "ul",
+                          "classes": [
+                            "footer-links_list"
+                          ],
+                          "attributes": {
+                            "role": "list"
+                          },
+                          "children": [
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "/wellness"
+                                  },
+                                  "text": "wellness",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "/dining"
+                                  },
+                                  "text": "dining",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "/neighborhood"
+                                  },
+                                  "text": "neighborhood",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "/meetings"
+                                  },
+                                  "text": "meetings & events",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "services",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "resortpass",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "packages",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "footer-links_column"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "header",
+                          "classes": [
+                            "footer-links_column-header"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "classes": [
+                                "footer-links_column-heading",
+                                "text-style-eyebrow-caps"
+                              ],
+                              "attributes": {},
+                              "text": "dining",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "ul",
+                          "classes": [
+                            "footer-links_list"
+                          ],
+                          "attributes": {
+                            "role": "list"
+                          },
+                          "children": [
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "zuma san diego",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "the lobby bar",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "the lobby terrace",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "pool lounge",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "in-room dining",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "footer-links_column"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "header",
+                          "classes": [
+                            "footer-links_column-header"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "classes": [
+                                "footer-links_column-heading",
+                                "text-style-eyebrow-caps"
+                              ],
+                              "attributes": {},
+                              "text": "social",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "ul",
+                          "classes": [
+                            "footer-links_list"
+                          ],
+                          "attributes": {
+                            "role": "list"
+                          },
+                          "children": [
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "instagram",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "facebook",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "tiktok",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "footer-links_column"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "header",
+                          "classes": [
+                            "footer-links_column-header"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "classes": [
+                                "footer-links_column-heading",
+                                "text-style-eyebrow-caps"
+                              ],
+                              "attributes": {},
+                              "text": "links",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "ul",
+                          "classes": [
+                            "footer-links_list"
+                          ],
+                          "attributes": {
+                            "role": "list"
+                          },
+                          "children": [
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "privacy policy",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "text": "accessibility",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "footer-links_list-item"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "footer-links_link",
+                                    "text-style-caption"
+                                  ],
+                                  "attributes": {
+                                    "href": "/guidelines"
+                                  },
+                                  "text": "photoshoot guidelines",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "classes": [
+                    "footer-links_bottom"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "footer-links_legal"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "p",
+                          "classes": [
+                            "footer-links_text",
+                            "text-style-legal"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "#text",
+                              "text": "copyright © "
+                            },
+                            {
+                              "tag": "span",
+                              "classes": [],
+                              "attributes": {
+                                "data-current-year": ""
+                              },
+                              "text": "2026",
+                              "children": []
+                            },
+                            {
+                              "tag": "#text",
+                              "text": " the guild hotel"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "figure",
+                      "classes": [
+                        "footer-links_logo"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "img",
+                          "classes": [
+                            "footer-links_logo-image"
+                          ],
+                          "attributes": {
+                            "src": "figma/vectors/group-270990038-152x31-250-2123.svg",
+                            "alt": "Tribute Portfolio",
+                            "loading": "lazy",
+                            "width": "153",
+                            "height": "32"
+                          },
+                          "assetSlot": "logo",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "footer-links_credit"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "p",
+                          "classes": [
+                            "footer-links_text",
+                            "text-style-legal"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "#text",
+                              "text": "brand & website by "
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "footer-links_credit-link"
+                              ],
+                              "attributes": {
+                                "href": "#",
+                                "target": "_blank",
+                                "rel": "noopener"
+                              },
+                              "text": "Studio circa",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": null,
+      "name": "base",
+      "on": "section_footer-links",
+      "styleDeltas": {},
+      "crop": "figma/pages/home/sections/19-the-hotel/section.webp"
+    }
+  ],
+  "props": [],
+  "assets": [
+    {
+      "slot": "background",
+      "figmaImageRef": "27078587832153ecb831134d89bff71b2b68f548",
+      "webflowAssetId": "6ad66fef6684c3e22ea4dc76",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66fef6684c3e22ea4dc76_27078587832153ecb831134d89bff71b2b68f548.jpg",
+      "local": "assets/images/27078587832153ecb831134d89bff71b2b68f548.jpg",
+      "alt": "",
+      "note": "Decorative; empty alt. KTD10: place by hand in the Designer if MCP placement cannot see REST uploads."
+    },
+    {
+      "slot": "logo",
+      "figmaNodeId": "250:2123",
+      "webflowAssetId": null,
+      "webflowUrl": null,
+      "local": "figma/vectors/group-270990038-152x31-250-2123.svg",
+      "alt": "Tribute Portfolio",
+      "note": "Not uploaded yet (figma/assets.json webflowAssetId null). Upload before the build or use an inline SVG embed; see openQuestions."
+    }
+  ],
+  "instances": [
+    {
+      "page": "home",
+      "section": "home/19-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/home/sections/19-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "dining-collection",
+      "section": "dining-collection/13-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/dining-collection/sections/13-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "rooms-collection",
+      "section": "rooms-collection/12-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/rooms-collection/sections/12-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "wellness-collection",
+      "section": "wellness-collection/10-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/wellness-collection/sections/10-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "meetings-collection",
+      "section": "meetings-collection/13-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/meetings-collection/sections/13-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "history",
+      "section": "history/13-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/history/sections/13-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "guidelines",
+      "section": "guidelines/09-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/guidelines/sections/09-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "rooms-individual",
+      "section": "rooms-individual/15-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/rooms-individual/sections/15-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "press",
+      "section": "press/13-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/press/sections/13-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "gallery",
+      "section": "gallery/07-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/gallery/sections/07-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "arts",
+      "section": "arts/11-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/arts/sections/11-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "static-template",
+      "section": "static-template/03-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/static-template/sections/03-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "contact",
+      "section": "contact/07-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/contact/sections/07-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "neighborhood",
+      "section": "neighborhood/15-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/neighborhood/sections/15-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "dining-zuma",
+      "section": "dining-zuma/11-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/dining-zuma/sections/11-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "dining-gardenterrace",
+      "section": "dining-gardenterrace/10-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/dining-gardenterrace/sections/10-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "dining-lobbybar",
+      "section": "dining-lobbybar/10-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/dining-lobbybar/sections/10-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "dining-poollounge",
+      "section": "dining-poollounge/10-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/dining-poollounge/sections/10-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "legal",
+      "section": "legal/16-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/legal/sections/16-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "corporate",
+      "section": "corporate/16-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/corporate/sections/16-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "happenings-collection",
+      "section": "happenings-collection/12-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/happenings-collection/sections/12-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "blog-collection",
+      "section": "blog-collection/12-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/blog-collection/sections/12-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "happenings-indiv",
+      "section": "happenings-indiv/09-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/happenings-indiv/sections/09-the-hotel/section.webp",
+      "content": {}
+    },
+    {
+      "page": "blog-indiv",
+      "section": "blog-indiv/09-the-hotel",
+      "variant": "base",
+      "crop": "figma/pages/blog-indiv/sections/09-the-hotel/section.webp",
+      "content": {}
+    }
+  ],
+  "openQuestions": [
+    "Logo SVG (Tribute Portfolio, figma node 250:2123) has no Webflow asset id. Upload it with the asset pipeline before the Designer session, or place it as an inline SVG embed?",
+    "Link targets: only rooms, history, gallery, press, contact, wellness, dining, neighborhood, meetings and guidelines map to existing pages. amenities, services (x2), corporate, resortpass, packages, the four dining venues, in-room dining, privacy policy, accessibility and the three social URLs need hrefs (placeholders are '#'). CMS pages (dining venues, legal, corporate) arrive with Q027 to Q030.",
+    "'Studio circa' credit link URL is not in the design.",
+    "No mobile or tablet frames exist in the snapshot. Tablet (3 columns), mobile landscape (2 columns, stacked bottom row with logo first) and mobile portrait values are proposals; confirm or supply a mobile design.",
+    "Section element: plan uses <section role=\"contentinfo\"> to keep the section_ convention. A plain <footer> tag is the semantic alternative, but CLAUDE.md reserves <footer> for CTA wrappers and GSAP code targets the .footer class; confirm.",
+    "Container: the design runs edge to edge at 40px margins on a 1600 frame. The plan uses padding-global (2rem) with no container-large, so columns span the full width as in Figma. Adding container-large would cap content at 80rem and leave much wider margins at 1440."
+  ],
+  "deviations": [
+    "The brief lists optional element gatch-20 on dining-gardenterrace, dining-lobbybar and dining-poollounge. Spec inspection shows it belongs to Group 270990062 (an 'other dining options' slider with H2 heading, Gatch 20 body, #D9D9D9 placeholders and arrows) whose bbox overlaps the footer band (y 308 to 844 on a 700px footer, crop heights 844). It is not part of the footer: those three footers are identical to the other 21. No optional element is planned; the slider belongs to the dining venue page entries.",
+    "Background image: the Figma rectangle (1601x1678, scaleMode FILL on a 1667x2500 jpg) starts 978px above the footer and is shared with the book-your-escape section above it. The footer shows image rows 56% to 85%, reproduced with object-fit cover and object-position 50% 80% (exact at about 1500px wide, within a few percent at 1440 and 1600). If the design intends one continuous image across both sections, that is a page-level decision for the book-your-escape entry.",
+    "Overlay: the rectangle has a third fill the snapshot spec omits (read from figma/raw/file.json.gz): a black linear gradient at 65% layer opacity, transparent at the rectangle top to opaque at 67.6%. Over the footer band that is 56% black at the top rising to 65% at 22% down, then flat. The plan stacks it over the 20% black fill on footer-links_overlay.",
+    "Side margin is 2rem (padding-global) instead of the Figma 40px (2.5rem at 1600 wide).",
+    "Copyright year is wrapped in <span data-current-year> so the currentYear module keeps it current.",
+    "Section background-color var(--color-neutral-900) is a fallback under the image so text stays legible while it loads; not in Figma."
+  ]
+}
