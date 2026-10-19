@@ -1,0 +1,32 @@
+[
+  {
+    "id": "is-tall",
+    "variant": "is-tall",
+    "crop": "figma/pages/meetings-collection/sections/06-request-for-proposal/section.webp",
+    "section": "meetings-collection/06-request-for-proposal"
+  },
+  {
+    "id": "base",
+    "variant": "base",
+    "crop": "figma/pages/guidelines/sections/06-photoshoot-request/section.webp",
+    "section": "guidelines/06-photoshoot-request"
+  },
+  {
+    "id": "base-press",
+    "variant": "base",
+    "crop": "figma/pages/press/sections/08-press-enquiries/section.webp",
+    "section": "press/08-press-enquiries"
+  },
+  {
+    "id": "base-contact",
+    "variant": "base",
+    "crop": "figma/pages/contact/sections/01-contact-us/section.webp",
+    "section": "contact/01-contact-us"
+  },
+  {
+    "id": "base-legal",
+    "variant": "base",
+    "crop": "figma/pages/legal/sections/12-a-landmark-reimagined/section.webp",
+    "section": "legal/12-a-landmark-reimagined"
+  }
+]
