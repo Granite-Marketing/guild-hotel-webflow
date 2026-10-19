@@ -1,0 +1,1090 @@
+{
+  "entry": "Q012",
+  "component": "cta-booking-newsletter",
+  "buildOn": {
+    "page": "home",
+    "pageId": "6ad64060ae8eac6d7b7c4241",
+    "section": "home/18-book-your-escape"
+  },
+  "webflowComponent": {
+    "name": "CTA Booking Newsletter",
+    "props": "none: all 24 instances render identical content (brief: consider a component with no props)"
+  },
+  "reusedClasses": [
+    "padding-global",
+    "padding-section-large",
+    "heading-style-h1",
+    "text-weight-normal",
+    "button",
+    "w-form-done",
+    "w-form-fail"
+  ],
+  "familyClasses": [
+    {
+      "name": "section_cta-booking-newsletter",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "overflow": "hidden",
+          "background-color": "var(--color-neutral-900)",
+          "color": "var(--color-neutral-100)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_background",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "z-index": "0",
+          "margin": "0",
+          "overflow": "hidden"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_background-image",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "100%",
+          "height": "100%",
+          "object-fit": "cover",
+          "object-position": "50% 25%"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_overlay",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "z-index": "1",
+          "background-color": "rgba(0, 0, 0, 0.2)",
+          "background-image": "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.56) 100%)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_component",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "z-index": "2",
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+          "row-gap": "2.1875rem",
+          "padding-top": "6.75rem",
+          "padding-bottom": "6.0625rem"
+        },
+        "tablet": {
+          "padding-top": "3rem",
+          "padding-bottom": "3rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "1rem",
+          "padding-bottom": "1rem",
+          "row-gap": "3rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_columns",
+      "styles": {
+        "desktop": {
+          "display": "grid",
+          "grid-template-columns": "1fr 1px 1fr",
+          "align-items": "center",
+          "width": "100%",
+          "min-height": "26.625rem"
+        },
+        "tablet": {
+          "min-height": "22rem",
+          "column-gap": "2rem"
+        },
+        "mobileLandscape": {
+          "grid-template-columns": "1fr",
+          "row-gap": "3rem",
+          "min-height": "0",
+          "column-gap": "0"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_column",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+          "row-gap": "5.0625rem",
+          "text-align": "center"
+        },
+        "tablet": {
+          "row-gap": "3.5rem"
+        },
+        "mobileLandscape": {
+          "row-gap": "2.5rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_divider",
+      "styles": {
+        "desktop": {
+          "align-self": "stretch",
+          "width": "1px",
+          "background-color": "var(--color-neutral-100)"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "justify-self": "center",
+          "width": "6rem",
+          "height": "1px"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_header",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_actions",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "justify-content": "center",
+          "width": "100%"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_form-block",
+      "styles": {
+        "desktop": {
+          "width": "100%",
+          "max-width": "34.4375rem",
+          "margin-bottom": "0"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_form",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "align-items": "flex-end",
+          "column-gap": "1.25rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {
+          "column-gap": "0.75rem"
+        }
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_input",
+      "styles": {
+        "desktop": {
+          "flex": "1 1 auto",
+          "min-width": "0",
+          "height": "2.3125rem",
+          "margin-bottom": "0",
+          "padding": "0 0 0.5rem 0",
+          "border-style": "none none solid none",
+          "border-bottom-width": "1px",
+          "border-bottom-color": "var(--color-neutral-100)",
+          "border-radius": "0",
+          "background-color": "transparent",
+          "color": "var(--color-neutral-100)",
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1rem",
+          "line-height": "1",
+          "text-transform": "lowercase",
+          "::placeholder": {
+            "color": "var(--color-neutral-100)",
+            "opacity": "1"
+          }
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_form-message",
+      "styles": {
+        "desktop": {
+          "margin-top": "1rem",
+          "padding": "0.75rem 1rem",
+          "background-color": "transparent",
+          "border": "1px solid var(--color-neutral-100)",
+          "color": "var(--color-neutral-100)",
+          "font-family": "var(--font-style-heading)",
+          "font-size": "0.875rem",
+          "line-height": "1.2",
+          "text-align": "center",
+          "text-transform": "lowercase"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_brand",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+          "row-gap": "1.625rem",
+          "text-align": "center"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_logo-wrapper",
+      "styles": {
+        "desktop": {
+          "width": "10.4375rem",
+          "margin": "0"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {
+          "width": "8.5rem"
+        }
+      }
+    },
+    {
+      "name": "cta-booking-newsletter_logo",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "100%",
+          "height": "auto"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    }
+  ],
+  "proposedShared": [
+    {
+      "name": "is-chamfer",
+      "why": "Cream chamfered (octagonal) button used by this CTA and, from figma/vectors (vector-25-* shapes, 19 sizes), most buttons site-wide. Combo on the Relume `button` base.",
+      "on": "button",
+      "styles": {
+        "desktop": {
+          "display": "inline-flex",
+          "justify-content": "center",
+          "align-items": "center",
+          "min-height": "2.3125rem",
+          "padding": "0.5625rem 2.3125rem",
+          "border": "0",
+          "border-radius": "0",
+          "background-color": "var(--color-neutral-100)",
+          "color": "var(--color-brand-4a1217)",
+          "text-align": "center",
+          "text-decoration": "none",
+          "cursor": "pointer",
+          "clip-path": "polygon(0.6875rem 0, calc(100% - 0.6875rem) 0, 100% 32.35%, 100% 67.13%, calc(100% - 0.6875rem) 100%, 0.6875rem 100%, 0 67.13%, 0 32.35%)",
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1rem",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase",
+          "font-weight": "400"
+        }
+      }
+    },
+    {
+      "name": "is-wide",
+      "why": "Wider fixed-minimum button (book now is 214px against 144px for join us at the same padding). Combo on `button is-chamfer`.",
+      "on": "button is-chamfer",
+      "styles": {
+        "desktop": {
+          "min-width": "13.375rem"
+        }
+      }
+    },
+    {
+      "name": "text-style-caption",
+      "why": "Sackers 14/14/0.7 lowercase caption: 648 uses in figma/tokens.json textStyles; tokens mapping suggests this combo name.",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "0.875rem",
+          "line-height": "1",
+          "letter-spacing": "0.05em",
+          "text-transform": "lowercase",
+          "font-weight": "400"
+        }
+      }
+    }
+  ],
+  "variables": [
+    "color-neutral-100",
+    "color-neutral-900",
+    "color-brand-4a1217",
+    "font-style-heading"
+  ],
+  "tree": [
+    {
+      "tag": "section",
+      "classes": [
+        "section_cta-booking-newsletter"
+      ],
+      "attributes": {},
+      "children": [
+        {
+          "tag": "figure",
+          "classes": [
+            "cta-booking-newsletter_background"
+          ],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "img",
+              "classes": [
+                "cta-booking-newsletter_background-image"
+              ],
+              "attributes": {
+                "src": "assets/images/27078587832153ecb831134d89bff71b2b68f548.jpg",
+                "alt": "",
+                "loading": "lazy",
+                "sizes": "100vw"
+              },
+              "children": [],
+              "assetSlot": "background"
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "cta-booking-newsletter_overlay"
+          ],
+          "attributes": {
+            "aria-hidden": "true"
+          },
+          "children": []
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "padding-global",
+            "padding-section-large"
+          ],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "article",
+              "classes": [
+                "cta-booking-newsletter_component"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "cta-booking-newsletter_columns"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "cta-booking-newsletter_column"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "header",
+                          "classes": [
+                            "cta-booking-newsletter_header"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "classes": [
+                                "heading-style-h1",
+                                "text-weight-normal"
+                              ],
+                              "attributes": {},
+                              "children": [],
+                              "text": "Book your escape"
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "footer",
+                          "classes": [
+                            "cta-booking-newsletter_actions"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "button",
+                                "is-chamfer",
+                                "is-wide"
+                              ],
+                              "attributes": {
+                                "href": "#"
+                              },
+                              "children": [],
+                              "text": "book now"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "cta-booking-newsletter_divider"
+                      ],
+                      "attributes": {
+                        "aria-hidden": "true"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "cta-booking-newsletter_column"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "header",
+                          "classes": [
+                            "cta-booking-newsletter_header"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "classes": [
+                                "heading-style-h1",
+                                "text-weight-normal"
+                              ],
+                              "attributes": {},
+                              "children": [],
+                              "text": "Stay in the loop"
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "footer",
+                          "classes": [
+                            "cta-booking-newsletter_actions"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "div",
+                              "classes": [
+                                "cta-booking-newsletter_form-block"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "form",
+                                  "classes": [
+                                    "cta-booking-newsletter_form"
+                                  ],
+                                  "attributes": {
+                                    "name": "newsletter",
+                                    "data-name": "Newsletter",
+                                    "aria-label": "Newsletter sign-up",
+                                    "method": "get"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "input",
+                                      "classes": [
+                                        "cta-booking-newsletter_input"
+                                      ],
+                                      "attributes": {
+                                        "type": "email",
+                                        "name": "email",
+                                        "data-name": "Email",
+                                        "placeholder": "*Email",
+                                        "aria-label": "Email",
+                                        "required": "",
+                                        "maxlength": "256",
+                                        "autocomplete": "email"
+                                      },
+                                      "children": [],
+                                      "webflowElement": "FormTextInput"
+                                    },
+                                    {
+                                      "tag": "input",
+                                      "classes": [
+                                        "button",
+                                        "is-chamfer"
+                                      ],
+                                      "attributes": {
+                                        "type": "submit",
+                                        "value": "join us"
+                                      },
+                                      "children": [],
+                                      "webflowElement": "FormButton"
+                                    }
+                                  ],
+                                  "webflowElement": "FormForm"
+                                },
+                                {
+                                  "tag": "div",
+                                  "classes": [
+                                    "w-form-done",
+                                    "cta-booking-newsletter_form-message"
+                                  ],
+                                  "attributes": {
+                                    "role": "status"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "classes": [],
+                                      "attributes": {},
+                                      "children": [],
+                                      "text": "Thank you! Your submission has been received!"
+                                    }
+                                  ],
+                                  "webflowElement": "FormSuccessMessage"
+                                },
+                                {
+                                  "tag": "div",
+                                  "classes": [
+                                    "w-form-fail",
+                                    "cta-booking-newsletter_form-message"
+                                  ],
+                                  "attributes": {
+                                    "role": "alert"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "classes": [],
+                                      "attributes": {},
+                                      "children": [],
+                                      "text": "Oops! Something went wrong while submitting the form."
+                                    }
+                                  ],
+                                  "webflowElement": "FormErrorMessage"
+                                }
+                              ],
+                              "webflowElement": "FormBlock"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "classes": [
+                    "cta-booking-newsletter_brand"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "figure",
+                      "classes": [
+                        "cta-booking-newsletter_logo-wrapper"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "img",
+                          "classes": [
+                            "cta-booking-newsletter_logo"
+                          ],
+                          "attributes": {
+                            "src": "figma/brand/bonvoy.svg",
+                            "alt": "Marriott Bonvoy",
+                            "width": "167",
+                            "height": "49"
+                          },
+                          "children": [],
+                          "assetSlot": "bonvoy-logo"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "text-style-caption"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "p",
+                          "classes": [],
+                          "attributes": {},
+                          "children": [],
+                          "text": "Earn Marriott Bonvoy® Points on Every Stay"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [],
+  "props": [],
+  "assets": [
+    {
+      "slot": "background",
+      "figmaImageRef": "27078587832153ecb831134d89bff71b2b68f548",
+      "webflowAssetId": "6ad66fef6684c3e22ea4dc76",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66fef6684c3e22ea4dc76_27078587832153ecb831134d89bff71b2b68f548.jpg",
+      "local": "assets/images/27078587832153ecb831134d89bff71b2b68f548.jpg",
+      "alt": "",
+      "note": "Decorative background, alt empty. Placement is a manual Designer step (KTD10) unless the build session proves MCP placement."
+    },
+    {
+      "slot": "bonvoy-logo",
+      "figmaNodeId": "250:2045",
+      "webflowAssetId": null,
+      "local": "figma/brand/bonvoy.svg",
+      "alt": "Marriott Bonvoy",
+      "note": "Not uploaded yet (figma/assets.json brand.bonvoy webflowAssetId null). Upload figma/brand/bonvoy.svg before the build, or place it by hand."
+    }
+  ],
+  "instances": [
+    {
+      "page": "home",
+      "section": "home/18-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/home/sections/18-book-your-escape/section.webp"
+    },
+    {
+      "page": "dining-collection",
+      "section": "dining-collection/12-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/dining-collection/sections/12-book-your-escape/section.webp"
+    },
+    {
+      "page": "rooms-collection",
+      "section": "rooms-collection/11-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/rooms-collection/sections/11-book-your-escape/section.webp"
+    },
+    {
+      "page": "wellness-collection",
+      "section": "wellness-collection/09-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/wellness-collection/sections/09-book-your-escape/section.webp"
+    },
+    {
+      "page": "meetings-collection",
+      "section": "meetings-collection/12-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/meetings-collection/sections/12-book-your-escape/section.webp"
+    },
+    {
+      "page": "history",
+      "section": "history/12-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/history/sections/12-book-your-escape/section.webp"
+    },
+    {
+      "page": "guidelines",
+      "section": "guidelines/08-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/guidelines/sections/08-book-your-escape/section.webp"
+    },
+    {
+      "page": "rooms-individual",
+      "section": "rooms-individual/14-a-landmark-reimagined",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/rooms-individual/sections/14-a-landmark-reimagined/section.webp",
+      "note": "spec.json also lists 'A Landmark Reimagined' (Sackers 40/40) at y 182; it is not visible in the crop, so it is not built. See openQuestions."
+    },
+    {
+      "page": "press",
+      "section": "press/12-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/press/sections/12-book-your-escape/section.webp"
+    },
+    {
+      "page": "gallery",
+      "section": "gallery/06-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/gallery/sections/06-book-your-escape/section.webp"
+    },
+    {
+      "page": "arts",
+      "section": "arts/10-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/arts/sections/10-book-your-escape/section.webp"
+    },
+    {
+      "page": "static-template",
+      "section": "static-template/02-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/static-template/sections/02-book-your-escape/section.webp"
+    },
+    {
+      "page": "contact",
+      "section": "contact/06-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/contact/sections/06-book-your-escape/section.webp"
+    },
+    {
+      "page": "neighborhood",
+      "section": "neighborhood/14-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/neighborhood/sections/14-book-your-escape/section.webp"
+    },
+    {
+      "page": "dining-zuma",
+      "section": "dining-zuma/10-other-dining-options",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/dining-zuma/sections/10-other-dining-options/section.webp",
+      "note": "spec.json also lists 'other dining options', a Gatch 20/26 paragraph and three venue labels from Group 270990062; none is visible in the crop, so none is built. See openQuestions."
+    },
+    {
+      "page": "dining-gardenterrace",
+      "section": "dining-gardenterrace/09-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/dining-gardenterrace/sections/09-book-your-escape/section.webp"
+    },
+    {
+      "page": "dining-lobbybar",
+      "section": "dining-lobbybar/09-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/dining-lobbybar/sections/09-book-your-escape/section.webp"
+    },
+    {
+      "page": "dining-poollounge",
+      "section": "dining-poollounge/09-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/dining-poollounge/sections/09-book-your-escape/section.webp"
+    },
+    {
+      "page": "legal",
+      "section": "legal/15-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/legal/sections/15-book-your-escape/section.webp"
+    },
+    {
+      "page": "corporate",
+      "section": "corporate/15-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/corporate/sections/15-book-your-escape/section.webp"
+    },
+    {
+      "page": "happenings-collection",
+      "section": "happenings-collection/11-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/happenings-collection/sections/11-book-your-escape/section.webp"
+    },
+    {
+      "page": "blog-collection",
+      "section": "blog-collection/11-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/blog-collection/sections/11-book-your-escape/section.webp"
+    },
+    {
+      "page": "happenings-indiv",
+      "section": "happenings-indiv/08-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/happenings-indiv/sections/08-book-your-escape/section.webp"
+    },
+    {
+      "page": "blog-indiv",
+      "section": "blog-indiv/08-book-your-escape",
+      "variant": "base",
+      "content": {
+        "headingLeft": "Book your escape",
+        "buttonLeft": "book now",
+        "buttonLeftHref": "#",
+        "headingRight": "Stay in the loop",
+        "inputPlaceholder": "*Email",
+        "buttonRight": "join us",
+        "caption": "Earn Marriott Bonvoy® Points on Every Stay"
+      },
+      "crop": "figma/pages/blog-indiv/sections/08-book-your-escape/section.webp"
+    }
+  ],
+  "openQuestions": [
+    "Optional texts: the brief lists optional eyebrow-caps and gatch-20 elements and heading sizes h2-caps and sackers-40. They come from rooms-individual/14 ('A Landmark Reimagined') and dining-zuma/10 ('other dining options', a Gatch paragraph and venue labels), but none is visible in either crop; they look like layers hidden behind the full-bleed image or bleeding in from the section above. Cautious call: not built, all 24 instances are identical. If they should show, add an optional header row above the columns in a later entry.",
+    "Book now link: no booking engine URL in the snapshot. Plan uses href '#'; the build session or Stephen supplies the real URL (likely the Marriott booking link, opening in a new tab).",
+    "Newsletter form: no provider is named. Plan uses a native Webflow form (name 'newsletter', one required email field) with Webflow's default success and error copy. Confirm the provider (Webflow forms or an email platform embed) and the copy.",
+    "Bonvoy logo asset is not uploaded (webflowAssetId null). Upload figma/brand/bonvoy.svg first. Unknown whether the logo should link to Marriott Bonvoy.",
+    "No mobile frame exists in the snapshot (only 1600 desktop frames). Tablet and mobile styles are proposals: the columns stack below 768px and the vertical divider becomes a short horizontal rule.",
+    "Shared names is-chamfer, is-wide and text-style-caption are proposals; K01 should reconcile them with the button and caption names other wave 2 plans propose.",
+    "Image placement: the background image and logo need a manual Designer step under KTD10 unless the build session proves MCP placement works."
+  ],
+  "deviations": [
+    "No container-large inside padding-global: the two columns are centred on the quarter lines of the full 1600 frame (x 400 and 1200). A 80rem container would pull them inward to about 480 and 1120.",
+    "Button typography (CAPS-CAPTION-16) sits on the is-chamfer combo instead of a separate text-style-caps-caption-16 class, because a button carrying four stacked classes is fragile in Webflow.",
+    "Heading tags are h2 with heading-style-h1 styling: Morello 60/72 maps to heading-style-h1 in figma/tokens.json, but every page already has its own h1."
+  ]
+}
