@@ -1,0 +1,158 @@
+{
+  "entry": "Q024",
+  "component": "image-inset-single",
+  "buildOn": {
+    "page": "rooms-individual",
+    "pageId": "6ad66fd5f8bf4846e809dc45",
+    "section": "rooms-individual/04-section"
+  },
+  "reusedClasses": ["padding-global", "padding-section-small", "container-large"],
+  "familyClasses": [
+    {
+      "name": "section_image-inset-single",
+      "styles": {
+        "desktop": { "background-color": "var(--color-neutral-100)" },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-inset-single_figure",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "width": "100%",
+          "aspect-ratio": "1253 / 753",
+          "margin": "0",
+          "overflow": "hidden"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-inset-single_image",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "100%",
+          "height": "100%",
+          "object-fit": "cover"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    }
+  ],
+  "proposedShared": [],
+  "variables": ["color-neutral-100"],
+  "tree": [
+    {
+      "tag": "section",
+      "classes": ["section_image-inset-single"],
+      "attributes": {},
+      "children": [
+        {
+          "tag": "div",
+          "classes": ["padding-global", "padding-section-small"],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "div",
+              "classes": ["container-large"],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "figure",
+                  "classes": ["image-inset-single_figure"],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "img",
+                      "classes": ["image-inset-single_image"],
+                      "attributes": { "loading": "lazy", "alt": "{image alt}" },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": "is-small",
+      "on": "image-inset-single_figure",
+      "styleDeltas": {
+        "desktop": { "max-width": "46.5rem", "aspect-ratio": "744 / 524" },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "crop": "figma/pages/happenings-indiv/sections/03-section/section.webp"
+    }
+  ],
+  "props": [
+    { "name": "image", "type": "image", "element": "image-inset-single_image" },
+    { "name": "image alt", "type": "text", "element": "image-inset-single_image" }
+  ],
+  "assets": [
+    {
+      "slot": "image (rooms-individual/04-section)",
+      "webflowAssetId": "6ad67019735773f25340899e",
+      "local": "assets/images/d7332204a5bee888af6d6fe5adf267bebfab8918.png"
+    },
+    {
+      "slot": "image (arts/03-section)",
+      "webflowAssetId": "6ad66fff134731ad1b927c11",
+      "local": "assets/images/6f6117168648560af09fa8344fd7ec88a095e861.png"
+    }
+  ],
+  "instances": [
+    {
+      "page": "rooms-individual",
+      "section": "rooms-individual/04-section",
+      "variant": "base",
+      "content": { "image": "assets/images/d7332204a5bee888af6d6fe5adf267bebfab8918.png", "image alt": "A hand writing 'Welcome to the Guild Hotel' in pencil on a card" }
+    },
+    {
+      "page": "arts",
+      "section": "arts/03-section",
+      "variant": "base",
+      "content": { "image": "assets/images/6f6117168648560af09fa8344fd7ec88a095e861.png", "image alt": "Palm leaves in front of the Guild Hotel sign at night" }
+    },
+    {
+      "page": "happenings-indiv",
+      "section": "happenings-indiv/03-section",
+      "variant": "is-small",
+      "content": { "image": null, "image alt": null }
+    },
+    {
+      "page": "blog-indiv",
+      "section": "blog-indiv/03-section",
+      "variant": "is-small",
+      "content": { "image": null, "image alt": null }
+    }
+  ],
+  "openQuestions": [
+    "rooms-individual/04-section: the vision review tagged it video/media and the still looks like a video frame (pencil mid-stroke). Is this slot a background video? If yes, swap the img for the backgroundVideo module markup (div.bg-video[data-bg-video] with a poster img) inside the same figure; the figure class family does not change.",
+    "happenings-indiv/03-section and blog-indiv/03-section hold a #D9D9D9 placeholder rectangle, not an empty section. Which image fills it? C01 proposes no image field for cms-happenings-blog-indiv, so either add one (bind the image prop to it) or supply a static image.",
+    "rooms-individual is the rooms-collection template page. Should the base image bind to a per-room CMS image field, or stay the same static image on every room?",
+    "No mobile design exists. The plan keeps the desktop aspect ratios at every breakpoint (base is about 326 by 196 px at 390 wide). Confirm, or give a taller mobile ratio (for example 4 / 3).",
+    "Vertical spacing: Figma gaps around the section are 130/40 px (rooms-individual), 163/40 px (arts) and 150/202 px (happenings-indiv). The plan gives the section padding-section-small (3rem) and leaves the rest to the neighbours' padding; K01 should confirm once neighbouring plans fix their own padding."
+  ],
+  "deviations": [
+    "Brief variant `is-cream + is-no-image + is-regular` replaced by one modifier `is-small` on image-inset-single_figure. Reason: every instance, base included, sits on cream #F4EFDF, so is-cream changes nothing; the variant does have an image (a placeholder), so is-no-image is wrong; the shorter height follows from the narrower figure and its own aspect ratio, so is-regular is not needed.",
+    "Brief describes the base as a full-bleed background image. The crops show an inset image inside the container on a cream section, so the image is an img in a figure, not a section background.",
+    "The modifier sits on the figure, not on section_image-inset-single, because Webflow combo classes cannot style descendants. In the Webflow component, expose it as a component variant (base, small) that swaps the figure's combo class.",
+    "No image-inset-single_component wrapper and no header or footer wrappers: the component has no text or CTA, and the figure is the only child of the container.",
+    "Figma image width is 1253 px in a 1600 px frame (x 178); container-large gives 1280 px (x 160). The 27 px difference is accepted to stay on the shared container.",
+    "Section background is set explicitly to color-neutral-100 (#F4EFDF per figma/tokens.json; the Relume default for that variable is #F5F5F5 until Q001 syncs it)."
+  ]
+}
