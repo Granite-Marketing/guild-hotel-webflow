@@ -23,6 +23,7 @@
     "setup": "npx playwright install chromium",
     "build": "cross-env NODE_ENV=production node ./bin/build.js",
     "dev": "cross-env NODE_ENV=development node ./bin/build.js --watch",
+    "preview:fixtures": "esbuild tests/visual/fixtures/*.ts --bundle --outdir=tests/visual/fixtures --servedir=. --serve=3001",
     "watch": "cross-env NODE_ENV=development node ./bin/build.js --watch",
     "check": "tsc --noEmit",
     "typecheck": "tsc --noEmit",

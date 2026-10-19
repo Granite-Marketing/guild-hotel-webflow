@@ -32,3 +32,6 @@ Content/
 
 # Figma snapshot cache: full-page renders, step markers, call ledger (see figma/README.md)
 figma/.cache/
+
+# Fixture bundles built by the Playwright specs and preview:fixtures
+tests/visual/fixtures/*.js
