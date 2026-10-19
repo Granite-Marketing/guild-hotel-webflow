@@ -1,0 +1,639 @@
+{
+  "entry": "Q015",
+  "component": "faq-accordion",
+  "buildOn": {
+    "page": "home",
+    "pageId": "6ad64060ae8eac6d7b7c4241",
+    "section": "home/17-faqs"
+  },
+  "reusedClasses": [
+    "padding-global",
+    "padding-section-large",
+    "container-large",
+    "heading-style-h2",
+    "heading-style-h4",
+    "text-size-regular",
+    "text-size-medium",
+    "text-weight-normal"
+  ],
+  "familyClasses": [
+    {
+      "name": "section_faq-accordion",
+      "styles": {
+        "desktop": {
+          "background-color": "var(--color-neutral-100)",
+          "color": "var(--color-neutral-900)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "faq-accordion_component",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+          "padding-top": "5rem",
+          "padding-bottom": "7rem"
+        },
+        "tablet": {
+          "padding-top": "2.5rem",
+          "padding-bottom": "3.5rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "1.5rem",
+          "padding-bottom": "1.5rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "faq-accordion_header",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+          "row-gap": "1.25rem",
+          "margin-bottom": "5rem",
+          "text-align": "center"
+        },
+        "tablet": {
+          "margin-bottom": "3.5rem"
+        },
+        "mobileLandscape": {
+          "row-gap": "1rem",
+          "margin-bottom": "2.5rem"
+        },
+        "mobilePortrait": {
+          "margin-bottom": "2rem"
+        }
+      }
+    },
+    {
+      "name": "faq-accordion_list",
+      "styles": {
+        "desktop": {
+          "width": "100%",
+          "max-width": "59.75rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    }
+  ],
+  "proposedShared": [
+    {
+      "name": "text-style-eyebrow-caps",
+      "why": "EYEBROW-CAPS is the most used Figma text style (393 uses); tokens.json already proposes this combo on text-size-regular",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1.125rem",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase"
+        }
+      }
+    },
+    {
+      "name": "accordion_item",
+      "why": "Runtime contract of src/utils/accordion.ts (docs/reference/component-patterns.md, Accordion contract); any future accordion reuses it",
+      "styles": {
+        "desktop": {
+          "border-bottom": "1px solid color-mix(in srgb, var(--color-neutral-900) 30%, transparent)"
+        }
+      }
+    },
+    {
+      "name": "accordion_header",
+      "why": "Click target the accordion module binds to (.accordion_header); module toggles is-active and aria-expanded on it",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "width": "100%",
+          "justify-content": "space-between",
+          "align-items": "center",
+          "column-gap": "2rem",
+          "padding-top": "2.625rem",
+          "padding-right": "0rem",
+          "padding-bottom": "0.625rem",
+          "padding-left": "0rem",
+          "border-top-width": "0px",
+          "border-right-width": "0px",
+          "border-bottom-width": "0px",
+          "border-left-width": "0px",
+          "background-color": "transparent",
+          "color": "inherit",
+          "text-align": "left",
+          "cursor": "pointer"
+        },
+        "mobileLandscape": {
+          "column-gap": "1rem",
+          "padding-top": "1.75rem"
+        }
+      }
+    },
+    {
+      "name": "accordion_question",
+      "why": "Question text inside the trigger; carries heading-style-h4 so the trigger can stay a native button",
+      "styles": {
+        "desktop": {
+          "flex-grow": "1"
+        }
+      }
+    },
+    {
+      "name": "accordion_icon",
+      "why": "Chevron wrapper (figure-style wrapper for the inline SVG); rotates with the header state",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "width": "1.5rem",
+          "height": "1.5rem",
+          "flex-shrink": "0",
+          "transform": "rotate(180deg)",
+          "transition": "transform 300ms ease"
+        }
+      },
+      "states": {
+        "accordion_header.is-active": {
+          "transform": "rotate(0deg)"
+        }
+      }
+    },
+    {
+      "name": "accordion_content-wrapper",
+      "why": "Next sibling of the header; the module animates its max-height",
+      "styles": {
+        "desktop": {
+          "overflow": "hidden",
+          "transition": "max-height 400ms ease"
+        }
+      }
+    },
+    {
+      "name": "accordion_content",
+      "why": "Inner content the module measures (offsetHeight) for the open height",
+      "styles": {
+        "desktop": {
+          "padding-top": "0.9375rem",
+          "padding-bottom": "2.75rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "0.75rem",
+          "padding-bottom": "1.75rem"
+        }
+      }
+    }
+  ],
+  "variables": [
+    "color-neutral-100",
+    "color-neutral-900",
+    "font-style-heading",
+    "font-style-body"
+  ],
+  "tree": [
+    {
+      "tag": "section",
+      "classes": [
+        "section_faq-accordion"
+      ],
+      "attributes": {},
+      "children": [
+        {
+          "tag": "div",
+          "classes": [
+            "padding-global",
+            "padding-section-large"
+          ],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "container-large"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "article",
+                  "classes": [
+                    "faq-accordion_component"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "header",
+                      "classes": [
+                        "faq-accordion_header"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "text-size-regular",
+                            "text-weight-normal",
+                            "text-style-eyebrow-caps"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "p",
+                              "classes": [],
+                              "attributes": {},
+                              "text": "faqs",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "h2",
+                          "classes": [
+                            "heading-style-h2",
+                            "text-weight-normal"
+                          ],
+                          "attributes": {
+                            "aria-label": "Your questions, answered"
+                          },
+                          "text": "your questions, answered",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "faq-accordion_list"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "accordion_item"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "button",
+                              "classes": [
+                                "accordion_header"
+                              ],
+                              "attributes": {
+                                "type": "button"
+                              },
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "classes": [
+                                    "accordion_question",
+                                    "heading-style-h4",
+                                    "text-weight-normal"
+                                  ],
+                                  "attributes": {},
+                                  "text": "{question}",
+                                  "children": []
+                                },
+                                {
+                                  "tag": "div",
+                                  "classes": [
+                                    "accordion_icon"
+                                  ],
+                                  "attributes": {
+                                    "aria-hidden": "true"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "embed",
+                                      "classes": [],
+                                      "attributes": {},
+                                      "html": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4.5 15 12 7.5 19.5 15\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "classes": [
+                                "accordion_content-wrapper"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "classes": [
+                                    "accordion_content",
+                                    "text-size-medium",
+                                    "text-weight-normal"
+                                  ],
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "tag": "p",
+                                      "classes": [],
+                                      "attributes": {},
+                                      "text": "{answer}",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "repeat": 6
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": null,
+      "name": "base",
+      "on": "section_faq-accordion",
+      "styleDeltas": {},
+      "crop": "figma/pages/home/sections/17-faqs/section.webp"
+    }
+  ],
+  "props": [],
+  "assets": [],
+  "instances": [
+    {
+      "page": "home",
+      "pageId": "6ad64060ae8eac6d7b7c4241",
+      "section": "home/17-faqs",
+      "variant": "base",
+      "content": {},
+      "referenceHeightPx": 1195
+    },
+    {
+      "page": "dining-collection",
+      "pageId": "6ad66fd476d24ed37ac4c5cb",
+      "section": "dining-collection/10-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195
+    },
+    {
+      "page": "rooms-collection",
+      "pageId": "6ad66fd5f8bf4846e809dbee",
+      "section": "rooms-collection/10-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195
+    },
+    {
+      "page": "wellness-collection",
+      "pageId": "6ad66fd7735773f253406791",
+      "section": "wellness-collection/08-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195
+    },
+    {
+      "page": "meetings-collection",
+      "pageId": "6ad66fd96684c3e22ea4d417",
+      "section": "meetings-collection/11-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195
+    },
+    {
+      "page": "history",
+      "pageId": "6ad66fd276d24ed37ac4c52f",
+      "section": "history/10-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195
+    },
+    {
+      "page": "guidelines",
+      "pageId": "6ad66fd44c7f57894534ada5",
+      "section": "guidelines/07-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195
+    },
+    {
+      "page": "rooms-individual",
+      "pageId": "6ad66fd5f8bf4846e809dc45",
+      "section": "rooms-individual/13-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195
+    },
+    {
+      "page": "press",
+      "pageId": "6ad66fd5735773f253406642",
+      "section": "press/11-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195
+    },
+    {
+      "page": "gallery",
+      "pageId": "6ad66fd65794075272b95584",
+      "section": "gallery/05-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1135
+    },
+    {
+      "page": "arts",
+      "pageId": "6ad66fd7ba96f2e53726a2eb",
+      "section": "arts/09-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1068
+    },
+    {
+      "page": "contact",
+      "pageId": "6ad66fd8e0b7968459e18f22",
+      "section": "contact/04-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1135
+    },
+    {
+      "page": "neighborhood",
+      "pageId": "6ad66fdb02cc199b55b926ba",
+      "section": "neighborhood/13-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195
+    },
+    {
+      "page": "dining-zuma",
+      "pageId": null,
+      "section": "dining-zuma/09-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195,
+      "note": "CMS template page, created in Q027 to Q030"
+    },
+    {
+      "page": "dining-gardenterrace",
+      "pageId": null,
+      "section": "dining-gardenterrace/08-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195,
+      "note": "CMS template page, created in Q027 to Q030"
+    },
+    {
+      "page": "dining-lobbybar",
+      "pageId": null,
+      "section": "dining-lobbybar/08-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195,
+      "note": "CMS template page, created in Q027 to Q030"
+    },
+    {
+      "page": "dining-poollounge",
+      "pageId": null,
+      "section": "dining-poollounge/08-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195,
+      "note": "CMS template page, created in Q027 to Q030"
+    },
+    {
+      "page": "legal",
+      "pageId": null,
+      "section": "legal/14-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195,
+      "note": "CMS template page, created in Q027 to Q030"
+    },
+    {
+      "page": "corporate",
+      "pageId": null,
+      "section": "corporate/14-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195,
+      "note": "CMS template page, created in Q027 to Q030"
+    },
+    {
+      "page": "happenings-collection",
+      "pageId": null,
+      "section": "happenings-collection/10-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195,
+      "note": "CMS template page, created in Q027 to Q030"
+    },
+    {
+      "page": "blog-collection",
+      "pageId": null,
+      "section": "blog-collection/10-faqs",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/17-faqs"
+      },
+      "referenceHeightPx": 1195,
+      "note": "CMS template page, created in Q027 to Q030"
+    }
+  ],
+  "content": {
+    "eyebrow": "faqs",
+    "heading": "your questions, answered",
+    "items": [
+      {
+        "question": "How many guests can stay in this room?",
+        "answer": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort.",
+        "openInDesign": true
+      },
+      {
+        "question": "Can I request a crib or an extra bed?",
+        "answer": null
+      },
+      {
+        "question": "Are connecting rooms available?",
+        "answer": null
+      },
+      {
+        "question": "Is an accessible version of this room available?",
+        "answer": null
+      },
+      {
+        "question": "Will my room look exactly like the photos?",
+        "answer": null
+      },
+      {
+        "question": "What amenities are included with my stay?",
+        "answer": null
+      }
+    ]
+  },
+  "openQuestions": [
+    "First item open on load: the crop shows item 1 open, but src/utils/accordion.ts collapses every item on init, and a header pre-marked is-active stays is-active with aria-expanded true while its content is collapsed (checked by running the module on preview.html). Proposal: a small module change (separate code entry) that opens a header carrying data-accordion-open on load. Until then all items start closed and the Designer must not pre-set is-active.",
+    "Chevron rotation needs the selector .accordion_header.is-active .accordion_icon, which the Designer cannot author. Proposal: add that one rule to site custom code (head) as part of the Q015 build, or have the module also toggle is-active on the item so K01 can choose one approach for every accordion.",
+    "Trigger element: plan uses a native button (custom element tag button, type=button) so Enter and Space work without module changes (verified). If element_builder cannot create a button with children, fall back to a Link Block with href=# (the module calls preventDefault); do not use a plain div, it is not keyboard reachable.",
+    "Copy: all 21 instances carry the same room-specific placeholder questions (rooms page copy on home, legal, press and so on), and only item 1 has an answer in Figma. Plan builds one Webflow component with no props and reuses item 1 answer as a placeholder for items 2 to 6. If per-page FAQs are expected later, the component needs props or a FAQ CMS collection; cms-proposal.md treats FAQ as static.",
+    "Section spacing: the bottom gap is about 227px on every instance; the top gap varies with the band crop (194, 134, 67px). Plan uses padding-section-large plus 5rem top and 7rem bottom on faq-accordion_component (12rem and 14rem total at desktop). K01 may prefer a shared padding-section-xlarge instead of component padding.",
+    "No mobile Figma frame exists; tablet and mobile values are derived. heading-style-h4 at 1.5rem wraps questions to 2 or 3 lines at 390px; Q001 owns the responsive heading scale, so check it there.",
+    "Divider colour: the crop shows a muted line, about 30% of #262118 on cream. Plan uses color-mix(in srgb, var(--color-neutral-900) 30%, transparent). If Webflow will not take color-mix on a border, K01 should add a variable (blended solid #B6B1A3) rather than hard-code rgba.",
+    "Mobile answer size: text-size-medium stays 1.25rem at 390px, larger than the wrapped questions. Q001 should scale text-size-medium down at mobile (1rem to 1.125rem)."
+  ],
+  "deviations": [
+    "Question text is a div with heading-style-h4 inside the button, not an h3 in a header wrapper: a button cannot contain a heading, and the module needs the trigger to be the direct previous sibling of the content wrapper.",
+    "Chevron is an inline SVG embed using currentColor (redrawn as a stroked path from figma/vectors/frame-24x24-236-8173.svg) instead of an uploaded asset: the vector has no Webflow asset id and an embed follows the text colour.",
+    "accordion_* classes are proposed shared, not faq-accordion_*: their names are fixed by the accordion runtime module contract."
+  ]
+}
