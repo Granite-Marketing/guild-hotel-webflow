@@ -1,0 +1,819 @@
+{
+  "entry": "Q025",
+  "component": "article-card-staggered",
+  "buildOn": {
+    "page": "neighborhood",
+    "pageId": "6ad66fdb02cc199b55b926ba",
+    "section": "neighborhood/09-dining-around-the-guild"
+  },
+  "reusedClasses": [
+    "padding-global",
+    "padding-section-small",
+    "container-large",
+    "heading-style-h3",
+    "heading-style-h4",
+    "text-weight-normal",
+    "text-size-medium",
+    "u-image"
+  ],
+  "reusedStyles": {
+    "_note": "Preview only. Values from figma/tokens.json mapping and docs/reference/breakpoints.md; the live values come from Q001 and are not rewritten by this entry.",
+    "padding-global": {
+      "desktop": {
+        "padding-left": "2rem",
+        "padding-right": "2rem"
+      }
+    },
+    "padding-section-small": {
+      "desktop": {
+        "padding-top": "3rem",
+        "padding-bottom": "3rem"
+      },
+      "tablet": {
+        "padding-top": "2rem",
+        "padding-bottom": "2rem"
+      },
+      "mobileLandscape": {
+        "padding-top": "1.5rem",
+        "padding-bottom": "1.5rem"
+      },
+      "mobilePortrait": {
+        "padding-top": "1rem",
+        "padding-bottom": "1rem"
+      }
+    },
+    "container-large": {
+      "desktop": {
+        "width": "100%",
+        "max-width": "80rem",
+        "margin-left": "auto",
+        "margin-right": "auto"
+      }
+    },
+    "heading-style-h3": {
+      "desktop": {
+        "font-family": "var(--font-style-heading)",
+        "font-size": "1.875rem",
+        "line-height": "1",
+        "letter-spacing": "-0.05em",
+        "margin-top": "0",
+        "margin-bottom": "0"
+      }
+    },
+    "heading-style-h4": {
+      "desktop": {
+        "font-family": "var(--font-style-heading)",
+        "font-size": "1.5rem",
+        "line-height": "1.2",
+        "letter-spacing": "0em",
+        "text-transform": "lowercase",
+        "margin-top": "0",
+        "margin-bottom": "0"
+      }
+    },
+    "text-weight-normal": {
+      "desktop": {
+        "font-weight": "400"
+      }
+    },
+    "text-size-medium": {
+      "desktop": {
+        "font-family": "var(--font-style-body)",
+        "font-size": "1.25rem",
+        "line-height": "1.3"
+      }
+    },
+    "u-image": {
+      "desktop": {
+        "display": "block",
+        "width": "100%",
+        "height": "100%",
+        "object-fit": "cover"
+      }
+    }
+  },
+  "familyClasses": [
+    {
+      "name": "section_article-card-staggered",
+      "styles": {
+        "desktop": {
+          "background-color": "var(--color-neutral-100)",
+          "color": "var(--color-accent)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "article-card-staggered_component",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "stretch",
+          "row-gap": "2rem",
+          "width": "100%",
+          "max-width": "46.5rem",
+          "margin-right": "auto",
+          "margin-left": "4.5rem"
+        },
+        "tablet": {
+          "max-width": "40rem",
+          "margin-left": "2rem"
+        },
+        "mobileLandscape": {
+          "max-width": "none",
+          "row-gap": "1.5rem",
+          "margin-left": "0",
+          "padding-top": "1rem",
+          "padding-bottom": "1rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "article-card-staggered_header",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "2rem",
+          "margin-top": "0",
+          "margin-bottom": "0",
+          "padding-top": "4.5rem"
+        },
+        "tablet": {
+          "padding-top": "3rem"
+        },
+        "mobileLandscape": {
+          "row-gap": "1.25rem",
+          "padding-top": "1.5rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "article-card-staggered_intro",
+      "styles": {
+        "desktop": {
+          "max-width": "30.5rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "max-width": "none"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "article-card-staggered_list",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "6.25rem"
+        },
+        "tablet": {
+          "row-gap": "5rem"
+        },
+        "mobileLandscape": {
+          "row-gap": "3.5rem"
+        },
+        "mobilePortrait": {
+          "row-gap": "3rem"
+        }
+      }
+    },
+    {
+      "name": "article-card-staggered_item",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "1.5rem",
+          "margin-top": "0",
+          "margin-bottom": "0"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "row-gap": "1.25rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "article-card-staggered_figure",
+      "styles": {
+        "desktop": {
+          "width": "100%",
+          "aspect-ratio": "744 / 524",
+          "overflow": "hidden",
+          "background-color": "#d9d9d9",
+          "margin-top": "0",
+          "margin-bottom": "0",
+          "margin-left": "0",
+          "margin-right": "0"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "article-card-staggered_content",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "1rem",
+          "margin-top": "0",
+          "margin-bottom": "0"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "row-gap": "0.75rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "article-card-staggered_text",
+      "styles": {
+        "desktop": {
+          "max-width": "40.5rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "max-width": "none"
+        },
+        "mobilePortrait": {}
+      }
+    }
+  ],
+  "proposedShared": [
+    {
+      "name": "text-style-eyebrow-caps",
+      "why": "Figma EYEBROW-CAPS (393 uses site-wide); figma/tokens.json suggests this combo name. Applied standalone here so it is reusable; K01 decides standalone versus combo on text-size-regular.",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-weight": "400",
+          "font-size": "1.125rem",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase",
+          "margin-top": "0",
+          "margin-bottom": "0"
+        }
+      }
+    },
+    {
+      "name": "text-style-caps-caption-16",
+      "why": "Figma CAPS-CAPTION-16 (242 uses site-wide); figma/tokens.json suggests this combo name. Applied standalone for the same reason.",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-weight": "400",
+          "font-size": "1rem",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase",
+          "margin-top": "0",
+          "margin-bottom": "0"
+        }
+      }
+    }
+  ],
+  "variables": [
+    "color-neutral-100",
+    "color-accent",
+    "font-style-heading",
+    "font-style-body"
+  ],
+  "variableValues": {
+    "_note": "Preview only, from figma/tokens.json mapping (D01 confirms color-accent #29310C). #D9D9D9 is the Figma image placeholder with no variable.",
+    "color-neutral-100": "#F4EFDF",
+    "color-accent": "#29310C",
+    "font-style-heading": "'Sackers Heavy Gothic', 'Copperplate', 'Copperplate Gothic Light', 'Times New Roman', serif",
+    "font-style-body": "'Gatch Test', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif"
+  },
+  "tree": [
+    {
+      "tag": "section",
+      "classes": [
+        "section_article-card-staggered"
+      ],
+      "attributes": {},
+      "children": [
+        {
+          "tag": "div",
+          "classes": [
+            "padding-global",
+            "padding-section-small"
+          ],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "container-large"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "article",
+                  "classes": [
+                    "article-card-staggered_component"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "header",
+                      "classes": [
+                        "article-card-staggered_header"
+                      ],
+                      "attributes": {},
+                      "optional": "showHeader",
+                      "children": [
+                        {
+                          "tag": "h2",
+                          "classes": [
+                            "heading-style-h4",
+                            "text-weight-normal"
+                          ],
+                          "attributes": {},
+                          "prop": "heading",
+                          "headingClassProp": "headingStyle",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "article-card-staggered_intro",
+                            "text-size-medium"
+                          ],
+                          "attributes": {},
+                          "optional": "intro",
+                          "children": [
+                            {
+                              "tag": "p",
+                              "classes": [],
+                              "attributes": {},
+                              "prop": "intro",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "article-card-staggered_list"
+                      ],
+                      "attributes": {},
+                      "slot": "items",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "article-card-staggered_item"
+                          ],
+                          "attributes": {},
+                          "repeat": "items",
+                          "children": [
+                            {
+                              "tag": "figure",
+                              "classes": [
+                                "article-card-staggered_figure"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "img",
+                                  "classes": [
+                                    "u-image"
+                                  ],
+                                  "attributes": {
+                                    "loading": "lazy",
+                                    "alt": ""
+                                  },
+                                  "prop": "image",
+                                  "optional": "image",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "header",
+                              "classes": [
+                                "article-card-staggered_content"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "h3",
+                                  "classes": [
+                                    "text-style-eyebrow-caps"
+                                  ],
+                                  "attributes": {},
+                                  "prop": "eyebrow",
+                                  "optional": "eyebrow",
+                                  "children": []
+                                },
+                                {
+                                  "tag": "h3",
+                                  "classes": [
+                                    "text-style-caps-caption-16"
+                                  ],
+                                  "attributes": {},
+                                  "prop": "caption",
+                                  "optional": "caption",
+                                  "children": []
+                                },
+                                {
+                                  "tag": "div",
+                                  "classes": [
+                                    "article-card-staggered_text",
+                                    "text-size-medium"
+                                  ],
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "tag": "p",
+                                      "classes": [],
+                                      "attributes": {},
+                                      "prop": "text",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": "is-right",
+      "on": "article-card-staggered_component",
+      "styleDeltas": {
+        "desktop": {
+          "margin-left": "auto",
+          "margin-right": "0"
+        },
+        "mobileLandscape": {
+          "margin-left": "0"
+        }
+      },
+      "crop": "figma/pages/happenings-collection/sections/04-the-best-san-diego-hotels-for/section.webp"
+    },
+    {
+      "modifier": "is-tall",
+      "on": "article-card-staggered_component",
+      "styleDeltas": {
+        "desktop": {
+          "display": "grid",
+          "grid-template-columns": "minmax(0, 1fr) 30.25rem",
+          "column-gap": "4rem",
+          "align-items": "start",
+          "max-width": "none",
+          "margin-right": "0",
+          "padding-top": "4rem",
+          "padding-bottom": "4rem",
+          "margin-left": "0"
+        },
+        "tablet": {
+          "grid-template-columns": "minmax(0, 1fr) 24rem",
+          "column-gap": "3rem",
+          "padding-top": "3rem",
+          "padding-bottom": "3rem",
+          "margin-left": "0"
+        },
+        "mobileLandscape": {
+          "display": "flex",
+          "row-gap": "3rem",
+          "padding-top": "2rem",
+          "padding-bottom": "2rem"
+        },
+        "mobilePortrait": {
+          "row-gap": "2.5rem"
+        }
+      },
+      "crop": "figma/pages/neighborhood/sections/09-dining-around-the-guild/section.webp"
+    },
+    {
+      "modifier": "is-tall",
+      "on": "article-card-staggered_header",
+      "styleDeltas": {
+        "desktop": {
+          "padding-top": "2.625rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "0"
+        }
+      },
+      "crop": "figma/pages/neighborhood/sections/09-dining-around-the-guild/section.webp"
+    },
+    {
+      "modifier": "is-tall",
+      "on": "article-card-staggered_list",
+      "styleDeltas": {
+        "desktop": {
+          "row-gap": "5rem"
+        },
+        "tablet": {
+          "row-gap": "4rem"
+        },
+        "mobileLandscape": {
+          "row-gap": "3.5rem"
+        },
+        "mobilePortrait": {
+          "row-gap": "3rem"
+        }
+      },
+      "crop": "figma/pages/neighborhood/sections/09-dining-around-the-guild/section.webp"
+    },
+    {
+      "modifier": "is-tall",
+      "on": "article-card-staggered_item",
+      "styleDeltas": {
+        "desktop": {
+          "row-gap": "2rem"
+        },
+        "mobileLandscape": {
+          "row-gap": "1.25rem"
+        }
+      },
+      "crop": "figma/pages/neighborhood/sections/09-dining-around-the-guild/section.webp"
+    },
+    {
+      "modifier": "is-tall",
+      "on": "article-card-staggered_figure",
+      "styleDeltas": {
+        "desktop": {
+          "aspect-ratio": "1 / 1"
+        }
+      },
+      "crop": "figma/pages/neighborhood/sections/09-dining-around-the-guild/section.webp"
+    },
+    {
+      "modifier": "is-tall",
+      "on": "article-card-staggered_text",
+      "styleDeltas": {
+        "desktop": {
+          "max-width": "none"
+        }
+      },
+      "crop": "figma/pages/neighborhood/sections/09-dining-around-the-guild/section.webp"
+    }
+  ],
+  "props": [
+    {
+      "name": "showHeader",
+      "type": "visibility",
+      "element": "article-card-staggered_header",
+      "default": false
+    },
+    {
+      "name": "heading",
+      "type": "text",
+      "element": "article-card-staggered_header h2",
+      "default": "dining around the guild"
+    },
+    {
+      "name": "headingStyle",
+      "type": "class",
+      "element": "article-card-staggered_header h2",
+      "default": "heading-style-h4",
+      "note": "heading-style-h4 (H4-CAPS) or heading-style-h3 (H3-CAPS). Not a Webflow prop type: see open question 3."
+    },
+    {
+      "name": "intro",
+      "type": "text",
+      "element": "article-card-staggered_intro p",
+      "default": ""
+    },
+    {
+      "name": "showIntro",
+      "type": "visibility",
+      "element": "article-card-staggered_intro",
+      "default": false
+    },
+    {
+      "name": "items",
+      "type": "slot",
+      "element": "article-card-staggered_list",
+      "note": "Holds article-card-staggered_item blocks, or a Collection List on CMS pages. See open question 1."
+    },
+    {
+      "name": "image",
+      "type": "image",
+      "element": "article-card-staggered_figure img",
+      "scope": "item"
+    },
+    {
+      "name": "eyebrow",
+      "type": "text",
+      "element": "text-style-eyebrow-caps",
+      "scope": "item",
+      "note": "Visibility bound to non-empty."
+    },
+    {
+      "name": "caption",
+      "type": "text",
+      "element": "text-style-caps-caption-16",
+      "scope": "item",
+      "note": "Visibility bound to non-empty."
+    },
+    {
+      "name": "text",
+      "type": "text",
+      "element": "article-card-staggered_text p",
+      "scope": "item"
+    }
+  ],
+  "assets": [
+    {
+      "slot": "article-card-staggered_figure img",
+      "webflowAssetId": null,
+      "local": null,
+      "note": "Every card image in the Figma file is a #D9D9D9 placeholder rectangle (spec images: []). No asset exists in figma/assets.json or assets/asset-manifest.json. The figure keeps a #d9d9d9 fill until real images arrive (CMS image field on collection pages, manual upload on neighborhood)."
+    }
+  ],
+  "instances": [
+    {
+      "page": "neighborhood",
+      "section": "neighborhood/09-dining-around-the-guild",
+      "variant": "is-tall",
+      "crop": "figma/pages/neighborhood/sections/09-dining-around-the-guild/section.webp",
+      "content": {
+        "showHeader": true,
+        "heading": "dining around the guild",
+        "headingStyle": "heading-style-h4",
+        "intro": "In hac habitasse platea dictumst. Etiam dapibus augue tortor. In hac habitasse platea dictumst. Etiam dapibus augue tortor",
+        "items": [
+          {
+            "caption": "dining 1",
+            "text": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis morbi ullamcorper rutrum varius"
+          },
+          {
+            "caption": "dining 2",
+            "text": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis morbi ullamcorper rutrum varius"
+          },
+          {
+            "caption": "dining 2",
+            "text": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis morbi ullamcorper rutrum varius"
+          }
+        ]
+      }
+    },
+    {
+      "page": "happenings-collection",
+      "section": "happenings-collection/03-the-best-san-diego-hotels-for",
+      "variant": "base",
+      "crop": "figma/pages/happenings-collection/sections/03-the-best-san-diego-hotels-for/section.webp",
+      "content": {
+        "showHeader": false,
+        "items": [
+          {
+            "eyebrow": "The best San Diego hotels for every kind of traveler",
+            "text": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio."
+          }
+        ]
+      }
+    },
+    {
+      "page": "happenings-collection",
+      "section": "happenings-collection/04-the-best-san-diego-hotels-for",
+      "variant": "is-right",
+      "crop": "figma/pages/happenings-collection/sections/04-the-best-san-diego-hotels-for/section.webp",
+      "content": {
+        "showHeader": false,
+        "items": [
+          {
+            "eyebrow": "The best San Diego hotels for every kind of traveler",
+            "text": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio."
+          }
+        ]
+      }
+    },
+    {
+      "page": "happenings-collection",
+      "section": "happenings-collection/05-the-best-san-diego-hotels-for",
+      "variant": "base",
+      "crop": "figma/pages/happenings-collection/sections/05-the-best-san-diego-hotels-for/section.webp",
+      "content": {
+        "showHeader": false,
+        "items": [
+          {
+            "eyebrow": "The best San Diego hotels for every kind of traveler",
+            "text": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio."
+          }
+        ]
+      }
+    },
+    {
+      "page": "happenings-collection",
+      "section": "happenings-collection/06-culture",
+      "variant": "is-right",
+      "crop": "figma/pages/happenings-collection/sections/06-culture/section.webp",
+      "content": {
+        "showHeader": true,
+        "heading": "culture",
+        "headingStyle": "heading-style-h3",
+        "items": [
+          {
+            "eyebrow": "The best San Diego hotels for every kind of traveler",
+            "text": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio."
+          }
+        ]
+      }
+    },
+    {
+      "page": "happenings-collection",
+      "section": "happenings-collection/07-the-best-san-diego-hotels-for",
+      "variant": "base",
+      "crop": "figma/pages/happenings-collection/sections/07-the-best-san-diego-hotels-for/section.webp",
+      "content": {
+        "showHeader": false,
+        "items": [
+          {
+            "eyebrow": "The best San Diego hotels for every kind of traveler",
+            "text": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio."
+          }
+        ]
+      }
+    },
+    {
+      "page": "blog-collection",
+      "section": "blog-collection/03-the-best-san-diego-hotels-for",
+      "variant": "base",
+      "crop": "figma/pages/blog-collection/sections/03-the-best-san-diego-hotels-for/section.webp",
+      "content": {
+        "sameAs": "happenings-collection/03-the-best-san-diego-hotels-for"
+      }
+    },
+    {
+      "page": "blog-collection",
+      "section": "blog-collection/04-the-best-san-diego-hotels-for",
+      "variant": "is-right",
+      "crop": "figma/pages/blog-collection/sections/04-the-best-san-diego-hotels-for/section.webp",
+      "content": {
+        "sameAs": "happenings-collection/04-the-best-san-diego-hotels-for"
+      }
+    },
+    {
+      "page": "blog-collection",
+      "section": "blog-collection/05-the-best-san-diego-hotels-for",
+      "variant": "base",
+      "crop": "figma/pages/blog-collection/sections/05-the-best-san-diego-hotels-for/section.webp",
+      "content": {
+        "sameAs": "happenings-collection/05-the-best-san-diego-hotels-for"
+      }
+    },
+    {
+      "page": "blog-collection",
+      "section": "blog-collection/06-culture",
+      "variant": "is-right",
+      "crop": "figma/pages/blog-collection/sections/06-culture/section.webp",
+      "content": {
+        "sameAs": "happenings-collection/06-culture"
+      }
+    },
+    {
+      "page": "blog-collection",
+      "section": "blog-collection/07-the-best-san-diego-hotels-for",
+      "variant": "base",
+      "crop": "figma/pages/blog-collection/sections/07-the-best-san-diego-hotels-for/section.webp",
+      "content": {
+        "sameAs": "happenings-collection/07-the-best-san-diego-hotels-for"
+      }
+    }
+  ],
+  "openQuestions": [
+    "1. Collection pages: happenings-collection and blog-collection list items of the cms-happenings-blog-indiv collection. Recommend one instance per page with a Collection List in article-card-staggered_list (DynamoItem = article-card-staggered_item, bound to name, image, excerpt) instead of five static sections. Alternating left and right inside one list then needs an even-item rule (custom CSS .article-card-staggered_item:nth-child(even) or a per-item modifier); the plan as written places one card per section and uses is-right on the section, which matches the Figma file 1:1. Which does Stephen want?",
+    "2. The list holds 1 card (collection pages) or 3 cards (neighborhood). A Webflow component cannot vary its child count without a slot. Use a slot on article-card-staggered_list if the MCP supports it (X01 probe), otherwise build the section as a component with the list unbound and insert items per instance, or skip the component and reuse the class family.",
+    "3. Heading size differs per instance (heading-style-h4 on neighborhood, heading-style-h3 on culture). Webflow component props cannot swap a class. Options: two optional heading elements with visibility props (h4 and h3), or a Webflow component variant. Plan recommends two optional headings if variants are unavailable.",
+    "4. Is the neighborhood header meant to stick while the cards scroll? Nothing in figma/animations/neighborhood.md says so; the plan leaves it static.",
+    "5. Card images are Figma placeholders. Where do real images come from: CMS image field (collection pages) and a manual upload list for neighborhood dining cards?"
+  ],
+  "deviations": [
+    "Added modifier is-right (not in the brief). The brief groups all 10 collection instances as base, but 04 and 06 place the card at x 816 (right) while 03, 05 and 07 place it at x 169 (left). One combo on the component covers it.",
+    "Layout sits in container-large (80rem) per convention. The Figma frame is 1600 wide with content from x 42 to x 1560, so at 1440 and wider the right-aligned card ends at the container edge (about 2.75rem further in than Figma) and the is-tall intro starts at the container edge (about 2.5rem further in).",
+    "text-style-eyebrow-caps and text-style-caps-caption-16 are applied as standalone classes carrying the full type values, not as combos on text-size-regular as figma/tokens.json proposes, so they can be reused on any element. K01 reconciles.",
+    "Extra vertical space on is-tall lives on article-card-staggered_component.is-tall (padding 4rem top and bottom on top of padding-section-small) because a component instance cannot swap the shared padding-section-* utility.",
+    "Card figure uses a #d9d9d9 fill with no variable as a placeholder until real images exist. Remove the fill once images are bound."
+  ]
+}
