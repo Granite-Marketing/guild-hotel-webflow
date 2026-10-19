@@ -1,0 +1,186 @@
+/* Generated from plan.json by render-preview.mjs. Do not edit by hand. */
+:root {
+  --color-neutral-100: #F4EFDF;
+  --color-neutral-900: #262118;
+  --color-neutral-300: #D1D1D1;
+  --color-secondary: #FBF5DE;
+  --color-brand-4a1217: #4A1217;
+  --color-brand-489cca: #489CCA;
+  --font-style-heading: "Sackers Heavy Gothic", Copperplate, serif;
+  --font-style-body: "Gatch Test", "Helvetica Neue", Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-style-body); }
+p { margin: 0; }
+.preview-label { font: 12px/1.4 system-ui, sans-serif; padding: 8px 16px; background: #fff; color: #333; }
+.padding-global {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.padding-section-small {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.container-large {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.heading-style-h2 {
+  margin: 0;
+  font-family: var(--font-style-heading);
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+.text-size-large {
+  font-family: var(--font-style-body);
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 1.6;
+  letter-spacing: 0em;
+}
+.text-size-regular {
+  font-size: 1rem;
+}
+.button {
+  cursor: pointer;
+}
+.section_hero-fullbleed-centered {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-neutral-300);
+  color: var(--color-neutral-100);
+}
+.hero-fullbleed-centered_figure {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  margin: 0;
+}
+.hero-fullbleed-centered_image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-fullbleed-centered_logo-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 26rem;
+  margin: 0;
+  transform: translate(-50%, -50%);
+}
+.hero-fullbleed-centered_logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero-fullbleed-centered_component {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.75rem;
+  text-align: center;
+}
+.hero-fullbleed-centered_header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.75rem;
+  max-width: 56.25rem;
+}
+.hero-fullbleed-centered_footer {
+  display: flex;
+  justify-content: center;
+}
+.hero-fullbleed-centered_text {
+  max-width: 53.375rem;
+  line-height: 1.6;
+}
+.section_hero-fullbleed-centered.is-text-dark {
+  color: var(--color-neutral-900);
+}
+.hero-fullbleed-centered_component.is-left {
+  align-items: flex-start;
+  max-width: 44rem;
+  text-align: left;
+}
+.text-size-regular.text-style-eyebrow-caps {
+  font-family: var(--font-style-heading);
+  font-size: 1.125rem;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
+}
+.text-size-regular.text-style-button {
+  font-family: var(--font-style-heading);
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+.button.is-octagon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 12.125rem;
+  min-height: 2.3125rem;
+  padding: 0.65625rem 1.25rem;
+  border: 0;
+  border-radius: 0;
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-900);
+  text-decoration: none;
+  clip-path: polygon(0 67.1%, 0 32.4%, 0.6875rem 0, calc(100% - 0.7334rem) 0, 100% 32.4%, 100% 67.1%, calc(100% - 0.7334rem) 100%, 0.6875rem 100%);
+}
+.button.is-burgundy {
+  background-color: var(--color-brand-4a1217);
+  color: var(--color-secondary);
+}
+.button.is-blue {
+  background-color: var(--color-brand-489cca);
+  color: var(--color-secondary);
+}
+@media (max-width: 991px) {
+.padding-section-small {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.hero-fullbleed-centered_logo-wrapper {
+  width: 20rem;
+}
+}
+@media (max-width: 767px) {
+.padding-section-small {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.hero-fullbleed-centered_component.is-left {
+  max-width: none;
+}
+}
+@media (max-width: 479px) {
+.padding-section-small {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.section_hero-fullbleed-centered {
+  min-height: 100svh;
+}
+.hero-fullbleed-centered_logo-wrapper {
+  width: 14rem;
+}
+.hero-fullbleed-centered_header {
+  row-gap: 1.25rem;
+}
+}
