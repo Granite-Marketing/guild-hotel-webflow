@@ -1,0 +1,2175 @@
+{
+  "entry": "Q017",
+  "component": "split-image-text-light",
+  "webflowComponentName": "Split image text light",
+  "buildOn": {
+    "page": "home",
+    "pageId": "6ad64060ae8eac6d7b7c4241",
+    "section": "home/03-west-coast-hospitality-since-1924"
+  },
+  "notation": {
+    "styles": "CSS property names in kebab case. Colours and fonts reference Webflow variables as var(--<variable-name>), names from figma/tokens.json and docs/figma/decisions.md (K01 reconciles them with the live names after Q001).",
+    "breakpoints": "desktop = main (992px and up), tablet = medium (991px), mobileLandscape = small (767px), mobilePortrait = tiny (479px). Only values that change are listed per breakpoint.",
+    "combos": "familyClasses entries with comboOn are Webflow combo classes: they exist only on top of that base class. Webflow cannot style a child from a parent combo, so every element that changes in a variant carries its own combo.",
+    "tree": "Every node has a slot id. instances[] and previewInstances[] say which slots are hidden, which combos and utility swaps each slot takes, and the content."
+  },
+  "reusedClasses": [
+    "padding-global",
+    "padding-section-large",
+    "padding-section-medium",
+    "container-large",
+    "heading-style-h1",
+    "heading-style-h3",
+    "heading-style-h4",
+    "text-weight-normal",
+    "text-size-medium",
+    "text-size-regular",
+    "button",
+    "is-link"
+  ],
+  "familyClasses": [
+    {
+      "name": "section_split-image-text-light",
+      "element": "section",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "background-color": "var(--color-neutral-100)",
+          "color": "var(--color-neutral-900)"
+        }
+      }
+    },
+    {
+      "name": "is-olive",
+      "comboOn": "section_split-image-text-light",
+      "styles": {
+        "desktop": {
+          "background-color": "var(--color-accent)",
+          "color": "var(--color-neutral-100)"
+        }
+      }
+    },
+    {
+      "name": "is-tan",
+      "comboOn": "section_split-image-text-light",
+      "styles": {
+        "desktop": {
+          "background-color": "var(--color-brand-906e58)",
+          "color": "var(--color-neutral-100)"
+        }
+      }
+    },
+    {
+      "name": "is-blue",
+      "comboOn": "section_split-image-text-light",
+      "styles": {
+        "desktop": {
+          "background-color": "var(--color-brand-00263e)",
+          "color": "var(--color-neutral-100)"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_component",
+      "element": "article",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "display": "grid",
+          "grid-template-columns": "repeat(12, minmax(0, 1fr))",
+          "column-gap": "2rem",
+          "row-gap": "4rem",
+          "align-items": "end"
+        },
+        "tablet": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "stretch",
+          "row-gap": "3rem"
+        },
+        "mobilePortrait": {
+          "row-gap": "2rem"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_media",
+      "element": "figure",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "grid-column": "2 / 7",
+          "grid-row": "1",
+          "align-self": "center",
+          "margin": "0",
+          "overflow": "hidden",
+          "aspect-ratio": "647 / 831",
+          "background-color": "var(--color-neutral-300)"
+        },
+        "tablet": {
+          "align-self": "stretch",
+          "width": "100%"
+        }
+      }
+    },
+    {
+      "name": "is-start-1",
+      "comboOn": "split-image-text-light_media",
+      "why": "Media from the first column (tan history, rooms, arts).",
+      "styles": {
+        "desktop": {
+          "grid-column": "1 / 6"
+        }
+      }
+    },
+    {
+      "name": "is-end",
+      "comboOn": "split-image-text-light_media",
+      "why": "Wide landscape media on the right, text below it (dining explore-the-space, gaslamp).",
+      "styles": {
+        "desktop": {
+          "grid-column": "6 / 13",
+          "align-self": "start",
+          "aspect-ratio": "873 / 574"
+        },
+        "tablet": {
+          "align-self": "stretch"
+        }
+      }
+    },
+    {
+      "name": "is-end-half",
+      "comboOn": "split-image-text-light_media",
+      "why": "Landscape media in the right half beside the text (compact variant).",
+      "styles": {
+        "desktop": {
+          "grid-column": "7 / 13",
+          "align-self": "end",
+          "aspect-ratio": "744 / 524"
+        },
+        "tablet": {
+          "align-self": "stretch"
+        }
+      }
+    },
+    {
+      "name": "is-wide",
+      "comboOn": "split-image-text-light_media",
+      "why": "Large square media (little italy).",
+      "styles": {
+        "desktop": {
+          "grid-column": "1 / 8",
+          "align-self": "start",
+          "aspect-ratio": "1 / 1"
+        },
+        "tablet": {
+          "align-self": "stretch"
+        }
+      }
+    },
+    {
+      "name": "is-secondary",
+      "comboOn": "split-image-text-light_media",
+      "why": "Second, smaller square image pinned top right and bleeding into the right gutter (rooms, arts, little italy).",
+      "styles": {
+        "desktop": {
+          "grid-column": "10 / 13",
+          "align-self": "start",
+          "aspect-ratio": "1 / 1",
+          "margin-top": "-5.75rem",
+          "margin-right": "-2rem"
+        },
+        "tablet": {
+          "align-self": "flex-end",
+          "width": "60%",
+          "margin-top": "0"
+        },
+        "mobilePortrait": {
+          "width": "75%"
+        }
+      }
+    },
+    {
+      "name": "is-overlap",
+      "comboOn": "split-image-text-light_media",
+      "why": "Coloured band variants where the image hangs below the band into the next section (home olive, zuma blue).",
+      "styles": {
+        "desktop": {
+          "z-index": "1",
+          "margin-top": "2.75rem",
+          "margin-bottom": "-12.4375rem"
+        },
+        "tablet": {
+          "margin-top": "0",
+          "margin-bottom": "0"
+        }
+      }
+    },
+    {
+      "name": "is-chamfer",
+      "comboOn": "split-image-text-light_media",
+      "why": "Cut-corner photo frame (history tan).",
+      "styles": {
+        "desktop": {
+          "clip-path": "polygon(2.5rem 0, calc(100% - 2.5rem) 0, 100% 2.5rem, 100% calc(100% - 2.5rem), calc(100% - 2.5rem) 100%, 2.5rem 100%, 0 calc(100% - 2.5rem), 0 2.5rem)"
+        },
+        "mobilePortrait": {
+          "clip-path": "polygon(1.5rem 0, calc(100% - 1.5rem) 0, 100% 1.5rem, 100% calc(100% - 1.5rem), calc(100% - 1.5rem) 100%, 1.5rem 100%, 0 calc(100% - 1.5rem), 0 1.5rem)"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_image",
+      "element": "img",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "100%",
+          "height": "100%",
+          "object-fit": "cover"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_content",
+      "element": "div",
+      "styles": {
+        "desktop": {
+          "grid-column": "8 / 12",
+          "grid-row": "1",
+          "align-self": "center",
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "2rem",
+          "max-width": "24rem"
+        },
+        "tablet": {
+          "align-self": "flex-start",
+          "max-width": "36rem"
+        }
+      }
+    },
+    {
+      "name": "is-start-1",
+      "comboOn": "split-image-text-light_content",
+      "styles": {
+        "desktop": {
+          "grid-column": "1 / 5"
+        }
+      }
+    },
+    {
+      "name": "is-start-2",
+      "comboOn": "split-image-text-light_content",
+      "styles": {
+        "desktop": {
+          "grid-column": "2 / 6"
+        }
+      }
+    },
+    {
+      "name": "is-start-4",
+      "comboOn": "split-image-text-light_content",
+      "styles": {
+        "desktop": {
+          "grid-column": "4 / 8"
+        }
+      }
+    },
+    {
+      "name": "is-start-7",
+      "comboOn": "split-image-text-light_content",
+      "styles": {
+        "desktop": {
+          "grid-column": "7 / 11"
+        }
+      }
+    },
+    {
+      "name": "is-start-9",
+      "comboOn": "split-image-text-light_content",
+      "styles": {
+        "desktop": {
+          "grid-column": "9 / 13"
+        }
+      }
+    },
+    {
+      "name": "is-bottom",
+      "comboOn": "split-image-text-light_content",
+      "why": "Text sits on the bottom edge of the image row (rooms, arts, compact, little italy).",
+      "styles": {
+        "desktop": {
+          "align-self": "end"
+        },
+        "tablet": {
+          "align-self": "flex-start"
+        }
+      }
+    },
+    {
+      "name": "is-below",
+      "comboOn": "split-image-text-light_content",
+      "why": "Text in a second row under a right-hand image (dining explore-the-space, gaslamp).",
+      "styles": {
+        "desktop": {
+          "grid-row": "2",
+          "align-self": "start",
+          "margin-top": "10rem"
+        },
+        "tablet": {
+          "align-self": "flex-start",
+          "margin-top": "0"
+        }
+      }
+    },
+    {
+      "name": "is-wide-text",
+      "comboOn": "split-image-text-light_content",
+      "why": "Measure of about 30 to 34 characters wider than the 24rem default (rooms, arts, compact, tall, tan).",
+      "styles": {
+        "desktop": {
+          "max-width": "34.5rem"
+        },
+        "tablet": {
+          "max-width": "36rem"
+        }
+      }
+    },
+    {
+      "name": "is-sticky",
+      "comboOn": "split-image-text-light_content",
+      "why": "Intro column stays in view while the feature list scrolls (tall variant). CSS sticky works with Lenis.",
+      "styles": {
+        "desktop": {
+          "position": "sticky",
+          "top": "7rem",
+          "align-self": "start"
+        },
+        "tablet": {
+          "position": "static",
+          "align-self": "flex-start"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_header",
+      "element": "header",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "1rem",
+          "margin-bottom": "0.5rem"
+        }
+      }
+    },
+    {
+      "name": "is-outdent",
+      "comboOn": "split-image-text-light_header",
+      "why": "Script heading starts one grid column left of the body copy and overlaps the photo (history tan).",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "z-index": "2",
+          "margin-left": "calc((100% + 2rem) / -3)",
+          "white-space": "nowrap"
+        },
+        "tablet": {
+          "margin-left": "0",
+          "white-space": "normal"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_eyebrow",
+      "element": "p",
+      "styles": {
+        "desktop": {
+          "margin": "0"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_heading",
+      "element": "h2",
+      "styles": {
+        "desktop": {
+          "margin": "0"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_body",
+      "element": "div",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "1.625rem"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_footer",
+      "element": "footer",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "align-items": "center",
+          "column-gap": "1.5rem"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_caption",
+      "element": "p",
+      "why": "Optional paragraph under the image (neighborhood downtown).",
+      "styles": {
+        "desktop": {
+          "grid-column": "2 / 6",
+          "grid-row": "2",
+          "align-self": "start",
+          "max-width": "24rem",
+          "margin": "0"
+        },
+        "tablet": {
+          "max-width": "36rem"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_features",
+      "element": "div",
+      "why": "Right-hand list of feature cards (tall variant).",
+      "styles": {
+        "desktop": {
+          "grid-column": "8 / 12",
+          "grid-row": "1",
+          "align-self": "start",
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "6.875rem"
+        },
+        "tablet": {
+          "row-gap": "4rem"
+        },
+        "mobilePortrait": {
+          "row-gap": "3rem"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_feature",
+      "element": "article",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_feature-media",
+      "element": "figure",
+      "styles": {
+        "desktop": {
+          "margin": "0 0 1.5rem",
+          "overflow": "hidden",
+          "aspect-ratio": "484 / 595",
+          "background-color": "var(--color-neutral-300)"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_feature-label",
+      "element": "p",
+      "styles": {
+        "desktop": {
+          "margin": "0 0 0.75rem"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_feature-list",
+      "element": "ul",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "margin": "0",
+          "padding": "0",
+          "list-style": "none"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_feature-item",
+      "element": "li",
+      "styles": {
+        "desktop": {
+          "padding": "0.375rem 0",
+          "border-bottom": "1px solid var(--color-neutral-300)"
+        }
+      }
+    },
+    {
+      "name": "split-image-text-light_stamp",
+      "element": "figure",
+      "why": "Decorative postmark stamp over the photo corner (history tan).",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "left": "37.5%",
+          "bottom": "-5rem",
+          "z-index": "2",
+          "width": "12rem",
+          "margin": "0",
+          "pointer-events": "none"
+        },
+        "tablet": {
+          "position": "static",
+          "align-self": "flex-end",
+          "width": "9rem",
+          "margin-top": "-1rem"
+        },
+        "mobilePortrait": {
+          "width": "7.5rem"
+        }
+      }
+    }
+  ],
+  "proposedShared": [
+    {
+      "name": "container-full",
+      "why": "Full-width container for edge-to-edge 12-column layouts that align to the padding-global gutter instead of the 80rem column. Used by this component's cream layouts; image-led blocks on other pages (gallery, offers, staggered cards) align to the same 2.5rem page edge.",
+      "styles": {
+        "desktop": {
+          "width": "100%",
+          "max-width": "none",
+          "margin-left": "auto",
+          "margin-right": "auto"
+        }
+      }
+    },
+    {
+      "name": "text-style-caps-caption-16",
+      "why": "CAPS-CAPTION-16 combo from figma/tokens.json (suggestedComboClass); used for links and labels across many components.",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1rem",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase"
+        }
+      }
+    },
+    {
+      "name": "text-style-eyebrow-caps",
+      "why": "EYEBROW-CAPS combo from figma/tokens.json (suggestedComboClass); optional eyebrow in this and at least five other components.",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1.125rem",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase"
+        }
+      }
+    },
+    {
+      "name": "text-style-script",
+      "why": "Morello script display headings (figma/tokens.json maps Morello 80/80 to heading-style-h1, whose primary font is Sackers). Combo on heading-style-h1; also needed by script-intro-centered (Q016) and form-split-script-contact (Q022).",
+      "styles": {
+        "desktop": {
+          "font-family": "Morello, cursive",
+          "font-size": "5rem",
+          "line-height": "1",
+          "letter-spacing": "0",
+          "text-transform": "none"
+        },
+        "tablet": {
+          "font-size": "4rem"
+        },
+        "mobileLandscape": {
+          "font-size": "3.25rem"
+        },
+        "mobilePortrait": {
+          "font-size": "2.75rem"
+        }
+      }
+    }
+  ],
+  "variables": [
+    "color-neutral-100",
+    "color-neutral-900",
+    "color-neutral-300",
+    "color-accent",
+    "color-brand-906e58",
+    "color-brand-00263e",
+    "font-style-heading",
+    "font-style-body"
+  ],
+  "tree": [
+    {
+      "slot": "section",
+      "tag": "section",
+      "classes": [
+        "section_split-image-text-light"
+      ],
+      "attributes": {},
+      "children": [
+        {
+          "slot": "padding",
+          "tag": "div",
+          "classes": [
+            "padding-global",
+            "padding-section-large"
+          ],
+          "attributes": {},
+          "children": [
+            {
+              "slot": "container",
+              "tag": "div",
+              "classes": [
+                "container-large"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "slot": "component",
+                  "tag": "article",
+                  "classes": [
+                    "split-image-text-light_component"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "slot": "media",
+                      "tag": "figure",
+                      "classes": [
+                        "split-image-text-light_media"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "slot": "media-image",
+                          "tag": "img",
+                          "classes": [
+                            "split-image-text-light_image"
+                          ],
+                          "attributes": {
+                            "loading": "lazy",
+                            "alt": ""
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "slot": "media-secondary",
+                      "tag": "figure",
+                      "classes": [
+                        "split-image-text-light_media",
+                        "is-secondary"
+                      ],
+                      "optional": true,
+                      "attributes": {},
+                      "children": [
+                        {
+                          "slot": "media-secondary-image",
+                          "tag": "img",
+                          "classes": [
+                            "split-image-text-light_image"
+                          ],
+                          "attributes": {
+                            "loading": "lazy",
+                            "alt": ""
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "slot": "content",
+                      "tag": "div",
+                      "classes": [
+                        "split-image-text-light_content"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "slot": "header",
+                          "tag": "header",
+                          "classes": [
+                            "split-image-text-light_header"
+                          ],
+                          "optional": true,
+                          "attributes": {},
+                          "children": [
+                            {
+                              "slot": "eyebrow",
+                              "tag": "p",
+                              "classes": [
+                                "split-image-text-light_eyebrow",
+                                "text-size-regular",
+                                "text-style-eyebrow-caps"
+                              ],
+                              "optional": true,
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "slot": "heading",
+                              "tag": "h2",
+                              "classes": [
+                                "split-image-text-light_heading",
+                                "heading-style-h4",
+                                "text-weight-normal"
+                              ],
+                              "attributes": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "slot": "body",
+                          "tag": "div",
+                          "classes": [
+                            "split-image-text-light_body",
+                            "text-size-medium"
+                          ],
+                          "optional": true,
+                          "attributes": {},
+                          "children": [
+                            {
+                              "slot": "body-1",
+                              "tag": "p",
+                              "classes": [],
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "slot": "body-2",
+                              "tag": "p",
+                              "classes": [],
+                              "optional": true,
+                              "attributes": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "slot": "footer",
+                          "tag": "footer",
+                          "classes": [
+                            "split-image-text-light_footer"
+                          ],
+                          "optional": true,
+                          "attributes": {},
+                          "children": [
+                            {
+                              "slot": "cta",
+                              "tag": "a",
+                              "classes": [
+                                "button",
+                                "is-link",
+                                "text-style-caps-caption-16"
+                              ],
+                              "attributes": {
+                                "href": "#"
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "slot": "caption",
+                      "tag": "p",
+                      "classes": [
+                        "split-image-text-light_caption",
+                        "text-size-medium"
+                      ],
+                      "optional": true,
+                      "attributes": {},
+                      "children": []
+                    },
+                    {
+                      "slot": "features",
+                      "tag": "div",
+                      "classes": [
+                        "split-image-text-light_features"
+                      ],
+                      "optional": true,
+                      "attributes": {},
+                      "children": [
+                        {
+                          "slot": "feature",
+                          "tag": "article",
+                          "classes": [
+                            "split-image-text-light_feature"
+                          ],
+                          "repeat": "features",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "slot": "feature-media",
+                              "tag": "figure",
+                              "classes": [
+                                "split-image-text-light_feature-media"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "slot": "feature-image",
+                                  "tag": "img",
+                                  "classes": [
+                                    "split-image-text-light_image"
+                                  ],
+                                  "attributes": {
+                                    "loading": "lazy",
+                                    "alt": ""
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "slot": "feature-label",
+                              "tag": "p",
+                              "classes": [
+                                "split-image-text-light_feature-label",
+                                "text-size-regular",
+                                "text-style-caps-caption-16"
+                              ],
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "slot": "feature-list",
+                              "tag": "ul",
+                              "classes": [
+                                "split-image-text-light_feature-list"
+                              ],
+                              "attributes": {
+                                "role": "list"
+                              },
+                              "children": [
+                                {
+                                  "slot": "feature-item",
+                                  "tag": "li",
+                                  "classes": [
+                                    "split-image-text-light_feature-item",
+                                    "text-size-medium"
+                                  ],
+                                  "repeat": "items",
+                                  "attributes": {},
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "slot": "stamp",
+                      "tag": "figure",
+                      "classes": [
+                        "split-image-text-light_stamp"
+                      ],
+                      "optional": true,
+                      "attributes": {
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "slot": "stamp-image",
+                          "tag": "img",
+                          "classes": [
+                            "split-image-text-light_image"
+                          ],
+                          "attributes": {
+                            "alt": ""
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": null,
+      "name": "base",
+      "on": "section_split-image-text-light",
+      "styleDeltas": {},
+      "realisedBy": "Cream section, no section combo. Layout per instance from the media and content placement combos (layouts: edge, split, stagger, wide; see layouts).",
+      "crop": "figma/pages/rooms-individual/sections/06-morbi-gravida-augue-at-ipsum-ultricies/section.webp"
+    },
+    {
+      "modifier": "is-olive",
+      "name": "olive",
+      "on": "section_split-image-text-light",
+      "styleDeltas": {
+        "desktop": {
+          "background-color": "var(--color-accent)",
+          "color": "var(--color-neutral-100)"
+        }
+      },
+      "alsoApplies": {
+        "media": [
+          "is-overlap"
+        ]
+      },
+      "crop": "figma/pages/home/sections/03-west-coast-hospitality-since-1924/section.webp"
+    },
+    {
+      "modifier": null,
+      "name": "compact",
+      "on": "section_split-image-text-light",
+      "styleDeltas": {},
+      "realisedBy": "No section combo: padding-section-medium instead of padding-section-large, container-full, media is-end-half, content is-start-2 is-bottom is-wide-text.",
+      "crop": "figma/pages/happenings-indiv/sections/04-nam-eleifend-venenatis-erat-sit-amet/section.webp"
+    },
+    {
+      "modifier": null,
+      "name": "tall",
+      "on": "section_split-image-text-light",
+      "styleDeltas": {},
+      "realisedBy": "No section combo: media slot hidden, features slot shown, container-full, content is-start-1 is-sticky is-wide-text, CTA is a filled button (button, no is-link).",
+      "crop": "figma/pages/meetings-collection/sections/08-key-features-of-our-spaces/section.webp"
+    },
+    {
+      "modifier": "is-tan",
+      "name": "tan",
+      "on": "section_split-image-text-light",
+      "styleDeltas": {
+        "desktop": {
+          "background-color": "var(--color-brand-906e58)",
+          "color": "var(--color-neutral-100)"
+        }
+      },
+      "alsoApplies": {
+        "media": [
+          "is-start-1",
+          "is-chamfer"
+        ],
+        "content": [
+          "is-start-7",
+          "is-wide-text"
+        ],
+        "header": [
+          "is-outdent"
+        ],
+        "heading": "heading-style-h1 text-style-script (replaces heading-style-h4)"
+      },
+      "crop": "figma/pages/history/sections/04-george-marston/section.webp"
+    },
+    {
+      "modifier": "is-blue",
+      "name": "blue",
+      "on": "section_split-image-text-light",
+      "styleDeltas": {
+        "desktop": {
+          "background-color": "var(--color-brand-00263e)",
+          "color": "var(--color-neutral-100)"
+        }
+      },
+      "alsoApplies": {
+        "media": [
+          "is-overlap"
+        ]
+      },
+      "crop": "figma/pages/dining-zuma/sections/02-contemporary-japanese-dining-at-the-guild/section.webp"
+    }
+  ],
+  "layouts": {
+    "split": {
+      "container": "container-large",
+      "media": [],
+      "content": [],
+      "used": "olive, blue, neighborhood/03 (plus caption)"
+    },
+    "edge": {
+      "container": "container-full",
+      "media": [
+        "is-start-1"
+      ],
+      "content": [
+        "is-start-7",
+        "is-bottom",
+        "is-wide-text"
+      ],
+      "secondary": true,
+      "used": "rooms-individual/06, rooms-individual/08, arts/05"
+    },
+    "staggerLeft": {
+      "container": "container-full",
+      "media": [
+        "is-end"
+      ],
+      "content": [
+        "is-start-4",
+        "is-below"
+      ],
+      "used": "dining-zuma, dining-gardenterrace, dining-lobbybar, dining-poollounge /04"
+    },
+    "staggerMid": {
+      "container": "container-full",
+      "media": [
+        "is-end"
+      ],
+      "content": [
+        "is-start-7",
+        "is-below"
+      ],
+      "used": "neighborhood/04"
+    },
+    "wide": {
+      "container": "container-full",
+      "media": [
+        "is-wide"
+      ],
+      "content": [
+        "is-start-9",
+        "is-bottom"
+      ],
+      "secondary": true,
+      "used": "neighborhood/05"
+    },
+    "compact": {
+      "container": "container-full",
+      "padding": "padding-section-medium",
+      "media": [
+        "is-end-half"
+      ],
+      "content": [
+        "is-start-2",
+        "is-bottom",
+        "is-wide-text"
+      ],
+      "used": "happenings-indiv/04, blog-indiv/04"
+    },
+    "tall": {
+      "container": "container-full",
+      "media": "hidden",
+      "content": [
+        "is-start-1",
+        "is-sticky",
+        "is-wide-text"
+      ],
+      "features": true,
+      "used": "meetings-collection/08"
+    },
+    "tan": {
+      "container": "container-large",
+      "media": [
+        "is-start-1",
+        "is-chamfer"
+      ],
+      "content": [
+        "is-start-7",
+        "is-wide-text"
+      ],
+      "header": [
+        "is-outdent"
+      ],
+      "stamp": true,
+      "used": "history/04"
+    }
+  },
+  "props": [
+    {
+      "name": "Eyebrow",
+      "type": "text",
+      "element": "split-image-text-light_eyebrow",
+      "slot": "eyebrow"
+    },
+    {
+      "name": "Eyebrow visible",
+      "type": "visibility",
+      "slot": "eyebrow",
+      "default": false
+    },
+    {
+      "name": "Heading",
+      "type": "text",
+      "element": "split-image-text-light_heading",
+      "slot": "heading"
+    },
+    {
+      "name": "Header visible",
+      "type": "visibility",
+      "slot": "header",
+      "default": true
+    },
+    {
+      "name": "Body",
+      "type": "text",
+      "element": "split-image-text-light_body > p (1)",
+      "slot": "body-1"
+    },
+    {
+      "name": "Body 2",
+      "type": "text",
+      "element": "split-image-text-light_body > p (2)",
+      "slot": "body-2"
+    },
+    {
+      "name": "Body 2 visible",
+      "type": "visibility",
+      "slot": "body-2",
+      "default": false
+    },
+    {
+      "name": "CTA",
+      "type": "link",
+      "element": "button is-link",
+      "slot": "cta"
+    },
+    {
+      "name": "CTA label",
+      "type": "text",
+      "element": "button is-link",
+      "slot": "cta"
+    },
+    {
+      "name": "Footer visible",
+      "type": "visibility",
+      "slot": "footer",
+      "default": false
+    },
+    {
+      "name": "Image",
+      "type": "image",
+      "element": "split-image-text-light_media > split-image-text-light_image",
+      "slot": "media-image"
+    },
+    {
+      "name": "Image visible",
+      "type": "visibility",
+      "slot": "media",
+      "default": true
+    },
+    {
+      "name": "Second image",
+      "type": "image",
+      "element": "split-image-text-light_media is-secondary > split-image-text-light_image",
+      "slot": "media-secondary-image"
+    },
+    {
+      "name": "Second image visible",
+      "type": "visibility",
+      "slot": "media-secondary",
+      "default": false
+    },
+    {
+      "name": "Caption",
+      "type": "text",
+      "element": "split-image-text-light_caption",
+      "slot": "caption"
+    },
+    {
+      "name": "Caption visible",
+      "type": "visibility",
+      "slot": "caption",
+      "default": false
+    },
+    {
+      "name": "Features visible",
+      "type": "visibility",
+      "slot": "features",
+      "default": false
+    },
+    {
+      "name": "Stamp visible",
+      "type": "visibility",
+      "slot": "stamp",
+      "default": false
+    }
+  ],
+  "assets": [
+    {
+      "slot": "media-image",
+      "instance": "history/04-george-marston",
+      "figmaImageRef": "8d27c8c8088059a056c81c4b09c23d8cf589c1bc",
+      "webflowAssetId": "6ad67007cf42363c3ffe3d61",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad67007cf42363c3ffe3d61_8d27c8c8088059a056c81c4b09c23d8cf589c1bc.png",
+      "local": "assets/images/8d27c8c8088059a056c81c4b09c23d8cf589c1bc.png",
+      "manualPlacement": "KTD10: place by hand in the Designer unless MCP placement is proven."
+    },
+    {
+      "slot": "media-image",
+      "instance": "dining-zuma/02-contemporary-japanese-dining-at-the-guild",
+      "figmaImageRef": "31e2d0109f131d7e4cf1db6797206bef1567db8b",
+      "webflowAssetId": "6ad66ff45794075272b9663f",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66ff45794075272b9663f_31e2d0109f131d7e4cf1db6797206bef1567db8b.png",
+      "local": "assets/images/31e2d0109f131d7e4cf1db6797206bef1567db8b.png",
+      "manualPlacement": "KTD10: place by hand in the Designer unless MCP placement is proven."
+    },
+    {
+      "slot": "stamp-image",
+      "instance": "history/04-george-marston",
+      "figmaNodeId": "228:7875",
+      "webflowAssetId": null,
+      "local": "figma/vectors/group-263x263-228-7875.svg",
+      "manualPlacement": "Not uploaded yet (figma/assets.json webflowAssetId null). Upload before the history page entry."
+    }
+  ],
+  "previewInstances": [
+    {
+      "variant": "base",
+      "section": "rooms-individual/06-morbi-gravida-augue-at-ipsum-ultricies"
+    },
+    {
+      "variant": "olive",
+      "section": "home/03-west-coast-hospitality-since-1924"
+    },
+    {
+      "variant": "compact",
+      "section": "happenings-indiv/04-nam-eleifend-venenatis-erat-sit-amet"
+    },
+    {
+      "variant": "tall",
+      "section": "meetings-collection/08-key-features-of-our-spaces"
+    },
+    {
+      "variant": "tan",
+      "section": "history/04-george-marston"
+    },
+    {
+      "variant": "blue",
+      "section": "dining-zuma/02-contemporary-japanese-dining-at-the-guild"
+    }
+  ],
+  "instances": [
+    {
+      "page": "home",
+      "pageId": "6ad64060ae8eac6d7b7c4241",
+      "cmsTemplate": null,
+      "section": "home/03-west-coast-hospitality-since-1924",
+      "variant": "olive",
+      "layout": "olive",
+      "crop": "figma/pages/home/sections/03-west-coast-hospitality-since-1924/section.webp",
+      "classOverrides": {
+        "section": [
+          "section_split-image-text-light",
+          "is-olive"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-overlap"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "media-secondary",
+        "caption",
+        "features",
+        "stamp"
+      ],
+      "content": {
+        "heading": "West Coast Hospitality since 1924",
+        "body-1": "As the YMCA that welcomed Army and Navy men and women, The Guild was the city’s premier gathering place. The experience has been curated, elevated and refined – but at heart, we’re still a sailor on shore leave.",
+        "cta": "uncover our history",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "dining-gardenterrace",
+      "pageId": null,
+      "cmsTemplate": "cms-dining",
+      "section": "dining-gardenterrace/02-contemporary-japanese-dining-at-the-guild",
+      "variant": "olive",
+      "layout": "olive",
+      "crop": "figma/pages/dining-gardenterrace/sections/02-contemporary-japanese-dining-at-the-guild/section.webp",
+      "classOverrides": {
+        "section": [
+          "section_split-image-text-light",
+          "is-olive"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-overlap"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "media-secondary",
+        "caption",
+        "features",
+        "stamp"
+      ],
+      "content": {
+        "heading": "Contemporary Japanese Dining at The Guild Hotel",
+        "body-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum quam eu est facilisis gravida. Nulla ultrices aliquam ante, at elementum ex tincidunt at. Vestibulum vitae nunc eu felis maximus semper. Curabitur eget molestie dui. Vestibulum quis elit ac libero tempus condimentum eget eget tellus.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "dining-lobbybar",
+      "pageId": null,
+      "cmsTemplate": "cms-dining",
+      "section": "dining-lobbybar/02-contemporary-japanese-dining-at-the-guild",
+      "variant": "olive",
+      "layout": "olive",
+      "crop": "figma/pages/dining-lobbybar/sections/02-contemporary-japanese-dining-at-the-guild/section.webp",
+      "classOverrides": {
+        "section": [
+          "section_split-image-text-light",
+          "is-olive"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-overlap"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "media-secondary",
+        "caption",
+        "features",
+        "stamp"
+      ],
+      "content": {
+        "heading": "Contemporary Japanese Dining at The Guild Hotel",
+        "body-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum quam eu est facilisis gravida. Nulla ultrices aliquam ante, at elementum ex tincidunt at. Vestibulum vitae nunc eu felis maximus semper. Curabitur eget molestie dui. Vestibulum quis elit ac libero tempus condimentum eget eget tellus.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "dining-poollounge",
+      "pageId": null,
+      "cmsTemplate": "cms-dining",
+      "section": "dining-poollounge/02-contemporary-japanese-dining-at-the-guild",
+      "variant": "olive",
+      "layout": "olive",
+      "crop": "figma/pages/dining-poollounge/sections/02-contemporary-japanese-dining-at-the-guild/section.webp",
+      "classOverrides": {
+        "section": [
+          "section_split-image-text-light",
+          "is-olive"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-overlap"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "media-secondary",
+        "caption",
+        "features",
+        "stamp"
+      ],
+      "content": {
+        "heading": "Contemporary Japanese Dining at The Guild Hotel",
+        "body-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum quam eu est facilisis gravida. Nulla ultrices aliquam ante, at elementum ex tincidunt at. Vestibulum vitae nunc eu felis maximus semper. Curabitur eget molestie dui. Vestibulum quis elit ac libero tempus condimentum eget eget tellus.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "dining-zuma",
+      "pageId": null,
+      "cmsTemplate": "cms-dining",
+      "section": "dining-zuma/02-contemporary-japanese-dining-at-the-guild",
+      "variant": "blue",
+      "layout": "blue",
+      "crop": "figma/pages/dining-zuma/sections/02-contemporary-japanese-dining-at-the-guild/section.webp",
+      "classOverrides": {
+        "section": [
+          "section_split-image-text-light",
+          "is-blue"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-overlap"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "media-secondary",
+        "caption",
+        "features",
+        "stamp"
+      ],
+      "content": {
+        "heading": "Contemporary Japanese Dining at The Guild Hotel",
+        "body-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum quam eu est facilisis gravida. Nulla ultrices aliquam ante, at elementum ex tincidunt at. Vestibulum vitae nunc eu felis maximus semper. Curabitur eget molestie dui. Vestibulum quis elit ac libero tempus condimentum eget eget tellus.",
+        "media-image": {
+          "webflowAssetId": "6ad66ff45794075272b9663f",
+          "local": "assets/images/31e2d0109f131d7e4cf1db6797206bef1567db8b.png"
+        }
+      }
+    },
+    {
+      "page": "history",
+      "pageId": "6ad66fd276d24ed37ac4c52f",
+      "cmsTemplate": null,
+      "section": "history/04-george-marston",
+      "variant": "tan",
+      "layout": "tan",
+      "crop": "figma/pages/history/sections/04-george-marston/section.webp",
+      "classOverrides": {
+        "section": [
+          "section_split-image-text-light",
+          "is-tan"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-start-1",
+          "is-chamfer"
+        ],
+        "content": [
+          "split-image-text-light_content",
+          "is-start-7",
+          "is-wide-text"
+        ],
+        "header": [
+          "split-image-text-light_header",
+          "is-outdent"
+        ],
+        "heading": [
+          "split-image-text-light_heading",
+          "heading-style-h1",
+          "text-weight-normal",
+          "text-style-script"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "footer",
+        "media-secondary",
+        "caption",
+        "features"
+      ],
+      "content": {
+        "heading": "George Marston",
+        "body-1": "In 1924, George Marsden saw more than a building. He imagined a grand center of city life, a gathering place to elevate hospitality and raise a downtown. The Italian Renaissance icon he built welcomed and entertained some eight million servicemen and women.",
+        "body-2": "The Guild preserves the existing structure, retains defining architectural elements, and incorporates materials that will age gracefully,  extending the life of this important civic landmark.",
+        "media-image": {
+          "webflowAssetId": "6ad67007cf42363c3ffe3d61",
+          "local": "assets/images/8d27c8c8088059a056c81c4b09c23d8cf589c1bc.png"
+        }
+      }
+    },
+    {
+      "page": "meetings-collection",
+      "pageId": "6ad66fd96684c3e22ea4d417",
+      "cmsTemplate": null,
+      "section": "meetings-collection/08-key-features-of-our-spaces",
+      "variant": "tall",
+      "layout": "tall",
+      "crop": "figma/pages/meetings-collection/sections/08-key-features-of-our-spaces/section.webp",
+      "classOverrides": {
+        "container": [
+          "container-full"
+        ],
+        "content": [
+          "split-image-text-light_content",
+          "is-start-1",
+          "is-sticky",
+          "is-wide-text"
+        ],
+        "cta": [
+          "button",
+          "text-style-caps-caption-16"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "media-secondary",
+        "caption",
+        "stamp",
+        "media"
+      ],
+      "content": {
+        "heading": "key features of our spaces",
+        "body-1": "Vestibulum id justo eget erat porta consequat. Donec et massa congue, aliquet sem non, consectetur sem proin et.",
+        "cta": "book your space",
+        "features": [
+          {
+            "label": "Event Services",
+            "items": [
+              "Our innovative & experienced team creates your vision",
+              "Chef Collaboration and Menu Design",
+              "Mixologist Consultation",
+              "Branded Event Menus",
+              "Menu tastings available",
+              "Branding Opportunities with Video Projection Wall",
+              "Full Hotel Buyouts Available - Guild Take Over"
+            ]
+          },
+          {
+            "label": "AV Capabilities",
+            "items": [
+              "Video-texture mapping",
+              "Surround sound/ LED lighting",
+              "Latest tech",
+              "Pre- & post-event support"
+            ]
+          },
+          {
+            "label": "Hotel Amenities",
+            "items": [
+              "Dedicated event planners",
+              "Professional audio visual services",
+              "Meeting sets with clean, sophisticated designs",
+              "Restaurant-style banquet menus",
+              "Black or Grey banquet style chairs, Black & White floor-length linens & napkins",
+              "Seasonal heaters & umbrellas",
+              "Marriott Rewards Program"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": "happenings-indiv",
+      "pageId": null,
+      "cmsTemplate": "cms-happenings-blog-indiv",
+      "section": "happenings-indiv/04-nam-eleifend-venenatis-erat-sit-amet",
+      "variant": "compact",
+      "layout": "compact",
+      "crop": "figma/pages/happenings-indiv/sections/04-nam-eleifend-venenatis-erat-sit-amet/section.webp",
+      "classOverrides": {
+        "container": [
+          "container-full"
+        ],
+        "padding": [
+          "padding-global",
+          "padding-section-medium"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-end-half"
+        ],
+        "content": [
+          "split-image-text-light_content",
+          "is-start-2",
+          "is-bottom",
+          "is-wide-text"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "media-secondary",
+        "caption",
+        "features",
+        "stamp",
+        "header"
+      ],
+      "content": {
+        "body-1": "Nam eleifend venenatis erat sit amet bibendum. In varius ipsum tempor nunc vestibulum elementum. Integer ut consectetur nunc. Aliquam aliquet consectetur turpis, et imperdiet dui sollicitudin molestie. Nam volutpat vel nibh non elementum. Etiam egestas cursus blandit. Mauris luctus metus sit amet ex feugiat efficitur.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "blog-indiv",
+      "pageId": null,
+      "cmsTemplate": "cms-happenings-blog-indiv",
+      "section": "blog-indiv/04-nam-eleifend-venenatis-erat-sit-amet",
+      "variant": "compact",
+      "layout": "compact",
+      "crop": "figma/pages/blog-indiv/sections/04-nam-eleifend-venenatis-erat-sit-amet/section.webp",
+      "classOverrides": {
+        "container": [
+          "container-full"
+        ],
+        "padding": [
+          "padding-global",
+          "padding-section-medium"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-end-half"
+        ],
+        "content": [
+          "split-image-text-light_content",
+          "is-start-2",
+          "is-bottom",
+          "is-wide-text"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "media-secondary",
+        "caption",
+        "features",
+        "stamp",
+        "header"
+      ],
+      "content": {
+        "body-1": "Nam eleifend venenatis erat sit amet bibendum. In varius ipsum tempor nunc vestibulum elementum. Integer ut consectetur nunc. Aliquam aliquet consectetur turpis, et imperdiet dui sollicitudin molestie. Nam volutpat vel nibh non elementum. Etiam egestas cursus blandit. Mauris luctus metus sit amet ex feugiat efficitur.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "rooms-individual",
+      "pageId": "6ad66fd5f8bf4846e809dc45",
+      "cmsTemplate": null,
+      "section": "rooms-individual/06-morbi-gravida-augue-at-ipsum-ultricies",
+      "variant": "base",
+      "layout": "edge",
+      "crop": "figma/pages/rooms-individual/sections/06-morbi-gravida-augue-at-ipsum-ultricies/section.webp",
+      "classOverrides": {
+        "container": [
+          "container-full"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-start-1"
+        ],
+        "content": [
+          "split-image-text-light_content",
+          "is-start-7",
+          "is-bottom",
+          "is-wide-text"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "caption",
+        "features",
+        "stamp",
+        "header"
+      ],
+      "content": {
+        "body-1": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "rooms-individual",
+      "pageId": "6ad66fd5f8bf4846e809dc45",
+      "cmsTemplate": null,
+      "section": "rooms-individual/08-morbi-gravida-augue-at-ipsum-ultricies",
+      "variant": "base",
+      "layout": "edge",
+      "crop": "figma/pages/rooms-individual/sections/08-morbi-gravida-augue-at-ipsum-ultricies/section.webp",
+      "classOverrides": {
+        "container": [
+          "container-full"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-start-1"
+        ],
+        "content": [
+          "split-image-text-light_content",
+          "is-start-7",
+          "is-bottom",
+          "is-wide-text"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "caption",
+        "features",
+        "stamp",
+        "header"
+      ],
+      "content": {
+        "body-1": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "arts",
+      "pageId": "6ad66fd7ba96f2e53726a2eb",
+      "cmsTemplate": null,
+      "section": "arts/05-the-guild-collection",
+      "variant": "base",
+      "layout": "edge",
+      "crop": "figma/pages/arts/sections/05-the-guild-collection/section.webp",
+      "classOverrides": {
+        "container": [
+          "container-full"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-start-1"
+        ],
+        "content": [
+          "split-image-text-light_content",
+          "is-start-7",
+          "is-bottom",
+          "is-wide-text"
+        ],
+        "heading": [
+          "split-image-text-light_heading",
+          "heading-style-h3",
+          "text-weight-normal"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "caption",
+        "features",
+        "stamp"
+      ],
+      "content": {
+        "heading": "the guild collection",
+        "body-1": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "neighborhood",
+      "pageId": "6ad66fdb02cc199b55b926ba",
+      "cmsTemplate": null,
+      "section": "neighborhood/03-downtown-san-diego",
+      "variant": "base",
+      "layout": "split",
+      "crop": "figma/pages/neighborhood/sections/03-downtown-san-diego/section.webp",
+      "classOverrides": {},
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "media-secondary",
+        "features",
+        "stamp"
+      ],
+      "content": {
+        "heading": "downtown san diego",
+        "body-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum quam eu est facilisis gravida. Nulla ultrices aliquam ante, at elementum ex tincidunt at. Vestibulum vitae nunc eu felis maximus semper. Curabitur eget molestie dui. Vestibulum quis elit ac libero tempus condimentum eget eget tellus.",
+        "caption": "Nam in massa ut enim cursus sagittis ut vel ex. Aenean tincidunt sollicitudin sem, vitae molestie odio. Cras eget ullamcorper nisl. Nullam lorem eros, varius vel nulla sed, molestie efficitur sapien. Suspendisse vel ante cursus, lobortis ligula nec, varius erat.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "neighborhood",
+      "pageId": "6ad66fdb02cc199b55b926ba",
+      "cmsTemplate": null,
+      "section": "neighborhood/04-gaslamp-quarter",
+      "variant": "base",
+      "layout": "staggerMid",
+      "crop": "figma/pages/neighborhood/sections/04-gaslamp-quarter/section.webp",
+      "classOverrides": {
+        "container": [
+          "container-full"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-end"
+        ],
+        "content": [
+          "split-image-text-light_content",
+          "is-start-7",
+          "is-below"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "media-secondary",
+        "caption",
+        "features",
+        "stamp"
+      ],
+      "content": {
+        "heading": "gaslamp quarter",
+        "body-1": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "neighborhood",
+      "pageId": "6ad66fdb02cc199b55b926ba",
+      "cmsTemplate": null,
+      "section": "neighborhood/05-little-italy",
+      "variant": "base",
+      "layout": "wide",
+      "crop": "figma/pages/neighborhood/sections/05-little-italy/section.webp",
+      "classOverrides": {
+        "container": [
+          "container-full"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-wide"
+        ],
+        "content": [
+          "split-image-text-light_content",
+          "is-start-9",
+          "is-bottom"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "caption",
+        "features",
+        "stamp"
+      ],
+      "content": {
+        "heading": "little italy",
+        "body-1": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "dining-zuma",
+      "pageId": null,
+      "cmsTemplate": "cms-dining",
+      "section": "dining-zuma/04-explore-the-space",
+      "variant": "base",
+      "layout": "staggerLeft",
+      "crop": "figma/pages/dining-zuma/sections/04-explore-the-space/section.webp",
+      "classOverrides": {
+        "container": [
+          "container-full"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-end"
+        ],
+        "content": [
+          "split-image-text-light_content",
+          "is-start-4",
+          "is-below"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "media-secondary",
+        "caption",
+        "features",
+        "stamp"
+      ],
+      "content": {
+        "heading": "explore the space",
+        "body-1": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "dining-gardenterrace",
+      "pageId": null,
+      "cmsTemplate": "cms-dining",
+      "section": "dining-gardenterrace/04-explore-the-space",
+      "variant": "base",
+      "layout": "staggerLeft",
+      "crop": "figma/pages/dining-gardenterrace/sections/04-explore-the-space/section.webp",
+      "classOverrides": {
+        "container": [
+          "container-full"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-end"
+        ],
+        "content": [
+          "split-image-text-light_content",
+          "is-start-4",
+          "is-below"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "media-secondary",
+        "caption",
+        "features",
+        "stamp"
+      ],
+      "content": {
+        "heading": "explore the space",
+        "body-1": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "dining-lobbybar",
+      "pageId": null,
+      "cmsTemplate": "cms-dining",
+      "section": "dining-lobbybar/04-explore-the-space",
+      "variant": "base",
+      "layout": "staggerLeft",
+      "crop": "figma/pages/dining-lobbybar/sections/04-explore-the-space/section.webp",
+      "classOverrides": {
+        "container": [
+          "container-full"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-end"
+        ],
+        "content": [
+          "split-image-text-light_content",
+          "is-start-4",
+          "is-below"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "media-secondary",
+        "caption",
+        "features",
+        "stamp"
+      ],
+      "content": {
+        "heading": "explore the space",
+        "body-1": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    },
+    {
+      "page": "dining-poollounge",
+      "pageId": null,
+      "cmsTemplate": "cms-dining",
+      "section": "dining-poollounge/04-explore-the-space",
+      "variant": "base",
+      "layout": "staggerLeft",
+      "crop": "figma/pages/dining-poollounge/sections/04-explore-the-space/section.webp",
+      "classOverrides": {
+        "container": [
+          "container-full"
+        ],
+        "media": [
+          "split-image-text-light_media",
+          "is-end"
+        ],
+        "content": [
+          "split-image-text-light_content",
+          "is-start-4",
+          "is-below"
+        ]
+      },
+      "hidden": [
+        "eyebrow",
+        "body-2",
+        "footer",
+        "media-secondary",
+        "caption",
+        "features",
+        "stamp"
+      ],
+      "content": {
+        "heading": "explore the space",
+        "body-1": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+        "media-image": "placeholder (no image in the design yet)"
+      }
+    }
+  ],
+  "openQuestions": [
+    "Variables: color-brand-906e58 (tan) and color-brand-00263e (blue) are figma/tokens.json suggestions; D01 only names #CB3629 and #4A1217. Confirm Q001 creates both, and color-neutral-300 for the image placeholder fill and list rules (K01).",
+    "Base text colour: rooms-individual and arts use #29310C (color-accent), neighborhood and dining use #262118 (color-neutral-900). The plan uses color-neutral-900 for all base instances. Accept, or add an is-accent-text combo?",
+    "Dining template section 02 is one CMS template (cms-dining): zuma is blue with an image (s02-image), the other three are olive with no image. One template cannot switch a section combo per item. Options: two component instances (blue and olive) with conditional visibility on a CMS option field, or a CMS colour field bound to the section background. Needs a decision before Q027.",
+    "history/04: the portrait shows three slider dashes at its bottom edge, which suggests a multi-image slider. The plan treats it as one image. Confirm one image, or route it to a slider entry.",
+    "history/04 stamp SVG (figma/vectors/group-263x263-228-7875.svg) is not uploaded to Webflow (webflowAssetId null). Upload before the history page entry.",
+    "neighborhood/05: the burgundy pill nav (dining, arts, beyond downtown, services) inside the crop is not part of this component. It looks like a sticky in-page nav that belongs to another entry; leave its slot to that entry or a manual overlay.",
+    "meetings-collection/08 (tall) is a list of three feature cards beside a sticky intro; it was clustered here but is the weakest fit (components.md Check these pairs it with image-pair-text at 0.645, D02 kept them separate). The plan supports it with the features slot. Confirm, or split it into its own entry.",
+    "Feature list rows draw a rule under every row, including the last; the design has none under the last row. Webflow has no last-child styling on a static list without a custom combo; accept, or add an is-last combo on the final li.",
+    "Text that sits in a CMS template (dining-*, happenings-indiv, blog-indiv) should bind to CMS fields once C01 creates them; the props here are static component props."
+  ],
+  "deviations": [
+    "Brief modifiers is-media-left and is-1-image are not created: media-left and one image are the defaults, so the classes would carry no styles. Second images use the is-secondary combo on a second figure.",
+    "is-compact and is-tall are not section combos: compact is padding-section-medium plus placement combos, tall is the features slot plus a sticky content combo. Neither needs a section-level style.",
+    "The brief lists 0 images for every variant except tan and blue, but every reference crop has grey placeholder rectangles (#D9D9D9, #C4C4C4) in image positions. The plan keeps those as image slots with a color-neutral-300 placeholder fill.",
+    "Base instances use four layouts (edge, split, stagger, wide). They are expressed as element combos on the media and content (grid placement on a 12-column grid), not as extra section variants, because Webflow combos cannot style children from the section.",
+    "Webflow component variants: one component with variants base, olive, blue, tan, compact, tall plus layout variants edge, stagger-left, stagger-mid, wide, so instances pick a variant instead of re-classing elements. If component variants cannot change classes on nested elements, fall back to unlinked layout overrides per instance.",
+    "Morello script heading uses heading-style-h1 plus a new shared text-style-script combo (font family, 5rem/1, no transform), because heading-style-h1 is Sackers.",
+    "The tall CTA is a filled button (button without is-link); its chamfered pill shape comes from the shared button entry, not from this plan."
+  ],
+  "previewAssumptions": {
+    "note": "Values the preview uses for reused Relume classes so the page renders. They come from figma/tokens.json classValues and docs/reference/breakpoints.md; Q001 owns the live values. Never written to Webflow from this plan.",
+    "variables": {
+      "color-neutral-100": "#F4EFDF",
+      "color-neutral-900": "#262118",
+      "color-neutral-300": "#D9D9D9",
+      "color-accent": "#29310C",
+      "color-brand-906e58": "#906E58",
+      "color-brand-00263e": "#00263E",
+      "font-style-heading": "'Sackers Heavy Gothic', 'Copperplate', 'Copperplate Gothic Light', serif",
+      "font-style-body": "'Gatch Test', 'Helvetica Neue', Arial, sans-serif"
+    },
+    "classes": {
+      "padding-global": {
+        "desktop": {
+          "padding-left": "2rem",
+          "padding-right": "2rem"
+        }
+      },
+      "padding-section-large": {
+        "desktop": {
+          "padding-top": "7rem",
+          "padding-bottom": "7rem"
+        },
+        "tablet": {
+          "padding-top": "5rem",
+          "padding-bottom": "5rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "3.5rem",
+          "padding-bottom": "3.5rem"
+        },
+        "mobilePortrait": {
+          "padding-top": "2.5rem",
+          "padding-bottom": "2.5rem"
+        }
+      },
+      "padding-section-medium": {
+        "desktop": {
+          "padding-top": "5rem",
+          "padding-bottom": "5rem"
+        },
+        "tablet": {
+          "padding-top": "3.5rem",
+          "padding-bottom": "3.5rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "2.5rem",
+          "padding-bottom": "2.5rem"
+        },
+        "mobilePortrait": {
+          "padding-top": "2rem",
+          "padding-bottom": "2rem"
+        }
+      },
+      "container-large": {
+        "desktop": {
+          "width": "100%",
+          "max-width": "80rem",
+          "margin-left": "auto",
+          "margin-right": "auto"
+        }
+      },
+      "heading-style-h1": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "3.5rem",
+          "line-height": "1",
+          "font-weight": "400",
+          "text-transform": "lowercase"
+        }
+      },
+      "heading-style-h3": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1.875rem",
+          "line-height": "1",
+          "letter-spacing": "-0.05em",
+          "font-weight": "400"
+        }
+      },
+      "heading-style-h4": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1.5rem",
+          "line-height": "1.2",
+          "font-weight": "400",
+          "text-transform": "lowercase"
+        },
+        "mobilePortrait": {
+          "font-size": "1.25rem"
+        }
+      },
+      "text-weight-normal": {
+        "desktop": {
+          "font-weight": "400"
+        }
+      },
+      "text-size-medium": {
+        "desktop": {
+          "font-family": "var(--font-style-body)",
+          "font-size": "1.25rem",
+          "line-height": "1.3"
+        },
+        "mobilePortrait": {
+          "font-size": "1.125rem"
+        }
+      },
+      "text-size-regular": {
+        "desktop": {
+          "font-family": "var(--font-style-body)",
+          "font-size": "1.125rem",
+          "line-height": "1.6"
+        }
+      },
+      "button": {
+        "desktop": {
+          "display": "inline-flex",
+          "align-items": "center",
+          "justify-content": "center",
+          "padding": "0.875rem 1.75rem",
+          "background-color": "var(--color-accent)",
+          "color": "var(--color-neutral-100)",
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1rem",
+          "line-height": "1",
+          "text-transform": "lowercase",
+          "text-decoration": "none",
+          "clip-path": "polygon(0.75rem 0, calc(100% - 0.75rem) 0, 100% 50%, calc(100% - 0.75rem) 100%, 0.75rem 100%, 0 50%)"
+        }
+      },
+      "is-link": {
+        "comboOn": "button",
+        "desktop": {
+          "padding": "0",
+          "background-color": "transparent",
+          "color": "inherit",
+          "text-decoration": "underline",
+          "text-underline-offset": "0.2em",
+          "clip-path": "none"
+        }
+      }
+    },
+    "body": {
+      "margin": "0",
+      "background-color": "var(--color-neutral-100)",
+      "color": "var(--color-neutral-900)",
+      "font-family": "var(--font-style-body)"
+    },
+    "elements": {
+      "*, *::before, *::after": {
+        "box-sizing": "border-box"
+      },
+      "p, h1, h2, h3, ul, figure": {
+        "margin": "0"
+      },
+      "a": {
+        "color": "inherit"
+      }
+    }
+  }
+}
