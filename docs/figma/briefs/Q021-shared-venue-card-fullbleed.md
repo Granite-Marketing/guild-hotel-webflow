@@ -91,7 +91,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/home/sections/04-an-unexpected-resort-dining-experience/section.webp`
 - Component: venue-card-fullbleed, variant `is-media-center`
 - Texts (1): "an unexpected resort dining experience"
-- Images: 1 (1 distinct), `figma/assets.json` images: fa638bc2c84c8afc4c8daab6a935b35365944207 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: fa638bc2c84c8afc4c8daab6a935b35365944207 (uploaded)
 - Vision review: kind card-repeat; boundary issue: Contains the section eyebrow heading plus first venue card (Zuma, framed, no text overlay); next crop repeats Zuma as a full card
 
 ### Other instances
@@ -102,7 +102,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/home/sections/05-dress-up-for-the-rich-worldly/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (2): "Dress up for the rich, worldly sophistication of California’s first Zuma."; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: fa638bc2c84c8afc4c8daab6a935b35365944207 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: fa638bc2c84c8afc4c8daab6a935b35365944207 (uploaded)
 - Vectors: `figma/vectors/group-270989670-416x101-250-1958.svg` (Group 270989670, 416x101), `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `home/06-cocktail-classics-and-drinks-for-connaisseurs`: Venue card fullbleed
@@ -111,7 +111,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/home/sections/06-cocktail-classics-and-drinks-for-connaisseurs/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (2): "Cocktail classics and drinks for connaisseurs."; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: 57b7c9d475ed31c64fc14b589c293bc5f86142a8 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 57b7c9d475ed31c64fc14b589c293bc5f86142a8 (uploaded)
 - Vectors: `figma/vectors/a-738x232-433-5771.svg` (a, 738x232), `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `home/07-our-new-pool-serves-up-san`: Venue card fullbleed
@@ -120,7 +120,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/home/sections/07-our-new-pool-serves-up-san/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (2): "Our new pool serves up San Diego’s bright sunshine, cool drinks and warm people."; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: b0a187c5d40b728dda8eba29e50d1c301b9f1a68 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: b0a187c5d40b728dda8eba29e50d1c301b9f1a68 (uploaded)
 - Vectors: `figma/vectors/a-682x148-433-5793.svg` (a, 682x148), `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `home/08-lobby-terrace`: Venue card fullbleed
@@ -129,7 +129,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/home/sections/08-lobby-terrace/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "lobby terrace"; "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus."; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: 237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1 (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `home/09-solana-coffee`: Venue card fullbleed
@@ -138,7 +138,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/home/sections/09-solana-coffee/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "solana coffee"; "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus."; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: e462a0829a597ffc4060aaf8bb92466636f27cce (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: e462a0829a597ffc4060aaf8bb92466636f27cce (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `home/11-rooms-suites`: Feature card fullbleed centered
@@ -147,7 +147,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/home/sections/11-rooms-suites/section.webp`
 - Component: venue-card-fullbleed, variant `is-2-images` + `is-tall`
 - Texts (3): "rooms & suites"; "Generous layouts, thoughtful details, and room to make yourself at home."; "EXPLORE more"
-- Images: 2 (1 distinct), `figma/assets.json` images: 3a8a13fffa6bb106dd00f736e22e0aae384f5bda (not uploaded)
+- Images: 2 (1 distinct), `figma/assets.json` images: 3a8a13fffa6bb106dd00f736e22e0aae384f5bda (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `home/15-meetings-events`: Feature card fullbleed centered
@@ -156,7 +156,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/home/sections/15-meetings-events/section.webp`
 - Component: venue-card-fullbleed, variant `is-left`
 - Texts (6): "meetings & events"; "DISCOVER MORE"; "Inspired spaces breed bright ideas"
-- Images: 1 (1 distinct), `figma/assets.json` images: b940aa95950dd4de783e1c0ae2dfee90e4485143 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: b940aa95950dd4de783e1c0ae2dfee90e4485143 (uploaded)
 - Vectors: not exported (442:7526) (Group 270989659, 56x43), `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `dining-collection/03-zuma`: Venue card fullbleed
@@ -165,7 +165,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/dining-collection/sections/03-zuma/section.webp`
 - Component: venue-card-fullbleed, variant `is-left` + `is-media-center`
 - Texts (5): "Zuma"; "the lobby bar"; "pool lounge"
-- Images: 1 (1 distinct), `figma/assets.json` images: fa638bc2c84c8afc4c8daab6a935b35365944207 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: fa638bc2c84c8afc4c8daab6a935b35365944207 (uploaded)
 - Vectors: `figma/vectors/vector-25-886x56-266-1332.svg` (Vector 25, 886x56)
 
 #### `dining-collection/04-dress-up-for-the-rich-worldly`: Venue card fullbleed
@@ -174,7 +174,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/dining-collection/sections/04-dress-up-for-the-rich-worldly/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (2): "Dress up for the rich, worldly sophistication of California’s first Zuma."; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: fa638bc2c84c8afc4c8daab6a935b35365944207 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: fa638bc2c84c8afc4c8daab6a935b35365944207 (uploaded)
 - Vectors: `figma/vectors/group-270989670-416x101-250-1958.svg` (Group 270989670, 416x101), `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `dining-collection/05-cocktail-classics-and-drinks-for-connaisseurs`: Venue card fullbleed
@@ -183,7 +183,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/dining-collection/sections/05-cocktail-classics-and-drinks-for-connaisseurs/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (2): "Cocktail classics and drinks for connaisseurs."; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: 57b7c9d475ed31c64fc14b589c293bc5f86142a8 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 57b7c9d475ed31c64fc14b589c293bc5f86142a8 (uploaded)
 - Vectors: `figma/vectors/a-738x232-433-5771.svg` (a, 738x232), `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `dining-collection/06-our-new-pool-serves-up-san`: Venue card fullbleed
@@ -192,7 +192,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/dining-collection/sections/06-our-new-pool-serves-up-san/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (2): "Our new pool serves up San Diego’s bright sunshine, cool drinks and warm people."; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: b0a187c5d40b728dda8eba29e50d1c301b9f1a68 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: b0a187c5d40b728dda8eba29e50d1c301b9f1a68 (uploaded)
 - Vectors: `figma/vectors/a-682x148-433-5793.svg` (a, 682x148), `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `dining-collection/07-garden-terrace`: Venue card fullbleed
@@ -201,7 +201,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/dining-collection/sections/07-garden-terrace/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "garden terrace"; "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus."; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: 237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1 (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `dining-collection/08-solana-coffee`: Venue card fullbleed
@@ -210,7 +210,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/dining-collection/sections/08-solana-coffee/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "solana coffee"; "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus."; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: e462a0829a597ffc4060aaf8bb92466636f27cce (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: e462a0829a597ffc4060aaf8bb92466636f27cce (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `wellness-collection/03-in-room-wellness`: Feature card fullbleed centered
@@ -219,7 +219,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/wellness-collection/sections/03-in-room-wellness/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "in-room wellness"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: 70a13b1d6cdae1be50f7d9ca4b2541937747ae45 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 70a13b1d6cdae1be50f7d9ca4b2541937747ae45 (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `wellness-collection/04-fitness-center`: Feature card fullbleed centered
@@ -228,7 +228,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/wellness-collection/sections/04-fitness-center/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "fitness center"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: a615ab07d022b6aa76066c2ac89bf41fd38923c5 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: a615ab07d022b6aa76066c2ac89bf41fd38923c5 (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `wellness-collection/05-mindful-dining`: Feature card fullbleed centered
@@ -237,7 +237,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/wellness-collection/sections/05-mindful-dining/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "mindful dining"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: 0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `wellness-collection/06-wellness-events`: Feature card fullbleed centered
@@ -246,7 +246,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/wellness-collection/sections/06-wellness-events/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "wellness events"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: 5f867c9b46567c2df212f5570602c6afaa8b170e (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 5f867c9b46567c2df212f5570602c6afaa8b170e (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `meetings-collection/03-council-boardroom`: Venue card fullbleed
@@ -264,7 +264,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/meetings-collection/sections/04-lobby-terrace/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "lobby terrace"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: a615ab07d022b6aa76066c2ac89bf41fd38923c5 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: a615ab07d022b6aa76066c2ac89bf41fd38923c5 (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `meetings-collection/05-1-america-plaza`: Venue card fullbleed
@@ -273,7 +273,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/meetings-collection/sections/05-1-america-plaza/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "1 america plaza"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: 0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `legal/06-small-conference-center`: Venue card fullbleed
@@ -282,7 +282,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/legal/sections/06-small-conference-center/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "small conference center"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: 0f08995c13c13dec8d995c603e13669742ad8753 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 0f08995c13c13dec8d995c603e13669742ad8753 (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `legal/07-large-conference-center`: Venue card fullbleed
@@ -291,7 +291,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/legal/sections/07-large-conference-center/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "large conference center"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: bd46ec4969819d700587a489f9794218c352f8f4 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: bd46ec4969819d700587a489f9794218c352f8f4 (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `legal/08-council-boardroom`: Venue card fullbleed
@@ -300,7 +300,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/legal/sections/08-council-boardroom/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "council boardroom"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: b940aa95950dd4de783e1c0ae2dfee90e4485143 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: b940aa95950dd4de783e1c0ae2dfee90e4485143 (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `legal/09-one-columbia-place`: Venue card fullbleed
@@ -309,7 +309,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/legal/sections/09-one-columbia-place/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "one columbia place"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: 632da0f26628d214360c513d3c0f6d8e91262fb4 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 632da0f26628d214360c513d3c0f6d8e91262fb4 (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `corporate/06-small-conference-center`: Venue card fullbleed
@@ -318,7 +318,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/corporate/sections/06-small-conference-center/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "small conference center"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: 0f08995c13c13dec8d995c603e13669742ad8753 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 0f08995c13c13dec8d995c603e13669742ad8753 (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `corporate/07-large-conference-center`: Venue card fullbleed
@@ -327,7 +327,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/corporate/sections/07-large-conference-center/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "large conference center"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: bd46ec4969819d700587a489f9794218c352f8f4 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: bd46ec4969819d700587a489f9794218c352f8f4 (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `corporate/08-council-boardroom`: Venue card fullbleed
@@ -336,7 +336,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/corporate/sections/08-council-boardroom/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "council boardroom"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: b940aa95950dd4de783e1c0ae2dfee90e4485143 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: b940aa95950dd4de783e1c0ae2dfee90e4485143 (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 #### `corporate/09-one-columbia-place`: Venue card fullbleed
@@ -345,7 +345,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/corporate/sections/09-one-columbia-place/section.webp`
 - Component: venue-card-fullbleed, variant base
 - Texts (3): "one columbia place"; "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"; "DISCOVER MORE"
-- Images: 1 (1 distinct), `figma/assets.json` images: 632da0f26628d214360c513d3c0f6d8e91262fb4 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 632da0f26628d214360c513d3c0f6d8e91262fb4 (uploaded)
 - Vectors: `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 
 ## Component reuse gate

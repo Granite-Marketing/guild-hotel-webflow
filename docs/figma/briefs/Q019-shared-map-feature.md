@@ -100,7 +100,7 @@ Content, not variants: optional elements `button`, `eyebrow-caps`, `gatch-20`, `
 - Reference crop: `figma/pages/meetings-collection/sections/07-steps-from-key-legal-addresses/section.webp`
 - Component: map-feature, variant `is-image-bg` + `is-1-image`
 - Texts (14): "Steps from key legal addresses"; "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin..."; "San Diego Superior Court"
-- Images: 1 (1 distinct), `figma/assets.json` images: f5dfa6178bea152e201fd0047664f6dc3d8ebe1b (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: f5dfa6178bea152e201fd0047664f6dc3d8ebe1b (uploaded)
 - Vectors: `figma/vectors/ellipse-1-68x68-336-1413.svg` (Ellipse 1, 68x68), `figma/vectors/ellipse-2-68x68-336-1414.svg` (Ellipse 2, 68x68), `figma/vectors/ellipse-3-68x68-336-1415.svg` (Ellipse 3, 68x68), `figma/vectors/ellipse-4-68x68-336-1416.svg` (Ellipse 4, 68x68)
 
 #### `history/08-discover-the-property`: Map feature
@@ -109,7 +109,7 @@ Content, not variants: optional elements `button`, `eyebrow-caps`, `gatch-20`, `
 - Reference crop: `figma/pages/history/sections/08-discover-the-property/section.webp`
 - Component: map-feature, variant `is-image-bg` + `is-centered` + `is-1-image`
 - Texts (2): "Discover the Property"; "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc mo..."
-- Images: 1 (1 distinct), `figma/assets.json` images: 1f3f70ca62006004469496446ceb59b6f09405a2 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 1f3f70ca62006004469496446ceb59b6f09405a2 (uploaded)
 - Vectors: not exported (236:8252) (Vector 36, 1523x865)
 
 #### `rooms-individual/11-the-neighborhood`: Map feature
@@ -127,7 +127,7 @@ Content, not variants: optional elements `button`, `eyebrow-caps`, `gatch-20`, `
 - Reference crop: `figma/pages/neighborhood/sections/10-steps-from-key-legal-addresses/section.webp`
 - Component: map-feature, variant `is-image-bg` + `is-1-image`
 - Texts (14): "Steps from key legal addresses"; "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin..."; "San Diego Superior Court"
-- Images: 1 (1 distinct), `figma/assets.json` images: f5dfa6178bea152e201fd0047664f6dc3d8ebe1b (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: f5dfa6178bea152e201fd0047664f6dc3d8ebe1b (uploaded)
 - Vectors: `figma/vectors/ellipse-1-68x68-336-1413.svg` (Ellipse 1, 68x68), `figma/vectors/ellipse-2-68x68-336-1414.svg` (Ellipse 2, 68x68), `figma/vectors/ellipse-3-68x68-336-1415.svg` (Ellipse 3, 68x68), `figma/vectors/ellipse-4-68x68-336-1416.svg` (Ellipse 4, 68x68)
 
 #### `legal/10-steps-from-key-legal-addresses`: Map feature
@@ -136,7 +136,7 @@ Content, not variants: optional elements `button`, `eyebrow-caps`, `gatch-20`, `
 - Reference crop: `figma/pages/legal/sections/10-steps-from-key-legal-addresses/section.webp`
 - Component: map-feature, variant `is-image-bg` + `is-1-image`
 - Texts (14): "Steps from key legal addresses"; "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin..."; "San Diego Superior Court"
-- Images: 1 (1 distinct), `figma/assets.json` images: f5dfa6178bea152e201fd0047664f6dc3d8ebe1b (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: f5dfa6178bea152e201fd0047664f6dc3d8ebe1b (uploaded)
 - Vectors: `figma/vectors/ellipse-1-68x68-336-1413.svg` (Ellipse 1, 68x68), `figma/vectors/ellipse-2-68x68-336-1414.svg` (Ellipse 2, 68x68), `figma/vectors/ellipse-3-68x68-336-1415.svg` (Ellipse 3, 68x68), `figma/vectors/ellipse-4-68x68-336-1416.svg` (Ellipse 4, 68x68)
 
 #### `corporate/10-steps-from-key-legal-addresses`: Map feature
@@ -145,7 +145,7 @@ Content, not variants: optional elements `button`, `eyebrow-caps`, `gatch-20`, `
 - Reference crop: `figma/pages/corporate/sections/10-steps-from-key-legal-addresses/section.webp`
 - Component: map-feature, variant `is-image-bg` + `is-1-image`
 - Texts (14): "Steps from key legal addresses"; "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin..."; "San Diego Superior Court"
-- Images: 1 (1 distinct), `figma/assets.json` images: f5dfa6178bea152e201fd0047664f6dc3d8ebe1b (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: f5dfa6178bea152e201fd0047664f6dc3d8ebe1b (uploaded)
 - Vectors: `figma/vectors/ellipse-1-68x68-336-1413.svg` (Ellipse 1, 68x68), `figma/vectors/ellipse-2-68x68-336-1414.svg` (Ellipse 2, 68x68), `figma/vectors/ellipse-3-68x68-336-1415.svg` (Ellipse 3, 68x68), `figma/vectors/ellipse-4-68x68-336-1416.svg` (Ellipse 4, 68x68)
 
 ## Component reuse gate

@@ -102,7 +102,7 @@ From `figma/tokens.json` (mapping proposals; the token sync entry verifies live 
 - Reference crop: `figma/pages/press/sections/05-section/section.webp`
 - Component: press-card-staggered, variant `is-media-left` + `is-1-image`
 - Texts (0): none
-- Images: 1 (1 distinct), `figma/assets.json` images: 7b597b88d197b3ba4aaa7743f0e7c1341437b675 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 7b597b88d197b3ba4aaa7743f0e7c1341437b675 (uploaded)
 - Vision review: kind card-repeat; note: logo image card with caption; staggered left/right
 
 #### `press/06-the-guild-hotel-kicks-off-new`: Press card staggered
@@ -111,7 +111,7 @@ From `figma/tokens.json` (mapping proposals; the token sync entry verifies live 
 - Reference crop: `figma/pages/press/sections/06-the-guild-hotel-kicks-off-new/section.webp`
 - Component: press-card-staggered, variant `is-media-right` + `is-1-image`
 - Texts (3): "The Guild Hotel Kicks Off New Cocktail Exploration Series Featuring Batch 22"; "design"; "Top 20 Cool and Unusual Hotels in San Diego 2022"
-- Images: 1 (1 distinct), `figma/assets.json` images: ec94ae5ba98f5e313ee1651d92b82fd6642caf86 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: ec94ae5ba98f5e313ee1651d92b82fd6642caf86 (uploaded)
 - Vision review: kind card-repeat; note: logo image card with caption; staggered left/right
 
 #### `press/07-here-are-the-must-see-san`: Press card staggered

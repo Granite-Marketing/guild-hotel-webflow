@@ -10,7 +10,7 @@ Session setup, before anything else: in your worktree root run `ln -sf ~/guild-h
 
 ## Goal
 
-Upload the image fills used by the design to the Webflow asset library. 46 images are indexed in `figma/assets.json`, 46 without a Webflow URL. Brand SVGs (9) and vectors (61) are committed under `figma/` and are uploaded only when a build needs them as image files.
+Upload the image fills used by the design to the Webflow asset library. 46 images are indexed in `figma/assets.json`, 0 without a Webflow URL. Brand SVGs (9) and vectors (61) are committed under `figma/` and are uploaded only when a build needs them as image files.
 
 ## Steps
 
