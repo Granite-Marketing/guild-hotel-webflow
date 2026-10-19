@@ -11,6 +11,19 @@ const BUILD_DIRECTORY = 'dist'
 // Config entrypoint files
 const ENTRY_POINTS = ['src/index.ts']
 
+// Local preview fixtures (dev only): each tests/visual/fixtures/<name>.html is
+// copied to dist/fixtures/ (gitignored) with its <name>.ts entry bundled next
+// to it, so `pnpm dev` serves them at /fixtures/<name>.html. Images imported
+// by a fixture entry are copied alongside.
+const FIXTURE_DIRECTORY = 'tests/visual/fixtures'
+const FIXTURE_OPTIONS = {
+  bundle: true,
+  outdir: `${BUILD_DIRECTORY}/fixtures`,
+  target: 'esnext',
+  loader: { '.html': 'copy', '.webp': 'file', '.png': 'file', '.jpg': 'file' },
+  assetNames: 'assets/[name]-[hash]',
+}
+
 // Config dev serving
 const SERVE_PORT = 3000
 const SERVE_ORIGIN = `http://localhost:${SERVE_PORT}`
@@ -34,6 +47,13 @@ if (PRODUCTION || !WATCH) {
 } else {
   // Watch and serve files in dev
   await context.watch()
+  const fixtureEntries = readdirSync(FIXTURE_DIRECTORY)
+    .filter((file) => file.endsWith('.html') || file.endsWith('.ts'))
+    .map((file) => join(FIXTURE_DIRECTORY, file))
+  if (fixtureEntries.length) {
+    const fixtureContext = await esbuild.context({ ...FIXTURE_OPTIONS, entryPoints: fixtureEntries })
+    await fixtureContext.watch()
+  }
   await context
     .serve({
       servedir: BUILD_DIRECTORY,

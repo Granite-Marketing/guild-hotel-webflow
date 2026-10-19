@@ -40,6 +40,8 @@ import { swiperSliders } from '$utils/swiperSliders'
  *   import { finsweetRefresh } from '$utils/finsweetRefresh'         // slot F
  *   import { filterActiveState } from '$utils/filterActiveState'     // slot F
  *   import { scrollTextReveal } from '$utils/scrollTextReveal'       // slot G
+ *   import { galleryFilter } from '$utils/galleryFilter'             // slot E
+ *     (Gallery page filter tags; enable once a page carries [data-gallery-filter])
  */
 
 window.Webflow ||= [] as unknown as WebflowQueue
@@ -60,7 +62,7 @@ window.Webflow.push(() => {
   modals()
 
   currentYear()
-  // slot E: viewSwitcher(), cmsFilterLinks()
+  // slot E: viewSwitcher(), cmsFilterLinks(), galleryFilter()
   // slot F, in this order: filterPanels(), scrollHint(), finsweetRefresh(),
   //   filterActiveState()
 
