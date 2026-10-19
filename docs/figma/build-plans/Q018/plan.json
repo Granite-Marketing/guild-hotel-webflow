@@ -1,0 +1,800 @@
+{
+  "entry": "Q018",
+  "component": "gallery-mosaic-captioned",
+  "buildOn": {
+    "page": "meetings-collection",
+    "pageId": "6ad66fd96684c3e22ea4d417",
+    "pageSlug": "/meetings",
+    "section": "meetings-collection/09-meetings-events-gallery"
+  },
+  "reusedClasses": [
+    "heading-style-h4",
+    "heading-style-h2",
+    "text-weight-normal",
+    "text-size-regular"
+  ],
+  "familyClasses": [
+    {
+      "name": "section_gallery-mosaic-captioned",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "background-color": "var(--color-neutral-100)",
+          "color": "var(--color-neutral-900)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "gallery-mosaic-captioned_header",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "left": "2.5rem",
+          "top": "2.5rem",
+          "right": "2.5rem",
+          "z-index": "2"
+        },
+        "tablet": {
+          "left": "2rem",
+          "top": "2rem",
+          "right": "2rem"
+        },
+        "mobileLandscape": {
+          "left": "1.25rem",
+          "top": "1.25rem",
+          "right": "1.25rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "gallery-mosaic-captioned_heading",
+      "styles": {
+        "desktop": {
+          "margin-top": "0rem",
+          "margin-bottom": "0rem",
+          "color": "var(--color-neutral-900)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "gallery-mosaic-captioned_grid",
+      "styles": {
+        "desktop": {
+          "display": "grid",
+          "grid-template-columns": "1fr 1fr",
+          "grid-column-gap": "0.0625rem",
+          "grid-row-gap": "0.0625rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "grid-template-columns": "1fr"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "gallery-mosaic-captioned_figure",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "overflow": "hidden",
+          "margin-top": "0rem",
+          "margin-right": "0rem",
+          "margin-bottom": "0rem",
+          "margin-left": "0rem",
+          "aspect-ratio": "8 / 9",
+          "background-color": "#D9D9D9"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "aspect-ratio": "1 / 1"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "is-wide",
+      "comboOn": "gallery-mosaic-captioned_figure",
+      "styles": {
+        "desktop": {
+          "grid-column-start": "span 2",
+          "grid-column-end": "span 2",
+          "aspect-ratio": "1600 / 995"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "grid-column-start": "span 1",
+          "grid-column-end": "span 1",
+          "aspect-ratio": "4 / 5"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "gallery-mosaic-captioned_image",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "100%",
+          "height": "100%",
+          "object-fit": "cover"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "gallery-mosaic-captioned_feature-header",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "left": "2.5rem",
+          "right": "2.5rem",
+          "bottom": "9.125rem",
+          "z-index": "1",
+          "text-align": "center"
+        },
+        "tablet": {
+          "bottom": "7rem"
+        },
+        "mobileLandscape": {
+          "left": "1.25rem",
+          "right": "1.25rem",
+          "bottom": "7.5rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "gallery-mosaic-captioned_feature-title",
+      "styles": {
+        "desktop": {
+          "margin-top": "0rem",
+          "margin-bottom": "0rem",
+          "color": "var(--color-neutral-100)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "gallery-mosaic-captioned_caption",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "left": "2.5rem",
+          "right": "2.5rem",
+          "bottom": "2.5rem",
+          "z-index": "1",
+          "max-width": "37.75rem",
+          "margin-top": "0rem",
+          "margin-bottom": "0rem",
+          "color": "var(--color-accent)"
+        },
+        "tablet": {
+          "left": "2rem",
+          "right": "2rem",
+          "bottom": "2rem"
+        },
+        "mobileLandscape": {
+          "left": "1.25rem",
+          "right": "1.25rem",
+          "bottom": "1.25rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "gallery-mosaic-captioned_caption-index",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "top": "-0.5em",
+          "margin-right": "0.5em",
+          "font-size": "0.625em",
+          "line-height": "0"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    }
+  ],
+  "proposedShared": [
+    {
+      "name": "text-style-caps-caption-16",
+      "why": "Figma named style CAPS-CAPTION-16 (236:8161, 242 uses site-wide). figma/tokens.json maps it to text-size-regular plus this suggested combo class; every captioned gallery, card and timeline caption needs it.",
+      "comboOn": "text-size-regular",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-weight": "400",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase"
+        }
+      }
+    }
+  ],
+  "variables": [
+    "color-neutral-100",
+    "color-neutral-900",
+    "color-accent",
+    "font-style-heading"
+  ],
+  "tree": [
+    {
+      "tag": "section",
+      "classes": [
+        "section_gallery-mosaic-captioned"
+      ],
+      "attributes": {},
+      "children": [
+        {
+          "tag": "header",
+          "classes": [
+            "gallery-mosaic-captioned_header"
+          ],
+          "attributes": {},
+          "optional": true,
+          "visibilityProp": "headingVisible",
+          "children": [
+            {
+              "tag": "h2",
+              "classes": [
+                "gallery-mosaic-captioned_heading",
+                "heading-style-h4",
+                "text-weight-normal"
+              ],
+              "attributes": {},
+              "prop": "heading",
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "gallery-mosaic-captioned_grid"
+          ],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "figure",
+              "classes": [
+                "gallery-mosaic-captioned_figure",
+                "is-wide"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "img",
+                  "classes": [
+                    "gallery-mosaic-captioned_image"
+                  ],
+                  "attributes": {
+                    "loading": "lazy"
+                  },
+                  "prop": "image1",
+                  "children": []
+                },
+                {
+                  "tag": "header",
+                  "classes": [
+                    "gallery-mosaic-captioned_feature-header"
+                  ],
+                  "attributes": {},
+                  "optional": true,
+                  "visibilityProp": "featureTitleVisible",
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "classes": [
+                        "gallery-mosaic-captioned_feature-title",
+                        "heading-style-h2",
+                        "text-weight-normal"
+                      ],
+                      "attributes": {},
+                      "prop": "featureTitle",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "figcaption",
+                  "classes": [
+                    "gallery-mosaic-captioned_caption",
+                    "text-size-regular",
+                    "text-style-caps-caption-16"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "span",
+                      "classes": [
+                        "gallery-mosaic-captioned_caption-index"
+                      ],
+                      "attributes": {},
+                      "text": "1",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "classes": [],
+                      "attributes": {},
+                      "prop": "caption1",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "figure",
+              "classes": [
+                "gallery-mosaic-captioned_figure"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "img",
+                  "classes": [
+                    "gallery-mosaic-captioned_image"
+                  ],
+                  "attributes": {
+                    "loading": "lazy"
+                  },
+                  "prop": "image2",
+                  "children": []
+                },
+                {
+                  "tag": "figcaption",
+                  "classes": [
+                    "gallery-mosaic-captioned_caption",
+                    "text-size-regular",
+                    "text-style-caps-caption-16"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "span",
+                      "classes": [
+                        "gallery-mosaic-captioned_caption-index"
+                      ],
+                      "attributes": {},
+                      "text": "2",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "classes": [],
+                      "attributes": {},
+                      "prop": "caption2",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "figure",
+              "classes": [
+                "gallery-mosaic-captioned_figure"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "img",
+                  "classes": [
+                    "gallery-mosaic-captioned_image"
+                  ],
+                  "attributes": {
+                    "loading": "lazy"
+                  },
+                  "prop": "image3",
+                  "children": []
+                },
+                {
+                  "tag": "figcaption",
+                  "classes": [
+                    "gallery-mosaic-captioned_caption",
+                    "text-size-regular",
+                    "text-style-caps-caption-16"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "span",
+                      "classes": [
+                        "gallery-mosaic-captioned_caption-index"
+                      ],
+                      "attributes": {},
+                      "text": "3",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "classes": [],
+                      "attributes": {},
+                      "prop": "caption3",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "figure",
+              "classes": [
+                "gallery-mosaic-captioned_figure",
+                "is-wide"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "img",
+                  "classes": [
+                    "gallery-mosaic-captioned_image"
+                  ],
+                  "attributes": {
+                    "loading": "lazy"
+                  },
+                  "prop": "image4",
+                  "children": []
+                },
+                {
+                  "tag": "figcaption",
+                  "classes": [
+                    "gallery-mosaic-captioned_caption",
+                    "text-size-regular",
+                    "text-style-caps-caption-16"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "span",
+                      "classes": [
+                        "gallery-mosaic-captioned_caption-index"
+                      ],
+                      "attributes": {},
+                      "text": "4",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "classes": [],
+                      "attributes": {},
+                      "prop": "caption4",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": null,
+      "name": "base",
+      "on": "section_gallery-mosaic-captioned",
+      "styleDeltas": {},
+      "crop": "figma/pages/meetings-collection/sections/09-meetings-events-gallery/section.webp"
+    }
+  ],
+  "props": [
+    {
+      "name": "heading",
+      "type": "text",
+      "element": "gallery-mosaic-captioned_heading",
+      "default": "MEETINGS & EVENTS gallery"
+    },
+    {
+      "name": "headingVisible",
+      "type": "visibility",
+      "element": "gallery-mosaic-captioned_header",
+      "default": true
+    },
+    {
+      "name": "featureTitle",
+      "type": "text",
+      "element": "gallery-mosaic-captioned_feature-title",
+      "default": "A Landmark Reimagined"
+    },
+    {
+      "name": "featureTitleVisible",
+      "type": "visibility",
+      "element": "gallery-mosaic-captioned_feature-header",
+      "default": false
+    },
+    {
+      "name": "image1",
+      "type": "image",
+      "element": "gallery-mosaic-captioned_image",
+      "position": 1
+    },
+    {
+      "name": "image2",
+      "type": "image",
+      "element": "gallery-mosaic-captioned_image",
+      "position": 2
+    },
+    {
+      "name": "image3",
+      "type": "image",
+      "element": "gallery-mosaic-captioned_image",
+      "position": 3
+    },
+    {
+      "name": "image4",
+      "type": "image",
+      "element": "gallery-mosaic-captioned_image",
+      "position": 4
+    },
+    {
+      "name": "caption1",
+      "type": "text",
+      "element": "gallery-mosaic-captioned_caption",
+      "position": 1
+    },
+    {
+      "name": "caption2",
+      "type": "text",
+      "element": "gallery-mosaic-captioned_caption",
+      "position": 2
+    },
+    {
+      "name": "caption3",
+      "type": "text",
+      "element": "gallery-mosaic-captioned_caption",
+      "position": 3
+    },
+    {
+      "name": "caption4",
+      "type": "text",
+      "element": "gallery-mosaic-captioned_caption",
+      "position": 4
+    }
+  ],
+  "assets": [
+    {
+      "slot": "image1",
+      "webflowAssetId": null,
+      "local": null,
+      "note": "Figma has a #D9D9D9 placeholder rectangle (377:450), no image fill. Left as a Webflow placeholder image."
+    },
+    {
+      "slot": "image2",
+      "webflowAssetId": null,
+      "local": null,
+      "note": "Placeholder group 377:452, no image fill."
+    },
+    {
+      "slot": "image3",
+      "webflowAssetId": null,
+      "local": null,
+      "note": "Placeholder group 377:455 (vector group-270989703-800x900), no image fill."
+    },
+    {
+      "slot": "image4",
+      "webflowAssetId": null,
+      "local": null,
+      "note": "Placeholder rectangle 377:451, no image fill."
+    }
+  ],
+  "instances": [
+    {
+      "page": "meetings-collection",
+      "section": "meetings-collection/09-meetings-events-gallery",
+      "variant": "base",
+      "crop": "figma/pages/meetings-collection/sections/09-meetings-events-gallery/section.webp",
+      "headingOffset": {
+        "left": 40,
+        "top": 40
+      },
+      "content": {
+        "headingVisible": true,
+        "featureTitleVisible": false,
+        "heading": "MEETINGS & EVENTS gallery",
+        "featureTitle": "A Landmark Reimagined",
+        "caption1": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+        "caption2": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+        "caption3": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+        "caption4": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+      }
+    },
+    {
+      "page": "history",
+      "section": "history/07-1-etiam-imperdiet-sodales-dui-a",
+      "variant": "base",
+      "crop": "figma/pages/history/sections/07-1-etiam-imperdiet-sodales-dui-a/section.webp",
+      "headingOffset": null,
+      "content": {
+        "headingVisible": false,
+        "featureTitleVisible": false,
+        "caption1": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+        "caption2": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+        "caption3": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+        "caption4": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+      }
+    },
+    {
+      "page": "rooms-individual",
+      "section": "rooms-individual/09-deluxe-king-suite-gallery",
+      "variant": "base",
+      "crop": "figma/pages/rooms-individual/sections/09-deluxe-king-suite-gallery/section.webp",
+      "headingOffset": {
+        "left": 40,
+        "top": 40
+      },
+      "content": {
+        "headingVisible": true,
+        "featureTitleVisible": false,
+        "heading": "deluxe king suite gallery",
+        "caption1": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+        "caption2": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+        "caption3": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+        "caption4": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+      }
+    },
+    {
+      "page": "neighborhood",
+      "section": "neighborhood/11-neighborhood-gallery",
+      "variant": "base",
+      "crop": "figma/pages/neighborhood/sections/11-neighborhood-gallery/section.webp",
+      "headingOffset": {
+        "left": 40,
+        "top": 40
+      },
+      "content": {
+        "headingVisible": true,
+        "featureTitleVisible": false,
+        "heading": "neighborhood gallery",
+        "caption1": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+        "caption2": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+        "caption3": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+        "caption4": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+      }
+    },
+    {
+      "page": "dining-zuma",
+      "section": "dining-zuma/08-zuma-gallery",
+      "variant": "base",
+      "crop": "figma/pages/dining-zuma/sections/08-zuma-gallery/section.webp",
+      "headingOffset": {
+        "left": 40,
+        "top": 40
+      },
+      "content": {
+        "headingVisible": true,
+        "featureTitleVisible": false,
+        "heading": "zuma gallery",
+        "caption1": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+        "caption2": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+        "caption3": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+        "caption4": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+      }
+    },
+    {
+      "page": "dining-gardenterrace",
+      "section": "dining-gardenterrace/07-zuma-gallery",
+      "variant": "base",
+      "crop": "figma/pages/dining-gardenterrace/sections/07-zuma-gallery/section.webp",
+      "headingOffset": {
+        "left": 40,
+        "top": 40
+      },
+      "content": {
+        "headingVisible": true,
+        "featureTitleVisible": false,
+        "heading": "zuma gallery",
+        "caption1": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+        "caption2": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+        "caption3": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+        "caption4": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+      }
+    },
+    {
+      "page": "dining-lobbybar",
+      "section": "dining-lobbybar/07-zuma-gallery",
+      "variant": "base",
+      "crop": "figma/pages/dining-lobbybar/sections/07-zuma-gallery/section.webp",
+      "headingOffset": {
+        "left": 40,
+        "top": 40
+      },
+      "content": {
+        "headingVisible": true,
+        "featureTitleVisible": false,
+        "heading": "zuma gallery",
+        "caption1": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+        "caption2": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+        "caption3": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+        "caption4": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+      }
+    },
+    {
+      "page": "dining-poollounge",
+      "section": "dining-poollounge/07-zuma-gallery",
+      "variant": "base",
+      "crop": "figma/pages/dining-poollounge/sections/07-zuma-gallery/section.webp",
+      "headingOffset": {
+        "left": 40,
+        "top": 40
+      },
+      "content": {
+        "headingVisible": true,
+        "featureTitleVisible": false,
+        "heading": "zuma gallery",
+        "caption1": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+        "caption2": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+        "caption3": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+        "caption4": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+      }
+    },
+    {
+      "page": "legal",
+      "section": "legal/13-corporate-gallery",
+      "variant": "base",
+      "crop": "figma/pages/legal/sections/13-corporate-gallery/section.webp",
+      "headingOffset": {
+        "left": 40,
+        "top": 40
+      },
+      "content": {
+        "headingVisible": true,
+        "featureTitleVisible": false,
+        "heading": "corporate gallery",
+        "caption1": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+        "caption2": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+        "caption3": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+        "caption4": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+      }
+    },
+    {
+      "page": "corporate",
+      "section": "corporate/13-corporate-gallery",
+      "variant": "base",
+      "crop": "figma/pages/corporate/sections/13-corporate-gallery/section.webp",
+      "headingOffset": {
+        "left": 40,
+        "top": 40
+      },
+      "content": {
+        "headingVisible": true,
+        "featureTitleVisible": false,
+        "heading": "corporate gallery",
+        "caption1": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+        "caption2": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+        "caption3": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+        "caption4": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+      }
+    }
+  ],
+  "openQuestions": [
+    "Feature title: meetings-collection/09 has a 40px cream text 'A Landmark Reimagined' (288:4026) that is visible in Figma but drawn under the first tile, so no crop shows it. The plan supports it as an optional element (featureTitle, off by default). Should it show on the meetings instance?",
+    "Images: every tile in all 10 instances is a #D9D9D9 placeholder with no image fill, so no Webflow asset ids exist. Who supplies the 40 gallery images (4 per instance), and should the dining and legal/corporate instances take them from CMS (Q027, Q028) instead of component props?",
+    "Captions are lorem ipsum in every instance. Keep them as placeholders until copy arrives, or leave the caption props empty?",
+    "Gallery headings on dining-gardenterrace, dining-lobbybar and dining-poollounge read 'zuma gallery' (copied from dining-zuma). Confirm the real heading per venue.",
+    "Superscript caption numbers are static text 1 to 4 in the component. Figma's override for the digit is empty in the REST data, so the superscript treatment (0.625em, raised 0.5em) is read from the crop. Confirm against the Figma file if exact size matters."
+  ],
+  "deviations": [
+    "No padding-global or container: the grid is full bleed (1600 of 1600) and the header and captions sit 2.5rem in from the tile edge, not 2rem, so they carry their own offsets.",
+    "Caption bottom offset is 2.5rem on every tile; Figma has 2rem on the first full-width tile and 2.5rem on the others.",
+    "Figure placeholder colour #D9D9D9 is a literal value (no variable); it only shows until images are set.",
+    "Tile heights use aspect-ratio (1600 / 995 wide, 8 / 9 half) so the mosaic scales with viewport width; at 1440 the section is about 2602px tall against 2892px at the 1600 Figma frame.",
+    "Below 768px the grid stacks to one column (wide tiles 4 / 5, half tiles 1 / 1). Figma has no mobile frame for this section."
+  ]
+}
