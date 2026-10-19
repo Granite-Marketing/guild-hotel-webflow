@@ -6,6 +6,8 @@ Queue: `docs/figma/build-queue.md`. Type: page. Lane: agent. Depends on: Q001 (T
 
 You may use subagents. Send research, codebase extraction and verification (local preview checks, real-data runs, test runs, plan-vs-diff checks) to Sonnet subagents, running independent ones in parallel. Keep planning and core implementation in this session.
 
+Session setup, before anything else: in your worktree root run `ln -sf ~/guild-hotel-webflow/.env .env; [ -e assets ] || ln -s ~/guild-hotel-webflow/assets assets; pnpm install --frozen-lockfile` (both links are gitignored; source `.env` for keys and never print it). Do not edit `docs/figma/queue-status.json`; the orchestrator owns it. Put notes for the orchestrator in your PR description. Lane is settled: native Webflow (plan KTD7), so skip hybrid lane routing.
+
 ## Goal
 
 Build the GALLERY page section by section, top to bottom, inserting shared component instances where listed.

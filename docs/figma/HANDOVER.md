@@ -31,8 +31,8 @@ Last updated: 2026-10-19.
 
 Do these in one pass, and fix or report each failure before dispatching anything:
 
-1. `git -C ~/guild-hotel-webflow fetch && git -C ~/guild-hotel-webflow status`: `main` must contain `docs/figma/queue-status.json`. If it does not, stop: the snapshot branch is not merged yet.
-2. Read `docs/figma/queue-status.json`. Any entry `in-progress` from a previous orchestrator: find its session (`list_sessions`) or branch and PR (`gh pr list`), then set it to `review`, `done` or back to `todo` from the evidence.
+1. `git -C ~/guild-hotel-webflow fetch && git -C ~/guild-hotel-webflow pull`: `main` must contain `docs/figma/queue-status.json`. Sessions start from `main`, so they cannot see briefs that are not merged. If it is missing, find the open snapshot PR (`gh pr list --repo Granite-Marketing/guild-hotel-webflow`), ask Stephen to merge it (or merge it yourself if he has allowed merges), and do not dispatch until it is on `main`.
+2. Ask Stephen once, in your first message: "May I merge PRs that pass verification without asking each time?" Record the answer in `docs/figma/decisions.md`. Then read `docs/figma/queue-status.json`. Any entry `in-progress` from a previous orchestrator: find its session (`list_sessions`) or branch and PR (`gh pr list`), then set it to `review`, `done` or back to `todo` from the evidence.
 3. Webflow MCP: `data_sites_tool > get_site` for the site above must succeed. For Designer work, the Designer must be open with the companion app connected; if a Designer call fails, ask Stephen to open it and continue with non-Designer work meanwhile.
 4. Confirm `~/guild-hotel-webflow/.env` and `~/guild-hotel-webflow/assets/asset-manifest.json` exist (existence only).
 
@@ -44,37 +44,54 @@ Do these in one pass, and fix or report each failure before dispatching anything
 
 Repeat until every ledger entry is `done`:
 
-1. **Ready set:** entries with `status: todo` whose `dependsOn` are all `done`.
-2. **Stephen entries** (`surface: stephen`): send him one consolidated message listing every ready one with its reference crops (paths from the queue entry). Mark them `waiting-approval`. When he says one is done, mark it `done`.
-3. **Parallel entries** (`surface: rest` or `code`): start one session per ready entry, all at once, with `start_session` (`initiation: user_asked`, `context: fresh`, `use_worktree: true`). The prompt is the brief path, the worktree setup line and "Commit on your branch and open a PR against main when the brief's definition of done is met." The background is two sentences from section 1. Record `in-progress`, the session id and the branch.
-4. **Designer entry:** if no `designer` entry is `in-progress`, start the first ready one in queue order the same way. Never start a second while one runs.
+1. **Ready set:** entries with `status: todo` whose `dependsOn` are all `done`. You are the only writer of the ledger; sessions report through their PR description.
+2. **Stephen entries** (`surface: stephen`): send him one consolidated message listing every ready one: decisions (D01, D02) with the proposal, manual builds with their reference crops (paths from the queue entry), plus any session waiting on his approval. Mark them `waiting-approval`. Record decision answers in `docs/figma/decisions.md` and pass them in the prompts of the entries that depend on them. When he says an entry is done, mark it `done`.
+3. **Parallel entries** (`surface: rest` or `code`): start one session per ready entry, all at once, with `start_session` (`initiation: user_asked`, `context: fresh`, `use_worktree: true`, `source_branch: main`, plus the entry's `model` and `effort` from the ledger). The prompt is the brief path, the worktree setup line and "Commit on your branch and open a PR against main when the brief's definition of done is met." The background is two sentences from section 1. Record `in-progress`, the session id and the branch.
+4. **Designer entry:** if no `designer` entry is `in-progress` or `review`, and Stephen is not using the Designer, start the first ready one in queue order the same way. Never start a second while one runs. Each time the Designer lane frees up and Stephen has manual Designer builds ready (Q005 to Q010), ask him whether he wants the Designer now; hold the next agent Designer start until he says it is free. Designer PRs carry only doc updates (the build is on the live site), so merging them promptly keeps the lane moving.
 5. **When a session reports back:**
    - Dispatch a Sonnet subagent to verify against the brief's definition of done: diff matches the brief, tests pass, the reuse gate held (no duplicate class family; check `docs/reference/style-inventory.md` in the diff), `webflow-ids.md` and `style-inventory.md` updated for Designer work. For Designer work, the subagent also screenshots the staging page with Playwright and compares it to the brief's `section.webp` crops.
    - If verification passes: set `review`, and ask Stephen to merge the PR. Merge yourself only if he has said in this conversation that you may merge verified PRs. After the merge, set `done` and pull `main`.
-   - If it fails: send the findings back to that session with `SendMessage` and keep it `in-progress`.
+   - If it fails: send the findings back to that session with `SendMessage` (if delivery fails, ask Stephen to paste them into that session) and keep it `in-progress`.
 6. **Approvals inside sessions:** sessions wait on Stephen in their own window. Your status message to him lists which sessions are waiting, with links.
-7. **Record:** after every change, commit `docs/figma/queue-status.json` on `main` (or on a small `chore/queue-status` PR if `main` is protected) with a one-line message.
+7. **Record:** after every change, commit `docs/figma/queue-status.json` (and `docs/figma/decisions.md`) on `main` with a one-line message, or on a small `chore/queue-status` PR if `main` is protected.
 
 ## 6. Order of work
 
 | Wave | Entries | Surface | Notes |
 |---|---|---|---|
-| 0 | Q002 fonts, Q011 lane decision, brand colour roles, near-miss check in `components.md` | stephen | Ask all four in your first message; colour roles gate Q001 |
+| 0 | D01 colour roles, D02 near-identical pairs, Q002 fonts | stephen | Ask all three in your first message, with the merge question; D01 gates Q001, D02 gates every build |
 | 1 | Q001 token sync, then Q004 pages | designer | Q001 confirms the colour roles before applying |
-| 1 | Q003 asset upload | rest | Parallel with Q001; needs Stephen's yes on the upload list |
+| 1 | Q003 asset upload | rest | Parallel with Q001; the session produces the upload list and needs Stephen's yes, so flag it in your status message |
 | 1 | A01 to A05 animation modules | code | All five in parallel from the start |
 | 2 | Q012 to Q026 shared components | designer | Queue order (most reused first) |
-| 2 | Q005 to Q010 manual builds | stephen | Only while no agent Designer session runs; tell him when the Designer is free |
+| 2 | Q005 to Q011 manual builds and lane decision | stephen | Only while no agent Designer session runs; see dispatch step 4 |
 | 3 | Q027 to Q030 CMS templates | designer | Collection creation needs Stephen's yes on `cms-proposal.md` |
 | 4 | Q031 to Q044 pages | designer | Wire in the A0x modules by adding their data attributes |
-| 5 | Release | code | One `webflow-deploy` release after the A0x PRs merge; Stephen updates the footer script URL |
+| 5 | R01 release | code | One `webflow-deploy` release after the A0x PRs and the pages; Stephen updates the footer script URL |
 
-## 7. Keeping yourself lean
+## 7. Model and effort routing
+
+Match the model to the job: judgment and planning get the strongest model, mechanical and verification work gets the cheaper ones. The ledger carries a `model`, `effort` and `modelReason` for every entry; pass them to `start_session` (`model`, `effort`). A session can never run a stronger model or higher effort than you, so run the orchestrator on the strongest model at `xhigh`. If a model id is refused, fall back one step (Fable to Opus, Haiku to Sonnet) and note it in the ledger.
+
+| Role | Model | Effort | Why |
+|---|---|---|---|
+| Orchestrator (you): planning, dispatch, review decisions | Fable 5.1 (`claude-fable-5-1`), else Opus 5.5 | xhigh | Planning slot; and a session cannot run above your effort, so you need the highest any entry uses |
+| Shared components with 4+ variants or 20+ instances, A04, A05 | Opus 5.5 | xhigh | The class family every page reuses; hard animation logic |
+| Other shared components, CMS templates, Q001, Q004, A01 to A03 | Opus 5.5 | high | Structural decisions with a visual target |
+| Pages with page-specific sections | Opus 5.5 | medium | Mostly composition plus a few new blocks |
+| Pages that only place existing components, Q003 asset upload | Sonnet 5.5 (`claude-sonnet-5-5`) | medium | Mechanical, fully specified |
+| Verification, screenshot compare, diff-vs-brief checks, extraction, classification | Sonnet 5.5 subagents | default | Standing rule: verification runs on Sonnet |
+| Bulk lookups, ID listing, file inventories | Haiku 5.5 (`claude-haiku-5-5`) subagents | default | Cheapest; no judgment needed |
+
+Inside every session, the brief already tells it to delegate research, extraction and verification to Sonnet subagents in parallel and keep planning and core implementation in the session. Escalate an entry's model one step (and note it in `modelReason`) if its session fails verification twice; downgrade a page to Sonnet once all its components exist.
+
+## 8. Keeping yourself lean
 
 - Read only this file, the ledger and session reports. Never read crops, specs or briefs in full; your subagents and sessions do.
+- Run checks as Sonnet subagents in parallel (one per session report), and Haiku subagents for lookups such as listing PRs or branches.
 - Keep your messages to Stephen to status plus decisions needed.
 - If your context grows large, commit the ledger and tell Stephen to start a fresh orchestrator with: "Run `docs/figma/HANDOVER.md`."
 
-## 8. If the design changes
+## 9. If the design changes
 
 Run `pnpm figma:snapshot` (one call if unchanged), then `pnpm figma:slice`, `pnpm figma:inventory`, `pnpm figma:queue`, commit, and diff `docs/figma/build-queue.md` to see which entries changed. Reset changed entries that are `done` to `todo` with a note.

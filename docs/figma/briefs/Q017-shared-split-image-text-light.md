@@ -6,6 +6,8 @@ Queue: `docs/figma/build-queue.md`. Type: shared. Lane: agent. Depends on: Q001 
 
 You may use subagents. Send research, codebase extraction and verification (local preview checks, real-data runs, test runs, plan-vs-diff checks) to Sonnet subagents, running independent ones in parallel. Keep planning and core implementation in this session.
 
+Session setup, before anything else: in your worktree root run `ln -sf ~/guild-hotel-webflow/.env .env; [ -e assets ] || ln -s ~/guild-hotel-webflow/assets assets; pnpm install --frozen-lockfile` (both links are gitignored; source `.env` for keys and never print it). Do not edit `docs/figma/queue-status.json`; the orchestrator owns it. Put notes for the orchestrator in your PR description. Lane is settled: native Webflow (plan KTD7), so skip hybrid lane routing.
+
 ## Goal
 
 Build one shared component used by 19 sections on 12 pages (home, meetings-collection, history, rooms-individual, arts, neighborhood, dining-zuma, dining-gardenterrace, dining-lobbybar, dining-poollounge, happenings-indiv, blog-indiv). Build it once on `home` from `home/03-west-coast-hospitality-since-1924`, convert it to a Webflow component, then add the 5 other variants listed under Variants as `is-` modifier combo classes on that one component (or one class family), never as a second component. Page entries insert instances; they do not rebuild it.

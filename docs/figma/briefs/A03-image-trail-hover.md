@@ -4,6 +4,8 @@ Code-only animation module. Runs in its own worktree in parallel with Designer b
 
 You may use subagents. Send research, codebase extraction and verification (local preview checks, real-data runs, test runs, plan-vs-diff checks) to Sonnet subagents, running independent ones in parallel. Keep planning and core implementation in this session.
 
+Session setup, before anything else: in your worktree root run `ln -sf ~/guild-hotel-webflow/.env .env; [ -e assets ] || ln -s ~/guild-hotel-webflow/assets assets; pnpm install --frozen-lockfile` (both links are gitignored; source `.env` for keys and never print it). Do not edit `docs/figma/queue-status.json`; the orchestrator owns it. Put notes for the orchestrator in your PR description.
+
 ## Goal
 
 Image trail effect on hover; images come from the Arts CMS collection and click through to an anchor on the Arts page.
@@ -26,5 +28,5 @@ Image trail effect on hover; images come from the Arts CMS collection and click 
 ## Done when
 
 - `pnpm check` and `pnpm build` pass; the Playwright check passes.
-- The DOM contract is documented, and the matching component brief(s) are noted in `docs/figma/queue-status.json` (`notes`) so the Designer session adds the attributes.
+- The DOM contract is documented, and your PR description names the components (from `docs/figma/components.md`) whose Designer builds must add the data attributes.
 - Work is committed on your branch with a PR opened against `main`; do not release a version (the orchestrator batches releases).

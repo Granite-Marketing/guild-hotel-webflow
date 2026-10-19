@@ -6,6 +6,8 @@ Queue: `docs/figma/build-queue.md`. Type: cms. Lane: agent (collection needs app
 
 You may use subagents. Send research, codebase extraction and verification (local preview checks, real-data runs, test runs, plan-vs-diff checks) to Sonnet subagents, running independent ones in parallel. Keep planning and core implementation in this session.
 
+Session setup, before anything else: in your worktree root run `ln -sf ~/guild-hotel-webflow/.env .env; [ -e assets ] || ln -s ~/guild-hotel-webflow/assets assets; pnpm install --frozen-lockfile` (both links are gitignored; source `.env` for keys and never print it). Do not edit `docs/figma/queue-status.json`; the orchestrator owns it. Put notes for the orchestrator in your PR description. Lane is settled: native Webflow (plan KTD7), so skip hybrid lane routing.
+
 ## Goal
 
 Build the CMS template page for `cms-happenings-blog-collection` once. Pages happenings-collection, blog-collection are clones; `happenings-collection` is the reference. Creating the collection needs approval first: present the schema from `docs/figma/cms-proposal.md` and wait for a yes, then create it, record ids in `docs/reference/webflow-ids.md`, build the template from the reference page sections and bind fields.

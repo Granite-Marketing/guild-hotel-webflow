@@ -2,18 +2,57 @@
   "_readme": "Orchestrator ledger for docs/figma/HANDOVER.md. Status: todo | in-progress | waiting-approval | blocked | review | done. Update in the same commit as the work it records.",
   "entries": [
     {
+      "id": "D01",
+      "title": "Decision: brand colour roles (primary #29310C, secondary #F26849, accent #906E58 proposed by frequency)",
+      "type": "decision",
+      "lane": "manual",
+      "dependsOn": [],
+      "brief": null,
+      "surface": "stephen",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Record answer in docs/figma/decisions.md; pass it in the Q001 prompt",
+      "model": null,
+      "effort": null,
+      "modelReason": "manual, Stephen"
+    },
+    {
+      "id": "D02",
+      "title": "Decision: near-identical component pairs in docs/figma/components.md \"Check these\"",
+      "type": "decision",
+      "lane": "manual",
+      "dependsOn": [],
+      "brief": null,
+      "surface": "stephen",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Record answer in docs/figma/decisions.md; same block means the same name in figma/inventory.overrides.json, then rerun figma:inventory and figma:queue",
+      "model": null,
+      "effort": null,
+      "modelReason": "manual, Stephen"
+    },
+    {
       "id": "Q001",
       "title": "Token sync: variables and Relume classes",
       "type": "setup",
       "lane": "agent (approval)",
-      "dependsOn": [],
+      "dependsOn": [
+        "D01"
+      ],
       "brief": "docs/figma/briefs/Q001-token-sync.md",
       "surface": "designer",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "live-site mapping decisions, approval plan"
     },
     {
       "id": "Q002",
@@ -27,7 +66,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": null,
+      "effort": null,
+      "modelReason": "manual, Stephen"
     },
     {
       "id": "Q003",
@@ -41,7 +83,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-sonnet-5-5",
+      "effort": "medium",
+      "modelReason": "mechanical upload with resize"
     },
     {
       "id": "Q004",
@@ -55,7 +100,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "live-site mapping decisions, approval plan"
     },
     {
       "id": "Q005",
@@ -72,7 +120,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": null,
+      "effort": null,
+      "modelReason": "manual, Stephen"
     },
     {
       "id": "Q006",
@@ -89,7 +140,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": null,
+      "effort": null,
+      "modelReason": "manual, Stephen"
     },
     {
       "id": "Q007",
@@ -106,7 +160,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": null,
+      "effort": null,
+      "modelReason": "manual, Stephen"
     },
     {
       "id": "Q008",
@@ -123,7 +180,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": null,
+      "effort": null,
+      "modelReason": "manual, Stephen"
     },
     {
       "id": "Q009",
@@ -140,7 +200,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": null,
+      "effort": null,
+      "modelReason": "manual, Stephen"
     },
     {
       "id": "Q010",
@@ -157,7 +220,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": null,
+      "effort": null,
+      "modelReason": "manual, Stephen"
     },
     {
       "id": "Q011",
@@ -174,7 +240,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": null,
+      "effort": null,
+      "modelReason": "manual, Stephen"
     },
     {
       "id": "Q012",
@@ -185,7 +254,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q012-shared-cta-booking-newsletter.md",
       "surface": "designer",
@@ -193,7 +263,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "24 instances, 1 variants: the class family every page reuses"
     },
     {
       "id": "Q013",
@@ -204,7 +277,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q013-shared-footer-links.md",
       "surface": "designer",
@@ -212,7 +286,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "24 instances, 1 variants: the class family every page reuses"
     },
     {
       "id": "Q014",
@@ -223,7 +300,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q014-shared-hero-fullbleed-centered.md",
       "surface": "designer",
@@ -231,7 +309,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "24 instances, 3 variants: the class family every page reuses"
     },
     {
       "id": "Q015",
@@ -242,7 +323,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q015-shared-faq-accordion.md",
       "surface": "designer",
@@ -250,7 +332,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "21 instances, 1 variants: the class family every page reuses"
     },
     {
       "id": "Q016",
@@ -261,7 +346,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q016-shared-script-intro-centered.md",
       "surface": "designer",
@@ -269,7 +355,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "12 instances, 2 variants"
     },
     {
       "id": "Q017",
@@ -280,7 +369,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q017-shared-split-image-text-light.md",
       "surface": "designer",
@@ -288,7 +378,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "19 instances, 6 variants: the class family every page reuses"
     },
     {
       "id": "Q018",
@@ -299,7 +392,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q018-shared-gallery-mosaic-captioned.md",
       "surface": "designer",
@@ -307,7 +401,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "10 instances, 1 variants"
     },
     {
       "id": "Q019",
@@ -318,7 +415,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q019-shared-map-feature.md",
       "surface": "designer",
@@ -326,7 +424,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "9 instances, 3 variants"
     },
     {
       "id": "Q020",
@@ -337,7 +438,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q020-shared-image-trio-text.md",
       "surface": "designer",
@@ -345,7 +447,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "9 instances, 3 variants"
     },
     {
       "id": "Q021",
@@ -356,7 +461,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q021-shared-venue-card-fullbleed.md",
       "surface": "designer",
@@ -364,7 +470,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "29 instances, 6 variants: the class family every page reuses"
     },
     {
       "id": "Q022",
@@ -375,7 +484,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q022-shared-form-split-script-contact.md",
       "surface": "designer",
@@ -383,7 +493,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "6 instances, 2 variants"
     },
     {
       "id": "Q023",
@@ -394,7 +507,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q023-shared-tab-pills-intro.md",
       "surface": "designer",
@@ -402,7 +516,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "5 instances, 3 variants"
     },
     {
       "id": "Q024",
@@ -413,7 +530,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q024-shared-image-inset-single.md",
       "surface": "designer",
@@ -421,7 +539,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "4 instances, 2 variants"
     },
     {
       "id": "Q025",
@@ -432,7 +553,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q025-shared-article-card-staggered.md",
       "surface": "designer",
@@ -440,7 +562,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "11 instances, 2 variants"
     },
     {
       "id": "Q026",
@@ -451,7 +576,8 @@
         "Q001",
         "Q002",
         "Q003",
-        "Q004"
+        "Q004",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q026-shared-timeline-scatter-images.md",
       "surface": "designer",
@@ -459,7 +585,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "2 instances, 2 variants"
     },
     {
       "id": "Q027",
@@ -477,7 +606,8 @@
         "Q015",
         "Q017",
         "Q018",
-        "Q020"
+        "Q020",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q027-cms-dining.md",
       "surface": "designer",
@@ -485,7 +615,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "template structure plus CMS bindings"
     },
     {
       "id": "Q028",
@@ -506,7 +639,8 @@
         "Q019",
         "Q020",
         "Q021",
-        "Q022"
+        "Q022",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q028-cms-legal-corporate.md",
       "surface": "designer",
@@ -514,7 +648,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "template structure plus CMS bindings"
     },
     {
       "id": "Q029",
@@ -531,7 +668,8 @@
         "Q014",
         "Q015",
         "Q023",
-        "Q025"
+        "Q025",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q029-cms-happenings-blog-collection.md",
       "surface": "designer",
@@ -539,7 +677,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "template structure plus CMS bindings"
     },
     {
       "id": "Q030",
@@ -556,7 +697,8 @@
         "Q014",
         "Q016",
         "Q017",
-        "Q024"
+        "Q024",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q030-cms-happenings-blog-indiv.md",
       "surface": "designer",
@@ -564,7 +706,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "template structure plus CMS bindings"
     },
     {
       "id": "Q031",
@@ -584,7 +729,8 @@
         "Q017",
         "Q019",
         "Q020",
-        "Q021"
+        "Q021",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q031-page-home.md",
       "surface": "designer",
@@ -592,7 +738,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "1 page-specific section(s) plus instances"
     },
     {
       "id": "Q032",
@@ -611,7 +760,8 @@
         "Q016",
         "Q019",
         "Q021",
-        "Q027"
+        "Q027",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q032-page-dining-collection.md",
       "surface": "designer",
@@ -619,7 +769,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-sonnet-5-5",
+      "effort": "medium",
+      "modelReason": "assembles existing component instances only"
     },
     {
       "id": "Q033",
@@ -636,7 +789,8 @@
         "Q014",
         "Q015",
         "Q016",
-        "Q019"
+        "Q019",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q033-page-rooms-collection.md",
       "surface": "designer",
@@ -644,7 +798,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "5 page-specific section(s) plus instances"
     },
     {
       "id": "Q034",
@@ -661,7 +818,8 @@
         "Q014",
         "Q015",
         "Q021",
-        "Q023"
+        "Q023",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q034-page-wellness-collection.md",
       "surface": "designer",
@@ -669,7 +827,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-sonnet-5-5",
+      "effort": "medium",
+      "modelReason": "assembles existing component instances only"
     },
     {
       "id": "Q035",
@@ -690,7 +851,8 @@
         "Q019",
         "Q021",
         "Q022",
-        "Q023"
+        "Q023",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q035-page-meetings-collection.md",
       "surface": "designer",
@@ -698,7 +860,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-sonnet-5-5",
+      "effort": "medium",
+      "modelReason": "assembles existing component instances only"
     },
     {
       "id": "Q036",
@@ -717,7 +882,8 @@
         "Q016",
         "Q017",
         "Q018",
-        "Q019"
+        "Q019",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q036-page-history.md",
       "surface": "designer",
@@ -725,7 +891,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "3 page-specific section(s) plus instances"
     },
     {
       "id": "Q037",
@@ -743,7 +912,8 @@
         "Q015",
         "Q016",
         "Q022",
-        "Q026"
+        "Q026",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q037-page-guidelines.md",
       "surface": "designer",
@@ -751,7 +921,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "2 page-specific section(s) plus instances"
     },
     {
       "id": "Q038",
@@ -771,7 +944,8 @@
         "Q017",
         "Q018",
         "Q019",
-        "Q024"
+        "Q024",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q038-page-rooms-individual.md",
       "surface": "designer",
@@ -779,7 +953,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "2 page-specific section(s) plus instances"
     },
     {
       "id": "Q039",
@@ -796,7 +973,8 @@
         "Q014",
         "Q015",
         "Q022",
-        "Q023"
+        "Q023",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q039-page-press.md",
       "surface": "designer",
@@ -804,7 +982,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "5 page-specific section(s) plus instances"
     },
     {
       "id": "Q040",
@@ -819,7 +1000,8 @@
         "Q012",
         "Q013",
         "Q014",
-        "Q015"
+        "Q015",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q040-page-gallery.md",
       "surface": "designer",
@@ -827,7 +1009,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-sonnet-5-5",
+      "effort": "medium",
+      "modelReason": "assembles existing component instances only"
     },
     {
       "id": "Q041",
@@ -845,7 +1030,8 @@
         "Q015",
         "Q016",
         "Q017",
-        "Q024"
+        "Q024",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q041-page-arts.md",
       "surface": "designer",
@@ -853,7 +1039,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-sonnet-5-5",
+      "effort": "medium",
+      "modelReason": "assembles existing component instances only"
     },
     {
       "id": "Q042",
@@ -866,7 +1055,8 @@
         "Q003",
         "Q004",
         "Q012",
-        "Q013"
+        "Q013",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q042-page-static-template.md",
       "surface": "designer",
@@ -874,7 +1064,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "1 page-specific section(s) plus instances"
     },
     {
       "id": "Q043",
@@ -889,7 +1082,8 @@
         "Q012",
         "Q013",
         "Q015",
-        "Q022"
+        "Q022",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q043-page-contact.md",
       "surface": "designer",
@@ -897,7 +1091,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "2 page-specific section(s) plus instances"
     },
     {
       "id": "Q044",
@@ -918,7 +1115,8 @@
         "Q018",
         "Q019",
         "Q025",
-        "Q026"
+        "Q026",
+        "D02"
       ],
       "brief": "docs/figma/briefs/Q044-page-neighborhood.md",
       "surface": "designer",
@@ -926,7 +1124,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "1 page-specific section(s) plus instances"
     },
     {
       "id": "A01",
@@ -940,7 +1141,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "GSAP module with scroll or filter logic"
     },
     {
       "id": "A02",
@@ -954,7 +1158,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "GSAP module with scroll or filter logic"
     },
     {
       "id": "A03",
@@ -968,7 +1175,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "GSAP module with scroll or filter logic"
     },
     {
       "id": "A04",
@@ -982,7 +1192,10 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "GSAP module with scroll or filter logic"
     },
     {
       "id": "A05",
@@ -996,7 +1209,47 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": ""
+      "notes": "",
+      "model": "claude-opus-5-5",
+      "effort": "xhigh",
+      "modelReason": "GSAP module with scroll or filter logic"
+    },
+    {
+      "id": "R01",
+      "title": "Release: bundle the animation modules via webflow-deploy; Stephen updates the footer script URL",
+      "type": "release",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "Q031",
+        "Q032",
+        "Q033",
+        "Q034",
+        "Q035",
+        "Q036",
+        "Q037",
+        "Q038",
+        "Q039",
+        "Q040",
+        "Q041",
+        "Q042",
+        "Q043",
+        "Q044"
+      ],
+      "brief": null,
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Run the webflow-deploy skill in a session on main; enable each module in src/index.ts for pages that carry its data attributes",
+      "model": "claude-sonnet-5-5",
+      "effort": "medium",
+      "modelReason": "scripted release flow"
     }
   ]
 }

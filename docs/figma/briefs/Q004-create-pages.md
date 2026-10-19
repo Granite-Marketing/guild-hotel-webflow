@@ -6,6 +6,8 @@ Queue: `docs/figma/build-queue.md`. Type: setup. Lane: agent (approval). Depends
 
 You may use subagents. Send research, codebase extraction and verification (local preview checks, real-data runs, test runs, plan-vs-diff checks) to Sonnet subagents, running independent ones in parallel. Keep planning and core implementation in this session.
 
+Session setup, before anything else: in your worktree root run `ln -sf ~/guild-hotel-webflow/.env .env; [ -e assets ] || ln -s ~/guild-hotel-webflow/assets assets; pnpm install --frozen-lockfile` (both links are gitignored; source `.env` for keys and never print it). Do not edit `docs/figma/queue-status.json`; the orchestrator owns it. Put notes for the orchestrator in your PR description. Lane is settled: native Webflow (plan KTD7), so skip hybrid lane routing.
+
 ## Goal
 
 Create a Webflow page for each Figma page design so build sessions have a target. Clone pages in a CMS template group get one collection template page, created with the collection in their CMS entry, not static pages.

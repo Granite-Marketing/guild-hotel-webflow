@@ -18,7 +18,7 @@ Thumbs.db
 *.swo
 
 # Exported Figma assets (local storage, not committed)
-assets/
+/assets
 
 # Client copy documents (confidential)
 docs/examples/

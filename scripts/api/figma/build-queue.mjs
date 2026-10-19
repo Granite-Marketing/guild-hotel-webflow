@@ -22,6 +22,7 @@ import {
   GENERATED_MARKER,
   HEIGHT_CLASS_RATIO,
   SUBAGENT_LINE,
+  SESSION_SETUP_LINE,
   bandFills,
   buildAssetIndex,
   buildComponents,
@@ -525,6 +526,8 @@ const commonHeader = (entry, context) => {
     `Queue: \`docs/figma/build-queue.md\`. Type: ${entry.type}. Lane: ${entry.lane}. Depends on: ${depends}.`,
     '',
     SUBAGENT_LINE,
+    '',
+    SESSION_SETUP_LINE,
     ''
   ]
 }

@@ -12,7 +12,7 @@ import { discoverFrames, renderPath } from '../../scripts/api/figma/lib/frames.m
 import {
   GENERATED_MARKER,
   SIMILARITY,
-  SUBAGENT_LINE,
+  SUBAGENT_LINE, SESSION_SETUP_LINE,
   buildComponents,
   contentKey,
   sectionForUse,
@@ -195,11 +195,13 @@ test('every brief references files that exist and carries the required lines', (
     const text = fs.readFileSync(path.join(root, rel), 'utf8')
     assert.ok(text.includes(SUBAGENT_LINE), rel)
     assert.ok(text.includes(GENERATED_MARKER), rel)
+    assert.ok(text.includes(SESSION_SETUP_LINE), `${rel} has the session setup line`)
     assert.ok(!text.includes('\u2014'), `${rel} has no em dash`)
     if (!/Q00[1-4]-/.test(rel)) assert.ok(text.includes('## Component reuse gate') && text.includes('`docs/figma/components.md`'), `${rel} has the reuse gate`)
     const paths = [...text.matchAll(/`([A-Za-z0-9_.][A-Za-z0-9_./-]*\.(?:md|json|webp|svg|png))`/g)].map((match) => match[1])
     assert.ok(paths.length > 3, rel)
-    for (const file of paths) assert.ok(fs.existsSync(path.join(root, file)), `${rel} -> ${file}`)
+    // The orchestrator ledger is named in the setup line but is not part of a test root.
+    for (const file of paths.filter((file) => file !== 'docs/figma/queue-status.json')) assert.ok(fs.existsSync(path.join(root, file)), `${rel} -> ${file}`)
   }
   const home = fs.readFileSync(path.join(root, briefs.find((rel) => rel.endsWith('page-home.md'))), 'utf8')
   assert.match(home, /6ad64060ae8eac6d7b7c4241/, 'home page id from webflow-ids.md')
