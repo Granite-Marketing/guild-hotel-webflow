@@ -130,7 +130,7 @@ Images, icons, and logos are exported from Figma and uploaded to Webflow via RES
 - `WEBFLOW_SITE_ID` — Found in Site Settings > General
 - `ANTHROPIC_API_KEY` — Alt-text generation (paid; scripts print a dollar estimate and need `--yes` before submitting)
 
-**Figma snapshot (this project):** design data is cached in `figma/` (see `figma/README.md`); build sessions read it and never call `api.figma.com`. Build order and lanes: `docs/figma/build-queue.md`.
+**Start here:** `docs/figma/HANDOVER.md` (state, waves, what can run in parallel). **Figma snapshot (this project):** design data is cached in `figma/` (see `figma/README.md`); build sessions read it and never call `api.figma.com`. Build order and lanes: `docs/figma/build-queue.md`.
 
 Figma REST calls fail with 403 when the token holder has view-only access, and the Figma MCP has plan-based call limits. Check access before starting: `docs/reference/figma-access.md`.
 
