@@ -57,3 +57,18 @@ None yet. Proposed schemas live in `docs/figma/cms-proposal.md`; collections are
 ## Asset library (Q003)
 
 46 image fills from `figma/assets.json` uploaded to site `6ad6405eae8eac6d7b7c41a3`. Per-image `webflowAssetId` and `webflowUrl` live in `figma/assets.json` (and `assets/asset-manifest.json`). Run `pnpm run upload-assets -- --used-only` to limit uploads to the design's fills; without the flag the script uploads every manifest entry. Alt text is not yet generated.
+
+## CMS collections (C01, created 2026-10-19, items are drafts)
+
+| Collection | ID | Items (id) |
+|---|---|---|
+| `cms-dining` | `6ad67d7316e13e66c2b760d7` | dining-zuma `6ad67dd4bf36da0c182e52b3`, dining-gardenterrace `6ad67dd4bf36da0c182e52b5`, dining-lobbybar `6ad67dd4bf36da0c182e52b7`, dining-poollounge `6ad67dd4bf36da0c182e52b9` |
+| `cms-legal-corporate` | `6ad67d74943352af06e37843` | legal `6ad67dd58726a8a44534c1e6`, corporate `6ad67dd58726a8a44534c1e8` |
+| `cms-happenings-blog-collection` | `6ad67d74485ab8562b6e34da` | happenings-collection `6ad67dd6f57084c9b83ef704`, blog-collection `6ad67dd6f57084c9b83ef706` |
+| `cms-happenings-blog-indiv` | `6ad67d759914af41be21de7e` | happenings-indiv `6ad67dd7f7187cbc1ad0b2b9`, blog-indiv `6ad67dd7f7187cbc1ad0b2bb` |
+
+`cms-dining` fields (slug: id): `hero-heading` a12380119d472b70dd45f91789af3ebf, `hero-intro` f932bc9eac4e78e6dabf2a4960ea3e8e, `intro-image` 013209ec315eebd7a70571d12141516f, `other-dining-heading` ae37b5ef4767d6e216b8d5aed2ff2762, `other-dining-intro` 1db3846d47828d3e66a284c56ba04b21, `other-dining-label-1` 653ca61f0714efbc54188ac10d91001a, `other-dining-label-2` 11ef34b688eb9808b6a0b321df2afd4d, `other-dining-label-3` 55c8a14d41e2850754675b9804c6e4bb.
+
+`cms-happenings-blog-collection` field: `hero-heading` 0af5cdb8abb9c97b54f59decff37e1d3.
+
+`cms-legal-corporate` and `cms-happenings-blog-indiv` have only the default name and slug fields.
