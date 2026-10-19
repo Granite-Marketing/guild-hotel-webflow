@@ -16,6 +16,7 @@ Create clients through `pnpm create:client`; never fork this private factory as 
 ## Working rules
 
 - **CLAUDE.md is a router.** Keep this file to rules and pointers; detailed setup, DOM contracts and gotchas live in `docs/reference/` and `docs/solutions/`, linked from here.
+- **One class family per component (hard rule).** Similar blocks share one `section_<component>` family; differences are `is-` modifiers or utility classes. Check `docs/figma/components.md` and the live styles before creating a family; see `build-component` Step 0.25. Five similar blocks with five unique class families is a failed build.
 - **Reuse styles before creating them.** Before building, read the site's existing styles (`get_styles` with all styles) and reuse generic classes for shared patterns (dividers, page heroes, section headers). Name new shared classes generically, not after the page they first appear on.
 - **Record learnings.** When a project hits a reusable gotcha, write it to that project's `docs/solutions/` with frontmatter, then back-port it here once a second project would benefit.
 

@@ -7,6 +7,7 @@
 // figma/review/vision-*.json. Writes:
 //   figma/assets.json             image, brand and vector index (Webflow ids preserved)
 //   docs/figma/build-queue.md     ordered queue
+//   docs/figma/components.md      component catalogue: variants and duplicates
 //   docs/figma/briefs/Qnnn-*.md   one session brief per agent entry
 // Fully local: no network. Output is deterministic; stale generated briefs are removed.
 //
@@ -14,19 +15,29 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
+import zlib from 'node:zlib'
 import { fileURLToPath } from 'node:url'
 import {
   APPROVAL_RULE,
   GENERATED_MARKER,
+  HEIGHT_CLASS_RATIO,
   SUBAGENT_LINE,
+  bandFills,
   buildAssetIndex,
+  buildComponents,
   clean,
+  contentKey,
   effectiveSections,
   mergeVision,
+  pageBuildOrder,
   planQueue,
   tokenSummary,
-  truncate
+  toneName,
+  truncate,
+  variantFeatures,
+  variantText
 } from './lib/queue.mjs'
+import { indexNodes } from './lib/spec.mjs'
 
 const DEFAULT_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..')
 
@@ -143,8 +154,30 @@ export const buildQueue = ({ root = DEFAULT_ROOT, log = console.log, warn = (mes
     }
   }
 
+  // Component model: variant features per instance. Background fills come
+  // from the committed raw file when present (local read, no network).
+  const rawFile = path.join(figmaDir, 'raw', 'file.json.gz')
+  let rawNodes = null
+  if (fs.existsSync(rawFile)) {
+    try {
+      rawNodes = indexNodes(JSON.parse(zlib.gunzipSync(fs.readFileSync(rawFile)).toString('utf8')).document)
+    } catch (error) {
+      warn(`${rawFile}: ${error.message}; backgrounds fall back to spec colour counts`)
+    }
+  }
+  const skipHexes = (tokens?.mapping?.colors || []).filter((color) => color.skipped).map((color) => color.hex)
+  const features = new Map()
+  const contents = new Map()
+  for (const section of sections) {
+    const spec = specs.get(section.key) || null
+    const fills = spec && rawNodes ? bandFills(spec, rawNodes) : null
+    features.set(section.key, variantFeatures(spec, { fills, skipHexes }))
+    contents.set(section.key, contentKey(spec))
+  }
+  const components = buildComponents(sections, { features, contents, compare: pageBuildOrder(inventory).byRank })
+
   const fonts = tokens?.fontsRequiringUpload || []
-  const plan = planQueue(inventory, sections, { fonts })
+  const plan = planQueue(inventory, sections, { fonts, components })
   const { entries } = plan
   for (const entry of entries) entry.brief = entry.lane === 'manual' ? null : `docs/figma/briefs/${entry.id}-${entry.slug}.md`
   const entryById = new Map(entries.map((entry) => [entry.id, entry]))
@@ -154,6 +187,7 @@ export const buildQueue = ({ root = DEFAULT_ROOT, log = console.log, warn = (mes
   for (const entry of entries) if (entry.brief) briefs.set(entry.brief, renderBrief(entry, context))
 
   writeIfChanged(path.join(root, 'docs', 'figma', 'build-queue.md'), renderQueue(context))
+  writeIfChanged(path.join(root, 'docs', 'figma', 'components.md'), renderComponents(context))
   const briefDir = path.join(root, 'docs', 'figma', 'briefs')
   for (const [file, text] of briefs) writeIfChanged(path.join(root, file), text)
   const removed = []
@@ -172,10 +206,13 @@ export const buildQueue = ({ root = DEFAULT_ROOT, log = console.log, warn = (mes
   const counts = countByType(entries)
   log(`${entries.length} queue entries: ${Object.entries(counts).map(([type, count]) => `${type} ${count}`).join(', ')}`)
   log(`${briefs.size} briefs; ${plan.agentCount} agent sections placed, ${plan.unplaced.length} unplaced${removed.length ? `; removed ${removed.length} stale briefs` : ''}`)
+  const summary = componentSummary(plan)
+  log(`${summary.total} components (agent ${summary.agent}, manual ${summary.manual}, mixed ${summary.mixed}), ${summary.variants} variants, ${summary.instances} instances`)
   if (vision.size) log(`vision reviews: ${vision.size} sections from ${visionFiles.length} files`)
   for (const key of plan.unplaced) warn(`agent section not placed: ${key}`)
-  for (const key of plan.duplicated) warn(`agent section placed more than once: ${key}`)
-  return { entries, briefs: [...briefs.keys()], assets, plan, removed }
+  for (const key of plan.duplicated) warn(`section placed more than once: ${key}`)
+  for (const key of plan.unplacedManual) warn(`manual section not placed: ${key}`)
+  return { entries, briefs: [...briefs.keys()], assets, plan, removed, components }
 }
 
 const countByType = (entries) => {
@@ -186,7 +223,119 @@ const countByType = (entries) => {
 
 const pagesOf = (entry) => entry.pages || entry.pageList || [...new Set(entry.sections.map((section) => section.pageSlug))]
 
-const renderQueue = ({ entries, plan, inventory }) => {
+// Component helpers shared by the queue, the catalogue and the briefs.
+
+export const componentSummary = (plan) => {
+  const list = plan.components.components
+  const count = (lane) => list.filter((component) => component.lane === lane).length
+  return {
+    total: list.length,
+    agent: count('agent'),
+    manual: count('manual'),
+    mixed: count('mixed'),
+    shared: plan.entries.filter((entry) => entry.type === 'shared').length,
+    variants: list.reduce((sum, component) => sum + component.variants.length, 0),
+    instances: list.reduce((sum, component) => sum + component.instances.length, 0),
+    multiVariant: list.filter((component) => component.variants.length > 1).length,
+    duplicateGroups: list.reduce((sum, component) => sum + component.duplicates.length, 0)
+  }
+}
+
+const backgroundText = (background) => (background === 'image' ? 'full-bleed image' : background === 'none' ? 'no fill' : `${background} (${toneName(background)})`)
+
+// Visual traits of a variant (what its modifiers style), from the traits and
+// the reference instance's features.
+export const featureText = (variant) => {
+  const { traits, features } = variant
+  if (traits.noSpec) return 'no spec (component set beside the page, see `figma/inventory.json`)'
+  const background = traits.background === 'image' ? 'full-bleed image' : traits.background === 'none' ? 'no fill' : `${traits.background} (${features.background})`
+  const images = traits.images === '3+' ? '3 or more images' : `${traits.images} image${traits.images === '1' ? '' : 's'}`
+  return [
+    `background ${background}`,
+    traits.alignment === 'none' ? 'no text' : `${traits.alignment === 'center' ? 'centred' : 'left-aligned'} text`,
+    `${images}${traits.imageSide !== 'none' ? ` (media ${traits.imageSide})` : ''}`,
+    `${traits.height} height (reference about ${features.heightBucket}px)`
+  ].join(', ')
+}
+
+// Content differences the class family must support (not variants).
+export const contentText = (component) => {
+  const parts = []
+  if (component.optionalElements.length) parts.push(`optional elements ${component.optionalElements.map(code).join(', ')} (present on some instances only; support them in the one class family, hide when empty)`)
+  if (component.headingSwap) parts.push(`heading size varies (${component.headingRoles.map(code).join(', ')}): set it with a \`heading-style-*\` utility, not a variant`)
+  return parts.length ? `Content, not variants: ${parts.join('; ')}.` : ''
+}
+
+const variantName = (variant) => (variant.label === 'base' ? 'base' : variant.modifiers.join(' + '))
+
+const sectionVariant = (section, context) => {
+  const info = context.plan.components.bySection.get(section.key)
+  if (!info) return ''
+  return `${info.component.name}, variant ${info.component.variants.length > 1 ? variantText(info.variant) : 'base (only variant)'}`
+}
+
+const keyList = (sections, max = Infinity) => {
+  const keys = sections.map((section) => code(section.key))
+  return keys.length > max ? `${keys.slice(0, max).join(', ')} and ${keys.length - max} more` : keys.join(', ')
+}
+
+// Duplicate note for one variant restricted to some members.
+const duplicateNotes = (variant, members) => {
+  const keys = new Set(members.map((section) => section.key))
+  return variant.duplicates
+    .map((group) => group.filter((section) => keys.has(section.key)))
+    .filter((group) => group.length > 1)
+    .map((group) => `identical content on ${group.length} instances (${keyList(group, 6)}): build once, reuse; consider a Webflow component with no props`)
+}
+
+const entryOf = (section, context) => context.plan.assigned.get(section.key)
+
+const componentEntries = (component, context) => [...new Set(component.instances.map((section) => entryOf(section, context)).filter(Boolean))].sort()
+
+// Variant lines for an entry (queue markdown, crop links relative to docs/figma/).
+const queueVariantLines = (entry) => {
+  const lines = []
+  for (const { component, variants } of entry.components || []) {
+    const total = variants.reduce((sum, item) => sum + item.members.length, 0)
+    lines.push(`Component \`${component.name}\` (${component.kind}): ${total} instance${total === 1 ? '' : 's'} here, ${variants.length} variant${variants.length === 1 ? '' : 's'}.${contentText(component) ? ` ${contentText(component)}` : ''}`, '')
+    for (const { variant, members } of variants) {
+      const reference = members.find((section) => section.crop) || null
+      const crop = reference ? `[crop](../../${reference.crop})` : 'no crop'
+      const notes = duplicateNotes(variant, members)
+      const content = notes.length ? ` ${notes.join('; ')}.` : members.length > 1 ? ' Different content per instance: props or CMS fields.' : ''
+      lines.push(`- Variant ${variant.label === 'base' ? 'base' : variantText(variant)} (${members.length}): ${featureText(variant)}. Reference ${crop}.${content}`)
+    }
+    lines.push('')
+  }
+  return lines
+}
+
+// Variants block for a shared brief: one reference crop per variant.
+const briefVariantLines = (entry) => {
+  const lines = ['## Variants', '']
+  if (entry.components.length > 1) {
+    lines.push(`These ${entry.components.length} component names share an exact structural cluster: build them as one class family on \`${entry.components[0].component.name}\`, each name and variant an \`is-\` modifier, not separate components.`, '')
+  }
+  for (const { component, variants } of entry.components) {
+    lines.push(`### Component \`${component.name}\` (${component.kind})`, '')
+    if (contentText(component)) lines.push(contentText(component), '')
+    for (const { variant, members } of variants) {
+      const reference = members.find((section) => section.crop) || members[0]
+      lines.push(`- ${variant.label === 'base' ? 'Base (no modifier)' : `Modifier ${variantText(variant)}`}, ${members.length} instance${members.length === 1 ? '' : 's'}: ${featureText(variant)}.`)
+      lines.push(`  Reference crop: ${reference.crop ? `\`${reference.crop}\`` : 'none'} (\`${reference.key}\`). Instances: ${keyList(members)}.`)
+      const notes = duplicateNotes(variant, members)
+      if (notes.length) for (const note of notes) lines.push(`  Duplicates: ${note}.`)
+      else if (members.length > 1) lines.push('  Same variant, different content: use component properties or CMS fields.')
+    }
+    lines.push('')
+  }
+  return lines
+}
+
+const renderQueue = (context) => {
+  const { entries, plan, inventory } = context
+  const summary = componentSummary(plan)
+  const manualEntries = entries.filter((entry) => entry.type === 'manual')
   const lines = [
     '# Build queue',
     '',
@@ -194,7 +343,14 @@ const renderQueue = ({ entries, plan, inventory }) => {
     '',
     `Source: Figma version ${clean(inventory.source?.version ?? 'unknown')}. Inputs: \`figma/inventory.json\`, \`figma/inventory.overrides.json\`, vision reviews in \`figma/review/\`. Regenerate after any inventory change.`,
     '',
-    'Order: global setup, manual entries for Stephen, shared components (by pages using them), CMS templates, then pages (home, collection pages, the rest). Every agent entry has a session brief; run one fresh session per brief, in order, after its dependencies are done. Manual entries never get agent briefs.',
+    '## Summary',
+    '',
+    `- Distinct components to build: ${summary.total} (agent ${summary.agent}, manual ${summary.manual}, mixed ${summary.mixed}). Agent components on two or more pages are built once in ${summary.shared} shared entries; the rest are built inside their page or CMS entry. Manual components: ${manualEntries.length} entries for Stephen.`,
+    `- Variants: ${summary.variants} across all components (${summary.multiVariant} components have more than one); build each as an \`is-\` modifier, not a separate component.`,
+    `- Instances: ${summary.instances} sections; ${summary.duplicateGroups} groups of identical-content duplicates.`,
+    '- Catalogue with every component, variant, reference crop and duplicate group: [components.md](components.md).',
+    '',
+    'Order: global setup, manual entries for Stephen (one per component type), shared components (by pages using them), CMS templates, then pages (home, collection pages, the rest). Every agent entry has a session brief; run one fresh session per brief, in order, after its dependencies are done. Manual entries never get agent briefs.',
     '',
     `Entries: ${Object.entries(countByType(entries)).map(([type, count]) => `${type} ${count}`).join(', ')}. Agent sections: ${plan.agentCount}, placed exactly once: ${plan.agentCount - plan.unplaced.length - plan.duplicated.length}.`,
     '',
@@ -214,15 +370,21 @@ const renderQueue = ({ entries, plan, inventory }) => {
     lines.push(`### ${entry.id} ${clean(entry.title)}`, '')
     if (entry.type === 'manual') {
       lines.push(entry.instruction, '')
+      for (const { component } of entry.components || []) {
+        const elsewhere = componentEntries(component, context).filter((id) => id !== entry.id)
+        if (elsewhere.length) lines.push(`Other instances of \`${component.name}\` are queued in ${elsewhere.join(', ')}; use the same variant classes.`, '')
+      }
+      lines.push(...queueVariantLines(entry))
       for (const section of entry.sections) {
         const ref = section.crop ? `[crop](../../${section.crop})` : `no crop: component set ${clean(section.frameId ?? '')}, see \`figma/inventory.json\``
-        lines.push(`- \`${section.key}\` (${clean(section.displayName)}): ${clean(section.laneReason)}. ${ref}`)
+        lines.push(`- \`${section.key}\` (${clean(section.displayName)}): ${clean(section.laneReason)}. ${ref}. ${sectionVariant(section, context)}`)
       }
     } else if (entry.type === 'setup') {
       lines.push(setupSummary(entry))
     } else {
       lines.push(`Pages: ${pagesOf(entry).join(', ')}. Brief: [${entry.brief.replace('docs/figma/briefs/', '')}](${entry.brief.replace('docs/figma/', '')})`, '')
-      for (const section of entry.sections) lines.push(`- \`${section.key}\` ${clean(section.displayName)}`)
+      if (entry.type === 'shared') lines.push(...queueVariantLines(entry))
+      for (const section of entry.sections) lines.push(`- \`${section.key}\` ${clean(section.displayName)}${entry.type === 'shared' ? ` (${sectionVariant(section, context).replace(/^[^,]+, /, '')})` : ''}`)
       if (entry.type === 'page' && entry.sharedOnPage.length) {
         lines.push(`- Shared on this page: ${entry.sharedOnPage.map((section) => `\`${section.key}\` (${plan.assigned.get(section.key)})`).join(', ')}`)
       }
@@ -231,9 +393,82 @@ const renderQueue = ({ entries, plan, inventory }) => {
   }
   lines.push('## Coverage', '')
   lines.push(plan.unplaced.length ? `Unplaced agent sections: ${plan.unplaced.map(code).join(', ')}` : 'Every agent section appears in exactly one shared, CMS or page entry.')
+  lines.push(plan.unplacedManual.length ? `Unplaced manual sections: ${plan.unplacedManual.map(code).join(', ')}` : 'Every manual section appears in exactly one manual entry.')
   lines.push('')
   return lines.join('\n')
 }
+
+// docs/figma/components.md: the component catalogue.
+const renderComponents = (context) => {
+  const { plan, inventory } = context
+  const summary = componentSummary(plan)
+  const list = plan.components.components
+  const lines = [
+    '# Component catalogue',
+    '',
+    GENERATED_MARKER,
+    '',
+    `Source: Figma version ${clean(inventory.source?.version ?? 'unknown')}. Queue: [build-queue.md](build-queue.md).`,
+    '',
+    `A component is every section sharing a component name (override name, then inventory proposed name, then vision name, else the cluster id). Each instance gets a variant key from visual traits a designer would style: background colour family, text alignment, media side (reversed), image layout (0, 1, 2, 3 or more) and height class (compact or tall only beyond ${HEIGHT_CLASS_RATIO}x the component median). Optional text elements (eyebrow, button, caption) and heading size swaps are content, listed per component, not variants. Same key and same text content: a duplicate (build once, reuse). Same key, different content: one variant with different content (props or CMS fields). Different keys: variants, built as \`is-\` modifiers on one component (CLAUDE.md, Component Variants). Labels describe how a variant differs from the base (the most common variant).`,
+    '',
+    `${summary.total} components (agent ${summary.agent}, manual ${summary.manual}, mixed ${summary.mixed}), ${summary.variants} variants, ${summary.instances} instances, ${summary.duplicateGroups} duplicate groups.`,
+    '',
+    '| Component | Kind | Lane | Instances | Pages | Variants (label: count) | Duplicates | Queue entry |',
+    '|---|---|---|---|---|---|---|---|'
+  ]
+  for (const component of list) {
+    const variants = component.variants.map((variant) => `${variantName(variant)}: ${variant.instances.length}`).join('; ')
+    const duplicates = component.duplicates.length ? component.duplicates.map((group) => `${group.length} identical`).join('; ') : 'none'
+    const alias = component.aliases.length ? ` (alias ${component.aliases.map(clean).join(', ')})` : ''
+    lines.push(`| [${clean(component.name)}](#${anchor(component.name)})${alias} | ${clean(component.kind)} | ${component.lane} | ${component.instances.length} | ${component.pages.length} | ${clean(variants)} | ${duplicates} | ${componentEntries(component, context).join(', ')} |`)
+  }
+  lines.push('')
+  const { merges, nearMisses, similarity } = plan.components
+  const weights = Object.entries(similarity.weights).map(([name, weight]) => `${name} ${weight}`).join(', ')
+  lines.push('## Merged near-identical components', '')
+  lines.push(`Vision reviewers named sections independently, so one block can carry two names. Score = ${similarity.blend.structure} x structural link (exact shared inventory cluster 1, loose cluster only ${similarity.LOOSE_LINK}, none 0) + ${similarity.blend.features} x spec feature similarity (${weights}; each variant matched to its best counterpart). Pairs at or above ${similarity.MERGE_THRESHOLD} merge into the name with more instances; the other name becomes an alias and its instances become variants. Constants: \`SIMILARITY\` in \`scripts/api/figma/lib/queue.mjs\`.`, '')
+  if (merges.length) {
+    lines.push('| Component | Component | Score | Merged into |', '|---|---|---|---|')
+    for (const pair of merges) lines.push(`| ${clean(pair.a)} | ${clean(pair.b)} | ${pair.score.toFixed(3)} | ${clean(pair.into)} |`)
+  } else {
+    lines.push('None.')
+  }
+  lines.push('', '## Check these', '')
+  lines.push(`Near misses scoring ${similarity.NEAR_MISS_FLOOR} to just under ${similarity.MERGE_THRESHOLD}: compare the crops; if they are the same block, add the same \`name\` to both in \`figma/inventory.overrides.json\` and re-run \`pnpm figma:inventory\` and \`pnpm figma:queue\`.`, '')
+  if (nearMisses.length) {
+    const byName = new Map(list.flatMap((component) => [[component.name, component], ...component.aliases.map((alias) => [alias, component])]))
+    const cropOf = (name) => {
+      const component = byName.get(name)
+      const section = component?.instances.find((instance) => instance.crop && (instance.vision?.name ? instance.vision.name === name : true)) || component?.instances.find((instance) => instance.crop)
+      return section ? `[crop](../../${section.crop})` : 'no crop'
+    }
+    lines.push('| Component | Component | Score | Crops |', '|---|---|---|---|')
+    for (const pair of nearMisses) lines.push(`| ${clean(pair.a)} | ${clean(pair.b)} | ${pair.score.toFixed(3)} | ${cropOf(pair.a)}, ${cropOf(pair.b)} |`)
+  } else {
+    lines.push('None.')
+  }
+  lines.push('')
+  for (const component of list) {
+    lines.push(`## ${clean(component.name)}`, '')
+    if (component.aliases.length) lines.push(`Also named ${component.aliases.map((alias) => code(alias)).join(', ')} by the vision review; merged as near-identical (see Merged near-identical components).`, '')
+    if (contentText(component)) lines.push(contentText(component), '')
+    lines.push(`Kind ${clean(component.kind)}, lane ${component.lane}, ${component.instances.length} instance${component.instances.length === 1 ? '' : 's'} on ${component.pages.length} page${component.pages.length === 1 ? '' : 's'}, queue ${componentEntries(component, context).join(', ')}.`, '')
+    for (const variant of component.variants) {
+      const crop = variant.reference?.crop ? `[crop](../../${variant.reference.crop})` : 'no crop'
+      const content = variant.duplicates.length
+        ? `; ${variant.duplicates.map((group) => `identical content: ${keyList(group)}`).join('; ')}`
+        : ''
+      const distinct = variant.instances.length > 1 ? ` ${variant.distinctContent} distinct content version${variant.distinctContent === 1 ? '' : 's'}` : ''
+      lines.push(`- ${variant.label === 'base' ? '**base**' : `**${variantName(variant)}**`} (${variant.instances.length}): ${featureText(variant)}. Example ${crop}.${distinct}${content}`)
+      lines.push(`  Instances: ${keyList(variant.instances)}`)
+    }
+    lines.push('')
+  }
+  return lines.join('\n')
+}
+
+const anchor = (name) => String(name).toLowerCase().replace(/[^a-z0-9 -]/g, '').replace(/ /g, '-')
 
 const setupSummary = (entry) => {
   if (entry.kind === 'tokens') return 'Verify live variable collections and Relume classes read-only, then sync `figma/tokens.json` onto them after approval.'
@@ -250,6 +485,8 @@ const sectionBlock = (section, context, { compact = false } = {}) => {
   const lines = [`#### \`${section.key}\`: ${clean(section.displayName)}`, '']
   lines.push(`- Spec: \`${section.spec}\``)
   if (section.crop) lines.push(`- Reference crop: \`${section.crop}\``)
+  const variant = sectionVariant(section, context)
+  if (variant) lines.push(`- Component: ${variant}`)
   const texts = (spec?.texts || []).map((text) => text.characters).filter(Boolean)
   lines.push(`- Texts (${texts.length}): ${texts.slice(0, 3).map((text) => `"${truncate(text, 80)}"`).join('; ') || 'none'}`)
   const refs = [...new Set((spec?.images || []).map((image) => image.imageRef).filter(Boolean))]
@@ -350,9 +587,11 @@ export const renderBrief = (entry, context) => {
   lines.push('## Goal', '')
   if (entry.type === 'shared') {
     const reference = entry.reference
-    lines.push(`Build one shared component used by ${entry.sections.length} sections on ${entry.pages.length} pages (${entry.pages.join(', ')}). Build it once on \`${reference.pageSlug}\` from \`${reference.key}\`, convert it to a Webflow component, then check each other instance below for content or layout variants (use component properties or \`is-\` modifiers, not a second component). Page entries insert instances; they do not rebuild it.`, '')
+    const variantCount = entry.components.reduce((sum, item) => sum + item.variants.length, 0)
+    lines.push(`Build one shared component used by ${entry.sections.length} sections on ${entry.pages.length} pages (${entry.pages.join(', ')}). Build it once on \`${reference.pageSlug}\` from \`${reference.key}\`, convert it to a Webflow component, then add the ${variantCount > 1 ? `${variantCount - 1} other variant${variantCount === 2 ? '' : 's'} listed under Variants as \`is-\` modifier combo classes on that one component (or one class family), never as a second component` : 'instances below: they share one variant, so only content differs'}. Page entries insert instances; they do not rebuild it.`, '')
     lines.push(targetLine(reference.pageSlug, context), '')
     lines.push(...rulesBlock(context, specList))
+    lines.push(...briefVariantLines(entry))
     lines.push('## Sections', '', '### Reference instance', '')
     lines.push(...sectionBlock(reference, context))
     lines.push('### Other instances', '')
@@ -364,7 +603,14 @@ export const renderBrief = (entry, context) => {
     const create = context.entries.find((candidate) => candidate.kind === 'pages')
     lines.push(`Target: site \`${context.webflow.siteId ?? 'see docs/reference/webflow-ids.md'}\`, the collection template page (created with the collection; static pages for these clones are not needed, see ${create.id}).`, '')
     const sharedIds = entry.dependsOn.filter((id) => context.entryById.get(id).type === 'shared')
-    if (sharedIds.length) lines.push(`Insert instances of shared components from ${sharedIds.join(', ')} where those sections appear; do not rebuild them.`, '')
+    if (sharedIds.length) {
+      lines.push(`Insert instances of shared components from ${sharedIds.join(', ')} where those sections appear; do not rebuild them. Variant to use per section:`, '')
+      const onPages = context.sections
+        .filter((section) => entry.pages.includes(section.pageSlug) && sharedIds.includes(context.plan.assigned.get(section.key)))
+        .sort((a, b) => entry.pages.indexOf(a.pageSlug) - entry.pages.indexOf(b.pageSlug) || (a.index ?? Infinity) - (b.index ?? Infinity) || a.key.localeCompare(b.key))
+      for (const section of onPages) lines.push(`- \`${section.key}\`: insert shared component from ${context.plan.assigned.get(section.key)} (${sectionVariant(section, context)})`)
+      lines.push('')
+    }
     lines.push(...rulesBlock(context, specList))
     lines.push('## Sections', '')
     const referenceSections = entry.sections.filter((section) => section.pageSlug === group.referencePage)
@@ -392,15 +638,50 @@ export const renderBrief = (entry, context) => {
     const all = [...entry.sections, ...entry.sharedOnPage, ...entry.manualOnPage].sort((a, b) => (a.index ?? Infinity) - (b.index ?? Infinity) || a.key.localeCompare(b.key))
     for (const section of all) {
       const owner = context.plan.assigned.get(section.key)
-      const role = owner === entry.id ? 'build here' : section.lane === 'agent' ? `insert shared component from ${owner}` : `manual (${owner}), leave a placeholder`
+      const role = owner === entry.id ? 'build here' : section.lane === 'agent' ? `insert shared component from ${owner} (${sectionVariant(section, context)})` : `manual (${owner}: ${sectionVariant(section, context)}), leave a placeholder`
       lines.push(`- \`${section.key}\` ${clean(section.displayName)}: ${role}`)
     }
     lines.push('', '## Sections to build', '')
     if (!entry.sections.length) lines.push('None: this page only assembles shared component instances.', '')
     for (const section of entry.sections) lines.push(...sectionBlock(section, context))
   }
+  lines.push(...reuseGate(entry, context))
   lines.push(...closingBlock(context))
   return lines.join('\n')
+}
+
+// Mandatory reuse gate for every agent brief: one class family per component.
+const reuseGate = (entry, context) => {
+  const lines = [
+    '## Component reuse gate',
+    '',
+    'Mandatory before creating any class. Five similar blocks with five unique class families is a failed build.',
+    '',
+    '1. Look up each section\'s component and variant in `docs/figma/components.md` (listed below), including its aliases and the Check these list.',
+    '2. Check whether that component, or a near-identical one, already has a class family in Webflow: read `docs/reference/style-inventory.md` and the live `get_styles`.',
+    '3. If it exists, reuse its `section_<component>` and `<component>_<element>` classes and apply the variant\'s `is-` modifier (or a utility class for a one-property difference). Do not create a new class family.',
+    '4. Create a new class family only for a component with no existing family. Name it after the component (its layout), never after the page or the content, and record the family and all its variants in `docs/reference/style-inventory.md` in this session.',
+    ''
+  ]
+  const sections = [...entry.sections, ...(entry.sharedOnPage || [])]
+  const seen = new Map()
+  for (const section of sections) {
+    const info = context.plan.components.bySection.get(section.key)
+    if (!info) continue
+    if (!seen.has(info.component.name)) seen.set(info.component.name, { component: info.component, variants: new Set() })
+    seen.get(info.component.name).variants.add(info.variant.label === 'base' ? 'base' : info.variant.modifiers.join(' + '))
+  }
+  if (seen.size) {
+    lines.push('Components in this entry:', '')
+    for (const { component, variants } of [...seen.values()].sort((a, b) => a.component.name.localeCompare(b.component.name))) {
+      const alias = component.aliases.length ? ` (alias ${component.aliases.join(', ')})` : ''
+      const optional = component.optionalElements.length ? `; optional elements ${component.optionalElements.map(code).join(', ')}` : ''
+      const heading = component.headingSwap ? '; heading size via `heading-style-*` utility' : ''
+      lines.push(`- \`${component.name}\`${alias}: class family \`section_${component.name}\`; variants used here: ${[...variants].map(code).join(', ')}${optional}${heading}; ${component.instances.length} instance${component.instances.length === 1 ? "" : "s"} site-wide, queue ${componentEntries(component, context).join(', ')}.`)
+    }
+    lines.push('')
+  }
+  return lines
 }
 
 const renderSetupBrief = (entry, context) => {

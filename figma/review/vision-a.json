@@ -595,10 +595,10 @@
       "key": "dining-gardenterrace/10-the-hotel",
       "name": "footer-links",
       "kind": "footer",
-      "slider": true,
+      "slider": false,
       "interactive": "other-dining card slider below footer with arrows",
-      "boundaryIssue": "Crop contains the footer plus a separate other-dining card slider (cards cut off at right, arrows bottom-left) below it; two distinct sections, and the slider sits after the footer",
-      "note": "Footer then blank area with arrows and venue cards (The Lobby Bar, Lobby Terrace)"
+      "boundaryIssue": "",
+      "note": "Footer. A leftover other-dining card group overlaps its bottom in the design; ignore it (see inventory overrides)."
     },
     {
       "key": "dining-lobbybar/01-lobby-bar",
@@ -685,10 +685,10 @@
       "key": "dining-lobbybar/10-the-hotel",
       "name": "footer-links",
       "kind": "footer",
-      "slider": true,
+      "slider": false,
       "interactive": "other-dining card slider below footer with arrows",
-      "boundaryIssue": "Crop contains the footer plus a separate other-dining card slider (cards cut off at right, arrows bottom-left) below it; two distinct sections, and the slider sits after the footer",
-      "note": "Footer then blank area with arrows and venue cards (The Lobby Bar, Lobby Terrace); clone of dining-gardenterrace"
+      "boundaryIssue": "",
+      "note": "Footer. A leftover other-dining card group overlaps its bottom in the design; ignore it (see inventory overrides)."
     },
     {
       "key": "dining-poollounge/01-pool-lounge",
@@ -775,10 +775,10 @@
       "key": "dining-poollounge/10-the-hotel",
       "name": "footer-links",
       "kind": "footer",
-      "slider": true,
+      "slider": false,
       "interactive": "other-dining card slider below footer with arrows",
-      "boundaryIssue": "Crop contains the footer plus a separate other-dining card slider (cards cut off at right, arrows bottom-left) below it; two distinct sections, and the slider sits after the footer",
-      "note": "Footer then blank area with arrows and venue cards (The Lobby Bar, Lobby Terrace); clone of dining-gardenterrace"
+      "boundaryIssue": "",
+      "note": "Footer. A leftover other-dining card group overlaps its bottom in the design; ignore it (see inventory overrides)."
     }
   ]
 }

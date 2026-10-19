@@ -90,8 +90,13 @@ const mostCommon = (values) => {
   return best
 }
 
+// Manual category: the vision kind first, then the inventory lane reason.
 const manualCategory = (section) => {
   if (section.lane === 'needs-decision') return 'decision'
+  const kind = section.vision?.kind
+  if (kind === 'nav') return 'navbar'
+  if (kind === 'overlay') return 'overlay'
+  if (section.vision?.slider === true || kind === 'slider') return 'slider'
   const reason = String(section.laneReason || '')
   if (section.pageSlug === 'nav-elements' || /\bnav\b/i.test(reason)) return 'navbar'
   if (/slider|carousel|gallery/i.test(reason)) return 'slider'
@@ -99,23 +104,23 @@ const manualCategory = (section) => {
   return 'other'
 }
 
+// Manual entry kinds in queue order. perComponent entries get one entry per
+// component name; the rest are one bucket each.
 const MANUAL_ENTRIES = [
-  ['navbar', 'Navbar and menu', 'Build the navbar component and its menu states by hand. Agent sections exclude every nav instance (see each brief). Add the component to `docs/reference/style-inventory.md` once it exists.'],
-  ['overlay', 'Modals and overlays', 'Build each overlay as a dialog following `docs/reference/modal-setup.md`.'],
-  ['slider', 'Sliders and galleries', 'Build sliders with Swiper per `docs/reference/swiper-slider-setup.md`.'],
-  ['decision', 'Needs a lane decision', 'Decide each item: set `lane` in `figma/inventory.overrides.json`, re-run `pnpm figma:inventory` and `pnpm figma:queue`.'],
-  ['other', 'Other manual sections', 'Marked manual by an override or review; build by hand.']
+  { category: 'navbar', perComponent: false, title: 'Navbar and menu', instruction: 'Build the navbar component and its menu states by hand. Agent sections exclude every nav instance (see each brief). Add the component to `docs/reference/style-inventory.md` once it exists.' },
+  { category: 'overlay', perComponent: true, prefix: 'Modal', instruction: 'Build one dialog component following `docs/reference/modal-setup.md`; each variant below is an `is-` modifier on that one dialog, not a separate modal.' },
+  { category: 'slider', perComponent: true, prefix: 'Slider', instruction: 'Build one Swiper slider type per `docs/reference/swiper-slider-setup.md`; each variant below is an `is-` modifier on that one slider, and instances with different content are CMS items or props.' },
+  { category: 'decision', perComponent: false, title: 'Needs a lane decision', instruction: 'Decide each item: set `lane` in `figma/inventory.overrides.json`, re-run `pnpm figma:inventory` and `pnpm figma:queue`.' },
+  { category: 'other', perComponent: false, title: 'Other manual sections', instruction: 'Marked manual by an override or review; build by hand.' }
 ]
 
-// Plan the queue from effective sections and the inventory.
-export const planQueue = (inventory, sections, { fonts = [] } = {}) => {
-  const pages = inventory.pages
-  const pageBySlug = new Map(pages.map((page) => [page.pageSlug, page]))
-  const unitOf = (pageSlug) => pageBySlug.get(pageSlug)?.cmsTemplateGroup || pageSlug
-  const cmsPages = new Set(pages.filter((page) => page.cmsTemplateGroup).map((page) => page.pageSlug))
-  const pageSectionCount = (page) => sections.filter((section) => section.pageSlug === page.pageSlug && section.source === 'page').length
+const plural = (count, word) => `${count} ${word}${count === 1 ? '' : 's'}`
 
-  // Page build order: home, then collection pages, then the rest (inventory order).
+// Page build order: home, then collection pages, then the rest (inventory
+// order); CMS clone pages last. Returns the order and a section comparator.
+export const pageBuildOrder = (inventory) => {
+  const pages = inventory.pages
+  const cmsPages = new Set(pages.filter((page) => page.cmsTemplateGroup).map((page) => page.pageSlug))
   const ordered = pages.filter((page) => !cmsPages.has(page.pageSlug))
   const pageOrder = [
     ...ordered.filter((page) => page.pageSlug === 'home'),
@@ -131,16 +136,50 @@ export const planQueue = (inventory, sections, { fonts = [] } = {}) => {
     const [pageB, indexB] = rank(b)
     return pageA - pageB || indexA - indexB || a.key.localeCompare(b.key)
   }
+  return { pageOrder, byRank }
+}
+
+// Variant groups of one component restricted to the given sections.
+const variantsWithin = (component, members) => {
+  const keys = new Set(members.map((section) => section.key))
+  return component.variants
+    .map((variant) => ({ variant, members: variant.instances.filter((section) => keys.has(section.key)) }))
+    .filter((entry) => entry.members.length)
+}
+
+// Components present in a list of sections, largest first.
+const componentsWithin = (members, catalogue) => {
+  const seen = new Map()
+  for (const section of members) {
+    const component = catalogue.bySection.get(section.key)?.component
+    if (component && !seen.has(component.name)) seen.set(component.name, component)
+  }
+  return [...seen.values()]
+    .map((component) => ({ component, variants: variantsWithin(component, members) }))
+    .sort((a, b) => b.variants.reduce((sum, entry) => sum + entry.members.length, 0) - a.variants.reduce((sum, entry) => sum + entry.members.length, 0) || a.component.name.localeCompare(b.component.name))
+}
+
+// Plan the queue from effective sections and the inventory.
+export const planQueue = (inventory, sections, { fonts = [], components = null } = {}) => {
+  const pages = inventory.pages
+  const pageBySlug = new Map(pages.map((page) => [page.pageSlug, page]))
+  const unitOf = (pageSlug) => pageBySlug.get(pageSlug)?.cmsTemplateGroup || pageSlug
+  const cmsPages = new Set(pages.filter((page) => page.cmsTemplateGroup).map((page) => page.pageSlug))
+  const pageSectionCount = (page) => sections.filter((section) => section.pageSlug === page.pageSlug && section.source === 'page').length
+  const { pageOrder, byRank } = pageBuildOrder(inventory)
+  const catalogue = components || buildComponents(sections, { compare: byRank })
 
   const agent = sections.filter((section) => section.lane === 'agent')
   const agentKeys = new Set(agent.map((section) => section.key))
 
-  // Shared groups: union by exact cluster, by explicit or vision name, and by mergeWith.
+  // Shared groups: union by exact cluster, by explicit or vision name, by
+  // merged component (near-identical names), and by mergeWith.
   const union = new UnionFind()
   const firstBy = new Map()
   for (const section of agent) {
     union.find(section.key)
-    for (const tag of [section.clusterId && `c:${section.clusterId}`, section.groupName && `n:${normaliseName(section.groupName)}`]) {
+    const component = catalogue.bySection.get(section.key)?.component
+    for (const tag of [section.clusterId && `c:${section.clusterId}`, section.groupName && `n:${normaliseName(section.groupName)}`, component && `m:${component.name}`]) {
       if (!tag || tag === 'n:') continue
       if (firstBy.has(tag)) union.union(firstBy.get(tag), section.key)
       else firstBy.set(tag, section.key)
@@ -188,25 +227,57 @@ export const planQueue = (inventory, sections, { fonts = [] } = {}) => {
   const setupIds = [tokenSync.id, fontUpload.id, assetUpload.id, pageCreate.id]
 
   // Manual entries for Stephen.
-  const manualSections = sections.filter((section) => section.lane !== 'agent')
-  for (const [category, title, instruction] of MANUAL_ENTRIES) {
-    const members = manualSections.filter((section) => manualCategory(section) === category)
+  const manualSections = sections.filter((section) => section.lane !== 'agent').sort(byRank)
+  for (const spec of MANUAL_ENTRIES) {
+    const members = manualSections.filter((section) => manualCategory(section) === spec.category)
     if (!members.length) continue
-    const entry = add({ type: 'manual', kind: category, lane: 'manual', title, slug: kebab(title), dependsOn: [tokenSync.id, fontUpload.id], sections: members, instruction })
-    for (const member of members) assigned.set(member.key, entry.id)
+    const buckets = spec.perComponent
+      ? componentsWithin(members, catalogue).map(({ component }) => ({ component, members: members.filter((section) => catalogue.bySection.get(section.key)?.component === component) }))
+      : [{ component: null, members }]
+    for (const bucket of buckets) {
+      const within = componentsWithin(bucket.members, catalogue)
+      let title = spec.title
+      let instruction = spec.instruction
+      if (bucket.component) {
+        const { component } = bucket
+        const gallery = spec.category === 'slider' && component.kind === 'gallery' && !bucket.members.some((section) => section.vision?.slider === true)
+        const prefix = gallery ? 'Gallery' : spec.prefix
+        const variantCount = within[0].variants.length
+        const scope = bucket.members.length === component.instances.length ? plural(bucket.members.length, 'instance') : `${bucket.members.length} of ${plural(component.instances.length, 'instance')}`
+        title = `${prefix}: ${component.name} (${scope}${variantCount > 1 ? `, ${variantCount} variants` : ''})`
+        if (gallery) instruction = 'Build the gallery animation by hand (Swiper or GSAP, see `docs/reference/swiper-slider-setup.md`); each variant below is an `is-` modifier on one gallery component.'
+      }
+      const entry = add({
+        type: 'manual',
+        kind: spec.category,
+        lane: 'manual',
+        title,
+        slug: kebab(bucket.component ? `${spec.prefix}-${bucket.component.name}` : title),
+        dependsOn: [tokenSync.id, fontUpload.id],
+        sections: bucket.members,
+        instruction,
+        components: within
+      })
+      for (const member of bucket.members) assigned.set(member.key, entry.id)
+    }
   }
 
   const sharedEntryOf = new Map()
   for (const group of shared) {
+    const within = componentsWithin(group.members, catalogue)
+    const name = within[0]?.component.name || kebab(group.title)
+    const names = within.length > 1 ? `${within.slice(0, 3).map((entry) => entry.component.name).join(' + ')}${within.length > 3 ? ` + ${within.length - 3} more` : ''}` : name
+    const variantCount = within.reduce((sum, entry) => sum + entry.variants.length, 0)
     const entry = add({
       type: 'shared',
       lane: 'agent',
-      title: `Shared: ${group.title}`,
-      slug: `shared-${kebab(group.title).slice(0, 40)}`,
+      title: `Shared: ${names} (${plural(group.members.length, 'instance')}${variantCount > 1 ? `, ${variantCount} variants` : ''})`,
+      slug: `shared-${name.slice(0, 40).replace(/-$/, '')}`,
       dependsOn: [...setupIds],
       sections: group.members,
       pages: group.pages,
-      reference: group.reference
+      reference: group.reference,
+      components: within
     })
     for (const member of group.members) {
       assigned.set(member.key, entry.id)
@@ -264,7 +335,8 @@ export const planQueue = (inventory, sections, { fonts = [] } = {}) => {
   for (const entry of entries) for (const section of entry.sections) counts.set(section.key, (counts.get(section.key) || 0) + 1)
   const unplaced = agent.filter((section) => !counts.has(section.key)).map((section) => section.key)
   const duplicated = [...counts].filter(([, count]) => count > 1).map(([key]) => key)
-  return { entries, unplaced, duplicated, agentCount: agent.length, assigned, pageOrder }
+  const unplacedManual = sections.filter((section) => section.lane !== 'agent' && !counts.has(section.key)).map((section) => section.key)
+  return { entries, unplaced, unplacedManual, duplicated, agentCount: agent.length, sectionCount: sections.length, assigned, pageOrder, components: catalogue }
 }
 
 // Asset index: image fills from specs plus brand SVGs and vectors.
@@ -396,3 +468,447 @@ export const tokenSummary = (specList, tokens) => {
     fontVariables: (tokens.mapping.fontVariables || []).map((entry) => `\`${entry.variable}\`: ${clean(entry.value)}`)
   }
 }
+
+// Component model: component type, variants and duplicates.
+//
+// A component is every section sharing a component name (override name, then
+// inventory proposedName, then vision name, else the cluster id). Each
+// instance gets a variant key from its spec; instances with the same key and
+// the same text content are duplicates (one build, reused), the same key with
+// different content is one variant with different content (CMS or props), and
+// different keys inside a component are variants (`is-` modifiers).
+
+export const componentNameOf = (section) => kebab(section.proposedName) || kebab(section.vision?.name) || section.clusterId || section.key
+
+const channelOf = (hex, offset) => parseInt(hex.slice(offset, offset + 2), 16) / 255
+
+// Short, deterministic colour name for a modifier label.
+export const toneName = (hex) => {
+  if (!/^#[0-9A-F]{6}$/i.test(String(hex))) return 'custom'
+  const red = channelOf(hex, 1)
+  const green = channelOf(hex, 3)
+  const blue = channelOf(hex, 5)
+  const max = Math.max(red, green, blue)
+  const min = Math.min(red, green, blue)
+  const lightness = (max + min) / 2
+  const saturation = max === min ? 0 : (max - min) / (1 - Math.abs(2 * lightness - 1))
+  let hue = 0
+  if (max !== min) {
+    if (max === red) hue = ((green - blue) / (max - min)) % 6
+    else if (max === green) hue = (blue - red) / (max - min) + 2
+    else hue = (red - green) / (max - min) + 4
+    hue = (hue * 60 + 360) % 360
+  }
+  if (lightness >= 0.97) return 'white'
+  if (lightness >= 0.85) return saturation >= 0.3 && hue >= 20 && hue < 70 ? 'cream' : 'light'
+  if (lightness < 0.06) return 'black'
+  if (saturation < 0.15 || (lightness < 0.2 && saturation < 0.35)) return lightness < 0.3 ? 'dark' : lightness < 0.7 ? 'grey' : 'light'
+  if (hue < 15 || hue >= 330) return lightness < 0.3 ? 'burgundy' : 'red'
+  if (hue < 20) return lightness < 0.3 ? 'brown' : 'orange'
+  if (hue < 60) return lightness < 0.3 ? 'brown' : 'tan'
+  if (hue < 160) return lightness < 0.3 ? 'olive' : 'green'
+  if (hue < 260) return 'blue'
+  return 'purple'
+}
+
+const intersectArea = (box, rect) => {
+  if (!box) return 0
+  const width = Math.min(box.x + box.width, rect.x + rect.width) - Math.max(box.x, rect.x)
+  const height = Math.min(box.y + box.height, rect.y + rect.height) - Math.max(box.y, rect.y)
+  return width > 0 && height > 0 ? width * height : 0
+}
+
+const solidHex = (paint) => {
+  const opacity = (paint.opacity ?? 1) * (paint.color?.a ?? 1)
+  if (paint.type !== 'SOLID' || !paint.color || opacity < 0.9) return null
+  const channel = (value) => Math.round(Math.max(0, Math.min(1, value)) * 255).toString(16).padStart(2, '0')
+  return `#${channel(paint.color.r)}${channel(paint.color.g)}${channel(paint.color.b)}`.toUpperCase()
+}
+
+// Solid fills inside one band from the raw Figma nodes: the largest single
+// node area per colour, plus the page frame's own fill. `nodes` maps node id
+// to raw node. Pure: the caller supplies the index.
+export const bandFills = (spec, nodes) => {
+  const frame = nodes.get(spec?.frameId)
+  const frameBox = frame?.absoluteBoundingBox
+  if (!frameBox || !spec?.bbox) return null
+  const rect = { x: frameBox.x, y: frameBox.y + spec.bbox.y, width: frameBox.width, height: spec.bbox.height }
+  const skip = new Set((spec.manualOverlays || []).map((overlay) => overlay.nodeId))
+  const largest = new Map()
+  const visit = (node) => {
+    if (!node || node.visible === false || skip.has(node.id)) return
+    if (node.type !== 'TEXT' && (node.opacity ?? 1) >= 0.9) {
+      for (const paint of node.fills || []) {
+        if (paint?.visible === false) continue
+        const hex = solidHex(paint)
+        if (!hex) continue
+        const area = intersectArea(node.absoluteBoundingBox, rect)
+        if (area > (largest.get(hex) || 0)) largest.set(hex, area)
+      }
+    }
+    for (const child of node.children || []) visit(child)
+  }
+  for (const entry of [...(spec.backgrounds || []), ...(spec.nodes || [])]) visit(nodes.get(entry.id))
+  const frameFill = (frame.fills || []).filter((paint) => paint?.visible !== false).map(solidHex).find(Boolean) || null
+  return {
+    bandArea: rect.width * rect.height,
+    frameFill,
+    fills: [...largest].map(([hex, area]) => ({ hex, area: Math.round(area) })).sort((a, b) => b.area - a.area || a.hex.localeCompare(b.hex))
+  }
+}
+
+// Dominant background: 'image' when a full-bleed image fill dominates, else
+// the largest-area solid fill (from bandFills, or from spec colour counts
+// minus text fills when the raw file is unavailable), else 'none'.
+export const dominantBackground = (spec, { fills = null, skipHexes = [] } = {}) => {
+  const width = spec?.bbox?.width || 0
+  const height = spec?.bbox?.height || 0
+  const bandArea = width * height
+  const top = spec?.bbox && spec?.crop ? spec.bbox.y - spec.crop.y0 : 0
+  const bandRect = { x: 0, y: top, width, height }
+  const imageArea = Math.max(0, ...(spec?.images || []).map((image) => intersectArea(image.bbox, bandRect)))
+  const skip = new Set(skipHexes.map((hex) => String(hex).toUpperCase()))
+  if (fills) {
+    const solid = fills.fills.find((fill) => !skip.has(fill.hex)) || null
+    const solidArea = solid?.area || 0
+    if (bandArea && imageArea >= 0.5 * bandArea && imageArea >= 0.9 * solidArea) return 'image'
+    if (solid && bandArea && solidArea >= 0.35 * bandArea) return solid.hex
+    if (fills.frameFill && !skip.has(fills.frameFill)) return fills.frameFill
+    return solid ? solid.hex : 'none'
+  }
+  if (bandArea && imageArea >= 0.5 * bandArea) return 'image'
+  const textFills = new Map()
+  for (const text of spec?.texts || []) if (text.fill) textFills.set(text.fill, (textFills.get(text.fill) || 0) + 1)
+  const residual = (spec?.colors || [])
+    .filter((color) => color.opacity >= 0.9 && !skip.has(color.hex))
+    .map((color) => ({ hex: color.hex, count: color.count - (textFills.get(color.hex) || 0) }))
+    .filter((color) => color.count > 0)
+    .sort((a, b) => b.count - a.count || a.hex.localeCompare(b.hex))
+  return residual[0]?.hex || 'none'
+}
+
+// Text role: the named style's last segment, else family plus a 4px size bucket.
+export const textRole = (text) => {
+  if (text.styleName) return kebab(String(text.styleName).split('/').pop()) || kebab(text.styleName)
+  const family = kebab(text.fontFamily).split('-')[0] || 'text'
+  return `${family}-${Math.round((text.fontSize || 0) / 4) * 4}`
+}
+
+// Column structure from spec geometry: content area (text and inset images)
+// per sixth of the frame width, as a 6-character mask ('x' occupied, '.' not).
+// Used for similarity only, not for the variant key.
+export const layoutSignature = (spec) => {
+  const width = spec?.bbox?.width || 0
+  if (!width) return ''
+  const bins = new Array(6).fill(0)
+  const boxes = [
+    ...(spec.texts || []).filter((text) => String(text.characters || '').trim()).map((text) => text.bbox),
+    ...(spec.images || []).map((image) => image.bbox).filter((box) => box && box.width < 0.8 * width)
+  ].filter(Boolean)
+  for (const box of boxes) {
+    for (let bin = 0; bin < 6; bin++) {
+      const overlap = Math.min(box.x + box.width, ((bin + 1) * width) / 6) - Math.max(box.x, (bin * width) / 6)
+      if (overlap > 0) bins[bin] += overlap * Math.max(box.height, 1)
+    }
+  }
+  const total = bins.reduce((sum, value) => sum + value, 0)
+  return total ? bins.map((value) => (value / total >= 0.05 ? 'x' : '.')).join('') : '......'
+}
+
+export const variantFeatures = (spec, options = {}) => {
+  const width = spec?.bbox?.width || 1
+  const texts = (spec?.texts || []).filter((text) => String(text.characters || '').trim() && text.bbox)
+  const roles = []
+  const headingRoles = []
+  for (const text of texts) {
+    const role = textRole(text)
+    if (!roles.includes(role)) roles.push(role)
+    if (isHeadingRole(role, text.fontSize || 0) && !headingRoles.includes(role)) headingRoles.push(role)
+  }
+  const centred = texts.filter((text) => Math.abs(text.bbox.x + text.bbox.width / 2 - width / 2) <= 0.05 * width).length
+  const alignment = texts.length ? (centred / texts.length >= 0.6 ? 'center' : 'left') : 'none'
+  const inset = (spec?.images || []).filter((image) => image.bbox && image.bbox.width < 0.8 * width)
+    .sort((a, b) => b.bbox.width * b.bbox.height - a.bbox.width * a.bbox.height || a.bbox.x - b.bbox.x)
+  const mainImage = inset[0]
+  const centre = mainImage ? (mainImage.bbox.x + mainImage.bbox.width / 2) / width : null
+  const imageSide = centre === null ? 'none' : centre < 0.45 ? 'left' : centre > 0.55 ? 'right' : 'center'
+  if (!spec) return { background: 'none', roles: [], headingRoles: [], imageCount: 0, alignment: 'none', imageSide: 'none', heightBucket: 0, layout: '', noSpec: true }
+  return {
+    background: dominantBackground(spec, options),
+    roles,
+    headingRoles,
+    imageCount: (spec?.images || []).length,
+    alignment,
+    imageSide,
+    heightBucket: Math.round((spec?.bbox?.height || 0) / 100) * 100,
+    layout: layoutSignature(spec)
+  }
+}
+
+export const variantKey = (features) => features.noSpec ? 'no-spec' :
+  [`bg=${features.background}`, `roles=${features.roles.join(',')}`, `img=${features.imageCount}`, `align=${features.alignment}`, `side=${features.imageSide}`, `h=${features.heightBucket}`].join('|')
+
+export const contentKey = (spec) => (spec?.texts || []).map((text) => String(text.characters || '').replace(/\s+/g, ' ').trim()).filter(Boolean).join('\n')
+
+// Modifiers describing how `other` differs from `base`.
+// Visual variant traits: only differences a designer would style. Optional
+// text elements and ordinary height changes are content, not variants.
+export const HEIGHT_CLASS_RATIO = 1.5
+
+export const backgroundFamily = (background) => (background === 'image' || background === 'none' ? background : toneName(background))
+
+export const imageLayout = (count) => (count >= 3 ? '3+' : String(count))
+
+export const heightClass = (height, median, ratio = HEIGHT_CLASS_RATIO) => {
+  if (!height || !median) return 'regular'
+  if (height > median * ratio) return 'tall'
+  if (height < median / ratio) return 'compact'
+  return 'regular'
+}
+
+export const visualTraits = (features, median) => features.noSpec
+  ? { noSpec: true }
+  : {
+      background: backgroundFamily(features.background),
+      alignment: features.alignment,
+      imageSide: features.imageSide,
+      images: imageLayout(features.imageCount),
+      height: heightClass(features.heightBucket, median)
+    }
+
+export const visualKey = (traits) => traits.noSpec ? 'no-spec' : ['bg', traits.background, 'align', traits.alignment, 'side', traits.imageSide, 'img', traits.images, 'h', traits.height].join('|')
+
+const backgroundModifier = (family) => (family === 'image' ? 'is-image-bg' : family === 'none' ? 'is-transparent' : `is-${family}`)
+
+// Modifiers describing how `other` differs visually from `base` (visual traits).
+export const variantModifiers = (base, other) => {
+  if (base.noSpec || other.noSpec) return []
+  const modifiers = []
+  if (other.background !== base.background) modifiers.push(backgroundModifier(other.background))
+  if (other.alignment !== base.alignment && other.alignment !== 'none') modifiers.push(other.alignment === 'center' ? 'is-centered' : 'is-left')
+  if (other.imageSide !== base.imageSide) {
+    const opposite = (base.imageSide === 'left' && other.imageSide === 'right') || (base.imageSide === 'right' && other.imageSide === 'left')
+    if (opposite) modifiers.push('is-reversed')
+    else if (other.imageSide !== 'none') modifiers.push(`is-media-${other.imageSide}`)
+  }
+  if (other.images !== base.images) modifiers.push(other.images === '0' ? 'is-no-image' : other.images === '3+' ? 'is-multi-image' : `is-${other.images}-image${other.images === '1' ? '' : 's'}`)
+  if (other.height !== base.height) modifiers.push(`is-${other.height}`)
+  return modifiers
+}
+
+// Heading roles: named heading styles or large type; the rest are body roles.
+export const isHeadingRole = (role, fontSize = 0) => /^(h[1-6]\b|h[1-6]-|hero|display)/.test(role) || fontSize >= 32
+
+const mostCommonKind = (instances) => mostCommon(instances.map((section) => section.vision?.kind && clean(section.vision.kind))) || 'unknown'
+
+// Near-identical component merge. Vision reviewers named sections
+// independently, so one block can carry two names. Components scoring at or
+// above MERGE_THRESHOLD merge (the name with more instances wins, the other
+// becomes an alias); scores in [NEAR_MISS_FLOOR, MERGE_THRESHOLD) are listed
+// for human review. Tuned on the Guild snapshot (see docs/figma/components.md).
+// The score blends a structural link (an instance of one shares an exact
+// inventory cluster with the other: 1; only a loose cluster: LOOSE_LINK; none:
+// 0) with spec feature similarity. LOOSE_LINK keeps loose look-alikes below
+// the merge threshold even with identical features (0.4 x 0.4 + 0.6 = 0.76),
+// so only exact structural twins with similar specs merge. Tuned on the Guild
+// snapshot: exact-linked pairs score 0.80 to 0.95, loose-only pairs 0.53 to
+// 0.65 and unlinked pairs at most 0.53.
+export const SIMILARITY = {
+  MERGE_THRESHOLD: 0.79,
+  NEAR_MISS_FLOOR: 0.55,
+  LOOSE_LINK: 0.4,
+  blend: { structure: 0.4, features: 0.6 },
+  weights: { roles: 0.3, layout: 0.2, alignment: 0.15, images: 0.15, height: 0.1, background: 0.1 }
+}
+
+const roleSimilarity = (a, b) => {
+  if (!a.length && !b.length) return 1
+  const union = new Set([...a, ...b])
+  const shared = a.filter((role) => b.includes(role)).length
+  return shared / union.size
+}
+
+const layoutSimilarity = (a = '', b = '') => {
+  if (!a || !b) return a === b ? 1 : 0
+  let same = 0
+  for (let at = 0; at < Math.max(a.length, b.length); at++) if (a[at] === b[at]) same++
+  return same / Math.max(a.length, b.length)
+}
+
+// Similarity of two variant feature sets, 0 to 1.
+export const featureSimilarity = (a, b, weights = SIMILARITY.weights) => {
+  if (a.noSpec || b.noSpec) return 0
+  const parts = {
+    roles: roleSimilarity(a.roles, b.roles),
+    layout: layoutSimilarity(a.layout, b.layout),
+    alignment: a.alignment === b.alignment ? 1 : 0,
+    images: 1 - Math.abs(a.imageCount - b.imageCount) / Math.max(a.imageCount, b.imageCount, 1),
+    height: Math.min(a.heightBucket, b.heightBucket) / Math.max(a.heightBucket, b.heightBucket, 1),
+    background: a.background === b.background ? 1 : (a.background === 'image') === (b.background === 'image') ? 0.5 : 0
+  }
+  let score = 0
+  for (const [name, weight] of Object.entries(weights)) score += weight * parts[name]
+  return score
+}
+
+// Feature similarity of two components: each variant of one side matched to
+// its best variant on the other, weighted by instance count, averaged over
+// both directions.
+export const variantSetSimilarity = (variantsA, variantsB, weights = SIMILARITY.weights) => {
+  const direction = (from, to) => {
+    let total = 0
+    let weight = 0
+    for (const variant of from) {
+      const best = Math.max(...to.map((other) => featureSimilarity(variant.features, other.features, weights)))
+      total += best * variant.instances.length
+      weight += variant.instances.length
+    }
+    return weight ? total / weight : 0
+  }
+  return (direction(variantsA, variantsB) + direction(variantsB, variantsA)) / 2
+}
+
+// Structural link between two instance lists from inventory cluster ids.
+export const structuralLink = (instancesA, instancesB, looseLink = SIMILARITY.LOOSE_LINK) => {
+  const ids = (list, field) => new Set(list.map((section) => section[field]).filter(Boolean))
+  const exactB = ids(instancesB, 'clusterId')
+  if ([...ids(instancesA, 'clusterId')].some((id) => exactB.has(id))) return 1
+  const looseB = ids(instancesB, 'looseClusterId')
+  return [...ids(instancesA, 'looseClusterId')].some((id) => looseB.has(id)) ? looseLink : 0
+}
+
+// Component similarity, 0 to 1, rounded to 3 places.
+export const componentSimilarity = (a, b, similarity = SIMILARITY) => {
+  const features = variantSetSimilarity(a.variants, b.variants, similarity.weights)
+  const structure = structuralLink(a.instances, b.instances, similarity.LOOSE_LINK)
+  return Math.round((similarity.blend.structure * structure + similarity.blend.features * features) * 1000) / 1000
+}
+
+const groupVariants = (instances, features) => {
+  const groups = new Map()
+  for (const section of instances) {
+    const feature = features.get(section.key) || variantFeatures(null)
+    const key = variantKey(feature)
+    if (!groups.has(key)) groups.set(key, { key, features: feature, instances: [] })
+    groups.get(key).instances.push(section)
+  }
+  return [...groups.values()]
+}
+
+// Build the component catalogue. `features` maps section key to
+// variantFeatures, `contents` maps section key to contentKey. `compare` orders
+// sections (page build order); default keeps array order.
+export const buildComponents = (sections, { features = new Map(), contents = new Map(), compare = null, similarity = SIMILARITY } = {}) => {
+  const position = new Map(sections.map((section, at) => [section.key, at]))
+  const order = compare || ((a, b) => position.get(a.key) - position.get(b.key))
+  const byName = new Map()
+  for (const section of sections) {
+    const name = componentNameOf(section)
+    if (!byName.has(name)) byName.set(name, [])
+    byName.get(name).push(section)
+  }
+  const names = [...byName.keys()].sort((a, b) => byName.get(b).length - byName.get(a).length || a.localeCompare(b))
+  const rawVariants = new Map(names.map((name) => [name, groupVariants(byName.get(name), features)]))
+
+  // Pairwise similarity, then merge the high scorers (union-find on names).
+  const pairs = []
+  for (let first = 0; first < names.length; first++) {
+    for (let second = first + 1; second < names.length; second++) {
+      const score = componentSimilarity(
+        { variants: rawVariants.get(names[first]), instances: byName.get(names[first]) },
+        { variants: rawVariants.get(names[second]), instances: byName.get(names[second]) },
+        similarity
+      )
+      if (score >= similarity.NEAR_MISS_FLOOR) pairs.push({ a: names[first], b: names[second], score })
+    }
+  }
+  pairs.sort((x, y) => y.score - x.score || x.a.localeCompare(y.a) || x.b.localeCompare(y.b))
+  const union = new UnionFind()
+  const nameRank = new Map(names.map((name, at) => [name, String(at).padStart(6, '0')]))
+  const rootOf = (name) => union.find(nameRank.get(name))
+  for (const pair of pairs) if (pair.score >= similarity.MERGE_THRESHOLD) union.union(nameRank.get(pair.a), nameRank.get(pair.b))
+  const families = new Map()
+  for (const name of names) {
+    const root = rootOf(name)
+    if (!families.has(root)) families.set(root, [])
+    families.get(root).push(name)
+  }
+  const merges = pairs.filter((pair) => pair.score >= similarity.MERGE_THRESHOLD)
+  const nearMisses = pairs.filter((pair) => pair.score < similarity.MERGE_THRESHOLD && rootOf(pair.a) !== rootOf(pair.b))
+
+  const components = []
+  const canonical = new Map()
+  for (const family of families.values()) {
+    const [name, ...aliases] = family
+    for (const member of family) canonical.set(member, name)
+    const instances = family.flatMap((member) => byName.get(member)).sort(order)
+    const featureOf = (section) => features.get(section.key) || variantFeatures(null)
+    const heights = instances.map((section) => featureOf(section)).filter((feature) => !feature.noSpec).map((feature) => feature.heightBucket).sort((a, b) => a - b)
+    const median = heights.length ? heights[Math.floor((heights.length - 1) / 2)] : 0
+    const groups = new Map()
+    for (const section of instances) {
+      const traits = visualTraits(featureOf(section), median)
+      const key = visualKey(traits)
+      if (!groups.has(key)) groups.set(key, { key, traits, features: featureOf(section), instances: [] })
+      groups.get(key).instances.push(section)
+    }
+    const variants = [...groups.values()].sort((a, b) => b.instances.length - a.instances.length || order(a.instances[0], b.instances[0]))
+    const base = variants[0]
+    const used = new Map()
+    for (const variant of variants) {
+      variant.modifiers = variant === base ? [] : variantModifiers(base.traits, variant.traits)
+      let label = variant === base ? 'base' : variant.modifiers.join(' ') || 'is-alt'
+      const seen = used.get(label) || 0
+      used.set(label, seen + 1)
+      if (seen) {
+        label = `${label}-${seen + 1}`
+        if (variant.modifiers.length) variant.modifiers = [...variant.modifiers.slice(0, -1), `${variant.modifiers.at(-1)}-${seen + 1}`]
+        else variant.modifiers = [label]
+      }
+      variant.label = label
+      variant.reference = variant.instances.find((section) => section.crop) || variant.instances[0]
+      variant.sourceNames = [...new Set(variant.instances.map((section) => componentNameOf(section)))].sort()
+      const byContent = new Map()
+      for (const section of variant.instances) {
+        const content = contents.get(section.key) ?? ''
+        if (!byContent.has(content)) byContent.set(content, [])
+        byContent.get(content).push(section)
+      }
+      variant.duplicates = [...byContent.values()].filter((group) => group.length > 1)
+      variant.distinctContent = byContent.size
+    }
+    // Content differences the class family must support: optional body
+    // elements (present in some instances only) and heading size swaps.
+    const specced = instances.map(featureOf).filter((feature) => !feature.noSpec)
+    const bodyCounts = new Map()
+    for (const feature of specced) {
+      for (const role of feature.roles) if (!feature.headingRoles.includes(role)) bodyCounts.set(role, (bodyCounts.get(role) || 0) + 1)
+    }
+    const optionalElements = [...bodyCounts].filter(([, count]) => count < specced.length).map(([role]) => role).sort()
+    const headingRoles = [...new Set(specced.flatMap((feature) => feature.headingRoles))].sort()
+    const lanes = new Set(instances.map((section) => (section.lane === 'agent' ? 'agent' : 'manual')))
+    components.push({
+      name,
+      aliases,
+      optionalElements,
+      headingRoles,
+      headingSwap: headingRoles.length > 1,
+      kind: mostCommonKind(instances),
+      lane: lanes.size > 1 ? 'mixed' : [...lanes][0],
+      instances,
+      pages: [...new Set(instances.map((section) => section.pageSlug))],
+      variants,
+      duplicates: variants.flatMap((variant) => variant.duplicates)
+    })
+  }
+  components.sort((a, b) => b.instances.length - a.instances.length || a.name.localeCompare(b.name))
+  const bySection = new Map()
+  for (const component of components) {
+    for (const variant of component.variants) for (const section of variant.instances) bySection.set(section.key, { component, variant })
+  }
+  const named = (pair) => ({ ...pair, into: canonical.get(pair.a) })
+  return { components, bySection, merges: merges.map(named), nearMisses: nearMisses.map(named), similarity }
+}
+
+// Human label for a variant, for briefs and tables.
+export const variantText = (variant) => (variant.label === 'base' ? 'base' : variant.modifiers.map((modifier) => `\`${modifier}\``).join(' + '))

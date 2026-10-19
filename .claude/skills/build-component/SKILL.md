@@ -81,6 +81,19 @@ Context: "Checking existing component library to reuse components instead of reb
 
 Check if any existing component matches a section in the Figma design. If a match exists (e.g., `Button Icon`, `Large Text Hero Section`), **insert a component instance** instead of building from scratch.
 
+### Step 0.25: Component Reuse Gate (HARD STOP)
+
+One design pattern gets one class family. Five similar blocks with five unique class families is a failed build.
+
+1. Look up the section's component in `docs/figma/components.md` (component name, variant, near-identical merges). If the project has no catalogue, compare the section against every existing `section_*` family from Step 0.1 by layout (column structure, text-role order, image count, alignment), ignoring content and colour.
+2. If the component, or a near-identical one, already has a class family in Webflow: reuse its `section_<component>` and `<component>_<element>` classes. Express the difference as:
+   - an `is-` combo modifier on the existing class for a variant (background, alignment, reversed order, compact spacing), or
+   - an existing utility class for a single-property difference (`text-align-center`, `background-color-*`, `padding-section-*`, `hide-*`).
+3. Create a new class family only when no existing family matches. Name it after the layout, never the page or content (`section_split-image-text`, not `section_zuma-intro`).
+4. Record every new family and every new `is-` modifier in `docs/reference/style-inventory.md` (family, purpose, variants, where used) before the session ends.
+
+Present the reuse decision (reused family + modifiers, or why a new family is justified) in the Phase 3 consent gate.
+
 ### Step 0.3: Map Figma Design to Existing Styles
 
 For each text element in the Figma design:
@@ -659,6 +672,7 @@ Before publishing, run a structural review to catch convention drift from sub-ag
 13. **Images** — All have aspect-ratio or percentage sizing, not fixed rem dimensions
 14. **Copy accuracy** — Compare every text node against the component map (docs/component-maps/)
 15. **Button components** — All CTAs use the Button Icon component, not plain Button or TextLink
+16. **One family per component:** Re-run `get_styles` and list `section_*` families. No two families describe the same layout; any new family created this session is recorded in `docs/reference/style-inventory.md` with its `is-` variants. If two families match, fold the newer one into the older as an `is-` modifier before publishing.
 
 If any checks fail, fix before proceeding to Phase 5.
 

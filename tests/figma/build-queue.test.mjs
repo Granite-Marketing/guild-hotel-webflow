@@ -9,7 +9,15 @@ import { spawnSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 import { discoverFrames, renderPath } from '../../scripts/api/figma/lib/frames.mjs'
-import { GENERATED_MARKER, SUBAGENT_LINE, sectionForUse } from '../../scripts/api/figma/lib/queue.mjs'
+import {
+  GENERATED_MARKER,
+  SIMILARITY,
+  SUBAGENT_LINE,
+  buildComponents,
+  contentKey,
+  sectionForUse,
+  variantFeatures
+} from '../../scripts/api/figma/lib/queue.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const repo = path.resolve(here, '../..')
@@ -76,7 +84,7 @@ const runQueue = (root) => {
 
 const readJson = (root, rel) => JSON.parse(fs.readFileSync(path.join(root, rel), 'utf8'))
 const briefFiles = (root) => fs.readdirSync(path.join(root, 'docs/figma/briefs')).sort().map((name) => `docs/figma/briefs/${name}`)
-const outputHashes = (root) => Object.fromEntries(['figma/assets.json', 'docs/figma/build-queue.md', ...briefFiles(root)]
+const outputHashes = (root) => Object.fromEntries(['figma/assets.json', 'docs/figma/build-queue.md', 'docs/figma/components.md', ...briefFiles(root)]
   .map((rel) => [rel, crypto.createHash('sha256').update(fs.readFileSync(path.join(root, rel))).digest('hex')]))
 
 // Queue rows parsed back from docs/figma/build-queue.md.
@@ -188,6 +196,7 @@ test('every brief references files that exist and carries the required lines', (
     assert.ok(text.includes(SUBAGENT_LINE), rel)
     assert.ok(text.includes(GENERATED_MARKER), rel)
     assert.ok(!text.includes('\u2014'), `${rel} has no em dash`)
+    if (!/Q00[1-4]-/.test(rel)) assert.ok(text.includes('## Component reuse gate') && text.includes('`docs/figma/components.md`'), `${rel} has the reuse gate`)
     const paths = [...text.matchAll(/`([A-Za-z0-9_.][A-Za-z0-9_./-]*\.(?:md|json|webp|svg|png))`/g)].map((match) => match[1])
     assert.ok(paths.length > 3, rel)
     for (const file of paths) assert.ok(fs.existsSync(path.join(root, file)), `${rel} -> ${file}`)
@@ -290,4 +299,135 @@ test('a vision slider flips an agent section to manual, and stale generated brie
 test('the queue scripts make no network calls', () => {
   const source = fs.readFileSync(queueScript, 'utf8') + fs.readFileSync(path.join(repo, 'scripts/api/figma/lib/queue.mjs'), 'utf8')
   assert.ok(!/\bfetch\(|https?:\/\/|node:https?\b/.test(source))
+})
+
+// Component model on real specs from the temp root.
+const realSpec = (section) => JSON.parse(fs.readFileSync(path.join(root, section.spec), 'utf8'))
+const agentWithSpec = () => inventory.sections.filter((section) => section.lane === 'agent' && section.spec && fs.existsSync(path.join(root, section.spec)))
+const fake = (section, overrides) => ({ ...section, vision: null, ...overrides })
+const catalogueFor = (entries) => buildComponents(entries.map((entry) => entry.section), {
+  features: new Map(entries.map((entry) => [entry.section.key, entry.features])),
+  contents: new Map(entries.map((entry) => [entry.section.key, entry.content]))
+})
+
+test('identical spec content collapses into one duplicate group; a background-only difference is a labelled variant', () => {
+  const source = agentWithSpec().find((section) => realSpec(section).texts.length >= 2)
+  const spec = realSpec(source)
+  const fills = (hex) => ({ bandArea: spec.bbox.width * spec.bbox.height, frameFill: hex, fills: [] })
+  const light = variantFeatures(spec, { fills: fills('#F4EFDF') })
+  const dark = variantFeatures(spec, { fills: fills('#262118') })
+  const make = (key, features) => ({ section: fake(source, { key, proposedName: 'test-block', crop: source.crop }), features, content: contentKey(spec) })
+
+  const twins = catalogueFor([make('a/01-one', light), make('b/01-one', light)])
+  assert.equal(twins.components.length, 1)
+  const [component] = twins.components
+  assert.equal(component.variants.length, 1)
+  assert.equal(component.duplicates.length, 1)
+  assert.deepEqual(component.duplicates[0].map((section) => section.key), ['a/01-one', 'b/01-one'])
+
+  const mixed = catalogueFor([make('a/01-one', light), make('b/01-one', light), make('c/01-one', dark)])
+  const variants = mixed.components[0].variants
+  assert.equal(variants.length, 2, 'background splits the variants')
+  assert.equal(variants[0].label, 'base')
+  assert.notEqual(variants[0].label, variants[1].label)
+  assert.deepEqual(variants[1].modifiers, ['is-dark'])
+  assert.equal(variants[0].duplicates.length, 1, 'light pair is still a duplicate group')
+  const again = catalogueFor([make('a/01-one', light), make('b/01-one', light), make('c/01-one', dark)])
+  assert.deepEqual(again.components[0].variants.map((variant) => variant.label), variants.map((variant) => variant.label), 'deterministic')
+})
+
+test('optional text elements and ordinary height changes are content, not variants', () => {
+  const source = agentWithSpec().find((section) => {
+    const texts = realSpec(section).texts.filter((text) => String(text.characters || '').trim())
+    return new Set(texts.map((text) => text.styleName || `${text.fontFamily}${text.fontSize}`)).size >= 2
+  })
+  const spec = realSpec(source)
+  const full = variantFeatures(spec)
+  const dropped = full.roles.find((role) => !full.headingRoles.includes(role)) || full.roles.at(-1)
+  const trimmed = { ...spec, texts: spec.texts.filter((text) => variantFeatures({ ...spec, texts: [text] }).roles[0] !== dropped) }
+  const fewer = variantFeatures(trimmed)
+  assert.ok(!fewer.roles.includes(dropped), 'role removed from the second instance')
+  const taller = { ...full, heightBucket: Math.round(full.heightBucket * 1.3) }
+  const catalogue = catalogueFor([
+    { section: fake(source, { key: 'p/01-a', proposedName: 'intro-block' }), features: full, content: 'one' },
+    { section: fake(source, { key: 'q/01-a', proposedName: 'intro-block' }), features: { ...full, roles: fewer.roles, headingRoles: fewer.headingRoles }, content: 'two' },
+    { section: fake(source, { key: 'r/01-a', proposedName: 'intro-block' }), features: taller, content: 'three' }
+  ])
+  const [component] = catalogue.components
+  assert.equal(component.variants.length, 1, 'one variant')
+  assert.ok(!component.variants.some((variant) => variant.modifiers.some((modifier) => /^is-(with|no)-/.test(modifier) && modifier !== 'is-no-image')))
+  if (!full.headingRoles.includes(dropped)) assert.ok(component.optionalElements.includes(dropped), 'recorded as an optional element')
+  else assert.ok(component.headingSwap, 'heading swap recorded')
+})
+
+test('near-identical components under different names merge; a clearly different pair does not', () => {
+  const sections = agentWithSpec()
+  const source = sections.find((section) => section.clusterId && realSpec(section).texts.length >= 2)
+  const spec = realSpec(source)
+  const features = variantFeatures(spec)
+  const twin = [
+    { section: fake(source, { key: 'x/01-a', proposedName: 'card-block-wide' }), features, content: 'one' },
+    { section: fake(source, { key: 'y/01-a', proposedName: 'card-block-wide' }), features, content: 'two' },
+    { section: fake(source, { key: 'z/01-a', proposedName: 'card-feature-alt' }), features, content: 'three' }
+  ]
+  const merged = catalogueFor(twin)
+  assert.equal(merged.components.length, 1, 'merged into one component')
+  assert.equal(merged.components[0].name, 'card-block-wide', 'the name with more instances is kept')
+  assert.deepEqual(merged.components[0].aliases, ['card-feature-alt'])
+  assert.ok(merged.merges[0].score >= SIMILARITY.MERGE_THRESHOLD)
+
+  const sourceRoles = new Set(features.roles)
+  const other = sections.find((section) => {
+    if (section.clusterId === source.clusterId || section.looseClusterId === source.looseClusterId) return false
+    const candidate = variantFeatures(realSpec(section))
+    return candidate.roles.every((role) => !sourceRoles.has(role)) && candidate.alignment !== features.alignment
+  })
+  assert.ok(other, 'found a clearly different real section')
+  const apart = catalogueFor([
+    twin[0],
+    { section: fake(other, { key: 'w/01-b', proposedName: 'other-block' }), features: variantFeatures(realSpec(other)), content: 'four' }
+  ])
+  assert.equal(apart.components.length, 2, 'different blocks stay apart')
+  assert.equal(apart.merges.length, 0)
+})
+
+test('manual sliders get one queue entry per component name, with variants, and every section is placed once', () => {
+  const candidates = inventory.sections.filter((section) => section.lane === 'agent' && section.pageSlug !== 'home' && section.crop && section.clusterSize === 1)
+  const pick = (count, skip) => candidates.slice(skip, skip + count)
+  const sliderA = pick(3, 0)
+  const sliderB = pick(2, 3)
+  const records = [
+    ...sliderA.map((section) => ({ key: section.key, name: 'test-slider-split', kind: 'slider', slider: true, interactive: '', boundaryIssue: '', note: '' })),
+    ...sliderB.map((section) => ({ key: section.key, name: 'test-card-carousel', kind: 'slider', slider: true, interactive: '', boundaryIssue: '', note: '' }))
+  ]
+  fs.mkdirSync(path.join(root, 'figma/review'), { recursive: true })
+  fs.writeFileSync(path.join(root, 'figma/review/vision-zz-sliders.json'), `${JSON.stringify({ sections: records }, null, 2)}\n`)
+  runQueue(root)
+  const rows = queueRows(root)
+  const sections = entrySections(root)
+  const sliderRows = rows.filter((row) => row.type === 'manual' && /^Slider: test-/.test(row.title))
+  assert.deepEqual(sliderRows.map((row) => row.title.split(' ')[1]).sort(), ['test-card-carousel', 'test-slider-split'])
+  assert.match(sliderRows.find((row) => row.title.includes('test-slider-split')).title, /\(3 instances/)
+  assert.deepEqual([...sections.get(sliderRows.find((row) => row.title.includes('test-slider-split')).id)].sort(), sliderA.map((section) => section.key).sort())
+  for (const row of sliderRows) assert.equal(row.brief, 'yours')
+
+  // Every section (agent and manual) appears in exactly one entry.
+  const placed = new Map()
+  for (const row of rows.filter((entry) => entry.type !== 'setup')) {
+    for (const key of sections.get(row.id)) placed.set(key, (placed.get(key) || 0) + 1)
+  }
+  for (const section of inventory.sections) assert.equal(placed.get(section.key), 1, section.key)
+
+  const text = fs.readFileSync(path.join(root, 'docs/figma/build-queue.md'), 'utf8')
+  assert.match(text, /## Summary/)
+  assert.match(text, /Distinct components to build: \d+ \(agent \d+, manual \d+, mixed \d+\)/)
+  const catalogue = fs.readFileSync(path.join(root, 'docs/figma/components.md'), 'utf8')
+  assert.match(catalogue, /\| \[test-slider-split\]\(#test-slider-split\) \| slider \| manual \| 3 \|/)
+  assert.match(catalogue, /## Merged near-identical components/)
+  assert.match(catalogue, /## Check these/)
+  assert.ok(!catalogue.includes('\u2014'))
+
+  const first = outputHashes(root)
+  runQueue(root)
+  assert.deepEqual(outputHashes(root), first, 're-run is byte-identical')
 })
