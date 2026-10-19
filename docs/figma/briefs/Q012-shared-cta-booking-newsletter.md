@@ -62,7 +62,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/home/sections/18-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 - Vision review: kind cta; interactive: email input and join button
 
@@ -74,7 +74,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/dining-collection/sections/12-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `rooms-collection/11-book-your-escape`: Cta booking newsletter
@@ -83,7 +83,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/rooms-collection/sections/11-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `wellness-collection/09-book-your-escape`: Cta booking newsletter
@@ -92,7 +92,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/wellness-collection/sections/09-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `meetings-collection/12-book-your-escape`: Cta booking newsletter
@@ -101,7 +101,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/meetings-collection/sections/12-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `history/12-book-your-escape`: Cta booking newsletter
@@ -110,7 +110,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/history/sections/12-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `guidelines/08-book-your-escape`: Cta booking newsletter
@@ -119,7 +119,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/guidelines/sections/08-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `rooms-individual/14-a-landmark-reimagined`: Cta booking newsletter
@@ -128,7 +128,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/rooms-individual/sections/14-a-landmark-reimagined/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (7): "A Landmark Reimagined"; "Book your escape"; "Stay in the loop"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `press/12-book-your-escape`: Cta booking newsletter
@@ -137,7 +137,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/press/sections/12-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `gallery/06-book-your-escape`: Cta booking newsletter
@@ -146,7 +146,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/gallery/sections/06-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `arts/10-book-your-escape`: Cta booking newsletter
@@ -155,7 +155,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/arts/sections/10-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `static-template/02-book-your-escape`: Cta booking newsletter
@@ -164,7 +164,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/static-template/sections/02-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `contact/06-book-your-escape`: Cta booking newsletter
@@ -173,7 +173,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/contact/sections/06-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `neighborhood/14-book-your-escape`: Cta booking newsletter
@@ -182,7 +182,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/neighborhood/sections/14-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `dining-zuma/10-other-dining-options`: Cta booking newsletter
@@ -191,7 +191,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/dining-zuma/sections/10-other-dining-options/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (11): "other dining options"; "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc mo..."; "Book your escape"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270989618-28x12-236-8230.svg` (Group 270989618, 28x12), `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/group-270990048-28x12-266-3621.svg` (Group 270990048, 28x12), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `dining-gardenterrace/09-book-your-escape`: Cta booking newsletter
@@ -200,7 +200,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/dining-gardenterrace/sections/09-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `dining-lobbybar/09-book-your-escape`: Cta booking newsletter
@@ -209,7 +209,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/dining-lobbybar/sections/09-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `dining-poollounge/09-book-your-escape`: Cta booking newsletter
@@ -218,7 +218,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/dining-poollounge/sections/09-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `legal/15-book-your-escape`: Cta booking newsletter
@@ -227,7 +227,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/legal/sections/15-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `corporate/15-book-your-escape`: Cta booking newsletter
@@ -236,7 +236,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/corporate/sections/15-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `happenings-collection/11-book-your-escape`: Cta booking newsletter
@@ -245,7 +245,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/happenings-collection/sections/11-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `blog-collection/11-book-your-escape`: Cta booking newsletter
@@ -254,7 +254,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/blog-collection/sections/11-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `happenings-indiv/08-book-your-escape`: Cta booking newsletter
@@ -263,7 +263,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/happenings-indiv/sections/08-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 #### `blog-indiv/08-book-your-escape`: Cta booking newsletter
@@ -272,7 +272,7 @@ Content, not variants: optional elements `eyebrow-caps`, `gatch-20` (present on 
 - Reference crop: `figma/pages/blog-indiv/sections/08-book-your-escape/section.webp`
 - Component: cta-booking-newsletter, variant base (only variant)
 - Texts (6): "Book your escape"; "Stay in the loop"; "book now"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990036-167x48-250-2045.svg` (Group 270990036, 167x48), `figma/vectors/vector-25-144x37-250-1971.svg` (Vector 25, 144x37), `figma/vectors/vector-25-214x37-250-1982.svg` (Vector 25, 214x37)
 
 ## Component reuse gate

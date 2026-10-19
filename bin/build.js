@@ -2,6 +2,8 @@ import * as esbuild from 'esbuild'
 import { readdirSync } from 'node:fs'
 import { join, sep } from 'node:path'
 
+import { serveFixtures } from './fixtures.js'
+
 const PRODUCTION = process.env.NODE_ENV === 'production'
 const WATCH = process.argv.includes('--watch')
 
@@ -11,33 +13,29 @@ const BUILD_DIRECTORY = 'dist'
 // Config entrypoint files
 const ENTRY_POINTS = ['src/index.ts']
 
-// Dev-only visual fixtures: tests/visual/fixtures/<name>.{ts,html} are served
-// at /fixtures/<name>.{js,html}. Images a fixture imports use the file loader.
-const FIXTURES_DIRECTORY = 'tests/visual/fixtures'
-const fixtureEntryPoints = () =>
-  readdirSync(FIXTURES_DIRECTORY)
-    .filter((file) => /\.(ts|html)$/.test(file) && !file.endsWith('.spec.ts'))
-    .map((file) => ({
-      in: join(FIXTURES_DIRECTORY, file),
-      out: `fixtures/${file.replace(/\.(ts|html)$/, '')}`,
-    }))
+// Local preview fixtures (dev only): each tests/visual/fixtures/<name>.html is
+// copied to dist/fixtures/ (gitignored) with its <name>.ts entry bundled next
+// to it, so `pnpm dev` serves them at /fixtures/<name>.html. Images imported
+// by a fixture entry are copied alongside.
+const FIXTURE_DIRECTORY = 'tests/visual/fixtures'
+const FIXTURE_OPTIONS = {
+  bundle: true,
+  outdir: `${BUILD_DIRECTORY}/fixtures`,
+  target: 'esnext',
+  loader: { '.html': 'copy', '.webp': 'file', '.png': 'file', '.jpg': 'file' },
+  assetNames: 'assets/[name]-[hash]',
+}
 
 // Config dev serving
 const SERVE_PORT = 3000
 const SERVE_ORIGIN = `http://localhost:${SERVE_PORT}`
+const FIXTURES_PORT = 3001
 
 // Create context
 const context = await esbuild.context({
   bundle: true,
-  entryPoints: WATCH
-    ? [{ in: ENTRY_POINTS[0], out: 'index' }, ...fixtureEntryPoints()]
-    : ENTRY_POINTS,
+  entryPoints: ENTRY_POINTS,
   outdir: BUILD_DIRECTORY,
-  // Watch mode serves from memory so `pnpm dev` never overwrites the
-  // committed production dist/index.js.
-  write: !WATCH,
-  loader: { '.html': 'copy', '.webp': 'file', '.jpg': 'file', '.png': 'file' },
-  assetNames: 'fixtures/assets/[name]-[hash]',
   minify: PRODUCTION,
   sourcemap: !PRODUCTION,
   target: PRODUCTION ? 'es2020' : 'esnext',
@@ -52,12 +50,22 @@ if (PRODUCTION || !WATCH) {
 } else {
   // Watch and serve files in dev
   await context.watch()
+  const fixtureEntries = readdirSync(FIXTURE_DIRECTORY)
+    .filter((file) => file.endsWith('.html') || file.endsWith('.ts'))
+    .map((file) => join(FIXTURE_DIRECTORY, file))
+  if (fixtureEntries.length) {
+    const fixtureContext = await esbuild.context({ ...FIXTURE_OPTIONS, entryPoints: fixtureEntries })
+    await fixtureContext.watch()
+  }
   await context
     .serve({
       servedir: BUILD_DIRECTORY,
       port: SERVE_PORT,
     })
     .then(logServedFiles)
+
+  const fixtures = await serveFixtures(FIXTURES_PORT)
+  console.log(`Module fixtures: ${fixtures.origin}/<name>.html`)
 }
 
 /**
@@ -103,8 +111,4 @@ function logServedFiles() {
     .filter(Boolean)
 
   console.table(filesInfo)
-
-  fixtureEntryPoints()
-    .filter((entry) => entry.in.endsWith('.html'))
-    .forEach((entry) => console.log(`Fixture: ${SERVE_ORIGIN}/${entry.out}.html`))
 }

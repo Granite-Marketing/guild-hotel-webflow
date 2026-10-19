@@ -2,7 +2,6 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests/visual',
-  testIgnore: 'fixtures/**',
   fullyParallel: false,
   retries: 0,
   use: {

@@ -2,7 +2,7 @@
 
 This document is the **live reference** for what already exists in The Guild Hotel Webflow project. Before creating ANY new style or element, check here first. If a match exists, reuse it.
 
-**Last updated:** 2026-10-19 (reset for The Guild Hotel; the previous contents described another project)
+**Last updated:** 2026-10-19 (Q004 added 13 static pages; no styles or components changed, so the baseline below still matches the live site)
 
 **Status:** Baseline only. The site currently holds the Relume starter style guide and no project components. The first build session must regenerate this file from the live site (`style_tool > get_styles(query: "all", skip_properties: false)` and `de_component_tool > get_all_components`) before building anything.
 

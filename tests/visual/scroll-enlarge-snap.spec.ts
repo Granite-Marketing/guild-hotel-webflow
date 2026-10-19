@@ -1,12 +1,15 @@
 import { expect, test, type Page } from '@playwright/test'
 
+import { serveFixtures } from '../../bin/fixtures.js'
+
 /**
  * scrollEnlargeSnap reaches its end state on scroll, snaps between panels,
  * follows tab clicks, and shows the end state at once under reduced motion.
- * Run with `pnpm test:fixtures` (starts `pnpm dev` if it is not running).
+ * Runs without Webflow: the fixture server bundles the entry in memory.
+ * GSAP and Lenis load from jsDelivr, so this needs network.
  */
 
-const FIXTURE = '/fixtures/scroll-enlarge-snap.html'
+const FIXTURE = '/scroll-enlarge-snap.html'
 const SETTLE_MS = 1800
 
 interface PinState {
@@ -21,8 +24,18 @@ interface PinState {
   itemOpacity: number[]
 }
 
+let fixtures: { origin: string; stop: () => Promise<void> }
+
+test.beforeAll(async () => {
+  fixtures = await serveFixtures(3102)
+})
+
+test.afterAll(async () => {
+  await fixtures.stop()
+})
+
 const open = async (page: Page) => {
-  await page.goto(FIXTURE)
+  await page.goto(`${fixtures.origin}${FIXTURE}`)
   await page.waitForFunction(() => window.fixtureReady === true)
 }
 

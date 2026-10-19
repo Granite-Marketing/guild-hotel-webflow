@@ -59,7 +59,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/home/sections/19-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 - Vision review: kind footer
 
@@ -71,7 +71,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/dining-collection/sections/13-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `rooms-collection/12-the-hotel`: Footer links
@@ -80,7 +80,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/rooms-collection/sections/12-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `wellness-collection/10-the-hotel`: Footer links
@@ -89,7 +89,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/wellness-collection/sections/10-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `meetings-collection/13-the-hotel`: Footer links
@@ -98,7 +98,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/meetings-collection/sections/13-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `history/13-the-hotel`: Footer links
@@ -107,7 +107,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/history/sections/13-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `guidelines/09-the-hotel`: Footer links
@@ -116,7 +116,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/guidelines/sections/09-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `rooms-individual/15-the-hotel`: Footer links
@@ -125,7 +125,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/rooms-individual/sections/15-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `press/13-the-hotel`: Footer links
@@ -134,7 +134,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/press/sections/13-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `gallery/07-the-hotel`: Footer links
@@ -143,7 +143,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/gallery/sections/07-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `arts/11-the-hotel`: Footer links
@@ -152,7 +152,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/arts/sections/11-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `static-template/03-the-hotel`: Footer links
@@ -161,7 +161,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/static-template/sections/03-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `contact/07-the-hotel`: Footer links
@@ -170,7 +170,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/contact/sections/07-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `neighborhood/15-the-hotel`: Footer links
@@ -179,7 +179,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/neighborhood/sections/15-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `dining-zuma/11-the-hotel`: Footer links
@@ -188,7 +188,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/dining-zuma/sections/11-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `dining-gardenterrace/10-the-hotel`: Footer links
@@ -197,7 +197,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/dining-gardenterrace/sections/10-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (38): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270989618-28x12-236-8230.svg` (Group 270989618, 28x12), `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31), `figma/vectors/group-270990048-28x12-266-3621.svg` (Group 270990048, 28x12)
 
 #### `dining-lobbybar/10-the-hotel`: Footer links
@@ -206,7 +206,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/dining-lobbybar/sections/10-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (38): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270989618-28x12-236-8230.svg` (Group 270989618, 28x12), `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31), `figma/vectors/group-270990048-28x12-266-3621.svg` (Group 270990048, 28x12)
 
 #### `dining-poollounge/10-the-hotel`: Footer links
@@ -215,7 +215,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/dining-poollounge/sections/10-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (38): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270989618-28x12-236-8230.svg` (Group 270989618, 28x12), `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31), `figma/vectors/group-270990048-28x12-266-3621.svg` (Group 270990048, 28x12)
 
 #### `legal/16-the-hotel`: Footer links
@@ -224,7 +224,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/legal/sections/16-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `corporate/16-the-hotel`: Footer links
@@ -233,7 +233,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/corporate/sections/16-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `happenings-collection/12-the-hotel`: Footer links
@@ -242,7 +242,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/happenings-collection/sections/12-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `blog-collection/12-the-hotel`: Footer links
@@ -251,7 +251,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/blog-collection/sections/12-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `happenings-indiv/09-the-hotel`: Footer links
@@ -260,7 +260,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/happenings-indiv/sections/09-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 #### `blog-indiv/09-the-hotel`: Footer links
@@ -269,7 +269,7 @@ Content, not variants: optional elements `gatch-20` (present on some instances o
 - Reference crop: `figma/pages/blog-indiv/sections/09-the-hotel/section.webp`
 - Component: footer-links, variant base (only variant)
 - Texts (33): "The Hotel"; "experience"; "dining"
-- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 27078587832153ecb831134d89bff71b2b68f548 (uploaded)
 - Vectors: `figma/vectors/group-270990038-152x31-250-2123.svg` (Group 270990038, 152x31)
 
 ## Component reuse gate

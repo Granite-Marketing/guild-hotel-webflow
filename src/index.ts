@@ -34,6 +34,7 @@ import { swiperSliders } from '$utils/swiperSliders'
  *   import { heroTextReveal } from '$utils/heroTextReveal'           // slot C
  *   import { navToggle } from '$utils/navToggle'                     // slot D
  *   import { imageHoverScale } from '$utils/imageHoverScale'         // slot D
+ *   import { imageTrailHover } from '$utils/imageTrailHover'         // slot D
  *   import { viewSwitcher } from '$utils/viewSwitcher'               // slot E
  *   import { cmsFilterLinks } from '$utils/cmsFilterLinks'           // slot E
  *   import { filterPanels } from '$utils/filterPanels'               // slot F
@@ -41,6 +42,10 @@ import { swiperSliders } from '$utils/swiperSliders'
  *   import { finsweetRefresh } from '$utils/finsweetRefresh'         // slot F
  *   import { filterActiveState } from '$utils/filterActiveState'     // slot F
  *   import { scrollTextReveal } from '$utils/scrollTextReveal'       // slot G
+ *   import { galleryFilter } from '$utils/galleryFilter'             // slot E
+ *     (Gallery page filter tags; enable once a page carries [data-gallery-filter])
+ *   import { historyStickyYear } from '$utils/historyStickyYear'     // slot G (history page: sticky year + collapse gallery)
+ *   import { imageStackCollapse } from '$utils/imageStackCollapse'   // slot G
  */
 
 window.Webflow ||= [] as unknown as WebflowQueue
@@ -57,16 +62,19 @@ window.Webflow.push(() => {
   // slot C: backgroundVideo(), heroTextReveal()
   swiperSliders()
 
-  // slot D: navToggle(), imageHoverScale()
+  // slot D: navToggle(), imageHoverScale(), imageTrailHover()
+  //   imageTrailHover: enable once home section 14 (heading-wide-image-cta)
+  //   carries [data-image-trail-hover].
   accordion()
   modals()
 
   currentYear()
-  // slot E: viewSwitcher(), cmsFilterLinks()
+  // slot E: viewSwitcher(), cmsFilterLinks(), galleryFilter()
   // slot F, in this order: filterPanels(), scrollHint(), finsweetRefresh(),
   //   filterActiveState()
 
   // ScrollTrigger-creating reveals last, after DOM-mutating modules settle.
   gsapBasicAnimations()
-  // slot G: scrollTextReveal()
+  // slot G: scrollTextReveal(), historyStickyYear()
+  // slot G: imageStackCollapse() (enable once a page carries [data-image-stack-collapse])
 })
