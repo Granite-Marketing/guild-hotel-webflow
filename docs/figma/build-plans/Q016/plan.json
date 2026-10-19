@@ -1,0 +1,651 @@
+{
+  "entry": "Q016",
+  "component": "script-intro-centered",
+  "buildOn": {
+    "page": "home",
+    "pageId": "6ad64060ae8eac6d7b7c4241",
+    "section": "home/02-a-century-of-stories-meets-a"
+  },
+  "reusedClasses": [
+    "padding-global",
+    "container-large",
+    "heading-style-h1",
+    "text-size-medium",
+    "text-size-regular",
+    "text-weight-normal"
+  ],
+  "familyClasses": [
+    {
+      "name": "section_script-intro-centered",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "background-color": "var(--color-neutral-100)",
+          "color": "var(--color-accent)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "script-intro-centered_component",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+          "row-gap": "2.5rem",
+          "text-align": "center"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "row-gap": "2rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "script-intro-centered_back",
+      "styles": {
+        "desktop": {
+          "margin-bottom": "3.5rem"
+        },
+        "tablet": {
+          "margin-bottom": "2rem"
+        },
+        "mobileLandscape": {
+          "margin-bottom": "1rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "script-intro-centered_back-link",
+      "styles": {
+        "desktop": {
+          "display": "inline-flex",
+          "align-items": "center",
+          "column-gap": "0.375rem",
+          "color": "var(--color-accent)",
+          "text-decoration": "none"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "script-intro-centered_back-icon",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "0.75rem",
+          "height": "0.75rem",
+          "flex": "none"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "script-intro-centered_figure",
+      "styles": {
+        "desktop": {
+          "width": "100%",
+          "max-width": "27.5rem",
+          "margin": "0"
+        },
+        "tablet": {
+          "max-width": "22rem"
+        },
+        "mobileLandscape": {
+          "max-width": "17rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "script-intro-centered_image",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "100%",
+          "height": "auto"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "script-intro-centered_header",
+      "styles": {
+        "desktop": {
+          "width": "100%"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "script-intro-centered_heading",
+      "styles": {
+        "desktop": {
+          "margin-top": "3rem",
+          "margin-bottom": "3rem",
+          "color": "var(--color-neutral-900)",
+          "white-space": "pre-line",
+          "transform": "rotate(-7.38deg)"
+        },
+        "tablet": {
+          "margin-top": "2.5rem",
+          "margin-bottom": "2.5rem"
+        },
+        "mobileLandscape": {
+          "margin-top": "1.5rem",
+          "margin-bottom": "1.5rem"
+        },
+        "mobilePortrait": {
+          "margin-top": "1.25rem",
+          "margin-bottom": "1.25rem"
+        }
+      }
+    },
+    {
+      "name": "script-intro-centered_text",
+      "styles": {
+        "desktop": {
+          "width": "100%",
+          "max-width": "36.75rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "script-intro-centered_paragraph",
+      "styles": {
+        "desktop": {
+          "margin-top": "0",
+          "margin-bottom": "0",
+          "color": "var(--color-accent)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    }
+  ],
+  "proposedShared": [
+    {
+      "name": "padding-section-xlarge",
+      "why": "Figma gaps around every script intro are 218 to 283px at 1600 wide (median about 235px), double padding-section-large. Neighbouring heroes are full-bleed with no padding, so this section owns the gap. Any other airy section with the same rhythm can reuse it.",
+      "comboOn": "padding-global",
+      "styles": {
+        "desktop": {
+          "padding-top": "14rem",
+          "padding-bottom": "14rem"
+        },
+        "tablet": {
+          "padding-top": "10rem",
+          "padding-bottom": "10rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "6rem",
+          "padding-bottom": "6rem"
+        },
+        "mobilePortrait": {
+          "padding-top": "5rem",
+          "padding-bottom": "5rem"
+        }
+      }
+    },
+    {
+      "name": "text-style-script",
+      "why": "Morello 80/96 script heading: 25 uses at 80px in figma/raw (tokens.json maps it to heading-style-h1, whose primary style is Sackers 56). Combo on heading-style-h1 carrying only the differing properties. Rotation stays on the family heading because 48 Morello 60px uses are unrotated.",
+      "comboOn": "heading-style-h1",
+      "styles": {
+        "desktop": {
+          "font-family": "Morello, 'Snell Roundhand', 'Apple Chancery', cursive",
+          "font-size": "5rem",
+          "font-weight": "400",
+          "line-height": "1.2",
+          "letter-spacing": "0",
+          "text-transform": "none"
+        },
+        "tablet": {
+          "font-size": "4rem"
+        },
+        "mobileLandscape": {
+          "font-size": "3.25rem"
+        },
+        "mobilePortrait": {
+          "font-size": "2.75rem"
+        }
+      }
+    },
+    {
+      "name": "text-style-caps-caption-16",
+      "why": "CAPS-CAPTION-16 (242 uses). Same definition as P018 proposes; tokens.json suggests this combo on text-size-regular.",
+      "comboOn": "text-size-regular",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-weight": "400",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase"
+        }
+      }
+    }
+  ],
+  "variables": [
+    "color-neutral-100",
+    "color-neutral-900",
+    "color-accent",
+    "font-style-heading",
+    "font-style-body"
+  ],
+  "tree": [
+    {
+      "tag": "section",
+      "classes": [
+        "section_script-intro-centered"
+      ],
+      "attributes": {},
+      "children": [
+        {
+          "tag": "div",
+          "classes": [
+            "padding-global",
+            "padding-section-xlarge"
+          ],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "container-large"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "article",
+                  "classes": [
+                    "script-intro-centered_component"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "script-intro-centered_back"
+                      ],
+                      "attributes": {},
+                      "optionalProp": "backLink",
+                      "children": [
+                        {
+                          "tag": "a",
+                          "classes": [
+                            "script-intro-centered_back-link",
+                            "text-size-regular",
+                            "text-style-caps-caption-16"
+                          ],
+                          "attributes": {
+                            "href": "/rooms"
+                          },
+                          "prop": "backLinkUrl",
+                          "children": [
+                            {
+                              "tag": "img",
+                              "classes": [
+                                "script-intro-centered_back-icon"
+                              ],
+                              "attributes": {
+                                "alt": "",
+                                "src": "figma/vectors/group-270990121-11x11-413-5536.svg"
+                              },
+                              "children": []
+                            },
+                            {
+                              "tag": "span",
+                              "classes": [],
+                              "attributes": {},
+                              "prop": "backLink",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "figure",
+                      "classes": [
+                        "script-intro-centered_figure"
+                      ],
+                      "attributes": {},
+                      "optionalProp": "image",
+                      "children": [
+                        {
+                          "tag": "img",
+                          "classes": [
+                            "script-intro-centered_image"
+                          ],
+                          "attributes": {},
+                          "prop": "image",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "header",
+                      "classes": [
+                        "script-intro-centered_header"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "h2",
+                          "classes": [
+                            "script-intro-centered_heading",
+                            "heading-style-h1",
+                            "text-style-script"
+                          ],
+                          "attributes": {},
+                          "prop": "heading",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "script-intro-centered_text"
+                      ],
+                      "attributes": {},
+                      "optionalProp": "paragraph",
+                      "children": [
+                        {
+                          "tag": "p",
+                          "classes": [
+                            "script-intro-centered_paragraph",
+                            "text-size-medium",
+                            "text-weight-normal"
+                          ],
+                          "attributes": {},
+                          "prop": "paragraph",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": "is-tall",
+      "on": "section_script-intro-centered",
+      "styleDeltas": {
+        "desktop": {
+          "padding-bottom": "2.5rem"
+        },
+        "tablet": {
+          "padding-bottom": "1.5rem"
+        },
+        "mobileLandscape": {
+          "padding-bottom": "0"
+        },
+        "mobilePortrait": {}
+      },
+      "crop": "figma/pages/home/sections/02-a-century-of-stories-meets-a/section.webp"
+    },
+    {
+      "modifier": "is-wide",
+      "on": "script-intro-centered_text",
+      "kind": "element modifier (content width)",
+      "styleDeltas": {
+        "desktop": {
+          "max-width": "46.5rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "crop": "figma/pages/dining-collection/sections/02-first-sips-small-bites-big-nights/section.webp"
+    },
+    {
+      "modifier": "is-bottom",
+      "on": "script-intro-centered_figure",
+      "kind": "element modifier (decoration below the text)",
+      "styleDeltas": {
+        "desktop": {
+          "order": "1",
+          "max-width": "10rem",
+          "margin-top": "2.5rem"
+        },
+        "tablet": {
+          "max-width": "9rem"
+        },
+        "mobileLandscape": {
+          "max-width": "8rem",
+          "margin-top": "1rem"
+        },
+        "mobilePortrait": {}
+      },
+      "crop": "figma/pages/rooms-collection/sections/02-a-room-for-every-stay/section.webp"
+    }
+  ],
+  "props": [
+    {
+      "name": "heading",
+      "type": "text",
+      "element": "script-intro-centered_heading",
+      "note": "Script heading. Line break kept with white-space pre-line."
+    },
+    {
+      "name": "paragraph",
+      "type": "text",
+      "element": "script-intro-centered_paragraph",
+      "note": "Hide script-intro-centered_text when empty."
+    },
+    {
+      "name": "image",
+      "type": "image",
+      "element": "script-intro-centered_image",
+      "note": "Optional decoration. Hide script-intro-centered_figure when empty."
+    },
+    {
+      "name": "image alt",
+      "type": "text",
+      "element": "script-intro-centered_image"
+    },
+    {
+      "name": "backLink",
+      "type": "text",
+      "element": "script-intro-centered_back-link",
+      "note": "Optional; hide script-intro-centered_back when empty."
+    },
+    {
+      "name": "backLinkUrl",
+      "type": "link",
+      "element": "script-intro-centered_back-link"
+    }
+  ],
+  "assets": [
+    {
+      "slot": "image (home/02 building illustration)",
+      "webflowAssetId": null,
+      "local": "figma/vectors/group-270989565-441x254-433-4759.svg"
+    },
+    {
+      "slot": "image (rooms-collection/02 postmark stamp)",
+      "webflowAssetId": null,
+      "local": "figma/vectors/group-191x191-379-1187.svg"
+    },
+    {
+      "slot": "back-icon (rooms-individual/02 arrow)",
+      "webflowAssetId": null,
+      "local": "figma/vectors/group-270990121-11x11-413-5536.svg"
+    }
+  ],
+  "instances": [
+    {
+      "page": "home",
+      "section": "home/02-a-century-of-stories-meets-a",
+      "variant": "is-tall",
+      "content": {
+        "image": "figma/vectors/group-270989565-441x254-433-4759.svg",
+        "image alt": "Line drawing of the Guild Hotel building",
+        "heading": "A century of stories meets\na new hospitality",
+        "paragraph": "Behind this mannered Italian Renaissance facade is a century of glamorous mischief. Today, it’s an icon with open arms, a high-spirited destination that welcomes you to the heart of contemporary San Diego."
+      }
+    },
+    {
+      "page": "dining-collection",
+      "section": "dining-collection/02-first-sips-small-bites-big-nights",
+      "variant": "base",
+      "modifiers": {
+        "script-intro-centered_text": [
+          "is-wide"
+        ]
+      },
+      "content": {
+        "heading": "First sips, small bites\n& big nights out.",
+        "paragraph": "For visitors and locals, Guild dining is a journey, an invitation to to savor our worlds. The Lobby Bar knows its classics from its off-menu surprises. California’s first Zuma serves up the sushi and robata that have made it an international standard-setter from London to Miami, Vail to Abu Dhabi. Poolside, there’s always fresh, easy West Coast goodness, and the Mediterranean influences daytime offerings in The Courtyard."
+      }
+    },
+    {
+      "page": "rooms-collection",
+      "section": "rooms-collection/02-a-room-for-every-stay",
+      "variant": "base",
+      "modifiers": {
+        "script-intro-centered_figure": [
+          "is-bottom"
+        ]
+      },
+      "content": {
+        "heading": "A room\nfor every stay",
+        "paragraph": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort.",
+        "image": "figma/vectors/group-191x191-379-1187.svg",
+        "image alt": "The Guild Hotel postmark stamp, San Diego, Nov 3 1924"
+      }
+    },
+    {
+      "page": "history",
+      "section": "history/02-a-century-of-stories-meets-a",
+      "variant": "base",
+      "content": {
+        "heading": "A century of stories meets\na new hospitality"
+      }
+    },
+    {
+      "page": "guidelines",
+      "section": "guidelines/02-thank-you-for-choosing-the-guild",
+      "variant": "base",
+      "content": {
+        "heading": "Thank you for choosing\nthe Guild Hotel for your shoot!",
+        "paragraph": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+      }
+    },
+    {
+      "page": "rooms-individual",
+      "section": "rooms-individual/02-back-to-rooms",
+      "variant": "base",
+      "content": {
+        "backLink": "back to rooms",
+        "backLinkUrl": "/rooms",
+        "heading": "A room\nfor every stay"
+      }
+    },
+    {
+      "page": "arts",
+      "section": "arts/02-an-art-collection-through-a-curators",
+      "variant": "base",
+      "content": {
+        "heading": "An art collection\nthrough a curator’s eyes",
+        "paragraph": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort."
+      }
+    },
+    {
+      "page": "neighborhood",
+      "section": "neighborhood/02-the-best-of-san-diego-is",
+      "variant": "base",
+      "content": {
+        "heading": "The best of\nSan Diego is right here",
+        "paragraph": "The San Diego on our doorstep includes the city’s favorite neighborhoods and attractions – and best of all, you can walk to them. From the harbor and Seaport Village to the Museum of Contemporary Art, Little Italy and the Gaslamp, the past, future and excitement of the city are yours to discover."
+      }
+    },
+    {
+      "page": "legal",
+      "section": "legal/02-refined-focus-unmatched-convenience",
+      "variant": "base",
+      "sameAs": "corporate/02-refined-focus-unmatched-convenience",
+      "content": {
+        "heading": "Refined focus,\nunmatched convenience.",
+        "paragraph": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+      }
+    },
+    {
+      "page": "corporate",
+      "section": "corporate/02-refined-focus-unmatched-convenience",
+      "variant": "base",
+      "sameAs": "legal/02-refined-focus-unmatched-convenience",
+      "content": {
+        "heading": "Refined focus,\nunmatched convenience.",
+        "paragraph": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+      }
+    }
+  ],
+  "openQuestions": [
+    "The three decoration SVGs (building illustration, postmark stamp, back arrow) have no Webflow asset id (figma/assets.json webflowAssetId is null). Upload them with the asset pipeline before the Designer session, or embed them inline?",
+    "happenings-indiv/02 and blog-indiv/02 (identical, both CMS templates) are excluded from this family: left-aligned caps title, long paragraph and a burgundy octagon CTA that overlaps the paragraph in Figma. Decided as a unique item per the orchestrator rule. The orchestrator should add an entry for them (suggested class family text-intro-cta, reusing text-style-eyebrow-caps and the global button), or fold them into the CMS template entry.",
+    "arts/02 sets its script heading in accent green (#29310C); the other script headings are #000000. The plan uses color-neutral-900 for all of them. Keep arts green with an is-accent heading modifier, or treat it as a design inconsistency?",
+    "rooms-individual/02 back link: should it point to /rooms (rooms-collection) on every room page? The page is the rooms CMS template.",
+    "No mobile or tablet design exists. The plan scales the script heading 5 / 4 / 3.25 / 2.75rem and the section padding 14 / 10 / 6 / 5rem. Confirm."
+  ],
+  "deviations": [
+    "is-tall is kept as the brief asks, but the 700px versus 600px height difference in Figma is almost all content (the 441x254 building illustration). Its only style delta is 2.5rem more bottom padding (home bottom gap 272px versus about 240px elsewhere). K01 may drop it.",
+    "Added element modifiers is-wide (script-intro-centered_text) and is-bottom (script-intro-centered_figure). They are content-layout modifiers inside the one family, not a second component. Paragraph widths in Figma are 588px (36.75rem) and 742 to 744px (46.5rem); the stamp sits below the paragraph while the building sits above the heading.",
+    "Script headings are rotated -0.1288 rad (-7.38deg) in figma/raw. The plan rotates script-intro-centered_heading with transform and gives it 3rem top and bottom margin so the rotated glyphs do not collide. Figma's measured heading-to-paragraph gap is about 107px on most instances and 67px on home; the plan uses one gap (2.5rem row gap plus 3rem margin, 88px).",
+    "Heading colour #000000 has no variable; the plan uses color-neutral-900 (#262118).",
+    "Dropped the cream H4-CAPS text \"Contemporary Japanese Dining at The Guild Hotel\" found on rooms-collection, guidelines, legal and corporate: it is cream on cream at x 945, invisible in every crop, a leftover layer.",
+    "padding-section-xlarge is a new shared utility; the brief's padding-section-* set tops out at 7rem, half the Figma gap.",
+    "Removed the trailing spaces from the dining-collection paragraph.",
+    "Brief instances happenings-indiv/02 and blog-indiv/02 are not covered by this plan; see excludedInstances and openQuestions.",
+    "Preview scale: plan values are Figma px at 1600 converted 1:1 to rem, so at 1440 the preview reads about 10 percent larger than the crop scaled to 1440. Kept 1:1 on purpose; Webflow has no fluid type scale here."
+  ],
+  "excludedInstances": [
+    {
+      "page": "happenings-indiv",
+      "section": "happenings-indiv/02-the-guild-a-tribute-portfolio-hotel",
+      "reason": "Different layout (left-aligned caps title, long paragraph, burgundy CTA, no script heading). Treated as a unique item per the orchestrator rule: when unsure between variant and unique item, make it unique. Needs its own entry.",
+      "content": {
+        "title": "The Guild, a Tribute Portfolio Hotel",
+        "paragraph": "Nullam euismod finibus suscipit. Quisque dignissim est velit, nec vestibulum purus fermentum in. Donec placerat tristique blandit. Vivamus semper est nec massa vulputate, aliquet sodales quam dapibus. Curabitur dapibus mauris tellus, molestie ultrices ex eleifend gravida. Nulla maximus turpis in sapien maximus, eu aliquet augue vulputate. Donec viverra turpis nec nibh vestibulum, at cursus augue egestas. Curabitur accumsan vehicula nisi eleifend varius. Maecenas ut bibendum augue, posuere blandit nulla. Phasellus in diam id metus facilisis venenatis quis vel elit. Integer sodales justo in velit cursus, mollis commodo ex eleifend.",
+        "cta": "learn more",
+        "ctaUrl": "#"
+      }
+    },
+    {
+      "page": "blog-indiv",
+      "section": "blog-indiv/02-the-guild-a-tribute-portfolio-hotel",
+      "reason": "Different layout (left-aligned caps title, long paragraph, burgundy CTA, no script heading). Treated as a unique item per the orchestrator rule: when unsure between variant and unique item, make it unique. Needs its own entry.",
+      "content": {
+        "title": "The Guild, a Tribute Portfolio Hotel",
+        "paragraph": "Nullam euismod finibus suscipit. Quisque dignissim est velit, nec vestibulum purus fermentum in. Donec placerat tristique blandit. Vivamus semper est nec massa vulputate, aliquet sodales quam dapibus. Curabitur dapibus mauris tellus, molestie ultrices ex eleifend gravida. Nulla maximus turpis in sapien maximus, eu aliquet augue vulputate. Donec viverra turpis nec nibh vestibulum, at cursus augue egestas. Curabitur accumsan vehicula nisi eleifend varius. Maecenas ut bibendum augue, posuere blandit nulla. Phasellus in diam id metus facilisis venenatis quis vel elit. Integer sodales justo in velit cursus, mollis commodo ex eleifend.",
+        "cta": "learn more",
+        "ctaUrl": "#"
+      }
+    }
+  ]
+}
