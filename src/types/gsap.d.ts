@@ -26,6 +26,7 @@ interface GsapTimeline {
     vars: Record<string, unknown>,
     position?: number | string,
   ) => GsapTimeline;
+  scrollTrigger?: ScrollTriggerInstance;
 }
 
 interface GsapMatchMediaContext {

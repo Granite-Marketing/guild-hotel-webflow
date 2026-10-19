@@ -28,6 +28,8 @@ export const serveFixtures = async (port) => {
     write: false,
     sourcemap: true,
     target: 'esnext',
+    // Fixture entries may import placeholder crops from figma/.
+    loader: { '.webp': 'file', '.png': 'file', '.jpg': 'file' },
   })
   const server = await context.serve({ servedir: FIXTURES_DIRECTORY, port })
 

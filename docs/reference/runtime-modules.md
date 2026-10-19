@@ -23,6 +23,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | gsapBasicAnimations | `gsapBasicAnimations.ts` | wired | G |
 | debugOverlay | `debugOverlay.ts` | opt-in | A |
 | scrollPin | `scrollPin.ts` | opt-in | B |
+| scrollEnlargeSnap | `scrollEnlargeSnap.ts` | opt-in | B |
 | backgroundVideo | `backgroundVideo.ts` | opt-in | C |
 | heroTextReveal | `heroTextReveal.ts` | opt-in | C |
 | navToggle | `navToggle.ts` | opt-in | D |
@@ -217,6 +218,45 @@ range) and `data-pin="sticky"` (pinned while the parent is in view), with
   CSS fixed/sticky inside `#smooth-content`. **Optional** on Lenis, where
   native sticky works; use it when you want an offset scroll-range pin or a
   per-breakpoint switch.
+
+### scrollEnlargeSnap
+
+A framed image grows to fill its stage on scroll; the stage then stays
+pinned and further scrolling snaps through a stack of panels, each with an
+image wipe and a text transition. Guild Figma Home-Animation-1 (home 04 to
+09, dining-collection 03, meetings-collection 02, wellness-collection 02).
+
+| Attribute | On | Meaning |
+|---|---|---|
+| `data-scroll-enlarge-snap` | section root | Guard selector. One instance per root. |
+| `data-scroll-enlarge-snap-step` | root (optional) | Scroll distance per step in % of viewport height. Default `100`. |
+| `data-scroll-enlarge-snap-stage` | inside root (optional) | The box that pins. Give it a fixed height (`100svh`). Its padding is the gap around the full-size frame. Defaults to the root itself. |
+| `data-scroll-enlarge-snap-media` | inside stage | The frame. Style it at its small start size (for example `width: 79%`, `aspect-ratio: 16 / 9`), `position: relative`, `overflow: hidden`. The module grows it to the stage content box. Chamfered corners belong on this element. Do not set `max-width` or `max-height` on it. |
+| `data-scroll-enlarge-snap-item` | inside media, one per panel | Panels overlap (`position: absolute; inset: 0`). DOM order is panel order. |
+| `data-scroll-enlarge-snap-image` | inside item (optional) | Image that settles from `scale: 1.2` as its panel wipes in. Defaults to the first `img`. |
+| `data-scroll-enlarge-snap-content` | inside item (optional) | Its direct children (heading, text, CTA footer) fade and rise in, staggered. |
+| `data-scroll-enlarge-snap-tab` | inside root (optional) | Nth tab maps to nth item. Click scrolls to that panel. Keep tabs outside the items so they stay visible. |
+
+- Scroll timeline: step 1 enlarges the frame and fades in the first panel's
+  content; each later step wipes the next panel up from the bottom
+  (`clip-path`) while the previous content leaves. Snap points sit at the end
+  of each step; the first half of the enlarge scrolls freely.
+- State: the active item and tab get `is-active`; the active tab also gets
+  `aria-current="true"`. Style the tab underline from `is-active`.
+- The module sets inline `z-index` and `autoAlpha` on items (DOM order
+  stacking, only the active panel visible) and inline `width`/`height` on
+  the media. Without JS the Designer view shows the frame at its start size
+  with the last item on top.
+- `prefers-reduced-motion: reduce`: the frame is set straight to full size,
+  the stage still pins, and panels swap instantly at each step with no
+  tweens and no snap. Tabs jump to their panel.
+- Lenis: snap uses ScrollTrigger snap with `inertia: false`, so a tab jump
+  is not read as a fling.
+- Local preview: `pnpm dev`, then
+  `http://localhost:3001/scroll-enlarge-snap.html`. Check:
+  `npx playwright test scroll-enlarge-snap`.
+- Order: slot B, after `smoothScroll.init()`, so the pin exists before
+  later triggers measure.
 
 ### backgroundVideo
 

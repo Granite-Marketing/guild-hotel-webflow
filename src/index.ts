@@ -29,6 +29,7 @@ import { swiperSliders } from '$utils/swiperSliders'
  *
  *   import { debugOverlay } from '$utils/debugOverlay'               // slot A
  *   import { scrollPin } from '$utils/scrollPin'                     // slot B
+ *   import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'     // slot B
  *   import { backgroundVideo } from '$utils/backgroundVideo'         // slot C
  *   import { heroTextReveal } from '$utils/heroTextReveal'           // slot C
  *   import { navToggle } from '$utils/navToggle'                     // slot D
@@ -56,6 +57,7 @@ window.Webflow.push(() => {
   // slot A: debugOverlay() (before the engine, so it logs the first refresh)
   smoothScroll.init()
   // slot B: scrollPin() (after the engine; required under ScrollSmoother)
+  // slot B: scrollEnlargeSnap() (pins; enable once a page has [data-scroll-enlarge-snap])
 
   // slot C: backgroundVideo(), heroTextReveal()
   swiperSliders()
