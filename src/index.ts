@@ -33,6 +33,7 @@ import { swiperSliders } from '$utils/swiperSliders'
  *   import { heroTextReveal } from '$utils/heroTextReveal'           // slot C
  *   import { navToggle } from '$utils/navToggle'                     // slot D
  *   import { imageHoverScale } from '$utils/imageHoverScale'         // slot D
+ *   import { imageTrailHover } from '$utils/imageTrailHover'         // slot D
  *   import { viewSwitcher } from '$utils/viewSwitcher'               // slot E
  *   import { cmsFilterLinks } from '$utils/cmsFilterLinks'           // slot E
  *   import { filterPanels } from '$utils/filterPanels'               // slot F
@@ -56,7 +57,9 @@ window.Webflow.push(() => {
   // slot C: backgroundVideo(), heroTextReveal()
   swiperSliders()
 
-  // slot D: navToggle(), imageHoverScale()
+  // slot D: navToggle(), imageHoverScale(), imageTrailHover()
+  //   imageTrailHover: enable once home section 14 (heading-wide-image-cta)
+  //   carries [data-image-trail-hover].
   accordion()
   modals()
 

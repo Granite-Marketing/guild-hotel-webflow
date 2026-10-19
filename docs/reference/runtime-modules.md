@@ -27,6 +27,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | heroTextReveal | `heroTextReveal.ts` | opt-in | C |
 | navToggle | `navToggle.ts` | opt-in | D |
 | imageHoverScale | `imageHoverScale.ts` | opt-in | D |
+| imageTrailHover | `imageTrailHover.ts` | opt-in | D |
 | viewSwitcher | `viewSwitcher.ts` | opt-in | E |
 | cmsFilterLinks | `cmsFilterLinks.ts` | opt-in | E |
 | filterPanels | `filterPanels.ts` | opt-in | F (1st) |
@@ -275,6 +276,39 @@ Scales `[data-hover-scale]` while its parent is hovered; the parent gets
 - Skipped when `(hover: hover)` does not match, so touch taps never stick.
 - Put the image inside its figure wrapper (the parent is the hover target and
   clip box). Order: slot D.
+
+### imageTrailHover
+
+Image trail on hover: linked images spawn under the mouse as it moves across a
+zone, and the newest one always sits under the pointer so a click follows its
+link. Built for home section 14 (`heading-wide-image-cta`), where each image is
+an Arts CMS item linking to its anchor on the Arts page.
+
+- Zone: `[data-image-trail-hover]` on the media wrapper. The Designer class
+  sets `position: relative`, the size, and `overflow: hidden` (with the
+  clipped corner shape) so images clip at the edge.
+- Items: `[data-image-trail-hover-item]` on each link, typically the Collection
+  Item or an `<a>` inside it, `href="/arts#{{slug}}"`, wrapping the figure and
+  image. Set the item width in its class (about 20.5rem; the design ratio is
+  328 x 467). The module sets `position: absolute`, centring and `autoAlpha`
+  on items; do not hide them with `display: none` in the Designer.
+- Optional on the zone: `data-image-trail-hover-threshold` (px of pointer
+  travel between spawns, default 100), `data-image-trail-hover-max` (images
+  visible at once, default 3), `data-image-trail-hover-duration` (fade-in
+  seconds, default 0.6; fade-out is 75% of it).
+- Items cycle in DOM order. Visible items get `is-active`; when more than
+  `max` show, the oldest fades out; leaving the zone fades them all.
+- Touch devices (`hover: none`) and `prefers-reduced-motion: reduce` get the
+  end state with no animation: the first `max` items stacked around the zone
+  centre, so they stay tappable. `gsap.matchMedia` swaps modes live.
+- Hidden items are `visibility: hidden`, so keyboard users cannot tab to them;
+  keep the section CTA as the keyboard path.
+- Arts page dependency: each Arts item on `/arts` needs `id` bound to its slug
+  so the anchor resolves.
+- Local preview: `pnpm dev`, then
+  `http://localhost:3001/image-trail-hover.html` (fixture in
+  `tests/visual/fixtures/`); check with
+  `npx playwright test tests/visual/image-trail-hover.spec.ts`. Order: slot D.
 
 ### viewSwitcher
 

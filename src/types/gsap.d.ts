@@ -35,7 +35,7 @@ interface GsapMatchMediaContext {
 interface GsapMatchMedia {
   add: (
     conditions: Record<string, string>,
-    callback: (context: GsapMatchMediaContext) => void,
+    callback: (context: GsapMatchMediaContext) => void | (() => void),
   ) => void;
 }
 
