@@ -45,7 +45,7 @@ Static pages created by Q004 on 2026-10-19 (slugs approved by Stephen: the four 
 
 ## CMS Collections
 
-None yet. Proposed schemas live in `docs/figma/cms-proposal.md`; collections are created only after approval.
+Created by C01 (2026-10-19); IDs are in the C01 section below. Proposed schemas: `docs/figma/cms-proposal.md`; field map: `docs/figma/build-plans/cms-fields.md`.
 
 ## Conventions
 
