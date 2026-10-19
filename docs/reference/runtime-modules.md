@@ -34,6 +34,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | finsweetRefresh | `finsweetRefresh.ts` | opt-in | F (3rd) |
 | filterActiveState | `filterActiveState.ts` | opt-in | F (4th) |
 | scrollTextReveal | `scrollTextReveal.ts` | opt-in | G |
+| historyStickyYear | `historyStickyYear.ts` | opt-in | G |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
 
 To enable an opt-in module, uncomment its import and its call in
@@ -372,6 +373,43 @@ Scroll-triggered line reveal.
 - Waits for `document.fonts.ready`, then `ScrollTrigger.refresh(true)` in a
   rAF. Pre-hide targets in CSS. Do not apply to elements whose spans a hover
   script owns (text-roll buttons). Order: slot G.
+
+### historyStickyYear
+
+History page scroll animations (Figma History-Animation-1 and
+History-Animation-2). Two independent halves in one module; each runs only
+when its root attribute is present. Order: slot G.
+
+Sticky year label (component `timeline-sticky-year-scroll`, `history/05`):
+
+| Attribute | On | Purpose |
+|---|---|---|
+| `data-history-sticky-year` | section | Root. |
+| `data-history-sticky-year-label` | the year badge | Element that stays in view. Make it sticky in the Designer (`position: sticky` on it or its wrapper); the module does not pin it. |
+| `data-history-sticky-year-text` | text inside the badge (optional) | The node whose text is swapped and tweened. Defaults to the label. Set its initial text to the first year. |
+| `data-history-sticky-year-item="1924"` | each milestone block | The value is the year shown while the block crosses the viewport centre. Falls back to the block's text when empty. |
+
+- The active item gets `is-active`; the label rolls out and in (`yPercent`
+  plus `autoAlpha`, 0.5s). Between items the last year stays.
+- Reduced motion: the text swaps instantly, no tween.
+
+Collapse gallery (component `gallery-row-dark-titled`, `history/06`):
+
+| Attribute | On | Purpose |
+|---|---|---|
+| `data-history-collapse` | section | Root, pinned for the scrub. Give it `overflow: clip` (the full-screen image overshoots) and a height of about `100vh`. The module sets `position: relative` inline if the root is static. |
+| `data-history-collapse-item` | each image wrapper (`figure`) | Moves and scales. The image inside needs `object-fit: cover`. The last item sits on top of the stack and is the one seen full screen. |
+| `data-history-collapse-fade` | heading and caption wrappers (optional) | Fade out while the image fills the screen, back in at the end. |
+| `data-history-collapse-distance="3"` | section (optional) | Pin length in viewport heights. Default 3. |
+
+- Timeline: items slide to the centre into one stack, the stack scales
+  uniformly to cover the visible root, then everything returns to the grid.
+  The natural layout is the start and end state, so no CSS pre-hiding.
+- Offsets are measured through the `offsetParent` chain, so refreshes
+  mid-scroll stay correct.
+- Reduced motion: nothing is created; the gallery shows as laid out.
+- Local check: `pnpm exec playwright test history-sticky-year` (fixture in
+  `tests/visual/fixtures/history-sticky-year.html`; add `--headed` to watch).
 
 ## Not ported (project-specific)
 
