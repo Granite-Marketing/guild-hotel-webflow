@@ -1,0 +1,2123 @@
+{
+  "entry": "Q021",
+  "component": "venue-card-fullbleed",
+  "buildOn": {
+    "page": "home",
+    "pageId": "6ad64060ae8eac6d7b7c4241",
+    "section": "home/04-an-unexpected-resort-dining-experience",
+    "note": "Build the home snap group (home/04 to 09) as the first instance, convert the section to a Webflow component, then insert instances elsewhere."
+  },
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "reusedClasses": [
+    "heading-style-h1",
+    "heading-style-h2",
+    "heading-style-h3",
+    "heading-style-h4",
+    "text-size-large",
+    "text-size-medium",
+    "text-size-regular",
+    "button",
+    "is-outline"
+  ],
+  "reusedClassAssumptions": [
+    {
+      "name": "heading-style-h1",
+      "source": "tokens.json Sackers Heavy Gothic/Display/Hero",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "3.5rem",
+          "line-height": "1",
+          "font-weight": "400"
+        },
+        "mobilePortrait": {
+          "font-size": "2.5rem"
+        }
+      }
+    },
+    {
+      "name": "heading-style-h2",
+      "source": "tokens.json H2-CAPS",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "2.5rem",
+          "line-height": "1",
+          "letter-spacing": "-0.05em",
+          "font-weight": "400"
+        },
+        "mobilePortrait": {
+          "font-size": "2rem"
+        }
+      }
+    },
+    {
+      "name": "heading-style-h3",
+      "source": "tokens.json H3-CAPS",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1.875rem",
+          "line-height": "1",
+          "letter-spacing": "-0.05em",
+          "font-weight": "400"
+        },
+        "mobilePortrait": {
+          "font-size": "1.5rem"
+        }
+      }
+    },
+    {
+      "name": "heading-style-h4",
+      "source": "tokens.json H4-CAPS",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1.5rem",
+          "line-height": "1.2",
+          "font-weight": "400"
+        }
+      }
+    },
+    {
+      "name": "text-size-large",
+      "source": "tokens.json Gatch Test 22/35.2",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-body)",
+          "font-size": "1.375rem"
+        },
+        "mobilePortrait": {
+          "font-size": "1.125rem"
+        }
+      }
+    },
+    {
+      "name": "text-size-medium",
+      "source": "tokens.json Paragraph 20/26",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-body)",
+          "font-size": "1.25rem",
+          "line-height": "1.3"
+        }
+      }
+    },
+    {
+      "name": "text-size-regular",
+      "source": "tokens.json Gatch Test/Body/Regular 18/28.8",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-body)",
+          "font-size": "1.125rem",
+          "line-height": "1.6"
+        }
+      }
+    },
+    {
+      "name": "button",
+      "source": "figma/vectors/vector-25-194x37-236-8217.svg (54 uses) and the Label / Button style. The site-wide button owner (K01 or the first shared entry to build it) decides the final values.",
+      "styles": {
+        "desktop": {
+          "display": "inline-flex",
+          "justify-content": "center",
+          "align-items": "center",
+          "min-height": "2.3125rem",
+          "padding-left": "1.5rem",
+          "padding-right": "1.5rem",
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1rem",
+          "line-height": "1",
+          "text-transform": "lowercase",
+          "text-decoration": "none",
+          "color": "var(--color-neutral-900)",
+          "background-color": "var(--color-neutral-100)",
+          "clip-path": "polygon(0.75rem 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0.75rem 100%, 0 calc(100% - 0.75rem), 0 0.75rem)"
+        }
+      }
+    },
+    {
+      "name": "is-outline",
+      "comboOn": "button",
+      "source": "home/11 and home/15: cream outline, transparent fill. A chamfered outline cannot come from border plus clip-path; the assumption is an outline SVG as background image (asset to upload).",
+      "styles": {
+        "desktop": {
+          "color": "var(--color-neutral-100)",
+          "background-color": "transparent",
+          "clip-path": "none",
+          "background-image": "url(\"button-outline.svg\")",
+          "background-size": "100% 100%",
+          "background-repeat": "no-repeat"
+        }
+      }
+    }
+  ],
+  "familyClasses": [
+    {
+      "name": "section_venue-card-fullbleed",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "background-color": "var(--color-neutral-100)"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_intro",
+      "note": "Optional header above the stage (home/04 eyebrow heading; on wellness and meetings the Q023 intro may move here, see open questions).",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+          "row-gap": "1.5rem",
+          "padding-top": "7rem",
+          "padding-left": "2rem",
+          "padding-right": "2rem",
+          "text-align": "center",
+          "color": "var(--color-accent)"
+        },
+        "tablet": {
+          "padding-top": "5rem"
+        },
+        "mobilePortrait": {
+          "padding-top": "3.5rem"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_stage",
+      "note": "data-scroll-enlarge-snap-stage. Its padding is the gap around the full-size frame.",
+      "styles": {
+        "desktop": {
+          "padding-top": "1.25rem",
+          "padding-bottom": "1.25rem",
+          "padding-left": "2.5rem",
+          "padding-right": "2.5rem"
+        },
+        "mobilePortrait": {
+          "padding-top": "0.5rem",
+          "padding-bottom": "0.5rem",
+          "padding-left": "0.75rem",
+          "padding-right": "0.75rem"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_media",
+      "note": "data-scroll-enlarge-snap-media. The chamfered frame; corner size from figma/vectors/group-270990056-1520x988-288-4035.svg (34 to 36px). No max-width or max-height (module rule).",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "width": "100%",
+          "aspect-ratio": "1520 / 988",
+          "overflow": "hidden",
+          "background-color": "var(--color-neutral-300)",
+          "clip-path": "polygon(2.25rem 0, calc(100% - 2.25rem) 0, 100% 2.125rem, 100% calc(100% - 2.125rem), calc(100% - 2.25rem) 100%, 2.25rem 100%, 0 calc(100% - 2.125rem), 0 2.125rem)"
+        },
+        "mobileLandscape": {
+          "aspect-ratio": "auto",
+          "min-height": "37.5rem"
+        },
+        "mobilePortrait": {
+          "clip-path": "polygon(1rem 0, calc(100% - 1rem) 0, 100% 1rem, 100% calc(100% - 1rem), calc(100% - 1rem) 100%, 1rem 100%, 0 calc(100% - 1rem), 0 1rem)"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_item",
+      "note": "data-scroll-enlarge-snap-item, one per panel. A static card has exactly one.",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_figure",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "margin": "0"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_image",
+      "note": "data-scroll-enlarge-snap-image on snap panels.",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "100%",
+          "height": "100%",
+          "object-fit": "cover"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_content",
+      "note": "data-scroll-enlarge-snap-content. Also the dark scrim: Figma uses #000 at 0.3 to 0.45 per instance; one value, 0.4, is used everywhere.",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "display": "flex",
+          "flex-direction": "column",
+          "justify-content": "center",
+          "align-items": "center",
+          "row-gap": "2.5rem",
+          "padding-top": "2.5rem",
+          "padding-bottom": "2.5rem",
+          "padding-left": "2.5rem",
+          "padding-right": "2.5rem",
+          "text-align": "center",
+          "color": "var(--color-neutral-100)",
+          "background-color": "rgba(0, 0, 0, 0.4)"
+        },
+        "mobilePortrait": {
+          "row-gap": "2rem",
+          "padding-left": "1.25rem",
+          "padding-right": "1.25rem"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_header",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+          "row-gap": "1.5rem",
+          "max-width": "61rem"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_logo-wrapper",
+      "note": "Optional: venue wordmark in place of the heading (home/05 to 07, dining-collection/04 to 06).",
+      "styles": {
+        "desktop": {
+          "width": "26rem",
+          "max-width": "100%",
+          "margin": "0"
+        },
+        "mobilePortrait": {
+          "width": "15rem"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_logo",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "100%",
+          "height": "auto"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_text",
+      "note": "Wraps the paragraph; size comes from a text-size-* utility on the same div. Line height 1.6 matches Gatch 22/35.2.",
+      "styles": {
+        "desktop": {
+          "max-width": "41.25rem",
+          "line-height": "1.6"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_footer",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "justify-content": "center"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_tabs",
+      "note": "Optional nav inside the media (dining-collection/03). Outside the items so it stays visible. Pill shape from figma/vectors/vector-25-886x56-266-1332.svg.",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "left": "50%",
+          "bottom": "2.5rem",
+          "z-index": "50",
+          "display": "flex",
+          "column-gap": "2.8125rem",
+          "padding-top": "1.0625rem",
+          "padding-bottom": "1.0625rem",
+          "padding-left": "2.25rem",
+          "padding-right": "2.25rem",
+          "transform": "translateX(-50%)",
+          "white-space": "nowrap",
+          "color": "var(--color-neutral-100)",
+          "background-color": "var(--color-brand-4a1217)",
+          "clip-path": "polygon(1.25rem 0, calc(100% - 1.25rem) 0, 100% 1rem, 100% calc(100% - 1rem), calc(100% - 1.25rem) 100%, 1.25rem 100%, 0 calc(100% - 1rem), 0 1rem)"
+        },
+        "tablet": {
+          "column-gap": "1.75rem"
+        },
+        "mobileLandscape": {
+          "left": "1rem",
+          "right": "1rem",
+          "bottom": "1rem",
+          "column-gap": "1.5rem",
+          "padding-left": "1.25rem",
+          "padding-right": "1.25rem",
+          "transform": "none",
+          "overflow-x": "auto",
+          "clip-path": "polygon(0.75rem 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0.75rem 100%, 0 calc(100% - 0.75rem), 0 0.75rem)"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_tab",
+      "note": "data-scroll-enlarge-snap-tab. Plus text-size-regular and text-style-eyebrow-caps. The module adds is-active.",
+      "styles": {
+        "desktop": {
+          "color": "inherit",
+          "text-decoration": "none",
+          "opacity": "0.7",
+          "padding-bottom": "0.25rem",
+          "border-bottom": "1px solid transparent"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_list",
+      "note": "Optional venue list under the header (home/15).",
+      "styles": {
+        "desktop": {
+          "grid-column-start": "1",
+          "grid-column-end": "-1",
+          "display": "flex",
+          "flex-direction": "column",
+          "width": "100%",
+          "margin-top": "3rem"
+        },
+        "mobilePortrait": {
+          "margin-top": "1.5rem"
+        }
+      }
+    },
+    {
+      "name": "venue-card-fullbleed_list-link",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "padding-top": "1.5rem",
+          "padding-bottom": "1.5rem",
+          "border-top": "1px solid rgba(244, 239, 223, 0.5)",
+          "color": "inherit",
+          "text-decoration": "none",
+          "opacity": "0.5"
+        },
+        "mobilePortrait": {
+          "padding-top": "1rem",
+          "padding-bottom": "1rem"
+        }
+      }
+    }
+  ],
+  "proposedShared": [
+    {
+      "name": "heading-style-display",
+      "why": "Sackers Heavy Gothic 80/80 has no Relume level (heading-style-h1 is the 56px Hero). tokens.json counts 19 Sackers 80/80 text nodes (letter-spacing 0 and -4); all are venue-card headings today. A typography level, so it lives with the heading-style-* utilities, not in the family. Standalone class, not a combo.",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "5rem",
+          "line-height": "1",
+          "font-weight": "400"
+        },
+        "tablet": {
+          "font-size": "4rem"
+        },
+        "mobileLandscape": {
+          "font-size": "3.25rem"
+        },
+        "mobilePortrait": {
+          "font-size": "2.5rem"
+        }
+      }
+    },
+    {
+      "name": "text-style-eyebrow-caps",
+      "comboOn": "text-size-regular",
+      "why": "Figma named style EYEBROW-CAPS; tokens.json suggests this combo. Used for the venue tabs here and for eyebrows across many components. Same name as other wave 2 plans so K01 merges one definition.",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1.125rem",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase"
+        }
+      }
+    }
+  ],
+  "variables": [
+    "color-neutral-100",
+    "color-neutral-300",
+    "color-neutral-900",
+    "color-accent",
+    "color-brand-4a1217",
+    "font-style-heading",
+    "font-style-body"
+  ],
+  "tree": [
+    {
+      "tag": "section",
+      "classes": [
+        "section_venue-card-fullbleed"
+      ],
+      "attributes": {
+        "data-scroll-enlarge-snap": "(snap groups only)"
+      },
+      "element": "root",
+      "children": [
+        {
+          "tag": "header",
+          "classes": [
+            "venue-card-fullbleed_intro"
+          ],
+          "optional": true,
+          "element": "intro",
+          "children": [
+            {
+              "tag": "h2",
+              "classes": [
+                "heading-style-h4"
+              ],
+              "prop": "introHeading"
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "venue-card-fullbleed_stage"
+          ],
+          "attributes": {
+            "data-scroll-enlarge-snap-stage": "(snap groups only)"
+          },
+          "element": "stage",
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "venue-card-fullbleed_media"
+              ],
+              "attributes": {
+                "data-scroll-enlarge-snap-media": "(snap groups only)"
+              },
+              "element": "media",
+              "children": [
+                {
+                  "tag": "article",
+                  "classes": [
+                    "venue-card-fullbleed_item"
+                  ],
+                  "attributes": {
+                    "data-scroll-enlarge-snap-item": "(snap groups only)"
+                  },
+                  "repeat": "items",
+                  "element": "item",
+                  "children": [
+                    {
+                      "tag": "figure",
+                      "classes": [
+                        "venue-card-fullbleed_figure"
+                      ],
+                      "element": "figure",
+                      "optional": true,
+                      "children": [
+                        {
+                          "tag": "img",
+                          "classes": [
+                            "venue-card-fullbleed_image"
+                          ],
+                          "attributes": {
+                            "data-scroll-enlarge-snap-image": "(snap groups only)",
+                            "loading": "eager",
+                            "data-eager": ""
+                          },
+                          "prop": "image"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "venue-card-fullbleed_content"
+                      ],
+                      "attributes": {
+                        "data-scroll-enlarge-snap-content": "(snap groups only)"
+                      },
+                      "element": "content",
+                      "children": [
+                        {
+                          "tag": "header",
+                          "classes": [
+                            "venue-card-fullbleed_header"
+                          ],
+                          "element": "header",
+                          "optional": true,
+                          "children": [
+                            {
+                              "tag": "figure",
+                              "classes": [
+                                "venue-card-fullbleed_logo-wrapper"
+                              ],
+                              "optional": true,
+                              "element": "logo-wrapper",
+                              "children": [
+                                {
+                                  "tag": "img",
+                                  "classes": [
+                                    "venue-card-fullbleed_logo"
+                                  ],
+                                  "prop": "logo"
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "h3",
+                              "classes": [
+                                "heading-style-display"
+                              ],
+                              "optional": true,
+                              "prop": "heading",
+                              "note": "Tag h3 inside a snap group (the intro is h2), h2 on a standalone card. Size class per instance: heading-style-display, heading-style-h1 or heading-style-h2."
+                            },
+                            {
+                              "tag": "div",
+                              "classes": [
+                                "venue-card-fullbleed_text",
+                                "text-size-large"
+                              ],
+                              "optional": true,
+                              "element": "text",
+                              "note": "Size class per instance: text-size-large, text-size-medium or text-size-regular.",
+                              "children": [
+                                {
+                                  "tag": "p",
+                                  "classes": [],
+                                  "prop": "text"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "footer",
+                          "classes": [
+                            "venue-card-fullbleed_footer"
+                          ],
+                          "optional": true,
+                          "element": "footer",
+                          "children": [
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "button"
+                              ],
+                              "attributes": {
+                                "href": "#"
+                              },
+                              "prop": "button",
+                              "note": "Add is-outline per instance (home/11, home/15)."
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "venue-card-fullbleed_list"
+                          ],
+                          "optional": true,
+                          "element": "list",
+                          "children": [
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "venue-card-fullbleed_list-link"
+                              ],
+                              "attributes": {
+                                "href": "#"
+                              },
+                              "repeat": "list",
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "classes": [
+                                    "heading-style-h3"
+                                  ],
+                                  "prop": "listLabel"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "nav",
+                  "classes": [
+                    "venue-card-fullbleed_tabs"
+                  ],
+                  "optional": true,
+                  "element": "tabs",
+                  "attributes": {
+                    "aria-label": "(venue group name)"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "venue-card-fullbleed_tab",
+                        "text-size-regular",
+                        "text-style-eyebrow-caps"
+                      ],
+                      "attributes": {
+                        "href": "#",
+                        "data-scroll-enlarge-snap-tab": ""
+                      },
+                      "repeat": "tabs",
+                      "prop": "tabLabel"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": "is-media-center",
+      "briefVariant": "is-media-center",
+      "meaning": "Snap group start state: the frame starts at 83% of the stage content box (1261 of 1520), 16:9, centred in a 100svh stage. scrollEnlargeSnap grows it to the stage content box.",
+      "on": "venue-card-fullbleed_stage",
+      "styleDeltas": {
+        "desktop": {
+          "display": "flex",
+          "justify-content": "center",
+          "align-items": "center",
+          "height": "100svh"
+        }
+      },
+      "crop": "figma/pages/home/sections/04-an-unexpected-resort-dining-experience/section.webp"
+    },
+    {
+      "modifier": "is-media-center",
+      "briefVariant": "is-media-center",
+      "meaning": "Snap group start state: the frame starts at 83% of the stage content box (1261 of 1520), 16:9, centred in a 100svh stage. scrollEnlargeSnap grows it to the stage content box.",
+      "on": "venue-card-fullbleed_media",
+      "styleDeltas": {
+        "desktop": {
+          "width": "83%",
+          "aspect-ratio": "1261 / 712"
+        },
+        "mobileLandscape": {
+          "width": "88%",
+          "aspect-ratio": "3 / 4",
+          "min-height": "0"
+        }
+      },
+      "crop": "figma/pages/home/sections/04-an-unexpected-resort-dining-experience/section.webp"
+    },
+    {
+      "modifier": "is-tall",
+      "briefVariant": "is-2-images + is-tall",
+      "meaning": "Standalone edge-to-edge card, about square, no chamfer and no stage gap (home/11).",
+      "on": "venue-card-fullbleed_stage",
+      "styleDeltas": {
+        "desktop": {
+          "padding-top": "0",
+          "padding-bottom": "0",
+          "padding-left": "0",
+          "padding-right": "0"
+        }
+      },
+      "crop": "figma/pages/home/sections/11-rooms-suites/section.webp"
+    },
+    {
+      "modifier": "is-tall",
+      "briefVariant": "is-2-images + is-tall",
+      "meaning": "Standalone edge-to-edge card, about square, no chamfer and no stage gap (home/11).",
+      "on": "venue-card-fullbleed_media",
+      "styleDeltas": {
+        "desktop": {
+          "aspect-ratio": "1600 / 1579",
+          "clip-path": "none"
+        },
+        "mobileLandscape": {
+          "aspect-ratio": "auto",
+          "min-height": "45rem"
+        }
+      },
+      "crop": "figma/pages/home/sections/11-rooms-suites/section.webp"
+    },
+    {
+      "modifier": "is-tall",
+      "briefVariant": "is-2-images + is-tall",
+      "meaning": "Standalone edge-to-edge card, about square, no chamfer and no stage gap (home/11).",
+      "on": "venue-card-fullbleed_header",
+      "styleDeltas": {
+        "desktop": {
+          "row-gap": "2rem",
+          "max-width": "22rem"
+        }
+      },
+      "crop": "figma/pages/home/sections/11-rooms-suites/section.webp"
+    },
+    {
+      "modifier": "is-left",
+      "briefVariant": "is-left",
+      "meaning": "Standalone edge-to-edge card, 16:9, content bottom-left with the CTA on the right and an optional venue list below (home/15).",
+      "on": "venue-card-fullbleed_stage",
+      "styleDeltas": {
+        "desktop": {
+          "padding-bottom": "0",
+          "padding-left": "0",
+          "padding-right": "0"
+        }
+      },
+      "crop": "figma/pages/home/sections/15-meetings-events/section.webp"
+    },
+    {
+      "modifier": "is-left",
+      "briefVariant": "is-left",
+      "meaning": "Standalone edge-to-edge card, 16:9, content bottom-left with the CTA on the right and an optional venue list below (home/15).",
+      "on": "venue-card-fullbleed_media",
+      "styleDeltas": {
+        "desktop": {
+          "aspect-ratio": "16 / 9",
+          "clip-path": "none"
+        },
+        "mobileLandscape": {
+          "aspect-ratio": "auto",
+          "min-height": "45rem"
+        }
+      },
+      "crop": "figma/pages/home/sections/15-meetings-events/section.webp"
+    },
+    {
+      "modifier": "is-left",
+      "briefVariant": "is-left",
+      "meaning": "Standalone edge-to-edge card, 16:9, content bottom-left with the CTA on the right and an optional venue list below (home/15).",
+      "on": "venue-card-fullbleed_content",
+      "styleDeltas": {
+        "desktop": {
+          "display": "grid",
+          "grid-template-columns": "1fr auto",
+          "align-content": "end",
+          "align-items": "center",
+          "justify-items": "start",
+          "column-gap": "2rem",
+          "row-gap": "0",
+          "padding-bottom": "0",
+          "text-align": "left"
+        },
+        "mobileLandscape": {
+          "grid-template-columns": "1fr",
+          "row-gap": "1.5rem"
+        }
+      },
+      "crop": "figma/pages/home/sections/15-meetings-events/section.webp"
+    },
+    {
+      "modifier": "is-left",
+      "briefVariant": "is-left",
+      "meaning": "Standalone edge-to-edge card, 16:9, content bottom-left with the CTA on the right and an optional venue list below (home/15).",
+      "on": "venue-card-fullbleed_header",
+      "styleDeltas": {
+        "desktop": {
+          "align-items": "flex-start",
+          "row-gap": "1.5rem"
+        }
+      },
+      "crop": "figma/pages/home/sections/15-meetings-events/section.webp"
+    },
+    {
+      "modifier": "is-active",
+      "briefVariant": "(state, set by scrollEnlargeSnap or the page)",
+      "meaning": "Active tab or list row.",
+      "on": "venue-card-fullbleed_tab",
+      "styleDeltas": {
+        "desktop": {
+          "opacity": "1",
+          "border-bottom-color": "currentColor"
+        }
+      },
+      "crop": "figma/pages/dining-collection/sections/03-zuma/section.webp"
+    },
+    {
+      "modifier": "is-active",
+      "briefVariant": "(state, set by scrollEnlargeSnap or the page)",
+      "meaning": "Active tab or list row.",
+      "on": "venue-card-fullbleed_list-link",
+      "styleDeltas": {
+        "desktop": {
+          "opacity": "1"
+        }
+      },
+      "crop": "figma/pages/dining-collection/sections/03-zuma/section.webp"
+    }
+  ],
+  "props": [
+    {
+      "name": "introHeading",
+      "type": "text",
+      "element": "venue-card-fullbleed_intro",
+      "optional": true
+    },
+    {
+      "name": "image",
+      "type": "image",
+      "element": "venue-card-fullbleed_image",
+      "optional": true
+    },
+    {
+      "name": "imageAlt",
+      "type": "text",
+      "element": "venue-card-fullbleed_image"
+    },
+    {
+      "name": "logo",
+      "type": "image",
+      "element": "venue-card-fullbleed_logo",
+      "optional": true
+    },
+    {
+      "name": "heading",
+      "type": "text",
+      "element": "venue-card-fullbleed_header (h2 or h3)",
+      "optional": true
+    },
+    {
+      "name": "text",
+      "type": "text",
+      "element": "venue-card-fullbleed_text",
+      "optional": true
+    },
+    {
+      "name": "buttonLabel",
+      "type": "text",
+      "element": "button",
+      "optional": true
+    },
+    {
+      "name": "buttonLink",
+      "type": "link",
+      "element": "button",
+      "optional": true
+    },
+    {
+      "name": "tabs",
+      "type": "repeat (text)",
+      "element": "venue-card-fullbleed_tab",
+      "optional": true
+    },
+    {
+      "name": "list",
+      "type": "repeat (text + link)",
+      "element": "venue-card-fullbleed_list-link",
+      "optional": true
+    }
+  ],
+  "propsNote": "Webflow component props cannot repeat elements. Build the section once as a component for the static cards (home/11, home/15, legal, corporate); snap groups have 3 to 5 items each, so build them as plain sections from the same classes (or a component per group with no props). See Q021-OQ4.",
+  "groups": [
+    {
+      "group": "home-venues",
+      "page": "home",
+      "root": "home/04-an-unexpected-resort-dining-experience",
+      "modifier": "is-media-center",
+      "snap": true,
+      "attributes": {
+        "data-scroll-enlarge-snap": "",
+        "data-scroll-enlarge-snap-step": "80"
+      },
+      "items": [
+        "home/05",
+        "home/06",
+        "home/07",
+        "home/08",
+        "home/09"
+      ],
+      "tabs": false,
+      "intro": true
+    },
+    {
+      "group": "dining-venues",
+      "page": "dining-collection",
+      "root": "dining-collection/03-zuma",
+      "modifier": "is-media-center",
+      "snap": true,
+      "attributes": {
+        "data-scroll-enlarge-snap": ""
+      },
+      "items": [
+        "dining-collection/04",
+        "dining-collection/05",
+        "dining-collection/06",
+        "dining-collection/07",
+        "dining-collection/08"
+      ],
+      "tabs": true,
+      "intro": false
+    },
+    {
+      "group": "wellness-venues",
+      "page": "wellness-collection",
+      "root": "wellness-collection/02 (Q023 owns the intro and start frame today)",
+      "modifier": "is-media-center",
+      "snap": true,
+      "attributes": {
+        "data-scroll-enlarge-snap": ""
+      },
+      "items": [
+        "wellness-collection/03",
+        "wellness-collection/04",
+        "wellness-collection/05",
+        "wellness-collection/06"
+      ],
+      "tabs": true,
+      "intro": true,
+      "openQuestion": "Q021-OQ2"
+    },
+    {
+      "group": "meetings-venues",
+      "page": "meetings-collection",
+      "root": "meetings-collection/02 (Q023 owns the intro and start frame today)",
+      "modifier": "is-media-center",
+      "snap": true,
+      "attributes": {
+        "data-scroll-enlarge-snap": ""
+      },
+      "items": [
+        "meetings-collection/03",
+        "meetings-collection/04",
+        "meetings-collection/05"
+      ],
+      "tabs": true,
+      "intro": true,
+      "openQuestion": "Q021-OQ2"
+    },
+    {
+      "group": "legal-venues",
+      "page": "legal",
+      "root": null,
+      "modifier": null,
+      "snap": false,
+      "items": [
+        "legal/06",
+        "legal/07",
+        "legal/08",
+        "legal/09"
+      ],
+      "note": "No animation note and no start frame: four static base cards, one section each (no data attributes). See Q021-OQ3.",
+      "openQuestion": "Q021-OQ3"
+    },
+    {
+      "group": "corporate-venues",
+      "page": "corporate",
+      "root": null,
+      "modifier": null,
+      "snap": false,
+      "items": [
+        "corporate/06",
+        "corporate/07",
+        "corporate/08",
+        "corporate/09"
+      ],
+      "note": "Same as legal (identical content). See Q021-OQ3.",
+      "openQuestion": "Q021-OQ3"
+    },
+    {
+      "group": "home-rooms",
+      "page": "home",
+      "root": "home/11-rooms-suites",
+      "modifier": "is-tall",
+      "snap": false,
+      "items": [
+        "home/11"
+      ]
+    },
+    {
+      "group": "home-meetings",
+      "page": "home",
+      "root": "home/15-meetings-events",
+      "modifier": "is-left",
+      "snap": false,
+      "items": [
+        "home/15"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "slot": "image",
+      "figmaImageRef": "fa638bc2c84c8afc4c8daab6a935b35365944207",
+      "webflowAssetId": "6ad6701fde86688556052e83",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad6701fde86688556052e83_fa638bc2c84c8afc4c8daab6a935b35365944207.png",
+      "local": "assets/images/fa638bc2c84c8afc4c8daab6a935b35365944207.png",
+      "usedBy": [
+        "home/04-an-unexpected-resort-dining-experience",
+        "home/05-dress-up-for-the-rich-worldly",
+        "dining-collection/03-zuma",
+        "dining-collection/04-dress-up-for-the-rich-worldly"
+      ]
+    },
+    {
+      "slot": "logo",
+      "local": "figma/vectors/group-270989670-416x101-250-1958.svg",
+      "webflowAssetId": null,
+      "note": "SVG not uploaded yet (figma/assets.json webflowAssetId null). Upload before the build.",
+      "usedBy": [
+        "home/05-dress-up-for-the-rich-worldly",
+        "dining-collection/04-dress-up-for-the-rich-worldly"
+      ]
+    },
+    {
+      "slot": "image",
+      "figmaImageRef": "57b7c9d475ed31c64fc14b589c293bc5f86142a8",
+      "webflowAssetId": "6ad66ffa6684c3e22ea4e2ca",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66ffa6684c3e22ea4e2ca_57b7c9d475ed31c64fc14b589c293bc5f86142a8.jpg",
+      "local": "assets/images/57b7c9d475ed31c64fc14b589c293bc5f86142a8.jpg",
+      "usedBy": [
+        "home/06-cocktail-classics-and-drinks-for-connaisseurs",
+        "dining-collection/05-cocktail-classics-and-drinks-for-connaisseurs"
+      ]
+    },
+    {
+      "slot": "logo",
+      "local": "figma/vectors/a-738x232-433-5771.svg",
+      "webflowAssetId": null,
+      "note": "SVG not uploaded yet (figma/assets.json webflowAssetId null). Upload before the build.",
+      "usedBy": [
+        "home/06-cocktail-classics-and-drinks-for-connaisseurs",
+        "dining-collection/05-cocktail-classics-and-drinks-for-connaisseurs"
+      ]
+    },
+    {
+      "slot": "image",
+      "figmaImageRef": "b0a187c5d40b728dda8eba29e50d1c301b9f1a68",
+      "webflowAssetId": "6ad67015134731ad1b928187",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad67015134731ad1b928187_b0a187c5d40b728dda8eba29e50d1c301b9f1a68.jpg",
+      "local": "assets/images/b0a187c5d40b728dda8eba29e50d1c301b9f1a68.jpg",
+      "usedBy": [
+        "home/07-our-new-pool-serves-up-san",
+        "dining-collection/06-our-new-pool-serves-up-san"
+      ]
+    },
+    {
+      "slot": "logo",
+      "local": "figma/vectors/a-682x148-433-5793.svg",
+      "webflowAssetId": null,
+      "note": "SVG not uploaded yet (figma/assets.json webflowAssetId null). Upload before the build.",
+      "usedBy": [
+        "home/07-our-new-pool-serves-up-san",
+        "dining-collection/06-our-new-pool-serves-up-san"
+      ]
+    },
+    {
+      "slot": "image",
+      "figmaImageRef": "237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1",
+      "webflowAssetId": "6ad66fee735773f253407335",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66fee735773f253407335_237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1.jpg",
+      "local": "assets/images/237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1.jpg",
+      "usedBy": [
+        "home/08-lobby-terrace",
+        "dining-collection/07-garden-terrace"
+      ]
+    },
+    {
+      "slot": "image",
+      "figmaImageRef": "e462a0829a597ffc4060aaf8bb92466636f27cce",
+      "webflowAssetId": "6ad6701b6684c3e22ea4f00f",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad6701b6684c3e22ea4f00f_e462a0829a597ffc4060aaf8bb92466636f27cce.jpg",
+      "local": "assets/images/e462a0829a597ffc4060aaf8bb92466636f27cce.jpg",
+      "usedBy": [
+        "home/09-solana-coffee",
+        "dining-collection/08-solana-coffee"
+      ]
+    },
+    {
+      "slot": "image",
+      "figmaImageRef": "3a8a13fffa6bb106dd00f736e22e0aae384f5bda",
+      "webflowAssetId": "6ad66ff96684c3e22ea4e1af",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66ff96684c3e22ea4e1af_3a8a13fffa6bb106dd00f736e22e0aae384f5bda.png",
+      "local": "assets/images/3a8a13fffa6bb106dd00f736e22e0aae384f5bda.png",
+      "usedBy": [
+        "home/11-rooms-suites"
+      ]
+    },
+    {
+      "slot": "image",
+      "figmaImageRef": "b940aa95950dd4de783e1c0ae2dfee90e4485143",
+      "webflowAssetId": "6ad67016f8bf4846e80a023a",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad67016f8bf4846e80a023a_b940aa95950dd4de783e1c0ae2dfee90e4485143.png",
+      "local": "assets/images/b940aa95950dd4de783e1c0ae2dfee90e4485143.png",
+      "usedBy": [
+        "home/15-meetings-events",
+        "legal/08-council-boardroom",
+        "corporate/08-council-boardroom"
+      ]
+    },
+    {
+      "slot": "image",
+      "figmaImageRef": "70a13b1d6cdae1be50f7d9ca4b2541937747ae45",
+      "webflowAssetId": "6ad67000240d911fb18d77af",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad67000240d911fb18d77af_70a13b1d6cdae1be50f7d9ca4b2541937747ae45.jpg",
+      "local": "assets/images/70a13b1d6cdae1be50f7d9ca4b2541937747ae45.jpg",
+      "usedBy": [
+        "wellness-collection/03-in-room-wellness"
+      ]
+    },
+    {
+      "slot": "image",
+      "figmaImageRef": "a615ab07d022b6aa76066c2ac89bf41fd38923c5",
+      "webflowAssetId": "6ad6700eb28c9b39f95d814d",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad6700eb28c9b39f95d814d_a615ab07d022b6aa76066c2ac89bf41fd38923c5.jpg",
+      "local": "assets/images/a615ab07d022b6aa76066c2ac89bf41fd38923c5.jpg",
+      "usedBy": [
+        "wellness-collection/04-fitness-center",
+        "meetings-collection/04-lobby-terrace"
+      ]
+    },
+    {
+      "slot": "image",
+      "figmaImageRef": "0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c",
+      "webflowAssetId": "6ad66fe91ce40a5a6239b8ad",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66fe91ce40a5a6239b8ad_0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c.jpg",
+      "local": "assets/images/0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c.jpg",
+      "usedBy": [
+        "wellness-collection/05-mindful-dining",
+        "meetings-collection/05-1-america-plaza"
+      ]
+    },
+    {
+      "slot": "image",
+      "figmaImageRef": "5f867c9b46567c2df212f5570602c6afaa8b170e",
+      "webflowAssetId": "6ad66ffdba96f2e53726bd55",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66ffdba96f2e53726bd55_5f867c9b46567c2df212f5570602c6afaa8b170e.jpg",
+      "local": "assets/images/5f867c9b46567c2df212f5570602c6afaa8b170e.jpg",
+      "usedBy": [
+        "wellness-collection/06-wellness-events"
+      ]
+    },
+    {
+      "slot": "image",
+      "figmaImageRef": "0f08995c13c13dec8d995c603e13669742ad8753",
+      "webflowAssetId": "6ad66feb6684c3e22ea4da8d",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66feb6684c3e22ea4da8d_0f08995c13c13dec8d995c603e13669742ad8753.png",
+      "local": "assets/images/0f08995c13c13dec8d995c603e13669742ad8753.png",
+      "usedBy": [
+        "legal/06-small-conference-center",
+        "corporate/06-small-conference-center"
+      ]
+    },
+    {
+      "slot": "image",
+      "figmaImageRef": "bd46ec4969819d700587a489f9794218c352f8f4",
+      "webflowAssetId": "6ad67017b28c9b39f95d840a",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad67017b28c9b39f95d840a_bd46ec4969819d700587a489f9794218c352f8f4.png",
+      "local": "assets/images/bd46ec4969819d700587a489f9794218c352f8f4.png",
+      "usedBy": [
+        "legal/07-large-conference-center",
+        "corporate/07-large-conference-center"
+      ]
+    },
+    {
+      "slot": "image",
+      "figmaImageRef": "632da0f26628d214360c513d3c0f6d8e91262fb4",
+      "webflowAssetId": "6ad66ffe58367429abb48c84",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66ffe58367429abb48c84_632da0f26628d214360c513d3c0f6d8e91262fb4.jpg",
+      "local": "assets/images/632da0f26628d214360c513d3c0f6d8e91262fb4.jpg",
+      "usedBy": [
+        "legal/09-one-columbia-place",
+        "corporate/09-one-columbia-place"
+      ]
+    },
+    {
+      "slot": "button-outline",
+      "local": "docs/figma/build-plans/Q021/button-outline.svg",
+      "webflowAssetId": null,
+      "note": "Chamfered outline for button is-outline; generated from the 194x37 button vector. Belongs to the button owner; listed so it is not missed."
+    }
+  ],
+  "instances": [
+    {
+      "page": "home",
+      "section": "home/04-an-unexpected-resort-dining-experience",
+      "briefVariant": "is-media-center",
+      "plannedVariant": "is-media-center",
+      "group": "home-venues",
+      "role": "root",
+      "spec": "figma/pages/home/sections/04-an-unexpected-resort-dining-experience/spec.json",
+      "crop": "figma/pages/home/sections/04-an-unexpected-resort-dining-experience/section.webp",
+      "classes": {},
+      "content": {
+        "introHeading": "an unexpected resort dining experience",
+        "image": {
+          "figmaImageRef": "fa638bc2c84c8afc4c8daab6a935b35365944207",
+          "webflowAssetId": "6ad6701fde86688556052e83",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad6701fde86688556052e83_fa638bc2c84c8afc4c8daab6a935b35365944207.png",
+          "local": "assets/images/fa638bc2c84c8afc4c8daab6a935b35365944207.png"
+        }
+      },
+      "figmaScrimOpacity": null
+    },
+    {
+      "page": "home",
+      "section": "home/05-dress-up-for-the-rich-worldly",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "home-venues",
+      "role": "item",
+      "spec": "figma/pages/home/sections/05-dress-up-for-the-rich-worldly/spec.json",
+      "crop": "figma/pages/home/sections/05-dress-up-for-the-rich-worldly/section.webp",
+      "classes": {
+        "text": "text-size-large"
+      },
+      "content": {
+        "text": "Dress up for the rich, worldly sophistication of California’s first Zuma.",
+        "button": "discover more",
+        "logo": {
+          "svg": "figma/vectors/group-270989670-416x101-250-1958.svg",
+          "alt": "Zuma",
+          "webflowAssetId": null
+        },
+        "image": {
+          "figmaImageRef": "fa638bc2c84c8afc4c8daab6a935b35365944207",
+          "webflowAssetId": "6ad6701fde86688556052e83",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad6701fde86688556052e83_fa638bc2c84c8afc4c8daab6a935b35365944207.png",
+          "local": "assets/images/fa638bc2c84c8afc4c8daab6a935b35365944207.png"
+        }
+      },
+      "figmaScrimOpacity": null
+    },
+    {
+      "page": "home",
+      "section": "home/06-cocktail-classics-and-drinks-for-connaisseurs",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "home-venues",
+      "role": "item",
+      "spec": "figma/pages/home/sections/06-cocktail-classics-and-drinks-for-connaisseurs/spec.json",
+      "crop": "figma/pages/home/sections/06-cocktail-classics-and-drinks-for-connaisseurs/section.webp",
+      "classes": {
+        "text": "text-size-large"
+      },
+      "content": {
+        "text": "Cocktail classics and drinks for connaisseurs.",
+        "button": "discover more",
+        "logo": {
+          "svg": "figma/vectors/a-738x232-433-5771.svg",
+          "alt": "The Lobby Bar",
+          "webflowAssetId": null
+        },
+        "image": {
+          "figmaImageRef": "57b7c9d475ed31c64fc14b589c293bc5f86142a8",
+          "webflowAssetId": "6ad66ffa6684c3e22ea4e2ca",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66ffa6684c3e22ea4e2ca_57b7c9d475ed31c64fc14b589c293bc5f86142a8.jpg",
+          "local": "assets/images/57b7c9d475ed31c64fc14b589c293bc5f86142a8.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.3
+    },
+    {
+      "page": "home",
+      "section": "home/07-our-new-pool-serves-up-san",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "home-venues",
+      "role": "item",
+      "spec": "figma/pages/home/sections/07-our-new-pool-serves-up-san/spec.json",
+      "crop": "figma/pages/home/sections/07-our-new-pool-serves-up-san/section.webp",
+      "classes": {
+        "text": "text-size-large"
+      },
+      "content": {
+        "text": "Our new pool serves up San Diego’s bright sunshine, cool drinks and warm people.",
+        "button": "discover more",
+        "logo": {
+          "svg": "figma/vectors/a-682x148-433-5793.svg",
+          "alt": "Pool Lounge",
+          "webflowAssetId": null
+        },
+        "image": {
+          "figmaImageRef": "b0a187c5d40b728dda8eba29e50d1c301b9f1a68",
+          "webflowAssetId": "6ad67015134731ad1b928187",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad67015134731ad1b928187_b0a187c5d40b728dda8eba29e50d1c301b9f1a68.jpg",
+          "local": "assets/images/b0a187c5d40b728dda8eba29e50d1c301b9f1a68.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.3
+    },
+    {
+      "page": "home",
+      "section": "home/08-lobby-terrace",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "home-venues",
+      "role": "item",
+      "spec": "figma/pages/home/sections/08-lobby-terrace/spec.json",
+      "crop": "figma/pages/home/sections/08-lobby-terrace/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "lobby terrace",
+        "text": "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus.",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1",
+          "webflowAssetId": "6ad66fee735773f253407335",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66fee735773f253407335_237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1.jpg",
+          "local": "assets/images/237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.4
+    },
+    {
+      "page": "home",
+      "section": "home/09-solana-coffee",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "home-venues",
+      "role": "item",
+      "spec": "figma/pages/home/sections/09-solana-coffee/spec.json",
+      "crop": "figma/pages/home/sections/09-solana-coffee/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "solana coffee",
+        "text": "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus.",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "e462a0829a597ffc4060aaf8bb92466636f27cce",
+          "webflowAssetId": "6ad6701b6684c3e22ea4f00f",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad6701b6684c3e22ea4f00f_e462a0829a597ffc4060aaf8bb92466636f27cce.jpg",
+          "local": "assets/images/e462a0829a597ffc4060aaf8bb92466636f27cce.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.4
+    },
+    {
+      "page": "home",
+      "section": "home/11-rooms-suites",
+      "briefVariant": "is-2-images + is-tall",
+      "plannedVariant": "is-tall",
+      "group": "home-rooms",
+      "role": "standalone",
+      "spec": "figma/pages/home/sections/11-rooms-suites/spec.json",
+      "crop": "figma/pages/home/sections/11-rooms-suites/section.webp",
+      "classes": {
+        "heading": "heading-style-h1",
+        "text": "text-size-regular",
+        "button": "button is-outline"
+      },
+      "content": {
+        "heading": "rooms & suites",
+        "text": "Generous layouts, thoughtful details, and room to make yourself at home.",
+        "button": "explore more",
+        "image": {
+          "figmaImageRef": "3a8a13fffa6bb106dd00f736e22e0aae384f5bda",
+          "webflowAssetId": "6ad66ff96684c3e22ea4e1af",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66ff96684c3e22ea4e1af_3a8a13fffa6bb106dd00f736e22e0aae384f5bda.png",
+          "local": "assets/images/3a8a13fffa6bb106dd00f736e22e0aae384f5bda.png"
+        }
+      },
+      "figmaScrimOpacity": 0.4
+    },
+    {
+      "page": "home",
+      "section": "home/15-meetings-events",
+      "briefVariant": "is-left",
+      "plannedVariant": "is-left",
+      "group": "home-meetings",
+      "role": "standalone",
+      "spec": "figma/pages/home/sections/15-meetings-events/spec.json",
+      "crop": "figma/pages/home/sections/15-meetings-events/section.webp",
+      "classes": {
+        "heading": "heading-style-h2",
+        "text": "text-size-medium",
+        "button": "button is-outline"
+      },
+      "content": {
+        "heading": "meetings & events",
+        "button": "discover more",
+        "text": "Inspired spaces breed bright ideas",
+        "list": [
+          "council boardroom",
+          "courtyard",
+          "conference center"
+        ],
+        "image": {
+          "figmaImageRef": "b940aa95950dd4de783e1c0ae2dfee90e4485143",
+          "webflowAssetId": "6ad67016f8bf4846e80a023a",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad67016f8bf4846e80a023a_b940aa95950dd4de783e1c0ae2dfee90e4485143.png",
+          "local": "assets/images/b940aa95950dd4de783e1c0ae2dfee90e4485143.png"
+        }
+      },
+      "figmaScrimOpacity": 0.4
+    },
+    {
+      "page": "dining-collection",
+      "section": "dining-collection/03-zuma",
+      "briefVariant": "is-left + is-media-center",
+      "plannedVariant": "is-media-center",
+      "group": "dining-venues",
+      "role": "root",
+      "spec": "figma/pages/dining-collection/sections/03-zuma/spec.json",
+      "crop": "figma/pages/dining-collection/sections/03-zuma/section.webp",
+      "classes": {},
+      "content": {
+        "tabs": [
+          "Zuma",
+          "the lobby bar",
+          "pool lounge",
+          "lobby terrace",
+          "solana coffee"
+        ],
+        "image": {
+          "figmaImageRef": "fa638bc2c84c8afc4c8daab6a935b35365944207",
+          "webflowAssetId": "6ad6701fde86688556052e83",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad6701fde86688556052e83_fa638bc2c84c8afc4c8daab6a935b35365944207.png",
+          "local": "assets/images/fa638bc2c84c8afc4c8daab6a935b35365944207.png"
+        }
+      },
+      "figmaScrimOpacity": null
+    },
+    {
+      "page": "dining-collection",
+      "section": "dining-collection/04-dress-up-for-the-rich-worldly",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "dining-venues",
+      "role": "item",
+      "spec": "figma/pages/dining-collection/sections/04-dress-up-for-the-rich-worldly/spec.json",
+      "crop": "figma/pages/dining-collection/sections/04-dress-up-for-the-rich-worldly/section.webp",
+      "classes": {
+        "text": "text-size-large"
+      },
+      "content": {
+        "text": "Dress up for the rich, worldly sophistication of California’s first Zuma.",
+        "button": "discover more",
+        "logo": {
+          "svg": "figma/vectors/group-270989670-416x101-250-1958.svg",
+          "alt": "Zuma",
+          "webflowAssetId": null
+        },
+        "image": {
+          "figmaImageRef": "fa638bc2c84c8afc4c8daab6a935b35365944207",
+          "webflowAssetId": "6ad6701fde86688556052e83",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad6701fde86688556052e83_fa638bc2c84c8afc4c8daab6a935b35365944207.png",
+          "local": "assets/images/fa638bc2c84c8afc4c8daab6a935b35365944207.png"
+        }
+      },
+      "figmaScrimOpacity": null
+    },
+    {
+      "page": "dining-collection",
+      "section": "dining-collection/05-cocktail-classics-and-drinks-for-connaisseurs",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "dining-venues",
+      "role": "item",
+      "spec": "figma/pages/dining-collection/sections/05-cocktail-classics-and-drinks-for-connaisseurs/spec.json",
+      "crop": "figma/pages/dining-collection/sections/05-cocktail-classics-and-drinks-for-connaisseurs/section.webp",
+      "classes": {
+        "text": "text-size-large"
+      },
+      "content": {
+        "text": "Cocktail classics and drinks for connaisseurs.",
+        "button": "discover more",
+        "logo": {
+          "svg": "figma/vectors/a-738x232-433-5771.svg",
+          "alt": "The Lobby Bar",
+          "webflowAssetId": null
+        },
+        "image": {
+          "figmaImageRef": "57b7c9d475ed31c64fc14b589c293bc5f86142a8",
+          "webflowAssetId": "6ad66ffa6684c3e22ea4e2ca",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66ffa6684c3e22ea4e2ca_57b7c9d475ed31c64fc14b589c293bc5f86142a8.jpg",
+          "local": "assets/images/57b7c9d475ed31c64fc14b589c293bc5f86142a8.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.3
+    },
+    {
+      "page": "dining-collection",
+      "section": "dining-collection/06-our-new-pool-serves-up-san",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "dining-venues",
+      "role": "item",
+      "spec": "figma/pages/dining-collection/sections/06-our-new-pool-serves-up-san/spec.json",
+      "crop": "figma/pages/dining-collection/sections/06-our-new-pool-serves-up-san/section.webp",
+      "classes": {
+        "text": "text-size-large"
+      },
+      "content": {
+        "text": "Our new pool serves up San Diego’s bright sunshine, cool drinks and warm people.",
+        "button": "discover more",
+        "logo": {
+          "svg": "figma/vectors/a-682x148-433-5793.svg",
+          "alt": "Pool Lounge",
+          "webflowAssetId": null
+        },
+        "image": {
+          "figmaImageRef": "b0a187c5d40b728dda8eba29e50d1c301b9f1a68",
+          "webflowAssetId": "6ad67015134731ad1b928187",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad67015134731ad1b928187_b0a187c5d40b728dda8eba29e50d1c301b9f1a68.jpg",
+          "local": "assets/images/b0a187c5d40b728dda8eba29e50d1c301b9f1a68.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.3
+    },
+    {
+      "page": "dining-collection",
+      "section": "dining-collection/07-garden-terrace",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "dining-venues",
+      "role": "item",
+      "spec": "figma/pages/dining-collection/sections/07-garden-terrace/spec.json",
+      "crop": "figma/pages/dining-collection/sections/07-garden-terrace/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "garden terrace",
+        "text": "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus.",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1",
+          "webflowAssetId": "6ad66fee735773f253407335",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66fee735773f253407335_237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1.jpg",
+          "local": "assets/images/237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.4
+    },
+    {
+      "page": "dining-collection",
+      "section": "dining-collection/08-solana-coffee",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "dining-venues",
+      "role": "item",
+      "spec": "figma/pages/dining-collection/sections/08-solana-coffee/spec.json",
+      "crop": "figma/pages/dining-collection/sections/08-solana-coffee/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "solana coffee",
+        "text": "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus.",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "e462a0829a597ffc4060aaf8bb92466636f27cce",
+          "webflowAssetId": "6ad6701b6684c3e22ea4f00f",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad6701b6684c3e22ea4f00f_e462a0829a597ffc4060aaf8bb92466636f27cce.jpg",
+          "local": "assets/images/e462a0829a597ffc4060aaf8bb92466636f27cce.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.4
+    },
+    {
+      "page": "wellness-collection",
+      "section": "wellness-collection/03-in-room-wellness",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "wellness-venues",
+      "role": "item",
+      "spec": "figma/pages/wellness-collection/sections/03-in-room-wellness/spec.json",
+      "crop": "figma/pages/wellness-collection/sections/03-in-room-wellness/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "in-room wellness",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "70a13b1d6cdae1be50f7d9ca4b2541937747ae45",
+          "webflowAssetId": "6ad67000240d911fb18d77af",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad67000240d911fb18d77af_70a13b1d6cdae1be50f7d9ca4b2541937747ae45.jpg",
+          "local": "assets/images/70a13b1d6cdae1be50f7d9ca4b2541937747ae45.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.35
+    },
+    {
+      "page": "wellness-collection",
+      "section": "wellness-collection/04-fitness-center",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "wellness-venues",
+      "role": "item",
+      "spec": "figma/pages/wellness-collection/sections/04-fitness-center/spec.json",
+      "crop": "figma/pages/wellness-collection/sections/04-fitness-center/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "fitness center",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "a615ab07d022b6aa76066c2ac89bf41fd38923c5",
+          "webflowAssetId": "6ad6700eb28c9b39f95d814d",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad6700eb28c9b39f95d814d_a615ab07d022b6aa76066c2ac89bf41fd38923c5.jpg",
+          "local": "assets/images/a615ab07d022b6aa76066c2ac89bf41fd38923c5.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.2
+    },
+    {
+      "page": "wellness-collection",
+      "section": "wellness-collection/05-mindful-dining",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "wellness-venues",
+      "role": "item",
+      "spec": "figma/pages/wellness-collection/sections/05-mindful-dining/spec.json",
+      "crop": "figma/pages/wellness-collection/sections/05-mindful-dining/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "mindful dining",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c",
+          "webflowAssetId": "6ad66fe91ce40a5a6239b8ad",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66fe91ce40a5a6239b8ad_0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c.jpg",
+          "local": "assets/images/0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.25
+    },
+    {
+      "page": "wellness-collection",
+      "section": "wellness-collection/06-wellness-events",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "wellness-venues",
+      "role": "item",
+      "spec": "figma/pages/wellness-collection/sections/06-wellness-events/spec.json",
+      "crop": "figma/pages/wellness-collection/sections/06-wellness-events/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "wellness events",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "5f867c9b46567c2df212f5570602c6afaa8b170e",
+          "webflowAssetId": "6ad66ffdba96f2e53726bd55",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66ffdba96f2e53726bd55_5f867c9b46567c2df212f5570602c6afaa8b170e.jpg",
+          "local": "assets/images/5f867c9b46567c2df212f5570602c6afaa8b170e.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.3
+    },
+    {
+      "page": "meetings-collection",
+      "section": "meetings-collection/03-council-boardroom",
+      "briefVariant": "is-cream + is-no-image",
+      "plannedVariant": "base",
+      "group": "meetings-venues",
+      "role": "item",
+      "spec": "figma/pages/meetings-collection/sections/03-council-boardroom/spec.json",
+      "crop": "figma/pages/meetings-collection/sections/03-council-boardroom/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "council boardroom",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more"
+      },
+      "figmaScrimOpacity": null,
+      "note": "No image in Figma: a #D9D9D9 placeholder card. Needs an image before launch; the media background shows meanwhile."
+    },
+    {
+      "page": "meetings-collection",
+      "section": "meetings-collection/04-lobby-terrace",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "meetings-venues",
+      "role": "item",
+      "spec": "figma/pages/meetings-collection/sections/04-lobby-terrace/spec.json",
+      "crop": "figma/pages/meetings-collection/sections/04-lobby-terrace/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "lobby terrace",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "a615ab07d022b6aa76066c2ac89bf41fd38923c5",
+          "webflowAssetId": "6ad6700eb28c9b39f95d814d",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad6700eb28c9b39f95d814d_a615ab07d022b6aa76066c2ac89bf41fd38923c5.jpg",
+          "local": "assets/images/a615ab07d022b6aa76066c2ac89bf41fd38923c5.jpg"
+        }
+      },
+      "figmaScrimOpacity": null
+    },
+    {
+      "page": "meetings-collection",
+      "section": "meetings-collection/05-1-america-plaza",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "meetings-venues",
+      "role": "item",
+      "spec": "figma/pages/meetings-collection/sections/05-1-america-plaza/spec.json",
+      "crop": "figma/pages/meetings-collection/sections/05-1-america-plaza/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "1 america plaza",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c",
+          "webflowAssetId": "6ad66fe91ce40a5a6239b8ad",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66fe91ce40a5a6239b8ad_0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c.jpg",
+          "local": "assets/images/0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c.jpg"
+        }
+      },
+      "figmaScrimOpacity": null
+    },
+    {
+      "page": "legal",
+      "section": "legal/06-small-conference-center",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "legal-venues",
+      "role": "item",
+      "spec": "figma/pages/legal/sections/06-small-conference-center/spec.json",
+      "crop": "figma/pages/legal/sections/06-small-conference-center/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "small conference center",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "0f08995c13c13dec8d995c603e13669742ad8753",
+          "webflowAssetId": "6ad66feb6684c3e22ea4da8d",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66feb6684c3e22ea4da8d_0f08995c13c13dec8d995c603e13669742ad8753.png",
+          "local": "assets/images/0f08995c13c13dec8d995c603e13669742ad8753.png"
+        }
+      },
+      "figmaScrimOpacity": 0.35
+    },
+    {
+      "page": "legal",
+      "section": "legal/07-large-conference-center",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "legal-venues",
+      "role": "item",
+      "spec": "figma/pages/legal/sections/07-large-conference-center/spec.json",
+      "crop": "figma/pages/legal/sections/07-large-conference-center/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "large conference center",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "bd46ec4969819d700587a489f9794218c352f8f4",
+          "webflowAssetId": "6ad67017b28c9b39f95d840a",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad67017b28c9b39f95d840a_bd46ec4969819d700587a489f9794218c352f8f4.png",
+          "local": "assets/images/bd46ec4969819d700587a489f9794218c352f8f4.png"
+        }
+      },
+      "figmaScrimOpacity": 0.45
+    },
+    {
+      "page": "legal",
+      "section": "legal/08-council-boardroom",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "legal-venues",
+      "role": "item",
+      "spec": "figma/pages/legal/sections/08-council-boardroom/spec.json",
+      "crop": "figma/pages/legal/sections/08-council-boardroom/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "council boardroom",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "b940aa95950dd4de783e1c0ae2dfee90e4485143",
+          "webflowAssetId": "6ad67016f8bf4846e80a023a",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad67016f8bf4846e80a023a_b940aa95950dd4de783e1c0ae2dfee90e4485143.png",
+          "local": "assets/images/b940aa95950dd4de783e1c0ae2dfee90e4485143.png"
+        }
+      },
+      "figmaScrimOpacity": 0.45
+    },
+    {
+      "page": "legal",
+      "section": "legal/09-one-columbia-place",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "legal-venues",
+      "role": "item",
+      "spec": "figma/pages/legal/sections/09-one-columbia-place/spec.json",
+      "crop": "figma/pages/legal/sections/09-one-columbia-place/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "one columbia place",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "632da0f26628d214360c513d3c0f6d8e91262fb4",
+          "webflowAssetId": "6ad66ffe58367429abb48c84",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66ffe58367429abb48c84_632da0f26628d214360c513d3c0f6d8e91262fb4.jpg",
+          "local": "assets/images/632da0f26628d214360c513d3c0f6d8e91262fb4.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.45
+    },
+    {
+      "page": "corporate",
+      "section": "corporate/06-small-conference-center",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "corporate-venues",
+      "role": "item",
+      "spec": "figma/pages/corporate/sections/06-small-conference-center/spec.json",
+      "crop": "figma/pages/corporate/sections/06-small-conference-center/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "small conference center",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "0f08995c13c13dec8d995c603e13669742ad8753",
+          "webflowAssetId": "6ad66feb6684c3e22ea4da8d",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66feb6684c3e22ea4da8d_0f08995c13c13dec8d995c603e13669742ad8753.png",
+          "local": "assets/images/0f08995c13c13dec8d995c603e13669742ad8753.png"
+        }
+      },
+      "figmaScrimOpacity": 0.35
+    },
+    {
+      "page": "corporate",
+      "section": "corporate/07-large-conference-center",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "corporate-venues",
+      "role": "item",
+      "spec": "figma/pages/corporate/sections/07-large-conference-center/spec.json",
+      "crop": "figma/pages/corporate/sections/07-large-conference-center/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "large conference center",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "bd46ec4969819d700587a489f9794218c352f8f4",
+          "webflowAssetId": "6ad67017b28c9b39f95d840a",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad67017b28c9b39f95d840a_bd46ec4969819d700587a489f9794218c352f8f4.png",
+          "local": "assets/images/bd46ec4969819d700587a489f9794218c352f8f4.png"
+        }
+      },
+      "figmaScrimOpacity": 0.45
+    },
+    {
+      "page": "corporate",
+      "section": "corporate/08-council-boardroom",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "corporate-venues",
+      "role": "item",
+      "spec": "figma/pages/corporate/sections/08-council-boardroom/spec.json",
+      "crop": "figma/pages/corporate/sections/08-council-boardroom/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "council boardroom",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "b940aa95950dd4de783e1c0ae2dfee90e4485143",
+          "webflowAssetId": "6ad67016f8bf4846e80a023a",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad67016f8bf4846e80a023a_b940aa95950dd4de783e1c0ae2dfee90e4485143.png",
+          "local": "assets/images/b940aa95950dd4de783e1c0ae2dfee90e4485143.png"
+        }
+      },
+      "figmaScrimOpacity": 0.45
+    },
+    {
+      "page": "corporate",
+      "section": "corporate/09-one-columbia-place",
+      "briefVariant": "base",
+      "plannedVariant": "base",
+      "group": "corporate-venues",
+      "role": "item",
+      "spec": "figma/pages/corporate/sections/09-one-columbia-place/spec.json",
+      "crop": "figma/pages/corporate/sections/09-one-columbia-place/section.webp",
+      "classes": {
+        "heading": "heading-style-display",
+        "text": "text-size-large"
+      },
+      "content": {
+        "heading": "one columbia place",
+        "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+        "button": "discover more",
+        "image": {
+          "figmaImageRef": "632da0f26628d214360c513d3c0f6d8e91262fb4",
+          "webflowAssetId": "6ad66ffe58367429abb48c84",
+          "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66ffe58367429abb48c84_632da0f26628d214360c513d3c0f6d8e91262fb4.jpg",
+          "local": "assets/images/632da0f26628d214360c513d3c0f6d8e91262fb4.jpg"
+        }
+      },
+      "figmaScrimOpacity": 0.45
+    }
+  ],
+  "openQuestions": [
+    {
+      "id": "Q021-OQ1",
+      "question": "Most \"instances\" are panels of one scrollEnlargeSnap group, not sections. Plan builds 4 snap sections (home, dining, wellness, meetings) whose items are the panel instances. Confirm.",
+      "default": "Yes, as planned."
+    },
+    {
+      "id": "Q021-OQ2",
+      "question": "Wellness and meetings: the intro and start frame sit in wellness-collection/02 and meetings-collection/02 (Q023 tab-pills-intro, is-media-center), but the snap root must contain both the frame and the panels. Either Q023 hands its intro to venue-card-fullbleed_intro (this plan supports it: intro header plus tabs) or Q023 hosts the snap markup with these classes.",
+      "default": "venue-card-fullbleed owns the whole snap section; Q023 drops those two instances. Needs the Q023 plan and K01 to agree."
+    },
+    {
+      "id": "Q021-OQ3",
+      "question": "Legal and corporate 06 to 09 have no animation note and no start frame. Static stack of four cards, or a snap group that starts full size?",
+      "default": "Static stack (four base sections)."
+    },
+    {
+      "id": "Q021-OQ4",
+      "question": "Webflow component shape: one component for static cards with props, snap groups as plain sections using the same classes. Alternative: one component per snap group with no props.",
+      "default": "As planned."
+    },
+    {
+      "id": "Q021-OQ5",
+      "question": "home/15 venue list (council boardroom, courtyard, conference center): rows fade towards the bottom in Figma. Static links with the first row is-active, or does it switch the background image on hover?",
+      "default": "Static links, first row is-active, no JS."
+    },
+    {
+      "id": "Q021-OQ6",
+      "question": "meetings-collection/03 is a #D9D9D9 placeholder with a #484848 square in Figma: which image goes there, and is the square a real element (logo or badge)?",
+      "default": "Base panel; image to come; square ignored."
+    },
+    {
+      "id": "Q021-OQ7",
+      "question": "Dining tabs read \"lobby terrace\" but panel 07 is \"garden terrace\". Which name?",
+      "default": "Use the panel name (garden terrace) for both."
+    },
+    {
+      "id": "Q021-OQ8",
+      "question": "Logo panels (Zuma, The Lobby Bar, Pool Lounge) have a wordmark and no text heading. Keep a visually hidden h3 with the venue name for headings order, or rely on the logo alt text?",
+      "default": "Logo alt only; the tabs and intro give context."
+    },
+    {
+      "id": "Q021-OQ9",
+      "question": "clip-path (chamfered frame, tabs and button) may not be settable through the Designer API. Fallback: a small site-wide CSS block in the head custom code for these three selectors.",
+      "default": "Try the style panel; fall back to site CSS."
+    },
+    {
+      "id": "Q021-OQ10",
+      "question": "is-left (home/15) shares the frame, content and button with the family but adds a grid layout and a venue list. Keep it as a modifier or split it into its own unique section?",
+      "default": "Kept as a modifier because the classes and DOM are shared. If the Designer build finds the grid fights the base content, build home/15 as a unique section instead (orchestrator guidance: when unsure, prefer a unique item)."
+    }
+  ],
+  "deviations": [
+    {
+      "what": "is-2-images dropped",
+      "why": "home/11 has two image nodes with the same imageRef and the same box; one image renders the same result. Only is-tall is kept."
+    },
+    {
+      "what": "is-left + is-media-center on dining-collection/03 becomes is-media-center plus the optional tabs nav",
+      "why": "The \"left\" text is the tab labels inside a centred tab bar; the frame and content are not left aligned. The tabs are an optional element, not a variant."
+    },
+    {
+      "what": "is-cream + is-no-image on meetings-collection/03 becomes a base panel with no image",
+      "why": "The crop is a #D9D9D9 placeholder card on the cream page, the same chrome as every base card. Without an image the media background (color-neutral-300) shows; no modifier needed."
+    },
+    {
+      "what": "is-media-center is a snap group start state, not a static layout",
+      "why": "home/04 and dining/03 are the first frame of Home-Animation-1. The modifier sets the start size that scrollEnlargeSnap enlarges."
+    },
+    {
+      "what": "No padding-global or container-*",
+      "why": "The frame is full bleed with a 2.5rem gap (the snap stage padding); a max-width container would stop the enlarge at 80rem."
+    },
+    {
+      "what": "Scrim opacity unified at 0.4",
+      "why": "Figma varies 0.3 to 0.45 per instance with no visible intent; per-instance values are in instances[].figmaScrimOpacity."
+    },
+    {
+      "what": "Modifiers are set on each element they change",
+      "why": "Webflow cannot style descendants from a parent combo class, so is-tall, is-left and is-media-center are applied to the stage, media, content and header elements as listed in variants."
+    }
+  ]
+}
