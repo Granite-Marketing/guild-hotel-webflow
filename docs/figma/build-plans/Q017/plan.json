@@ -250,15 +250,6 @@
       }
     },
     {
-      "name": "is-start-1",
-      "comboOn": "split-image-text-light_content",
-      "styles": {
-        "desktop": {
-          "grid-column": "1 / 5"
-        }
-      }
-    },
-    {
       "name": "is-start-2",
       "comboOn": "split-image-text-light_content",
       "styles": {
@@ -326,29 +317,13 @@
     {
       "name": "is-wide-text",
       "comboOn": "split-image-text-light_content",
-      "why": "Measure of about 30 to 34 characters wider than the 24rem default (rooms, arts, compact, tall, tan).",
+      "why": "Measure wider than the 24rem default (rooms, arts, compact, tan).",
       "styles": {
         "desktop": {
           "max-width": "34.5rem"
         },
         "tablet": {
           "max-width": "36rem"
-        }
-      }
-    },
-    {
-      "name": "is-sticky",
-      "comboOn": "split-image-text-light_content",
-      "why": "Intro column stays in view while the feature list scrolls (tall variant). CSS sticky works with Lenis.",
-      "styles": {
-        "desktop": {
-          "position": "sticky",
-          "top": "7rem",
-          "align-self": "start"
-        },
-        "tablet": {
-          "position": "static",
-          "align-self": "flex-start"
         }
       }
     },
@@ -435,81 +410,6 @@
         },
         "tablet": {
           "max-width": "36rem"
-        }
-      }
-    },
-    {
-      "name": "split-image-text-light_features",
-      "element": "div",
-      "why": "Right-hand list of feature cards (tall variant).",
-      "styles": {
-        "desktop": {
-          "grid-column": "8 / 12",
-          "grid-row": "1",
-          "align-self": "start",
-          "display": "flex",
-          "flex-direction": "column",
-          "row-gap": "6.875rem"
-        },
-        "tablet": {
-          "row-gap": "4rem"
-        },
-        "mobilePortrait": {
-          "row-gap": "3rem"
-        }
-      }
-    },
-    {
-      "name": "split-image-text-light_feature",
-      "element": "article",
-      "styles": {
-        "desktop": {
-          "display": "flex",
-          "flex-direction": "column"
-        }
-      }
-    },
-    {
-      "name": "split-image-text-light_feature-media",
-      "element": "figure",
-      "styles": {
-        "desktop": {
-          "margin": "0 0 1.5rem",
-          "overflow": "hidden",
-          "aspect-ratio": "484 / 595",
-          "background-color": "var(--color-neutral-300)"
-        }
-      }
-    },
-    {
-      "name": "split-image-text-light_feature-label",
-      "element": "p",
-      "styles": {
-        "desktop": {
-          "margin": "0 0 0.75rem"
-        }
-      }
-    },
-    {
-      "name": "split-image-text-light_feature-list",
-      "element": "ul",
-      "styles": {
-        "desktop": {
-          "display": "flex",
-          "flex-direction": "column",
-          "margin": "0",
-          "padding": "0",
-          "list-style": "none"
-        }
-      }
-    },
-    {
-      "name": "split-image-text-light_feature-item",
-      "element": "li",
-      "styles": {
-        "desktop": {
-          "padding": "0.375rem 0",
-          "border-bottom": "1px solid var(--color-neutral-300)"
         }
       }
     },
@@ -798,84 +698,6 @@
                       "children": []
                     },
                     {
-                      "slot": "features",
-                      "tag": "div",
-                      "classes": [
-                        "split-image-text-light_features"
-                      ],
-                      "optional": true,
-                      "attributes": {},
-                      "children": [
-                        {
-                          "slot": "feature",
-                          "tag": "article",
-                          "classes": [
-                            "split-image-text-light_feature"
-                          ],
-                          "repeat": "features",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "slot": "feature-media",
-                              "tag": "figure",
-                              "classes": [
-                                "split-image-text-light_feature-media"
-                              ],
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "slot": "feature-image",
-                                  "tag": "img",
-                                  "classes": [
-                                    "split-image-text-light_image"
-                                  ],
-                                  "attributes": {
-                                    "loading": "lazy",
-                                    "alt": ""
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "slot": "feature-label",
-                              "tag": "p",
-                              "classes": [
-                                "split-image-text-light_feature-label",
-                                "text-size-regular",
-                                "text-style-caps-caption-16"
-                              ],
-                              "attributes": {},
-                              "children": []
-                            },
-                            {
-                              "slot": "feature-list",
-                              "tag": "ul",
-                              "classes": [
-                                "split-image-text-light_feature-list"
-                              ],
-                              "attributes": {
-                                "role": "list"
-                              },
-                              "children": [
-                                {
-                                  "slot": "feature-item",
-                                  "tag": "li",
-                                  "classes": [
-                                    "split-image-text-light_feature-item",
-                                    "text-size-medium"
-                                  ],
-                                  "repeat": "items",
-                                  "attributes": {},
-                                  "children": []
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
                       "slot": "stamp",
                       "tag": "figure",
                       "classes": [
@@ -941,14 +763,6 @@
       "styleDeltas": {},
       "realisedBy": "No section combo: padding-section-medium instead of padding-section-large, container-full, media is-end-half, content is-start-2 is-bottom is-wide-text.",
       "crop": "figma/pages/happenings-indiv/sections/04-nam-eleifend-venenatis-erat-sit-amet/section.webp"
-    },
-    {
-      "modifier": null,
-      "name": "tall",
-      "on": "section_split-image-text-light",
-      "styleDeltas": {},
-      "realisedBy": "No section combo: media slot hidden, features slot shown, container-full, content is-start-1 is-sticky is-wide-text, CTA is a filled button (button, no is-link).",
-      "crop": "figma/pages/meetings-collection/sections/08-key-features-of-our-spaces/section.webp"
     },
     {
       "modifier": "is-tan",
@@ -1060,17 +874,6 @@
         "is-wide-text"
       ],
       "used": "happenings-indiv/04, blog-indiv/04"
-    },
-    "tall": {
-      "container": "container-full",
-      "media": "hidden",
-      "content": [
-        "is-start-1",
-        "is-sticky",
-        "is-wide-text"
-      ],
-      "features": true,
-      "used": "meetings-collection/08"
     },
     "tan": {
       "container": "container-large",
@@ -1187,12 +990,6 @@
       "default": false
     },
     {
-      "name": "Features visible",
-      "type": "visibility",
-      "slot": "features",
-      "default": false
-    },
-    {
       "name": "Stamp visible",
       "type": "visibility",
       "slot": "stamp",
@@ -1241,10 +1038,6 @@
       "section": "happenings-indiv/04-nam-eleifend-venenatis-erat-sit-amet"
     },
     {
-      "variant": "tall",
-      "section": "meetings-collection/08-key-features-of-our-spaces"
-    },
-    {
       "variant": "tan",
       "section": "history/04-george-marston"
     },
@@ -1277,7 +1070,6 @@
         "body-2",
         "media-secondary",
         "caption",
-        "features",
         "stamp"
       ],
       "content": {
@@ -1311,7 +1103,6 @@
         "footer",
         "media-secondary",
         "caption",
-        "features",
         "stamp"
       ],
       "content": {
@@ -1344,7 +1135,6 @@
         "footer",
         "media-secondary",
         "caption",
-        "features",
         "stamp"
       ],
       "content": {
@@ -1377,7 +1167,6 @@
         "footer",
         "media-secondary",
         "caption",
-        "features",
         "stamp"
       ],
       "content": {
@@ -1410,7 +1199,6 @@
         "footer",
         "media-secondary",
         "caption",
-        "features",
         "stamp"
       ],
       "content": {
@@ -1460,8 +1248,7 @@
         "eyebrow",
         "footer",
         "media-secondary",
-        "caption",
-        "features"
+        "caption"
       ],
       "content": {
         "heading": "George Marston",
@@ -1471,78 +1258,6 @@
           "webflowAssetId": "6ad67007cf42363c3ffe3d61",
           "local": "assets/images/8d27c8c8088059a056c81c4b09c23d8cf589c1bc.png"
         }
-      }
-    },
-    {
-      "page": "meetings-collection",
-      "pageId": "6ad66fd96684c3e22ea4d417",
-      "cmsTemplate": null,
-      "section": "meetings-collection/08-key-features-of-our-spaces",
-      "variant": "tall",
-      "layout": "tall",
-      "crop": "figma/pages/meetings-collection/sections/08-key-features-of-our-spaces/section.webp",
-      "classOverrides": {
-        "container": [
-          "container-full"
-        ],
-        "content": [
-          "split-image-text-light_content",
-          "is-start-1",
-          "is-sticky",
-          "is-wide-text"
-        ],
-        "cta": [
-          "button",
-          "text-style-caps-caption-16"
-        ]
-      },
-      "hidden": [
-        "eyebrow",
-        "body-2",
-        "media-secondary",
-        "caption",
-        "stamp",
-        "media"
-      ],
-      "content": {
-        "heading": "key features of our spaces",
-        "body-1": "Vestibulum id justo eget erat porta consequat. Donec et massa congue, aliquet sem non, consectetur sem proin et.",
-        "cta": "book your space",
-        "features": [
-          {
-            "label": "Event Services",
-            "items": [
-              "Our innovative & experienced team creates your vision",
-              "Chef Collaboration and Menu Design",
-              "Mixologist Consultation",
-              "Branded Event Menus",
-              "Menu tastings available",
-              "Branding Opportunities with Video Projection Wall",
-              "Full Hotel Buyouts Available - Guild Take Over"
-            ]
-          },
-          {
-            "label": "AV Capabilities",
-            "items": [
-              "Video-texture mapping",
-              "Surround sound/ LED lighting",
-              "Latest tech",
-              "Pre- & post-event support"
-            ]
-          },
-          {
-            "label": "Hotel Amenities",
-            "items": [
-              "Dedicated event planners",
-              "Professional audio visual services",
-              "Meeting sets with clean, sophisticated designs",
-              "Restaurant-style banquet menus",
-              "Black or Grey banquet style chairs, Black & White floor-length linens & napkins",
-              "Seasonal heaters & umbrellas",
-              "Marriott Rewards Program"
-            ]
-          }
-        ]
       }
     },
     {
@@ -1578,7 +1293,6 @@
         "footer",
         "media-secondary",
         "caption",
-        "features",
         "stamp",
         "header"
       ],
@@ -1620,7 +1334,6 @@
         "footer",
         "media-secondary",
         "caption",
-        "features",
         "stamp",
         "header"
       ],
@@ -1657,7 +1370,6 @@
         "body-2",
         "footer",
         "caption",
-        "features",
         "stamp",
         "header"
       ],
@@ -1694,7 +1406,6 @@
         "body-2",
         "footer",
         "caption",
-        "features",
         "stamp",
         "header"
       ],
@@ -1736,7 +1447,6 @@
         "body-2",
         "footer",
         "caption",
-        "features",
         "stamp"
       ],
       "content": {
@@ -1759,7 +1469,6 @@
         "body-2",
         "footer",
         "media-secondary",
-        "features",
         "stamp"
       ],
       "content": {
@@ -1797,7 +1506,6 @@
         "footer",
         "media-secondary",
         "caption",
-        "features",
         "stamp"
       ],
       "content": {
@@ -1833,7 +1541,6 @@
         "body-2",
         "footer",
         "caption",
-        "features",
         "stamp"
       ],
       "content": {
@@ -1870,7 +1577,6 @@
         "footer",
         "media-secondary",
         "caption",
-        "features",
         "stamp"
       ],
       "content": {
@@ -1907,7 +1613,6 @@
         "footer",
         "media-secondary",
         "caption",
-        "features",
         "stamp"
       ],
       "content": {
@@ -1944,7 +1649,6 @@
         "footer",
         "media-secondary",
         "caption",
-        "features",
         "stamp"
       ],
       "content": {
@@ -1981,7 +1685,6 @@
         "footer",
         "media-secondary",
         "caption",
-        "features",
         "stamp"
       ],
       "content": {
@@ -1998,18 +1701,17 @@
     "history/04: the portrait shows three slider dashes at its bottom edge, which suggests a multi-image slider. The plan treats it as one image. Confirm one image, or route it to a slider entry.",
     "history/04 stamp SVG (figma/vectors/group-263x263-228-7875.svg) is not uploaded to Webflow (webflowAssetId null). Upload before the history page entry.",
     "neighborhood/05: the burgundy pill nav (dining, arts, beyond downtown, services) inside the crop is not part of this component. It looks like a sticky in-page nav that belongs to another entry; leave its slot to that entry or a manual overlay.",
-    "meetings-collection/08 (tall) is a list of three feature cards beside a sticky intro; it was clustered here but is the weakest fit (components.md Check these pairs it with image-pair-text at 0.645, D02 kept them separate). The plan supports it with the features slot. Confirm, or split it into its own entry.",
-    "Feature list rows draw a rule under every row, including the last; the design has none under the last row. Webflow has no last-child styling on a static list without a custom combo; accept, or add an is-last combo on the final li.",
-    "Text that sits in a CMS template (dining-*, happenings-indiv, blog-indiv) should bind to CMS fields once C01 creates them; the props here are static component props."
+    "Text that sits in a CMS template (dining-*, happenings-indiv, blog-indiv) should bind to CMS fields once C01 creates them; the props here are static component props.",
+    "meetings-collection/08 (brief variant is-tall) was moved out of this component as a unique item, per Stephen's rule for unsure variant calls. Its page entry builds it; confirm that is acceptable."
   ],
   "deviations": [
     "Brief modifiers is-media-left and is-1-image are not created: media-left and one image are the defaults, so the classes would carry no styles. Second images use the is-secondary combo on a second figure.",
-    "is-compact and is-tall are not section combos: compact is padding-section-medium plus placement combos, tall is the features slot plus a sticky content combo. Neither needs a section-level style.",
+    "is-compact is not a section combo: it is padding-section-medium plus placement combos, with no section-level style.",
     "The brief lists 0 images for every variant except tan and blue, but every reference crop has grey placeholder rectangles (#D9D9D9, #C4C4C4) in image positions. The plan keeps those as image slots with a color-neutral-300 placeholder fill.",
     "Base instances use four layouts (edge, split, stagger, wide). They are expressed as element combos on the media and content (grid placement on a 12-column grid), not as extra section variants, because Webflow combos cannot style children from the section.",
-    "Webflow component variants: one component with variants base, olive, blue, tan, compact, tall plus layout variants edge, stagger-left, stagger-mid, wide, so instances pick a variant instead of re-classing elements. If component variants cannot change classes on nested elements, fall back to unlinked layout overrides per instance.",
+    "Webflow component variants: one component with variants base, olive, blue, tan, compact plus layout variants edge, stagger-left, stagger-mid, wide, so instances pick a variant instead of re-classing elements. If component variants cannot change classes on nested elements, fall back to unlinked layout overrides per instance.",
     "Morello script heading uses heading-style-h1 plus a new shared text-style-script combo (font family, 5rem/1, no transform), because heading-style-h1 is Sackers.",
-    "The tall CTA is a filled button (button without is-link); its chamfered pill shape comes from the shared button entry, not from this plan."
+    "Brief variant is-tall (meetings-collection/08) is not part of this component; see excludedInstances."
   ],
   "previewAssumptions": {
     "note": "Values the preview uses for reused Relume classes so the page renders. They come from figma/tokens.json classValues and docs/reference/breakpoints.md; Q001 owns the live values. Never written to Webflow from this plan.",
@@ -2171,5 +1873,12 @@
         "color": "inherit"
       }
     }
-  }
+  },
+  "excludedInstances": [
+    {
+      "section": "meetings-collection/08-key-features-of-our-spaces",
+      "reason": "Sticky intro beside three image-and-list feature cards; a different structure from the rest of the cluster. Built as a unique item in the meetings-collection page entry (Stephen 2026-10-19: when unsure between a component variant and a unique item, make it a unique item).",
+      "crop": "figma/pages/meetings-collection/sections/08-key-features-of-our-spaces/section.webp"
+    }
+  ]
 }

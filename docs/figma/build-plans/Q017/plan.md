@@ -1,6 +1,6 @@
 # Q017 build plan: split-image-text-light
 
-One Webflow component, built on Home (`home/03-west-coast-hospitality-since-1924`), used by 19 sections on 12 pages. Machine-readable plan: `plan.json`. Preview: `preview.html` (generated with `node docs/figma/build-plans/Q017/render-preview.mjs --shots`, which also validates the plan and retakes the screenshots).
+One Webflow component, built on Home (`home/03-west-coast-hospitality-since-1924`), used by 18 sections on 11 pages. `meetings-collection/08` (the brief's `is-tall`) is excluded and built as a unique item in its page entry (Stephen's rule: when unsure between a variant and a unique item, make it unique). Machine-readable plan: `plan.json`. Preview: `preview.html` (generated with `node docs/figma/build-plans/Q017/render-preview.mjs --shots`, which also validates the plan and retakes the screenshots).
 
 ## Class family
 
@@ -8,7 +8,7 @@ One Webflow component, built on Home (`home/03-west-coast-hospitality-since-1924
 
 - Section combos (colour): `is-olive` (color-accent), `is-tan` (color-brand-906e58), `is-blue` (color-brand-00263e). Text colour is set on the section and inherited.
 - Media combos: `is-start-1`, `is-end`, `is-end-half`, `is-wide`, `is-secondary`, `is-overlap`, `is-chamfer`.
-- Content combos: `is-start-1`, `is-start-2`, `is-start-4`, `is-start-7`, `is-start-9`, `is-bottom`, `is-below`, `is-wide-text`, `is-sticky`.
+- Content combos: `is-start-2`, `is-start-4`, `is-start-7`, `is-start-9`, `is-bottom`, `is-below`, `is-wide-text`.
 - Header combo: `is-outdent`.
 - Reused: `padding-global`, `padding-section-large` / `-medium`, `container-large`, `heading-style-h1` / `-h3` / `-h4`, `text-weight-normal`, `text-size-medium`, `text-size-regular`, `button`, `is-link`.
 - Proposed shared (for K01): `container-full`, `text-style-caps-caption-16`, `text-style-eyebrow-caps`, `text-style-script`.
@@ -34,11 +34,6 @@ At tablet (991px) the grid becomes a flex column, so the grid placement combos s
           - `footer` .split-image-text-light_footer (optional)
             - `a` .button .is-link .text-style-caps-caption-16
         - `p` .split-image-text-light_caption .text-size-medium (optional)
-        - `div` .split-image-text-light_features (optional, tall)
-          - `article` .split-image-text-light_feature (repeat)
-            - `figure` .split-image-text-light_feature-media > `img`
-            - `p` .split-image-text-light_feature-label .text-size-regular .text-style-caps-caption-16
-            - `ul` .split-image-text-light_feature-list > `li` .split-image-text-light_feature-item .text-size-medium
         - `figure` .split-image-text-light_stamp (optional, history) > `img`
 
 ## Variants
@@ -50,7 +45,6 @@ At tablet (991px) the grid becomes a flex column, so the grid placement combos s
 | blue | `is-blue` | media `is-overlap` | 1 |
 | tan | `is-tan` | media `is-start-1 is-chamfer`, content `is-start-7 is-wide-text`, header `is-outdent`, heading h1 + `text-style-script`, stamp shown | 1 |
 | compact | none | `padding-section-medium`, `container-full`, media `is-end-half`, content `is-start-2 is-bottom is-wide-text` | 2 |
-| tall | none | `container-full`, media hidden, features shown, content `is-start-1 is-sticky is-wide-text`, CTA is a filled `button` | 1 |
 
 Base layouts: edge (rooms x2, arts: media columns 1 to 5, second image top right bleeding into the gutter, text bottom right), split (neighborhood downtown: the olive geometry on cream, plus a caption under the image), stagger (dining explore-the-space x4 and gaslamp: wide image top right, text in a second row), wide (little italy: large square left, second image right, text bottom right).
 
@@ -63,7 +57,7 @@ Fonts fall back in the preview (Sackers, Gatch and Morello are not installed), s
 - **base** (`rooms-individual/06`): pass. Same three elements; text left edge at 51% in both; secondary image at about 75% and near the section top in both. Differs: the primary image is wider (2% to 41% against 2.5% to 35%) because it spans grid columns 1 to 5. 390 stacks image, offset second image, text.
 - **olive** (`home/03`): pass. Image hangs about 87px below the band (crop about 78px); text starts at about 59% in both; heading, body and CTA gaps match. Differs: image left edge at 13% against 10.6%; image top 156px below the band top against about 140px. 390 stacks cleanly inside the band.
 - **compact** (`happenings-indiv/04`): pass. Image 51% to 97.8% against 51% to 97.5% with the same aspect; text bottom-aligned at 10% against 9%. Differs: text column about 30% wide against 32%.
-- **tall** (`meetings-collection/08`): pass. Image column 59% to 89.5% in both; three image and list groups in the same order. Differs: heading to body gap about 67px against 38px (fallback font height); the CTA shape comes from the assumed `button` style, not the design's small chamfered pill; a rule shows under the last list row (open question).
+- **tall** (`meetings-collection/08`): compared and passed on the first pass, then removed from this component as a unique item; no preview kept.
 - **tan** (`history/04`): failed on the first pass (stamp too large and over the text, heading not overlapping the photo). Fixed: stamp 12rem, 5rem below the media at desktop and static in the flow at tablet and below; header outdent changed to a third of the content width plus gap, so the script heading reaches the photo edge. Second Sonnet compare: pass. Script heading overlaps the photo edge, stamp sits at the photo's lower right below the body, colours and two-paragraph rhythm match; 390 stacks photo, heading, body, stamp with nothing covering text. Still differs: body wraps to 7 lines against 4 (fallback font about 18px against about 15px equivalent); stamp extends about 80px below the photo against about 20px (tune by eye in the Designer once Morello and Gatch load); the slider dashes under the photo are not built (open question).
 - **blue** (`dining-zuma/02`): pass. Image hangs about 87px below the band (crop about 78px); image spans the same 152px to 734px; text left edge at 845px against 850px.
 
@@ -73,4 +67,4 @@ See `openQuestions` in `plan.json`; the same list is in the PR description.
 
 ## Deviations from the brief
 
-See `deviations` in `plan.json`. Main ones: no `is-media-left` or `is-1-image` classes (they would be empty); compact and tall are realised by utility swaps and element combos, not section combos; grey placeholder rectangles are kept as image slots although the brief says 0 images.
+See `deviations` in `plan.json`. Main ones: no `is-media-left` or `is-1-image` classes (they would be empty); compact is realised by utility swaps and element combos, not a section combo; tall is excluded as a unique item; grey placeholder rectangles are kept as image slots although the brief says 0 images.

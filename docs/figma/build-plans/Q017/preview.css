@@ -214,9 +214,6 @@ body {
   row-gap: 2rem;
   max-width: 24rem;
 }
-.split-image-text-light_content.is-start-1 {
-  grid-column: 1 / 5;
-}
 .split-image-text-light_content.is-start-2 {
   grid-column: 2 / 6;
 }
@@ -239,11 +236,6 @@ body {
 }
 .split-image-text-light_content.is-wide-text {
   max-width: 34.5rem;
-}
-.split-image-text-light_content.is-sticky {
-  position: sticky;
-  top: 7rem;
-  align-self: start;
 }
 .split-image-text-light_header {
   display: flex;
@@ -279,38 +271,6 @@ body {
   align-self: start;
   max-width: 24rem;
   margin: 0;
-}
-.split-image-text-light_features {
-  grid-column: 8 / 12;
-  grid-row: 1;
-  align-self: start;
-  display: flex;
-  flex-direction: column;
-  row-gap: 6.875rem;
-}
-.split-image-text-light_feature {
-  display: flex;
-  flex-direction: column;
-}
-.split-image-text-light_feature-media {
-  margin: 0 0 1.5rem;
-  overflow: hidden;
-  aspect-ratio: 484 / 595;
-  background-color: var(--color-neutral-300);
-}
-.split-image-text-light_feature-label {
-  margin: 0 0 0.75rem;
-}
-.split-image-text-light_feature-list {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.split-image-text-light_feature-item {
-  padding: 0.375rem 0;
-  border-bottom: 1px solid var(--color-neutral-300);
 }
 .split-image-text-light_stamp {
   position: absolute;
@@ -376,19 +336,12 @@ body {
 .split-image-text-light_content.is-wide-text {
   max-width: 36rem;
 }
-.split-image-text-light_content.is-sticky {
-  position: static;
-  align-self: flex-start;
-}
 .split-image-text-light_header.is-outdent {
   margin-left: 0;
   white-space: normal;
 }
 .split-image-text-light_caption {
   max-width: 36rem;
-}
-.split-image-text-light_features {
-  row-gap: 4rem;
 }
 .split-image-text-light_stamp {
   position: static;
@@ -438,9 +391,6 @@ body {
 }
 .split-image-text-light_media.is-chamfer {
   clip-path: polygon(1.5rem 0, calc(100% - 1.5rem) 0, 100% 1.5rem, 100% calc(100% - 1.5rem), calc(100% - 1.5rem) 100%, 1.5rem 100%, 0 calc(100% - 1.5rem), 0 1.5rem);
-}
-.split-image-text-light_features {
-  row-gap: 3rem;
 }
 .split-image-text-light_stamp {
   width: 7.5rem;
