@@ -61,7 +61,7 @@ Content, not variants: heading size varies (`h3-caps`, `morello-80`): set it wit
 - Reference crop: `figma/pages/wellness-collection/sections/02-from-movement-and-produce-to-deep/section.webp`
 - Component: tab-pills-intro, variant `is-media-center` + `is-1-image` + `is-tall`
 - Texts (6): "From movement and produce to deep rest."; "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin..."; "in-room wellness"
-- Images: 1 (1 distinct), `figma/assets.json` images: 70a13b1d6cdae1be50f7d9ca4b2541937747ae45 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 70a13b1d6cdae1be50f7d9ca4b2541937747ae45 (uploaded)
 - Vectors: `figma/vectors/vector-25-900x56-284-3907.svg` (Vector 25, 900x56)
 - Animation (Wellness-Col-Animation-1): The initial smaller image enlarges on scroll until it becomes full width. then, as user scrolls it snaps with text and image transitions like the above example.
 - Vision review: kind content; interactive: tab pills (In-room wellness, Fitness center, Mindful dining, Wellness events) anchor to cards; note: script intro, image, floating pill nav

@@ -35,7 +35,7 @@ interface GsapMatchMediaContext {
 interface GsapMatchMedia {
   add: (
     conditions: Record<string, string>,
-    callback: (context: GsapMatchMediaContext) => void,
+    callback: (context: GsapMatchMediaContext) => void | (() => void),
   ) => void;
 }
 
@@ -60,6 +60,7 @@ interface GsapInstance {
   ) => void;
   set: (target: unknown, vars: Record<string, unknown>) => void;
   killTweensOf: (target: unknown) => void;
+  getProperty: (target: unknown, property: string, unit?: string) => number | string;
   timeline: (vars?: Record<string, unknown>) => GsapTimeline;
   matchMedia: () => GsapMatchMedia;
   delayedCall: (delay: number, callback: () => void) => GsapDelayedCall;

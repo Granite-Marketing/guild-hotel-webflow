@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fixture: image stack collapse</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <style>
+      body { margin: 0; background: #f4efdf; color: #262118; font-family: sans-serif; }
+      .fixture_spacer { height: 120vh; display: grid; place-items: center; }
+      .section_image-trio-text { overflow: clip; padding: 7.5rem 0; }
+      .image-trio-text_images {
+        display: flex;
+        justify-content: center;
+        gap: 1.875vw;
+      }
+      .image-trio-text_figure {
+        flex: none;
+        width: 34.4375vw;
+        aspect-ratio: 551 / 694;
+        margin: 0;
+      }
+      .image-trio-text_image { display: block; width: 100%; height: 100%; object-fit: cover; }
+      /* Each figure shows its own panel of the home/10 section crop. */
+      .image-trio-text_figure:nth-child(1) .image-trio-text_image { object-view-box: inset(90px 829px 293px 0); }
+      .image-trio-text_figure:nth-child(2) .image-trio-text_image { object-view-box: inset(90px 393px 293px 394px); }
+      .image-trio-text_figure:nth-child(3) .image-trio-text_image { object-view-box: inset(90px 0 293px 830px); }
+      .image-trio-text_content { text-align: center; padding-top: 4rem; }
+    </style>
+  </head>
+  <body>
+    <div class="fixture_spacer">Scroll down</div>
+    <section class="section_image-trio-text">
+      <div class="image-trio-text_images" data-image-stack-collapse>
+        <figure class="image-trio-text_figure" data-image-stack-collapse-item>
+          <img class="image-trio-text_image" src="/figma/pages/home/sections/10-wellness/section.webp" alt="" />
+        </figure>
+        <figure class="image-trio-text_figure" data-image-stack-collapse-item="anchor">
+          <img class="image-trio-text_image" src="/figma/pages/home/sections/10-wellness/section.webp" alt="" />
+        </figure>
+        <figure class="image-trio-text_figure" data-image-stack-collapse-item>
+          <img class="image-trio-text_image" src="/figma/pages/home/sections/10-wellness/section.webp" alt="" />
+        </figure>
+      </div>
+      <header class="image-trio-text_content"><h2>Wellness</h2></header>
+    </section>
+    <div class="fixture_spacer">End</div>
+    <script src="/tests/visual/fixtures/image-stack-collapse.js"></script>
+  </body>
+</html>

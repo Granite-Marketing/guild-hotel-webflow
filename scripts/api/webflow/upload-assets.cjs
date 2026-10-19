@@ -15,7 +15,13 @@ async function main () {
   const client = new WebflowClient()
   const currentManifest = await manifest.read()
 
-  const toUpload = manifest.getUnuploaded(currentManifest)
+  let toUpload = manifest.getUnuploaded(currentManifest)
+
+  // --used-only: restrict to the image fills the design uses (figma/assets.json)
+  if (process.argv.includes('--used-only')) {
+    const used = new Set(Object.values(require('../../../figma/assets.json').images).map(i => i.file))
+    toUpload = toUpload.filter(a => used.has(a.localPath))
+  }
   if (toUpload.length === 0) {
     console.log('[upload] No assets to upload. All assets already in Webflow or skipped.')
     return

@@ -68,7 +68,7 @@ From `figma/tokens.json` (mapping proposals; the token sync entry verifies live 
 - Reference crop: `figma/pages/rooms-collection/sections/03-01/section.webp`
 - Component: quiz-step-split-image, variant base (only variant)
 - Texts (9): "01"; "03"; "/"
-- Images: 1 (1 distinct), `figma/assets.json` images: 22db683e135ddee3633012bf9bf473d63a8f49e2 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 22db683e135ddee3633012bf9bf473d63a8f49e2 (uploaded)
 - Vectors: `figma/vectors/vector-25-325x69-379-1291.svg` (Vector 25, 325x69), `figma/vectors/vector-26-325x69-384-1317.svg` (Vector 26, 325x69), `figma/vectors/vector-27-325x69-384-1318.svg` (Vector 27, 325x69), `figma/vectors/vector-28-325x69-384-1319.svg` (Vector 28, 325x69)
 - Vision review: kind form; interactive: stepper quiz, 01 / 03 step counter, option pills
 
@@ -78,7 +78,7 @@ From `figma/tokens.json` (mapping proposals; the token sync entry verifies live 
 - Reference crop: `figma/pages/rooms-collection/sections/04-02/section.webp`
 - Component: quiz-step-split-image, variant base (only variant)
 - Texts (10): "02"; "03"; "/"
-- Images: 1 (1 distinct), `figma/assets.json` images: d8c0b016a9841abf507b2b7c64742e7080b675a8 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: d8c0b016a9841abf507b2b7c64742e7080b675a8 (uploaded)
 - Vectors: `figma/vectors/vector-25-325x69-379-1291.svg` (Vector 25, 325x69), `figma/vectors/vector-26-325x69-384-1317.svg` (Vector 26, 325x69), `figma/vectors/vector-27-325x69-384-1318.svg` (Vector 27, 325x69), `figma/vectors/vector-28-325x69-384-1319.svg` (Vector 28, 325x69), `figma/vectors/vector-29-325x69-384-1358.svg` (Vector 29, 325x69)
 - Vision review: kind form; interactive: stepper quiz, 02 / 03 step counter
 
@@ -88,7 +88,7 @@ From `figma/tokens.json` (mapping proposals; the token sync entry verifies live 
 - Reference crop: `figma/pages/rooms-collection/sections/05-03/section.webp`
 - Component: quiz-step-split-image, variant base (only variant)
 - Texts (10): "03"; "03"; "/"
-- Images: 1 (1 distinct), `figma/assets.json` images: 0c5cb498b7eacbe1174374b129d91e21a3a9ddcd (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 0c5cb498b7eacbe1174374b129d91e21a3a9ddcd (uploaded)
 - Vectors: `figma/vectors/vector-25-325x69-379-1291.svg` (Vector 25, 325x69), `figma/vectors/vector-26-325x69-384-1317.svg` (Vector 26, 325x69), `figma/vectors/vector-27-325x69-384-1318.svg` (Vector 27, 325x69), `figma/vectors/vector-28-325x69-384-1319.svg` (Vector 28, 325x69), `figma/vectors/vector-29-325x69-384-1358.svg` (Vector 29, 325x69)
 - Vision review: kind form; interactive: stepper quiz, 03 / 03 step counter
 
@@ -107,7 +107,7 @@ From `figma/tokens.json` (mapping proposals; the token sync entry verifies live 
 - Reference crop: `figma/pages/rooms-collection/sections/07-deluxe-king-suite/section.webp`
 - Component: room-card-grid, variant base (only variant)
 - Texts (7): "deluxe king suite"; "deluxe king suite"; "guild corner loft suite"
-- Images: 4 (4 distinct), `figma/assets.json` images: 745c085a4a4187ad24dd49e947e40a436a1ffbdd (not uploaded), 8303f7c977cff864b2b171528b08d4a7957b69c6 (not uploaded), 27f6840ca839b9675c82ed8eb521abfc5f478c78 (not uploaded), d7332204a5bee888af6d6fe5adf267bebfab8918 (not uploaded)
+- Images: 4 (4 distinct), `figma/assets.json` images: 745c085a4a4187ad24dd49e947e40a436a1ffbdd (uploaded), 8303f7c977cff864b2b171528b08d4a7957b69c6 (uploaded), 27f6840ca839b9675c82ed8eb521abfc5f478c78 (uploaded), d7332204a5bee888af6d6fe5adf267bebfab8918 (uploaded)
 - Vectors: `figma/vectors/frame-32x32-242-1622.svg` (Frame, 32x32), `figma/vectors/group-270990163-47x47-433-7465.svg` (Group 270990163, 47x47), `figma/vectors/vector-25-164x37-386-1562.svg` (Vector 25, 164x37)
 - Vision review: kind card-repeat; interactive: hover reveals View more and details
 

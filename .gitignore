@@ -35,3 +35,6 @@ figma/.cache/
 
 # Dev-only fixture builds (bin/build.js --watch)
 dist/fixtures/
+
+# Fixture bundles built by the Playwright specs and preview:fixtures
+tests/visual/fixtures/*.js

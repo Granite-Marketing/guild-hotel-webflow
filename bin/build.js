@@ -2,6 +2,8 @@ import * as esbuild from 'esbuild'
 import { readdirSync } from 'node:fs'
 import { join, sep } from 'node:path'
 
+import { serveFixtures } from './fixtures.js'
+
 const PRODUCTION = process.env.NODE_ENV === 'production'
 const WATCH = process.argv.includes('--watch')
 
@@ -27,6 +29,7 @@ const FIXTURE_OPTIONS = {
 // Config dev serving
 const SERVE_PORT = 3000
 const SERVE_ORIGIN = `http://localhost:${SERVE_PORT}`
+const FIXTURES_PORT = 3001
 
 // Create context
 const context = await esbuild.context({
@@ -60,6 +63,9 @@ if (PRODUCTION || !WATCH) {
       port: SERVE_PORT,
     })
     .then(logServedFiles)
+
+  const fixtures = await serveFixtures(FIXTURES_PORT)
+  console.log(`Module fixtures: ${fixtures.origin}/<name>.html`)
 }
 
 /**
