@@ -1,0 +1,210 @@
+{
+  "pageSlug": "happenings-indiv",
+  "frames": [
+    {
+      "id": "2027:1567",
+      "name": "HAPPENINGS-INDIV",
+      "kind": "page",
+      "width": 1600,
+      "height": 7478,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/2027-1567.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "locals-night-at-rodeo-bar",
+      "dir": "sections/01-locals-night-at-rodeo-bar",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:1567",
+      "frameName": "HAPPENINGS-INDIV",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 900,
+      "nodeIds": [
+        "2027:1568",
+        "2027:1792",
+        "2027:1572",
+        "2027:1571"
+      ],
+      "backgroundIds": [
+        "2027:1855",
+        "2027:1856"
+      ],
+      "crop": "sections/01-locals-night-at-rodeo-bar/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "the-guild-a-tribute-portfolio-hotel",
+      "dir": "sections/02-the-guild-a-tribute-portfolio-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:1567",
+      "frameName": "HAPPENINGS-INDIV",
+      "y0": 900,
+      "y1": 1284,
+      "cropY0": 900,
+      "cropY1": 1359,
+      "nodeIds": [
+        "2027:1847",
+        "2027:1848",
+        "2027:1857"
+      ],
+      "backgroundIds": [
+        "2027:1855",
+        "2027:1856"
+      ],
+      "crop": "sections/02-the-guild-a-tribute-portfolio-hotel/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "section",
+      "dir": "sections/03-section",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:1567",
+      "frameName": "HAPPENINGS-INDIV",
+      "y0": 1434,
+      "y1": 1958,
+      "cropY0": 1359,
+      "cropY1": 2059,
+      "nodeIds": [
+        "2027:1851"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-section/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "nam-eleifend-venenatis-erat-sit-amet",
+      "dir": "sections/04-nam-eleifend-venenatis-erat-sit-amet",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:1567",
+      "frameName": "HAPPENINGS-INDIV",
+      "y0": 2160,
+      "y1": 2684,
+      "cropY0": 2059,
+      "cropY1": 2811.5,
+      "nodeIds": [
+        "2027:1852",
+        "2027:1854"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-nam-eleifend-venenatis-erat-sit-amet/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "more-around-town",
+      "dir": "sections/05-more-around-town",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:1567",
+      "frameName": "HAPPENINGS-INDIV",
+      "y0": 2939,
+      "y1": 3920,
+      "cropY0": 2811.5,
+      "cropY1": 3920,
+      "nodeIds": [
+        "2027:1880",
+        "2027:1872",
+        "2027:1873",
+        "2027:1874",
+        "2027:1877"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-more-around-town/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "more-of-the-guild",
+      "dir": "sections/06-more-of-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:1567",
+      "frameName": "HAPPENINGS-INDIV",
+      "y0": 3920,
+      "y1": 4885,
+      "cropY0": 3920,
+      "cropY1": 4892.5,
+      "nodeIds": [
+        "2027:1773"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-more-of-the-guild/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "offers-packages",
+      "dir": "sections/07-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:1567",
+      "frameName": "HAPPENINGS-INDIV",
+      "y0": 4900,
+      "y1": 5800,
+      "cropY0": 4892.5,
+      "cropY1": 5800,
+      "nodeIds": [
+        "2027:1650"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-offers-packages/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "book-your-escape",
+      "dir": "sections/08-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:1567",
+      "frameName": "HAPPENINGS-INDIV",
+      "y0": 5800,
+      "y1": 6778,
+      "cropY0": 5800,
+      "cropY1": 6778,
+      "nodeIds": [
+        "2027:1696",
+        "2027:1697",
+        "2027:1703",
+        "2027:1752",
+        "2027:1695"
+      ],
+      "backgroundIds": [
+        "2027:1676",
+        "2027:1677"
+      ],
+      "crop": "sections/08-book-your-escape/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "the-hotel",
+      "dir": "sections/09-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:1567",
+      "frameName": "HAPPENINGS-INDIV",
+      "y0": 6778,
+      "y1": 7478,
+      "cropY0": 6778,
+      "cropY1": 7478,
+      "nodeIds": [
+        "2027:1710",
+        "2027:1574",
+        "2027:1678",
+        "2027:1771",
+        "2027:1772"
+      ],
+      "backgroundIds": [
+        "2027:1676",
+        "2027:1677"
+      ],
+      "crop": "sections/09-the-hotel/section.webp"
+    }
+  ]
+}

@@ -18,7 +18,7 @@ Thumbs.db
 *.swo
 
 # Exported Figma assets (local storage, not committed)
-assets/
+/assets
 
 # Client copy documents (confidential)
 docs/examples/
@@ -29,3 +29,6 @@ docs/examples/
 
 # Client content drops (local-only, ingested via content-ingest skill)
 Content/
+
+# Figma snapshot cache: full-page renders, step markers, call ledger (see figma/README.md)
+figma/.cache/

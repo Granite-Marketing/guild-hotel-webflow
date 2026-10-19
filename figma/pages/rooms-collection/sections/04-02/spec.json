@@ -1,0 +1,262 @@
+{
+  "pageSlug": "rooms-collection",
+  "index": 4,
+  "slug": "02",
+  "laneHint": null,
+  "frameId": "379:581",
+  "bbox": {
+    "x": 0,
+    "y": 2873,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 2873,
+    "y1": 3773
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "384:1331",
+      "characters": "02",
+      "styleName": "Sackers Heavy Gothic / Label / Caption",
+      "styleId": "177:62",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 15,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 356,
+        "y": 80.5,
+        "width": 25,
+        "height": 15
+      }
+    },
+    {
+      "id": "384:1334",
+      "characters": "03",
+      "styleName": "Sackers Heavy Gothic / Label / Caption",
+      "styleId": "177:62",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 15,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 419,
+        "y": 80.5,
+        "width": 25,
+        "height": 15
+      }
+    },
+    {
+      "id": "384:1333",
+      "characters": "/",
+      "styleName": "Sackers Heavy Gothic / Label / Caption",
+      "styleId": "177:62",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 15,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 394,
+        "y": 81,
+        "width": 12,
+        "height": 15
+      }
+    },
+    {
+      "id": "384:1335",
+      "characters": "what type of stay are you planning?",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 34,
+        "y": 120,
+        "width": 732,
+        "height": 29
+      }
+    },
+    {
+      "id": "384:1340",
+      "characters": "couples getaway",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#4A1217",
+      "bbox": {
+        "x": 298.6,
+        "y": 299,
+        "width": 204,
+        "height": 24
+      }
+    },
+    {
+      "id": "384:1341",
+      "characters": "business trip",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 317.6,
+        "y": 389,
+        "width": 166,
+        "height": 24
+      }
+    },
+    {
+      "id": "384:1342",
+      "characters": "family & Friends",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 299.6,
+        "y": 482,
+        "width": 202,
+        "height": 24
+      }
+    },
+    {
+      "id": "384:1343",
+      "characters": "celebration",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 325.6,
+        "y": 577,
+        "width": 150,
+        "height": 24
+      }
+    },
+    {
+      "id": "384:1359",
+      "characters": "extended stay",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 314.6,
+        "y": 670,
+        "width": 172,
+        "height": 24
+      }
+    },
+    {
+      "id": "384:1344",
+      "characters": "SEE ALL THE ROOMS",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 263,
+        "y": 845,
+        "width": 273,
+        "height": 19
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 10
+    },
+    {
+      "hex": "#4A1217",
+      "opacity": 1,
+      "count": 2
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "384:1366",
+      "name": "Rectangle 514",
+      "imageRef": "d8c0b016a9841abf507b2b7c64742e7080b675a8",
+      "bbox": {
+        "x": 801,
+        "y": 0,
+        "width": 799,
+        "height": 900
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "384:1322",
+      "type": "GROUP",
+      "name": "Group 270990149",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

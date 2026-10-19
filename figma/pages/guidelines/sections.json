@@ -1,0 +1,209 @@
+{
+  "pageSlug": "guidelines",
+  "frames": [
+    {
+      "id": "309:282",
+      "name": "GUIDELINES",
+      "kind": "page",
+      "width": 1600,
+      "height": 9463,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/309-282.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "photoshoot-guidelines",
+      "dir": "sections/01-photoshoot-guidelines",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "309:282",
+      "frameName": "GUIDELINES",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 1014.78,
+      "nodeIds": [
+        "309:302",
+        "309:515",
+        "309:317",
+        "309:305"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-photoshoot-guidelines/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "thank-you-for-choosing-the-guild",
+      "dir": "sections/02-thank-you-for-choosing-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "309:282",
+      "frameName": "GUIDELINES",
+      "y0": 1129.55,
+      "y1": 1580,
+      "cropY0": 1014.78,
+      "cropY1": 1695,
+      "nodeIds": [
+        "309:570",
+        "309:316",
+        "309:569"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/02-thank-you-for-choosing-the-guild/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "our-process",
+      "dir": "sections/03-our-process",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "309:282",
+      "frameName": "GUIDELINES",
+      "y0": 1810,
+      "y1": 2807,
+      "cropY0": 1695,
+      "cropY1": 2922,
+      "nodeIds": [
+        "309:604"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-our-process/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "work-from-our-collaborators",
+      "dir": "sections/04-work-from-our-collaborators",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "309:282",
+      "frameName": "GUIDELINES",
+      "y0": 3037,
+      "y1": 4523,
+      "cropY0": 2922,
+      "cropY1": 4622,
+      "nodeIds": [
+        "309:637",
+        "309:622",
+        "309:634",
+        "309:635",
+        "309:636"
+      ],
+      "backgroundIds": [
+        "309:621",
+        "309:641"
+      ],
+      "crop": "sections/04-work-from-our-collaborators/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "username",
+      "dir": "sections/05-username",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "309:282",
+      "frameName": "GUIDELINES",
+      "y0": 4721,
+      "y1": 5559,
+      "cropY0": 4622,
+      "cropY1": 5653,
+      "nodeIds": [
+        "309:639",
+        "309:640"
+      ],
+      "backgroundIds": [
+        "309:621",
+        "309:641"
+      ],
+      "crop": "sections/05-username/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "photoshoot-request",
+      "dir": "sections/06-photoshoot-request",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "309:282",
+      "frameName": "GUIDELINES",
+      "y0": 5747,
+      "y1": 6589.83,
+      "cropY0": 5653,
+      "cropY1": 6589.92,
+      "nodeIds": [
+        "377:411"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-photoshoot-request/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "faqs",
+      "dir": "sections/07-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "309:282",
+      "frameName": "GUIDELINES",
+      "y0": 6590,
+      "y1": 7785,
+      "cropY0": 6589.92,
+      "cropY1": 7785,
+      "nodeIds": [
+        "309:383"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-faqs/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "book-your-escape",
+      "dir": "sections/08-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "309:282",
+      "frameName": "GUIDELINES",
+      "y0": 7785,
+      "y1": 8763,
+      "cropY0": 7785,
+      "cropY1": 8763,
+      "nodeIds": [
+        "309:438",
+        "309:439",
+        "309:445",
+        "309:494",
+        "309:437"
+      ],
+      "backgroundIds": [
+        "309:418",
+        "309:419"
+      ],
+      "crop": "sections/08-book-your-escape/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "the-hotel",
+      "dir": "sections/09-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "309:282",
+      "frameName": "GUIDELINES",
+      "y0": 8763,
+      "y1": 9463,
+      "cropY0": 8763,
+      "cropY1": 9463,
+      "nodeIds": [
+        "309:452",
+        "309:420",
+        "309:513",
+        "309:514"
+      ],
+      "backgroundIds": [
+        "309:418",
+        "309:419"
+      ],
+      "crop": "sections/09-the-hotel/section.webp"
+    }
+  ]
+}

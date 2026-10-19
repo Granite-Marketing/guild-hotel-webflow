@@ -1,0 +1,159 @@
+{
+  "pageSlug": "home",
+  "index": 3,
+  "slug": "west-coast-hospitality-since-1924",
+  "laneHint": null,
+  "frameId": "433:559",
+  "bbox": {
+    "x": 0,
+    "y": 2058,
+    "width": 1600,
+    "height": 987
+  },
+  "crop": {
+    "y0": 1922,
+    "y1": 3202
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "433:5742",
+      "characters": "West Coast Hospitality\nsince 1924",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 945,
+        "y": 537,
+        "width": 336,
+        "height": 58
+      }
+    },
+    {
+      "id": "433:5741",
+      "characters": "As the YMCA that welcomed Army and Navy men and women, The Guild was the city’s premier gathering place. The experience has been curated, elevated and refined – but at heart, we’re still a sailor on shore leave. ",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 945,
+        "y": 635,
+        "width": 382,
+        "height": 118
+      }
+    },
+    {
+      "id": "433:5727",
+      "characters": "uncover our history",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 945,
+        "y": 785,
+        "width": 199,
+        "height": 19
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#C4C4C4",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "433:5740",
+      "type": "RECTANGLE",
+      "name": "Rectangle 566",
+      "bbox": {
+        "x": 0,
+        "y": 136,
+        "width": 1602,
+        "height": 900
+      }
+    },
+    {
+      "id": "433:5743",
+      "type": "RECTANGLE",
+      "name": "Rectangle 567",
+      "bbox": {
+        "x": 169,
+        "y": 292,
+        "width": 647,
+        "height": 831
+      }
+    },
+    {
+      "id": "433:5742",
+      "type": "TEXT",
+      "name": "West Coast Hospitality since 1924",
+      "bbox": {
+        "x": 945,
+        "y": 537,
+        "width": 336,
+        "height": 58
+      }
+    },
+    {
+      "id": "433:5741",
+      "type": "TEXT",
+      "name": "As the YMCA that welcomed Army and Navy men and women, The Guild was the city’s premier gathering place. The experience has been curated, elevated and refined – but at heart, we’re still a sailor on shore leave.",
+      "bbox": {
+        "x": 945,
+        "y": 635,
+        "width": 382,
+        "height": 118
+      }
+    },
+    {
+      "id": "433:5727",
+      "type": "TEXT",
+      "name": "uncover our history",
+      "bbox": {
+        "x": 945,
+        "y": 785,
+        "width": 199,
+        "height": 19
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

@@ -1,0 +1,900 @@
+{
+  "pageSlug": "arts",
+  "frames": [
+    {
+      "id": "477:1069",
+      "name": "ARTS",
+      "kind": "page",
+      "width": 1600,
+      "height": 9944,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/477-1069.png",
+      "status": "ok",
+      "tree": {
+        "id": "477:1069",
+        "type": "FRAME",
+        "name": "ARTS",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 9944
+        },
+        "children": [
+          {
+            "id": "477:1359",
+            "type": "RECTANGLE",
+            "name": "Rectangle 612",
+            "bbox": {
+              "x": 0,
+              "y": 4366,
+              "width": 1601,
+              "height": 900
+            }
+          },
+          {
+            "id": "477:1071",
+            "type": "RECTANGLE",
+            "name": "Rectangle 1",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 900
+            }
+          },
+          {
+            "id": "477:1074",
+            "type": "TEXT",
+            "name": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+            "bbox": {
+              "x": 503,
+              "y": 818,
+              "width": 595,
+              "height": 35
+            },
+            "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non."
+          },
+          {
+            "id": "477:1075",
+            "type": "TEXT",
+            "name": "art collection",
+            "bbox": {
+              "x": 630,
+              "y": 740,
+              "width": 341,
+              "height": 40
+            },
+            "characters": "art collection"
+          },
+          {
+            "id": "477:1076",
+            "type": "TEXT",
+            "name": "A Landmark Reimagined",
+            "bbox": {
+              "x": 533,
+              "y": 14198,
+              "width": 535,
+              "height": 40
+            },
+            "characters": "A Landmark Reimagined"
+          },
+          {
+            "id": "477:1077",
+            "type": "RECTANGLE",
+            "name": "Rectangle 583",
+            "bbox": {
+              "x": 1,
+              "y": 7199,
+              "width": 1599,
+              "height": 11370
+            }
+          },
+          {
+            "id": "477:1339",
+            "type": "GROUP",
+            "name": "Group 270990200",
+            "bbox": {
+              "x": -219,
+              "y": 4390,
+              "width": 2134,
+              "height": 852
+            },
+            "children": [
+              {
+                "id": "477:1079",
+                "type": "FRAME",
+                "name": "Frame 427318675",
+                "bbox": {
+                  "x": -219,
+                  "y": 4828,
+                  "width": 2134,
+                  "height": 414
+                },
+                "children": [
+                  {
+                    "id": "477:1080",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 609",
+                    "bbox": {
+                      "x": -219,
+                      "y": 4828,
+                      "width": 356,
+                      "height": 414
+                    }
+                  },
+                  {
+                    "id": "477:1081",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 608",
+                    "bbox": {
+                      "x": 161,
+                      "y": 4828,
+                      "width": 485,
+                      "height": 414
+                    }
+                  },
+                  {
+                    "id": "477:1082",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 606",
+                    "bbox": {
+                      "x": 670,
+                      "y": 4828,
+                      "width": 485,
+                      "height": 414
+                    }
+                  },
+                  {
+                    "id": "477:1083",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 607",
+                    "bbox": {
+                      "x": 1179,
+                      "y": 4828,
+                      "width": 227,
+                      "height": 414
+                    }
+                  },
+                  {
+                    "id": "477:1084",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 610",
+                    "bbox": {
+                      "x": 1430,
+                      "y": 4828,
+                      "width": 485,
+                      "height": 414
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "477:1085",
+                "type": "FRAME",
+                "name": "Frame 270990200",
+                "bbox": {
+                  "x": -73,
+                  "y": 4390,
+                  "width": 1747,
+                  "height": 414
+                },
+                "children": [
+                  {
+                    "id": "477:1086",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 602",
+                    "bbox": {
+                      "x": -73,
+                      "y": 4390,
+                      "width": 356,
+                      "height": 414
+                    }
+                  },
+                  {
+                    "id": "477:1087",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 603",
+                    "bbox": {
+                      "x": 307,
+                      "y": 4390,
+                      "width": 227,
+                      "height": 414
+                    }
+                  },
+                  {
+                    "id": "477:1088",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 604",
+                    "bbox": {
+                      "x": 558,
+                      "y": 4390,
+                      "width": 485,
+                      "height": 414
+                    }
+                  },
+                  {
+                    "id": "477:1089",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 605",
+                    "bbox": {
+                      "x": 1067,
+                      "y": 4390,
+                      "width": 356,
+                      "height": 414
+                    }
+                  },
+                  {
+                    "id": "477:1090",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 611",
+                    "bbox": {
+                      "x": 1447,
+                      "y": 4390,
+                      "width": 227,
+                      "height": 414
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "477:1340",
+            "type": "TEXT",
+            "name": "An art collection through a curator’s eyes",
+            "bbox": {
+              "x": 439.22,
+              "y": 1044.12,
+              "width": 721.83,
+              "height": 280.68
+            },
+            "characters": "An art collection\nthrough a curator’s eyes"
+          },
+          {
+            "id": "477:1341",
+            "type": "TEXT",
+            "name": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort.",
+            "bbox": {
+              "x": 506,
+              "y": 1386,
+              "width": 588,
+              "height": 40
+            },
+            "characters": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort."
+          },
+          {
+            "id": "477:1351",
+            "type": "GROUP",
+            "name": "Group 270990202",
+            "bbox": {
+              "x": 0,
+              "y": 1589,
+              "width": 1600,
+              "height": 2538
+            },
+            "children": [
+              {
+                "id": "477:1344",
+                "type": "RECTANGLE",
+                "name": "Rectangle 593",
+                "bbox": {
+                  "x": 178,
+                  "y": 1589,
+                  "width": 1253,
+                  "height": 753
+                }
+              },
+              {
+                "id": "477:1345",
+                "type": "RECTANGLE",
+                "name": "Rectangle 594",
+                "bbox": {
+                  "x": 0,
+                  "y": 2382,
+                  "width": 1600,
+                  "height": 874
+                }
+              },
+              {
+                "id": "477:1346",
+                "type": "TEXT",
+                "name": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+                "bbox": {
+                  "x": 40,
+                  "y": 3175,
+                  "width": 703,
+                  "height": 44
+                },
+                "characters": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus."
+              },
+              {
+                "id": "477:1347",
+                "type": "RECTANGLE",
+                "name": "Rectangle 3",
+                "bbox": {
+                  "x": 40,
+                  "y": 3476,
+                  "width": 517,
+                  "height": 651
+                }
+              },
+              {
+                "id": "477:1348",
+                "type": "RECTANGLE",
+                "name": "Rectangle 4",
+                "bbox": {
+                  "x": 1204,
+                  "y": 3296,
+                  "width": 396,
+                  "height": 396
+                }
+              },
+              {
+                "id": "477:1349",
+                "type": "TEXT",
+                "name": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum.",
+                "bbox": {
+                  "x": 816,
+                  "y": 4001,
+                  "width": 485,
+                  "height": 118
+                },
+                "characters": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum."
+              },
+              {
+                "id": "477:1358",
+                "type": "TEXT",
+                "name": "the guild collection",
+                "bbox": {
+                  "x": 816,
+                  "y": 3939,
+                  "width": 485,
+                  "height": 30
+                },
+                "characters": "the guild collection"
+              }
+            ]
+          },
+          {
+            "id": "477:1105",
+            "type": "GROUP",
+            "name": "Group 270990182",
+            "bbox": {
+              "x": -1,
+              "y": 5266,
+              "width": 1820,
+              "height": 4677.53
+            },
+            "children": [
+              {
+                "id": "477:1106",
+                "type": "GROUP",
+                "name": "Group 270990026",
+                "bbox": {
+                  "x": 0,
+                  "y": 7070.53,
+                  "width": 1600,
+                  "height": 1195
+                },
+                "children": [
+                  {
+                    "id": "477:1107",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 553",
+                    "bbox": {
+                      "x": 0,
+                      "y": 7070.53,
+                      "width": 1600,
+                      "height": 1195
+                    }
+                  },
+                  {
+                    "id": "477:1108",
+                    "type": "GROUP",
+                    "name": "Group 270990023",
+                    "bbox": {
+                      "x": 323,
+                      "y": 7264.53,
+                      "width": 955,
+                      "height": 776
+                    },
+                    "childCount": 16
+                  }
+                ]
+              },
+              {
+                "id": "477:1167",
+                "type": "GROUP",
+                "name": "Group 270990037",
+                "bbox": {
+                  "x": -1,
+                  "y": 8265.53,
+                  "width": 1601,
+                  "height": 1678
+                },
+                "children": [
+                  {
+                    "id": "477:1168",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 530",
+                    "bbox": {
+                      "x": -1,
+                      "y": 8265.53,
+                      "width": 1601,
+                      "height": 1678
+                    }
+                  },
+                  {
+                    "id": "477:1169",
+                    "type": "GROUP",
+                    "name": "Group 270990038",
+                    "bbox": {
+                      "x": 723,
+                      "y": 9872.53,
+                      "width": 152.45,
+                      "height": 31.3
+                    },
+                    "childCount": 16
+                  },
+                  {
+                    "id": "477:1186",
+                    "type": "TEXT",
+                    "name": "Earn Marriott Bonvoy® Points on Every Stay",
+                    "bbox": {
+                      "x": 596.61,
+                      "y": 9020.53,
+                      "width": 414,
+                      "height": 14
+                    },
+                    "characters": "Earn Marriott Bonvoy® Points on Every Stay"
+                  },
+                  {
+                    "id": "477:1187",
+                    "type": "LINE",
+                    "name": "Line 4",
+                    "bbox": {
+                      "x": 800,
+                      "y": 8485.53,
+                      "width": 0,
+                      "height": 426
+                    }
+                  },
+                  {
+                    "id": "477:1188",
+                    "type": "GROUP",
+                    "name": "Group 270990031",
+                    "bbox": {
+                      "x": 205,
+                      "y": 8603.53,
+                      "width": 392,
+                      "height": 191
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "477:1194",
+                    "type": "GROUP",
+                    "name": "Group 270990030",
+                    "bbox": {
+                      "x": 924,
+                      "y": 8603.53,
+                      "width": 551,
+                      "height": 191
+                    },
+                    "childCount": 4
+                  },
+                  {
+                    "id": "477:1201",
+                    "type": "FRAME",
+                    "name": "Frame 427318623",
+                    "bbox": {
+                      "x": 40,
+                      "y": 9443.53,
+                      "width": 1520,
+                      "height": 250
+                    },
+                    "childCount": 5
+                  },
+                  {
+                    "id": "477:1243",
+                    "type": "GROUP",
+                    "name": "Group 270990036",
+                    "bbox": {
+                      "x": 716,
+                      "y": 8946.53,
+                      "width": 167,
+                      "height": 48.09
+                    },
+                    "childCount": 1
+                  },
+                  {
+                    "id": "477:1262",
+                    "type": "TEXT",
+                    "name": "copyright © 2026 the guild hotel",
+                    "bbox": {
+                      "x": 40,
+                      "y": 9889.53,
+                      "width": 356,
+                      "height": 14
+                    },
+                    "characters": "copyright © 2026 the guild hotel"
+                  },
+                  {
+                    "id": "477:1263",
+                    "type": "TEXT",
+                    "name": "brand & website by Studio circa",
+                    "bbox": {
+                      "x": 1283,
+                      "y": 9889.53,
+                      "width": 277,
+                      "height": 14
+                    },
+                    "characters": "brand & website by Studio circa"
+                  }
+                ]
+              },
+              {
+                "id": "487:2078",
+                "type": "FRAME",
+                "name": "Frame 427318677",
+                "bbox": {
+                  "x": 0,
+                  "y": 5266,
+                  "width": 1819,
+                  "height": 1865
+                },
+                "children": [
+                  {
+                    "id": "477:1264",
+                    "type": "GROUP",
+                    "name": "Group 270990178",
+                    "bbox": {
+                      "x": 0,
+                      "y": 5266,
+                      "width": 1819,
+                      "height": 965
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "477:1141",
+                    "type": "GROUP",
+                    "name": "Group 270990181",
+                    "bbox": {
+                      "x": 0,
+                      "y": 6231,
+                      "width": 1601,
+                      "height": 900
+                    },
+                    "childCount": 5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "477:1283",
+            "type": "INSTANCE",
+            "name": "guild-nav-full-dark",
+            "bbox": {
+              "x": 40,
+              "y": 26,
+              "width": 1520,
+              "height": 56
+            },
+            "manual": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "477:1392",
+      "name": "ARTS-ARTIST",
+      "kind": "side",
+      "width": 1600,
+      "height": 900,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/477-1392.png",
+      "status": "ok",
+      "tree": {
+        "id": "477:1392",
+        "type": "FRAME",
+        "name": "ARTS-ARTIST",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 900
+        },
+        "children": [
+          {
+            "id": "477:1393",
+            "type": "RECTANGLE",
+            "name": "Rectangle 1",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 816,
+              "height": 900
+            }
+          },
+          {
+            "id": "477:1394",
+            "type": "RECTANGLE",
+            "name": "Rectangle 2",
+            "bbox": {
+              "x": 71,
+              "y": 52,
+              "width": 681,
+              "height": 796
+            }
+          },
+          {
+            "id": "477:1395",
+            "type": "GROUP",
+            "name": "Group 270990203",
+            "bbox": {
+              "x": 913,
+              "y": 38,
+              "width": 61,
+              "height": 19
+            },
+            "children": [
+              {
+                "id": "477:1396",
+                "type": "TEXT",
+                "name": "back",
+                "bbox": {
+                  "x": 930,
+                  "y": 38,
+                  "width": 44,
+                  "height": 19
+                },
+                "characters": "back"
+              },
+              {
+                "id": "477:1397",
+                "type": "GROUP",
+                "name": "Group 270990121",
+                "bbox": {
+                  "x": 913,
+                  "y": 44,
+                  "width": 11,
+                  "height": 11
+                },
+                "children": [
+                  {
+                    "id": "477:1398",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 913,
+                      "y": 49.5,
+                      "width": 11,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "477:1399",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 913,
+                      "y": 44,
+                      "width": 5.5,
+                      "height": 11
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "477:1400",
+            "type": "TEXT",
+            "name": "Eva Struble is a San Diego-based artist whose work examines landscape through social, environmental, and personal histories. Her practice explores human-altered environments, regional botany, and the ways nature and human intervention continually reshape one another.",
+            "bbox": {
+              "x": 913,
+              "y": 730,
+              "width": 534,
+              "height": 118
+            },
+            "characters": "Eva Struble is a San Diego-based artist whose work examines landscape through social, environmental, and personal histories. Her practice explores human-altered environments, regional botany, and the ways nature and human intervention continually reshape one another."
+          },
+          {
+            "id": "477:1403",
+            "type": "TEXT",
+            "name": "eva struble",
+            "bbox": {
+              "x": 913,
+              "y": 635,
+              "width": 518,
+              "height": 30
+            },
+            "characters": "eva struble"
+          }
+        ]
+      }
+    },
+    {
+      "id": "477:1352",
+      "name": "ARTS-MODAL",
+      "kind": "side",
+      "width": 1600,
+      "height": 900,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/477-1352.png",
+      "status": "ok",
+      "tree": {
+        "id": "477:1352",
+        "type": "FRAME",
+        "name": "ARTS-MODAL",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 900
+        },
+        "children": [
+          {
+            "id": "477:1353",
+            "type": "RECTANGLE",
+            "name": "Rectangle 1",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 816,
+              "height": 900
+            }
+          },
+          {
+            "id": "477:1370",
+            "type": "RECTANGLE",
+            "name": "Rectangle 2",
+            "bbox": {
+              "x": 71,
+              "y": 52,
+              "width": 681,
+              "height": 796
+            }
+          },
+          {
+            "id": "477:1383",
+            "type": "GROUP",
+            "name": "Group 270990203",
+            "bbox": {
+              "x": 913,
+              "y": 38,
+              "width": 61,
+              "height": 19
+            },
+            "children": [
+              {
+                "id": "477:1365",
+                "type": "TEXT",
+                "name": "back",
+                "bbox": {
+                  "x": 930,
+                  "y": 38,
+                  "width": 44,
+                  "height": 19
+                },
+                "characters": "back"
+              },
+              {
+                "id": "477:1366",
+                "type": "GROUP",
+                "name": "Group 270990121",
+                "bbox": {
+                  "x": 913,
+                  "y": 44,
+                  "width": 11,
+                  "height": 11
+                },
+                "children": [
+                  {
+                    "id": "477:1367",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 913,
+                      "y": 49.5,
+                      "width": 11,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "477:1368",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 913,
+                      "y": 44,
+                      "width": 5.5,
+                      "height": 11
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "477:1356",
+            "type": "TEXT",
+            "name": "Eva’s work unfolds through layered color, texture, and abstraction, conjuring the atmospheric qualities of a coastal landscape without settling into a singular representation of place. The work speaks to the deep relationship between landscape and the daily life of Southern California, where the natural environment is not simply a backdrop, but integral of how the region is experienced, remembered, and understood.",
+            "bbox": {
+              "x": 913,
+              "y": 678,
+              "width": 550,
+              "height": 170
+            },
+            "characters": "Eva’s work unfolds through layered color, texture, and abstraction, conjuring the atmospheric qualities of a coastal landscape without settling into a singular representation of place. The work speaks to the deep relationship between landscape and the daily life of Southern California, where the natural environment is not simply a backdrop, but integral of how the region is experienced, remembered, and understood."
+          },
+          {
+            "id": "477:1390",
+            "type": "GROUP",
+            "name": "Group 270990204",
+            "bbox": {
+              "x": 913,
+              "y": 521,
+              "width": 615,
+              "height": 92
+            },
+            "children": [
+              {
+                "id": "477:1355",
+                "type": "TEXT",
+                "name": "by eva struble",
+                "bbox": {
+                  "x": 913,
+                  "y": 572,
+                  "width": 137,
+                  "height": 19
+                },
+                "characters": "by eva struble"
+              },
+              {
+                "id": "477:1372",
+                "type": "TEXT",
+                "name": "‘oceano’",
+                "bbox": {
+                  "x": 913,
+                  "y": 521,
+                  "width": 518,
+                  "height": 30
+                },
+                "characters": "‘oceano’"
+              },
+              {
+                "id": "477:1378",
+                "type": "TEXT",
+                "name": "2024 | 48 x 60 in Oil and acrylic on canvas",
+                "bbox": {
+                  "x": 1172,
+                  "y": 575,
+                  "width": 356,
+                  "height": 38
+                },
+                "characters": "2024 | 48 x 60 in\nOil and acrylic on canvas"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "animationNotes": [
+    {
+      "id": "477:1284",
+      "name": "Gallery-Animation",
+      "texts": [
+        "one of these 2 gallery types - we will want a small description of the piece when clicked - so it will open up a modal/transition to show the details"
+      ],
+      "sectionIndex": 6
+    }
+  ]
+}

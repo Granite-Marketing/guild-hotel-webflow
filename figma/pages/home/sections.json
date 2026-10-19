@@ -1,0 +1,388 @@
+{
+  "pageSlug": "home",
+  "frames": [
+    {
+      "id": "433:559",
+      "name": "HOME",
+      "kind": "page",
+      "width": 1600,
+      "height": 21647,
+      "scale": 0.75,
+      "renderScale": 0.75,
+      "render": "figma/.cache/renders/433-559.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "the-bold-handsome-heart-of-san",
+      "dir": "sections/01-the-bold-handsome-heart-of-san",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 1014.5,
+      "nodeIds": [
+        "433:570",
+        "433:903",
+        "433:571",
+        "433:572",
+        "433:5720"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-the-bold-handsome-heart-of-san/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "a-century-of-stories-meets-a",
+      "dir": "sections/02-a-century-of-stories-meets-a",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 1129,
+      "y1": 1786,
+      "cropY0": 1014.5,
+      "cropY1": 1922,
+      "nodeIds": [
+        "433:4759",
+        "433:787",
+        "433:607"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/02-a-century-of-stories-meets-a/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "west-coast-hospitality-since-1924",
+      "dir": "sections/03-west-coast-hospitality-since-1924",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 2058,
+      "y1": 3045,
+      "cropY0": 1922,
+      "cropY1": 3202,
+      "nodeIds": [
+        "433:5740",
+        "433:5743",
+        "433:5742",
+        "433:5741",
+        "433:5727"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-west-coast-hospitality-since-1924/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "an-unexpected-resort-dining-experience",
+      "dir": "sections/04-an-unexpected-resort-dining-experience",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 3359,
+      "y1": 4185,
+      "cropY0": 3202,
+      "cropY1": 4205,
+      "nodeIds": [
+        "433:5815",
+        "433:5753"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-an-unexpected-resort-dining-experience/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "dress-up-for-the-rich-worldly",
+      "dir": "sections/05-dress-up-for-the-rich-worldly",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 4225,
+      "y1": 5213,
+      "cropY0": 4205,
+      "cropY1": 5231,
+      "nodeIds": [
+        "433:5754"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-dress-up-for-the-rich-worldly/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "cocktail-classics-and-drinks-for-connaisseurs",
+      "dir": "sections/06-cocktail-classics-and-drinks-for-connaisseurs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 5249,
+      "y1": 6237,
+      "cropY0": 5231,
+      "cropY1": 6255,
+      "nodeIds": [
+        "433:5769"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-cocktail-classics-and-drinks-for-connaisseurs/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "our-new-pool-serves-up-san",
+      "dir": "sections/07-our-new-pool-serves-up-san",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 6273,
+      "y1": 7261,
+      "cropY0": 6255,
+      "cropY1": 7279,
+      "nodeIds": [
+        "433:5787"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-our-new-pool-serves-up-san/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "lobby-terrace",
+      "dir": "sections/08-lobby-terrace",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 7297,
+      "y1": 8285,
+      "cropY0": 7279,
+      "cropY1": 8305,
+      "nodeIds": [
+        "433:5796"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/08-lobby-terrace/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "solana-coffee",
+      "dir": "sections/09-solana-coffee",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 8325,
+      "y1": 9313,
+      "cropY0": 8305,
+      "cropY1": 9433,
+      "nodeIds": [
+        "433:5804"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/09-solana-coffee/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "wellness",
+      "dir": "sections/10-wellness",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 9553,
+      "y1": 10522,
+      "cropY0": 9433,
+      "cropY1": 10636,
+      "nodeIds": [
+        "433:7355"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/10-wellness/section.webp"
+    },
+    {
+      "index": 11,
+      "slug": "rooms-suites",
+      "dir": "sections/11-rooms-suites",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 10750,
+      "y1": 12329,
+      "cropY0": 10636,
+      "cropY1": 12449,
+      "nodeIds": [
+        "433:7340"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/11-rooms-suites/section.webp"
+    },
+    {
+      "index": 12,
+      "slug": "the-neighborhood",
+      "dir": "sections/12-the-neighborhood",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 12569,
+      "y1": 13664.81,
+      "cropY0": 12449,
+      "cropY1": 13784.91,
+      "nodeIds": [
+        "433:6591"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/12-the-neighborhood/section.webp"
+    },
+    {
+      "index": 13,
+      "slug": "retail",
+      "dir": "sections/13-retail",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 13905,
+      "y1": 14805,
+      "cropY0": 13784.91,
+      "cropY1": 14925,
+      "nodeIds": [
+        "433:7461"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/13-retail/section.webp"
+    },
+    {
+      "index": 14,
+      "slug": "art-stories",
+      "dir": "sections/14-art-stories",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 15045,
+      "y1": 16854,
+      "cropY0": 14925,
+      "cropY1": 16874,
+      "nodeIds": [
+        "433:7464"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/14-art-stories/section.webp"
+    },
+    {
+      "index": 15,
+      "slug": "meetings-events",
+      "dir": "sections/15-meetings-events",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 16894,
+      "y1": 17794,
+      "cropY0": 16874,
+      "cropY1": 17794,
+      "nodeIds": [
+        "442:7504"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/15-meetings-events/section.webp"
+    },
+    {
+      "index": 16,
+      "slug": "offers-packages",
+      "dir": "sections/16-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 17794,
+      "y1": 18774,
+      "cropY0": 17794,
+      "cropY1": 18774,
+      "nodeIds": [
+        "487:2076"
+      ],
+      "backgroundIds": [
+        "487:2077"
+      ],
+      "crop": "sections/16-offers-packages/section.webp"
+    },
+    {
+      "index": 17,
+      "slug": "faqs",
+      "dir": "sections/17-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 18774,
+      "y1": 19969,
+      "cropY0": 18774,
+      "cropY1": 19969,
+      "nodeIds": [
+        "433:721"
+      ],
+      "backgroundIds": [
+        "487:2077"
+      ],
+      "crop": "sections/17-faqs/section.webp"
+    },
+    {
+      "index": 18,
+      "slug": "book-your-escape",
+      "dir": "sections/18-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 19969,
+      "y1": 20947,
+      "cropY0": 19969,
+      "cropY1": 20947,
+      "nodeIds": [
+        "433:808",
+        "433:809",
+        "433:815",
+        "433:864",
+        "433:807"
+      ],
+      "backgroundIds": [
+        "433:788",
+        "433:789"
+      ],
+      "crop": "sections/18-book-your-escape/section.webp"
+    },
+    {
+      "index": 19,
+      "slug": "the-hotel",
+      "dir": "sections/19-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "433:559",
+      "frameName": "HOME",
+      "y0": 20947,
+      "y1": 21647,
+      "cropY0": 20947,
+      "cropY1": 21647,
+      "nodeIds": [
+        "433:822",
+        "433:790",
+        "433:883",
+        "433:884"
+      ],
+      "backgroundIds": [
+        "433:788",
+        "433:789"
+      ],
+      "crop": "sections/19-the-hotel/section.webp"
+    }
+  ]
+}

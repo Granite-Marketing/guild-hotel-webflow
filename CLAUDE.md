@@ -16,6 +16,7 @@ Create clients through `pnpm create:client`; never fork this private factory as 
 ## Working rules
 
 - **CLAUDE.md is a router.** Keep this file to rules and pointers; detailed setup, DOM contracts and gotchas live in `docs/reference/` and `docs/solutions/`, linked from here.
+- **One class family per component (hard rule).** Similar blocks share one `section_<component>` family; differences are `is-` modifiers or utility classes. Check `docs/figma/components.md` and the live styles before creating a family; see `build-component` Step 0.25. Five similar blocks with five unique class families is a failed build.
 - **Reuse styles before creating them.** Before building, read the site's existing styles (`get_styles` with all styles) and reuse generic classes for shared patterns (dividers, page heroes, section headers). Name new shared classes generically, not after the page they first appear on.
 - **Record learnings.** When a project hits a reusable gotcha, write it to that project's `docs/solutions/` with frontmatter, then back-port it here once a second project would benefit.
 
@@ -128,6 +129,8 @@ Images, icons, and logos are exported from Figma and uploaded to Webflow via RES
 - `WEBFLOW_API_TOKEN` — Site or workspace API token
 - `WEBFLOW_SITE_ID` — Found in Site Settings > General
 - `ANTHROPIC_API_KEY` — Alt-text generation (paid; scripts print a dollar estimate and need `--yes` before submitting)
+
+**Start here:** `docs/figma/HANDOVER.md` is the orchestrator runbook; a fresh session told "Run docs/figma/HANDOVER.md" drives the whole build. **Figma snapshot (this project):** design data is cached in `figma/` (see `figma/README.md`); build sessions read it and never call `api.figma.com`. Build order and lanes: `docs/figma/build-queue.md`.
 
 Figma REST calls fail with 403 when the token holder has view-only access, and the Figma MCP has plan-based call limits. Check access before starting: `docs/reference/figma-access.md`.
 

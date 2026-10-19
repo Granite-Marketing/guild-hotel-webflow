@@ -1,0 +1,195 @@
+{
+  "pageSlug": "wellness-collection",
+  "index": 7,
+  "slug": "offers-packages",
+  "laneHint": null,
+  "frameId": "266:3630",
+  "bbox": {
+    "x": 0,
+    "y": 6700,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 6680,
+    "y1": 7600
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "284:3993",
+      "characters": "offers & packages",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 148,
+        "y": 62.36,
+        "width": 506,
+        "height": 22
+      }
+    },
+    {
+      "id": "284:3995",
+      "characters": "wellness staycation",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 168.5,
+        "y": 399,
+        "width": 465,
+        "height": 40
+      }
+    },
+    {
+      "id": "284:3996",
+      "characters": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices massa",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 148,
+        "y": 471,
+        "width": 506,
+        "height": 14
+      }
+    },
+    {
+      "id": "284:3999",
+      "characters": "discover more",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#4A1217",
+      "bbox": {
+        "x": 329,
+        "y": 526,
+        "width": 144,
+        "height": 16
+      }
+    },
+    {
+      "id": "284:4010",
+      "characters": "/",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 394.5,
+        "y": 870,
+        "width": 12,
+        "height": 16
+      }
+    },
+    {
+      "id": "284:4008",
+      "characters": "02",
+      "styleName": "Sackers Heavy Gothic / Label / Caption",
+      "styleId": "177:62",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 15,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 356.5,
+        "y": 870.5,
+        "width": 25,
+        "height": 15
+      }
+    },
+    {
+      "id": "284:4011",
+      "characters": "05",
+      "styleName": "Sackers Heavy Gothic / Label / Caption",
+      "styleId": "177:62",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 15,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 419.5,
+        "y": 870.5,
+        "width": 25,
+        "height": 15
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 7
+    },
+    {
+      "hex": "#4A1217",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "284:4017",
+      "type": "GROUP",
+      "name": "Group 270990057",
+      "bbox": {
+        "x": 0,
+        "y": 20,
+        "width": 1601,
+        "height": 900
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

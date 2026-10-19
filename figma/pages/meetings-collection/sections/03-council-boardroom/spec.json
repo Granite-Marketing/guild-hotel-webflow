@@ -1,0 +1,131 @@
+{
+  "pageSlug": "meetings-collection",
+  "index": 3,
+  "slug": "council-boardroom",
+  "laneHint": null,
+  "frameId": "288:4019",
+  "bbox": {
+    "x": 0,
+    "y": 2588,
+    "width": 1600,
+    "height": 988
+  },
+  "crop": {
+    "y0": 2568,
+    "y1": 3596
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "288:4048",
+      "characters": "council boardroom",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 80,
+      "fontWeight": 400,
+      "lineHeightPx": 80,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 255,
+        "y": 360,
+        "width": 1091,
+        "height": 80
+      }
+    },
+    {
+      "id": "288:4049",
+      "characters": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 22,
+      "fontWeight": 400,
+      "lineHeightPx": 35.2,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 492,
+        "y": 514,
+        "width": 614,
+        "height": 35
+      }
+    },
+    {
+      "id": "288:4052",
+      "characters": "DISCOVER MORE",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 727,
+        "y": 600,
+        "width": 144,
+        "height": 16
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#484848",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "363:397",
+      "type": "GROUP",
+      "name": "Group 270990139",
+      "bbox": {
+        "x": 40,
+        "y": 20,
+        "width": 1520,
+        "height": 988
+      }
+    },
+    {
+      "id": "296:5083",
+      "type": "RECTANGLE",
+      "name": "Rectangle 576",
+      "bbox": {
+        "x": 101,
+        "y": 668,
+        "width": 255,
+        "height": 255
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

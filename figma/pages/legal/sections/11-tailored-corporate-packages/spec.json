@@ -1,0 +1,240 @@
+{
+  "pageSlug": "legal",
+  "index": 11,
+  "slug": "tailored-corporate-packages",
+  "laneHint": null,
+  "frameId": "318:836",
+  "bbox": {
+    "x": 0,
+    "y": 12945,
+    "width": 1600,
+    "height": 1002
+  },
+  "crop": {
+    "y0": 12856,
+    "y1": 14072.5
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "359:1553",
+      "characters": "tailored corporate packages",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 32,
+      "fontWeight": 400,
+      "lineHeightPx": 38.4,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 510,
+        "y": 89,
+        "width": 580,
+        "height": 38
+      }
+    },
+    {
+      "id": "359:1565",
+      "characters": "Executive Floor Buyout",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 558,
+        "y": 775,
+        "width": 485,
+        "height": 22
+      }
+    },
+    {
+      "id": "359:1562",
+      "characters": "Entire floor reservation for full confidentiality\nOptional private outdoor terrace\nEnhanced security and exclusive guest access\nCustom space layout and meeting room allocation",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 558,
+        "y": 819,
+        "width": 485,
+        "height": 92
+      }
+    },
+    {
+      "id": "359:1564",
+      "characters": "War Room Setup",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 955,
+        "width": 485,
+        "height": 22
+      }
+    },
+    {
+      "id": "359:1566",
+      "characters": "Extended Stay Legal Comfort Package",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 1075,
+        "y": 955,
+        "width": 485,
+        "height": 22
+      }
+    },
+    {
+      "id": "359:1561",
+      "characters": "Dedicated meeting rooms or suites for legal teams\nHigh-speed internet and full AV capabilities\nOn-demand printing, copying, and secure storage\nRound-the-clock access to working areas",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 999,
+        "width": 485,
+        "height": 92
+      }
+    },
+    {
+      "id": "359:1563",
+      "characters": "Custom in-room amenities for long trials\nDaily housekeeping or modified schedules\nWellness options to support mental clarity and team morale\nDiscounted dining packages and meal coordination",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 1075,
+        "y": 999,
+        "width": 495,
+        "height": 92
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 7
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "359:1553",
+      "type": "TEXT",
+      "name": "tailored corporate packages",
+      "bbox": {
+        "x": 510,
+        "y": 89,
+        "width": 580,
+        "height": 38
+      }
+    },
+    {
+      "id": "359:1648",
+      "type": "GROUP",
+      "name": "Group 270990127",
+      "bbox": {
+        "x": 558,
+        "y": 183,
+        "width": 485,
+        "height": 728
+      }
+    },
+    {
+      "id": "359:1647",
+      "type": "GROUP",
+      "name": "Group 270990126",
+      "bbox": {
+        "x": 1075,
+        "y": 363,
+        "width": 495,
+        "height": 728
+      }
+    },
+    {
+      "id": "359:1649",
+      "type": "GROUP",
+      "name": "Group 270990128",
+      "bbox": {
+        "x": 40,
+        "y": 363,
+        "width": 485,
+        "height": 728
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "319:1357",
+      "type": "RECTANGLE",
+      "name": "Rectangle 583",
+      "bbox": {
+        "x": 1,
+        "y": -5657,
+        "width": 1599,
+        "height": 11370
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

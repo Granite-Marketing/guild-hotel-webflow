@@ -1,0 +1,800 @@
+{
+  "pageSlug": "blog-collection",
+  "frames": [
+    {
+      "id": "2034:1180",
+      "name": "BLOG-COLLECTION",
+      "kind": "page",
+      "width": 1600,
+      "height": 10207,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/2034-1180.png",
+      "status": "ok",
+      "tree": {
+        "id": "2034:1180",
+        "type": "FRAME",
+        "name": "BLOG-COLLECTION",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 10207
+        },
+        "children": [
+          {
+            "id": "2034:1181",
+            "type": "RECTANGLE",
+            "name": "Rectangle 1",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 900
+            }
+          },
+          {
+            "id": "2034:1184",
+            "type": "TEXT",
+            "name": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+            "bbox": {
+              "x": 503,
+              "y": 818,
+              "width": 595,
+              "height": 35
+            },
+            "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non."
+          },
+          {
+            "id": "2034:1185",
+            "type": "TEXT",
+            "name": "blog",
+            "bbox": {
+              "x": 746,
+              "y": 740,
+              "width": 109,
+              "height": 40
+            },
+            "characters": "blog"
+          },
+          {
+            "id": "2034:1186",
+            "type": "TEXT",
+            "name": "A Landmark Reimagined",
+            "bbox": {
+              "x": 533,
+              "y": 14198,
+              "width": 535,
+              "height": 40
+            },
+            "characters": "A Landmark Reimagined"
+          },
+          {
+            "id": "2034:1187",
+            "type": "RECTANGLE",
+            "name": "Rectangle 583",
+            "bbox": {
+              "x": 1,
+              "y": 7199,
+              "width": 1599,
+              "height": 11370
+            }
+          },
+          {
+            "id": "2034:1188",
+            "type": "TEXT",
+            "name": "What’s on in San Diego",
+            "bbox": {
+              "x": 564.17,
+              "y": 1060.43,
+              "width": 470.93,
+              "height": 248.2
+            },
+            "characters": "What’s on\nin San Diego"
+          },
+          {
+            "id": "2034:1189",
+            "type": "TEXT",
+            "name": "dining",
+            "bbox": {
+              "x": 169,
+              "y": 1568,
+              "width": 109,
+              "height": 30
+            },
+            "characters": "dining"
+          },
+          {
+            "id": "2034:1190",
+            "type": "TEXT",
+            "name": "culture",
+            "bbox": {
+              "x": 816,
+              "y": 3866,
+              "width": 139,
+              "height": 30
+            },
+            "characters": "culture"
+          },
+          {
+            "id": "2034:1191",
+            "type": "TEXT",
+            "name": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+            "bbox": {
+              "x": 470,
+              "y": 1386,
+              "width": 660,
+              "height": 40
+            },
+            "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non."
+          },
+          {
+            "id": "2034:1192",
+            "type": "GROUP",
+            "name": "Group 270990253",
+            "bbox": {
+              "x": 169,
+              "y": 1613,
+              "width": 744,
+              "height": 626
+            },
+            "children": [
+              {
+                "id": "2034:1193",
+                "type": "RECTANGLE",
+                "name": "Rectangle 596",
+                "bbox": {
+                  "x": 169,
+                  "y": 1613,
+                  "width": 744,
+                  "height": 524
+                }
+              },
+              {
+                "id": "2034:1194",
+                "type": "GROUP",
+                "name": "Group 270990252",
+                "bbox": {
+                  "x": 169,
+                  "y": 2161,
+                  "width": 703,
+                  "height": 78
+                },
+                "children": [
+                  {
+                    "id": "2034:1195",
+                    "type": "TEXT",
+                    "name": "The best San Diego hotels for every kind of traveler",
+                    "bbox": {
+                      "x": 169,
+                      "y": 2161,
+                      "width": 703,
+                      "height": 22
+                    },
+                    "characters": "The best San Diego hotels for every kind of traveler"
+                  },
+                  {
+                    "id": "2034:1196",
+                    "type": "TEXT",
+                    "name": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio.",
+                    "bbox": {
+                      "x": 169,
+                      "y": 2199,
+                      "width": 647,
+                      "height": 40
+                    },
+                    "characters": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:1197",
+            "type": "GROUP",
+            "name": "Group 270990255",
+            "bbox": {
+              "x": 169,
+              "y": 3065,
+              "width": 744,
+              "height": 626
+            },
+            "children": [
+              {
+                "id": "2034:1198",
+                "type": "RECTANGLE",
+                "name": "Rectangle 596",
+                "bbox": {
+                  "x": 169,
+                  "y": 3065,
+                  "width": 744,
+                  "height": 524
+                }
+              },
+              {
+                "id": "2034:1199",
+                "type": "GROUP",
+                "name": "Group 270990252",
+                "bbox": {
+                  "x": 169,
+                  "y": 3613,
+                  "width": 703,
+                  "height": 78
+                },
+                "children": [
+                  {
+                    "id": "2034:1200",
+                    "type": "TEXT",
+                    "name": "The best San Diego hotels for every kind of traveler",
+                    "bbox": {
+                      "x": 169,
+                      "y": 3613,
+                      "width": 703,
+                      "height": 22
+                    },
+                    "characters": "The best San Diego hotels for every kind of traveler"
+                  },
+                  {
+                    "id": "2034:1201",
+                    "type": "TEXT",
+                    "name": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio.",
+                    "bbox": {
+                      "x": 169,
+                      "y": 3651,
+                      "width": 647,
+                      "height": 40
+                    },
+                    "characters": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:1202",
+            "type": "GROUP",
+            "name": "Group 270990257",
+            "bbox": {
+              "x": 169,
+              "y": 4654,
+              "width": 744,
+              "height": 626
+            },
+            "children": [
+              {
+                "id": "2034:1203",
+                "type": "RECTANGLE",
+                "name": "Rectangle 596",
+                "bbox": {
+                  "x": 169,
+                  "y": 4654,
+                  "width": 744,
+                  "height": 524
+                }
+              },
+              {
+                "id": "2034:1204",
+                "type": "GROUP",
+                "name": "Group 270990252",
+                "bbox": {
+                  "x": 169,
+                  "y": 5202,
+                  "width": 703,
+                  "height": 78
+                },
+                "children": [
+                  {
+                    "id": "2034:1205",
+                    "type": "TEXT",
+                    "name": "The best San Diego hotels for every kind of traveler",
+                    "bbox": {
+                      "x": 169,
+                      "y": 5202,
+                      "width": 703,
+                      "height": 22
+                    },
+                    "characters": "The best San Diego hotels for every kind of traveler"
+                  },
+                  {
+                    "id": "2034:1206",
+                    "type": "TEXT",
+                    "name": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio.",
+                    "bbox": {
+                      "x": 169,
+                      "y": 5240,
+                      "width": 647,
+                      "height": 40
+                    },
+                    "characters": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:1207",
+            "type": "GROUP",
+            "name": "Group 270990254",
+            "bbox": {
+              "x": 816,
+              "y": 2339,
+              "width": 744,
+              "height": 626
+            },
+            "children": [
+              {
+                "id": "2034:1208",
+                "type": "RECTANGLE",
+                "name": "Rectangle 596",
+                "bbox": {
+                  "x": 816,
+                  "y": 2339,
+                  "width": 744,
+                  "height": 524
+                }
+              },
+              {
+                "id": "2034:1209",
+                "type": "GROUP",
+                "name": "Group 270990252",
+                "bbox": {
+                  "x": 816,
+                  "y": 2887,
+                  "width": 703,
+                  "height": 78
+                },
+                "children": [
+                  {
+                    "id": "2034:1210",
+                    "type": "TEXT",
+                    "name": "The best San Diego hotels for every kind of traveler",
+                    "bbox": {
+                      "x": 816,
+                      "y": 2887,
+                      "width": 703,
+                      "height": 22
+                    },
+                    "characters": "The best San Diego hotels for every kind of traveler"
+                  },
+                  {
+                    "id": "2034:1211",
+                    "type": "TEXT",
+                    "name": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio.",
+                    "bbox": {
+                      "x": 816,
+                      "y": 2925,
+                      "width": 647,
+                      "height": 40
+                    },
+                    "characters": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:1212",
+            "type": "GROUP",
+            "name": "Group 270990256",
+            "bbox": {
+              "x": 816,
+              "y": 3928,
+              "width": 744,
+              "height": 626
+            },
+            "children": [
+              {
+                "id": "2034:1213",
+                "type": "RECTANGLE",
+                "name": "Rectangle 596",
+                "bbox": {
+                  "x": 816,
+                  "y": 3928,
+                  "width": 744,
+                  "height": 524
+                }
+              },
+              {
+                "id": "2034:1214",
+                "type": "GROUP",
+                "name": "Group 270990252",
+                "bbox": {
+                  "x": 816,
+                  "y": 4476,
+                  "width": 703,
+                  "height": 78
+                },
+                "children": [
+                  {
+                    "id": "2034:1215",
+                    "type": "TEXT",
+                    "name": "The best San Diego hotels for every kind of traveler",
+                    "bbox": {
+                      "x": 816,
+                      "y": 4476,
+                      "width": 703,
+                      "height": 22
+                    },
+                    "characters": "The best San Diego hotels for every kind of traveler"
+                  },
+                  {
+                    "id": "2034:1216",
+                    "type": "TEXT",
+                    "name": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio.",
+                    "bbox": {
+                      "x": 816,
+                      "y": 4514,
+                      "width": 647,
+                      "height": 40
+                    },
+                    "characters": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:1218",
+            "type": "GROUP",
+            "name": "Group 270990042",
+            "bbox": {
+              "x": 572,
+              "y": 661,
+              "width": 455.57,
+              "height": 881
+            },
+            "children": [
+              {
+                "id": "2034:1219",
+                "type": "RECTANGLE",
+                "name": "Rectangle 564",
+                "bbox": {
+                  "x": 821,
+                  "y": 661,
+                  "width": 51,
+                  "height": 825
+                }
+              },
+              {
+                "id": "2034:1220",
+                "type": "GROUP",
+                "name": "Group 270990041",
+                "bbox": {
+                  "x": 572,
+                  "y": 1486,
+                  "width": 455.57,
+                  "height": 56
+                },
+                "children": [
+                  {
+                    "id": "2034:1221",
+                    "type": "VECTOR",
+                    "name": "Vector 25",
+                    "bbox": {
+                      "x": 572,
+                      "y": 1486,
+                      "width": 455.57,
+                      "height": 56
+                    }
+                  },
+                  {
+                    "id": "2034:1222",
+                    "type": "GROUP",
+                    "name": "Group 270990040",
+                    "bbox": {
+                      "x": 608,
+                      "y": 1503,
+                      "width": 383,
+                      "height": 22
+                    },
+                    "childCount": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:1227",
+            "type": "GROUP",
+            "name": "Group 270990182",
+            "bbox": {
+              "x": -1,
+              "y": 5469,
+              "width": 1820,
+              "height": 4737.53
+            },
+            "children": [
+              {
+                "id": "2034:1228",
+                "type": "GROUP",
+                "name": "Group 270990026",
+                "bbox": {
+                  "x": 0,
+                  "y": 7333.53,
+                  "width": 1600,
+                  "height": 1195
+                },
+                "children": [
+                  {
+                    "id": "2034:1229",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 553",
+                    "bbox": {
+                      "x": 0,
+                      "y": 7333.53,
+                      "width": 1600,
+                      "height": 1195
+                    }
+                  },
+                  {
+                    "id": "2034:1230",
+                    "type": "GROUP",
+                    "name": "Group 270990023",
+                    "bbox": {
+                      "x": 323,
+                      "y": 7527.53,
+                      "width": 955,
+                      "height": 776
+                    },
+                    "childCount": 16
+                  }
+                ]
+              },
+              {
+                "id": "2034:1263",
+                "type": "GROUP",
+                "name": "Group 270990181",
+                "bbox": {
+                  "x": 0,
+                  "y": 5469,
+                  "width": 1601,
+                  "height": 900
+                },
+                "children": [
+                  {
+                    "id": "2034:1264",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 511",
+                    "bbox": {
+                      "x": 0,
+                      "y": 5469,
+                      "width": 801,
+                      "height": 900
+                    }
+                  },
+                  {
+                    "id": "2034:1265",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 530",
+                    "bbox": {
+                      "x": 801,
+                      "y": 5469,
+                      "width": 800,
+                      "height": 900
+                    }
+                  },
+                  {
+                    "id": "2034:1266",
+                    "type": "TEXT",
+                    "name": "offers & packages",
+                    "bbox": {
+                      "x": 148,
+                      "y": 5511.36,
+                      "width": 506,
+                      "height": 22
+                    },
+                    "characters": "offers & packages"
+                  },
+                  {
+                    "id": "2034:1267",
+                    "type": "GROUP",
+                    "name": "Group 270990022",
+                    "bbox": {
+                      "x": 148,
+                      "y": 5848,
+                      "width": 506,
+                      "height": 155
+                    },
+                    "childCount": 3
+                  },
+                  {
+                    "id": "2034:1273",
+                    "type": "GROUP",
+                    "name": "Group 270990024",
+                    "bbox": {
+                      "x": 309,
+                      "y": 6319,
+                      "width": 183,
+                      "height": 16
+                    },
+                    "childCount": 1
+                  }
+                ]
+              },
+              {
+                "id": "2034:1289",
+                "type": "GROUP",
+                "name": "Group 270990037",
+                "bbox": {
+                  "x": -1,
+                  "y": 8528.53,
+                  "width": 1601,
+                  "height": 1678
+                },
+                "children": [
+                  {
+                    "id": "2034:1290",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 530",
+                    "bbox": {
+                      "x": -1,
+                      "y": 8528.53,
+                      "width": 1601,
+                      "height": 1678
+                    }
+                  },
+                  {
+                    "id": "2034:1291",
+                    "type": "GROUP",
+                    "name": "Group 270990038",
+                    "bbox": {
+                      "x": 723,
+                      "y": 10135.53,
+                      "width": 152.45,
+                      "height": 31.3
+                    },
+                    "childCount": 16
+                  },
+                  {
+                    "id": "2034:1308",
+                    "type": "TEXT",
+                    "name": "Earn Marriott Bonvoy® Points on Every Stay",
+                    "bbox": {
+                      "x": 596.61,
+                      "y": 9283.53,
+                      "width": 414,
+                      "height": 14
+                    },
+                    "characters": "Earn Marriott Bonvoy® Points on Every Stay"
+                  },
+                  {
+                    "id": "2034:1309",
+                    "type": "LINE",
+                    "name": "Line 4",
+                    "bbox": {
+                      "x": 800,
+                      "y": 8748.53,
+                      "width": 0,
+                      "height": 426
+                    }
+                  },
+                  {
+                    "id": "2034:1310",
+                    "type": "GROUP",
+                    "name": "Group 270990031",
+                    "bbox": {
+                      "x": 205,
+                      "y": 8866.53,
+                      "width": 392,
+                      "height": 191
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:1316",
+                    "type": "GROUP",
+                    "name": "Group 270990030",
+                    "bbox": {
+                      "x": 924,
+                      "y": 8866.53,
+                      "width": 551,
+                      "height": 191
+                    },
+                    "childCount": 4
+                  },
+                  {
+                    "id": "2034:1323",
+                    "type": "FRAME",
+                    "name": "Frame 427318623",
+                    "bbox": {
+                      "x": 40,
+                      "y": 9706.53,
+                      "width": 1520,
+                      "height": 250
+                    },
+                    "childCount": 5
+                  },
+                  {
+                    "id": "2034:1365",
+                    "type": "GROUP",
+                    "name": "Group 270990036",
+                    "bbox": {
+                      "x": 716,
+                      "y": 9209.53,
+                      "width": 167,
+                      "height": 48.09
+                    },
+                    "childCount": 1
+                  },
+                  {
+                    "id": "2034:1384",
+                    "type": "TEXT",
+                    "name": "copyright © 2026 the guild hotel",
+                    "bbox": {
+                      "x": 40,
+                      "y": 10152.53,
+                      "width": 356,
+                      "height": 14
+                    },
+                    "characters": "copyright © 2026 the guild hotel"
+                  },
+                  {
+                    "id": "2034:1385",
+                    "type": "TEXT",
+                    "name": "brand & website by Studio circa",
+                    "bbox": {
+                      "x": 1283,
+                      "y": 10152.53,
+                      "width": 277,
+                      "height": 14
+                    },
+                    "characters": "brand & website by Studio circa"
+                  }
+                ]
+              },
+              {
+                "id": "2034:1386",
+                "type": "GROUP",
+                "name": "Group 270990178",
+                "bbox": {
+                  "x": 0,
+                  "y": 6369,
+                  "width": 1819,
+                  "height": 965
+                },
+                "children": [
+                  {
+                    "id": "2034:1387",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 595",
+                    "bbox": {
+                      "x": 0,
+                      "y": 6369,
+                      "width": 1600,
+                      "height": 965
+                    }
+                  },
+                  {
+                    "id": "2034:1388",
+                    "type": "GROUP",
+                    "name": "Group 270990177",
+                    "bbox": {
+                      "x": 40,
+                      "y": 6584,
+                      "width": 1779,
+                      "height": 536
+                    },
+                    "childCount": 10
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:1405",
+            "type": "INSTANCE",
+            "name": "guild-nav-full-dark",
+            "bbox": {
+              "x": 40,
+              "y": 26,
+              "width": 1520,
+              "height": 56
+            },
+            "manual": true
+          }
+        ]
+      }
+    }
+  ],
+  "animationNotes": []
+}

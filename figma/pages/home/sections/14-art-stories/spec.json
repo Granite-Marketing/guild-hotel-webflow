@@ -1,0 +1,184 @@
+{
+  "pageSlug": "home",
+  "index": 14,
+  "slug": "art-stories",
+  "laneHint": null,
+  "frameId": "433:559",
+  "bbox": {
+    "x": 0,
+    "y": 15045,
+    "width": 1600,
+    "height": 1809
+  },
+  "crop": {
+    "y0": 14925,
+    "y1": 16874
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "433:7412",
+      "characters": "art & stories",
+      "styleName": "Sackers Heavy Gothic/Display/Hero",
+      "styleId": "177:54",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 56,
+      "fontWeight": 400,
+      "lineHeightPx": 56,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 402,
+        "y": 120,
+        "width": 806,
+        "height": 56
+      }
+    },
+    {
+      "id": "433:7413",
+      "characters": "we’ve lived here for a century; let us show you around.",
+      "styleName": "Sackers Heavy Gothic / Label / Eyebrow",
+      "styleId": "177:56",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 26.1,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 402,
+        "y": 200,
+        "width": 806,
+        "height": 26
+      }
+    },
+    {
+      "id": "433:7416",
+      "characters": "DISCOVER MORE",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": null,
+      "bbox": {
+        "x": 733,
+        "y": 275,
+        "width": 144,
+        "height": 16
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#000000",
+      "opacity": 0.15,
+      "count": 1
+    },
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#FFFFFF",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "433:7417",
+      "name": "Vector 32",
+      "imageRef": "ea6bc516bd4f42b1e9858ed150c5031a47c59e38",
+      "bbox": {
+        "x": 40,
+        "y": 361,
+        "width": 1520,
+        "height": 1568
+      }
+    },
+    {
+      "nodeId": "433:7420",
+      "name": "Vector 33",
+      "imageRef": "91b1ad60c89e25e811754a2b7530e0ea8d7bfba1",
+      "bbox": {
+        "x": 489,
+        "y": 815,
+        "width": 328,
+        "height": 467
+      }
+    },
+    {
+      "nodeId": "433:7420",
+      "name": "Vector 33",
+      "imageRef": "329601abd0336770082f6f604d40ce84e20afc0a",
+      "bbox": {
+        "x": 489,
+        "y": 815,
+        "width": 328,
+        "height": 467
+      }
+    },
+    {
+      "nodeId": "433:7419",
+      "name": "Vector 35",
+      "imageRef": "a7732a1e6011fbfc551f4ba922600d4ccfc64540",
+      "bbox": {
+        "x": 632,
+        "y": 886,
+        "width": 328,
+        "height": 467
+      }
+    },
+    {
+      "nodeId": "433:7418",
+      "name": "Vector 36",
+      "imageRef": "a656817fa1ef70d4378ec951ac2d19747ca90545",
+      "bbox": {
+        "x": 738,
+        "y": 1008,
+        "width": 328,
+        "height": 467
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "433:7464",
+      "type": "GROUP",
+      "name": "Group 270990199",
+      "bbox": {
+        "x": 40,
+        "y": 120,
+        "width": 1520,
+        "height": 1809
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [
+    {
+      "id": "433:7472",
+      "name": "Home-Animation-3",
+      "texts": [
+        "image trail effect on hover. images linked to CMS collection on inside arts page - so click takes you anchor link to inside page (since CTA disappears on scroll above)"
+      ]
+    }
+  ],
+  "source": "page"
+}

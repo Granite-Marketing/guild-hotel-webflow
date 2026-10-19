@@ -1,0 +1,256 @@
+{
+  "pageSlug": "dining-zuma",
+  "index": 3,
+  "slug": "dress-code",
+  "laneHint": null,
+  "frameId": "266:2135",
+  "bbox": {
+    "x": 0,
+    "y": 2053,
+    "width": 1600,
+    "height": 352
+  },
+  "crop": {
+    "y0": 1970,
+    "y1": 2449
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "266:3267",
+      "characters": "dress code",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 83,
+        "width": 382,
+        "height": 22
+      }
+    },
+    {
+      "id": "266:3268",
+      "characters": "Nam in massa ut enim cursus sagittis ut vel ex. Aenean tincidunt sollicitudin sem, vitae molestie odio. Cras eget ullamcorper nisl. Nullam lorem eros, varius vel nulla sed, molestie efficitur sapien. Suspendisse vel ante cursus, lobortis ligula nec, varius erat.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 945,
+        "y": 95,
+        "width": 382,
+        "height": 144
+      }
+    },
+    {
+      "id": "266:3269",
+      "characters": "Upscale. Flip-flops/sandals, active wear and sweat-attire are not permitted.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 127,
+        "width": 382,
+        "height": 40
+      }
+    },
+    {
+      "id": "266:3274",
+      "characters": "Hours of Operation",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 213,
+        "width": 382,
+        "height": 22
+      }
+    },
+    {
+      "id": "266:3275",
+      "characters": "Monday–Thursday: 5:00 PM – 10:00 PM\nFriday–Saturday: 5:00 PM – 11:00 PM\nSunday: 5:00 PM – 10:00 PM",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 257,
+        "width": 382,
+        "height": 66
+      }
+    },
+    {
+      "id": "266:3276",
+      "characters": "browse the menu",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 369,
+        "width": 382,
+        "height": 22
+      }
+    },
+    {
+      "id": "266:3277",
+      "characters": "discover zuma",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 413,
+        "width": 382,
+        "height": 22
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 6
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "266:3267",
+      "type": "TEXT",
+      "name": "dress code",
+      "bbox": {
+        "x": 169,
+        "y": 83,
+        "width": 382,
+        "height": 22
+      }
+    },
+    {
+      "id": "266:3268",
+      "type": "TEXT",
+      "name": "Nam in massa ut enim cursus sagittis ut vel ex. Aenean tincidunt sollicitudin sem, vitae molestie odio. Cras eget ullamcorper nisl. Nullam lorem eros, varius vel nulla sed, molestie efficitur sapien. Suspendisse vel ante cursus, lobortis ligula nec, varius erat.",
+      "bbox": {
+        "x": 945,
+        "y": 95,
+        "width": 382,
+        "height": 144
+      }
+    },
+    {
+      "id": "266:3269",
+      "type": "TEXT",
+      "name": "Upscale. Flip-flops/sandals, active wear and sweat-attire are not permitted.",
+      "bbox": {
+        "x": 169,
+        "y": 127,
+        "width": 382,
+        "height": 40
+      }
+    },
+    {
+      "id": "266:3274",
+      "type": "TEXT",
+      "name": "Hours of Operation",
+      "bbox": {
+        "x": 169,
+        "y": 213,
+        "width": 382,
+        "height": 22
+      }
+    },
+    {
+      "id": "266:3275",
+      "type": "TEXT",
+      "name": "Monday–Thursday: 5:00 PM – 10:00 PM Friday–Saturday: 5:00 PM – 11:00 PM Sunday: 5:00 PM – 10:00 PM",
+      "bbox": {
+        "x": 169,
+        "y": 257,
+        "width": 382,
+        "height": 66
+      }
+    },
+    {
+      "id": "266:3276",
+      "type": "TEXT",
+      "name": "browse the menu",
+      "bbox": {
+        "x": 169,
+        "y": 369,
+        "width": 382,
+        "height": 22
+      }
+    },
+    {
+      "id": "266:3277",
+      "type": "TEXT",
+      "name": "discover zuma",
+      "bbox": {
+        "x": 169,
+        "y": 413,
+        "width": 382,
+        "height": 22
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

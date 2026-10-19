@@ -1,0 +1,355 @@
+{
+  "pageSlug": "guidelines",
+  "index": 6,
+  "slug": "photoshoot-request",
+  "laneHint": null,
+  "frameId": "309:282",
+  "bbox": {
+    "x": 0,
+    "y": 5747,
+    "width": 1600,
+    "height": 842.83
+  },
+  "crop": {
+    "y0": 5653,
+    "y1": 6589.92
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "309:700",
+      "characters": "Photoshoot Request",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 60,
+      "fontWeight": 400,
+      "lineHeightPx": 72,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 37.17,
+        "y": 94,
+        "width": 442.66,
+        "height": 128.42
+      }
+    },
+    {
+      "id": "309:704",
+      "characters": "contact information",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 144.21,
+        "width": 830,
+        "height": 29
+      }
+    },
+    {
+      "id": "309:771",
+      "characters": "First Name",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 222.21,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "309:786",
+      "characters": "Last Name",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1129,
+        "y": 222.21,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "309:762",
+      "characters": "Email Address",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 280,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "309:768",
+      "characters": "Phone Number",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1129,
+        "y": 280,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "309:759",
+      "characters": "Company or Organization",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 338,
+        "width": 830,
+        "height": 22
+      }
+    },
+    {
+      "id": "309:715",
+      "characters": "shoot details",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 473,
+        "width": 830,
+        "height": 29
+      }
+    },
+    {
+      "id": "309:756",
+      "characters": "Nature of the shoot",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 551,
+        "width": 830,
+        "height": 22
+      }
+    },
+    {
+      "id": "309:777",
+      "characters": "shoot Date",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 609.83,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "309:780",
+      "characters": "Number of people",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1129,
+        "y": 609.83,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "309:783",
+      "characters": "Start Time",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 668.83,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "309:765",
+      "characters": "End Time",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1129,
+        "y": 668.83,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "309:774",
+      "characters": "Additional Details",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 727.83,
+        "width": 830,
+        "height": 22
+      }
+    },
+    {
+      "id": "309:729",
+      "characters": "submit your request",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1305,
+        "y": 907.83,
+        "width": 196,
+        "height": 19
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 13
+    },
+    {
+      "hex": "#2B2927",
+      "opacity": 1,
+      "count": 13
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "377:411",
+      "type": "GROUP",
+      "name": "Group 270990140",
+      "bbox": {
+        "x": 37.17,
+        "y": 94,
+        "width": 1482.83,
+        "height": 842.83
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

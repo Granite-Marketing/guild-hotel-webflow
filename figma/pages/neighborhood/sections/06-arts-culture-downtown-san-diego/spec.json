@@ -1,0 +1,195 @@
+{
+  "pageSlug": "neighborhood",
+  "index": 6,
+  "slug": "arts-culture-downtown-san-diego",
+  "laneHint": null,
+  "frameId": "487:2080",
+  "bbox": {
+    "x": 0,
+    "y": 5808,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 5778,
+    "y1": 6841
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "487:2626",
+      "characters": "arts & Culture downtown san diego",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 209,
+        "y": 72.36,
+        "width": 383,
+        "height": 22
+      }
+    },
+    {
+      "id": "487:2629",
+      "characters": "the midway museum",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 237,
+        "y": 374,
+        "width": 326,
+        "height": 30
+      }
+    },
+    {
+      "id": "487:2630",
+      "characters": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 125,
+        "y": 444,
+        "width": 550,
+        "height": 66
+      }
+    },
+    {
+      "id": "487:2633",
+      "characters": "discover more",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#906E58",
+      "bbox": {
+        "x": 331,
+        "y": 566,
+        "width": 138,
+        "height": 19
+      }
+    },
+    {
+      "id": "487:2643",
+      "characters": "/",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 394.5,
+        "y": 882,
+        "width": 12,
+        "height": 16
+      }
+    },
+    {
+      "id": "487:2641",
+      "characters": "02",
+      "styleName": "Sackers Heavy Gothic / Label / Caption",
+      "styleId": "177:62",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 15,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 356.5,
+        "y": 882.5,
+        "width": 25,
+        "height": 15
+      }
+    },
+    {
+      "id": "487:2644",
+      "characters": "05",
+      "styleName": "Sackers Heavy Gothic / Label / Caption",
+      "styleId": "177:62",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 15,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 419.5,
+        "y": 882.5,
+        "width": 25,
+        "height": 15
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 7
+    },
+    {
+      "hex": "#906E58",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "487:2623",
+      "type": "GROUP",
+      "name": "Group 270990196",
+      "bbox": {
+        "x": 0,
+        "y": 30,
+        "width": 1600,
+        "height": 900
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

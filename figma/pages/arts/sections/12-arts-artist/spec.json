@@ -1,0 +1,166 @@
+{
+  "pageSlug": "arts",
+  "index": 12,
+  "slug": "arts-artist",
+  "laneHint": "manual",
+  "frameId": "477:1392",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 900
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "477:1396",
+      "characters": "back",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 930,
+        "y": 38,
+        "width": 44,
+        "height": 19
+      }
+    },
+    {
+      "id": "477:1403",
+      "characters": "eva struble",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 913,
+        "y": 635,
+        "width": 518,
+        "height": 30
+      }
+    },
+    {
+      "id": "477:1400",
+      "characters": "Eva Struble is a San Diego-based artist whose work examines landscape through social, environmental, and personal histories. Her practice explores human-altered environments, regional botany, and the ways nature and human intervention continually reshape one another.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 913,
+        "y": 730,
+        "width": 534,
+        "height": 118
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "477:1394",
+      "name": "Rectangle 2",
+      "imageRef": "7895a2b999123e125c4a8c071b9b9c332197e810",
+      "bbox": {
+        "x": 71,
+        "y": 52,
+        "width": 681,
+        "height": 796
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "477:1393",
+      "type": "RECTANGLE",
+      "name": "Rectangle 1",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 816,
+        "height": 900
+      }
+    },
+    {
+      "id": "477:1394",
+      "type": "RECTANGLE",
+      "name": "Rectangle 2",
+      "bbox": {
+        "x": 71,
+        "y": 52,
+        "width": 681,
+        "height": 796
+      }
+    },
+    {
+      "id": "477:1395",
+      "type": "GROUP",
+      "name": "Group 270990203",
+      "bbox": {
+        "x": 913,
+        "y": 38,
+        "width": 61,
+        "height": 19
+      }
+    },
+    {
+      "id": "477:1400",
+      "type": "TEXT",
+      "name": "Eva Struble is a San Diego-based artist whose work examines landscape through social, environmental, and personal histories. Her practice explores human-altered environments, regional botany, and the ways nature and human intervention continually reshape one another.",
+      "bbox": {
+        "x": 913,
+        "y": 730,
+        "width": 534,
+        "height": 118
+      }
+    },
+    {
+      "id": "477:1403",
+      "type": "TEXT",
+      "name": "eva struble",
+      "bbox": {
+        "x": 913,
+        "y": 635,
+        "width": 518,
+        "height": 30
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "side"
+}

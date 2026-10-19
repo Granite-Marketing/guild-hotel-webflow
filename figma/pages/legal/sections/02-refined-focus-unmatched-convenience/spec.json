@@ -1,0 +1,126 @@
+{
+  "pageSlug": "legal",
+  "index": 2,
+  "slug": "refined-focus-unmatched-convenience",
+  "laneHint": null,
+  "frameId": "318:836",
+  "bbox": {
+    "x": 0,
+    "y": 1142.26,
+    "width": 1600,
+    "height": 437.74
+  },
+  "crop": {
+    "y0": 1021.13,
+    "y1": 1746.5
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "318:977",
+      "characters": "Refined focus,\nunmatched convenience.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 80,
+      "fontWeight": 400,
+      "lineHeightPx": 96,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#000000",
+      "bbox": {
+        "x": 424.44,
+        "y": 121.13,
+        "width": 753.57,
+        "height": 284.79
+      }
+    },
+    {
+      "id": "318:841",
+      "characters": "Contemporary Japanese\nDining at The Guild Hotel",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 945,
+        "y": 279.87,
+        "width": 372,
+        "height": 58
+      }
+    },
+    {
+      "id": "318:976",
+      "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 506,
+        "y": 466.87,
+        "width": 588,
+        "height": 92
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "359:1568",
+      "type": "GROUP",
+      "name": "Group 270990125",
+      "bbox": {
+        "x": 424.44,
+        "y": 121.13,
+        "width": 753.57,
+        "height": 437.74
+      }
+    },
+    {
+      "id": "318:841",
+      "type": "TEXT",
+      "name": "Contemporary Japanese Dining at The Guild Hotel",
+      "bbox": {
+        "x": 945,
+        "y": 279.87,
+        "width": 372,
+        "height": 58
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

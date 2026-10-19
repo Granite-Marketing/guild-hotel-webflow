@@ -1,0 +1,240 @@
+{
+  "pageSlug": "dining-gardenterrace",
+  "frames": [
+    {
+      "id": "2034:1678",
+      "name": "DINING-GARDENTERRACE",
+      "kind": "page",
+      "width": 1600,
+      "height": 13131,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/2034-1678.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "garden-terrace",
+      "dir": "sections/01-garden-terrace",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1678",
+      "frameName": "DINING-GARDENTERRACE",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 900,
+      "nodeIds": [
+        "2034:1698",
+        "2034:1774",
+        "2034:1911",
+        "2034:1713",
+        "2034:1701"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-garden-terrace/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "contemporary-japanese-dining-at-the-guild",
+      "dir": "sections/02-contemporary-japanese-dining-at-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1678",
+      "frameName": "DINING-GARDENTERRACE",
+      "y0": 900,
+      "y1": 1887,
+      "cropY0": 900,
+      "cropY1": 1970,
+      "nodeIds": [
+        "2034:1697",
+        "2034:1736",
+        "2034:1712",
+        "2034:1702"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/02-contemporary-japanese-dining-at-the-guild/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "dress-code",
+      "dir": "sections/03-dress-code",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1678",
+      "frameName": "DINING-GARDENTERRACE",
+      "y0": 2053,
+      "y1": 2361,
+      "cropY0": 1970,
+      "cropY1": 2426.5,
+      "nodeIds": [
+        "2034:1705",
+        "2034:1709",
+        "2034:1710",
+        "2034:1706",
+        "2034:1711",
+        "2034:1707"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-dress-code/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "explore-the-space",
+      "dir": "sections/04-explore-the-space",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1678",
+      "frameName": "DINING-GARDENTERRACE",
+      "y0": 2492,
+      "y1": 3482,
+      "cropY0": 2426.5,
+      "cropY1": 3661.5,
+      "nodeIds": [
+        "2034:1737",
+        "2034:1714",
+        "2034:1703"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-explore-the-space/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "curabitur-at-magna-diam-suspendisse-tempor",
+      "dir": "sections/05-curabitur-at-magna-diam-suspendisse-tempor",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1678",
+      "frameName": "DINING-GARDENTERRACE",
+      "y0": 3841,
+      "y1": 4714,
+      "cropY0": 3661.5,
+      "cropY1": 4829,
+      "nodeIds": [
+        "2034:1738",
+        "2034:1743",
+        "2034:1744",
+        "2034:1704",
+        "2034:1739"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-curabitur-at-magna-diam-suspendisse-tempor/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "group-dining-events",
+      "dir": "sections/06-group-dining-events",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1678",
+      "frameName": "DINING-GARDENTERRACE",
+      "y0": 4944,
+      "y1": 5913,
+      "cropY0": 4829,
+      "cropY1": 6039.5,
+      "nodeIds": [
+        "2034:1748"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-group-dining-events/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "zuma-gallery",
+      "dir": "sections/07-zuma-gallery",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1678",
+      "frameName": "DINING-GARDENTERRACE",
+      "y0": 6166,
+      "y1": 9057.53,
+      "cropY0": 6039.5,
+      "cropY1": 9057.77,
+      "nodeIds": [
+        "2034:1723",
+        "2034:1735",
+        "2034:1731",
+        "2034:1725",
+        "2034:1728",
+        "2034:1732",
+        "2034:1734",
+        "2034:1724",
+        "2034:1733"
+      ],
+      "backgroundIds": [
+        "2034:1722"
+      ],
+      "crop": "sections/07-zuma-gallery/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "faqs",
+      "dir": "sections/08-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1678",
+      "frameName": "DINING-GARDENTERRACE",
+      "y0": 9058,
+      "y1": 10253,
+      "cropY0": 9057.77,
+      "cropY1": 10253,
+      "nodeIds": [
+        "2034:1779"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/08-faqs/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "book-your-escape",
+      "dir": "sections/09-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1678",
+      "frameName": "DINING-GARDENTERRACE",
+      "y0": 10253,
+      "y1": 11231,
+      "cropY0": 10253,
+      "cropY1": 11231,
+      "nodeIds": [
+        "2034:1834",
+        "2034:1835",
+        "2034:1841",
+        "2034:1890",
+        "2034:1833"
+      ],
+      "backgroundIds": [
+        "2034:1814",
+        "2034:1815"
+      ],
+      "crop": "sections/09-book-your-escape/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "the-hotel",
+      "dir": "sections/10-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1678",
+      "frameName": "DINING-GARDENTERRACE",
+      "y0": 11231,
+      "y1": 12075,
+      "cropY0": 11231,
+      "cropY1": 13131,
+      "nodeIds": [
+        "2034:1848",
+        "2034:1756",
+        "2034:1816",
+        "2034:1909",
+        "2034:1910"
+      ],
+      "backgroundIds": [
+        "2034:1814",
+        "2034:1815"
+      ],
+      "crop": "sections/10-the-hotel/section.webp"
+    }
+  ]
+}

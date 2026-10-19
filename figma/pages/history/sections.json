@@ -1,0 +1,322 @@
+{
+  "pageSlug": "history",
+  "frames": [
+    {
+      "id": "219:739",
+      "name": "HISTORY",
+      "kind": "page",
+      "width": 1600,
+      "height": 24866,
+      "scale": 0.75,
+      "renderScale": 0.6589,
+      "render": "figma/.cache/renders/219-739.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "a-bold-promise",
+      "dir": "sections/01-a-bold-promise",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "219:739",
+      "frameName": "HISTORY",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 1041.61,
+      "nodeIds": [
+        "220:740",
+        "236:8629",
+        "224:7189",
+        "224:7190"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-a-bold-promise/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "a-century-of-stories-meets-a",
+      "dir": "sections/02-a-century-of-stories-meets-a",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "219:739",
+      "frameName": "HISTORY",
+      "y0": 1183.22,
+      "y1": 1475.33,
+      "cropY0": 1041.61,
+      "cropY1": 1604.67,
+      "nodeIds": [
+        "242:94"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/02-a-century-of-stories-meets-a/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "san-diegos-great-escape-oasis-is",
+      "dir": "sections/03-san-diegos-great-escape-oasis-is",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "219:739",
+      "frameName": "HISTORY",
+      "y0": 1734,
+      "y1": 2949,
+      "cropY0": 1604.67,
+      "cropY1": 3061.5,
+      "nodeIds": [
+        "224:7764",
+        "242:91",
+        "224:7759"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-san-diegos-great-escape-oasis-is/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "george-marston",
+      "dir": "sections/04-george-marston",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "219:739",
+      "frameName": "HISTORY",
+      "y0": 3174,
+      "y1": 4151,
+      "cropY0": 3061.5,
+      "cropY1": 4282,
+      "nodeIds": [
+        "228:7873",
+        "224:7769",
+        "226:7774",
+        "226:7776",
+        "228:7875",
+        "236:8091"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-george-marston/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "once-opened-never-closed",
+      "dir": "sections/05-once-opened-never-closed",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "219:739",
+      "frameName": "HISTORY",
+      "y0": 4413,
+      "y1": 14503,
+      "cropY0": 4282,
+      "cropY1": 14626.5,
+      "nodeIds": [
+        "228:7969",
+        "228:7963",
+        "220:7104",
+        "220:7035",
+        "220:7036",
+        "220:7037",
+        "220:7107",
+        "220:7106",
+        "220:7105",
+        "220:7111",
+        "220:7112",
+        "220:7113",
+        "220:7115",
+        "220:7114",
+        "220:7117",
+        "220:7121",
+        "220:7118",
+        "220:7122",
+        "220:7123",
+        "220:7128",
+        "220:7127",
+        "220:7130",
+        "220:7129",
+        "220:7136",
+        "220:7137",
+        "220:7138",
+        "220:7139"
+      ],
+      "backgroundIds": [
+        "224:7222"
+      ],
+      "crop": "sections/05-once-opened-never-closed/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "a-landmark-reimagined",
+      "dir": "sections/06-a-landmark-reimagined",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "219:739",
+      "frameName": "HISTORY",
+      "y0": 14750,
+      "y1": 15774,
+      "cropY0": 14626.5,
+      "cropY1": 15774,
+      "nodeIds": [
+        "228:7985",
+        "228:7972",
+        "228:7980",
+        "228:7982",
+        "228:7983",
+        "228:7984",
+        "228:7971"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-a-landmark-reimagined/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "1-etiam-imperdiet-sodales-dui-a",
+      "dir": "sections/07-1-etiam-imperdiet-sodales-dui-a",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "219:739",
+      "frameName": "HISTORY",
+      "y0": 15774,
+      "y1": 18665.53,
+      "cropY0": 15774,
+      "cropY1": 18789.77,
+      "nodeIds": [
+        "236:8077",
+        "236:8092",
+        "236:8079",
+        "236:8082",
+        "236:8106",
+        "236:8107",
+        "236:8108",
+        "236:8109"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-1-etiam-imperdiet-sodales-dui-a/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "discover-the-property",
+      "dir": "sections/08-discover-the-property",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "219:739",
+      "frameName": "HISTORY",
+      "y0": 18914,
+      "y1": 19935,
+      "cropY0": 18789.77,
+      "cropY1": 20109,
+      "nodeIds": [
+        "236:8255",
+        "236:8257",
+        "236:8254"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/08-discover-the-property/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "more-of-the-guild",
+      "dir": "sections/09-more-of-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "219:739",
+      "frameName": "HISTORY",
+      "y0": 20283,
+      "y1": 20819,
+      "cropY0": 20109,
+      "cropY1": 20916,
+      "nodeIds": [
+        "413:5545"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/09-more-of-the-guild/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "faqs",
+      "dir": "sections/10-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "219:739",
+      "frameName": "HISTORY",
+      "y0": 21013,
+      "y1": 22208,
+      "cropY0": 20916,
+      "cropY1": 22208,
+      "nodeIds": [
+        "236:8250"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/10-faqs/section.webp"
+    },
+    {
+      "index": 11,
+      "slug": "offers-packages",
+      "dir": "sections/11-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "219:739",
+      "frameName": "HISTORY",
+      "y0": 22288,
+      "y1": 23188,
+      "cropY0": 22208,
+      "cropY1": 23188,
+      "nodeIds": [
+        "236:8208",
+        "236:8209",
+        "236:8211",
+        "236:8244",
+        "236:8248"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/11-offers-packages/section.webp"
+    },
+    {
+      "index": 12,
+      "slug": "book-your-escape",
+      "dir": "sections/12-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "219:739",
+      "frameName": "HISTORY",
+      "y0": 23188,
+      "y1": 24166,
+      "cropY0": 23188,
+      "cropY1": 24166,
+      "nodeIds": [
+        "250:1966",
+        "250:1985",
+        "250:1986",
+        "250:2045",
+        "250:2075"
+      ],
+      "backgroundIds": [
+        "250:2073",
+        "242:129"
+      ],
+      "crop": "sections/12-book-your-escape/section.webp"
+    },
+    {
+      "index": 13,
+      "slug": "the-hotel",
+      "dir": "sections/13-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "219:739",
+      "frameName": "HISTORY",
+      "y0": 24166,
+      "y1": 24866,
+      "cropY0": 24166,
+      "cropY1": 24866,
+      "nodeIds": [
+        "250:2023",
+        "250:2123",
+        "250:2063",
+        "250:2065"
+      ],
+      "backgroundIds": [
+        "250:2073",
+        "242:129"
+      ],
+      "crop": "sections/13-the-hotel/section.webp"
+    }
+  ]
+}

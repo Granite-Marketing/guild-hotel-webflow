@@ -1,0 +1,142 @@
+{
+  "pageSlug": "neighborhood",
+  "index": 16,
+  "slug": "neighborhood-overlay",
+  "laneHint": "manual",
+  "frameId": "487:2428",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 899
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 899
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "487:2464",
+      "characters": "coronado beach",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 609,
+        "y": 175,
+        "width": 383,
+        "height": 40
+      }
+    },
+    {
+      "id": "487:2434",
+      "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 388,
+        "y": 339,
+        "width": 825,
+        "height": 66
+      }
+    },
+    {
+      "id": "487:2724",
+      "characters": "learn more",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 748,
+        "y": 462,
+        "width": 107,
+        "height": 19
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#C4C4C4",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "487:2429",
+      "type": "GROUP",
+      "name": "Group 270990119",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 1329
+      }
+    },
+    {
+      "id": "487:2432",
+      "type": "FRAME",
+      "name": "Frame 270990121",
+      "bbox": {
+        "x": 90,
+        "y": 125,
+        "width": 1421,
+        "height": 1204
+      }
+    },
+    {
+      "id": "487:2465",
+      "type": "GROUP",
+      "name": "Group 270990121",
+      "bbox": {
+        "x": 40,
+        "y": 192,
+        "width": 17,
+        "height": 17
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "side"
+}

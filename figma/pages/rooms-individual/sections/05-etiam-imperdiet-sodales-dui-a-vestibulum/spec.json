@@ -1,0 +1,88 @@
+{
+  "pageSlug": "rooms-individual",
+  "index": 5,
+  "slug": "etiam-imperdiet-sodales-dui-a-vestibulum",
+  "laneHint": null,
+  "frameId": "406:3458",
+  "bbox": {
+    "x": 0,
+    "y": 2694,
+    "width": 1600,
+    "height": 874
+  },
+  "crop": {
+    "y0": 2674,
+    "y1": 3588
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "413:5526",
+      "characters": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 813,
+        "width": 703,
+        "height": 44
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "413:5523",
+      "name": "Rectangle 594",
+      "imageRef": "d7332204a5bee888af6d6fe5adf267bebfab8918",
+      "bbox": {
+        "x": 0,
+        "y": 20,
+        "width": 1600,
+        "height": 874
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "413:5523",
+      "type": "RECTANGLE",
+      "name": "Rectangle 594",
+      "bbox": {
+        "x": 0,
+        "y": 20,
+        "width": 1600,
+        "height": 874
+      }
+    },
+    {
+      "id": "413:5526",
+      "type": "TEXT",
+      "name": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+      "bbox": {
+        "x": 40,
+        "y": 813,
+        "width": 703,
+        "height": 44
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

@@ -1,0 +1,483 @@
+{
+  "pageSlug": "legal",
+  "index": 12,
+  "slug": "a-landmark-reimagined",
+  "laneHint": null,
+  "frameId": "318:836",
+  "bbox": {
+    "x": 0,
+    "y": 14198,
+    "width": 1600,
+    "height": 741.23
+  },
+  "crop": {
+    "y0": 14072.5,
+    "y1": 15057.12
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "318:843",
+      "characters": "A Landmark Reimagined",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 533,
+        "y": 125.5,
+        "width": 535,
+        "height": 40
+      }
+    },
+    {
+      "id": "318:1012",
+      "characters": "Request for Proposal",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 60,
+      "fontWeight": 400,
+      "lineHeightPx": 72,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 37.17,
+        "y": 174.5,
+        "width": 499.17,
+        "height": 135.86
+      }
+    },
+    {
+      "id": "359:1652",
+      "characters": "Proin sed nisl nisi. Quisque porttitor, nisl sed eleifend mattis, risus tellus pulvinar metus, a lacinia lacus neque sit amet purus. Donec efficitur leo sed urna tempus, eu congue ex convallis.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 345.94,
+        "width": 496,
+        "height": 66
+      }
+    },
+    {
+      "id": "318:1013",
+      "characters": "contact information",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 345.94,
+        "width": 830,
+        "height": 29
+      }
+    },
+    {
+      "id": "318:1015",
+      "characters": "First Name",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 423.94,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "318:1017",
+      "characters": "Last Name",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1129,
+        "y": 423.94,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "359:1658",
+      "characters": "Trial Team Concierge",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 477.94,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "318:1020",
+      "characters": "Email Address",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 481.73,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "318:1022",
+      "characters": "Phone Number",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1129,
+        "y": 481.73,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "359:1657",
+      "characters": "legalteams@theguildhotel.com",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 512.94,
+        "width": 288,
+        "height": 14
+      }
+    },
+    {
+      "id": "318:1025",
+      "characters": "law firm",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 539.73,
+        "width": 830,
+        "height": 22
+      }
+    },
+    {
+      "id": "318:1034",
+      "characters": "team size",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1129,
+        "y": 539.73,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "359:1663",
+      "characters": "24/7 Emergency Booking Available",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 566.94,
+        "width": 411,
+        "height": 19
+      }
+    },
+    {
+      "id": "318:1037",
+      "characters": "check-in date",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 598.73,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "318:1039",
+      "characters": "check-out date",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1129,
+        "y": 598.73,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "359:1662",
+      "characters": "+ 1 (619) 975-6000",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 601.94,
+        "width": 288,
+        "height": 14
+      }
+    },
+    {
+      "id": "359:1666",
+      "characters": "address",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 655.94,
+        "width": 411,
+        "height": 19
+      }
+    },
+    {
+      "id": "318:1042",
+      "characters": "special requirements",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 690,
+        "y": 657.73,
+        "width": 830,
+        "height": 22
+      }
+    },
+    {
+      "id": "359:1665",
+      "characters": "500 W. Broadway, San Diego, CA 92101",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 690.94,
+        "width": 348,
+        "height": 14
+      }
+    },
+    {
+      "id": "318:1046",
+      "characters": "submit your request",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1305,
+        "y": 837.73,
+        "width": 196,
+        "height": 19
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 11
+    },
+    {
+      "hex": "#2B2927",
+      "opacity": 1,
+      "count": 10
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 7
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 3
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "318:843",
+      "type": "TEXT",
+      "name": "A Landmark Reimagined",
+      "bbox": {
+        "x": 533,
+        "y": 125.5,
+        "width": 535,
+        "height": 40
+      }
+    },
+    {
+      "id": "359:1675",
+      "type": "GROUP",
+      "name": "Group 270990138",
+      "bbox": {
+        "x": 37.17,
+        "y": 174.5,
+        "width": 1482.83,
+        "height": 692.23
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "319:1357",
+      "type": "RECTANGLE",
+      "name": "Rectangle 583",
+      "bbox": {
+        "x": 1,
+        "y": -6873.5,
+        "width": 1599,
+        "height": 11370
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

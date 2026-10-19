@@ -1,0 +1,110 @@
+{
+  "pageSlug": "nav-elements",
+  "frames": [
+    {
+      "id": "242:1624",
+      "name": "full-2",
+      "kind": "side",
+      "width": 1600,
+      "height": 900,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/242-1624.png",
+      "status": "ok"
+    },
+    {
+      "id": "242:1573",
+      "name": "menu-1",
+      "kind": "side",
+      "width": 1600,
+      "height": 900,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/242-1573.png",
+      "status": "ok"
+    },
+    {
+      "id": "242:1600",
+      "name": "window-1",
+      "kind": "side",
+      "width": 1600,
+      "height": 900,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/242-1600.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "full-2",
+      "dir": "sections/01-full-2",
+      "source": "side",
+      "laneHint": "manual",
+      "frameId": "242:1624",
+      "frameName": "full-2",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 900,
+      "nodeIds": [
+        "242:1625",
+        "242:1634",
+        "242:1643",
+        "242:1652",
+        "242:1661",
+        "242:1685",
+        "242:1686",
+        "242:1687",
+        "242:1689",
+        "250:1956",
+        "250:1958"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-full-2/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "menu-1",
+      "dir": "sections/02-menu-1",
+      "source": "side",
+      "laneHint": "manual",
+      "frameId": "242:1573",
+      "frameName": "menu-1",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 900,
+      "nodeIds": [
+        "242:1574",
+        "242:1596",
+        "242:1597",
+        "242:1598",
+        "242:1901"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/02-menu-1/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "window-1",
+      "dir": "sections/03-window-1",
+      "source": "side",
+      "laneHint": "manual",
+      "frameId": "242:1600",
+      "frameName": "window-1",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 900,
+      "nodeIds": [
+        "242:1601",
+        "242:1610",
+        "242:1622"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-window-1/section.webp"
+    }
+  ]
+}

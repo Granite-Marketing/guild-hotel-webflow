@@ -1,0 +1,90 @@
+{
+  "pageSlug": "blog-collection",
+  "index": 5,
+  "slug": "the-best-san-diego-hotels-for",
+  "laneHint": null,
+  "frameId": "2034:1180",
+  "bbox": {
+    "x": 0,
+    "y": 3065,
+    "width": 1600,
+    "height": 626
+  },
+  "crop": {
+    "y0": 3015,
+    "y1": 3778.5
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "2034:1200",
+      "characters": "The best San Diego hotels for every kind of traveler",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 598,
+        "width": 703,
+        "height": 22
+      }
+    },
+    {
+      "id": "2034:1201",
+      "characters": "Praesent id ipsum enim. Nunc congue, risus sollicitudin faucibus dignissim, sem dolor egestas tellus, et varius lectus mauris sed odio.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 636,
+        "width": 647,
+        "height": 40
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "2034:1197",
+      "type": "GROUP",
+      "name": "Group 270990255",
+      "bbox": {
+        "x": 169,
+        "y": 50,
+        "width": 744,
+        "height": 626
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

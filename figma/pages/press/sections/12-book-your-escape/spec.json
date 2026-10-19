@@ -1,0 +1,276 @@
+{
+  "pageSlug": "press",
+  "index": 12,
+  "slug": "book-your-escape",
+  "laneHint": null,
+  "frameId": "419:5583",
+  "bbox": {
+    "x": 0,
+    "y": 8804.53,
+    "width": 1600,
+    "height": 978
+  },
+  "crop": {
+    "y0": 8804.53,
+    "y1": 9782.53
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "419:6416",
+      "characters": "Book your escape",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 60,
+      "fontWeight": 400,
+      "lineHeightPx": 72,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 205,
+        "y": 338,
+        "width": 392,
+        "height": 72
+      }
+    },
+    {
+      "id": "419:6422",
+      "characters": "Stay in the loop",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 60,
+      "fontWeight": 400,
+      "lineHeightPx": 72,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1019,
+        "y": 338,
+        "width": 364,
+        "height": 72
+      }
+    },
+    {
+      "id": "419:6420",
+      "characters": "book now",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#4A1217",
+      "bbox": {
+        "x": 355,
+        "y": 500,
+        "width": 92,
+        "height": 19
+      }
+    },
+    {
+      "id": "419:6425",
+      "characters": "join us",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#4A1217",
+      "bbox": {
+        "x": 1368,
+        "y": 500,
+        "width": 70,
+        "height": 19
+      }
+    },
+    {
+      "id": "419:6427",
+      "characters": "*Email",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 924,
+        "y": 503,
+        "width": 60,
+        "height": 16
+      }
+    },
+    {
+      "id": "419:6413",
+      "characters": "Earn Marriott Bonvoy® Points on Every Stay",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "RIGHT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 596.61,
+        "y": 755,
+        "width": 414,
+        "height": 14
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 24
+    },
+    {
+      "hex": "#4A1217",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#000000",
+      "opacity": 0.2,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "419:6395",
+      "name": "Rectangle 530",
+      "imageRef": "27078587832153ecb831134d89bff71b2b68f548",
+      "bbox": {
+        "x": -1,
+        "y": 0,
+        "width": 1601,
+        "height": 1678
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "419:6414",
+      "type": "LINE",
+      "name": "Line 4",
+      "bbox": {
+        "x": 800,
+        "y": 220,
+        "width": 0,
+        "height": 426
+      }
+    },
+    {
+      "id": "419:6415",
+      "type": "GROUP",
+      "name": "Group 270990031",
+      "bbox": {
+        "x": 205,
+        "y": 338,
+        "width": 392,
+        "height": 191
+      }
+    },
+    {
+      "id": "419:6421",
+      "type": "GROUP",
+      "name": "Group 270990030",
+      "bbox": {
+        "x": 924,
+        "y": 338,
+        "width": 551,
+        "height": 191
+      }
+    },
+    {
+      "id": "419:6470",
+      "type": "GROUP",
+      "name": "Group 270990036",
+      "bbox": {
+        "x": 716,
+        "y": 681,
+        "width": 167,
+        "height": 48.09
+      }
+    },
+    {
+      "id": "419:6413",
+      "type": "TEXT",
+      "name": "Earn Marriott Bonvoy® Points on Every Stay",
+      "bbox": {
+        "x": 596.61,
+        "y": 755,
+        "width": 414,
+        "height": 14
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "423:6909",
+      "type": "GROUP",
+      "name": "Group 270990182",
+      "bbox": {
+        "x": -1,
+        "y": -3059.53,
+        "width": 1820,
+        "height": 4737.53
+      }
+    },
+    {
+      "id": "419:5590",
+      "type": "RECTANGLE",
+      "name": "Rectangle 583",
+      "bbox": {
+        "x": 1,
+        "y": -1605.53,
+        "width": 1599,
+        "height": 11370
+      }
+    },
+    {
+      "id": "419:6394",
+      "type": "GROUP",
+      "name": "Group 270990037",
+      "bbox": {
+        "x": -1,
+        "y": 0,
+        "width": 1601,
+        "height": 1678
+      }
+    },
+    {
+      "id": "419:6395",
+      "type": "RECTANGLE",
+      "name": "Rectangle 530",
+      "bbox": {
+        "x": -1,
+        "y": 0,
+        "width": 1601,
+        "height": 1678
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

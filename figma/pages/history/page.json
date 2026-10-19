@@ -1,0 +1,3100 @@
+{
+  "pageSlug": "history",
+  "frames": [
+    {
+      "id": "219:739",
+      "name": "HISTORY",
+      "kind": "page",
+      "width": 1600,
+      "height": 24866,
+      "scale": 0.75,
+      "renderScale": 0.6589,
+      "render": "figma/.cache/renders/219-739.png",
+      "status": "ok",
+      "tree": {
+        "id": "219:739",
+        "type": "FRAME",
+        "name": "HISTORY",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 24866
+        },
+        "children": [
+          {
+            "id": "228:7985",
+            "type": "RECTANGLE",
+            "name": "Rectangle 560",
+            "bbox": {
+              "x": 0,
+              "y": 14750,
+              "width": 1600,
+              "height": 1024
+            }
+          },
+          {
+            "id": "236:8077",
+            "type": "RECTANGLE",
+            "name": "Rectangle 504",
+            "bbox": {
+              "x": 0,
+              "y": 15774,
+              "width": 1600,
+              "height": 994.53
+            }
+          },
+          {
+            "id": "236:8108",
+            "type": "RECTANGLE",
+            "name": "Rectangle 561",
+            "bbox": {
+              "x": 0,
+              "y": 17671,
+              "width": 1600,
+              "height": 994.53
+            }
+          },
+          {
+            "id": "236:8079",
+            "type": "GROUP",
+            "name": "Group 270989688",
+            "bbox": {
+              "x": 0,
+              "y": 16769.53,
+              "width": 799,
+              "height": 900
+            },
+            "children": [
+              {
+                "id": "236:8080",
+                "type": "GROUP",
+                "name": "Group 270989635",
+                "bbox": {
+                  "x": 0,
+                  "y": 16769.53,
+                  "width": 799,
+                  "height": 900
+                },
+                "children": [
+                  {
+                    "id": "236:8081",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 504",
+                    "bbox": {
+                      "x": 0,
+                      "y": 16769.53,
+                      "width": 799,
+                      "height": 900
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "236:8082",
+            "type": "GROUP",
+            "name": "Group 270989703",
+            "bbox": {
+              "x": 800,
+              "y": 16769.53,
+              "width": 800,
+              "height": 900
+            },
+            "children": [
+              {
+                "id": "236:8083",
+                "type": "GROUP",
+                "name": "Group 270989635",
+                "bbox": {
+                  "x": 800,
+                  "y": 16769.53,
+                  "width": 800,
+                  "height": 900
+                },
+                "children": [
+                  {
+                    "id": "236:8084",
+                    "type": "VECTOR",
+                    "name": "Rectangle 504",
+                    "bbox": {
+                      "x": 800,
+                      "y": 16769.53,
+                      "width": 800,
+                      "height": 900
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "228:7873",
+            "type": "RECTANGLE",
+            "name": "Rectangle 554",
+            "bbox": {
+              "x": 0,
+              "y": 3174,
+              "width": 1600,
+              "height": 977
+            }
+          },
+          {
+            "id": "220:740",
+            "type": "RECTANGLE",
+            "name": "Rectangle 1",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 900
+            }
+          },
+          {
+            "id": "224:7189",
+            "type": "TEXT",
+            "name": "a bold promise",
+            "bbox": {
+              "x": 629,
+              "y": 748,
+              "width": 343,
+              "height": 40
+            },
+            "characters": "a bold promise"
+          },
+          {
+            "id": "224:7190",
+            "type": "TEXT",
+            "name": "“Once Opened, Never Closed”. The Guild has been the social heart of San Diego since 1924.",
+            "bbox": {
+              "x": 373,
+              "y": 816,
+              "width": 854,
+              "height": 44
+            },
+            "characters": "“Once Opened, Never Closed”.\nThe Guild has been the social heart of San Diego since 1924."
+          },
+          {
+            "id": "224:7222",
+            "type": "GROUP",
+            "name": "Group 270990011",
+            "bbox": {
+              "x": 0,
+              "y": 5767,
+              "width": 1600,
+              "height": 8736
+            },
+            "children": [
+              {
+                "id": "220:7104",
+                "type": "RECTANGLE",
+                "name": "Rectangle 2",
+                "bbox": {
+                  "x": 428,
+                  "y": 5767,
+                  "width": 1132,
+                  "height": 651
+                }
+              },
+              {
+                "id": "220:7121",
+                "type": "RECTANGLE",
+                "name": "Rectangle 8",
+                "bbox": {
+                  "x": 0,
+                  "y": 9939,
+                  "width": 1132,
+                  "height": 651
+                }
+              },
+              {
+                "id": "220:7129",
+                "type": "RECTANGLE",
+                "name": "Rectangle 12",
+                "bbox": {
+                  "x": 0,
+                  "y": 12293,
+                  "width": 1600,
+                  "height": 920
+                }
+              },
+              {
+                "id": "220:7106",
+                "type": "RECTANGLE",
+                "name": "Rectangle 3",
+                "bbox": {
+                  "x": 40,
+                  "y": 7067,
+                  "width": 517,
+                  "height": 651
+                }
+              },
+              {
+                "id": "220:7127",
+                "type": "RECTANGLE",
+                "name": "Rectangle 10",
+                "bbox": {
+                  "x": 267,
+                  "y": 11491,
+                  "width": 388,
+                  "height": 388
+                }
+              },
+              {
+                "id": "220:7128",
+                "type": "RECTANGLE",
+                "name": "Rectangle 11",
+                "bbox": {
+                  "x": 1072,
+                  "y": 11034,
+                  "width": 485,
+                  "height": 651
+                }
+              },
+              {
+                "id": "220:7112",
+                "type": "RECTANGLE",
+                "name": "Rectangle 5",
+                "bbox": {
+                  "x": 816,
+                  "y": 8249,
+                  "width": 647,
+                  "height": 651
+                }
+              },
+              {
+                "id": "220:7138",
+                "type": "RECTANGLE",
+                "name": "Rectangle 13",
+                "bbox": {
+                  "x": 40,
+                  "y": 13601,
+                  "width": 647,
+                  "height": 651
+                }
+              },
+              {
+                "id": "220:7113",
+                "type": "RECTANGLE",
+                "name": "Rectangle 6",
+                "bbox": {
+                  "x": 40,
+                  "y": 8649,
+                  "width": 356,
+                  "height": 502
+                }
+              },
+              {
+                "id": "220:7139",
+                "type": "RECTANGLE",
+                "name": "Rectangle 14",
+                "bbox": {
+                  "x": 1204,
+                  "y": 14001,
+                  "width": 356,
+                  "height": 502
+                }
+              },
+              {
+                "id": "220:7107",
+                "type": "RECTANGLE",
+                "name": "Rectangle 4",
+                "bbox": {
+                  "x": 1204,
+                  "y": 6887,
+                  "width": 396,
+                  "height": 396
+                }
+              },
+              {
+                "id": "220:7117",
+                "type": "RECTANGLE",
+                "name": "Rectangle 7",
+                "bbox": {
+                  "x": 913,
+                  "y": 9471,
+                  "width": 291,
+                  "height": 291
+                }
+              },
+              {
+                "id": "220:7035",
+                "type": "GROUP",
+                "name": "Group 270990006",
+                "bbox": {
+                  "x": 703,
+                  "y": 6225,
+                  "width": 194.25,
+                  "height": 69.72
+                },
+                "children": [
+                  {
+                    "id": "220:7033",
+                    "type": "VECTOR",
+                    "name": "Vector 25",
+                    "bbox": {
+                      "x": 703,
+                      "y": 6225,
+                      "width": 194.25,
+                      "height": 69.72
+                    }
+                  },
+                  {
+                    "id": "220:7026",
+                    "type": "TEXT",
+                    "name": "1924",
+                    "bbox": {
+                      "x": 725,
+                      "y": 6231,
+                      "width": 150,
+                      "height": 50
+                    },
+                    "characters": "1924"
+                  }
+                ]
+              },
+              {
+                "id": "220:7118",
+                "type": "GROUP",
+                "name": "Group 270990008",
+                "bbox": {
+                  "x": 703,
+                  "y": 10087,
+                  "width": 194.25,
+                  "height": 69.72
+                },
+                "children": [
+                  {
+                    "id": "220:7119",
+                    "type": "VECTOR",
+                    "name": "Vector 25",
+                    "bbox": {
+                      "x": 703,
+                      "y": 10087,
+                      "width": 194.25,
+                      "height": 69.72
+                    }
+                  },
+                  {
+                    "id": "220:7120",
+                    "type": "TEXT",
+                    "name": "2019",
+                    "bbox": {
+                      "x": 725,
+                      "y": 10093,
+                      "width": 150,
+                      "height": 50
+                    },
+                    "characters": "2019"
+                  }
+                ]
+              },
+              {
+                "id": "220:7130",
+                "type": "GROUP",
+                "name": "Group 270990009",
+                "bbox": {
+                  "x": 703,
+                  "y": 12116,
+                  "width": 194.25,
+                  "height": 69.72
+                },
+                "children": [
+                  {
+                    "id": "220:7131",
+                    "type": "VECTOR",
+                    "name": "Vector 25",
+                    "bbox": {
+                      "x": 703,
+                      "y": 12116,
+                      "width": 194.25,
+                      "height": 69.72
+                    }
+                  },
+                  {
+                    "id": "220:7132",
+                    "type": "TEXT",
+                    "name": "2026",
+                    "bbox": {
+                      "x": 719,
+                      "y": 12122,
+                      "width": 163,
+                      "height": 50
+                    },
+                    "characters": "2026"
+                  }
+                ]
+              },
+              {
+                "id": "220:7111",
+                "type": "GROUP",
+                "name": "Group 270990007",
+                "bbox": {
+                  "x": 613,
+                  "y": 8031,
+                  "width": 374.25,
+                  "height": 69.72
+                },
+                "children": [
+                  {
+                    "id": "220:7109",
+                    "type": "VECTOR",
+                    "name": "Vector 25",
+                    "bbox": {
+                      "x": 613,
+                      "y": 8031,
+                      "width": 374.25,
+                      "height": 69.72
+                    }
+                  },
+                  {
+                    "id": "220:7110",
+                    "type": "TEXT",
+                    "name": "1924-1970",
+                    "bbox": {
+                      "x": 641,
+                      "y": 8038,
+                      "width": 319,
+                      "height": 50
+                    },
+                    "characters": "1924-1970"
+                  }
+                ]
+              },
+              {
+                "id": "220:7036",
+                "type": "TEXT",
+                "name": "A YMCA LANDMARK IS BORN",
+                "bbox": {
+                  "x": 40,
+                  "y": 6568,
+                  "width": 360,
+                  "height": 29
+                },
+                "characters": "A YMCA LANDMARK IS BORN"
+              },
+              {
+                "id": "220:7115",
+                "type": "TEXT",
+                "name": "THE ARMY AND NAVY YMCA",
+                "bbox": {
+                  "x": 558,
+                  "y": 9078,
+                  "width": 343,
+                  "height": 29
+                },
+                "characters": "THE ARMY AND NAVY YMCA"
+              },
+              {
+                "id": "220:7122",
+                "type": "TEXT",
+                "name": "THE GUILD OPENS ITS DOORS",
+                "bbox": {
+                  "x": 169,
+                  "y": 10734,
+                  "width": 385,
+                  "height": 29
+                },
+                "characters": "THE GUILD OPENS ITS DOORS"
+              },
+              {
+                "id": "220:7136",
+                "type": "TEXT",
+                "name": "THE GUILD BUILDS THE FUTURE",
+                "bbox": {
+                  "x": 40,
+                  "y": 13277,
+                  "width": 412,
+                  "height": 29
+                },
+                "characters": "THE GUILD BUILDS THE FUTURE"
+              },
+              {
+                "id": "220:7037",
+                "type": "TEXT",
+                "name": "in 1924, following San Diego's 1915 Panama-California Exposition, George Marston commissioned architects Lincoln Rogers and Frank Stevenson to design a building that would become a turning point in city architectural history.",
+                "bbox": {
+                  "x": 557,
+                  "y": 6573,
+                  "width": 486,
+                  "height": 92
+                },
+                "characters": "in 1924, following San Diego's 1915 Panama-California Exposition, George Marston commissioned architects Lincoln Rogers and Frank Stevenson to design a building that would become a turning point in city architectural history."
+              },
+              {
+                "id": "220:7105",
+                "type": "TEXT",
+                "name": "The Italian Renaissance Revival style structure they created had a  symmetrical composition, richly articulated masonry, arched openings, and generously proportioned public rooms that expressed permanence, dignity, and civic generosity. Some things never change.",
+                "bbox": {
+                  "x": 816,
+                  "y": 7592,
+                  "width": 485,
+                  "height": 118
+                },
+                "characters": "The Italian Renaissance Revival style structure they created had a  symmetrical composition, richly articulated masonry, arched openings, and generously proportioned public rooms that expressed permanence, dignity, and civic generosity. Some things never change."
+              },
+              {
+                "id": "220:7114",
+                "type": "TEXT",
+                "name": "A postcard from the YMCA dated April 1945, carried the tagline “The Home Away From Home”.  In nearly five decades as a YMCA, some 8 million Army and Navy servicemen and women called it home, playground, living room, bowling alley, restaurant, boxing ring, checkers table…and much, much more, we’re sure",
+                "bbox": {
+                  "x": 558,
+                  "y": 9151,
+                  "width": 485,
+                  "height": 144
+                },
+                "characters": "A postcard from the YMCA dated April 1945, carried the tagline “The Home Away From Home”.  In nearly five decades as a YMCA, some 8 million Army and Navy servicemen and women called it home, playground, living room, bowling alley, restaurant, boxing ring, checkers table…and much, much more, we’re sure"
+              },
+              {
+                "id": "220:7123",
+                "type": "TEXT",
+                "name": "After the YMCA closed its doors, the downtown landmark slumbered until it was reimagined as The Guild, part of the Marriott’s Tribute Portfolio. The luxury hotel served as a central oasis for the ever-growing numbers of visitors to “America’s Finest City”.",
+                "bbox": {
+                  "x": 169,
+                  "y": 10803,
+                  "width": 434,
+                  "height": 118
+                },
+                "characters": "After the YMCA closed its doors, the downtown landmark slumbered until it was reimagined as The Guild, part of the Marriott’s Tribute Portfolio. The luxury hotel served as a central oasis for the ever-growing numbers of visitors to “America’s Finest City”."
+              },
+              {
+                "id": "220:7137",
+                "type": "TEXT",
+                "name": "Ownership rejuvenates The Guild with a refreshed interior design, sparkling new pool, private art collection, and exciting food and beverage offerings including Zuma that draw locals and international visitors alike. Spa and wellness menus and facilities make the hotel a true urban resort and destination.",
+                "bbox": {
+                  "x": 1075,
+                  "y": 13282,
+                  "width": 356,
+                  "height": 170
+                },
+                "characters": "Ownership rejuvenates The Guild with a refreshed interior design, sparkling new pool, private art collection, and exciting food and beverage offerings including Zuma that draw locals and international visitors alike. Spa and wellness menus and facilities make the hotel a true urban resort and destination."
+              }
+            ]
+          },
+          {
+            "id": "224:7759",
+            "type": "TEXT",
+            "name": "500 W. Broadway, built when San Diego’s identity was tightly tied to its waterfront and naval presence, was an Italian Renaissance masterwork that became a place of welcome and belonging for a growing military community. As a YMCA, it was a civic institution that offered lodging, recreation, education and fellowship. Today, we’re proud stewards of that spirit of service, camaraderie and hospitality.",
+            "bbox": {
+              "x": 557,
+              "y": 2753,
+              "width": 486,
+              "height": 196
+            },
+            "characters": "500 W. Broadway, built when San Diego’s identity was tightly tied to its waterfront and naval presence, was an Italian Renaissance masterwork that became a place of welcome and belonging for a growing military community. \n\nAs a YMCA, it was a civic institution that offered lodging, recreation, education and fellowship. Today, we’re proud stewards of that spirit of service, camaraderie and hospitality."
+          },
+          {
+            "id": "224:7764",
+            "type": "RECTANGLE",
+            "name": "Rectangle 2",
+            "bbox": {
+              "x": 429,
+              "y": 1734,
+              "width": 742,
+              "height": 877
+            }
+          },
+          {
+            "id": "224:7769",
+            "type": "VECTOR",
+            "name": "Vector 32",
+            "bbox": {
+              "x": 78,
+              "y": 3270,
+              "width": 645,
+              "height": 785
+            }
+          },
+          {
+            "id": "226:7776",
+            "type": "TEXT",
+            "name": "In 1924, George Marsden saw more than a building. He imagined a grand center of city life, a gathering place to elevate hospitality and raise a downtown. The Italian Renaissance icon he built welcomed and entertained some eight million servicemen and women. The Guild preserves the existing structure, retains defining architectural elements, and incorporates materials that will age gracefully,  extending the life of this important civic landmark.",
+            "bbox": {
+              "x": 816,
+              "y": 3559,
+              "width": 550,
+              "height": 196
+            },
+            "characters": "In 1924, George Marsden saw more than a building. He imagined a grand center of city life, a gathering place to elevate hospitality and raise a downtown. The Italian Renaissance icon he built welcomed and entertained some eight million servicemen and women.\n\nThe Guild preserves the existing structure, retains defining architectural elements, and incorporates materials that will age gracefully,  extending the life of this important civic landmark."
+          },
+          {
+            "id": "226:7774",
+            "type": "TEXT",
+            "name": "George Marston",
+            "bbox": {
+              "x": 658,
+              "y": 3408,
+              "width": 528.05,
+              "height": 103.38
+            },
+            "characters": "George Marston"
+          },
+          {
+            "id": "228:7963",
+            "type": "RECTANGLE",
+            "name": "Rectangle 555",
+            "bbox": {
+              "x": 40,
+              "y": 4758,
+              "width": 1520,
+              "height": 814
+            }
+          },
+          {
+            "id": "228:7969",
+            "type": "GROUP",
+            "name": "Group 270990015",
+            "bbox": {
+              "x": 70,
+              "y": 4413,
+              "width": 1460,
+              "height": 84
+            },
+            "children": [
+              {
+                "id": "228:7968",
+                "type": "GROUP",
+                "name": "Group 270990014",
+                "bbox": {
+                  "x": 70,
+                  "y": 4433,
+                  "width": 1460,
+                  "height": 26
+                },
+                "children": [
+                  {
+                    "id": "226:7869",
+                    "type": "TEXT",
+                    "name": "2026",
+                    "bbox": {
+                      "x": 1465,
+                      "y": 4433,
+                      "width": 65,
+                      "height": 26
+                    },
+                    "characters": "2026"
+                  },
+                  {
+                    "id": "226:7870",
+                    "type": "TEXT",
+                    "name": "1924",
+                    "bbox": {
+                      "x": 70,
+                      "y": 4433,
+                      "width": 60,
+                      "height": 26
+                    },
+                    "characters": "1924"
+                  }
+                ]
+              },
+              {
+                "id": "228:7966",
+                "type": "GROUP",
+                "name": "Group 270990013",
+                "bbox": {
+                  "x": 442,
+                  "y": 4413,
+                  "width": 716,
+                  "height": 84
+                },
+                "children": [
+                  {
+                    "id": "226:7867",
+                    "type": "TEXT",
+                    "name": "“Once Opened, Never Closed”.",
+                    "bbox": {
+                      "x": 442,
+                      "y": 4413,
+                      "width": 716,
+                      "height": 40
+                    },
+                    "characters": "“Once Opened, Never Closed”."
+                  },
+                  {
+                    "id": "226:7871",
+                    "type": "TEXT",
+                    "name": "The key to the YMCA was ceremoniously tossed into the ocean on opening day.",
+                    "bbox": {
+                      "x": 489,
+                      "y": 4483,
+                      "width": 622,
+                      "height": 14
+                    },
+                    "characters": "The key to the YMCA was ceremoniously tossed into the ocean on opening day."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "228:7875",
+            "type": "GROUP",
+            "name": "Group",
+            "bbox": {
+              "x": 607,
+              "y": 3854,
+              "width": 263.29,
+              "height": 263.29
+            },
+            "children": [
+              {
+                "id": "228:7876",
+                "type": "GROUP",
+                "name": "path5869",
+                "bbox": {
+                  "x": 646.44,
+                  "y": 3986.36,
+                  "width": 15.88,
+                  "height": 15.52
+                },
+                "children": [
+                  {
+                    "id": "228:7877",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 646.44,
+                      "y": 3986.36,
+                      "width": 15.88,
+                      "height": 15.52
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7878",
+                "type": "GROUP",
+                "name": "path5871",
+                "bbox": {
+                  "x": 645.73,
+                  "y": 3999.11,
+                  "width": 17.79,
+                  "height": 17.64
+                },
+                "children": [
+                  {
+                    "id": "228:7879",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 645.73,
+                      "y": 3999.11,
+                      "width": 17.79,
+                      "height": 17.64
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7880",
+                "type": "GROUP",
+                "name": "path5873",
+                "bbox": {
+                  "x": 651.6,
+                  "y": 4010.33,
+                  "width": 19.82,
+                  "height": 19.98
+                },
+                "children": [
+                  {
+                    "id": "228:7881",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 651.6,
+                      "y": 4010.33,
+                      "width": 19.82,
+                      "height": 19.98
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7882",
+                "type": "GROUP",
+                "name": "path5875",
+                "bbox": {
+                  "x": 665.61,
+                  "y": 4030.76,
+                  "width": 15.97,
+                  "height": 16.51
+                },
+                "children": [
+                  {
+                    "id": "228:7883",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 665.61,
+                      "y": 4030.76,
+                      "width": 15.97,
+                      "height": 16.51
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7884",
+                "type": "GROUP",
+                "name": "path5877",
+                "bbox": {
+                  "x": 675.62,
+                  "y": 4040.77,
+                  "width": 9.96,
+                  "height": 12.83
+                },
+                "children": [
+                  {
+                    "id": "228:7885",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 675.62,
+                      "y": 4040.77,
+                      "width": 9.96,
+                      "height": 12.83
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7886",
+                "type": "GROUP",
+                "name": "path5879",
+                "bbox": {
+                  "x": 680.37,
+                  "y": 4045.21,
+                  "width": 15.03,
+                  "height": 16.23
+                },
+                "children": [
+                  {
+                    "id": "228:7887",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 680.37,
+                      "y": 4045.21,
+                      "width": 15.03,
+                      "height": 16.23
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7888",
+                "type": "GROUP",
+                "name": "path5881",
+                "bbox": {
+                  "x": 691.05,
+                  "y": 4052.24,
+                  "width": 13.87,
+                  "height": 15.09
+                },
+                "children": [
+                  {
+                    "id": "228:7889",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 691.05,
+                      "y": 4052.24,
+                      "width": 13.87,
+                      "height": 15.09
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7890",
+                "type": "GROUP",
+                "name": "path5883",
+                "bbox": {
+                  "x": 702.87,
+                  "y": 4057.58,
+                  "width": 14.26,
+                  "height": 15.27
+                },
+                "children": [
+                  {
+                    "id": "228:7891",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 702.87,
+                      "y": 4057.58,
+                      "width": 14.26,
+                      "height": 15.27
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7892",
+                "type": "GROUP",
+                "name": "path5885",
+                "bbox": {
+                  "x": 715.69,
+                  "y": 4071.6,
+                  "width": 3.21,
+                  "height": 3.75
+                },
+                "children": [
+                  {
+                    "id": "228:7893",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 715.69,
+                      "y": 4071.6,
+                      "width": 3.21,
+                      "height": 3.75
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7894",
+                "type": "GROUP",
+                "name": "path5887",
+                "bbox": {
+                  "x": 730.3,
+                  "y": 4062.49,
+                  "width": 14.95,
+                  "height": 15.51
+                },
+                "children": [
+                  {
+                    "id": "228:7895",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 730.3,
+                      "y": 4062.49,
+                      "width": 14.95,
+                      "height": 15.51
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7896",
+                "type": "GROUP",
+                "name": "path5889",
+                "bbox": {
+                  "x": 743.12,
+                  "y": 4062.6,
+                  "width": 17.26,
+                  "height": 17.74
+                },
+                "children": [
+                  {
+                    "id": "228:7897",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 743.12,
+                      "y": 4062.6,
+                      "width": 17.26,
+                      "height": 17.74
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7898",
+                "type": "GROUP",
+                "name": "path5891",
+                "bbox": {
+                  "x": 754.24,
+                  "y": 4060.78,
+                  "width": 17.16,
+                  "height": 15.22
+                },
+                "children": [
+                  {
+                    "id": "228:7899",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 754.24,
+                      "y": 4060.78,
+                      "width": 17.16,
+                      "height": 15.22
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7900",
+                "type": "GROUP",
+                "name": "path5893",
+                "bbox": {
+                  "x": 765.19,
+                  "y": 4057.09,
+                  "width": 13.24,
+                  "height": 12.7
+                },
+                "children": [
+                  {
+                    "id": "228:7901",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 765.19,
+                      "y": 4057.09,
+                      "width": 13.24,
+                      "height": 12.7
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7902",
+                "type": "GROUP",
+                "name": "path5895",
+                "bbox": {
+                  "x": 770.88,
+                  "y": 4049.83,
+                  "width": 15.85,
+                  "height": 17.04
+                },
+                "children": [
+                  {
+                    "id": "228:7903",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 770.88,
+                      "y": 4049.83,
+                      "width": 15.85,
+                      "height": 17.04
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7904",
+                "type": "GROUP",
+                "name": "path5897",
+                "bbox": {
+                  "x": 786.29,
+                  "y": 4058.56,
+                  "width": 3.14,
+                  "height": 3.14
+                },
+                "children": [
+                  {
+                    "id": "228:7905",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 786.29,
+                      "y": 4058.56,
+                      "width": 3.14,
+                      "height": 3.14
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7906",
+                "type": "GROUP",
+                "name": "path5899",
+                "bbox": {
+                  "x": 687.52,
+                  "y": 3903.91,
+                  "width": 16.18,
+                  "height": 15.31
+                },
+                "children": [
+                  {
+                    "id": "228:7907",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 687.52,
+                      "y": 3903.91,
+                      "width": 16.18,
+                      "height": 15.31
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7908",
+                "type": "GROUP",
+                "name": "path5901",
+                "bbox": {
+                  "x": 697.04,
+                  "y": 3897.64,
+                  "width": 20.05,
+                  "height": 19.94
+                },
+                "children": [
+                  {
+                    "id": "228:7909",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 697.04,
+                      "y": 3897.64,
+                      "width": 20.05,
+                      "height": 19.94
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7910",
+                "type": "GROUP",
+                "name": "path5903",
+                "bbox": {
+                  "x": 710.53,
+                  "y": 3894.01,
+                  "width": 19.06,
+                  "height": 19.17
+                },
+                "children": [
+                  {
+                    "id": "228:7911",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 710.53,
+                      "y": 3894.01,
+                      "width": 19.06,
+                      "height": 19.17
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7912",
+                "type": "GROUP",
+                "name": "path5905",
+                "bbox": {
+                  "x": 735.02,
+                  "y": 3893.91,
+                  "width": 14.61,
+                  "height": 15.25
+                },
+                "children": [
+                  {
+                    "id": "228:7913",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 735.02,
+                      "y": 3893.91,
+                      "width": 14.61,
+                      "height": 15.25
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7914",
+                "type": "GROUP",
+                "name": "path5907",
+                "bbox": {
+                  "x": 747.34,
+                  "y": 3894.25,
+                  "width": 15.83,
+                  "height": 16.6
+                },
+                "children": [
+                  {
+                    "id": "228:7915",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 747.34,
+                      "y": 3894.25,
+                      "width": 15.83,
+                      "height": 16.6
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7916",
+                "type": "GROUP",
+                "name": "path5909",
+                "bbox": {
+                  "x": 761,
+                  "y": 3899.68,
+                  "width": 8.73,
+                  "height": 12.25
+                },
+                "children": [
+                  {
+                    "id": "228:7917",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 761,
+                      "y": 3899.68,
+                      "width": 8.73,
+                      "height": 12.25
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7918",
+                "type": "GROUP",
+                "name": "path5911",
+                "bbox": {
+                  "x": 767.69,
+                  "y": 3902.29,
+                  "width": 13.42,
+                  "height": 14.6
+                },
+                "children": [
+                  {
+                    "id": "228:7919",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 767.69,
+                      "y": 3902.29,
+                      "width": 13.42,
+                      "height": 14.6
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7920",
+                "type": "GROUP",
+                "name": "path5913",
+                "bbox": {
+                  "x": 777.99,
+                  "y": 3907.54,
+                  "width": 14.38,
+                  "height": 15.28
+                },
+                "children": [
+                  {
+                    "id": "228:7921",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 777.99,
+                      "y": 3907.54,
+                      "width": 14.38,
+                      "height": 15.28
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7922",
+                "type": "GROUP",
+                "name": "path5915",
+                "bbox": {
+                  "x": 793.77,
+                  "y": 3921.81,
+                  "width": 18.25,
+                  "height": 18.8
+                },
+                "children": [
+                  {
+                    "id": "228:7923",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 793.77,
+                      "y": 3921.81,
+                      "width": 18.25,
+                      "height": 18.8
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7924",
+                "type": "GROUP",
+                "name": "path5917",
+                "bbox": {
+                  "x": 803.49,
+                  "y": 3934.87,
+                  "width": 14.94,
+                  "height": 15.34
+                },
+                "children": [
+                  {
+                    "id": "228:7925",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 803.49,
+                      "y": 3934.87,
+                      "width": 14.94,
+                      "height": 15.34
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7926",
+                "type": "GROUP",
+                "name": "path5919",
+                "bbox": {
+                  "x": 810.07,
+                  "y": 3944.98,
+                  "width": 15.93,
+                  "height": 16.25
+                },
+                "children": [
+                  {
+                    "id": "228:7927",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 810.07,
+                      "y": 3944.98,
+                      "width": 15.93,
+                      "height": 16.25
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7928",
+                "type": "GROUP",
+                "name": "path5921",
+                "bbox": {
+                  "x": 810.6,
+                  "y": 3955.39,
+                  "width": 19.17,
+                  "height": 19.12
+                },
+                "children": [
+                  {
+                    "id": "228:7929",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 810.6,
+                      "y": 3955.39,
+                      "width": 19.17,
+                      "height": 19.12
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7930",
+                "type": "GROUP",
+                "name": "path5923",
+                "bbox": {
+                  "x": 812.87,
+                  "y": 3967.8,
+                  "width": 15.85,
+                  "height": 17.04
+                },
+                "children": [
+                  {
+                    "id": "228:7931",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 812.87,
+                      "y": 3967.8,
+                      "width": 15.85,
+                      "height": 17.04
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7932",
+                "type": "GROUP",
+                "name": "path5925",
+                "bbox": {
+                  "x": 607,
+                  "y": 3854,
+                  "width": 263.29,
+                  "height": 263.29
+                },
+                "children": [
+                  {
+                    "id": "228:7933",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 607,
+                      "y": 3854,
+                      "width": 263.29,
+                      "height": 263.29
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7934",
+                "type": "GROUP",
+                "name": "path5927",
+                "bbox": {
+                  "x": 721.72,
+                  "y": 3950.71,
+                  "width": 13.66,
+                  "height": 14.68
+                },
+                "children": [
+                  {
+                    "id": "228:7935",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 721.72,
+                      "y": 3950.71,
+                      "width": 13.66,
+                      "height": 14.68
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7936",
+                "type": "GROUP",
+                "name": "path5929",
+                "bbox": {
+                  "x": 732.56,
+                  "y": 3956.12,
+                  "width": 14.18,
+                  "height": 15.24
+                },
+                "children": [
+                  {
+                    "id": "228:7937",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 732.56,
+                      "y": 3956.12,
+                      "width": 14.18,
+                      "height": 15.24
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7938",
+                "type": "GROUP",
+                "name": "path5931",
+                "bbox": {
+                  "x": 742.6,
+                  "y": 3961.44,
+                  "width": 14.82,
+                  "height": 15.27
+                },
+                "children": [
+                  {
+                    "id": "228:7939",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 742.6,
+                      "y": 3961.44,
+                      "width": 14.82,
+                      "height": 15.27
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7940",
+                "type": "GROUP",
+                "name": "path5933",
+                "bbox": {
+                  "x": 760.76,
+                  "y": 3970.61,
+                  "width": 13.89,
+                  "height": 15.11
+                },
+                "children": [
+                  {
+                    "id": "228:7941",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 760.76,
+                      "y": 3970.61,
+                      "width": 13.89,
+                      "height": 15.11
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7942",
+                "type": "GROUP",
+                "name": "path5935",
+                "bbox": {
+                  "x": 709.07,
+                  "y": 3989.29,
+                  "width": 8.47,
+                  "height": 12.01
+                },
+                "children": [
+                  {
+                    "id": "228:7943",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 709.07,
+                      "y": 3989.29,
+                      "width": 8.47,
+                      "height": 12.01
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7944",
+                "type": "GROUP",
+                "name": "path5937",
+                "bbox": {
+                  "x": 714.56,
+                  "y": 3991.91,
+                  "width": 13.77,
+                  "height": 14.88
+                },
+                "children": [
+                  {
+                    "id": "228:7945",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 714.56,
+                      "y": 3991.91,
+                      "width": 13.77,
+                      "height": 14.88
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7946",
+                "type": "GROUP",
+                "name": "path5939",
+                "bbox": {
+                  "x": 724.79,
+                  "y": 3997.17,
+                  "width": 13.78,
+                  "height": 14.89
+                },
+                "children": [
+                  {
+                    "id": "228:7947",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 724.79,
+                      "y": 3997.17,
+                      "width": 13.78,
+                      "height": 14.89
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7948",
+                "type": "GROUP",
+                "name": "path5941",
+                "bbox": {
+                  "x": 734.97,
+                  "y": 4002.61,
+                  "width": 14.91,
+                  "height": 15.32
+                },
+                "children": [
+                  {
+                    "id": "228:7949",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 734.97,
+                      "y": 4002.61,
+                      "width": 14.91,
+                      "height": 15.32
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7950",
+                "type": "GROUP",
+                "name": "path5943",
+                "bbox": {
+                  "x": 710.62,
+                  "y": 3967.58,
+                  "width": 8.47,
+                  "height": 12.01
+                },
+                "children": [
+                  {
+                    "id": "228:7951",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 710.62,
+                      "y": 3967.58,
+                      "width": 8.47,
+                      "height": 12.01
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7952",
+                "type": "GROUP",
+                "name": "path5945",
+                "bbox": {
+                  "x": 716.14,
+                  "y": 3970.22,
+                  "width": 13.78,
+                  "height": 14.89
+                },
+                "children": [
+                  {
+                    "id": "228:7953",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 716.14,
+                      "y": 3970.22,
+                      "width": 13.78,
+                      "height": 14.89
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7954",
+                "type": "GROUP",
+                "name": "path5947",
+                "bbox": {
+                  "x": 726.21,
+                  "y": 3978.62,
+                  "width": 9.73,
+                  "height": 10.58
+                },
+                "children": [
+                  {
+                    "id": "228:7955",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 726.21,
+                      "y": 3978.62,
+                      "width": 9.73,
+                      "height": 10.58
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7956",
+                "type": "GROUP",
+                "name": "path5949",
+                "bbox": {
+                  "x": 732.9,
+                  "y": 3982.05,
+                  "width": 9.93,
+                  "height": 10.67
+                },
+                "children": [
+                  {
+                    "id": "228:7957",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 732.9,
+                      "y": 3982.05,
+                      "width": 9.93,
+                      "height": 10.67
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7958",
+                "type": "GROUP",
+                "name": "path5951",
+                "bbox": {
+                  "x": 741.16,
+                  "y": 3983.28,
+                  "width": 13.66,
+                  "height": 14.68
+                },
+                "children": [
+                  {
+                    "id": "228:7959",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 741.16,
+                      "y": 3983.28,
+                      "width": 13.66,
+                      "height": 14.68
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "228:7960",
+                "type": "GROUP",
+                "name": "path5953",
+                "bbox": {
+                  "x": 751.63,
+                  "y": 3988.65,
+                  "width": 14.91,
+                  "height": 15.32
+                },
+                "children": [
+                  {
+                    "id": "228:7961",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 751.63,
+                      "y": 3988.65,
+                      "width": 14.91,
+                      "height": 15.32
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "228:7971",
+            "type": "TEXT",
+            "name": "Discover the materials, colors and details that INC architecture chose to reveal the character of The Guild.",
+            "bbox": {
+              "x": 525,
+              "y": 15555,
+              "width": 550,
+              "height": 40
+            },
+            "characters": "Discover the materials, colors and details that INC architecture chose to reveal the character of The Guild."
+          },
+          {
+            "id": "228:7972",
+            "type": "TEXT",
+            "name": "A Landmark Reimagined",
+            "bbox": {
+              "x": 533,
+              "y": 14929,
+              "width": 535,
+              "height": 40
+            },
+            "characters": "A Landmark Reimagined"
+          },
+          {
+            "id": "228:7980",
+            "type": "RECTANGLE",
+            "name": "Rectangle 556",
+            "bbox": {
+              "x": 40,
+              "y": 15029,
+              "width": 356,
+              "height": 466
+            }
+          },
+          {
+            "id": "228:7983",
+            "type": "RECTANGLE",
+            "name": "Rectangle 558",
+            "bbox": {
+              "x": 816,
+              "y": 15029,
+              "width": 356,
+              "height": 466
+            }
+          },
+          {
+            "id": "228:7982",
+            "type": "RECTANGLE",
+            "name": "Rectangle 557",
+            "bbox": {
+              "x": 428,
+              "y": 15029,
+              "width": 356,
+              "height": 466
+            }
+          },
+          {
+            "id": "228:7984",
+            "type": "RECTANGLE",
+            "name": "Rectangle 559",
+            "bbox": {
+              "x": 1204,
+              "y": 15029,
+              "width": 356,
+              "height": 466
+            }
+          },
+          {
+            "id": "236:8091",
+            "type": "GROUP",
+            "name": "Group 270990021",
+            "bbox": {
+              "x": 353,
+              "y": 4041,
+              "width": 95,
+              "height": 0
+            },
+            "children": [
+              {
+                "id": "236:8088",
+                "type": "LINE",
+                "name": "Line 1",
+                "bbox": {
+                  "x": 381,
+                  "y": 4041,
+                  "width": 39,
+                  "height": 0
+                }
+              },
+              {
+                "id": "236:8089",
+                "type": "LINE",
+                "name": "Line 2",
+                "bbox": {
+                  "x": 353,
+                  "y": 4041,
+                  "width": 18,
+                  "height": 0
+                }
+              },
+              {
+                "id": "236:8090",
+                "type": "LINE",
+                "name": "Line 3",
+                "bbox": {
+                  "x": 430,
+                  "y": 4041,
+                  "width": 18,
+                  "height": 0
+                }
+              }
+            ]
+          },
+          {
+            "id": "236:8092",
+            "type": "TEXT",
+            "name": "1 Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+            "bbox": {
+              "x": 40,
+              "y": 16698,
+              "width": 603,
+              "height": 38
+            },
+            "characters": "1 Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus."
+          },
+          {
+            "id": "236:8106",
+            "type": "TEXT",
+            "name": "2 Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+            "bbox": {
+              "x": 40,
+              "y": 17592,
+              "width": 603,
+              "height": 38
+            },
+            "characters": "2 Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta."
+          },
+          {
+            "id": "236:8109",
+            "type": "TEXT",
+            "name": "4 Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.",
+            "bbox": {
+              "x": 40,
+              "y": 18588,
+              "width": 603,
+              "height": 38
+            },
+            "characters": "4  Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+          },
+          {
+            "id": "236:8107",
+            "type": "TEXT",
+            "name": "3 Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+            "bbox": {
+              "x": 840,
+              "y": 17592,
+              "width": 603,
+              "height": 38
+            },
+            "characters": "3 Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem."
+          },
+          {
+            "id": "236:8250",
+            "type": "GROUP",
+            "name": "Group 270990026",
+            "bbox": {
+              "x": 0,
+              "y": 21013,
+              "width": 1600,
+              "height": 1195
+            },
+            "children": [
+              {
+                "id": "236:8163",
+                "type": "RECTANGLE",
+                "name": "Rectangle 553",
+                "bbox": {
+                  "x": 0,
+                  "y": 21013,
+                  "width": 1600,
+                  "height": 1195
+                }
+              },
+              {
+                "id": "236:8245",
+                "type": "GROUP",
+                "name": "Group 270990023",
+                "bbox": {
+                  "x": 323,
+                  "y": 21207,
+                  "width": 955,
+                  "height": 776
+                },
+                "children": [
+                  {
+                    "id": "236:8167",
+                    "type": "TEXT",
+                    "name": "faqs",
+                    "bbox": {
+                      "x": 775,
+                      "y": 21207,
+                      "width": 50,
+                      "height": 22
+                    },
+                    "characters": "faqs"
+                  },
+                  {
+                    "id": "236:8168",
+                    "type": "TEXT",
+                    "name": "your questions, answered",
+                    "bbox": {
+                      "x": 499,
+                      "y": 21248,
+                      "width": 603,
+                      "height": 40
+                    },
+                    "characters": "your questions, answered"
+                  },
+                  {
+                    "id": "236:8172",
+                    "type": "TEXT",
+                    "name": "How many guests can stay in this room?",
+                    "bbox": {
+                      "x": 323,
+                      "y": 21411,
+                      "width": 588,
+                      "height": 29
+                    },
+                    "characters": "How many guests can stay in this room?"
+                  },
+                  {
+                    "id": "236:8173",
+                    "type": "FRAME",
+                    "name": "Frame",
+                    "bbox": {
+                      "x": 1254,
+                      "y": 21413,
+                      "width": 24,
+                      "height": 24
+                    },
+                    "childCount": 1
+                  },
+                  {
+                    "id": "236:8175",
+                    "type": "TEXT",
+                    "name": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort.",
+                    "bbox": {
+                      "x": 323,
+                      "y": 21465,
+                      "width": 955,
+                      "height": 66
+                    },
+                    "characters": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort."
+                  },
+                  {
+                    "id": "236:8176",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 323,
+                      "y": 21577,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "236:8178",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 323,
+                      "y": 21618,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "236:8182",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 323,
+                      "y": 21658,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "236:8184",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 323,
+                      "y": 21699,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "236:8188",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 323,
+                      "y": 21739,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "236:8190",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 323,
+                      "y": 21780,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "236:8194",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 323,
+                      "y": 21820,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "236:8196",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 323,
+                      "y": 21861,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "236:8200",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 323,
+                      "y": 21901,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "236:8202",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 323,
+                      "y": 21942,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "236:8206",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 323,
+                      "y": 21982,
+                      "width": 955,
+                      "height": 1
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "236:8208",
+            "type": "RECTANGLE",
+            "name": "Rectangle 511",
+            "bbox": {
+              "x": 0,
+              "y": 22288,
+              "width": 801,
+              "height": 900
+            }
+          },
+          {
+            "id": "236:8209",
+            "type": "RECTANGLE",
+            "name": "Rectangle 530",
+            "bbox": {
+              "x": 801,
+              "y": 22288,
+              "width": 800,
+              "height": 900
+            }
+          },
+          {
+            "id": "236:8211",
+            "type": "TEXT",
+            "name": "offers & packages",
+            "bbox": {
+              "x": 148,
+              "y": 22330.36,
+              "width": 506,
+              "height": 22
+            },
+            "characters": "offers & packages"
+          },
+          {
+            "id": "236:8244",
+            "type": "GROUP",
+            "name": "Group 270990022",
+            "bbox": {
+              "x": 148,
+              "y": 22667,
+              "width": 506,
+              "height": 155
+            },
+            "children": [
+              {
+                "id": "236:8214",
+                "type": "TEXT",
+                "name": "Save on 5+ Nights",
+                "bbox": {
+                  "x": 185.5,
+                  "y": 22667,
+                  "width": 431,
+                  "height": 40
+                },
+                "characters": "Save on 5+ Nights"
+              },
+              {
+                "id": "236:8215",
+                "type": "TEXT",
+                "name": "A comfortable king room for an effortless city getaway.",
+                "bbox": {
+                  "x": 148,
+                  "y": 22739,
+                  "width": 506,
+                  "height": 14
+                },
+                "characters": "A comfortable king room for an effortless city getaway."
+              },
+              {
+                "id": "236:8216",
+                "type": "GROUP",
+                "name": "Button",
+                "bbox": {
+                  "x": 304,
+                  "y": 22785,
+                  "width": 194,
+                  "height": 37
+                },
+                "children": [
+                  {
+                    "id": "236:8217",
+                    "type": "VECTOR",
+                    "name": "Vector 25",
+                    "bbox": {
+                      "x": 304,
+                      "y": 22785,
+                      "width": 194,
+                      "height": 37
+                    }
+                  },
+                  {
+                    "id": "236:8218",
+                    "type": "TEXT",
+                    "name": "discover more",
+                    "bbox": {
+                      "x": 329,
+                      "y": 22794,
+                      "width": 144,
+                      "height": 16
+                    },
+                    "characters": "discover more"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "236:8248",
+            "type": "GROUP",
+            "name": "Group 270990024",
+            "bbox": {
+              "x": 309,
+              "y": 23138,
+              "width": 183,
+              "height": 16
+            },
+            "children": [
+              {
+                "id": "236:8219",
+                "type": "FRAME",
+                "name": "Frame 427318460",
+                "bbox": {
+                  "x": 309,
+                  "y": 23138,
+                  "width": 183,
+                  "height": 16
+                },
+                "children": [
+                  {
+                    "id": "236:8220",
+                    "type": "GROUP",
+                    "name": "Group 270989617",
+                    "bbox": {
+                      "x": 309,
+                      "y": 23140,
+                      "width": 28.5,
+                      "height": 12
+                    },
+                    "childCount": 3
+                  },
+                  {
+                    "id": "236:8224",
+                    "type": "FRAME",
+                    "name": "Frame 427318463",
+                    "bbox": {
+                      "x": 356.5,
+                      "y": 23138,
+                      "width": 88,
+                      "height": 16
+                    },
+                    "childCount": 1
+                  },
+                  {
+                    "id": "236:8230",
+                    "type": "GROUP",
+                    "name": "Group 270989618",
+                    "bbox": {
+                      "x": 463.5,
+                      "y": 23140,
+                      "width": 28.5,
+                      "height": 12
+                    },
+                    "childCount": 3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "236:8254",
+            "type": "GROUP",
+            "name": "Mask group",
+            "bbox": {
+              "x": 36.65,
+              "y": 19070,
+              "width": 1523.35,
+              "height": 865
+            },
+            "children": [
+              {
+                "id": "236:8252",
+                "type": "VECTOR",
+                "name": "Vector 36",
+                "bbox": {
+                  "x": 36.65,
+                  "y": 19070,
+                  "width": 1523.35,
+                  "height": 865
+                }
+              },
+              {
+                "id": "236:8251",
+                "type": "RECTANGLE",
+                "name": "2db7c3b495fb9a085d2565bd928a81d6 1",
+                "bbox": {
+                  "x": 40,
+                  "y": 18921,
+                  "width": 1520,
+                  "height": 1050
+                }
+              }
+            ]
+          },
+          {
+            "id": "236:8255",
+            "type": "TEXT",
+            "name": "Discover the Property",
+            "bbox": {
+              "x": 536,
+              "y": 18914,
+              "width": 529,
+              "height": 40
+            },
+            "characters": "Discover the Property"
+          },
+          {
+            "id": "236:8257",
+            "type": "TEXT",
+            "name": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.",
+            "bbox": {
+              "x": 537,
+              "y": 18986,
+              "width": 526,
+              "height": 40
+            },
+            "characters": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+          },
+          {
+            "id": "242:91",
+            "type": "TEXT",
+            "name": "San diego’s great escape & oasis is as welcoming as ever",
+            "bbox": {
+              "x": 557,
+              "y": 2653,
+              "width": 487,
+              "height": 58
+            },
+            "characters": "San diego’s great escape & oasis\nis as welcoming as ever"
+          },
+          {
+            "id": "242:94",
+            "type": "TEXT",
+            "name": "A century of stories meets a new hospitality",
+            "bbox": {
+              "x": 395.68,
+              "y": 1183.22,
+              "width": 810.1,
+              "height": 292.11
+            },
+            "characters": "A century of stories meets\na new hospitality"
+          },
+          {
+            "id": "250:2073",
+            "type": "GROUP",
+            "name": "Group 270990037",
+            "bbox": {
+              "x": -1,
+              "y": 23188,
+              "width": 1601,
+              "height": 1678
+            },
+            "children": [
+              {
+                "id": "242:129",
+                "type": "RECTANGLE",
+                "name": "Rectangle 530",
+                "bbox": {
+                  "x": -1,
+                  "y": 23188,
+                  "width": 1601,
+                  "height": 1678
+                }
+              },
+              {
+                "id": "250:2123",
+                "type": "GROUP",
+                "name": "Group 270990038",
+                "bbox": {
+                  "x": 723,
+                  "y": 24795,
+                  "width": 152.45,
+                  "height": 31.3
+                },
+                "children": [
+                  {
+                    "id": "250:2124",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 863.09,
+                      "y": 24813.93,
+                      "width": 12.36,
+                      "height": 12.37
+                    }
+                  },
+                  {
+                    "id": "250:2125",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 740.27,
+                      "y": 24813.94,
+                      "width": 12.36,
+                      "height": 12.36
+                    }
+                  },
+                  {
+                    "id": "250:2126",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 813.26,
+                      "y": 24813.94,
+                      "width": 12.35,
+                      "height": 12.36
+                    }
+                  },
+                  {
+                    "id": "250:2127",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 792.1,
+                      "y": 24795,
+                      "width": 9.07,
+                      "height": 11.67
+                    }
+                  },
+                  {
+                    "id": "250:2128",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 761.81,
+                      "y": 24814.36,
+                      "width": 9.42,
+                      "height": 11.47
+                    }
+                  },
+                  {
+                    "id": "250:2129",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 761.44,
+                      "y": 24795.03,
+                      "width": 9.3,
+                      "height": 11.58
+                    }
+                  },
+                  {
+                    "id": "250:2130",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 846.71,
+                      "y": 24795.03,
+                      "width": 8.3,
+                      "height": 11.57
+                    }
+                  },
+                  {
+                    "id": "250:2131",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 723,
+                      "y": 24814.4,
+                      "width": 8.76,
+                      "height": 11.43
+                    }
+                  },
+                  {
+                    "id": "250:2132",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 810.08,
+                      "y": 24795.04,
+                      "width": 9.81,
+                      "height": 11.83
+                    }
+                  },
+                  {
+                    "id": "250:2133",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 796.64,
+                      "y": 24814.4,
+                      "width": 7.92,
+                      "height": 11.43
+                    }
+                  },
+                  {
+                    "id": "250:2134",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 778.7,
+                      "y": 24814.37,
+                      "width": 9.15,
+                      "height": 11.46
+                    }
+                  },
+                  {
+                    "id": "250:2135",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 828.76,
+                      "y": 24795.04,
+                      "width": 9.13,
+                      "height": 11.56
+                    }
+                  },
+                  {
+                    "id": "250:2136",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 743.62,
+                      "y": 24795.06,
+                      "width": 9.12,
+                      "height": 11.56
+                    }
+                  },
+                  {
+                    "id": "250:2137",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 834.95,
+                      "y": 24814.38,
+                      "width": 7.3,
+                      "height": 11.44
+                    }
+                  },
+                  {
+                    "id": "250:2138",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 779.58,
+                      "y": 24795.02,
+                      "width": 2.72,
+                      "height": 11.59
+                    }
+                  },
+                  {
+                    "id": "250:2139",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 851.15,
+                      "y": 24814.4,
+                      "width": 2.75,
+                      "height": 11.42
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "250:2075",
+                "type": "TEXT",
+                "name": "Earn Marriott Bonvoy® Points on Every Stay",
+                "bbox": {
+                  "x": 596.61,
+                  "y": 23943,
+                  "width": 414,
+                  "height": 14
+                },
+                "characters": "Earn Marriott Bonvoy® Points on Every Stay"
+              },
+              {
+                "id": "250:1966",
+                "type": "LINE",
+                "name": "Line 4",
+                "bbox": {
+                  "x": 800,
+                  "y": 23408,
+                  "width": 0,
+                  "height": 426
+                }
+              },
+              {
+                "id": "250:1986",
+                "type": "GROUP",
+                "name": "Group 270990031",
+                "bbox": {
+                  "x": 205,
+                  "y": 23526,
+                  "width": 392,
+                  "height": 191
+                },
+                "children": [
+                  {
+                    "id": "250:1980",
+                    "type": "TEXT",
+                    "name": "Book your escape",
+                    "bbox": {
+                      "x": 205,
+                      "y": 23526,
+                      "width": 392,
+                      "height": 72
+                    },
+                    "characters": "Book your escape"
+                  },
+                  {
+                    "id": "250:1981",
+                    "type": "GROUP",
+                    "name": "Button",
+                    "bbox": {
+                      "x": 294,
+                      "y": 23680,
+                      "width": 214,
+                      "height": 37
+                    },
+                    "childCount": 1
+                  }
+                ]
+              },
+              {
+                "id": "250:1985",
+                "type": "GROUP",
+                "name": "Group 270990030",
+                "bbox": {
+                  "x": 924,
+                  "y": 23526,
+                  "width": 551,
+                  "height": 191
+                },
+                "children": [
+                  {
+                    "id": "250:1967",
+                    "type": "TEXT",
+                    "name": "Stay in the loop",
+                    "bbox": {
+                      "x": 1019,
+                      "y": 23526,
+                      "width": 364,
+                      "height": 72
+                    },
+                    "characters": "Stay in the loop"
+                  },
+                  {
+                    "id": "250:1970",
+                    "type": "GROUP",
+                    "name": "Button",
+                    "bbox": {
+                      "x": 1331,
+                      "y": 23680,
+                      "width": 144,
+                      "height": 37
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "250:1974",
+                    "type": "LINE",
+                    "name": "Line 5",
+                    "bbox": {
+                      "x": 924,
+                      "y": 23717,
+                      "width": 388,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "250:1976",
+                    "type": "TEXT",
+                    "name": "*Email",
+                    "bbox": {
+                      "x": 924,
+                      "y": 23691,
+                      "width": 60,
+                      "height": 16
+                    },
+                    "characters": "*Email"
+                  }
+                ]
+              },
+              {
+                "id": "250:2023",
+                "type": "FRAME",
+                "name": "Frame 427318623",
+                "bbox": {
+                  "x": 40,
+                  "y": 24366,
+                  "width": 1520,
+                  "height": 250
+                },
+                "children": [
+                  {
+                    "id": "250:2019",
+                    "type": "GROUP",
+                    "name": "Group 270990032",
+                    "bbox": {
+                      "x": 40,
+                      "y": 24366,
+                      "width": 123,
+                      "height": 250
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "250:2020",
+                    "type": "GROUP",
+                    "name": "Group 270990033",
+                    "bbox": {
+                      "x": 333,
+                      "y": 24366,
+                      "width": 168,
+                      "height": 224
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "250:2021",
+                    "type": "GROUP",
+                    "name": "Group 270990034",
+                    "bbox": {
+                      "x": 671,
+                      "y": 24366,
+                      "width": 168,
+                      "height": 172
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "250:2022",
+                    "type": "GROUP",
+                    "name": "Group 270990035",
+                    "bbox": {
+                      "x": 1009,
+                      "y": 24366,
+                      "width": 168,
+                      "height": 120
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "250:2048",
+                    "type": "GROUP",
+                    "name": "Group 270990036",
+                    "bbox": {
+                      "x": 1347,
+                      "y": 24366,
+                      "width": 215,
+                      "height": 120
+                    },
+                    "childCount": 2
+                  }
+                ]
+              },
+              {
+                "id": "250:2045",
+                "type": "GROUP",
+                "name": "Group 270990036",
+                "bbox": {
+                  "x": 717,
+                  "y": 23869,
+                  "width": 167,
+                  "height": 48.09
+                },
+                "children": [
+                  {
+                    "id": "250:2027",
+                    "type": "GROUP",
+                    "name": "Group",
+                    "bbox": {
+                      "x": 717,
+                      "y": 23869,
+                      "width": 167,
+                      "height": 48.09
+                    },
+                    "childCount": 17
+                  }
+                ]
+              },
+              {
+                "id": "250:2063",
+                "type": "TEXT",
+                "name": "copyright © 2026 the guild hotel",
+                "bbox": {
+                  "x": 40,
+                  "y": 24812,
+                  "width": 356,
+                  "height": 14
+                },
+                "characters": "copyright © 2026 the guild hotel"
+              },
+              {
+                "id": "250:2065",
+                "type": "TEXT",
+                "name": "brand & website by Studio circa",
+                "bbox": {
+                  "x": 1283,
+                  "y": 24812,
+                  "width": 277,
+                  "height": 14
+                },
+                "characters": "brand & website by Studio circa"
+              }
+            ]
+          },
+          {
+            "id": "413:5545",
+            "type": "GROUP",
+            "name": "Group 270990177",
+            "bbox": {
+              "x": 40,
+              "y": 20283,
+              "width": 1779,
+              "height": 536
+            },
+            "children": [
+              {
+                "id": "236:8259",
+                "type": "TEXT",
+                "name": "more of the guild",
+                "bbox": {
+                  "x": 40,
+                  "y": 20283,
+                  "width": 411,
+                  "height": 40
+                },
+                "characters": "more of the guild"
+              },
+              {
+                "id": "250:2096",
+                "type": "RECTANGLE",
+                "name": "Rectangle 14",
+                "bbox": {
+                  "x": 1075,
+                  "y": 20283,
+                  "width": 356,
+                  "height": 352
+                }
+              },
+              {
+                "id": "250:2099",
+                "type": "RECTANGLE",
+                "name": "Rectangle 563",
+                "bbox": {
+                  "x": 687,
+                  "y": 20283,
+                  "width": 356,
+                  "height": 502
+                }
+              },
+              {
+                "id": "250:2098",
+                "type": "RECTANGLE",
+                "name": "Rectangle 562",
+                "bbox": {
+                  "x": 1463,
+                  "y": 20283,
+                  "width": 356,
+                  "height": 463
+                }
+              },
+              {
+                "id": "250:2100",
+                "type": "TEXT",
+                "name": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.",
+                "bbox": {
+                  "x": 40,
+                  "y": 20355,
+                  "width": 485,
+                  "height": 40
+                },
+                "characters": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+              },
+              {
+                "id": "250:2102",
+                "type": "TEXT",
+                "name": "rooms",
+                "bbox": {
+                  "x": 687,
+                  "y": 20797,
+                  "width": 69,
+                  "height": 22
+                },
+                "characters": "rooms"
+              },
+              {
+                "id": "250:2104",
+                "type": "TEXT",
+                "name": "dining",
+                "bbox": {
+                  "x": 1075,
+                  "y": 20647,
+                  "width": 67,
+                  "height": 22
+                },
+                "characters": "dining"
+              },
+              {
+                "id": "250:2105",
+                "type": "TEXT",
+                "name": "wellness",
+                "bbox": {
+                  "x": 1463,
+                  "y": 20758,
+                  "width": 96,
+                  "height": 22
+                },
+                "characters": "wellness"
+              },
+              {
+                "id": "250:2108",
+                "type": "GROUP",
+                "name": "Group 270989617",
+                "bbox": {
+                  "x": 40,
+                  "y": 20803,
+                  "width": 28.5,
+                  "height": 12
+                },
+                "children": [
+                  {
+                    "id": "250:2109",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 40,
+                      "y": 20809,
+                      "width": 28.5,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "250:2110",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 40,
+                      "y": 20809,
+                      "width": 6,
+                      "height": 6
+                    }
+                  },
+                  {
+                    "id": "250:2111",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 40,
+                      "y": 20803,
+                      "width": 6,
+                      "height": 6
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "250:2118",
+                "type": "GROUP",
+                "name": "Group 270989618",
+                "bbox": {
+                  "x": 90,
+                  "y": 20803,
+                  "width": 28.5,
+                  "height": 12
+                },
+                "children": [
+                  {
+                    "id": "250:2119",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 90,
+                      "y": 20809,
+                      "width": 28.5,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "250:2120",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 112.5,
+                      "y": 20803,
+                      "width": 6,
+                      "height": 6
+                    }
+                  },
+                  {
+                    "id": "250:2121",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 112.5,
+                      "y": 20809,
+                      "width": 6,
+                      "height": 6
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "236:8629",
+            "type": "INSTANCE",
+            "name": "guild-nav-full-dark",
+            "bbox": {
+              "x": 40,
+              "y": 26,
+              "width": 1520,
+              "height": 56
+            },
+            "manual": true
+          }
+        ]
+      }
+    }
+  ],
+  "animationNotes": [
+    {
+      "id": "255:203",
+      "name": "History-Animation-1",
+      "texts": [
+        "sticky year element that changes on scroll when reaching specific sections"
+      ],
+      "sectionIndex": 5
+    },
+    {
+      "id": "255:200",
+      "name": "History-Animation-2",
+      "texts": [
+        "4 images collapse onto one another (into 1 image) then expand into full screen. after scroll those 4 images comprise the gallery underneath"
+      ],
+      "sectionIndex": 6
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "pageSlug": "legal",
+  "index": 4,
+  "slug": "why-teams-choose-the-guild",
+  "laneHint": null,
+  "frameId": "318:836",
+  "bbox": {
+    "x": 0,
+    "y": 2871,
+    "width": 1600,
+    "height": 1026
+  },
+  "crop": {
+    "y0": 2790.5,
+    "y1": 3930
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "319:1153",
+      "characters": "Why teams choose The Guild",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 32,
+      "fontWeight": 400,
+      "lineHeightPx": 38.4,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 526,
+        "y": 285.5,
+        "width": 549,
+        "height": 38
+      }
+    },
+    {
+      "id": "319:1165",
+      "characters": "eyebrow text",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 96,
+        "y": 444.5,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "319:1162",
+      "characters": "eyebrow text",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 469,
+        "y": 444.5,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "319:1167",
+      "characters": "eyebrow text",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 842,
+        "y": 444.5,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "319:1169",
+      "characters": "eyebrow text",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1215,
+        "y": 444.5,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "319:1164",
+      "characters": "Prime location within minutes of San Diego’s courthouses",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 96,
+        "y": 487.5,
+        "width": 288,
+        "height": 40
+      }
+    },
+    {
+      "id": "319:1161",
+      "characters": "Elegant, distraction-free setting ideal for preparation",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 469,
+        "y": 487.5,
+        "width": 288,
+        "height": 40
+      }
+    },
+    {
+      "id": "319:1166",
+      "characters": "High-speed fiber Wi-Fi & flexible private meeting spaces",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 842,
+        "y": 487.5,
+        "width": 288,
+        "height": 40
+      }
+    },
+    {
+      "id": "319:1168",
+      "characters": "Full-floor buyouts for maximum privacy and control",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1215,
+        "y": 487.5,
+        "width": 288,
+        "height": 40
+      }
+    },
+    {
+      "id": "319:1186",
+      "characters": "eyebrow text",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 96,
+        "y": 662.5,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "319:1177",
+      "characters": "eyebrow text",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 469,
+        "y": 662.5,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "319:1180",
+      "characters": "eyebrow text",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 842,
+        "y": 662.5,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "319:1183",
+      "characters": "eyebrow text",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1215,
+        "y": 662.5,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "319:1185",
+      "characters": "Private outdoor terraces for breaks and decompression",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 96,
+        "y": 705.5,
+        "width": 288,
+        "height": 40
+      }
+    },
+    {
+      "id": "319:1176",
+      "characters": "Custom food and beverage options for legal teams",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 469,
+        "y": 705.5,
+        "width": 288,
+        "height": 40
+      }
+    },
+    {
+      "id": "319:1179",
+      "characters": "Seamless group booking and extended-stay accommodations",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 842,
+        "y": 705.5,
+        "width": 288,
+        "height": 40
+      }
+    },
+    {
+      "id": "319:1182",
+      "characters": "Tribute Portfolio Hotel – eligible for Marriott Bonvoy Points",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1215,
+        "y": 705.5,
+        "width": 288,
+        "height": 40
+      }
+    },
+    {
+      "id": "319:1209",
+      "characters": "Earn Marriott Bonvoy®\nPoints on Every Stay",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 16.8,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 692,
+        "y": 993.5,
+        "width": 217,
+        "height": 34
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 35
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 4
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "I319:1307;319:1255",
+      "name": "Rectangle 579",
+      "imageRef": "2e81693530e933aa43a6c48a794614cca7c8822d",
+      "bbox": {
+        "x": 241,
+        "y": 356.5,
+        "width": 377,
+        "height": 486
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "319:1315",
+      "type": "GROUP",
+      "name": "Group 270990100",
+      "bbox": {
+        "x": 0,
+        "y": 80.5,
+        "width": 1600,
+        "height": 1026
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

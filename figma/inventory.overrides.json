@@ -1,0 +1,14 @@
+{
+  "_readme": "Manual inventory corrections, applied last by scripts/api/figma/build-inventory.mjs. Key each entry by section key (<pageSlug>/<NN-slug>, see figma/inventory.json). Fields: lane (agent | manual | needs-decision), name, mergeWith (another section key), note.",
+  "sections": {
+    "dining-gardenterrace/10-the-hotel": {
+      "note": "Footer. The other-dining card group (2034:1756 on Garden Terrace) overlaps the footer bottom in the design; treat it as a leftover and do not build it here."
+    },
+    "dining-lobbybar/10-the-hotel": {
+      "note": "Footer. The other-dining card group (2034:1756 on Garden Terrace) overlaps the footer bottom in the design; treat it as a leftover and do not build it here."
+    },
+    "dining-poollounge/10-the-hotel": {
+      "note": "Footer. The other-dining card group (2034:1756 on Garden Terrace) overlaps the footer bottom in the design; treat it as a leftover and do not build it here."
+    }
+  }
+}

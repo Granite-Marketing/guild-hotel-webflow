@@ -1,0 +1,169 @@
+{
+  "pageSlug": "history",
+  "index": 6,
+  "slug": "a-landmark-reimagined",
+  "laneHint": null,
+  "frameId": "219:739",
+  "bbox": {
+    "x": 0,
+    "y": 14750,
+    "width": 1600,
+    "height": 1024
+  },
+  "crop": {
+    "y0": 14626.5,
+    "y1": 15774
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "228:7972",
+      "characters": "A Landmark Reimagined",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 533,
+        "y": 302.5,
+        "width": 535,
+        "height": 40
+      }
+    },
+    {
+      "id": "228:7971",
+      "characters": "Discover the materials, colors and details that INC architecture chose to reveal the character of The Guild.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 525,
+        "y": 928.5,
+        "width": 550,
+        "height": 40
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 4
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "228:7985",
+      "type": "RECTANGLE",
+      "name": "Rectangle 560",
+      "bbox": {
+        "x": 0,
+        "y": 123.5,
+        "width": 1600,
+        "height": 1024
+      }
+    },
+    {
+      "id": "228:7972",
+      "type": "TEXT",
+      "name": "A Landmark Reimagined",
+      "bbox": {
+        "x": 533,
+        "y": 302.5,
+        "width": 535,
+        "height": 40
+      }
+    },
+    {
+      "id": "228:7980",
+      "type": "RECTANGLE",
+      "name": "Rectangle 556",
+      "bbox": {
+        "x": 40,
+        "y": 402.5,
+        "width": 356,
+        "height": 466
+      }
+    },
+    {
+      "id": "228:7982",
+      "type": "RECTANGLE",
+      "name": "Rectangle 557",
+      "bbox": {
+        "x": 428,
+        "y": 402.5,
+        "width": 356,
+        "height": 466
+      }
+    },
+    {
+      "id": "228:7983",
+      "type": "RECTANGLE",
+      "name": "Rectangle 558",
+      "bbox": {
+        "x": 816,
+        "y": 402.5,
+        "width": 356,
+        "height": 466
+      }
+    },
+    {
+      "id": "228:7984",
+      "type": "RECTANGLE",
+      "name": "Rectangle 559",
+      "bbox": {
+        "x": 1204,
+        "y": 402.5,
+        "width": 356,
+        "height": 466
+      }
+    },
+    {
+      "id": "228:7971",
+      "type": "TEXT",
+      "name": "Discover the materials, colors and details that INC architecture chose to reveal the character of The Guild.",
+      "bbox": {
+        "x": 525,
+        "y": 928.5,
+        "width": 550,
+        "height": 40
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [
+    {
+      "id": "255:200",
+      "name": "History-Animation-2",
+      "texts": [
+        "4 images collapse onto one another (into 1 image) then expand into full screen. after scroll those 4 images comprise the gallery underneath"
+      ]
+    }
+  ],
+  "source": "page"
+}

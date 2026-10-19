@@ -1,0 +1,102 @@
+{
+  "pageSlug": "press",
+  "index": 3,
+  "slug": "the-best-san-diego-hotels-for",
+  "laneHint": null,
+  "frameId": "419:5583",
+  "bbox": {
+    "x": 0,
+    "y": 1613,
+    "width": 1600,
+    "height": 562
+  },
+  "crop": {
+    "y0": 1605.5,
+    "y1": 2200
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "420:6693",
+      "characters": "The best San Diego hotels for every kind of traveler",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 547.5,
+        "width": 703,
+        "height": 22
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 18
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#FFCC00",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "420:6692",
+      "type": "RECTANGLE",
+      "name": "Rectangle 596",
+      "bbox": {
+        "x": 169,
+        "y": 7.5,
+        "width": 744,
+        "height": 524
+      }
+    },
+    {
+      "id": "420:6695",
+      "type": "FRAME",
+      "name": "Natgeologo 1",
+      "bbox": {
+        "x": 405,
+        "y": 229.5,
+        "width": 272,
+        "height": 80
+      }
+    },
+    {
+      "id": "420:6693",
+      "type": "TEXT",
+      "name": "The best San Diego hotels for every kind of traveler",
+      "bbox": {
+        "x": 169,
+        "y": 547.5,
+        "width": 703,
+        "height": 22
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

@@ -1,0 +1,138 @@
+{
+  "pageSlug": "wellness-collection",
+  "index": 4,
+  "slug": "fitness-center",
+  "laneHint": null,
+  "frameId": "266:3630",
+  "bbox": {
+    "x": 0,
+    "y": 3616,
+    "width": 1600,
+    "height": 988
+  },
+  "crop": {
+    "y0": 3596,
+    "y1": 4624
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "284:3973",
+      "characters": "fitness center",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 80,
+      "fontWeight": 400,
+      "lineHeightPx": 80,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 317,
+        "y": 400,
+        "width": 967,
+        "height": 80
+      }
+    },
+    {
+      "id": "284:3974",
+      "characters": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 22,
+      "fontWeight": 400,
+      "lineHeightPx": 35.2,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 492,
+        "y": 514,
+        "width": 614,
+        "height": 35
+      }
+    },
+    {
+      "id": "284:3977",
+      "characters": "DISCOVER MORE",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 727,
+        "y": 600,
+        "width": 144,
+        "height": 16
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#000000",
+      "opacity": 0.2,
+      "count": 1
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "284:3970",
+      "name": "Vector 31",
+      "imageRef": "a615ab07d022b6aa76066c2ac89bf41fd38923c5",
+      "bbox": {
+        "x": 40,
+        "y": 20,
+        "width": 1520,
+        "height": 988
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "284:3969",
+      "type": "GROUP",
+      "name": "Group 270990054",
+      "bbox": {
+        "x": 40,
+        "y": 20,
+        "width": 1520,
+        "height": 988
+      }
+    },
+    {
+      "id": "284:3971",
+      "type": "GROUP",
+      "name": "Group 270990054",
+      "bbox": {
+        "x": 317,
+        "y": 400,
+        "width": 967,
+        "height": 228
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

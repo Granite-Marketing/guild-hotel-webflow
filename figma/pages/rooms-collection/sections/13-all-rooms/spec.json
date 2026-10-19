@@ -1,0 +1,502 @@
+{
+  "pageSlug": "rooms-collection",
+  "index": 13,
+  "slug": "all-rooms",
+  "laneHint": "manual",
+  "frameId": "386:1422",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 900
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "386:1436",
+      "characters": "all",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 251,
+        "y": 120,
+        "width": 45,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1447",
+      "characters": "rooms",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 328,
+        "y": 120,
+        "width": 95,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1448",
+      "characters": "suites",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 455,
+        "y": 120,
+        "width": 93,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1527",
+      "characters": "cozy queen",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 165,
+        "y": 218,
+        "width": 470,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1528",
+      "characters": "Cozy King",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 165,
+        "y": 271,
+        "width": 470,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1529",
+      "characters": "Cozy Courtyard Queen",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 165,
+        "y": 324,
+        "width": 470,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1530",
+      "characters": "Cozy Courtyard King",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 165,
+        "y": 377,
+        "width": 470,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1531",
+      "characters": "City Level Below Ground",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 165,
+        "y": 430,
+        "width": 470,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1442",
+      "characters": "TWO GUESTS",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#4A1217",
+      "bbox": {
+        "x": 332.6,
+        "y": 471,
+        "width": 137,
+        "height": 24
+      }
+    },
+    {
+      "id": "386:1532",
+      "characters": "Guild City Level Loft",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 165,
+        "y": 483,
+        "width": 470,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1533",
+      "characters": "Guild Loft Suite",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 165,
+        "y": 536,
+        "width": 470,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1534",
+      "characters": "Guild Corner Loft Suite",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 165,
+        "y": 589,
+        "width": 470,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1535",
+      "characters": "Guild Double",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 165,
+        "y": 642,
+        "width": 470,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1536",
+      "characters": "Two Bedroom Loft Suite",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 165,
+        "y": 695,
+        "width": 470,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1558",
+      "characters": "cozy courtyard queen",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 840,
+        "y": 794,
+        "width": 470,
+        "height": 30
+      }
+    },
+    {
+      "id": "386:1563",
+      "characters": "view more",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 1421,
+        "y": 837,
+        "width": 94,
+        "height": 19
+      }
+    },
+    {
+      "id": "386:1445",
+      "characters": "back to the quiz",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 262,
+        "y": 845,
+        "width": 273,
+        "height": 19
+      }
+    },
+    {
+      "id": "386:1552",
+      "characters": "4 guests",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 888,
+        "y": 845,
+        "width": 95,
+        "height": 22
+      }
+    },
+    {
+      "id": "386:1556",
+      "characters": "52 m² size",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1079,
+        "y": 845,
+        "width": 107,
+        "height": 22
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 20
+    },
+    {
+      "hex": "#4A1217",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#FFFFFF",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "386:1424",
+      "name": "Rectangle 513",
+      "imageRef": "cec4b89085ea09ad21eb68b7b11a462e95e59cfa",
+      "bbox": {
+        "x": 800,
+        "y": 0,
+        "width": 801,
+        "height": 900
+      }
+    }
+  ],
+  "manualOverlays": [
+    {
+      "nodeId": "386:1571",
+      "name": "guild-nav-full-dark",
+      "reason": "nav component instance: manual lane, bbox only",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "386:1423",
+      "type": "GROUP",
+      "name": "Group 270990148",
+      "bbox": {
+        "x": -1,
+        "y": 0,
+        "width": 1602,
+        "height": 900
+      }
+    },
+    {
+      "id": "386:1506",
+      "type": "FRAME",
+      "name": "Tap Hand",
+      "bbox": {
+        "x": 515,
+        "y": 333,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "id": "386:1560",
+      "type": "GROUP",
+      "name": "Group 270990081",
+      "bbox": {
+        "x": 1386,
+        "y": 829,
+        "width": 164,
+        "height": 37
+      }
+    },
+    {
+      "id": "386:1571",
+      "type": "INSTANCE",
+      "name": "guild-nav-full-dark",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "side"
+}

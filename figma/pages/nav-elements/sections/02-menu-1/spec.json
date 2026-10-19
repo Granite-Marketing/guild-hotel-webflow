@@ -1,0 +1,536 @@
+{
+  "pageSlug": "nav-elements",
+  "index": 2,
+  "slug": "menu-1",
+  "laneHint": "manual",
+  "frameId": "242:1573",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 900
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "242:1934",
+      "characters": "BOOK NOW",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 12,
+      "letterSpacing": -0.8,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "RIGHT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1471,
+        "y": 46,
+        "width": 89,
+        "height": 12
+      }
+    },
+    {
+      "id": "242:1939",
+      "characters": "day",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 12,
+      "letterSpacing": -0.8,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "RIGHT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 130,
+        "y": 48.01,
+        "width": 31,
+        "height": 12
+      }
+    },
+    {
+      "id": "242:1936",
+      "characters": "night",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 12,
+      "letterSpacing": -0.8,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "RIGHT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 200.04,
+        "y": 48.01,
+        "width": 50,
+        "height": 12
+      }
+    },
+    {
+      "id": "242:1587",
+      "characters": "stay",
+      "styleName": "Sackers Heavy Gothic / Display / Card",
+      "styleId": "177:52",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 38,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 748.5,
+        "y": 183,
+        "width": 103,
+        "height": 38
+      }
+    },
+    {
+      "id": "242:1588",
+      "characters": "dine",
+      "styleName": "Sackers Heavy Gothic / Display / Card",
+      "styleId": "177:52",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 38,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 747,
+        "y": 245,
+        "width": 106,
+        "height": 38
+      }
+    },
+    {
+      "id": "242:1578",
+      "characters": "stay",
+      "styleName": "Sackers Heavy Gothic / Display / Section",
+      "styleId": "177:57",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 48,
+      "fontWeight": 400,
+      "lineHeightPx": 48,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 1138.5,
+        "y": 266.5,
+        "width": 123,
+        "height": 48
+      }
+    },
+    {
+      "id": "242:1589",
+      "characters": "wellness",
+      "styleName": "Sackers Heavy Gothic / Display / Card",
+      "styleId": "177:52",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 38,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 689.5,
+        "y": 307,
+        "width": 221,
+        "height": 38
+      }
+    },
+    {
+      "id": "242:1579",
+      "characters": "dine",
+      "styleName": "Sackers Heavy Gothic / Display / Section",
+      "styleId": "177:57",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 48,
+      "fontWeight": 400,
+      "lineHeightPx": 48,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 1136.5,
+        "y": 330.5,
+        "width": 127,
+        "height": 48
+      }
+    },
+    {
+      "id": "242:1590",
+      "characters": "experiences",
+      "styleName": "Sackers Heavy Gothic / Display / Card",
+      "styleId": "177:52",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 38,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 651,
+        "y": 369,
+        "width": 298,
+        "height": 38
+      }
+    },
+    {
+      "id": "242:1580",
+      "characters": "wellness",
+      "styleName": "Sackers Heavy Gothic / Display / Section",
+      "styleId": "177:57",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 48,
+      "fontWeight": 400,
+      "lineHeightPx": 48,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 1067.5,
+        "y": 394.5,
+        "width": 265,
+        "height": 48
+      }
+    },
+    {
+      "id": "242:1593",
+      "characters": "our history",
+      "styleName": "Sackers Heavy Gothic / Display / Card",
+      "styleId": "177:52",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 38,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 653,
+        "y": 431,
+        "width": 294,
+        "height": 38
+      }
+    },
+    {
+      "id": "242:1581",
+      "characters": "experiences",
+      "styleName": "Sackers Heavy Gothic / Display / Section",
+      "styleId": "177:57",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 48,
+      "fontWeight": 400,
+      "lineHeightPx": 48,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 1021,
+        "y": 458.5,
+        "width": 358,
+        "height": 48
+      }
+    },
+    {
+      "id": "242:1591",
+      "characters": "meetings & events",
+      "styleName": "Sackers Heavy Gothic / Display / Card",
+      "styleId": "177:52",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 38,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 576,
+        "y": 493,
+        "width": 448,
+        "height": 38
+      }
+    },
+    {
+      "id": "242:1582",
+      "characters": "gather",
+      "styleName": "Sackers Heavy Gothic / Display / Section",
+      "styleId": "177:57",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 48,
+      "fontWeight": 400,
+      "lineHeightPx": 48,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 1098.5,
+        "y": 522.5,
+        "width": 203,
+        "height": 48
+      }
+    },
+    {
+      "id": "242:1592",
+      "characters": "neighborhood",
+      "styleName": "Sackers Heavy Gothic / Display / Card",
+      "styleId": "177:52",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 38,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 621.5,
+        "y": 555,
+        "width": 357,
+        "height": 38
+      }
+    },
+    {
+      "id": "242:1583",
+      "characters": "discovery",
+      "styleName": "Sackers Heavy Gothic / Display / Section",
+      "styleId": "177:57",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 48,
+      "fontWeight": 400,
+      "lineHeightPx": 48,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 1054.5,
+        "y": 586.5,
+        "width": 291,
+        "height": 48
+      }
+    },
+    {
+      "id": "242:1594",
+      "characters": "gallery",
+      "styleName": "Sackers Heavy Gothic / Display / Card",
+      "styleId": "177:52",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 38,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 709,
+        "y": 617,
+        "width": 182,
+        "height": 38
+      }
+    },
+    {
+      "id": "242:1595",
+      "characters": "contact",
+      "styleName": "Sackers Heavy Gothic / Display / Card",
+      "styleId": "177:52",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 38,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 699.5,
+        "y": 679,
+        "width": 201,
+        "height": 38
+      }
+    },
+    {
+      "id": "242:1596",
+      "characters": "500 W. Broadway San Diego, CA 92101",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 65,
+        "y": 853,
+        "width": 355,
+        "height": 19
+      }
+    },
+    {
+      "id": "242:1597",
+      "characters": "(619) 795-6000",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 719,
+        "y": 853,
+        "width": 161,
+        "height": 19
+      }
+    },
+    {
+      "id": "242:1598",
+      "characters": "booking@theguildhotel.com",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1273,
+        "y": 853,
+        "width": 272,
+        "height": 19
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 33
+    },
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 10
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 6
+    },
+    {
+      "hex": "#000000",
+      "opacity": 0.5,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "242:1584",
+      "name": "Rectangle 530",
+      "imageRef": "98eca10794a53739c444c52708394a47e0eedb31",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "242:1574",
+      "type": "GROUP",
+      "name": "Group 270989728",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "242:1596",
+      "type": "TEXT",
+      "name": "500 W. Broadway San Diego, CA 92101",
+      "bbox": {
+        "x": 65,
+        "y": 853,
+        "width": 355,
+        "height": 19
+      }
+    },
+    {
+      "id": "242:1597",
+      "type": "TEXT",
+      "name": "(619) 795-6000",
+      "bbox": {
+        "x": 719,
+        "y": 853,
+        "width": 161,
+        "height": 19
+      }
+    },
+    {
+      "id": "242:1598",
+      "type": "TEXT",
+      "name": "booking@theguildhotel.com",
+      "bbox": {
+        "x": 1273,
+        "y": 853,
+        "width": 272,
+        "height": 19
+      }
+    },
+    {
+      "id": "242:1901",
+      "type": "FRAME",
+      "name": "guild-nav-full-dark",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "side"
+}

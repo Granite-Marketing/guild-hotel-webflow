@@ -1,0 +1,2311 @@
+{
+ "source": "Verbatim Home frame 433:558 > 433:559 with its top-level children, plus file styles, components and componentSets, copied from tests/figma/fixtures/file-depth4.json.gz (file version 2412078996349254008)",
+ "styles": {
+  "220:7188": {
+   "key": "4fd55e69a19a669eb1db2341d091e57e58f035a1",
+   "name": "H4-CAPS",
+   "styleType": "TEXT",
+   "remote": false,
+   "description": ""
+  },
+  "236:8087": {
+   "key": "437dfa32e2446ead4c9783c6215357082cf0ab10",
+   "name": "H2-CAPS",
+   "styleType": "TEXT",
+   "remote": false,
+   "description": ""
+  },
+  "236:8094": {
+   "key": "5edfc89170b3bb4c883ce5c75415d88ad57839c7",
+   "name": "Paragraph",
+   "styleType": "TEXT",
+   "remote": false,
+   "description": ""
+  },
+  "236:8161": {
+   "key": "4f7e17eadf140906e828ddf11149435dcd3cf3b8",
+   "name": "CAPS-CAPTION-16",
+   "styleType": "TEXT",
+   "remote": false,
+   "description": ""
+  },
+  "236:8243": {
+   "key": "8445be5bddb2b54b87a80b68b44a9395c1bf383b",
+   "name": "EYEBROW-CAPS",
+   "styleType": "TEXT",
+   "remote": false,
+   "description": ""
+  },
+  "291:4282": {
+   "key": "206671cc07b196e4b6f61ced16b654848e010b6f",
+   "name": "Desktop-Guides",
+   "styleType": "GRID",
+   "remote": false,
+   "description": ""
+  },
+  "384:1311": {
+   "key": "53ec8dc377bb98beb1b4e6664d9583428c85b1e4",
+   "name": "H5-CAPS",
+   "styleType": "TEXT",
+   "remote": false,
+   "description": ""
+  },
+  "386:1566": {
+   "key": "486d2371a59082be5d17ed4dfc70222eafbba38f",
+   "name": "H3-CAPS",
+   "styleType": "TEXT",
+   "remote": false,
+   "description": ""
+  },
+  "177:56": {
+   "key": "8710f90f87c7f12b3439a8a92db2ce5d749deb23",
+   "name": "Sackers Heavy Gothic / Label / Eyebrow",
+   "styleType": "TEXT",
+   "remote": true,
+   "description": "Section eyebrows, categories, and secondary headings."
+  },
+  "220:7116": {
+   "key": "ebd215f47afc95d9e6e7fa9363c96693ecbf2399",
+   "name": "Paragraph-20/Paragraph-20/130",
+   "styleType": "TEXT",
+   "remote": false,
+   "description": ""
+  },
+  "177:3": {
+   "key": "1d3946abd5c19706cfc52aa9f0438f7817d6917d",
+   "name": "Sackers Heavy Gothic / Label / Button",
+   "styleType": "TEXT",
+   "remote": true,
+   "description": "Primary and secondary button labels."
+  }
+ },
+ "components": {
+  "236:8311": {
+   "key": "195706f925a2ecb94b5f5abde9a6ef820b2f915e",
+   "name": "Main-Dark=Default",
+   "description": "",
+   "remote": false,
+   "componentSetId": "236:8312",
+   "documentationLinks": []
+  },
+  "236:8313": {
+   "key": "9468c36e75db6017d9eae80b2030fac1ec073dfd",
+   "name": "Main-Dark=Main-Light",
+   "description": "",
+   "remote": false,
+   "componentSetId": "236:8312",
+   "documentationLinks": []
+  },
+  "236:8363": {
+   "key": "10ef6dab9a28bdb2e099ce8d2207917223314049",
+   "name": "Main-Dark=Shield-Dark",
+   "description": "",
+   "remote": false,
+   "componentSetId": "236:8312",
+   "documentationLinks": []
+  },
+  "236:8498": {
+   "key": "2b6cec69c3a4027bf023f18b5485c296f2d9a232",
+   "name": "Main-Dark=Shield-Light",
+   "description": "",
+   "remote": false,
+   "componentSetId": "236:8312",
+   "documentationLinks": []
+  },
+  "319:1297": {
+   "key": "142e4aa5c57d06aa28fa6a149b2df8927d8b1e84",
+   "name": "Property 1=Default",
+   "description": "",
+   "remote": false,
+   "componentSetId": "319:1298",
+   "documentationLinks": []
+  },
+  "319:1299": {
+   "key": "6a3400150c7c8d89d41b9bea1eec0393875e041e",
+   "name": "Property 1=Variant2",
+   "description": "",
+   "remote": false,
+   "componentSetId": "319:1298",
+   "documentationLinks": []
+  },
+  "2034:2892": {
+   "key": "7b251ebd98c98e01e630e7737f57d0f8196b48ee",
+   "name": "Property 1=Default",
+   "description": "",
+   "remote": false,
+   "componentSetId": "2034:2891",
+   "documentationLinks": []
+  },
+  "2034:2899": {
+   "key": "648821ca89aeb4b5ba9fa71fc19075d3d250266c",
+   "name": "Property 1=Variant2",
+   "description": "",
+   "remote": false,
+   "componentSetId": "2034:2891",
+   "documentationLinks": []
+  }
+ },
+ "componentSets": {
+  "236:8312": {
+   "key": "95c7e951f7e996c1649c9d9b37bf62ee44c85a49",
+   "name": "guild-nav-full-dark",
+   "description": "",
+   "documentationLinks": []
+  },
+  "319:1298": {
+   "key": "31325946c081a780686dc8c955f2cc7d9655292b",
+   "name": "Group 270990099",
+   "description": "",
+   "documentationLinks": []
+  },
+  "2034:2891": {
+   "key": "8c9acc009b2b5049b8a4e408a8e9b5fa75afa629",
+   "name": "Group 270990249",
+   "description": "",
+   "documentationLinks": []
+  }
+ },
+ "frame": {
+  "id": "433:559",
+  "name": "HOME",
+  "type": "FRAME",
+  "scrollBehavior": "SCROLLS",
+  "children": [
+   {
+    "id": "433:570",
+    "name": "Rectangle 1",
+    "type": "RECTANGLE",
+    "scrollBehavior": "SCROLLS",
+    "blendMode": "PASS_THROUGH",
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+       "r": 0.8509804010391235,
+       "g": 0.8509804010391235,
+       "b": 0.8509804010391235,
+       "a": 1
+      }
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "absoluteBoundingBox": {
+     "x": -3883,
+     "y": 0,
+     "width": 1600,
+     "height": 900
+    },
+    "absoluteRenderBounds": {
+     "x": -3883,
+     "y": 0,
+     "width": 1600,
+     "height": 900
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "CENTER"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:571",
+    "name": "the bold, handsome heart of san diego",
+    "type": "TEXT",
+    "scrollBehavior": "SCROLLS",
+    "boundVariables": {
+     "fills": [
+      {
+       "type": "VARIABLE_ALIAS",
+       "id": "VariableID:177:17076"
+      }
+     ]
+    },
+    "blendMode": "PASS_THROUGH",
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+       "r": 0.14901961386203766,
+       "g": 0.12941177189350128,
+       "b": 0.0941176488995552,
+       "a": 1
+      },
+      "boundVariables": {
+       "color": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:177:17076"
+       }
+      }
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 9.952228546142578,
+    "strokeAlign": "INSIDE",
+    "absoluteBoundingBox": {
+     "x": -3533,
+     "y": 651,
+     "width": 900,
+     "height": 40
+    },
+    "absoluteRenderBounds": {
+     "x": -3530.0078125,
+     "y": 665.59375,
+     "width": 892.609375,
+     "height": 28.65234375
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "CENTER"
+    },
+    "characters": "the bold, handsome heart of san diego",
+    "characterStyleOverrides": [],
+    "styleOverrideTable": {},
+    "lineTypes": [
+     "NONE"
+    ],
+    "lineIndentations": [
+     0
+    ],
+    "style": {
+     "fontFamily": "Sackers Heavy Gothic",
+     "fontPostScriptName": "SackersHeavyGothic",
+     "fontStyle": "Regular",
+     "fontWeight": 400,
+     "textAutoResize": "WIDTH_AND_HEIGHT",
+     "fontSize": 40,
+     "textAlignHorizontal": "CENTER",
+     "textAlignVertical": "CENTER",
+     "letterSpacing": -2,
+     "lineHeightPx": 40,
+     "lineHeightPercent": 77.48770141601562,
+     "lineHeightPercentFontSize": 100,
+     "lineHeightUnit": "FONT_SIZE_%"
+    },
+    "layoutVersion": 5,
+    "styles": {
+     "text": "236:8087"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:572",
+    "name": "The Guild is quintessential San Diego, a storied landmark reimagined as a sophisticated playground for locals and visitors alike. Grand and casual, elegant and unexpected, The Guild is an urban resort and destination unlike anything else in the city.",
+    "type": "TEXT",
+    "scrollBehavior": "SCROLLS",
+    "boundVariables": {
+     "fills": [
+      {
+       "type": "VARIABLE_ALIAS",
+       "id": "VariableID:177:17076"
+      }
+     ]
+    },
+    "blendMode": "PASS_THROUGH",
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+       "r": 0.14901961386203766,
+       "g": 0.12941177189350128,
+       "b": 0.0941176488995552,
+       "a": 1
+      },
+      "boundVariables": {
+       "color": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:177:17076"
+       }
+      }
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 4.466485977172852,
+    "strokeAlign": "INSIDE",
+    "absoluteBoundingBox": {
+     "x": -3510,
+     "y": 719,
+     "width": 854,
+     "height": 73
+    },
+    "absoluteRenderBounds": {
+     "x": -3506.93212890625,
+     "y": 718.4240112304688,
+     "width": 848.05029296875,
+     "height": 78.1519775390625
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "CENTER"
+    },
+    "characters": "The Guild is quintessential San Diego, a storied landmark reimagined as a sophisticated playground for locals and visitors alike. Grand and casual, elegant and unexpected, The Guild is an urban resort and destination unlike anything else in the city.",
+    "characterStyleOverrides": [],
+    "styleOverrideTable": {},
+    "lineTypes": [
+     "NONE"
+    ],
+    "lineIndentations": [
+     0
+    ],
+    "style": {
+     "fontFamily": "Gatch Test",
+     "fontPostScriptName": "GatchTest-Regular",
+     "fontStyle": "Regular",
+     "fontWeight": 400,
+     "textAutoResize": "HEIGHT",
+     "fontSize": 22,
+     "textAlignHorizontal": "CENTER",
+     "textAlignVertical": "CENTER",
+     "leadingTrim": "CAP_HEIGHT",
+     "letterSpacing": 0,
+     "lineHeightPx": 28.599998474121094,
+     "lineHeightPercent": 103.17460632324219,
+     "lineHeightPercentFontSize": 130,
+     "lineHeightUnit": "FONT_SIZE_%"
+    },
+    "layoutVersion": 5,
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:5720",
+    "name": "Group 270990183",
+    "type": "GROUP",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "rectangleCornerRadii": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "cornerSmoothing": 0,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3180,
+     "y": 820,
+     "width": 194,
+     "height": 37
+    },
+    "absoluteRenderBounds": {
+     "x": -3180,
+     "y": 820,
+     "width": 194,
+     "height": 37
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "487:2077",
+    "name": "Frame 427318676",
+    "type": "FRAME",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "layoutMode": "VERTICAL",
+    "counterAxisSizingMode": "FIXED",
+    "strokesIncludedInLayout": true,
+    "itemSpacing": 80,
+    "layoutWrap": "NO_WRAP",
+    "absoluteBoundingBox": {
+     "x": -3883,
+     "y": 17794,
+     "width": 1601,
+     "height": 2175
+    },
+    "absoluteRenderBounds": {
+     "x": -3883,
+     "y": 17794,
+     "width": 1600,
+     "height": 2175
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "layoutSizingHorizontal": "FIXED",
+    "layoutSizingVertical": "HUG",
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:607",
+    "name": "Behind this mannered Italian Renaissance facade is a century of glamorous mischief. Today, it’s an icon with open arms, a high-spirited destination that welcomes you to the heart of contemporary San Diego.",
+    "type": "TEXT",
+    "scrollBehavior": "SCROLLS",
+    "boundVariables": {
+     "fills": [
+      {
+       "type": "VARIABLE_ALIAS",
+       "id": "VariableID:177:17078"
+      }
+     ]
+    },
+    "blendMode": "PASS_THROUGH",
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+       "r": 0.1609954833984375,
+       "g": 0.191986083984375,
+       "b": 0.0469970703125,
+       "a": 1
+      },
+      "boundVariables": {
+       "color": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:177:17078"
+       }
+      }
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 1,
+    "strokeAlign": "OUTSIDE",
+    "absoluteBoundingBox": {
+     "x": -3377,
+     "y": 1720,
+     "width": 588,
+     "height": 66
+    },
+    "absoluteRenderBounds": {
+     "x": -3374.828369140625,
+     "y": 1719.8599853515625,
+     "width": 584.48046875,
+     "height": 70.300048828125
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "CENTER"
+    },
+    "characters": "Behind this mannered Italian Renaissance facade is a century of glamorous mischief. Today, it’s an icon with open arms, a high-spirited destination that welcomes you to the heart of contemporary San Diego.",
+    "characterStyleOverrides": [],
+    "styleOverrideTable": {},
+    "lineTypes": [
+     "NONE"
+    ],
+    "lineIndentations": [
+     0
+    ],
+    "style": {
+     "fontFamily": "Gatch Test",
+     "fontPostScriptName": "GatchTest-Regular",
+     "fontStyle": "Regular",
+     "fontWeight": 400,
+     "textAutoResize": "HEIGHT",
+     "fontSize": 20,
+     "textAlignHorizontal": "CENTER",
+     "textAlignVertical": "TOP",
+     "leadingTrim": "CAP_HEIGHT",
+     "letterSpacing": 0,
+     "lineHeightPx": 26,
+     "lineHeightPercent": 103.17460632324219,
+     "lineHeightPercentFontSize": 130,
+     "lineHeightUnit": "FONT_SIZE_%"
+    },
+    "layoutVersion": 5,
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:787",
+    "name": "A century of stories meets a new hospitality",
+    "type": "TEXT",
+    "scrollBehavior": "SCROLLS",
+    "rotation": -0.12876574456753453,
+    "blendMode": "PASS_THROUGH",
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+       "r": 0,
+       "g": 0,
+       "b": 0,
+       "a": 1
+      }
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 1,
+    "strokeAlign": "OUTSIDE",
+    "absoluteBoundingBox": {
+     "x": -3488,
+     "y": 1411.0000451803207,
+     "width": 810.0979127883911,
+     "height": 292.1113439798355
+    },
+    "absoluteRenderBounds": {
+     "x": -3500.855224609375,
+     "y": 1410.5521240234375,
+     "width": 827.07373046875,
+     "height": 311.1590576171875
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "CENTER"
+    },
+    "characters": "A century of stories meets\na new hospitality",
+    "characterStyleOverrides": [],
+    "styleOverrideTable": {},
+    "lineTypes": [
+     "NONE",
+     "NONE"
+    ],
+    "lineIndentations": [
+     0,
+     0
+    ],
+    "style": {
+     "fontFamily": "Morello",
+     "fontPostScriptName": "MorelloPointedPen",
+     "fontStyle": "PointedPen",
+     "fontWeight": 400,
+     "textWrapStyle": "BALANCE",
+     "textAutoResize": "WIDTH_AND_HEIGHT",
+     "fontSize": 80,
+     "textAlignHorizontal": "CENTER",
+     "textAlignVertical": "BOTTOM",
+     "letterSpacing": 0,
+     "lineHeightPx": 96,
+     "lineHeightPercent": 90.63444519042969,
+     "lineHeightPercentFontSize": 120.00000762939453,
+     "lineHeightUnit": "FONT_SIZE_%"
+    },
+    "layoutVersion": 5,
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:4759",
+    "name": "Group 270989565",
+    "type": "GROUP",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "rectangleCornerRadii": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "cornerSmoothing": 0,
+    "strokeWeight": 3.5343880653381348,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3303,
+     "y": 1129,
+     "width": 440.774169921875,
+     "height": 253.56454467773438
+    },
+    "absoluteRenderBounds": {
+     "x": -3303,
+     "y": 1129,
+     "width": 440.774169921875,
+     "height": 253.56454467773438
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "CENTER"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:788",
+    "name": "Group 270990037",
+    "type": "GROUP",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "rectangleCornerRadii": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "cornerSmoothing": 0,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3884,
+     "y": 19969,
+     "width": 1601,
+     "height": 1678
+    },
+    "absoluteRenderBounds": {
+     "x": -3883,
+     "y": 19969,
+     "width": 1600,
+     "height": 1678
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:885",
+    "name": "Tribute 1",
+    "visible": false,
+    "type": "RECTANGLE",
+    "scrollBehavior": "SCROLLS",
+    "blendMode": "PASS_THROUGH",
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "IMAGE",
+      "scaleMode": "FILL",
+      "imageRef": "67985fbba0d754d1101fa8a86a800c494f946eca"
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "absoluteBoundingBox": {
+     "x": -3427,
+     "y": 25028,
+     "width": 774,
+     "height": 301
+    },
+    "absoluteRenderBounds": null,
+    "preserveRatio": true,
+    "targetAspectRatio": {
+     "x": 774,
+     "y": 301
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:5740",
+    "name": "Rectangle 566",
+    "type": "RECTANGLE",
+    "scrollBehavior": "SCROLLS",
+    "boundVariables": {
+     "fills": [
+      {
+       "type": "VARIABLE_ALIAS",
+       "id": "VariableID:177:17078"
+      }
+     ]
+    },
+    "blendMode": "PASS_THROUGH",
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+       "r": 0.1609954833984375,
+       "g": 0.191986083984375,
+       "b": 0.0469970703125,
+       "a": 1
+      },
+      "boundVariables": {
+       "color": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:177:17078"
+       }
+      }
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "absoluteBoundingBox": {
+     "x": -3883,
+     "y": 2058,
+     "width": 1602,
+     "height": 900
+    },
+    "absoluteRenderBounds": {
+     "x": -3883,
+     "y": 2058,
+     "width": 1600,
+     "height": 900
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:5741",
+    "name": "As the YMCA that welcomed Army and Navy men and women, The Guild was the city’s premier gathering place. The experience has been curated, elevated and refined – but at heart, we’re still a sailor on shore leave.",
+    "type": "TEXT",
+    "scrollBehavior": "SCROLLS",
+    "boundVariables": {
+     "fills": [
+      {
+       "type": "VARIABLE_ALIAS",
+       "id": "VariableID:177:17077"
+      }
+     ],
+     "textRangeFills": [
+      {
+       "type": "VARIABLE_ALIAS",
+       "id": "VariableID:177:17077"
+      }
+     ]
+    },
+    "blendMode": "PASS_THROUGH",
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+       "r": 0.95686274766922,
+       "g": 0.9372549057006836,
+       "b": 0.8745098114013672,
+       "a": 1
+      },
+      "boundVariables": {
+       "color": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:177:17077"
+       }
+      }
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 1,
+    "strokeAlign": "OUTSIDE",
+    "absoluteBoundingBox": {
+     "x": -2938,
+     "y": 2557,
+     "width": 382,
+     "height": 118
+    },
+    "absoluteRenderBounds": {
+     "x": -2937.860107421875,
+     "y": 2556.840087890625,
+     "width": 379.318603515625,
+     "height": 118.31982421875
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "CENTER"
+    },
+    "characters": "As the YMCA that welcomed Army and Navy men and women, The Guild was the city’s premier gathering place. The experience has been curated, elevated and refined – but at heart, we’re still a sailor on shore leave. ",
+    "characterStyleOverrides": [
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9
+    ],
+    "styleOverrideTable": {
+     "9": {
+      "fontFamily": "Gatch Test",
+      "fontPostScriptName": "GatchTest-Regular",
+      "fontStyle": "Regular",
+      "fontWeight": 400,
+      "textAutoResize": "WIDTH_AND_HEIGHT",
+      "isOverrideOverTextStyle": true,
+      "fontSize": 20,
+      "letterSpacing": 0,
+      "fills": [
+       {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+         "r": 0.95686274766922,
+         "g": 0.9372549057006836,
+         "b": 0.8745098114013672,
+         "a": 1
+        },
+        "boundVariables": {
+         "color": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:177:17077"
+         }
+        }
+       }
+      ],
+      "lineHeightPx": 26,
+      "lineHeightPercent": 103.17460632324219,
+      "lineHeightPercentFontSize": 130,
+      "lineHeightUnit": "FONT_SIZE_%",
+      "inheritTextStyleId": "220:7116"
+     }
+    },
+    "lineTypes": [
+     "NONE"
+    ],
+    "lineIndentations": [
+     0
+    ],
+    "style": {
+     "fontFamily": "Gatch Test",
+     "fontPostScriptName": "GatchTest-Regular",
+     "fontStyle": "Regular",
+     "fontWeight": 400,
+     "textAutoResize": "HEIGHT",
+     "fontSize": 20,
+     "textAlignHorizontal": "LEFT",
+     "textAlignVertical": "TOP",
+     "leadingTrim": "CAP_HEIGHT",
+     "letterSpacing": 0,
+     "lineHeightPx": 26,
+     "lineHeightPercent": 103.17460632324219,
+     "lineHeightPercentFontSize": 130,
+     "lineHeightUnit": "FONT_SIZE_%"
+    },
+    "layoutVersion": 5,
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:5742",
+    "name": "West Coast Hospitality since 1924",
+    "type": "TEXT",
+    "scrollBehavior": "SCROLLS",
+    "boundVariables": {
+     "fills": [
+      {
+       "type": "VARIABLE_ALIAS",
+       "id": "VariableID:177:17077"
+      }
+     ]
+    },
+    "blendMode": "PASS_THROUGH",
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+       "r": 0.95686274766922,
+       "g": 0.9372549057006836,
+       "b": 0.8745098114013672,
+       "a": 1
+      },
+      "boundVariables": {
+       "color": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:177:17077"
+       }
+      }
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 9.952228546142578,
+    "strokeAlign": "INSIDE",
+    "absoluteBoundingBox": {
+     "x": -2938,
+     "y": 2459,
+     "width": 336,
+     "height": 58
+    },
+    "absoluteRenderBounds": {
+     "x": -2937.51953125,
+     "y": 2470.15625,
+     "width": 334.359375,
+     "height": 42.27734375
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "CENTER"
+    },
+    "characters": "West Coast Hospitality\nsince 1924",
+    "characterStyleOverrides": [],
+    "styleOverrideTable": {},
+    "lineTypes": [
+     "NONE",
+     "NONE"
+    ],
+    "lineIndentations": [
+     0,
+     0
+    ],
+    "style": {
+     "fontFamily": "Sackers Heavy Gothic",
+     "fontPostScriptName": "SackersHeavyGothic",
+     "fontStyle": "Regular",
+     "fontWeight": 400,
+     "textWrapStyle": "BALANCE",
+     "textCase": "LOWER",
+     "textAutoResize": "WIDTH_AND_HEIGHT",
+     "fontSize": 24,
+     "textAlignHorizontal": "LEFT",
+     "textAlignVertical": "BOTTOM",
+     "letterSpacing": 0,
+     "lineHeightPx": 28.80000114440918,
+     "lineHeightPercent": 92.9852523803711,
+     "lineHeightPercentFontSize": 120.00000762939453,
+     "lineHeightUnit": "FONT_SIZE_%"
+    },
+    "layoutVersion": 5,
+    "styles": {
+     "text": "220:7188"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:5815",
+    "name": "an unexpected resort dining experience",
+    "type": "TEXT",
+    "scrollBehavior": "SCROLLS",
+    "boundVariables": {
+     "fills": [
+      {
+       "type": "VARIABLE_ALIAS",
+       "id": "VariableID:177:17078"
+      }
+     ]
+    },
+    "blendMode": "PASS_THROUGH",
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+       "r": 0.1609954833984375,
+       "g": 0.191986083984375,
+       "b": 0.0469970703125,
+       "a": 1
+      },
+      "boundVariables": {
+       "color": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:177:17078"
+       }
+      }
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 9.952228546142578,
+    "strokeAlign": "INSIDE",
+    "absoluteBoundingBox": {
+     "x": -3525,
+     "y": 3359,
+     "width": 884,
+     "height": 29
+    },
+    "absoluteRenderBounds": {
+     "x": -3382.26171875,
+     "y": 3370.15625,
+     "width": 597.41015625,
+     "height": 13.27734375
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "CENTER"
+    },
+    "characters": "an unexpected resort dining experience",
+    "characterStyleOverrides": [],
+    "styleOverrideTable": {},
+    "lineTypes": [
+     "NONE"
+    ],
+    "lineIndentations": [
+     0
+    ],
+    "style": {
+     "fontFamily": "Sackers Heavy Gothic",
+     "fontPostScriptName": "SackersHeavyGothic",
+     "fontStyle": "Regular",
+     "fontWeight": 400,
+     "textWrapStyle": "BALANCE",
+     "textCase": "LOWER",
+     "textAutoResize": "HEIGHT",
+     "fontSize": 24,
+     "textAlignHorizontal": "CENTER",
+     "textAlignVertical": "BOTTOM",
+     "letterSpacing": 0,
+     "lineHeightPx": 28.80000114440918,
+     "lineHeightPercent": 92.9852523803711,
+     "lineHeightPercentFontSize": 120.00000762939453,
+     "lineHeightUnit": "FONT_SIZE_%"
+    },
+    "layoutVersion": 5,
+    "styles": {
+     "text": "220:7188"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:5743",
+    "name": "Rectangle 567",
+    "type": "RECTANGLE",
+    "scrollBehavior": "SCROLLS",
+    "blendMode": "PASS_THROUGH",
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+       "r": 0.7686274647712708,
+       "g": 0.7686274647712708,
+       "b": 0.7686274647712708,
+       "a": 1
+      }
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "absoluteBoundingBox": {
+     "x": -3714,
+     "y": 2214,
+     "width": 647,
+     "height": 831
+    },
+    "absoluteRenderBounds": {
+     "x": -3714,
+     "y": 2214,
+     "width": 647,
+     "height": 831
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:5727",
+    "name": "uncover our history",
+    "type": "TEXT",
+    "scrollBehavior": "SCROLLS",
+    "boundVariables": {
+     "fills": [
+      {
+       "type": "VARIABLE_ALIAS",
+       "id": "VariableID:177:17077"
+      }
+     ],
+     "textRangeFills": [
+      {
+       "type": "VARIABLE_ALIAS",
+       "id": "VariableID:177:17077"
+      }
+     ]
+    },
+    "blendMode": "PASS_THROUGH",
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+       "r": 0.95686274766922,
+       "g": 0.9372549057006836,
+       "b": 0.8745098114013672,
+       "a": 1
+      },
+      "boundVariables": {
+       "color": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:177:17077"
+       }
+      }
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 4.466485977172852,
+    "strokeAlign": "INSIDE",
+    "absoluteBoundingBox": {
+     "x": -2938,
+     "y": 2707,
+     "width": 199,
+     "height": 19
+    },
+    "absoluteRenderBounds": {
+     "x": -2938,
+     "y": 2714.4375,
+     "width": 198.485107421875,
+     "height": 11.359375
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "CENTER"
+    },
+    "characters": "uncover our history",
+    "characterStyleOverrides": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "styleOverrideTable": {
+     "2": {
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontPostScriptName": "SackersHeavyGothic",
+      "fontStyle": "Regular",
+      "fontWeight": 400,
+      "textCase": "LOWER",
+      "textAutoResize": "WIDTH_AND_HEIGHT",
+      "textDecoration": "UNDERLINE",
+      "isOverrideOverTextStyle": true,
+      "fontSize": 16,
+      "letterSpacing": -0.48,
+      "fills": [
+       {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+         "r": 0.95686274766922,
+         "g": 0.9372549057006836,
+         "b": 0.8745098114013672,
+         "a": 1
+        },
+        "boundVariables": {
+         "color": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:177:17077"
+         }
+        }
+       }
+      ],
+      "lineHeightPx": 19.200000762939453,
+      "lineHeightPercent": 92.9852523803711,
+      "lineHeightPercentFontSize": 120.00000762939453,
+      "lineHeightUnit": "FONT_SIZE_%",
+      "inheritTextStyleId": "236:8161"
+     }
+    },
+    "lineTypes": [
+     "NONE"
+    ],
+    "lineIndentations": [
+     0
+    ],
+    "style": {
+     "fontFamily": "Sackers Heavy Gothic",
+     "fontPostScriptName": "SackersHeavyGothic",
+     "fontStyle": "Regular",
+     "fontWeight": 400,
+     "textCase": "LOWER",
+     "textAutoResize": "WIDTH_AND_HEIGHT",
+     "fontSize": 16,
+     "textAlignHorizontal": "LEFT",
+     "textAlignVertical": "CENTER",
+     "letterSpacing": -0.48,
+     "lineHeightPx": 19.200000762939453,
+     "lineHeightPercent": 92.9852523803711,
+     "lineHeightPercentFontSize": 120.00000762939453,
+     "lineHeightUnit": "FONT_SIZE_%"
+    },
+    "layoutVersion": 5,
+    "styles": {
+     "text": "236:8161"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:5753",
+    "name": "Vector 33",
+    "type": "VECTOR",
+    "scrollBehavior": "SCROLLS",
+    "rotation": -1.2592866620098265e-16,
+    "blendMode": "PASS_THROUGH",
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "IMAGE",
+      "scaleMode": "FILL",
+      "imageRef": "fa638bc2c84c8afc4c8daab6a935b35365944207"
+     },
+     {
+      "opacity": 0.6000000238418579,
+      "blendMode": "NORMAL",
+      "type": "GRADIENT_LINEAR",
+      "gradientHandlePositions": [
+       {
+        "x": 0.5,
+        "y": -4.8543650840965e-15
+       },
+       {
+        "x": 0.5000000000000001,
+        "y": 0.9999999999999951
+       },
+       {
+        "x": 0.06582061306157927,
+        "y": -4.823748900265793e-15
+       }
+      ],
+      "gradientStops": [
+       {
+        "color": {
+         "r": 0,
+         "g": 0,
+         "b": 0,
+         "a": 0
+        },
+        "position": 0
+       },
+       {
+        "color": {
+         "r": 0,
+         "g": 0,
+         "b": 0,
+         "a": 1
+        },
+        "position": 1
+       }
+      ]
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 3,
+    "strokeAlign": "CENTER",
+    "absoluteBoundingBox": {
+     "x": -3713,
+     "y": 3473,
+     "width": 1261,
+     "height": 712
+    },
+    "absoluteRenderBounds": {
+     "x": -3713,
+     "y": 3473,
+     "width": 1261,
+     "height": 712
+    },
+    "constraints": {
+     "vertical": "CENTER",
+     "horizontal": "CENTER"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:5754",
+    "name": "Group 270990186",
+    "type": "GROUP",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "rectangleCornerRadii": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "cornerSmoothing": 0,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3843.24853515625,
+     "y": 4225,
+     "width": 1520,
+     "height": 988
+    },
+    "absoluteRenderBounds": {
+     "x": -3843.24853515625,
+     "y": 4225,
+     "width": 1520,
+     "height": 988
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:5769",
+    "name": "Group 270990187",
+    "type": "GROUP",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "rectangleCornerRadii": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "cornerSmoothing": 0,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3843.24853515625,
+     "y": 5249,
+     "width": 1520,
+     "height": 988
+    },
+    "absoluteRenderBounds": {
+     "x": -3843.24853515625,
+     "y": 5249,
+     "width": 1520,
+     "height": 988
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:5787",
+    "name": "Group 270990189",
+    "type": "GROUP",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "rectangleCornerRadii": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "cornerSmoothing": 0,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3843.24853515625,
+     "y": 6273,
+     "width": 1520,
+     "height": 988
+    },
+    "absoluteRenderBounds": {
+     "x": -3843.24853515625,
+     "y": 6273,
+     "width": 1520,
+     "height": 988
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:5796",
+    "name": "Group 270990191",
+    "type": "GROUP",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "rectangleCornerRadii": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "cornerSmoothing": 0,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3843.24853515625,
+     "y": 7297,
+     "width": 1520,
+     "height": 988
+    },
+    "absoluteRenderBounds": {
+     "x": -3843.24853515625,
+     "y": 7297,
+     "width": 1520,
+     "height": 988
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:5804",
+    "name": "Group 270990193",
+    "type": "GROUP",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "rectangleCornerRadii": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "cornerSmoothing": 0,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3843.24853515625,
+     "y": 8325,
+     "width": 1520,
+     "height": 988
+    },
+    "absoluteRenderBounds": {
+     "x": -3843.24853515625,
+     "y": 8325,
+     "width": 1520,
+     "height": 988
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:6591",
+    "name": "Group 270990158",
+    "type": "GROUP",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "rectangleCornerRadii": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "cornerSmoothing": 0,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3729,
+     "y": 12568.9990234375,
+     "width": 1291.075927734375,
+     "height": 1095.8094482421875
+    },
+    "absoluteRenderBounds": {
+     "x": -3729,
+     "y": 12568.9990234375,
+     "width": 1291.075927734375,
+     "height": 1095.8094482421875
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "CENTER"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:7340",
+    "name": "Group 270990195",
+    "type": "GROUP",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "rectangleCornerRadii": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "cornerSmoothing": 0,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3883,
+     "y": 10750,
+     "width": 1600,
+     "height": 1579
+    },
+    "absoluteRenderBounds": {
+     "x": -3883,
+     "y": 10750,
+     "width": 1600,
+     "height": 1579
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:7355",
+    "name": "Group 270990061",
+    "type": "GROUP",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "rectangleCornerRadii": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "cornerSmoothing": 0,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3939,
+     "y": 9553,
+     "width": 1713,
+     "height": 969
+    },
+    "absoluteRenderBounds": {
+     "x": -3883,
+     "y": 9553,
+     "width": 1600,
+     "height": 969
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:7464",
+    "name": "Group 270990199",
+    "type": "GROUP",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "rectangleCornerRadii": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "cornerSmoothing": 0,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3843,
+     "y": 15045,
+     "width": 1520,
+     "height": 1809
+    },
+    "absoluteRenderBounds": {
+     "x": -3843,
+     "y": 15045,
+     "width": 1520,
+     "height": 1809
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:7461",
+    "name": "Group 270990196",
+    "type": "GROUP",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "rectangleCornerRadii": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "cornerSmoothing": 0,
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3884,
+     "y": 13905,
+     "width": 1600,
+     "height": 900
+    },
+    "absoluteRenderBounds": {
+     "x": -3883,
+     "y": 13905,
+     "width": 1599,
+     "height": 900
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "LEFT"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "442:7504",
+    "name": "opt3",
+    "type": "FRAME",
+    "scrollBehavior": "SCROLLS",
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": true,
+    "background": [
+     {
+      "blendMode": "NORMAL",
+      "type": "IMAGE",
+      "scaleMode": "FILL",
+      "imageRef": "b940aa95950dd4de783e1c0ae2dfee90e4485143"
+     },
+     {
+      "opacity": 0.4000000059604645,
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+       "r": 0,
+       "g": 0,
+       "b": 0,
+       "a": 1
+      }
+     }
+    ],
+    "fills": [
+     {
+      "blendMode": "NORMAL",
+      "type": "IMAGE",
+      "scaleMode": "FILL",
+      "imageRef": "b940aa95950dd4de783e1c0ae2dfee90e4485143"
+     },
+     {
+      "opacity": 0.4000000059604645,
+      "blendMode": "NORMAL",
+      "type": "SOLID",
+      "color": {
+       "r": 0,
+       "g": 0,
+       "b": 0,
+       "a": 1
+      }
+     }
+    ],
+    "strokes": [],
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3883,
+     "y": 16894,
+     "width": 1600,
+     "height": 900
+    },
+    "absoluteRenderBounds": {
+     "x": -3883,
+     "y": 16894,
+     "width": 1600,
+     "height": 900
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "CENTER"
+    },
+    "effects": [],
+    "interactions": [],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   },
+   {
+    "id": "433:903",
+    "name": "guild-nav-full-dark",
+    "type": "INSTANCE",
+    "isFixed": true,
+    "scrollBehavior": "FIXED",
+    "componentId": "236:8313",
+    "componentProperties": {
+     "Main-Dark": {
+      "value": "Main-Light",
+      "type": "VARIANT",
+      "boundVariables": {}
+     }
+    },
+    "overrides": [],
+    "children": [],
+    "blendMode": "PASS_THROUGH",
+    "clipsContent": false,
+    "background": [],
+    "fills": [],
+    "strokes": [],
+    "strokeWeight": 1,
+    "strokeAlign": "INSIDE",
+    "backgroundColor": {
+     "r": 0,
+     "g": 0,
+     "b": 0,
+     "a": 0
+    },
+    "absoluteBoundingBox": {
+     "x": -3843,
+     "y": 26,
+     "width": 1520,
+     "height": 56
+    },
+    "absoluteRenderBounds": {
+     "x": -3843,
+     "y": 26,
+     "width": 1520,
+     "height": 56
+    },
+    "constraints": {
+     "vertical": "TOP",
+     "horizontal": "CENTER"
+    },
+    "effects": [],
+    "transitionNodeID": "236:8363",
+    "transitionDuration": 300,
+    "transitionEasing": "EASE_OUT",
+    "interactions": [
+     {
+      "trigger": {
+       "type": "ON_CLICK"
+      },
+      "actions": [
+       {
+        "type": "NODE",
+        "destinationId": "236:8363",
+        "navigation": "CHANGE_TO",
+        "transition": null
+       }
+      ]
+     }
+    ],
+    "complexStrokeProperties": {
+     "strokeType": "BASIC"
+    }
+   }
+  ],
+  "blendMode": "PASS_THROUGH",
+  "clipsContent": true,
+  "background": [
+   {
+    "blendMode": "NORMAL",
+    "type": "SOLID",
+    "color": {
+     "r": 0.95686274766922,
+     "g": 0.9372549057006836,
+     "b": 0.8745098114013672,
+     "a": 1
+    }
+   }
+  ],
+  "fills": [
+   {
+    "blendMode": "NORMAL",
+    "type": "SOLID",
+    "color": {
+     "r": 0.95686274766922,
+     "g": 0.9372549057006836,
+     "b": 0.8745098114013672,
+     "a": 1
+    }
+   }
+  ],
+  "strokes": [],
+  "strokeWeight": 1,
+  "strokeAlign": "INSIDE",
+  "backgroundColor": {
+   "r": 0.95686274766922,
+   "g": 0.9372549057006836,
+   "b": 0.8745098114013672,
+   "a": 1
+  },
+  "layoutGrids": [
+   {
+    "pattern": "COLUMNS",
+    "sectionSize": 97.33333587646484,
+    "visible": true,
+    "color": {
+     "r": 1,
+     "g": 0,
+     "b": 0,
+     "a": 0.10000000149011612
+    },
+    "alignment": "STRETCH",
+    "gutterSize": 32,
+    "offset": 40,
+    "count": 12
+   }
+  ],
+  "absoluteBoundingBox": {
+   "x": -3883,
+   "y": 0,
+   "width": 1600,
+   "height": 21647
+  },
+  "absoluteRenderBounds": {
+   "x": -3883,
+   "y": 0,
+   "width": 1600,
+   "height": 21647
+  },
+  "constraints": {
+   "vertical": "TOP",
+   "horizontal": "LEFT"
+  },
+  "effects": [],
+  "interactions": [],
+  "complexStrokeProperties": {
+   "strokeType": "BASIC"
+  }
+ }
+}

@@ -1,0 +1,90 @@
+{
+  "pageSlug": "static-template",
+  "frames": [
+    {
+      "id": "484:1410",
+      "name": "STATIC-TEMPLATE",
+      "kind": "page",
+      "width": 1600,
+      "height": 3574,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/484-1410.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "privacy-policy",
+      "dir": "sections/01-privacy-policy",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "484:1410",
+      "frameName": "STATIC-TEMPLATE",
+      "y0": 26,
+      "y1": 1627,
+      "cropY0": 0,
+      "cropY1": 1761.5,
+      "nodeIds": [
+        "484:1628",
+        "484:1733",
+        "484:1732",
+        "484:1735",
+        "484:1736",
+        "484:1737"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-privacy-policy/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "book-your-escape",
+      "dir": "sections/02-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "484:1410",
+      "frameName": "STATIC-TEMPLATE",
+      "y0": 1896,
+      "y1": 2874,
+      "cropY0": 1761.5,
+      "cropY1": 2874,
+      "nodeIds": [
+        "484:1525",
+        "484:1526",
+        "484:1532",
+        "484:1581",
+        "484:1524"
+      ],
+      "backgroundIds": [
+        "484:1505",
+        "484:1506"
+      ],
+      "crop": "sections/02-book-your-escape/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "the-hotel",
+      "dir": "sections/03-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "484:1410",
+      "frameName": "STATIC-TEMPLATE",
+      "y0": 2874,
+      "y1": 3574,
+      "cropY0": 2874,
+      "cropY1": 3574,
+      "nodeIds": [
+        "484:1539",
+        "484:1507",
+        "484:1600",
+        "484:1601"
+      ],
+      "backgroundIds": [
+        "484:1505",
+        "484:1506"
+      ],
+      "crop": "sections/03-the-hotel/section.webp"
+    }
+  ]
+}

@@ -1,0 +1,800 @@
+{
+  "pageSlug": "arts",
+  "index": 11,
+  "slug": "the-hotel",
+  "laneHint": null,
+  "frameId": "477:1069",
+  "bbox": {
+    "x": 0,
+    "y": 9243.53,
+    "width": 1600,
+    "height": 700
+  },
+  "crop": {
+    "y0": 9243.53,
+    "y1": 9944
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "477:1203",
+      "characters": "The Hotel",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 200,
+        "width": 123,
+        "height": 22
+      }
+    },
+    {
+      "id": "477:1214",
+      "characters": "experience",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 333,
+        "y": 200,
+        "width": 117,
+        "height": 22
+      }
+    },
+    {
+      "id": "477:1224",
+      "characters": "dining",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 671,
+        "y": 200,
+        "width": 67,
+        "height": 22
+      }
+    },
+    {
+      "id": "477:1232",
+      "characters": "social",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1009,
+        "y": 200,
+        "width": 68,
+        "height": 22
+      }
+    },
+    {
+      "id": "477:1238",
+      "characters": "links",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1347,
+        "y": 200,
+        "width": 69.11,
+        "height": 22
+      }
+    },
+    {
+      "id": "477:1205",
+      "characters": "rooms",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 254,
+        "width": 102.89,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1216",
+      "characters": "wellness",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 333,
+        "y": 254,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1226",
+      "characters": "zuma san diego",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 671,
+        "y": 254,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1234",
+      "characters": "instagram",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1009,
+        "y": 254,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1240",
+      "characters": "privacy policy",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1347,
+        "y": 254,
+        "width": 215,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1206",
+      "characters": "history",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 280,
+        "width": 102.89,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1217",
+      "characters": "dining",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 333,
+        "y": 280,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1227",
+      "characters": "the lobby bar",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 671,
+        "y": 280,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1235",
+      "characters": "facebook",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1009,
+        "y": 280,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1241",
+      "characters": "accessibility",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1347,
+        "y": 280,
+        "width": 215,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1207",
+      "characters": "amenities",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 306,
+        "width": 102.89,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1218",
+      "characters": "neighborhood",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 333,
+        "y": 306,
+        "width": 138,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1228",
+      "characters": "the lobby terrace",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 671,
+        "y": 306,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1236",
+      "characters": "tiktok",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1009,
+        "y": 306,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1242",
+      "characters": "photoshoot guidelines",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1347,
+        "y": 306,
+        "width": 216,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1208",
+      "characters": "services",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 332,
+        "width": 102.89,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1219",
+      "characters": "meetings & events",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 333,
+        "y": 332,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1229",
+      "characters": "pool lounge",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 671,
+        "y": 332,
+        "width": 116,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1209",
+      "characters": "corporate",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 358,
+        "width": 98,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1220",
+      "characters": "services",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 333,
+        "y": 358,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1230",
+      "characters": "in-room dining",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 671,
+        "y": 358,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1210",
+      "characters": "gallery",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 384,
+        "width": 102.89,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1221",
+      "characters": "resortpass",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 333,
+        "y": 384,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1211",
+      "characters": "press",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 410,
+        "width": 102.89,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1222",
+      "characters": "packages",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 333,
+        "y": 410,
+        "width": 168,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1212",
+      "characters": "contact",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0.7,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 436,
+        "width": 102.89,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1262",
+      "characters": "copyright © 2026 the guild hotel",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 646,
+        "width": 356,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1263",
+      "characters": "brand & website by Studio circa",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 14,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "RIGHT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1283,
+        "y": 646,
+        "width": 277,
+        "height": 14
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 50
+    },
+    {
+      "hex": "#000000",
+      "opacity": 0.2,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "477:1168",
+      "name": "Rectangle 530",
+      "imageRef": "27078587832153ecb831134d89bff71b2b68f548",
+      "bbox": {
+        "x": -1,
+        "y": -978,
+        "width": 1601,
+        "height": 1678
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "477:1201",
+      "type": "FRAME",
+      "name": "Frame 427318623",
+      "bbox": {
+        "x": 40,
+        "y": 200,
+        "width": 1520,
+        "height": 250
+      }
+    },
+    {
+      "id": "477:1169",
+      "type": "GROUP",
+      "name": "Group 270990038",
+      "bbox": {
+        "x": 723,
+        "y": 629,
+        "width": 152.45,
+        "height": 31.3
+      }
+    },
+    {
+      "id": "477:1262",
+      "type": "TEXT",
+      "name": "copyright © 2026 the guild hotel",
+      "bbox": {
+        "x": 40,
+        "y": 646,
+        "width": 356,
+        "height": 14
+      }
+    },
+    {
+      "id": "477:1263",
+      "type": "TEXT",
+      "name": "brand & website by Studio circa",
+      "bbox": {
+        "x": 1283,
+        "y": 646,
+        "width": 277,
+        "height": 14
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "477:1105",
+      "type": "GROUP",
+      "name": "Group 270990182",
+      "bbox": {
+        "x": -1,
+        "y": -3977.53,
+        "width": 1820,
+        "height": 4677.53
+      }
+    },
+    {
+      "id": "477:1077",
+      "type": "RECTANGLE",
+      "name": "Rectangle 583",
+      "bbox": {
+        "x": 1,
+        "y": -2044.53,
+        "width": 1599,
+        "height": 11370
+      }
+    },
+    {
+      "id": "477:1167",
+      "type": "GROUP",
+      "name": "Group 270990037",
+      "bbox": {
+        "x": -1,
+        "y": -978,
+        "width": 1601,
+        "height": 1678
+      }
+    },
+    {
+      "id": "477:1168",
+      "type": "RECTANGLE",
+      "name": "Rectangle 530",
+      "bbox": {
+        "x": -1,
+        "y": -978,
+        "width": 1601,
+        "height": 1678
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

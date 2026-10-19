@@ -1,0 +1,309 @@
+{
+  "pageSlug": "contact",
+  "index": 1,
+  "slug": "contact-us",
+  "laneHint": null,
+  "frameId": "485:1744",
+  "bbox": {
+    "x": 0,
+    "y": 1,
+    "width": 1600,
+    "height": 933
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 984
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "485:1846",
+      "characters": "contact us",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 325,
+        "width": 257,
+        "height": 40
+      }
+    },
+    {
+      "id": "485:1964",
+      "characters": "address",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 40,
+        "y": 415,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "485:1961",
+      "characters": "500 W. Broadway San Diego, CA 92101",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 450,
+        "width": 306,
+        "height": 14
+      }
+    },
+    {
+      "id": "485:1974",
+      "characters": "general enquiries",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 40,
+        "y": 504,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "485:1975",
+      "characters": "Phone: (619) 795-6000\nEmail: info@theguildhotel.com",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 539,
+        "width": 241,
+        "height": 40
+      }
+    },
+    {
+      "id": "485:1977",
+      "characters": "groups, meetings & events",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 40,
+        "y": 619,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "485:1978",
+      "characters": "Email: sales@theguildhotel.com",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 654,
+        "width": 251,
+        "height": 14
+      }
+    },
+    {
+      "id": "485:1982",
+      "characters": "Reservation Billing Questions",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 40,
+        "y": 708,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "485:1983",
+      "characters": "Email: billing@theguildhotel.com",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 743,
+        "width": 260,
+        "height": 14
+      }
+    },
+    {
+      "id": "485:1989",
+      "characters": "instagram",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 40,
+        "y": 797,
+        "width": 95,
+        "height": 19
+      }
+    },
+    {
+      "id": "485:1999",
+      "characters": "facebook",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 175,
+        "y": 797,
+        "width": 91,
+        "height": 19
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#2B2927",
+      "opacity": 1,
+      "count": 6
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 5
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [
+    {
+      "nodeId": "485:1847",
+      "name": "guild-nav-full-dark",
+      "reason": "nav component instance: manual lane, bbox only",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "485:2000",
+      "type": "GROUP",
+      "name": "Group 270990208",
+      "bbox": {
+        "x": 40,
+        "y": 1,
+        "width": 391,
+        "height": 815
+      }
+    },
+    {
+      "id": "485:1847",
+      "type": "INSTANCE",
+      "name": "guild-nav-full-dark",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    },
+    {
+      "id": "485:2001",
+      "type": "RECTANGLE",
+      "name": "Rectangle 615",
+      "bbox": {
+        "x": 655,
+        "y": 208,
+        "width": 905,
+        "height": 726
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

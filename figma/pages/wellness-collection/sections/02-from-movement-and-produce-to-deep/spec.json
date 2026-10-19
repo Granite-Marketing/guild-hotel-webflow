@@ -1,0 +1,222 @@
+{
+  "pageSlug": "wellness-collection",
+  "index": 2,
+  "slug": "from-movement-and-produce-to-deep",
+  "laneHint": null,
+  "frameId": "266:3630",
+  "bbox": {
+    "x": 0,
+    "y": 1140.59,
+    "width": 1600,
+    "height": 1407.41
+  },
+  "crop": {
+    "y0": 1020.3,
+    "y1": 2568
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "284:3902",
+      "characters": "From movement\nand produce to deep rest.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 80,
+      "fontWeight": 400,
+      "lineHeightPx": 96,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#000000",
+      "bbox": {
+        "x": 410.55,
+        "y": 120.29,
+        "width": 780.35,
+        "height": 288.26
+      }
+    },
+    {
+      "id": "284:3901",
+      "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 482,
+        "y": 467.68,
+        "width": 636,
+        "height": 40
+      }
+    },
+    {
+      "id": "284:3910",
+      "characters": "in-room wellness",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 395,
+        "y": 1448.7,
+        "width": 189,
+        "height": 22
+      }
+    },
+    {
+      "id": "284:3911",
+      "characters": "fitness center",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 629,
+        "y": 1448.7,
+        "width": 158,
+        "height": 22
+      }
+    },
+    {
+      "id": "284:3912",
+      "characters": "mindful dining",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 832,
+        "y": 1448.7,
+        "width": 157,
+        "height": 22
+      }
+    },
+    {
+      "id": "303:261",
+      "characters": "wellness events",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1034,
+        "y": 1448.7,
+        "width": 173,
+        "height": 22
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 4
+    },
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#4A1217",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "284:3903",
+      "name": "Vector 33",
+      "imageRef": "70a13b1d6cdae1be50f7d9ca4b2541937747ae45",
+      "bbox": {
+        "x": 170,
+        "y": 815.7,
+        "width": 1261,
+        "height": 712
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "284:3900",
+      "type": "GROUP",
+      "name": "Group 270990039",
+      "bbox": {
+        "x": 410.55,
+        "y": 120.29,
+        "width": 780.35,
+        "height": 387.39
+      }
+    },
+    {
+      "id": "284:3904",
+      "type": "GROUP",
+      "name": "Group 270990042",
+      "bbox": {
+        "x": 351,
+        "y": 606.7,
+        "width": 899.57,
+        "height": 881
+      }
+    },
+    {
+      "id": "284:3903",
+      "type": "VECTOR",
+      "name": "Vector 33",
+      "bbox": {
+        "x": 170,
+        "y": 815.7,
+        "width": 1261,
+        "height": 712
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [
+    {
+      "id": "284:3917",
+      "name": "Wellness-Col-Animation-1",
+      "texts": [
+        "The initial smaller image enlarges on scroll until it becomes full width. then, as user scrolls it snaps with text and image transitions like the above example."
+      ]
+    }
+  ],
+  "source": "page"
+}

@@ -1,0 +1,491 @@
+{
+  "pageSlug": "nav-elements",
+  "index": 1,
+  "slug": "full-2",
+  "laneHint": "manual",
+  "frameId": "242:1624",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 900
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "242:1686",
+      "characters": "back",
+      "styleName": "Sackers Heavy Gothic / Label / Eyebrow",
+      "styleId": "177:56",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 26.1,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 874,
+        "y": 57,
+        "width": 52,
+        "height": 26
+      }
+    },
+    {
+      "id": "242:1638",
+      "characters": "ZUMA",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "RIGHT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1172,
+        "y": 144,
+        "width": 70,
+        "height": 29
+      }
+    },
+    {
+      "id": "242:1639",
+      "characters": "Contemporary Japanese dining.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1172,
+        "y": 197,
+        "width": 249,
+        "height": 14
+      }
+    },
+    {
+      "id": "242:1642",
+      "characters": "reserve",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#4A1217",
+      "bbox": {
+        "x": 1194.88,
+        "y": 295,
+        "width": 78,
+        "height": 16
+      }
+    },
+    {
+      "id": "242:1647",
+      "characters": "THE LOBBY BAR",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "RIGHT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1172,
+        "y": 380,
+        "width": 203,
+        "height": 29
+      }
+    },
+    {
+      "id": "242:1648",
+      "characters": "Cocktails, light bites and an intimate atmosphere.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1172,
+        "y": 433,
+        "width": 349,
+        "height": 40
+      }
+    },
+    {
+      "id": "242:1651",
+      "characters": "reserve",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#000000",
+      "bbox": {
+        "x": 1194.88,
+        "y": 557,
+        "width": 78,
+        "height": 16
+      }
+    },
+    {
+      "id": "242:1656",
+      "characters": "THE COURTYARD",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "RIGHT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1172,
+        "y": 628,
+        "width": 214,
+        "height": 29
+      }
+    },
+    {
+      "id": "242:1657",
+      "characters": "Flexible spaces for meetings, celebrations, and everything worth gathering for.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1172,
+        "y": 681,
+        "width": 359,
+        "height": 40
+      }
+    },
+    {
+      "id": "242:1660",
+      "characters": "reserve",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1194.88,
+        "y": 779,
+        "width": 78,
+        "height": 16
+      }
+    },
+    {
+      "id": "242:1665",
+      "characters": "THE POOL",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "RIGHT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1172,
+        "y": 864,
+        "width": 130,
+        "height": 29
+      }
+    },
+    {
+      "id": "242:1666",
+      "characters": "Flexible spaces for meetings, celebrations, and everything worth gathering for.",
+      "styleName": "Gatch Test/Body/Regular",
+      "styleId": "177:61",
+      "fontFamily": "Gatch Test",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1172,
+        "y": 917,
+        "width": 326,
+        "height": 58
+      }
+    },
+    {
+      "id": "242:1669",
+      "characters": "reserve",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1194.88,
+        "y": 1033,
+        "width": 78,
+        "height": 16
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 15
+    },
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#4A1217",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#FFFFFF",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "250:1956",
+      "name": "Rectangle 548",
+      "imageRef": "fa638bc2c84c8afc4c8daab6a935b35365944207",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 800,
+        "height": 900
+      }
+    },
+    {
+      "nodeId": "242:1635",
+      "name": "Rectangle 548",
+      "imageRef": "9caf28c625dc64ad8401d83813de06d1262d9554",
+      "bbox": {
+        "x": 874,
+        "y": 138,
+        "width": 250,
+        "height": 186
+      }
+    },
+    {
+      "nodeId": "242:1644",
+      "name": "Rectangle 548",
+      "imageRef": "07c90753b34886706cc23ffa888aee5fc2572046",
+      "bbox": {
+        "x": 874,
+        "y": 400,
+        "width": 250,
+        "height": 186
+      }
+    },
+    {
+      "nodeId": "242:1653",
+      "name": "Rectangle 548",
+      "imageRef": "71c9a3f6584e7abf8e70bc951c4e97fe4f391a5d",
+      "bbox": {
+        "x": 874,
+        "y": 622,
+        "width": 250,
+        "height": 186
+      }
+    },
+    {
+      "nodeId": "242:1662",
+      "name": "Rectangle 548",
+      "imageRef": "32282edb924fd998cdb66829891a2a8dcc032830",
+      "bbox": {
+        "x": 874,
+        "y": 876,
+        "width": 250,
+        "height": 186
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "242:1625",
+      "type": "GROUP",
+      "name": "Group 270989789",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "242:1634",
+      "type": "FRAME",
+      "name": "Frame 427318612",
+      "bbox": {
+        "x": 874,
+        "y": 138,
+        "width": 450,
+        "height": 186
+      }
+    },
+    {
+      "id": "242:1643",
+      "type": "FRAME",
+      "name": "Frame 427318614",
+      "bbox": {
+        "x": 874,
+        "y": 380,
+        "width": 575,
+        "height": 206
+      }
+    },
+    {
+      "id": "242:1652",
+      "type": "FRAME",
+      "name": "Frame 427318616",
+      "bbox": {
+        "x": 874,
+        "y": 622,
+        "width": 552,
+        "height": 186
+      }
+    },
+    {
+      "id": "242:1661",
+      "type": "FRAME",
+      "name": "Frame 427318618",
+      "bbox": {
+        "x": 874,
+        "y": 864,
+        "width": 552,
+        "height": 198
+      }
+    },
+    {
+      "id": "242:1685",
+      "type": "FRAME",
+      "name": "Frame",
+      "bbox": {
+        "x": 1530,
+        "y": 46,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "id": "242:1686",
+      "type": "TEXT",
+      "name": "back",
+      "bbox": {
+        "x": 874,
+        "y": 57,
+        "width": 52,
+        "height": 26
+      }
+    },
+    {
+      "id": "242:1687",
+      "type": "FRAME",
+      "name": "Frame",
+      "bbox": {
+        "x": 1516,
+        "y": 48,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "242:1689",
+      "type": "FRAME",
+      "name": "Tap Hand",
+      "bbox": {
+        "x": 1285,
+        "y": 295,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "id": "250:1956",
+      "type": "RECTANGLE",
+      "name": "Rectangle 548",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 800,
+        "height": 900
+      }
+    },
+    {
+      "id": "250:1958",
+      "type": "GROUP",
+      "name": "Group 270989670",
+      "bbox": {
+        "x": 192,
+        "y": 400,
+        "width": 416,
+        "height": 101
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "side"
+}

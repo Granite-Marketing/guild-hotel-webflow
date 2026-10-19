@@ -1,0 +1,1389 @@
+{
+  "pageSlug": "contact",
+  "frames": [
+    {
+      "id": "485:1744",
+      "name": "CONTACT",
+      "kind": "page",
+      "width": 1600,
+      "height": 6293,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/485-1744.png",
+      "status": "ok",
+      "tree": {
+        "id": "485:1744",
+        "type": "FRAME",
+        "name": "CONTACT",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 6293
+        },
+        "children": [
+          {
+            "id": "485:1963",
+            "type": "GROUP",
+            "name": "Group 270990205",
+            "bbox": {
+              "x": 653,
+              "y": 1034,
+              "width": 830,
+              "height": 462
+            },
+            "children": [
+              {
+                "id": "485:1899",
+                "type": "TEXT",
+                "name": "Email Address",
+                "bbox": {
+                  "x": 653,
+                  "y": 1169.79,
+                  "width": 391,
+                  "height": 22
+                },
+                "characters": "Email Address"
+              },
+              {
+                "id": "485:1901",
+                "type": "RECTANGLE",
+                "name": "Rectangle 519",
+                "bbox": {
+                  "x": 1092,
+                  "y": 1197.79,
+                  "width": 391,
+                  "height": 0.5
+                }
+              },
+              {
+                "id": "485:1903",
+                "type": "TEXT",
+                "name": "your request",
+                "bbox": {
+                  "x": 653,
+                  "y": 1034,
+                  "width": 830,
+                  "height": 29
+                },
+                "characters": "your request"
+              },
+              {
+                "id": "485:1904",
+                "type": "GROUP",
+                "name": "Group 270990076",
+                "bbox": {
+                  "x": 653,
+                  "y": 1112,
+                  "width": 830,
+                  "height": 28.5
+                },
+                "children": [
+                  {
+                    "id": "485:1905",
+                    "type": "TEXT",
+                    "name": "First Name",
+                    "bbox": {
+                      "x": 653,
+                      "y": 1112,
+                      "width": 391,
+                      "height": 22
+                    },
+                    "characters": "First Name"
+                  },
+                  {
+                    "id": "485:1906",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 519",
+                    "bbox": {
+                      "x": 653,
+                      "y": 1140,
+                      "width": 391,
+                      "height": 0.5
+                    }
+                  },
+                  {
+                    "id": "485:1907",
+                    "type": "TEXT",
+                    "name": "Last Name",
+                    "bbox": {
+                      "x": 1092,
+                      "y": 1112,
+                      "width": 391,
+                      "height": 22
+                    },
+                    "characters": "Last Name"
+                  },
+                  {
+                    "id": "485:1908",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 519",
+                    "bbox": {
+                      "x": 1092,
+                      "y": 1140,
+                      "width": 391,
+                      "height": 0.5
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "485:1909",
+                "type": "RECTANGLE",
+                "name": "Rectangle 519",
+                "bbox": {
+                  "x": 653,
+                  "y": 1197.79,
+                  "width": 391,
+                  "height": 0.5
+                }
+              },
+              {
+                "id": "485:1910",
+                "type": "TEXT",
+                "name": "Phone Number",
+                "bbox": {
+                  "x": 1092,
+                  "y": 1169.79,
+                  "width": 391,
+                  "height": 22
+                },
+                "characters": "Phone Number"
+              },
+              {
+                "id": "485:1911",
+                "type": "GROUP",
+                "name": "Group 270990134",
+                "bbox": {
+                  "x": 653,
+                  "y": 1227.79,
+                  "width": 830,
+                  "height": 28.5
+                },
+                "children": [
+                  {
+                    "id": "485:1912",
+                    "type": "GROUP",
+                    "name": "Group 270990133",
+                    "bbox": {
+                      "x": 653,
+                      "y": 1227.79,
+                      "width": 391,
+                      "height": 28.5
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "485:1915",
+                    "type": "GROUP",
+                    "name": "Group 270990079",
+                    "bbox": {
+                      "x": 1092,
+                      "y": 1227.79,
+                      "width": 391,
+                      "height": 28.5
+                    },
+                    "childCount": 3
+                  }
+                ]
+              },
+              {
+                "id": "485:1924",
+                "type": "GROUP",
+                "name": "Group 270990082",
+                "bbox": {
+                  "x": 653,
+                  "y": 1287,
+                  "width": 830,
+                  "height": 141.37
+                },
+                "children": [
+                  {
+                    "id": "485:1925",
+                    "type": "TEXT",
+                    "name": "special requirements",
+                    "bbox": {
+                      "x": 653,
+                      "y": 1287,
+                      "width": 830,
+                      "height": 22
+                    },
+                    "characters": "special requirements"
+                  },
+                  {
+                    "id": "485:1926",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 519",
+                    "bbox": {
+                      "x": 653,
+                      "y": 1427.87,
+                      "width": 830,
+                      "height": 0.5
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "485:1927",
+                "type": "GROUP",
+                "name": "Group 270990081",
+                "bbox": {
+                  "x": 1249,
+                  "y": 1459,
+                  "width": 234,
+                  "height": 37
+                },
+                "children": [
+                  {
+                    "id": "485:1928",
+                    "type": "VECTOR",
+                    "name": "Vector 25",
+                    "bbox": {
+                      "x": 1249,
+                      "y": 1459,
+                      "width": 234,
+                      "height": 37
+                    }
+                  },
+                  {
+                    "id": "485:1929",
+                    "type": "TEXT",
+                    "name": "send your message",
+                    "bbox": {
+                      "x": 1277,
+                      "y": 1467,
+                      "width": 179,
+                      "height": 19
+                    },
+                    "characters": "send your message"
+                  }
+                ]
+              },
+              {
+                "id": "485:1949",
+                "type": "TEXT",
+                "name": "i have read and accept the privacy policy",
+                "bbox": {
+                  "x": 682,
+                  "y": 1466,
+                  "width": 340,
+                  "height": 17
+                },
+                "characters": "i have read and accept the privacy policy"
+              },
+              {
+                "id": "485:1958",
+                "type": "RECTANGLE",
+                "name": "Rectangle 613",
+                "bbox": {
+                  "x": 653,
+                  "y": 1466,
+                  "width": 18,
+                  "height": 18
+                }
+              },
+              {
+                "id": "485:1959",
+                "type": "RECTANGLE",
+                "name": "Rectangle 614",
+                "bbox": {
+                  "x": 657,
+                  "y": 1470,
+                  "width": 10,
+                  "height": 10
+                }
+              }
+            ]
+          },
+          {
+            "id": "485:2000",
+            "type": "GROUP",
+            "name": "Group 270990208",
+            "bbox": {
+              "x": 40,
+              "y": 1,
+              "width": 391,
+              "height": 815
+            },
+            "children": [
+              {
+                "id": "485:1846",
+                "type": "TEXT",
+                "name": "contact us",
+                "bbox": {
+                  "x": 40,
+                  "y": 325,
+                  "width": 257,
+                  "height": 40
+                },
+                "characters": "contact us"
+              },
+              {
+                "id": "485:1964",
+                "type": "TEXT",
+                "name": "address",
+                "bbox": {
+                  "x": 40,
+                  "y": 415,
+                  "width": 391,
+                  "height": 22
+                },
+                "characters": "address"
+              },
+              {
+                "id": "485:1961",
+                "type": "TEXT",
+                "name": "500 W. Broadway San Diego, CA 92101",
+                "bbox": {
+                  "x": 40,
+                  "y": 450,
+                  "width": 306,
+                  "height": 14
+                },
+                "characters": "500 W. Broadway San Diego, CA 92101"
+              },
+              {
+                "id": "485:1979",
+                "type": "GROUP",
+                "name": "Group 270990206",
+                "bbox": {
+                  "x": 40,
+                  "y": 504,
+                  "width": 391,
+                  "height": 75
+                },
+                "children": [
+                  {
+                    "id": "485:1974",
+                    "type": "TEXT",
+                    "name": "general enquiries",
+                    "bbox": {
+                      "x": 40,
+                      "y": 504,
+                      "width": 391,
+                      "height": 22
+                    },
+                    "characters": "general enquiries"
+                  },
+                  {
+                    "id": "485:1975",
+                    "type": "TEXT",
+                    "name": "Phone: (619) 795-6000 Email: info@theguildhotel.com",
+                    "bbox": {
+                      "x": 40,
+                      "y": 539,
+                      "width": 241,
+                      "height": 40
+                    },
+                    "characters": "Phone: (619) 795-6000\nEmail: info@theguildhotel.com"
+                  }
+                ]
+              },
+              {
+                "id": "485:1980",
+                "type": "GROUP",
+                "name": "Group 270990207",
+                "bbox": {
+                  "x": 40,
+                  "y": 619,
+                  "width": 391,
+                  "height": 49
+                },
+                "children": [
+                  {
+                    "id": "485:1977",
+                    "type": "TEXT",
+                    "name": "groups, meetings & events",
+                    "bbox": {
+                      "x": 40,
+                      "y": 619,
+                      "width": 391,
+                      "height": 22
+                    },
+                    "characters": "groups, meetings & events"
+                  },
+                  {
+                    "id": "485:1978",
+                    "type": "TEXT",
+                    "name": "Email: sales@theguildhotel.com",
+                    "bbox": {
+                      "x": 40,
+                      "y": 654,
+                      "width": 251,
+                      "height": 14
+                    },
+                    "characters": "Email: sales@theguildhotel.com"
+                  }
+                ]
+              },
+              {
+                "id": "485:1982",
+                "type": "TEXT",
+                "name": "Reservation Billing Questions",
+                "bbox": {
+                  "x": 40,
+                  "y": 708,
+                  "width": 391,
+                  "height": 22
+                },
+                "characters": "Reservation Billing Questions"
+              },
+              {
+                "id": "485:1989",
+                "type": "TEXT",
+                "name": "instagram",
+                "bbox": {
+                  "x": 40,
+                  "y": 797,
+                  "width": 95,
+                  "height": 19
+                },
+                "characters": "instagram"
+              },
+              {
+                "id": "485:1999",
+                "type": "TEXT",
+                "name": "facebook",
+                "bbox": {
+                  "x": 175,
+                  "y": 797,
+                  "width": 91,
+                  "height": 19
+                },
+                "characters": "facebook"
+              },
+              {
+                "id": "485:1983",
+                "type": "TEXT",
+                "name": "Email: billing@theguildhotel.com",
+                "bbox": {
+                  "x": 40,
+                  "y": 743,
+                  "width": 260,
+                  "height": 14
+                },
+                "characters": "Email: billing@theguildhotel.com"
+              },
+              {
+                "id": "485:2003",
+                "type": "RECTANGLE",
+                "name": "Rectangle 616",
+                "bbox": {
+                  "x": 125,
+                  "y": 1,
+                  "width": 235,
+                  "height": 324
+                }
+              }
+            ]
+          },
+          {
+            "id": "485:2001",
+            "type": "RECTANGLE",
+            "name": "Rectangle 615",
+            "bbox": {
+              "x": 655,
+              "y": 208,
+              "width": 905,
+              "height": 726
+            }
+          },
+          {
+            "id": "485:2074",
+            "type": "GROUP",
+            "name": "Group 270990211",
+            "bbox": {
+              "x": 0,
+              "y": 3715,
+              "width": 1600,
+              "height": 900
+            },
+            "children": [
+              {
+                "id": "485:2005",
+                "type": "RECTANGLE",
+                "name": "Rectangle 617",
+                "bbox": {
+                  "x": 0,
+                  "y": 3715,
+                  "width": 1600,
+                  "height": 900
+                }
+              },
+              {
+                "id": "485:2009",
+                "type": "GROUP",
+                "name": "Group 270990209",
+                "bbox": {
+                  "x": 469,
+                  "y": 3912,
+                  "width": 662,
+                  "height": 506
+                },
+                "children": [
+                  {
+                    "id": "485:2018",
+                    "type": "GROUP",
+                    "name": "Group 270990210",
+                    "bbox": {
+                      "x": 469,
+                      "y": 3912,
+                      "width": 662,
+                      "height": 506
+                    },
+                    "childCount": 3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "485:2019",
+            "type": "GROUP",
+            "name": "Group 270990026",
+            "bbox": {
+              "x": 1,
+              "y": 2500.53,
+              "width": 1600,
+              "height": 1195
+            },
+            "children": [
+              {
+                "id": "485:2020",
+                "type": "RECTANGLE",
+                "name": "Rectangle 553",
+                "bbox": {
+                  "x": 1,
+                  "y": 2500.53,
+                  "width": 1600,
+                  "height": 1195
+                }
+              },
+              {
+                "id": "485:2021",
+                "type": "GROUP",
+                "name": "Group 270990023",
+                "bbox": {
+                  "x": 324,
+                  "y": 2694.53,
+                  "width": 955,
+                  "height": 776
+                },
+                "children": [
+                  {
+                    "id": "485:2022",
+                    "type": "TEXT",
+                    "name": "faqs",
+                    "bbox": {
+                      "x": 776,
+                      "y": 2694.53,
+                      "width": 50,
+                      "height": 22
+                    },
+                    "characters": "faqs"
+                  },
+                  {
+                    "id": "485:2023",
+                    "type": "TEXT",
+                    "name": "your questions, answered",
+                    "bbox": {
+                      "x": 500,
+                      "y": 2735.53,
+                      "width": 603,
+                      "height": 40
+                    },
+                    "characters": "your questions, answered"
+                  },
+                  {
+                    "id": "485:2024",
+                    "type": "TEXT",
+                    "name": "How many guests can stay in this room?",
+                    "bbox": {
+                      "x": 324,
+                      "y": 2898.53,
+                      "width": 588,
+                      "height": 29
+                    },
+                    "characters": "How many guests can stay in this room?"
+                  },
+                  {
+                    "id": "485:2025",
+                    "type": "FRAME",
+                    "name": "Frame",
+                    "bbox": {
+                      "x": 1255,
+                      "y": 2900.53,
+                      "width": 24,
+                      "height": 24
+                    },
+                    "childCount": 1
+                  },
+                  {
+                    "id": "485:2027",
+                    "type": "TEXT",
+                    "name": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort.",
+                    "bbox": {
+                      "x": 324,
+                      "y": 2952.53,
+                      "width": 955,
+                      "height": 66
+                    },
+                    "characters": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort."
+                  },
+                  {
+                    "id": "485:2028",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 324,
+                      "y": 3064.53,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "485:2029",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 324,
+                      "y": 3105.53,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "485:2033",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 324,
+                      "y": 3145.53,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "485:2034",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 324,
+                      "y": 3186.53,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "485:2038",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 324,
+                      "y": 3226.53,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "485:2039",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 324,
+                      "y": 3267.53,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "485:2043",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 324,
+                      "y": 3307.53,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "485:2044",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 324,
+                      "y": 3348.53,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "485:2048",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 324,
+                      "y": 3388.53,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "485:2049",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 324,
+                      "y": 3429.53,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "485:2053",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 324,
+                      "y": 3469.53,
+                      "width": 955,
+                      "height": 1
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "485:2054",
+            "type": "GROUP",
+            "name": "Group 270990178",
+            "bbox": {
+              "x": 1,
+              "y": 1596,
+              "width": 1819,
+              "height": 965
+            },
+            "children": [
+              {
+                "id": "485:2055",
+                "type": "RECTANGLE",
+                "name": "Rectangle 595",
+                "bbox": {
+                  "x": 1,
+                  "y": 1596,
+                  "width": 1600,
+                  "height": 965
+                }
+              },
+              {
+                "id": "485:2056",
+                "type": "GROUP",
+                "name": "Group 270990177",
+                "bbox": {
+                  "x": 41,
+                  "y": 1811,
+                  "width": 1779,
+                  "height": 536
+                },
+                "children": [
+                  {
+                    "id": "485:2057",
+                    "type": "TEXT",
+                    "name": "more of the guild",
+                    "bbox": {
+                      "x": 41,
+                      "y": 1811,
+                      "width": 411,
+                      "height": 40
+                    },
+                    "characters": "more of the guild"
+                  },
+                  {
+                    "id": "485:2058",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 14",
+                    "bbox": {
+                      "x": 1076,
+                      "y": 1811,
+                      "width": 356,
+                      "height": 352
+                    }
+                  },
+                  {
+                    "id": "485:2059",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 563",
+                    "bbox": {
+                      "x": 688,
+                      "y": 1811,
+                      "width": 356,
+                      "height": 502
+                    }
+                  },
+                  {
+                    "id": "485:2060",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 562",
+                    "bbox": {
+                      "x": 1464,
+                      "y": 1811,
+                      "width": 356,
+                      "height": 463
+                    }
+                  },
+                  {
+                    "id": "485:2061",
+                    "type": "TEXT",
+                    "name": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.",
+                    "bbox": {
+                      "x": 41,
+                      "y": 1883,
+                      "width": 485,
+                      "height": 40
+                    },
+                    "characters": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+                  },
+                  {
+                    "id": "485:2062",
+                    "type": "TEXT",
+                    "name": "rooms",
+                    "bbox": {
+                      "x": 688,
+                      "y": 2325,
+                      "width": 69,
+                      "height": 22
+                    },
+                    "characters": "rooms"
+                  },
+                  {
+                    "id": "485:2063",
+                    "type": "TEXT",
+                    "name": "dining",
+                    "bbox": {
+                      "x": 1076,
+                      "y": 2175,
+                      "width": 67,
+                      "height": 22
+                    },
+                    "characters": "dining"
+                  },
+                  {
+                    "id": "485:2064",
+                    "type": "TEXT",
+                    "name": "wellness",
+                    "bbox": {
+                      "x": 1464,
+                      "y": 2286,
+                      "width": 96,
+                      "height": 22
+                    },
+                    "characters": "wellness"
+                  },
+                  {
+                    "id": "485:2065",
+                    "type": "GROUP",
+                    "name": "Group 270989617",
+                    "bbox": {
+                      "x": 41,
+                      "y": 2331,
+                      "width": 28.5,
+                      "height": 12
+                    },
+                    "childCount": 3
+                  },
+                  {
+                    "id": "485:2069",
+                    "type": "GROUP",
+                    "name": "Group 270989618",
+                    "bbox": {
+                      "x": 91,
+                      "y": 2331,
+                      "width": 28.5,
+                      "height": 12
+                    },
+                    "childCount": 3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "485:1745",
+            "type": "GROUP",
+            "name": "Group 270990037",
+            "bbox": {
+              "x": -1,
+              "y": 4615,
+              "width": 1601,
+              "height": 1678
+            },
+            "children": [
+              {
+                "id": "485:1746",
+                "type": "RECTANGLE",
+                "name": "Rectangle 530",
+                "bbox": {
+                  "x": -1,
+                  "y": 4615,
+                  "width": 1601,
+                  "height": 1678
+                }
+              },
+              {
+                "id": "485:1747",
+                "type": "GROUP",
+                "name": "Group 270990038",
+                "bbox": {
+                  "x": 723,
+                  "y": 6222,
+                  "width": 152.45,
+                  "height": 31.3
+                },
+                "children": [
+                  {
+                    "id": "485:1748",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 863.09,
+                      "y": 6240.93,
+                      "width": 12.36,
+                      "height": 12.37
+                    }
+                  },
+                  {
+                    "id": "485:1749",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 740.27,
+                      "y": 6240.94,
+                      "width": 12.36,
+                      "height": 12.36
+                    }
+                  },
+                  {
+                    "id": "485:1750",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 813.27,
+                      "y": 6240.94,
+                      "width": 12.35,
+                      "height": 12.36
+                    }
+                  },
+                  {
+                    "id": "485:1751",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 792.09,
+                      "y": 6222,
+                      "width": 9.07,
+                      "height": 11.67
+                    }
+                  },
+                  {
+                    "id": "485:1752",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 761.81,
+                      "y": 6241.36,
+                      "width": 9.42,
+                      "height": 11.47
+                    }
+                  },
+                  {
+                    "id": "485:1753",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 761.45,
+                      "y": 6222.03,
+                      "width": 9.3,
+                      "height": 11.58
+                    }
+                  },
+                  {
+                    "id": "485:1754",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 846.71,
+                      "y": 6222.03,
+                      "width": 8.3,
+                      "height": 11.57
+                    }
+                  },
+                  {
+                    "id": "485:1755",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 723,
+                      "y": 6241.4,
+                      "width": 8.76,
+                      "height": 11.43
+                    }
+                  },
+                  {
+                    "id": "485:1756",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 810.07,
+                      "y": 6222.04,
+                      "width": 9.81,
+                      "height": 11.83
+                    }
+                  },
+                  {
+                    "id": "485:1757",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 796.64,
+                      "y": 6241.4,
+                      "width": 7.92,
+                      "height": 11.43
+                    }
+                  },
+                  {
+                    "id": "485:1758",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 778.7,
+                      "y": 6241.37,
+                      "width": 9.15,
+                      "height": 11.46
+                    }
+                  },
+                  {
+                    "id": "485:1759",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 828.76,
+                      "y": 6222.04,
+                      "width": 9.13,
+                      "height": 11.56
+                    }
+                  },
+                  {
+                    "id": "485:1760",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 743.63,
+                      "y": 6222.06,
+                      "width": 9.12,
+                      "height": 11.56
+                    }
+                  },
+                  {
+                    "id": "485:1761",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 834.95,
+                      "y": 6241.38,
+                      "width": 7.3,
+                      "height": 11.44
+                    }
+                  },
+                  {
+                    "id": "485:1762",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 779.58,
+                      "y": 6222.02,
+                      "width": 2.72,
+                      "height": 11.59
+                    }
+                  },
+                  {
+                    "id": "485:1763",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 851.15,
+                      "y": 6241.4,
+                      "width": 2.75,
+                      "height": 11.42
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "485:1764",
+                "type": "TEXT",
+                "name": "Earn Marriott Bonvoy® Points on Every Stay",
+                "bbox": {
+                  "x": 596.61,
+                  "y": 5370,
+                  "width": 414,
+                  "height": 14
+                },
+                "characters": "Earn Marriott Bonvoy® Points on Every Stay"
+              },
+              {
+                "id": "485:1765",
+                "type": "LINE",
+                "name": "Line 4",
+                "bbox": {
+                  "x": 800,
+                  "y": 4835,
+                  "width": 0,
+                  "height": 426
+                }
+              },
+              {
+                "id": "485:1766",
+                "type": "GROUP",
+                "name": "Group 270990031",
+                "bbox": {
+                  "x": 205,
+                  "y": 4953,
+                  "width": 392,
+                  "height": 191
+                },
+                "children": [
+                  {
+                    "id": "485:1767",
+                    "type": "TEXT",
+                    "name": "Book your escape",
+                    "bbox": {
+                      "x": 205,
+                      "y": 4953,
+                      "width": 392,
+                      "height": 72
+                    },
+                    "characters": "Book your escape"
+                  },
+                  {
+                    "id": "485:1768",
+                    "type": "GROUP",
+                    "name": "Button",
+                    "bbox": {
+                      "x": 294,
+                      "y": 5107,
+                      "width": 214,
+                      "height": 37
+                    },
+                    "childCount": 1
+                  }
+                ]
+              },
+              {
+                "id": "485:1772",
+                "type": "GROUP",
+                "name": "Group 270990030",
+                "bbox": {
+                  "x": 924,
+                  "y": 4953,
+                  "width": 551,
+                  "height": 191
+                },
+                "children": [
+                  {
+                    "id": "485:1773",
+                    "type": "TEXT",
+                    "name": "Stay in the loop",
+                    "bbox": {
+                      "x": 1019,
+                      "y": 4953,
+                      "width": 364,
+                      "height": 72
+                    },
+                    "characters": "Stay in the loop"
+                  },
+                  {
+                    "id": "485:1774",
+                    "type": "GROUP",
+                    "name": "Button",
+                    "bbox": {
+                      "x": 1331,
+                      "y": 5107,
+                      "width": 144,
+                      "height": 37
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "485:1777",
+                    "type": "LINE",
+                    "name": "Line 5",
+                    "bbox": {
+                      "x": 924,
+                      "y": 5144,
+                      "width": 388,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "485:1778",
+                    "type": "TEXT",
+                    "name": "*Email",
+                    "bbox": {
+                      "x": 924,
+                      "y": 5118,
+                      "width": 60,
+                      "height": 16
+                    },
+                    "characters": "*Email"
+                  }
+                ]
+              },
+              {
+                "id": "485:1779",
+                "type": "FRAME",
+                "name": "Frame 427318623",
+                "bbox": {
+                  "x": 40,
+                  "y": 5793,
+                  "width": 1520,
+                  "height": 250
+                },
+                "children": [
+                  {
+                    "id": "485:1780",
+                    "type": "GROUP",
+                    "name": "Group 270990032",
+                    "bbox": {
+                      "x": 40,
+                      "y": 5793,
+                      "width": 123,
+                      "height": 250
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "485:1791",
+                    "type": "GROUP",
+                    "name": "Group 270990033",
+                    "bbox": {
+                      "x": 333,
+                      "y": 5793,
+                      "width": 168,
+                      "height": 224
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "485:1801",
+                    "type": "GROUP",
+                    "name": "Group 270990034",
+                    "bbox": {
+                      "x": 671,
+                      "y": 5793,
+                      "width": 168,
+                      "height": 172
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "485:1809",
+                    "type": "GROUP",
+                    "name": "Group 270990035",
+                    "bbox": {
+                      "x": 1009,
+                      "y": 5793,
+                      "width": 168,
+                      "height": 120
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "485:1815",
+                    "type": "GROUP",
+                    "name": "Group 270990036",
+                    "bbox": {
+                      "x": 1347,
+                      "y": 5793,
+                      "width": 215,
+                      "height": 120
+                    },
+                    "childCount": 2
+                  }
+                ]
+              },
+              {
+                "id": "485:1821",
+                "type": "GROUP",
+                "name": "Group 270990036",
+                "bbox": {
+                  "x": 717,
+                  "y": 5296,
+                  "width": 167,
+                  "height": 48.09
+                },
+                "children": [
+                  {
+                    "id": "485:1822",
+                    "type": "GROUP",
+                    "name": "Group",
+                    "bbox": {
+                      "x": 717,
+                      "y": 5296,
+                      "width": 167,
+                      "height": 48.09
+                    },
+                    "childCount": 17
+                  }
+                ]
+              },
+              {
+                "id": "485:1840",
+                "type": "TEXT",
+                "name": "copyright © 2026 the guild hotel",
+                "bbox": {
+                  "x": 40,
+                  "y": 6239,
+                  "width": 356,
+                  "height": 14
+                },
+                "characters": "copyright © 2026 the guild hotel"
+              },
+              {
+                "id": "485:1841",
+                "type": "TEXT",
+                "name": "brand & website by Studio circa",
+                "bbox": {
+                  "x": 1283,
+                  "y": 6239,
+                  "width": 277,
+                  "height": 14
+                },
+                "characters": "brand & website by Studio circa"
+              }
+            ]
+          },
+          {
+            "id": "485:1847",
+            "type": "INSTANCE",
+            "name": "guild-nav-full-dark",
+            "bbox": {
+              "x": 40,
+              "y": 26,
+              "width": 1520,
+              "height": 56
+            },
+            "manual": true
+          }
+        ]
+      }
+    }
+  ],
+  "animationNotes": []
+}

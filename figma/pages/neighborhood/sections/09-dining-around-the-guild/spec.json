@@ -1,0 +1,233 @@
+{
+  "pageSlug": "neighborhood",
+  "index": 9,
+  "slug": "dining-around-the-guild",
+  "laneHint": null,
+  "frameId": "487:2080",
+  "bbox": {
+    "x": 0,
+    "y": 11389,
+    "width": 1600,
+    "height": 2171
+  },
+  "crop": {
+    "y0": 11389,
+    "y1": 13650
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "487:2527",
+      "characters": "dining around the guild",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 42,
+        "y": 202,
+        "width": 485,
+        "height": 29
+      }
+    },
+    {
+      "id": "487:2526",
+      "characters": "In hac habitasse platea dictumst. Etiam dapibus augue tortor.  In hac habitasse platea dictumst. Etiam dapibus augue tortor",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 42,
+        "y": 263,
+        "width": 485,
+        "height": 40
+      }
+    },
+    {
+      "id": "487:2523",
+      "characters": "dining 1",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 676,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "487:2522",
+      "characters": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis morbi ullamcorper rutrum varius",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 711,
+        "width": 484,
+        "height": 66
+      }
+    },
+    {
+      "id": "487:2542",
+      "characters": "dining 2",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 1373,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "487:2541",
+      "characters": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis morbi ullamcorper rutrum varius",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 1408,
+        "width": 484,
+        "height": 66
+      }
+    },
+    {
+      "id": "487:2547",
+      "characters": "dining 2",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 2070,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "487:2546",
+      "characters": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis morbi ullamcorper rutrum varius",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 2105,
+        "width": 484,
+        "height": 66
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 8
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 3
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "487:2548",
+      "type": "GROUP",
+      "name": "Group 270990218",
+      "bbox": {
+        "x": 42,
+        "y": 0,
+        "width": 1389,
+        "height": 2171
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "487:2714",
+      "type": "GROUP",
+      "name": "Group 270990225",
+      "bbox": {
+        "x": -1,
+        "y": -1708,
+        "width": 1602,
+        "height": 11894
+      }
+    },
+    {
+      "id": "487:2713",
+      "type": "GROUP",
+      "name": "Group 270990224",
+      "bbox": {
+        "x": -1,
+        "y": 0,
+        "width": 1602,
+        "height": 10186
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

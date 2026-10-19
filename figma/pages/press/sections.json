@@ -1,0 +1,300 @@
+{
+  "pageSlug": "press",
+  "frames": [
+    {
+      "id": "419:5583",
+      "name": "PRESS",
+      "kind": "page",
+      "width": 1600,
+      "height": 10482,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/419-5583.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "press",
+      "dir": "sections/01-press",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "419:5583",
+      "frameName": "PRESS",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 900,
+      "nodeIds": [
+        "419:5584",
+        "419:6568",
+        "419:5588",
+        "419:5587"
+      ],
+      "backgroundIds": [
+        "420:6675",
+        "420:6676"
+      ],
+      "crop": "sections/01-press/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "a-room-for-every-stay",
+      "dir": "sections/02-a-room-for-every-stay",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "419:5583",
+      "frameName": "PRESS",
+      "y0": 900,
+      "y1": 1598,
+      "cropY0": 900,
+      "cropY1": 1605.5,
+      "nodeIds": [
+        "419:6540",
+        "420:6685",
+        "420:6677",
+        "420:6690"
+      ],
+      "backgroundIds": [
+        "420:6675",
+        "420:6676"
+      ],
+      "crop": "sections/02-a-room-for-every-stay/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "the-best-san-diego-hotels-for",
+      "dir": "sections/03-the-best-san-diego-hotels-for",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "419:5583",
+      "frameName": "PRESS",
+      "y0": 1613,
+      "y1": 2175,
+      "cropY0": 1605.5,
+      "cropY1": 2200,
+      "nodeIds": [
+        "420:6692",
+        "420:6695",
+        "420:6693"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-the-best-san-diego-hotels-for/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "the-12-best-hotels-in-san",
+      "dir": "sections/04-the-12-best-hotels-in-san",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "419:5583",
+      "frameName": "PRESS",
+      "y0": 2225,
+      "y1": 2787,
+      "cropY0": 2200,
+      "cropY1": 2812,
+      "nodeIds": [
+        "420:6718",
+        "420:6720",
+        "420:6719"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-the-12-best-hotels-in-san/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "section",
+      "dir": "sections/05-section",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "419:5583",
+      "frameName": "PRESS",
+      "y0": 2837,
+      "y1": 3361,
+      "cropY0": 2812,
+      "cropY1": 3369,
+      "nodeIds": [
+        "420:6722",
+        "420:6724"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-section/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "the-guild-hotel-kicks-off-new",
+      "dir": "sections/06-the-guild-hotel-kicks-off-new",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "419:5583",
+      "frameName": "PRESS",
+      "y0": 3377,
+      "y1": 4078,
+      "cropY0": 3369,
+      "cropY1": 4103,
+      "nodeIds": [
+        "420:6723",
+        "420:6725",
+        "420:6726",
+        "420:6728",
+        "420:6727"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-the-guild-hotel-kicks-off-new/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "here-are-the-must-see-san",
+      "dir": "sections/07-here-are-the-must-see-san",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "419:5583",
+      "frameName": "PRESS",
+      "y0": 4128,
+      "y1": 4690,
+      "cropY0": 4103,
+      "cropY1": 4767.5,
+      "nodeIds": [
+        "423:6729",
+        "423:6812",
+        "423:6730"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-here-are-the-must-see-san/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "press-enquiries",
+      "dir": "sections/08-press-enquiries",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "419:5583",
+      "frameName": "PRESS",
+      "y0": 4845,
+      "y1": 5745,
+      "cropY0": 4767.5,
+      "cropY1": 5745,
+      "nodeIds": [
+        "423:6906"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/08-press-enquiries/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "offers-packages",
+      "dir": "sections/09-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "419:5583",
+      "frameName": "PRESS",
+      "y0": 5745,
+      "y1": 6645,
+      "cropY0": 5745,
+      "cropY1": 6645,
+      "nodeIds": [
+        "423:6907"
+      ],
+      "backgroundIds": [
+        "423:6909"
+      ],
+      "crop": "sections/09-offers-packages/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "more-of-the-guild",
+      "dir": "sections/10-more-of-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "419:5583",
+      "frameName": "PRESS",
+      "y0": 6645,
+      "y1": 7610,
+      "cropY0": 6645,
+      "cropY1": 7609.77,
+      "nodeIds": [
+        "419:6674"
+      ],
+      "backgroundIds": [
+        "423:6909",
+        "419:5590"
+      ],
+      "crop": "sections/10-more-of-the-guild/section.webp"
+    },
+    {
+      "index": 11,
+      "slug": "faqs",
+      "dir": "sections/11-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "419:5583",
+      "frameName": "PRESS",
+      "y0": 7609.53,
+      "y1": 8804.53,
+      "cropY0": 7609.77,
+      "cropY1": 8804.53,
+      "nodeIds": [
+        "419:5591"
+      ],
+      "backgroundIds": [
+        "423:6909",
+        "419:5590"
+      ],
+      "crop": "sections/11-faqs/section.webp"
+    },
+    {
+      "index": 12,
+      "slug": "book-your-escape",
+      "dir": "sections/12-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "419:5583",
+      "frameName": "PRESS",
+      "y0": 8804.53,
+      "y1": 9782.53,
+      "cropY0": 8804.53,
+      "cropY1": 9782.53,
+      "nodeIds": [
+        "419:6414",
+        "419:6415",
+        "419:6421",
+        "419:6470",
+        "419:6413"
+      ],
+      "backgroundIds": [
+        "423:6909",
+        "419:5590",
+        "419:6394",
+        "419:6395"
+      ],
+      "crop": "sections/12-book-your-escape/section.webp"
+    },
+    {
+      "index": 13,
+      "slug": "the-hotel",
+      "dir": "sections/13-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "419:5583",
+      "frameName": "PRESS",
+      "y0": 9782.53,
+      "y1": 10482,
+      "cropY0": 9782.53,
+      "cropY1": 10482,
+      "nodeIds": [
+        "419:6428",
+        "419:6396",
+        "419:6489",
+        "419:6490"
+      ],
+      "backgroundIds": [
+        "423:6909",
+        "419:5590",
+        "419:6394",
+        "419:6395"
+      ],
+      "crop": "sections/13-the-hotel/section.webp"
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "pageSlug": "rooms-collection",
+  "index": 5,
+  "slug": "03",
+  "laneHint": null,
+  "frameId": "379:581",
+  "bbox": {
+    "x": 0,
+    "y": 3773,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 3773,
+    "y1": 4753
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "386:1377",
+      "characters": "03",
+      "styleName": "Sackers Heavy Gothic / Label / Caption",
+      "styleId": "177:62",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 15,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 356,
+        "y": 80.5,
+        "width": 25,
+        "height": 15
+      }
+    },
+    {
+      "id": "386:1380",
+      "characters": "03",
+      "styleName": "Sackers Heavy Gothic / Label / Caption",
+      "styleId": "177:62",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 15,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 419,
+        "y": 80.5,
+        "width": 25,
+        "height": 15
+      }
+    },
+    {
+      "id": "386:1379",
+      "characters": "/",
+      "styleName": "Sackers Heavy Gothic / Label / Caption",
+      "styleId": "177:62",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeightPx": 15,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 394,
+        "y": 81,
+        "width": 12,
+        "height": 15
+      }
+    },
+    {
+      "id": "386:1381",
+      "characters": "what matters most to you?",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 34,
+        "y": 120,
+        "width": 732,
+        "height": 29
+      }
+    },
+    {
+      "id": "386:1385",
+      "characters": "spaciousness",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#4A1217",
+      "bbox": {
+        "x": 316.6,
+        "y": 299,
+        "width": 168,
+        "height": 24
+      }
+    },
+    {
+      "id": "386:1388",
+      "characters": "elevator proximity",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 284.6,
+        "y": 389,
+        "width": 232,
+        "height": 24
+      }
+    },
+    {
+      "id": "386:1391",
+      "characters": "courtyard view",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 306.6,
+        "y": 482,
+        "width": 188,
+        "height": 24
+      }
+    },
+    {
+      "id": "386:1394",
+      "characters": "street view",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 331.6,
+        "y": 577,
+        "width": 139,
+        "height": 24
+      }
+    },
+    {
+      "id": "386:1397",
+      "characters": "quiet",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 367.6,
+        "y": 670,
+        "width": 66,
+        "height": 24
+      }
+    },
+    {
+      "id": "386:1398",
+      "characters": "SEE ALL THE ROOMS",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 263,
+        "y": 845,
+        "width": 273,
+        "height": 19
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 10
+    },
+    {
+      "hex": "#4A1217",
+      "opacity": 1,
+      "count": 2
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "386:1369",
+      "name": "Rectangle 514",
+      "imageRef": "0c5cb498b7eacbe1174374b129d91e21a3a9ddcd",
+      "bbox": {
+        "x": 801,
+        "y": 0,
+        "width": 799,
+        "height": 900
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "386:1368",
+      "type": "GROUP",
+      "name": "Group 270990150",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

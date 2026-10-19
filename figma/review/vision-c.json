@@ -1,0 +1,747 @@
+{
+ "sections": [
+  {
+   "key": "happenings-indiv/01-locals-night-at-rodeo-bar",
+   "name": "hero-fullbleed-caption",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "article hero"
+  },
+  {
+   "key": "happenings-indiv/02-the-guild-a-tribute-portfolio-hotel",
+   "name": "script-intro-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "small-caps heading, paragraph and Learn More button, no script heading"
+  },
+  {
+   "key": "happenings-indiv/03-section",
+   "name": "image-inset-single",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "single inset image placeholder"
+  },
+  {
+   "key": "happenings-indiv/04-nam-eleifend-venenatis-erat-sit-amet",
+   "name": "split-image-text-light",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "text left, image right"
+  },
+  {
+   "key": "happenings-indiv/05-more-around-town",
+   "name": "split-card-pair-captioned",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "possible hover swap",
+   "boundaryIssue": "",
+   "note": "two half-width image cards with captions under a centered header"
+  },
+  {
+   "key": "happenings-indiv/06-more-of-the-guild",
+   "name": "card-carousel-header-left",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider arrows, cards cut off at edge",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-indiv/07-offers-packages",
+   "name": "offers-slider-split",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider arrows and 02/05 counter",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-indiv/08-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-indiv/09-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "blog-indiv/01-locals-night-at-rodeo-bar",
+   "name": "hero-fullbleed-caption",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "article hero (clone of happenings-indiv/01-locals-night-at-rodeo-bar)"
+  },
+  {
+   "key": "blog-indiv/02-the-guild-a-tribute-portfolio-hotel",
+   "name": "script-intro-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "small-caps heading, paragraph and Learn More button, no script heading (clone of happenings-indiv/02-the-guild-a-tribute-portfolio-hotel)"
+  },
+  {
+   "key": "blog-indiv/03-section",
+   "name": "image-inset-single",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "single inset image placeholder (clone of happenings-indiv/03-section)"
+  },
+  {
+   "key": "blog-indiv/04-nam-eleifend-venenatis-erat-sit-amet",
+   "name": "split-image-text-light",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "text left, image right (clone of happenings-indiv/04-nam-eleifend-venenatis-erat-sit-amet)"
+  },
+  {
+   "key": "blog-indiv/05-more-around-town",
+   "name": "split-card-pair-captioned",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "possible hover swap",
+   "boundaryIssue": "",
+   "note": "two half-width image cards with captions under a centered header (clone of happenings-indiv/05-more-around-town)"
+  },
+  {
+   "key": "blog-indiv/06-more-of-the-guild",
+   "name": "card-carousel-header-left",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider arrows, cards cut off at edge",
+   "boundaryIssue": "",
+   "note": "clone of happenings-indiv/06-more-of-the-guild"
+  },
+  {
+   "key": "blog-indiv/07-offers-packages",
+   "name": "offers-slider-split",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider arrows and 02/05 counter",
+   "boundaryIssue": "",
+   "note": "clone of happenings-indiv/07-offers-packages"
+  },
+  {
+   "key": "blog-indiv/08-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of happenings-indiv/08-book-your-escape"
+  },
+  {
+   "key": "blog-indiv/09-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of happenings-indiv/09-the-hotel"
+  },
+  {
+   "key": "gallery/01-gallery",
+   "name": "hero-fullbleed-centered",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "gallery/02-all",
+   "name": "gallery-mosaic-captioned",
+   "kind": "gallery",
+   "slider": false,
+   "interactive": "filter pills (All, Design, Wellness, Dining, Room, Amenities, Guests)",
+   "boundaryIssue": "",
+   "note": "floating pill filter over mosaic"
+  },
+  {
+   "key": "gallery/03-offers-packages",
+   "name": "offers-slider-split",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider arrows and 02/05 counter",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "gallery/04-more-of-the-guild",
+   "name": "card-carousel-header-left",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider arrows, cards cut off at edge",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "gallery/05-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "gallery/06-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "gallery/07-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "arts/01-art-collection",
+   "name": "hero-fullbleed-centered",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "arts/02-an-art-collection-through-a-curators",
+   "name": "script-intro-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "arts/03-section",
+   "name": "image-inset-single",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "inset image on cream"
+  },
+  {
+   "key": "arts/04-etiam-imperdiet-sodales-dui-a-vestibulum",
+   "name": "hero-fullbleed-caption",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "full-bleed image with small caption bottom-left"
+  },
+  {
+   "key": "arts/05-the-guild-collection",
+   "name": "split-image-text-light",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "scattered two images with text block"
+  },
+  {
+   "key": "arts/06-section",
+   "name": "gallery-mosaic-captioned",
+   "kind": "gallery",
+   "slider": false,
+   "interactive": "possibly click opens artist overlay",
+   "boundaryIssue": "",
+   "note": "dark-gap mosaic of artworks, no captions visible"
+  },
+  {
+   "key": "arts/07-more-of-the-guild",
+   "name": "card-carousel-header-left",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider arrows, cards cut off at edge",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "arts/08-offers-packages",
+   "name": "offers-slider-split",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider arrows and 02/05 counter",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "arts/09-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "arts/10-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "arts/11-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "arts/12-arts-artist",
+   "name": "overlay-detail-panel-modal",
+   "kind": "overlay",
+   "slider": false,
+   "interactive": "modal with back link",
+   "boundaryIssue": "",
+   "note": "artist bio, portrait left"
+  },
+  {
+   "key": "arts/13-arts-modal",
+   "name": "overlay-detail-panel-modal",
+   "kind": "overlay",
+   "slider": false,
+   "interactive": "modal with back link",
+   "boundaryIssue": "",
+   "note": "artwork detail, image left text right"
+  },
+  {
+   "key": "wellness-collection/01-wellness-at-the-guild",
+   "name": "hero-fullbleed-centered",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "wellness-collection/02-from-movement-and-produce-to-deep",
+   "name": "tab-pills-intro",
+   "kind": "content",
+   "slider": false,
+   "interactive": "tab pills (In-room wellness, Fitness center, Mindful dining, Wellness events) anchor to cards",
+   "boundaryIssue": "",
+   "note": "script intro, image, floating pill nav"
+  },
+  {
+   "key": "wellness-collection/03-in-room-wellness",
+   "name": "feature-card-fullbleed-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "wellness-collection/04-fitness-center",
+   "name": "feature-card-fullbleed-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "wellness-collection/05-mindful-dining",
+   "name": "feature-card-fullbleed-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "wellness-collection/06-wellness-events",
+   "name": "feature-card-fullbleed-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "wellness-collection/07-offers-packages",
+   "name": "offers-slider-split",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider arrows and 02/05 counter",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "wellness-collection/08-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "wellness-collection/09-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "wellness-collection/10-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "static-template/01-privacy-policy",
+   "name": "rich-text-legal",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "crop includes site header/nav above the legal content",
+   "note": "includes page nav at top of crop"
+  },
+  {
+   "key": "static-template/02-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "static-template/03-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "contact/01-contact-us",
+   "name": "form-split-script-contact",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "crop includes site header/nav",
+   "note": "contact details left, image/map placeholder right; includes nav header"
+  },
+  {
+   "key": "contact/02-your-request",
+   "name": "form-contact-fields",
+   "kind": "form",
+   "slider": false,
+   "interactive": "form",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "contact/03-more-of-the-guild",
+   "name": "card-carousel-header-left",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider arrows, cards cut off at edge",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "contact/04-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "contact/05-cant-find-what-youre-looking-for",
+   "name": "cta-script-centered-dark",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "contact/06-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "contact/07-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "meetings-collection/01-meetings-events-at-the-guild",
+   "name": "hero-fullbleed-centered",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "meetings-collection/02-intimate-spaces-for-celebration-collaboration",
+   "name": "tab-pills-intro",
+   "kind": "content",
+   "slider": false,
+   "interactive": "tab pills (Council Boardroom, Terrace, Conference Center)",
+   "boundaryIssue": "",
+   "note": "script intro, large image, floating pills"
+  },
+  {
+   "key": "meetings-collection/03-council-boardroom",
+   "name": "venue-card-fullbleed",
+   "kind": "content",
+   "slider": false,
+   "interactive": "opens meetings overlay",
+   "boundaryIssue": "",
+   "note": "rounded full-bleed card with small inset thumb"
+  },
+  {
+   "key": "meetings-collection/04-lobby-terrace",
+   "name": "venue-card-fullbleed",
+   "kind": "content",
+   "slider": false,
+   "interactive": "opens meetings overlay",
+   "boundaryIssue": "",
+   "note": "rounded full-bleed card with small inset thumb"
+  },
+  {
+   "key": "meetings-collection/05-1-america-plaza",
+   "name": "venue-card-fullbleed",
+   "kind": "content",
+   "slider": false,
+   "interactive": "opens meetings overlay",
+   "boundaryIssue": "",
+   "note": "rounded full-bleed card with small inset thumb"
+  },
+  {
+   "key": "meetings-collection/06-request-for-proposal",
+   "name": "form-split-script-contact",
+   "kind": "form",
+   "slider": false,
+   "interactive": "form",
+   "boundaryIssue": "",
+   "note": "script heading left, RFP form right"
+  },
+  {
+   "key": "meetings-collection/07-steps-from-key-legal-addresses",
+   "name": "map-feature",
+   "kind": "map",
+   "slider": false,
+   "interactive": "map pins with info panel",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "meetings-collection/08-key-features-of-our-spaces",
+   "name": "split-image-text-light",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "sticky text left, three stacked image plus list items right"
+  },
+  {
+   "key": "meetings-collection/09-meetings-events-gallery",
+   "name": "gallery-captioned-grid-numbered",
+   "kind": "gallery",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "meetings-collection/10-offers-packages",
+   "name": "offers-slider-split",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider arrows and 02/05 counter",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "meetings-collection/11-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "meetings-collection/12-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "meetings-collection/13-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "meetings-collection/14-meetings-overlay",
+   "name": "overlay-detail-panel-modal",
+   "kind": "overlay",
+   "slider": false,
+   "interactive": "modal with back arrow",
+   "boundaryIssue": "crop shows top of overlay only, appears to include page chrome",
+   "note": "venue detail, layout options, image below"
+  },
+  {
+   "key": "neighborhood/01-a-city-at-your-fingertips",
+   "name": "hero-fullbleed-centered",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "neighborhood/02-the-best-of-san-diego-is",
+   "name": "script-intro-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "neighborhood/03-downtown-san-diego",
+   "name": "split-image-text-light",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "scattered image and text blocks"
+  },
+  {
+   "key": "neighborhood/04-gaslamp-quarter",
+   "name": "split-image-text-light",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "scattered image and text blocks"
+  },
+  {
+   "key": "neighborhood/05-little-italy",
+   "name": "split-image-text-light",
+   "kind": "content",
+   "slider": false,
+   "interactive": "tab pills (Dining, Arts, Beyond Downtown, Services) anchor nav",
+   "boundaryIssue": "",
+   "note": "floating pill nav at bottom"
+  },
+  {
+   "key": "neighborhood/06-arts-culture-downtown-san-diego",
+   "name": "offers-slider-split",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider arrows and 02/05 counter",
+   "boundaryIssue": "",
+   "note": "tan variant of offers split"
+  },
+  {
+   "key": "neighborhood/07-beyond-downtown-san-diego",
+   "name": "timeline-scatter-images",
+   "kind": "content",
+   "slider": false,
+   "interactive": "possible modal trigger to neighborhood overlay",
+   "boundaryIssue": "",
+   "note": "staggered captioned images"
+  },
+  {
+   "key": "neighborhood/08-corporate-services",
+   "name": "image-grid-text-dark",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "2x2 image cards on burgundy with CTA footer row"
+  },
+  {
+   "key": "neighborhood/09-dining-around-the-guild",
+   "name": "article-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "header left, stacked image/text cards right"
+  },
+  {
+   "key": "neighborhood/10-steps-from-key-legal-addresses",
+   "name": "map-feature",
+   "kind": "map",
+   "slider": false,
+   "interactive": "map pins with info panel",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "neighborhood/11-neighborhood-gallery",
+   "name": "gallery-captioned-grid-numbered",
+   "kind": "gallery",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "neighborhood/12-offers-packages",
+   "name": "offers-slider-split",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider arrows and 02/05 counter",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "neighborhood/13-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "neighborhood/14-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "neighborhood/15-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "neighborhood/16-neighborhood-overlay",
+   "name": "overlay-detail-panel-modal",
+   "kind": "overlay",
+   "slider": false,
+   "interactive": "modal with back arrow",
+   "boundaryIssue": "",
+   "note": "Coronado Beach detail with Learn More"
+  }
+ ]
+}

@@ -1,0 +1,322 @@
+{
+  "pageSlug": "rooms-collection",
+  "index": 7,
+  "slug": "deluxe-king-suite",
+  "laneHint": null,
+  "frameId": "379:581",
+  "bbox": {
+    "x": 0,
+    "y": 5235,
+    "width": 1600,
+    "height": 1800
+  },
+  "crop": {
+    "y0": 5155,
+    "y1": 7153
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "404:3405",
+      "characters": "deluxe king suite",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 41,
+        "y": 910,
+        "width": 296,
+        "height": 30
+      }
+    },
+    {
+      "id": "389:3174",
+      "characters": "deluxe king suite",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 840,
+        "y": 910,
+        "width": 296,
+        "height": 30
+      }
+    },
+    {
+      "id": "389:3193",
+      "characters": "guild corner loft suite",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 840,
+        "y": 1762,
+        "width": 409,
+        "height": 30
+      }
+    },
+    {
+      "id": "389:3232",
+      "characters": "premium twin room",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 1801,
+        "width": 327,
+        "height": 30
+      }
+    },
+    {
+      "id": "389:3306",
+      "characters": "view more",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 1431,
+        "y": 1805,
+        "width": 94,
+        "height": 19
+      }
+    },
+    {
+      "id": "389:3198",
+      "characters": "4 guests",
+      "styleName": "Sackers Heavy Gothic / Label / Eyebrow",
+      "styleId": "177:56",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 26.1,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 888,
+        "y": 1811,
+        "width": 99,
+        "height": 26
+      }
+    },
+    {
+      "id": "389:3202",
+      "characters": "52 m² size",
+      "styleName": "Sackers Heavy Gothic / Label / Eyebrow",
+      "styleId": "177:56",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 26.1,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1083,
+        "y": 1811,
+        "width": 112,
+        "height": 26
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 9
+    },
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#FFFFFF",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "404:3411",
+      "name": "Rectangle 584",
+      "imageRef": "745c085a4a4187ad24dd49e947e40a436a1ffbdd",
+      "bbox": {
+        "x": 1,
+        "y": 80,
+        "width": 799,
+        "height": 900
+      }
+    },
+    {
+      "nodeId": "389:3166",
+      "name": "Rectangle 530",
+      "imageRef": "8303f7c977cff864b2b171528b08d4a7957b69c6",
+      "bbox": {
+        "x": 800,
+        "y": 80,
+        "width": 800,
+        "height": 900
+      }
+    },
+    {
+      "nodeId": "389:3224",
+      "name": "Rectangle 530",
+      "imageRef": "27f6840ca839b9675c82ed8eb521abfc5f478c78",
+      "bbox": {
+        "x": 0,
+        "y": 980,
+        "width": 800,
+        "height": 900
+      }
+    },
+    {
+      "nodeId": "389:3185",
+      "name": "Rectangle 530",
+      "imageRef": "d7332204a5bee888af6d6fe5adf267bebfab8918",
+      "bbox": {
+        "x": 800,
+        "y": 980,
+        "width": 800,
+        "height": 900
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "389:3166",
+      "type": "RECTANGLE",
+      "name": "Rectangle 530",
+      "bbox": {
+        "x": 800,
+        "y": 80,
+        "width": 800,
+        "height": 900
+      }
+    },
+    {
+      "id": "394:3323",
+      "type": "LINE",
+      "name": "Line 29",
+      "bbox": {
+        "x": 800,
+        "y": 80,
+        "width": 0,
+        "height": 1800
+      }
+    },
+    {
+      "id": "404:3411",
+      "type": "RECTANGLE",
+      "name": "Rectangle 584",
+      "bbox": {
+        "x": 1,
+        "y": 80,
+        "width": 799,
+        "height": 900
+      }
+    },
+    {
+      "id": "389:3174",
+      "type": "TEXT",
+      "name": "deluxe king suite",
+      "bbox": {
+        "x": 840,
+        "y": 910,
+        "width": 296,
+        "height": 30
+      }
+    },
+    {
+      "id": "404:3404",
+      "type": "FRAME",
+      "name": "Frame 427318509",
+      "bbox": {
+        "x": 41,
+        "y": 910,
+        "width": 476,
+        "height": 30
+      }
+    },
+    {
+      "id": "394:3325",
+      "type": "LINE",
+      "name": "Line 30",
+      "bbox": {
+        "x": 1,
+        "y": 980,
+        "width": 1599,
+        "height": 0
+      }
+    },
+    {
+      "id": "404:3390",
+      "type": "GROUP",
+      "name": "Group 270990166",
+      "bbox": {
+        "x": 800,
+        "y": 980,
+        "width": 800,
+        "height": 900
+      }
+    },
+    {
+      "id": "404:3397",
+      "type": "GROUP",
+      "name": "Group 270990168",
+      "bbox": {
+        "x": 0,
+        "y": 980,
+        "width": 800,
+        "height": 900
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

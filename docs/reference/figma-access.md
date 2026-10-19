@@ -2,6 +2,10 @@
 
 What the pipeline needs from Figma before `/export-assets`, `pnpm run extract-styles` or `/build-component` can run, and how to check it in one call.
 
+## Snapshot first
+
+When a project has `figma/snapshot.json`, all design reads come from the committed snapshot (`pnpm figma:snapshot` fetches it once, `pnpm figma:slice` and `pnpm figma:tokens` rebuild everything locally for free). Build sessions never call the REST API or the Figma MCP on their default path. Refresh the snapshot only when the design changes; a re-run on an unchanged file costs one call. See `figma/README.md`.
+
 ## Edit access is required for the REST API
 
 The Figma REST API returns **403 "File not exportable"** when the token holder only has "can view" access to the file. The Figma MCP (which works through the desktop app connection) may still return screenshots, so the problem shows up late, at token extraction or asset export.

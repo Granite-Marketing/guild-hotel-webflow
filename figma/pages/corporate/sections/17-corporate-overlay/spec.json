@@ -1,0 +1,429 @@
+{
+  "pageSlug": "corporate",
+  "index": 17,
+  "slug": "corporate-overlay",
+  "laneHint": "manual",
+  "frameId": "2034:2906",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 899
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 899
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "2034:2942",
+      "characters": "council boardroom",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 571,
+        "y": 175,
+        "width": 458,
+        "height": 40
+      }
+    },
+    {
+      "id": "2034:2941",
+      "characters": "submit your request",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1296,
+        "y": 189,
+        "width": 196,
+        "height": 19
+      }
+    },
+    {
+      "id": "2034:2920",
+      "characters": "details",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 318,
+        "width": 485,
+        "height": 29
+      }
+    },
+    {
+      "id": "2034:2924",
+      "characters": "1 510 SQ FT",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 816,
+        "y": 325,
+        "width": 615,
+        "height": 14
+      }
+    },
+    {
+      "id": "2034:2912",
+      "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 369,
+        "width": 485,
+        "height": 118
+      }
+    },
+    {
+      "id": "2034:2926",
+      "characters": "2 Modern executive seating for 12",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 816,
+        "y": 387,
+        "width": 615,
+        "height": 14
+      }
+    },
+    {
+      "id": "2034:2928",
+      "characters": "3 Premium conference table with ultra connectivity",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 816,
+        "y": 449,
+        "width": 615,
+        "height": 14
+      }
+    },
+    {
+      "id": "2034:2930",
+      "characters": "4 Oversized, built-in hi-res TV",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 816,
+        "y": 511,
+        "width": 615,
+        "height": 14
+      }
+    },
+    {
+      "id": "2034:2921",
+      "characters": "layout options",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 550,
+        "width": 485,
+        "height": 29
+      }
+    },
+    {
+      "id": "2034:2932",
+      "characters": "5 Capacity: 50+",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 816,
+        "y": 573,
+        "width": 615,
+        "height": 14
+      }
+    },
+    {
+      "id": "2034:2913",
+      "characters": "Classroom: 21*",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 601,
+        "width": 123,
+        "height": 14
+      }
+    },
+    {
+      "id": "2034:2917",
+      "characters": "Theater: 21",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 396,
+        "y": 601,
+        "width": 86,
+        "height": 14
+      }
+    },
+    {
+      "id": "2034:2914",
+      "characters": "U-shape: 21",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 635,
+        "width": 92,
+        "height": 14
+      }
+    },
+    {
+      "id": "2034:2918",
+      "characters": "Conference: 21*",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 396,
+        "y": 635,
+        "width": 131,
+        "height": 14
+      }
+    },
+    {
+      "id": "2034:2915",
+      "characters": "Rounds: 21",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 669,
+        "width": 85,
+        "height": 14
+      }
+    },
+    {
+      "id": "2034:2919",
+      "characters": "Reception: 21",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 396,
+        "y": 669,
+        "width": 106,
+        "height": 14
+      }
+    },
+    {
+      "id": "2034:2916",
+      "characters": "floorplan\n\n*Requires furniture removal, charges may apply",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 713,
+        "width": 457,
+        "height": 57
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 20
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "2034:2933",
+      "name": "Rectangle 586",
+      "imageRef": "b940aa95950dd4de783e1c0ae2dfee90e4485143",
+      "bbox": {
+        "x": 90,
+        "y": 804,
+        "width": 1421,
+        "height": 707
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "2034:2907",
+      "type": "GROUP",
+      "name": "Group 270990119",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 1615
+      }
+    },
+    {
+      "id": "2034:2910",
+      "type": "FRAME",
+      "name": "Frame 270990121",
+      "bbox": {
+        "x": 90,
+        "y": 125,
+        "width": 1421,
+        "height": 1386
+      }
+    },
+    {
+      "id": "2034:2943",
+      "type": "GROUP",
+      "name": "Group 270990121",
+      "bbox": {
+        "x": 40,
+        "y": 192,
+        "width": 17,
+        "height": 17
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "side"
+}

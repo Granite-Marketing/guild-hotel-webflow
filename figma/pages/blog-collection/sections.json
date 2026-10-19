@@ -1,0 +1,272 @@
+{
+  "pageSlug": "blog-collection",
+  "frames": [
+    {
+      "id": "2034:1180",
+      "name": "BLOG-COLLECTION",
+      "kind": "page",
+      "width": 1600,
+      "height": 10207,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/2034-1180.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "blog",
+      "dir": "sections/01-blog",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1180",
+      "frameName": "BLOG-COLLECTION",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 900,
+      "nodeIds": [
+        "2034:1181",
+        "2034:1405",
+        "2034:1185",
+        "2034:1184"
+      ],
+      "backgroundIds": [
+        "2034:1218",
+        "2034:1219"
+      ],
+      "crop": "sections/01-blog/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "whats-on-in-san-diego",
+      "dir": "sections/02-whats-on-in-san-diego",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1180",
+      "frameName": "BLOG-COLLECTION",
+      "y0": 900,
+      "y1": 1598,
+      "cropY0": 900,
+      "cropY1": 1605.5,
+      "nodeIds": [
+        "2034:1188",
+        "2034:1191",
+        "2034:1220",
+        "2034:1189"
+      ],
+      "backgroundIds": [
+        "2034:1218",
+        "2034:1219"
+      ],
+      "crop": "sections/02-whats-on-in-san-diego/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "the-best-san-diego-hotels-for",
+      "dir": "sections/03-the-best-san-diego-hotels-for",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1180",
+      "frameName": "BLOG-COLLECTION",
+      "y0": 1613,
+      "y1": 2239,
+      "cropY0": 1605.5,
+      "cropY1": 2289,
+      "nodeIds": [
+        "2034:1192"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-the-best-san-diego-hotels-for/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "the-best-san-diego-hotels-for",
+      "dir": "sections/04-the-best-san-diego-hotels-for",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1180",
+      "frameName": "BLOG-COLLECTION",
+      "y0": 2339,
+      "y1": 2965,
+      "cropY0": 2289,
+      "cropY1": 3015,
+      "nodeIds": [
+        "2034:1207"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-the-best-san-diego-hotels-for/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "the-best-san-diego-hotels-for",
+      "dir": "sections/05-the-best-san-diego-hotels-for",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1180",
+      "frameName": "BLOG-COLLECTION",
+      "y0": 3065,
+      "y1": 3691,
+      "cropY0": 3015,
+      "cropY1": 3778.5,
+      "nodeIds": [
+        "2034:1197"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-the-best-san-diego-hotels-for/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "culture",
+      "dir": "sections/06-culture",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1180",
+      "frameName": "BLOG-COLLECTION",
+      "y0": 3866,
+      "y1": 4554,
+      "cropY0": 3778.5,
+      "cropY1": 4604,
+      "nodeIds": [
+        "2034:1190",
+        "2034:1212"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-culture/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "the-best-san-diego-hotels-for",
+      "dir": "sections/07-the-best-san-diego-hotels-for",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1180",
+      "frameName": "BLOG-COLLECTION",
+      "y0": 4654,
+      "y1": 5280,
+      "cropY0": 4604,
+      "cropY1": 5374.5,
+      "nodeIds": [
+        "2034:1202"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-the-best-san-diego-hotels-for/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "offers-packages",
+      "dir": "sections/08-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1180",
+      "frameName": "BLOG-COLLECTION",
+      "y0": 5469,
+      "y1": 6369,
+      "cropY0": 5374.5,
+      "cropY1": 6369,
+      "nodeIds": [
+        "2034:1263"
+      ],
+      "backgroundIds": [
+        "2034:1227"
+      ],
+      "crop": "sections/08-offers-packages/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "more-of-the-guild",
+      "dir": "sections/09-more-of-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1180",
+      "frameName": "BLOG-COLLECTION",
+      "y0": 6369,
+      "y1": 7334,
+      "cropY0": 6369,
+      "cropY1": 7333.77,
+      "nodeIds": [
+        "2034:1386"
+      ],
+      "backgroundIds": [
+        "2034:1227",
+        "2034:1187"
+      ],
+      "crop": "sections/09-more-of-the-guild/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "faqs",
+      "dir": "sections/10-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1180",
+      "frameName": "BLOG-COLLECTION",
+      "y0": 7333.53,
+      "y1": 8528.53,
+      "cropY0": 7333.77,
+      "cropY1": 8528.53,
+      "nodeIds": [
+        "2034:1228"
+      ],
+      "backgroundIds": [
+        "2034:1227",
+        "2034:1187"
+      ],
+      "crop": "sections/10-faqs/section.webp"
+    },
+    {
+      "index": 11,
+      "slug": "book-your-escape",
+      "dir": "sections/11-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1180",
+      "frameName": "BLOG-COLLECTION",
+      "y0": 8528.53,
+      "y1": 9506.53,
+      "cropY0": 8528.53,
+      "cropY1": 9506.53,
+      "nodeIds": [
+        "2034:1309",
+        "2034:1310",
+        "2034:1316",
+        "2034:1365",
+        "2034:1308"
+      ],
+      "backgroundIds": [
+        "2034:1227",
+        "2034:1187",
+        "2034:1289",
+        "2034:1290"
+      ],
+      "crop": "sections/11-book-your-escape/section.webp"
+    },
+    {
+      "index": 12,
+      "slug": "the-hotel",
+      "dir": "sections/12-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:1180",
+      "frameName": "BLOG-COLLECTION",
+      "y0": 9506.53,
+      "y1": 10206.53,
+      "cropY0": 9506.53,
+      "cropY1": 10207,
+      "nodeIds": [
+        "2034:1323",
+        "2034:1291",
+        "2034:1384",
+        "2034:1385"
+      ],
+      "backgroundIds": [
+        "2034:1227",
+        "2034:1187",
+        "2034:1289",
+        "2034:1290"
+      ],
+      "crop": "sections/12-the-hotel/section.webp"
+    }
+  ]
+}

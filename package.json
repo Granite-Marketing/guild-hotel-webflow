@@ -11,7 +11,7 @@
   "scripts": {
     "create:client": "node ./scripts/factory/create-client-project.mjs",
     "test:factory": "node --test tests/factory/*.test.mjs",
-    "factory:verify": "pnpm test:factory && pnpm check && pnpm build",
+    "factory:verify": "pnpm test:factory && pnpm check && pnpm build && pnpm test:figma",
     "factory:tokens": "node ./scripts/factory/generate-token-adapters.mjs",
     "factory:blueprint": "node ./scripts/factory/validate-blueprint.mjs",
     "factory:snapshot": "node ./scripts/factory/inspect-webflow.mjs",
@@ -27,7 +27,7 @@
     "check": "tsc --noEmit",
     "typecheck": "tsc --noEmit",
     "release": "changeset publish",
-    "export-assets": "node scripts/api/figma/export-assets.js",
+    "export-assets": "node scripts/api/figma/export-assets.cjs",
     "upload-assets": "node scripts/api/webflow/upload-assets.cjs",
     "update-metadata": "node scripts/api/webflow/update-metadata.cjs",
     "update-seo": "node scripts/api/webflow/update-seo.cjs",
@@ -36,7 +36,14 @@
     "alt:generate": "node scripts/api/anthropic/generate-alt-text.mjs",
     "alt:payload": "node scripts/api/anthropic/build-apply-payload.mjs",
     "alt:apply": "node scripts/api/webflow/apply-alt-text.cjs",
-    "alt:verify": "node scripts/api/anthropic/verify-live-alt.mjs"
+    "alt:verify": "node scripts/api/anthropic/verify-live-alt.mjs",
+    "figma:snapshot": "node scripts/api/figma/snapshot.mjs",
+    "figma:slice": "node scripts/api/figma/slice-sections.mjs",
+    "figma:tokens": "node scripts/api/figma/extract-tokens.mjs",
+    "test:figma": "node --test tests/figma/*.test.mjs",
+    "figma:inventory": "node scripts/api/figma/build-inventory.mjs",
+    "figma:vectors": "node scripts/api/figma/export-vectors.mjs",
+    "figma:queue": "node scripts/api/figma/build-queue.mjs"
   },
   "keywords": [
     "webflow",

@@ -1,0 +1,319 @@
+{
+  "pageSlug": "corporate",
+  "index": 5,
+  "slug": "designed-for-focused-work-confidential-strategy",
+  "laneHint": null,
+  "frameId": "2034:2490",
+  "bbox": {
+    "x": 0,
+    "y": 3963,
+    "width": 1600,
+    "height": 3236
+  },
+  "crop": {
+    "y0": 3930,
+    "y1": 7294.5
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "2034:2599",
+      "characters": "Designed for Focused Work & Confidential Strategy",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 206,
+        "width": 485,
+        "height": 58
+      }
+    },
+    {
+      "id": "2034:2598",
+      "characters": "The Guild provides a discreet, high-performance atmosphere tailored to the demands of legal professionals.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 296,
+        "width": 485,
+        "height": 40
+      }
+    },
+    {
+      "id": "2034:2604",
+      "characters": "book your space",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 78,
+        "y": 389,
+        "width": 158,
+        "height": 19
+      }
+    },
+    {
+      "id": "2034:2583",
+      "characters": "Private Access Options",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 812,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "2034:2582",
+      "characters": "Entire floor buyouts available for secure team use and confidential strategy rooms.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 847,
+        "width": 440,
+        "height": 40
+      }
+    },
+    {
+      "id": "2034:2587",
+      "characters": "Wellness Programming & Extended-Stay Amenities",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 1606,
+        "width": 484,
+        "height": 19
+      }
+    },
+    {
+      "id": "2034:2586",
+      "characters": "Customized in-room features and wellness offerings for long-term trial support.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 1641,
+        "width": 456,
+        "height": 40
+      }
+    },
+    {
+      "id": "2034:2591",
+      "characters": "Quiet, Professional Environment",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 2400,
+        "width": 484,
+        "height": 19
+      }
+    },
+    {
+      "id": "2034:2590",
+      "characters": "From soundproof guest rooms to adaptable “war room” setups, every space promotes concentration and comfort.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 2435,
+        "width": 456,
+        "height": 40
+      }
+    },
+    {
+      "id": "2034:2595",
+      "characters": "Secure Storage & Services",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 3194,
+        "width": 484,
+        "height": 19
+      }
+    },
+    {
+      "id": "2034:2594",
+      "characters": "On-site private storage for sensitive materials, with 24/7 access to printing and scanning.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 3229,
+        "width": 456,
+        "height": 40
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 11
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 4
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "2034:2596",
+      "type": "GROUP",
+      "name": "Group 270990106",
+      "bbox": {
+        "x": 40,
+        "y": 33,
+        "width": 485,
+        "height": 385
+      }
+    },
+    {
+      "id": "2034:2580",
+      "type": "GROUP",
+      "name": "Group 270990101",
+      "bbox": {
+        "x": 947,
+        "y": 193,
+        "width": 484,
+        "height": 694
+      }
+    },
+    {
+      "id": "2034:2584",
+      "type": "GROUP",
+      "name": "Group 270990102",
+      "bbox": {
+        "x": 947,
+        "y": 987,
+        "width": 484,
+        "height": 694
+      }
+    },
+    {
+      "id": "2034:2588",
+      "type": "GROUP",
+      "name": "Group 270990103",
+      "bbox": {
+        "x": 947,
+        "y": 1781,
+        "width": 484,
+        "height": 694
+      }
+    },
+    {
+      "id": "2034:2592",
+      "type": "GROUP",
+      "name": "Group 270990104",
+      "bbox": {
+        "x": 947,
+        "y": 2575,
+        "width": 484,
+        "height": 694
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

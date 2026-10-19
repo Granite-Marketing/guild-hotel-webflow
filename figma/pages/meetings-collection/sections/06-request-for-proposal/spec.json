@@ -1,0 +1,335 @@
+{
+  "pageSlug": "meetings-collection",
+  "index": 6,
+  "slug": "request-for-proposal",
+  "laneHint": null,
+  "frameId": "288:4019",
+  "bbox": {
+    "x": 0,
+    "y": 5632,
+    "width": 1600,
+    "height": 1283
+  },
+  "crop": {
+    "y0": 5632,
+    "y1": 6915
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "377:413",
+      "characters": "Request for Proposal",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 60,
+      "fontWeight": 400,
+      "lineHeightPx": 72,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 59,
+        "y": 245,
+        "width": 499.17,
+        "height": 135.86
+      }
+    },
+    {
+      "id": "377:414",
+      "characters": "contact information",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 711.83,
+        "y": 302.65,
+        "width": 830,
+        "height": 29
+      }
+    },
+    {
+      "id": "377:416",
+      "characters": "First Name",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 711.83,
+        "y": 380.65,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:418",
+      "characters": "Last Name",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1150.83,
+        "y": 380.65,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:421",
+      "characters": "Email Address",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 711.83,
+        "y": 438.44,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:423",
+      "characters": "Phone Number",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1150.83,
+        "y": 438.44,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:426",
+      "characters": "Company or Organization",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 711.83,
+        "y": 496.44,
+        "width": 830,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:428",
+      "characters": "event details",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 711.83,
+        "y": 631.44,
+        "width": 830,
+        "height": 29
+      }
+    },
+    {
+      "id": "377:433",
+      "characters": "Event Date",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 711.83,
+        "y": 711.26,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:435",
+      "characters": "Number of people",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1150.83,
+        "y": 711.26,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:438",
+      "characters": "Start Time",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 711.83,
+        "y": 770.26,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:440",
+      "characters": "End Time",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1150.83,
+        "y": 770.26,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:443",
+      "characters": "Additional Details",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 712,
+        "y": 829.44,
+        "width": 830,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:447",
+      "characters": "submit your request",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1326.83,
+        "y": 1009.26,
+        "width": 196,
+        "height": 19
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 12
+    },
+    {
+      "hex": "#2B2927",
+      "opacity": 1,
+      "count": 12
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 2
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "377:526",
+      "type": "GROUP",
+      "name": "Group 270990143",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 1283
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

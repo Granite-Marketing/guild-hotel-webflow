@@ -1,0 +1,192 @@
+{
+  "pageSlug": "home",
+  "index": 15,
+  "slug": "meetings-events",
+  "laneHint": null,
+  "frameId": "433:559",
+  "bbox": {
+    "x": 0,
+    "y": 16894,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 16874,
+    "y1": 17794
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "442:7521",
+      "characters": "meetings & events",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 563,
+        "width": 806,
+        "height": 40
+      }
+    },
+    {
+      "id": "442:7525",
+      "characters": "DISCOVER MORE",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": null,
+      "bbox": {
+        "x": 1406,
+        "y": 586,
+        "width": 138,
+        "height": 19
+      }
+    },
+    {
+      "id": "442:7522",
+      "characters": "Inspired spaces breed bright ideas",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 627,
+        "width": 806,
+        "height": 14
+      }
+    },
+    {
+      "id": "442:7509",
+      "characters": "council boardroom",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 704,
+        "width": 1560,
+        "height": 30
+      }
+    },
+    {
+      "id": "442:7512",
+      "characters": "courtyard",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 783,
+        "width": 1560,
+        "height": 30
+      }
+    },
+    {
+      "id": "442:7515",
+      "characters": "conference center",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 862,
+        "width": 335,
+        "height": 30
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 8
+    },
+    {
+      "hex": "#000000",
+      "opacity": 0.4,
+      "count": 1
+    },
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#FFFFFF",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "442:7504",
+      "name": "opt3",
+      "imageRef": "b940aa95950dd4de783e1c0ae2dfee90e4485143",
+      "bbox": {
+        "x": 0,
+        "y": 20,
+        "width": 1600,
+        "height": 900
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "442:7504",
+      "type": "FRAME",
+      "name": "opt3",
+      "bbox": {
+        "x": 0,
+        "y": 20,
+        "width": 1600,
+        "height": 900
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

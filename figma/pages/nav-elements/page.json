@@ -1,0 +1,816 @@
+{
+  "pageSlug": "nav-elements",
+  "frames": [
+    {
+      "id": "242:1624",
+      "name": "full-2",
+      "kind": "side",
+      "width": 1600,
+      "height": 900,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/242-1624.png",
+      "status": "ok",
+      "tree": {
+        "id": "242:1624",
+        "type": "FRAME",
+        "name": "full-2",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 900
+        },
+        "children": [
+          {
+            "id": "242:1625",
+            "type": "GROUP",
+            "name": "Group 270989789",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 900
+            },
+            "children": [
+              {
+                "id": "242:1626",
+                "type": "RECTANGLE",
+                "name": "Rectangle 479",
+                "bbox": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1600,
+                  "height": 900
+                }
+              },
+              {
+                "id": "242:1633",
+                "type": "RECTANGLE",
+                "name": "Rectangle 547",
+                "bbox": {
+                  "x": 800,
+                  "y": 0,
+                  "width": 800,
+                  "height": 900
+                }
+              }
+            ]
+          },
+          {
+            "id": "242:1634",
+            "type": "FRAME",
+            "name": "Frame 427318612",
+            "bbox": {
+              "x": 874,
+              "y": 138,
+              "width": 450,
+              "height": 186
+            },
+            "children": [
+              {
+                "id": "242:1635",
+                "type": "RECTANGLE",
+                "name": "Rectangle 548",
+                "bbox": {
+                  "x": 874,
+                  "y": 138,
+                  "width": 250,
+                  "height": 186
+                }
+              },
+              {
+                "id": "242:1636",
+                "type": "FRAME",
+                "name": "Frame 427318611",
+                "bbox": {
+                  "x": 1172,
+                  "y": 144,
+                  "width": 224,
+                  "height": 180
+                },
+                "children": [
+                  {
+                    "id": "242:1637",
+                    "type": "FRAME",
+                    "name": "Frame 427318597",
+                    "bbox": {
+                      "x": 1172,
+                      "y": 144,
+                      "width": 224,
+                      "height": 67
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "242:1640",
+                    "type": "GROUP",
+                    "name": "Group 270989578",
+                    "bbox": {
+                      "x": 1172,
+                      "y": 287,
+                      "width": 124.75,
+                      "height": 37
+                    },
+                    "childCount": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "242:1643",
+            "type": "FRAME",
+            "name": "Frame 427318614",
+            "bbox": {
+              "x": 874,
+              "y": 380,
+              "width": 575,
+              "height": 206
+            },
+            "children": [
+              {
+                "id": "242:1644",
+                "type": "RECTANGLE",
+                "name": "Rectangle 548",
+                "bbox": {
+                  "x": 874,
+                  "y": 400,
+                  "width": 250,
+                  "height": 186
+                }
+              },
+              {
+                "id": "242:1645",
+                "type": "FRAME",
+                "name": "Frame 427318613",
+                "bbox": {
+                  "x": 1172,
+                  "y": 380,
+                  "width": 349,
+                  "height": 206
+                },
+                "children": [
+                  {
+                    "id": "242:1646",
+                    "type": "FRAME",
+                    "name": "Frame 427318597",
+                    "bbox": {
+                      "x": 1172,
+                      "y": 380,
+                      "width": 349,
+                      "height": 93
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "242:1649",
+                    "type": "GROUP",
+                    "name": "Group 270989578",
+                    "bbox": {
+                      "x": 1172,
+                      "y": 549,
+                      "width": 124.75,
+                      "height": 37
+                    },
+                    "childCount": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "242:1652",
+            "type": "FRAME",
+            "name": "Frame 427318616",
+            "bbox": {
+              "x": 874,
+              "y": 622,
+              "width": 552,
+              "height": 186
+            },
+            "children": [
+              {
+                "id": "242:1653",
+                "type": "RECTANGLE",
+                "name": "Rectangle 548",
+                "bbox": {
+                  "x": 874,
+                  "y": 622,
+                  "width": 250,
+                  "height": 186
+                }
+              },
+              {
+                "id": "242:1654",
+                "type": "FRAME",
+                "name": "Frame 427318615",
+                "bbox": {
+                  "x": 1172,
+                  "y": 628,
+                  "width": 326,
+                  "height": 180
+                },
+                "children": [
+                  {
+                    "id": "242:1655",
+                    "type": "FRAME",
+                    "name": "Frame 427318597",
+                    "bbox": {
+                      "x": 1172,
+                      "y": 628,
+                      "width": 326,
+                      "height": 93
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "242:1658",
+                    "type": "GROUP",
+                    "name": "Group 270989578",
+                    "bbox": {
+                      "x": 1172,
+                      "y": 771,
+                      "width": 124.75,
+                      "height": 37
+                    },
+                    "childCount": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "242:1661",
+            "type": "FRAME",
+            "name": "Frame 427318618",
+            "bbox": {
+              "x": 874,
+              "y": 864,
+              "width": 552,
+              "height": 198
+            },
+            "children": [
+              {
+                "id": "242:1662",
+                "type": "RECTANGLE",
+                "name": "Rectangle 548",
+                "bbox": {
+                  "x": 874,
+                  "y": 876,
+                  "width": 250,
+                  "height": 186
+                }
+              },
+              {
+                "id": "242:1663",
+                "type": "FRAME",
+                "name": "Frame 427318617",
+                "bbox": {
+                  "x": 1172,
+                  "y": 864,
+                  "width": 326,
+                  "height": 198
+                },
+                "children": [
+                  {
+                    "id": "242:1664",
+                    "type": "FRAME",
+                    "name": "Frame 427318597",
+                    "bbox": {
+                      "x": 1172,
+                      "y": 864,
+                      "width": 326,
+                      "height": 111
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "242:1667",
+                    "type": "GROUP",
+                    "name": "Group 270989578",
+                    "bbox": {
+                      "x": 1172,
+                      "y": 1025,
+                      "width": 124.75,
+                      "height": 37
+                    },
+                    "childCount": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "242:1685",
+            "type": "FRAME",
+            "name": "Frame",
+            "bbox": {
+              "x": 1530,
+              "y": 46,
+              "width": 24,
+              "height": 24
+            }
+          },
+          {
+            "id": "242:1686",
+            "type": "TEXT",
+            "name": "back",
+            "bbox": {
+              "x": 874,
+              "y": 57,
+              "width": 52,
+              "height": 26
+            },
+            "characters": "back"
+          },
+          {
+            "id": "242:1687",
+            "type": "FRAME",
+            "name": "Frame",
+            "bbox": {
+              "x": 1516,
+              "y": 48,
+              "width": 32,
+              "height": 32
+            },
+            "children": [
+              {
+                "id": "242:1688",
+                "type": "VECTOR",
+                "name": "Vector",
+                "bbox": {
+                  "x": 1522.5,
+                  "y": 54.5,
+                  "width": 19,
+                  "height": 19
+                }
+              }
+            ]
+          },
+          {
+            "id": "242:1689",
+            "type": "FRAME",
+            "name": "Tap Hand",
+            "bbox": {
+              "x": 1285,
+              "y": 295,
+              "width": 40,
+              "height": 40
+            },
+            "children": [
+              {
+                "id": "242:1690",
+                "type": "GROUP",
+                "name": "Group",
+                "bbox": {
+                  "x": 1289.88,
+                  "y": 298.72,
+                  "width": 27.32,
+                  "height": 29.77
+                },
+                "children": [
+                  {
+                    "id": "242:1691",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 1289.88,
+                      "y": 298.72,
+                      "width": 27.32,
+                      "height": 29.77
+                    }
+                  },
+                  {
+                    "id": "242:1692",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 1289.88,
+                      "y": 298.72,
+                      "width": 27.32,
+                      "height": 29.77
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "242:1693",
+                "type": "VECTOR",
+                "name": "Vector",
+                "bbox": {
+                  "x": 1301.59,
+                  "y": 315.46,
+                  "width": 9.76,
+                  "height": 7.44
+                }
+              }
+            ]
+          },
+          {
+            "id": "250:1956",
+            "type": "RECTANGLE",
+            "name": "Rectangle 548",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 800,
+              "height": 900
+            }
+          },
+          {
+            "id": "250:1958",
+            "type": "GROUP",
+            "name": "Group 270989670",
+            "bbox": {
+              "x": 192,
+              "y": 400,
+              "width": 416,
+              "height": 101
+            },
+            "children": [
+              {
+                "id": "250:1959",
+                "type": "FRAME",
+                "name": "zuma_logo-1 1",
+                "bbox": {
+                  "x": 192,
+                  "y": 400,
+                  "width": 416,
+                  "height": 101
+                },
+                "children": [
+                  {
+                    "id": "250:1960",
+                    "type": "GROUP",
+                    "name": "Clip path group",
+                    "bbox": {
+                      "x": 192,
+                      "y": 400,
+                      "width": 414.44,
+                      "height": 101
+                    },
+                    "childCount": 2
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "242:1573",
+      "name": "menu-1",
+      "kind": "side",
+      "width": 1600,
+      "height": 900,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/242-1573.png",
+      "status": "ok",
+      "tree": {
+        "id": "242:1573",
+        "type": "FRAME",
+        "name": "menu-1",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 900
+        },
+        "children": [
+          {
+            "id": "242:1574",
+            "type": "GROUP",
+            "name": "Group 270989728",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 900
+            },
+            "children": [
+              {
+                "id": "242:1575",
+                "type": "FRAME",
+                "name": "Frame 427318461",
+                "bbox": {
+                  "x": 947,
+                  "y": 266.5,
+                  "width": 506,
+                  "height": 368
+                },
+                "children": [
+                  {
+                    "id": "242:1576",
+                    "type": "FRAME",
+                    "name": "Frame 427318437",
+                    "bbox": {
+                      "x": 947,
+                      "y": 266.5,
+                      "width": 506,
+                      "height": 368
+                    },
+                    "childCount": 1
+                  }
+                ]
+              },
+              {
+                "id": "242:1584",
+                "type": "RECTANGLE",
+                "name": "Rectangle 530",
+                "bbox": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1600,
+                  "height": 900
+                }
+              },
+              {
+                "id": "242:1585",
+                "type": "GROUP",
+                "name": "Group 270989733",
+                "bbox": {
+                  "x": 547,
+                  "y": 183,
+                  "width": 506,
+                  "height": 534
+                },
+                "children": [
+                  {
+                    "id": "242:1586",
+                    "type": "FRAME",
+                    "name": "Frame 427318500",
+                    "bbox": {
+                      "x": 547,
+                      "y": 183,
+                      "width": 506,
+                      "height": 534
+                    },
+                    "childCount": 9
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "242:1596",
+            "type": "TEXT",
+            "name": "500 W. Broadway San Diego, CA 92101",
+            "bbox": {
+              "x": 65,
+              "y": 853,
+              "width": 355,
+              "height": 19
+            },
+            "characters": "500 W. Broadway San Diego, CA 92101"
+          },
+          {
+            "id": "242:1597",
+            "type": "TEXT",
+            "name": "(619) 795-6000",
+            "bbox": {
+              "x": 719,
+              "y": 853,
+              "width": 161,
+              "height": 19
+            },
+            "characters": "(619) 795-6000"
+          },
+          {
+            "id": "242:1598",
+            "type": "TEXT",
+            "name": "booking@theguildhotel.com",
+            "bbox": {
+              "x": 1273,
+              "y": 853,
+              "width": 272,
+              "height": 19
+            },
+            "characters": "booking@theguildhotel.com"
+          },
+          {
+            "id": "242:1901",
+            "type": "FRAME",
+            "name": "guild-nav-full-dark",
+            "bbox": {
+              "x": 40,
+              "y": 26,
+              "width": 1520,
+              "height": 56
+            },
+            "children": [
+              {
+                "id": "242:1902",
+                "type": "GROUP",
+                "name": "Group 270990027",
+                "bbox": {
+                  "x": 40,
+                  "y": 40,
+                  "width": 1520,
+                  "height": 27.9
+                },
+                "children": [
+                  {
+                    "id": "242:1903",
+                    "type": "GROUP",
+                    "name": "Group 270989552",
+                    "bbox": {
+                      "x": 586,
+                      "y": 40,
+                      "width": 428.91,
+                      "height": 27.9
+                    },
+                    "childCount": 13
+                  },
+                  {
+                    "id": "242:1930",
+                    "type": "GROUP",
+                    "name": "Group 270990016",
+                    "bbox": {
+                      "x": 40,
+                      "y": 48.01,
+                      "width": 37,
+                      "height": 16
+                    },
+                    "childCount": 3
+                  },
+                  {
+                    "id": "242:1934",
+                    "type": "TEXT",
+                    "name": "BOOK NOW",
+                    "bbox": {
+                      "x": 1471,
+                      "y": 46,
+                      "width": 89,
+                      "height": 12
+                    },
+                    "characters": "BOOK NOW"
+                  },
+                  {
+                    "id": "242:1935",
+                    "type": "GROUP",
+                    "name": "Group 270990018",
+                    "bbox": {
+                      "x": 185,
+                      "y": 48.01,
+                      "width": 65.03,
+                      "height": 13
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "242:1938",
+                    "type": "GROUP",
+                    "name": "Group 270990019",
+                    "bbox": {
+                      "x": 109,
+                      "y": 48.01,
+                      "width": 52,
+                      "height": 15.75
+                    },
+                    "childCount": 2
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "242:1600",
+      "name": "window-1",
+      "kind": "side",
+      "width": 1600,
+      "height": 900,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/242-1600.png",
+      "status": "ok",
+      "tree": {
+        "id": "242:1600",
+        "type": "FRAME",
+        "name": "window-1",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 900
+        },
+        "children": [
+          {
+            "id": "242:1601",
+            "type": "GROUP",
+            "name": "Group 270989789",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 900
+            },
+            "children": [
+              {
+                "id": "242:1602",
+                "type": "RECTANGLE",
+                "name": "Rectangle 479",
+                "bbox": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1600,
+                  "height": 900
+                }
+              }
+            ]
+          },
+          {
+            "id": "242:1610",
+            "type": "GROUP",
+            "name": "Group 270989811",
+            "bbox": {
+              "x": 796,
+              "y": 24,
+              "width": 780,
+              "height": 434
+            },
+            "children": [
+              {
+                "id": "242:1611",
+                "type": "GROUP",
+                "name": "Group 270989794",
+                "bbox": {
+                  "x": 796,
+                  "y": 24,
+                  "width": 780,
+                  "height": 434
+                },
+                "children": [
+                  {
+                    "id": "242:1612",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 547",
+                    "bbox": {
+                      "x": 796,
+                      "y": 24,
+                      "width": 780,
+                      "height": 434
+                    }
+                  },
+                  {
+                    "id": "242:1613",
+                    "type": "FRAME",
+                    "name": "Frame 427318500",
+                    "bbox": {
+                      "x": 1186,
+                      "y": 141,
+                      "width": 321,
+                      "height": 200
+                    },
+                    "childCount": 4
+                  }
+                ]
+              },
+              {
+                "id": "242:1621",
+                "type": "RECTANGLE",
+                "name": "Rectangle 530",
+                "bbox": {
+                  "x": 796,
+                  "y": 24,
+                  "width": 336,
+                  "height": 434
+                }
+              }
+            ]
+          },
+          {
+            "id": "242:1622",
+            "type": "FRAME",
+            "name": "Frame",
+            "bbox": {
+              "x": 1516,
+              "y": 48,
+              "width": 32,
+              "height": 32
+            },
+            "children": [
+              {
+                "id": "242:1623",
+                "type": "VECTOR",
+                "name": "Vector",
+                "bbox": {
+                  "x": 1522.5,
+                  "y": 54.5,
+                  "width": 19,
+                  "height": 19
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "animationNotes": []
+}

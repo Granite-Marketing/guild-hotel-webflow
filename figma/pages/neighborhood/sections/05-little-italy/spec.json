@@ -1,0 +1,224 @@
+{
+  "pageSlug": "neighborhood",
+  "index": 5,
+  "slug": "little-italy",
+  "laneHint": null,
+  "frameId": "487:2080",
+  "bbox": {
+    "x": 0,
+    "y": 4607,
+    "width": 1600,
+    "height": 1141
+  },
+  "crop": {
+    "y0": 4427.5,
+    "y1": 5778
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "487:2589",
+      "characters": "little italy",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 1075,
+        "y": 865.5,
+        "width": 160,
+        "height": 29
+      }
+    },
+    {
+      "id": "487:2588",
+      "characters": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 1075,
+        "y": 934.5,
+        "width": 356,
+        "height": 118
+      }
+    },
+    {
+      "id": "487:2125",
+      "characters": "dining",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 533.5,
+        "y": 1281.5,
+        "width": 67,
+        "height": 22
+      }
+    },
+    {
+      "id": "487:2534",
+      "characters": "arts",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 645.5,
+        "y": 1281.5,
+        "width": 48,
+        "height": 22
+      }
+    },
+    {
+      "id": "487:2127",
+      "characters": "beyond downtown",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 738.5,
+        "y": 1281.5,
+        "width": 192,
+        "height": 22
+      }
+    },
+    {
+      "id": "487:2518",
+      "characters": "services",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 975.5,
+        "y": 1281.5,
+        "width": 91,
+        "height": 22
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 4
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#4A1217",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "487:2574",
+      "type": "RECTANGLE",
+      "name": "Rectangle 569",
+      "bbox": {
+        "x": 40,
+        "y": 179.5,
+        "width": 873,
+        "height": 873
+      }
+    },
+    {
+      "id": "487:2579",
+      "type": "RECTANGLE",
+      "name": "Rectangle 570",
+      "bbox": {
+        "x": 1075,
+        "y": 179.5,
+        "width": 485,
+        "height": 574
+      }
+    },
+    {
+      "id": "487:2119",
+      "type": "GROUP",
+      "name": "Group 270990042",
+      "bbox": {
+        "x": 452,
+        "y": 439.5,
+        "width": 695.57,
+        "height": 881
+      }
+    },
+    {
+      "id": "487:2589",
+      "type": "TEXT",
+      "name": "little italy",
+      "bbox": {
+        "x": 1075,
+        "y": 865.5,
+        "width": 160,
+        "height": 29
+      }
+    },
+    {
+      "id": "487:2588",
+      "type": "TEXT",
+      "name": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+      "bbox": {
+        "x": 1075,
+        "y": 934.5,
+        "width": 356,
+        "height": 118
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

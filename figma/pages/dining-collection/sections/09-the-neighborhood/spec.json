@@ -1,0 +1,153 @@
+{
+  "pageSlug": "dining-collection",
+  "index": 9,
+  "slug": "the-neighborhood",
+  "laneHint": null,
+  "frameId": "262:53",
+  "bbox": {
+    "x": 0,
+    "y": 7676,
+    "width": 1600,
+    "height": 1310
+  },
+  "crop": {
+    "y0": 7676,
+    "y1": 8986
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "266:1369",
+      "characters": "The Neighborhood",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 80,
+      "fontWeight": 400,
+      "lineHeightPx": 80,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 165,
+        "y": 121,
+        "width": 563.7,
+        "height": 155.13
+      }
+    },
+    {
+      "id": "266:1370",
+      "characters": "We’ve lived here for a century; let us show you around.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "RIGHT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 1004,
+        "y": 149,
+        "width": 425,
+        "height": 14
+      }
+    },
+    {
+      "id": "266:2131",
+      "characters": "DISCOVER MORE",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": null,
+      "bbox": {
+        "x": 1029,
+        "y": 200,
+        "width": 144,
+        "height": 16
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#A48E59",
+      "opacity": 1,
+      "count": 516
+    },
+    {
+      "hex": "#FBF5DE",
+      "opacity": 1,
+      "count": 169
+    },
+    {
+      "hex": "#CB3629",
+      "opacity": 1,
+      "count": 33
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 18
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "266:2133",
+      "type": "RECTANGLE",
+      "name": "Rectangle 565",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 1310
+      }
+    },
+    {
+      "id": "386:1650",
+      "type": "GROUP",
+      "name": "Group 270990158",
+      "bbox": {
+        "x": 139.92,
+        "y": 121,
+        "width": 1291.08,
+        "height": 1095.81
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "298:5085",
+      "type": "GROUP",
+      "name": "Group 270990058",
+      "bbox": {
+        "x": -1,
+        "y": 0,
+        "width": 1602,
+        "height": 5083
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

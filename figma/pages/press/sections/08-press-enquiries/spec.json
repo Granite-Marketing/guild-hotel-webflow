@@ -1,0 +1,320 @@
+{
+  "pageSlug": "press",
+  "index": 8,
+  "slug": "press-enquiries",
+  "laneHint": null,
+  "frameId": "419:5583",
+  "bbox": {
+    "x": 0,
+    "y": 4845,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 4767.5,
+    "y1": 5745
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "423:6860",
+      "characters": "Press Enquiries",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 60,
+      "fontWeight": 400,
+      "lineHeightPx": 72,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 59,
+        "y": 219.5,
+        "width": 377.22,
+        "height": 119.81
+      }
+    },
+    {
+      "id": "423:6893",
+      "characters": "Proin sed nisl nisi. Quisque porttitor, nisl sed eleifend mattis, risus tellus pulvinar metus, a lacinia lacus neque sit amet purus. Donec efficitur leo sed urna tempus, eu congue ex convallis.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 61.83,
+        "y": 374.89,
+        "width": 496,
+        "height": 66
+      }
+    },
+    {
+      "id": "423:6866",
+      "characters": "contact information",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 711.83,
+        "y": 374.89,
+        "width": 830,
+        "height": 29
+      }
+    },
+    {
+      "id": "423:6868",
+      "characters": "First Name",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 711.83,
+        "y": 452.89,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "423:6870",
+      "characters": "Last Name",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1150.83,
+        "y": 452.89,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "423:6897",
+      "characters": "email",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 61.83,
+        "y": 506.89,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "423:6862",
+      "characters": "Email Address",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 711.83,
+        "y": 510.67,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "423:6873",
+      "characters": "Phone Number",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1150.83,
+        "y": 510.67,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "423:6896",
+      "characters": "press@theguildhotel.com",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 61.83,
+        "y": 541.89,
+        "width": 288,
+        "height": 14
+      }
+    },
+    {
+      "id": "423:6877",
+      "characters": "organization",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 711.83,
+        "y": 568.67,
+        "width": 139,
+        "height": 22
+      }
+    },
+    {
+      "id": "423:6879",
+      "characters": "expected publish date",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 1150.83,
+        "y": 568.67,
+        "width": 391,
+        "height": 22
+      }
+    },
+    {
+      "id": "423:6888",
+      "characters": "details",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#2B2927",
+      "bbox": {
+        "x": 711.83,
+        "y": 627.45,
+        "width": 830,
+        "height": 22
+      }
+    },
+    {
+      "id": "423:6892",
+      "characters": "submit your request",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1326.83,
+        "y": 807.45,
+        "width": 196,
+        "height": 19
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 9
+    },
+    {
+      "hex": "#2B2927",
+      "opacity": 1,
+      "count": 8
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 2
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "423:6906",
+      "type": "GROUP",
+      "name": "Group 270990180",
+      "bbox": {
+        "x": 0,
+        "y": 77.5,
+        "width": 1600,
+        "height": 900
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

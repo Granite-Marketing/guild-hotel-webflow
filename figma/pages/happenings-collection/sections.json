@@ -1,0 +1,272 @@
+{
+  "pageSlug": "happenings-collection",
+  "frames": [
+    {
+      "id": "2027:859",
+      "name": "HAPPENINGS",
+      "kind": "page",
+      "width": 1600,
+      "height": 10207,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/2027-859.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "happenings",
+      "dir": "sections/01-happenings",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:859",
+      "frameName": "HAPPENINGS",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 900,
+      "nodeIds": [
+        "2027:860",
+        "2027:1211",
+        "2027:864",
+        "2027:863"
+      ],
+      "backgroundIds": [
+        "2027:989",
+        "2027:990"
+      ],
+      "crop": "sections/01-happenings/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "whats-on-in-san-diego",
+      "dir": "sections/02-whats-on-in-san-diego",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:859",
+      "frameName": "HAPPENINGS",
+      "y0": 900,
+      "y1": 1598,
+      "cropY0": 900,
+      "cropY1": 1605.5,
+      "nodeIds": [
+        "2027:867",
+        "2027:870",
+        "2027:991",
+        "2027:868"
+      ],
+      "backgroundIds": [
+        "2027:989",
+        "2027:990"
+      ],
+      "crop": "sections/02-whats-on-in-san-diego/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "the-best-san-diego-hotels-for",
+      "dir": "sections/03-the-best-san-diego-hotels-for",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:859",
+      "frameName": "HAPPENINGS",
+      "y0": 1613,
+      "y1": 2239,
+      "cropY0": 1605.5,
+      "cropY1": 2289,
+      "nodeIds": [
+        "2027:1267"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-the-best-san-diego-hotels-for/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "the-best-san-diego-hotels-for",
+      "dir": "sections/04-the-best-san-diego-hotels-for",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:859",
+      "frameName": "HAPPENINGS",
+      "y0": 2339,
+      "y1": 2965,
+      "cropY0": 2289,
+      "cropY1": 3015,
+      "nodeIds": [
+        "2027:1268"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-the-best-san-diego-hotels-for/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "the-best-san-diego-hotels-for",
+      "dir": "sections/05-the-best-san-diego-hotels-for",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:859",
+      "frameName": "HAPPENINGS",
+      "y0": 3065,
+      "y1": 3691,
+      "cropY0": 3015,
+      "cropY1": 3778.5,
+      "nodeIds": [
+        "2027:1273"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-the-best-san-diego-hotels-for/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "culture",
+      "dir": "sections/06-culture",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:859",
+      "frameName": "HAPPENINGS",
+      "y0": 3866,
+      "y1": 4554,
+      "cropY0": 3778.5,
+      "cropY1": 4604,
+      "nodeIds": [
+        "2027:1283",
+        "2027:1278"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-culture/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "the-best-san-diego-hotels-for",
+      "dir": "sections/07-the-best-san-diego-hotels-for",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:859",
+      "frameName": "HAPPENINGS",
+      "y0": 4654,
+      "y1": 5280,
+      "cropY0": 4604,
+      "cropY1": 5374.5,
+      "nodeIds": [
+        "2027:1284"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-the-best-san-diego-hotels-for/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "offers-packages",
+      "dir": "sections/08-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:859",
+      "frameName": "HAPPENINGS",
+      "y0": 5469,
+      "y1": 6369,
+      "cropY0": 5374.5,
+      "cropY1": 6369,
+      "nodeIds": [
+        "2027:1069"
+      ],
+      "backgroundIds": [
+        "2027:1033"
+      ],
+      "crop": "sections/08-offers-packages/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "more-of-the-guild",
+      "dir": "sections/09-more-of-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:859",
+      "frameName": "HAPPENINGS",
+      "y0": 6369,
+      "y1": 7334,
+      "cropY0": 6369,
+      "cropY1": 7333.77,
+      "nodeIds": [
+        "2027:1192"
+      ],
+      "backgroundIds": [
+        "2027:1033",
+        "2027:866"
+      ],
+      "crop": "sections/09-more-of-the-guild/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "faqs",
+      "dir": "sections/10-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:859",
+      "frameName": "HAPPENINGS",
+      "y0": 7333.53,
+      "y1": 8528.53,
+      "cropY0": 7333.77,
+      "cropY1": 8528.53,
+      "nodeIds": [
+        "2027:1034"
+      ],
+      "backgroundIds": [
+        "2027:1033",
+        "2027:866"
+      ],
+      "crop": "sections/10-faqs/section.webp"
+    },
+    {
+      "index": 11,
+      "slug": "book-your-escape",
+      "dir": "sections/11-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:859",
+      "frameName": "HAPPENINGS",
+      "y0": 8528.53,
+      "y1": 9506.53,
+      "cropY0": 8528.53,
+      "cropY1": 9506.53,
+      "nodeIds": [
+        "2027:1115",
+        "2027:1116",
+        "2027:1122",
+        "2027:1171",
+        "2027:1114"
+      ],
+      "backgroundIds": [
+        "2027:1033",
+        "2027:866",
+        "2027:1095",
+        "2027:1096"
+      ],
+      "crop": "sections/11-book-your-escape/section.webp"
+    },
+    {
+      "index": 12,
+      "slug": "the-hotel",
+      "dir": "sections/12-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2027:859",
+      "frameName": "HAPPENINGS",
+      "y0": 9506.53,
+      "y1": 10206.53,
+      "cropY0": 9506.53,
+      "cropY1": 10207,
+      "nodeIds": [
+        "2027:1129",
+        "2027:1097",
+        "2027:1190",
+        "2027:1191"
+      ],
+      "backgroundIds": [
+        "2027:1033",
+        "2027:866",
+        "2027:1095",
+        "2027:1096"
+      ],
+      "crop": "sections/12-the-hotel/section.webp"
+    }
+  ]
+}

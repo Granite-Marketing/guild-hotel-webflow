@@ -1,0 +1,101 @@
+{
+  "pageSlug": "neighborhood",
+  "index": 2,
+  "slug": "the-best-of-san-diego-is",
+  "laneHint": null,
+  "frameId": "487:2080",
+  "bbox": {
+    "x": 0,
+    "y": 1141.75,
+    "width": 1600,
+    "height": 438.25
+  },
+  "crop": {
+    "y0": 1020.88,
+    "y1": 1701
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "487:2091",
+      "characters": "The best of\nSan Diego is right here",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 80,
+      "fontWeight": 400,
+      "lineHeightPx": 96,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#000000",
+      "bbox": {
+        "x": 420.47,
+        "y": 120.87,
+        "width": 761.5,
+        "height": 285.82
+      }
+    },
+    {
+      "id": "487:2090",
+      "characters": "The San Diego on our doorstep includes the city’s favorite neighborhoods and attractions – and best of all, you can walk to them. From the harbor and Seaport Village to the Museum of Contemporary Art, Little Italy and the Gaslamp, the past, future and excitement of the city are yours to discover.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 506,
+        "y": 467.12,
+        "width": 588,
+        "height": 92
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "487:2091",
+      "type": "TEXT",
+      "name": "The best of San Diego is right here",
+      "bbox": {
+        "x": 420.47,
+        "y": 120.87,
+        "width": 761.5,
+        "height": 285.82
+      }
+    },
+    {
+      "id": "487:2090",
+      "type": "TEXT",
+      "name": "The San Diego on our doorstep includes the city’s favorite neighborhoods and attractions – and best of all, you can walk to them. From the harbor and Seaport Village to the Museum of Contemporary Art, Little Italy and the Gaslamp, the past, future and excitement of the city are yours to discover.",
+      "bbox": {
+        "x": 506,
+        "y": 467.12,
+        "width": 588,
+        "height": 92
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

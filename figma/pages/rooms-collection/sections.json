@@ -1,0 +1,298 @@
+{
+  "pageSlug": "rooms-collection",
+  "frames": [
+    {
+      "id": "379:581",
+      "name": "ROOMS-COLLECTION",
+      "kind": "page",
+      "width": 1600,
+      "height": 12295,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/379-581.png",
+      "status": "ok"
+    },
+    {
+      "id": "386:1422",
+      "name": "All Rooms",
+      "kind": "side",
+      "width": 1600,
+      "height": 900,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/386-1422.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "rooms-suites",
+      "dir": "sections/01-rooms-suites",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "379:581",
+      "frameName": "ROOMS-COLLECTION",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 1009,
+      "nodeIds": [
+        "379:582",
+        "379:981",
+        "379:587",
+        "379:585"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-rooms-suites/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "a-room-for-every-stay",
+      "dir": "sections/02-a-room-for-every-stay",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "379:581",
+      "frameName": "ROOMS-COLLECTION",
+      "y0": 1118,
+      "y1": 1755.59,
+      "cropY0": 1009,
+      "cropY1": 1864.3,
+      "nodeIds": [
+        "394:3327",
+        "379:586"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/02-a-room-for-every-stay/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "01",
+      "dir": "sections/03-01",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "379:581",
+      "frameName": "ROOMS-COLLECTION",
+      "y0": 1973,
+      "y1": 2873,
+      "cropY0": 1864.3,
+      "cropY1": 2873,
+      "nodeIds": [
+        "384:1321"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-01/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "02",
+      "dir": "sections/04-02",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "379:581",
+      "frameName": "ROOMS-COLLECTION",
+      "y0": 2873,
+      "y1": 3773,
+      "cropY0": 2873,
+      "cropY1": 3773,
+      "nodeIds": [
+        "384:1322"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-02/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "03",
+      "dir": "sections/05-03",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "379:581",
+      "frameName": "ROOMS-COLLECTION",
+      "y0": 3773,
+      "y1": 4673,
+      "cropY0": 3773,
+      "cropY1": 4753,
+      "nodeIds": [
+        "386:1368"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-03/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "our-recommendations-for-your-stay",
+      "dir": "sections/06-our-recommendations-for-your-stay",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "379:581",
+      "frameName": "ROOMS-COLLECTION",
+      "y0": 4833,
+      "y1": 5075,
+      "cropY0": 4753,
+      "cropY1": 5155,
+      "nodeIds": [
+        "404:3407"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-our-recommendations-for-your-stay/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "deluxe-king-suite",
+      "dir": "sections/07-deluxe-king-suite",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "379:581",
+      "frameName": "ROOMS-COLLECTION",
+      "y0": 5235,
+      "y1": 7035,
+      "cropY0": 5155,
+      "cropY1": 7153,
+      "nodeIds": [
+        "389:3166",
+        "394:3323",
+        "404:3411",
+        "389:3174",
+        "404:3404",
+        "394:3325",
+        "404:3390",
+        "404:3397"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-deluxe-king-suite/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "the-neighborhood",
+      "dir": "sections/08-the-neighborhood",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "379:581",
+      "frameName": "ROOMS-COLLECTION",
+      "y0": 7271,
+      "y1": 8366.81,
+      "cropY0": 7153,
+      "cropY1": 8444.4,
+      "nodeIds": [
+        "386:2394"
+      ],
+      "backgroundIds": [
+        "379:696"
+      ],
+      "crop": "sections/08-the-neighborhood/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "offers-packages",
+      "dir": "sections/09-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "379:581",
+      "frameName": "ROOMS-COLLECTION",
+      "y0": 8522,
+      "y1": 9422,
+      "cropY0": 8444.4,
+      "cropY1": 9422,
+      "nodeIds": [
+        "386:1623"
+      ],
+      "backgroundIds": [
+        "379:696"
+      ],
+      "crop": "sections/09-offers-packages/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "faqs",
+      "dir": "sections/10-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "379:581",
+      "frameName": "ROOMS-COLLECTION",
+      "y0": 9422,
+      "y1": 10617,
+      "cropY0": 9422,
+      "cropY1": 10617,
+      "nodeIds": [
+        "379:849"
+      ],
+      "backgroundIds": [
+        "379:696"
+      ],
+      "crop": "sections/10-faqs/section.webp"
+    },
+    {
+      "index": 11,
+      "slug": "book-your-escape",
+      "dir": "sections/11-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "379:581",
+      "frameName": "ROOMS-COLLECTION",
+      "y0": 10617,
+      "y1": 11595,
+      "cropY0": 10617,
+      "cropY1": 11595,
+      "nodeIds": [
+        "379:904",
+        "379:905",
+        "379:911",
+        "379:960",
+        "379:903"
+      ],
+      "backgroundIds": [
+        "379:696",
+        "379:884",
+        "379:885"
+      ],
+      "crop": "sections/11-book-your-escape/section.webp"
+    },
+    {
+      "index": 12,
+      "slug": "the-hotel",
+      "dir": "sections/12-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "379:581",
+      "frameName": "ROOMS-COLLECTION",
+      "y0": 11595,
+      "y1": 12295,
+      "cropY0": 11595,
+      "cropY1": 12295,
+      "nodeIds": [
+        "379:918",
+        "379:886",
+        "379:979",
+        "379:980"
+      ],
+      "backgroundIds": [
+        "379:696",
+        "379:884",
+        "379:885"
+      ],
+      "crop": "sections/12-the-hotel/section.webp"
+    },
+    {
+      "index": 13,
+      "slug": "all-rooms",
+      "dir": "sections/13-all-rooms",
+      "source": "side",
+      "laneHint": "manual",
+      "frameId": "386:1422",
+      "frameName": "All Rooms",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 900,
+      "nodeIds": [
+        "386:1423",
+        "386:1506",
+        "386:1560",
+        "386:1571"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/13-all-rooms/section.webp"
+    }
+  ]
+}
