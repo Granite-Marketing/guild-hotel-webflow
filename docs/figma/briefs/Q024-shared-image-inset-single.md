@@ -50,7 +50,7 @@ From `figma/tokens.json` (mapping proposals; the token sync entry verifies live 
 - Reference crop: `figma/pages/rooms-individual/sections/04-section/section.webp`
 - Component: image-inset-single, variant base
 - Texts (0): none
-- Images: 1 (1 distinct), `figma/assets.json` images: d7332204a5bee888af6d6fe5adf267bebfab8918 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: d7332204a5bee888af6d6fe5adf267bebfab8918 (uploaded)
 - Vision review: kind content; interactive: video/media
 
 ### Other instances
@@ -61,7 +61,7 @@ From `figma/tokens.json` (mapping proposals; the token sync entry verifies live 
 - Reference crop: `figma/pages/arts/sections/03-section/section.webp`
 - Component: image-inset-single, variant base
 - Texts (0): none
-- Images: 1 (1 distinct), `figma/assets.json` images: 6f6117168648560af09fa8344fd7ec88a095e861 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 6f6117168648560af09fa8344fd7ec88a095e861 (uploaded)
 
 #### `happenings-indiv/03-section`: Image inset single
 

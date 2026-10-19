@@ -97,7 +97,7 @@ Content, not variants: optional elements `caps-caption-16`, `eyebrow-caps`, `gat
 - Reference crop: `figma/pages/history/sections/04-george-marston/section.webp`
 - Component: split-image-text-light, variant `is-tan` + `is-media-left` + `is-1-image`
 - Texts (2): "George Marston"; "In 1924, George Marsden saw more than a building. He imagined a grand center..."
-- Images: 1 (1 distinct), `figma/assets.json` images: 8d27c8c8088059a056c81c4b09c23d8cf589c1bc (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 8d27c8c8088059a056c81c4b09c23d8cf589c1bc (uploaded)
 - Vectors: `figma/vectors/group-263x263-228-7875.svg` (Group, 263x263)
 
 #### `rooms-individual/06-morbi-gravida-augue-at-ipsum-ultricies`: Split image text light
@@ -155,7 +155,7 @@ Content, not variants: optional elements `caps-caption-16`, `eyebrow-caps`, `gat
 - Reference crop: `figma/pages/dining-zuma/sections/02-contemporary-japanese-dining-at-the-guild/section.webp`
 - Component: split-image-text-light, variant `is-blue` + `is-media-left` + `is-1-image`
 - Texts (2): "Contemporary Japanese Dining at The Guild Hotel"; "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum qu..."
-- Images: 1 (1 distinct), `figma/assets.json` images: 31e2d0109f131d7e4cf1db6797206bef1567db8b (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 31e2d0109f131d7e4cf1db6797206bef1567db8b (uploaded)
 
 #### `dining-zuma/04-explore-the-space`: Split image text light
 

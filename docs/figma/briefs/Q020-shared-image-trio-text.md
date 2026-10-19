@@ -64,7 +64,7 @@ Content, not variants: optional elements `gatch-20`, `paragraph` (present on som
 - Reference crop: `figma/pages/home/sections/10-wellness/section.webp`
 - Component: image-trio-text, variant `is-media-left` + `is-multi-image`
 - Texts (3): "wellness"; "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac..."; "discover more"
-- Images: 3 (3 distinct), `figma/assets.json` images: 0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c (not uploaded), 5f867c9b46567c2df212f5570602c6afaa8b170e (not uploaded), a615ab07d022b6aa76066c2ac89bf41fd38923c5 (not uploaded)
+- Images: 3 (3 distinct), `figma/assets.json` images: 0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c (uploaded), 5f867c9b46567c2df212f5570602c6afaa8b170e (uploaded), a615ab07d022b6aa76066c2ac89bf41fd38923c5 (uploaded)
 - Animation (Home-Animation-2): section begins as 3 images, then animates into a stack of 1 (essentially the reverse of this reference animation). However, no rotation, always properly aligned
 - Vision review: kind content; note: Three portrait images (edge ones cropped) above centred text and button
 

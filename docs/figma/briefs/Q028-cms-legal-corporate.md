@@ -78,7 +78,7 @@ From `figma/tokens.json` (mapping proposals; the token sync entry verifies live 
 - Reference crop: `figma/pages/legal/sections/04-why-teams-choose-the-guild/section.webp`
 - Component: feature-grid-dark-eyebrow, variant base (only variant)
 - Texts (18): "Why teams choose The Guild"; "eyebrow text"; "eyebrow text"
-- Images: 1 (1 distinct), `figma/assets.json` images: 2e81693530e933aa43a6c48a794614cca7c8822d (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 2e81693530e933aa43a6c48a794614cca7c8822d (uploaded)
 - Vectors: `figma/vectors/group-167x48-319-1210.svg` (Group, 167x48), `figma/vectors/group-270990098-17x17-I319-1307-319-1295.svg` (Group 270990098, 17x17)
 - Vision review: kind content
 
@@ -100,7 +100,7 @@ From `figma/tokens.json` (mapping proposals; the token sync entry verifies live 
 - Reference crop: `figma/pages/corporate/sections/04-why-teams-choose-the-guild/section.webp`
 - Component: feature-grid-dark-eyebrow, variant base (only variant)
 - Texts (18): "Why teams choose The Guild"; "eyebrow text"; "eyebrow text"
-- Images: 1 (1 distinct), `figma/assets.json` images: 2e81693530e933aa43a6c48a794614cca7c8822d (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 2e81693530e933aa43a6c48a794614cca7c8822d (uploaded)
 - Vectors: `figma/vectors/group-167x48-319-1210.svg` (Group, 167x48), `figma/vectors/group-270990098-17x17-I319-1307-319-1295.svg` (Group 270990098, 17x17)
 - Same structure as a reference section: content becomes CMS fields.
 
