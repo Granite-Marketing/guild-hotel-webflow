@@ -34,6 +34,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | finsweetRefresh | `finsweetRefresh.ts` | opt-in | F (3rd) |
 | filterActiveState | `filterActiveState.ts` | opt-in | F (4th) |
 | scrollTextReveal | `scrollTextReveal.ts` | opt-in | G |
+| imageStackCollapse | `imageStackCollapse.ts` | opt-in | G |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
 
 To enable an opt-in module, uncomment its import and its call in
@@ -372,6 +373,36 @@ Scroll-triggered line reveal.
 - Waits for `document.fonts.ready`, then `ScrollTrigger.refresh(true)` in a
   rAF. Pre-hide targets in CSS. Do not apply to elements whose spans a hover
   script owns (text-roll buttons). Order: slot G.
+
+### imageStackCollapse
+
+A row of images slides together on scroll into a stack of one: every image
+ends exactly behind an anchor image, with no rotation. Scrubbed, so scrolling
+back up fans them out again.
+
+| Attribute | On | Value |
+|---|---|---|
+| `data-image-stack-collapse` | the row wrapper | required; also the scroll trigger |
+| `data-image-stack-collapse-item` | each image wrapper (figure) | required, at least two |
+| `data-image-stack-collapse-item="anchor"` | the image that stays put | optional; defaults to the middle item |
+| `data-image-stack-collapse-start` | the row wrapper | optional ScrollTrigger start, default `top 75%` |
+| `data-image-stack-collapse-end` | the row wrapper | optional ScrollTrigger end, default `center center` |
+
+- Offsets are measured centre to centre from subpixel rects (with each
+  item's own translate removed) and recomputed on every refresh
+  (`invalidateOnRefresh`), so the stack stays aligned across resizes and
+  breakpoints. Do not transform the anchor or the row from another script. Works for rows, grids and stacked
+  mobile layouts alike, because it moves on both axes.
+- The script raises the anchor (`z-index: 2`, others `1`) and gives static
+  items `position: relative`. Equal-size items hide fully behind the anchor;
+  set `overflow: hidden` (or `clip`) on the section when the outer images
+  bleed past the viewport edge, as in the Guild designs.
+- `prefers-reduced-motion: reduce` shows the end state (the stack) with no
+  animation, re-applied on refresh. Both branches live in a keyed
+  `gsap.matchMedia()`, so switching the preference reverts cleanly.
+- Local preview: `pnpm preview:fixtures`, then open
+  `http://localhost:3001/tests/visual/fixtures/image-stack-collapse.html`.
+  Playwright check: `npx playwright test image-stack-collapse`. Order: slot G.
 
 ## Not ported (project-specific)
 
