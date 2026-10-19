@@ -35,6 +35,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | finsweetRefresh | `finsweetRefresh.ts` | opt-in | F (3rd) |
 | filterActiveState | `filterActiveState.ts` | opt-in | F (4th) |
 | scrollTextReveal | `scrollTextReveal.ts` | opt-in | G |
+| galleryFilter | `galleryFilter.ts` | opt-in | E |
 | historyStickyYear | `historyStickyYear.ts` | opt-in | G |
 | imageStackCollapse | `imageStackCollapse.ts` | opt-in | G |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
@@ -408,6 +409,39 @@ Scroll-triggered line reveal.
 - Waits for `document.fonts.ready`, then `ScrollTrigger.refresh(true)` in a
   rAF. Pre-hide targets in CSS. Do not apply to elements whose spans a hover
   script owns (text-roll buttons). Order: slot G.
+
+### galleryFilter
+
+Category filter for a gallery grid, driven by the sticky subnav tag pill
+(Gallery page section 02). Arts page detail modals reuse `modals()`.
+
+| Attribute | On | Value |
+|---|---|---|
+| `data-gallery-filter` | section root | none; one per gallery, several per page are independent |
+| `data-gallery-filter-tag` | each tag button or link | category slug; `all` or empty shows every item |
+| `data-gallery-filter-item` | each grid item | one or more categories, comma-separated (`Dining, Amenities`) |
+| `data-gallery-filter-empty` | optional message | none; gets `is-active` when nothing matches |
+
+- Matching is case-insensitive and treats spaces as hyphens, so a CMS-bound
+  category name (`Private Dining`) matches a tag slug (`private-dining`).
+- Hidden items get the template `hide` class. The active tag gets
+  `is-active` and `aria-pressed="true"`; style `is-active` on the tag class.
+  The root gets `data-gallery-filter-active="{category}"` for CSS hooks.
+- Initial tag: the one carrying `is-active` in the Designer, else `all`.
+- Transition: non-matching items fade out (`autoAlpha`), the grid reflows,
+  newly matching items rise in with a stagger. Rapid clicks settle on the
+  last tag. After each change it calls `ScrollTrigger.refresh(true)` and, if
+  the grid top has scrolled above the viewport, scrolls the root back into
+  view.
+- `prefers-reduced-motion: reduce`: classes switch instantly, no tweens.
+- Sticky tag bar is CSS only: `position: sticky; bottom: 2rem` on the tag
+  wrapper, placed after the grid inside the root.
+- Arts detail modal: give each piece `data-modal-open="{slug}"` and build one
+  dialog per piece with the CMS pattern in `modal-setup.md`. No extra code.
+- Local preview: `pnpm dev`, then
+  `http://localhost:3000/fixtures/gallery-filter.html`; check:
+  `npx playwright test tests/visual/gallery-filter.spec.ts`.
+- Order: slot E. It mutates layout, so it runs before slot G reveals.
 
 ### historyStickyYear
 
