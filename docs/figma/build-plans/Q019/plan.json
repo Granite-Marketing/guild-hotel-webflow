@@ -1,0 +1,1082 @@
+{
+  "entry": "Q019",
+  "component": "map-feature",
+  "buildOn": {
+    "page": "home",
+    "pageId": "6ad64060ae8eac6d7b7c4241",
+    "section": "home/12-the-neighborhood"
+  },
+  "reusedClasses": [
+    "padding-global",
+    "padding-section-large",
+    "container-large",
+    "heading-style-h1",
+    "heading-style-h2",
+    "heading-style-h4",
+    "text-weight-normal",
+    "text-size-medium",
+    "text-size-regular",
+    "button"
+  ],
+  "familyClasses": [
+    {
+      "name": "section_map-feature",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "overflow": "hidden",
+          "background-color": "var(--color-neutral-100)",
+          "color": "var(--color-neutral-900)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_component",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_content",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "justify-content": "space-between",
+          "align-items": "flex-start",
+          "gap": "2rem"
+        },
+        "tablet": {
+          "flex-direction": "column",
+          "gap": "1.5rem"
+        },
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_header",
+      "styles": {
+        "desktop": {
+          "padding-top": "2.375rem",
+          "padding-left": "1.75rem",
+          "transform": "rotate(-8deg)",
+          "transform-origin": "50% 50%"
+        },
+        "tablet": {
+          "padding-top": "1.5rem",
+          "padding-left": "0.5rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "1rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_aside",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "flex-start",
+          "gap": "0.875rem",
+          "width": "100%",
+          "max-width": "26.5625rem",
+          "padding-top": "1.75rem",
+          "color": "var(--color-accent)"
+        },
+        "tablet": {
+          "padding-top": "0"
+        },
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_text",
+      "styles": {
+        "desktop": {
+          "margin-top": "0",
+          "margin-bottom": "0"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_footer",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "align-items": "center"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_list",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "margin-top": "0",
+          "margin-bottom": "0",
+          "padding-left": "0",
+          "list-style-type": "none"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_item",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "gap": "0.8125rem",
+          "padding-top": "1.5rem",
+          "padding-bottom": "0.75rem",
+          "border-top": "1px solid rgba(244, 239, 223, 0.3)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_item-row",
+      "styles": {
+        "desktop": {
+          "display": "grid",
+          "grid-template-columns": "9.5rem auto",
+          "justify-items": "start",
+          "align-items": "baseline"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_link",
+      "styles": {
+        "desktop": {
+          "color": "inherit",
+          "text-decoration": "underline",
+          "text-underline-offset": "0.2em"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_figure",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "width": "100%",
+          "max-width": "80.6875rem",
+          "aspect-ratio": "1291 / 881",
+          "margin": "6rem auto 0",
+          "overflow": "hidden"
+        },
+        "tablet": {
+          "margin-top": "3rem"
+        },
+        "mobileLandscape": {
+          "margin-top": "2rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_image",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "100%",
+          "height": "100%",
+          "object-fit": "contain"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_pins",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "inset": "0",
+          "pointer-events": "none"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "map-feature_pin",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "width": "4.25%",
+          "aspect-ratio": "1 / 1",
+          "border-radius": "50%",
+          "background-color": "#906E58"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "is-pin-1",
+      "comboOn": "map-feature_pin",
+      "styles": {
+        "desktop": {
+          "left": "49%",
+          "top": "47.09%"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "is-pin-2",
+      "comboOn": "map-feature_pin",
+      "styles": {
+        "desktop": {
+          "left": "67.19%",
+          "top": "67.01%"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "is-pin-3",
+      "comboOn": "map-feature_pin",
+      "styles": {
+        "desktop": {
+          "left": "53.81%",
+          "top": "80.6%"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "is-pin-4",
+      "comboOn": "map-feature_pin",
+      "styles": {
+        "desktop": {
+          "left": "75.25%",
+          "top": "41.88%"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    }
+  ],
+  "proposedShared": [
+    {
+      "name": "text-style-script",
+      "why": "Morello script display heading (combo on heading-style-h1); used by map-feature and the other morello-60/80 headings across the site",
+      "styles": {
+        "desktop": {
+          "font-family": "Morello",
+          "font-size": "5rem",
+          "line-height": "1",
+          "letter-spacing": "0",
+          "text-transform": "none"
+        },
+        "tablet": {
+          "font-size": "4rem"
+        },
+        "mobileLandscape": {
+          "font-size": "3.25rem"
+        },
+        "mobilePortrait": {
+          "font-size": "2.75rem"
+        }
+      }
+    },
+    {
+      "name": "text-style-eyebrow-caps",
+      "why": "EYEBROW-CAPS label (combo on text-size-regular), 393 uses in the file; token mapping suggests this name",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1.125rem",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase"
+        }
+      }
+    },
+    {
+      "name": "text-style-button",
+      "why": "Sackers Label / Button type (combo on text-size-regular) for every CTA; token mapping suggests this name",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1rem",
+          "line-height": "1",
+          "letter-spacing": "0",
+          "text-transform": "lowercase"
+        }
+      }
+    },
+    {
+      "name": "is-chamfer",
+      "why": "Combo on button: the site-wide outlined button with clipped corners (vector-25 shape, 194x37); also used by hero, venue-card and overlay CTAs",
+      "styles": {
+        "desktop": {
+          "display": "inline-flex",
+          "align-items": "center",
+          "justify-content": "center",
+          "padding": "0.65625rem 1.5625rem",
+          "border": "0",
+          "background-color": "transparent",
+          "background-image": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 194 37' preserveAspectRatio='none'%3E%3Cpath d='M.5 24.6V12.2L11.2.5h170.8l11.5 11.7v12.4L182 36.5H11.2z' fill='%23F4EFDF' stroke='%23262118' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E\")",
+          "background-size": "100% 100%",
+          "background-repeat": "no-repeat",
+          "color": "var(--color-neutral-900)",
+          "text-decoration": "none"
+        }
+      },
+      "comboOn": "button"
+    }
+  ],
+  "variables": [
+    "color-neutral-100",
+    "color-neutral-900",
+    "color-accent",
+    "font-style-heading",
+    "font-style-body"
+  ],
+  "tree": [
+    {
+      "tag": "section",
+      "classes": [
+        "section_map-feature"
+      ],
+      "attributes": {},
+      "children": [
+        {
+          "tag": "div",
+          "classes": [
+            "padding-global",
+            "padding-section-large"
+          ],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "article",
+              "classes": [
+                "map-feature_component"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "container-large"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "map-feature_content"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "header",
+                          "classes": [
+                            "map-feature_header"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "classes": [
+                                "heading-style-h1",
+                                "text-style-script",
+                                "text-weight-normal"
+                              ],
+                              "attributes": {},
+                              "prop": "heading",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "map-feature_aside"
+                          ],
+                          "attributes": {},
+                          "prop": "showAside",
+                          "children": [
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "map-feature_text",
+                                "text-size-medium"
+                              ],
+                              "attributes": {},
+                              "prop": "text",
+                              "children": []
+                            },
+                            {
+                              "tag": "footer",
+                              "classes": [
+                                "map-feature_footer"
+                              ],
+                              "attributes": {},
+                              "prop": "showButton",
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "classes": [
+                                    "button",
+                                    "is-chamfer",
+                                    "text-size-regular",
+                                    "text-style-button"
+                                  ],
+                                  "attributes": {
+                                    "href": "/neighborhood"
+                                  },
+                                  "prop": "buttonLabel",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "ul",
+                          "classes": [
+                            "map-feature_list"
+                          ],
+                          "attributes": {
+                            "role": "list"
+                          },
+                          "prop": "showList",
+                          "children": [
+                            {
+                              "tag": "li",
+                              "classes": [
+                                "map-feature_item"
+                              ],
+                              "attributes": {},
+                              "repeat": 4,
+                              "children": [
+                                {
+                                  "tag": "p",
+                                  "classes": [
+                                    "map-feature_text",
+                                    "text-size-regular",
+                                    "text-style-eyebrow-caps"
+                                  ],
+                                  "attributes": {},
+                                  "prop": "placeName{n}",
+                                  "children": []
+                                },
+                                {
+                                  "tag": "div",
+                                  "classes": [
+                                    "map-feature_item-row"
+                                  ],
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "tag": "p",
+                                      "classes": [
+                                        "map-feature_text",
+                                        "text-size-medium"
+                                      ],
+                                      "attributes": {},
+                                      "prop": "placeWalk{n}",
+                                      "children": []
+                                    },
+                                    {
+                                      "tag": "a",
+                                      "classes": [
+                                        "map-feature_link",
+                                        "text-size-medium"
+                                      ],
+                                      "attributes": {
+                                        "href": "#",
+                                        "target": "_blank",
+                                        "rel": "noopener"
+                                      },
+                                      "prop": "placeLink{n}",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "figure",
+                  "classes": [
+                    "map-feature_figure"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "img",
+                      "classes": [
+                        "map-feature_image"
+                      ],
+                      "attributes": {
+                        "loading": "lazy"
+                      },
+                      "prop": "image",
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "map-feature_pins"
+                      ],
+                      "attributes": {
+                        "aria-hidden": "true"
+                      },
+                      "prop": "showPins",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "map-feature_pin",
+                            "is-pin-1"
+                          ],
+                          "attributes": {},
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "map-feature_pin",
+                            "is-pin-2"
+                          ],
+                          "attributes": {},
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "map-feature_pin",
+                            "is-pin-3"
+                          ],
+                          "attributes": {},
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "map-feature_pin",
+                            "is-pin-4"
+                          ],
+                          "attributes": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": "is-image-bg",
+      "on": "section_map-feature",
+      "styleDeltas": {
+        "desktop": {
+          "aspect-ratio": "1600 / 1170",
+          "color": "var(--color-neutral-100)"
+        },
+        "tablet": {
+          "aspect-ratio": "auto"
+        }
+      },
+      "crop": "figma/pages/meetings-collection/sections/07-steps-from-key-legal-addresses/section.webp"
+    },
+    {
+      "modifier": "is-image-bg",
+      "on": "map-feature_content",
+      "styleDeltas": {
+        "desktop": {
+          "position": "absolute",
+          "left": "2.5rem",
+          "bottom": "2.5rem",
+          "z-index": "1",
+          "flex-direction": "column",
+          "justify-content": "flex-start",
+          "align-items": "stretch",
+          "gap": "1.6875rem",
+          "width": "30.3125rem",
+          "padding": "2.4375rem 1.875rem 2.125rem",
+          "background-color": "#906E58"
+        },
+        "tablet": {
+          "position": "relative",
+          "left": "auto",
+          "bottom": "auto",
+          "width": "100%"
+        },
+        "mobileLandscape": {
+          "padding": "1.5rem 1.25rem"
+        }
+      },
+      "crop": "figma/pages/meetings-collection/sections/07-steps-from-key-legal-addresses/section.webp"
+    },
+    {
+      "modifier": "is-image-bg",
+      "on": "map-feature_header",
+      "styleDeltas": {
+        "desktop": {
+          "padding-top": "0",
+          "padding-left": "0",
+          "transform": "none"
+        }
+      },
+      "crop": "figma/pages/meetings-collection/sections/07-steps-from-key-legal-addresses/section.webp"
+    },
+    {
+      "modifier": "is-image-bg",
+      "on": "map-feature_aside",
+      "styleDeltas": {
+        "desktop": {
+          "max-width": "none",
+          "padding-top": "0",
+          "color": "inherit"
+        }
+      },
+      "crop": "figma/pages/meetings-collection/sections/07-steps-from-key-legal-addresses/section.webp"
+    },
+    {
+      "modifier": "is-image-bg",
+      "on": "map-feature_figure",
+      "styleDeltas": {
+        "desktop": {
+          "position": "absolute",
+          "inset": "0",
+          "max-width": "none",
+          "aspect-ratio": "auto",
+          "margin": "0"
+        },
+        "tablet": {
+          "position": "relative",
+          "inset": "auto",
+          "aspect-ratio": "1600 / 1170",
+          "order": "-1"
+        }
+      },
+      "crop": "figma/pages/meetings-collection/sections/07-steps-from-key-legal-addresses/section.webp"
+    },
+    {
+      "modifier": "is-image-bg",
+      "on": "map-feature_image",
+      "styleDeltas": {
+        "desktop": {
+          "object-fit": "cover",
+          "filter": "grayscale(100%) brightness(0.9)"
+        }
+      },
+      "crop": "figma/pages/meetings-collection/sections/07-steps-from-key-legal-addresses/section.webp"
+    },
+    {
+      "modifier": "is-centered",
+      "on": "map-feature_content",
+      "styleDeltas": {
+        "desktop": {
+          "flex-direction": "column",
+          "align-items": "center",
+          "text-align": "center"
+        },
+        "tablet": {
+          "gap": "2rem"
+        }
+      },
+      "crop": "figma/pages/history/sections/08-discover-the-property/section.webp"
+    },
+    {
+      "modifier": "is-centered",
+      "on": "map-feature_header",
+      "styleDeltas": {
+        "desktop": {
+          "padding-top": "0",
+          "padding-left": "0",
+          "transform": "none"
+        },
+        "tablet": {
+          "padding-top": "0",
+          "padding-left": "0"
+        }
+      },
+      "crop": "figma/pages/history/sections/08-discover-the-property/section.webp"
+    },
+    {
+      "modifier": "is-centered",
+      "on": "map-feature_aside",
+      "styleDeltas": {
+        "desktop": {
+          "align-items": "center",
+          "max-width": "32.875rem",
+          "padding-top": "0"
+        }
+      },
+      "crop": "figma/pages/history/sections/08-discover-the-property/section.webp"
+    },
+    {
+      "modifier": "is-centered",
+      "on": "map-feature_figure",
+      "styleDeltas": {
+        "desktop": {
+          "max-width": "95.1875rem",
+          "aspect-ratio": "1523 / 865",
+          "margin-top": "2.75rem"
+        },
+        "tablet": {
+          "margin-top": "2rem"
+        }
+      },
+      "crop": "figma/pages/history/sections/08-discover-the-property/section.webp"
+    },
+    {
+      "modifier": "is-centered",
+      "on": "map-feature_image",
+      "styleDeltas": {
+        "desktop": {
+          "object-fit": "cover",
+          "object-position": "50% 80%",
+          "mix-blend-mode": "multiply"
+        }
+      },
+      "crop": "figma/pages/history/sections/08-discover-the-property/section.webp"
+    }
+  ],
+  "props": [
+    {
+      "name": "heading",
+      "type": "text",
+      "element": "h2 in map-feature_header"
+    },
+    {
+      "name": "showAside",
+      "type": "visibility",
+      "element": "map-feature_aside"
+    },
+    {
+      "name": "text",
+      "type": "text",
+      "element": "map-feature_text (in map-feature_aside)"
+    },
+    {
+      "name": "showButton",
+      "type": "visibility",
+      "element": "map-feature_footer"
+    },
+    {
+      "name": "buttonLabel",
+      "type": "text",
+      "element": "button is-chamfer"
+    },
+    {
+      "name": "buttonLink",
+      "type": "link",
+      "element": "button is-chamfer"
+    },
+    {
+      "name": "showList",
+      "type": "visibility",
+      "element": "map-feature_list"
+    },
+    {
+      "name": "placeName1",
+      "type": "text",
+      "element": "map-feature_item 1 eyebrow"
+    },
+    {
+      "name": "placeWalk1",
+      "type": "text",
+      "element": "map-feature_item 1 walk time"
+    },
+    {
+      "name": "placeLink1",
+      "type": "link",
+      "element": "map-feature_item 1 map-feature_link"
+    },
+    {
+      "name": "placeName2",
+      "type": "text",
+      "element": "map-feature_item 2 eyebrow"
+    },
+    {
+      "name": "placeWalk2",
+      "type": "text",
+      "element": "map-feature_item 2 walk time"
+    },
+    {
+      "name": "placeLink2",
+      "type": "link",
+      "element": "map-feature_item 2 map-feature_link"
+    },
+    {
+      "name": "placeName3",
+      "type": "text",
+      "element": "map-feature_item 3 eyebrow"
+    },
+    {
+      "name": "placeWalk3",
+      "type": "text",
+      "element": "map-feature_item 3 walk time"
+    },
+    {
+      "name": "placeLink3",
+      "type": "link",
+      "element": "map-feature_item 3 map-feature_link"
+    },
+    {
+      "name": "placeName4",
+      "type": "text",
+      "element": "map-feature_item 4 eyebrow"
+    },
+    {
+      "name": "placeWalk4",
+      "type": "text",
+      "element": "map-feature_item 4 walk time"
+    },
+    {
+      "name": "placeLink4",
+      "type": "link",
+      "element": "map-feature_item 4 map-feature_link"
+    },
+    {
+      "name": "image",
+      "type": "image",
+      "element": "map-feature_image"
+    },
+    {
+      "name": "imageAlt",
+      "type": "text",
+      "element": "map-feature_image alt"
+    },
+    {
+      "name": "showPins",
+      "type": "visibility",
+      "element": "map-feature_pins"
+    }
+  ],
+  "assets": [
+    {
+      "slot": "image (base: neighborhood map illustration)",
+      "webflowAssetId": null,
+      "local": "figma/vectors/group-270990043-1291x881-433-6592.svg"
+    },
+    {
+      "slot": "image (is-image-bg: downtown map background)",
+      "webflowAssetId": "6ad6701edd7f0762ee12bb55",
+      "local": "assets/images/f5dfa6178bea152e201fd0047664f6dc3d8ebe1b.png"
+    },
+    {
+      "slot": "image (is-centered: property illustration)",
+      "webflowAssetId": "6ad66fed1ce40a5a6239b98e",
+      "local": "assets/images/1f3f70ca62006004469496446ceb59b6f09405a2.jpg"
+    }
+  ],
+  "instances": [
+    {
+      "page": "home",
+      "section": "home/12-the-neighborhood",
+      "variant": "base",
+      "content": {
+        "heading": "The Neighborhood",
+        "headingClasses": [
+          "heading-style-h1",
+          "text-style-script",
+          "text-weight-normal"
+        ],
+        "showAside": true,
+        "text": "We’ve lived here for a century; let us show you around.",
+        "showButton": true,
+        "buttonLabel": "Discover more",
+        "buttonLink": "/neighborhood",
+        "showList": false,
+        "image": "figma/vectors/group-270990043-1291x881-433-6592.svg",
+        "imageAlt": "Hand-drawn map of the streets and landmarks around the hotel",
+        "showPins": false
+      }
+    },
+    {
+      "page": "dining-collection",
+      "section": "dining-collection/09-the-neighborhood",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/12-the-neighborhood"
+      }
+    },
+    {
+      "page": "rooms-collection",
+      "section": "rooms-collection/08-the-neighborhood",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/12-the-neighborhood"
+      }
+    },
+    {
+      "page": "rooms-individual",
+      "section": "rooms-individual/11-the-neighborhood",
+      "variant": "base",
+      "content": {
+        "sameAs": "home/12-the-neighborhood"
+      }
+    },
+    {
+      "page": "meetings-collection",
+      "section": "meetings-collection/07-steps-from-key-legal-addresses",
+      "variant": "is-image-bg",
+      "content": {
+        "heading": "Steps from key legal addresses",
+        "headingClasses": [
+          "heading-style-h4",
+          "text-weight-normal"
+        ],
+        "showAside": true,
+        "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
+        "showButton": false,
+        "showList": true,
+        "places": [
+          {
+            "name": "San Diego Superior Court",
+            "walk": "6-minute walk",
+            "linkLabel": "Directions",
+            "link": "#"
+          },
+          {
+            "name": "San Diego Central Courthouse",
+            "walk": "4-minute walk",
+            "linkLabel": "Directions",
+            "link": "#"
+          },
+          {
+            "name": "U.S. District Court",
+            "walk": "3-minute walk",
+            "linkLabel": "Directions",
+            "link": "#"
+          },
+          {
+            "name": "Hall of Justice",
+            "walk": "3-minute walk",
+            "linkLabel": "Directions",
+            "link": "#"
+          }
+        ],
+        "image": "assets/images/f5dfa6178bea152e201fd0047664f6dc3d8ebe1b.png",
+        "imageAlt": "Map of downtown San Diego marking the courthouses near the hotel",
+        "showPins": true
+      }
+    },
+    {
+      "page": "neighborhood",
+      "section": "neighborhood/10-steps-from-key-legal-addresses",
+      "variant": "is-image-bg",
+      "content": {
+        "sameAs": "meetings-collection/07-steps-from-key-legal-addresses"
+      }
+    },
+    {
+      "page": "legal",
+      "section": "legal/10-steps-from-key-legal-addresses",
+      "variant": "is-image-bg",
+      "content": {
+        "sameAs": "meetings-collection/07-steps-from-key-legal-addresses"
+      }
+    },
+    {
+      "page": "corporate",
+      "section": "corporate/10-steps-from-key-legal-addresses",
+      "variant": "is-image-bg",
+      "content": {
+        "sameAs": "meetings-collection/07-steps-from-key-legal-addresses"
+      }
+    },
+    {
+      "page": "history",
+      "section": "history/08-discover-the-property",
+      "variant": "is-centered",
+      "content": {
+        "heading": "Discover the Property",
+        "headingClasses": [
+          "heading-style-h2",
+          "text-weight-normal"
+        ],
+        "showAside": true,
+        "text": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.",
+        "showButton": false,
+        "showList": false,
+        "image": "assets/images/1f3f70ca62006004469496446ceb59b6f09405a2.jpg",
+        "imageAlt": "Illustrated map of the hotel grounds, guest room wings and cottages",
+        "showPins": false
+      }
+    }
+  ],
+  "openQuestions": [
+    "Per-instance class differences (the is-image-bg and is-centered combos, and the heading class: heading-style-h1 + text-style-script, heading-style-h4 or heading-style-h2) need Webflow component variants (data_component_variants_tool), one per plan variant. X01 should confirm variants can change classes through MCP. If they cannot, keep one component and switch the combos with three wrapper elements and visibility props; never build a second component.",
+    "The base map illustration (figma/vectors/group-270990043-1291x881-433-6592.svg, 228 KB) is not in the Webflow asset library. Upload it as an asset before the Designer session, or approve the Designer session uploading it by hand.",
+    "The base map art shows Atlanta streets and 'Hotel Clermont' (Ponce de Leon Ave, Eastside Beltline). It looks like placeholder art from another project. Confirm it ships as is or will be replaced with a San Diego map.",
+    "#906E58 (map card and pins) has no colour variable: D01 added variables only for #CB3629 and #4A1217. Add color-brand-906e58 in Q001, or keep the raw hex.",
+    "The history property illustration is masked in Figma by a freeform shape (node 236:8254, Vector 36) that hides the inset key map and compass. The plan approximates it with a rectangular crop (object-position 50% 80%), so the bottom of the inset map and the compass still show. Export node 236:8254 as a transparent PNG and upload it, or accept the crop.",
+    "The four 'Directions' links have no URLs in the design. Supply Google Maps direction links for San Diego Superior Court, San Diego Central Courthouse, U.S. District Court and Hall of Justice.",
+    "Base button target: the plan links 'Discover more' to /neighborhood. Confirm.",
+    "Mobile has no Figma design. The base map scales to about 326px wide at 390, which makes its street labels unreadable. Accept, or provide a mobile crop of the map.",
+    "legal and corporate are CMS template pages created in Q028; their instances are inserted there, not in this entry."
+  ],
+  "deviations": [
+    "history/08-discover-the-property is planned as is-centered only, not is-image-bg + is-centered: in the crop the illustration sits below the centred header on the cream background, not behind it. Its image uses the same map-feature_figure slot as the base map.",
+    "is-1-image is dropped: it would carry no style. Image presence is content (the image prop), not a modifier.",
+    "Modifiers are applied to each element whose style changes (Webflow combos style one element only), so is-image-bg and is-centered appear on several family elements, each listed under variants.",
+    "map-feature_figure sits beside container-large inside map-feature_component, not inside the container, so the history illustration can span 1523px and the image-bg map can cover the section.",
+    "The base heading is rotated -8deg on map-feature_header to match the tilted script title (its 563x155 box at 80px type implies about 8 degrees). is-image-bg and is-centered reset it.",
+    "Map pins are CSS circles in % positions inside the figure (is-pin-1 to is-pin-4) rather than the four ellipse SVGs; the section keeps the 1600/1170 aspect on desktop so the pins stay on the courthouses.",
+    "The card's divider colour (rgba(244, 239, 223, 0.3)) is read from the crop; the spec lists no stroke.",
+    "is-pin-1 to is-pin-4 are combos on map-feature_pin listed in familyClasses (with comboOn) because they sit in the tree on every instance; they place the four pins and are not plan variants.",
+    "The image-bg map's Figma fills (a black COLOR-blend layer and a 10% black layer over the photo) become filter: grayscale(100%) brightness(0.9) on map-feature_image is-image-bg; the history illustration's MULTIPLY fill becomes mix-blend-mode: multiply."
+  ]
+}
