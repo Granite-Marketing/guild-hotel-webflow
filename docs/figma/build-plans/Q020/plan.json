@@ -1,0 +1,770 @@
+{
+  "entry": "Q020",
+  "component": "image-trio-text",
+  "buildOn": {
+    "page": "home",
+    "pageId": "6ad64060ae8eac6d7b7c4241",
+    "section": "home/10-wellness"
+  },
+  "reusedClasses": [
+    "padding-global",
+    "padding-section-large",
+    "heading-style-h3",
+    "heading-style-h4",
+    "text-size-regular",
+    "text-size-medium",
+    "text-weight-normal",
+    "text-rich-text"
+  ],
+  "familyClasses": [
+    {
+      "name": "section_image-trio-text",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "overflow": "clip",
+          "background-color": "var(--color-neutral-100)",
+          "color": "var(--color-neutral-900)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_component",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+          "row-gap": "2.5rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "row-gap": "2rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_header",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+          "row-gap": "2.5rem",
+          "width": "100%",
+          "max-width": "34.75rem",
+          "text-align": "center"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "row-gap": "1.5rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_heading",
+      "styles": {
+        "desktop": {
+          "margin-top": "0rem",
+          "margin-bottom": "0rem",
+          "color": "inherit"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_paragraph",
+      "styles": {
+        "desktop": {
+          "margin-top": "0rem",
+          "margin-bottom": "0rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_list",
+      "styles": {
+        "desktop": {
+          "order": "-1",
+          "display": "grid",
+          "grid-template-columns": "1fr 1fr 1fr",
+          "column-gap": "1.875vw",
+          "align-items": "start",
+          "flex-shrink": "0",
+          "width": "107.0625vw",
+          "margin-bottom": "2.3125rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "column-gap": "5vw",
+          "width": "190vw",
+          "margin-bottom": "1rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_item",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "1.75rem",
+          "min-width": "0rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "row-gap": "1.25rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_figure",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "overflow": "hidden",
+          "width": "100%",
+          "aspect-ratio": "551 / 694",
+          "margin": "0rem",
+          "background-color": "#D9D9D9"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_image",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "100%",
+          "height": "100%",
+          "object-fit": "cover"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_item-content",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "row-gap": "1.375rem",
+          "text-align": "left"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "row-gap": "1rem"
+        },
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_item-header",
+      "styles": {
+        "desktop": {},
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_item-heading",
+      "styles": {
+        "desktop": {
+          "margin-top": "0rem",
+          "margin-bottom": "0rem",
+          "color": "inherit"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_item-text",
+      "styles": {
+        "desktop": {
+          "color": "inherit"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_footer",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "justify-content": "center"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "image-trio-text_link",
+      "styles": {
+        "desktop": {
+          "color": "inherit",
+          "text-decoration": "underline",
+          "text-underline-offset": "0.25rem",
+          "text-decoration-thickness": "1px"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    }
+  ],
+  "proposedShared": [
+    {
+      "name": "text-style-eyebrow-caps",
+      "why": "Combo for EYEBROW-CAPS (Sackers 18/21.6, -0.03em, lowercase) on top of text-size-regular; 393 uses in the file, proposed by figma/tokens.json mapping. If Q001 creates it first, reuse that one.",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--font-style-heading)",
+          "font-size": "1.125rem",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase"
+        }
+      }
+    }
+  ],
+  "variables": [
+    "color-neutral-100",
+    "color-neutral-900",
+    "color-accent",
+    "font-style-heading",
+    "font-style-body"
+  ],
+  "tree": [
+    {
+      "tag": "section",
+      "classes": [
+        "section_image-trio-text"
+      ],
+      "attributes": {},
+      "children": [
+        {
+          "tag": "div",
+          "classes": [
+            "padding-global",
+            "padding-section-large"
+          ],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "image-trio-text_component"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "header",
+                  "classes": [
+                    "image-trio-text_header"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "classes": [
+                        "image-trio-text_heading",
+                        "heading-style-h3",
+                        "text-weight-normal"
+                      ],
+                      "attributes": {},
+                      "prop": "heading",
+                      "children": []
+                    },
+                    {
+                      "tag": "p",
+                      "classes": [
+                        "image-trio-text_paragraph",
+                        "text-size-medium",
+                        "text-weight-normal"
+                      ],
+                      "attributes": {},
+                      "prop": "paragraph",
+                      "optional": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "classes": [
+                    "image-trio-text_list"
+                  ],
+                  "attributes": {
+                    "data-image-stack-collapse": ""
+                  },
+                  "note": "data-image-stack-collapse only on base instances (both reference animation notes); remove on is-left instances.",
+                  "children": [
+                    {
+                      "tag": "article",
+                      "classes": [
+                        "image-trio-text_item"
+                      ],
+                      "attributes": {},
+                      "repeat": 3,
+                      "note": "Three static items. On is-left + is-offset instances items 1 and 3 carry the is-offset combo.",
+                      "children": [
+                        {
+                          "tag": "figure",
+                          "classes": [
+                            "image-trio-text_figure"
+                          ],
+                          "attributes": {
+                            "data-image-stack-collapse-item": ""
+                          },
+                          "note": "Stack attribute on base instances only. The middle item is the default anchor, so no value is needed.",
+                          "children": [
+                            {
+                              "tag": "img",
+                              "classes": [
+                                "image-trio-text_image"
+                              ],
+                              "attributes": {
+                                "loading": "lazy",
+                                "data-eager": ""
+                              },
+                              "prop": "image{n}",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "image-trio-text_item-content"
+                          ],
+                          "attributes": {},
+                          "optional": true,
+                          "note": "Present on is-left instances only; hidden by the itemContentVisible prop elsewhere.",
+                          "children": [
+                            {
+                              "tag": "header",
+                              "classes": [
+                                "image-trio-text_item-header"
+                              ],
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "tag": "h3",
+                                  "classes": [
+                                    "image-trio-text_item-heading",
+                                    "text-size-regular",
+                                    "text-weight-normal",
+                                    "text-style-eyebrow-caps"
+                                  ],
+                                  "attributes": {},
+                                  "prop": "item{n}Heading",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "classes": [
+                                "image-trio-text_item-text",
+                                "text-rich-text",
+                                "text-size-medium",
+                                "text-weight-normal"
+                              ],
+                              "attributes": {},
+                              "prop": "item{n}Text",
+                              "note": "Rich Text element: a paragraph on legal/03, a bulleted list on legal/11.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "footer",
+                  "classes": [
+                    "image-trio-text_footer"
+                  ],
+                  "attributes": {},
+                  "optional": true,
+                  "children": [
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "image-trio-text_link",
+                        "text-size-regular",
+                        "text-weight-normal",
+                        "text-style-eyebrow-caps"
+                      ],
+                      "attributes": {
+                        "href": "#"
+                      },
+                      "prop": "ctaText",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": "base",
+      "on": "section_image-trio-text",
+      "styleDeltas": {},
+      "crop": "figma/pages/dining-zuma/sections/07-group-dining-events/section.webp",
+      "note": "Full-bleed trio of portrait figures (grey #D9D9D9 placeholders until photos arrive), centred header, paragraph and CTA below."
+    },
+    {
+      "modifier": "is-media-left is-multi-image",
+      "on": "section_image-trio-text",
+      "styleDeltas": {},
+      "crop": "figma/pages/home/sections/10-wellness/section.webp",
+      "note": "Same layout as base with real photos. The brief's modifier names come from the auto classifier; there is no style delta, so these combo classes are not created (see deviations). Heading uses heading-style-h3 instead of h4."
+    },
+    {
+      "modifier": "is-left",
+      "on": "section_image-trio-text",
+      "styleDeltas": {
+        "desktop": {
+          "section_image-trio-text": {
+            "color": "var(--color-accent)"
+          },
+          "image-trio-text_header": {
+            "max-width": "none"
+          },
+          "image-trio-text_list": {
+            "order": "0",
+            "width": "100%",
+            "column-gap": "2rem",
+            "margin-bottom": "0rem"
+          },
+          "image-trio-text_figure": {
+            "aspect-ratio": "485 / 562"
+          }
+        },
+        "tablet": {
+          "image-trio-text_list": {
+            "column-gap": "1.5rem"
+          }
+        },
+        "mobileLandscape": {
+          "image-trio-text_list": {
+            "grid-template-columns": "1fr",
+            "row-gap": "3rem",
+            "width": "100%"
+          }
+        },
+        "mobilePortrait": {}
+      },
+      "crop": "figma/pages/legal/sections/03-key-features/section.webp",
+      "note": "Heading on top, three contained cards with left-aligned eyebrow title and body. Accent text colour."
+    },
+    {
+      "modifier": "is-offset",
+      "on": "image-trio-text_item",
+      "styleDeltas": {
+        "desktop": {
+          "image-trio-text_item": {
+            "margin-top": "11.25rem"
+          }
+        },
+        "tablet": {
+          "image-trio-text_item": {
+            "margin-top": "6rem"
+          }
+        },
+        "mobileLandscape": {
+          "image-trio-text_item": {
+            "margin-top": "0rem"
+          }
+        },
+        "mobilePortrait": {}
+      },
+      "crop": "figma/pages/legal/sections/11-tailored-corporate-packages/section.webp",
+      "note": "Not in the brief: legal/11 and corporate/11 stagger the cards (outer two 180px lower). Applied with is-left on the section and is-offset on items 1 and 3."
+    }
+  ],
+  "props": [
+    {
+      "name": "heading",
+      "type": "text",
+      "element": "image-trio-text_heading"
+    },
+    {
+      "name": "headingTag",
+      "type": "text",
+      "element": "image-trio-text_heading",
+      "note": "Not a native prop; keep h2. Size is set per instance with heading-style-h3 or heading-style-h4 (see instances)."
+    },
+    {
+      "name": "paragraph",
+      "type": "text",
+      "element": "image-trio-text_paragraph"
+    },
+    {
+      "name": "paragraphVisible",
+      "type": "visibility",
+      "element": "image-trio-text_paragraph"
+    },
+    {
+      "name": "ctaText",
+      "type": "text",
+      "element": "image-trio-text_link"
+    },
+    {
+      "name": "ctaLink",
+      "type": "link",
+      "element": "image-trio-text_link"
+    },
+    {
+      "name": "ctaVisible",
+      "type": "visibility",
+      "element": "image-trio-text_footer"
+    },
+    {
+      "name": "image1",
+      "type": "image",
+      "element": "image-trio-text_image (item 1)"
+    },
+    {
+      "name": "image2",
+      "type": "image",
+      "element": "image-trio-text_image (item 2)"
+    },
+    {
+      "name": "image3",
+      "type": "image",
+      "element": "image-trio-text_image (item 3)"
+    },
+    {
+      "name": "itemContentVisible",
+      "type": "visibility",
+      "element": "image-trio-text_item-content (all three)"
+    },
+    {
+      "name": "item1Heading",
+      "type": "text",
+      "element": "image-trio-text_item-heading (item 1)"
+    },
+    {
+      "name": "item2Heading",
+      "type": "text",
+      "element": "image-trio-text_item-heading (item 2)"
+    },
+    {
+      "name": "item3Heading",
+      "type": "text",
+      "element": "image-trio-text_item-heading (item 3)"
+    },
+    {
+      "name": "item1Text",
+      "type": "richText",
+      "element": "image-trio-text_item-text (item 1)"
+    },
+    {
+      "name": "item2Text",
+      "type": "richText",
+      "element": "image-trio-text_item-text (item 2)"
+    },
+    {
+      "name": "item3Text",
+      "type": "richText",
+      "element": "image-trio-text_item-text (item 3)"
+    }
+  ],
+  "assets": [
+    {
+      "slot": "home/10-wellness image1",
+      "figmaImageRef": "0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c",
+      "webflowAssetId": "6ad66fe91ce40a5a6239b8ad",
+      "local": "assets/images/0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c.jpg",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66fe91ce40a5a6239b8ad_0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c.jpg"
+    },
+    {
+      "slot": "home/10-wellness image2",
+      "figmaImageRef": "5f867c9b46567c2df212f5570602c6afaa8b170e",
+      "webflowAssetId": "6ad66ffdba96f2e53726bd55",
+      "local": "assets/images/5f867c9b46567c2df212f5570602c6afaa8b170e.jpg",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad66ffdba96f2e53726bd55_5f867c9b46567c2df212f5570602c6afaa8b170e.jpg"
+    },
+    {
+      "slot": "home/10-wellness image3",
+      "figmaImageRef": "a615ab07d022b6aa76066c2ac89bf41fd38923c5",
+      "webflowAssetId": "6ad6700eb28c9b39f95d814d",
+      "local": "assets/images/a615ab07d022b6aa76066c2ac89bf41fd38923c5.jpg",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad6700eb28c9b39f95d814d_a615ab07d022b6aa76066c2ac89bf41fd38923c5.jpg"
+    }
+  ],
+  "instances": [
+    {
+      "page": "home",
+      "section": "home/10-wellness",
+      "variant": "base",
+      "headingClass": "heading-style-h3",
+      "attributes": {
+        "image-trio-text_list": {
+          "data-image-stack-collapse": ""
+        },
+        "image-trio-text_figure": {
+          "data-image-stack-collapse-item": ""
+        }
+      },
+      "content": {
+        "heading": "wellness",
+        "paragraph": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+        "ctaText": "discover more",
+        "ctaLink": "#",
+        "image1": "6ad66fe91ce40a5a6239b8ad",
+        "image2": "6ad66ffdba96f2e53726bd55",
+        "image3": "6ad6700eb28c9b39f95d814d",
+        "itemContentVisible": false
+      }
+    },
+    {
+      "page": "dining-zuma",
+      "section": "dining-zuma/07-group-dining-events",
+      "variant": "base",
+      "headingClass": "heading-style-h4",
+      "attributes": {
+        "image-trio-text_list": {
+          "data-image-stack-collapse": ""
+        },
+        "image-trio-text_figure": {
+          "data-image-stack-collapse-item": ""
+        }
+      },
+      "content": {
+        "heading": "group dining & events",
+        "paragraph": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+        "ctaText": "enquire",
+        "ctaLink": "#",
+        "image1": null,
+        "image2": null,
+        "image3": null,
+        "itemContentVisible": false
+      }
+    },
+    {
+      "page": "dining-gardenterrace",
+      "section": "dining-gardenterrace/06-group-dining-events",
+      "variant": "base",
+      "sameContentAs": "dining-zuma/07-group-dining-events"
+    },
+    {
+      "page": "dining-lobbybar",
+      "section": "dining-lobbybar/06-group-dining-events",
+      "variant": "base",
+      "sameContentAs": "dining-zuma/07-group-dining-events"
+    },
+    {
+      "page": "dining-poollounge",
+      "section": "dining-poollounge/06-group-dining-events",
+      "variant": "base",
+      "sameContentAs": "dining-zuma/07-group-dining-events"
+    },
+    {
+      "page": "legal",
+      "section": "legal/03-key-features",
+      "variant": "is-left",
+      "headingClass": "heading-style-h4",
+      "attributes": {},
+      "content": {
+        "heading": "key features",
+        "paragraphVisible": false,
+        "ctaVisible": false,
+        "image1": null,
+        "image2": null,
+        "image3": null,
+        "itemContentVisible": true,
+        "item1Heading": "High-Speed, Encrypted Wi-Fi",
+        "item1Text": "<p>Fast, secure internet throughout the hotel, ideal for managing sensitive documents and conducting virtual proceedings.</p>",
+        "item2Heading": "24/7 Controlled Security",
+        "item2Text": "<p>Professional security protocols maintaining attorney-client privilege standards</p>",
+        "item3Heading": "Quiet, Professional Workspaces",
+        "item3Text": "<p>Comfortable, dedicated areas designed for quiet focus and productivity, ideal for reviewing case files, preparing witnesses, and conducting confidential team discussions.</p>"
+      }
+    },
+    {
+      "page": "corporate",
+      "section": "corporate/03-key-features",
+      "variant": "is-left",
+      "sameContentAs": "legal/03-key-features"
+    },
+    {
+      "page": "legal",
+      "section": "legal/11-tailored-corporate-packages",
+      "variant": "is-left + is-offset (items 1 and 3)",
+      "headingClass": "heading-style-h3",
+      "attributes": {},
+      "content": {
+        "heading": "tailored corporate packages",
+        "paragraphVisible": false,
+        "ctaVisible": false,
+        "image1": null,
+        "image2": null,
+        "image3": null,
+        "itemContentVisible": true,
+        "item1Heading": "War Room Setup",
+        "item1Text": "<ul><li>Dedicated meeting rooms or suites for legal teams</li><li>High-speed internet and full AV capabilities</li><li>On-demand printing, copying, and secure storage</li><li>Round-the-clock access to working areas</li></ul>",
+        "item2Heading": "Executive Floor Buyout",
+        "item2Text": "<ul><li>Entire floor reservation for full confidentiality</li><li>Optional private outdoor terrace</li><li>Enhanced security and exclusive guest access</li><li>Custom space layout and meeting room allocation</li></ul>",
+        "item3Heading": "Extended Stay Legal Comfort Package",
+        "item3Text": "<ul><li>Custom in-room amenities for long trials</li><li>Daily housekeeping or modified schedules</li><li>Wellness options to support mental clarity and team morale</li><li>Discounted dining packages and meal coordination</li></ul>"
+      }
+    },
+    {
+      "page": "corporate",
+      "section": "corporate/11-tailored-corporate-packages",
+      "variant": "is-left + is-offset (items 1 and 3)",
+      "sameContentAs": "legal/11-tailored-corporate-packages"
+    }
+  ],
+  "openQuestions": [
+    "Variant switching: Webflow props cannot toggle combo classes. Use Webflow component variants (base, left, left-offset) on the one component, or leave the component unvariant and apply is-left / is-offset per instance after unlinking? Recommendation: component variants.",
+    "Heading size per instance (heading-style-h3 vs h4) has the same problem as variant switching; recommendation: fold it into the component variant (base uses h4, wellness instance overrides via its own variant or accepts h4).",
+    "Placeholder fill #D9D9D9 has no variable (263 uses site-wide). Create a shared color-placeholder variable in K01, or keep the raw hex on image-trio-text_figure?",
+    "Are the grey cards on dining, legal and corporate placeholders for photos to come, or intended as empty blocks? The plan treats them as image slots with a grey fallback.",
+    "The Figma copy on legal/03 contains em dashes; the plan uses commas instead. Confirm the copy wording.",
+    "text-style-eyebrow-caps: Q001 may create it during token sync; this plan reuses Q001's if present, otherwise creates it with the values here. K01 reconciles.",
+    "Sackers 32/38.4 (legal/11 heading) maps to heading-style-h3 in figma/tokens.json, which also holds H3-CAPS 30/30. Which size should heading-style-h3 carry? The plan uses heading-style-h3 as is."
+  ],
+  "deviations": [
+    "Brief variant is-media-left + is-multi-image (home/10-wellness) has the same layout as base; no combo classes are created for it. The only differences are real images and a heading-style-h3 heading.",
+    "New modifier is-offset on image-trio-text_item for legal/11 and corporate/11 (staggered cards), not listed in the brief.",
+    "No container-large: the is-left cards span 1520px of the 1600px frame (2.5rem side margins), wider than container-large (80rem). The plan uses padding-global (2rem) only, so cards are 1536px wide at 1600.",
+    "Base trio bleeds past the viewport with vw units (list width 107.0625vw, gap 1.875vw) to keep the Figma crop of the outer images at every width; rem cannot express this.",
+    "Header to cards gap on legal/11 is 56px in Figma; the plan uses the shared 2.5rem (40px).",
+    "Section vertical padding uses padding-section-large (7rem). Figma shows about 120px above the wellness images, 40px above the dining images and about 166px above the legal heading; the gaps come from neighbouring sections, which page entries own.",
+    "Bulleted lists use a Rich Text element (text-rich-text); nested list styling must be set in the Designer (MCP limitation).",
+    "Card body text has no max-width: Figma's legal/03 text boxes are 378px inside 485px cards, but legal/11 lists use the full card width, and one Rich Text class cannot tell them apart without nested styling."
+  ]
+}
