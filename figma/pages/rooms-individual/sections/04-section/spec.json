@@ -1,0 +1,50 @@
+{
+  "pageSlug": "rooms-individual",
+  "index": 4,
+  "slug": "section",
+  "laneHint": null,
+  "frameId": "406:3458",
+  "bbox": {
+    "x": 0,
+    "y": 1901,
+    "width": 1600,
+    "height": 753
+  },
+  "crop": {
+    "y0": 1836,
+    "y1": 2674
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [],
+  "colors": [],
+  "images": [
+    {
+      "nodeId": "413:5522",
+      "name": "Rectangle 593",
+      "imageRef": "d7332204a5bee888af6d6fe5adf267bebfab8918",
+      "bbox": {
+        "x": 178,
+        "y": 65,
+        "width": 1253,
+        "height": 753
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "413:5522",
+      "type": "RECTANGLE",
+      "name": "Rectangle 593",
+      "bbox": {
+        "x": 178,
+        "y": 65,
+        "width": 1253,
+        "height": 753
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

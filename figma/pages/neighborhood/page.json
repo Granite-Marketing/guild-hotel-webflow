@@ -1,0 +1,1012 @@
+{
+  "pageSlug": "neighborhood",
+  "frames": [
+    {
+      "id": "487:2080",
+      "name": "NEIGHBORHOOD",
+      "kind": "page",
+      "width": 1600,
+      "height": 21575,
+      "scale": 0.75,
+      "renderScale": 0.75,
+      "render": "figma/.cache/renders/487-2080.png",
+      "status": "ok",
+      "tree": {
+        "id": "487:2080",
+        "type": "FRAME",
+        "name": "NEIGHBORHOOD",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 21575
+        },
+        "children": [
+          {
+            "id": "487:2087",
+            "type": "RECTANGLE",
+            "name": "Rectangle 1",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 900
+            }
+          },
+          {
+            "id": "487:2088",
+            "type": "TEXT",
+            "name": "a city at your fingertips",
+            "bbox": {
+              "x": 522,
+              "y": 740,
+              "width": 556,
+              "height": 40
+            },
+            "characters": "a city at your fingertips"
+          },
+          {
+            "id": "487:2089",
+            "type": "TEXT",
+            "name": "In hac habitasse platea dictumst. Etiam dapibus augue tortor",
+            "bbox": {
+              "x": 373,
+              "y": 818,
+              "width": 854,
+              "height": 15
+            },
+            "characters": "In hac habitasse platea dictumst. Etiam dapibus augue tortor"
+          },
+          {
+            "id": "487:2090",
+            "type": "TEXT",
+            "name": "The San Diego on our doorstep includes the city’s favorite neighborhoods and attractions – and best of all, you can walk to them. From the harbor and Seaport Village to the Museum of Contemporary Art, Little Italy and the Gaslamp, the past, future and excitement of the city are yours to discover.",
+            "bbox": {
+              "x": 506,
+              "y": 1488,
+              "width": 588,
+              "height": 92
+            },
+            "characters": "The San Diego on our doorstep includes the city’s favorite neighborhoods and attractions – and best of all, you can walk to them. From the harbor and Seaport Village to the Museum of Contemporary Art, Little Italy and the Gaslamp, the past, future and excitement of the city are yours to discover."
+          },
+          {
+            "id": "487:2091",
+            "type": "TEXT",
+            "name": "The best of San Diego is right here",
+            "bbox": {
+              "x": 420.47,
+              "y": 1141.75,
+              "width": 761.5,
+              "height": 285.82
+            },
+            "characters": "The best of\nSan Diego is right here"
+          },
+          {
+            "id": "487:2566",
+            "type": "TEXT",
+            "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum quam eu est facilisis gravida. Nulla ultrices aliquam ante, at elementum ex tincidunt at. Vestibulum vitae nunc eu felis maximus semper. Curabitur eget molestie dui. Vestibulum quis elit ac libero tempus condimentum eget eget tellus.",
+            "bbox": {
+              "x": 945,
+              "y": 2165,
+              "width": 382,
+              "height": 170
+            },
+            "characters": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum quam eu est facilisis gravida. Nulla ultrices aliquam ante, at elementum ex tincidunt at. Vestibulum vitae nunc eu felis maximus semper. Curabitur eget molestie dui. Vestibulum quis elit ac libero tempus condimentum eget eget tellus."
+          },
+          {
+            "id": "487:2567",
+            "type": "TEXT",
+            "name": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+            "bbox": {
+              "x": 784,
+              "y": 4130,
+              "width": 356,
+              "height": 118
+            },
+            "characters": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo."
+          },
+          {
+            "id": "487:2588",
+            "type": "TEXT",
+            "name": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+            "bbox": {
+              "x": 1075,
+              "y": 5362,
+              "width": 356,
+              "height": 118
+            },
+            "characters": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo."
+          },
+          {
+            "id": "487:2570",
+            "type": "TEXT",
+            "name": "downtown san diego",
+            "bbox": {
+              "x": 945,
+              "y": 2096,
+              "width": 303,
+              "height": 29
+            },
+            "characters": "downtown san diego"
+          },
+          {
+            "id": "487:2571",
+            "type": "TEXT",
+            "name": "gaslamp quarter",
+            "bbox": {
+              "x": 784,
+              "y": 4061,
+              "width": 269,
+              "height": 29
+            },
+            "characters": "gaslamp quarter"
+          },
+          {
+            "id": "487:2589",
+            "type": "TEXT",
+            "name": "little italy",
+            "bbox": {
+              "x": 1075,
+              "y": 5293,
+              "width": 160,
+              "height": 29
+            },
+            "characters": "little italy"
+          },
+          {
+            "id": "487:2587",
+            "type": "GROUP",
+            "name": "Group 270990220",
+            "bbox": {
+              "x": 169,
+              "y": 2760,
+              "width": 382,
+              "height": 144
+            },
+            "children": [
+              {
+                "id": "487:2569",
+                "type": "TEXT",
+                "name": "Nam in massa ut enim cursus sagittis ut vel ex. Aenean tincidunt sollicitudin sem, vitae molestie odio. Cras eget ullamcorper nisl. Nullam lorem eros, varius vel nulla sed, molestie efficitur sapien. Suspendisse vel ante cursus, lobortis ligula nec, varius erat.",
+                "bbox": {
+                  "x": 169,
+                  "y": 2760,
+                  "width": 382,
+                  "height": 144
+                },
+                "characters": "Nam in massa ut enim cursus sagittis ut vel ex. Aenean tincidunt sollicitudin sem, vitae molestie odio. Cras eget ullamcorper nisl. Nullam lorem eros, varius vel nulla sed, molestie efficitur sapien. Suspendisse vel ante cursus, lobortis ligula nec, varius erat."
+              }
+            ]
+          },
+          {
+            "id": "487:2572",
+            "type": "RECTANGLE",
+            "name": "Rectangle 567",
+            "bbox": {
+              "x": 169,
+              "y": 1822,
+              "width": 647,
+              "height": 831
+            }
+          },
+          {
+            "id": "487:2573",
+            "type": "RECTANGLE",
+            "name": "Rectangle 568",
+            "bbox": {
+              "x": 687,
+              "y": 3258,
+              "width": 873,
+              "height": 574
+            }
+          },
+          {
+            "id": "487:2574",
+            "type": "RECTANGLE",
+            "name": "Rectangle 569",
+            "bbox": {
+              "x": 40,
+              "y": 4607,
+              "width": 873,
+              "height": 873
+            }
+          },
+          {
+            "id": "487:2579",
+            "type": "RECTANGLE",
+            "name": "Rectangle 570",
+            "bbox": {
+              "x": 1075,
+              "y": 4607,
+              "width": 485,
+              "height": 574
+            }
+          },
+          {
+            "id": "487:2623",
+            "type": "GROUP",
+            "name": "Group 270990196",
+            "bbox": {
+              "x": 0,
+              "y": 5808,
+              "width": 1600,
+              "height": 900
+            },
+            "children": [
+              {
+                "id": "487:2624",
+                "type": "RECTANGLE",
+                "name": "Rectangle 511",
+                "bbox": {
+                  "x": 0,
+                  "y": 5808,
+                  "width": 800,
+                  "height": 900
+                }
+              },
+              {
+                "id": "487:2625",
+                "type": "RECTANGLE",
+                "name": "Rectangle 530",
+                "bbox": {
+                  "x": 800,
+                  "y": 5808,
+                  "width": 800,
+                  "height": 900
+                }
+              },
+              {
+                "id": "487:2626",
+                "type": "TEXT",
+                "name": "arts & Culture downtown san diego",
+                "bbox": {
+                  "x": 209,
+                  "y": 5850.36,
+                  "width": 383,
+                  "height": 22
+                },
+                "characters": "arts & Culture downtown san diego"
+              },
+              {
+                "id": "487:2627",
+                "type": "FRAME",
+                "name": "Frame 427318461",
+                "bbox": {
+                  "x": 147,
+                  "y": 6152,
+                  "width": 506,
+                  "height": 221
+                },
+                "children": [
+                  {
+                    "id": "487:2628",
+                    "type": "FRAME",
+                    "name": "Frame 427318437",
+                    "bbox": {
+                      "x": 147,
+                      "y": 6152,
+                      "width": 506,
+                      "height": 136
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "487:2631",
+                    "type": "GROUP",
+                    "name": "Button",
+                    "bbox": {
+                      "x": 303,
+                      "y": 6336,
+                      "width": 194,
+                      "height": 37
+                    },
+                    "childCount": 2
+                  }
+                ]
+              },
+              {
+                "id": "487:2634",
+                "type": "FRAME",
+                "name": "Frame 427318460",
+                "bbox": {
+                  "x": 309,
+                  "y": 6660,
+                  "width": 183,
+                  "height": 16
+                },
+                "children": [
+                  {
+                    "id": "487:2635",
+                    "type": "GROUP",
+                    "name": "Group 270989617",
+                    "bbox": {
+                      "x": 309,
+                      "y": 6662,
+                      "width": 28.5,
+                      "height": 12
+                    },
+                    "childCount": 3
+                  },
+                  {
+                    "id": "487:2639",
+                    "type": "FRAME",
+                    "name": "Frame 427318463",
+                    "bbox": {
+                      "x": 356.5,
+                      "y": 6660,
+                      "width": 88,
+                      "height": 16
+                    },
+                    "childCount": 1
+                  },
+                  {
+                    "id": "487:2645",
+                    "type": "GROUP",
+                    "name": "Group 270989618",
+                    "bbox": {
+                      "x": 463.5,
+                      "y": 6662,
+                      "width": 28.5,
+                      "height": 12
+                    },
+                    "childCount": 3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "487:2653",
+            "type": "RECTANGLE",
+            "name": "Rectangle 596",
+            "bbox": {
+              "x": 169,
+              "y": 7036,
+              "width": 744,
+              "height": 524
+            }
+          },
+          {
+            "id": "487:2664",
+            "type": "TEXT",
+            "name": "beyond downtown san diego",
+            "bbox": {
+              "x": 169,
+              "y": 6974,
+              "width": 485,
+              "height": 30
+            },
+            "characters": "beyond downtown san diego"
+          },
+          {
+            "id": "487:2654",
+            "type": "RECTANGLE",
+            "name": "Rectangle 599",
+            "bbox": {
+              "x": 816,
+              "y": 8939,
+              "width": 744,
+              "height": 524
+            }
+          },
+          {
+            "id": "487:2655",
+            "type": "RECTANGLE",
+            "name": "Rectangle 598",
+            "bbox": {
+              "x": 169,
+              "y": 8260,
+              "width": 744,
+              "height": 524
+            }
+          },
+          {
+            "id": "487:2656",
+            "type": "RECTANGLE",
+            "name": "Rectangle 597",
+            "bbox": {
+              "x": 816,
+              "y": 7648,
+              "width": 744,
+              "height": 524
+            }
+          },
+          {
+            "id": "487:2657",
+            "type": "TEXT",
+            "name": "Coronado Beach",
+            "bbox": {
+              "x": 169,
+              "y": 7576,
+              "width": 177,
+              "height": 22
+            },
+            "characters": "Coronado Beach"
+          },
+          {
+            "id": "487:2658",
+            "type": "TEXT",
+            "name": "oceanside",
+            "bbox": {
+              "x": 816,
+              "y": 9479,
+              "width": 703,
+              "height": 22
+            },
+            "characters": "oceanside"
+          },
+          {
+            "id": "487:2659",
+            "type": "TEXT",
+            "name": "Coronado Beach",
+            "bbox": {
+              "x": 169,
+              "y": 8800,
+              "width": 703,
+              "height": 22
+            },
+            "characters": "Coronado Beach"
+          },
+          {
+            "id": "487:2660",
+            "type": "TEXT",
+            "name": "oceanside",
+            "bbox": {
+              "x": 816,
+              "y": 8188,
+              "width": 703,
+              "height": 22
+            },
+            "characters": "oceanside"
+          },
+          {
+            "id": "487:2714",
+            "type": "GROUP",
+            "name": "Group 270990225",
+            "bbox": {
+              "x": -1,
+              "y": 9681,
+              "width": 1602,
+              "height": 11894
+            },
+            "children": [
+              {
+                "id": "487:2713",
+                "type": "GROUP",
+                "name": "Group 270990224",
+                "bbox": {
+                  "x": -1,
+                  "y": 11389,
+                  "width": 1602,
+                  "height": 10186
+                },
+                "children": [
+                  {
+                    "id": "487:2548",
+                    "type": "GROUP",
+                    "name": "Group 270990218",
+                    "bbox": {
+                      "x": 42,
+                      "y": 11389,
+                      "width": 1389,
+                      "height": 2171
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "487:2590",
+                    "type": "GROUP",
+                    "name": "Group 270990221",
+                    "bbox": {
+                      "x": -1,
+                      "y": 13740,
+                      "width": 1602,
+                      "height": 7835
+                    },
+                    "childCount": 5
+                  }
+                ]
+              },
+              {
+                "id": "487:2712",
+                "type": "GROUP",
+                "name": "Group 270990223",
+                "bbox": {
+                  "x": 0,
+                  "y": 9681,
+                  "width": 1600,
+                  "height": 1708
+                },
+                "children": [
+                  {
+                    "id": "487:2692",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 618",
+                    "bbox": {
+                      "x": 0,
+                      "y": 9681,
+                      "width": 1600,
+                      "height": 1708
+                    }
+                  },
+                  {
+                    "id": "487:2681",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 572",
+                    "bbox": {
+                      "x": 40,
+                      "y": 9884,
+                      "width": 744,
+                      "height": 457
+                    }
+                  },
+                  {
+                    "id": "487:2706",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 619",
+                    "bbox": {
+                      "x": 40,
+                      "y": 10553,
+                      "width": 744,
+                      "height": 457
+                    }
+                  },
+                  {
+                    "id": "487:2682",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 573",
+                    "bbox": {
+                      "x": 816,
+                      "y": 9884,
+                      "width": 744,
+                      "height": 457
+                    }
+                  },
+                  {
+                    "id": "487:2707",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 620",
+                    "bbox": {
+                      "x": 816,
+                      "y": 10553,
+                      "width": 744,
+                      "height": 457
+                    }
+                  },
+                  {
+                    "id": "487:2684",
+                    "type": "TEXT",
+                    "name": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,",
+                    "bbox": {
+                      "x": 40,
+                      "y": 10417,
+                      "width": 647,
+                      "height": 66
+                    },
+                    "characters": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,"
+                  },
+                  {
+                    "id": "487:2708",
+                    "type": "TEXT",
+                    "name": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,",
+                    "bbox": {
+                      "x": 40,
+                      "y": 11086,
+                      "width": 647,
+                      "height": 66
+                    },
+                    "characters": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,"
+                  },
+                  {
+                    "id": "487:2685",
+                    "type": "TEXT",
+                    "name": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,",
+                    "bbox": {
+                      "x": 816,
+                      "y": 10417,
+                      "width": 647,
+                      "height": 66
+                    },
+                    "characters": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,"
+                  },
+                  {
+                    "id": "487:2709",
+                    "type": "TEXT",
+                    "name": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,",
+                    "bbox": {
+                      "x": 816,
+                      "y": 11086,
+                      "width": 647,
+                      "height": 66
+                    },
+                    "characters": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,"
+                  },
+                  {
+                    "id": "487:2687",
+                    "type": "TEXT",
+                    "name": "san diego convention center",
+                    "bbox": {
+                      "x": 40,
+                      "y": 10373,
+                      "width": 485,
+                      "height": 22
+                    },
+                    "characters": "san diego convention center"
+                  },
+                  {
+                    "id": "487:2710",
+                    "type": "TEXT",
+                    "name": "san diego convention center",
+                    "bbox": {
+                      "x": 40,
+                      "y": 11042,
+                      "width": 485,
+                      "height": 22
+                    },
+                    "characters": "san diego convention center"
+                  },
+                  {
+                    "id": "487:2688",
+                    "type": "TEXT",
+                    "name": "san diego superior court",
+                    "bbox": {
+                      "x": 816,
+                      "y": 10373,
+                      "width": 485,
+                      "height": 22
+                    },
+                    "characters": "san diego superior court"
+                  },
+                  {
+                    "id": "487:2711",
+                    "type": "TEXT",
+                    "name": "san diego superior court",
+                    "bbox": {
+                      "x": 816,
+                      "y": 11042,
+                      "width": 485,
+                      "height": 22
+                    },
+                    "characters": "san diego superior court"
+                  },
+                  {
+                    "id": "487:2690",
+                    "type": "TEXT",
+                    "name": "corporate & services",
+                    "bbox": {
+                      "x": 613,
+                      "y": 9814,
+                      "width": 374,
+                      "height": 30
+                    },
+                    "characters": "corporate & services"
+                  },
+                  {
+                    "id": "487:2705",
+                    "type": "GROUP",
+                    "name": "Group 270990222",
+                    "bbox": {
+                      "x": 40,
+                      "y": 11222,
+                      "width": 1520,
+                      "height": 65
+                    },
+                    "childCount": 3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "487:2119",
+            "type": "GROUP",
+            "name": "Group 270990042",
+            "bbox": {
+              "x": 452,
+              "y": 4867,
+              "width": 695.57,
+              "height": 881
+            },
+            "children": [
+              {
+                "id": "487:2120",
+                "type": "RECTANGLE",
+                "name": "Rectangle 564",
+                "bbox": {
+                  "x": 1032,
+                  "y": 4867,
+                  "width": 51,
+                  "height": 825
+                }
+              },
+              {
+                "id": "487:2121",
+                "type": "GROUP",
+                "name": "Group 270990041",
+                "bbox": {
+                  "x": 452,
+                  "y": 5692,
+                  "width": 695.57,
+                  "height": 56
+                },
+                "children": [
+                  {
+                    "id": "487:2122",
+                    "type": "VECTOR",
+                    "name": "Vector 25",
+                    "bbox": {
+                      "x": 452,
+                      "y": 5692,
+                      "width": 695.57,
+                      "height": 56
+                    }
+                  },
+                  {
+                    "id": "487:2123",
+                    "type": "GROUP",
+                    "name": "Group 270990040",
+                    "bbox": {
+                      "x": 533.5,
+                      "y": 5709,
+                      "width": 533,
+                      "height": 22
+                    },
+                    "childCount": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "487:2424",
+            "type": "INSTANCE",
+            "name": "guild-nav-full-dark",
+            "bbox": {
+              "x": 40,
+              "y": 26,
+              "width": 1520,
+              "height": 56
+            },
+            "manual": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "487:2428",
+      "name": "NEIGHBORHOOD-OVERLAY",
+      "kind": "side",
+      "width": 1600,
+      "height": 899,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/487-2428.png",
+      "status": "ok",
+      "tree": {
+        "id": "487:2428",
+        "type": "FRAME",
+        "name": "NEIGHBORHOOD-OVERLAY",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 899
+        },
+        "children": [
+          {
+            "id": "487:2429",
+            "type": "GROUP",
+            "name": "Group 270990119",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 1329
+            },
+            "children": [
+              {
+                "id": "487:2430",
+                "type": "VECTOR",
+                "name": "Vector 33",
+                "bbox": {
+                  "x": 0,
+                  "y": 125,
+                  "width": 1600,
+                  "height": 1204
+                }
+              },
+              {
+                "id": "487:2431",
+                "type": "RECTANGLE",
+                "name": "Rectangle 587",
+                "bbox": {
+                  "x": 1036,
+                  "y": 0,
+                  "width": 341,
+                  "height": 125
+                }
+              }
+            ]
+          },
+          {
+            "id": "487:2432",
+            "type": "FRAME",
+            "name": "Frame 270990121",
+            "bbox": {
+              "x": 90,
+              "y": 125,
+              "width": 1421,
+              "height": 1204
+            },
+            "children": [
+              {
+                "id": "487:2434",
+                "type": "TEXT",
+                "name": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
+                "bbox": {
+                  "x": 388,
+                  "y": 339,
+                  "width": 825,
+                  "height": 66
+                },
+                "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+              },
+              {
+                "id": "487:2455",
+                "type": "RECTANGLE",
+                "name": "Rectangle 586",
+                "bbox": {
+                  "x": 90,
+                  "y": 540,
+                  "width": 1421,
+                  "height": 707
+                }
+              },
+              {
+                "id": "487:2720",
+                "type": "RECTANGLE",
+                "name": "Rectangle 621",
+                "bbox": {
+                  "x": 654,
+                  "y": 1252,
+                  "width": 293,
+                  "height": 565
+                }
+              },
+              {
+                "id": "487:2456",
+                "type": "GROUP",
+                "name": "Group 270990021",
+                "bbox": {
+                  "x": 753,
+                  "y": 1227,
+                  "width": 95,
+                  "height": 0
+                },
+                "children": [
+                  {
+                    "id": "487:2457",
+                    "type": "LINE",
+                    "name": "Line 1",
+                    "bbox": {
+                      "x": 781,
+                      "y": 1227,
+                      "width": 39,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "487:2458",
+                    "type": "LINE",
+                    "name": "Line 2",
+                    "bbox": {
+                      "x": 753,
+                      "y": 1227,
+                      "width": 18,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "487:2459",
+                    "type": "LINE",
+                    "name": "Line 3",
+                    "bbox": {
+                      "x": 830,
+                      "y": 1227,
+                      "width": 18,
+                      "height": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "487:2722",
+                "type": "GROUP",
+                "name": "Group 270990081",
+                "bbox": {
+                  "x": 684,
+                  "y": 454,
+                  "width": 234,
+                  "height": 37
+                },
+                "children": [
+                  {
+                    "id": "487:2723",
+                    "type": "VECTOR",
+                    "name": "Vector 25",
+                    "bbox": {
+                      "x": 684,
+                      "y": 454,
+                      "width": 234,
+                      "height": 37
+                    }
+                  },
+                  {
+                    "id": "487:2724",
+                    "type": "TEXT",
+                    "name": "learn more",
+                    "bbox": {
+                      "x": 748,
+                      "y": 462,
+                      "width": 107,
+                      "height": 19
+                    },
+                    "characters": "learn more"
+                  }
+                ]
+              },
+              {
+                "id": "487:2464",
+                "type": "TEXT",
+                "name": "coronado beach",
+                "bbox": {
+                  "x": 609,
+                  "y": 175,
+                  "width": 383,
+                  "height": 40
+                },
+                "characters": "coronado beach"
+              }
+            ]
+          },
+          {
+            "id": "487:2465",
+            "type": "GROUP",
+            "name": "Group 270990121",
+            "bbox": {
+              "x": 40,
+              "y": 192,
+              "width": 17,
+              "height": 17
+            },
+            "children": [
+              {
+                "id": "487:2466",
+                "type": "VECTOR",
+                "name": "Vector",
+                "bbox": {
+                  "x": 40,
+                  "y": 200.5,
+                  "width": 17,
+                  "height": 0
+                }
+              },
+              {
+                "id": "487:2467",
+                "type": "VECTOR",
+                "name": "Vector",
+                "bbox": {
+                  "x": 40,
+                  "y": 192,
+                  "width": 8.5,
+                  "height": 17
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "animationNotes": []
+}

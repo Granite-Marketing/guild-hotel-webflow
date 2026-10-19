@@ -1,0 +1,106 @@
+{
+  "pages": {
+    "arts": {
+      "note": "Full-bleed captioned video ends at 3256; the staggered image and text block on cream starts at 3296.",
+      "splitAt": [
+        3276
+      ]
+    },
+    "blog-collection": {
+      "note": "Hero ends at 900; script intro with tab switcher below is its own section.",
+      "splitAt": [
+        900
+      ]
+    },
+    "blog-indiv": {
+      "note": "Hero ends at 900; article intro block below is its own section.",
+      "splitAt": [
+        900
+      ]
+    },
+    "corporate": {
+      "note": "Dark why-teams-choose grid ends at 3897; the sticky split section (Designed for focused work, then three panels) runs 3963 to 7199 and stays one section.",
+      "splitAt": [
+        3930
+      ]
+    },
+    "dining-collection": {
+      "note": "Script intro ends at 1598; the framed venue image with tab pill bar starts below it.",
+      "splitAt": [
+        1717
+      ]
+    },
+    "dining-zuma": {
+      "note": "Dress code and hours block ends at 2405; the Explore the Space image and text block starts at 2492, as on the other dining pages.",
+      "splitAt": [
+        2449
+      ]
+    },
+    "gallery": {
+      "note": "Hero ends at 900; the filterable image grid starts at 924.",
+      "splitAt": [
+        912
+      ]
+    },
+    "happenings-collection": {
+      "note": "Hero ends at 900; script intro with tab switcher below is its own section.",
+      "splitAt": [
+        900
+      ]
+    },
+    "happenings-indiv": {
+      "note": "Hero ends at 900; article intro block below is its own section.",
+      "splitAt": [
+        900
+      ]
+    },
+    "legal": {
+      "note": "Dark why-teams-choose grid ends at 3897; the sticky split section (Designed for focused work, then three panels) runs 3963 to 7199 and stays one section.",
+      "splitAt": [
+        3930
+      ]
+    },
+    "meetings-collection": {
+      "note": "Map ends at 8085; the Key Features of Our Spaces list runs 8085 to 11267 as one section.",
+      "splitAt": [
+        8085
+      ],
+      "mergeRanges": [
+        [
+          8085,
+          11270
+        ]
+      ]
+    },
+    "neighborhood": {
+      "note": "Beyond Downtown San Diego is one staggered grid from 6974 to 9501.",
+      "mergeRanges": [
+        [
+          6900,
+          9600
+        ]
+      ]
+    },
+    "press": {
+      "note": "Hero ends at 900; script intro with tab switcher below is its own section.",
+      "splitAt": [
+        900
+      ]
+    },
+    "rooms-individual": {
+      "note": "Full-bleed captioned image ends at 3568; the scattered image and text block on cream starts at 3608.",
+      "splitAt": [
+        3588
+      ]
+    },
+    "history": {
+      "mergeRanges": [
+        [
+          4413,
+          14503
+        ]
+      ],
+      "note": "Sections 05 to 13 are one sticky-year scroll timeline (see the History-Animation-1 note); vision review found it cut into nine fragments."
+    }
+  }
+}

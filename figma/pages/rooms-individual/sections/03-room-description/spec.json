@@ -1,0 +1,258 @@
+{
+  "pageSlug": "rooms-individual",
+  "index": 3,
+  "slug": "room-description",
+  "laneHint": null,
+  "frameId": "406:3458",
+  "bbox": {
+    "x": 0,
+    "y": 1466,
+    "width": 1600,
+    "height": 305
+  },
+  "crop": {
+    "y0": 1385.97,
+    "y1": 1836
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "410:5489",
+      "characters": "room description",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 80.03,
+        "width": 263,
+        "height": 29
+      }
+    },
+    {
+      "id": "410:5488",
+      "characters": "Vivamus vestibulum hendrerit ligula id euismod. Nunc ac dolor id urna egestas mollis in ac purus. Nunc fermentum massa vel scelerisque ultricies.Nulla id facilisis ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 141.03,
+        "width": 410,
+        "height": 118
+      }
+    },
+    {
+      "id": "410:5491",
+      "characters": "1 1 Queen Bed",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 816,
+        "y": 141.03,
+        "width": 615,
+        "height": 14
+      }
+    },
+    {
+      "id": "410:5493",
+      "characters": "2 2 Guests",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 816,
+        "y": 187.03,
+        "width": 615,
+        "height": 14
+      }
+    },
+    {
+      "id": "410:5495",
+      "characters": "3 180sqft / 16sqm — 206sqft / 19sqm",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 816,
+        "y": 233.03,
+        "width": 615,
+        "height": 14
+      }
+    },
+    {
+      "id": "410:5497",
+      "characters": "4 Mauris congue nibh diam, eu iaculis ligula tincidunt vel",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 816,
+        "y": 279.03,
+        "width": 615,
+        "height": 14
+      }
+    },
+    {
+      "id": "410:5506",
+      "characters": "view floorplan",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 32,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 295.03,
+        "width": 144,
+        "height": 32
+      }
+    },
+    {
+      "id": "410:5500",
+      "characters": "5 Morbi suscipit est elit, ut convallis orci dignissim placerat",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 816,
+        "y": 325.03,
+        "width": 615,
+        "height": 14
+      }
+    },
+    {
+      "id": "410:5501",
+      "characters": "6 Donec elementum risus enim, ut aliquet velit volutpat ut",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 816,
+        "y": 371.03,
+        "width": 615,
+        "height": 14
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 9
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "410:5489",
+      "type": "TEXT",
+      "name": "room description",
+      "bbox": {
+        "x": 169,
+        "y": 80.03,
+        "width": 263,
+        "height": 29
+      }
+    },
+    {
+      "id": "410:5488",
+      "type": "TEXT",
+      "name": "Vivamus vestibulum hendrerit ligula id euismod. Nunc ac dolor id urna egestas mollis in ac purus. Nunc fermentum massa vel scelerisque ultricies.Nulla id facilisis ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+      "bbox": {
+        "x": 169,
+        "y": 141.03,
+        "width": 410,
+        "height": 118
+      }
+    },
+    {
+      "id": "410:5503",
+      "type": "FRAME",
+      "name": "Frame 427318672",
+      "bbox": {
+        "x": 816,
+        "y": 141.03,
+        "width": 647,
+        "height": 244
+      }
+    },
+    {
+      "id": "410:5506",
+      "type": "TEXT",
+      "name": "view floorplan",
+      "bbox": {
+        "x": 169,
+        "y": 295.03,
+        "width": 144,
+        "height": 32
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

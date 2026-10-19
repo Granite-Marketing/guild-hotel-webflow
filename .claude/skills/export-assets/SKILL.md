@@ -41,7 +41,7 @@ Accept one of:
 ### Step 1: Export from Figma
 
 ```bash
-node scripts/api/figma/export-assets.js <fileKey> <nodeId>
+node scripts/api/figma/export-assets.cjs <fileKey> <nodeId>
 ```
 
 This:

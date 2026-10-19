@@ -1,0 +1,242 @@
+{
+  "pageSlug": "legal",
+  "index": 14,
+  "slug": "faqs",
+  "laneHint": null,
+  "frameId": "318:836",
+  "bbox": {
+    "x": 0,
+    "y": 18067,
+    "width": 1600,
+    "height": 1195
+  },
+  "crop": {
+    "y0": 18066.77,
+    "y1": 19262
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "318:847",
+      "characters": "faqs",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 775,
+        "y": 194.23,
+        "width": 50,
+        "height": 22
+      }
+    },
+    {
+      "id": "318:848",
+      "characters": "your questions, answered",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 499,
+        "y": 235.23,
+        "width": 603,
+        "height": 40
+      }
+    },
+    {
+      "id": "318:849",
+      "characters": "How many guests can stay in this room?",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 323,
+        "y": 398.23,
+        "width": 588,
+        "height": 29
+      }
+    },
+    {
+      "id": "318:852",
+      "characters": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 323,
+        "y": 452.23,
+        "width": 955,
+        "height": 66
+      }
+    },
+    {
+      "id": "318:855",
+      "characters": "Can I request a crib or an extra bed?",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 323,
+        "y": 605.23,
+        "width": 554,
+        "height": 29
+      }
+    },
+    {
+      "id": "318:860",
+      "characters": "Are connecting rooms available?",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 323,
+        "y": 686.23,
+        "width": 494,
+        "height": 29
+      }
+    },
+    {
+      "id": "318:865",
+      "characters": "Is an accessible version of this room available?",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 323,
+        "y": 767.23,
+        "width": 722,
+        "height": 29
+      }
+    },
+    {
+      "id": "318:870",
+      "characters": "Will my room look exactly like the photos?",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 323,
+        "y": 848.23,
+        "width": 638,
+        "height": 29
+      }
+    },
+    {
+      "id": "318:875",
+      "characters": "What amenities are included with my stay?",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 323,
+        "y": 929.23,
+        "width": 619,
+        "height": 29
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 21
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 2
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "318:844",
+      "type": "GROUP",
+      "name": "Group 270990026",
+      "bbox": {
+        "x": 0,
+        "y": 0.23,
+        "width": 1600,
+        "height": 1195
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "319:1357",
+      "type": "RECTANGLE",
+      "name": "Rectangle 583",
+      "bbox": {
+        "x": 1,
+        "y": -10867.77,
+        "width": 1599,
+        "height": 11370
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

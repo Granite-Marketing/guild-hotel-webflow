@@ -1,0 +1,288 @@
+{
+  "pageSlug": "neighborhood",
+  "index": 11,
+  "slug": "neighborhood-gallery",
+  "laneHint": null,
+  "frameId": "487:2080",
+  "bbox": {
+    "x": 0,
+    "y": 14910,
+    "width": 1600,
+    "height": 2891.53
+  },
+  "crop": {
+    "y0": 14910,
+    "y1": 17801.77
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "487:2422",
+      "characters": "neighborhood gallery",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 40,
+        "y": 40,
+        "width": 332,
+        "height": 29
+      }
+    },
+    {
+      "id": "487:2418",
+      "characters": "1 Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 924,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "487:2419",
+      "characters": "2 Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 1818,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "487:2421",
+      "characters": "3 Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 840,
+        "y": 1818,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "487:2420",
+      "characters": "4  Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 2814,
+        "width": 603,
+        "height": 38
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 4
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 4
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "487:2410",
+      "type": "RECTANGLE",
+      "name": "Rectangle 504",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 994.53
+      }
+    },
+    {
+      "id": "487:2422",
+      "type": "TEXT",
+      "name": "neighborhood gallery",
+      "bbox": {
+        "x": 40,
+        "y": 40,
+        "width": 332,
+        "height": 29
+      }
+    },
+    {
+      "id": "487:2418",
+      "type": "TEXT",
+      "name": "1 Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+      "bbox": {
+        "x": 40,
+        "y": 924,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "487:2412",
+      "type": "GROUP",
+      "name": "Group 270989688",
+      "bbox": {
+        "x": 0,
+        "y": 995.53,
+        "width": 799,
+        "height": 900
+      }
+    },
+    {
+      "id": "487:2415",
+      "type": "GROUP",
+      "name": "Group 270989703",
+      "bbox": {
+        "x": 800,
+        "y": 995.53,
+        "width": 800,
+        "height": 900
+      }
+    },
+    {
+      "id": "487:2419",
+      "type": "TEXT",
+      "name": "2 Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+      "bbox": {
+        "x": 40,
+        "y": 1818,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "487:2421",
+      "type": "TEXT",
+      "name": "3 Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+      "bbox": {
+        "x": 840,
+        "y": 1818,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "487:2411",
+      "type": "RECTANGLE",
+      "name": "Rectangle 561",
+      "bbox": {
+        "x": 0,
+        "y": 1897,
+        "width": 1600,
+        "height": 994.53
+      }
+    },
+    {
+      "id": "487:2420",
+      "type": "TEXT",
+      "name": "4 Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.",
+      "bbox": {
+        "x": 40,
+        "y": 2814,
+        "width": 603,
+        "height": 38
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "487:2714",
+      "type": "GROUP",
+      "name": "Group 270990225",
+      "bbox": {
+        "x": -1,
+        "y": -5229,
+        "width": 1602,
+        "height": 11894
+      }
+    },
+    {
+      "id": "487:2713",
+      "type": "GROUP",
+      "name": "Group 270990224",
+      "bbox": {
+        "x": -1,
+        "y": -3521,
+        "width": 1602,
+        "height": 10186
+      }
+    },
+    {
+      "id": "487:2590",
+      "type": "GROUP",
+      "name": "Group 270990221",
+      "bbox": {
+        "x": -1,
+        "y": -1170,
+        "width": 1602,
+        "height": 7835
+      }
+    },
+    {
+      "id": "487:2409",
+      "type": "GROUP",
+      "name": "Group 270990046",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 2891.53
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

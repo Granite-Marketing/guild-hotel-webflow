@@ -1,0 +1,302 @@
+{
+  "pageSlug": "meetings-collection",
+  "index": 9,
+  "slug": "meetings-events-gallery",
+  "laneHint": null,
+  "frameId": "288:4019",
+  "bbox": {
+    "x": 0,
+    "y": 11267,
+    "width": 1600,
+    "height": 2891.53
+  },
+  "crop": {
+    "y0": 11267,
+    "y1": 14158.77
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "377:462",
+      "characters": "MEETINGS & EVENTS gallery",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 40,
+        "y": 40,
+        "width": 387,
+        "height": 29
+      }
+    },
+    {
+      "id": "288:4026",
+      "characters": "A Landmark Reimagined",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 533,
+        "y": 809,
+        "width": 535,
+        "height": 40
+      }
+    },
+    {
+      "id": "377:458",
+      "characters": "1 Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 924,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "377:459",
+      "characters": "2 Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 1818,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "377:461",
+      "characters": "3 Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 840,
+        "y": 1818,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "377:460",
+      "characters": "4  Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 2814,
+        "width": 603,
+        "height": 38
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 4
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 4
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "377:450",
+      "type": "RECTANGLE",
+      "name": "Rectangle 504",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 994.53
+      }
+    },
+    {
+      "id": "377:462",
+      "type": "TEXT",
+      "name": "MEETINGS & EVENTS gallery",
+      "bbox": {
+        "x": 40,
+        "y": 40,
+        "width": 387,
+        "height": 29
+      }
+    },
+    {
+      "id": "288:4026",
+      "type": "TEXT",
+      "name": "A Landmark Reimagined",
+      "bbox": {
+        "x": 533,
+        "y": 809,
+        "width": 535,
+        "height": 40
+      }
+    },
+    {
+      "id": "377:458",
+      "type": "TEXT",
+      "name": "1 Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+      "bbox": {
+        "x": 40,
+        "y": 924,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "377:452",
+      "type": "GROUP",
+      "name": "Group 270989688",
+      "bbox": {
+        "x": 0,
+        "y": 995.53,
+        "width": 799,
+        "height": 900
+      }
+    },
+    {
+      "id": "377:455",
+      "type": "GROUP",
+      "name": "Group 270989703",
+      "bbox": {
+        "x": 800,
+        "y": 995.53,
+        "width": 800,
+        "height": 900
+      }
+    },
+    {
+      "id": "377:459",
+      "type": "TEXT",
+      "name": "2 Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+      "bbox": {
+        "x": 40,
+        "y": 1818,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "377:461",
+      "type": "TEXT",
+      "name": "3 Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+      "bbox": {
+        "x": 840,
+        "y": 1818,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "377:451",
+      "type": "RECTANGLE",
+      "name": "Rectangle 561",
+      "bbox": {
+        "x": 0,
+        "y": 1897,
+        "width": 1600,
+        "height": 994.53
+      }
+    },
+    {
+      "id": "377:460",
+      "type": "TEXT",
+      "name": "4 Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.",
+      "bbox": {
+        "x": 40,
+        "y": 2814,
+        "width": 603,
+        "height": 38
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "377:525",
+      "type": "RECTANGLE",
+      "name": "Rectangle 590",
+      "bbox": {
+        "x": 0,
+        "y": -3182,
+        "width": 1600,
+        "height": 4375
+      }
+    },
+    {
+      "id": "377:449",
+      "type": "GROUP",
+      "name": "Group 270990046",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 2891.53
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

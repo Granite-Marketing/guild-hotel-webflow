@@ -1,0 +1,135 @@
+{
+  "pageSlug": "rooms-individual",
+  "index": 1,
+  "slug": "deluxe-king-suite",
+  "laneHint": null,
+  "frameId": "406:3458",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 900
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "406:3465",
+      "characters": "deluxe king suite",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 603,
+        "y": 740,
+        "width": 395,
+        "height": 40
+      }
+    },
+    {
+      "id": "406:3463",
+      "characters": "Our rooms and suites pair historic character with generous, modern comfort throughout.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 22,
+      "fontWeight": 400,
+      "lineHeightPx": 35.2,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 420,
+        "y": 818,
+        "width": 761,
+        "height": 35
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [
+    {
+      "nodeId": "406:4586",
+      "name": "guild-nav-full-dark",
+      "reason": "nav component instance: manual lane, bbox only",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "406:3460",
+      "type": "RECTANGLE",
+      "name": "Rectangle 1",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "406:4586",
+      "type": "INSTANCE",
+      "name": "guild-nav-full-dark",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    },
+    {
+      "id": "406:3465",
+      "type": "TEXT",
+      "name": "deluxe king suite",
+      "bbox": {
+        "x": 603,
+        "y": 740,
+        "width": 395,
+        "height": 40
+      }
+    },
+    {
+      "id": "406:3463",
+      "type": "TEXT",
+      "name": "Our rooms and suites pair historic character with generous, modern comfort throughout.",
+      "bbox": {
+        "x": 420,
+        "y": 818,
+        "width": 761,
+        "height": 35
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

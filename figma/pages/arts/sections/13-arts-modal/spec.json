@@ -1,0 +1,206 @@
+{
+  "pageSlug": "arts",
+  "index": 13,
+  "slug": "arts-modal",
+  "laneHint": "manual",
+  "frameId": "477:1352",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 900
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "477:1365",
+      "characters": "back",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 930,
+        "y": 38,
+        "width": 44,
+        "height": 19
+      }
+    },
+    {
+      "id": "477:1372",
+      "characters": "‘oceano’",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 913,
+        "y": 521,
+        "width": 518,
+        "height": 30
+      }
+    },
+    {
+      "id": "477:1355",
+      "characters": "by eva struble",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 913,
+        "y": 572,
+        "width": 137,
+        "height": 19
+      }
+    },
+    {
+      "id": "477:1378",
+      "characters": "2024 | 48 x 60 in\nOil and acrylic on canvas",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1172,
+        "y": 575,
+        "width": 356,
+        "height": 38
+      }
+    },
+    {
+      "id": "477:1356",
+      "characters": "Eva’s work unfolds through layered color, texture, and abstraction, conjuring the atmospheric qualities of a coastal landscape without settling into a singular representation of place. The work speaks to the deep relationship between landscape and the daily life of Southern California, where the natural environment is not simply a backdrop, but integral of how the region is experienced, remembered, and understood.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 913,
+        "y": 678,
+        "width": 550,
+        "height": 170
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 5
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "477:1370",
+      "name": "Rectangle 2",
+      "imageRef": "5f3f1ae69aebd49c587ab8c561fe30bb80ccc09e",
+      "bbox": {
+        "x": 71,
+        "y": 52,
+        "width": 681,
+        "height": 796
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "477:1353",
+      "type": "RECTANGLE",
+      "name": "Rectangle 1",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 816,
+        "height": 900
+      }
+    },
+    {
+      "id": "477:1370",
+      "type": "RECTANGLE",
+      "name": "Rectangle 2",
+      "bbox": {
+        "x": 71,
+        "y": 52,
+        "width": 681,
+        "height": 796
+      }
+    },
+    {
+      "id": "477:1383",
+      "type": "GROUP",
+      "name": "Group 270990203",
+      "bbox": {
+        "x": 913,
+        "y": 38,
+        "width": 61,
+        "height": 19
+      }
+    },
+    {
+      "id": "477:1356",
+      "type": "TEXT",
+      "name": "Eva’s work unfolds through layered color, texture, and abstraction, conjuring the atmospheric qualities of a coastal landscape without settling into a singular representation of place. The work speaks to the deep relationship between landscape and the daily life of Southern California, where the natural environment is not simply a backdrop, but integral of how the region is experienced, remembered, and understood.",
+      "bbox": {
+        "x": 913,
+        "y": 678,
+        "width": 550,
+        "height": 170
+      }
+    },
+    {
+      "id": "477:1390",
+      "type": "GROUP",
+      "name": "Group 270990204",
+      "bbox": {
+        "x": 913,
+        "y": 521,
+        "width": 615,
+        "height": 92
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "side"
+}

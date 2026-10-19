@@ -1,0 +1,142 @@
+{
+  "pageSlug": "arts",
+  "index": 1,
+  "slug": "art-collection",
+  "laneHint": null,
+  "frameId": "477:1069",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 972.06
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "477:1075",
+      "characters": "art collection",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 630,
+        "y": 740,
+        "width": 341,
+        "height": 40
+      }
+    },
+    {
+      "id": "477:1074",
+      "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 22,
+      "fontWeight": 400,
+      "lineHeightPx": 35.2,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 503,
+        "y": 818,
+        "width": 595,
+        "height": 35
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 2
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "477:1071",
+      "name": "Rectangle 1",
+      "imageRef": "aebbcac2114e788ebc0ded5eee7b3da87ef37bc6",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      }
+    }
+  ],
+  "manualOverlays": [
+    {
+      "nodeId": "477:1283",
+      "name": "guild-nav-full-dark",
+      "reason": "nav component instance: manual lane, bbox only",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "477:1071",
+      "type": "RECTANGLE",
+      "name": "Rectangle 1",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "477:1283",
+      "type": "INSTANCE",
+      "name": "guild-nav-full-dark",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    },
+    {
+      "id": "477:1075",
+      "type": "TEXT",
+      "name": "art collection",
+      "bbox": {
+        "x": 630,
+        "y": 740,
+        "width": 341,
+        "height": 40
+      }
+    },
+    {
+      "id": "477:1074",
+      "type": "TEXT",
+      "name": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+      "bbox": {
+        "x": 503,
+        "y": 818,
+        "width": 595,
+        "height": 35
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

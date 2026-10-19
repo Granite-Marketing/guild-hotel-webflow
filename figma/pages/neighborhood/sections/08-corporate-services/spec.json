@@ -1,0 +1,287 @@
+{
+  "pageSlug": "neighborhood",
+  "index": 8,
+  "slug": "corporate-services",
+  "laneHint": null,
+  "frameId": "487:2080",
+  "bbox": {
+    "x": 0,
+    "y": 9681,
+    "width": 1600,
+    "height": 1708
+  },
+  "crop": {
+    "y0": 9591,
+    "y1": 11389
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "487:2690",
+      "characters": "corporate & services",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 613,
+        "y": 223,
+        "width": 374,
+        "height": 30
+      }
+    },
+    {
+      "id": "487:2687",
+      "characters": "san diego convention center",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 782,
+        "width": 485,
+        "height": 22
+      }
+    },
+    {
+      "id": "487:2688",
+      "characters": "san diego superior court",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 816,
+        "y": 782,
+        "width": 485,
+        "height": 22
+      }
+    },
+    {
+      "id": "487:2684",
+      "characters": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 826,
+        "width": 647,
+        "height": 66
+      }
+    },
+    {
+      "id": "487:2685",
+      "characters": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 816,
+        "y": 826,
+        "width": 647,
+        "height": 66
+      }
+    },
+    {
+      "id": "487:2710",
+      "characters": "san diego convention center",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 1451,
+        "width": 485,
+        "height": 22
+      }
+    },
+    {
+      "id": "487:2711",
+      "characters": "san diego superior court",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 816,
+        "y": 1451,
+        "width": 485,
+        "height": 22
+      }
+    },
+    {
+      "id": "487:2708",
+      "characters": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 1495,
+        "width": 647,
+        "height": 66
+      }
+    },
+    {
+      "id": "487:2709",
+      "characters": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 816,
+        "y": 1495,
+        "width": 647,
+        "height": 66
+      }
+    },
+    {
+      "id": "487:2701",
+      "characters": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 1658,
+        "width": 1094,
+        "height": 38
+      }
+    },
+    {
+      "id": "487:2699",
+      "characters": "corporate & legal packages",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#4A1217",
+      "bbox": {
+        "x": 1280,
+        "y": 1667,
+        "width": 266,
+        "height": 19
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 11
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 4
+    },
+    {
+      "hex": "#4A1217",
+      "opacity": 1,
+      "count": 2
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "487:2712",
+      "type": "GROUP",
+      "name": "Group 270990223",
+      "bbox": {
+        "x": 0,
+        "y": 90,
+        "width": 1600,
+        "height": 1708
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "487:2714",
+      "type": "GROUP",
+      "name": "Group 270990225",
+      "bbox": {
+        "x": -1,
+        "y": 90,
+        "width": 1602,
+        "height": 11894
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

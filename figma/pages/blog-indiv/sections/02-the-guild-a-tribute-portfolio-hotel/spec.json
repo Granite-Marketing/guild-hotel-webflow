@@ -1,0 +1,160 @@
+{
+  "pageSlug": "blog-indiv",
+  "index": 2,
+  "slug": "the-guild-a-tribute-portfolio-hotel",
+  "laneHint": null,
+  "frameId": "2034:1407",
+  "bbox": {
+    "x": 0,
+    "y": 900,
+    "width": 1600,
+    "height": 384
+  },
+  "crop": {
+    "y0": 900,
+    "y1": 1359
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "2034:1558",
+      "characters": "The Guild, a Tribute Portfolio Hotel",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 428,
+        "y": 150,
+        "width": 450,
+        "height": 24
+      }
+    },
+    {
+      "id": "2034:1559",
+      "characters": "Nullam euismod finibus suscipit. Quisque dignissim est velit, nec vestibulum purus fermentum in. Donec placerat tristique blandit. Vivamus semper est nec massa vulputate, aliquet sodales quam dapibus. Curabitur dapibus mauris tellus, molestie ultrices ex eleifend gravida. Nulla maximus turpis in sapien maximus, eu aliquet augue vulputate. Donec viverra turpis nec nibh vestibulum, at cursus augue egestas. Curabitur accumsan vehicula nisi eleifend varius. Maecenas ut bibendum augue, posuere blandit nulla. Phasellus in diam id metus facilisis venenatis quis vel elit. Integer sodales justo in velit cursus, mollis commodo ex eleifend.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 428,
+        "y": 214,
+        "width": 744,
+        "height": 170
+      }
+    },
+    {
+      "id": "2034:1575",
+      "characters": "learn more",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 738,
+        "y": 335,
+        "width": 121,
+        "height": 22
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#4A1217",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "2034:1558",
+      "type": "TEXT",
+      "name": "The Guild, a Tribute Portfolio Hotel",
+      "bbox": {
+        "x": 428,
+        "y": 150,
+        "width": 450,
+        "height": 24
+      }
+    },
+    {
+      "id": "2034:1559",
+      "type": "TEXT",
+      "name": "Nullam euismod finibus suscipit. Quisque dignissim est velit, nec vestibulum purus fermentum in. Donec placerat tristique blandit. Vivamus semper est nec massa vulputate, aliquet sodales quam dapibus. Curabitur dapibus mauris tellus, molestie ultrices ex eleifend gravida. Nulla maximus turpis in sapien maximus, eu aliquet augue vulputate. Donec viverra turpis nec nibh vestibulum, at cursus augue egestas. Curabitur accumsan vehicula nisi eleifend varius. Maecenas ut bibendum augue, posuere blandit nulla. Phasellus in diam id metus facilisis venenatis quis vel elit. Integer sodales justo in velit cursus, mollis commodo ex eleifend.",
+      "bbox": {
+        "x": 428,
+        "y": 214,
+        "width": 744,
+        "height": 170
+      }
+    },
+    {
+      "id": "2034:1571",
+      "type": "GROUP",
+      "name": "Group 270990041",
+      "bbox": {
+        "x": 702,
+        "y": 320,
+        "width": 195.57,
+        "height": 56
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "2034:1569",
+      "type": "GROUP",
+      "name": "Group 270990042",
+      "bbox": {
+        "x": 702,
+        "y": -505,
+        "width": 195.57,
+        "height": 881
+      }
+    },
+    {
+      "id": "2034:1570",
+      "type": "RECTANGLE",
+      "name": "Rectangle 564",
+      "bbox": {
+        "x": 775,
+        "y": -505,
+        "width": 51,
+        "height": 825
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

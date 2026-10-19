@@ -1,0 +1,107 @@
+{
+  "pageSlug": "dining-collection",
+  "index": 6,
+  "slug": "our-new-pool-serves-up-san",
+  "laneHint": null,
+  "frameId": "262:53",
+  "bbox": {
+    "x": 0,
+    "y": 4636,
+    "width": 1600,
+    "height": 988
+  },
+  "crop": {
+    "y0": 4618,
+    "y1": 5642
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "263:1296",
+      "characters": "Our new pool serves up San Diego’s bright sunshine, cool drinks and warm people.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 22,
+      "fontWeight": 400,
+      "lineHeightPx": 35.2,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 442,
+        "y": 598,
+        "width": 717,
+        "height": 35
+      }
+    },
+    {
+      "id": "263:1299",
+      "characters": "DISCOVER MORE",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 728,
+        "y": 684,
+        "width": 144,
+        "height": 16
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 4
+    },
+    {
+      "hex": "#000000",
+      "opacity": 0.3,
+      "count": 1
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "263:1295",
+      "name": "Vector 32",
+      "imageRef": "b0a187c5d40b728dda8eba29e50d1c301b9f1a68",
+      "bbox": {
+        "x": 39.75,
+        "y": 18,
+        "width": 1520,
+        "height": 988
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "433:5748",
+      "type": "GROUP",
+      "name": "Group 270990189",
+      "bbox": {
+        "x": 39.75,
+        "y": 18,
+        "width": 1520,
+        "height": 988
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

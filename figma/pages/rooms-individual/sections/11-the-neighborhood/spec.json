@@ -1,0 +1,142 @@
+{
+  "pageSlug": "rooms-individual",
+  "index": 11,
+  "slug": "the-neighborhood",
+  "laneHint": null,
+  "frameId": "406:3458",
+  "bbox": {
+    "x": 0,
+    "y": 10592,
+    "width": 1600,
+    "height": 1095.81
+  },
+  "crop": {
+    "y0": 10425.5,
+    "y1": 11804.17
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "408:5479",
+      "characters": "The Neighborhood",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 80,
+      "fontWeight": 400,
+      "lineHeightPx": 80,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#262118",
+      "bbox": {
+        "x": 180.08,
+        "y": 166.5,
+        "width": 563.7,
+        "height": 155.13
+      }
+    },
+    {
+      "id": "408:5480",
+      "characters": "We’ve lived here for a century; let us show you around.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "RIGHT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 1019.08,
+        "y": 194.5,
+        "width": 425,
+        "height": 14
+      }
+    },
+    {
+      "id": "408:5483",
+      "characters": "DISCOVER MORE",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": null,
+      "bbox": {
+        "x": 1044.08,
+        "y": 245.5,
+        "width": 144,
+        "height": 16
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#A48E59",
+      "opacity": 1,
+      "count": 516
+    },
+    {
+      "hex": "#FBF5DE",
+      "opacity": 1,
+      "count": 169
+    },
+    {
+      "hex": "#CB3629",
+      "opacity": 1,
+      "count": 33
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 18
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "408:4742",
+      "type": "GROUP",
+      "name": "Group 270990158",
+      "bbox": {
+        "x": 155,
+        "y": 166.5,
+        "width": 1291.07,
+        "height": 1095.81
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "406:3557",
+      "type": "RECTANGLE",
+      "name": "Rectangle 583",
+      "bbox": {
+        "x": 1,
+        "y": -3226.5,
+        "width": 1599,
+        "height": 11370
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

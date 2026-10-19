@@ -1,0 +1,248 @@
+{
+  "pageSlug": "gallery",
+  "index": 2,
+  "slug": "all",
+  "laneHint": null,
+  "frameId": "477:609",
+  "bbox": {
+    "x": 0,
+    "y": 912,
+    "width": 1600,
+    "height": 864
+  },
+  "crop": {
+    "y0": 912,
+    "y1": 1788
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "477:745",
+      "characters": "all",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 501,
+        "y": 591,
+        "width": 29,
+        "height": 19
+      }
+    },
+    {
+      "id": "477:1032",
+      "characters": "design",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 554,
+        "y": 591,
+        "width": 63,
+        "height": 19
+      }
+    },
+    {
+      "id": "477:746",
+      "characters": "wellness",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 641,
+        "y": 591,
+        "width": 85,
+        "height": 19
+      }
+    },
+    {
+      "id": "477:747",
+      "characters": "dining",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 750,
+        "y": 591,
+        "width": 60,
+        "height": 19
+      }
+    },
+    {
+      "id": "477:1012",
+      "characters": "rooms",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 834,
+        "y": 591,
+        "width": 62,
+        "height": 19
+      }
+    },
+    {
+      "id": "477:1014",
+      "characters": "amenities",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 920,
+        "y": 591,
+        "width": 89,
+        "height": 19
+      }
+    },
+    {
+      "id": "477:1023",
+      "characters": "guests",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 1033,
+        "y": 591,
+        "width": 65,
+        "height": 19
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 10
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 7
+    },
+    {
+      "hex": "#4A1217",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "477:1064",
+      "type": "FRAME",
+      "name": "Frame 270990200",
+      "bbox": {
+        "x": -73,
+        "y": 12,
+        "width": 1747,
+        "height": 414
+      }
+    },
+    {
+      "id": "477:1065",
+      "type": "FRAME",
+      "name": "Frame 427318675",
+      "bbox": {
+        "x": -219,
+        "y": 450,
+        "width": 2134,
+        "height": 414
+      }
+    },
+    {
+      "id": "477:741",
+      "type": "GROUP",
+      "name": "Group 270990041",
+      "bbox": {
+        "x": 467,
+        "y": 574,
+        "width": 665.57,
+        "height": 56
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "477:739",
+      "type": "GROUP",
+      "name": "Group 270990042",
+      "bbox": {
+        "x": 467,
+        "y": -251,
+        "width": 665.57,
+        "height": 881
+      }
+    },
+    {
+      "id": "477:740",
+      "type": "RECTANGLE",
+      "name": "Rectangle 564",
+      "bbox": {
+        "x": 836,
+        "y": -251,
+        "width": 51,
+        "height": 825
+      }
+    }
+  ],
+  "animationNotes": [
+    {
+      "id": "477:1025",
+      "name": "Gallery-Animation",
+      "texts": [
+        "one of these 3 gallery types - for adaptability, maybe the middle one is best. As we need to have a filter as well for the sticky subnav tags"
+      ]
+    }
+  ],
+  "source": "page"
+}

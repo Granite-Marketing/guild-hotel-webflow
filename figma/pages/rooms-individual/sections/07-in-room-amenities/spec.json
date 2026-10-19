@@ -1,0 +1,250 @@
+{
+  "pageSlug": "rooms-individual",
+  "index": 7,
+  "slug": "in-room-amenities",
+  "laneHint": null,
+  "frameId": "406:3458",
+  "bbox": {
+    "x": 0,
+    "y": 4574,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 4506.5,
+    "y1": 5494
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "408:4688",
+      "characters": "in room amenities",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 647,
+        "y": 286.5,
+        "width": 306,
+        "height": 30
+      }
+    },
+    {
+      "id": "408:4722",
+      "characters": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 538,
+        "y": 348.5,
+        "width": 524,
+        "height": 66
+      }
+    },
+    {
+      "id": "408:4696",
+      "characters": "le labo santal 33\nbath amenities",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 96,
+        "y": 546.5,
+        "width": 289,
+        "height": 38
+      }
+    },
+    {
+      "id": "408:4710",
+      "characters": "hair dryer\n(flat iron upon request)",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 842,
+        "y": 546.5,
+        "width": 289,
+        "height": 38
+      }
+    },
+    {
+      "id": "408:4717",
+      "characters": "music player\n(via bluetooth tv)",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 1215,
+        "y": 546.5,
+        "width": 289,
+        "height": 38
+      }
+    },
+    {
+      "id": "408:4703",
+      "characters": "curated local art",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 469,
+        "y": 556.5,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "408:4699",
+      "characters": "iron & board\n(steamer upon request)",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 96,
+        "y": 669.5,
+        "width": 289,
+        "height": 38
+      }
+    },
+    {
+      "id": "408:4713",
+      "characters": "keurig coffee machine\n(upon request)",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 842,
+        "y": 669.5,
+        "width": 289,
+        "height": 38
+      }
+    },
+    {
+      "id": "408:4706",
+      "characters": "laptop safe",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 469,
+        "y": 679.5,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "408:4720",
+      "characters": "high speed wifi",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 1215,
+        "y": 679.5,
+        "width": 289,
+        "height": 19
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 10
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "408:5486",
+      "type": "GROUP",
+      "name": "Group 270990175",
+      "bbox": {
+        "x": 1,
+        "y": 67.5,
+        "width": 1600,
+        "height": 900
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

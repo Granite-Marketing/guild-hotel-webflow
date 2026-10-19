@@ -1,0 +1,212 @@
+{
+  "pageSlug": "static-template",
+  "index": 1,
+  "slug": "privacy-policy",
+  "laneHint": null,
+  "frameId": "484:1410",
+  "bbox": {
+    "x": 0,
+    "y": 26,
+    "width": 1600,
+    "height": 1601
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 1761.5
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "484:1733",
+      "characters": "privacy policy",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 388,
+        "width": 321,
+        "height": 40
+      }
+    },
+    {
+      "id": "484:1732",
+      "characters": "The Guild, a Tribute Portfolio Hotel",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 687,
+        "y": 424,
+        "width": 450,
+        "height": 24
+      }
+    },
+    {
+      "id": "484:1735",
+      "characters": "The Guild, a Tribute Portfolio Hotel\nThis Privacy Notice describes our practices in connection with information that we collect through websites operated by us from which you are accessing this Privacy Notice (the “Websites”), through the software applications made available by us for use on or through computers and mobile devices (the “Apps”), and through our social media pages that we control from which you are accessing this Privacy Notice (collectively, our “Social Media Pages”), (collectively, including the Websites, the Apps and our Social Media Pages, the “Services”). This Privacy Notice also applies to our offline collection of information. The information you provide helps us to operate effectively and continually provide you with the best hospitality products, services and experiences.\n\nOur privacy practices may vary among the countries in which we operate to reflect local practices and legal requirements. Please read the following to learn more about our privacy practices.\n\nYour Acceptance of Our Privacy Notice: By using the Services, you accept the terms of this Privacy Notice and the ways we may use your information. If you do not accept the terms of this Notice, please do not continue to use the Services.\n\nWhat Information Is Collected and How Is It Collected?\nHow Do We Use Your Information?\nHow Do We Disclose Your Information?\nHow Do We Safeguard Your Information?\nOther Important Information\nChoices and Contact Us",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 687,
+        "y": 488,
+        "width": 744,
+        "height": 638
+      }
+    },
+    {
+      "id": "484:1736",
+      "characters": "What Information Is Collected and How Is It Collected?",
+      "styleName": "H5-CAPS",
+      "styleId": "384:1311",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 687,
+        "y": 1237,
+        "width": 687,
+        "height": 24
+      }
+    },
+    {
+      "id": "484:1737",
+      "characters": "We may collect personal information (which is information that identifies you or relates to you as an identifiable person) about you such as your:\n\nName\nPostal address (including billing and shipping addresses)\nTelephone number\nEmail address\nCredit and debit card number\nFinancial information\nProfile picture\nSocial media account ID\nStay information\nCommunication preferences",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 687,
+        "y": 1301,
+        "width": 744,
+        "height": 326
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 5
+    }
+  ],
+  "images": [],
+  "manualOverlays": [
+    {
+      "nodeId": "484:1628",
+      "name": "guild-nav-full-dark",
+      "reason": "nav component instance: manual lane, bbox only",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "484:1628",
+      "type": "INSTANCE",
+      "name": "guild-nav-full-dark",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    },
+    {
+      "id": "484:1733",
+      "type": "TEXT",
+      "name": "privacy policy",
+      "bbox": {
+        "x": 40,
+        "y": 388,
+        "width": 321,
+        "height": 40
+      }
+    },
+    {
+      "id": "484:1732",
+      "type": "TEXT",
+      "name": "The Guild, a Tribute Portfolio Hotel",
+      "bbox": {
+        "x": 687,
+        "y": 424,
+        "width": 450,
+        "height": 24
+      }
+    },
+    {
+      "id": "484:1735",
+      "type": "TEXT",
+      "name": "The Guild, a Tribute Portfolio Hotel This Privacy Notice describes our practices in connection with information that we collect through websites operated by us from which you are accessing this Privacy Notice (the “Websites”), through the software applications made available by us for use on or through computers and mobile devices (the “Apps”), and through our social media pages that we control from which you are accessing this Privacy Notice (collectively, our “Social Media Pages”), (collectively, including the Websites, the Apps and our Social Media Pages, the “Services”). This Privacy Notice also applies to our offline collection of information. The information you provide helps us to operate effectively and continually provide you with the best hospitality products, services and experiences. Our privacy practices may vary among the countries in which we operate to reflect local practices and legal requirements. Please read the following to learn more about our privacy practices. Your Acceptance of Our Privacy Notice: By using the Services, you accept the terms of this Privacy Notice and the ways we may use your information. If you do not accept the terms of this Notice, please do not continue to use the Services. What Information Is Collected and How Is It Collected? How Do We Use Your Information? How Do We Disclose Your Information? How Do We Safeguard Your Information? Other Important Information Choices and Contact Us",
+      "bbox": {
+        "x": 687,
+        "y": 488,
+        "width": 744,
+        "height": 638
+      }
+    },
+    {
+      "id": "484:1736",
+      "type": "TEXT",
+      "name": "What Information Is Collected and How Is It Collected?",
+      "bbox": {
+        "x": 687,
+        "y": 1237,
+        "width": 687,
+        "height": 24
+      }
+    },
+    {
+      "id": "484:1737",
+      "type": "TEXT",
+      "name": "We may collect personal information (which is information that identifies you or relates to you as an identifiable person) about you such as your: Name Postal address (including billing and shipping addresses) Telephone number Email address Credit and debit card number Financial information Profile picture Social media account ID Stay information Communication preferences",
+      "bbox": {
+        "x": 687,
+        "y": 1301,
+        "width": 744,
+        "height": 326
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

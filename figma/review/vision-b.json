@@ -1,0 +1,909 @@
+{
+ "sections": [
+  {
+   "key": "guidelines/01-photoshoot-guidelines",
+   "name": "hero-fullbleed-centered",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "guidelines/02-thank-you-for-choosing-the-guild",
+   "name": "script-intro-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "guidelines/03-our-process",
+   "name": "split-text-list-dark",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "dark panel with title left and numbered terms right"
+  },
+  {
+   "key": "guidelines/04-work-from-our-collaborators",
+   "name": "timeline-scatter-images",
+   "kind": "gallery",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "scattered portrait/landscape images with @username captions"
+  },
+  {
+   "key": "guidelines/05-username",
+   "name": "image-fullwidth-captioned",
+   "kind": "gallery",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "single wide image with @username caption; likely part of collaborators set"
+  },
+  {
+   "key": "guidelines/06-photoshoot-request",
+   "name": "form-split-script-contact",
+   "kind": "form",
+   "slider": false,
+   "interactive": "form",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "guidelines/07-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "guidelines/08-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "newsletter email field",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "guidelines/09-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/01-retreat-for-corporate-teams",
+   "name": "hero-fullbleed-centered",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/02-refined-focus-unmatched-convenience",
+   "name": "script-intro-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/03-key-features",
+   "name": "image-trio-text",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/04-why-teams-choose-the-guild",
+   "name": "feature-grid-dark-eyebrow",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/05-designed-for-focused-work-confidential-strategy",
+   "name": "split-sticky-text-stacked-images",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "tall 841px crop with stacked images; verify it is one section"
+  },
+  {
+   "key": "legal/06-small-conference-center",
+   "name": "venue-card-fullbleed",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/07-large-conference-center",
+   "name": "venue-card-fullbleed",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/08-council-boardroom",
+   "name": "venue-card-fullbleed",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/09-one-columbia-place",
+   "name": "venue-card-fullbleed",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/10-steps-from-key-legal-addresses",
+   "name": "map-feature",
+   "kind": "map",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/11-tailored-corporate-packages",
+   "name": "image-trio-text",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/12-a-landmark-reimagined",
+   "name": "form-split-script-contact",
+   "kind": "form",
+   "slider": false,
+   "interactive": "form",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/13-corporate-gallery",
+   "name": "gallery-mosaic-captioned",
+   "kind": "gallery",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/14-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/15-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "newsletter email field",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/16-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "legal/17-legal",
+   "name": "overlay-detail-panel-modal",
+   "kind": "overlay",
+   "slider": false,
+   "interactive": "modal opened from venue cards",
+   "boundaryIssue": "named legal but contains Council Boardroom overlay, no legal rich text captured",
+   "note": "Council Boardroom detail panel with Submit your request button"
+  },
+  {
+   "key": "corporate/01-retreat-for-corporate-teams",
+   "name": "hero-fullbleed-centered",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of legal/01-retreat-for-corporate-teams"
+  },
+  {
+   "key": "corporate/02-refined-focus-unmatched-convenience",
+   "name": "script-intro-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of legal/02-refined-focus-unmatched-convenience"
+  },
+  {
+   "key": "corporate/03-key-features",
+   "name": "image-trio-text",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of legal/03-key-features"
+  },
+  {
+   "key": "corporate/04-why-teams-choose-the-guild",
+   "name": "feature-grid-dark-eyebrow",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of legal/04-why-teams-choose-the-guild"
+  },
+  {
+   "key": "corporate/05-designed-for-focused-work-confidential-strategy",
+   "name": "split-sticky-text-stacked-images",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "tall 841px crop with stacked images; verify it is one section",
+   "note": "clone of legal/05-designed-for-focused-work-confidential-strategy"
+  },
+  {
+   "key": "corporate/06-small-conference-center",
+   "name": "venue-card-fullbleed",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of legal/06-small-conference-center"
+  },
+  {
+   "key": "corporate/07-large-conference-center",
+   "name": "venue-card-fullbleed",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of legal/07-large-conference-center"
+  },
+  {
+   "key": "corporate/08-council-boardroom",
+   "name": "venue-card-fullbleed",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of legal/08-council-boardroom"
+  },
+  {
+   "key": "corporate/09-one-columbia-place",
+   "name": "venue-card-fullbleed",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of legal/09-one-columbia-place"
+  },
+  {
+   "key": "corporate/10-steps-from-key-legal-addresses",
+   "name": "map-feature",
+   "kind": "map",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of legal/10-steps-from-key-legal-addresses"
+  },
+  {
+   "key": "corporate/11-tailored-corporate-packages",
+   "name": "image-trio-text",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of legal/11-tailored-corporate-packages"
+  },
+  {
+   "key": "corporate/12-a-landmark-reimagined",
+   "name": "form-split-script-contact",
+   "kind": "form",
+   "slider": false,
+   "interactive": "form",
+   "boundaryIssue": "",
+   "note": "clone of legal/12-a-landmark-reimagined"
+  },
+  {
+   "key": "corporate/13-corporate-gallery",
+   "name": "gallery-mosaic-captioned",
+   "kind": "gallery",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of legal/13-corporate-gallery"
+  },
+  {
+   "key": "corporate/14-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": "",
+   "note": "clone of legal/14-faqs"
+  },
+  {
+   "key": "corporate/15-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "newsletter email field",
+   "boundaryIssue": "",
+   "note": "clone of legal/15-book-your-escape"
+  },
+  {
+   "key": "corporate/16-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of legal/16-the-hotel"
+  },
+  {
+   "key": "corporate/17-corporate-overlay",
+   "name": "overlay-detail-panel-modal",
+   "kind": "overlay",
+   "slider": false,
+   "interactive": "modal opened from venue cards",
+   "boundaryIssue": "",
+   "note": "clone of legal/17-legal; Council Boardroom detail panel with Submit your request button"
+  },
+  {
+   "key": "rooms-collection/01-rooms-suites",
+   "name": "hero-fullbleed-centered",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-collection/02-a-room-for-every-stay",
+   "name": "script-intro-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "includes round stamp badge"
+  },
+  {
+   "key": "rooms-collection/03-01",
+   "name": "quiz-step-split-image",
+   "kind": "form",
+   "slider": false,
+   "interactive": "stepper quiz, 01 / 03 step counter, option pills",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-collection/04-02",
+   "name": "quiz-step-split-image",
+   "kind": "form",
+   "slider": false,
+   "interactive": "stepper quiz, 02 / 03 step counter",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-collection/05-03",
+   "name": "quiz-step-split-image",
+   "kind": "form",
+   "slider": false,
+   "interactive": "stepper quiz, 03 / 03 step counter",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-collection/06-our-recommendations-for-your-stay",
+   "name": "heading-centered-links",
+   "kind": "content",
+   "slider": false,
+   "interactive": "quiz results heading with back and see-all links",
+   "boundaryIssue": "results list is likely in 13-all-rooms"
+  },
+  {
+   "key": "rooms-collection/07-deluxe-king-suite",
+   "name": "room-card-grid",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "hover reveals View more and details",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-collection/08-the-neighborhood",
+   "name": "map-feature",
+   "kind": "map",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-collection/09-offers-packages",
+   "name": "offers-slider-split",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider with 02 / 05 counter and arrows",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-collection/10-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-collection/11-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "newsletter email field",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-collection/12-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-collection/13-all-rooms",
+   "name": "room-list-hover-preview",
+   "kind": "overlay",
+   "slider": false,
+   "interactive": "hover list swaps preview image; ALL/ROOMS/SUITES tabs",
+   "boundaryIssue": "includes nav bar header; appears to be quiz results or all rooms overlay"
+  },
+  {
+   "key": "rooms-individual/01-deluxe-king-suite",
+   "name": "hero-fullbleed-centered",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-individual/02-back-to-rooms",
+   "name": "script-intro-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "back link plus script heading, probably placeholder copy"
+  },
+  {
+   "key": "rooms-individual/03-room-description",
+   "name": "text-spec-list-split",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-individual/04-section",
+   "name": "media-fullbleed-inset",
+   "kind": "content",
+   "slider": false,
+   "interactive": "video/media",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-individual/05-etiam-imperdiet-sodales-dui-a-vestibulum",
+   "name": "media-fullbleed-caption",
+   "kind": "content",
+   "slider": false,
+   "interactive": "video/media",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-individual/06-morbi-gravida-augue-at-ipsum-ultricies",
+   "name": "split-image-text-light",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "offset images with text bottom right"
+  },
+  {
+   "key": "rooms-individual/07-in-room-amenities",
+   "name": "amenities-grid-centered",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-individual/08-morbi-gravida-augue-at-ipsum-ultricies",
+   "name": "split-image-text-light",
+   "kind": "content",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "mirrored variant of 06"
+  },
+  {
+   "key": "rooms-individual/09-deluxe-king-suite-gallery",
+   "name": "gallery-mosaic-captioned",
+   "kind": "gallery",
+   "slider": false,
+   "interactive": "possible lightbox",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-individual/10-discover-other-rooms",
+   "name": "card-carousel-header-left",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "arrows, cards cut off at right edge",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-individual/11-the-neighborhood",
+   "name": "map-feature",
+   "kind": "map",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-individual/12-offers-packages",
+   "name": "offers-slider-split",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider with 02 / 05 counter and arrows",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-individual/13-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-individual/14-a-landmark-reimagined",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "newsletter email field",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "rooms-individual/15-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "press/01-press",
+   "name": "hero-fullbleed-centered",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "press/02-a-room-for-every-stay",
+   "name": "tab-pills-intro",
+   "kind": "content",
+   "slider": false,
+   "interactive": "tabs: Press / Design / Community filter pills",
+   "boundaryIssue": "bottom shows a PRESS label belonging to the list below"
+  },
+  {
+   "key": "press/03-the-best-san-diego-hotels-for",
+   "name": "press-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "logo image card with caption; staggered left/right"
+  },
+  {
+   "key": "press/04-the-12-best-hotels-in-san",
+   "name": "press-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "logo image card with caption; staggered left/right"
+  },
+  {
+   "key": "press/05-section",
+   "name": "press-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "logo image card with caption; staggered left/right"
+  },
+  {
+   "key": "press/06-the-guild-hotel-kicks-off-new",
+   "name": "press-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "logo image card with caption; staggered left/right"
+  },
+  {
+   "key": "press/07-here-are-the-must-see-san",
+   "name": "press-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "logo image card with caption; staggered left/right"
+  },
+  {
+   "key": "press/08-press-enquiries",
+   "name": "form-split-script-contact",
+   "kind": "form",
+   "slider": false,
+   "interactive": "form",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "press/09-offers-packages",
+   "name": "offers-slider-split",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider with 02 / 05 counter and arrows",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "press/10-more-of-the-guild",
+   "name": "card-carousel-header-left",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "arrows, cards cut off at right edge",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "press/11-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "press/12-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "newsletter email field",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "press/13-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-collection/01-happenings",
+   "name": "hero-fullbleed-centered",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-collection/02-whats-on-in-san-diego",
+   "name": "tab-pills-intro",
+   "kind": "content",
+   "slider": false,
+   "interactive": "tabs: Dining / Culture / Conferences filter pills",
+   "boundaryIssue": "bottom shows a DINING label belonging to the list below"
+  },
+  {
+   "key": "happenings-collection/03-the-best-san-diego-hotels-for",
+   "name": "article-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-collection/04-the-best-san-diego-hotels-for",
+   "name": "article-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-collection/05-the-best-san-diego-hotels-for",
+   "name": "article-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-collection/06-culture",
+   "name": "article-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-collection/07-the-best-san-diego-hotels-for",
+   "name": "article-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-collection/08-offers-packages",
+   "name": "offers-slider-split",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider with 02 / 05 counter and arrows",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-collection/09-more-of-the-guild",
+   "name": "card-carousel-header-left",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "arrows, cards cut off at right edge",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-collection/10-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-collection/11-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "newsletter email field",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "happenings-collection/12-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": ""
+  },
+  {
+   "key": "blog-collection/01-blog",
+   "name": "hero-fullbleed-centered",
+   "kind": "hero",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of happenings-collection/01-happenings (title text differs)"
+  },
+  {
+   "key": "blog-collection/02-whats-on-in-san-diego",
+   "name": "tab-pills-intro",
+   "kind": "content",
+   "slider": false,
+   "interactive": "tabs: Dining / Culture / Conferences filter pills",
+   "boundaryIssue": "bottom shows a DINING label belonging to the list below",
+   "note": "clone of happenings-collection/02-whats-on-in-san-diego"
+  },
+  {
+   "key": "blog-collection/03-the-best-san-diego-hotels-for",
+   "name": "article-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of happenings-collection/03-the-best-san-diego-hotels-for"
+  },
+  {
+   "key": "blog-collection/04-the-best-san-diego-hotels-for",
+   "name": "article-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of happenings-collection/04-the-best-san-diego-hotels-for"
+  },
+  {
+   "key": "blog-collection/05-the-best-san-diego-hotels-for",
+   "name": "article-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of happenings-collection/05-the-best-san-diego-hotels-for"
+  },
+  {
+   "key": "blog-collection/06-culture",
+   "name": "article-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of happenings-collection/06-culture"
+  },
+  {
+   "key": "blog-collection/07-the-best-san-diego-hotels-for",
+   "name": "article-card-staggered",
+   "kind": "card-repeat",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of happenings-collection/07-the-best-san-diego-hotels-for"
+  },
+  {
+   "key": "blog-collection/08-offers-packages",
+   "name": "offers-slider-split",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "slider with 02 / 05 counter and arrows",
+   "boundaryIssue": "",
+   "note": "clone of happenings-collection/08-offers-packages"
+  },
+  {
+   "key": "blog-collection/09-more-of-the-guild",
+   "name": "card-carousel-header-left",
+   "kind": "slider",
+   "slider": true,
+   "interactive": "arrows, cards cut off at right edge",
+   "boundaryIssue": "",
+   "note": "clone of happenings-collection/09-more-of-the-guild"
+  },
+  {
+   "key": "blog-collection/10-faqs",
+   "name": "faq-accordion",
+   "kind": "accordion",
+   "slider": false,
+   "interactive": "accordion",
+   "boundaryIssue": "",
+   "note": "clone of happenings-collection/10-faqs"
+  },
+  {
+   "key": "blog-collection/11-book-your-escape",
+   "name": "cta-booking-newsletter",
+   "kind": "cta",
+   "slider": false,
+   "interactive": "newsletter email field",
+   "boundaryIssue": "",
+   "note": "clone of happenings-collection/11-book-your-escape"
+  },
+  {
+   "key": "blog-collection/12-the-hotel",
+   "name": "footer-links",
+   "kind": "footer",
+   "slider": false,
+   "interactive": "",
+   "boundaryIssue": "",
+   "note": "clone of happenings-collection/12-the-hotel"
+  }
+ ]
+}

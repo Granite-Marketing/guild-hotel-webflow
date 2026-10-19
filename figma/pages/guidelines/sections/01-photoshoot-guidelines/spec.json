@@ -1,0 +1,135 @@
+{
+  "pageSlug": "guidelines",
+  "index": 1,
+  "slug": "photoshoot-guidelines",
+  "laneHint": null,
+  "frameId": "309:282",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 1014.78
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "309:317",
+      "characters": "photoshoot guidelines",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 532,
+        "y": 740,
+        "width": 536,
+        "height": 40
+      }
+    },
+    {
+      "id": "309:305",
+      "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 22,
+      "fontWeight": 400,
+      "lineHeightPx": 35.2,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 503,
+        "y": 818,
+        "width": 595,
+        "height": 35
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [
+    {
+      "nodeId": "309:515",
+      "name": "guild-nav-full-dark",
+      "reason": "nav component instance: manual lane, bbox only",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "309:302",
+      "type": "RECTANGLE",
+      "name": "Rectangle 1",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "309:515",
+      "type": "INSTANCE",
+      "name": "guild-nav-full-dark",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    },
+    {
+      "id": "309:317",
+      "type": "TEXT",
+      "name": "photoshoot guidelines",
+      "bbox": {
+        "x": 532,
+        "y": 740,
+        "width": 536,
+        "height": 40
+      }
+    },
+    {
+      "id": "309:305",
+      "type": "TEXT",
+      "name": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+      "bbox": {
+        "x": 503,
+        "y": 818,
+        "width": 595,
+        "height": 35
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

@@ -1,0 +1,210 @@
+{
+  "pageSlug": "guidelines",
+  "index": 3,
+  "slug": "our-process",
+  "laneHint": null,
+  "frameId": "309:282",
+  "bbox": {
+    "x": 0,
+    "y": 1810,
+    "width": 1600,
+    "height": 997
+  },
+  "crop": {
+    "y0": 1695,
+    "y1": 2922
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "309:588",
+      "characters": "our process",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 169,
+        "y": 282,
+        "width": 187,
+        "height": 29
+      }
+    },
+    {
+      "id": "309:590",
+      "characters": "1 Upon receiving the requirements of your shoot (including the day/date/time), the Hotel will check availability and provide a list of available spaces where the photographer can shoot/film.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 816,
+        "y": 282,
+        "width": 615,
+        "height": 66
+      }
+    },
+    {
+      "id": "309:573",
+      "characters": "To ensure the best experience during your shoot, and to optimize Hotel guest experience, the following guidelines apply for professional shoots:",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 169,
+        "y": 343,
+        "width": 326,
+        "height": 92
+      }
+    },
+    {
+      "id": "309:592",
+      "characters": "2 Room rental charges may apply (in addition to the location fee) to reserve spaces to shoot in.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 816,
+        "y": 412,
+        "width": 615,
+        "height": 40
+      }
+    },
+    {
+      "id": "309:593",
+      "characters": "3 A Hotel team member will be available to you throughout the shoot and will provide entrance to the pre-determined available areas of the Hotel. As a result, a location flat fee of $500 will apply.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 816,
+        "y": 516,
+        "width": 615,
+        "height": 66
+      }
+    },
+    {
+      "id": "309:595",
+      "characters": "4 Shooting in public areas of the Hotel (including, but not limited to front steps, The Lobby Bar, The Lobby Terrace, Pool Lounge, Zuma) are not guaranteed, and may be limited.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 816,
+        "y": 646,
+        "width": 615,
+        "height": 66
+      }
+    },
+    {
+      "id": "309:597",
+      "characters": "5 The content of the shoot will need to be approved by the Hotel with a signed Letter of Agreement, and Event Order.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 816,
+        "y": 776,
+        "width": 615,
+        "height": 40
+      }
+    },
+    {
+      "id": "309:754",
+      "characters": "6 Special considerations may apply for pre-approved promotional partnerships, confirmed reservations or contracted groups, events, or weddings. If these terms are acceptable to you, and if you’d like to move forward, please email your formal request to sales@theguildhotel.com or fill out the form below.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 816,
+        "y": 880,
+        "width": 615,
+        "height": 118
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 8
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "309:604",
+      "type": "GROUP",
+      "name": "Group 270990069",
+      "bbox": {
+        "x": 0,
+        "y": 115,
+        "width": 1600,
+        "height": 997
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

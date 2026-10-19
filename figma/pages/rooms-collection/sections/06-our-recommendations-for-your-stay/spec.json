@@ -1,0 +1,125 @@
+{
+  "pageSlug": "rooms-collection",
+  "index": 6,
+  "slug": "our-recommendations-for-your-stay",
+  "laneHint": null,
+  "frameId": "379:581",
+  "bbox": {
+    "x": 0,
+    "y": 4833,
+    "width": 1600,
+    "height": 242
+  },
+  "crop": {
+    "y0": 4753,
+    "y1": 5155
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "389:3160",
+      "characters": "our recommendations\nfor your stay",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 544,
+        "y": 80,
+        "width": 512,
+        "height": 80
+      }
+    },
+    {
+      "id": "404:3395",
+      "characters": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 512,
+        "y": 200,
+        "width": 576,
+        "height": 40
+      }
+    },
+    {
+      "id": "389:3141",
+      "characters": "back to the quiz",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 600,
+        "y": 290,
+        "width": 173,
+        "height": 22
+      }
+    },
+    {
+      "id": "389:3150",
+      "characters": "see all rooms",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 827,
+        "y": 290,
+        "width": 148,
+        "height": 22
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 4
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "404:3407",
+      "type": "GROUP",
+      "name": "Group 270990173",
+      "bbox": {
+        "x": 512,
+        "y": 80,
+        "width": 576,
+        "height": 242
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

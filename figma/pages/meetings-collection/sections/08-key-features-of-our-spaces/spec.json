@@ -1,0 +1,591 @@
+{
+  "pageSlug": "meetings-collection",
+  "index": 8,
+  "slug": "key-features-of-our-spaces",
+  "laneHint": null,
+  "frameId": "288:4019",
+  "bbox": {
+    "x": 0,
+    "y": 8085,
+    "width": 1600,
+    "height": 3182
+  },
+  "crop": {
+    "y0": 8085,
+    "y1": 11267
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "377:504",
+      "characters": "key features of our spaces",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 173,
+        "width": 485,
+        "height": 29
+      }
+    },
+    {
+      "id": "377:503",
+      "characters": "Vestibulum id justo eget erat porta consequat. Donec et massa congue, aliquet sem non, consectetur sem proin et.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 234,
+        "width": 485,
+        "height": 40
+      }
+    },
+    {
+      "id": "377:509",
+      "characters": "book your space",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 78,
+        "y": 327,
+        "width": 158,
+        "height": 19
+      }
+    },
+    {
+      "id": "377:500",
+      "characters": "Event Services",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 779,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "377:499",
+      "characters": "Our innovative & experienced team creates your vision",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 814,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:528",
+      "characters": "Chef Collaboration and Menu Design",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 852,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:530",
+      "characters": "Mixologist Consultation",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 890,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:532",
+      "characters": "Branded Event Menus",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 928,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:534",
+      "characters": "Menu tastings available",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 966,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:536",
+      "characters": "Branding Opportunities with Video Projection Wall",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 1004,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:538",
+      "characters": "Full Hotel Buyouts Available - Guild Take Over",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 1042,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:545",
+      "characters": "AV Capabilities",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 1785,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "377:547",
+      "characters": "Video-texture mapping",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 1820,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:549",
+      "characters": "Surround sound/ LED lighting",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 1858,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:551",
+      "characters": "Latest tech",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 1896,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:553",
+      "characters": "Pre- & post-event support",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 1934,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:564",
+      "characters": "Hotel Amenities",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 2677,
+        "width": 289,
+        "height": 19
+      }
+    },
+    {
+      "id": "377:566",
+      "characters": "Dedicated event planners",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 2712,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:568",
+      "characters": "Professional audio visual services",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 2750,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:570",
+      "characters": "Meeting sets with clean, sophisticated designs",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 2788,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:572",
+      "characters": "Restaurant-style banquet menus",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 2826,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:574",
+      "characters": "Black or Grey banquet style chairs, Black & White floor-length linens & napkins",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 2864,
+        "width": 484,
+        "height": 40
+      }
+    },
+    {
+      "id": "377:576",
+      "characters": "Seasonal heaters & umbrellas",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 2928,
+        "width": 484,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:578",
+      "characters": "Marriott Rewards Program",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 947,
+        "y": 2966,
+        "width": 484,
+        "height": 14
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 24
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 3
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "377:523",
+      "type": "GROUP",
+      "name": "Group 270990142",
+      "bbox": {
+        "x": 40,
+        "y": 0,
+        "width": 485,
+        "height": 356
+      }
+    },
+    {
+      "id": "377:542",
+      "type": "GROUP",
+      "name": "Group 270990144",
+      "bbox": {
+        "x": 947,
+        "y": 160,
+        "width": 484,
+        "height": 896
+      }
+    },
+    {
+      "id": "377:543",
+      "type": "GROUP",
+      "name": "Group 270990145",
+      "bbox": {
+        "x": 947,
+        "y": 1166,
+        "width": 484,
+        "height": 782
+      }
+    },
+    {
+      "id": "377:562",
+      "type": "GROUP",
+      "name": "Group 270990146",
+      "bbox": {
+        "x": 947,
+        "y": 2058,
+        "width": 484,
+        "height": 922
+      }
+    },
+    {
+      "id": "379:579",
+      "type": "RECTANGLE",
+      "name": "Rectangle 591",
+      "bbox": {
+        "x": 0,
+        "y": 2986,
+        "width": 1600,
+        "height": 196
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "377:525",
+      "type": "RECTANGLE",
+      "name": "Rectangle 590",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 4375
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

@@ -1,0 +1,62 @@
+{
+  "mergeGap": 120,
+  "minBandHeight": 200,
+  "maxBandHeight": 2500,
+  "overlapTolerance": 2,
+  "backgroundTypes": [
+    "RECTANGLE",
+    "VECTOR",
+    "ELLIPSE"
+  ],
+  "fullBleed": {
+    "minWidthRatio": 0.95,
+    "minHeight": 600,
+    "types": [
+      "RECTANGLE",
+      "FRAME",
+      "GROUP",
+      "INSTANCE",
+      "COMPONENT"
+    ]
+  },
+  "repeat": {
+    "minHeight": 300,
+    "heightTolerance": 0.02,
+    "widthTolerance": 0.02,
+    "maxGap": 120
+  },
+  "splitBeforeText": {
+    "patterns": [
+      "^faqs?$",
+      "^offers? (&|and) packages$",
+      "^your request$",
+      "^more of the guild$",
+      "^book your escape$",
+      "^the hotel$",
+      "^experiences$",
+      "^social$",
+      "^links$",
+      "^back to rooms$"
+    ],
+    "window": 400,
+    "padding": 16,
+    "minGap": 8
+  },
+  "mergeSplitGrids": {
+    "enabled": true,
+    "sizeTolerance": 0.02,
+    "minCells": 2,
+    "minCellHeight": 300,
+    "decorMaxThickness": 4
+  },
+  "minCropHeight": 80,
+  "slugMaxWords": 6,
+  "pageTreeDepth": 3,
+  "webpQuality": 85,
+  "nav": {
+    "componentSetIds": [
+      "236:8312"
+    ],
+    "namePattern": "guild-nav"
+  }
+}

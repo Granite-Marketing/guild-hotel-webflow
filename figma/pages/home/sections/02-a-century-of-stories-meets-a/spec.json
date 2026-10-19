@@ -1,0 +1,117 @@
+{
+  "pageSlug": "home",
+  "index": 2,
+  "slug": "a-century-of-stories-meets-a",
+  "laneHint": null,
+  "frameId": "433:559",
+  "bbox": {
+    "x": 0,
+    "y": 1129,
+    "width": 1600,
+    "height": 657
+  },
+  "crop": {
+    "y0": 1014.5,
+    "y1": 1922
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "433:787",
+      "characters": "A century of stories meets\na new hospitality",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 80,
+      "fontWeight": 400,
+      "lineHeightPx": 96,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#000000",
+      "bbox": {
+        "x": 395,
+        "y": 396.5,
+        "width": 810.1,
+        "height": 292.11
+      }
+    },
+    {
+      "id": "433:607",
+      "characters": "Behind this mannered Italian Renaissance facade is a century of glamorous mischief. Today, it’s an icon with open arms, a high-spirited destination that welcomes you to the heart of contemporary San Diego.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 506,
+        "y": 705.5,
+        "width": 588,
+        "height": 66
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 479
+    },
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "433:4759",
+      "type": "GROUP",
+      "name": "Group 270989565",
+      "bbox": {
+        "x": 580,
+        "y": 114.5,
+        "width": 440.77,
+        "height": 253.56
+      }
+    },
+    {
+      "id": "433:787",
+      "type": "TEXT",
+      "name": "A century of stories meets a new hospitality",
+      "bbox": {
+        "x": 395,
+        "y": 396.5,
+        "width": 810.1,
+        "height": 292.11
+      }
+    },
+    {
+      "id": "433:607",
+      "type": "TEXT",
+      "name": "Behind this mannered Italian Renaissance facade is a century of glamorous mischief. Today, it’s an icon with open arms, a high-spirited destination that welcomes you to the heart of contemporary San Diego.",
+      "bbox": {
+        "x": 506,
+        "y": 705.5,
+        "width": 588,
+        "height": 66
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

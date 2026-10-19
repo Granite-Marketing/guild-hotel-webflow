@@ -1,0 +1,127 @@
+{
+  "pageSlug": "home",
+  "index": 8,
+  "slug": "lobby-terrace",
+  "laneHint": null,
+  "frameId": "433:559",
+  "bbox": {
+    "x": 0,
+    "y": 7297,
+    "width": 1600,
+    "height": 988
+  },
+  "crop": {
+    "y0": 7279,
+    "y1": 8305
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "433:5799",
+      "characters": "lobby terrace",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 80,
+      "fontWeight": 400,
+      "lineHeightPx": 80,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 318,
+        "y": 405,
+        "width": 967,
+        "height": 53
+      }
+    },
+    {
+      "id": "433:5800",
+      "characters": "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 22,
+      "fontWeight": 400,
+      "lineHeightPx": 35.2,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 474,
+        "y": 505,
+        "width": 653,
+        "height": 35
+      }
+    },
+    {
+      "id": "433:5803",
+      "characters": "DISCOVER MORE",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 728,
+        "y": 591,
+        "width": 144,
+        "height": 16
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#000000",
+      "opacity": 0.4,
+      "count": 1
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "433:5797",
+      "name": "Vector 32",
+      "imageRef": "237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1",
+      "bbox": {
+        "x": 39.75,
+        "y": 18,
+        "width": 1520,
+        "height": 988
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "433:5796",
+      "type": "GROUP",
+      "name": "Group 270990191",
+      "bbox": {
+        "x": 39.75,
+        "y": 18,
+        "width": 1520,
+        "height": 988
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

@@ -1,0 +1,953 @@
+{
+  "pageSlug": "dining-collection",
+  "frames": [
+    {
+      "id": "262:53",
+      "name": "DINING-COLLECTION",
+      "kind": "page",
+      "width": 1600,
+      "height": 12759,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/262-53.png",
+      "status": "ok",
+      "tree": {
+        "id": "262:53",
+        "type": "FRAME",
+        "name": "DINING-COLLECTION",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 12759
+        },
+        "children": [
+          {
+            "id": "262:64",
+            "type": "RECTANGLE",
+            "name": "Rectangle 1",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 900
+            }
+          },
+          {
+            "id": "262:65",
+            "type": "TEXT",
+            "name": "a taste of the guild",
+            "bbox": {
+              "x": 573,
+              "y": 750,
+              "width": 454,
+              "height": 40
+            },
+            "characters": "a taste of the guild"
+          },
+          {
+            "id": "262:66",
+            "type": "TEXT",
+            "name": "A world of invention, craft and sophisticated pleasures",
+            "bbox": {
+              "x": 373,
+              "y": 818,
+              "width": 854,
+              "height": 15
+            },
+            "characters": "A world of invention, craft and sophisticated pleasures"
+          },
+          {
+            "id": "262:202",
+            "type": "TEXT",
+            "name": "A Landmark Reimagined",
+            "bbox": {
+              "x": 533,
+              "y": 14929,
+              "width": 535,
+              "height": 40
+            },
+            "characters": "A Landmark Reimagined"
+          },
+          {
+            "id": "263:1313",
+            "type": "GROUP",
+            "name": "Group 270990039",
+            "bbox": {
+              "x": 429,
+              "y": 1138,
+              "width": 742,
+              "height": 460.46
+            },
+            "children": [
+              {
+                "id": "262:101",
+                "type": "TEXT",
+                "name": "For visitors and locals, Guild dining is a journey, an invitation to to savor our worlds. The Lobby Bar knows its classics from its off-menu surprises. California’s first Zuma serves up the sushi and robata that have made it an international standard-setter from London to Miami, Vail to Abu Dhabi. Poolside, there’s always fresh, easy West Coast goodness, and the Mediterranean influences daytime offerings in The Courtyard.   ",
+                "bbox": {
+                  "x": 429,
+                  "y": 1480.46,
+                  "width": 742,
+                  "height": 118
+                },
+                "characters": "For visitors and locals, Guild dining is a journey, an invitation to to savor our worlds. The Lobby Bar knows its classics from its off-menu surprises. California’s first Zuma serves up the sushi and robata that have made it an international standard-setter from London to Miami, Vail to Abu Dhabi. Poolside, there’s always fresh, easy West Coast goodness, and the Mediterranean influences daytime offerings in The Courtyard.   "
+              },
+              {
+                "id": "262:282",
+                "type": "TEXT",
+                "name": "First sips, small bites & big nights out.",
+                "bbox": {
+                  "x": 452.2,
+                  "y": 1138,
+                  "width": 697.04,
+                  "height": 277.47
+                },
+                "characters": "First sips, small bites\n& big nights out."
+              }
+            ]
+          },
+          {
+            "id": "266:1316",
+            "type": "VECTOR",
+            "name": "Vector 33",
+            "bbox": {
+              "x": 170,
+              "y": 1836,
+              "width": 1261,
+              "height": 712
+            }
+          },
+          {
+            "id": "433:5745",
+            "type": "GROUP",
+            "name": "Group 270990186",
+            "bbox": {
+              "x": 39.75,
+              "y": 2588,
+              "width": 1520,
+              "height": 988
+            },
+            "children": [
+              {
+                "id": "263:1259",
+                "type": "VECTOR",
+                "name": "Vector 31",
+                "bbox": {
+                  "x": 39.75,
+                  "y": 2588,
+                  "width": 1520,
+                  "height": 988
+                }
+              },
+              {
+                "id": "263:1260",
+                "type": "GROUP",
+                "name": "Group 270989672",
+                "bbox": {
+                  "x": 503,
+                  "y": 2963,
+                  "width": 595,
+                  "height": 249
+                },
+                "children": [
+                  {
+                    "id": "263:1261",
+                    "type": "GROUP",
+                    "name": "Group 270989671",
+                    "bbox": {
+                      "x": 503,
+                      "y": 3108,
+                      "width": 595,
+                      "height": 104
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "263:1266",
+                    "type": "GROUP",
+                    "name": "Group 270989670",
+                    "bbox": {
+                      "x": 592,
+                      "y": 2963,
+                      "width": 416,
+                      "height": 101
+                    },
+                    "childCount": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "433:5746",
+            "type": "GROUP",
+            "name": "Group 270990187",
+            "bbox": {
+              "x": 39.75,
+              "y": 3612,
+              "width": 1520,
+              "height": 988
+            },
+            "children": [
+              {
+                "id": "263:1274",
+                "type": "VECTOR",
+                "name": "Vector 31",
+                "bbox": {
+                  "x": 39.75,
+                  "y": 3612,
+                  "width": 1520,
+                  "height": 988
+                }
+              },
+              {
+                "id": "263:1276",
+                "type": "FRAME",
+                "name": "a",
+                "bbox": {
+                  "x": 431,
+                  "y": 3926,
+                  "width": 738,
+                  "height": 232.17
+                },
+                "children": [
+                  {
+                    "id": "263:1277",
+                    "type": "GROUP",
+                    "name": "Group",
+                    "bbox": {
+                      "x": 497.21,
+                      "y": 3926,
+                      "width": 671.79,
+                      "height": 232.17
+                    },
+                    "childCount": 8
+                  },
+                  {
+                    "id": "263:1286",
+                    "type": "GROUP",
+                    "name": "Group",
+                    "bbox": {
+                      "x": 431,
+                      "y": 4023.91,
+                      "width": 76.16,
+                      "height": 78.36
+                    },
+                    "childCount": 3
+                  }
+                ]
+              },
+              {
+                "id": "263:1290",
+                "type": "TEXT",
+                "name": "Cocktail classics and drinks for connaisseurs.",
+                "bbox": {
+                  "x": 605,
+                  "y": 4192,
+                  "width": 391,
+                  "height": 35
+                },
+                "characters": "Cocktail classics and drinks for connaisseurs."
+              },
+              {
+                "id": "263:1292",
+                "type": "VECTOR",
+                "name": "Vector 25",
+                "bbox": {
+                  "x": 703,
+                  "y": 4269,
+                  "width": 194,
+                  "height": 37
+                }
+              }
+            ]
+          },
+          {
+            "id": "263:1293",
+            "type": "TEXT",
+            "name": "DISCOVER MORE",
+            "bbox": {
+              "x": 728,
+              "y": 4278,
+              "width": 144,
+              "height": 16
+            },
+            "characters": "DISCOVER MORE"
+          },
+          {
+            "id": "433:5748",
+            "type": "GROUP",
+            "name": "Group 270990189",
+            "bbox": {
+              "x": 39.75,
+              "y": 4636,
+              "width": 1520,
+              "height": 988
+            },
+            "children": [
+              {
+                "id": "263:1295",
+                "type": "VECTOR",
+                "name": "Vector 32",
+                "bbox": {
+                  "x": 39.75,
+                  "y": 4636,
+                  "width": 1520,
+                  "height": 988
+                }
+              },
+              {
+                "id": "433:5747",
+                "type": "GROUP",
+                "name": "Group 270990188",
+                "bbox": {
+                  "x": 442,
+                  "y": 5019,
+                  "width": 717,
+                  "height": 311
+                },
+                "children": [
+                  {
+                    "id": "263:1296",
+                    "type": "TEXT",
+                    "name": "Our new pool serves up San Diego’s bright sunshine, cool drinks and warm people.",
+                    "bbox": {
+                      "x": 442,
+                      "y": 5216,
+                      "width": 717,
+                      "height": 35
+                    },
+                    "characters": "Our new pool serves up San Diego’s bright sunshine, cool drinks and warm people."
+                  },
+                  {
+                    "id": "263:1298",
+                    "type": "VECTOR",
+                    "name": "Vector 25",
+                    "bbox": {
+                      "x": 703,
+                      "y": 5293,
+                      "width": 194,
+                      "height": 37
+                    }
+                  },
+                  {
+                    "id": "263:1299",
+                    "type": "TEXT",
+                    "name": "DISCOVER MORE",
+                    "bbox": {
+                      "x": 728,
+                      "y": 5302,
+                      "width": 144,
+                      "height": 16
+                    },
+                    "characters": "DISCOVER MORE"
+                  },
+                  {
+                    "id": "263:1301",
+                    "type": "FRAME",
+                    "name": "a",
+                    "bbox": {
+                      "x": 459,
+                      "y": 5019,
+                      "width": 682,
+                      "height": 148.12
+                    },
+                    "childCount": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "433:5750",
+            "type": "GROUP",
+            "name": "Group 270990191",
+            "bbox": {
+              "x": 39.75,
+              "y": 5660,
+              "width": 1520,
+              "height": 988
+            },
+            "children": [
+              {
+                "id": "263:1305",
+                "type": "VECTOR",
+                "name": "Vector 32",
+                "bbox": {
+                  "x": 39.75,
+                  "y": 5660,
+                  "width": 1520,
+                  "height": 988
+                }
+              },
+              {
+                "id": "433:5749",
+                "type": "GROUP",
+                "name": "Group 270990190",
+                "bbox": {
+                  "x": 318,
+                  "y": 6047,
+                  "width": 967,
+                  "height": 214
+                },
+                "children": [
+                  {
+                    "id": "263:1307",
+                    "type": "TEXT",
+                    "name": "garden terrace",
+                    "bbox": {
+                      "x": 318,
+                      "y": 6047,
+                      "width": 967,
+                      "height": 53
+                    },
+                    "characters": "garden terrace"
+                  },
+                  {
+                    "id": "263:1308",
+                    "type": "TEXT",
+                    "name": "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus.",
+                    "bbox": {
+                      "x": 474,
+                      "y": 6147,
+                      "width": 653,
+                      "height": 35
+                    },
+                    "characters": "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus."
+                  },
+                  {
+                    "id": "263:1309",
+                    "type": "GROUP",
+                    "name": "Button",
+                    "bbox": {
+                      "x": 703,
+                      "y": 6224,
+                      "width": 194,
+                      "height": 37
+                    },
+                    "childCount": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "433:5752",
+            "type": "GROUP",
+            "name": "Group 270990193",
+            "bbox": {
+              "x": 39.75,
+              "y": 6688,
+              "width": 1520,
+              "height": 988
+            },
+            "children": [
+              {
+                "id": "298:5086",
+                "type": "VECTOR",
+                "name": "Vector 34",
+                "bbox": {
+                  "x": 39.75,
+                  "y": 6688,
+                  "width": 1520,
+                  "height": 988
+                }
+              },
+              {
+                "id": "433:5751",
+                "type": "GROUP",
+                "name": "Group 270990192",
+                "bbox": {
+                  "x": 318,
+                  "y": 7075,
+                  "width": 967,
+                  "height": 214
+                },
+                "children": [
+                  {
+                    "id": "298:5087",
+                    "type": "TEXT",
+                    "name": "solana coffee",
+                    "bbox": {
+                      "x": 318,
+                      "y": 7075,
+                      "width": 967,
+                      "height": 53
+                    },
+                    "characters": "solana coffee"
+                  },
+                  {
+                    "id": "298:5088",
+                    "type": "TEXT",
+                    "name": "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus.",
+                    "bbox": {
+                      "x": 474,
+                      "y": 7175,
+                      "width": 653,
+                      "height": 35
+                    },
+                    "characters": "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus."
+                  },
+                  {
+                    "id": "298:5089",
+                    "type": "GROUP",
+                    "name": "Button",
+                    "bbox": {
+                      "x": 703,
+                      "y": 7252,
+                      "width": 194,
+                      "height": 37
+                    },
+                    "childCount": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "266:1342",
+            "type": "GROUP",
+            "name": "Group 270990042",
+            "bbox": {
+              "x": 357,
+              "y": 1627,
+              "width": 885.57,
+              "height": 881
+            },
+            "children": [
+              {
+                "id": "266:1341",
+                "type": "RECTANGLE",
+                "name": "Rectangle 564",
+                "bbox": {
+                  "x": 1043,
+                  "y": 1627,
+                  "width": 51,
+                  "height": 825
+                }
+              },
+              {
+                "id": "266:1331",
+                "type": "GROUP",
+                "name": "Group 270990041",
+                "bbox": {
+                  "x": 357,
+                  "y": 2452,
+                  "width": 885.57,
+                  "height": 56
+                },
+                "children": [
+                  {
+                    "id": "266:1332",
+                    "type": "VECTOR",
+                    "name": "Vector 25",
+                    "bbox": {
+                      "x": 357,
+                      "y": 2452,
+                      "width": 885.57,
+                      "height": 56
+                    }
+                  },
+                  {
+                    "id": "266:1333",
+                    "type": "GROUP",
+                    "name": "Group 270990040",
+                    "bbox": {
+                      "x": 392,
+                      "y": 2469,
+                      "width": 815,
+                      "height": 22
+                    },
+                    "childCount": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "298:5085",
+            "type": "GROUP",
+            "name": "Group 270990058",
+            "bbox": {
+              "x": -1,
+              "y": 7676,
+              "width": 1602,
+              "height": 5083
+            },
+            "children": [
+              {
+                "id": "266:2133",
+                "type": "RECTANGLE",
+                "name": "Rectangle 565",
+                "bbox": {
+                  "x": 0,
+                  "y": 7676,
+                  "width": 1600,
+                  "height": 1310
+                }
+              },
+              {
+                "id": "386:1650",
+                "type": "GROUP",
+                "name": "Group 270990158",
+                "bbox": {
+                  "x": 139.92,
+                  "y": 7797,
+                  "width": 1291.08,
+                  "height": 1095.81
+                },
+                "children": [
+                  {
+                    "id": "266:2123",
+                    "type": "GROUP",
+                    "name": "Group 270990043",
+                    "bbox": {
+                      "x": 139.92,
+                      "y": 8012,
+                      "width": 1291.08,
+                      "height": 880.81
+                    },
+                    "childCount": 735
+                  },
+                  {
+                    "id": "266:1369",
+                    "type": "TEXT",
+                    "name": "The Neighborhood",
+                    "bbox": {
+                      "x": 165,
+                      "y": 7797,
+                      "width": 563.7,
+                      "height": 155.13
+                    },
+                    "characters": "The Neighborhood"
+                  },
+                  {
+                    "id": "266:1370",
+                    "type": "TEXT",
+                    "name": "We’ve lived here for a century; let us show you around.",
+                    "bbox": {
+                      "x": 1004,
+                      "y": 7825,
+                      "width": 425,
+                      "height": 14
+                    },
+                    "characters": "We’ve lived here for a century; let us show you around."
+                  },
+                  {
+                    "id": "266:2129",
+                    "type": "GROUP",
+                    "name": "Group 270990044",
+                    "bbox": {
+                      "x": 1004,
+                      "y": 7867,
+                      "width": 194,
+                      "height": 37
+                    },
+                    "childCount": 2
+                  }
+                ]
+              },
+              {
+                "id": "262:215",
+                "type": "GROUP",
+                "name": "Group 270990026",
+                "bbox": {
+                  "x": 0,
+                  "y": 8986,
+                  "width": 1600,
+                  "height": 1195
+                },
+                "children": [
+                  {
+                    "id": "262:216",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 553",
+                    "bbox": {
+                      "x": 0,
+                      "y": 8986,
+                      "width": 1600,
+                      "height": 1195
+                    }
+                  },
+                  {
+                    "id": "262:217",
+                    "type": "GROUP",
+                    "name": "Group 270990023",
+                    "bbox": {
+                      "x": 323,
+                      "y": 9180,
+                      "width": 955,
+                      "height": 776
+                    },
+                    "childCount": 16
+                  }
+                ]
+              },
+              {
+                "id": "262:251",
+                "type": "RECTANGLE",
+                "name": "Rectangle 511",
+                "bbox": {
+                  "x": 0,
+                  "y": 10181,
+                  "width": 801,
+                  "height": 900
+                }
+              },
+              {
+                "id": "262:252",
+                "type": "RECTANGLE",
+                "name": "Rectangle 530",
+                "bbox": {
+                  "x": 801,
+                  "y": 10181,
+                  "width": 800,
+                  "height": 900
+                }
+              },
+              {
+                "id": "262:253",
+                "type": "TEXT",
+                "name": "offers & packages",
+                "bbox": {
+                  "x": 148,
+                  "y": 10223.36,
+                  "width": 506,
+                  "height": 22
+                },
+                "characters": "offers & packages"
+              },
+              {
+                "id": "262:254",
+                "type": "GROUP",
+                "name": "Group 270990022",
+                "bbox": {
+                  "x": 148,
+                  "y": 10560,
+                  "width": 506,
+                  "height": 155
+                },
+                "children": [
+                  {
+                    "id": "262:255",
+                    "type": "TEXT",
+                    "name": "Save on 5+ Nights",
+                    "bbox": {
+                      "x": 185.5,
+                      "y": 10560,
+                      "width": 431,
+                      "height": 40
+                    },
+                    "characters": "Save on 5+ Nights"
+                  },
+                  {
+                    "id": "262:256",
+                    "type": "TEXT",
+                    "name": "A comfortable king room for an effortless city getaway.",
+                    "bbox": {
+                      "x": 148,
+                      "y": 10632,
+                      "width": 506,
+                      "height": 14
+                    },
+                    "characters": "A comfortable king room for an effortless city getaway."
+                  },
+                  {
+                    "id": "262:257",
+                    "type": "GROUP",
+                    "name": "Button",
+                    "bbox": {
+                      "x": 304,
+                      "y": 10678,
+                      "width": 194,
+                      "height": 37
+                    },
+                    "childCount": 2
+                  }
+                ]
+              },
+              {
+                "id": "262:260",
+                "type": "GROUP",
+                "name": "Group 270990024",
+                "bbox": {
+                  "x": 309,
+                  "y": 11031,
+                  "width": 183,
+                  "height": 16
+                },
+                "children": [
+                  {
+                    "id": "262:261",
+                    "type": "FRAME",
+                    "name": "Frame 427318460",
+                    "bbox": {
+                      "x": 309,
+                      "y": 11031,
+                      "width": 183,
+                      "height": 16
+                    },
+                    "childCount": 3
+                  }
+                ]
+              },
+              {
+                "id": "262:283",
+                "type": "GROUP",
+                "name": "Group 270990037",
+                "bbox": {
+                  "x": -1,
+                  "y": 11081,
+                  "width": 1601,
+                  "height": 1678
+                },
+                "children": [
+                  {
+                    "id": "262:284",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 530",
+                    "bbox": {
+                      "x": -1,
+                      "y": 11081,
+                      "width": 1601,
+                      "height": 1678
+                    }
+                  },
+                  {
+                    "id": "262:285",
+                    "type": "GROUP",
+                    "name": "Group 270990038",
+                    "bbox": {
+                      "x": 723,
+                      "y": 12688,
+                      "width": 152.45,
+                      "height": 31.3
+                    },
+                    "childCount": 16
+                  },
+                  {
+                    "id": "262:302",
+                    "type": "TEXT",
+                    "name": "Earn Marriott Bonvoy® Points on Every Stay",
+                    "bbox": {
+                      "x": 596.61,
+                      "y": 11836,
+                      "width": 414,
+                      "height": 14
+                    },
+                    "characters": "Earn Marriott Bonvoy® Points on Every Stay"
+                  },
+                  {
+                    "id": "262:303",
+                    "type": "LINE",
+                    "name": "Line 4",
+                    "bbox": {
+                      "x": 800,
+                      "y": 11301,
+                      "width": 0,
+                      "height": 426
+                    }
+                  },
+                  {
+                    "id": "262:304",
+                    "type": "GROUP",
+                    "name": "Group 270990031",
+                    "bbox": {
+                      "x": 205,
+                      "y": 11419,
+                      "width": 392,
+                      "height": 191
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "262:310",
+                    "type": "GROUP",
+                    "name": "Group 270990030",
+                    "bbox": {
+                      "x": 924,
+                      "y": 11419,
+                      "width": 551,
+                      "height": 191
+                    },
+                    "childCount": 4
+                  },
+                  {
+                    "id": "262:317",
+                    "type": "FRAME",
+                    "name": "Frame 427318623",
+                    "bbox": {
+                      "x": 40,
+                      "y": 12259,
+                      "width": 1520,
+                      "height": 250
+                    },
+                    "childCount": 5
+                  },
+                  {
+                    "id": "262:359",
+                    "type": "GROUP",
+                    "name": "Group 270990036",
+                    "bbox": {
+                      "x": 717,
+                      "y": 11762,
+                      "width": 167,
+                      "height": 48.09
+                    },
+                    "childCount": 1
+                  },
+                  {
+                    "id": "262:378",
+                    "type": "TEXT",
+                    "name": "copyright © 2026 the guild hotel",
+                    "bbox": {
+                      "x": 40,
+                      "y": 12705,
+                      "width": 356,
+                      "height": 14
+                    },
+                    "characters": "copyright © 2026 the guild hotel"
+                  },
+                  {
+                    "id": "262:379",
+                    "type": "TEXT",
+                    "name": "brand & website by Studio circa",
+                    "bbox": {
+                      "x": 1283,
+                      "y": 12705,
+                      "width": 277,
+                      "height": 14
+                    },
+                    "characters": "brand & website by Studio circa"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "262:396",
+            "type": "INSTANCE",
+            "name": "guild-nav-full-dark",
+            "bbox": {
+              "x": 40,
+              "y": 26,
+              "width": 1520,
+              "height": 56
+            },
+            "manual": true
+          }
+        ]
+      }
+    }
+  ],
+  "animationNotes": [
+    {
+      "id": "262:400",
+      "name": "Dining-Col-Animation-1",
+      "texts": [
+        "The initial smaller image enlarges on scroll until it becomes full width. then, as user scrolls it snaps with text and image transitions like the above example."
+      ],
+      "sectionIndex": 3
+    }
+  ]
+}

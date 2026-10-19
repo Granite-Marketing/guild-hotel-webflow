@@ -1,0 +1,115 @@
+{
+  "pageSlug": "home",
+  "index": 5,
+  "slug": "dress-up-for-the-rich-worldly",
+  "laneHint": null,
+  "frameId": "433:559",
+  "bbox": {
+    "x": 0,
+    "y": 4225,
+    "width": 1600,
+    "height": 988
+  },
+  "crop": {
+    "y0": 4205,
+    "y1": 5231
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "433:5758",
+      "characters": "Dress up for the rich, worldly sophistication of California’s first Zuma.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 22,
+      "fontWeight": 400,
+      "lineHeightPx": 35.2,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 503,
+        "y": 540,
+        "width": 595,
+        "height": 35
+      }
+    },
+    {
+      "id": "433:5761",
+      "characters": "DISCOVER MORE",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 728,
+        "y": 616,
+        "width": 144,
+        "height": 16
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "433:5755",
+      "name": "Vector 31",
+      "imageRef": "fa638bc2c84c8afc4c8daab6a935b35365944207",
+      "bbox": {
+        "x": 39.75,
+        "y": 20,
+        "width": 1520,
+        "height": 988
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "433:5754",
+      "type": "GROUP",
+      "name": "Group 270990186",
+      "bbox": {
+        "x": 39.75,
+        "y": 20,
+        "width": 1520,
+        "height": 988
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [
+    {
+      "id": "433:7368",
+      "name": "Home-Animation-1",
+      "texts": [
+        "The initial smaller image enlarges on scroll until it becomes full width. then, as user scrolls it snaps with text and image transitions like the above example."
+      ]
+    }
+  ],
+  "source": "page"
+}

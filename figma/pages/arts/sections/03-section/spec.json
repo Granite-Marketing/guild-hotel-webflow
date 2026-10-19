@@ -1,0 +1,62 @@
+{
+  "pageSlug": "arts",
+  "index": 3,
+  "slug": "section",
+  "laneHint": null,
+  "frameId": "477:1069",
+  "bbox": {
+    "x": 0,
+    "y": 1589,
+    "width": 1600,
+    "height": 753
+  },
+  "crop": {
+    "y0": 1507.5,
+    "y1": 2362
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [],
+  "colors": [],
+  "images": [
+    {
+      "nodeId": "477:1344",
+      "name": "Rectangle 593",
+      "imageRef": "6f6117168648560af09fa8344fd7ec88a095e861",
+      "bbox": {
+        "x": 178,
+        "y": 81.5,
+        "width": 1253,
+        "height": 753
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "477:1344",
+      "type": "RECTANGLE",
+      "name": "Rectangle 593",
+      "bbox": {
+        "x": 178,
+        "y": 81.5,
+        "width": 1253,
+        "height": 753
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "477:1351",
+      "type": "GROUP",
+      "name": "Group 270990202",
+      "bbox": {
+        "x": 0,
+        "y": 81.5,
+        "width": 1600,
+        "height": 2538
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

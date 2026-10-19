@@ -1,0 +1,192 @@
+{
+  "pageSlug": "dining-zuma",
+  "index": 1,
+  "slug": "zuma-san-diego",
+  "laneHint": null,
+  "frameId": "266:2135",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 900
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "266:3625",
+      "characters": "zuma san diego",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 629,
+        "y": 740,
+        "width": 342,
+        "height": 40
+      }
+    },
+    {
+      "id": "266:3170",
+      "characters": "Dress up for the rich, worldly sophistication of California’s first Zuma.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 22,
+      "fontWeight": 400,
+      "lineHeightPx": 35.2,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 503,
+        "y": 818,
+        "width": 595,
+        "height": 35
+      }
+    },
+    {
+      "id": "266:3173",
+      "characters": "reserve a table",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#FBF5DE",
+      "bbox": {
+        "x": 724,
+        "y": 832,
+        "width": 154,
+        "height": 16
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#489CCA",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#FBF5DE",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [
+    {
+      "nodeId": "266:3100",
+      "name": "guild-nav-full-dark",
+      "reason": "nav component instance: manual lane, bbox only",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "266:2136",
+      "type": "RECTANGLE",
+      "name": "Rectangle 1",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "266:3628",
+      "type": "GROUP",
+      "name": "Group 270990050",
+      "bbox": {
+        "x": 664,
+        "y": 0,
+        "width": 273,
+        "height": 860
+      }
+    },
+    {
+      "id": "266:3100",
+      "type": "INSTANCE",
+      "name": "guild-nav-full-dark",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    },
+    {
+      "id": "266:3174",
+      "type": "GROUP",
+      "name": "Group 270989670",
+      "bbox": {
+        "x": 592,
+        "y": 399,
+        "width": 416,
+        "height": 101
+      }
+    },
+    {
+      "id": "266:3625",
+      "type": "TEXT",
+      "name": "zuma san diego",
+      "bbox": {
+        "x": 629,
+        "y": 740,
+        "width": 342,
+        "height": 40
+      }
+    },
+    {
+      "id": "266:3170",
+      "type": "TEXT",
+      "name": "Dress up for the rich, worldly sophistication of California’s first Zuma.",
+      "bbox": {
+        "x": 503,
+        "y": 818,
+        "width": 595,
+        "height": 35
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

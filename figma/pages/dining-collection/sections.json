@@ -1,0 +1,289 @@
+{
+  "pageSlug": "dining-collection",
+  "frames": [
+    {
+      "id": "262:53",
+      "name": "DINING-COLLECTION",
+      "kind": "page",
+      "width": 1600,
+      "height": 12759,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/262-53.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "a-taste-of-the-guild",
+      "dir": "sections/01-a-taste-of-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "262:53",
+      "frameName": "DINING-COLLECTION",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 1019,
+      "nodeIds": [
+        "262:64",
+        "262:396",
+        "262:65",
+        "262:66"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-a-taste-of-the-guild/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "first-sips-small-bites-big-nights",
+      "dir": "sections/02-first-sips-small-bites-big-nights",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "262:53",
+      "frameName": "DINING-COLLECTION",
+      "y0": 1138,
+      "y1": 1717,
+      "cropY0": 1019,
+      "cropY1": 1717,
+      "nodeIds": [
+        "263:1313"
+      ],
+      "backgroundIds": [
+        "266:1342",
+        "266:1341"
+      ],
+      "crop": "sections/02-first-sips-small-bites-big-nights/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "zuma",
+      "dir": "sections/03-zuma",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "262:53",
+      "frameName": "DINING-COLLECTION",
+      "y0": 1717,
+      "y1": 2548,
+      "cropY0": 1717,
+      "cropY1": 2568,
+      "nodeIds": [
+        "266:1316",
+        "266:1331"
+      ],
+      "backgroundIds": [
+        "266:1342",
+        "266:1341"
+      ],
+      "crop": "sections/03-zuma/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "dress-up-for-the-rich-worldly",
+      "dir": "sections/04-dress-up-for-the-rich-worldly",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "262:53",
+      "frameName": "DINING-COLLECTION",
+      "y0": 2588,
+      "y1": 3576,
+      "cropY0": 2568,
+      "cropY1": 3594,
+      "nodeIds": [
+        "433:5745"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-dress-up-for-the-rich-worldly/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "cocktail-classics-and-drinks-for-connaisseurs",
+      "dir": "sections/05-cocktail-classics-and-drinks-for-connaisseurs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "262:53",
+      "frameName": "DINING-COLLECTION",
+      "y0": 3612,
+      "y1": 4600,
+      "cropY0": 3594,
+      "cropY1": 4618,
+      "nodeIds": [
+        "433:5746",
+        "263:1293"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-cocktail-classics-and-drinks-for-connaisseurs/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "our-new-pool-serves-up-san",
+      "dir": "sections/06-our-new-pool-serves-up-san",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "262:53",
+      "frameName": "DINING-COLLECTION",
+      "y0": 4636,
+      "y1": 5624,
+      "cropY0": 4618,
+      "cropY1": 5642,
+      "nodeIds": [
+        "433:5748"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-our-new-pool-serves-up-san/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "garden-terrace",
+      "dir": "sections/07-garden-terrace",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "262:53",
+      "frameName": "DINING-COLLECTION",
+      "y0": 5660,
+      "y1": 6648,
+      "cropY0": 5642,
+      "cropY1": 6668,
+      "nodeIds": [
+        "433:5750"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-garden-terrace/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "solana-coffee",
+      "dir": "sections/08-solana-coffee",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "262:53",
+      "frameName": "DINING-COLLECTION",
+      "y0": 6688,
+      "y1": 7676,
+      "cropY0": 6668,
+      "cropY1": 7676,
+      "nodeIds": [
+        "433:5752"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/08-solana-coffee/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "the-neighborhood",
+      "dir": "sections/09-the-neighborhood",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "262:53",
+      "frameName": "DINING-COLLECTION",
+      "y0": 7676,
+      "y1": 8986,
+      "cropY0": 7676,
+      "cropY1": 8986,
+      "nodeIds": [
+        "266:2133",
+        "386:1650"
+      ],
+      "backgroundIds": [
+        "298:5085"
+      ],
+      "crop": "sections/09-the-neighborhood/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "faqs",
+      "dir": "sections/10-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "262:53",
+      "frameName": "DINING-COLLECTION",
+      "y0": 8986,
+      "y1": 10181,
+      "cropY0": 8986,
+      "cropY1": 10181,
+      "nodeIds": [
+        "262:215"
+      ],
+      "backgroundIds": [
+        "298:5085"
+      ],
+      "crop": "sections/10-faqs/section.webp"
+    },
+    {
+      "index": 11,
+      "slug": "offers-packages",
+      "dir": "sections/11-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "262:53",
+      "frameName": "DINING-COLLECTION",
+      "y0": 10181,
+      "y1": 11081,
+      "cropY0": 10181,
+      "cropY1": 11081,
+      "nodeIds": [
+        "262:251",
+        "262:252",
+        "262:253",
+        "262:254",
+        "262:260"
+      ],
+      "backgroundIds": [
+        "298:5085"
+      ],
+      "crop": "sections/11-offers-packages/section.webp"
+    },
+    {
+      "index": 12,
+      "slug": "book-your-escape",
+      "dir": "sections/12-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "262:53",
+      "frameName": "DINING-COLLECTION",
+      "y0": 11081,
+      "y1": 12059,
+      "cropY0": 11081,
+      "cropY1": 12059,
+      "nodeIds": [
+        "262:303",
+        "262:304",
+        "262:310",
+        "262:359",
+        "262:302"
+      ],
+      "backgroundIds": [
+        "298:5085",
+        "262:283",
+        "262:284"
+      ],
+      "crop": "sections/12-book-your-escape/section.webp"
+    },
+    {
+      "index": 13,
+      "slug": "the-hotel",
+      "dir": "sections/13-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "262:53",
+      "frameName": "DINING-COLLECTION",
+      "y0": 12059,
+      "y1": 12759,
+      "cropY0": 12059,
+      "cropY1": 12759,
+      "nodeIds": [
+        "262:317",
+        "262:285",
+        "262:378",
+        "262:379"
+      ],
+      "backgroundIds": [
+        "298:5085",
+        "262:283",
+        "262:284"
+      ],
+      "crop": "sections/13-the-hotel/section.webp"
+    }
+  ]
+}

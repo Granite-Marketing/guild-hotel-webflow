@@ -1,38 +1,38 @@
 # Webflow IDs Reference
 
-Quick-lookup for site, page, collection, and field IDs to avoid redundant API/MCP calls. **Fill this in for your project on first-run setup.** Several skills (`build-component`, `content-ingest`, `update-seo`, `upload-copy`) read these IDs implicitly; keep this file current as your CMS schema evolves.
+Quick-lookup for site, page, collection, and field IDs to avoid redundant API/MCP calls. Several skills (`build-component`, `content-ingest`, `update-seo`, `upload-copy`) read these IDs implicitly; keep this file current as pages and the CMS schema evolve.
+
+Last verified: 2026-10-19 via the Webflow Data API (read-only).
 
 ## Site
 
-- **Name**: _<your project name>_
-- **Site ID**: `REPLACE_ME_SITE_ID`
-- **Staging URL**: `your-site.webflow.io`
-
-Look up the Site ID via `mcp__webflow__data_sites_tool` → `list_sites`, or in Webflow Site Settings → General.
+- **Name**: The Guild Hotel
+- **Site ID**: `6ad6405eae8eac6d7b7c41a3`
+- **Short name**: `the-guild-hotel-c34e71`
+- **Staging URL**: `the-guild-hotel-c34e71.webflow.io`
+- **Figma file**: `7KV5sqOiFIoei8gxhptDOU` (GUILD-WEB-NEW), see `figma/README.md`
 
 ## Pages
 
 | Page | ID | Slug |
 |---|---|---|
-| Home | `REPLACE_ME` | `/` |
+| Home | `6ad64060ae8eac6d7b7c4241` | `/` |
+| Style Guide | `6ad64060ae8eac6d7b7c4244` | `/style-guide` |
+| Starter Components | `6ad64060ae8eac6d7b7c4245` | `/starter-components` |
+| Password | `6ad64060ae8eac6d7b7c4242` | `/401` |
+| 404 | `6ad64060ae8eac6d7b7c4243` | `/404` |
 
-Populate via `mcp__webflow__data_pages_tool` → `list_pages`.
+Pages for the remaining Figma designs do not exist yet; add rows as build sessions create them.
+
+## Components
+
+| Component | ID | Notes |
+|---|---|---|
+| Global Styles | `ab488b17-f25a-fbf8-5f54-4a3955eb57e5` | Relume starter global styles embed |
 
 ## CMS Collections
 
-| Collection | ID | Purpose |
-|---|---|---|
-| _Example_ | `REPLACE_ME` | Brief description of what the collection holds |
-
-Populate via `mcp__webflow__data_cms_tool` → `get_collection_list`.
-
-## Key CMS Fields
-
-For each collection your skills write to, list the writable fields, their slugs, and types. Reference fields should call out the target collection.
-
-| Field | Slug | Type | Notes |
-|---|---|---|---|
-| _Example_ | `field-slug` | PlainText | |
+None yet. Proposed schemas live in `docs/figma/cms-proposal.md`; collections are created only after approval.
 
 ## Conventions
 

@@ -1,0 +1,3126 @@
+{
+  "pageSlug": "corporate",
+  "frames": [
+    {
+      "id": "2034:2490",
+      "name": "CORPORATE",
+      "kind": "page",
+      "width": 1600,
+      "height": 20940,
+      "scale": 0.75,
+      "renderScale": 0.75,
+      "render": "figma/.cache/renders/2034-2490.png",
+      "status": "ok",
+      "tree": {
+        "id": "2034:2490",
+        "type": "FRAME",
+        "name": "CORPORATE",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 20940
+        },
+        "children": [
+          {
+            "id": "2034:2491",
+            "type": "RECTANGLE",
+            "name": "Rectangle 1",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 900
+            }
+          },
+          {
+            "id": "2034:2494",
+            "type": "TEXT",
+            "name": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+            "bbox": {
+              "x": 503,
+              "y": 818,
+              "width": 595,
+              "height": 35
+            },
+            "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non."
+          },
+          {
+            "id": "2034:2495",
+            "type": "TEXT",
+            "name": "Contemporary Japanese Dining at The Guild Hotel",
+            "bbox": {
+              "x": 945,
+              "y": 1301,
+              "width": 372,
+              "height": 58
+            },
+            "characters": "Contemporary Japanese\nDining at The Guild Hotel"
+          },
+          {
+            "id": "2034:2496",
+            "type": "TEXT",
+            "name": "retreat for corporate teams",
+            "bbox": {
+              "x": 463,
+              "y": 740,
+              "width": 674,
+              "height": 40
+            },
+            "characters": "retreat for corporate teams"
+          },
+          {
+            "id": "2034:2497",
+            "type": "TEXT",
+            "name": "A Landmark Reimagined",
+            "bbox": {
+              "x": 533,
+              "y": 14198,
+              "width": 535,
+              "height": 40
+            },
+            "characters": "A Landmark Reimagined"
+          },
+          {
+            "id": "2034:2498",
+            "type": "GROUP",
+            "name": "Group 270990125",
+            "bbox": {
+              "x": 424.44,
+              "y": 1142.26,
+              "width": 753.57,
+              "height": 437.74
+            },
+            "children": [
+              {
+                "id": "2034:2499",
+                "type": "TEXT",
+                "name": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
+                "bbox": {
+                  "x": 506,
+                  "y": 1488,
+                  "width": 588,
+                  "height": 92
+                },
+                "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+              },
+              {
+                "id": "2034:2500",
+                "type": "TEXT",
+                "name": "Refined focus, unmatched convenience.",
+                "bbox": {
+                  "x": 424.44,
+                  "y": 1142.26,
+                  "width": 753.57,
+                  "height": 284.79
+                },
+                "characters": "Refined focus,\nunmatched convenience."
+              }
+            ]
+          },
+          {
+            "id": "2034:2501",
+            "type": "GROUP",
+            "name": "Group 270990085",
+            "bbox": {
+              "x": 40,
+              "y": 1913,
+              "width": 1520,
+              "height": 797
+            },
+            "children": [
+              {
+                "id": "2034:2502",
+                "type": "RECTANGLE",
+                "name": "Rectangle 572",
+                "bbox": {
+                  "x": 40,
+                  "y": 1982,
+                  "width": 485,
+                  "height": 563
+                }
+              },
+              {
+                "id": "2034:2503",
+                "type": "GROUP",
+                "name": "Group 270990084",
+                "bbox": {
+                  "x": 40,
+                  "y": 1982,
+                  "width": 1520,
+                  "height": 728
+                },
+                "children": [
+                  {
+                    "id": "2034:2504",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 573",
+                    "bbox": {
+                      "x": 558,
+                      "y": 1982,
+                      "width": 485,
+                      "height": 563
+                    }
+                  },
+                  {
+                    "id": "2034:2505",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 574",
+                    "bbox": {
+                      "x": 1075,
+                      "y": 1982,
+                      "width": 485,
+                      "height": 563
+                    }
+                  },
+                  {
+                    "id": "2034:2506",
+                    "type": "TEXT",
+                    "name": "Fast, secure internet throughout the hotel—ideal for managing sensitive documents and conducting virtual proceedings.",
+                    "bbox": {
+                      "x": 40,
+                      "y": 2618,
+                      "width": 378,
+                      "height": 66
+                    },
+                    "characters": "Fast, secure internet throughout the hotel—ideal for managing sensitive documents and conducting virtual proceedings."
+                  },
+                  {
+                    "id": "2034:2507",
+                    "type": "TEXT",
+                    "name": "Professional security protocols maintaining attorney-client privilege standards",
+                    "bbox": {
+                      "x": 558,
+                      "y": 2618,
+                      "width": 378,
+                      "height": 40
+                    },
+                    "characters": "Professional security protocols maintaining attorney-client privilege standards"
+                  },
+                  {
+                    "id": "2034:2508",
+                    "type": "TEXT",
+                    "name": "Comfortable, dedicated areas designed for quiet focus and productivity—ideal for reviewing case files, preparing witnesses, and conducting confidential team discussions.",
+                    "bbox": {
+                      "x": 1075,
+                      "y": 2618,
+                      "width": 378,
+                      "height": 92
+                    },
+                    "characters": "Comfortable, dedicated areas designed for quiet focus and productivity—ideal for reviewing case files, preparing witnesses, and conducting confidential team discussions."
+                  },
+                  {
+                    "id": "2034:2509",
+                    "type": "TEXT",
+                    "name": "High-Speed, Encrypted Wi-Fi",
+                    "bbox": {
+                      "x": 40,
+                      "y": 2574,
+                      "width": 485,
+                      "height": 22
+                    },
+                    "characters": "High-Speed, Encrypted Wi-Fi"
+                  },
+                  {
+                    "id": "2034:2510",
+                    "type": "TEXT",
+                    "name": "24/7 Controlled Security",
+                    "bbox": {
+                      "x": 558,
+                      "y": 2574,
+                      "width": 485,
+                      "height": 22
+                    },
+                    "characters": "24/7 Controlled Security"
+                  },
+                  {
+                    "id": "2034:2511",
+                    "type": "TEXT",
+                    "name": "Quiet, Professional Workspaces",
+                    "bbox": {
+                      "x": 1075,
+                      "y": 2574,
+                      "width": 485,
+                      "height": 22
+                    },
+                    "characters": "Quiet, Professional Workspaces"
+                  }
+                ]
+              },
+              {
+                "id": "2034:2512",
+                "type": "TEXT",
+                "name": "key features",
+                "bbox": {
+                  "x": 706,
+                  "y": 1913,
+                  "width": 189,
+                  "height": 29
+                },
+                "characters": "key features"
+              }
+            ]
+          },
+          {
+            "id": "2034:2513",
+            "type": "GROUP",
+            "name": "Group 270990122",
+            "bbox": {
+              "x": 40,
+              "y": 1982,
+              "width": 1520,
+              "height": 728
+            },
+            "children": [
+              {
+                "id": "2034:2514",
+                "type": "RECTANGLE",
+                "name": "Rectangle 572",
+                "bbox": {
+                  "x": 40,
+                  "y": 1982,
+                  "width": 485,
+                  "height": 563
+                }
+              },
+              {
+                "id": "2034:2515",
+                "type": "RECTANGLE",
+                "name": "Rectangle 573",
+                "bbox": {
+                  "x": 558,
+                  "y": 1982,
+                  "width": 485,
+                  "height": 563
+                }
+              },
+              {
+                "id": "2034:2516",
+                "type": "RECTANGLE",
+                "name": "Rectangle 574",
+                "bbox": {
+                  "x": 1075,
+                  "y": 1982,
+                  "width": 485,
+                  "height": 563
+                }
+              },
+              {
+                "id": "2034:2517",
+                "type": "TEXT",
+                "name": "Fast, secure internet throughout the hotel—ideal for managing sensitive documents and conducting virtual proceedings.",
+                "bbox": {
+                  "x": 40,
+                  "y": 2618,
+                  "width": 378,
+                  "height": 66
+                },
+                "characters": "Fast, secure internet throughout the hotel—ideal for managing sensitive documents and conducting virtual proceedings."
+              },
+              {
+                "id": "2034:2518",
+                "type": "TEXT",
+                "name": "Professional security protocols maintaining attorney-client privilege standards",
+                "bbox": {
+                  "x": 558,
+                  "y": 2618,
+                  "width": 378,
+                  "height": 40
+                },
+                "characters": "Professional security protocols maintaining attorney-client privilege standards"
+              },
+              {
+                "id": "2034:2519",
+                "type": "TEXT",
+                "name": "Comfortable, dedicated areas designed for quiet focus and productivity—ideal for reviewing case files, preparing witnesses, and conducting confidential team discussions.",
+                "bbox": {
+                  "x": 1075,
+                  "y": 2618,
+                  "width": 378,
+                  "height": 92
+                },
+                "characters": "Comfortable, dedicated areas designed for quiet focus and productivity—ideal for reviewing case files, preparing witnesses, and conducting confidential team discussions."
+              },
+              {
+                "id": "2034:2520",
+                "type": "TEXT",
+                "name": "High-Speed, Encrypted Wi-Fi",
+                "bbox": {
+                  "x": 40,
+                  "y": 2574,
+                  "width": 485,
+                  "height": 22
+                },
+                "characters": "High-Speed, Encrypted Wi-Fi"
+              },
+              {
+                "id": "2034:2521",
+                "type": "TEXT",
+                "name": "24/7 Controlled Security",
+                "bbox": {
+                  "x": 558,
+                  "y": 2574,
+                  "width": 485,
+                  "height": 22
+                },
+                "characters": "24/7 Controlled Security"
+              },
+              {
+                "id": "2034:2522",
+                "type": "TEXT",
+                "name": "Quiet, Professional Workspaces",
+                "bbox": {
+                  "x": 1075,
+                  "y": 2574,
+                  "width": 485,
+                  "height": 22
+                },
+                "characters": "Quiet, Professional Workspaces"
+              }
+            ]
+          },
+          {
+            "id": "2034:2523",
+            "type": "GROUP",
+            "name": "Group 270990100",
+            "bbox": {
+              "x": 0,
+              "y": 2871,
+              "width": 1600,
+              "height": 1026
+            },
+            "children": [
+              {
+                "id": "2034:2524",
+                "type": "RECTANGLE",
+                "name": "Rectangle 578",
+                "bbox": {
+                  "x": 0,
+                  "y": 2871,
+                  "width": 1600,
+                  "height": 1026
+                }
+              },
+              {
+                "id": "2034:2525",
+                "type": "RECTANGLE",
+                "name": "Rectangle 580",
+                "bbox": {
+                  "x": 0,
+                  "y": 2871,
+                  "width": 1600,
+                  "height": 1026
+                }
+              },
+              {
+                "id": "2034:2526",
+                "type": "TEXT",
+                "name": "Earn Marriott Bonvoy® Points on Every Stay",
+                "bbox": {
+                  "x": 692,
+                  "y": 3784,
+                  "width": 217,
+                  "height": 34
+                },
+                "characters": "Earn Marriott Bonvoy®\nPoints on Every Stay"
+              },
+              {
+                "id": "2034:2527",
+                "type": "GROUP",
+                "name": "Group",
+                "bbox": {
+                  "x": 717,
+                  "y": 3718,
+                  "width": 167,
+                  "height": 48.09
+                },
+                "children": [
+                  {
+                    "id": "2034:2528",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 827.7,
+                      "y": 3761.79,
+                      "width": 22.67,
+                      "height": 3.76
+                    }
+                  },
+                  {
+                    "id": "2034:2529",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 851.03,
+                      "y": 3739.78,
+                      "width": 25.28,
+                      "height": 25.8
+                    }
+                  },
+                  {
+                    "id": "2034:2530",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 717,
+                      "y": 3739.78,
+                      "width": 21.41,
+                      "height": 25.8
+                    }
+                  },
+                  {
+                    "id": "2034:2531",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 801.25,
+                      "y": 3739.78,
+                      "width": 24.85,
+                      "height": 25.8
+                    }
+                  },
+                  {
+                    "id": "2034:2532",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 742.97,
+                      "y": 3739.26,
+                      "width": 26.83,
+                      "height": 26.83
+                    }
+                  },
+                  {
+                    "id": "2034:2533",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 775.16,
+                      "y": 3739.78,
+                      "width": 21.38,
+                      "height": 25.8
+                    }
+                  },
+                  {
+                    "id": "2034:2534",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 830.03,
+                      "y": 3739.26,
+                      "width": 18.02,
+                      "height": 18.02
+                    }
+                  },
+                  {
+                    "id": "2034:2535",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 738.98,
+                      "y": 3718.26,
+                      "width": 13.34,
+                      "height": 12.91
+                    }
+                  },
+                  {
+                    "id": "2034:2536",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 844.29,
+                      "y": 3718.26,
+                      "width": 10.04,
+                      "height": 12.91
+                    }
+                  },
+                  {
+                    "id": "2034:2537",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 830.37,
+                      "y": 3718.26,
+                      "width": 10.01,
+                      "height": 12.91
+                    }
+                  },
+                  {
+                    "id": "2034:2538",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 806.38,
+                      "y": 3718.26,
+                      "width": 2.41,
+                      "height": 12.91
+                    }
+                  },
+                  {
+                    "id": "2034:2539",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 774.33,
+                      "y": 3718.26,
+                      "width": 10.73,
+                      "height": 12.91
+                    }
+                  },
+                  {
+                    "id": "2034:2540",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 756.97,
+                      "y": 3718.26,
+                      "width": 13.11,
+                      "height": 12.91
+                    }
+                  },
+                  {
+                    "id": "2034:2541",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 790.17,
+                      "y": 3718.26,
+                      "width": 10.73,
+                      "height": 12.91
+                    }
+                  },
+                  {
+                    "id": "2034:2542",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 813.61,
+                      "y": 3718,
+                      "width": 13.43,
+                      "height": 13.43
+                    }
+                  },
+                  {
+                    "id": "2034:2543",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 878.03,
+                      "y": 3739.72,
+                      "width": 2.5,
+                      "height": 3.24
+                    }
+                  },
+                  {
+                    "id": "2034:2544",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 880.93,
+                      "y": 3739.72,
+                      "width": 3.07,
+                      "height": 3.24
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "2034:2545",
+                "type": "GROUP",
+                "name": "Group 270990096",
+                "bbox": {
+                  "x": 96,
+                  "y": 3076,
+                  "width": 1408,
+                  "height": 546
+                },
+                "children": [
+                  {
+                    "id": "2034:2546",
+                    "type": "TEXT",
+                    "name": "Why teams choose The Guild",
+                    "bbox": {
+                      "x": 526,
+                      "y": 3076,
+                      "width": 549,
+                      "height": 38
+                    },
+                    "characters": "Why teams choose The Guild"
+                  },
+                  {
+                    "id": "2034:2547",
+                    "type": "LINE",
+                    "name": "Line 14",
+                    "bbox": {
+                      "x": 96,
+                      "y": 3429,
+                      "width": 289,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "2034:2548",
+                    "type": "LINE",
+                    "name": "Line 15",
+                    "bbox": {
+                      "x": 469,
+                      "y": 3429,
+                      "width": 289,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "2034:2549",
+                    "type": "LINE",
+                    "name": "Line 16",
+                    "bbox": {
+                      "x": 841,
+                      "y": 3429,
+                      "width": 289,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "2034:2550",
+                    "type": "LINE",
+                    "name": "Line 17",
+                    "bbox": {
+                      "x": 1215,
+                      "y": 3429,
+                      "width": 289,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "2034:2551",
+                    "type": "GROUP",
+                    "name": "Group 270990095",
+                    "bbox": {
+                      "x": 96,
+                      "y": 3235,
+                      "width": 289,
+                      "height": 301
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2558",
+                    "type": "LINE",
+                    "name": "Line 11",
+                    "bbox": {
+                      "x": 427,
+                      "y": 3235,
+                      "width": 0,
+                      "height": 387
+                    }
+                  },
+                  {
+                    "id": "2034:2559",
+                    "type": "GROUP",
+                    "name": "Group 270990088",
+                    "bbox": {
+                      "x": 469,
+                      "y": 3235,
+                      "width": 289,
+                      "height": 83
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2562",
+                    "type": "GROUP",
+                    "name": "Group 270990090",
+                    "bbox": {
+                      "x": 469,
+                      "y": 3453,
+                      "width": 289,
+                      "height": 83
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2565",
+                    "type": "LINE",
+                    "name": "Line 12",
+                    "bbox": {
+                      "x": 800,
+                      "y": 3235,
+                      "width": 0,
+                      "height": 387
+                    }
+                  },
+                  {
+                    "id": "2034:2566",
+                    "type": "GROUP",
+                    "name": "Group 270990087",
+                    "bbox": {
+                      "x": 842,
+                      "y": 3235,
+                      "width": 289,
+                      "height": 83
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2569",
+                    "type": "GROUP",
+                    "name": "Group 270990091",
+                    "bbox": {
+                      "x": 842,
+                      "y": 3453,
+                      "width": 289,
+                      "height": 83
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2572",
+                    "type": "LINE",
+                    "name": "Line 13",
+                    "bbox": {
+                      "x": 1173,
+                      "y": 3235,
+                      "width": 0,
+                      "height": 387
+                    }
+                  },
+                  {
+                    "id": "2034:2573",
+                    "type": "GROUP",
+                    "name": "Group 270990086",
+                    "bbox": {
+                      "x": 1215,
+                      "y": 3235,
+                      "width": 289,
+                      "height": 83
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2576",
+                    "type": "GROUP",
+                    "name": "Group 270990092",
+                    "bbox": {
+                      "x": 1215,
+                      "y": 3453,
+                      "width": 289,
+                      "height": 83
+                    },
+                    "childCount": 2
+                  }
+                ]
+              },
+              {
+                "id": "2034:2579",
+                "type": "INSTANCE",
+                "name": "Group 270990249",
+                "bbox": {
+                  "x": 241,
+                  "y": 3147,
+                  "width": 377,
+                  "height": 486
+                },
+                "children": [
+                  {
+                    "id": "I2034:2579;2034:2893",
+                    "type": "GROUP",
+                    "name": "Group 270990097",
+                    "bbox": {
+                      "x": 241,
+                      "y": 3147,
+                      "width": 377,
+                      "height": 486
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "I2034:2579;2034:2896",
+                    "type": "GROUP",
+                    "name": "Group 270990098",
+                    "bbox": {
+                      "x": 573,
+                      "y": 3599,
+                      "width": 16.97,
+                      "height": 16.97
+                    },
+                    "childCount": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:2580",
+            "type": "GROUP",
+            "name": "Group 270990101",
+            "bbox": {
+              "x": 947,
+              "y": 4123,
+              "width": 484,
+              "height": 694
+            },
+            "children": [
+              {
+                "id": "2034:2581",
+                "type": "RECTANGLE",
+                "name": "Rectangle 581",
+                "bbox": {
+                  "x": 947,
+                  "y": 4123,
+                  "width": 484,
+                  "height": 595
+                }
+              },
+              {
+                "id": "2034:2582",
+                "type": "TEXT",
+                "name": "Entire floor buyouts available for secure team use and confidential strategy rooms.",
+                "bbox": {
+                  "x": 947,
+                  "y": 4777,
+                  "width": 440,
+                  "height": 40
+                },
+                "characters": "Entire floor buyouts available for secure team use and confidential strategy rooms."
+              },
+              {
+                "id": "2034:2583",
+                "type": "TEXT",
+                "name": "Private Access Options",
+                "bbox": {
+                  "x": 947,
+                  "y": 4742,
+                  "width": 289,
+                  "height": 19
+                },
+                "characters": "Private Access Options"
+              }
+            ]
+          },
+          {
+            "id": "2034:2584",
+            "type": "GROUP",
+            "name": "Group 270990102",
+            "bbox": {
+              "x": 947,
+              "y": 4917,
+              "width": 484,
+              "height": 694
+            },
+            "children": [
+              {
+                "id": "2034:2585",
+                "type": "RECTANGLE",
+                "name": "Rectangle 581",
+                "bbox": {
+                  "x": 947,
+                  "y": 4917,
+                  "width": 484,
+                  "height": 595
+                }
+              },
+              {
+                "id": "2034:2586",
+                "type": "TEXT",
+                "name": "Customized in-room features and wellness offerings for long-term trial support.",
+                "bbox": {
+                  "x": 947,
+                  "y": 5571,
+                  "width": 456,
+                  "height": 40
+                },
+                "characters": "Customized in-room features and wellness offerings for long-term trial support."
+              },
+              {
+                "id": "2034:2587",
+                "type": "TEXT",
+                "name": "Wellness Programming & Extended-Stay Amenities",
+                "bbox": {
+                  "x": 947,
+                  "y": 5536,
+                  "width": 484,
+                  "height": 19
+                },
+                "characters": "Wellness Programming & Extended-Stay Amenities"
+              }
+            ]
+          },
+          {
+            "id": "2034:2588",
+            "type": "GROUP",
+            "name": "Group 270990103",
+            "bbox": {
+              "x": 947,
+              "y": 5711,
+              "width": 484,
+              "height": 694
+            },
+            "children": [
+              {
+                "id": "2034:2589",
+                "type": "RECTANGLE",
+                "name": "Rectangle 581",
+                "bbox": {
+                  "x": 947,
+                  "y": 5711,
+                  "width": 484,
+                  "height": 595
+                }
+              },
+              {
+                "id": "2034:2590",
+                "type": "TEXT",
+                "name": "From soundproof guest rooms to adaptable “war room” setups, every space promotes concentration and comfort.",
+                "bbox": {
+                  "x": 947,
+                  "y": 6365,
+                  "width": 456,
+                  "height": 40
+                },
+                "characters": "From soundproof guest rooms to adaptable “war room” setups, every space promotes concentration and comfort."
+              },
+              {
+                "id": "2034:2591",
+                "type": "TEXT",
+                "name": "Quiet, Professional Environment",
+                "bbox": {
+                  "x": 947,
+                  "y": 6330,
+                  "width": 484,
+                  "height": 19
+                },
+                "characters": "Quiet, Professional Environment"
+              }
+            ]
+          },
+          {
+            "id": "2034:2592",
+            "type": "GROUP",
+            "name": "Group 270990104",
+            "bbox": {
+              "x": 947,
+              "y": 6505,
+              "width": 484,
+              "height": 694
+            },
+            "children": [
+              {
+                "id": "2034:2593",
+                "type": "RECTANGLE",
+                "name": "Rectangle 581",
+                "bbox": {
+                  "x": 947,
+                  "y": 6505,
+                  "width": 484,
+                  "height": 595
+                }
+              },
+              {
+                "id": "2034:2594",
+                "type": "TEXT",
+                "name": "On-site private storage for sensitive materials, with 24/7 access to printing and scanning.",
+                "bbox": {
+                  "x": 947,
+                  "y": 7159,
+                  "width": 456,
+                  "height": 40
+                },
+                "characters": "On-site private storage for sensitive materials, with 24/7 access to printing and scanning."
+              },
+              {
+                "id": "2034:2595",
+                "type": "TEXT",
+                "name": "Secure Storage & Services",
+                "bbox": {
+                  "x": 947,
+                  "y": 7124,
+                  "width": 484,
+                  "height": 19
+                },
+                "characters": "Secure Storage & Services"
+              }
+            ]
+          },
+          {
+            "id": "2034:2596",
+            "type": "GROUP",
+            "name": "Group 270990106",
+            "bbox": {
+              "x": 40,
+              "y": 3963,
+              "width": 485,
+              "height": 385
+            },
+            "children": [
+              {
+                "id": "2034:2597",
+                "type": "GROUP",
+                "name": "Group 270990105",
+                "bbox": {
+                  "x": 40,
+                  "y": 4136,
+                  "width": 485,
+                  "height": 130
+                },
+                "children": [
+                  {
+                    "id": "2034:2598",
+                    "type": "TEXT",
+                    "name": "The Guild provides a discreet, high-performance atmosphere tailored to the demands of legal professionals.",
+                    "bbox": {
+                      "x": 40,
+                      "y": 4226,
+                      "width": 485,
+                      "height": 40
+                    },
+                    "characters": "The Guild provides a discreet, high-performance atmosphere tailored to the demands of legal professionals."
+                  },
+                  {
+                    "id": "2034:2599",
+                    "type": "TEXT",
+                    "name": "Designed for Focused Work & Confidential Strategy",
+                    "bbox": {
+                      "x": 40,
+                      "y": 4136,
+                      "width": 485,
+                      "height": 58
+                    },
+                    "characters": "Designed for Focused Work & Confidential Strategy"
+                  }
+                ]
+              },
+              {
+                "id": "2034:2600",
+                "type": "RECTANGLE",
+                "name": "Rectangle 582",
+                "bbox": {
+                  "x": 41,
+                  "y": 3963,
+                  "width": 462,
+                  "height": 173
+                }
+              },
+              {
+                "id": "2034:2601",
+                "type": "GROUP",
+                "name": "Group 270990081",
+                "bbox": {
+                  "x": 40,
+                  "y": 4311,
+                  "width": 234,
+                  "height": 37
+                },
+                "children": [
+                  {
+                    "id": "2034:2602",
+                    "type": "GROUP",
+                    "name": "Group 270990107",
+                    "bbox": {
+                      "x": 40,
+                      "y": 4311,
+                      "width": 234,
+                      "height": 37
+                    },
+                    "childCount": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:2605",
+            "type": "RECTANGLE",
+            "name": "Rectangle 583",
+            "bbox": {
+              "x": 1,
+              "y": 7199,
+              "width": 1599,
+              "height": 11370
+            }
+          },
+          {
+            "id": "2034:2606",
+            "type": "TEXT",
+            "name": "tailored corporate packages",
+            "bbox": {
+              "x": 510,
+              "y": 12945,
+              "width": 580,
+              "height": 38
+            },
+            "characters": "tailored corporate packages"
+          },
+          {
+            "id": "2034:2607",
+            "type": "GROUP",
+            "name": "Group 270990110",
+            "bbox": {
+              "x": 40,
+              "y": 7390,
+              "width": 1520,
+              "height": 988
+            },
+            "children": [
+              {
+                "id": "2034:2608",
+                "type": "GROUP",
+                "name": "Group 270990109",
+                "bbox": {
+                  "x": 40,
+                  "y": 7390,
+                  "width": 1520,
+                  "height": 988
+                },
+                "children": [
+                  {
+                    "id": "2034:2609",
+                    "type": "GROUP",
+                    "name": "Group 270990053",
+                    "bbox": {
+                      "x": 40,
+                      "y": 7390,
+                      "width": 1520,
+                      "height": 988
+                    },
+                    "childCount": 1
+                  }
+                ]
+              },
+              {
+                "id": "2034:2611",
+                "type": "GROUP",
+                "name": "Group 270990056",
+                "bbox": {
+                  "x": 99,
+                  "y": 7766,
+                  "width": 1403,
+                  "height": 236
+                },
+                "children": [
+                  {
+                    "id": "2034:2612",
+                    "type": "GROUP",
+                    "name": "Group 270990053",
+                    "bbox": {
+                      "x": 99,
+                      "y": 7766,
+                      "width": 1403,
+                      "height": 236
+                    },
+                    "childCount": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:2619",
+            "type": "GROUP",
+            "name": "Group 270990111",
+            "bbox": {
+              "x": 40,
+              "y": 8418,
+              "width": 1520,
+              "height": 988
+            },
+            "children": [
+              {
+                "id": "2034:2620",
+                "type": "GROUP",
+                "name": "Group 270990109",
+                "bbox": {
+                  "x": 40,
+                  "y": 8418,
+                  "width": 1520,
+                  "height": 988
+                },
+                "children": [
+                  {
+                    "id": "2034:2621",
+                    "type": "GROUP",
+                    "name": "Group 270990053",
+                    "bbox": {
+                      "x": 40,
+                      "y": 8418,
+                      "width": 1520,
+                      "height": 988
+                    },
+                    "childCount": 1
+                  }
+                ]
+              },
+              {
+                "id": "2034:2623",
+                "type": "GROUP",
+                "name": "Group 270990056",
+                "bbox": {
+                  "x": 99,
+                  "y": 8794,
+                  "width": 1403,
+                  "height": 236
+                },
+                "children": [
+                  {
+                    "id": "2034:2624",
+                    "type": "GROUP",
+                    "name": "Group 270990053",
+                    "bbox": {
+                      "x": 99,
+                      "y": 8794,
+                      "width": 1403,
+                      "height": 236
+                    },
+                    "childCount": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:2631",
+            "type": "GROUP",
+            "name": "Group 270990112",
+            "bbox": {
+              "x": 40,
+              "y": 9446,
+              "width": 1520,
+              "height": 988
+            },
+            "children": [
+              {
+                "id": "2034:2632",
+                "type": "GROUP",
+                "name": "Group 270990109",
+                "bbox": {
+                  "x": 40,
+                  "y": 9446,
+                  "width": 1520,
+                  "height": 988
+                },
+                "children": [
+                  {
+                    "id": "2034:2633",
+                    "type": "GROUP",
+                    "name": "Group 270990053",
+                    "bbox": {
+                      "x": 40,
+                      "y": 9446,
+                      "width": 1520,
+                      "height": 988
+                    },
+                    "childCount": 1
+                  }
+                ]
+              },
+              {
+                "id": "2034:2635",
+                "type": "GROUP",
+                "name": "Group 270990056",
+                "bbox": {
+                  "x": 99,
+                  "y": 9822,
+                  "width": 1403,
+                  "height": 236
+                },
+                "children": [
+                  {
+                    "id": "2034:2636",
+                    "type": "GROUP",
+                    "name": "Group 270990053",
+                    "bbox": {
+                      "x": 99,
+                      "y": 9822,
+                      "width": 1403,
+                      "height": 236
+                    },
+                    "childCount": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:2643",
+            "type": "GROUP",
+            "name": "Group 270990113",
+            "bbox": {
+              "x": 40,
+              "y": 10474,
+              "width": 1520,
+              "height": 988
+            },
+            "children": [
+              {
+                "id": "2034:2644",
+                "type": "GROUP",
+                "name": "Group 270990109",
+                "bbox": {
+                  "x": 40,
+                  "y": 10474,
+                  "width": 1520,
+                  "height": 988
+                },
+                "children": [
+                  {
+                    "id": "2034:2645",
+                    "type": "GROUP",
+                    "name": "Group 270990053",
+                    "bbox": {
+                      "x": 40,
+                      "y": 10474,
+                      "width": 1520,
+                      "height": 988
+                    },
+                    "childCount": 1
+                  }
+                ]
+              },
+              {
+                "id": "2034:2647",
+                "type": "GROUP",
+                "name": "Group 270990056",
+                "bbox": {
+                  "x": 99,
+                  "y": 10850,
+                  "width": 1403,
+                  "height": 236
+                },
+                "children": [
+                  {
+                    "id": "2034:2648",
+                    "type": "GROUP",
+                    "name": "Group 270990053",
+                    "bbox": {
+                      "x": 99,
+                      "y": 10850,
+                      "width": 1403,
+                      "height": 236
+                    },
+                    "childCount": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:2655",
+            "type": "GROUP",
+            "name": "Group 270990141",
+            "bbox": {
+              "x": 0,
+              "y": 11597,
+              "width": 1600,
+              "height": 1170
+            },
+            "children": [
+              {
+                "id": "2034:2656",
+                "type": "RECTANGLE",
+                "name": "Rectangle 584",
+                "bbox": {
+                  "x": 0,
+                  "y": 11597,
+                  "width": 1600,
+                  "height": 1170
+                }
+              },
+              {
+                "id": "2034:2657",
+                "type": "RECTANGLE",
+                "name": "Rectangle 585",
+                "bbox": {
+                  "x": 40,
+                  "y": 12104,
+                  "width": 485,
+                  "height": 623
+                }
+              },
+              {
+                "id": "2034:2658",
+                "type": "ELLIPSE",
+                "name": "Ellipse 1",
+                "bbox": {
+                  "x": 784,
+                  "y": 12148,
+                  "width": 68,
+                  "height": 68
+                }
+              },
+              {
+                "id": "2034:2659",
+                "type": "ELLIPSE",
+                "name": "Ellipse 2",
+                "bbox": {
+                  "x": 1075,
+                  "y": 12381,
+                  "width": 68,
+                  "height": 68
+                }
+              },
+              {
+                "id": "2034:2660",
+                "type": "ELLIPSE",
+                "name": "Ellipse 3",
+                "bbox": {
+                  "x": 861,
+                  "y": 12540,
+                  "width": 68,
+                  "height": 68
+                }
+              },
+              {
+                "id": "2034:2661",
+                "type": "ELLIPSE",
+                "name": "Ellipse 4",
+                "bbox": {
+                  "x": 1204,
+                  "y": 12087,
+                  "width": 68,
+                  "height": 68
+                }
+              },
+              {
+                "id": "2034:2662",
+                "type": "FRAME",
+                "name": "Frame 427318626",
+                "bbox": {
+                  "x": 70,
+                  "y": 12329,
+                  "width": 421,
+                  "height": 364
+                },
+                "children": [
+                  {
+                    "id": "2034:2663",
+                    "type": "LINE",
+                    "name": "Line 18",
+                    "bbox": {
+                      "x": 70,
+                      "y": 12329,
+                      "width": 421,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "2034:2664",
+                    "type": "GROUP",
+                    "name": "Group 270990117",
+                    "bbox": {
+                      "x": 70,
+                      "y": 12353,
+                      "width": 274,
+                      "height": 49
+                    },
+                    "childCount": 3
+                  },
+                  {
+                    "id": "2034:2668",
+                    "type": "LINE",
+                    "name": "Line 19",
+                    "bbox": {
+                      "x": 70,
+                      "y": 12426,
+                      "width": 421,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "2034:2669",
+                    "type": "GROUP",
+                    "name": "Group 270990116",
+                    "bbox": {
+                      "x": 70,
+                      "y": 12450,
+                      "width": 328,
+                      "height": 49
+                    },
+                    "childCount": 3
+                  },
+                  {
+                    "id": "2034:2673",
+                    "type": "LINE",
+                    "name": "Line 20",
+                    "bbox": {
+                      "x": 70,
+                      "y": 12523,
+                      "width": 421,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "2034:2674",
+                    "type": "GROUP",
+                    "name": "Group 270990115",
+                    "bbox": {
+                      "x": 70,
+                      "y": 12547,
+                      "width": 235,
+                      "height": 49
+                    },
+                    "childCount": 3
+                  },
+                  {
+                    "id": "2034:2678",
+                    "type": "LINE",
+                    "name": "Line 21",
+                    "bbox": {
+                      "x": 70,
+                      "y": 12620,
+                      "width": 421,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "2034:2679",
+                    "type": "GROUP",
+                    "name": "Group 270990114",
+                    "bbox": {
+                      "x": 70,
+                      "y": 12644,
+                      "width": 235,
+                      "height": 49
+                    },
+                    "childCount": 3
+                  }
+                ]
+              },
+              {
+                "id": "2034:2683",
+                "type": "GROUP",
+                "name": "Group 270990118",
+                "bbox": {
+                  "x": 70,
+                  "y": 12143,
+                  "width": 421,
+                  "height": 151
+                },
+                "children": [
+                  {
+                    "id": "2034:2684",
+                    "type": "TEXT",
+                    "name": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
+                    "bbox": {
+                      "x": 70,
+                      "y": 12228,
+                      "width": 397,
+                      "height": 66
+                    },
+                    "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+                  },
+                  {
+                    "id": "2034:2685",
+                    "type": "TEXT",
+                    "name": "Steps from key legal addresses",
+                    "bbox": {
+                      "x": 70,
+                      "y": 12143,
+                      "width": 421,
+                      "height": 58
+                    },
+                    "characters": "Steps from key legal addresses"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:2686",
+            "type": "GROUP",
+            "name": "Group 270990046",
+            "bbox": {
+              "x": 0,
+              "y": 15175,
+              "width": 1600,
+              "height": 2891.53
+            },
+            "children": [
+              {
+                "id": "2034:2687",
+                "type": "RECTANGLE",
+                "name": "Rectangle 504",
+                "bbox": {
+                  "x": 0,
+                  "y": 15175,
+                  "width": 1600,
+                  "height": 994.53
+                }
+              },
+              {
+                "id": "2034:2688",
+                "type": "RECTANGLE",
+                "name": "Rectangle 561",
+                "bbox": {
+                  "x": 0,
+                  "y": 17072,
+                  "width": 1600,
+                  "height": 994.53
+                }
+              },
+              {
+                "id": "2034:2689",
+                "type": "GROUP",
+                "name": "Group 270989688",
+                "bbox": {
+                  "x": 0,
+                  "y": 16170.53,
+                  "width": 799,
+                  "height": 900
+                },
+                "children": [
+                  {
+                    "id": "2034:2690",
+                    "type": "GROUP",
+                    "name": "Group 270989635",
+                    "bbox": {
+                      "x": 0,
+                      "y": 16170.53,
+                      "width": 799,
+                      "height": 900
+                    },
+                    "childCount": 1
+                  }
+                ]
+              },
+              {
+                "id": "2034:2692",
+                "type": "GROUP",
+                "name": "Group 270989703",
+                "bbox": {
+                  "x": 800,
+                  "y": 16170.53,
+                  "width": 800,
+                  "height": 900
+                },
+                "children": [
+                  {
+                    "id": "2034:2693",
+                    "type": "GROUP",
+                    "name": "Group 270989635",
+                    "bbox": {
+                      "x": 800,
+                      "y": 16170.53,
+                      "width": 800,
+                      "height": 900
+                    },
+                    "childCount": 1
+                  }
+                ]
+              },
+              {
+                "id": "2034:2695",
+                "type": "TEXT",
+                "name": "1 Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+                "bbox": {
+                  "x": 40,
+                  "y": 16099,
+                  "width": 603,
+                  "height": 38
+                },
+                "characters": "1 Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus."
+              },
+              {
+                "id": "2034:2696",
+                "type": "TEXT",
+                "name": "2 Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+                "bbox": {
+                  "x": 40,
+                  "y": 16993,
+                  "width": 603,
+                  "height": 38
+                },
+                "characters": "2 Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta."
+              },
+              {
+                "id": "2034:2697",
+                "type": "TEXT",
+                "name": "4 Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.",
+                "bbox": {
+                  "x": 40,
+                  "y": 17989,
+                  "width": 603,
+                  "height": 38
+                },
+                "characters": "4  Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+              },
+              {
+                "id": "2034:2698",
+                "type": "TEXT",
+                "name": "3 Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+                "bbox": {
+                  "x": 840,
+                  "y": 16993,
+                  "width": 603,
+                  "height": 38
+                },
+                "characters": "3 Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem."
+              },
+              {
+                "id": "2034:2699",
+                "type": "TEXT",
+                "name": "corporate gallery",
+                "bbox": {
+                  "x": 40,
+                  "y": 15215,
+                  "width": 275,
+                  "height": 29
+                },
+                "characters": "corporate gallery"
+              }
+            ]
+          },
+          {
+            "id": "2034:2700",
+            "type": "GROUP",
+            "name": "Group 270990138",
+            "bbox": {
+              "x": 37.17,
+              "y": 14247,
+              "width": 1482.83,
+              "height": 692.23
+            },
+            "children": [
+              {
+                "id": "2034:2701",
+                "type": "TEXT",
+                "name": "Request for Proposal",
+                "bbox": {
+                  "x": 37.17,
+                  "y": 14247,
+                  "width": 499.17,
+                  "height": 135.86
+                },
+                "characters": "Request for Proposal"
+              },
+              {
+                "id": "2034:2702",
+                "type": "GROUP",
+                "name": "Group 270990137",
+                "bbox": {
+                  "x": 690,
+                  "y": 14418.44,
+                  "width": 830,
+                  "height": 520.79
+                },
+                "children": [
+                  {
+                    "id": "2034:2703",
+                    "type": "TEXT",
+                    "name": "Email Address",
+                    "bbox": {
+                      "x": 690,
+                      "y": 14554.23,
+                      "width": 391,
+                      "height": 22
+                    },
+                    "characters": "Email Address"
+                  },
+                  {
+                    "id": "2034:2704",
+                    "type": "GROUP",
+                    "name": "Group 270990136",
+                    "bbox": {
+                      "x": 690,
+                      "y": 14418.44,
+                      "width": 830,
+                      "height": 520.79
+                    },
+                    "childCount": 2
+                  }
+                ]
+              },
+              {
+                "id": "2034:2734",
+                "type": "TEXT",
+                "name": "Proin sed nisl nisi. Quisque porttitor, nisl sed eleifend mattis, risus tellus pulvinar metus, a lacinia lacus neque sit amet purus. Donec efficitur leo sed urna tempus, eu congue ex convallis.",
+                "bbox": {
+                  "x": 40,
+                  "y": 14418.44,
+                  "width": 496,
+                  "height": 66
+                },
+                "characters": "Proin sed nisl nisi. Quisque porttitor, nisl sed eleifend mattis, risus tellus pulvinar metus, a lacinia lacus neque sit amet purus. Donec efficitur leo sed urna tempus, eu congue ex convallis."
+              },
+              {
+                "id": "2034:2735",
+                "type": "FRAME",
+                "name": "Frame 270990132",
+                "bbox": {
+                  "x": 40,
+                  "y": 14550.45,
+                  "width": 411,
+                  "height": 227
+                },
+                "children": [
+                  {
+                    "id": "2034:2736",
+                    "type": "GROUP",
+                    "name": "Group 270990129",
+                    "bbox": {
+                      "x": 40,
+                      "y": 14550.45,
+                      "width": 289,
+                      "height": 49
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2739",
+                    "type": "GROUP",
+                    "name": "Group 270990130",
+                    "bbox": {
+                      "x": 40,
+                      "y": 14639.45,
+                      "width": 411,
+                      "height": 49
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2742",
+                    "type": "GROUP",
+                    "name": "Group 270990131",
+                    "bbox": {
+                      "x": 40,
+                      "y": 14728.45,
+                      "width": 411,
+                      "height": 49
+                    },
+                    "childCount": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:2745",
+            "type": "TEXT",
+            "name": "key features",
+            "bbox": {
+              "x": 706,
+              "y": 1913,
+              "width": 189,
+              "height": 29
+            },
+            "characters": "key features"
+          },
+          {
+            "id": "2034:2746",
+            "type": "GROUP",
+            "name": "Group 270990128",
+            "bbox": {
+              "x": 40,
+              "y": 13219,
+              "width": 485,
+              "height": 728
+            },
+            "children": [
+              {
+                "id": "2034:2747",
+                "type": "RECTANGLE",
+                "name": "Rectangle 572",
+                "bbox": {
+                  "x": 40,
+                  "y": 13219,
+                  "width": 485,
+                  "height": 563
+                }
+              },
+              {
+                "id": "2034:2748",
+                "type": "TEXT",
+                "name": "Dedicated meeting rooms or suites for legal teams High-speed internet and full AV capabilities On-demand printing, copying, and secure storage Round-the-clock access to working areas",
+                "bbox": {
+                  "x": 40,
+                  "y": 13855,
+                  "width": 485,
+                  "height": 92
+                },
+                "characters": "Dedicated meeting rooms or suites for legal teams\nHigh-speed internet and full AV capabilities\nOn-demand printing, copying, and secure storage\nRound-the-clock access to working areas"
+              },
+              {
+                "id": "2034:2749",
+                "type": "TEXT",
+                "name": "War Room Setup",
+                "bbox": {
+                  "x": 40,
+                  "y": 13811,
+                  "width": 485,
+                  "height": 22
+                },
+                "characters": "War Room Setup"
+              }
+            ]
+          },
+          {
+            "id": "2034:2750",
+            "type": "GROUP",
+            "name": "Group 270990127",
+            "bbox": {
+              "x": 558,
+              "y": 13039,
+              "width": 485,
+              "height": 728
+            },
+            "children": [
+              {
+                "id": "2034:2751",
+                "type": "RECTANGLE",
+                "name": "Rectangle 573",
+                "bbox": {
+                  "x": 558,
+                  "y": 13039,
+                  "width": 485,
+                  "height": 563
+                }
+              },
+              {
+                "id": "2034:2752",
+                "type": "TEXT",
+                "name": "Entire floor reservation for full confidentiality Optional private outdoor terrace Enhanced security and exclusive guest access Custom space layout and meeting room allocation",
+                "bbox": {
+                  "x": 558,
+                  "y": 13675,
+                  "width": 485,
+                  "height": 92
+                },
+                "characters": "Entire floor reservation for full confidentiality\nOptional private outdoor terrace\nEnhanced security and exclusive guest access\nCustom space layout and meeting room allocation"
+              },
+              {
+                "id": "2034:2753",
+                "type": "TEXT",
+                "name": "Executive Floor Buyout",
+                "bbox": {
+                  "x": 558,
+                  "y": 13631,
+                  "width": 485,
+                  "height": 22
+                },
+                "characters": "Executive Floor Buyout"
+              }
+            ]
+          },
+          {
+            "id": "2034:2754",
+            "type": "GROUP",
+            "name": "Group 270990126",
+            "bbox": {
+              "x": 1075,
+              "y": 13219,
+              "width": 495,
+              "height": 728
+            },
+            "children": [
+              {
+                "id": "2034:2755",
+                "type": "RECTANGLE",
+                "name": "Rectangle 574",
+                "bbox": {
+                  "x": 1075,
+                  "y": 13219,
+                  "width": 485,
+                  "height": 563
+                }
+              },
+              {
+                "id": "2034:2756",
+                "type": "TEXT",
+                "name": "Custom in-room amenities for long trials Daily housekeeping or modified schedules Wellness options to support mental clarity and team morale Discounted dining packages and meal coordination",
+                "bbox": {
+                  "x": 1075,
+                  "y": 13855,
+                  "width": 495,
+                  "height": 92
+                },
+                "characters": "Custom in-room amenities for long trials\nDaily housekeeping or modified schedules\nWellness options to support mental clarity and team morale\nDiscounted dining packages and meal coordination"
+              },
+              {
+                "id": "2034:2757",
+                "type": "TEXT",
+                "name": "Extended Stay Legal Comfort Package",
+                "bbox": {
+                  "x": 1075,
+                  "y": 13811,
+                  "width": 485,
+                  "height": 22
+                },
+                "characters": "Extended Stay Legal Comfort Package"
+              }
+            ]
+          },
+          {
+            "id": "2034:2758",
+            "type": "GROUP",
+            "name": "Group 270990026",
+            "bbox": {
+              "x": 0,
+              "y": 18067,
+              "width": 1600,
+              "height": 1195
+            },
+            "children": [
+              {
+                "id": "2034:2759",
+                "type": "RECTANGLE",
+                "name": "Rectangle 553",
+                "bbox": {
+                  "x": 0,
+                  "y": 18067,
+                  "width": 1600,
+                  "height": 1195
+                }
+              },
+              {
+                "id": "2034:2760",
+                "type": "GROUP",
+                "name": "Group 270990023",
+                "bbox": {
+                  "x": 323,
+                  "y": 18261,
+                  "width": 955,
+                  "height": 776
+                },
+                "children": [
+                  {
+                    "id": "2034:2761",
+                    "type": "TEXT",
+                    "name": "faqs",
+                    "bbox": {
+                      "x": 775,
+                      "y": 18261,
+                      "width": 50,
+                      "height": 22
+                    },
+                    "characters": "faqs"
+                  },
+                  {
+                    "id": "2034:2762",
+                    "type": "TEXT",
+                    "name": "your questions, answered",
+                    "bbox": {
+                      "x": 499,
+                      "y": 18302,
+                      "width": 603,
+                      "height": 40
+                    },
+                    "characters": "your questions, answered"
+                  },
+                  {
+                    "id": "2034:2763",
+                    "type": "TEXT",
+                    "name": "How many guests can stay in this room?",
+                    "bbox": {
+                      "x": 323,
+                      "y": 18465,
+                      "width": 588,
+                      "height": 29
+                    },
+                    "characters": "How many guests can stay in this room?"
+                  },
+                  {
+                    "id": "2034:2764",
+                    "type": "FRAME",
+                    "name": "Frame",
+                    "bbox": {
+                      "x": 1254,
+                      "y": 18467,
+                      "width": 24,
+                      "height": 24
+                    },
+                    "childCount": 1
+                  },
+                  {
+                    "id": "2034:2766",
+                    "type": "TEXT",
+                    "name": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort.",
+                    "bbox": {
+                      "x": 323,
+                      "y": 18519,
+                      "width": 955,
+                      "height": 66
+                    },
+                    "characters": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort."
+                  },
+                  {
+                    "id": "2034:2767",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 323,
+                      "y": 18631,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "2034:2768",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 323,
+                      "y": 18672,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2772",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 323,
+                      "y": 18712,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "2034:2773",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 323,
+                      "y": 18753,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2777",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 323,
+                      "y": 18793,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "2034:2778",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 323,
+                      "y": 18834,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2782",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 323,
+                      "y": 18874,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "2034:2783",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 323,
+                      "y": 18915,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2787",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 323,
+                      "y": 18955,
+                      "width": 955,
+                      "height": 1
+                    }
+                  },
+                  {
+                    "id": "2034:2788",
+                    "type": "FRAME",
+                    "name": "Frame 427318513",
+                    "bbox": {
+                      "x": 323,
+                      "y": 18996,
+                      "width": 955,
+                      "height": 29
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2792",
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 523",
+                    "bbox": {
+                      "x": 323,
+                      "y": 19036,
+                      "width": 955,
+                      "height": 1
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2034:2793",
+            "type": "GROUP",
+            "name": "Group 270990037",
+            "bbox": {
+              "x": -1,
+              "y": 19262,
+              "width": 1601,
+              "height": 1678
+            },
+            "children": [
+              {
+                "id": "2034:2794",
+                "type": "RECTANGLE",
+                "name": "Rectangle 530",
+                "bbox": {
+                  "x": -1,
+                  "y": 19262,
+                  "width": 1601,
+                  "height": 1678
+                }
+              },
+              {
+                "id": "2034:2795",
+                "type": "GROUP",
+                "name": "Group 270990038",
+                "bbox": {
+                  "x": 723,
+                  "y": 20869,
+                  "width": 152.45,
+                  "height": 31.3
+                },
+                "children": [
+                  {
+                    "id": "2034:2796",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 863.09,
+                      "y": 20887.93,
+                      "width": 12.36,
+                      "height": 12.37
+                    }
+                  },
+                  {
+                    "id": "2034:2797",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 740.27,
+                      "y": 20887.94,
+                      "width": 12.36,
+                      "height": 12.36
+                    }
+                  },
+                  {
+                    "id": "2034:2798",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 813.26,
+                      "y": 20887.94,
+                      "width": 12.35,
+                      "height": 12.36
+                    }
+                  },
+                  {
+                    "id": "2034:2799",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 792.1,
+                      "y": 20869,
+                      "width": 9.07,
+                      "height": 11.67
+                    }
+                  },
+                  {
+                    "id": "2034:2800",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 761.81,
+                      "y": 20888.36,
+                      "width": 9.42,
+                      "height": 11.47
+                    }
+                  },
+                  {
+                    "id": "2034:2801",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 761.44,
+                      "y": 20869.03,
+                      "width": 9.3,
+                      "height": 11.58
+                    }
+                  },
+                  {
+                    "id": "2034:2802",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 846.71,
+                      "y": 20869.03,
+                      "width": 8.3,
+                      "height": 11.57
+                    }
+                  },
+                  {
+                    "id": "2034:2803",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 723,
+                      "y": 20888.4,
+                      "width": 8.76,
+                      "height": 11.43
+                    }
+                  },
+                  {
+                    "id": "2034:2804",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 810.07,
+                      "y": 20869.04,
+                      "width": 9.81,
+                      "height": 11.83
+                    }
+                  },
+                  {
+                    "id": "2034:2805",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 796.64,
+                      "y": 20888.4,
+                      "width": 7.92,
+                      "height": 11.43
+                    }
+                  },
+                  {
+                    "id": "2034:2806",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 778.7,
+                      "y": 20888.37,
+                      "width": 9.15,
+                      "height": 11.46
+                    }
+                  },
+                  {
+                    "id": "2034:2807",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 828.76,
+                      "y": 20869.04,
+                      "width": 9.13,
+                      "height": 11.56
+                    }
+                  },
+                  {
+                    "id": "2034:2808",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 743.63,
+                      "y": 20869.06,
+                      "width": 9.12,
+                      "height": 11.56
+                    }
+                  },
+                  {
+                    "id": "2034:2809",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 834.95,
+                      "y": 20888.38,
+                      "width": 7.3,
+                      "height": 11.44
+                    }
+                  },
+                  {
+                    "id": "2034:2810",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 779.58,
+                      "y": 20869.02,
+                      "width": 2.72,
+                      "height": 11.59
+                    }
+                  },
+                  {
+                    "id": "2034:2811",
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "bbox": {
+                      "x": 851.15,
+                      "y": 20888.41,
+                      "width": 2.75,
+                      "height": 11.42
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "2034:2812",
+                "type": "TEXT",
+                "name": "Earn Marriott Bonvoy® Points on Every Stay",
+                "bbox": {
+                  "x": 596.61,
+                  "y": 20017,
+                  "width": 414,
+                  "height": 14
+                },
+                "characters": "Earn Marriott Bonvoy® Points on Every Stay"
+              },
+              {
+                "id": "2034:2813",
+                "type": "LINE",
+                "name": "Line 4",
+                "bbox": {
+                  "x": 800,
+                  "y": 19482,
+                  "width": 0,
+                  "height": 426
+                }
+              },
+              {
+                "id": "2034:2814",
+                "type": "GROUP",
+                "name": "Group 270990031",
+                "bbox": {
+                  "x": 205,
+                  "y": 19600,
+                  "width": 392,
+                  "height": 191
+                },
+                "children": [
+                  {
+                    "id": "2034:2815",
+                    "type": "TEXT",
+                    "name": "Book your escape",
+                    "bbox": {
+                      "x": 205,
+                      "y": 19600,
+                      "width": 392,
+                      "height": 72
+                    },
+                    "characters": "Book your escape"
+                  },
+                  {
+                    "id": "2034:2816",
+                    "type": "GROUP",
+                    "name": "Button",
+                    "bbox": {
+                      "x": 294,
+                      "y": 19754,
+                      "width": 214,
+                      "height": 37
+                    },
+                    "childCount": 1
+                  }
+                ]
+              },
+              {
+                "id": "2034:2820",
+                "type": "GROUP",
+                "name": "Group 270990030",
+                "bbox": {
+                  "x": 924,
+                  "y": 19600,
+                  "width": 551,
+                  "height": 191
+                },
+                "children": [
+                  {
+                    "id": "2034:2821",
+                    "type": "TEXT",
+                    "name": "Stay in the loop",
+                    "bbox": {
+                      "x": 1019,
+                      "y": 19600,
+                      "width": 364,
+                      "height": 72
+                    },
+                    "characters": "Stay in the loop"
+                  },
+                  {
+                    "id": "2034:2822",
+                    "type": "GROUP",
+                    "name": "Button",
+                    "bbox": {
+                      "x": 1331,
+                      "y": 19754,
+                      "width": 144,
+                      "height": 37
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2825",
+                    "type": "LINE",
+                    "name": "Line 5",
+                    "bbox": {
+                      "x": 924,
+                      "y": 19791,
+                      "width": 388,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "2034:2826",
+                    "type": "TEXT",
+                    "name": "*Email",
+                    "bbox": {
+                      "x": 924,
+                      "y": 19765,
+                      "width": 60,
+                      "height": 16
+                    },
+                    "characters": "*Email"
+                  }
+                ]
+              },
+              {
+                "id": "2034:2827",
+                "type": "FRAME",
+                "name": "Frame 427318623",
+                "bbox": {
+                  "x": 40,
+                  "y": 20440,
+                  "width": 1520,
+                  "height": 250
+                },
+                "children": [
+                  {
+                    "id": "2034:2828",
+                    "type": "GROUP",
+                    "name": "Group 270990032",
+                    "bbox": {
+                      "x": 40,
+                      "y": 20440,
+                      "width": 123,
+                      "height": 250
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2839",
+                    "type": "GROUP",
+                    "name": "Group 270990033",
+                    "bbox": {
+                      "x": 333,
+                      "y": 20440,
+                      "width": 168,
+                      "height": 224
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2849",
+                    "type": "GROUP",
+                    "name": "Group 270990034",
+                    "bbox": {
+                      "x": 671,
+                      "y": 20440,
+                      "width": 168,
+                      "height": 172
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2857",
+                    "type": "GROUP",
+                    "name": "Group 270990035",
+                    "bbox": {
+                      "x": 1009,
+                      "y": 20440,
+                      "width": 168,
+                      "height": 120
+                    },
+                    "childCount": 2
+                  },
+                  {
+                    "id": "2034:2863",
+                    "type": "GROUP",
+                    "name": "Group 270990036",
+                    "bbox": {
+                      "x": 1347,
+                      "y": 20440,
+                      "width": 215,
+                      "height": 120
+                    },
+                    "childCount": 2
+                  }
+                ]
+              },
+              {
+                "id": "2034:2869",
+                "type": "GROUP",
+                "name": "Group 270990036",
+                "bbox": {
+                  "x": 716,
+                  "y": 19943,
+                  "width": 167,
+                  "height": 48.09
+                },
+                "children": [
+                  {
+                    "id": "2034:2870",
+                    "type": "GROUP",
+                    "name": "Group",
+                    "bbox": {
+                      "x": 716,
+                      "y": 19943,
+                      "width": 167,
+                      "height": 48.09
+                    },
+                    "childCount": 17
+                  }
+                ]
+              },
+              {
+                "id": "2034:2888",
+                "type": "TEXT",
+                "name": "copyright © 2026 the guild hotel",
+                "bbox": {
+                  "x": 40,
+                  "y": 20886,
+                  "width": 356,
+                  "height": 14
+                },
+                "characters": "copyright © 2026 the guild hotel"
+              },
+              {
+                "id": "2034:2889",
+                "type": "TEXT",
+                "name": "brand & website by Studio circa",
+                "bbox": {
+                  "x": 1283,
+                  "y": 20886,
+                  "width": 277,
+                  "height": 14
+                },
+                "characters": "brand & website by Studio circa"
+              }
+            ]
+          },
+          {
+            "id": "2034:2890",
+            "type": "INSTANCE",
+            "name": "guild-nav-full-dark",
+            "bbox": {
+              "x": 40,
+              "y": 26,
+              "width": 1520,
+              "height": 56
+            },
+            "manual": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "2034:2906",
+      "name": "Corporate-Overlay",
+      "kind": "side",
+      "width": 1600,
+      "height": 899,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/2034-2906.png",
+      "status": "ok",
+      "tree": {
+        "id": "2034:2906",
+        "type": "FRAME",
+        "name": "Corporate-Overlay",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 899
+        },
+        "children": [
+          {
+            "id": "2034:2907",
+            "type": "GROUP",
+            "name": "Group 270990119",
+            "bbox": {
+              "x": 0,
+              "y": 0,
+              "width": 1600,
+              "height": 1615
+            },
+            "children": [
+              {
+                "id": "2034:2908",
+                "type": "VECTOR",
+                "name": "Vector 33",
+                "bbox": {
+                  "x": 0,
+                  "y": 125,
+                  "width": 1600,
+                  "height": 1490
+                }
+              },
+              {
+                "id": "2034:2909",
+                "type": "RECTANGLE",
+                "name": "Rectangle 587",
+                "bbox": {
+                  "x": 1036,
+                  "y": 0,
+                  "width": 341,
+                  "height": 125
+                }
+              }
+            ]
+          },
+          {
+            "id": "2034:2910",
+            "type": "FRAME",
+            "name": "Frame 270990121",
+            "bbox": {
+              "x": 90,
+              "y": 125,
+              "width": 1421,
+              "height": 1386
+            },
+            "children": [
+              {
+                "id": "2034:2911",
+                "type": "GROUP",
+                "name": "Group 270990120",
+                "bbox": {
+                  "x": 169,
+                  "y": 318,
+                  "width": 485,
+                  "height": 452
+                },
+                "children": [
+                  {
+                    "id": "2034:2912",
+                    "type": "TEXT",
+                    "name": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
+                    "bbox": {
+                      "x": 169,
+                      "y": 369,
+                      "width": 485,
+                      "height": 118
+                    },
+                    "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+                  },
+                  {
+                    "id": "2034:2913",
+                    "type": "TEXT",
+                    "name": "Classroom: 21*",
+                    "bbox": {
+                      "x": 169,
+                      "y": 601,
+                      "width": 123,
+                      "height": 14
+                    },
+                    "characters": "Classroom: 21*"
+                  },
+                  {
+                    "id": "2034:2914",
+                    "type": "TEXT",
+                    "name": "U-shape: 21",
+                    "bbox": {
+                      "x": 169,
+                      "y": 635,
+                      "width": 92,
+                      "height": 14
+                    },
+                    "characters": "U-shape: 21"
+                  },
+                  {
+                    "id": "2034:2915",
+                    "type": "TEXT",
+                    "name": "Rounds: 21",
+                    "bbox": {
+                      "x": 169,
+                      "y": 669,
+                      "width": 85,
+                      "height": 14
+                    },
+                    "characters": "Rounds: 21"
+                  },
+                  {
+                    "id": "2034:2916",
+                    "type": "TEXT",
+                    "name": "floorplan *Requires furniture removal, charges may apply",
+                    "bbox": {
+                      "x": 169,
+                      "y": 713,
+                      "width": 457,
+                      "height": 57
+                    },
+                    "characters": "floorplan\n\n*Requires furniture removal, charges may apply"
+                  },
+                  {
+                    "id": "2034:2917",
+                    "type": "TEXT",
+                    "name": "Theater: 21",
+                    "bbox": {
+                      "x": 396,
+                      "y": 601,
+                      "width": 86,
+                      "height": 14
+                    },
+                    "characters": "Theater: 21"
+                  },
+                  {
+                    "id": "2034:2918",
+                    "type": "TEXT",
+                    "name": "Conference: 21*",
+                    "bbox": {
+                      "x": 396,
+                      "y": 635,
+                      "width": 131,
+                      "height": 14
+                    },
+                    "characters": "Conference: 21*"
+                  },
+                  {
+                    "id": "2034:2919",
+                    "type": "TEXT",
+                    "name": "Reception: 21",
+                    "bbox": {
+                      "x": 396,
+                      "y": 669,
+                      "width": 106,
+                      "height": 14
+                    },
+                    "characters": "Reception: 21"
+                  },
+                  {
+                    "id": "2034:2920",
+                    "type": "TEXT",
+                    "name": "details",
+                    "bbox": {
+                      "x": 169,
+                      "y": 318,
+                      "width": 485,
+                      "height": 29
+                    },
+                    "characters": "details"
+                  },
+                  {
+                    "id": "2034:2921",
+                    "type": "TEXT",
+                    "name": "layout options",
+                    "bbox": {
+                      "x": 169,
+                      "y": 550,
+                      "width": 485,
+                      "height": 29
+                    },
+                    "characters": "layout options"
+                  }
+                ]
+              },
+              {
+                "id": "2034:2922",
+                "type": "GROUP",
+                "name": "Group 270990066",
+                "bbox": {
+                  "x": 816,
+                  "y": 325,
+                  "width": 647,
+                  "height": 262
+                },
+                "children": [
+                  {
+                    "id": "2034:2923",
+                    "type": "FRAME",
+                    "name": "Frame 427318627",
+                    "bbox": {
+                      "x": 816,
+                      "y": 325,
+                      "width": 647,
+                      "height": 262
+                    },
+                    "childCount": 9
+                  }
+                ]
+              },
+              {
+                "id": "2034:2933",
+                "type": "RECTANGLE",
+                "name": "Rectangle 586",
+                "bbox": {
+                  "x": 90,
+                  "y": 804,
+                  "width": 1421,
+                  "height": 707
+                }
+              },
+              {
+                "id": "2034:2934",
+                "type": "GROUP",
+                "name": "Group 270990021",
+                "bbox": {
+                  "x": 768,
+                  "y": 1495,
+                  "width": 95,
+                  "height": 0
+                },
+                "children": [
+                  {
+                    "id": "2034:2935",
+                    "type": "LINE",
+                    "name": "Line 1",
+                    "bbox": {
+                      "x": 796,
+                      "y": 1495,
+                      "width": 39,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "2034:2936",
+                    "type": "LINE",
+                    "name": "Line 2",
+                    "bbox": {
+                      "x": 768,
+                      "y": 1495,
+                      "width": 18,
+                      "height": 0
+                    }
+                  },
+                  {
+                    "id": "2034:2937",
+                    "type": "LINE",
+                    "name": "Line 3",
+                    "bbox": {
+                      "x": 845,
+                      "y": 1495,
+                      "width": 18,
+                      "height": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "2034:2938",
+                "type": "RECTANGLE",
+                "name": "Rectangle 588",
+                "bbox": {
+                  "x": 507,
+                  "y": 1511,
+                  "width": 464,
+                  "height": 703
+                }
+              },
+              {
+                "id": "2034:2939",
+                "type": "GROUP",
+                "name": "Group 270990081",
+                "bbox": {
+                  "x": 1277,
+                  "y": 181,
+                  "width": 234,
+                  "height": 37
+                },
+                "children": [
+                  {
+                    "id": "2034:2940",
+                    "type": "VECTOR",
+                    "name": "Vector 25",
+                    "bbox": {
+                      "x": 1277,
+                      "y": 181,
+                      "width": 234,
+                      "height": 37
+                    }
+                  },
+                  {
+                    "id": "2034:2941",
+                    "type": "TEXT",
+                    "name": "submit your request",
+                    "bbox": {
+                      "x": 1296,
+                      "y": 189,
+                      "width": 196,
+                      "height": 19
+                    },
+                    "characters": "submit your request"
+                  }
+                ]
+              },
+              {
+                "id": "2034:2942",
+                "type": "TEXT",
+                "name": "council boardroom",
+                "bbox": {
+                  "x": 571,
+                  "y": 175,
+                  "width": 458,
+                  "height": 40
+                },
+                "characters": "council boardroom"
+              }
+            ]
+          },
+          {
+            "id": "2034:2943",
+            "type": "GROUP",
+            "name": "Group 270990121",
+            "bbox": {
+              "x": 40,
+              "y": 192,
+              "width": 17,
+              "height": 17
+            },
+            "children": [
+              {
+                "id": "2034:2944",
+                "type": "VECTOR",
+                "name": "Vector",
+                "bbox": {
+                  "x": 40,
+                  "y": 200.5,
+                  "width": 17,
+                  "height": 0
+                }
+              },
+              {
+                "id": "2034:2945",
+                "type": "VECTOR",
+                "name": "Vector",
+                "bbox": {
+                  "x": 40,
+                  "y": 192,
+                  "width": 8.5,
+                  "height": 17
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "animationNotes": []
+}

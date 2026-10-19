@@ -1,0 +1,429 @@
+{
+  "pageSlug": "meetings-collection",
+  "index": 7,
+  "slug": "steps-from-key-legal-addresses",
+  "laneHint": null,
+  "frameId": "288:4019",
+  "bbox": {
+    "x": 0,
+    "y": 6915,
+    "width": 1600,
+    "height": 1170
+  },
+  "crop": {
+    "y0": 6915,
+    "y1": 8085
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "377:495",
+      "characters": "Steps from key legal addresses",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 70,
+        "y": 546,
+        "width": 421,
+        "height": 58
+      }
+    },
+    {
+      "id": "377:494",
+      "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 70,
+        "y": 631,
+        "width": 397,
+        "height": 66
+      }
+    },
+    {
+      "id": "377:477",
+      "characters": "San Diego Superior Court",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 70,
+        "y": 756,
+        "width": 274,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:475",
+      "characters": "6-minute walk",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 70,
+        "y": 791,
+        "width": 112,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:476",
+      "characters": "Directions",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 222,
+        "y": 791,
+        "width": 83,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:482",
+      "characters": "San Diego Central Courthouse",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 70,
+        "y": 853,
+        "width": 328,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:480",
+      "characters": "4-minute walk",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 70,
+        "y": 888,
+        "width": 112,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:481",
+      "characters": "Directions",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 222,
+        "y": 888,
+        "width": 83,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:487",
+      "characters": "U.S. District Court",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 70,
+        "y": 950,
+        "width": 199,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:485",
+      "characters": "3-minute walk",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 70,
+        "y": 985,
+        "width": 112,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:486",
+      "characters": "Directions",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 222,
+        "y": 985,
+        "width": 83,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:492",
+      "characters": "Hall of Justice",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 70,
+        "y": 1047,
+        "width": 163,
+        "height": 22
+      }
+    },
+    {
+      "id": "377:490",
+      "characters": "3-minute walk",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 70,
+        "y": 1082,
+        "width": 112,
+        "height": 14
+      }
+    },
+    {
+      "id": "377:491",
+      "characters": "Directions",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 222,
+        "y": 1082,
+        "width": 83,
+        "height": 14
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 14
+    },
+    {
+      "hex": "#906E58",
+      "opacity": 1,
+      "count": 5
+    },
+    {
+      "hex": "#000000",
+      "opacity": 0.1,
+      "count": 1
+    },
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "377:466",
+      "name": "Rectangle 584",
+      "imageRef": "f5dfa6178bea152e201fd0047664f6dc3d8ebe1b",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 1170
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "377:466",
+      "type": "RECTANGLE",
+      "name": "Rectangle 584",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 1170
+      }
+    },
+    {
+      "id": "377:471",
+      "type": "ELLIPSE",
+      "name": "Ellipse 4",
+      "bbox": {
+        "x": 1204,
+        "y": 490,
+        "width": 68,
+        "height": 68
+      }
+    },
+    {
+      "id": "377:467",
+      "type": "RECTANGLE",
+      "name": "Rectangle 585",
+      "bbox": {
+        "x": 40,
+        "y": 507,
+        "width": 485,
+        "height": 623
+      }
+    },
+    {
+      "id": "377:493",
+      "type": "GROUP",
+      "name": "Group 270990118",
+      "bbox": {
+        "x": 70,
+        "y": 546,
+        "width": 421,
+        "height": 151
+      }
+    },
+    {
+      "id": "377:468",
+      "type": "ELLIPSE",
+      "name": "Ellipse 1",
+      "bbox": {
+        "x": 784,
+        "y": 551,
+        "width": 68,
+        "height": 68
+      }
+    },
+    {
+      "id": "377:472",
+      "type": "FRAME",
+      "name": "Frame 427318626",
+      "bbox": {
+        "x": 70,
+        "y": 732,
+        "width": 421,
+        "height": 364
+      }
+    },
+    {
+      "id": "377:469",
+      "type": "ELLIPSE",
+      "name": "Ellipse 2",
+      "bbox": {
+        "x": 1075,
+        "y": 784,
+        "width": 68,
+        "height": 68
+      }
+    },
+    {
+      "id": "377:470",
+      "type": "ELLIPSE",
+      "name": "Ellipse 3",
+      "bbox": {
+        "x": 861,
+        "y": 943,
+        "width": 68,
+        "height": 68
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

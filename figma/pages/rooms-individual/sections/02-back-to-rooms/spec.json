@@ -1,0 +1,112 @@
+{
+  "pageSlug": "rooms-individual",
+  "index": 2,
+  "slug": "back-to-rooms",
+  "laneHint": null,
+  "frameId": "406:3458",
+  "bbox": {
+    "x": 0,
+    "y": 926,
+    "width": 1600,
+    "height": 379.93
+  },
+  "crop": {
+    "y0": 900,
+    "y1": 1385.97
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "413:5517",
+      "characters": "back to rooms",
+      "styleName": "CAPS-CAPTION-16",
+      "styleId": "236:8161",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 731,
+        "y": 26,
+        "width": 138,
+        "height": 19
+      }
+    },
+    {
+      "id": "413:5515",
+      "characters": "A room \nfor every stay",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 80,
+      "fontWeight": 400,
+      "lineHeightPx": 96,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#000000",
+      "bbox": {
+        "x": 585,
+        "y": 163,
+        "width": 430.27,
+        "height": 242.93
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "413:5517",
+      "type": "TEXT",
+      "name": "back to rooms",
+      "bbox": {
+        "x": 731,
+        "y": 26,
+        "width": 138,
+        "height": 19
+      }
+    },
+    {
+      "id": "413:5536",
+      "type": "GROUP",
+      "name": "Group 270990121",
+      "bbox": {
+        "x": 714,
+        "y": 32,
+        "width": 11,
+        "height": 11
+      }
+    },
+    {
+      "id": "413:5515",
+      "type": "TEXT",
+      "name": "A room for every stay",
+      "bbox": {
+        "x": 585,
+        "y": 163,
+        "width": 430.27,
+        "height": 242.93
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

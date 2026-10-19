@@ -1,0 +1,147 @@
+{
+  "pageSlug": "home",
+  "index": 10,
+  "slug": "wellness",
+  "laneHint": null,
+  "frameId": "433:559",
+  "bbox": {
+    "x": 0,
+    "y": 9553,
+    "width": 1600,
+    "height": 969
+  },
+  "crop": {
+    "y0": 9433,
+    "y1": 10636
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "433:7361",
+      "characters": "wellness",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 590,
+        "y": 891,
+        "width": 420,
+        "height": 30
+      }
+    },
+    {
+      "id": "433:7360",
+      "characters": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 522,
+        "y": 961,
+        "width": 556,
+        "height": 66
+      }
+    },
+    {
+      "id": "433:7362",
+      "characters": "discover more",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 590,
+        "y": 1067,
+        "width": 420,
+        "height": 22
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 3
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "433:7358",
+      "name": "Rectangle 572",
+      "imageRef": "0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c",
+      "bbox": {
+        "x": -56,
+        "y": 120,
+        "width": 551,
+        "height": 694
+      }
+    },
+    {
+      "nodeId": "433:7356",
+      "name": "Rectangle 571",
+      "imageRef": "5f867c9b46567c2df212f5570602c6afaa8b170e",
+      "bbox": {
+        "x": 525,
+        "y": 120,
+        "width": 551,
+        "height": 694
+      }
+    },
+    {
+      "nodeId": "433:7357",
+      "name": "Rectangle 573",
+      "imageRef": "a615ab07d022b6aa76066c2ac89bf41fd38923c5",
+      "bbox": {
+        "x": 1106,
+        "y": 120,
+        "width": 551,
+        "height": 694
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "433:7355",
+      "type": "GROUP",
+      "name": "Group 270990061",
+      "bbox": {
+        "x": -56,
+        "y": 120,
+        "width": 1713,
+        "height": 969
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [
+    {
+      "id": "433:7364",
+      "name": "Home-Animation-2",
+      "texts": [
+        "section begins as 3 images, then animates into a stack of 1 (essentially the reverse of this reference animation). However, no rotation, always properly aligned"
+      ]
+    }
+  ],
+  "source": "page"
+}

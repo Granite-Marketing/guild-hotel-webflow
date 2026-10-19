@@ -1,0 +1,391 @@
+{
+  "pageSlug": "corporate",
+  "frames": [
+    {
+      "id": "2034:2490",
+      "name": "CORPORATE",
+      "kind": "page",
+      "width": 1600,
+      "height": 20940,
+      "scale": 0.75,
+      "renderScale": 0.75,
+      "render": "figma/.cache/renders/2034-2490.png",
+      "status": "ok"
+    },
+    {
+      "id": "2034:2906",
+      "name": "Corporate-Overlay",
+      "kind": "side",
+      "width": 1600,
+      "height": 899,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/2034-2906.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "retreat-for-corporate-teams",
+      "dir": "sections/01-retreat-for-corporate-teams",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 1021.13,
+      "nodeIds": [
+        "2034:2491",
+        "2034:2890",
+        "2034:2496",
+        "2034:2494"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-retreat-for-corporate-teams/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "refined-focus-unmatched-convenience",
+      "dir": "sections/02-refined-focus-unmatched-convenience",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 1142.26,
+      "y1": 1580,
+      "cropY0": 1021.13,
+      "cropY1": 1746.5,
+      "nodeIds": [
+        "2034:2498",
+        "2034:2495"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/02-refined-focus-unmatched-convenience/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "key-features",
+      "dir": "sections/03-key-features",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 1913,
+      "y1": 2710,
+      "cropY0": 1746.5,
+      "cropY1": 2790.5,
+      "nodeIds": [
+        "2034:2501",
+        "2034:2745",
+        "2034:2513"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-key-features/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "why-teams-choose-the-guild",
+      "dir": "sections/04-why-teams-choose-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 2871,
+      "y1": 3897,
+      "cropY0": 2790.5,
+      "cropY1": 3930,
+      "nodeIds": [
+        "2034:2523"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-why-teams-choose-the-guild/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "designed-for-focused-work-confidential-strategy",
+      "dir": "sections/05-designed-for-focused-work-confidential-strategy",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 3963,
+      "y1": 7199,
+      "cropY0": 3930,
+      "cropY1": 7294.5,
+      "nodeIds": [
+        "2034:2596",
+        "2034:2580",
+        "2034:2584",
+        "2034:2588",
+        "2034:2592"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-designed-for-focused-work-confidential-strategy/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "small-conference-center",
+      "dir": "sections/06-small-conference-center",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 7390,
+      "y1": 8378,
+      "cropY0": 7294.5,
+      "cropY1": 8398,
+      "nodeIds": [
+        "2034:2607"
+      ],
+      "backgroundIds": [
+        "2034:2605"
+      ],
+      "crop": "sections/06-small-conference-center/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "large-conference-center",
+      "dir": "sections/07-large-conference-center",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 8418,
+      "y1": 9406,
+      "cropY0": 8398,
+      "cropY1": 9426,
+      "nodeIds": [
+        "2034:2619"
+      ],
+      "backgroundIds": [
+        "2034:2605"
+      ],
+      "crop": "sections/07-large-conference-center/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "council-boardroom",
+      "dir": "sections/08-council-boardroom",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 9446,
+      "y1": 10434,
+      "cropY0": 9426,
+      "cropY1": 10454,
+      "nodeIds": [
+        "2034:2631"
+      ],
+      "backgroundIds": [
+        "2034:2605"
+      ],
+      "crop": "sections/08-council-boardroom/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "one-columbia-place",
+      "dir": "sections/09-one-columbia-place",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 10474,
+      "y1": 11462,
+      "cropY0": 10454,
+      "cropY1": 11529.5,
+      "nodeIds": [
+        "2034:2643"
+      ],
+      "backgroundIds": [
+        "2034:2605"
+      ],
+      "crop": "sections/09-one-columbia-place/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "steps-from-key-legal-addresses",
+      "dir": "sections/10-steps-from-key-legal-addresses",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 11597,
+      "y1": 12767,
+      "cropY0": 11529.5,
+      "cropY1": 12856,
+      "nodeIds": [
+        "2034:2655"
+      ],
+      "backgroundIds": [
+        "2034:2605"
+      ],
+      "crop": "sections/10-steps-from-key-legal-addresses/section.webp"
+    },
+    {
+      "index": 11,
+      "slug": "tailored-corporate-packages",
+      "dir": "sections/11-tailored-corporate-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 12945,
+      "y1": 13947,
+      "cropY0": 12856,
+      "cropY1": 14072.5,
+      "nodeIds": [
+        "2034:2606",
+        "2034:2750",
+        "2034:2746",
+        "2034:2754"
+      ],
+      "backgroundIds": [
+        "2034:2605"
+      ],
+      "crop": "sections/11-tailored-corporate-packages/section.webp"
+    },
+    {
+      "index": 12,
+      "slug": "a-landmark-reimagined",
+      "dir": "sections/12-a-landmark-reimagined",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 14198,
+      "y1": 14939.23,
+      "cropY0": 14072.5,
+      "cropY1": 15057.12,
+      "nodeIds": [
+        "2034:2497",
+        "2034:2700"
+      ],
+      "backgroundIds": [
+        "2034:2605"
+      ],
+      "crop": "sections/12-a-landmark-reimagined/section.webp"
+    },
+    {
+      "index": 13,
+      "slug": "corporate-gallery",
+      "dir": "sections/13-corporate-gallery",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 15175,
+      "y1": 18066.53,
+      "cropY0": 15057.12,
+      "cropY1": 18066.77,
+      "nodeIds": [
+        "2034:2687",
+        "2034:2699",
+        "2034:2695",
+        "2034:2689",
+        "2034:2692",
+        "2034:2696",
+        "2034:2698",
+        "2034:2688",
+        "2034:2697"
+      ],
+      "backgroundIds": [
+        "2034:2605",
+        "2034:2686"
+      ],
+      "crop": "sections/13-corporate-gallery/section.webp"
+    },
+    {
+      "index": 14,
+      "slug": "faqs",
+      "dir": "sections/14-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 18067,
+      "y1": 19262,
+      "cropY0": 18066.77,
+      "cropY1": 19262,
+      "nodeIds": [
+        "2034:2758"
+      ],
+      "backgroundIds": [
+        "2034:2605"
+      ],
+      "crop": "sections/14-faqs/section.webp"
+    },
+    {
+      "index": 15,
+      "slug": "book-your-escape",
+      "dir": "sections/15-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 19262,
+      "y1": 20240,
+      "cropY0": 19262,
+      "cropY1": 20240,
+      "nodeIds": [
+        "2034:2813",
+        "2034:2814",
+        "2034:2820",
+        "2034:2869",
+        "2034:2812"
+      ],
+      "backgroundIds": [
+        "2034:2793",
+        "2034:2794"
+      ],
+      "crop": "sections/15-book-your-escape/section.webp"
+    },
+    {
+      "index": 16,
+      "slug": "the-hotel",
+      "dir": "sections/16-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "2034:2490",
+      "frameName": "CORPORATE",
+      "y0": 20240,
+      "y1": 20940,
+      "cropY0": 20240,
+      "cropY1": 20940,
+      "nodeIds": [
+        "2034:2827",
+        "2034:2795",
+        "2034:2888",
+        "2034:2889"
+      ],
+      "backgroundIds": [
+        "2034:2793",
+        "2034:2794"
+      ],
+      "crop": "sections/16-the-hotel/section.webp"
+    },
+    {
+      "index": 17,
+      "slug": "corporate-overlay",
+      "dir": "sections/17-corporate-overlay",
+      "source": "side",
+      "laneHint": "manual",
+      "frameId": "2034:2906",
+      "frameName": "Corporate-Overlay",
+      "y0": 0,
+      "y1": 899,
+      "cropY0": 0,
+      "cropY1": 899,
+      "nodeIds": [
+        "2034:2907",
+        "2034:2910",
+        "2034:2943"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/17-corporate-overlay/section.webp"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "pageSlug": "dining-zuma",
+  "frames": [
+    {
+      "id": "266:2135",
+      "name": "DINING-ZUMA",
+      "kind": "page",
+      "width": 1600,
+      "height": 13131,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/266-2135.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "zuma-san-diego",
+      "dir": "sections/01-zuma-san-diego",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:2135",
+      "frameName": "DINING-ZUMA",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 900,
+      "nodeIds": [
+        "266:2136",
+        "266:3628",
+        "266:3100",
+        "266:3174",
+        "266:3625",
+        "266:3170"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-zuma-san-diego/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "contemporary-japanese-dining-at-the-guild",
+      "dir": "sections/02-contemporary-japanese-dining-at-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:2135",
+      "frameName": "DINING-ZUMA",
+      "y0": 900,
+      "y1": 1887,
+      "cropY0": 900,
+      "cropY1": 1970,
+      "nodeIds": [
+        "266:3216",
+        "266:3232",
+        "266:3185",
+        "266:3184"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/02-contemporary-japanese-dining-at-the-guild/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "dress-code",
+      "dir": "sections/03-dress-code",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:2135",
+      "frameName": "DINING-ZUMA",
+      "y0": 2053,
+      "y1": 2405,
+      "cropY0": 1970,
+      "cropY1": 2449,
+      "nodeIds": [
+        "266:3267",
+        "266:3268",
+        "266:3269",
+        "266:3274",
+        "266:3275",
+        "266:3276",
+        "266:3277"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-dress-code/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "explore-the-space",
+      "dir": "sections/04-explore-the-space",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:2135",
+      "frameName": "DINING-ZUMA",
+      "y0": 2492,
+      "y1": 3482,
+      "cropY0": 2449,
+      "cropY1": 3661.5,
+      "nodeIds": [
+        "266:3525",
+        "266:3524",
+        "266:3523"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-explore-the-space/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "curabitur-at-magna-diam-suspendisse-tempor",
+      "dir": "sections/05-curabitur-at-magna-diam-suspendisse-tempor",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:2135",
+      "frameName": "DINING-ZUMA",
+      "y0": 3841,
+      "y1": 4714,
+      "cropY0": 3661.5,
+      "cropY1": 4891.5,
+      "nodeIds": [
+        "266:3526",
+        "266:3527",
+        "266:3559",
+        "266:3578",
+        "266:3564"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-curabitur-at-magna-diam-suspendisse-tempor/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "with-every-bite-as-beautiful-to",
+      "dir": "sections/06-with-every-bite-as-beautiful-to",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:2135",
+      "frameName": "DINING-ZUMA",
+      "y0": 5069,
+      "y1": 6063.53,
+      "cropY0": 4891.5,
+      "cropY1": 6103.77,
+      "nodeIds": [
+        "306:276"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-with-every-bite-as-beautiful-to/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "group-dining-events",
+      "dir": "sections/07-group-dining-events",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:2135",
+      "frameName": "DINING-ZUMA",
+      "y0": 6144,
+      "y1": 7113,
+      "cropY0": 6103.77,
+      "cropY1": 7239.5,
+      "nodeIds": [
+        "306:274"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-group-dining-events/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "zuma-gallery",
+      "dir": "sections/08-zuma-gallery",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:2135",
+      "frameName": "DINING-ZUMA",
+      "y0": 7366,
+      "y1": 10257.53,
+      "cropY0": 7239.5,
+      "cropY1": 10257.77,
+      "nodeIds": [
+        "266:3203",
+        "306:279",
+        "266:3211",
+        "266:3205",
+        "266:3208",
+        "266:3212",
+        "266:3214",
+        "266:3204",
+        "266:3213"
+      ],
+      "backgroundIds": [
+        "266:3202"
+      ],
+      "crop": "sections/08-zuma-gallery/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "faqs",
+      "dir": "sections/09-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:2135",
+      "frameName": "DINING-ZUMA",
+      "y0": 10258,
+      "y1": 11453,
+      "cropY0": 10257.77,
+      "cropY1": 11453,
+      "nodeIds": [
+        "266:2943"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/09-faqs/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "other-dining-options",
+      "dir": "sections/10-other-dining-options",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:2135",
+      "frameName": "DINING-ZUMA",
+      "y0": 11453,
+      "y1": 12431,
+      "cropY0": 11453,
+      "cropY1": 12431,
+      "nodeIds": [
+        "306:275",
+        "266:3023",
+        "266:3024",
+        "266:3030",
+        "266:3079",
+        "266:3022"
+      ],
+      "backgroundIds": [
+        "266:3003",
+        "266:3004"
+      ],
+      "crop": "sections/10-other-dining-options/section.webp"
+    },
+    {
+      "index": 11,
+      "slug": "the-hotel",
+      "dir": "sections/11-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:2135",
+      "frameName": "DINING-ZUMA",
+      "y0": 12431,
+      "y1": 13131,
+      "cropY0": 12431,
+      "cropY1": 13131,
+      "nodeIds": [
+        "266:3037",
+        "266:3005",
+        "266:3098",
+        "266:3099"
+      ],
+      "backgroundIds": [
+        "266:3003",
+        "266:3004"
+      ],
+      "crop": "sections/11-the-hotel/section.webp"
+    }
+  ]
+}

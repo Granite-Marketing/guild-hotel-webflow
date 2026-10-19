@@ -1,0 +1,135 @@
+{
+  "pageSlug": "legal",
+  "index": 1,
+  "slug": "retreat-for-corporate-teams",
+  "laneHint": null,
+  "frameId": "318:836",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 1021.13
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "318:842",
+      "characters": "retreat for corporate teams",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 463,
+        "y": 740,
+        "width": 674,
+        "height": 40
+      }
+    },
+    {
+      "id": "318:840",
+      "characters": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 22,
+      "fontWeight": 400,
+      "lineHeightPx": 35.2,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 503,
+        "y": 818,
+        "width": 595,
+        "height": 35
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [
+    {
+      "nodeId": "318:1047",
+      "name": "guild-nav-full-dark",
+      "reason": "nav component instance: manual lane, bbox only",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "318:837",
+      "type": "RECTANGLE",
+      "name": "Rectangle 1",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "318:1047",
+      "type": "INSTANCE",
+      "name": "guild-nav-full-dark",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    },
+    {
+      "id": "318:842",
+      "type": "TEXT",
+      "name": "retreat for corporate teams",
+      "bbox": {
+        "x": 463,
+        "y": 740,
+        "width": 674,
+        "height": 40
+      }
+    },
+    {
+      "id": "318:840",
+      "type": "TEXT",
+      "name": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+      "bbox": {
+        "x": 503,
+        "y": 818,
+        "width": 595,
+        "height": 35
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

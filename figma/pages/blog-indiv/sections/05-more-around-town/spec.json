@@ -1,0 +1,164 @@
+{
+  "pageSlug": "blog-indiv",
+  "index": 5,
+  "slug": "more-around-town",
+  "laneHint": null,
+  "frameId": "2034:1407",
+  "bbox": {
+    "x": 0,
+    "y": 2939,
+    "width": 1600,
+    "height": 981
+  },
+  "crop": {
+    "y0": 2811.5,
+    "y1": 3920
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "2034:1565",
+      "characters": "more around town",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 585,
+        "y": 127.5,
+        "width": 431,
+        "height": 40
+      }
+    },
+    {
+      "id": "2034:1567",
+      "characters": "historical tours",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 40,
+        "y": 1038.5,
+        "width": 291,
+        "height": 30
+      }
+    },
+    {
+      "id": "2034:1566",
+      "characters": "autumn at spa adolphus",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 840,
+        "y": 1038.5,
+        "width": 415,
+        "height": 30
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#949494",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#D4D4D4",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "2034:1565",
+      "type": "TEXT",
+      "name": "more around town",
+      "bbox": {
+        "x": 585,
+        "y": 127.5,
+        "width": 431,
+        "height": 40
+      }
+    },
+    {
+      "id": "2034:1563",
+      "type": "RECTANGLE",
+      "name": "Rectangle 584",
+      "bbox": {
+        "x": 0,
+        "y": 208.5,
+        "width": 800,
+        "height": 900
+      }
+    },
+    {
+      "id": "2034:1564",
+      "type": "RECTANGLE",
+      "name": "Rectangle 530",
+      "bbox": {
+        "x": 800,
+        "y": 208.5,
+        "width": 800,
+        "height": 900
+      }
+    },
+    {
+      "id": "2034:1566",
+      "type": "TEXT",
+      "name": "autumn at spa adolphus",
+      "bbox": {
+        "x": 840,
+        "y": 1038.5,
+        "width": 415,
+        "height": 30
+      }
+    },
+    {
+      "id": "2034:1567",
+      "type": "TEXT",
+      "name": "historical tours",
+      "bbox": {
+        "x": 40,
+        "y": 1038.5,
+        "width": 291,
+        "height": 30
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

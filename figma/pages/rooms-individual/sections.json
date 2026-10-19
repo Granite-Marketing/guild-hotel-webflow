@@ -1,0 +1,335 @@
+{
+  "pageSlug": "rooms-individual",
+  "frames": [
+    {
+      "id": "406:3458",
+      "name": "ROOMS-INDIVIDUAL",
+      "kind": "page",
+      "width": 1600,
+      "height": 15694,
+      "scale": 0.75,
+      "renderScale": 0.75,
+      "render": "figma/.cache/renders/406-3458.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "deluxe-king-suite",
+      "dir": "sections/01-deluxe-king-suite",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 900,
+      "nodeIds": [
+        "406:3460",
+        "406:4586",
+        "406:3465",
+        "406:3463"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-deluxe-king-suite/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "back-to-rooms",
+      "dir": "sections/02-back-to-rooms",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 926,
+      "y1": 1305.93,
+      "cropY0": 900,
+      "cropY1": 1385.97,
+      "nodeIds": [
+        "413:5517",
+        "413:5536",
+        "413:5515"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/02-back-to-rooms/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "room-description",
+      "dir": "sections/03-room-description",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 1466,
+      "y1": 1771,
+      "cropY0": 1385.97,
+      "cropY1": 1836,
+      "nodeIds": [
+        "410:5489",
+        "410:5488",
+        "410:5503",
+        "410:5506"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-room-description/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "section",
+      "dir": "sections/04-section",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 1901,
+      "y1": 2654,
+      "cropY0": 1836,
+      "cropY1": 2674,
+      "nodeIds": [
+        "413:5522"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-section/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "etiam-imperdiet-sodales-dui-a-vestibulum",
+      "dir": "sections/05-etiam-imperdiet-sodales-dui-a-vestibulum",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 2694,
+      "y1": 3568,
+      "cropY0": 2674,
+      "cropY1": 3588,
+      "nodeIds": [
+        "413:5523",
+        "413:5526"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-etiam-imperdiet-sodales-dui-a-vestibulum/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "morbi-gravida-augue-at-ipsum-ultricies",
+      "dir": "sections/06-morbi-gravida-augue-at-ipsum-ultricies",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 3608,
+      "y1": 4439,
+      "cropY0": 3588,
+      "cropY1": 4506.5,
+      "nodeIds": [
+        "2023:861",
+        "413:5540",
+        "413:5542"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-morbi-gravida-augue-at-ipsum-ultricies/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "in-room-amenities",
+      "dir": "sections/07-in-room-amenities",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 4574,
+      "y1": 5474,
+      "cropY0": 4506.5,
+      "cropY1": 5494,
+      "nodeIds": [
+        "408:5486"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-in-room-amenities/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "morbi-gravida-augue-at-ipsum-ultricies",
+      "dir": "sections/08-morbi-gravida-augue-at-ipsum-ultricies",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 5514,
+      "y1": 6345,
+      "cropY0": 5494,
+      "cropY1": 6479,
+      "nodeIds": [
+        "2023:866",
+        "2023:865"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/08-morbi-gravida-augue-at-ipsum-ultricies/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "deluxe-king-suite-gallery",
+      "dir": "sections/09-deluxe-king-suite-gallery",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 6613,
+      "y1": 9504.53,
+      "cropY0": 6479,
+      "cropY1": 9613.77,
+      "nodeIds": [
+        "408:4728",
+        "408:4740",
+        "408:4736",
+        "408:4730",
+        "408:4733",
+        "408:4737",
+        "408:4739",
+        "408:4729",
+        "408:4738"
+      ],
+      "backgroundIds": [
+        "408:4727",
+        "406:3557"
+      ],
+      "crop": "sections/09-deluxe-king-suite-gallery/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "discover-other-rooms",
+      "dir": "sections/10-discover-other-rooms",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 9723,
+      "y1": 10259,
+      "cropY0": 9613.77,
+      "cropY1": 10425.5,
+      "nodeIds": [
+        "413:5564"
+      ],
+      "backgroundIds": [
+        "406:3557"
+      ],
+      "crop": "sections/10-discover-other-rooms/section.webp"
+    },
+    {
+      "index": 11,
+      "slug": "the-neighborhood",
+      "dir": "sections/11-the-neighborhood",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 10592,
+      "y1": 11687.81,
+      "cropY0": 10425.5,
+      "cropY1": 11804.17,
+      "nodeIds": [
+        "408:4742"
+      ],
+      "backgroundIds": [
+        "406:3557"
+      ],
+      "crop": "sections/11-the-neighborhood/section.webp"
+    },
+    {
+      "index": 12,
+      "slug": "offers-packages",
+      "dir": "sections/12-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 11920.53,
+      "y1": 12820.53,
+      "cropY0": 11804.17,
+      "cropY1": 12820.53,
+      "nodeIds": [
+        "413:5544"
+      ],
+      "backgroundIds": [
+        "406:3557"
+      ],
+      "crop": "sections/12-offers-packages/section.webp"
+    },
+    {
+      "index": 13,
+      "slug": "faqs",
+      "dir": "sections/13-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 12820.53,
+      "y1": 14015.53,
+      "cropY0": 12820.53,
+      "cropY1": 14015.53,
+      "nodeIds": [
+        "406:3558"
+      ],
+      "backgroundIds": [
+        "406:3557"
+      ],
+      "crop": "sections/13-faqs/section.webp"
+    },
+    {
+      "index": 14,
+      "slug": "a-landmark-reimagined",
+      "dir": "sections/14-a-landmark-reimagined",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 14015.53,
+      "y1": 14993.53,
+      "cropY0": 14015.53,
+      "cropY1": 14993.53,
+      "nodeIds": [
+        "406:3466",
+        "406:4466",
+        "406:4467",
+        "406:4473",
+        "406:4522",
+        "406:4465"
+      ],
+      "backgroundIds": [
+        "406:3557",
+        "406:4446",
+        "406:4447"
+      ],
+      "crop": "sections/14-a-landmark-reimagined/section.webp"
+    },
+    {
+      "index": 15,
+      "slug": "the-hotel",
+      "dir": "sections/15-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "406:3458",
+      "frameName": "ROOMS-INDIVIDUAL",
+      "y0": 14993.53,
+      "y1": 15693.53,
+      "cropY0": 14993.53,
+      "cropY1": 15694,
+      "nodeIds": [
+        "406:4480",
+        "406:4448",
+        "406:4541",
+        "406:4542"
+      ],
+      "backgroundIds": [
+        "406:3557",
+        "406:4446",
+        "406:4447"
+      ],
+      "crop": "sections/15-the-hotel/section.webp"
+    }
+  ]
+}

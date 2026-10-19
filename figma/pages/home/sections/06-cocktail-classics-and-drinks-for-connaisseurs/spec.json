@@ -1,0 +1,107 @@
+{
+  "pageSlug": "home",
+  "index": 6,
+  "slug": "cocktail-classics-and-drinks-for-connaisseurs",
+  "laneHint": null,
+  "frameId": "433:559",
+  "bbox": {
+    "x": 0,
+    "y": 5249,
+    "width": 1600,
+    "height": 988
+  },
+  "crop": {
+    "y0": 5231,
+    "y1": 6255
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "433:5785",
+      "characters": "Cocktail classics and drinks for connaisseurs.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 22,
+      "fontWeight": 400,
+      "lineHeightPx": 35.2,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 605,
+        "y": 598,
+        "width": 391,
+        "height": 35
+      }
+    },
+    {
+      "id": "433:5813",
+      "characters": "DISCOVER MORE",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 728,
+        "y": 685,
+        "width": 144,
+        "height": 16
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 13
+    },
+    {
+      "hex": "#000000",
+      "opacity": 0.3,
+      "count": 1
+    },
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "433:5770",
+      "name": "Vector 31",
+      "imageRef": "57b7c9d475ed31c64fc14b589c293bc5f86142a8",
+      "bbox": {
+        "x": 39.75,
+        "y": 18,
+        "width": 1520,
+        "height": 988
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "433:5769",
+      "type": "GROUP",
+      "name": "Group 270990187",
+      "bbox": {
+        "x": 39.75,
+        "y": 18,
+        "width": 1520,
+        "height": 988
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

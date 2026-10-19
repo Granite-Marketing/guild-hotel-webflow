@@ -1,0 +1,67 @@
+{
+  "pageSlug": "press",
+  "index": 5,
+  "slug": "section",
+  "laneHint": null,
+  "frameId": "419:5583",
+  "bbox": {
+    "x": 0,
+    "y": 2837,
+    "width": 1600,
+    "height": 524
+  },
+  "crop": {
+    "y0": 2812,
+    "y1": 3369
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [],
+  "colors": [
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "420:6724",
+      "name": "mobile_logo-1 1",
+      "imageRef": "7b597b88d197b3ba4aaa7743f0e7c1341437b675",
+      "bbox": {
+        "x": 395,
+        "y": 243,
+        "width": 292,
+        "height": 89
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "420:6722",
+      "type": "RECTANGLE",
+      "name": "Rectangle 598",
+      "bbox": {
+        "x": 169,
+        "y": 25,
+        "width": 744,
+        "height": 524
+      }
+    },
+    {
+      "id": "420:6724",
+      "type": "RECTANGLE",
+      "name": "mobile_logo-1 1",
+      "bbox": {
+        "x": 395,
+        "y": 243,
+        "width": 292,
+        "height": 89
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

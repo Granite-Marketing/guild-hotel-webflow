@@ -1,0 +1,231 @@
+{
+  "pageSlug": "press",
+  "index": 2,
+  "slug": "a-room-for-every-stay",
+  "laneHint": null,
+  "frameId": "419:5583",
+  "bbox": {
+    "x": 0,
+    "y": 900,
+    "width": 1600,
+    "height": 698
+  },
+  "crop": {
+    "y0": 900,
+    "y1": 1605.5
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "419:6540",
+      "characters": "A room \nfor every stay",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 80,
+      "fontWeight": 400,
+      "lineHeightPx": 96,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 585,
+        "y": 163,
+        "width": 430.27,
+        "height": 242.93
+      }
+    },
+    {
+      "id": "420:6685",
+      "characters": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 506,
+        "y": 486,
+        "width": 588,
+        "height": 40
+      }
+    },
+    {
+      "id": "420:6681",
+      "characters": "press",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 606,
+        "y": 603,
+        "width": 61,
+        "height": 22
+      }
+    },
+    {
+      "id": "420:6682",
+      "characters": "design",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 712,
+        "y": 603,
+        "width": 70,
+        "height": 22
+      }
+    },
+    {
+      "id": "420:6683",
+      "characters": "community",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 827,
+        "y": 603,
+        "width": 113,
+        "height": 22
+      }
+    },
+    {
+      "id": "420:6690",
+      "characters": "press",
+      "styleName": "H3-CAPS",
+      "styleId": "386:1566",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 30,
+      "fontWeight": 400,
+      "lineHeightPx": 30,
+      "letterSpacing": -1.5,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 169,
+        "y": 668,
+        "width": 99,
+        "height": 30
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#4A1217",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "419:6540",
+      "type": "TEXT",
+      "name": "A room for every stay",
+      "bbox": {
+        "x": 585,
+        "y": 163,
+        "width": 430.27,
+        "height": 242.93
+      }
+    },
+    {
+      "id": "420:6685",
+      "type": "TEXT",
+      "name": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort.",
+      "bbox": {
+        "x": 506,
+        "y": 486,
+        "width": 588,
+        "height": 40
+      }
+    },
+    {
+      "id": "420:6677",
+      "type": "GROUP",
+      "name": "Group 270990041",
+      "bbox": {
+        "x": 545,
+        "y": 586,
+        "width": 455.57,
+        "height": 56
+      }
+    },
+    {
+      "id": "420:6690",
+      "type": "TEXT",
+      "name": "press",
+      "bbox": {
+        "x": 169,
+        "y": 668,
+        "width": 99,
+        "height": 30
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "420:6675",
+      "type": "GROUP",
+      "name": "Group 270990042",
+      "bbox": {
+        "x": 545,
+        "y": -239,
+        "width": 455.57,
+        "height": 881
+      }
+    },
+    {
+      "id": "420:6676",
+      "type": "RECTANGLE",
+      "name": "Rectangle 564",
+      "bbox": {
+        "x": 794,
+        "y": -239,
+        "width": 51,
+        "height": 825
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

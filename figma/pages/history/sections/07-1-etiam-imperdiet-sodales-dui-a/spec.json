@@ -1,0 +1,207 @@
+{
+  "pageSlug": "history",
+  "index": 7,
+  "slug": "1-etiam-imperdiet-sodales-dui-a",
+  "laneHint": null,
+  "frameId": "219:739",
+  "bbox": {
+    "x": 0,
+    "y": 15774,
+    "width": 1600,
+    "height": 2891.53
+  },
+  "crop": {
+    "y0": 15774,
+    "y1": 18789.77
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "236:8092",
+      "characters": "1 Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 924,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "236:8106",
+      "characters": "2 Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 1818,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "236:8107",
+      "characters": "3 Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 840,
+        "y": 1818,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "236:8109",
+      "characters": "4  Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 19.2,
+      "letterSpacing": -0.48,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 40,
+        "y": 2814,
+        "width": 603,
+        "height": 38
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 4
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 4
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "236:8077",
+      "type": "RECTANGLE",
+      "name": "Rectangle 504",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 994.53
+      }
+    },
+    {
+      "id": "236:8092",
+      "type": "TEXT",
+      "name": "1 Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+      "bbox": {
+        "x": 40,
+        "y": 924,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "236:8079",
+      "type": "GROUP",
+      "name": "Group 270989688",
+      "bbox": {
+        "x": 0,
+        "y": 995.53,
+        "width": 799,
+        "height": 900
+      }
+    },
+    {
+      "id": "236:8082",
+      "type": "GROUP",
+      "name": "Group 270989703",
+      "bbox": {
+        "x": 800,
+        "y": 995.53,
+        "width": 800,
+        "height": 900
+      }
+    },
+    {
+      "id": "236:8106",
+      "type": "TEXT",
+      "name": "2 Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta.",
+      "bbox": {
+        "x": 40,
+        "y": 1818,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "236:8107",
+      "type": "TEXT",
+      "name": "3 Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem.",
+      "bbox": {
+        "x": 840,
+        "y": 1818,
+        "width": 603,
+        "height": 38
+      }
+    },
+    {
+      "id": "236:8108",
+      "type": "RECTANGLE",
+      "name": "Rectangle 561",
+      "bbox": {
+        "x": 0,
+        "y": 1897,
+        "width": 1600,
+        "height": 994.53
+      }
+    },
+    {
+      "id": "236:8109",
+      "type": "TEXT",
+      "name": "4 Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.",
+      "bbox": {
+        "x": 40,
+        "y": 2814,
+        "width": 603,
+        "height": 38
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

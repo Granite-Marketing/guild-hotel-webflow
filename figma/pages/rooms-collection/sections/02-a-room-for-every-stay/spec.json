@@ -1,0 +1,131 @@
+{
+  "pageSlug": "rooms-collection",
+  "index": 2,
+  "slug": "a-room-for-every-stay",
+  "laneHint": null,
+  "frameId": "379:581",
+  "bbox": {
+    "x": 0,
+    "y": 1118,
+    "width": 1600,
+    "height": 637.59
+  },
+  "crop": {
+    "y0": 1009,
+    "y1": 1864.3
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "379:591",
+      "characters": "A room \nfor every stay",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 80,
+      "fontWeight": 400,
+      "lineHeightPx": 96,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#000000",
+      "bbox": {
+        "x": 586.09,
+        "y": 109,
+        "width": 430.27,
+        "height": 242.93
+      }
+    },
+    {
+      "id": "379:586",
+      "characters": "Contemporary Japanese\nDining at The Guild Hotel",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 945,
+        "y": 292,
+        "width": 372,
+        "height": 58
+      }
+    },
+    {
+      "id": "379:590",
+      "characters": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort.",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 506,
+        "y": 433.81,
+        "width": 588,
+        "height": 40
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 43
+    },
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "394:3327",
+      "type": "GROUP",
+      "name": "Group 270990164",
+      "bbox": {
+        "x": 506,
+        "y": 109,
+        "width": 588,
+        "height": 637.59
+      }
+    },
+    {
+      "id": "379:586",
+      "type": "TEXT",
+      "name": "Contemporary Japanese Dining at The Guild Hotel",
+      "bbox": {
+        "x": 945,
+        "y": 292,
+        "width": 372,
+        "height": 58
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

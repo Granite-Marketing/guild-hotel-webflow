@@ -1,0 +1,133 @@
+{
+  "pageSlug": "home",
+  "index": 11,
+  "slug": "rooms-suites",
+  "laneHint": null,
+  "frameId": "433:559",
+  "bbox": {
+    "x": 0,
+    "y": 10750,
+    "width": 1600,
+    "height": 1579
+  },
+  "crop": {
+    "y0": 10636,
+    "y1": 12449
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "433:7345",
+      "characters": "rooms  & suites",
+      "styleName": "Sackers Heavy Gothic/Display/Hero",
+      "styleId": "177:54",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 56,
+      "fontWeight": 400,
+      "lineHeightPx": 56,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 657,
+        "y": 773,
+        "width": 286,
+        "height": 112
+      }
+    },
+    {
+      "id": "433:7346",
+      "characters": "Generous layouts, thoughtful details, and room to make yourself at home.",
+      "styleName": "Gatch Test/Body/Regular",
+      "styleId": "177:61",
+      "fontFamily": "Gatch Test",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 655,
+        "y": 917,
+        "width": 290,
+        "height": 58
+      }
+    },
+    {
+      "id": "433:7349",
+      "characters": "EXPLORE more",
+      "styleName": "Sackers Heavy Gothic / Label / Button",
+      "styleId": "177:3",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 16,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#F4EFDF",
+      "bbox": {
+        "x": 733,
+        "y": 1032,
+        "width": 134,
+        "height": 16
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#F4EFDF",
+      "opacity": 1,
+      "count": 3
+    },
+    {
+      "hex": "#000000",
+      "opacity": 0.4,
+      "count": 2
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "433:7341",
+      "name": "Rectangle 504",
+      "imageRef": "3a8a13fffa6bb106dd00f736e22e0aae384f5bda",
+      "bbox": {
+        "x": 0,
+        "y": 114,
+        "width": 1600,
+        "height": 1579
+      }
+    },
+    {
+      "nodeId": "433:7351",
+      "name": "Rectangle 505",
+      "imageRef": "3a8a13fffa6bb106dd00f736e22e0aae384f5bda",
+      "bbox": {
+        "x": 0,
+        "y": 114,
+        "width": 1600,
+        "height": 1579
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "433:7340",
+      "type": "GROUP",
+      "name": "Group 270990195",
+      "bbox": {
+        "x": 0,
+        "y": 114,
+        "width": 1600,
+        "height": 1579
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

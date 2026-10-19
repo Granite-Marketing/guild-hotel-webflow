@@ -105,12 +105,15 @@ Collect these inputs. Ask for any that are missing:
 
 | Input | Required | Example |
 |---|---|---|
-| Figma file URL (with node ID) | Yes | `figma.com/design/ABC123/File?node-id=1:234` |
+| Snapshot section (page slug + section folder) | Yes, when `figma/snapshot.json` exists | `home/03-a-century-of-stories` (from `docs/figma/build-queue.md`) |
+| Figma file URL (with node ID) | Only without a snapshot | `figma.com/design/ABC123/File?node-id=1:234` |
 | Target Webflow site name | Yes | `stephens-mcp-test` |
 | Target page slug | Yes | `/poc-test` (existing) or `/new-page` (create) |
 | Component name | Yes | `two-img-imba` (used for class naming) |
 
-Parse the Figma URL to extract `fileKey` and `nodeId`:
+**Snapshot first.** When `figma/snapshot.json` exists, the design source is the local snapshot, not Figma. Do not call the Figma MCP or `api.figma.com` on the default path; the REST quota on this account has locked a file for days before. See `figma/README.md`.
+
+Without a snapshot, parse the Figma URL to extract `fileKey` and `nodeId`:
 - `figma.com/design/:fileKey/:fileName?node-id=:nodeId` (convert `-` to `:` in nodeId)
 - Branch URLs: `figma.com/design/:fileKey/branch/:branchKey/:fileName` (use branchKey)
 
@@ -427,7 +430,20 @@ Style Guide Sync Complete:
 - Manual tasks: [list any items requiring Designer interaction]
 ```
 
-## Phase 3: Read (Figma -> Component Map)
+## Phase 3: Read (Snapshot -> Component Map)
+
+### 3.0 Default path: read the local snapshot
+
+1. Find the section in `figma/inventory.json` by page slug and section folder. Confirm its lane is `agent`; stop and report if it is `manual` or `needs-decision`.
+2. Read `figma/pages/<page>/sections/<NN>-<slug>/spec.json`: texts with named style and raw type values, colours, image refs, geometry relative to the section, `manualOverlays`, and animation notes.
+3. View `section.webp` in the same folder. It is the Figma reference for Phase 7 compare. Treat every `manualOverlays` region (for example the navbar) as owned by a hand-built component: do not build it, and ignore it in the visual compare.
+4. Map type and colour values through `figma/tokens.json` onto existing Relume classes and variables.
+5. Take image sources from `figma/assets.json` (`webflowUrl` once uploaded). Placing an image after a REST upload may need a manual Designer step; list it rather than guessing.
+6. Write the component map (step 5 below) from these files.
+
+Fall back to the Figma MCP steps below only for a field the snapshot lacks, one call at a time, and note each call in the component map. Never re-fetch a whole page.
+
+### 3.1 Fallback: Figma MCP
 
 **Context protection:** Run this phase in an Agent sub-task to protect the main context window. The sub-agent should return a structured summary (element tree, key styles, content, attributes) rather than raw Figma data.
 
@@ -456,7 +472,7 @@ Style Guide Sync Complete:
    ```
    get_screenshot(fileKey, nodeId)
    ```
-   Save to `test-results/<component>-figma-reference.png`.
+   Save to `test-results/<component>-figma-reference.png`. With a snapshot, copy `section.webp` instead of calling this.
 
 5. **Write component map:**
    Create `docs/component-maps/<component>.md` with:

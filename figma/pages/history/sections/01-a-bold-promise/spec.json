@@ -1,0 +1,135 @@
+{
+  "pageSlug": "history",
+  "index": 1,
+  "slug": "a-bold-promise",
+  "laneHint": null,
+  "frameId": "219:739",
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 900
+  },
+  "crop": {
+    "y0": 0,
+    "y1": 1041.61
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "224:7189",
+      "characters": "a bold promise",
+      "styleName": "H2-CAPS",
+      "styleId": "236:8087",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 40,
+      "fontWeight": 400,
+      "lineHeightPx": 40,
+      "letterSpacing": -2,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 629,
+        "y": 748,
+        "width": 343,
+        "height": 40
+      }
+    },
+    {
+      "id": "224:7190",
+      "characters": "“Once Opened, Never Closed”.\nThe Guild has been the social heart of San Diego since 1924.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Gatch Test",
+      "fontSize": 22,
+      "fontWeight": 400,
+      "lineHeightPx": 28.6,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#262118",
+      "bbox": {
+        "x": 373,
+        "y": 816,
+        "width": 854,
+        "height": 44
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#262118",
+      "opacity": 1,
+      "count": 2
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [
+    {
+      "nodeId": "236:8629",
+      "name": "guild-nav-full-dark",
+      "reason": "nav component instance: manual lane, bbox only",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "220:740",
+      "type": "RECTANGLE",
+      "name": "Rectangle 1",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "236:8629",
+      "type": "INSTANCE",
+      "name": "guild-nav-full-dark",
+      "bbox": {
+        "x": 40,
+        "y": 26,
+        "width": 1520,
+        "height": 56
+      }
+    },
+    {
+      "id": "224:7189",
+      "type": "TEXT",
+      "name": "a bold promise",
+      "bbox": {
+        "x": 629,
+        "y": 748,
+        "width": 343,
+        "height": 40
+      }
+    },
+    {
+      "id": "224:7190",
+      "type": "TEXT",
+      "name": "“Once Opened, Never Closed”. The Guild has been the social heart of San Diego since 1924.",
+      "bbox": {
+        "x": 373,
+        "y": 816,
+        "width": 854,
+        "height": 44
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

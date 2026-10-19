@@ -1,0 +1,113 @@
+{
+  "pageSlug": "dining-collection",
+  "index": 2,
+  "slug": "first-sips-small-bites-big-nights",
+  "laneHint": null,
+  "frameId": "262:53",
+  "bbox": {
+    "x": 0,
+    "y": 1138,
+    "width": 1600,
+    "height": 579
+  },
+  "crop": {
+    "y0": 1019,
+    "y1": 1717
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "262:282",
+      "characters": "First sips, small bites\n& big nights out.",
+      "styleName": null,
+      "styleId": null,
+      "fontFamily": "Morello",
+      "fontSize": 80,
+      "fontWeight": 400,
+      "lineHeightPx": 96,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#000000",
+      "bbox": {
+        "x": 452.2,
+        "y": 119,
+        "width": 697.04,
+        "height": 277.47
+      }
+    },
+    {
+      "id": "262:101",
+      "characters": "For visitors and locals, Guild dining is a journey, an invitation to to savor our worlds. The Lobby Bar knows its classics from its off-menu surprises. California’s first Zuma serves up the sushi and robata that have made it an international standard-setter from London to Miami, Vail to Abu Dhabi. Poolside, there’s always fresh, easy West Coast goodness, and the Mediterranean influences daytime offerings in The Courtyard.   ",
+      "styleName": "Paragraph",
+      "styleId": "236:8094",
+      "fontFamily": "Gatch Test",
+      "fontSize": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 26,
+      "letterSpacing": 0,
+      "textCase": "ORIGINAL",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 429,
+        "y": 461.46,
+        "width": 742,
+        "height": 118
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#000000",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "263:1313",
+      "type": "GROUP",
+      "name": "Group 270990039",
+      "bbox": {
+        "x": 429,
+        "y": 119,
+        "width": 742,
+        "height": 460.46
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "266:1342",
+      "type": "GROUP",
+      "name": "Group 270990042",
+      "bbox": {
+        "x": 357,
+        "y": 608,
+        "width": 885.57,
+        "height": 881
+      }
+    },
+    {
+      "id": "266:1341",
+      "type": "RECTANGLE",
+      "name": "Rectangle 564",
+      "bbox": {
+        "x": 1043,
+        "y": 608,
+        "width": 51,
+        "height": 825
+      }
+    }
+  ],
+  "animationNotes": [],
+  "source": "page"
+}

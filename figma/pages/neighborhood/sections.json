@@ -1,0 +1,389 @@
+{
+  "pageSlug": "neighborhood",
+  "frames": [
+    {
+      "id": "487:2080",
+      "name": "NEIGHBORHOOD",
+      "kind": "page",
+      "width": 1600,
+      "height": 21575,
+      "scale": 0.75,
+      "renderScale": 0.75,
+      "render": "figma/.cache/renders/487-2080.png",
+      "status": "ok"
+    },
+    {
+      "id": "487:2428",
+      "name": "NEIGHBORHOOD-OVERLAY",
+      "kind": "side",
+      "width": 1600,
+      "height": 899,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/487-2428.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "a-city-at-your-fingertips",
+      "dir": "sections/01-a-city-at-your-fingertips",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 1020.88,
+      "nodeIds": [
+        "487:2087",
+        "487:2424",
+        "487:2088",
+        "487:2089"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-a-city-at-your-fingertips/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "the-best-of-san-diego-is",
+      "dir": "sections/02-the-best-of-san-diego-is",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 1141.75,
+      "y1": 1580,
+      "cropY0": 1020.88,
+      "cropY1": 1701,
+      "nodeIds": [
+        "487:2091",
+        "487:2090"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/02-the-best-of-san-diego-is/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "downtown-san-diego",
+      "dir": "sections/03-downtown-san-diego",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 1822,
+      "y1": 2904,
+      "cropY0": 1701,
+      "cropY1": 3081,
+      "nodeIds": [
+        "487:2572",
+        "487:2570",
+        "487:2566",
+        "487:2587"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-downtown-san-diego/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "gaslamp-quarter",
+      "dir": "sections/04-gaslamp-quarter",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 3258,
+      "y1": 4248,
+      "cropY0": 3081,
+      "cropY1": 4427.5,
+      "nodeIds": [
+        "487:2573",
+        "487:2571",
+        "487:2567"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-gaslamp-quarter/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "little-italy",
+      "dir": "sections/05-little-italy",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 4607,
+      "y1": 5748,
+      "cropY0": 4427.5,
+      "cropY1": 5778,
+      "nodeIds": [
+        "487:2574",
+        "487:2579",
+        "487:2119",
+        "487:2589",
+        "487:2588"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-little-italy/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "arts-culture-downtown-san-diego",
+      "dir": "sections/06-arts-culture-downtown-san-diego",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 5808,
+      "y1": 6708,
+      "cropY0": 5778,
+      "cropY1": 6841,
+      "nodeIds": [
+        "487:2623"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-arts-culture-downtown-san-diego/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "beyond-downtown-san-diego",
+      "dir": "sections/07-beyond-downtown-san-diego",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 6974,
+      "y1": 9501,
+      "cropY0": 6841,
+      "cropY1": 9591,
+      "nodeIds": [
+        "487:2664",
+        "487:2653",
+        "487:2657",
+        "487:2656",
+        "487:2660",
+        "487:2655",
+        "487:2659",
+        "487:2654",
+        "487:2658"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-beyond-downtown-san-diego/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "corporate-services",
+      "dir": "sections/08-corporate-services",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 9681,
+      "y1": 11389,
+      "cropY0": 9591,
+      "cropY1": 11389,
+      "nodeIds": [
+        "487:2712"
+      ],
+      "backgroundIds": [
+        "487:2714"
+      ],
+      "crop": "sections/08-corporate-services/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "dining-around-the-guild",
+      "dir": "sections/09-dining-around-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 11389,
+      "y1": 13560,
+      "cropY0": 11389,
+      "cropY1": 13650,
+      "nodeIds": [
+        "487:2548"
+      ],
+      "backgroundIds": [
+        "487:2714",
+        "487:2713"
+      ],
+      "crop": "sections/09-dining-around-the-guild/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "steps-from-key-legal-addresses",
+      "dir": "sections/10-steps-from-key-legal-addresses",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 13740,
+      "y1": 14910,
+      "cropY0": 13650,
+      "cropY1": 14910,
+      "nodeIds": [
+        "487:2549"
+      ],
+      "backgroundIds": [
+        "487:2714",
+        "487:2713",
+        "487:2590"
+      ],
+      "crop": "sections/10-steps-from-key-legal-addresses/section.webp"
+    },
+    {
+      "index": 11,
+      "slug": "neighborhood-gallery",
+      "dir": "sections/11-neighborhood-gallery",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 14910,
+      "y1": 17801.53,
+      "cropY0": 14910,
+      "cropY1": 17801.77,
+      "nodeIds": [
+        "487:2410",
+        "487:2422",
+        "487:2418",
+        "487:2412",
+        "487:2415",
+        "487:2419",
+        "487:2421",
+        "487:2411",
+        "487:2420"
+      ],
+      "backgroundIds": [
+        "487:2714",
+        "487:2713",
+        "487:2590",
+        "487:2409"
+      ],
+      "crop": "sections/11-neighborhood-gallery/section.webp"
+    },
+    {
+      "index": 12,
+      "slug": "offers-packages",
+      "dir": "sections/12-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 17802,
+      "y1": 18702,
+      "cropY0": 17801.77,
+      "cropY1": 18702,
+      "nodeIds": [
+        "487:2383"
+      ],
+      "backgroundIds": [
+        "487:2714",
+        "487:2713",
+        "487:2590"
+      ],
+      "crop": "sections/12-offers-packages/section.webp"
+    },
+    {
+      "index": 13,
+      "slug": "faqs",
+      "dir": "sections/13-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 18702,
+      "y1": 19897,
+      "cropY0": 18702,
+      "cropY1": 19897,
+      "nodeIds": [
+        "487:2251"
+      ],
+      "backgroundIds": [
+        "487:2714",
+        "487:2713",
+        "487:2590"
+      ],
+      "crop": "sections/13-faqs/section.webp"
+    },
+    {
+      "index": 14,
+      "slug": "book-your-escape",
+      "dir": "sections/14-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 19897,
+      "y1": 20875,
+      "cropY0": 19897,
+      "cropY1": 20875,
+      "nodeIds": [
+        "487:2306",
+        "487:2307",
+        "487:2313",
+        "487:2362",
+        "487:2305"
+      ],
+      "backgroundIds": [
+        "487:2714",
+        "487:2713",
+        "487:2590",
+        "487:2286",
+        "487:2287"
+      ],
+      "crop": "sections/14-book-your-escape/section.webp"
+    },
+    {
+      "index": 15,
+      "slug": "the-hotel",
+      "dir": "sections/15-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "487:2080",
+      "frameName": "NEIGHBORHOOD",
+      "y0": 20875,
+      "y1": 21575,
+      "cropY0": 20875,
+      "cropY1": 21575,
+      "nodeIds": [
+        "487:2320",
+        "487:2288",
+        "487:2381",
+        "487:2382"
+      ],
+      "backgroundIds": [
+        "487:2714",
+        "487:2713",
+        "487:2590",
+        "487:2286",
+        "487:2287"
+      ],
+      "crop": "sections/15-the-hotel/section.webp"
+    },
+    {
+      "index": 16,
+      "slug": "neighborhood-overlay",
+      "dir": "sections/16-neighborhood-overlay",
+      "source": "side",
+      "laneHint": "manual",
+      "frameId": "487:2428",
+      "frameName": "NEIGHBORHOOD-OVERLAY",
+      "y0": 0,
+      "y1": 899,
+      "cropY0": 0,
+      "cropY1": 899,
+      "nodeIds": [
+        "487:2429",
+        "487:2432",
+        "487:2465"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/16-neighborhood-overlay/section.webp"
+    }
+  ]
+}

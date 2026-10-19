@@ -1,0 +1,784 @@
+{
+  "sections": [
+    {
+      "key": "nav-elements/01-full-2",
+      "name": "overlay-detail-panel-modal",
+      "kind": "overlay",
+      "slider": false,
+      "interactive": "slide-in panel with back and close; reserve buttons with hover state",
+      "boundaryIssue": "",
+      "note": "Venue image left, venue card list right, cropped at bottom"
+    },
+    {
+      "key": "nav-elements/02-menu-1",
+      "name": "nav-fullscreen-menu",
+      "kind": "nav",
+      "slider": false,
+      "interactive": "burger toggle, day/night toggle, link hovers",
+      "boundaryIssue": "",
+      "note": "Centered link list over blurred image with address footer row"
+    },
+    {
+      "key": "nav-elements/03-window-1",
+      "name": "overlay-detail-panel-modal",
+      "kind": "overlay",
+      "slider": false,
+      "interactive": "modal with close; link hover states",
+      "boundaryIssue": "",
+      "note": "Booking quick-links panel: image left, dark link list right"
+    },
+    {
+      "key": "history/01-a-bold-promise",
+      "name": "hero-fullbleed-caption",
+      "kind": "hero",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Nav bar plus title and caption at bottom"
+    },
+    {
+      "key": "history/02-a-century-of-stories-meets-a",
+      "name": "script-intro-centered",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "history/03-san-diegos-great-escape-oasis-is",
+      "name": "image-text-centered-stack",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Single portrait image above centred heading and two paragraphs"
+    },
+    {
+      "key": "history/04-george-marston",
+      "name": "split-image-text-dark",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Brown panel, cut-out portrait left, script heading and text right, stamp badge"
+    },
+    {
+      "key": "history/05-once-opened-never-closed",
+      "name": "timeline-sticky-year-scroll",
+      "kind": "content",
+      "slider": false,
+      "interactive": "sticky year label that changes on scroll; images collapse and expand (see figma/animations/history.md)",
+      "boundaryIssue": "",
+      "note": "Merged from nine timeline fragments (old 05 to 13) by a slicer override."
+    },
+    {
+      "key": "history/06-a-landmark-reimagined",
+      "name": "gallery-row-dark-titled",
+      "kind": "gallery",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Black band, centred title, row of four images, caption"
+    },
+    {
+      "key": "history/07-1-etiam-imperdiet-sodales-dui-a",
+      "name": "gallery-mosaic-captioned",
+      "kind": "gallery",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Full-width image, two half-width images, full-width image, each with small caption"
+    },
+    {
+      "key": "history/08-discover-the-property",
+      "name": "map-feature",
+      "kind": "map",
+      "slider": false,
+      "interactive": "possible hotspot markers on illustrated map",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "history/09-more-of-the-guild",
+      "name": "card-carousel-header-left",
+      "kind": "slider",
+      "slider": true,
+      "interactive": "horizontal card carousel with arrows",
+      "boundaryIssue": "",
+      "note": "Title and intro left, image cards cut off at right edge, arrow buttons bottom-left"
+    },
+    {
+      "key": "history/10-faqs",
+      "name": "faq-accordion",
+      "kind": "accordion",
+      "slider": false,
+      "interactive": "accordion",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "history/11-offers-packages",
+      "name": "offers-slider-split",
+      "kind": "slider",
+      "slider": true,
+      "interactive": "offers slider with counter and arrows",
+      "boundaryIssue": "",
+      "note": "Maroon panel left with 02 / 05 counter, image right"
+    },
+    {
+      "key": "history/12-book-your-escape",
+      "name": "cta-booking-newsletter",
+      "kind": "cta",
+      "slider": false,
+      "interactive": "email input and join button",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "history/13-the-hotel",
+      "name": "footer-links",
+      "kind": "footer",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "home/01-the-bold-handsome-heart-of-san",
+      "name": "hero-fullbleed-caption",
+      "kind": "hero",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Nav bar, title, paragraph and book button at bottom"
+    },
+    {
+      "key": "home/02-a-century-of-stories-meets-a",
+      "name": "script-intro-centered",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Building illustration above script heading and paragraph"
+    },
+    {
+      "key": "home/03-west-coast-hospitality-since-1924",
+      "name": "split-image-text-dark",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Green band, tall image overlapping left, text right"
+    },
+    {
+      "key": "home/04-an-unexpected-resort-dining-experience",
+      "name": "venue-card-fullbleed",
+      "kind": "card-repeat",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "Contains the section eyebrow heading plus first venue card (Zuma, framed, no text overlay); next crop repeats Zuma as a full card"
+    },
+    {
+      "key": "home/05-dress-up-for-the-rich-worldly",
+      "name": "venue-card-fullbleed",
+      "kind": "card-repeat",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Zuma card with centred logo, tagline and button"
+    },
+    {
+      "key": "home/06-cocktail-classics-and-drinks-for-connaisseurs",
+      "name": "venue-card-fullbleed",
+      "kind": "card-repeat",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Lobby Bar card"
+    },
+    {
+      "key": "home/07-our-new-pool-serves-up-san",
+      "name": "venue-card-fullbleed",
+      "kind": "card-repeat",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Pool Lounge card"
+    },
+    {
+      "key": "home/08-lobby-terrace",
+      "name": "venue-card-fullbleed",
+      "kind": "card-repeat",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Lobby Terrace card"
+    },
+    {
+      "key": "home/09-solana-coffee",
+      "name": "venue-card-fullbleed",
+      "kind": "card-repeat",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Solana Coffee card"
+    },
+    {
+      "key": "home/10-wellness",
+      "name": "image-trio-text",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Three portrait images (edge ones cropped) above centred text and button"
+    },
+    {
+      "key": "home/11-rooms-suites",
+      "name": "feature-card-fullbleed-centered",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Full-bleed image with centred title, text and button"
+    },
+    {
+      "key": "home/12-the-neighborhood",
+      "name": "map-feature",
+      "kind": "map",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Hand-drawn map with script title and button"
+    },
+    {
+      "key": "home/13-retail",
+      "name": "offers-slider-split",
+      "kind": "slider",
+      "slider": true,
+      "interactive": "slider with 02 / 05 counter and arrows",
+      "boundaryIssue": "",
+      "note": "Blue panel left with text, image right"
+    },
+    {
+      "key": "home/14-art-stories",
+      "name": "heading-wide-image-cta",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Centred heading and button above large framed image"
+    },
+    {
+      "key": "home/15-meetings-events",
+      "name": "feature-card-fullbleed-centered",
+      "kind": "content",
+      "slider": false,
+      "interactive": "hover or select room list (Council Boardroom, Courtyard, Conference Center)",
+      "boundaryIssue": "",
+      "note": "Full-bleed image, title left with room list, discover button right"
+    },
+    {
+      "key": "home/16-offers-packages",
+      "name": "offers-slider-split",
+      "kind": "slider",
+      "slider": true,
+      "interactive": "offers slider with counter and arrows",
+      "boundaryIssue": "",
+      "note": "Maroon panel left, image right"
+    },
+    {
+      "key": "home/17-faqs",
+      "name": "faq-accordion",
+      "kind": "accordion",
+      "slider": false,
+      "interactive": "accordion",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "home/18-book-your-escape",
+      "name": "cta-booking-newsletter",
+      "kind": "cta",
+      "slider": false,
+      "interactive": "email input and join button",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "home/19-the-hotel",
+      "name": "footer-links",
+      "kind": "footer",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "dining-collection/01-a-taste-of-the-guild",
+      "name": "hero-fullbleed-caption",
+      "kind": "hero",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "dining-collection/02-first-sips-small-bites-big-nights",
+      "name": "script-intro-centered",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "dining-collection/03-zuma",
+      "name": "venue-card-fullbleed",
+      "kind": "card-repeat",
+      "slider": false,
+      "interactive": "venue tab pills (Zuma, Lobby Bar, Pool Lounge, Lobby Terrace, Solana Coffee) at card bottom",
+      "boundaryIssue": "",
+      "note": "Framed card without text overlay, tab pills at bottom"
+    },
+    {
+      "key": "dining-collection/04-dress-up-for-the-rich-worldly",
+      "name": "venue-card-fullbleed",
+      "kind": "card-repeat",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Zuma card"
+    },
+    {
+      "key": "dining-collection/05-cocktail-classics-and-drinks-for-connaisseurs",
+      "name": "venue-card-fullbleed",
+      "kind": "card-repeat",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Lobby Bar card"
+    },
+    {
+      "key": "dining-collection/06-our-new-pool-serves-up-san",
+      "name": "venue-card-fullbleed",
+      "kind": "card-repeat",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Pool Lounge card"
+    },
+    {
+      "key": "dining-collection/07-garden-terrace",
+      "name": "venue-card-fullbleed",
+      "kind": "card-repeat",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Garden Terrace card"
+    },
+    {
+      "key": "dining-collection/08-solana-coffee",
+      "name": "venue-card-fullbleed",
+      "kind": "card-repeat",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Solana Coffee card"
+    },
+    {
+      "key": "dining-collection/09-the-neighborhood",
+      "name": "map-feature",
+      "kind": "map",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "dining-collection/10-faqs",
+      "name": "faq-accordion",
+      "kind": "accordion",
+      "slider": false,
+      "interactive": "accordion",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "dining-collection/11-offers-packages",
+      "name": "offers-slider-split",
+      "kind": "slider",
+      "slider": true,
+      "interactive": "offers slider with counter and arrows",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "dining-collection/12-book-your-escape",
+      "name": "cta-booking-newsletter",
+      "kind": "cta",
+      "slider": false,
+      "interactive": "email input and join button",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "dining-collection/13-the-hotel",
+      "name": "footer-links",
+      "kind": "footer",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "dining-zuma/01-zuma-san-diego",
+      "name": "hero-fullbleed-centered",
+      "kind": "hero",
+      "slider": false,
+      "interactive": "reserve a table button",
+      "boundaryIssue": "",
+      "note": "Logo, title, intro line and reserve button over full-bleed image"
+    },
+    {
+      "key": "dining-zuma/02-contemporary-japanese-dining-at-the-guild",
+      "name": "split-image-text-dark",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Navy band, image left overlapping, text right"
+    },
+    {
+      "key": "dining-zuma/03-dress-code",
+      "name": "text-columns-info",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Two text columns: dress code, hours, links"
+    },
+    {
+      "key": "dining-zuma/04-explore-the-space",
+      "name": "split-image-text-light",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Image top right, text bottom left"
+    },
+    {
+      "key": "dining-zuma/05-curabitur-at-magna-diam-suspendisse-tempor",
+      "name": "image-pair-text",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Wide image left, narrower image right with paragraph"
+    },
+    {
+      "key": "dining-zuma/06-with-every-bite-as-beautiful-to",
+      "name": "quote-band-dark",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Navy band with press quote and publication logo"
+    },
+    {
+      "key": "dining-zuma/07-group-dining-events",
+      "name": "image-trio-text",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Three images in a row (third cropped at edge, no controls) above centred text and enquire link"
+    },
+    {
+      "key": "dining-zuma/08-zuma-gallery",
+      "name": "gallery-mosaic-captioned",
+      "kind": "gallery",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Full-width image, two half images, full-width image with captions"
+    },
+    {
+      "key": "dining-zuma/09-faqs",
+      "name": "faq-accordion",
+      "kind": "accordion",
+      "slider": false,
+      "interactive": "accordion",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "dining-zuma/10-other-dining-options",
+      "name": "cta-booking-newsletter",
+      "kind": "cta",
+      "slider": false,
+      "interactive": "email input and join button",
+      "boundaryIssue": "Folder name suggests an other-dining-options section but the crop shows only the booking/newsletter CTA; the other-dining slider is not in this crop"
+    },
+    {
+      "key": "dining-zuma/11-the-hotel",
+      "name": "footer-links",
+      "kind": "footer",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "dining-gardenterrace/01-garden-terrace",
+      "name": "hero-fullbleed-centered",
+      "kind": "hero",
+      "slider": false,
+      "interactive": "reserve a table button",
+      "boundaryIssue": "",
+      "note": "Garden Terrace hero with reserve button"
+    },
+    {
+      "key": "dining-gardenterrace/02-contemporary-japanese-dining-at-the-guild",
+      "name": "split-image-text-dark",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Green band, image left, text right"
+    },
+    {
+      "key": "dining-gardenterrace/03-dress-code",
+      "name": "text-columns-info",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Two text columns"
+    },
+    {
+      "key": "dining-gardenterrace/04-explore-the-space",
+      "name": "split-image-text-light",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Image top right, text bottom left"
+    },
+    {
+      "key": "dining-gardenterrace/05-curabitur-at-magna-diam-suspendisse-tempor",
+      "name": "image-pair-text",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Two images with paragraph"
+    },
+    {
+      "key": "dining-gardenterrace/06-group-dining-events",
+      "name": "image-trio-text",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Three images above centred text and enquire link"
+    },
+    {
+      "key": "dining-gardenterrace/07-zuma-gallery",
+      "name": "gallery-mosaic-captioned",
+      "kind": "gallery",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Full, two half, full images with captions"
+    },
+    {
+      "key": "dining-gardenterrace/08-faqs",
+      "name": "faq-accordion",
+      "kind": "accordion",
+      "slider": false,
+      "interactive": "accordion",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "dining-gardenterrace/09-book-your-escape",
+      "name": "cta-booking-newsletter",
+      "kind": "cta",
+      "slider": false,
+      "interactive": "email input and join button",
+      "boundaryIssue": ""
+    },
+    {
+      "key": "dining-gardenterrace/10-the-hotel",
+      "name": "footer-links",
+      "kind": "footer",
+      "slider": true,
+      "interactive": "other-dining card slider below footer with arrows",
+      "boundaryIssue": "Crop contains the footer plus a separate other-dining card slider (cards cut off at right, arrows bottom-left) below it; two distinct sections, and the slider sits after the footer",
+      "note": "Footer then blank area with arrows and venue cards (The Lobby Bar, Lobby Terrace)"
+    },
+    {
+      "key": "dining-lobbybar/01-lobby-bar",
+      "name": "hero-fullbleed-centered",
+      "kind": "hero",
+      "slider": false,
+      "interactive": "reserve a table button",
+      "boundaryIssue": "",
+      "note": "Lobby Bar hero with reserve button (different title only)"
+    },
+    {
+      "key": "dining-lobbybar/02-contemporary-japanese-dining-at-the-guild",
+      "name": "split-image-text-dark",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Green band, image left, text right; clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-lobbybar/03-dress-code",
+      "name": "text-columns-info",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Two text columns; clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-lobbybar/04-explore-the-space",
+      "name": "split-image-text-light",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Image top right, text bottom left; clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-lobbybar/05-curabitur-at-magna-diam-suspendisse-tempor",
+      "name": "image-pair-text",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Two images with paragraph; clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-lobbybar/06-group-dining-events",
+      "name": "image-trio-text",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Three images above centred text and enquire link; clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-lobbybar/07-zuma-gallery",
+      "name": "gallery-mosaic-captioned",
+      "kind": "gallery",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Full, two half, full images with captions; clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-lobbybar/08-faqs",
+      "name": "faq-accordion",
+      "kind": "accordion",
+      "slider": false,
+      "interactive": "accordion",
+      "boundaryIssue": "",
+      "note": "clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-lobbybar/09-book-your-escape",
+      "name": "cta-booking-newsletter",
+      "kind": "cta",
+      "slider": false,
+      "interactive": "email input and join button",
+      "boundaryIssue": "",
+      "note": "clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-lobbybar/10-the-hotel",
+      "name": "footer-links",
+      "kind": "footer",
+      "slider": true,
+      "interactive": "other-dining card slider below footer with arrows",
+      "boundaryIssue": "Crop contains the footer plus a separate other-dining card slider (cards cut off at right, arrows bottom-left) below it; two distinct sections, and the slider sits after the footer",
+      "note": "Footer then blank area with arrows and venue cards (The Lobby Bar, Lobby Terrace); clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-poollounge/01-pool-lounge",
+      "name": "hero-fullbleed-centered",
+      "kind": "hero",
+      "slider": false,
+      "interactive": "reserve a table button",
+      "boundaryIssue": "",
+      "note": "Pool Lounge hero with reserve button (different title only)"
+    },
+    {
+      "key": "dining-poollounge/02-contemporary-japanese-dining-at-the-guild",
+      "name": "split-image-text-dark",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Green band, image left, text right; clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-poollounge/03-dress-code",
+      "name": "text-columns-info",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Two text columns; clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-poollounge/04-explore-the-space",
+      "name": "split-image-text-light",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Image top right, text bottom left; clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-poollounge/05-curabitur-at-magna-diam-suspendisse-tempor",
+      "name": "image-pair-text",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Two images with paragraph; clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-poollounge/06-group-dining-events",
+      "name": "image-trio-text",
+      "kind": "content",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Three images above centred text and enquire link; clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-poollounge/07-zuma-gallery",
+      "name": "gallery-mosaic-captioned",
+      "kind": "gallery",
+      "slider": false,
+      "interactive": "",
+      "boundaryIssue": "",
+      "note": "Full, two half, full images with captions; clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-poollounge/08-faqs",
+      "name": "faq-accordion",
+      "kind": "accordion",
+      "slider": false,
+      "interactive": "accordion",
+      "boundaryIssue": "",
+      "note": "clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-poollounge/09-book-your-escape",
+      "name": "cta-booking-newsletter",
+      "kind": "cta",
+      "slider": false,
+      "interactive": "email input and join button",
+      "boundaryIssue": "",
+      "note": "clone of dining-gardenterrace"
+    },
+    {
+      "key": "dining-poollounge/10-the-hotel",
+      "name": "footer-links",
+      "kind": "footer",
+      "slider": true,
+      "interactive": "other-dining card slider below footer with arrows",
+      "boundaryIssue": "Crop contains the footer plus a separate other-dining card slider (cards cut off at right, arrows bottom-left) below it; two distinct sections, and the slider sits after the footer",
+      "note": "Footer then blank area with arrows and venue cards (The Lobby Bar, Lobby Terrace); clone of dining-gardenterrace"
+    }
+  ]
+}

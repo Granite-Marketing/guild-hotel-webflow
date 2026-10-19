@@ -1,0 +1,180 @@
+{
+  "pageSlug": "gallery",
+  "frames": [
+    {
+      "id": "477:609",
+      "name": "GALLERY",
+      "kind": "page",
+      "width": 1600,
+      "height": 6478,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/477-609.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "gallery",
+      "dir": "sections/01-gallery",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:609",
+      "frameName": "GALLERY",
+      "y0": 0,
+      "y1": 912,
+      "cropY0": 0,
+      "cropY1": 912,
+      "nodeIds": [
+        "477:610",
+        "477:961",
+        "477:614",
+        "477:613"
+      ],
+      "backgroundIds": [
+        "477:739",
+        "477:740"
+      ],
+      "crop": "sections/01-gallery/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "all",
+      "dir": "sections/02-all",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:609",
+      "frameName": "GALLERY",
+      "y0": 912,
+      "y1": 1776,
+      "cropY0": 912,
+      "cropY1": 1788,
+      "nodeIds": [
+        "477:1064",
+        "477:1065",
+        "477:741"
+      ],
+      "backgroundIds": [
+        "477:739",
+        "477:740"
+      ],
+      "crop": "sections/02-all/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "offers-packages",
+      "dir": "sections/03-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:609",
+      "frameName": "GALLERY",
+      "y0": 1800,
+      "y1": 2700,
+      "cropY0": 1788,
+      "cropY1": 2700,
+      "nodeIds": [
+        "477:819"
+      ],
+      "backgroundIds": [
+        "477:783"
+      ],
+      "crop": "sections/03-offers-packages/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "more-of-the-guild",
+      "dir": "sections/04-more-of-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:609",
+      "frameName": "GALLERY",
+      "y0": 2700,
+      "y1": 3665,
+      "cropY0": 2700,
+      "cropY1": 3665,
+      "nodeIds": [
+        "477:942"
+      ],
+      "backgroundIds": [
+        "477:783",
+        "477:784",
+        "477:785"
+      ],
+      "crop": "sections/04-more-of-the-guild/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "faqs",
+      "dir": "sections/05-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:609",
+      "frameName": "GALLERY",
+      "y0": 3665,
+      "y1": 4799.53,
+      "cropY0": 3665,
+      "cropY1": 4799.53,
+      "nodeIds": [
+        "477:786"
+      ],
+      "backgroundIds": [
+        "477:783",
+        "477:784",
+        "477:785"
+      ],
+      "crop": "sections/05-faqs/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "book-your-escape",
+      "dir": "sections/06-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:609",
+      "frameName": "GALLERY",
+      "y0": 4799.53,
+      "y1": 5777.53,
+      "cropY0": 4799.53,
+      "cropY1": 5777.53,
+      "nodeIds": [
+        "477:865",
+        "477:866",
+        "477:872",
+        "477:921",
+        "477:864"
+      ],
+      "backgroundIds": [
+        "477:783",
+        "477:845",
+        "477:846"
+      ],
+      "crop": "sections/06-book-your-escape/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "the-hotel",
+      "dir": "sections/07-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:609",
+      "frameName": "GALLERY",
+      "y0": 5777.53,
+      "y1": 6477.53,
+      "cropY0": 5777.53,
+      "cropY1": 6478,
+      "nodeIds": [
+        "477:879",
+        "477:847",
+        "477:940",
+        "477:941"
+      ],
+      "backgroundIds": [
+        "477:783",
+        "477:845",
+        "477:846"
+      ],
+      "crop": "sections/07-the-hotel/section.webp"
+    }
+  ]
+}

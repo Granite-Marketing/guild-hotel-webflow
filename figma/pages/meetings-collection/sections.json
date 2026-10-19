@@ -1,0 +1,332 @@
+{
+  "pageSlug": "meetings-collection",
+  "frames": [
+    {
+      "id": "288:4019",
+      "name": "MEETINGS-COLLECTION",
+      "kind": "page",
+      "width": 1600,
+      "height": 17932,
+      "scale": 0.75,
+      "renderScale": 0.75,
+      "render": "figma/.cache/renders/288-4019.png",
+      "status": "ok"
+    },
+    {
+      "id": "363:358",
+      "name": "Meetings-Overlay",
+      "kind": "side",
+      "width": 1600,
+      "height": 899,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/363-358.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "meetings-events-at-the-guild",
+      "dir": "sections/01-meetings-events-at-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "288:4019",
+      "frameName": "MEETINGS-COLLECTION",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 1015.42,
+      "nodeIds": [
+        "288:4027",
+        "288:4227",
+        "288:4028",
+        "288:4029"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-meetings-events-at-the-guild/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "intimate-spaces-for-celebration-collaboration",
+      "dir": "sections/02-intimate-spaces-for-celebration-collaboration",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "288:4019",
+      "frameName": "MEETINGS-COLLECTION",
+      "y0": 1130.83,
+      "y1": 2548,
+      "cropY0": 1015.42,
+      "cropY1": 2568,
+      "nodeIds": [
+        "288:4033",
+        "288:4032",
+        "288:4060",
+        "288:4034"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/02-intimate-spaces-for-celebration-collaboration/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "council-boardroom",
+      "dir": "sections/03-council-boardroom",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "288:4019",
+      "frameName": "MEETINGS-COLLECTION",
+      "y0": 2588,
+      "y1": 3576,
+      "cropY0": 2568,
+      "cropY1": 3596,
+      "nodeIds": [
+        "363:397",
+        "296:5083"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-council-boardroom/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "lobby-terrace",
+      "dir": "sections/04-lobby-terrace",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "288:4019",
+      "frameName": "MEETINGS-COLLECTION",
+      "y0": 3616,
+      "y1": 4604,
+      "cropY0": 3596,
+      "cropY1": 4624,
+      "nodeIds": [
+        "288:4020",
+        "288:4038",
+        "296:5082"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-lobby-terrace/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "1-america-plaza",
+      "dir": "sections/05-1-america-plaza",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "288:4019",
+      "frameName": "MEETINGS-COLLECTION",
+      "y0": 4644,
+      "y1": 5632,
+      "cropY0": 4624,
+      "cropY1": 5632,
+      "nodeIds": [
+        "288:4023",
+        "288:4053",
+        "296:5084"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-1-america-plaza/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "request-for-proposal",
+      "dir": "sections/06-request-for-proposal",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "288:4019",
+      "frameName": "MEETINGS-COLLECTION",
+      "y0": 5632,
+      "y1": 6915,
+      "cropY0": 5632,
+      "cropY1": 6915,
+      "nodeIds": [
+        "377:526"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-request-for-proposal/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "steps-from-key-legal-addresses",
+      "dir": "sections/07-steps-from-key-legal-addresses",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "288:4019",
+      "frameName": "MEETINGS-COLLECTION",
+      "y0": 6915,
+      "y1": 8085,
+      "cropY0": 6915,
+      "cropY1": 8085,
+      "nodeIds": [
+        "377:466",
+        "377:471",
+        "377:467",
+        "377:493",
+        "377:468",
+        "377:472",
+        "377:469",
+        "377:470"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-steps-from-key-legal-addresses/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "key-features-of-our-spaces",
+      "dir": "sections/08-key-features-of-our-spaces",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "288:4019",
+      "frameName": "MEETINGS-COLLECTION",
+      "y0": 8085,
+      "y1": 11267,
+      "cropY0": 8085,
+      "cropY1": 11267,
+      "nodeIds": [
+        "377:523",
+        "377:542",
+        "377:543",
+        "377:562",
+        "379:579"
+      ],
+      "backgroundIds": [
+        "377:525"
+      ],
+      "crop": "sections/08-key-features-of-our-spaces/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "meetings-events-gallery",
+      "dir": "sections/09-meetings-events-gallery",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "288:4019",
+      "frameName": "MEETINGS-COLLECTION",
+      "y0": 11267,
+      "y1": 14158.53,
+      "cropY0": 11267,
+      "cropY1": 14158.77,
+      "nodeIds": [
+        "377:450",
+        "377:462",
+        "288:4026",
+        "377:458",
+        "377:452",
+        "377:455",
+        "377:459",
+        "377:461",
+        "377:451",
+        "377:460"
+      ],
+      "backgroundIds": [
+        "377:525",
+        "377:449"
+      ],
+      "crop": "sections/09-meetings-events-gallery/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "offers-packages",
+      "dir": "sections/10-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "288:4019",
+      "frameName": "MEETINGS-COLLECTION",
+      "y0": 14159,
+      "y1": 15059,
+      "cropY0": 14158.77,
+      "cropY1": 15059,
+      "nodeIds": [
+        "288:4201"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/10-offers-packages/section.webp"
+    },
+    {
+      "index": 11,
+      "slug": "faqs",
+      "dir": "sections/11-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "288:4019",
+      "frameName": "MEETINGS-COLLECTION",
+      "y0": 15059,
+      "y1": 16254,
+      "cropY0": 15059,
+      "cropY1": 16254,
+      "nodeIds": [
+        "288:4069"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/11-faqs/section.webp"
+    },
+    {
+      "index": 12,
+      "slug": "book-your-escape",
+      "dir": "sections/12-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "288:4019",
+      "frameName": "MEETINGS-COLLECTION",
+      "y0": 16254,
+      "y1": 17232,
+      "cropY0": 16254,
+      "cropY1": 17232,
+      "nodeIds": [
+        "288:4124",
+        "288:4125",
+        "288:4131",
+        "288:4180",
+        "288:4123"
+      ],
+      "backgroundIds": [
+        "288:4104",
+        "288:4105"
+      ],
+      "crop": "sections/12-book-your-escape/section.webp"
+    },
+    {
+      "index": 13,
+      "slug": "the-hotel",
+      "dir": "sections/13-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "288:4019",
+      "frameName": "MEETINGS-COLLECTION",
+      "y0": 17232,
+      "y1": 17932,
+      "cropY0": 17232,
+      "cropY1": 17932,
+      "nodeIds": [
+        "288:4138",
+        "288:4106",
+        "288:4199",
+        "288:4200"
+      ],
+      "backgroundIds": [
+        "288:4104",
+        "288:4105"
+      ],
+      "crop": "sections/13-the-hotel/section.webp"
+    },
+    {
+      "index": 14,
+      "slug": "meetings-overlay",
+      "dir": "sections/14-meetings-overlay",
+      "source": "side",
+      "laneHint": "manual",
+      "frameId": "363:358",
+      "frameName": "Meetings-Overlay",
+      "y0": 0,
+      "y1": 899,
+      "cropY0": 0,
+      "cropY1": 899,
+      "nodeIds": [
+        "363:359",
+        "363:362",
+        "363:392"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/14-meetings-overlay/section.webp"
+    }
+  ]
+}

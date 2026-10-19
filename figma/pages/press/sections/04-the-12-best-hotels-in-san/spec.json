@@ -1,0 +1,97 @@
+{
+  "pageSlug": "press",
+  "index": 4,
+  "slug": "the-12-best-hotels-in-san",
+  "laneHint": null,
+  "frameId": "419:5583",
+  "bbox": {
+    "x": 0,
+    "y": 2225,
+    "width": 1600,
+    "height": 562
+  },
+  "crop": {
+    "y0": 2200,
+    "y1": 2812
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "420:6719",
+      "characters": "The 12 Best Hotels In San Diego | The Guild Hotel",
+      "styleName": "EYEBROW-CAPS",
+      "styleId": "236:8243",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeightPx": 21.6,
+      "letterSpacing": -0.54,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "LEFT",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 816,
+        "y": 565,
+        "width": 703,
+        "height": 22
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#33629A",
+      "opacity": 1,
+      "count": 1
+    },
+    {
+      "hex": "#D9D9D9",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "420:6718",
+      "type": "RECTANGLE",
+      "name": "Rectangle 597",
+      "bbox": {
+        "x": 816,
+        "y": 25,
+        "width": 744,
+        "height": 524
+      }
+    },
+    {
+      "id": "420:6720",
+      "type": "FRAME",
+      "name": "Forbes_logo 1",
+      "bbox": {
+        "x": 1088,
+        "y": 260,
+        "width": 200,
+        "height": 54
+      }
+    },
+    {
+      "id": "420:6719",
+      "type": "TEXT",
+      "name": "The 12 Best Hotels In San Diego | The Guild Hotel",
+      "bbox": {
+        "x": 816,
+        "y": 565,
+        "width": 703,
+        "height": 22
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

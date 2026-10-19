@@ -1,0 +1,327 @@
+{
+  "pageSlug": "arts",
+  "frames": [
+    {
+      "id": "477:1069",
+      "name": "ARTS",
+      "kind": "page",
+      "width": 1600,
+      "height": 9944,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/477-1069.png",
+      "status": "ok"
+    },
+    {
+      "id": "477:1392",
+      "name": "ARTS-ARTIST",
+      "kind": "side",
+      "width": 1600,
+      "height": 900,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/477-1392.png",
+      "status": "ok"
+    },
+    {
+      "id": "477:1352",
+      "name": "ARTS-MODAL",
+      "kind": "side",
+      "width": 1600,
+      "height": 900,
+      "scale": 2,
+      "renderScale": 2,
+      "render": "figma/.cache/renders/477-1352.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "art-collection",
+      "dir": "sections/01-art-collection",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:1069",
+      "frameName": "ARTS",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 972.06,
+      "nodeIds": [
+        "477:1071",
+        "477:1283",
+        "477:1075",
+        "477:1074"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-art-collection/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "an-art-collection-through-a-curators",
+      "dir": "sections/02-an-art-collection-through-a-curators",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:1069",
+      "frameName": "ARTS",
+      "y0": 1044.12,
+      "y1": 1426,
+      "cropY0": 972.06,
+      "cropY1": 1507.5,
+      "nodeIds": [
+        "477:1340",
+        "477:1341"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/02-an-art-collection-through-a-curators/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "section",
+      "dir": "sections/03-section",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:1069",
+      "frameName": "ARTS",
+      "y0": 1589,
+      "y1": 2342,
+      "cropY0": 1507.5,
+      "cropY1": 2362,
+      "nodeIds": [
+        "477:1344"
+      ],
+      "backgroundIds": [
+        "477:1351"
+      ],
+      "crop": "sections/03-section/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "etiam-imperdiet-sodales-dui-a-vestibulum",
+      "dir": "sections/04-etiam-imperdiet-sodales-dui-a-vestibulum",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:1069",
+      "frameName": "ARTS",
+      "y0": 2382,
+      "y1": 3256,
+      "cropY0": 2362,
+      "cropY1": 3276,
+      "nodeIds": [
+        "477:1345",
+        "477:1346"
+      ],
+      "backgroundIds": [
+        "477:1351"
+      ],
+      "crop": "sections/04-etiam-imperdiet-sodales-dui-a-vestibulum/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "the-guild-collection",
+      "dir": "sections/05-the-guild-collection",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:1069",
+      "frameName": "ARTS",
+      "y0": 3296,
+      "y1": 4127,
+      "cropY0": 3276,
+      "cropY1": 4246.5,
+      "nodeIds": [
+        "477:1348",
+        "477:1347",
+        "477:1358",
+        "477:1349"
+      ],
+      "backgroundIds": [
+        "477:1351"
+      ],
+      "crop": "sections/05-the-guild-collection/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "section",
+      "dir": "sections/06-section",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:1069",
+      "frameName": "ARTS",
+      "y0": 4366,
+      "y1": 5266,
+      "cropY0": 4246.5,
+      "cropY1": 5266,
+      "nodeIds": [
+        "477:1359",
+        "477:1339"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-section/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "more-of-the-guild",
+      "dir": "sections/07-more-of-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:1069",
+      "frameName": "ARTS",
+      "y0": 5266,
+      "y1": 6231,
+      "cropY0": 5266,
+      "cropY1": 6231,
+      "nodeIds": [
+        "477:1264"
+      ],
+      "backgroundIds": [
+        "477:1105",
+        "487:2078"
+      ],
+      "crop": "sections/07-more-of-the-guild/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "offers-packages",
+      "dir": "sections/08-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:1069",
+      "frameName": "ARTS",
+      "y0": 6231,
+      "y1": 7197.77,
+      "cropY0": 6231,
+      "cropY1": 7197.77,
+      "nodeIds": [
+        "477:1141"
+      ],
+      "backgroundIds": [
+        "477:1105",
+        "487:2078",
+        "477:1106",
+        "477:1107"
+      ],
+      "crop": "sections/08-offers-packages/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "faqs",
+      "dir": "sections/09-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:1069",
+      "frameName": "ARTS",
+      "y0": 7197.77,
+      "y1": 8265.53,
+      "cropY0": 7197.77,
+      "cropY1": 8265.53,
+      "nodeIds": [
+        "477:1108"
+      ],
+      "backgroundIds": [
+        "477:1105",
+        "477:1077",
+        "477:1106",
+        "477:1107"
+      ],
+      "crop": "sections/09-faqs/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "book-your-escape",
+      "dir": "sections/10-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:1069",
+      "frameName": "ARTS",
+      "y0": 8265.53,
+      "y1": 9243.53,
+      "cropY0": 8265.53,
+      "cropY1": 9243.53,
+      "nodeIds": [
+        "477:1187",
+        "477:1188",
+        "477:1194",
+        "477:1243",
+        "477:1186"
+      ],
+      "backgroundIds": [
+        "477:1105",
+        "477:1077",
+        "477:1167",
+        "477:1168"
+      ],
+      "crop": "sections/10-book-your-escape/section.webp"
+    },
+    {
+      "index": 11,
+      "slug": "the-hotel",
+      "dir": "sections/11-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "477:1069",
+      "frameName": "ARTS",
+      "y0": 9243.53,
+      "y1": 9943.53,
+      "cropY0": 9243.53,
+      "cropY1": 9944,
+      "nodeIds": [
+        "477:1201",
+        "477:1169",
+        "477:1262",
+        "477:1263"
+      ],
+      "backgroundIds": [
+        "477:1105",
+        "477:1077",
+        "477:1167",
+        "477:1168"
+      ],
+      "crop": "sections/11-the-hotel/section.webp"
+    },
+    {
+      "index": 12,
+      "slug": "arts-artist",
+      "dir": "sections/12-arts-artist",
+      "source": "side",
+      "laneHint": "manual",
+      "frameId": "477:1392",
+      "frameName": "ARTS-ARTIST",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 900,
+      "nodeIds": [
+        "477:1393",
+        "477:1394",
+        "477:1395",
+        "477:1400",
+        "477:1403"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/12-arts-artist/section.webp"
+    },
+    {
+      "index": 13,
+      "slug": "arts-modal",
+      "dir": "sections/13-arts-modal",
+      "source": "side",
+      "laneHint": "manual",
+      "frameId": "477:1352",
+      "frameName": "ARTS-MODAL",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 900,
+      "nodeIds": [
+        "477:1353",
+        "477:1370",
+        "477:1383",
+        "477:1356",
+        "477:1390"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/13-arts-modal/section.webp"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "pageSlug": "home",
+  "index": 4,
+  "slug": "an-unexpected-resort-dining-experience",
+  "laneHint": null,
+  "frameId": "433:559",
+  "bbox": {
+    "x": 0,
+    "y": 3359,
+    "width": 1600,
+    "height": 826
+  },
+  "crop": {
+    "y0": 3202,
+    "y1": 4205
+  },
+  "bboxOrigin": "band crop top-left (x from the page frame left edge, y from crop.y0)",
+  "texts": [
+    {
+      "id": "433:5815",
+      "characters": "an unexpected resort dining experience",
+      "styleName": "H4-CAPS",
+      "styleId": "220:7188",
+      "fontFamily": "Sackers Heavy Gothic",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8,
+      "letterSpacing": 0,
+      "textCase": "LOWER",
+      "textAlignHorizontal": "CENTER",
+      "fill": "#29310C",
+      "bbox": {
+        "x": 358,
+        "y": 157,
+        "width": 884,
+        "height": 29
+      }
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#29310C",
+      "opacity": 1,
+      "count": 1
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "433:5753",
+      "name": "Vector 33",
+      "imageRef": "fa638bc2c84c8afc4c8daab6a935b35365944207",
+      "bbox": {
+        "x": 170,
+        "y": 271,
+        "width": 1261,
+        "height": 712
+      }
+    }
+  ],
+  "manualOverlays": [],
+  "nodes": [
+    {
+      "id": "433:5815",
+      "type": "TEXT",
+      "name": "an unexpected resort dining experience",
+      "bbox": {
+        "x": 358,
+        "y": 157,
+        "width": 884,
+        "height": 29
+      }
+    },
+    {
+      "id": "433:5753",
+      "type": "VECTOR",
+      "name": "Vector 33",
+      "bbox": {
+        "x": 170,
+        "y": 271,
+        "width": 1261,
+        "height": 712
+      }
+    }
+  ],
+  "backgrounds": [],
+  "animationNotes": [],
+  "source": "page"
+}

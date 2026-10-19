@@ -1,0 +1,220 @@
+{
+  "pageSlug": "wellness-collection",
+  "frames": [
+    {
+      "id": "266:3630",
+      "name": "WELLNESS_COLLECTION",
+      "kind": "page",
+      "width": 1600,
+      "height": 10473,
+      "scale": 1,
+      "renderScale": 1,
+      "render": "figma/.cache/renders/266-3630.png",
+      "status": "ok"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "slug": "wellness-at-the-guild",
+      "dir": "sections/01-wellness-at-the-guild",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:3630",
+      "frameName": "WELLNESS_COLLECTION",
+      "y0": 0,
+      "y1": 900,
+      "cropY0": 0,
+      "cropY1": 1020.3,
+      "nodeIds": [
+        "284:3897",
+        "266:3843",
+        "284:3898",
+        "284:3899"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/01-wellness-at-the-guild/section.webp"
+    },
+    {
+      "index": 2,
+      "slug": "from-movement-and-produce-to-deep",
+      "dir": "sections/02-from-movement-and-produce-to-deep",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:3630",
+      "frameName": "WELLNESS_COLLECTION",
+      "y0": 1140.59,
+      "y1": 2548,
+      "cropY0": 1020.3,
+      "cropY1": 2568,
+      "nodeIds": [
+        "284:3900",
+        "284:3904",
+        "284:3903"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/02-from-movement-and-produce-to-deep/section.webp"
+    },
+    {
+      "index": 3,
+      "slug": "in-room-wellness",
+      "dir": "sections/03-in-room-wellness",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:3630",
+      "frameName": "WELLNESS_COLLECTION",
+      "y0": 2588,
+      "y1": 3576,
+      "cropY0": 2568,
+      "cropY1": 3596,
+      "nodeIds": [
+        "284:3989",
+        "284:3990"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/03-in-room-wellness/section.webp"
+    },
+    {
+      "index": 4,
+      "slug": "fitness-center",
+      "dir": "sections/04-fitness-center",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:3630",
+      "frameName": "WELLNESS_COLLECTION",
+      "y0": 3616,
+      "y1": 4604,
+      "cropY0": 3596,
+      "cropY1": 4624,
+      "nodeIds": [
+        "284:3969",
+        "284:3971"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/04-fitness-center/section.webp"
+    },
+    {
+      "index": 5,
+      "slug": "mindful-dining",
+      "dir": "sections/05-mindful-dining",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:3630",
+      "frameName": "WELLNESS_COLLECTION",
+      "y0": 4644,
+      "y1": 5632,
+      "cropY0": 4624,
+      "cropY1": 5652,
+      "nodeIds": [
+        "284:3987",
+        "284:3980"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/05-mindful-dining/section.webp"
+    },
+    {
+      "index": 6,
+      "slug": "wellness-events",
+      "dir": "sections/06-wellness-events",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:3630",
+      "frameName": "WELLNESS_COLLECTION",
+      "y0": 5672,
+      "y1": 6660,
+      "cropY0": 5652,
+      "cropY1": 6680,
+      "nodeIds": [
+        "301:252",
+        "301:254"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/06-wellness-events/section.webp"
+    },
+    {
+      "index": 7,
+      "slug": "offers-packages",
+      "dir": "sections/07-offers-packages",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:3630",
+      "frameName": "WELLNESS_COLLECTION",
+      "y0": 6700,
+      "y1": 7600,
+      "cropY0": 6680,
+      "cropY1": 7600,
+      "nodeIds": [
+        "284:4017"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/07-offers-packages/section.webp"
+    },
+    {
+      "index": 8,
+      "slug": "faqs",
+      "dir": "sections/08-faqs",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:3630",
+      "frameName": "WELLNESS_COLLECTION",
+      "y0": 7600,
+      "y1": 8795,
+      "cropY0": 7600,
+      "cropY1": 8795,
+      "nodeIds": [
+        "266:3711"
+      ],
+      "backgroundIds": [],
+      "crop": "sections/08-faqs/section.webp"
+    },
+    {
+      "index": 9,
+      "slug": "book-your-escape",
+      "dir": "sections/09-book-your-escape",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:3630",
+      "frameName": "WELLNESS_COLLECTION",
+      "y0": 8795,
+      "y1": 9773,
+      "cropY0": 8795,
+      "cropY1": 9773,
+      "nodeIds": [
+        "266:3766",
+        "266:3767",
+        "266:3773",
+        "266:3822",
+        "266:3765"
+      ],
+      "backgroundIds": [
+        "266:3746",
+        "266:3747"
+      ],
+      "crop": "sections/09-book-your-escape/section.webp"
+    },
+    {
+      "index": 10,
+      "slug": "the-hotel",
+      "dir": "sections/10-the-hotel",
+      "source": "page",
+      "laneHint": null,
+      "frameId": "266:3630",
+      "frameName": "WELLNESS_COLLECTION",
+      "y0": 9773,
+      "y1": 10473,
+      "cropY0": 9773,
+      "cropY1": 10473,
+      "nodeIds": [
+        "266:3780",
+        "266:3748",
+        "266:3841",
+        "266:3842"
+      ],
+      "backgroundIds": [
+        "266:3746",
+        "266:3747"
+      ],
+      "crop": "sections/10-the-hotel/section.webp"
+    }
+  ]
+}
