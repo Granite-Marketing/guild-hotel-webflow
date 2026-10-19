@@ -67,7 +67,7 @@ Animation notes for the whole page: `figma/animations/home.md`.
 - Reference crop: `figma/pages/home/sections/14-art-stories/section.webp`
 - Component: heading-wide-image-cta, variant base (only variant)
 - Texts (3): "art & stories"; "we’ve lived here for a century; let us show you around."; "DISCOVER MORE"
-- Images: 5 (5 distinct), `figma/assets.json` images: ea6bc516bd4f42b1e9858ed150c5031a47c59e38 (not uploaded), 91b1ad60c89e25e811754a2b7530e0ea8d7bfba1 (not uploaded), 329601abd0336770082f6f604d40ce84e20afc0a (not uploaded), a7732a1e6011fbfc551f4ba922600d4ccfc64540 (not uploaded), a656817fa1ef70d4378ec951ac2d19747ca90545 (not uploaded)
+- Images: 5 (5 distinct), `figma/assets.json` images: ea6bc516bd4f42b1e9858ed150c5031a47c59e38 (uploaded), 91b1ad60c89e25e811754a2b7530e0ea8d7bfba1 (uploaded), 329601abd0336770082f6f604d40ce84e20afc0a (uploaded), a7732a1e6011fbfc551f4ba922600d4ccfc64540 (uploaded), a656817fa1ef70d4378ec951ac2d19747ca90545 (uploaded)
 - Vectors: `figma/vectors/group-270990163-47x47-433-7465.svg` (Group 270990163, 47x47), `figma/vectors/vector-25-194x37-236-8217.svg` (Vector 25, 194x37)
 - Animation (Home-Animation-3): image trail effect on hover. images linked to CMS collection on inside arts page - so click takes you anchor link to inside page (since CTA disappears on scroll above)
 - Vision review: kind content; note: Centred heading and button above large framed image

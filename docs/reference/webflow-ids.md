@@ -40,3 +40,7 @@ None yet. Proposed schemas live in `docs/figma/cms-proposal.md`; collections are
 - **Slug fields are kebab-case**, generated from the item name unless overridden.
 - **Reference fields** store the target item's ID; multi-reference fields store an array of IDs.
 - Update this file whenever you add a new collection, page, or field that another skill depends on.
+
+## Asset library (Q003)
+
+46 image fills from `figma/assets.json` uploaded to site `6ad6405eae8eac6d7b7c41a3`. Per-image `webflowAssetId` and `webflowUrl` live in `figma/assets.json` (and `assets/asset-manifest.json`). Run `pnpm run upload-assets -- --used-only` to limit uploads to the design's fills; without the flag the script uploads every manifest entry. Alt text is not yet generated.

@@ -136,7 +136,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/rooms-individual/sections/05-etiam-imperdiet-sodales-dui-a-vestibulum/section.webp`
 - Component: hero-fullbleed-centered, variant `is-image-bg` + `is-left` + `is-1-image`
 - Texts (1): "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit ame..."
-- Images: 1 (1 distinct), `figma/assets.json` images: d7332204a5bee888af6d6fe5adf267bebfab8918 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: d7332204a5bee888af6d6fe5adf267bebfab8918 (uploaded)
 
 #### `press/01-press`: Hero fullbleed centered
 
@@ -160,7 +160,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/arts/sections/01-art-collection/section.webp`
 - Component: hero-fullbleed-centered, variant `is-image-bg` + `is-1-image`
 - Texts (2): "art collection"; "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non."
-- Images: 1 (1 distinct), `figma/assets.json` images: aebbcac2114e788ebc0ded5eee7b3da87ef37bc6 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: aebbcac2114e788ebc0ded5eee7b3da87ef37bc6 (uploaded)
 
 #### `arts/04-etiam-imperdiet-sodales-dui-a-vestibulum`: Hero fullbleed caption
 
@@ -168,7 +168,7 @@ Content, not variants: optional elements `button`, `caps-caption-16`, `eyebrow-c
 - Reference crop: `figma/pages/arts/sections/04-etiam-imperdiet-sodales-dui-a-vestibulum/section.webp`
 - Component: hero-fullbleed-centered, variant `is-image-bg` + `is-left` + `is-1-image`
 - Texts (1): "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit ame..."
-- Images: 1 (1 distinct), `figma/assets.json` images: 6f6117168648560af09fa8344fd7ec88a095e861 (not uploaded)
+- Images: 1 (1 distinct), `figma/assets.json` images: 6f6117168648560af09fa8344fd7ec88a095e861 (uploaded)
 
 #### `neighborhood/01-a-city-at-your-fingertips`: Hero fullbleed centered
 
