@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Raw Webflow state capture",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["siteId", "coverage", "pages", "variables", "cms", "scripts", "library"],
+  "properties": {
+    "siteId": { "type": "string", "minLength": 1 },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pages", "variables", "cms", "scripts", "library"],
+      "properties": {
+        "pages": { "$ref": "#/$defs/coverageStatus" },
+        "variables": { "$ref": "#/$defs/coverageStatus" },
+        "cms": { "$ref": "#/$defs/coverageStatus" },
+        "scripts": { "$ref": "#/$defs/coverageStatus" },
+        "library": { "$ref": "#/$defs/coverageStatus" }
+      }
+    },
+    "pages": { "type": "array", "items": { "type": "object" } },
+    "variables": { "type": "array", "items": { "type": "object" } },
+    "cms": { "type": "array", "items": { "type": "object" } },
+    "scripts": { "type": "array", "items": { "type": "object" } },
+    "library": { "type": ["object", "null"] }
+  },
+  "$defs": {
+    "coverageStatus": { "enum": ["complete", "incomplete", "unavailable"] }
+  }
+}

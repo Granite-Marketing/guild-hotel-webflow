@@ -1,0 +1,31 @@
+node_modules/
+.pnpm-store/
+test-results/
+playwright-report/
+playwright/.cache/
+.env
+.env.local
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Exported Figma assets (local storage, not committed)
+assets/
+
+# Client copy documents (confidential)
+docs/examples/
+
+# Claude Code local settings (user-specific)
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+
+# Client content drops (local-only, ingested via content-ingest skill)
+Content/

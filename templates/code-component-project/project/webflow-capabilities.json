@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "siteId": "REPLACE_ME",
+  "inspectedAt": null,
+  "capabilities": {
+    "pages": "probe-required",
+    "seo": "probe-required",
+    "componentDiscovery": "probe-required",
+    "componentPlacement": "probe-required",
+    "props": "probe-required",
+    "cmsBindings": "probe-required",
+    "variables": "probe-required",
+    "readBack": "probe-required"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "{{PROJECT_SLUG}}",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "check": "tsc --noEmit",
+    "test": "playwright test",
+    "test:accessibility": "playwright test --grep accessibility",
+    "test:visual": "playwright test --grep visual",
+    "test:visual:update": "playwright test --grep visual --update-snapshots",
+    "contract:check": "node scripts/component-contract/audit.mjs",
+    "tokens:generate": "node scripts/tokens/generate.mjs",
+    "tokens:check": "node scripts/tokens/generate.mjs --check",
+    "tokens:shim": "node scripts/tokens/generate-wf-shim.mjs",
+    "tokens:shim:check": "node scripts/tokens/generate-wf-shim.mjs --check",
+    "lint:webflow-json": "node scripts/lint/webflow-json-paths.mjs",
+    "project:capabilities": "node scripts/project/probe-webflow-capabilities.mjs",
+    "project:snapshot": "node scripts/project/inspect-webflow.mjs",
+    "project:drift": "node scripts/project/diff-webflow-state.mjs project/drift/approved-snapshot.json project/drift/current-snapshot.json project/drift/report.json",
+    "project:resolve": "node scripts/project/diff-webflow-state.mjs --resolutions project/drift/report.json project/drift/resolutions.json project/drift/resolution-plan.json",
+    "project:blueprint": "node scripts/project/validate-blueprint.mjs project/blueprint.json project/webflow-capabilities.json project/drift/current-snapshot.json project/assembly-plan.json",
+    "devlink:configure": "webflow devlink bundle --dev --skip-update-check",
+    "devlink:bundle:development": "webflow devlink bundle --dev --no-input --skip-update-check",
+    "devlink:import:development": "webflow devlink import --dev --no-input --skip-update-check",
+    "devlink:bundle:production": "webflow devlink bundle --no-input --skip-update-check",
+    "_devlink:import:production": "webflow devlink import --no-input --skip-update-check",
+    "devlink:import:production": "node scripts/release/import-production.mjs",
+    "release:check": "pnpm tokens:check && pnpm tokens:shim:check && pnpm lint:webflow-json && pnpm contract:check && pnpm check && pnpm build && pnpm test && pnpm devlink:bundle:production",
+    "release:prepare": "node scripts/release/prepare-release.mjs",
+    "release:approve-staging": "node scripts/release/approve-staging.mjs",
+    "release:rollback": "node scripts/release/rollback-release.mjs"
+  },
+  "dependencies": {
+    "@gsap/react": "2.1.1",
+    "gsap": "3.13.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.58.2",
+    "@tailwindcss/postcss": "4.1.9",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "@vitejs/plugin-react": "5.0.4",
+    "@webflow/data-types": "2.0.0",
+    "@webflow/react": "2.0.0",
+    "@webflow/webflow-cli": "2.1.1",
+    "postcss": "8.5.6",
+    "tailwindcss": "4.1.9",
+    "typescript": "5.9.3",
+    "vite": "7.2.4"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "siteId": null,
+  "inspectedAt": null,
+  "capabilities": {
+    "pages": "probe-required",
+    "seo": "probe-required",
+    "componentDiscovery": "probe-required",
+    "componentPlacement": "probe-required",
+    "props": "probe-required",
+    "cmsBindings": "probe-required",
+    "variables": "probe-required",
+    "readBack": "probe-required",
+    "nativeElementBuild": "automatic",
+    "nativeStyleBuild": "automatic",
+    "nativeCssFromWhtml": "unavailable",
+    "collectionListElement": "automatic",
+    "collectionListSourceBinding": "manual-only",
+    "nativeElementTypedTree": "automatic",
+    "textBlockSetText": "unavailable",
+    "nativeStylePropertyNames": "required",
+    "listElement": "automatic-with-caveats",
+    "transformToComponent": "automatic"
+  },
+  "allowedStatuses": ["automatic", "manual-only", "unavailable", "probe-required", "required", "automatic-with-caveats"],
+  "notes": "Populate per-site capabilities (pages/seo/component*/props/cmsBindings/variables/readBack) per connected site; these fail closed and never trigger native element construction until probed. The native* / collectionList* / listElement / textBlockSetText / transformToComponent entries are site-agnostic MCP tool behaviors (how the builder tools behave, not per-site data) and are baked in from pilot evidence; see the evidence block for the reusable behavior behind each status.",
+  "evidence": {
+    "nativeElementBuild": "data_whtml_builder reconstructs a full semantic subtree from an HTML string: <section> -> Section, <div> -> Block, <h2>/<h3> -> Heading with correct headingLevel, <a href> -> native Link (linkType url, href preserved), <p> -> Paragraph, and inline <svg>/<path> -> native DOM elements with all attributes (viewBox, d, stroke-*) intact. No code islands, no shadow DOM; aria-* attributes preserved. Builds structure only (see nativeCssFromWhtml).",
+    "nativeCssFromWhtml": "data_whtml_builder's css param is validated (rejects '<'/'>' so child combinators and media-query '>' fail; rejects functional pseudo-selectors like :nth-child(4n+1)) but any accepted CSS is then silently dropped - no classes are created and no styles applied (query by name and by property return zero; elements carry no styleNames). Conclusion: whtml builds structure only; styling must be created separately via data_style_tool.",
+    "nativeStyleBuild": "data_style_tool create_style creates global classes and combo classes headlessly. variable_as_value links properties (e.g. color/font-family/font-size/max-width) directly to Webflow variables. Classes are applied to elements via data_element_tool set_style (combos passed as an ordered class array, base class first). Responsive overrides are added via update_style with breakpoint_id (medium/small/tiny), producing genuine per-breakpoint Webflow styles. A large set_style batch can exceed the ~375s MCP idle timeout yet still complete - verify by re-query, not by the timeout error.",
+    "collectionListElement": "data_element_builder type CMSCollection creates a native Collection List skeleton headlessly (DynamoWrapper > DynamoList > DynamoItem plus DynamoEmpty 'No items found.'). The empty list element itself is creatable via element_builder even though binding its source is not (see collectionListSourceBinding).",
+    "collectionListSourceBinding": "A headlessly-created Collection List exposes no collection-source setting (DynamoList get_settings returns only domId/tag/visibility) and its DynamoItem get_bindable_sources returns page fields only (e.g. name/title/meta/OG), not CMS collection fields. Pointing a native list at a collection is Designer-only; once the source is set in Designer the item's CMS fields become bindable and set_settings binding source_type=cms should populate them (unverified until the source is set).",
+    "nativeElementTypedTree": "data_element_builder builds a typed element tree with element TYPE chosen deliberately (DivBlock/LinkBlock/Heading/TextBlock/Paragraph/DOM), nested via element_schema.children, with set_style (existing classes incl. combos), set_text, set_heading_level, set_link, set_dom_config, and set_attributes applied atomically on creation. This is the fidelity path over whtml's literal-tag mapping (e.g. build an unlinked card surface as DivBlock instead of a Span). Element tags can be promoted (e.g. to <article>) via data_element_settings_tool set_tag.",
+    "listElement": "BY_CUSTOM_TAG custom_tag 'ul'/'li' maps to native List/ListItem (role attribute preserved), so static lists are workable. Caveats: Webflow auto-injects 3 default empty ListItems into a new List, and a TextBlock child set_text in the custom-tag li path does not apply (Webflow inserts a default text block instead). Usable for static lists with cleanup; for CMS use the CMSCollection (DynamoList) path.",
+    "transformToComponent": "data_component_tool transform_element_to_component converts a built subtree into a real Webflow Component headlessly (replace=true swaps the element for an instance). create_blank_component, duplicate_component, insert_component_instance, set_component_metadata, and unlink_component_instance are also exposed. unregister_component fails while instances exist ('Cannot unregister a component that is in use') - remove instances first. Registration fails if the component name already exists ('This Component name already exists') - use a distinct name. Promoted tags, classes, variable links, and breakpoint overrides survive the transform.",
+    "nativeStylePropertyNames": "data_style_tool stores any property name Webflow can't map to a native control as a CSS Custom property (visible in the Designer's Custom properties panel) - e.g. the 'gap' shorthand lands as a custom property instead of the native flex gap. Rule: reserve custom properties for values Webflow can't express natively (clamp, calc). Use native longhand: grid-row-gap/grid-column-gap (not gap), top/right/bottom/left (not inset), flex-grow/shrink/basis (not flex), align-items+justify-content (not place-items). A unitless '0' also leaks as a custom property (a value carrying a unit stays native), so never emit margin:0 resets on generated classes - give any needed zero an explicit unit. The API response does not label custom vs native; verify in the Designer's Custom properties panel.",
+    "textBlockSetText": "data_element_builder type TextBlock with set_text does NOT apply - the element materializes as a plain Block(div) holding Webflow's default string, and a follow-up data_element_tool set_text fails with 'This element doesn't support text' (the text is an unaddressable child String). Workaround: use Paragraph or Heading for text leaves (their set_text applies reliably), or remove and rebuild as a Paragraph. Same default-text failure mode occurs with TextBlock children in the BY_CUSTOM_TAG li path."
+  }
+}

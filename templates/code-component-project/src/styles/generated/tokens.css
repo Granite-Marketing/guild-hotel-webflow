@@ -1,0 +1,28 @@
+/* Generated from project/tokens.json. Do not edit directly. */
+@custom-variant wf-tablet (@media (max-width: 991px));
+@custom-variant wf-mobile-landscape (@media (max-width: 767px));
+@custom-variant wf-mobile-portrait (@media (max-width: 479px));
+
+:root {
+  --factory-color-brand-fallback: #1A1A2E;
+  --factory-color-foreground-fallback: #111111;
+  --factory-color-background-fallback: #FFFFFF;
+  --factory-font-heading-fallback: ui-sans-serif, system-ui, sans-serif;
+  --factory-font-body-fallback: ui-sans-serif, system-ui, sans-serif;
+  --factory-container-site-fallback: 80rem;
+  --factory-text-display-fallback: 5rem;
+  --factory-text-display-tablet-fallback: 4rem;
+  --factory-text-display-mobile-fallback: 3rem;
+}
+
+@theme inline {
+  --color-brand: var(--wf-color-primary, var(--factory-color-brand-fallback));
+  --color-foreground: var(--wf-color-foreground, var(--factory-color-foreground-fallback));
+  --color-background: var(--wf-color-background, var(--factory-color-background-fallback));
+  --font-heading: var(--wf-font-heading, var(--factory-font-heading-fallback));
+  --font-body: var(--wf-font-body, var(--factory-font-body-fallback));
+  --container-site: var(--wf-container-site, var(--factory-container-site-fallback));
+  --text-display: var(--wf-text-display, var(--factory-text-display-fallback));
+  --text-display-tablet: var(--wf-text-display-tablet, var(--factory-text-display-tablet-fallback));
+  --text-display-mobile: var(--wf-text-display-mobile, var(--factory-text-display-mobile-fallback));
+}

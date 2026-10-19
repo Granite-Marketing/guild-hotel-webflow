@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "breakpoints", "tokens"],
+  "properties": {
+    "version": { "const": 1 },
+    "breakpoints": {
+      "type": "object",
+      "required": ["tablet", "mobileLandscape", "mobilePortrait"],
+      "additionalProperties": false,
+      "properties": {
+        "tablet": { "type": "integer", "minimum": 1 },
+        "mobileLandscape": { "type": "integer", "minimum": 1 },
+        "mobilePortrait": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "tokens": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["type", "figma", "approved", "semantic", "webflow", "override"],
+        "properties": {
+          "type": { "enum": ["color", "font", "text", "spacing", "container", "radius"] },
+          "figma": { "type": ["string", "number"] },
+          "approved": { "type": ["string", "number"] },
+          "semantic": { "type": "string", "minLength": 1 },
+          "webflow": {
+            "type": "object",
+            "required": ["collection", "name", "cssVariable"]
+          },
+          "override": {
+            "type": ["object", "null"],
+            "properties": {
+              "reason": { "type": "string", "minLength": 1 },
+              "author": { "type": "string", "minLength": 1 },
+              "date": { "type": "string", "format": "date" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

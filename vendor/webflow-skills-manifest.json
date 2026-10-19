@@ -1,0 +1,54 @@
+{
+  "upstream": {
+    "repository": "https://github.com/webflow/webflow-skills",
+    "revision": "640398942db24c1e6bb49c17c590e7dee6269d35",
+    "retrieved": "2026-07-16",
+    "installer": "skills"
+  },
+  "skills": [
+    {
+      "name": "webflow-mcp:accessibility-audit",
+      "installPath": ".claude/skills/webflow-mcp-accessibility-audit"
+    },
+    {
+      "name": "webflow-code-component:component-audit",
+      "installPath": ".claude/skills/webflow-code-component-component-audit"
+    },
+    {
+      "name": "webflow-code-component:pre-deploy-check",
+      "installPath": ".claude/skills/webflow-code-component-pre-deploy-check"
+    },
+    {
+      "name": "webflow-mcp:safe-publish",
+      "installPath": ".claude/skills/webflow-mcp-safe-publish"
+    },
+    {
+      "name": "webflow-code-component:troubleshoot-deploy",
+      "installPath": ".claude/skills/webflow-code-component-troubleshoot-deploy"
+    },
+    {
+      "name": "webflow-cli:troubleshooter",
+      "installPath": ".claude/skills/webflow-cli-troubleshooter"
+    }
+  ],
+  "compatibility": [
+    {
+      "upstreamMaySay": "Node.js 18 or later",
+      "canonical": "Node.js 22.13 or later for current code-component tooling"
+    },
+    {
+      "upstreamMaySay": "webflow library share or webflow library bundle",
+      "canonical": "webflow devlink import or webflow devlink bundle"
+    }
+  ],
+  "referenceOnly": [
+    "webflow-code-component:component-scaffold",
+    "webflow-mcp:site-audit",
+    "webflow-mcp:link-checker",
+    "webflow-mcp:asset-audit",
+    "webflow-mcp:cms-best-practices",
+    "webflow-mcp:cms-collection-setup",
+    "webflow-mcp:bulk-cms-update",
+    "webflow-mcp:review-comments"
+  ]
+}

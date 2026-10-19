@@ -1,0 +1,17 @@
+{
+  "library": {
+    "name": "{{LIBRARY_NAME}}",
+    "description": "Client-owned Webflow code components",
+    "components": [
+      "./src/components/**/*.webflow.tsx"
+    ],
+    "globals": "./src/globals.webflow.ts"
+  },
+  "telemetry": {
+    "global": {
+      "allowTelemetry": false,
+      "lastPrompted": 0,
+      "version": "2.1.1"
+    }
+  }
+}

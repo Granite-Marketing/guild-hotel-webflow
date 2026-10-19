@@ -1,0 +1,65 @@
+{
+  "$comment": "Copy to assets/alt-text/config.json (gitignored) and replace every value. See docs/reference/alt-text-pipeline.md for the schema.",
+  "brand": {
+    "name": "Example Studio",
+    "description": "a design studio based in London"
+  },
+  "siteUrl": "https://www.example.com",
+  "staticPages": ["/", "/about", "/contact"],
+  "model": "claude-sonnet-5-5",
+  "maxChars": 200,
+  "collections": {
+    "Projects": {
+      "collectionId": "REPLACE_ME",
+      "tier": "projects",
+      "entity": "project",
+      "pagePath": "/projects/{slug}",
+      "heroFields": ["hero-image"],
+      "namingRule": "name the project and its city; add the country only on the hero image",
+      "brandOnHero": true,
+      "context": {
+        "project": "name",
+        "city": "city",
+        "country": { "field": "country", "ref": "Countries" },
+        "year": "year",
+        "description": { "field": "description", "html": true, "max": 600 }
+      }
+    },
+    "Team": {
+      "collectionId": "REPLACE_ME",
+      "tier": "people",
+      "entity": "person",
+      "heroFields": ["photo"],
+      "namingRule": "name the person and their title at the brand",
+      "includeBrand": true,
+      "matchLibraryByName": true,
+      "context": {
+        "name": "name",
+        "title": "job-title"
+      }
+    },
+    "Blog": {
+      "collectionId": "REPLACE_ME",
+      "tier": "news",
+      "entity": "blog post",
+      "pagePath": "/blog/{slug}",
+      "heroFields": ["main-image"],
+      "namingRule": "name the post or the subject it covers",
+      "context": {
+        "title": "name",
+        "date": { "field": "published-date", "max": 10 },
+        "summary": { "field": "summary", "html": true, "max": 400 }
+      }
+    },
+    "Countries": {
+      "collectionId": "REPLACE_ME",
+      "lookupOnly": true
+    }
+  },
+  "promptExamples": [
+    "Project hero (Harbour House, Residential, Bristol, United Kingdom): Harbour House, a timber-clad waterside home by Example Studio, seen from the quay at dusk in Bristol, United Kingdom",
+    "Project gallery image 2 of 5 (same project): Living room of Harbour House in Bristol with floor-to-ceiling glazing facing the water and an oak staircase",
+    "Person (Sam Taylor, Design Director): Sam Taylor, Design Director at Example Studio, black and white portrait in a dark jumper",
+    "No entity (static image on the About page): Hand-drawn floor plan sketches pinned to a cork board beside fabric swatches"
+  ]
+}

@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+@import './generated/tokens.css';
+
+:root {
+  color: var(--wf-color-foreground, var(--factory-color-foreground-fallback));
+  background: var(--wf-color-background, var(--factory-color-background-fallback));
+  font-family: var(--wf-font-body, var(--factory-font-body-fallback));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

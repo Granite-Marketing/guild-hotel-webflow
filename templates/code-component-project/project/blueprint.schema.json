@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "project", "library", "source", "webflow", "pages"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": 1 },
+    "project": { "type": "string", "minLength": 1 },
+    "library": { "type": "string", "minLength": 1 },
+    "source": {
+      "type": "object",
+      "required": ["figmaFileKey", "figmaStyleGuideNode"],
+      "additionalProperties": false,
+      "properties": {
+        "figmaFileKey": { "type": "string", "minLength": 1 },
+        "figmaStyleGuideNode": { "type": "string", "minLength": 1 }
+      }
+    },
+    "webflow": {
+      "type": "object",
+      "required": ["siteId", "styleGuidePath"],
+      "additionalProperties": false,
+      "properties": {
+        "siteId": { "type": "string", "minLength": 1 },
+        "styleGuidePath": { "type": "string", "pattern": "^/" }
+      }
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "name", "slug", "seo", "components"],
+        "additionalProperties": false,
+        "properties": {
+          "key": { "type": "string", "minLength": 1 },
+          "name": { "type": "string" },
+          "slug": { "type": "string", "pattern": "^/" },
+          "seo": {
+            "type": "object",
+            "required": ["title", "description"],
+            "properties": {
+              "title": { "type": "string", "minLength": 1 },
+              "description": { "type": "string", "minLength": 1 },
+              "openGraphImage": { "type": "string" }
+            }
+          },
+          "components": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["key", "component", "version", "props"],
+              "properties": {
+                "key": { "type": "string", "minLength": 1 },
+                "component": { "type": "string", "minLength": 1 },
+                "version": { "type": "string", "minLength": 1 },
+                "props": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "oneOf": [
+                      { "type": "object", "required": ["source", "value"], "properties": { "source": { "const": "literal" } } },
+                      { "type": "object", "required": ["source", "collection", "field"], "properties": { "source": { "const": "cms" } } },
+                      { "type": "object", "required": ["source", "instructions"], "properties": { "source": { "const": "manual" } } }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

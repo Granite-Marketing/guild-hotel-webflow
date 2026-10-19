@@ -1,0 +1,12 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+.env
+.env.local
+project/drift/*.json
+project/drift/*.md
+!project/drift/*.schema.json
+!project/drift/.gitkeep
+project/production-import-pending.json
+.DS_Store

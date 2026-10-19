@@ -1,0 +1,15 @@
+{
+  "$schema": "./blueprint.schema.json",
+  "version": 1,
+  "project": "{{PROJECT_SLUG}}",
+  "library": "{{LIBRARY_NAME}}",
+  "source": {
+    "figmaFileKey": "REPLACE_ME",
+    "figmaStyleGuideNode": "REPLACE_ME"
+  },
+  "webflow": {
+    "siteId": "REPLACE_ME",
+    "styleGuidePath": "/style-guide"
+  },
+  "pages": []
+}
