@@ -190,7 +190,13 @@
         "desktop": {
           "margin-top": "0rem",
           "margin-bottom": "0rem",
-          "color": "inherit"
+          "color": "inherit",
+          "font-family": "var(--_typography---font-styles--heading)",
+          "font-size": "1.125rem",
+          "line-height": "1.2",
+          "font-weight": "900",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -360,8 +366,7 @@
                                 {
                                   "tag": "h3",
                                   "classes": [
-                                    "image-trio-text_item-heading",
-                                    "text-style-eyebrow-caps"
+                                    "image-trio-text_item-heading"
                                   ],
                                   "attributes": {},
                                   "prop": "item{n}Heading",
@@ -754,7 +759,8 @@
     "Q020 build: the headingTag prop is not created (not a native prop type); the heading stays h2 and its size class is fixed per reference section.",
     "Q020 build: the is-left reference-section figures hold no img element, so the grey #D9D9D9 placeholder shows instead of Webflow's placeholder image.",
     "Q020 build: loading=\"lazy\" is left to Webflow's image default instead of a custom attribute; data-eager is set on the base images.",
-    "Q020 build: the visibility props are boolean props bound to element visibility (paragraphVisible, ctaVisible, itemContentVisible)."
+    "Q020 build: the visibility props are boolean props bound to element visibility (paragraphVisible, ctaVisible, itemContentVisible).",
+    "Q020 fix (Stephen, 2026-10-20): card titles use image-trio-text_item-heading alone, carrying the EYEBROW-CAPS values (heading font, 1.125rem, 1.2, -0.03em, lowercase), instead of the stack with text-style-eyebrow-caps. The Designer dropped that combo and rendered the titles at h3 tag size (2.5rem). The empty combo .image-trio-text_item-heading.text-style-eyebrow-caps is now unused."
   ],
   "k01": {
     "reconciledBy": "K01, 2026-10-20",
