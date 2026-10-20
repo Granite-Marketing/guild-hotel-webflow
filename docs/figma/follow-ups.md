@@ -313,3 +313,4 @@ Stand-in library photos on page-level sections and instance props, so staging sh
 - [x] `/meetings` (follow-up pass): stand-in photos in the hero (Show Image on, Base variant), the council boardroom panel and the three key features figures; gallery Images 1 and 4 varied. Per-slot asset ids in `docs/figma/build-plans/Q035/build.md`.
 - [ ] Offers sliders on Home, Rooms, History and Gallery hold the component's placeholder copy on slides 1 to 5 (except Home retail); set real offer copy and hide unused slides.
 - [ ] Every photo here is a stand-in; replace with the real imagery when it arrives, and run `/asset-metadata` for alt text (added images carry short generic alt).
+- [ ] Q043 /contact: inputs still carry Webflow's default `placeholder="Example Text"`; set real placeholders or clear them (the Data API rejects `placeholder`, so this is a Designer step).
