@@ -45,4 +45,14 @@ Section 02 heading ("The Guild, a Tribute Portfolio Hotel"), its "learn more" bu
 
 ## `cms-legal-corporate`
 
-No custom fields; items hold name and slug only. Copy on these pages is identical across the group and stays static in the template.
+The Figma copy is identical on both pages, so most sections stay static in the template. Q028 (2026-10-20) added seven fields so the two items read differently where it matters:
+
+| Field | Section | Binding |
+|---|---|---|
+| Hero Heading (`hero-heading`) | 01 hero | Hero Fullbleed Centered Heading prop |
+| Hero Text (`hero-text`) | 01 hero | Text prop |
+| Hero Image (`hero-image`, Image) | 01 hero | Image prop |
+| Intro Heading (`intro-heading`) | 02 script intro | script-intro-centered heading prop |
+| Intro Text (`intro-text`) | 02 script intro | paragraph prop |
+| Focus Heading (`focus-heading`) | 05 sticky split | native h2 text |
+| Focus Text (`focus-text`) | 05 sticky split | native paragraph text |
