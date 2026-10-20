@@ -750,7 +750,11 @@
     "Header to cards gap on legal/11 is 56px in Figma; the plan uses the shared 2.5rem (40px).",
     "Section vertical padding uses padding-section-large (7rem). Figma shows about 120px above the wellness images, 40px above the dining images and about 166px above the legal heading; the gaps come from neighbouring sections, which page entries own.",
     "Bulleted lists use a Rich Text element (text-rich-text); nested list styling must be set in the Designer (MCP limitation).",
-    "Card body text has no max-width: Figma's legal/03 text boxes are 378px inside 485px cards, but legal/11 lists use the full card width, and one Rich Text class cannot tell them apart without nested styling."
+    "Card body text has no max-width: Figma's legal/03 text boxes are 378px inside 485px cards, but legal/11 lists use the full card width, and one Rich Text class cannot tell them apart without nested styling.",
+    "Q020 build: the headingTag prop is not created (not a native prop type); the heading stays h2 and its size class is fixed per reference section.",
+    "Q020 build: the is-left reference-section figures hold no img element, so the grey #D9D9D9 placeholder shows instead of Webflow's placeholder image.",
+    "Q020 build: loading=\"lazy\" is left to Webflow's image default instead of a custom attribute; data-eager is set on the base images.",
+    "Q020 build: the visibility props are boolean props bound to element visibility (paragraphVisible, ctaVisible, itemContentVisible)."
   ],
   "k01": {
     "reconciledBy": "K01, 2026-10-20",
@@ -761,5 +765,80 @@
       "Variant `is-media-left is-multi-image` has no style delta, so it is now a named variant with no modifier class.",
       "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
     ]
+  },
+  "build": {
+    "by": "Q020",
+    "date": "2026-10-20",
+    "page": "6ad712c8f7fb71b6e78048f9",
+    "componentId": "eae1d08c-c012-be1b-bafe-4ca88d995c14",
+    "componentName": "Image Trio Text",
+    "referenceSections": {
+      "is-left": "5141da76-b14c-77b7-cfa3-601014da1ddf",
+      "is-left + is-offset": "a4806fe0-dc51-3988-2b80-2c56fdf9c6fc"
+    },
+    "createdCombos": [
+      {
+        "selector": ".image-trio-text_heading.heading-style-h3",
+        "id": "7162b217-1797-6f84-8e32-3ac796fc247e"
+      },
+      {
+        "selector": ".image-trio-text_heading.heading-style-h3.text-weight-normal",
+        "id": "91045be1-aa11-281a-c1b6-2e3bf54bde58"
+      },
+      {
+        "selector": ".image-trio-text_heading.heading-style-h4",
+        "id": "4d40fb09-219e-fa7f-e017-6c1aaa529bdf"
+      },
+      {
+        "selector": ".image-trio-text_heading.heading-style-h4.text-weight-normal",
+        "id": "b11bfa51-26c2-52cb-26b5-021fba72e6f8"
+      },
+      {
+        "selector": ".image-trio-text_paragraph.text-size-medium",
+        "id": "bffe4fb7-15ea-7afd-b37a-f2ef89f539b7"
+      },
+      {
+        "selector": ".image-trio-text_paragraph.text-size-medium.text-weight-normal",
+        "id": "d5b4672c-8765-104a-03d7-c88e426553b9"
+      },
+      {
+        "selector": ".image-trio-text_item-heading.text-style-eyebrow-caps",
+        "id": "b4e4722a-4d64-64e2-b3b8-00b9fd69fef3"
+      },
+      {
+        "selector": ".image-trio-text_item-text.text-rich-text",
+        "id": "2aa49343-51ea-61bb-d986-64c0d0d54ad5"
+      },
+      {
+        "selector": ".image-trio-text_item-text.text-rich-text.text-size-medium",
+        "id": "cd8e57ec-a099-5432-82da-25e09eba5f60"
+      },
+      {
+        "selector": ".image-trio-text_item-text.text-rich-text.text-size-medium.text-weight-normal",
+        "id": "dd607449-3f33-c8c1-87da-e42c1c6239f2"
+      },
+      {
+        "selector": ".image-trio-text_link.text-style-eyebrow-caps",
+        "id": "11768b5b-572f-fc3a-eee5-aa5963732ccc"
+      }
+    ],
+    "props": {
+      "Heading": "ebeb1a92-d766-3614-254d-19c94cdb7b4f",
+      "Paragraph": "d323685b-9532-0899-8770-7c03c325631a",
+      "Paragraph Visible": "61c19644-fe1a-9985-a0ab-cecf4c7d4813",
+      "CTA Text": "fcf7826c-f83e-523c-5ba8-b97a71cd74f7",
+      "CTA Link": "1e68ee0b-23c7-75ba-411e-50d99aeca5fd",
+      "CTA Visible": "e35db156-8ca9-55ee-5d4e-5f8c1d3945c7",
+      "Image 1": "3af045ac-8867-7574-0b8e-38ec6d207b60",
+      "Image 2": "e0035ff2-b44f-62fc-34b7-32e0ae7e7d74",
+      "Image 3": "977c31e8-9a15-17a7-26ff-1c8657825049",
+      "Item Content Visible": "a663587f-7763-66e5-a246-7e298e73bf99",
+      "Item 1 Heading": "f79f92db-cfe5-c3f4-bec2-ca3718e9faed",
+      "Item 2 Heading": "c70696b1-fd21-ac07-98a4-dc5d7c2a3d8a",
+      "Item 3 Heading": "d18381ee-348a-4dd0-1bdd-845d3a7c8bd7",
+      "Item 1 Text": "6641f4cd-e0a1-50a4-7c21-0c2924814323",
+      "Item 2 Text": "af838336-9b52-2e13-c029-42ce918a8efd",
+      "Item 3 Text": "7f61040c-583e-d94e-aefd-7c95d13e6849"
+    }
   }
 }
