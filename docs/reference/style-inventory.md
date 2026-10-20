@@ -161,7 +161,7 @@ Created by K02 on 2026-10-20 from the wave 2 plans (`docs/figma/build-plans/Q0xx
 | Q023 | `section_tab-pills-intro` / `tab-pills-intro_*` | 9 | 6 | `is-active`, `is-media` |
 | Q005 | `site-nav_*` (root `site-nav_component`, no `section_`) | 21 | 2 | `is-active` (mode), `is-end` (menu detail) |
 | Q024 | `section_image-inset-single` / `image-inset-single_*` | 3 | 1 | `is-small` |
-| Q025 | `section_article-card-staggered` / `article-card-staggered_*` | 9 | 7 | `is-right`, `is-tall` |
+| Q025 | `section_article-card-staggered` / `article-card-staggered_*` | 9 | 7 | `is-right`, `is-tall`; Q029 adds `is-cms-item` (on `_component`, `:nth-child(even)` flush right like the Right variant) and `is-link` (on `_item`, colour inherit, no underline) for the Post Categories collection list |
 | Q026 | `section_timeline-scatter-images` / `timeline-scatter-images_*` | 9 | 19 | `is-center`, `is-end`, `is-inset`, `is-large`, `is-lift`, `is-medium`, `is-small`, `is-tall`, `is-xlarge`, `is-xsmall` |
 
 **Page one-off section families (wave 3).** A page session creates one family per one-off section, named `section_<page>-<section>` (HANDOVER-wave3 rule 3). Where the Figma section slug is a number (rooms-collection 03-01), the family takes the component name instead, and repeated sections share one family.
