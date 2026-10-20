@@ -68,6 +68,10 @@ export const scrollSmootherEngine: SmoothScrollEngine = {
   start: () => {
     smootherInstance?.paused(false)
   },
+  scrollTo: (target: HTMLElement) => {
+    if (smootherInstance) smootherInstance.scrollTo(target, true)
+    else target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  },
   scrollTop: () => smootherInstance?.scrollTop() ?? window.scrollY,
   describe: (): Record<string, string | number | boolean> =>
     smootherInstance

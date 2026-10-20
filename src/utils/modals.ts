@@ -8,13 +8,27 @@
  *   - Overlay:    `[data-modal-overlay]`, optional global backdrop
  *                 (individual modals can opt out with `data-modal-no-overlay`)
  *
+ * Additional ways in, no extra attributes needed:
+ *   - Keyboard:   Enter and Space open a `[data-modal-open]` trigger that is
+ *                 not a native button or link (e.g. a div timeline item).
+ *                 Such triggers get `tabindex="0"` and `role="button"` at
+ *                 init if they have none.
+ *   - Hash link:  any `a[href="#{id}"]` whose id is a dialog opens it through
+ *                 the same path, also from inside another open dialog (the
+ *                 current one closes first and focus later returns to the
+ *                 trigger that opened the first dialog).
+ *   - Page load:  `location.hash` naming a dialog id opens that dialog.
+ *   - Close and scroll: a `[data-modal-close]` with `href="#{section-id}"`
+ *                 pointing at a non-dialog element closes the dialog, then
+ *                 scrolls to that element and moves focus there.
+ *
  * Open state is expressed via the `is-open` class; CSS handles visibility,
  * animation, and easing via Webflow combo classes.
  *
  * Page-scroll lock: the active smooth-scroll engine (Lenis by default, see
  * `$utils/smoothScroll`) is stopped on open and resumed on close. This halts
  * page scrolling AND releases the modal's overflow-y:auto for native
- * wheel/touch handling. No body styles or scrollTo are touched.
+ * wheel/touch handling. No body styles are touched.
  *
  * Under ScrollSmoother the dialog and overlay must live OUTSIDE
  * `#smooth-content` in the Designer; this script does not reparent them.
@@ -33,6 +47,8 @@ const FOCUSABLE_SELECTOR = [
   'textarea:not([disabled])',
   '[tabindex]:not([tabindex="-1"])',
 ].join(',')
+
+const NATIVE_ACTIVATION_SELECTOR = 'a[href], button, input, select, textarea, summary'
 
 export const modals = () => {
   const modalElements = document.querySelectorAll<HTMLElement>('[role="dialog"]')
@@ -61,21 +77,52 @@ export const modals = () => {
     }
   })
 
+  // Non-native triggers (divs, spans) need to be reachable and announced.
+  document.querySelectorAll<HTMLElement>('[data-modal-open]').forEach((trigger) => {
+    if (trigger.matches(NATIVE_ACTIVATION_SELECTOR)) return
+    if (!trigger.hasAttribute('tabindex')) trigger.setAttribute('tabindex', '0')
+    if (!trigger.hasAttribute('role')) trigger.setAttribute('role', 'button')
+  })
+
+  function getDialog(id: string | null | undefined): HTMLElement | null {
+    if (!id) return null
+    const element = document.getElementById(id)
+    return element && element.getAttribute('role') === 'dialog' ? element : null
+  }
+
+  /** The element id named by an `href="#id"`, or null for `#`, empty or other URLs. */
+  function hashTarget(href: string | null): string | null {
+    if (!href || !href.startsWith('#') || href.length < 2) return null
+    try {
+      return decodeURIComponent(href.slice(1))
+    } catch {
+      return href.slice(1)
+    }
+  }
+
   function getFocusableElements(root: HTMLElement): HTMLElement[] {
     return Array.from(root.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter(
       (element) => !element.hasAttribute('disabled') && element.offsetParent !== null,
     )
   }
 
-  function openModal(modal: HTMLElement, trigger: HTMLElement) {
-    if (activeModal) closeModal()
+  function openModal(modal: HTMLElement, trigger: HTMLElement | null) {
+    if (activeModal === modal) return
+
+    // Opening from inside the current dialog: the inner link is about to be
+    // hidden, so keep the trigger that opened the first dialog as the return
+    // focus target.
+    const returnTrigger =
+      activeModal && trigger && activeModal.contains(trigger) ? activeTrigger : trigger
+
+    if (activeModal) closeModal({ restoreFocus: false })
 
     activeModal = modal
-    activeTrigger = trigger
+    activeTrigger = returnTrigger
 
     modal.classList.add('is-open')
     modal.setAttribute('aria-hidden', 'false')
-    trigger.setAttribute('aria-expanded', 'true')
+    if (trigger?.hasAttribute('data-modal-open')) trigger.setAttribute('aria-expanded', 'true')
 
     const overlayEnabled = overlayElement && !modal.hasAttribute('data-modal-no-overlay')
     if (overlayEnabled) {
@@ -119,7 +166,7 @@ export const modals = () => {
     )
   }
 
-  function closeModal() {
+  function closeModal({ restoreFocus = true }: { restoreFocus?: boolean } = {}) {
     if (!activeModal) return
 
     const modal = activeModal
@@ -127,7 +174,7 @@ export const modals = () => {
 
     modal.classList.remove('is-open')
     modal.setAttribute('aria-hidden', 'true')
-    trigger?.setAttribute('aria-expanded', 'false')
+    if (trigger?.hasAttribute('data-modal-open')) trigger.setAttribute('aria-expanded', 'false')
 
     if (overlayElement) {
       overlayElement.classList.remove('is-open')
@@ -136,10 +183,23 @@ export const modals = () => {
 
     smoothScroll.start()
 
-    trigger?.focus({ preventScroll: true })
+    if (restoreFocus) trigger?.focus({ preventScroll: true })
 
     activeModal = null
     activeTrigger = null
+  }
+
+  /** Close, then scroll to a page section and move focus there. */
+  function closeAndScrollTo(section: HTMLElement) {
+    closeModal({ restoreFocus: false })
+    smoothScroll.scrollTo(section)
+    if (!section.matches(FOCUSABLE_SELECTOR)) section.setAttribute('tabindex', '-1')
+    section.focus({ preventScroll: true })
+  }
+
+  function openFromTrigger(trigger: HTMLElement) {
+    const modal = getDialog(trigger.getAttribute('data-modal-open'))
+    if (modal) openModal(modal, trigger)
   }
 
   document.addEventListener('click', (event) => {
@@ -147,23 +207,48 @@ export const modals = () => {
     const trigger = target?.closest<HTMLElement>('[data-modal-open]')
     if (trigger) {
       event.preventDefault()
-      const modalId = trigger.getAttribute('data-modal-open')
-      if (!modalId) return
-      const modal = document.getElementById(modalId)
-      if (modal && modal.getAttribute('role') === 'dialog') {
-        openModal(modal, trigger)
-      }
+      openFromTrigger(trigger)
       return
     }
 
     const closeButton = target?.closest<HTMLElement>('[data-modal-close]')
     if (closeButton && activeModal) {
       event.preventDefault()
-      closeModal()
+      const targetId = hashTarget(closeButton.getAttribute('href'))
+      const targetDialog = getDialog(targetId)
+      if (targetDialog) {
+        openModal(targetDialog, closeButton)
+        return
+      }
+      const section = targetId ? document.getElementById(targetId) : null
+      if (section) closeAndScrollTo(section)
+      else closeModal()
+      return
+    }
+
+    const hashLink = target?.closest<HTMLAnchorElement>('a[href^="#"]')
+    if (hashLink) {
+      const targetDialog = getDialog(hashTarget(hashLink.getAttribute('href')))
+      if (targetDialog) {
+        event.preventDefault()
+        openModal(targetDialog, hashLink)
+      }
     }
   })
 
   document.addEventListener('keydown', (event) => {
+    const target = event.target as HTMLElement | null
+    const isActivationKey = event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar'
+    if (
+      isActivationKey &&
+      target?.matches('[data-modal-open]') &&
+      !target.matches(NATIVE_ACTIVATION_SELECTOR)
+    ) {
+      event.preventDefault()
+      openFromTrigger(target)
+      return
+    }
+
     if (!activeModal) return
 
     if (event.key === 'Escape') {
@@ -191,4 +276,7 @@ export const modals = () => {
       }
     }
   })
+
+  const initialDialog = getDialog(hashTarget(window.location.hash))
+  if (initialDialog) openModal(initialDialog, null)
 }

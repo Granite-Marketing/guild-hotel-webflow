@@ -124,6 +124,7 @@ interface LenisInstance {
   resize: () => void;
   stop: () => void;
   start: () => void;
+  scrollTo: (target: number | string | HTMLElement, options?: Record<string, unknown>) => void;
   scroll: number;
   targetScroll: number;
   velocity: number;
