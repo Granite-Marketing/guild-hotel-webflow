@@ -1,3 +1,5 @@
+Superseded by docs/figma/punch-list.md (2026-10-20); add new items there.
+
 # Guild build follow-ups
 
 Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, #33, #35, #36, #37, #38 and the Q012 to Q015 `plan.json` deviations on main.
