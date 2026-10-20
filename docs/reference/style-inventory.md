@@ -164,6 +164,12 @@ Created by K02 on 2026-10-20 from the wave 2 plans (`docs/figma/build-plans/Q0xx
 | Q025 | `section_article-card-staggered` / `article-card-staggered_*` | 9 | 7 | `is-right`, `is-tall` |
 | Q026 | `section_timeline-scatter-images` / `timeline-scatter-images_*` | 9 | 19 | `is-center`, `is-end`, `is-inset`, `is-large`, `is-lift`, `is-medium`, `is-small`, `is-tall`, `is-xlarge`, `is-xsmall` |
 
+**Page one-off section families (wave 3).** A page session creates one family per one-off section, named `section_<page>-<section>` (HANDOVER-wave3 rule 3).
+
+| Entry | Family | Base classes | Combos | Notes |
+|---|---|---|---|---|
+| Q042 | `section_static-template-privacy-policy` / `static-template-privacy-policy_*` | 9 | 0 | Legal copy on `/static-template` (component `rich-text-legal`). Classes: `_component` (two-column grid, one column from medium), `_header`, `_content`, `_block` (article), `_block-header`, `_body` (1.25rem / 1.3, 1.625rem gap), `_text` (paragraph, `white-space: pre-line`), `_list`. Headings use `heading-style-h2` (h1) and `heading-style-h5` (h2) alone. Reuse this family for the legal and corporate pages if they stay static. |
+
 Q020 `is-left` also sits on `image-trio-text_header`, `_list` and `_figure`; apply it to all three with the section. Empty chain paths (no CSS) exist for stacked combos the plans use, for example `split-image-text-light_content.is-start-7.is-bottom.is-wide-text` and `<heading>.text-style-script.is-large`; see section 6 of the write plan.
 
 Q019 (2026-10-20): `map-feature_pin` background-color now uses `--_primitives---colors--tan` (Colors/Tan) instead of `#906E58`. New empty combos: `.map-feature_text.text-size-medium`, `.map-feature_text.text-style-eyebrow-caps`, `.map-feature_link.text-size-medium`, `.heading-style-h4.text-weight-normal`.

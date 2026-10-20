@@ -39,6 +39,8 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q016, Q020, Q021, Q022: visual check of `/build-script-intro-centered`, `/build-image-trio-text`, `/build-venue-card-fullbleed` and `/build-form-split-script-contact` in the Designer.
 - [x] Q025: visual check of `🧱 article-card-staggered` (`/build-article-card-staggered`) against the plan previews and crops in `docs/figma/build-plans/Q025/`: base instance, is-right, is-right with "culture", is-tall. Recheck spacing with the real Sackers and Gatch fonts. Stephen approved on 2026-10-20 ("all look pretty good").
 
+- [ ] Q042: visual check of `/static-template` on staging (https://the-guild-hotel-c34e71.webflow.io/static-template): Dark Site Nav, privacy policy section, CTA Booking Newsletter, Footer Links. Agent check: `docs/figma/build-plans/Q042/staging-notes.md`.
+
 ## Decisions for Stephen
 - [ ] Q005: day and night switch has no specified behaviour (built as static controls, day active, hidden below 992px); booking URL for book now (Book link prop defaults to `#book`); experiences links to /arts until an experiences or happenings page exists; Shield nav states (236:8363, 236:8498) are unused in Figma and not built.
 - [ ] Q024: `is-small` cannot switch on an image-inset-single instance (same decision as Q014); it sits as a plain section on the build page. The plan's open questions also stand: is rooms-individual/04 a background video, which image fills the small variant on happenings-indiv and blog-indiv, should the rooms image bind to a CMS field, and the mobile aspect ratio.
@@ -109,3 +111,5 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q026: no photos exist for either instance; add Image elements (`u-image timeline-scatter-images_image`, needs the empty combo) when the collaborator and location photos arrive, and decide whether the guidelines list becomes a CMS collection list (plan open question 1).
 - [ ] Q026: thirteen empty combos were created (listed in `docs/figma/build-plans/Q026/plan.json` `build.createdCombos`).
 - [ ] Q026: place the component on guidelines (base) and neighborhood (`is-tall`, once the slot or variant decision is made), then remove the build page.
+- [ ] Q042: the privacy copy is native elements (paragraphs, `ul`), not a Rich Text element, because rich text child styling (h2 size, list indent) cannot be set headlessly. If the client must edit the legal copy, either style a Rich Text in the Designer and move the copy into it, or bind the page to the `🧑‍⚖️ Legal Corporates` collection. The six contents lines are plain text, not anchor links; only the first legal section exists in the design.
+- [ ] Q042: the Site Nav "Book link" keeps its default `#book` on `/static-template`; set the real booking URL site-wide when known.
