@@ -205,6 +205,10 @@ Per-instance variants through the Data API: yes (styles only; content and visibi
 - A modifier that changes structure or content (for example an image instead of the placeholder) stays a Show boolean or an image prop.
 - A modifier on a class used outside the component needs its variant style checked on every class it touches. The variant only applies inside instances.
 
+### Variant styles attach through the first class only (V02, Q017)
+
+A variant style set on a class that sits in a combo position on the element (for example `padding-section-large` on `padding-global padding-section-large`, or `heading-style-h4` on `split-image-text-light_heading heading-style-h4`) reads back fine and publishes as `.padding-section-large:where(.w-variant-…)`, but never applies: Webflow adds the `w-variant-<id>` class only to elements whose **first** class has variant styles. Set the variant style on the element's first class instead (`padding-global`, `split-image-text-light_heading`). Single-class elements such as `container-large` work as expected. Even on the first class, a variant rule (`.padding-global:where(.w-variant-…)`, specificity 0,1,0) loses to another class on the same element that sets the same property later in the stylesheet (`.padding-section-large`). Q017 Compact gets its smaller section padding from negative vertical margins on the container instead. Draft build pages are skipped by a staging publish; un-draft the page to check it on webflow.io.
+
 Keep the combo classes and reference sections until each component's variants are verified on staging. Then remove the reference sections after Stephen's yes.
 ## Gotchas found in the Q026 build (2026-10-20)
 
