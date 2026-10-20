@@ -864,6 +864,24 @@
       "slot": "image (is-centered: property illustration)",
       "webflowAssetId": "6ad66fed1ce40a5a6239b98e",
       "local": "assets/images/1f3f70ca62006004469496446ceb59b6f09405a2.jpg"
+    },
+    {
+      "slot": "Map Feature: Image prop default",
+      "webflowAssetId": "6ad66fed1ce40a5a6239b98e",
+      "local": "assets/images/1f3f70ca62006004469496446ceb59b6f09405a2.jpg",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Map Feature Image Bg: Image prop default",
+      "webflowAssetId": "6ad6701edd7f0762ee12bb55",
+      "local": "assets/images/f5dfa6178bea152e201fd0047664f6dc3d8ebe1b.png",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Map Feature Centered: Image prop default",
+      "webflowAssetId": "6ad66fed1ce40a5a6239b98e",
+      "local": "assets/images/1f3f70ca62006004469496446ceb59b6f09405a2.jpg",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
     }
   ],
   "instances": [

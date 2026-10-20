@@ -573,6 +573,30 @@
       "webflowAssetId": null,
       "local": null,
       "note": "Placeholder rectangle 377:451, no image fill."
+    },
+    {
+      "slot": "Gallery Mosaic Captioned: Image 1 prop default",
+      "webflowAssetId": "6ad66ff96684c3e22ea4e1af",
+      "local": "assets/images/3a8a13fffa6bb106dd00f736e22e0aae384f5bda.png",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Image 2 prop default",
+      "webflowAssetId": "6ad66ff2de86688556051da2",
+      "local": "assets/images/2e81693530e933aa43a6c48a794614cca7c8822d.jpg",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Image 3 prop default",
+      "webflowAssetId": "6ad670147e3d6550932e0fac",
+      "local": "assets/images/aebbcac2114e788ebc0ded5eee7b3da87ef37bc6.jpg",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Image 4 prop default",
+      "webflowAssetId": "6ad67015134731ad1b928187",
+      "local": "assets/images/b0a187c5d40b728dda8eba29e50d1c301b9f1a68.jpg",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
     }
   ],
   "instances": [

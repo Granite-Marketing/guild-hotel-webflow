@@ -972,6 +972,24 @@
       "webflowAssetId": null,
       "local": "figma/vectors/group-263x263-228-7875.svg",
       "manualPlacement": "Not uploaded yet (figma/assets.json webflowAssetId null). Upload before the history page entry."
+    },
+    {
+      "slot": "Split image text light: Image prop default",
+      "webflowAssetId": "6ad66ff0f8bf4846e809ead6",
+      "local": "assets/images/27f6840ca839b9675c82ed8eb521abfc5f478c78.png",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Second image prop default",
+      "webflowAssetId": "6ad670091ce40a5a6239c71f",
+      "local": "assets/images/91b1ad60c89e25e811754a2b7530e0ea8d7bfba1.png",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "stamp image (static, split-image-text-light_stamp)",
+      "webflowAssetId": "6ad74da46b56ff1d7223e4d7",
+      "local": "figma/vectors (guild-postmark-stamp.svg)",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
     }
   ],
   "previewInstances": [

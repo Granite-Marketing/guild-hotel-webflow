@@ -33,3 +33,12 @@ Screenshots: staging-1600.jpg (1600x14813), staging-390.jpg (390x10614), full pa
 
 ## Console errors
 - Cloudflare challenge request failed (hagen.challenges.cloudflare.com), "Connecting to 'data:,' violates CSP" x3, "Fetch API cannot load data:," and two "%c%d font-size:0" log lines. All come from Webflow/Cloudflare bot-challenge scripts under Playwright, not from site code. No site JS errors.
+
+
+## Placeholder images filled (2026-10-20)
+
+Stand-in library photos (not the final design images), set through the Data API and checked on webflow.io staging: no grey placeholder remains. Added images use `u-image`.
+
+- Olive split (`90b79982-e297-c0b3-51ca-2126deb935d0`) Image: `6ad67007cf42363c3ffe3d61`.
+- home/13 retail placeholder replaced with Offers Slider Split, Blue variant (`30b825d4-bcde-7241-ae17-8d5c1209c9c0`): eyebrow and label "retail", heading "shops at the guild", Image 1 `6ad67011134731ad1b928045`, slides 2 to 5 hidden.
+- home/16 offers placeholder replaced with Offers Slider Split, Base (`a5660ddd-9800-ec8a-c973-bd44cf6dfba3`): images `6ad66feb58367429abb4835f`, `6ad67000240d911fb18d77af`, `6ad67004134731ad1b927d6c`, `6ad66ffdba96f2e53726bd55`, `6ad6701a28c5dc695c82c539`.
