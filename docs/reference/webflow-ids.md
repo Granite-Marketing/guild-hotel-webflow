@@ -33,7 +33,7 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 | Room Detail | `6ad66fd5f8bf4846e809dc45` | `/rooms-individual` | rooms-individual |
 | Press | `6ad66fd5735773f253406642` | `/press` | press |
 | Gallery | `6ad66fd65794075272b95584` | `/gallery` | gallery |
-| Arts | `6ad66fd7ba96f2e53726a2eb` | `/arts` | arts |
+| Arts | `6ad66fd7ba96f2e53726a2eb` | `/arts` | arts; assembled by Q041 (2026-10-20), Body `6ad66fd7ba96f2e53726a2f3`; element ids in `docs/figma/build-plans/Q041/build.md` |
 | Wellness | `6ad66fd7735773f253406791` | `/wellness` | wellness-collection; assembled by Q034 (2026-10-20), Body `6ad66fd7735773f253406797` |
 | Static Template | `6ad66fd802cc199b55b924be` | `/static-template` | static-template |
 | Contact | `6ad66fd8e0b7968459e18f22` | `/contact` | contact |

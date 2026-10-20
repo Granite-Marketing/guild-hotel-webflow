@@ -257,3 +257,11 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q037: visual check of `/guidelines` on staging (notes in `docs/figma/build-plans/Q037/`).
 - [ ] Q037: the hero has no image (Figma grey slot; Show Image is off); set Image and Show Image when the photo arrives. The guidelines/05 feature is an empty `figure` with `data-image-placeholder`; add a `u-image` Image when the collaborator photo arrives.
 - [ ] Snap groups (Home, Dining, Wellness): built as plain sections with `data-scroll-enlarge-snap` instead of Tab Pills Intro plus Venue Card instances, because tab-pills-intro has no panels slot. Accepted for the 80 to 90 percent target; converting needs a panels slot (Designer) or a dedicated snap-group component.
+
+## Q041 Arts (2026-10-20)
+
+- [ ] Q041 (Designer): visual check of `/arts` against the arts section crops, mainly the dark gallery (06) and the Dark detail dialogs. Staging is published; the filter, all ten dialogs and Escape close were checked there with no console errors.
+- [ ] Q041: artwork dialogs `artwork-03` to `artwork-10` carry draft copy (artwork title, by artist name, year / dimensions / medium, lorem) and hotel photos. Replace with the real catalogue; an Artworks CMS collection with the CMS dialog pattern in `docs/reference/modal-setup.md` would scale better than ten static instances.
+- [ ] Q041: the arts filter tags (painting, photography, sculpture, artists) are working tags, not from the Figma; confirm the categories with the client.
+- [ ] Q041: the "by eva struble" line in the Oceano dialog is plain text; the artist dialog opens from the second gallery tile. Linking the byline needs a link prop on the Overlay Detail Panel Modal eyebrow.
+- [ ] Q041: the Figma gallery rows bleed off both edges; the build wraps centred like `/gallery`. Decide whether Arts wants the edge-to-edge mosaic.
