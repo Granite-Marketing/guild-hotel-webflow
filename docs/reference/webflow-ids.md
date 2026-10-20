@@ -27,7 +27,7 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 | Password | `6ad64060ae8eac6d7b7c4242` | `/401` | - |
 | 404 | `6ad64060ae8eac6d7b7c4243` | `/404` | - |
 | History | `6ad66fd276d24ed37ac4c52f` | `/history` | history |
-| Dining | `6ad66fd476d24ed37ac4c5cb` | `/dining` | dining-collection |
+| Dining | `6ad66fd476d24ed37ac4c5cb` | `/dining` | dining-collection; assembled by Q032 (2026-10-20), Body `6ad66fd476d24ed37ac4c5d1` |
 | Guidelines | `6ad66fd44c7f57894534ada5` | `/guidelines` | guidelines |
 | Rooms | `6ad66fd5f8bf4846e809dbee` | `/rooms` | rooms-collection; assembled by Q033 (2026-10-20), Body `6ad66fd5f8bf4846e809dbf6` |
 | Room Detail | `6ad66fd5f8bf4846e809dc45` | `/rooms-individual` | rooms-individual |
