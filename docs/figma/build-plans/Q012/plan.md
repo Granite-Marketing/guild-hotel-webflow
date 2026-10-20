@@ -93,3 +93,17 @@ Fonts in the preview are fallbacks (Snell Roundhand for Morello, Copperplate for
 - Button width: `is-wide` is the standard 194px (12.125rem); book now measured 214px.
 - Button type: `is-chamfer` carries Label/Button (line height 1, no tracking) instead of CAPS-CAPTION-16.
 - Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).
+
+## Build (Q012, 2026-10-20)
+
+Built through the Data API on `🧱 cta-booking-newsletter` (`6ad712be4a1db356ac74034b`), with no Designer calls. The section was converted to the component "CTA Booking Newsletter" (`916e4ffc-007b-3572-a686-946c6645b2e8`, no props); one instance sits on the build page. The read-back matches the plan's tree, tags and class lists. No class was created and no live style changed.
+
+- Bonvoy logo uploaded as asset `6ad744318e4b52f5c4d49ec6` (Stephen approved) and set on `cta-booking-newsletter_logo` with alt "Marriott Bonvoy".
+- Book now links to `#` (url mode), as planned.
+- Build deviations are appended to `deviations` in [plan.json](plan.json).
+
+Designer follow-ups:
+
+1. Set the email input placeholder to `*Email`. The Data API rejects `placeholder` as a reserved attribute.
+2. Mark the background image decorative. Its alt is stored as inherit, and the asset has no library alt yet.
+3. Visual check of the build page against `preview-base-1440.png` and the home/18 crop.
