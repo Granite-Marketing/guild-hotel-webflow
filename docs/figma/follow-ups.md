@@ -257,3 +257,11 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q037: visual check of `/guidelines` on staging (notes in `docs/figma/build-plans/Q037/`).
 - [ ] Q037: the hero has no image (Figma grey slot; Show Image is off); set Image and Show Image when the photo arrives. The guidelines/05 feature is an empty `figure` with `data-image-placeholder`; add a `u-image` Image when the collaborator photo arrives.
 - [ ] Snap groups (Home, Dining, Wellness): built as plain sections with `data-scroll-enlarge-snap` instead of Tab Pills Intro plus Venue Card instances, because tab-pills-intro has no panels slot. Accepted for the 80 to 90 percent target; converting needs a panels slot (Designer) or a dedicated snap-group component.
+
+## Q038 Rooms individual (2026-10-20)
+
+- [ ] Q038 (Designer): visual check of `/rooms-individual` against the rooms-individual crops, mainly the one-off room description (03) and amenities grid (07). Notes in `docs/figma/build-plans/Q038/build.md`.
+- [ ] Q038: "view floorplan" links to `#`; point it at a floorplan PDF asset or page when one exists.
+- [ ] Q038: image choices are stand-ins from the library (room photos from rooms-collection); swap for the deluxe king suite photography when it arrives. Alt text on the two hero images was written in the build; review with `/asset-metadata`.
+- [ ] Q038: the Discover Other Rooms carousel does not initialise on staging until `cardCarouselHeaderLeft()` ships (see the v1.1.2 item above).
+- [ ] Q038: the carousel cards all link to `/rooms`; point each at its room page once a Rooms CMS template exists (Q009 notes rooms-individual could bind to the Rooms collection).
