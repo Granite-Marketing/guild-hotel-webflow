@@ -20,3 +20,11 @@ Page `6ad66fd5f8bf4846e809dbee`, Body `6ad66fd5f8bf4846e809dbf6`. Built 2026-10-
 | 13 | 13-all-rooms | `section_placeholder`, `data-placeholder="Q007"`, id `all-rooms` | `ddf20115-a908-c0e2-fded-3f0f85f6dc2a` | room-list-hover-preview not built yet |
 
 Animation: no `figma/animations/rooms-collection.md` exists, so the only data attributes are `data-hover-scale` on the room card images (imageHoverScale, opt-in), plus `data-quiz-step` / `data-quiz-option` hooks for a future quiz module. New classes: `docs/reference/style-inventory.md`, Q033 rows. Follow-ups: `docs/figma/follow-ups.md`, Q033 lines.
+
+
+## Placeholder images filled (2026-10-20)
+
+Stand-in library photos (not the final design images), set through the Data API and checked on webflow.io staging: no grey placeholder remains. Added images use `u-image`.
+
+- Hero (`bc0c1393-1d0f-8b55-c877-9b1e69e1ce9e`) Image: `6ad66ff96684c3e22ea4e1af`.
+- rooms-collection/09 placeholder replaced with Offers Slider Split, Base (`d76e0040-2c7c-848f-09fe-0a00f3c0ca43`) with room and wellness photos. The Q007 `#all-rooms` placeholder stays.
