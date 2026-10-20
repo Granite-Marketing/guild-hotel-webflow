@@ -5,6 +5,10 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 ## Stephen, in the Designer
 - [ ] Q024: visual check of `/build-image-inset-single` (base instance with the rooms-individual image, and the is-small reference section) against `docs/figma/build-plans/Q024/preview-*-1440.png` and the reference crops. No rich text styling is needed.
 - [ ] Q021: visual check of `/build-venue-card-fullbleed` (two component instances, the home and dining snap groups, is-tall and is-left) against `docs/figma/build-plans/Q021/preview-*.png` and the reference crops; check the clip-path chamfers on the frame and tab bar, and the is-left list row height and divider bleed.
+- [ ] V02-Q021: visual check of the three new instances on `/build-venue-card-fullbleed` (Media Center variant after the dining snap group, Venue Card Fullbleed Tall after is-tall, Venue Card Fullbleed Left after is-left) against the reference sections above them; not published or seen yet.
+- [ ] V02-Q021: delete the old is-tall and is-left reference sections once the new instances check out (keep the two snap group sections; they are not components).
+- [ ] V02-Q021: add list props to Venue Card Fullbleed Left (Show List, List Item 1 to 3 text and link) and bind them; the classifier blocked `create_prop`, so the rows are static.
+- [ ] V02-Q021: update the Venue Card Fullbleed description (still says is-tall and is-left are plain sections); the classifier blocked `set_component_metadata`. Text is in `docs/figma/build-plans/Q021/plan.json` `v02`.
 - [ ] Q021: home/11 heading break: Figma breaks "rooms" / "& suites"; add a line break if the real font wraps differently.
 
 - [ ] Q019: visual check of `/build-map-feature` (base instance plus the is-image-bg and is-centered reference sections) against `docs/figma/build-plans/Q019/preview-*-1440.png`. No rich text styling is needed.
