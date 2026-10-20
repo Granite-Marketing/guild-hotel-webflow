@@ -38,6 +38,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | scrollTextReveal | `scrollTextReveal.ts` | opt-in | G |
 | galleryFilter | `galleryFilter.ts` | opt-in | E |
 | historyStickyYear | `historyStickyYear.ts` | opt-in | G |
+| offersSliderSplit | `offersSliderSplit.ts` | opt-in (Q008, not wired yet) | C, after swiperSliders |
 | imageStackCollapse | `imageStackCollapse.ts` | opt-in | G |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
 
@@ -565,3 +566,8 @@ pinned scrubbed sections (use an `end` function plus
 `invalidateOnRefresh: true`, never a frozen `window.innerHeight`), and
 `gsap.matchMedia()` wrappers so breakpoint crossings revert inline
 transforms.
+
+
+## offersSliderSplit (Q008)
+
+Crossfading split slider for the Offers Slider Split component. Needs the Swiper 12 CDN CSS and JS. DOM contract: `.swiper_slider[data-offers-slider]` wraps `.swiper.offers` > `.swiper-wrapper` > `.swiper-slide`; `[data-offers-slider-controls]` holds `[data-offers-slider-prev]`, `[data-offers-slider-current]`, `[data-offers-slider-total]` and `[data-offers-slider-next]` (link blocks and spans, anywhere inside the root). The module writes the zero-padded total, updates the current number on every slide change, loops with a fade, and adds `hide` plus `aria-hidden` to the controls when there is one slide. The `offers` type class keeps `swiperSliders()` from also initialising the container. Fixture: `tests/visual/fixtures/offers-slider-split.html`.
