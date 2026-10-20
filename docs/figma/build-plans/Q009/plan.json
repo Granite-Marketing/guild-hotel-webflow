@@ -1,0 +1,134 @@
+{
+  "entry": "Q009",
+  "component": "card-carousel-header-left",
+  "webflowComponent": {
+    "name": "Card Carousel Header Left",
+    "id": "f5403de4-dabb-14c3-ecf8-c945d0a8e22e",
+    "group": "Sliders"
+  },
+  "buildPage": {
+    "id": "6ad78814d14363c9008ddeff",
+    "slug": "build-card-carousel-header-left",
+    "draft": false
+  },
+  "runtime": {
+    "module": "src/utils/cardCarouselHeaderLeft.ts",
+    "export": "cardCarouselHeaderLeft",
+    "wired": false,
+    "slot": "C, after swiperSliders()",
+    "fixture": "tests/visual/fixtures/card-carousel-header-left.html",
+    "spec": "tests/visual/card-carousel-header-left.spec.ts",
+    "needs": [
+      "Swiper 12 CSS in site head",
+      "Swiper 12 JS before the bundle"
+    ]
+  },
+  "variantIds": {
+    "base": "base",
+    "compact": "c59c2441-38e4-6521-05ae-61ab04e20bf2"
+  },
+  "variantPropId": "18d9c152-511a-0623-e95e-f0df74c21512",
+  "props": {
+    "Heading": "904cb47f-1b96-e29c-fad1-dc7ea9ccccef",
+    "Text": "264ee76e-e780-9d34-e502-01b5f2288b4f",
+    "Section label": "92f67272-7dd9-19b0-cb11-d2a41b7a2adb",
+    "Label 1": "13088cea-b72a-6f35-456d-36e908a1d723",
+    "Link 1": "a1b4b824-438b-5d6b-40d4-82fe328fb882",
+    "Image 1": "beeb6535-19e6-e1a3-2a54-9fffa9f93a7c",
+    "Show image 1": "c6a26839-950e-7303-aa0c-4773385a0344",
+    "Label 2": "4417f6c5-d860-28a1-0021-d25be30a2c12",
+    "Link 2": "85a76fac-ed2b-8c37-e859-1e5b764f816f",
+    "Image 2": "3b6efee4-fc6b-e3d6-c53b-0df83f77d05f",
+    "Show image 2": "71aa69dc-cb78-714e-6d15-5a8dfe8b58f2",
+    "Label 3": "5e70fb2b-bfc3-b927-bf99-e8ad4a74d4c7",
+    "Link 3": "7c79017d-17c7-8f8f-26f2-2b6c7393455d",
+    "Image 3": "19b3e2a7-7e56-6ee6-ded3-aa4bb03520ef",
+    "Show image 3": "ad601af3-3c6e-fe45-6bbb-3ecc9cd06260",
+    "Label 4": "b754827e-e25e-355b-1937-15b6549f0949",
+    "Link 4": "e1754923-afdf-3158-a713-ddf2f28ee18b",
+    "Image 4": "621e0bf3-d92a-ab39-1a60-026b18aedcfa",
+    "Show image 4": "04f55477-4a13-45dd-3a94-6dd8a5ecc679",
+    "Show card 4": "9bdfdf71-8af0-4250-9b51-15c684ef0855",
+    "Label 5": "2befc5b4-130b-e989-4f35-5168126b90e8",
+    "Link 5": "6f5f1c4a-8da2-d89c-2d9c-026aaf2c350c",
+    "Image 5": "175af097-5227-d928-737f-a38ddadf9069",
+    "Show image 5": "dc39288b-6592-ca4e-23b6-9cab35877ac0",
+    "Show card 5": "23242464-50e6-1f8c-7184-176969b4f93b",
+    "Label 6": "0f280041-e42c-fd68-d3a0-a91afc3971aa",
+    "Link 6": "97713276-c343-85b8-6707-fe4b131903b7",
+    "Image 6": "f9b4d8d3-5cd5-bfc8-9b35-bdb4a6e18a3d",
+    "Show image 6": "07136fbf-d969-2e1f-efba-5dd3bf529034",
+    "Show card 6": "ad5b63f8-4964-2e4f-15d1-aa79c552f483"
+  },
+  "buildPageInstances": {
+    "base": "the converted source section (default props)",
+    "compact": "fc0098cd-8c50-41b6-cf7f-14e7cc337d44"
+  },
+  "assets": {
+    "placeholderImage": "6ad67011134731ad1b928045"
+  },
+  "classesCreated": {
+    "standalone": [
+      "section_card-carousel-header-left",
+      "card-carousel-header-left_component",
+      "card-carousel-header-left_content",
+      "card-carousel-header-left_header",
+      "card-carousel-header-left_heading",
+      "card-carousel-header-left_text",
+      "card-carousel-header-left_controls",
+      "card-carousel-header-left_arrow",
+      "card-carousel-header-left_slider",
+      "card-carousel-header-left_slides",
+      "card-carousel-header-left_slide",
+      "card-carousel-header-left_link",
+      "card-carousel-header-left_figure",
+      "card-carousel-header-left_image",
+      "card-carousel-header-left_label"
+    ],
+    "combos": [
+      ".section_card-carousel-header-left.swiper_slider (empty)",
+      ".card-carousel-header-left_slider.swiper (margin-left and margin-right 0, to cancel Swiper's auto margins)",
+      ".card-carousel-header-left_slider.swiper.cards (empty)",
+      ".card-carousel-header-left_slides.swiper-wrapper (empty)",
+      ".card-carousel-header-left_slide.swiper-slide (width 22.25rem, 16rem small; height auto; beats Swiper's .swiper-slide)",
+      ".card-carousel-header-left_figure.is-tall (31.375rem, 22.5rem small)",
+      ".card-carousel-header-left_figure.is-mid (28.9375rem, 20.75rem small)",
+      ".card-carousel-header-left_arrow.is-disabled (opacity 0.4; Swiper's disabledClass)"
+    ]
+  },
+  "placeholdersOnBuiltPages": [
+    {
+      "page": "/history",
+      "pageId": "6ad66fd276d24ed37ac4c52f",
+      "elementId": "8829d2d2-6596-bb48-7469-cb63d779021a",
+      "section": "history/09-more-of-the-guild",
+      "variant": "Compact",
+      "marker": "section_placeholder[data-placeholder=Q009]"
+    },
+    {
+      "page": "/gallery",
+      "pageId": "6ad66fd65794075272b95584",
+      "elementId": "2b4ad8af-eb33-7b35-11cd-f93c3882180f",
+      "section": "gallery/04-more-of-the-guild",
+      "variant": "Base",
+      "marker": "section_placeholder[data-placeholder=Q009]"
+    },
+    {
+      "page": "Dinings Template (/dining/<slug>)",
+      "pageId": "6ad67d7416e13e66c2b76107",
+      "elementId": "86d57348-f224-7d1f-8ca3-1011769f1eb2",
+      "section": "dining-*/other dining options (Q027 static stand-in, class family card-stagger-header-left)",
+      "variant": "Base with dining labels, or keep the stand-in",
+      "marker": "section_card-stagger-header-left[data-placeholder=Q009]"
+    }
+  ],
+  "deviations": [
+    "Compact differs from Base only in section padding (8.5rem vs 13.4375rem on desktop), set as variant styles at main, medium and small; the crops show the same cards and type",
+    "Different content per instance (rooms-individual) is props, not CMS; rooms-individual could bind to the Rooms collection later",
+    "Six cards with Show card 4 to 6; Figma shows three and a half cards, so cards 4 to 6 are placeholder labels linking to site pages",
+    "Images are grey #d9d9d9 slots by default (Show image N off); Image N props take an asset id",
+    "Card stagger (tall, square, mid) is fixed per card position through is-tall and is-mid combos, repeating every three cards",
+    "Gap comes from the slide's CSS margin-right; Swiper runs with spaceBetween 0, because Swiper measures margins in slidesPerView auto and a non-zero spaceBetween doubled the gap",
+    "Values are copied onto family classes (heading, text, label) rather than stacking global text utilities, per the Q020 Designer note"
+  ]
+}

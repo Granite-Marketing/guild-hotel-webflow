@@ -262,3 +262,9 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 - **A DOM id can follow a prop.** Create an `id` type prop and bind the root with `set_settings` key `domId` and a prop `binding`; each instance publishes its own `id`. The prop default is empty, so every instance must set it.
 - **Base breakpoint rules beat variant rules at that breakpoint, on purpose or not.** A base `medium` or `small` rule on a class publishes after the variant's desktop rule with the same specificity, so it wins below that width. Q006 uses this to stack every variant into one column at `medium`, but a variant that resets panel padding or margin must repeat the reset at each breakpoint where the base class sets them (`medium` and `small` here).
 - **Fixtures from the published page.** For a component driven by an existing module, copying the staging `<body>` and the published `webflow.shared.<hash>.css` link into a fixture tests the real markup and CSS; refresh the hash after each publish.
+## Gotchas found in the Q009 build (2026-10-20)
+
+- **Swiper's `.swiper` has auto side margins.** In a flex column (the stacked tablet and mobile layout), `margin: 0 auto` on a cross-axis child turns off `align-items: stretch`, so the container sizes to its min-content: the full card row (1632px at 390). Swiper then sees every card fitting and locks. Put `margin-left: 0; margin-right: 0` on the family combo (`.x_slider.swiper`), which beats `.swiper` on specificity.
+- **Swiper CSS loads after the Webflow CSS.** `.swiper-slide { width: 100% }` and `height: 100%` tie with a family class and win on order. For fixed-width cards, set width and `height: auto` on the combo `.x_slide.swiper-slide`.
+- **`slidesPerView: 'auto'` measures slide margins.** With a CSS `margin-right` gap on the slides, keep `spaceBetween: 0`; a non-zero value adds to the margin and doubles the gap. The CSS margin also keeps the gap responsive without Swiper breakpoints.
+
