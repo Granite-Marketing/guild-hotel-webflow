@@ -702,7 +702,7 @@
     },
     {
       "id": "Q029",
-      "title": "CMS template: cms-happenings-blog-collection (happenings-collection, blog-collection)",
+      "title": "CMS template: \ud83c\udff7\ufe0f Post Categories (listing page for Happenings and Blog)",
       "type": "cms",
       "lane": "agent (collection needs approval)",
       "dependsOn": [
@@ -717,7 +717,8 @@
         "Q023",
         "Q025",
         "D02",
-        "C01"
+        "C01",
+        "C02"
       ],
       "brief": "docs/figma/briefs/Q029-cms-happenings-blog-collection.md",
       "surface": "designer",
@@ -725,14 +726,14 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Re-scoped 2026-10-20: category template page = listing page; collection list of posts filtered by current category. Ignore the brief where it treats listing pages as CMS items.",
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "template structure plus CMS bindings"
     },
     {
       "id": "Q030",
-      "title": "CMS template: cms-happenings-blog-indiv (happenings-indiv, blog-indiv)",
+      "title": "CMS template: \ud83d\udcf0 Happenings & Stories (post detail)",
       "type": "cms",
       "lane": "agent (collection needs approval)",
       "dependsOn": [
@@ -747,7 +748,8 @@
         "Q017",
         "Q024",
         "D02",
-        "C01"
+        "C01",
+        "C02"
       ],
       "brief": "docs/figma/briefs/Q030-cms-happenings-blog-indiv.md",
       "surface": "designer",
@@ -755,7 +757,7 @@
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "",
+      "notes": "Re-scoped 2026-10-20: binds the C02 post fields; one template for both categories.",
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "template structure plus CMS bindings"
@@ -1296,6 +1298,25 @@
       "model": "claude-sonnet-5-5",
       "effort": "medium",
       "modelReason": "Mechanical once the proposal is approved"
+    },
+    {
+      "id": "C02",
+      "title": "Posts model: Category reference, real post fields and sample posts in Happenings & Stories",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "C01"
+      ],
+      "brief": null,
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Per decisions.md CMS model. Replace the two placeholder items (happenings-indiv, blog-indiv) with sample posts from the Figma happenings and blog pages; add Category (Reference to Post Categories), date, hero image, excerpt, body (RichText). Add field groups. Data API only.",
+      "model": "claude-sonnet-5-5",
+      "effort": "medium",
+      "modelReason": "Fully specified CMS writes"
     },
     {
       "id": "P012",
