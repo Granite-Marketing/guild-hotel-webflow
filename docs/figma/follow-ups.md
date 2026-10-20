@@ -85,6 +85,6 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q020: the is-left reference sections have no `data-image-stack-collapse` attributes; add them where the A02 animation applies.
 - [ ] Q023 (Designer): add the `panels` slot to the tab-pills-intro frame (before the nav) and, if wanted, swap the four fixed tabs for a `tabs` slot. The Data API has no slot props.
 - [ ] Q023: the `media` variant (is-media on component, header, stage, frame and tabs) is two plain reference sections on the build page. Apply the V01 route, then place the component on wellness-collection and meetings-collection with the Q021 venue cards as panels.
-- [ ] Q023 (Designer): visual check of `/build-tab-pills-intro` (base instance and both is-media sections) against `docs/figma/build-plans/Q023/preview-*.png`.
+- [x] Q023 (Designer): visual check of `/build-tab-pills-intro` (base instance and both is-media sections). Stephen confirmed it looks fine on 2026-10-20.
 - [ ] Q023: three empty combos were created (listed in `docs/figma/build-plans/Q023/plan.json` `build.classesCreated`).
 - [ ] Q023: place the base component on press, happenings-collection and blog-collection (Show tab 4 off, tab links `#press` etc.), then remove the build page. Plan open questions still stand (scroll-spy or filters for base tabs, sticky pill, console warning on base instances, meetings tab copy, mobile tab overflow).
