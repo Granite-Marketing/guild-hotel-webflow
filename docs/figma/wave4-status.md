@@ -31,7 +31,7 @@ Until then the card carousels and the /rooms hover preview do not run on staging
 - **Punch list group (b), pages:** alt text on Home, Rooms, Dining, Gallery and Wellness photos, hidden lorem offer slides, Meetings RFP anchor, Neighborhood corporate link and dialog photo, Arts byline link, press publication logos.
 - **Shared styles:** six duplicate image classes merged into `u-image`, four logo classes into the new `u-logo`. A live regression sweep of 25 URLs found no change in any image or logo.
 
-Baseline QA report: https://claude.ai/artifact/7vaBYeN3pEneR54FJm64tX. A final re-run updates that link (see the PR 99 description).
+QA report (final pass, version 2 of the same link): https://claude.ai/artifact/7vaBYeN3pEneR54FJm64tX. Broken sections went from 10 to 2 and drift from 44 to 18 across 24 URLs; the two broken ones are the Post Categories pages, which need the Designer filter below. Remaining items: `docs/figma/qa-findings-final.md`.
 
 ## 4. Designer steps for Stephen
 
