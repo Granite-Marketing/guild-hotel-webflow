@@ -307,6 +307,11 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 - **"Link to current item" cannot be set headlessly.** `static_link` mode `collectionPage` stores `{pageSlug}` and publishes that string as a relative href; mode `page` with the template page id publishes the bare template path. Neither resolves per item, and the link setting has no bindable sources. Set it in the Designer.
 - **Alternating cards without a variant.** A combo on the item class with an `nth-child(even)` pseudo (`update_style` with `pseudo`) copies a variant's layout per item, since a Variant prop cannot follow the item.
 
+## Gotchas found in the Q007 build (2026-10-20)
+
+- **A family class with `display` beats the template `hide`.** `galleryFilter` hides items by adding `hide` (`.hide { display: none }`, no `!important`). A family class on the same element that sets `display` (`.room-list-hover-preview_item { display: block }`) comes later in the published CSS with the same specificity and wins, so nothing hides. Leave `display` off any class that `hide` must override. Fixtures that define `.hide` with `!important` themselves (gallery-filter) mask this; test against the published CSS.
+- **Fixed dialogs can carry the filter root.** `data-gallery-filter` on a `position: fixed` dialog works; `scrollRootIntoView` never fires because the root top stays at 0.
+- **`create_style` batches can 429 as a whole** when other sessions are busy (`too_many_requests` on every action). Nothing is written; re-query and resend the batch.
 ## Gotchas found building the post template (Q030, 2026-10-20)
 
 - **A cms binding in builder `settings` fails outside a CMS context, even on a template page.** A DOM `p` with `settings` `text` bound to a field returns "Element is not inside a CMS context" during the build. Build the element, then bind with `set_settings`. The failed child also stops its later siblings in that subtree, and the builder may still create some of them: read the tree back before adding replacements (a stray seeded RichText was left behind here and published next to the bound one).

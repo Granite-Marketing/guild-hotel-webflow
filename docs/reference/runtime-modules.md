@@ -45,6 +45,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | historyStickyYear | `historyStickyYear.ts` | wired (R00) | G |
 | offersSliderSplit | `offersSliderSplit.ts` | wired (R00) | C, after swiperSliders |
 | imageStackCollapse | `imageStackCollapse.ts` | wired (R00) | G |
+| roomListHoverPreview | `roomListHoverPreview.ts` | opt-in (Q007, not wired yet; R01 enables it) | D, after modals |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
 
 To enable an opt-in module, uncomment its import and its call in
@@ -494,6 +495,33 @@ Category filter for a gallery grid, driven by the sticky subnav tag pill
 - Order: slot E. It mutates layout, so it runs before slot G reveals.
 - Live use: `/gallery` `section_gallery-all` (Q040), tags are links with
   `role="button"`; the tag pill reuses `tab-pills-intro_tabs`.
+
+### roomListHoverPreview
+
+Hover preview for the all-rooms dialog (Q007, component Room List Hover
+Preview on `/rooms`). Hovering or focusing a room name shows that room's
+photo, name, specs and "view more" in the media column.
+
+| Attribute | On | Value |
+|---|---|---|
+| `data-room-preview` | dialog root | none; one per page |
+| `data-room-preview-trigger` | each room link | room key, e.g. `cozy-king` |
+| `data-room-preview-panel` | each preview `article` | the same room key |
+
+- The active link and panel get `is-active`; inactive panels get
+  `aria-hidden="true"`. Webflow carries `is-active` on the reference room, so
+  the dialog shows a photo before the module runs.
+- The All / Rooms / Suites tabs are the `galleryFilter` contract on the same
+  root (`data-gallery-filter`, `-tag`, `-item`). When a filter hides the
+  active room, the first visible room becomes active.
+- Open and close are `modals()` (`id="all-rooms"`, triggers carry
+  `data-modal-open="all-rooms"`).
+- Gotcha: a family class that sets `display` on the filtered items beats the
+  template `.hide` (same specificity, later in the CSS), so `_item` sets no
+  `display`.
+
+Fixture and spec: `tests/visual/fixtures/room-list-hover-preview.{html,ts}`,
+`tests/visual/room-list-hover-preview.spec.ts`.
 
 ### historyStickyYear
 
