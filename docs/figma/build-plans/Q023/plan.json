@@ -632,7 +632,11 @@
     "The H3-CAPS 'press' and 'dining' labels at the bottom of the base crops belong to the next section (press/03, happenings/03), so the brief's heading-size content note (h3-caps vs morello-80) does not apply. Every instance uses heading-style-h1 + text-style-script.",
     "Heading colour is #000000 in the wellness and meetings references and #29310C in the base references. The plan inherits color-accent (#29310C) everywhere.",
     "Paragraph widths in the references are 588, 636 and 660px; the plan uses one max-width of 37.5rem.",
-    "The base and media instances share one Webflow component; 'media' is a Webflow component variant that applies is-media to the component, header, stage, frame and tabs elements."
+    "The base and media instances share one Webflow component; 'media' is a Webflow component variant that applies is-media to the component, header, stage, frame and tabs elements.",
+    "Q023 build: the `tabs` and `panels` slots are not slots. The props API has no slot type (Q022 finding). The definition holds four fixed tab links with label and url link props, and Show tab 4 (default off) covers the three-tab and four-tab instances. The panels slot is left for the Designer; the Q021 venue cards cannot be dropped into the frame until it exists.",
+    "Q023 build: the `media` Webflow component variant is not built. The is-media look is two plain reference sections on the build page (wellness with 4 tabs, meetings with 3), following the Q017, Q019, Q020 and Q021 precedent; V01 decides the per-instance variant route.",
+    "Q023 build: the heading aria-label is bound to the Heading prop, so it carries the same line break as the heading text (\"A room\\nfor every stay\"). The reference sections use a static one-line aria-label.",
+    "Q023 build: the definition's first tab carries `is-active` statically, so base instances show the first tab active and scrollEnlargeSnap moves it on media instances."
   ],
   "k01": {
     "reconciledBy": "K01, 2026-10-20",
@@ -643,5 +647,105 @@
       "Script heading is `text-style-script is-large`. The live `text-style-eyebrow-caps` has no mobile step, so the tab labels stay 18px on mobile (the plan proposed 16px).",
       "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
     ]
+  },
+  "build": {
+    "builtBy": "Q023, 2026-10-20",
+    "buildPage": "6ad712caa15308564d06f1a8",
+    "componentId": "30192280-e01e-6f0a-638c-42d4686bee29",
+    "componentName": "tab-pills-intro",
+    "group": "Sections",
+    "defaultContent": "press/02",
+    "props": [
+      {
+        "name": "Heading",
+        "id": "f2f5e9fd-b2b2-ede5-2d94-15f81377e6e1",
+        "type": "textContent",
+        "boundTo": "heading text and aria-label"
+      },
+      {
+        "name": "Text",
+        "id": "201b39ab-c1e5-2b88-2d64-115d2eaccec1",
+        "type": "textContent"
+      },
+      {
+        "name": "Tabs label",
+        "id": "3e1c8f3d-8d61-487e-6dc0-08ef7920490e",
+        "type": "string",
+        "boundTo": "nav aria-label"
+      },
+      {
+        "name": "Tab 1 label",
+        "id": "2ce951d2-2dcc-4b6b-43d0-e1f70618306f",
+        "type": "textContent"
+      },
+      {
+        "name": "Tab 1 link",
+        "id": "626616fa-e73c-7e04-a138-61c943b0e64a",
+        "type": "link",
+        "default": "#press"
+      },
+      {
+        "name": "Tab 2 label",
+        "id": "68aab13c-9253-d62e-2ef1-c6de61e5db2b",
+        "type": "textContent"
+      },
+      {
+        "name": "Tab 2 link",
+        "id": "d2415ca6-0269-8abd-837c-280d008a7a1f",
+        "type": "link",
+        "default": "#design"
+      },
+      {
+        "name": "Tab 3 label",
+        "id": "de2dc000-5897-229d-ad2e-baeb3ea39dfc",
+        "type": "textContent"
+      },
+      {
+        "name": "Tab 3 link",
+        "id": "3278e79b-73c2-0693-3468-9dcc685deac5",
+        "type": "link",
+        "default": "#community"
+      },
+      {
+        "name": "Tab 4 label",
+        "id": "5586f337-916f-51d0-ca2c-efc3f453c6c5",
+        "type": "textContent"
+      },
+      {
+        "name": "Tab 4 link",
+        "id": "cae0d55e-82a5-537d-068c-8927e4d14039",
+        "type": "link",
+        "default": "#"
+      },
+      {
+        "name": "Show tab 4",
+        "id": "e689535f-149c-02f8-ff36-ee08947a19bb",
+        "type": "boolean",
+        "default": false,
+        "boundTo": "tab 4 visibility"
+      }
+    ],
+    "referenceSections": [
+      "is-media (wellness, 4 tabs)",
+      "is-media (meetings, 3 tabs)"
+    ],
+    "classesCreated": [
+      {
+        "selector": ".tab-pills-intro_text.text-size-medium",
+        "id": "465ed3ca-77db-4ca4-489f-024710cc97e1",
+        "properties": "none"
+      },
+      {
+        "selector": ".tab-pills-intro_tab.text-style-eyebrow-caps",
+        "id": "0c50606b-d974-2c63-d0fd-a72f9d7a63a2",
+        "properties": "none"
+      },
+      {
+        "selector": ".tab-pills-intro_tab.text-style-eyebrow-caps.is-active",
+        "id": "fae1698f-2b88-fd95-8963-9971757fbd5a",
+        "properties": "none"
+      }
+    ],
+    "standaloneClassesCreated": []
   }
 }

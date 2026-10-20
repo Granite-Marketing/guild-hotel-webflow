@@ -156,3 +156,11 @@ Rules for the build skill:
 ## Visual checks (Q020, 2026-10-20)
 
 - **Visual check by publishing to staging (Q020).** The Designer canvas can render Data API builds wrongly. On Q020 the eyebrow h3s showed at h3 tag size (about 40px) while the published page computed 18px as planned. Check the published page instead: build pages are created as drafts, so set `draft: false` with `data_pages_tool > update_page_settings`, then `data_sites_tool > publish_site` with `publishToWebflowSubdomain: true` and no custom domains. Read computed styles on `<site>.webflow.io/<slug>` in a browser. Stephen approved staging publishes for this project on 2026-10-20 (not shared with the client yet).
+
+## Gotchas found in the Q023 build (2026-10-20)
+
+- **Attribute bound to a text prop keeps its line breaks.** Binding a heading's `aria-label` (`set_settings` key `attributes`, `value_binding` to a `textContent` prop) works, and the attribute resolves to the prop value including its `\n`. Use a separate string prop if the label must be one line.
+- **Binding `attributes` replaces the whole list.** Re-include every static attribute (for example `data-*` hooks) in the same write. The nav and heading in Q023 had only `aria-label`, so nothing was lost.
+- **Text and link on a TextLink bind together.** One `set_settings` operation with keys `text` and `link` (both `binding` to props) applied cleanly, and the static `data-*` attributes on the link survived.
+- **Three-class combos for a state class.** A first tab with `tab_x text-style-eyebrow-caps is-active` needs `.tab_x.text-style-eyebrow-caps.is-active` to exist, even when `.tab_x.is-active` already carries the styles. Create it empty; the published CSS for `.tab_x.is-active` still matches the element.
+

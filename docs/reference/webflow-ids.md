@@ -92,6 +92,7 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 | form-split-script-contact | `2f0cac24-8156-b0d7-520c-f5128139d6b0` | Q022, built on `/build-form-split-script-contact` (2026-10-20); 7 props (Heading, Paragraph, 5 Show booleans); default content is the guidelines/06 photoshoot form; `is-tall` is a reference section on the build page |
 | Venue Card Fullbleed | `bbccdbb5-db17-02a1-a0cc-43ce0f5da371` | Q021 static base card, built on `/build-venue-card-fullbleed` (2026-10-20); 15 props (5 content and button, 4 image, 6 Show booleans); snap groups, `is-tall` and `is-left` are plain reference sections on the build page |
 | image-inset-single | `3eeb97fa-6550-7845-31ee-e997e4b8f2f1` | Q024, group Sections, built on `/build-image-inset-single` (2026-10-20); 2 props (image, image alt); `is-small` is a plain reference section on the build page |
+| tab-pills-intro | `30192280-e01e-6f0a-638c-42d4686bee29` | Q023, group Sections, built on `/build-tab-pills-intro` (2026-10-20); 12 props (Content, Tabs, Visibility groups); default content is press/02; `is-media` wellness and meetings are plain reference sections on the build page |
 
 ## Variable Collections
 
