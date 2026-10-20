@@ -238,3 +238,12 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q034: wellness/02 to 06 is a plain snap section built from the tab-pills-intro `is-media` family, so the is-media combos must stay even after the tab-pills-intro Media variant replaces the reference sections on `/build-tab-pills-intro`.
 - [ ] Q034: panel images use the library alt text set in the build ("In-room wellness at The Guild Hotel" and similar); review with `/asset-metadata`.
 - [ ] Q034 staging check: tab pill about 50px above the frame bottom (Figma lower); at 390 the pill is wider than the frame and clips "fitness center"; the Offers Slider Split label collides with the nav text; light nav text is low contrast over the cream intro. Details in `docs/figma/build-plans/Q034/staging-notes.md`.
+## Q044 Neighborhood (2026-10-20)
+
+- [ ] Q044 (Designer): visual check of `/neighborhood` against the neighborhood section crops, mainly the one-off corporate section (08) and the Coronado Beach dialog (16). Staging is published and the bundle runs there; the modal opens from timeline items 1 and 3 and both offers sliders initialise.
+- [ ] Q044: every image slot on the page is a grey placeholder except the map (10); real photos for the hero, splits, timeline, corporate cards (`data-image-placeholder`), dining cards, gallery and the dialog (currently the retail placeholder asset) are needed.
+- [ ] Q044: the corporate CTA "corporate & legal packages" links to `/meetings`; repoint it once a legal and corporate listing page exists.
+- [ ] Q044: the Coronado Beach timeline items open the dialog by click only (figures with no tabindex). If keyboard access is wanted, `modals.ts` needs Enter and Space handling on non-link triggers, or the items need a link wrapper in the Tall component.
+- [ ] Q044: neighborhood/05's burgundy pill nav (dining, arts, beyond downtown, services) is not part of any component and is not built; decide whether it is a sticky in-page nav.
+- [ ] Q037: visual check of `/guidelines` on staging (notes in `docs/figma/build-plans/Q037/`).
+- [ ] Q037: the hero has no image (Figma grey slot; Show Image is off); set Image and Show Image when the photo arrives. The guidelines/05 feature is an empty `figure` with `data-image-placeholder`; add a `u-image` Image when the collaborator photo arrives.
