@@ -2083,7 +2083,7 @@
       "session": null,
       "branch": null,
       "pr": 99,
-      "notes": "Baseline run before W02 (punch-list merge blocked): report https://claude.ai/artifact/7vaBYeN3pEneR54FJm64tX, findings in docs/figma/qa-findings.md. Re-run after W02.",
+      "notes": "Baseline and final pass: https://claude.ai/artifact/7vaBYeN3pEneR54FJm64tX (v2). 10 broken / 44 drift down to 2 / 18. Findings in docs/figma/qa-findings-final.md (PR 99).",
       "model": "claude-sonnet-5-5",
       "effort": "medium",
       "modelReason": ""
