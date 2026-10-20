@@ -186,6 +186,14 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q008: visual check of `/build-offers-slider-split` in the Designer and on staging against the crops (agent notes in `docs/figma/build-plans/Q008/staging-notes.md`).
 - [ ] Q008: home/13 retail crop shows a cream cross logo over the photo; confirm whether it is part of the photo asset or an overlay to add.
 
+## Q006 overlay-detail-panel-modal (2026-10-20)
+- [ ] Q006: page sessions place Overlay Detail Panel Modal instances and wire triggers with `data-modal-open` (table in `docs/figma/build-plans/Q006/plan.md`): Meetings (Q035) and the Legal Corporates template (Q028) "discover more" on the council boardroom venue card; Arts (Q041) artwork tile and artist link; Neighborhood (Q044) "Coronado Beach" item. Each instance sets Dialog id and Image.
+- [ ] Q006 (Q005 owner): the dining menu (Image Bg) and booking window (Burgundy) dialogs need triggers in the Site Nav: a "dining" menu entry and the "book" button with `data-modal-open` (the Book link prop is a URL today). Decide whether the two dialogs live inside the Site Nav component or on each page.
+- [ ] Q006: confirm what opens arts/12 (artist bio): no artist card exists in the Figma.
+- [ ] Q006: real photos and alt text for every dialog image (placeholder asset `6ad67011134731ad1b928045` on the build page).
+- [ ] Q006: visual check of `/build-overlay-detail-panel-modal` once R00 ships the bundle to the footer (staging has no script yet, so the triggers do nothing there today; the fixture spec covers the runtime).
+- [ ] Q006: delete the build page in the Designer once the instances live on real pages.
+
 ## Q009 card-carousel-header-left (2026-10-20)
 - [ ] Q009 (R00): enable `cardCarouselHeaderLeft()` in `src/index.ts` (slot C, after `swiperSliders()`), with the Swiper 12 CSS (head) and JS (footer, before the bundle) in the site custom code if R00 has not added them; then release a tag. Until then staging shows the cards in a clipped row with dead arrows.
 - [ ] Q009: replace the marked sections with Card Carousel Header Left instances: `/history` `8829d2d2-6596-bb48-7469-cb63d779021a` (history/09, Compact, defaults) and `/gallery` `2b4ad8af-eb33-7b35-11cd-f93c3882180f` (gallery/04, Base, defaults). Decide whether the Dinings Template stand-in `86d57348-f224-7d1f-8ca3-1011769f1eb2` (`section_card-stagger-header-left`, `data-placeholder="Q009"`, Q027) becomes an instance with dining labels or stays. Props per instance: `docs/figma/build-plans/Q009/plan.md`. Pages built later (press, arts, contact, rooms-individual, happenings and blog) place the instance directly.
