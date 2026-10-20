@@ -149,7 +149,7 @@ Created by K02 on 2026-10-20 from the wave 2 plans (`docs/figma/build-plans/Q0xx
 |---|---|---|---|---|
 | Q012 | `section_cta-booking-newsletter` / `cta-booking-newsletter_*` | 17 | 0 | none |
 | Q013 | `section_footer-links` / `footer-links_*` | 19 | 1 | `footer-links_padding` |
-| Q014 | `section_hero-fullbleed-centered` / `hero-fullbleed-centered_*` | 9 | 2 | `is-left`, `is-text-dark` |
+| Q014 | `section_hero-fullbleed-centered` / `hero-fullbleed-centered_*` | 10 | 2 | `is-left`, `is-text-dark`. `hero-fullbleed-centered_overlay` (2026-10-20): black at 40% (`rgba(0, 0, 0, 0.4)`), absolute inset 0, `pointer-events: none`, inside `_figure` after the image so Show Image hides it; `display: none` in the Text Dark variant. |
 | Q015 | `section_faq-accordion` / `faq-accordion_*` | 4 | 0 | none |
 | Q016 | `section_script-intro-centered` / `script-intro-centered_*` | 11 | 3 | `is-bottom`, `is-tall`, `is-wide` |
 | Q017 | `section_split-image-text-light` / `split-image-text-light_*` | 12 | 18 | `is-below`, `is-blue`, `is-bottom`, `is-chamfer`, `is-end`, `is-end-half`, `is-olive`, `is-outdent`, `is-overlap`, `is-secondary`, `is-start-1`, `is-start-2`, `is-start-4`, `is-start-7`, `is-start-9`, `is-tan`, `is-wide`, `is-wide-text` |
