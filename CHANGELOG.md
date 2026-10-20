@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1
+
+### Patch Changes
+
+- Wire offersSliderSplit (Q008) in slot C after swiperSliders, so the Offers Slider Split crossfades and counts on staging. Mark the R00 modules as wired in runtime-modules.md.
+
 ## 1.1.0
 
 ### Minor Changes

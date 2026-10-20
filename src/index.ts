@@ -26,6 +26,7 @@ import { imageStackCollapse } from '$utils/imageStackCollapse'
 import { imageTrailHover } from '$utils/imageTrailHover'
 import { modals } from '$utils/modals'
 import { navToggle } from '$utils/navToggle'
+import { offersSliderSplit } from '$utils/offersSliderSplit'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
 import { smoothScroll } from '$utils/smoothScroll'
 import { swiperSliders } from '$utils/swiperSliders'
@@ -60,6 +61,7 @@ window.Webflow.push(() => {
 
   // slot C: backgroundVideo(), heroTextReveal()
   swiperSliders()
+  offersSliderSplit()
 
   // slot D: navToggle(), imageHoverScale(), imageTrailHover()
   navToggle()
