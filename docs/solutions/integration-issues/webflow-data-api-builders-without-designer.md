@@ -157,3 +157,8 @@ Rules for the build skill:
 
 - **Visual check by publishing to staging (Q020).** The Designer canvas can render Data API builds wrongly. On Q020 the eyebrow h3s showed at h3 tag size (about 40px) while the published page computed 18px as planned. Check the published page instead: build pages are created as drafts, so set `draft: false` with `data_pages_tool > update_page_settings`, then `data_sites_tool > publish_site` with `publishToWebflowSubdomain: true` and no custom domains. Read computed styles on `<site>.webflow.io/<slug>` in a browser. Stephen approved staging publishes for this project on 2026-10-20 (not shared with the client yet).
 - **Designer drops some API-created utility combos (Q020).** On the card titles, the API and the published HTML both had `image-trio-text_item-heading text-style-eyebrow-caps`, but the Designer showed only `image-trio-text_item-heading` and rendered the h3 at tag size. For a family element whose only job is one text style, put the style values on the family class itself instead of stacking a global utility through an empty combo.
+
+## Gotchas found in the Q026 build (2026-10-20)
+
+- **Text elements with semantic tags:** a builder `DOM` element with `set_dom_config` `figcaption` and `settings` `[{ key: "text", static_text: { value } }]` creates a real `<figcaption>` with its text in one call, and its `text` setting binds to a text prop after conversion. Use it where `BY_CUSTOM_TAG` would give a Block that takes no text.
+- **Modifier stacks of three or four classes** (`_item is-large is-end is-lift`) apply only after each level exists as an empty combo; the published CSS of each two-class combo (`.x_item.is-lift`) still matches, so the deeper levels need no properties.
