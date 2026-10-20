@@ -1668,7 +1668,11 @@
     "Q017 build: image slots without an asset are left as empty Image elements. Images with an asset (blue, tan) inherit the library alt; no alt was written. The plan alt is empty, so mark them decorative in the Designer if the library alt should not apply.",
     "Q017 build: the tan stamp has no asset (figma/vectors/group-263x263-228-7875.svg is not uploaded), so its Image is empty on the tan reference section.",
     "Q017 build: the tan heading stays an h2 (not the h1 the brief suggested), as in the tree and Q012.",
-    "Q017 build: CTA links are a # url placeholder."
+    "Q017 build: CTA links are a # url placeholder.",
+    "V02 (2026-10-20): every plan variant and base layout is now a style-only Webflow component variant (Olive, Blue, Tan, Compact, Edge, Stagger Left, Stagger Mid, Wide); no separate components. Each variant copies its combo values onto the base classes inside the component: section_split-image-text-light (colour), container-large (max-width none stands in for container-full; Compact also gets negative margin-top and margin-bottom of 2, 1.5, 1 and 0.5rem per breakpoint, which turns the padding-section-large spacing into the padding-section-medium spacing), split-image-text-light_media, _content and _header. Visibility stays on props: page builds turn on Second image for Edge and Wide, Stamp for Tan, Header off for Compact, Footer where a CTA shows.",
+    "V02: the Tan script heading is variant styles on split-image-text-light_heading (font family, 5rem/4rem/3.25rem/2.75rem, line height 1.2, weight 400, text-transform none), copied from text-style-script plus is-large, because a variant cannot swap the heading classes.",
+    "V02: arts/05 (Edge) uses an h3-size heading; the Edge variant keeps the h4 size, since only one of three Edge instances needs h3. See follow-ups.",
+    "V02: variant styles only reach an element through its first class. Styles first set on padding-section-large and heading-style-h4 (combo-position classes) published as CSS but never matched, because the element got no w-variant class; they were moved to padding-global and split-image-text-light_heading. A padding-global variant style then did apply as a class but lost to .padding-section-large, which comes later in the stylesheet at the same specificity, so Compact uses container margins instead."
   ],
   "previewAssumptions": {
     "note": "Element stand-ins for the preview only. K01 removed the class and variable stand-ins: previews load ../shared-preview.css instead.",
@@ -1766,6 +1770,28 @@
         "id": "fc024fe7-3fea-3858-f496-00205211d2c5",
         "properties": "none"
       }
-    ]
+    ],
+    "variantPropId": "aa420cb8-91f6-452f-84c8-06d3561e68b6",
+    "variantIds": {
+      "base": "base",
+      "olive": "654bb362-ab8e-2b17-8c1c-352117770874",
+      "blue": "f30ba1e7-28c4-ef9f-30bc-31294c23f46d",
+      "tan": "9cd3f054-0bc5-3e71-98b6-562cb8361ab0",
+      "compact": "a6df7398-8cb4-0616-9847-2ba4833207db",
+      "edge": "473c3237-6d5f-b4e2-46df-945ff89461a7",
+      "staggerLeft": "5fb6b74c-56cc-c3c2-eef8-32b240b619e7",
+      "staggerMid": "8dcc8de6-914e-f2a6-a0b5-5f95af173bdf",
+      "wide": "45de7441-0ac3-59ed-e7fb-5c6524848b2d"
+    },
+    "variantInstances": {
+      "olive": "b1f8c735-9d2c-9600-30a8-3d34f3220a6f",
+      "blue": "437df478-63ab-f272-254f-ff527babbcc5",
+      "tan": "a6cc3a82-7062-6326-288d-01847f5a7b91",
+      "compact": "05940c18-c6e5-e139-0f50-49794ab30127",
+      "edge": "00aa76b8-fc64-03c2-0c0d-9563b8dc1306",
+      "staggerLeft": "693bb052-2a87-bdbe-3d7b-1454f3ad8f88",
+      "staggerMid": "ffcd1b70-8fe4-d280-4afe-b6770aa9442d",
+      "wide": "a6fa37b6-8c1c-82bf-2102-a4e5cb41de12"
+    }
   }
 }
