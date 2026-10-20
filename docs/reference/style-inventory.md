@@ -11,6 +11,7 @@ This document is the **live reference** for what already exists in The Guild Hot
 | Component | ID | Instances | Use For |
 |---|---|---|---|
 | Global Styles | `ab488b17-f25a-fbf8-5f54-4a3955eb57e5` | | Relume global styles embed (do not edit) |
+| Site Nav | `fc94d1a2-3399-4de0-e836-0233a6c86cdf` | every page | Q005 navbar and full-screen menu. Insert as the first child of the body. Base variant (light text) on hero pages; set Variant to Dark (`08083309-2be0-2228-878a-7f1c05773f43`, `type: "string"`) on static-template and contact. Needs `navToggle` in the bundle. |
 
 Navbar, modals and overlays, and sliders are built by hand in the Designer (see `docs/figma/inventory.md`). Add them here once they exist so agent builds insert instances instead of rebuilding. Q001 did not touch components; this table was carried over, not re-read.
 
@@ -158,9 +159,16 @@ Created by K02 on 2026-10-20 from the wave 2 plans (`docs/figma/build-plans/Q0xx
 | Q021 | `section_venue-card-fullbleed` / `venue-card-fullbleed_*` | 17 | 11 | `is-active`, `is-left`, `is-media-center`, `is-tall` |
 | Q022 | `section_form-split-script-contact` / `form-split-script-contact_*` | 22 | 6 | `is-centered`, `is-full`, `is-offset`, `is-rotated`, `is-tall`, `is-textarea` |
 | Q023 | `section_tab-pills-intro` / `tab-pills-intro_*` | 9 | 6 | `is-active`, `is-media` |
+| Q005 | `site-nav_*` (root `site-nav_component`, no `section_`) | 21 | 2 | `is-active` (mode), `is-end` (menu detail) |
 | Q024 | `section_image-inset-single` / `image-inset-single_*` | 3 | 1 | `is-small` |
 | Q025 | `section_article-card-staggered` / `article-card-staggered_*` | 9 | 7 | `is-right`, `is-tall` |
 | Q026 | `section_timeline-scatter-images` / `timeline-scatter-images_*` | 9 | 19 | `is-center`, `is-end`, `is-inset`, `is-large`, `is-lift`, `is-medium`, `is-small`, `is-tall`, `is-xlarge`, `is-xsmall` |
+
+**Page one-off section families (wave 3).** A page session creates one family per one-off section, named `section_<page>-<section>` (HANDOVER-wave3 rule 3).
+
+| Entry | Family | Base classes | Combos | Notes |
+|---|---|---|---|---|
+| Q042 | `section_static-template-privacy-policy` / `static-template-privacy-policy_*` | 9 | 0 | Legal copy on `/static-template` (component `rich-text-legal`). Classes: `_component` (two-column grid, one column from medium), `_header`, `_content`, `_block` (article), `_block-header`, `_body` (1.25rem / 1.3, 1.625rem gap), `_text` (paragraph, `white-space: pre-line`), `_list`. Headings use `heading-style-h2` (h1) and `heading-style-h5` (h2) alone. Reuse this family for the legal and corporate pages if they stay static. |
 
 Q020 `is-left` also sits on `image-trio-text_header`, `_list` and `_figure`; apply it to all three with the section. Empty chain paths (no CSS) exist for stacked combos the plans use, for example `split-image-text-light_content.is-start-7.is-bottom.is-wide-text` and `<heading>.text-style-script.is-large`; see section 6 of the write plan.
 

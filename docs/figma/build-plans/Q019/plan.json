@@ -1041,5 +1041,43 @@
       "The outline button is `button is-chamfer is-outline` (dark stroke SVG in shared-assets/).",
       "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
     ]
+  },
+  "variantIds": {},
+  "v02": {
+    "date": "2026-10-20",
+    "variants": [],
+    "separateComponents": [
+      {
+        "modifier": "is-image-bg",
+        "name": "Map Feature Image Bg",
+        "componentId": "5d830b69-6507-7d04-4828-069b2539cffb",
+        "why": "The reference swaps the heading classes (text-style-script is-large for heading-style-h4 text-weight-normal), which a variant cannot do; the base heading's is-large combo would also outrank any variant style on text-style-script. The duplicate carries the is-image-bg combos on section, content, header, aside, figure and image, exactly as the reference section."
+      },
+      {
+        "modifier": "is-centered",
+        "name": "Map Feature Centered",
+        "componentId": "d6e2f6bc-b2b0-8951-1f0a-59832380519b",
+        "why": "Same heading swap (heading-style-h2 text-weight-normal). The duplicate carries the is-centered combos on content, header, aside, figure and image, exactly as the reference section."
+      }
+    ],
+    "instancesPlaced": [
+      {
+        "after": "is-image-bg reference section",
+        "instanceId": "d9b87af6-78b5-9dd0-a286-370ebce38039",
+        "component": "Map Feature Image Bg",
+        "props": "Heading, Text, Show Button off, Show List on, Show Pins on, Image 6ad6701edd7f0762ee12bb55, Image Alt"
+      },
+      {
+        "after": "is-centered reference section",
+        "instanceId": "0f348b0e-cc20-7b7b-6826-e2535397a490",
+        "component": "Map Feature Centered",
+        "props": "Heading, Text, Show Button off, Image 6ad66fed1ce40a5a6239b98e, Image Alt"
+      }
+    ],
+    "readBack": "Classes on every element of both duplicates match their reference sections, so the styles are the same combo rules.",
+    "baseDescription": "Updated with set_component_metadata.",
+    "blocked": [
+      "publish to webflow.io staging: denied by the auto-mode classifier, so the new instances are not published or seen yet"
+    ]
   }
 }

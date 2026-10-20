@@ -1,0 +1,922 @@
+{
+  "entry": "Q005",
+  "component": "Site Nav",
+  "buildOn": {
+    "page": "🧱 site-nav",
+    "slug": "build-site-nav",
+    "pageId": "6ad769cad74aa30b7c564578",
+    "section": "nav-elements/02-menu-1, nav-elements/set-236-8312"
+  },
+  "reusedClasses": [],
+  "familyClasses": [
+    {
+      "name": "site-nav_component",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "top": "0",
+          "left": "0",
+          "right": "0",
+          "z-index": "100",
+          "color": "var(--_primitives---colors--neutral-lightest)"
+        }
+      }
+    },
+    {
+      "name": "site-nav_bar",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "z-index": "2",
+          "display": "flex",
+          "align-items": "center",
+          "justify-content": "space-between",
+          "column-gap": "2rem",
+          "padding-top": "2.5rem",
+          "padding-bottom": "1.5rem",
+          "padding-left": "2.5rem",
+          "padding-right": "2.5rem"
+        },
+        "tablet": {
+          "padding-left": "2rem",
+          "padding-right": "2rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "1.25rem",
+          "padding-bottom": "1.25rem",
+          "padding-left": "1.25rem",
+          "padding-right": "1.25rem",
+          "column-gap": "1rem"
+        }
+      }
+    },
+    {
+      "name": "site-nav_start",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-grow": "1",
+          "flex-shrink": "1",
+          "flex-basis": "0%",
+          "align-items": "center",
+          "column-gap": "2rem"
+        }
+      }
+    },
+    {
+      "name": "site-nav_toggle",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "width": "2.3125rem",
+          "height": "1rem",
+          "flex-shrink": "0",
+          "color": "inherit",
+          "cursor": "pointer"
+        },
+        "mobileLandscape": {
+          "width": "1.75rem",
+          "height": "0.75rem"
+        }
+      }
+    },
+    {
+      "name": "site-nav_icon",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "width": "100%",
+          "height": "100%"
+        }
+      },
+      "note": "HtmlEmbed wrapper; the svg inside uses currentColor"
+    },
+    {
+      "name": "site-nav_modes",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "align-items": "center",
+          "column-gap": "2.125rem"
+        },
+        "tablet": {
+          "display": "none"
+        }
+      }
+    },
+    {
+      "name": "site-nav_mode",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--_typography---font-styles--heading)",
+          "font-size": "1rem",
+          "line-height": "0.75",
+          "font-weight": "900",
+          "letter-spacing": "-0.05em",
+          "text-transform": "lowercase",
+          "text-decoration": "none",
+          "color": "inherit",
+          "display": "flex",
+          "align-items": "center",
+          "column-gap": "0.3125rem",
+          "opacity": "0.5"
+        }
+      },
+      "hover": {
+        "opacity": "1"
+      }
+    },
+    {
+      "name": "site-nav_mode-icon",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "width": "1rem",
+          "height": "1rem",
+          "flex-shrink": "0"
+        }
+      }
+    },
+    {
+      "name": "site-nav_logo",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "26.8125rem",
+          "max-width": "100%",
+          "height": "1.75rem",
+          "flex-shrink": "1",
+          "color": "inherit"
+        },
+        "tablet": {
+          "width": "20rem",
+          "height": "1.3125rem"
+        },
+        "mobileLandscape": {
+          "width": "12rem",
+          "height": "0.8rem"
+        }
+      }
+    },
+    {
+      "name": "site-nav_end",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-grow": "1",
+          "flex-shrink": "1",
+          "flex-basis": "0%",
+          "justify-content": "flex-end"
+        }
+      }
+    },
+    {
+      "name": "site-nav_book",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--_typography---font-styles--heading)",
+          "font-size": "1rem",
+          "line-height": "0.75",
+          "font-weight": "900",
+          "letter-spacing": "-0.05em",
+          "text-transform": "lowercase",
+          "text-decoration": "none",
+          "color": "inherit",
+          "white-space": "nowrap"
+        },
+        "mobileLandscape": {
+          "font-size": "0.75rem"
+        }
+      },
+      "hover": {
+        "opacity": "0.7"
+      }
+    },
+    {
+      "name": "site-nav_menu",
+      "styles": {
+        "desktop": {
+          "position": "fixed",
+          "top": "0",
+          "left": "0",
+          "right": "0",
+          "bottom": "0",
+          "z-index": "1",
+          "display": "flex",
+          "flex-direction": "column",
+          "overflow": "auto",
+          "background-color": "var(--_primitives---colors--neutral-darkest)",
+          "color": "var(--_primitives---colors--neutral-lightest)",
+          "opacity": "0",
+          "visibility": "hidden",
+          "pointer-events": "none"
+        }
+      },
+      "note": "Open state, transition and the header colour override live in the menu-state embed (descendant selectors)"
+    },
+    {
+      "name": "site-nav_menu-figure",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "top": "0",
+          "left": "0",
+          "right": "0",
+          "bottom": "0",
+          "margin": "0",
+          "overflow": "hidden"
+        }
+      }
+    },
+    {
+      "name": "site-nav_menu-image",
+      "styles": {
+        "desktop": {
+          "width": "100%",
+          "height": "100%",
+          "object-fit": "cover"
+        }
+      }
+    },
+    {
+      "name": "site-nav_menu-overlay",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "top": "0",
+          "left": "0",
+          "right": "0",
+          "bottom": "0",
+          "background-color": "rgba(0, 0, 0, 0.5)"
+        }
+      }
+    },
+    {
+      "name": "site-nav_menu-nav",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "display": "flex",
+          "flex-grow": "1",
+          "align-items": "center",
+          "justify-content": "center",
+          "padding-top": "7rem",
+          "padding-bottom": "3rem",
+          "padding-left": "2rem",
+          "padding-right": "2rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "5rem"
+        }
+      }
+    },
+    {
+      "name": "site-nav_menu-list",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+          "row-gap": "1.5rem",
+          "text-align": "center"
+        },
+        "mobileLandscape": {
+          "row-gap": "1.25rem"
+        }
+      }
+    },
+    {
+      "name": "site-nav_menu-link",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--_typography---font-styles--heading)",
+          "font-size": "2.5rem",
+          "line-height": "0.95",
+          "font-weight": "900",
+          "letter-spacing": "0",
+          "text-transform": "lowercase",
+          "text-decoration": "none",
+          "color": "inherit"
+        },
+        "tablet": {
+          "font-size": "2.25rem"
+        },
+        "mobileLandscape": {
+          "font-size": "1.75rem"
+        },
+        "mobilePortrait": {
+          "font-size": "1.5rem"
+        }
+      },
+      "hover": {
+        "opacity": "0.7"
+      }
+    },
+    {
+      "name": "site-nav_menu-footer",
+      "styles": {
+        "desktop": {
+          "display": "grid",
+          "grid-template-columns": "1fr auto 1fr",
+          "align-items": "center",
+          "column-gap": "2rem",
+          "position": "relative",
+          "padding-left": "4rem",
+          "padding-right": "3.5rem",
+          "padding-bottom": "1.75rem"
+        },
+        "tablet": {
+          "padding-left": "2rem",
+          "padding-right": "2rem"
+        },
+        "mobileLandscape": {
+          "flex-direction": "column",
+          "row-gap": "0.75rem",
+          "text-align": "center",
+          "padding-bottom": "2rem",
+          "display": "flex"
+        }
+      }
+    },
+    {
+      "name": "site-nav_menu-detail",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--_typography---font-styles--heading)",
+          "font-size": "1rem",
+          "line-height": "1.2",
+          "font-weight": "900",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase",
+          "text-decoration": "none",
+          "color": "inherit"
+        },
+        "mobileLandscape": {
+          "font-size": "0.875rem"
+        }
+      },
+      "hover": {
+        "opacity": "0.7"
+      }
+    },
+    {
+      "name": "site-nav_embed",
+      "styles": {
+        "desktop": {
+          "display": "none"
+        }
+      },
+      "note": "holds the menu-state <style>"
+    }
+  ],
+  "comboClasses": [
+    {
+      "name": "site-nav_mode.is-active",
+      "styles": {
+        "desktop": {
+          "opacity": "1"
+        }
+      }
+    },
+    {
+      "name": "site-nav_menu-detail.is-end",
+      "styles": {
+        "desktop": {
+          "justify-self": "end",
+          "text-align": "right"
+        },
+        "mobileLandscape": {
+          "justify-self": "auto",
+          "text-align": "center"
+        }
+      }
+    }
+  ],
+  "proposedShared": [],
+  "variables": [
+    "color-neutral-100 (--_primitives---colors--neutral-lightest)",
+    "color-neutral-900 (--_primitives---colors--neutral-darkest)",
+    "Font Styles/Heading"
+  ],
+  "tree": [
+    {
+      "tag": "header",
+      "classes": [
+        "site-nav_component"
+      ],
+      "attributes": {
+        "data-nav": "header",
+        "data-nav-lock": "always"
+      },
+      "children": [
+        {
+          "tag": "div",
+          "classes": [
+            "site-nav_bar"
+          ],
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "site-nav_start"
+              ],
+              "children": [
+                {
+                  "tag": "a",
+                  "classes": [
+                    "site-nav_toggle"
+                  ],
+                  "attributes": {
+                    "data-nav": "open",
+                    "href": "#",
+                    "aria-label": "Open navigation menu"
+                  },
+                  "children": [
+                    {
+                      "tag": "HtmlEmbed",
+                      "classes": [
+                        "site-nav_icon"
+                      ],
+                      "embed": "embeds/menu-icon.html"
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "classes": [
+                    "site-nav_modes"
+                  ],
+                  "attributes": {
+                    "role": "group",
+                    "aria-label": "Day or night"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "site-nav_mode",
+                        "is-active"
+                      ],
+                      "attributes": {
+                        "data-nav-mode": "day",
+                        "aria-pressed": "true",
+                        "role": "button",
+                        "tabindex": "0"
+                      },
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "site-nav_mode-icon"
+                          ],
+                          "children": [
+                            {
+                              "tag": "HtmlEmbed",
+                              "classes": [
+                                "site-nav_icon"
+                              ],
+                              "embed": "embeds/day-icon.html"
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "text": "day"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "site-nav_mode"
+                      ],
+                      "attributes": {
+                        "data-nav-mode": "night",
+                        "aria-pressed": "false",
+                        "role": "button",
+                        "tabindex": "0"
+                      },
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "site-nav_mode-icon"
+                          ],
+                          "children": [
+                            {
+                              "tag": "HtmlEmbed",
+                              "classes": [
+                                "site-nav_icon"
+                              ],
+                              "embed": "embeds/night-icon.html"
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "text": "night"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "a",
+              "classes": [
+                "site-nav_logo"
+              ],
+              "attributes": {
+                "aria-label": "The Guild Hotel home"
+              },
+              "link": {
+                "page": "6ad64060ae8eac6d7b7c4241",
+                "path": "/"
+              },
+              "children": [
+                {
+                  "tag": "HtmlEmbed",
+                  "classes": [
+                    "site-nav_icon"
+                  ],
+                  "embed": "embeds/logo.html"
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "classes": [
+                "site-nav_end"
+              ],
+              "children": [
+                {
+                  "tag": "a",
+                  "classes": [
+                    "site-nav_book"
+                  ],
+                  "text": "book now",
+                  "link": {
+                    "url": "#book",
+                    "prop": "Book link"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "site-nav_menu"
+          ],
+          "attributes": {
+            "data-nav": "menu"
+          },
+          "children": [
+            {
+              "tag": "figure",
+              "classes": [
+                "site-nav_menu-figure"
+              ],
+              "children": [
+                {
+                  "tag": "img",
+                  "classes": [
+                    "site-nav_menu-image"
+                  ],
+                  "asset": "6ad6700aba96f2e53726c671",
+                  "alt": "",
+                  "attributes": {
+                    "loading": "lazy"
+                  }
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "classes": [
+                "site-nav_menu-overlay"
+              ]
+            },
+            {
+              "tag": "nav",
+              "classes": [
+                "site-nav_menu-nav"
+              ],
+              "attributes": {
+                "aria-label": "Main"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "site-nav_menu-list"
+                  ],
+                  "attributes": {
+                    "data-nav": "list"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-nav_menu-link"
+                      ],
+                      "attributes": {
+                        "data-nav": "link"
+                      },
+                      "text": "stay",
+                      "link": {
+                        "page": "6ad66fd5f8bf4846e809dbee",
+                        "path": "/rooms"
+                      }
+                    },
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-nav_menu-link"
+                      ],
+                      "attributes": {
+                        "data-nav": "link"
+                      },
+                      "text": "dine",
+                      "link": {
+                        "page": "6ad66fd476d24ed37ac4c5cb",
+                        "path": "/dining"
+                      }
+                    },
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-nav_menu-link"
+                      ],
+                      "attributes": {
+                        "data-nav": "link"
+                      },
+                      "text": "wellness",
+                      "link": {
+                        "page": "6ad66fd7735773f253406791",
+                        "path": "/wellness"
+                      }
+                    },
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-nav_menu-link"
+                      ],
+                      "attributes": {
+                        "data-nav": "link"
+                      },
+                      "text": "experiences",
+                      "link": {
+                        "page": "6ad66fd7ba96f2e53726a2eb",
+                        "path": "/arts"
+                      }
+                    },
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-nav_menu-link"
+                      ],
+                      "attributes": {
+                        "data-nav": "link"
+                      },
+                      "text": "our history",
+                      "link": {
+                        "page": "6ad66fd276d24ed37ac4c52f",
+                        "path": "/history"
+                      }
+                    },
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-nav_menu-link"
+                      ],
+                      "attributes": {
+                        "data-nav": "link"
+                      },
+                      "text": "meetings & events",
+                      "link": {
+                        "page": "6ad66fd96684c3e22ea4d417",
+                        "path": "/meetings"
+                      }
+                    },
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-nav_menu-link"
+                      ],
+                      "attributes": {
+                        "data-nav": "link"
+                      },
+                      "text": "neighborhood",
+                      "link": {
+                        "page": "6ad66fdb02cc199b55b926ba",
+                        "path": "/neighborhood"
+                      }
+                    },
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-nav_menu-link"
+                      ],
+                      "attributes": {
+                        "data-nav": "link"
+                      },
+                      "text": "gallery",
+                      "link": {
+                        "page": "6ad66fd65794075272b95584",
+                        "path": "/gallery"
+                      }
+                    },
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-nav_menu-link"
+                      ],
+                      "attributes": {
+                        "data-nav": "link"
+                      },
+                      "text": "contact",
+                      "link": {
+                        "page": "6ad66fd8e0b7968459e18f22",
+                        "path": "/contact"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "footer",
+              "classes": [
+                "site-nav_menu-footer"
+              ],
+              "children": [
+                {
+                  "tag": "p",
+                  "classes": [
+                    "site-nav_menu-detail"
+                  ],
+                  "text": "500 W. Broadway San Diego, CA 92101"
+                },
+                {
+                  "tag": "a",
+                  "classes": [
+                    "site-nav_menu-detail"
+                  ],
+                  "text": "(619) 795-6000",
+                  "link": {
+                    "url": "tel:+16197956000"
+                  }
+                },
+                {
+                  "tag": "a",
+                  "classes": [
+                    "site-nav_menu-detail",
+                    "is-end"
+                  ],
+                  "text": "booking@theguildhotel.com",
+                  "link": {
+                    "url": "mailto:booking@theguildhotel.com"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "HtmlEmbed",
+          "classes": [
+            "site-nav_embed"
+          ],
+          "embed": "embeds/menu-state.html"
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": "Dark",
+      "componentVariant": true,
+      "on": "site-nav_component",
+      "styleDeltas": {
+        "desktop": {
+          "color": "var(--_primitives---colors--neutral-darkest)"
+        }
+      },
+      "figma": "236:8311 Main-Dark=Default",
+      "usedBy": [
+        "static-template",
+        "contact"
+      ],
+      "crop": null,
+      "note": "Webflow component variant (V01 route), not a combo class. Base is Main-Light (236:8313), used on 21 of 23 pages. The menu-state embed forces cream text while the menu is open."
+    }
+  ],
+  "props": [
+    {
+      "name": "Book link",
+      "type": "link",
+      "element": "site-nav_book",
+      "default": "#book"
+    }
+  ],
+  "runtime": {
+    "module": "src/utils/navToggle.ts",
+    "enable": "slot D in src/index.ts",
+    "change": "opt-in data-nav-lock=\"always\" on the header pauses scroll at every width (the menu is full screen on desktop too)",
+    "attributes": {
+      "site-nav_component": {
+        "data-nav": "header",
+        "data-nav-lock": "always"
+      }
+    }
+  },
+  "assets": [
+    {
+      "slot": "menu background",
+      "webflowAssetId": "6ad6700aba96f2e53726c671",
+      "local": "assets/images/98eca10794a53739c444c52708394a47e0eedb31.png"
+    },
+    {
+      "slot": "logo, menu icon, day and night icons",
+      "webflowAssetId": null,
+      "local": "docs/figma/build-plans/Q005/embeds/*.html",
+      "note": "inline SVG in HtmlEmbed, fill currentColor, so the Dark variant recolours them"
+    }
+  ],
+  "instances": [
+    {
+      "page": "every page",
+      "variant": "base (light)",
+      "content": {}
+    },
+    {
+      "page": "static-template, contact",
+      "variant": "Dark",
+      "content": {}
+    }
+  ],
+  "openQuestions": [
+    "Day and night toggle: Figma shows it on every page but no behaviour is specified. Built as two links with is-active on day; no script.",
+    "Book now URL: no booking engine link yet; Book link prop defaults to #book.",
+    "experiences has no matching page yet; linked to /arts until a happenings or experiences page exists.",
+    "Shield-Dark and Shield-Light variants (236:8363, 236:8498) exist in the Figma set but no page uses them; not built."
+  ],
+  "deviations": [
+    "Menu list is a div of links, not ul > li, to avoid the List builder seeding empty items (Q013) and so navToggle fades the links directly.",
+    "Day and night switch is hidden below 992px (no room beside the logo); move into the menu later if wanted.",
+    "Menu open state, transition and the open colour override sit in an HtmlEmbed <style>, because Webflow classes cannot express descendant selectors on .is-nav-open.",
+    "Day and night controls are divs with role=button and tabindex, not href=# links, so a click never jumps the page; there is no native button through the Data API (Q015)."
+  ],
+  "build": {
+    "date": "2026-10-20",
+    "route": "Data API only (no Designer)",
+    "component": {
+      "name": "Site Nav",
+      "id": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+      "group": "Global"
+    },
+    "props": {
+      "Book link": "f6c9cf45-4dfc-02ea-be81-50f6e2ecee62",
+      "Variant": "454e7f56-bf51-5074-566c-b5cbae95cdd5"
+    },
+    "variants": {
+      "Dark": "08083309-2be0-2228-878a-7f1c05773f43"
+    },
+    "instancesOnBuildPage": [
+      "base (body, first child)",
+      "Dark (inside div[data-q005-stage=dark])"
+    ],
+    "classesCreated": [
+      "site-nav_component",
+      "site-nav_bar",
+      "site-nav_start",
+      "site-nav_toggle",
+      "site-nav_icon",
+      "site-nav_modes",
+      "site-nav_mode",
+      "site-nav_mode-icon",
+      "site-nav_logo",
+      "site-nav_end",
+      "site-nav_book",
+      "site-nav_menu",
+      "site-nav_menu-figure",
+      "site-nav_menu-image",
+      "site-nav_menu-overlay",
+      "site-nav_menu-nav",
+      "site-nav_menu-list",
+      "site-nav_menu-link",
+      "site-nav_menu-footer",
+      "site-nav_menu-detail",
+      "site-nav_embed"
+    ],
+    "combosCreated": [
+      "site-nav_mode.is-active",
+      "site-nav_menu-detail.is-end"
+    ],
+    "pageOnlyCode": "Build page head and footer freeform code: stand-in backgrounds and a minified navToggle build with GSAP and Lenis from jsDelivr, for the staging check only. Remove once the site bundle ships navToggle.",
+    "staging": "https://the-guild-hotel-c34e71.webflow.io/build-site-nav"
+  }
+}

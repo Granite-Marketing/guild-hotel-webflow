@@ -2216,5 +2216,90 @@
         "webflowAssetId": "6ad74d3052f189f238b78a70"
       }
     ]
+  },
+  "variantIds": {
+    "componentId": "bbccdbb5-db17-02a1-a0cc-43ce0f5da371",
+    "variantPropId": "610e37db-a68b-e1aa-27de-a2d2456aa054",
+    "base": "base",
+    "is-media-center": "024eaaa9-a9b9-c251-8d00-f211d30965d2"
+  },
+  "v02": {
+    "date": "2026-10-20",
+    "variants": [
+      {
+        "modifier": "is-media-center",
+        "name": "Media Center",
+        "variantId": "024eaaa9-a9b9-c251-8d00-f211d30965d2",
+        "styles": {
+          "venue-card-fullbleed_stage": {
+            "main": {
+              "display": "flex",
+              "height": "100svh",
+              "justify-content": "center",
+              "align-items": "center"
+            }
+          },
+          "venue-card-fullbleed_media": {
+            "main": {
+              "width": "83%",
+              "aspect-ratio": "1261 / 712"
+            },
+            "small": {
+              "width": "88%",
+              "aspect-ratio": "3 / 4",
+              "min-height": "0"
+            }
+          }
+        },
+        "readBack": "matches the combos on main and small"
+      }
+    ],
+    "separateComponents": [
+      {
+        "modifier": "is-tall",
+        "name": "Venue Card Fullbleed Tall",
+        "componentId": "f8269db7-7b82-27f1-dd64-8dd069d633f6",
+        "why": "The reference swaps classes a variant cannot swap: heading-style-h1 for heading-style-display, text-size-regular for text-size-large, and button is-chamfer is-outline-light for the filled chamfer. The duplicate carries the is-tall combos on stage, media and header and those classes exactly."
+      },
+      {
+        "modifier": "is-left",
+        "name": "Venue Card Fullbleed Left",
+        "componentId": "100e1eab-d304-3568-6d93-6fa936f8c0af",
+        "why": "Same class swaps (heading-style-h2, text-size-medium, outline CTA) plus the venue list, which is structure. The duplicate carries the is-left combos on stage, media, content and header, and a venue-card-fullbleed_list with three list-link rows (first is-active)."
+      }
+    ],
+    "notVariants": [
+      {
+        "modifier": "is-active",
+        "why": "Runtime state set by scrollEnlargeSnap or the page on tabs and list rows, not an instance choice."
+      },
+      {
+        "modifier": "snap groups (home/04 to 09, dining/03 to 08)",
+        "why": "Several items in one media frame plus the intro, tabs and data-scroll-enlarge-snap attributes; components cannot repeat items. They stay page sections; the Media Center variant only covers a single static card in the start state."
+      }
+    ],
+    "instancesPlaced": [
+      {
+        "after": "dining snap group reference section",
+        "instanceId": "2109256a-61db-662a-7e51-117b00f9ca17",
+        "component": "Venue Card Fullbleed",
+        "variant": "Media Center"
+      },
+      {
+        "after": "is-tall reference section",
+        "instanceId": "9c1e41fd-fbbf-cfcf-7ade-50419f07d513",
+        "component": "Venue Card Fullbleed Tall"
+      },
+      {
+        "after": "is-left reference section",
+        "instanceId": "08c6bb7b-d52f-d032-da8a-d1e0d30d6cb3",
+        "component": "Venue Card Fullbleed Left"
+      }
+    ],
+    "blocked": [
+      "create_prop for the Left list labels and links (Show List, List Item 1 to 3 and their links): denied by the auto-mode classifier, so the rows are static text with # links",
+      "set_component_metadata on the base component description: denied by the classifier, so it still says the variants are plain sections",
+      "publish to webflow.io staging: denied by the classifier"
+    ]
   }
 }
