@@ -84,7 +84,11 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] K02 cleanup: merge the four identical logo classes (`cta-booking-newsletter_logo`, `footer-links_logo-image`, `hero-fullbleed-centered_logo`, `venue-card-fullbleed_logo`) into one shared logo class.
 - [ ] K02: `accordion_item` border-bottom colour is a literal `rgba(38, 33, 24, 0.3)` and not bound to Neutral Darkest; rebind if Webflow allows an alpha variable.
 - [x] Q020: apply `is-left` to `image-trio-text_header`, `_list` and `_figure` as well as the section. Done in the Q020 build reference sections.
-- [ ] Q020: `is-left` and `is-left` + `is-offset` are plain reference sections, not instances; page entries need the same variant decision as Q014 and Q017 (Webflow component variants or unlinked copies). The heading size (h3 or h4) per instance has the same problem.
+- [x] Q020: `is-left` and `is-left` + `is-offset` are plain reference sections, not instances. V02: now the separate components Image Trio Text Left and Image Trio Text Left Offset (no style-only variants fit; see `docs/figma/build-plans/Q020/plan.json` `v02`).
+- [ ] V02-Q020: visual check of the Image Trio Text Left and Left Offset instances on `/build-image-trio-text` in the Designer (computed styles on staging already match the reference sections at 1440).
+- [ ] V02-Q020: delete the old `is-left` and `is-left` + `is-offset` reference sections (`5141da76-b14c-77b7-cfa3-601014da1ddf`, `a4806fe0-dc51-3988-2b80-2c56fdf9c6fc`) on `/build-image-trio-text` after the visual check.
+- [ ] V02-Q020: the Left Offset instance's card texts are line-broken paragraphs; the instance prop API takes plain text only. Page sessions (legal/11, corporate/11) build the `ul` bullets inside the Item Text props with the element builder (see the Q020 rich text notes).
+- [ ] V02-Q020: base Image Trio Text keeps heading-style-h3 (wellness); the dining group-dining instances want heading-style-h4. Decide whether dining gets its own component or accepts h3.
 - [ ] Q020 (Designer): set the Rich Text nested list styling on `image-trio-text_item-text` (list `padding-left` about 1rem, bullet colour inherit), which the MCP cannot do.
 - [ ] Q020: the reference-section figures have no image (grey #D9D9D9 placeholders). Add Image elements when the legal, corporate and dining photos arrive, and check `object-position` on the wellness middle photo (Figma crop).
 - [x] Q014: add the per-instance variant mechanism once the decision above is made (component variants or a second component), and set the missing wide button combos on it.
@@ -96,7 +100,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q016: place `script-intro-centered` on the 9 pages (home uses `is-tall` once variants are decided), then remove the build page. happenings-indiv/02 and blog-indiv/02 still need their own entry.
 - [ ] Q021: add `data-eager` (and `loading=eager`) to the Venue Card Fullbleed component image; the wellness, meetings, legal and corporate tab groups are not built yet.
 - [ ] Q022: add `target=_blank` to the social links in the form-split-script-contact component.
-- [ ] Q020: the is-left reference sections have no `data-image-stack-collapse` attributes; add them where the A02 animation applies.
+- [x] Q020: the is-left reference sections have no `data-image-stack-collapse` attributes; add them where the A02 animation applies. V02: the plan keeps the attributes on base instances only; the Left components have none, by design.
 - [ ] Q023 (Designer): add the `panels` slot to the tab-pills-intro frame (before the nav) and, if wanted, swap the four fixed tabs for a `tabs` slot. The Data API has no slot props.
 - [ ] Q023: the `media` variant (is-media on component, header, stage, frame and tabs) is two plain reference sections on the build page. Apply the V01 route, then place the component on wellness-collection and meetings-collection with the Q021 venue cards as panels.
 - [x] Q023 (Designer): visual check of `/build-tab-pills-intro` (base instance and both is-media sections). Stephen confirmed it looks fine on 2026-10-20.
