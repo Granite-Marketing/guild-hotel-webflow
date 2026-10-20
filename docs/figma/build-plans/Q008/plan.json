@@ -1,0 +1,140 @@
+{
+  "entry": "Q008",
+  "component": "offers-slider-split",
+  "webflowComponent": {
+    "name": "Offers Slider Split",
+    "id": "96c19058-a54d-49c3-9568-d7aee87662b0",
+    "group": "Sliders"
+  },
+  "buildPage": {
+    "id": "6ad77f7b41c3b044b01140a4",
+    "slug": "build-offers-slider-split",
+    "draft": false
+  },
+  "runtime": {
+    "module": "src/utils/offersSliderSplit.ts",
+    "export": "offersSliderSplit",
+    "wired": false,
+    "slot": "C, after swiperSliders()",
+    "fixture": "tests/visual/fixtures/offers-slider-split.html",
+    "spec": "tests/visual/offers-slider-split.spec.ts",
+    "needs": [
+      "Swiper 12 CSS in site head",
+      "Swiper 12 JS before the bundle"
+    ]
+  },
+  "variantIds": {
+    "base": "base",
+    "blue": "1993beed-24b7-3024-c815-349d23e9e282",
+    "tan": "33c1374c-e0f0-7e2f-88ab-e318ee666728"
+  },
+  "variantPropId": "d176b097-92cb-1f48-49bb-d3e451881938",
+  "props": {
+    "Eyebrow": "0a108a11-1d17-c748-426c-571dac60cd3f",
+    "Section label": "1f2131ff-385c-ea70-3051-0c8958c09d7e",
+    "CTA label": "a80e5e25-d884-6cf5-9d63-83a1422f5ce6",
+    "Heading 1": "bf7ec952-d859-4d0d-dbc5-f84c2c935fa2",
+    "Text 1": "fd35295b-3f9c-2f7e-03a8-90230b4da061",
+    "Link 1": "bf16ff1f-7c8f-571f-eabc-f0361b92edbc",
+    "Image 1": "1eb4e7ac-bea8-0c18-0556-b4bfed1163f7",
+    "Show image 1": "60645787-05da-c9f1-c04f-32d6238b7b9f",
+    "Heading 2": "692e9b3d-8c29-21a9-e684-fc1aa898dfbd",
+    "Text 2": "132bfd63-c6b0-07be-3ec8-7671213e47ad",
+    "Link 2": "1045acda-db62-cdf5-9b15-707ba60fb4eb",
+    "Image 2": "52a0645e-b330-53e0-b0da-1fee5dbab5ee",
+    "Show image 2": "c5383a09-5fa2-d399-8087-9950d0388333",
+    "Show slide 2": "c2cbdaa2-2525-c8a4-b74f-2978af322eba",
+    "Heading 3": "29a36268-87ff-818d-9fcd-e5de7a26abc9",
+    "Text 3": "cb169ef8-77ad-1b89-1c17-0fb04b0fef99",
+    "Link 3": "eb300e4d-a5b4-a18f-575c-825240a6f6a1",
+    "Image 3": "dac4e05a-c981-70e5-371a-78a3cdb25926",
+    "Show image 3": "26872f4c-8b5e-bf71-b245-2366193b4ef2",
+    "Show slide 3": "e72fcc37-e948-4fb1-0949-980b25d81839",
+    "Heading 4": "1115b814-95e7-51c9-fd7c-9e765ad0edc4",
+    "Text 4": "89051704-31b0-90bb-5e68-845d618e9f98",
+    "Link 4": "97a4c3de-cd0f-07e4-0d48-a730b1a7dabc",
+    "Image 4": "0a0de125-8914-7799-6816-6f5965cf792d",
+    "Show image 4": "75efe1a7-90c7-3b8e-a2b3-0cb8098d4cd4",
+    "Show slide 4": "77ad49ba-2371-d831-be05-887929dde7b5",
+    "Heading 5": "042217e7-a0ef-c316-f1db-04bd140e05ed",
+    "Text 5": "f537aa42-bcec-4ace-01a6-6ff58ac7f57d",
+    "Link 5": "94a0a6b9-a54a-285e-8995-4f708aa641fe",
+    "Image 5": "e1a8667a-9db9-032d-3fef-edffb6814a07",
+    "Show image 5": "07a1365a-d6ae-8d2e-7d64-b6faee46c8d0",
+    "Show slide 5": "94ff416d-9a77-bf22-8c1c-bae7a5729923"
+  },
+  "assets": {
+    "retailImage": "6ad67011134731ad1b928045"
+  },
+  "classesCreated": {
+    "standalone": [
+      "section_offers-slider-split",
+      "offers-slider-split_slider",
+      "offers-slider-split_slides",
+      "offers-slider-split_slide",
+      "offers-slider-split_item",
+      "offers-slider-split_content",
+      "offers-slider-split_header",
+      "offers-slider-split_heading",
+      "offers-slider-split_text",
+      "offers-slider-split_footer",
+      "offers-slider-split_button",
+      "offers-slider-split_figure",
+      "offers-slider-split_image",
+      "offers-slider-split_overlay",
+      "offers-slider-split_eyebrow",
+      "offers-slider-split_controls",
+      "offers-slider-split_arrow",
+      "offers-slider-split_counter",
+      "offers-slider-split_total"
+    ],
+    "combos": [
+      ".section_offers-slider-split.swiper_slider (empty)",
+      ".offers-slider-split_slider.swiper (empty)",
+      ".offers-slider-split_slider.swiper.offers (empty)",
+      ".offers-slider-split_slides.swiper-wrapper (empty)",
+      ".offers-slider-split_slide.swiper-slide (empty)",
+      ".offers-slider-split_arrow.is-prev (opacity 0.4, hover 1)"
+    ]
+  },
+  "placeholdersOnBuiltPages": [
+    {
+      "page": "/",
+      "section": "home/13-retail",
+      "variant": "Blue",
+      "marker": "section_placeholder[data-placeholder=Q008]"
+    },
+    {
+      "page": "/",
+      "section": "home/16-offers-packages",
+      "variant": "Base",
+      "marker": "section_placeholder[data-placeholder=Q008]"
+    },
+    {
+      "page": "/rooms",
+      "section": "rooms-collection/09-offers-packages",
+      "variant": "Base (brief is-cream)",
+      "marker": "section_placeholder[data-placeholder=Q008]"
+    },
+    {
+      "page": "/history",
+      "section": "history/11-offers-packages",
+      "variant": "Base",
+      "marker": "section_placeholder[data-placeholder=Q008]"
+    },
+    {
+      "page": "/gallery",
+      "section": "gallery/03-offers-packages",
+      "variant": "Base",
+      "marker": "section_placeholder[data-placeholder=Q008]"
+    }
+  ],
+  "deviations": [
+    "is-cream folded into Base (same burgundy panel; cream belongs to the neighbouring section)",
+    "is-media-right and is-1-image are not classes; photo via Image 1 + Show image 1",
+    "heading size tied to variant (Blue, Tan = h3 size) instead of per-instance utility",
+    "button uses family class offers-slider-split_button with copied chamfer values, because a variant cannot beat the .button.is-chamfer combo",
+    "slides 3 to 5 hold placeholder copy (Figma shows one slide per instance)",
+    "image binding key is assetId, not image (set_settings rejected image)"
+  ]
+}
