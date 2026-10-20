@@ -37,6 +37,15 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 
 Static pages created by Q004 on 2026-10-19 (slugs approved by Stephen: the four `-collection` Figma pages use clean slugs). CMS template pages (dining-*, legal, corporate, happenings-*, blog-*) are created with their collections in Q027 to Q030; add their rows then.
 
+### CMS template pages
+
+| Template | Page ID | Path | Collection | Notes |
+|---|---|---|---|---|
+| `🍴 Dinings Template` | `6ad67d7416e13e66c2b76107` | `/dining/<slug>` | `6ad67d7316e13e66c2b760d7` | Assembled by Q027 (2026-10-20), Body `6ad67d7416e13e66c2b7610f`. Instances: Site Nav `f8cbdfba-9844-bc56-4c18-4675d35c9641`, Hero `726f3724-5fec-e4c7-caa6-8f1195d5abdd`, Split Olive `e0471a1c-0f53-a890-8460-fbddb329850e`, Split Stagger Left `b43a49ce-0bbb-f743-2fa7-b3250bb8db7c`, Image Trio Text `58d5c5a8-7e22-04a2-886d-09b8d27c59b1`, Gallery `42e6505b-83c4-c38b-82a8-e3aeecc0e1db`, faq-accordion `d1d32ffd-235e-839e-a309-b4fd1b93056b`, CTA `ce35b1a4-354e-eb34-3eea-404aa24ce152`, Footer `ee2f5942-bd9e-9131-52f5-c656c6e42e49`. Native sections: text-columns-info `7b75f1cc-caa9-0b17-844e-273e78e72f7c`, image-pair-text `d72e46c9-866b-1c48-800a-72b64c23e60a`, quote-band-dark `273f2b41-4042-4829-651a-50c1e5beeb62`, card-stagger-header-left `86d57348-f224-7d1f-8ca3-1011769f1eb2` |
+| `🧑‍⚖️ Legal Corporates Template` | `6ad67d74943352af06e37850` | `/legal-corporate/<slug>` | `6ad67d74943352af06e37843` | |
+| `🏷️ Post Categories Template` | `6ad67d75485ab8562b6e34e0` | `/post-categories/<slug>` | `6ad67d74485ab8562b6e34da` | |
+| `📰 Happenings & Stories Template` | `6ad67d759914af41be21de84` | `/happenings-stories/<slug>` | `6ad67d759914af41be21de7e` | |
+
 ## Build Pages (K02)
 
 Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in the nav. Each build session works only on its own page. Pages cannot be deleted through the API (X01); remove them in the Designer once their components move to real pages.
@@ -153,7 +162,7 @@ Renamed by Stephen on 2026-10-20 (labels and slugs as shown). Model: decisions.m
 | `🏷️ Post Categories` (slug `post-categories`) | `6ad67d74485ab8562b6e34da` | happenings-collection `6ad67dd6f57084c9b83ef704`, blog-collection `6ad67dd6f57084c9b83ef706` |
 | `📰 Happenings & Stories` (slug `happenings-stories`) | `6ad67d759914af41be21de7e` | 6 draft sample posts (C02, below); the two placeholder items were deleted on 2026-10-20 |
 
-`cms-dining` fields (slug: id): `hero-heading` a12380119d472b70dd45f91789af3ebf, `hero-intro` f932bc9eac4e78e6dabf2a4960ea3e8e, `intro-image` 013209ec315eebd7a70571d12141516f, `other-dining-heading` ae37b5ef4767d6e216b8d5aed2ff2762, `other-dining-intro` 1db3846d47828d3e66a284c56ba04b21, `other-dining-label-1` 653ca61f0714efbc54188ac10d91001a, `other-dining-label-2` 11ef34b688eb9808b6a0b321df2afd4d, `other-dining-label-3` 55c8a14d41e2850754675b9804c6e4bb.
+`cms-dining` fields (slug: id): `hero-heading` a12380119d472b70dd45f91789af3ebf, `hero-intro` f932bc9eac4e78e6dabf2a4960ea3e8e, `intro-image` 013209ec315eebd7a70571d12141516f, `other-dining-heading` ae37b5ef4767d6e216b8d5aed2ff2762, `other-dining-intro` 1db3846d47828d3e66a284c56ba04b21, `other-dining-label-1` 653ca61f0714efbc54188ac10d91001a, `other-dining-label-2` 11ef34b688eb9808b6a0b321df2afd4d, `other-dining-label-3` 55c8a14d41e2850754675b9804c6e4bb. Added by Q027 (2026-10-20): `press-quote` (PlainText) abab1d030d2356f75a28f54324240606, `show-press-quote` (Switch) 7e25bc91cd6301841d6bd29d700c0164; set on dining-zuma only. All four items are now ready to publish (not drafts) so the staging publish renders them.
 
 `cms-happenings-blog-collection` field: `hero-heading` 0af5cdb8abb9c97b54f59decff37e1d3.
 
