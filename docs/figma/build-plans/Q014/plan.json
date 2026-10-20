@@ -859,7 +859,8 @@
     "Q014 build: images carry data-eager only; the loading=eager attribute was not set, because eagerImages() promotes [data-eager] images at runtime.",
     "Q014 build: button labels are a text-style-button div inside the link; the builder ignores set_text on a TextBlock, so label text was written with data_element_settings_tool key text.",
     "Q014 build: button links are a # url placeholder; no booking URL is in the plan.",
-    "Q014 build: the Zuma logo slot has no asset, because the wordmark SVG is still not uploaded."
+    "Q014 build: the Zuma logo slot has no asset, because the wordmark SVG is still not uploaded.",
+    "V02 (2026-10-20): Blue Button and Burgundy Button are component variants. Variant styles target a single class by name (combos such as .button.is-chamfer cannot be named), and a .button:where() rule loses to .button.is-chamfer, so the fill is a solid background-image gradient on .button (linear-gradient of Colors/Blue or Colors/Burgundy, painted over the cream background-color) and the label colour (Colors/Secondary) is set on .text-style-button. The reference buttons now use the new empty .button.is-chamfer.is-wide.is-blue and .is-burgundy combos."
   ],
   "k01": {
     "reconciledBy": "K01, 2026-10-20",
@@ -885,7 +886,25 @@
         "selector": ".hero-fullbleed-centered_text.text-size-large",
         "id": "82f3d99a-6c67-a278-b8d5-4f927d7e8930",
         "properties": "none"
+      },
+      {
+        "selector": ".button.is-chamfer.is-wide.is-blue",
+        "id": "1e24b131-e2f0-3dc7-7bd2-4d2cebce5274",
+        "properties": "none"
+      },
+      {
+        "selector": ".button.is-chamfer.is-wide.is-burgundy",
+        "id": "af85f979-7a9d-0d5f-9511-fd2c42a862a2",
+        "properties": "none"
       }
-    ]
+    ],
+    "variantIds": {
+      "base": "base",
+      "is-text-dark": "c5755984-9207-f25b-c049-f99910c92943",
+      "is-left": "75108921-8bef-ba10-2260-5af2990c9e7d",
+      "is-blue": "e8c11cfd-fe49-cdf5-9556-32d89df58988",
+      "is-burgundy": "81c5f9ea-386b-7949-fba8-9ed7d1d78407"
+    },
+    "variantProp": "69451566-4154-e6c8-a0db-695c14d9c0af"
   }
 }
