@@ -258,6 +258,14 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [x] Q037: the hero has no image (Figma grey slot; Show Image is off); set Image and Show Image when the photo arrives. The guidelines/05 feature is an empty `figure` with `data-image-placeholder`; add a `u-image` Image when the collaborator photo arrives.
 - [ ] Snap groups (Home, Dining, Wellness): built as plain sections with `data-scroll-enlarge-snap` instead of Tab Pills Intro plus Venue Card instances, because tab-pills-intro has no panels slot. Accepted for the 80 to 90 percent target; converting needs a panels slot (Designer) or a dedicated snap-group component.
 
+## Q043 Contact (2026-10-20)
+
+- [ ] Q043 (Designer): visual check of `/contact` against the contact crops; agent notes in `docs/figma/build-plans/Q043/staging-notes.md`.
+- [ ] Q043: the contact heading is an h2 (the component's heading tag is fixed), so `/contact` has no h1. Add a heading-tag prop to form-split-script-contact, or set the tag in the Designer.
+- [ ] Q043: instagram and facebook links in form-split-script-contact have no URLs (no link props); add link props or set them when the handles are confirmed.
+- [ ] Q043: the 02 form uses visible labels above each line instead of Figma's in-line placeholders (placeholders cannot be set headlessly), so rows are taller than the crop. Switch to placeholders in the Designer if the in-line look is wanted, then remove `is-labelled`.
+- [ ] Q043: "privacy policy" links to `/static-template`; repoint when a privacy page exists. Form submit destination and notification address are still unset (site form settings).
+- [ ] Q043: the 03 carousel shows a static clipped row until `cardCarouselHeaderLeft()` ships (see the Q009 release item above).
 ## Q041 Arts (2026-10-20)
 
 - [ ] Q041 (Designer): visual check of `/arts` against the arts section crops, mainly the dark gallery (06) and the Dark detail dialogs. Staging is published; the filter, all ten dialogs and Escape close were checked there with no console errors.
@@ -305,6 +313,18 @@ Stand-in library photos on page-level sections and instance props, so staging sh
 - [x] `/meetings` (follow-up pass): stand-in photos in the hero (Show Image on, Base variant), the council boardroom panel and the three key features figures; gallery Images 1 and 4 varied. Per-slot asset ids in `docs/figma/build-plans/Q035/build.md`.
 - [ ] Offers sliders on Home, Rooms, History and Gallery hold the component's placeholder copy on slides 1 to 5 (except Home retail); set real offer copy and hide unused slides.
 - [ ] Every photo here is a stand-in; replace with the real imagery when it arrives, and run `/asset-metadata` for alt text (added images carry short generic alt).
+
+## Q029 Post Categories template (2026-10-20)
+
+Template `/post-categories/<slug>` (`6ad67d75485ab8562b6e34e0`): Site Nav, Hero (Heading bound to `hero-heading`), tab-pills-intro, a native Collection List of Happenings & Stories cards (article-card-staggered classes, even items flush right), Offers Slider Split, FAQ, CTA, Footer. Staging: `/post-categories/happenings-collection` and `/post-categories/blog-collection`.
+
+- [ ] Designer step (blocked headlessly): on the Collection List `a5c0e5b3-38b1-7fef-1453-daeccc3d156e`, add the filter **Category equals Current Post Category**. The Data API accepts only a static item id for a Reference filter ("does not support bound filter values"), so both category pages list all six posts until this is set.
+- [ ] Designer step (blocked headlessly): on the card Link Block `a4d6f938-3965-0d25-f0f8-3d055912b2df`, set the link to **Current Happenings & Stories** (collection page). The API's `collectionPage` and `page` link modes publish a static href, not the item URL; the link is `#` for now.
+- [ ] Hero text and tab-pills copy are the Figma lorem; tabs (dining, culture, conferences) link to `#dining`, `#culture`, `#conferences` with no targets. Decide whether the tabs filter posts by Topic (Finsweet CMS Filter) or link elsewhere.
+- [ ] Category `hero-heading` values are lowercase (`happenings`, `blog`) and render uppercase through the hero style; Post Categories has no image or intro field, so the hero photo and text are the component defaults for both categories. Add fields if the two pages should differ.
+- [ ] Offers Slider Split holds the component's placeholder offer copy on five slides (real library photos).
+- [ ] Visual check against `figma/pages/happenings-collection` and `blog-collection` section.webp at 1440 and mobile once the filter and link are set.
+- [ ] Q043 /contact: inputs still carry Webflow's default `placeholder="Example Text"`; set real placeholders or clear them (the Data API rejects `placeholder`, so this is a Designer step).
 
 ## Q007 room list hover preview (2026-10-20)
 

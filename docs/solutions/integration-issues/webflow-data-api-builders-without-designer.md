@@ -282,10 +282,26 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 - **Builder `set_link` url with a `#hash` is dropped.** A TextLink with `link_type: "url"` and `#photoshoot-request` was created with no link, while an `email` link on a sibling kept its value. Write hash links afterwards with `set_settings` key `link`, `static_link { mode: "url", to: "#..." }`.
 - **Inline links inside running text.** A `DOM` `p` with children `DOM span` (text through `settings` key `text`), `TextLink`, `DOM span` builds a paragraph with inline links in one call. A `sup` DOM element before an inline (`display: inline`) paragraph gives superscript item numbers.
 - **In-page anchor before an instance.** A plain `DOM div` with `settings` `domId` appended just before the instance gives a link target without touching the component.
+
+## Gotchas found assembling Contact (Q043, 2026-10-20)
+
+- **`id` is a reserved builder attribute.** `set_attributes` with `id` rejects the whole `data_element_builder` call and leaves a partial tree. Set ids afterwards with `set_settings` key `domId` (works on form inputs and headings).
+- **`FormSelect` options cannot be set headlessly** (`options` is "not applicable", and no other key exists). A DOM `select` with DOM `option` children (`set_attributes` `name` on the select and `value` on each option, option text through `settings` key `text`) builds a working select in one call.
+- **Builder `Form` inputs default to the "Example Text" placeholder.** With visible labels, hide it with a combo whose `placeholder` pseudo sets `color: transparent` (`update_style` with `pseudo: "placeholder"`).
+- **A visibility prop bound to `FormForm` leaves the `w-form` wrapper in place.** In a grid it still takes a cell; hide the wrapper (variant `display: none`) when the form is off.
+- **CSS `rotate` composes with `transform`.** A variant (0,1,0) cannot beat a combo's `transform: rotate(-7.5deg)`, but `rotate: 7.5deg` on the same element cancels it.
+- **Extending a shared component without changing its instances:** new text props default to the current content and are bound to the existing elements; new optional rows are DOM elements built inside the definition (`scope_component_id`) with `visibility` and `text` bound to new props in the builder's `settings`, defaulting to hidden.
 ## Notes from the Arts page (Q041, 2026-10-20)
 
 - **Modal trigger links take a bare `#` href.** A LinkBlock trigger with `href="#<dialog id>"` makes Webflow's in-page anchor scroll fire on click (the page jumped by the nav height and the URL took the hash), even though `modals.ts` opens the dialog. Use `href="#"` (set with `set_settings` key `link`, `static_link` url `#`); the link stays keyboard focusable and nothing scrolls.
 - **Filter item plus dialog trigger.** Keep `data-gallery-filter-item` on the figure (the element `galleryFilter` hides) and put `data-modal-open` on a LinkBlock inside it, so filtering and keyboard-accessible dialogs work together with no new code.
+## Gotchas found building the Post Categories listing (Q029, 2026-10-20)
+
+- **Collection Lists build headlessly.** `data_element_builder` type `CMSCollection` creates DynamoWrapper > DynamoList > DynamoItem plus a DynamoEmpty. Set `source` (`static_json` `{"collectionId": ...}`) and `sort` (`[{"fieldSlug":"date","direction":"descending"}]`) with `set_settings`; classes go on the DynamoList and DynamoItem with `set_style`. Inside the item, text binds with key `text` and images with key `assetId` (cms binding to an Image field); the published `<img>` carries the item's own alt text. The full settings contract is in the `webflow_guide_tool` output ("CMS Collection List Settings").
+- **"Reference equals current item" cannot be set headlessly.** A `filters` entry on a Reference field accepts only a static item id; a cms or page binding returns "does not support bound filter values in the Designer". Set the filter in the Designer.
+- **"Link to current item" cannot be set headlessly.** `static_link` mode `collectionPage` stores `{pageSlug}` and publishes that string as a relative href; mode `page` with the template page id publishes the bare template path. Neither resolves per item, and the link setting has no bindable sources. Set it in the Designer.
+- **Alternating cards without a variant.** A combo on the item class with an `nth-child(even)` pseudo (`update_style` with `pseudo`) copies a variant's layout per item, since a Variant prop cannot follow the item.
+
 ## Gotchas found in the Q007 build (2026-10-20)
 
 - **A family class with `display` beats the template `hide`.** `galleryFilter` hides items by adding `hide` (`.hide { display: none }`, no `!important`). A family class on the same element that sets `display` (`.room-list-hover-preview_item { display: block }`) comes later in the published CSS with the same specificity and wins, so nothing hides. Leave `display` off any class that `hide` must override. Fixtures that define `.hide` with `!important` themselves (gallery-filter) mask this; test against the published CSS.
