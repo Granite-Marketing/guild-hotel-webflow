@@ -1,5 +1,5 @@
 {
-  "_readme": "Orchestrator ledger for docs/figma/HANDOVER.md. Status: todo | in-progress | waiting-approval | blocked | review | done. Update in the same commit as the work it records. Wave 2 entries (X01, C01, P012 to P026, K01) are run by docs/figma/HANDOVER-wave2.md.",
+  "_readme": "Orchestrator ledger for docs/figma/HANDOVER.md. Status: todo | in-progress | waiting-approval | blocked | review | done. Update in the same commit as the work it records. Wave 2 entries (X01, C01, P012 to P026, K01) are run by docs/figma/HANDOVER-wave2.md. Wave 3 entries (V02-*, M01, Q027 to Q044) are run by docs/figma/HANDOVER-wave3.md.",
   "entries": [
     {
       "id": "D01",
@@ -112,7 +112,8 @@
       "lane": "manual",
       "dependsOn": [
         "Q001",
-        "Q002"
+        "Q002",
+        "M01"
       ],
       "brief": null,
       "surface": "stephen",
@@ -132,7 +133,8 @@
       "lane": "manual",
       "dependsOn": [
         "Q001",
-        "Q002"
+        "Q002",
+        "M01"
       ],
       "brief": null,
       "surface": "stephen",
@@ -152,7 +154,8 @@
       "lane": "manual",
       "dependsOn": [
         "Q001",
-        "Q002"
+        "Q002",
+        "M01"
       ],
       "brief": null,
       "surface": "stephen",
@@ -172,7 +175,8 @@
       "lane": "manual",
       "dependsOn": [
         "Q001",
-        "Q002"
+        "Q002",
+        "M01"
       ],
       "brief": null,
       "surface": "stephen",
@@ -192,7 +196,8 @@
       "lane": "manual",
       "dependsOn": [
         "Q001",
-        "Q002"
+        "Q002",
+        "M01"
       ],
       "brief": null,
       "surface": "stephen",
@@ -212,7 +217,8 @@
       "lane": "manual",
       "dependsOn": [
         "Q001",
-        "Q002"
+        "Q002",
+        "M01"
       ],
       "brief": null,
       "surface": "stephen",
@@ -232,7 +238,8 @@
       "lane": "manual",
       "dependsOn": [
         "Q001",
-        "Q002"
+        "Q002",
+        "M01"
       ],
       "brief": null,
       "surface": "stephen",
@@ -653,10 +660,13 @@
         "Q018",
         "Q020",
         "D02",
-        "C01"
+        "C01",
+        "V02-Q014",
+        "V02-Q017",
+        "V02-Q020"
       ],
-      "brief": "docs/figma/briefs/Q027-cms-dining.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/T-cms-template.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -687,10 +697,16 @@
         "Q021",
         "Q022",
         "D02",
-        "C01"
+        "C01",
+        "V02-Q014",
+        "V02-Q016",
+        "V02-Q019",
+        "V02-Q020",
+        "V02-Q021",
+        "V02-Q022"
       ],
-      "brief": "docs/figma/briefs/Q028-cms-legal-corporate.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/T-cms-template.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -718,10 +734,13 @@
         "Q025",
         "D02",
         "C01",
-        "C02"
+        "C02",
+        "V02-Q014",
+        "V02-Q023",
+        "V02-Q025"
       ],
-      "brief": "docs/figma/briefs/Q029-cms-happenings-blog-collection.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/T-cms-template.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -749,10 +768,14 @@
         "Q024",
         "D02",
         "C01",
-        "C02"
+        "C02",
+        "V02-Q014",
+        "V02-Q016",
+        "V02-Q017",
+        "V02-Q024"
       ],
-      "brief": "docs/figma/briefs/Q030-cms-happenings-blog-indiv.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/T-cms-template.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -782,10 +805,16 @@
         "Q020",
         "Q021",
         "D02",
-        "V01"
+        "V01",
+        "V02-Q014",
+        "V02-Q016",
+        "V02-Q017",
+        "V02-Q019",
+        "V02-Q020",
+        "V02-Q021"
       ],
-      "brief": "docs/figma/briefs/Q031-page-home.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -814,10 +843,14 @@
         "Q021",
         "Q027",
         "D02",
-        "V01"
+        "V01",
+        "V02-Q014",
+        "V02-Q016",
+        "V02-Q019",
+        "V02-Q021"
       ],
-      "brief": "docs/figma/briefs/Q032-page-dining-collection.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -844,10 +877,13 @@
         "Q016",
         "Q019",
         "D02",
-        "V01"
+        "V01",
+        "V02-Q014",
+        "V02-Q016",
+        "V02-Q019"
       ],
-      "brief": "docs/figma/briefs/Q033-page-rooms-collection.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -874,10 +910,13 @@
         "Q021",
         "Q023",
         "D02",
-        "V01"
+        "V01",
+        "V02-Q014",
+        "V02-Q021",
+        "V02-Q023"
       ],
-      "brief": "docs/figma/briefs/Q034-page-wellness-collection.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -908,10 +947,16 @@
         "Q022",
         "Q023",
         "D02",
-        "V01"
+        "V01",
+        "V02-Q014",
+        "V02-Q017",
+        "V02-Q019",
+        "V02-Q021",
+        "V02-Q022",
+        "V02-Q023"
       ],
-      "brief": "docs/figma/briefs/Q035-page-meetings-collection.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -940,10 +985,14 @@
         "Q018",
         "Q019",
         "D02",
-        "V01"
+        "V01",
+        "V02-Q014",
+        "V02-Q016",
+        "V02-Q017",
+        "V02-Q019"
       ],
-      "brief": "docs/figma/briefs/Q036-page-history.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -971,10 +1020,14 @@
         "Q022",
         "Q026",
         "D02",
-        "V01"
+        "V01",
+        "V02-Q014",
+        "V02-Q016",
+        "V02-Q022",
+        "V02-Q026"
       ],
-      "brief": "docs/figma/briefs/Q037-page-guidelines.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -1004,10 +1057,15 @@
         "Q019",
         "Q024",
         "D02",
-        "V01"
+        "V01",
+        "V02-Q014",
+        "V02-Q016",
+        "V02-Q017",
+        "V02-Q019",
+        "V02-Q024"
       ],
-      "brief": "docs/figma/briefs/Q038-page-rooms-individual.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -1034,10 +1092,13 @@
         "Q022",
         "Q023",
         "D02",
-        "V01"
+        "V01",
+        "V02-Q014",
+        "V02-Q022",
+        "V02-Q023"
       ],
-      "brief": "docs/figma/briefs/Q039-page-press.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -1062,10 +1123,11 @@
         "Q014",
         "Q015",
         "D02",
-        "V01"
+        "V01",
+        "V02-Q014"
       ],
-      "brief": "docs/figma/briefs/Q040-page-gallery.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -1093,10 +1155,14 @@
         "Q017",
         "Q024",
         "D02",
-        "V01"
+        "V01",
+        "V02-Q014",
+        "V02-Q016",
+        "V02-Q017",
+        "V02-Q024"
       ],
-      "brief": "docs/figma/briefs/Q041-page-arts.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -1121,8 +1187,8 @@
         "D02",
         "V01"
       ],
-      "brief": "docs/figma/briefs/Q042-page-static-template.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -1147,10 +1213,11 @@
         "Q015",
         "Q022",
         "D02",
-        "V01"
+        "V01",
+        "V02-Q022"
       ],
-      "brief": "docs/figma/briefs/Q043-page-contact.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -1181,10 +1248,16 @@
         "Q025",
         "Q026",
         "D02",
-        "V01"
+        "V01",
+        "V02-Q014",
+        "V02-Q016",
+        "V02-Q017",
+        "V02-Q019",
+        "V02-Q025",
+        "V02-Q026"
       ],
-      "brief": "docs/figma/briefs/Q044-page-neighborhood.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/PG-page-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
@@ -1703,6 +1776,243 @@
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "Probe design and judging evidence"
+    },
+    {
+      "id": "V02-Q014",
+      "title": "Variants: convert Q014 reference sections into component variants (hero-fullbleed-centered)",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "V01",
+        "Q014"
+      ],
+      "brief": "docs/figma/prep/V02-variant-conversion.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/V02-variant-conversion.md for entry Q014.",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Exact style copy plus variant-or-component judgment"
+    },
+    {
+      "id": "V02-Q016",
+      "title": "Variants: convert Q016 reference sections into component variants (script-intro-centered)",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "V01",
+        "Q016"
+      ],
+      "brief": "docs/figma/prep/V02-variant-conversion.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/V02-variant-conversion.md for entry Q016.",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "Exact style copy plus variant-or-component judgment"
+    },
+    {
+      "id": "V02-Q017",
+      "title": "Variants: convert Q017 reference sections into component variants (split-image-text-light)",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "V01",
+        "Q017"
+      ],
+      "brief": "docs/figma/prep/V02-variant-conversion.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/V02-variant-conversion.md for entry Q017.",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Exact style copy plus variant-or-component judgment"
+    },
+    {
+      "id": "V02-Q019",
+      "title": "Variants: convert Q019 reference sections into component variants (map-feature)",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "V01",
+        "Q019"
+      ],
+      "brief": "docs/figma/prep/V02-variant-conversion.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/V02-variant-conversion.md for entry Q019.",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "Exact style copy plus variant-or-component judgment"
+    },
+    {
+      "id": "V02-Q020",
+      "title": "Variants: convert Q020 reference sections into component variants (image-trio-text)",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "V01",
+        "Q020"
+      ],
+      "brief": "docs/figma/prep/V02-variant-conversion.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/V02-variant-conversion.md for entry Q020.",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "Exact style copy plus variant-or-component judgment"
+    },
+    {
+      "id": "V02-Q021",
+      "title": "Variants: convert Q021 reference sections into component variants (venue-card-fullbleed)",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "V01",
+        "Q021"
+      ],
+      "brief": "docs/figma/prep/V02-variant-conversion.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/V02-variant-conversion.md for entry Q021.",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Exact style copy plus variant-or-component judgment"
+    },
+    {
+      "id": "V02-Q022",
+      "title": "Variants: convert Q022 reference sections into component variants (form-split-script-contact)",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "V01",
+        "Q022"
+      ],
+      "brief": "docs/figma/prep/V02-variant-conversion.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/V02-variant-conversion.md for entry Q022.",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "Exact style copy plus variant-or-component judgment"
+    },
+    {
+      "id": "V02-Q023",
+      "title": "Variants: convert Q023 reference sections into component variants (tab-pills-intro)",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "V01",
+        "Q023"
+      ],
+      "brief": "docs/figma/prep/V02-variant-conversion.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/V02-variant-conversion.md for entry Q023.",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "Exact style copy plus variant-or-component judgment"
+    },
+    {
+      "id": "V02-Q024",
+      "title": "Variants: convert Q024 reference sections into component variants (image-inset-single)",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "V01",
+        "Q024"
+      ],
+      "brief": "docs/figma/prep/V02-variant-conversion.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/V02-variant-conversion.md for entry Q024.",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "Exact style copy plus variant-or-component judgment"
+    },
+    {
+      "id": "V02-Q025",
+      "title": "Variants: convert Q025 reference sections into component variants (article-card-staggered)",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "V01",
+        "Q025"
+      ],
+      "brief": "docs/figma/prep/V02-variant-conversion.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/V02-variant-conversion.md for entry Q025.",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "Exact style copy plus variant-or-component judgment"
+    },
+    {
+      "id": "V02-Q026",
+      "title": "Variants: convert Q026 reference sections into component variants (timeline-scatter-images)",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "V01",
+        "Q026"
+      ],
+      "brief": "docs/figma/prep/V02-variant-conversion.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Prompt: Execute docs/figma/prep/V02-variant-conversion.md for entry Q026.",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "modelReason": "Exact style copy plus variant-or-component judgment"
+    },
+    {
+      "id": "M01",
+      "title": "Decision: lane for Q005 to Q011 (navbar, modals, sliders): A Stephen in Designer, B agents via Data API on runtime contracts, C React code components",
+      "type": "decision",
+      "lane": "manual",
+      "dependsOn": [],
+      "brief": null,
+      "surface": "stephen",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Options in docs/figma/HANDOVER-wave3.md section 5; record in decisions.md",
+      "model": null,
+      "effort": null,
+      "modelReason": "manual, Stephen"
     },
     {
       "id": "R01",
