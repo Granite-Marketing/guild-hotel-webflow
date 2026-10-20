@@ -146,6 +146,12 @@
       "slot": "image (arts/03-section)",
       "webflowAssetId": "6ad66fff134731ad1b927c11",
       "local": "assets/images/6f6117168648560af09fa8344fd7ec88a095e861.png"
+    },
+    {
+      "slot": "image-inset-single: image prop default",
+      "webflowAssetId": "6ad67019735773f25340899e",
+      "local": "assets/images/d7332204a5bee888af6d6fe5adf267bebfab8918.png",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
     }
   ],
   "instances": [
