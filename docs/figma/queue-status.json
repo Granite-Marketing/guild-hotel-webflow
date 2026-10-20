@@ -2024,11 +2024,11 @@
       ],
       "brief": "docs/figma/prep/R00-early-release.md",
       "surface": "code",
-      "status": "waiting-approval",
+      "status": "done",
       "session": "local_d8cc5fc3-2427-44ca-b376-12b51326e3bc",
       "branch": null,
       "pr": 73,
-      "notes": "Makes navbar, A01 to A05, accordion and hover scale run on staging. R01 stays the final release. Merged v1.1.1; Stephen to push the tag and paste site scripts (docs/reference/site-scripts.md).",
+      "notes": "Makes navbar, A01 to A05, accordion and hover scale run on staging. R01 stays the final release. Merged v1.1.1; Stephen to push the tag and paste site scripts (docs/reference/site-scripts.md). Stephen pushed v1.1.1 and added site scripts; staging check passed except /rooms hover (follow-up).",
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "Release plus site scripts plus behaviour checks"

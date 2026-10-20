@@ -216,4 +216,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] R00: imageHoverScale does nothing on `/rooms`: `.rooms-collection-room-grid_overlay` sits over the card figure with pointer events on, so the figure never receives `mouseenter`. Fix in Webflow with `pointer-events: none` on the overlay (preferred), or have the module listen on the closest card link. See `docs/figma/build-plans/R00/staging-notes.md`.
 - [ ] R00: `/build-site-nav` has a second `[data-nav="header"]` (the Dark variant instance); navToggle binds only the first set, so the second never opens. Expected on the build page; real pages carry one Site Nav.
 - [ ] R00: accordion headers have no `aria-expanded` until the first click; set `aria-expanded="false"` on init in `src/utils/accordion.ts` in a later release.
-
+- [ ] R00 (staging check 2026-10-20): all behaviours pass on webflow.io except /rooms image hover. Fix: `pointer-events: none` on `rooms-collection-room-grid_overlay`, which sits over the figure and catches the pointer.
+- [ ] R00: Webflow rewrote the GSAP footer tags to its own host at 3.15.0 (`cdn.prod.website-files.com/gsap/3.15.0/`); update `docs/reference/site-scripts.md` to match.
+- [ ] R00: the `🧱 site-nav` page footer still holds duplicate GSAP and Lenis tags plus an inline navToggle; empty it (harmless while the page is unpublished).
+- [ ] Next release (v1.1.2): enable `cardCarouselHeaderLeft()` (Q009) in `src/index.ts`; Q006 modals already use `modals()`.
