@@ -1,5 +1,22 @@
 # W03 baseline QA findings (2026-10-20)
 
+
+## W02 status (2026-10-20, after two fix rounds, verified live)
+
+Fixed and verified on staging (details in `docs/figma/build-plans/W02/`):
+- History 05 year pills render with text; first timeline photo replaced.
+- Form labels on Guidelines, Press, Meetings, Legal, Corporate (component props). Gap: Press and Legal submit under the photoshoot field names; "Example Text" placeholders are hidden, not removed (Designer).
+- gallery-mosaic-captioned captions and heading readable everywhere (top and bottom scrims, cream text).
+- timeline-scatter-images captions: cream over photos on Guidelines, dark below photos on Neighborhood 07 (`is-tall`).
+- Tab pill rows wrap at 390 (Wellness, Gallery, Dining venue tabs).
+- Neighborhood 09 three cards; 05 pill bar; 07 and 08 photos.
+- Press "press" section header.
+- Dinings template: navy split, no overlap with DRESS CODE, distinct hero per item (new `hero-image` field), card and pair photos match captions.
+- Gallery 02 and Legal/Corporate 03 first photos.
+- Happenings & Stories article body heading and "learn more" button.
+
+Still open: Home map artwork label (design placeholder), Press publication logos (need logo files), Zuma logotype in hero and British Vogue logo (need files), post template inset/split/"more around town" are static, dining "other dining options" lists the current venue, Post Categories list unfiltered (Designer: collection list filter), Gallery pill bar position.
+
 Source: `qa-report.html` in the W03 scratch dir (24 captures of https://the-guild-hotel-c34e71.webflow.io at 1440 and 390, compared to `figma/pages/<page>/sections/*/section.webp`). Severity: broken = missing or unusable content, unfinished build; drift = visible difference that does not block use.
 
 Global (not repeated per page): FAQ first item is open in Figma and closed on staging. Full-page captures show scroll-pinned sections blank; spot-checked live on Home, History, Wellness, Gallery, Legal.
