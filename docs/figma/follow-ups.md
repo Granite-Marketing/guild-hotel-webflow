@@ -326,6 +326,18 @@ Template `/post-categories/<slug>` (`6ad67d75485ab8562b6e34e0`): Site Nav, Hero 
 - [ ] Visual check against `figma/pages/happenings-collection` and `blog-collection` section.webp at 1440 and mobile once the filter and link are set.
 - [ ] Q043 /contact: inputs still carry Webflow's default `placeholder="Example Text"`; set real placeholders or clear them (the Data API rejects `placeholder`, so this is a Designer step).
 
+## Q030 Happenings & Stories post template (2026-10-20)
+
+Template `/happenings-stories/<slug>` (`6ad67d759914af41be21de84`): Site Nav, Hero (bound), article body (date and body bound), image-inset-single Small, Split Compact (body-highlight bound), more posts Collection List, Card Carousel, Offers Slider Split, CTA, Footer. One template for both categories. Staging: `/happenings-stories/locals-night-at-rodeo-bar` and the five other posts. Element map: `docs/figma/build-plans/Q030/build.md`.
+
+- [ ] Designer step (blocked headlessly): on the more posts Collection List `4048e357-02ea-e0d3-0a14-0d95030910f9`, add the filter **Category equals Current Post's Category** (the API refuses bound Reference filters). It already sorts by date descending, excludes the current post (Name not equal to the current Name, set through the API) and shows 2.
+- [ ] Designer step (blocked headlessly): on the card Link Block `bcf99744-d3ed-d1a5-4a9f-c5cf373c5aff`, set the link to **Current Happenings & Stories**. It is `#` for now (the API's collection page link publishes a static `/happenings-stories` href).
+- [ ] Sections 03 (inset) and 04 (split) use static library photos (courtyard `6ad66fee735773f253407335`, lounge `6ad670147e3d6550932e0fac`), the same on every post. Add `inset-image` and `highlight-image` fields if each post should carry its own.
+- [ ] The Figma section 02 shows a burgundy "learn more" button overlapping the paragraph; it was left out (no target for a post). Add it if a destination is decided.
+- [ ] Hero eyebrow shows the post Topic (dining, culture, conferences) and the article eyebrow shows the Date; the Figma eyebrow copy ("The Guild, a Tribute Portfolio Hotel") is lorem. Confirm the choice.
+- [ ] Rich text body: paragraphs are styled through the `article-body_rich-text` class (size and paragraph gap). Headings, lists or links inside the body take the tag styles; style them in the Designer if posts use them.
+- [ ] Offers Slider Split holds the component's placeholder offer copy.
+- [ ] Visual check against `figma/pages/happenings-indiv` and `blog-indiv` section.webp at 1440 and mobile once the filter and link are set.
 
 ## Legal Corporates template (Q028, 2026-10-20)
 

@@ -306,3 +306,12 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 - **"Reference equals current item" cannot be set headlessly.** A `filters` entry on a Reference field accepts only a static item id; a cms or page binding returns "does not support bound filter values in the Designer". Set the filter in the Designer.
 - **"Link to current item" cannot be set headlessly.** `static_link` mode `collectionPage` stores `{pageSlug}` and publishes that string as a relative href; mode `page` with the template page id publishes the bare template path. Neither resolves per item, and the link setting has no bindable sources. Set it in the Designer.
 - **Alternating cards without a variant.** A combo on the item class with an `nth-child(even)` pseudo (`update_style` with `pseudo`) copies a variant's layout per item, since a Variant prop cannot follow the item.
+
+## Gotchas found building the post template (Q030, 2026-10-20)
+
+- **A cms binding in builder `settings` fails outside a CMS context, even on a template page.** A DOM `p` with `settings` `text` bound to a field returns "Element is not inside a CMS context" during the build. Build the element, then bind with `set_settings`. The failed child also stops its later siblings in that subtree, and the builder may still create some of them: read the tree back before adding replacements (a stray seeded RichText was left behind here and published next to the bound one).
+- **Leftover seeded RichText caused `[Conflict] ... component map` errors.** While the stray RichText sat on the page, every `filters` and `sort` write to the Collection List failed with `BATCH_FAILED` (other writes worked). After removing it the same writes applied at once.
+- **Bound text filters work; bound Reference filters do not.** `filters` `[{"fieldSlug":"name","operator":"doesNotEqual","value":{"sourceType":"cms","collectionId":...,"fieldId":<name field>}}]` excludes the current post from a same-collection list. Reference fields accept only `equals`, `doesNotEqual`, `isSet`, `isNotSet` with a static item id.
+- **Option and referenced fields bind as text.** An Option field binds to a `textContent` prop (the hero Eyebrow shows the topic name); a Reference's own fields show up in `get_bindable_sources` as `<refFieldId>:::<fieldId>` (for example Category Name).
+- **Paragraph spacing in a bound RichText without styling child tags:** give the RichText class `display: flex`, `flex-direction: column` and a `row-gap`.
+
