@@ -199,7 +199,8 @@
     "The modifier sits on the figure, not on section_image-inset-single, because Webflow combo classes cannot style descendants. In the Webflow component, expose it as a component variant (base, small) that swaps the figure's combo class.",
     "No image-inset-single_component wrapper and no header or footer wrappers: the component has no text or CTA, and the figure is the only child of the container.",
     "Figma image width is 1253 px in a 1600 px frame (x 178); container-large gives 1280 px (x 160). The 27 px difference is accepted to stay on the shared container.",
-    "Section background is set explicitly to color-neutral-100 (#F4EFDF per figma/tokens.json; the Relume default for that variable is #F5F5F5 until Q001 syncs it)."
+    "Section background is set explicitly to color-neutral-100 (#F4EFDF per figma/tokens.json; the Relume default for that variable is #F5F5F5 until Q001 syncs it).",
+    "Q024 build: the is-small variant is a plain reference section on the build page, not a Webflow component variant, following the Q014, Q016, Q017 and Q020 builds while the variant decision is open. Its image has no asset, matching the #D9D9D9 placeholder in Figma."
   ],
   "k01": {
     "reconciledBy": "K01, 2026-10-20",
@@ -208,5 +209,32 @@
       "Only variable names changed.",
       "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
     ]
+  },
+  "build": {
+    "builtBy": "Q024, 2026-10-20",
+    "buildPage": "6ad712cc8669ab49cd2c7290",
+    "componentId": "3eeb97fa-6550-7845-31ee-e997e4b8f2f1",
+    "componentName": "image-inset-single",
+    "group": "Sections",
+    "props": [
+      {
+        "name": "image",
+        "id": "d0bfb449-7a01-6fc3-f157-aabdabfc3f9f",
+        "type": "image",
+        "boundTo": "image-inset-single_image assetId",
+        "instanceValue": "6ad67019735773f25340899e"
+      },
+      {
+        "name": "image alt",
+        "id": "74b6d39f-054a-e3b2-e321-5cfb6f0663e9",
+        "type": "altText",
+        "boundTo": "image-inset-single_image altText",
+        "default": "A hand writing 'Welcome to the Guild Hotel' in pencil on a card"
+      }
+    ],
+    "referenceSections": [
+      "is-small"
+    ],
+    "classesCreated": []
   }
 }
