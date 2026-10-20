@@ -168,3 +168,8 @@ Baseline 0 broken, 3 drift; now 0 broken, 2 drift.
 - [ ] (drift) Dining item template: non-Zuma venues use navy where Figma shows olive green; Other dining options is a shared pair that can list the current venue.
 - [ ] (drift) Gallery pill bar overlays the first photo row (sticky).
 - [ ] (drift) Design placeholders shared with Figma: Home map label, repeated photos, FAQ first item closed.
+
+
+## Fixed after the final pass (2026-10-20)
+
+- [x] Dinings section 02: navy only on Zuma, olive on the other three venues (CMS switches `split-navy` and `split-olive` drive two wrapper divs; see `docs/figma/build-plans/W02/fix-final.md`). Verified live at 1440.
