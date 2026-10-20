@@ -12,6 +12,9 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q014: upload the Zuma wordmark (`figma/vectors/group-270989670-416x101-250-1958.svg`) and set it on the dining-zuma reference hero logo slot.
 - [ ] Q014: visual check of `/build-hero-fullbleed-centered` was done on 2026-10-20 and looked good; re-check once the Zuma logo and the blue and burgundy wide buttons are in.
 - [ ] Q015: visual check of `/build-faq-accordion` in the Designer (fonts and the static chevron are the known differences).
+- [ ] Q017: visual check of `/build-split-image-text-light` (component plus eight reference sections) against `docs/figma/build-plans/Q017/preview-*.png` and the reference crops; tune the tan stamp offset once Morello and Gatch load.
+- [ ] Q017: upload the history stamp SVG (`figma/vectors/group-263x263-228-7875.svg`) and set it on the tan reference section stamp image.
+- [ ] Q017: mark the blue (dining-zuma) and tan (history) reference images decorative if their library alt should not apply; the plan alt is empty.
 - [ ] C02: review the 6 draft sample posts (3 per category) and their invented dates; nothing is published.
 - [ ] K02: visual spot-check the 15 `🧱 <component>` draft pages for the new classes (padding, `text-size-large`, `text-style-script`, chamfer outline buttons).
 - [ ] Q012, Q013, Q014, Q015: delete each build page (`/build-<component>`) once its component sits on the real pages, and delete the probe pages `x01-probe` and `x01-probe-b`.
@@ -30,6 +33,8 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 
 ## Agent follow-ups
 
+- [ ] Q017: colour variants, compact and the four base layouts are plain reference sections, not instances. Page entries need the same decision as Q014 (Webflow component variants or unlinked copies) before placing them.
+- [ ] Q017: eight empty combo paths were created (listed in `docs/figma/build-plans/Q017/plan.json` `build.classesCreated`); `.button.is-link.text-style-caps-caption-16` sits under the shared `button` and may be reused by other families.
 - [ ] K02 (via Q014): create the missing combos `.button.is-chamfer.is-wide.is-blue` and `.button.is-chamfer.is-wide.is-burgundy` with the 12.125rem min-width, then update the dining reference buttons to use them.
 - [ ] Q015: `.heading-style-h2.text-weight-normal` and the four accordion combos exist but are empty; decide whether they need styles or can stay empty, and promote `.heading-style-h2.text-weight-normal` to a shared combo if other families need it.
 - [ ] Q015: add the chevron custom code `.accordion_header.is-active .accordion_icon { transform: rotate(0deg); }` to site custom code.

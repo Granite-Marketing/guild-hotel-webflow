@@ -79,3 +79,18 @@ See `deviations` in `plan.json`. Main ones: no `is-media-left` or `is-1-image` c
 - Script heading overrides (tan variant) use `text-style-script is-large`; line height is 1.2 (80/96) instead of the measured 1.
 - Section colour modifiers `is-tan` and `is-blue` need the new Colors/Tan and Colors/Navy variables.
 - Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).
+
+## Build (Q017, 2026-10-20)
+
+Built through the Data API on `🧱 split-image-text-light` (`6ad712c53e506fddaa973858`), with no Designer calls and nothing published. The base section was converted to the component "Split image text light" (`663131a8-3362-867e-25ef-28b6d3d209a2`); one instance sits at the top of the build page.
+
+- **Props (17):** Eyebrow, Heading, Body, Body 2, CTA (link), CTA label, Caption, Image, Second image, plus the visibility booleans Eyebrow, Header, Body 2, Footer, Image, Second image, Caption and Stamp. Each is bound to its element. Defaults follow the plan (header and image on, the rest off).
+- **Reference sections:** olive (home/03), blue (dining-zuma/02), tan (history/04), compact (happenings-indiv/04), edge (arts/05), stagger left (dining-zuma/04), stagger mid (neighborhood/04) and wide (neighborhood/05). They are plain sections, because an instance cannot switch the section and element combos.
+- **Classes created:** eight empty combo paths, listed in `build.classesCreated` in [plan.json](plan.json). No standalone class was created and no live style changed.
+- Build deviations are appended to `deviations` in [plan.json](plan.json).
+
+Designer follow-ups:
+
+1. Visual check of the build page against the `preview-*.png` files and the reference crops.
+2. Upload the stamp SVG and set it on the tan stamp image.
+3. Mark the blue and tan images decorative if their library alt should not apply (the plan alt is empty).
