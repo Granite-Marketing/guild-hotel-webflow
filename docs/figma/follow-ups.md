@@ -184,3 +184,11 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q008: real offer content (headings, text, links, photos) for slides 1 to 5; Figma shows one slide per instance, so slides 3 to 5 repeat placeholder copy. Hide unused slides with Show slide N.
 - [ ] Q008: visual check of `/build-offers-slider-split` in the Designer and on staging against the crops (agent notes in `docs/figma/build-plans/Q008/staging-notes.md`).
 - [ ] Q008: home/13 retail crop shows a cream cross logo over the photo; confirm whether it is part of the photo asset or an overlay to add.
+
+## Q032 Dining collection (2026-10-20)
+- [ ] Q032: visual check of `/dining` on staging (`https://the-guild-hotel-c34e71.webflow.io/dining`) against the dining-collection crops. An agent check found no console errors, no page overflow at 375px and every image loading at 1440px; notes in `docs/figma/build-plans/Q032/staging-notes.md`.
+- [ ] Q032 (R00): the venue snap group renders statically (five panels stacked, last on top) until `scrollEnlargeSnap()` is enabled in `src/index.ts` and released.
+- [ ] Q032 (Q021 owner): at 375px the `venue-card-fullbleed_tabs` row runs past the viewport (three tabs end 445 to 811px). Check the tabs' overflow and wrap rules at `small` and `tiny`.
+- [ ] Q032: solana coffee has no `🍴 Dinings` item, so its "discover more" button has no link. Add a CMS item or a target URL.
+- [ ] Q032: the dining-collection tab "lobby terrace" was built as "garden terrace" to match the panel and the CMS item; confirm the venue name with the client.
+- [ ] Q032: hero has no image (Figma grey slot); set Image and Show Image when the asset arrives. Venue photo alt text is empty; run `/asset-metadata`.
