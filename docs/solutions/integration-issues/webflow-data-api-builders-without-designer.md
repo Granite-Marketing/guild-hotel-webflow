@@ -273,3 +273,12 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 
 - **Lists without seeded items:** a builder `DOM` element with `set_dom_config` `ul` and `DOM` `li` children, each with `settings` `[{ key: "text", static_text: { value } }]`, creates a plain list with exactly the items passed and their text in one call. No seeded empty ListItems to remove (unlike `BY_CUSTOM_TAG ul`).
 - **Base `button is-chamfer` is cream on cream.** On a light section use the existing `is-dark` combo (`button is-chamfer is-dark`).
+## Notes from the Neighborhood page (Q044, 2026-10-20)
+
+- **Modal triggers on non-link items inside a component.** `modals.ts` delegates clicks to the closest `[data-modal-open]`, so any element works as a trigger. `data_element_tool > set_attributes` with `scope_component_id` adds attributes to a definition element and keeps the existing ones (`role="listitem"` survived); it does not replace the list the way `set_settings` key `attributes` does. Only add static triggers to a definition when one page uses that component.
+## Gotchas found assembling Guidelines (Q037, 2026-10-20)
+
+- **`BY_CUSTOM_TAG ol` becomes a `ul` List.** The tag is ignored and the three seeded ListItems appear as usual. Remove the seeds, then `set_settings > set_tag` with `static_value: "ol"`.
+- **Builder `set_link` url with a `#hash` is dropped.** A TextLink with `link_type: "url"` and `#photoshoot-request` was created with no link, while an `email` link on a sibling kept its value. Write hash links afterwards with `set_settings` key `link`, `static_link { mode: "url", to: "#..." }`.
+- **Inline links inside running text.** A `DOM` `p` with children `DOM span` (text through `settings` key `text`), `TextLink`, `DOM span` builds a paragraph with inline links in one call. A `sup` DOM element before an inline (`display: inline`) paragraph gives superscript item numbers.
+- **In-page anchor before an instance.** A plain `DOM div` with `settings` `domId` appended just before the instance gives a link target without touching the component.

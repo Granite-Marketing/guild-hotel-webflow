@@ -28,17 +28,17 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 | 404 | `6ad64060ae8eac6d7b7c4243` | `/404` | - |
 | History | `6ad66fd276d24ed37ac4c52f` | `/history` | history |
 | Dining | `6ad66fd476d24ed37ac4c5cb` | `/dining` | dining-collection; assembled by Q032 (2026-10-20), Body `6ad66fd476d24ed37ac4c5d1` |
-| Guidelines | `6ad66fd44c7f57894534ada5` | `/guidelines` | guidelines |
+| Guidelines | `6ad66fd44c7f57894534ada5` | `/guidelines` | guidelines; assembled by Q037 (2026-10-20), Body `6ad66fd44c7f57894534adac`; element ids in `docs/figma/build-plans/Q037/plan.md` |
 | Rooms | `6ad66fd5f8bf4846e809dbee` | `/rooms` | rooms-collection; assembled by Q033 (2026-10-20), Body `6ad66fd5f8bf4846e809dbf6` |
 | Room Detail | `6ad66fd5f8bf4846e809dc45` | `/rooms-individual` | rooms-individual |
 | Press | `6ad66fd5735773f253406642` | `/press` | press |
 | Gallery | `6ad66fd65794075272b95584` | `/gallery` | gallery |
 | Arts | `6ad66fd7ba96f2e53726a2eb` | `/arts` | arts |
-| Wellness | `6ad66fd7735773f253406791` | `/wellness` | wellness-collection |
+| Wellness | `6ad66fd7735773f253406791` | `/wellness` | wellness-collection; assembled by Q034 (2026-10-20), Body `6ad66fd7735773f253406797` |
 | Static Template | `6ad66fd802cc199b55b924be` | `/static-template` | static-template |
 | Contact | `6ad66fd8e0b7968459e18f22` | `/contact` | contact |
 | Meetings | `6ad66fd96684c3e22ea4d417` | `/meetings` | meetings-collection |
-| Neighborhood | `6ad66fdb02cc199b55b926ba` | `/neighborhood` | neighborhood |
+| Neighborhood | `6ad66fdb02cc199b55b926ba` | `/neighborhood` | neighborhood; assembled by Q044 (2026-10-20), Body `6ad66fdb02cc199b55b926c5` |
 
 Static pages created by Q004 on 2026-10-19 (slugs approved by Stephen: the four `-collection` Figma pages use clean slugs). CMS template pages (dining-*, legal, corporate, happenings-*, blog-*) are created with their collections in Q027 to Q030; add their rows then.
 
