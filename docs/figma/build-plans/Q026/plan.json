@@ -663,7 +663,11 @@
     "Base vertical overlap uses one is-lift value (-16% of list width). Figma lifts item 2 by about 271px and item 4 by about 221px at 1600 (17.8% and 14.5%); each lands about 25px off.",
     "is-tall uses one 3.125rem gap between items; Figma has 50px, 50px and 117px. The 117px gap before the last item is treated as drift.",
     "Vertical padding: padding-section-large (7rem) top and bottom; the crops show about 115px top and 99px bottom on guidelines and 133px top and 90px bottom on neighborhood.",
-    "Mobile (767 and below) is not in Figma. Items keep their alternate offsets at reduced widths (70%, 85% or 100%), lifts reset to 0 and the base heading drops into flow above the list."
+    "Mobile (767 and below) is not in Figma. Items keep their alternate offsets at reduced widths (70%, 85% or 100%), lifts reset to 0 and the base heading drops into flow above the list.",
+    "Q026 build: no items slot. create_prop has no slot type (Q022), so the four base items are fixed in the component definition; four caption text props (Caption 1 to 4) stand in for per-instance caption content. Reordering items or changing their size and offset modifiers needs the Designer.",
+    "Q026 build: no img elements. No photo assets exist, and an Image with no asset shows Webflow placeholder art over the grey fill, so each image-wrap is empty and shows the #D9D9D9 placeholder.",
+    "Q026 build: the showHeading prop is a boolean bound to the header visibility.",
+    "Q026 build: captions are DOM figcaption elements (text set through set_settings key text), and the base heading carries heading-style-h4 text-weight-normal in the definition; the is-tall reference section uses is-tall heading-style-h3 text-weight-normal."
   ],
   "buildNotes": [
     "Webflow combo chains: create each item modifier on a scratch element holding only timeline-scatter-images_item plus that one modifier (and likewise for image-wrap), then stack them on the real items. Styling a three-class chain directly creates a selector that only matches that exact chain.",
@@ -766,5 +770,79 @@
       "`u-image` is a shared class to create (cover version; image wrappers set the size).",
       "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
     ]
+  },
+  "build": {
+    "by": "Q026",
+    "date": "2026-10-20",
+    "page": "6ad712cefaaaa1926dd00d80",
+    "componentId": "144b7315-3604-2419-b046-c09d180f1163",
+    "componentName": "timeline-scatter-images",
+    "componentGroup": "Sections",
+    "instanceElement": "466f1ad5-c291-5485-a09c-d72788258e92",
+    "referenceSections": {
+      "is-tall": "ff99cbf2-2677-0282-70e3-bb267dce160e"
+    },
+    "createdCombos": [
+      {
+        "selector": ".timeline-scatter-images_heading.heading-style-h4",
+        "id": "d5550a79-8868-e44c-e241-a1787e6a998d"
+      },
+      {
+        "selector": ".timeline-scatter-images_heading.heading-style-h4.text-weight-normal",
+        "id": "d49370ff-e944-4f1d-4246-a7b0fa22328d"
+      },
+      {
+        "selector": ".timeline-scatter-images_heading.is-tall.heading-style-h3",
+        "id": "d8f0b498-0523-4488-85b2-3efea4a0c21f"
+      },
+      {
+        "selector": ".timeline-scatter-images_heading.is-tall.heading-style-h3.text-weight-normal",
+        "id": "88a9db6a-4f7d-bfa0-b2f4-84091aaeba8a"
+      },
+      {
+        "selector": ".timeline-scatter-images_caption.text-style-caps-caption-16",
+        "id": "cee359cf-b895-3723-c12b-1141f182fd32"
+      },
+      {
+        "selector": ".timeline-scatter-images_caption.is-tall.text-style-eyebrow-caps",
+        "id": "74e7d7a9-5322-7c6d-d825-525bc9670662"
+      },
+      {
+        "selector": ".timeline-scatter-images_item.is-large.is-end",
+        "id": "602d566d-c8cd-ccff-c892-698d5658d4e9"
+      },
+      {
+        "selector": ".timeline-scatter-images_item.is-large.is-end.is-lift",
+        "id": "19268f1b-3faf-2161-cf8b-c49abd3ff2d4"
+      },
+      {
+        "selector": ".timeline-scatter-images_item.is-xsmall.is-inset",
+        "id": "832d89fe-9c21-f478-78bf-8876ac880b1d"
+      },
+      {
+        "selector": ".timeline-scatter-images_item.is-medium.is-center",
+        "id": "ab146f61-9a28-09a1-75a9-453930fd8413"
+      },
+      {
+        "selector": ".timeline-scatter-images_item.is-medium.is-center.is-lift",
+        "id": "54cdee0e-293e-0882-44fd-caeacfb809ae"
+      },
+      {
+        "selector": ".timeline-scatter-images_item.is-xlarge.is-inset",
+        "id": "7578d4ba-592c-e40f-0182-ae4d0ae02f34"
+      },
+      {
+        "selector": ".timeline-scatter-images_item.is-xlarge.is-end",
+        "id": "6f6525c1-0aad-f51e-3e9f-e7b0712624dc"
+      }
+    ],
+    "props": {
+      "Heading": "676a3096-c577-5312-d46b-1482ee85b489",
+      "Show Heading": "234e53fa-ddca-fa5b-2190-ac5290dc4ba1",
+      "Caption 1": "e861fb03-093e-8511-b30e-6d5aed592966",
+      "Caption 2": "12fa9c1c-0b26-5f37-1a29-3bd2672bb1f3",
+      "Caption 3": "caadfeca-3265-16f8-f797-322e8a8368f5",
+      "Caption 4": "5663aa80-b008-e42b-24a0-d0b2abf26243"
+    }
   }
 }

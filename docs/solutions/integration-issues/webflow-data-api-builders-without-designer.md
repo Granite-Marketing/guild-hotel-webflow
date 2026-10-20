@@ -197,3 +197,7 @@ Per-instance variants through the Data API: yes (styles only; content and visibi
 - A modifier on a class used outside the component needs its variant style checked on every class it touches. The variant only applies inside instances.
 
 Keep the combo classes and reference sections until each component's variants are verified on staging. Then remove the reference sections after Stephen's yes.
+## Gotchas found in the Q026 build (2026-10-20)
+
+- **Text elements with semantic tags:** a builder `DOM` element with `set_dom_config` `figcaption` and `settings` `[{ key: "text", static_text: { value } }]` creates a real `<figcaption>` with its text in one call, and its `text` setting binds to a text prop after conversion. Use it where `BY_CUSTOM_TAG` would give a Block that takes no text.
+- **Modifier stacks of three or four classes** (`_item is-large is-end is-lift`) apply only after each level exists as an empty combo; the published CSS of each two-class combo (`.x_item.is-lift`) still matches, so the deeper levels need no properties.
