@@ -315,5 +315,7 @@ Template `/legal-corporate/<slug>` assembled through the Data API; staging rende
 - [ ] legal/04 hover image (`2e81693530e933aa43a6c48a794614cca7c8822d`, the image that appears over a grid item) is not built; it belongs to the image hover interaction (Q007).
 - [ ] The four venue cards' body text is still Figma lorem, and only council boardroom opens a dialog (one Overlay Detail Panel Modal, dialog `council-boardroom`); the other three "discover more" buttons have no target.
 - [ ] Card Carousel Header Left (Q009) is not used here: the legal design has no carousel section. Offers Slider Split (Q008) is added after the gallery as on `/meetings`, with its placeholder offer copy.
+- [ ] Request for Proposal form (form-split-script-contact) shows the component's default field labels ("Example Text") and a "Shoot Details" heading from the photoshoot form; the legal/12 fields (first and last name, law firm, team size, check-in and check-out dates, special requirements) need a form variant or Designer edit. Same on `/meetings`.
+- [ ] Visual check by a subagent (2026-10-20): both items render all sections, no grey boxes or broken images, no mobile horizontal scroll, council boardroom dialog opens and closes, no console errors; dark grid and sticky split match the crops' layout.
 - [ ] Every photo is a stand-in from the library; replace with real imagery when it arrives.
 
