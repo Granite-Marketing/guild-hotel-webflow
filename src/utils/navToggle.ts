@@ -18,8 +18,9 @@
  *
  * Scroll: below the mobile breakpoint the active engine is paused on open
  * (`smoothScroll.stop()`) and resumed in the close timeline's onComplete,
- * so the page cannot scroll behind a full-screen menu. Escape and any
- * `[data-nav="link"]` click close the menu.
+ * so the page cannot scroll behind a full-screen menu. Add
+ * `data-nav-lock="always"` to the header when the menu is full screen at
+ * every width. Escape and any `[data-nav="link"]` click close the menu.
  */
 
 import { smoothScroll } from '$utils/smoothScroll'
@@ -52,13 +53,14 @@ export const navToggle = () => {
   let isAnimating = false
   let scrollWasStopped = false
 
-  const isMobile = () => window.matchMedia(MOBILE_QUERY).matches
+  const locksAtEveryWidth = header.dataset.navLock === 'always'
+  const shouldLockScroll = () => locksAtEveryWidth || window.matchMedia(MOBILE_QUERY).matches
   const isOpen = () => header.classList.contains(OPEN_CLASS)
   const menuItems = () => navLists.flatMap((list) => Array.from(list.children))
 
   const open = () => {
     header.classList.add(OPEN_CLASS)
-    if (isMobile()) {
+    if (shouldLockScroll()) {
       smoothScroll.stop()
       scrollWasStopped = true
     }
@@ -98,7 +100,9 @@ export const navToggle = () => {
     }
   }
 
-  const handleToggle = () => {
+  const handleToggle = (event?: Event) => {
+    // A link toggle (href="#") must not jump the page or change the URL.
+    event?.preventDefault()
     if (isAnimating) return
     if (isOpen()) close()
     else open()
@@ -107,9 +111,10 @@ export const navToggle = () => {
   toggle.addEventListener('click', handleToggle)
   toggle.addEventListener('keydown', (event) => {
     if (toggle.tagName === 'BUTTON') return
+    // Enter on a link already fires click; only Space needs handling there.
+    if (event.key === 'Enter' && toggle.tagName === 'A') return
     if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault()
-      handleToggle()
+      handleToggle(event)
     }
   })
 

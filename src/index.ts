@@ -20,6 +20,7 @@ import { currentYear } from '$utils/currentYear'
 import { eagerImages } from '$utils/eagerImages'
 import { gsapBasicAnimations } from '$utils/gsapBasicAnimations'
 import { modals } from '$utils/modals'
+import { navToggle } from '$utils/navToggle'
 import { smoothScroll } from '$utils/smoothScroll'
 import { swiperSliders } from '$utils/swiperSliders'
 
@@ -32,7 +33,6 @@ import { swiperSliders } from '$utils/swiperSliders'
  *   import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'     // slot B
  *   import { backgroundVideo } from '$utils/backgroundVideo'         // slot C
  *   import { heroTextReveal } from '$utils/heroTextReveal'           // slot C
- *   import { navToggle } from '$utils/navToggle'                     // slot D
  *   import { imageHoverScale } from '$utils/imageHoverScale'         // slot D
  *   import { imageTrailHover } from '$utils/imageTrailHover'         // slot D
  *   import { viewSwitcher } from '$utils/viewSwitcher'               // slot E
@@ -63,6 +63,7 @@ window.Webflow.push(() => {
   swiperSliders()
 
   // slot D: navToggle(), imageHoverScale(), imageTrailHover()
+  navToggle()
   //   imageTrailHover: enable once home section 14 (heading-wide-image-cta)
   //   carries [data-image-trail-hover].
   accordion()
