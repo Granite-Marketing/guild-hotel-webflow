@@ -512,7 +512,30 @@
       "element": "timeline-scatter-images_list"
     }
   ],
-  "assets": [],
+  "assets": [
+    {
+      "slot": "timeline-scatter-images: new timeline-scatter-images_image Images in the four image-wraps",
+      "webflowAssetId": "6ad66fee735773f253407335, 6ad67011134731ad1b928045, 6ad67001f08ff78c37d85427, 6ad670147e3d6550932e0fac",
+      "local": [
+        "assets/images/237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1.jpg",
+        "assets/images/a97e194ea6811fe55bfcb2016b80ac2c0d524400.png",
+        "assets/images/745c085a4a4187ad24dd49e947e40a436a1ffbdd.png",
+        "assets/images/aebbcac2114e788ebc0ded5eee7b3da87ef37bc6.jpg"
+      ],
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "timeline-scatter-images Tall: new timeline-scatter-images_image Images in the four xlarge image-wraps",
+      "webflowAssetId": "6ad66fed15beaf9a7285e5c8, 6ad670091ce40a5a6239c71f, 6ad6701cf08ff78c37d862e1, 6ad66ff2de86688556051da2",
+      "local": [
+        "assets/images/22db683e135ddee3633012bf9bf473d63a8f49e2.jpg",
+        "assets/images/91b1ad60c89e25e811754a2b7530e0ea8d7bfba1.png",
+        "assets/images/ea6bc516bd4f42b1e9858ed150c5031a47c59e38.png",
+        "assets/images/2e81693530e933aa43a6c48a794614cca7c8822d.jpg"
+      ],
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    }
+  ],
   "instances": [
     {
       "page": "guidelines",

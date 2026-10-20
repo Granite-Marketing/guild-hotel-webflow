@@ -139,5 +139,43 @@
     "Heading size follows the variant (h2 2.5rem on Base and Centered, h3 1.875rem on Dark), not a heading-style utility, because a variant cannot swap classes.",
     "arts/13 places the artwork caption in a second column next to the 'by' line; the component stacks eyebrow and caption under the heading.",
     "Image Bg and Burgundy have no visible heading in Figma; Show heading is off there, so those dialogs get no aria-labelledby. A page session can set an aria-label on the instance root later if needed."
+  ],
+  "assets": [
+    {
+      "slot": "Overlay Detail Panel Modal: Image prop",
+      "webflowAssetId": "6ad670147e3d6550932e0fac",
+      "local": "assets/images/aebbcac2114e788ebc0ded5eee7b3da87ef37bc6.jpg",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Item 1 image prop",
+      "webflowAssetId": "6ad66ff0f8bf4846e809ead6",
+      "local": "assets/images/27f6840ca839b9675c82ed8eb521abfc5f478c78.png",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Item 2 image prop",
+      "webflowAssetId": "6ad67004134731ad1b927d6c",
+      "local": "assets/images/8303f7c977cff864b2b171528b08d4a7957b69c6.png",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Item 3 image prop",
+      "webflowAssetId": "6ad66ff96684c3e22ea4e1af",
+      "local": "assets/images/3a8a13fffa6bb106dd00f736e22e0aae384f5bda.png",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Item 4 image prop",
+      "webflowAssetId": "6ad67017fb3a14e0db41143b",
+      "local": "assets/images/cec4b89085ea09ad21eb68b7b11a462e95e59cfa.png",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Item 5 image prop",
+      "webflowAssetId": "6ad66feb58367429abb4835f",
+      "local": "assets/images/0c5cb498b7eacbe1174374b129d91e21a3a9ddcd.jpg",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    }
   ]
 }

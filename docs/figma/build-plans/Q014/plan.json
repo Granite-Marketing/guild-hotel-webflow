@@ -550,6 +550,12 @@
         "all instances with a button"
       ],
       "note": "Reference only: the shape is drawn by is-octagon clip-path, not uploaded."
+    },
+    {
+      "slot": "Hero Fullbleed Centered: Image prop default",
+      "webflowAssetId": "6ad66fed15beaf9a7285e5c8",
+      "local": "assets/images/22db683e135ddee3633012bf9bf473d63a8f49e2.jpg",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
     }
   ],
   "instances": [

@@ -64,6 +64,38 @@
     "Show slide 5": "94ff416d-9a77-bf22-8c1c-bae7a5729923"
   },
   "assets": {
+    "fillImagesDefaults": [
+      {
+        "slot": "Offers Slider Split: Image 1 prop (Show image 1 default now true)",
+        "webflowAssetId": "6ad67015134731ad1b928187",
+        "local": "assets/images/b0a187c5d40b728dda8eba29e50d1c301b9f1a68.jpg",
+        "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+      },
+      {
+        "slot": "Image 2 prop",
+        "webflowAssetId": "6ad66ffa6684c3e22ea4e2ca",
+        "local": "assets/images/57b7c9d475ed31c64fc14b589c293bc5f86142a8.jpg",
+        "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+      },
+      {
+        "slot": "Image 3 prop",
+        "webflowAssetId": "6ad66ff96684c3e22ea4e1af",
+        "local": "assets/images/3a8a13fffa6bb106dd00f736e22e0aae384f5bda.png",
+        "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+      },
+      {
+        "slot": "Image 4 prop",
+        "webflowAssetId": "6ad670091ce40a5a6239c71f",
+        "local": "assets/images/91b1ad60c89e25e811754a2b7530e0ea8d7bfba1.png",
+        "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+      },
+      {
+        "slot": "Image 5 prop",
+        "webflowAssetId": "6ad66fed15beaf9a7285e5c8",
+        "local": "assets/images/22db683e135ddee3633012bf9bf473d63a8f49e2.jpg",
+        "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+      }
+    ],
     "retailImage": "6ad67011134731ad1b928045"
   },
   "classesCreated": {
