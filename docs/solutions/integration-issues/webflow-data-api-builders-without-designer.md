@@ -286,3 +286,8 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 
 - **Modal trigger links take a bare `#` href.** A LinkBlock trigger with `href="#<dialog id>"` makes Webflow's in-page anchor scroll fire on click (the page jumped by the nav height and the URL took the hash), even though `modals.ts` opens the dialog. Use `href="#"` (set with `set_settings` key `link`, `static_link` url `#`); the link stays keyboard focusable and nothing scrolls.
 - **Filter item plus dialog trigger.** Keep `data-gallery-filter-item` on the figure (the element `galleryFilter` hides) and put `data-modal-open` on a LinkBlock inside it, so filtering and keyboard-accessible dialogs work together with no new code.
+## Gotchas found in the Q007 build (2026-10-20)
+
+- **A family class with `display` beats the template `hide`.** `galleryFilter` hides items by adding `hide` (`.hide { display: none }`, no `!important`). A family class on the same element that sets `display` (`.room-list-hover-preview_item { display: block }`) comes later in the published CSS with the same specificity and wins, so nothing hides. Leave `display` off any class that `hide` must override. Fixtures that define `.hide` with `!important` themselves (gallery-filter) mask this; test against the published CSS.
+- **Fixed dialogs can carry the filter root.** `data-gallery-filter` on a `position: fixed` dialog works; `scrollRootIntoView` never fires because the root top stays at 0.
+- **`create_style` batches can 429 as a whole** when other sessions are busy (`too_many_requests` on every action). Nothing is written; re-query and resend the batch.

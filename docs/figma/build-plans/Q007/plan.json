@@ -1,0 +1,44 @@
+{
+  "entry": "Q007",
+  "component": "Room List Hover Preview",
+  "componentId": "a9d40053-f1b0-f862-ee0a-4f021e1933a9",
+  "buildPage": {
+    "id": "6ad7b5d7fc756e91b34c370c",
+    "slug": "/build-room-list-hover-preview",
+    "body": "6ad7b5d7fc756e91b34c3712"
+  },
+  "instances": [
+    {
+      "page": "6ad66fd5f8bf4846e809dbee",
+      "slug": "/rooms",
+      "element": "80f767d6-0090-5ef7-fde4-878985946d8c",
+      "replaces": "ddf20115-a908-c0e2-fded-3f0f85f6dc2a"
+    }
+  ],
+  "dialogId": "all-rooms",
+  "triggers": [
+    "2d94c64b-e36a-a44b-b4b1-21dfc28abfa1",
+    "ef667276-5ed5-610e-848e-6d73a5521b81",
+    "e1ee711a-3eec-8fef-6364-5d76a31f28aa",
+    "d3290fd2-fc33-e57e-eb9e-d99585007c7e"
+  ],
+  "runtime": {
+    "modals": "wired",
+    "galleryFilter": "wired",
+    "roomListHoverPreview": "src/utils/roomListHoverPreview.ts, not wired (R01)"
+  },
+  "newCombos": [
+    ".room-list-hover-preview_component.is-open",
+    ".room-list-hover-preview_tab.is-active",
+    ".room-list-hover-preview_link.is-active",
+    ".room-list-hover-preview_preview.is-active"
+  ],
+  "styleChanges": [
+    {
+      "class": "rooms-collection-room-grid_overlay",
+      "added": {
+        "pointer-events": "none"
+      }
+    }
+  ]
+}

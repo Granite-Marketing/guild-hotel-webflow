@@ -78,6 +78,7 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 | Q008 | 🧱 offers-slider-split | `6ad77f7b41c3b044b01140a4` | `/build-offers-slider-split` (created by the Q008 session; un-drafted for staging) |
 | Q006 | 🧱 overlay-detail-panel-modal | `6ad7885b7f5d5d50523f997f` | `/build-overlay-detail-panel-modal` (created by the Q006 session; un-drafted for staging; Body `6ad7885b7f5d5d50523f9988`) |
 | Q009 | 🧱 card-carousel-header-left | `6ad78814d14363c9008ddeff` | `/build-card-carousel-header-left` (created by the Q009 session, not draft; Body `6ad78814d14363c9008ddf05`) |
+| Q007 | 🧱 room-list-hover-preview | `6ad7b5d7fc756e91b34c370c` | `/build-room-list-hover-preview` (created by the Q007 session; not draft, for staging; Body `6ad7b5d7fc756e91b34c3712`) |
 
 ## Shared Assets (K02)
 
@@ -126,6 +127,7 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 | Site Nav | `fc94d1a2-3399-4de0-e836-0233a6c86cdf` | Q005 shared navbar and full-screen menu, group Global, built on `/build-site-nav` (2026-10-20). Props: Book link `f6c9cf45-4dfc-02ea-be81-50f6e2ecee62` (url, default `#book`), Variant `454e7f56-bf51-5074-566c-b5cbae95cdd5` (base = light text; Dark `08083309-2be0-2228-878a-7f1c05773f43`) |
 | Offers Slider Split | `96c19058-a54d-49c3-9568-d7aee87662b0` | Q008 slider, group Sliders, built on `/build-offers-slider-split` (2026-10-20). Variant prop `d176b097-92cb-1f48-49bb-d3e451881938`: Base, Blue `1993beed-24b7-3024-c815-349d23e9e282`, Tan `33c1374c-e0f0-7e2f-88ab-e318ee666728`. 32 content props (ids in `docs/figma/build-plans/Q008/plan.json`). Runtime `src/utils/offersSliderSplit.ts` |
 | Overlay Detail Panel Modal | `44cccc51-37cb-2526-e426-133987071983` | Q006 dialog on the modals.ts contract, group Modals, built on `/build-overlay-detail-panel-modal` (2026-10-20). Variant prop `58627a5c-9ee5-3e05-ba7c-32f2cfa464f4`: Base, Dark `569f778f-307a-cdc2-95c3-95b18a7c2c5c`, Image Bg `72048989-461a-61a0-ac02-cfc3ae7b6e5c`, Burgundy `0e56f707-a8b4-d396-c73a-900ce080b5db`, Centered `34ca996d-2f65-a59e-6eb0-09dd065e4534`. 54 props incl. Dialog id `e23b2bf6-a467-9c5a-00e4-8cca4596b704` (ids in `docs/figma/build-plans/Q006/plan.json`) |
+| Room List Hover Preview | `a9d40053-f1b0-f862-ee0a-4f021e1933a9` | Q007 all-rooms dialog (DOM id `all-rooms`, static, no props), group Modals, built on `/build-room-list-hover-preview` (2026-10-20). Instances: build page, and `/rooms` `80f767d6-0090-5ef7-fde4-878985946d8c` (last child of the Body, where the Q007 placeholder was). Runtime: modals, galleryFilter, roomListHoverPreview |
 | Card Carousel Header Left | `f5403de4-dabb-14c3-ecf8-c945d0a8e22e` | Q009 slider, group Sliders, built on `/build-card-carousel-header-left` (2026-10-20). Variant prop `18d9c152-511a-0623-e95e-f0df74c21512`: Base, Compact `c59c2441-38e4-6521-05ae-61ab04e20bf2`. 30 content props (ids in `docs/figma/build-plans/Q009/plan.json`). Runtime `src/utils/cardCarouselHeaderLeft.ts` |
 
 ## Variable Collections
