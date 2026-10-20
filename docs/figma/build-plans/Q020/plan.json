@@ -846,5 +846,31 @@
       "Item 2 Text": "af838336-9b52-2e13-c029-42ce918a8efd",
       "Item 3 Text": "7f61040c-583e-d94e-aefd-7c95d13e6849"
     }
+  },
+  "v02": {
+    "date": "2026-10-20",
+    "variantIds": {},
+    "decision": "No component variants. is-left removes the data-image-stack-collapse attributes (behaviour, not style) and its two uses differ in heading class (h4 on legal/03, h3 on legal/11); is-offset applies to items 1 and 3 only, and a variant styles every element with a class. Per the wave 3 rule, both became separate components named after the variant. is-media-left is-multi-image has no style delta and stays base.",
+    "separateComponents": {
+      "is-left": {
+        "name": "Image Trio Text Left",
+        "componentId": "46897c76-730a-1978-c362-54be3e026510",
+        "instance": "8d67aba1-ae7a-8fbb-3aef-cff2a91d79d4",
+        "pages": [
+          "legal/03-key-features",
+          "corporate/03-key-features"
+        ]
+      },
+      "is-left + is-offset": {
+        "name": "Image Trio Text Left Offset",
+        "componentId": "f6f42b26-759f-d2b6-03de-516393880a37",
+        "instance": "933ea046-66a9-f832-470a-173bbc09d721",
+        "pages": [
+          "legal/11-tailored-corporate-packages",
+          "corporate/11-tailored-corporate-packages"
+        ]
+      }
+    },
+    "verification": "Staging publish at 1440: color, header max-width, list width and column-gap, figure aspect-ratio, item margin-top (180px on items 1 and 3) and heading size match the reference sections."
   }
 }

@@ -13,6 +13,8 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q021: home/11 heading break: Figma breaks "rooms" / "& suites"; add a line break if the real font wraps differently.
 
 - [ ] Q019: visual check of `/build-map-feature` (base instance plus the is-image-bg and is-centered reference sections) against `docs/figma/build-plans/Q019/preview-*-1440.png`. No rich text styling is needed.
+- [ ] V02-Q019: visual check of the two new instances on `/build-map-feature` (Map Feature Image Bg after the is-image-bg section, Map Feature Centered after the is-centered section) against the reference sections above them; not published yet (the classifier blocked the staging publish).
+- [ ] V02-Q019: delete the old is-image-bg and is-centered reference sections once the new instances check out.
 
 - [ ] Q012: set the email input placeholder to `*Email` on the newsletter form (the Data API rejects `placeholder`).
 - [ ] Q012: mark the background image decorative, so future library alt text does not apply to it.
@@ -46,7 +48,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q024: `is-small` cannot switch on an image-inset-single instance (same decision as Q014); it sits as a plain section on the build page. The plan's open questions also stand: is rooms-individual/04 a background video, which image fills the small variant on happenings-indiv and blog-indiv, should the rooms image bind to a CMS field, and the mobile aspect ratio.
 - [ ] Q021: open questions OQ2 (wellness and meetings intro moves from Q023 into this snap section) and OQ3 (legal and corporate as a static stack) are still on their defaults; confirm before those pages are built.
 
-- [ ] Q019: `is-image-bg` and `is-centered` cannot switch on a Map Feature instance (same as Q014). Options: Webflow component variants, or separate components for the two variants.
+- [x] Q019: `is-image-bg` and `is-centered` cannot switch on a Map Feature instance (same as Q014). Options: Webflow component variants, or separate components for the two variants. Done in V02 as separate components Map Feature Image Bg and Map Feature Centered (the heading classes differ, which a variant cannot swap).
 - [ ] Q019: the base map art shows Atlanta streets and Hotel Clermont; confirm it ships or supply a San Diego map. Also the four Directions URLs, and whether to export the masked history illustration (node 236:8254).
 
 - [x] Q014: per-instance variants (`is-text-dark`, `is-left`, button colours `is-blue`, `is-burgundy`) cannot switch on a component instance. Options: Webflow component variants, or a second component for the dark-text heroes (and separate ones for the button colours). Done as component variants (V01, V02): Text Dark, Left, Blue Button, Burgundy Button.
@@ -86,7 +88,11 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] K02 cleanup: merge the four identical logo classes (`cta-booking-newsletter_logo`, `footer-links_logo-image`, `hero-fullbleed-centered_logo`, `venue-card-fullbleed_logo`) into one shared logo class.
 - [ ] K02: `accordion_item` border-bottom colour is a literal `rgba(38, 33, 24, 0.3)` and not bound to Neutral Darkest; rebind if Webflow allows an alpha variable.
 - [x] Q020: apply `is-left` to `image-trio-text_header`, `_list` and `_figure` as well as the section. Done in the Q020 build reference sections.
-- [ ] Q020: `is-left` and `is-left` + `is-offset` are plain reference sections, not instances; page entries need the same variant decision as Q014 and Q017 (Webflow component variants or unlinked copies). The heading size (h3 or h4) per instance has the same problem.
+- [x] Q020: `is-left` and `is-left` + `is-offset` are plain reference sections, not instances. V02: now the separate components Image Trio Text Left and Image Trio Text Left Offset (no style-only variants fit; see `docs/figma/build-plans/Q020/plan.json` `v02`).
+- [ ] V02-Q020: visual check of the Image Trio Text Left and Left Offset instances on `/build-image-trio-text` in the Designer (computed styles on staging already match the reference sections at 1440).
+- [ ] V02-Q020: delete the old `is-left` and `is-left` + `is-offset` reference sections (`5141da76-b14c-77b7-cfa3-601014da1ddf`, `a4806fe0-dc51-3988-2b80-2c56fdf9c6fc`) on `/build-image-trio-text` after the visual check.
+- [ ] V02-Q020: the Left Offset instance's card texts are line-broken paragraphs; the instance prop API takes plain text only. Page sessions (legal/11, corporate/11) build the `ul` bullets inside the Item Text props with the element builder (see the Q020 rich text notes).
+- [ ] V02-Q020: base Image Trio Text keeps heading-style-h3 (wellness); the dining group-dining instances want heading-style-h4. Decide whether dining gets its own component or accepts h3.
 - [ ] Q020 (Designer): set the Rich Text nested list styling on `image-trio-text_item-text` (list `padding-left` about 1rem, bullet colour inherit), which the MCP cannot do.
 - [ ] Q020: the reference-section figures have no image (grey #D9D9D9 placeholders). Add Image elements when the legal, corporate and dining photos arrive, and check `object-position` on the wellness middle photo (Figma crop).
 - [x] Q014: add the per-instance variant mechanism once the decision above is made (component variants or a second component), and set the missing wide button combos on it.
@@ -98,7 +104,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q016: place `script-intro-centered` on the 9 pages (home uses `is-tall` once variants are decided), then remove the build page. happenings-indiv/02 and blog-indiv/02 still need their own entry.
 - [ ] Q021: add `data-eager` (and `loading=eager`) to the Venue Card Fullbleed component image; the wellness, meetings, legal and corporate tab groups are not built yet.
 - [ ] Q022: add `target=_blank` to the social links in the form-split-script-contact component.
-- [ ] Q020: the is-left reference sections have no `data-image-stack-collapse` attributes; add them where the A02 animation applies.
+- [x] Q020: the is-left reference sections have no `data-image-stack-collapse` attributes; add them where the A02 animation applies. V02: the plan keeps the attributes on base instances only; the Left components have none, by design.
 - [ ] Q023 (Designer): add the `panels` slot to the tab-pills-intro frame (before the nav) and, if wanted, swap the four fixed tabs for a `tabs` slot. The Data API has no slot props.
 - [ ] Q023: the `media` variant (is-media on component, header, stage, frame and tabs) is two plain reference sections on the build page. Apply the V01 route, then place the component on wellness-collection and meetings-collection with the Q021 venue cards as panels.
 - [x] Q023 (Designer): visual check of `/build-tab-pills-intro` (base instance and both is-media sections). Stephen confirmed it looks fine on 2026-10-20.
@@ -113,3 +119,5 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q026: place the component on guidelines (base) and neighborhood (`is-tall`, once the slot or variant decision is made), then remove the build page.
 - [ ] Q042: the privacy copy is native elements (paragraphs, `ul`), not a Rich Text element, because rich text child styling (h2 size, list indent) cannot be set headlessly. If the client must edit the legal copy, either style a Rich Text in the Designer and move the copy into it, or bind the page to the `🧑‍⚖️ Legal Corporates` collection. The six contents lines are plain text, not anchor links; only the first legal section exists in the design.
 - [ ] Q042: the Site Nav "Book link" keeps its default `#book` on `/static-template`; set the real booking URL site-wide when known.
+- [ ] V02-Q016: visual check of the Tall, Wide and Bottom variant instances at the end of `/build-script-intro-centered` against reference sections S2 to S4 (staging).
+- [ ] V02-Q016: delete the old is-tall, is-wide and is-bottom reference sections on `/build-script-intro-centered` after the visual check (keep the combos until no page uses them).
