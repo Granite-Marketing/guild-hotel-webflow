@@ -30,7 +30,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q022: set the placeholder on every form input to its label (the Data API rejects `placeholder`); the labels are in each input's aria-label and in `plan.json` instances.
 - [ ] Q022: decide whether to turn the form block, details and links into component slots (the Data API cannot: no slot prop type, and moving an element into a ComponentSlot fails). Without slots, every instance shows the photoshoot form.
 - [ ] Q016, Q020, Q021, Q022: visual check of `/build-script-intro-centered`, `/build-image-trio-text`, `/build-venue-card-fullbleed` and `/build-form-split-script-contact` in the Designer.
-- [ ] Q025: visual check of `🧱 article-card-staggered` (`/build-article-card-staggered`) against the plan previews and crops in `docs/figma/build-plans/Q025/`: base instance, is-right, is-right with "culture", is-tall. Recheck spacing with the real Sackers and Gatch fonts.
+- [x] Q025: visual check of `🧱 article-card-staggered` (`/build-article-card-staggered`) against the plan previews and crops in `docs/figma/build-plans/Q025/`: base instance, is-right, is-right with "culture", is-tall. Recheck spacing with the real Sackers and Gatch fonts. Stephen approved on 2026-10-20 ("all look pretty good").
 
 ## Decisions for Stephen
 - [ ] Q024: `is-small` cannot switch on an image-inset-single instance (same decision as Q014); it sits as a plain section on the build page. The plan's open questions also stand: is rooms-individual/04 a background video, which image fills the small variant on happenings-indiv and blog-indiv, should the rooms image bind to a CMS field, and the mobile aspect ratio.
