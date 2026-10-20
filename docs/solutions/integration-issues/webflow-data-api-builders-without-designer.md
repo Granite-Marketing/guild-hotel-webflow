@@ -232,3 +232,11 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 - **Presence-only data attributes get a value.** The A04 contract checks presence (`[data-history-sticky-year]`); the builder was given `value: "true"` rather than an empty string, which it may reject.
 - **Grey Figma placeholders become empty figures.** When the snapshot has only #D9D9D9 rectangles and no asset, build an empty `figure` with the size and aspect ratio on its class, a #d9d9d9 fill, and `data-image-placeholder="<what goes here>"`, so the image slots are findable later.
 - **Placeholders for unbuilt Q005 to Q011 pieces** use the shared `section_placeholder` class (created by Q036) plus `data-placeholder="Q0xx"`.
+- **Builder calls can fail with `init-multiplayer-connection returned 429` (`RATE_LIMITED`)** when several page sessions write at once (Q040). Nothing is written; re-send the same call a little later and read the page back to confirm.
+
+## Gotchas found assembling Home (Q031, 2026-10-20)
+
+- **Pages from the Relume starter keep a shell.** Home has `.page-wrapper` > Global Styles embed + `main.main-wrapper`, unlike the K02/Q004 pages where sections sit on the Body. `data_component_builder` `prepend` into `.page-wrapper` puts the Site Nav first (before the embed), and every section then goes in with `append` on `main.main-wrapper`. Read depth 0 to 2 before choosing the parent.
+- **Instance internals are invisible to page queries.** `query_elements` on the page with `attribute_name` finds nothing inside an instance (A02 attributes in Image Trio Text came back empty). Query with `scope_component_id` set to the component to verify attributes in a definition.
+- **Two styles named `section_placeholder` exist** (ids `34766799-7ade-616b-875e-1e8d19002c96` grey fill and `9333d82a-f287-e5ad-35b6-253c516b6c05` dashed border). `set_style` by name picks one; either reads as a placeholder, so it is fine for marked slots, but do not create a third.
+- **One-off sections built in one call.** A full section (section > component > header, footer, media with figure and four LinkBlock > figure > img) went in with one `data_element_builder` action, including `set_link` url, `set_image_asset` with alt text and `data-*` attributes. A copy of a plain section from a build page (the 04 to 09 snap group, about 50 elements) also went in as one nested schema.

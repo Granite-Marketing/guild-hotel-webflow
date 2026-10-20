@@ -24,7 +24,7 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 | History | `6ad66fd276d24ed37ac4c52f` | `/history` | history |
 | Dining | `6ad66fd476d24ed37ac4c5cb` | `/dining` | dining-collection |
 | Guidelines | `6ad66fd44c7f57894534ada5` | `/guidelines` | guidelines |
-| Rooms | `6ad66fd5f8bf4846e809dbee` | `/rooms` | rooms-collection |
+| Rooms | `6ad66fd5f8bf4846e809dbee` | `/rooms` | rooms-collection; assembled by Q033 (2026-10-20), Body `6ad66fd5f8bf4846e809dbf6` |
 | Room Detail | `6ad66fd5f8bf4846e809dc45` | `/rooms-individual` | rooms-individual |
 | Press | `6ad66fd5735773f253406642` | `/press` | press |
 | Gallery | `6ad66fd65794075272b95584` | `/gallery` | gallery |
