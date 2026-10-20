@@ -71,8 +71,8 @@ export const navToggle = () => {
     if (items.length) {
       gsap.fromTo(
         items,
-        { opacity: 0, y: 8 },
-        { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' },
+        { autoAlpha: 0, y: 8 },
+        { autoAlpha: 1, y: 0, duration: 0.35, ease: 'power2.out' },
       )
     }
   }
@@ -96,7 +96,7 @@ export const navToggle = () => {
 
     const items = menuItems()
     if (items.length) {
-      timeline.to(items, { opacity: 0, y: 8, duration: 0.35, ease: 'power2.in' }, 0)
+      timeline.to(items, { autoAlpha: 0, y: 8, duration: 0.35, ease: 'power2.in' }, 0)
     }
   }
 

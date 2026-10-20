@@ -302,7 +302,11 @@ Mobile nav open/close with a11y state and scroll pause.
 
 - `aria-expanded` and `aria-label` (open / close) stay in sync on the toggle.
 - Below 991px the engine is paused on open and resumed in the close
-  timeline's `onComplete`, after the fade.
+  timeline's `onComplete`, after the fade. Add `data-nav-lock="always"` to
+  `[data-nav="header"]` to pause it at every width, for a menu that is full
+  screen on desktop too (the Guild Site Nav uses this).
+- A link toggle (`a[href="#"]`) does not jump the page; Enter on it toggles
+  once.
 - Escape closes. `is-nav-open` is removed after the item fade, so style the
   header background, blur and menu visibility in CSS on `.is-nav-open`. No
   colours live in the script. Order: slot D.
