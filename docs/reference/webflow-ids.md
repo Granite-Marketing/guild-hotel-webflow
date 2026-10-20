@@ -38,7 +38,7 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 | Static Template | `6ad66fd802cc199b55b924be` | `/static-template` | static-template |
 | Contact | `6ad66fd8e0b7968459e18f22` | `/contact` | contact |
 | Meetings | `6ad66fd96684c3e22ea4d417` | `/meetings` | meetings-collection |
-| Neighborhood | `6ad66fdb02cc199b55b926ba` | `/neighborhood` | neighborhood |
+| Neighborhood | `6ad66fdb02cc199b55b926ba` | `/neighborhood` | neighborhood; assembled by Q044 (2026-10-20), Body `6ad66fdb02cc199b55b926c5` |
 
 Static pages created by Q004 on 2026-10-19 (slugs approved by Stephen: the four `-collection` Figma pages use clean slugs). CMS template pages (dining-*, legal, corporate, happenings-*, blog-*) are created with their collections in Q027 to Q030; add their rows then.
 
