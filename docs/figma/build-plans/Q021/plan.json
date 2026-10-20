@@ -1248,6 +1248,24 @@
       "local": "docs/figma/build-plans/shared-assets/button-outline-light.svg",
       "webflowAssetId": null,
       "note": "Outline for the shared button is-chamfer is-outline-light; upload once for all plans (see shared-classes.md)."
+    },
+    {
+      "slot": "Venue Card Fullbleed: Image prop default",
+      "webflowAssetId": "6ad6701cf08ff78c37d862e1",
+      "local": "assets/images/ea6bc516bd4f42b1e9858ed150c5031a47c59e38.png",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Venue Card Fullbleed Tall: Image prop default",
+      "webflowAssetId": "6ad66fee735773f253407335",
+      "local": "assets/images/237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1.jpg",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Venue Card Fullbleed Left: Image prop default",
+      "webflowAssetId": "6ad66ffa6684c3e22ea4e2ca",
+      "local": "assets/images/57b7c9d475ed31c64fc14b589c293bc5f86142a8.jpg",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
     }
   ],
   "instances": [
