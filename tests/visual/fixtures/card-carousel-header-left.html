@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fixture: card carousel header left (Q009)</title>
+    <!--
+      Local preview for src/utils/cardCarouselHeaderLeft.ts, loaded by
+      tests/visual/card-carousel-header-left.spec.ts. Swiper loads from
+      jsDelivr as on the site, and its CSS comes before the family CSS here
+      but after it on Webflow, so the slide width and the slider margins sit on
+      combos (.card-carousel-header-left_slide.swiper-slide,
+      .card-carousel-header-left_slider.swiper) as in the live styles. A is the base
+      variant (six cards), B compact (three cards), C a single card (locked).
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <style>
+      :root { --cream: #f4efdf; --dark: #262118; --olive: #29310c; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--cream); color: var(--dark); font-family: system-ui, sans-serif; }
+      .hide { display: none !important; }
+      .section_card-carousel-header-left { position: relative; overflow: hidden; padding: 13.4375rem 0 13.4375rem 2.5rem; background: var(--cream); }
+      .section_card-carousel-header-left.is-compact { padding-top: 8.5rem; padding-bottom: 8.5rem; }
+      .card-carousel-header-left_component { display: flex; align-items: stretch; }
+      .card-carousel-header-left_content { display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; width: 40.4375rem; flex-shrink: 0; padding-right: 2rem; }
+      .card-carousel-header-left_header { display: flex; flex-direction: column; gap: 2rem; max-width: 32.5rem; }
+      .card-carousel-header-left_heading { margin: 0; font-size: 2.5rem; line-height: 1; font-weight: 900; letter-spacing: -0.05em; }
+      .card-carousel-header-left_text { margin: 0; font-size: 1.25rem; line-height: 1.3; color: var(--olive); }
+      .card-carousel-header-left_controls { display: flex; align-items: center; gap: 1.25rem; }
+      .card-carousel-header-left_arrow { display: flex; width: 1.875rem; height: 0.875rem; color: inherit; transition: opacity 200ms ease; }
+      .card-carousel-header-left_arrow.is-disabled { opacity: 0.4; cursor: default; }
+      .card-carousel-header-left_slider { position: relative; overflow: hidden; flex-grow: 1; min-width: 0; }
+      /* Swiper's .swiper sets auto side margins, which stop the stretch when stacked. */
+      .card-carousel-header-left_slider.swiper { margin-left: 0; margin-right: 0; }
+      .card-carousel-header-left_slides { display: flex; align-items: flex-start; }
+      .card-carousel-header-left_slide { width: 22.25rem; flex-shrink: 0; margin-right: 2rem; }
+      .card-carousel-header-left_slide.swiper-slide { width: 22.25rem; height: auto; }
+      .card-carousel-header-left_link { display: block; color: inherit; text-decoration: none; }
+      .card-carousel-header-left_figure { position: relative; overflow: hidden; height: 22rem; margin: 0; background: #d9d9d9; }
+      .card-carousel-header-left_figure.is-tall { height: 31.375rem; }
+      .card-carousel-header-left_figure.is-mid { height: 28.9375rem; }
+      .card-carousel-header-left_label { margin: 0.75rem 0 0; font-size: 1.125rem; line-height: 1.2; font-weight: 900; letter-spacing: -0.03em; text-transform: lowercase; color: var(--olive); }
+      @media (max-width: 991px) {
+        .section_card-carousel-header-left { padding: 7rem 0 7rem 2rem; }
+        .section_card-carousel-header-left.is-compact { padding-top: 5rem; padding-bottom: 5rem; }
+        .card-carousel-header-left_component { flex-direction: column; gap: 3rem; }
+        .card-carousel-header-left_content { width: 100%; }
+        .card-carousel-header-left_slider { width: 100%; }
+      }
+      @media (max-width: 767px) {
+        .section_card-carousel-header-left { padding: 5rem 0 5rem 1.25rem; }
+        .section_card-carousel-header-left.is-compact { padding-top: 4rem; padding-bottom: 4rem; }
+        .card-carousel-header-left_content { padding-right: 1.25rem; }
+        .card-carousel-header-left_header { gap: 1.25rem; }
+        .card-carousel-header-left_heading { font-size: 2rem; }
+        .card-carousel-header-left_text { font-size: 1.125rem; }
+        .card-carousel-header-left_slide, .card-carousel-header-left_slide.swiper-slide { width: 16rem; margin-right: 1rem; }
+        .card-carousel-header-left_figure { height: 16rem; }
+        .card-carousel-header-left_figure.is-tall { height: 22.5rem; }
+        .card-carousel-header-left_figure.is-mid { height: 20.75rem; }
+        .card-carousel-header-left_label { font-size: 1rem; }
+      }
+    </style>
+  </head>
+  <body>
+  <section class="section_card-carousel-header-left swiper_slider" data-card-carousel aria-roledescription="carousel" aria-label="More of the guild A">
+    <div class="card-carousel-header-left_component">
+      <div class="card-carousel-header-left_content">
+        <header class="card-carousel-header-left_header"><h2 class="card-carousel-header-left_heading">more of the guild</h2><p class="card-carousel-header-left_text">Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.</p></header>
+        <div class="card-carousel-header-left_controls" data-card-carousel-controls>
+          <a href="#" class="card-carousel-header-left_arrow is-disabled" data-card-carousel-prev aria-label="Previous cards"><svg width="30" height="14" viewBox="0 0 30 14" fill="none" aria-hidden="true" style="display:block"><path d="M0.75 6.75H29.25M0.75 6.75L6.75 12.75M0.75 6.75L6.75 0.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#" class="card-carousel-header-left_arrow" data-card-carousel-next aria-label="Next cards"><svg width="30" height="14" viewBox="0 0 30 14" fill="none" aria-hidden="true" style="display:block"><path d="M29.25 6.75H0.75M29.25 6.75L23.25 0.75M29.25 6.75L23.25 12.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="card-carousel-header-left_slider swiper cards">
+        <div class="card-carousel-header-left_slides swiper-wrapper">
+          <div class="card-carousel-header-left_slide swiper-slide" data-card-carousel-slide="1">
+            <a class="card-carousel-header-left_link" href="#"><figure class="card-carousel-header-left_figure is-tall" data-image-placeholder="card image 1"></figure><p class="card-carousel-header-left_label">rooms</p></a>
+          </div>
+          <div class="card-carousel-header-left_slide swiper-slide" data-card-carousel-slide="2">
+            <a class="card-carousel-header-left_link" href="#"><figure class="card-carousel-header-left_figure" data-image-placeholder="card image 2"></figure><p class="card-carousel-header-left_label">dining</p></a>
+          </div>
+          <div class="card-carousel-header-left_slide swiper-slide" data-card-carousel-slide="3">
+            <a class="card-carousel-header-left_link" href="#"><figure class="card-carousel-header-left_figure is-mid" data-image-placeholder="card image 3"></figure><p class="card-carousel-header-left_label">wellness</p></a>
+          </div>
+          <div class="card-carousel-header-left_slide swiper-slide" data-card-carousel-slide="4">
+            <a class="card-carousel-header-left_link" href="#"><figure class="card-carousel-header-left_figure is-tall" data-image-placeholder="card image 4"></figure><p class="card-carousel-header-left_label">meetings &amp; events</p></a>
+          </div>
+          <div class="card-carousel-header-left_slide swiper-slide" data-card-carousel-slide="5">
+            <a class="card-carousel-header-left_link" href="#"><figure class="card-carousel-header-left_figure" data-image-placeholder="card image 5"></figure><p class="card-carousel-header-left_label">arts</p></a>
+          </div>
+          <div class="card-carousel-header-left_slide swiper-slide" data-card-carousel-slide="6">
+            <a class="card-carousel-header-left_link" href="#"><figure class="card-carousel-header-left_figure is-mid" data-image-placeholder="card image 6"></figure><p class="card-carousel-header-left_label">history</p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section_card-carousel-header-left swiper_slider is-compact" data-card-carousel aria-roledescription="carousel" aria-label="Discover other rooms B">
+    <div class="card-carousel-header-left_component">
+      <div class="card-carousel-header-left_content">
+        <header class="card-carousel-header-left_header"><h2 class="card-carousel-header-left_heading">discover other rooms</h2><p class="card-carousel-header-left_text">Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.</p></header>
+        <div class="card-carousel-header-left_controls" data-card-carousel-controls>
+          <a href="#" class="card-carousel-header-left_arrow is-disabled" data-card-carousel-prev aria-label="Previous cards"><svg width="30" height="14" viewBox="0 0 30 14" fill="none" aria-hidden="true" style="display:block"><path d="M0.75 6.75H29.25M0.75 6.75L6.75 12.75M0.75 6.75L6.75 0.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#" class="card-carousel-header-left_arrow" data-card-carousel-next aria-label="Next cards"><svg width="30" height="14" viewBox="0 0 30 14" fill="none" aria-hidden="true" style="display:block"><path d="M29.25 6.75H0.75M29.25 6.75L23.25 0.75M29.25 6.75L23.25 12.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="card-carousel-header-left_slider swiper cards">
+        <div class="card-carousel-header-left_slides swiper-wrapper">
+          <div class="card-carousel-header-left_slide swiper-slide" data-card-carousel-slide="1">
+            <a class="card-carousel-header-left_link" href="#"><figure class="card-carousel-header-left_figure is-tall" data-image-placeholder="card image 1"></figure><p class="card-carousel-header-left_label">cozy king</p></a>
+          </div>
+          <div class="card-carousel-header-left_slide swiper-slide" data-card-carousel-slide="2">
+            <a class="card-carousel-header-left_link" href="#"><figure class="card-carousel-header-left_figure" data-image-placeholder="card image 2"></figure><p class="card-carousel-header-left_label">guild city level loft</p></a>
+          </div>
+          <div class="card-carousel-header-left_slide swiper-slide" data-card-carousel-slide="3">
+            <a class="card-carousel-header-left_link" href="#"><figure class="card-carousel-header-left_figure is-mid" data-image-placeholder="card image 3"></figure><p class="card-carousel-header-left_label">guild loft suite</p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section_card-carousel-header-left swiper_slider" data-card-carousel aria-roledescription="carousel" aria-label="Single card C">
+    <div class="card-carousel-header-left_component">
+      <div class="card-carousel-header-left_content">
+        <header class="card-carousel-header-left_header"><h2 class="card-carousel-header-left_heading">one card</h2><p class="card-carousel-header-left_text">Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.</p></header>
+        <div class="card-carousel-header-left_controls" data-card-carousel-controls>
+          <a href="#" class="card-carousel-header-left_arrow is-disabled" data-card-carousel-prev aria-label="Previous cards"><svg width="30" height="14" viewBox="0 0 30 14" fill="none" aria-hidden="true" style="display:block"><path d="M0.75 6.75H29.25M0.75 6.75L6.75 12.75M0.75 6.75L6.75 0.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#" class="card-carousel-header-left_arrow" data-card-carousel-next aria-label="Next cards"><svg width="30" height="14" viewBox="0 0 30 14" fill="none" aria-hidden="true" style="display:block"><path d="M29.25 6.75H0.75M29.25 6.75L23.25 0.75M29.25 6.75L23.25 12.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="card-carousel-header-left_slider swiper cards">
+        <div class="card-carousel-header-left_slides swiper-wrapper">
+          <div class="card-carousel-header-left_slide swiper-slide" data-card-carousel-slide="1">
+            <a class="card-carousel-header-left_link" href="#"><figure class="card-carousel-header-left_figure is-tall" data-image-placeholder="card image 1"></figure><p class="card-carousel-header-left_label">rooms</p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./card-carousel-header-left.js"></script>
+  </body>
+</html>

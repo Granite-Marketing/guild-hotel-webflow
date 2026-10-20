@@ -184,3 +184,10 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q008: real offer content (headings, text, links, photos) for slides 1 to 5; Figma shows one slide per instance, so slides 3 to 5 repeat placeholder copy. Hide unused slides with Show slide N.
 - [ ] Q008: visual check of `/build-offers-slider-split` in the Designer and on staging against the crops (agent notes in `docs/figma/build-plans/Q008/staging-notes.md`).
 - [ ] Q008: home/13 retail crop shows a cream cross logo over the photo; confirm whether it is part of the photo asset or an overlay to add.
+
+## Q009 card-carousel-header-left (2026-10-20)
+- [ ] Q009 (R00): enable `cardCarouselHeaderLeft()` in `src/index.ts` (slot C, after `swiperSliders()`), with the Swiper 12 CSS (head) and JS (footer, before the bundle) in the site custom code if R00 has not added them; then release a tag. Until then staging shows the cards in a clipped row with dead arrows.
+- [ ] Q009: replace the marked sections with Card Carousel Header Left instances: `/history` `8829d2d2-6596-bb48-7469-cb63d779021a` (history/09, Compact, defaults) and `/gallery` `2b4ad8af-eb33-7b35-11cd-f93c3882180f` (gallery/04, Base, defaults). Decide whether the Dinings Template stand-in `86d57348-f224-7d1f-8ca3-1011769f1eb2` (`section_card-stagger-header-left`, `data-placeholder="Q009"`, Q027) becomes an instance with dining labels or stays. Props per instance: `docs/figma/build-plans/Q009/plan.md`. Pages built later (press, arts, contact, rooms-individual, happenings and blog) place the instance directly.
+- [ ] Q009: real card photos (Image N + Show image N) and final card labels and links; cards 4 to 6 hold placeholder labels (meetings & events, arts, history).
+- [ ] Q009: rooms-individual/10 "discover other rooms" could bind to the Rooms collection once that template is CMS driven; today it is props.
+- [ ] Q009: visual check of `/build-card-carousel-header-left` in the Designer and on staging against the crops (agent notes in `docs/figma/build-plans/Q009/staging-notes.md`).
