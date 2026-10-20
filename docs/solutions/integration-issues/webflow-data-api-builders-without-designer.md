@@ -165,6 +165,46 @@ Rules for the build skill:
 - **Text and link on a TextLink bind together.** One `set_settings` operation with keys `text` and `link` (both `binding` to props) applied cleanly, and the static `data-*` attributes on the link survived.
 - **Three-class combos for a state class.** A first tab with `tab_x text-style-eyebrow-caps is-active` needs `.tab_x.text-style-eyebrow-caps.is-active` to exist, even when `.tab_x.is-active` already carries the styles. Create it empty; the published CSS for `.tab_x.is-active` still matches the element.
 
+## Component variants (V01, 2026-10-20)
+
+Probe on Hero Fullbleed Centered (`f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa`) and `/build-hero-fullbleed-centered`. Two variants were created to match the `is-text-dark` and `is-left` reference sections: Text Dark (`c5755984-9207-f25b-c049-f99910c92943`) and Left (`75108921-8bef-ba10-2260-5af2990c9e7d`). Two new instances use them, below the reference sections.
+
+### 1. Create a variant, and what can differ?
+
+- `data_component_variants_tool > create_variant` works on an existing component. It returns the variant id. The variant has no styles until you add them.
+- A variant only holds **styles**. `set_variant_styles` takes `variant_id`, `style_name` (a class used inside the component), `breakpoint_id` and `pseudo`, and it accepts variables (`variable_as_value`). Text Dark sets `color` on `section_hero-fullbleed-centered`. Left sets `align-items`, `max-width` and `text-align` on `hero-fullbleed-centered_component` at `main`, and `max-width: none` at `small`.
+- A variant cannot add or swap classes or combos, and it cannot change text, images, links or visibility settings. Those stay props. A variant can hide an element with `display: none` on that element's class, but this probe did not test it. Use a Show boolean prop.
+- Breakpoint ids: `main` is desktop and `small` is mobile landscape (the published CSS puts `small` under `max-width: 767px`).
+
+### 2. Can an instance select a variant through the Data API?
+
+Yes. Creating the first variant adds a prop of type `variant`, named Variant, with default `base` (`69451566-4154-e6c8-a0db-695c14d9c0af` here). Neither `data_component_builder` nor `data_element_settings_tool` selects a variant: the instance returns "Element does not support settings". To select one, insert the instance, then call `set_component_instance_prop_values` with `type: "string"` and `string_value` set to the variant id. The schema has no `variant` type. `string` is accepted, and the variant id reads back.
+
+### 3. Do props keep working per instance?
+
+Yes. The Text Dark instance has Heading "V01 text dark". The Left instance has Image, Show Image, Show Eyebrow and Eyebrow set, and Show Heading, Show Text and Show Button off, all in the same call as the Variant prop. Each instance read back its own values, and the published page renders each one.
+
+### 4. Does creating a variant change existing instances?
+
+No. The instance that already existed reads `Variant: base` with all 15 props unchanged, and it publishes with the base styles. The Base variant's styles for both classes read back the same as before.
+
+### 5. Same on read-back and in the Designer?
+
+- **Read-back:** `get_variant_styles` returns exactly the values set, per breakpoint. `get_component` with `includeVariants` lists Base, Text Dark and Left.
+- **Published (webflow.io staging):** the root of each instance carries `data-wf--hero-fullbleed-centered--variant="<slug of the variant name>"`. Each element whose class has variant styles gets an extra class, `w-variant-<variant id>`. The CSS is `.section_hero-fullbleed-centered:where(.w-variant-…)`. Webflow merged it into the same rule as the matching combo (`, .section_hero-fullbleed-centered.is-text-dark`). The computed colour and alignment match the reference sections.
+- **Specificity:** `:where()` adds nothing, so a variant rule has single-class specificity (0,1,0), and a later rule on the same class can override it. Avoid combos on the same element that set the same property.
+- **Designer:** Stephen confirmed on 2026-10-20 that the canvas shows both instances correctly. The Text Dark instance has dark text, and the Left instance is left-aligned with the image and the eyebrow only, each matching its reference section.
+- `get_component` with `includeSelectedVariant`, or with several options combined, returns an internal error. Ask for one option per action.
+
+### Verdict
+
+Per-instance variants through the Data API: yes (styles only; content and visibility stay props).
+
+**Recommended route for the other components with reference-section variants (Q014, Q017, Q019, Q020, Q021, Q023, Q024, Q025, Q026):** for each `is-` combo in the plan's `variants`, create a variant named after the modifier. Then call `set_variant_styles` on the same base class and breakpoints, with the values read from the combo through `query_styles`. Page builds insert the instance and set the Variant prop by variant id as `type: "string"`. Two cases stay out of variants:
+- A modifier that changes structure or content (for example an image instead of the placeholder) stays a Show boolean or an image prop.
+- A modifier on a class used outside the component needs its variant style checked on every class it touches. The variant only applies inside instances.
+
+Keep the combo classes and reference sections until each component's variants are verified on staging. Then remove the reference sections after Stephen's yes.
 ## Gotchas found in the Q026 build (2026-10-20)
 
 - **Text elements with semantic tags:** a builder `DOM` element with `set_dom_config` `figcaption` and `settings` `[{ key: "text", static_text: { value } }]` creates a real `<figcaption>` with its text in one call, and its `text` setting binds to a text prop after conversion. Use it where `BY_CUSTOM_TAG` would give a Block that takes no text.
