@@ -305,3 +305,15 @@ Stand-in library photos on page-level sections and instance props, so staging sh
 - [x] `/meetings` (follow-up pass): stand-in photos in the hero (Show Image on, Base variant), the council boardroom panel and the three key features figures; gallery Images 1 and 4 varied. Per-slot asset ids in `docs/figma/build-plans/Q035/build.md`.
 - [ ] Offers sliders on Home, Rooms, History and Gallery hold the component's placeholder copy on slides 1 to 5 (except Home retail); set real offer copy and hide unused slides.
 - [ ] Every photo here is a stand-in; replace with the real imagery when it arrives, and run `/asset-metadata` for alt text (added images carry short generic alt).
+
+## Legal Corporates template (Q028, 2026-10-20)
+
+Template `/legal-corporate/<slug>` assembled through the Data API; staging renders `legal` and `corporate` with their own hero, intro and focus copy.
+
+- [ ] Visual check on staging against the Figma crops with a sample item: `/legal-corporate/legal` and `/legal-corporate/corporate`, desktop and mobile, including the sticky split and the venue snap section.
+- [ ] Corporate copy: the Figma pages are identical, so the corporate item's hero, intro and focus text are drafted, not client copy. Static sections (key features, packages, why teams choose, form details, map) still use the legal wording on both items; move more of them to CMS fields if the client supplies corporate copy.
+- [ ] legal/04 hover image (`2e81693530e933aa43a6c48a794614cca7c8822d`, the image that appears over a grid item) is not built; it belongs to the image hover interaction (Q007).
+- [ ] The four venue cards' body text is still Figma lorem, and only council boardroom opens a dialog (one Overlay Detail Panel Modal, dialog `council-boardroom`); the other three "discover more" buttons have no target.
+- [ ] Card Carousel Header Left (Q009) is not used here: the legal design has no carousel section. Offers Slider Split (Q008) is added after the gallery as on `/meetings`, with its placeholder offer copy.
+- [ ] Every photo is a stand-in from the library; replace with real imagery when it arrives.
+
