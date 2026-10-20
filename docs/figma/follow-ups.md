@@ -231,3 +231,5 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] V02-Q026: visual check of the `timeline-scatter-images Tall` instance (`44318675-d385-7bfe-151a-2014c7d5b255`) on `/build-timeline-scatter-images` against the is-tall reference section above it and the neighborhood/07 crop, in the Designer (the page is a draft, so staging returns 404). Classes read back identical to the reference section.
 - [ ] V02-Q026: delete the old is-tall reference section (`ff99cbf2-2677-0282-70e3-bb267dce160e`) on `/build-timeline-scatter-images` after the visual check (keep the combos; Tall uses them).
 - [ ] V02-Q026: neighborhood/07 (Q044) places `timeline-scatter-images Tall`, not the base component; it has no Variant prop.
+- [ ] Q037: visual check of `/guidelines` on staging (notes in `docs/figma/build-plans/Q037/`).
+- [ ] Q037: the hero has no image (Figma grey slot; Show Image is off); set Image and Show Image when the photo arrives. The guidelines/05 feature is an empty `figure` with `data-image-placeholder`; add a `u-image` Image when the collaborator photo arrives.
