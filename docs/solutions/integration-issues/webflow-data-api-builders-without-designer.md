@@ -185,7 +185,7 @@ No. The instance that already existed reads `Variant: base` with all 15 props un
 - **Read-back:** `get_variant_styles` returns exactly the values set, per breakpoint. `get_component` with `includeVariants` lists Base, Text Dark and Left.
 - **Published (webflow.io staging):** the root of each instance carries `data-wf--hero-fullbleed-centered--variant="<slug of the variant name>"`. Each element whose class has variant styles gets an extra class, `w-variant-<variant id>`. The CSS is `.section_hero-fullbleed-centered:where(.w-variant-…)`. Webflow merged it into the same rule as the matching combo (`, .section_hero-fullbleed-centered.is-text-dark`). The computed colour and alignment match the reference sections.
 - **Specificity:** `:where()` adds nothing, so a variant rule has single-class specificity (0,1,0), and a later rule on the same class can override it. Avoid combos on the same element that set the same property.
-- **Designer:** not yet checked; Stephen is to confirm. The Q020 note above still applies: trust the published render over the canvas.
+- **Designer:** Stephen confirmed on 2026-10-20 that the canvas shows both instances correctly. The Text Dark instance has dark text, and the Left instance is left-aligned with the image and the eyebrow only, each matching its reference section.
 - `get_component` with `includeSelectedVariant`, or with several options combined, returns an internal error. Ask for one option per action.
 
 ### Verdict
