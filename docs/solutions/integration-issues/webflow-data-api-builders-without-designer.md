@@ -240,3 +240,11 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 - **Instance internals are invisible to page queries.** `query_elements` on the page with `attribute_name` finds nothing inside an instance (A02 attributes in Image Trio Text came back empty). Query with `scope_component_id` set to the component to verify attributes in a definition.
 - **Two styles named `section_placeholder` exist** (ids `34766799-7ade-616b-875e-1e8d19002c96` grey fill and `9333d82a-f287-e5ad-35b6-253c516b6c05` dashed border). `set_style` by name picks one; either reads as a placeholder, so it is fine for marked slots, but do not create a third.
 - **One-off sections built in one call.** A full section (section > component > header, footer, media with figure and four LinkBlock > figure > img) went in with one `data_element_builder` action, including `set_link` url, `set_image_asset` with alt text and `data-*` attributes. A copy of a plain section from a build page (the 04 to 09 snap group, about 50 elements) also went in as one nested schema.
+
+## Gotchas found building the first CMS template (Q027, 2026-10-20)
+
+- **Instance props bind to CMS fields on a template page.** `set_component_instance_prop_values` with `type: "bindable"`, `binding_source_type: "cms"`, the collection id and the field id works for text props (Hero Heading and Text) and for image props (Split Image to an Image field). The published page renders each item's value, and an image prop bound to an empty Image field publishes `<img src="">`.
+- **Native text binds with `set_settings` key `text`** and a `cms` binding (headings, paragraphs, a Blockquote).
+- **Visibility binds only to a boolean field.** Binding `visibility` to a PlainText field returns "Element is not inside a CMS context", even on the template page. Add a Switch field and bind `visibility` to it through `set_settings` key `visibility` (`set_visibility` with a binding gave the same error). Hidden sections are left out of the published HTML.
+- **Draft items do not render on staging.** Template pages publish only items that are not drafts; set `isDraft: false` with `update_collection_items` before the webflow.io publish.
+- **A variant cannot follow the item.** The Variant prop takes a variant id, with no CMS binding, so per-item looks need a Switch and two conditionally shown instances.

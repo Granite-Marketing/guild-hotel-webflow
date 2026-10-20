@@ -163,3 +163,14 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q031 (Q015 owner): faq-accordion publishes with all six items expanded; Figma shows only the first open.
 - [ ] Q031 (Q012 owner): the CTA newsletter email field has no "*Email" placeholder (Designer-only, see the Q022 placeholder gotcha).
 - [ ] Pages: two global `section_placeholder` styles exist (ids 34766799 and 9333d82a, created by Q040 and Q036 in parallel). Keep one, repoint the other's elements, delete the duplicate.
+
+## Q027 Dinings template (2026-10-20)
+- [ ] Q027: visual check of the Dinings template on staging with sample items `https://the-guild-hotel-c34e71.webflow.io/dining/dining-zuma` (quote band on, intro image set) and `/dining/dining-gardenterrace` (quote band off) against the Q027 section crops.
+- [ ] Q027: the template uses one look for all four venues: hero Burgundy Button and intro split Olive. Zuma's design uses the Blue Button hero, the Zuma logo and the Blue, media-left split; a variant cannot be bound to a CMS field. Options: a Switch per look with two conditionally shown instances, or accept one look.
+- [ ] Q027: hero has no background image or logo; add `hero-image` and `hero-logo` Image fields and bind the Image and Logo props when the photos arrive. The intro split image is bound to `intro-image` (set on Zuma only); the other three render an empty img.
+- [ ] Q027: the "other dining options" section is a static stand-in for a card carousel (`data-placeholder="Q009"`, arrows not built). Card labels are bound to `other-dining-label-1..3`, identical on every item, so each venue lists itself; decide whether to replace the cards with a Collection List of the other Dinings items (filter: not the current item) once Q009 lands. Card images and links are empty.
+- [ ] Q027: Zuma's dress code section has an extra "discover zuma" link; the template shows only "browse the menu" (`#`). Add a link field per venue for the menu and the venue site.
+- [ ] Q027: quote band press logo slot is an empty figure (`data-image-placeholder`); upload `figma/vectors/logo-3-1-385x90-306-260.svg` and add a `press-logo` Image field.
+- [ ] Q027: gallery heading is static "gallery" (Figma copies "zuma gallery" on every venue); gallery images, group dining images and the image pair photos are placeholders; reservation, enquire and menu links are `#`.
+- [ ] Q027: all four Dinings items were switched from draft to ready so the staging publish renders them. Switch them back if they should not publish with the next site publish.
+

@@ -15,6 +15,9 @@ Proposal names (`s<section>-<role>`) mapped to the live readable fields. All tex
 | s10-eyebrow-caps-7 | Other dining label 2 (`other-dining-label-2`) | Second card eyebrow |
 | s10-eyebrow-caps-8 | Other dining label 3 (`other-dining-label-3`) | Third card eyebrow |
 
+| (Q027) | Press quote (`press-quote`) | dining-zuma/06 quote band text |
+| (Q027) | Show press quote (`show-press-quote`, Switch) | Quote band section visibility (on for Zuma only) |
+
 Note: the three label values are identical on all four items ("pool lounge", "lobby terrace", "the lobby bar"), so each venue's page lists itself. Revisit when the real cards are bound.
 
 ## `🏷️ Post Categories` (items: Happenings, Blog)
