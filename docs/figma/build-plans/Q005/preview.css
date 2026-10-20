@@ -1,0 +1,330 @@
+/* Generated from plan.json by generate-preview.mjs. Do not edit by hand. */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: var(--_typography---font-styles--body); }
+p { margin: 0; }
+
+/* Preview only: each state block is the positioning context. The live menu is position: fixed
+   (covers the viewport); here it is absolute inside the block so stacked states do not overlap.
+   The header is made static so the absolute menu measures against the block, not the 70px header. */
+.preview-state { position: relative; height: 100vh; overflow: hidden; }
+.preview-state .site-nav_component { position: static; }
+.preview-state .site-nav_menu { position: absolute; }
+.preview-standin { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; }
+.preview-state[data-state="base-closed"] .preview-standin, .preview-state[data-state="base-open"] .preview-standin { background: #D9D9D9; }
+.preview-state[data-state="dark-closed"] .preview-standin { background: #F4EFDF; }
+
+.site-nav_component {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  color: var(--_primitives---colors--neutral-lightest);
+}
+
+.site-nav_bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.site-nav_start {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.site-nav_toggle {
+  display: flex;
+  width: 2.3125rem;
+  height: 1rem;
+  flex-shrink: 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+.site-nav_icon {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.site-nav_modes {
+  display: flex;
+  align-items: center;
+  column-gap: 2.125rem;
+}
+
+.site-nav_mode {
+  font-family: var(--_typography---font-styles--heading);
+  font-size: 1rem;
+  line-height: 0.75;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  column-gap: 0.3125rem;
+  opacity: 0.5;
+}
+
+.site-nav_mode:hover {
+  opacity: 1;
+}
+
+.site-nav_mode-icon {
+  display: flex;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.site-nav_logo {
+  display: block;
+  width: 26.8125rem;
+  max-width: 100%;
+  height: 1.75rem;
+  flex-shrink: 1;
+  color: inherit;
+}
+
+.site-nav_end {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  justify-content: flex-end;
+}
+
+.site-nav_book {
+  font-family: var(--_typography---font-styles--heading);
+  font-size: 1rem;
+  line-height: 0.75;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.site-nav_book:hover {
+  opacity: 0.7;
+}
+
+.site-nav_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  background-color: var(--_primitives---colors--neutral-darkest);
+  color: var(--_primitives---colors--neutral-lightest);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.site-nav_menu-figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.site-nav_menu-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.site-nav_menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.site-nav_menu-nav {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.site-nav_menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+  text-align: center;
+}
+
+.site-nav_menu-link {
+  font-family: var(--_typography---font-styles--heading);
+  font-size: 2.5rem;
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-nav_menu-link:hover {
+  opacity: 0.7;
+}
+
+.site-nav_menu-footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  column-gap: 2rem;
+  position: relative;
+  padding-left: 4rem;
+  padding-right: 3.5rem;
+  padding-bottom: 1.75rem;
+}
+
+.site-nav_menu-detail {
+  font-family: var(--_typography---font-styles--heading);
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-nav_menu-detail:hover {
+  opacity: 0.7;
+}
+
+.site-nav_embed {
+  display: none;
+}
+
+.site-nav_mode.is-active {
+  opacity: 1;
+}
+
+.site-nav_menu-detail.is-end {
+  justify-self: end;
+  text-align: right;
+}
+
+.site-nav_component.is-preview-dark {
+  color: var(--_primitives---colors--neutral-darkest);
+}
+
+@media (max-width: 991px) {
+.site-nav_bar {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.site-nav_modes {
+  display: none;
+}
+
+.site-nav_logo {
+  width: 20rem;
+  height: 1.3125rem;
+}
+
+.site-nav_menu-link {
+  font-size: 2.25rem;
+}
+
+.site-nav_menu-footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+}
+
+@media (max-width: 767px) {
+.site-nav_bar {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  column-gap: 1rem;
+}
+
+.site-nav_toggle {
+  width: 1.75rem;
+  height: 0.75rem;
+}
+
+.site-nav_logo {
+  width: 12rem;
+  height: 0.8rem;
+}
+
+.site-nav_book {
+  font-size: 0.75rem;
+}
+
+.site-nav_menu-nav {
+  padding-top: 5rem;
+}
+
+.site-nav_menu-list {
+  row-gap: 1.25rem;
+}
+
+.site-nav_menu-link {
+  font-size: 1.75rem;
+}
+
+.site-nav_menu-footer {
+  flex-direction: column;
+  row-gap: 0.75rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  display: flex;
+}
+
+.site-nav_menu-detail {
+  font-size: 0.875rem;
+}
+
+.site-nav_menu-detail.is-end {
+  justify-self: auto;
+  text-align: center;
+}
+}
+
+@media (max-width: 479px) {
+.site-nav_menu-link {
+  font-size: 1.5rem;
+}
+}
+

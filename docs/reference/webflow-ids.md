@@ -58,6 +58,7 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 | Q024 | 🧱 image-inset-single | `6ad712cc8669ab49cd2c7290` | `/build-image-inset-single` |
 | Q025 | 🧱 article-card-staggered | `6ad712cd74b1a594d93c88aa` | `/build-article-card-staggered` |
 | Q026 | 🧱 timeline-scatter-images | `6ad712cefaaaa1926dd00d80` | `/build-timeline-scatter-images` |
+| Q005 | 🧱 site-nav | `6ad769cad74aa30b7c564578` | `/build-site-nav` (created by the Q005 session; published to staging, not draft) |
 
 ## Shared Assets (K02)
 
@@ -97,6 +98,7 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 | image-inset-single | `3eeb97fa-6550-7845-31ee-e997e4b8f2f1` | Q024, group Sections, built on `/build-image-inset-single` (2026-10-20); 2 props (image, image alt); `is-small` is a plain reference section on the build page |
 | tab-pills-intro | `30192280-e01e-6f0a-638c-42d4686bee29` | Q023, group Sections, built on `/build-tab-pills-intro` (2026-10-20); 12 props (Content, Tabs, Visibility groups); default content is press/02; `is-media` wellness and meetings are plain reference sections on the build page |
 | timeline-scatter-images | `144b7315-3604-2419-b046-c09d180f1163` | Q026, group Sections, built on `/build-timeline-scatter-images` (2026-10-20); 6 props (Heading, Show Heading, Caption 1 to 4); no slot, items fixed; `is-tall` is a reference section on the build page |
+| Site Nav | `fc94d1a2-3399-4de0-e836-0233a6c86cdf` | Q005 shared navbar and full-screen menu, group Global, built on `/build-site-nav` (2026-10-20). Props: Book link `f6c9cf45-4dfc-02ea-be81-50f6e2ecee62` (url, default `#book`), Variant `454e7f56-bf51-5074-566c-b5cbae95cdd5` (base = light text; Dark `08083309-2be0-2228-878a-7f1c05773f43`) |
 
 ## Variable Collections
 

@@ -3,6 +3,7 @@
 Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, #33, #35, #36, #37, #38 and the Q012 to Q015 `plan.json` deviations on main.
 
 ## Stephen, in the Designer
+- [ ] Q005: optional look at `/build-site-nav` on staging (https://the-guild-hotel-c34e71.webflow.io/build-site-nav): light nav over grey, Dark instance one screen down, hamburger opens the full-screen menu. Agent check results: `docs/figma/build-plans/Q005/staging-notes.md`.
 - [ ] Q024: visual check of `/build-image-inset-single` (base instance with the rooms-individual image, and the is-small reference section) against `docs/figma/build-plans/Q024/preview-*-1440.png` and the reference crops. No rich text styling is needed.
 - [ ] Q021: visual check of `/build-venue-card-fullbleed` (two component instances, the home and dining snap groups, is-tall and is-left) against `docs/figma/build-plans/Q021/preview-*.png` and the reference crops; check the clip-path chamfers on the frame and tab bar, and the is-left list row height and divider bleed.
 - [ ] V02-Q021: visual check of the three new instances on `/build-venue-card-fullbleed` (Media Center variant after the dining snap group, Venue Card Fullbleed Tall after is-tall, Venue Card Fullbleed Left after is-left) against the reference sections above them; not published or seen yet.
@@ -39,6 +40,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [x] Q025: visual check of `🧱 article-card-staggered` (`/build-article-card-staggered`) against the plan previews and crops in `docs/figma/build-plans/Q025/`: base instance, is-right, is-right with "culture", is-tall. Recheck spacing with the real Sackers and Gatch fonts. Stephen approved on 2026-10-20 ("all look pretty good").
 
 ## Decisions for Stephen
+- [ ] Q005: day and night switch has no specified behaviour (built as static controls, day active, hidden below 992px); booking URL for book now (Book link prop defaults to `#book`); experiences links to /arts until an experiences or happenings page exists; Shield nav states (236:8363, 236:8498) are unused in Figma and not built.
 - [ ] Q024: `is-small` cannot switch on an image-inset-single instance (same decision as Q014); it sits as a plain section on the build page. The plan's open questions also stand: is rooms-individual/04 a background video, which image fills the small variant on happenings-indiv and blog-indiv, should the rooms image bind to a CMS field, and the mobile aspect ratio.
 - [ ] Q021: open questions OQ2 (wellness and meetings intro moves from Q023 into this snap section) and OQ3 (legal and corporate as a static stack) are still on their defaults; confirm before those pages are built.
 
@@ -62,6 +64,9 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q025: card image source (CMS image field on collection pages, manual upload for the neighborhood dining cards) and whether the neighborhood header should stick (plan open questions 4 and 5).
 
 ## Agent follow-ups
+- [ ] Q005: the site has no custom code yet. Ship the bundle (navToggle is enabled in `src/index.ts`) via a release and the Site Settings footer tag, with GSAP, ScrollTrigger and Lenis CDN tags before it, then remove the page-only head and footer code from `🧱 site-nav`.
+- [ ] Q005: page sessions insert Site Nav (`fc94d1a2-3399-4de0-e836-0233a6c86cdf`) as the first body child on every page, Dark variant on static-template and contact; then remove the build page. Only one Site Nav per page: navToggle binds the first `[data-nav]` set.
+- [ ] Q005: 21 classes and 2 combos created (`docs/figma/build-plans/Q005/plan.json` `build`). Add an `aria-current` state for the current page link if wanted.
 - [ ] Q024: place image-inset-single on rooms-individual and arts (base, arts uses asset `6ad66fff134731ad1b927c11` with alt "Palm leaves in front of the Guild Hotel sign at night"), and is-small on happenings-indiv and blog-indiv once the variant and image decisions are made, then remove the build page.
 - [ ] Q021: four empty combos were created (`docs/figma/build-plans/Q021/plan.json` `build.classesCreated`). When placing on real pages, copy the home or dining snap section for each snap group (wellness and meetings need their tab labels and intro), and use the Venue Card Fullbleed component for the legal and corporate static cards, then remove the build page.
 - [ ] Q014: the Zuma wordmark is now uploaded (`6ad74d2ed0e5a6a8fc1be09e`, by Q021); set it on the dining-zuma reference hero logo slot.
