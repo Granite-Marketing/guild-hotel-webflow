@@ -36,4 +36,4 @@ Session setup, before anything else: in your worktree root run `ln -sf ~/guild-h
 - The component and every variant exist on the build page, matching the plan's tree and classes on read-back.
 - The component id is cached.
 - No standalone class was created by this session; every empty combo it created is listed in the PR.
-- PR against main with the deviations, any visual differences, and the Designer-only follow-ups.
+- PR against main (the orchestrator verifies and merges it; do not ask Stephen to merge) with the deviations, any visual differences, and the Designer-only follow-ups.
