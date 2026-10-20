@@ -86,6 +86,11 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q021: add `data-eager` (and `loading=eager`) to the Venue Card Fullbleed component image; the wellness, meetings, legal and corporate tab groups are not built yet.
 - [ ] Q022: add `target=_blank` to the social links in the form-split-script-contact component.
 - [ ] Q020: the is-left reference sections have no `data-image-stack-collapse` attributes; add them where the A02 animation applies.
+- [ ] Q023 (Designer): add the `panels` slot to the tab-pills-intro frame (before the nav) and, if wanted, swap the four fixed tabs for a `tabs` slot. The Data API has no slot props.
+- [ ] Q023: the `media` variant (is-media on component, header, stage, frame and tabs) is two plain reference sections on the build page. Apply the V01 route, then place the component on wellness-collection and meetings-collection with the Q021 venue cards as panels.
+- [x] Q023 (Designer): visual check of `/build-tab-pills-intro` (base instance and both is-media sections). Stephen confirmed it looks fine on 2026-10-20.
+- [ ] Q023: three empty combos were created (listed in `docs/figma/build-plans/Q023/plan.json` `build.classesCreated`).
+- [ ] Q023: place the base component on press, happenings-collection and blog-collection (Show tab 4 off, tab links `#press` etc.), then remove the build page. Plan open questions still stand (scroll-spy or filters for base tabs, sticky pill, console warning on base instances, meetings tab copy, mobile tab overflow).
 - [ ] Q025: four empty combos were created (`docs/figma/build-plans/Q025/plan.json` `build.createdCombos`), including the shared `.heading-style-h3.text-weight-normal`, which other families can reuse.
 - [ ] Q025: place Article Card Staggered on happenings-collection and blog-collection, and copy the is-tall reference section to neighborhood/09, then remove the build page. Remove the #d9d9d9 figure fill once real images are bound.
 - [x] Q026 (Designer): visual check of `🧱 timeline-scatter-images` (base instance and `is-tall` reference section) against `docs/figma/build-plans/Q026/preview-*.png` and the guidelines/04 and neighborhood/07 crops; nothing was published. Checked by Stephen in the Designer on 2026-10-20: looks good.

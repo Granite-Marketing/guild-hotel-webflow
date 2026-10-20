@@ -158,6 +158,13 @@ Rules for the build skill:
 - **Visual check by publishing to staging (Q020).** The Designer canvas can render Data API builds wrongly. On Q020 the eyebrow h3s showed at h3 tag size (about 40px) while the published page computed 18px as planned. Check the published page instead: build pages are created as drafts, so set `draft: false` with `data_pages_tool > update_page_settings`, then `data_sites_tool > publish_site` with `publishToWebflowSubdomain: true` and no custom domains. Read computed styles on `<site>.webflow.io/<slug>` in a browser. Stephen approved staging publishes for this project on 2026-10-20 (not shared with the client yet).
 - **Designer drops some API-created utility combos (Q020).** On the card titles, the API and the published HTML both had `image-trio-text_item-heading text-style-eyebrow-caps`, but the Designer showed only `image-trio-text_item-heading` and rendered the h3 at tag size. For a family element whose only job is one text style, put the style values on the family class itself instead of stacking a global utility through an empty combo.
 
+## Gotchas found in the Q023 build (2026-10-20)
+
+- **Attribute bound to a text prop keeps its line breaks.** Binding a heading's `aria-label` (`set_settings` key `attributes`, `value_binding` to a `textContent` prop) works, and the attribute resolves to the prop value including its `\n`. Use a separate string prop if the label must be one line.
+- **Binding `attributes` replaces the whole list.** Re-include every static attribute (for example `data-*` hooks) in the same write. The nav and heading in Q023 had only `aria-label`, so nothing was lost.
+- **Text and link on a TextLink bind together.** One `set_settings` operation with keys `text` and `link` (both `binding` to props) applied cleanly, and the static `data-*` attributes on the link survived.
+- **Three-class combos for a state class.** A first tab with `tab_x text-style-eyebrow-caps is-active` needs `.tab_x.text-style-eyebrow-caps.is-active` to exist, even when `.tab_x.is-active` already carries the styles. Create it empty; the published CSS for `.tab_x.is-active` still matches the element.
+
 ## Gotchas found in the Q026 build (2026-10-20)
 
 - **Text elements with semantic tags:** a builder `DOM` element with `set_dom_config` `figcaption` and `settings` `[{ key: "text", static_text: { value } }]` creates a real `<figcaption>` with its text in one call, and its `text` setting binds to a text prop after conversion. Use it where `BY_CUSTOM_TAG` would give a Block that takes no text.
