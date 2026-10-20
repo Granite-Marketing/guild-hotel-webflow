@@ -136,6 +136,8 @@ Figma variants with no class yet (add as `is-` modifiers inside the component th
 
 None yet. Record each shared class family here as build sessions create it (name, purpose, where used).
 
+Planned, not yet created: the wave 2 shared classes, new colour variables and corrections to existing utilities are listed in `docs/figma/build-plans/shared-classes.md` (K01). Move each row here once the Designer session creates it.
+
 Not project classes: `x01-probe_*` (9 classes and 2 combos) belong to the X01 probe and are deleted after it; `(delete this)` is a Relume leftover.
 
 ---

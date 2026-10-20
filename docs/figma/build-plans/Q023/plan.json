@@ -7,10 +7,11 @@
     "section": "wellness-collection/02-from-movement-and-produce-to-deep"
   },
   "reusedClasses": [
-    "padding-global",
     "container-large",
-    "heading-style-h1",
-    "text-size-medium"
+    "padding-global",
+    "text-size-medium",
+    "text-style-eyebrow-caps",
+    "text-style-script"
   ],
   "familyClasses": [
     {
@@ -18,8 +19,8 @@
       "styles": {
         "desktop": {
           "position": "relative",
-          "background-color": "var(--color-neutral-100)",
-          "color": "var(--color-accent)"
+          "background-color": "var(--_primitives---colors--neutral-lightest)",
+          "color": "var(--_primitives---colors--accent)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -141,7 +142,7 @@
           "padding-left": "3.75rem",
           "overflow-x": "auto",
           "white-space": "nowrap",
-          "background-color": "var(--color-brand-4a1217)",
+          "background-color": "var(--_primitives---colors--burgundy)",
           "clip-path": "polygon(1.25rem 0, calc(100% - 1.25rem) 0, 100% 1rem, 100% calc(100% - 1rem), calc(100% - 1.25rem) 100%, 1.25rem 100%, 0 calc(100% - 1rem), 0 1rem)"
         },
         "tablet": {
@@ -163,7 +164,7 @@
       "styles": {
         "desktop": {
           "flex": "0 0 auto",
-          "color": "var(--color-neutral-100)",
+          "color": "var(--_primitives---colors--neutral-lightest)",
           "opacity": "0.45",
           "text-decoration": "none",
           "transition": "opacity 300ms ease"
@@ -176,40 +177,15 @@
   ],
   "proposedShared": [
     {
-      "name": "text-style-script",
-      "why": "Morello pointed-pen script headings (Morello 60 and 80 styles, 74 text nodes across the file); stacks on a heading-style-* size class so every script heading shares one family and leading.",
-      "styles": {
-        "desktop": {
-          "font-family": "Morello",
-          "font-weight": "400",
-          "line-height": "1.2",
-          "letter-spacing": "0",
-          "text-transform": "none"
-        }
-      }
-    },
-    {
-      "name": "text-style-eyebrow-caps",
-      "why": "EYEBROW-CAPS named style (393 text nodes): tab labels, eyebrows and small caps labels in most components. Suggested combo name from figma/tokens.json.",
-      "styles": {
-        "desktop": {
-          "font-family": "\"Sackers Heavy Gothic\"",
-          "font-size": "1.125rem",
-          "font-weight": "400",
-          "line-height": "1.2",
-          "letter-spacing": "-0.03em",
-          "text-transform": "lowercase"
-        },
-        "mobilePortrait": {
-          "font-size": "1rem"
-        }
-      }
+      "name": "is-large",
+      "comboOn": "text-style-script",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     }
   ],
   "variables": [
-    "color-neutral-100",
-    "color-accent",
-    "color-brand-4a1217"
+    "_primitives---colors--accent",
+    "_primitives---colors--burgundy",
+    "_primitives---colors--neutral-lightest"
   ],
   "tree": [
     {
@@ -253,8 +229,8 @@
                           "tag": "h2",
                           "classes": [
                             "tab-pills-intro_heading",
-                            "heading-style-h1",
-                            "text-style-script"
+                            "text-style-script",
+                            "is-large"
                           ],
                           "attributes": {
                             "aria-label": "{heading}"
@@ -657,5 +633,15 @@
     "Heading colour is #000000 in the wellness and meetings references and #29310C in the base references. The plan inherits color-accent (#29310C) everywhere.",
     "Paragraph widths in the references are 588, 636 and 660px; the plan uses one max-width of 37.5rem.",
     "The base and media instances share one Webflow component; 'media' is a Webflow component variant that applies is-media to the component, header, stage, frame and tabs elements."
-  ]
+  ],
+  "k01": {
+    "reconciledBy": "K01, 2026-10-20",
+    "sharedClasses": "docs/figma/build-plans/shared-classes.md",
+    "changes": [
+      "Class list `tab-pills-intro_heading heading-style-h1 text-style-script` is now `tab-pills-intro_heading text-style-script is-large`.",
+      "The `is-media` modifier is kept: the brief's `is-media-center + is-1-image + is-tall` and `is-centered + is-tall` both reduce to the same frame, and every reference is centred (see deviations).",
+      "Script heading is `text-style-script is-large`. The live `text-style-eyebrow-caps` has no mobile step, so the tab labels stay 18px on mobile (the plan proposed 16px).",
+      "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  }
 }

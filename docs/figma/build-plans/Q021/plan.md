@@ -91,3 +91,14 @@ A Sonnet subagent compared each 1440 and 390 screenshot with its crop. The Figma
 | no-image ([meetings-collection/03](../../../../figma/pages/meetings-collection/sections/03-council-boardroom/section.webp)) | Chamfered card, centred heading, text and CTA | Grey is darker: the scrim sits over color-neutral-300, so text contrast is better than Figma. The dark square is absent (Q021-OQ6) | close |
 
 For the Designer session to check against the real fonts: the list row height on `is-left` (try 1.25rem padding), the divider bleed, and whether the 2.125rem frame chamfer reads too large on the smaller start frame.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Class list `button` is now `button is-chamfer`.
+- Class list `venue-card-fullbleed_tab text-size-regular text-style-eyebrow-caps` is now `venue-card-fullbleed_tab text-style-eyebrow-caps`.
+- Class list `button is-outline` is now `button is-chamfer is-outline-light`.
+- `button` is now `button is-chamfer`; home/11 and home/15 use `is-outline-light` (cream stroke SVG in shared-assets/). `reusedClassAssumptions` is superseded by the live values and shared-classes.json.
+- Stage, media and tab classes stay in this family; see shared-classes.md "Not merged".
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

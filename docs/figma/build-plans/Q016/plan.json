@@ -7,11 +7,11 @@
     "section": "home/02-a-century-of-stories-meets-a"
   },
   "reusedClasses": [
-    "padding-global",
     "container-large",
-    "heading-style-h1",
+    "padding-global",
     "text-size-medium",
-    "text-size-regular",
+    "text-style-caps-caption-16",
+    "text-style-script",
     "text-weight-normal"
   ],
   "familyClasses": [
@@ -20,8 +20,8 @@
       "styles": {
         "desktop": {
           "position": "relative",
-          "background-color": "var(--color-neutral-100)",
-          "color": "var(--color-accent)"
+          "background-color": "var(--_primitives---colors--neutral-lightest)",
+          "color": "var(--_primitives---colors--accent)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -67,7 +67,7 @@
           "display": "inline-flex",
           "align-items": "center",
           "column-gap": "0.375rem",
-          "color": "var(--color-accent)",
+          "color": "var(--_primitives---colors--accent)",
           "text-decoration": "none"
         },
         "tablet": {},
@@ -136,7 +136,7 @@
         "desktop": {
           "margin-top": "3rem",
           "margin-bottom": "3rem",
-          "color": "var(--color-neutral-900)",
+          "color": "var(--_primitives---colors--neutral-darkest)",
           "white-space": "pre-line",
           "transform": "rotate(-7.38deg)"
         },
@@ -172,7 +172,7 @@
         "desktop": {
           "margin-top": "0",
           "margin-bottom": "0",
-          "color": "var(--color-accent)"
+          "color": "var(--_primitives---colors--accent)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -182,73 +182,22 @@
   ],
   "proposedShared": [
     {
+      "name": "is-large",
+      "comboOn": "text-style-script",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
+    },
+    {
       "name": "padding-section-xlarge",
-      "why": "Figma gaps around every script intro are 218 to 283px at 1600 wide (median about 235px), double padding-section-large. Neighbouring heroes are full-bleed with no padding, so this section owns the gap. Any other airy section with the same rhythm can reuse it.",
       "comboOn": "padding-global",
-      "styles": {
-        "desktop": {
-          "padding-top": "14rem",
-          "padding-bottom": "14rem"
-        },
-        "tablet": {
-          "padding-top": "10rem",
-          "padding-bottom": "10rem"
-        },
-        "mobileLandscape": {
-          "padding-top": "6rem",
-          "padding-bottom": "6rem"
-        },
-        "mobilePortrait": {
-          "padding-top": "5rem",
-          "padding-bottom": "5rem"
-        }
-      }
-    },
-    {
-      "name": "text-style-script",
-      "why": "Morello 80/96 script heading: 25 uses at 80px in figma/raw (tokens.json maps it to heading-style-h1, whose primary style is Sackers 56). Combo on heading-style-h1 carrying only the differing properties. Rotation stays on the family heading because 48 Morello 60px uses are unrotated.",
-      "comboOn": "heading-style-h1",
-      "styles": {
-        "desktop": {
-          "font-family": "Morello, 'Snell Roundhand', 'Apple Chancery', cursive",
-          "font-size": "5rem",
-          "font-weight": "400",
-          "line-height": "1.2",
-          "letter-spacing": "0",
-          "text-transform": "none"
-        },
-        "tablet": {
-          "font-size": "4rem"
-        },
-        "mobileLandscape": {
-          "font-size": "3.25rem"
-        },
-        "mobilePortrait": {
-          "font-size": "2.75rem"
-        }
-      }
-    },
-    {
-      "name": "text-style-caps-caption-16",
-      "why": "CAPS-CAPTION-16 (242 uses). Same definition as P018 proposes; tokens.json suggests this combo on text-size-regular.",
-      "comboOn": "text-size-regular",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-weight": "400",
-          "line-height": "1.2",
-          "letter-spacing": "-0.03em",
-          "text-transform": "lowercase"
-        }
-      }
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     }
   ],
   "variables": [
-    "color-neutral-100",
-    "color-neutral-900",
-    "color-accent",
-    "font-style-heading",
-    "font-style-body"
+    "_primitives---colors--accent",
+    "_primitives---colors--neutral-darkest",
+    "_primitives---colors--neutral-lightest",
+    "_typography---font-styles--body",
+    "_typography---font-styles--heading"
   ],
   "tree": [
     {
@@ -292,7 +241,6 @@
                           "tag": "a",
                           "classes": [
                             "script-intro-centered_back-link",
-                            "text-size-regular",
                             "text-style-caps-caption-16"
                           ],
                           "attributes": {
@@ -352,8 +300,8 @@
                           "tag": "h2",
                           "classes": [
                             "script-intro-centered_heading",
-                            "heading-style-h1",
-                            "text-style-script"
+                            "text-style-script",
+                            "is-large"
                           ],
                           "attributes": {},
                           "prop": "heading",
@@ -647,5 +595,15 @@
         "ctaUrl": "#"
       }
     }
-  ]
+  ],
+  "k01": {
+    "reconciledBy": "K01, 2026-10-20",
+    "sharedClasses": "docs/figma/build-plans/shared-classes.md",
+    "changes": [
+      "Class list `script-intro-centered_back-link text-size-regular text-style-caps-caption-16` is now `script-intro-centered_back-link text-style-caps-caption-16`.",
+      "Class list `script-intro-centered_heading heading-style-h1 text-style-script` is now `script-intro-centered_heading text-style-script is-large`.",
+      "Script heading is `text-style-script is-large` (Morello 80/96) with no `heading-style-h1`.",
+      "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  }
 }

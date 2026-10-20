@@ -1,8 +1,7 @@
 // Generates preview.html and preview.css from plan.json, then screenshots each
 // variant at 1440 and 390 wide. Run from the repo root:
 //   node docs/figma/build-plans/Q026/generate-preview.mjs [--no-shots]
-// The CSS comes only from plan.json style values (familyClasses, proposedShared,
-// variants) plus the reused-class baseline in plan.previewBaseline, so the
+// The CSS comes only from plan.json style values (familyClasses, variants) plus ../shared-preview.css (live reused and K01 shared classes), so the
 // preview cannot drift from the plan.
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join, relative } from 'node:path'
@@ -33,18 +32,11 @@ const addRules = (selector, styles = {}) => {
   }
 }
 
-for (const entry of plan.previewBaseline.classes) addRules(`.${entry.name}`, entry.styles)
-for (const entry of plan.proposedShared) addRules(`.${entry.name}`, entry.styles)
 for (const entry of plan.familyClasses) addRules(`.${entry.name}`, entry.styles)
 for (const variant of plan.variants) addRules(`.${variant.on}.${variant.modifier}`, variant.styleDeltas)
 
-const variableBlock = `:root {\n${Object.entries(plan.previewBaseline.variables)
-  .map(([name, value]) => `  --${name}: ${value};`)
-  .join('\n')}\n}`
-
 const css = [
   '/* Generated from plan.json by generate-preview.mjs. Do not edit by hand. */',
-  variableBlock,
   plan.previewBaseline.reset,
   ...Object.entries(breakpoints).map(([name, query]) => {
     const rules = rulesByBreakpoint[name].join('\n')
@@ -115,6 +107,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Q026 timeline-scatter-images preview</title>
+<link rel="stylesheet" href="../shared-preview.css">
 <link rel="stylesheet" href="preview.css">
 </head>
 <body>

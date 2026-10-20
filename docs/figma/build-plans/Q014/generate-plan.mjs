@@ -1,3 +1,5 @@
+// K01 (2026-10-20): superseded. plan.json was reconciled after this script last ran (see ../shared-classes.md), so running it would overwrite those changes.
+if (!process.argv.includes('--force-regenerate')) { console.error('Superseded by K01: running this would overwrite the reconciled plan.json. Pass --force-regenerate to run anyway.'); process.exit(1) }
 // Generates plan.json from the figma/ snapshot specs and the asset manifest. Run from the repo root:
 // node docs/figma/build-plans/Q014/generate-plan.mjs
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'

@@ -1,0 +1,724 @@
+{
+  "generatedBy": "K01 (docs/figma/prep/K01-reconcile-plans.md), 2026-10-20",
+  "liveRead": "Data API style_tool get_styles and query_styles on site 6ad6405eae8eac6d7b7c41a3, 2026-10-20: 589 styles. variable_tool query_variables for CSS names.",
+  "howToRead": "shared lists classes the Designer session creates once, before the first component. comboOn names the parent chain. Values use live variable CSS names; IDs are in docs/reference/style-inventory.md. Plans reference these by name in proposedShared.",
+  "newVariables": [
+    {
+      "name": "Colors/Blue",
+      "cssName": "--_primitives---colors--blue",
+      "value": "#489CCA",
+      "collection": "Primitives",
+      "usedBy": [
+        "Q014"
+      ],
+      "was": "color-brand-489cca"
+    },
+    {
+      "name": "Colors/Tan",
+      "cssName": "--_primitives---colors--tan",
+      "value": "#906E58",
+      "collection": "Primitives",
+      "usedBy": [
+        "Q017"
+      ],
+      "was": "color-brand-906e58"
+    },
+    {
+      "name": "Colors/Navy",
+      "cssName": "--_primitives---colors--navy",
+      "value": "#00263E",
+      "collection": "Primitives",
+      "usedBy": [
+        "Q017"
+      ],
+      "was": "color-brand-00263e"
+    }
+  ],
+  "variableRenames": {
+    "--color-neutral-900": "--_primitives---colors--neutral-darkest",
+    "--color-neutral-100": "--_primitives---colors--neutral-lightest",
+    "--color-neutral-300": "--_primitives---colors--neutral-lighter",
+    "--color-accent": "--_primitives---colors--accent",
+    "--color-secondary": "--_primitives---colors--secondary",
+    "--color-primary": "--_primitives---colors--primary",
+    "--color-brand-4a1217": "--_primitives---colors--burgundy",
+    "--color-brand-489cca": "--_primitives---colors--blue",
+    "--color-brand-906e58": "--_primitives---colors--tan",
+    "--color-brand-00263e": "--_primitives---colors--navy",
+    "--font-style-heading": "--_typography---font-styles--heading",
+    "--font-style-body": "--_typography---font-styles--body"
+  },
+  "liveCorrections": [
+    {
+      "class": "padding-global",
+      "live": {
+        "desktop": {
+          "padding-left": "5%",
+          "padding-right": "5%"
+        }
+      },
+      "target": {
+        "desktop": {
+          "padding-left": "2rem",
+          "padding-right": "2rem"
+        }
+      },
+      "why": "CLAUDE.md and docs/reference/breakpoints.md fix it at 2rem; every preview assumes 2rem."
+    },
+    {
+      "class": "padding-section-large",
+      "live": {
+        "desktop": "7rem",
+        "tablet": "6rem",
+        "mobileLandscape": "4rem",
+        "mobilePortrait": "4rem"
+      },
+      "target": {
+        "desktop": "7rem",
+        "tablet": "5rem",
+        "mobileLandscape": "3.5rem",
+        "mobilePortrait": "2.5rem"
+      },
+      "why": "docs/reference/breakpoints.md scale; previews use it. Values are padding-top and padding-bottom."
+    },
+    {
+      "class": "padding-section-medium",
+      "live": {
+        "desktop": "5rem",
+        "tablet": "4rem",
+        "mobileLandscape": "3rem",
+        "mobilePortrait": "3rem"
+      },
+      "target": {
+        "desktop": "5rem",
+        "tablet": "3.5rem",
+        "mobileLandscape": "2.5rem",
+        "mobilePortrait": "2rem"
+      },
+      "why": "docs/reference/breakpoints.md scale."
+    },
+    {
+      "class": "padding-section-small",
+      "live": {
+        "desktop": "3rem",
+        "tablet": "3rem",
+        "mobileLandscape": "2rem",
+        "mobilePortrait": "2rem"
+      },
+      "target": {
+        "desktop": "3rem",
+        "tablet": "2rem",
+        "mobileLandscape": "1.5rem",
+        "mobilePortrait": "1rem"
+      },
+      "why": "docs/reference/breakpoints.md scale."
+    },
+    {
+      "class": "text-style-script",
+      "live": {
+        "desktop": {
+          "font-size": "3.75rem"
+        }
+      },
+      "target": {
+        "tablet": {
+          "font-size": "3.25rem"
+        },
+        "mobilePortrait": {
+          "font-size": "2.5rem"
+        }
+      },
+      "why": "Q001 set desktop only; Q022 needs the responsive steps for Morello 60."
+    },
+    {
+      "class": "text-size-large",
+      "live": {
+        "desktop": {
+          "font-size": "1.25rem"
+        },
+        "mobileLandscape": {
+          "font-size": "1.125rem"
+        }
+      },
+      "target": {
+        "desktop": {
+          "font-size": "1.375rem",
+          "line-height": "1.6"
+        },
+        "mobileLandscape": {
+          "font-size": "1.125rem"
+        }
+      },
+      "why": "Live text-size-large equals text-size-medium. Q014 and Q021 both use it for Gatch 22/35.2 and assume 1.375rem."
+    }
+  ],
+  "builtIns": [
+    "w-form-done",
+    "w-form-fail"
+  ],
+  "notShared": [
+    "x01-probe_* (X01 probe leftovers, deleted after the probe)",
+    "(delete this) (Relume leftover)"
+  ],
+  "shared": [
+    {
+      "name": "text-style-caption-tracked",
+      "comboOn": null,
+      "role": "Sackers 14/14 caption tracked 0.05em (figma/tokens.json 648 uses): footer links, CTA captions",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--_typography---font-styles--heading)",
+          "font-weight": "900",
+          "font-size": "0.875rem",
+          "line-height": "1",
+          "letter-spacing": "0.05em",
+          "text-transform": "lowercase"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q012",
+        "Q013"
+      ],
+      "replaces": [
+        {
+          "plan": "Q012",
+          "was": "text-style-caption"
+        },
+        {
+          "plan": "Q013",
+          "was": "text-style-caption"
+        }
+      ],
+      "note": "The live text-style-caption is Label/Caption 14/15 untracked, so the tracked caption needs its own name."
+    },
+    {
+      "name": "is-large",
+      "comboOn": "text-style-script",
+      "role": "Morello 80/96 script display size (16 uses); base text-style-script is Morello 60/72",
+      "styles": {
+        "desktop": {
+          "font-size": "5rem"
+        },
+        "tablet": {
+          "font-size": "4rem"
+        },
+        "mobileLandscape": {
+          "font-size": "3.25rem"
+        },
+        "mobilePortrait": {
+          "font-size": "2.75rem"
+        }
+      },
+      "usedBy": [
+        "Q016",
+        "Q017",
+        "Q019",
+        "Q023"
+      ],
+      "replaces": [
+        {
+          "plan": "Q016",
+          "was": "heading-style-h1 + text-style-script (5rem combo)"
+        },
+        {
+          "plan": "Q017",
+          "was": "heading-style-h1 + text-style-script (5rem combo)"
+        },
+        {
+          "plan": "Q019",
+          "was": "heading-style-h1 + text-style-script (5rem combo)"
+        },
+        {
+          "plan": "Q023",
+          "was": "heading-style-h1 + text-style-script (5rem combo)"
+        }
+      ],
+      "note": "Line height stays 1.2 from text-style-script. Q017 and Q019 measured 80/80 on one-line headings; only the box height changes (about 16px)."
+    },
+    {
+      "name": "heading-style-display",
+      "comboOn": null,
+      "role": "Sackers 80/80 display heading (19 uses, venue cards)",
+      "styles": {
+        "desktop": {
+          "font-family": "var(--_typography---font-styles--heading)",
+          "font-weight": "900",
+          "font-size": "5rem",
+          "line-height": "1",
+          "text-transform": "lowercase"
+        },
+        "tablet": {
+          "font-size": "4rem"
+        },
+        "mobileLandscape": {
+          "font-size": "3.25rem"
+        },
+        "mobilePortrait": {
+          "font-size": "2.5rem"
+        }
+      },
+      "usedBy": [
+        "Q021"
+      ],
+      "replaces": [],
+      "note": "Q021 proposal kept; weight 900 because Sackers is uploaded at 900 only; lowercase matches the other heading-style-* classes."
+    },
+    {
+      "name": "padding-section-xlarge",
+      "comboOn": "padding-global",
+      "role": "Section vertical padding for the 220 to 240px script intro gaps",
+      "styles": {
+        "desktop": {
+          "padding-top": "14rem",
+          "padding-bottom": "14rem"
+        },
+        "tablet": {
+          "padding-top": "10rem",
+          "padding-bottom": "10rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "6rem",
+          "padding-bottom": "6rem"
+        },
+        "mobilePortrait": {
+          "padding-top": "5rem",
+          "padding-bottom": "5rem"
+        }
+      },
+      "usedBy": [
+        "Q016"
+      ],
+      "replaces": [],
+      "note": "Same pattern as the live padding-section-* combos on padding-global."
+    },
+    {
+      "name": "container-full",
+      "comboOn": null,
+      "role": "Full-width container aligned to the padding-global gutter",
+      "styles": {
+        "desktop": {
+          "width": "100%",
+          "max-width": "none",
+          "margin-left": "auto",
+          "margin-right": "auto"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q017"
+      ],
+      "replaces": []
+    },
+    {
+      "name": "u-image",
+      "comboOn": null,
+      "role": "Image fills its figure wrapper (CLAUDE.md utility, missing on the live site)",
+      "styles": {
+        "desktop": {
+          "display": "block",
+          "width": "100%",
+          "height": "100%",
+          "object-fit": "cover"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q025",
+        "Q026"
+      ],
+      "replaces": [],
+      "note": "Q026 assumed display block, max-width 100%. Its image wrappers set the size, so the cover version renders the same; confirmed in the K01 re-render."
+    },
+    {
+      "name": "is-chamfer",
+      "comboOn": "button",
+      "role": "Site-wide Guild button: vector-25 chamfered shape (194x37, 54 uses), cream fill, dark text, Label/Button type",
+      "styles": {
+        "desktop": {
+          "display": "inline-flex",
+          "justify-content": "center",
+          "align-items": "center",
+          "min-height": "2.3125rem",
+          "padding-top": "0.5625rem",
+          "padding-bottom": "0.5625rem",
+          "padding-left": "1.5rem",
+          "padding-right": "1.5rem",
+          "border-top-width": "0px",
+          "border-right-width": "0px",
+          "border-bottom-width": "0px",
+          "border-left-width": "0px",
+          "border-radius": "0px",
+          "background-color": "var(--_primitives---colors--neutral-lightest)",
+          "color": "var(--_primitives---colors--neutral-darkest)",
+          "font-family": "var(--_typography---font-styles--heading)",
+          "font-weight": "900",
+          "font-size": "1rem",
+          "line-height": "1",
+          "letter-spacing": "0em",
+          "text-transform": "lowercase",
+          "text-align": "center",
+          "text-decoration": "none",
+          "clip-path": "polygon(0 0.75rem, 0.6875rem 0, calc(100% - 0.6875rem) 0, 100% 0.75rem, 100% calc(100% - 0.75rem), calc(100% - 0.6875rem) 100%, 0.6875rem 100%, 0 calc(100% - 0.75rem))"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q012",
+        "Q014",
+        "Q019",
+        "Q021",
+        "Q022"
+      ],
+      "replaces": [
+        {
+          "plan": "Q012",
+          "was": "is-chamfer (own definition)"
+        },
+        {
+          "plan": "Q014",
+          "was": "is-octagon"
+        },
+        {
+          "plan": "Q019",
+          "was": "is-chamfer (outline definition)"
+        },
+        {
+          "plan": "Q021",
+          "was": "button (reusedClassAssumptions)"
+        },
+        {
+          "plan": "Q022",
+          "was": "is-clipped"
+        }
+      ],
+      "note": "Typography is Label/Button (same values as the live text-style-button), so buttons need no extra text class. Q012 and Q022 measured CAPS-CAPTION-16 (line height 1.2, -0.03em); the 37px min-height keeps the box size."
+    },
+    {
+      "name": "is-wide",
+      "comboOn": "button is-chamfer",
+      "role": "Standard 194px minimum button width",
+      "styles": {
+        "desktop": {
+          "min-width": "12.125rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q012",
+        "Q014"
+      ],
+      "replaces": [
+        {
+          "plan": "Q012",
+          "was": "is-wide (13.375rem)"
+        },
+        {
+          "plan": "Q014",
+          "was": "min-width inside is-octagon"
+        }
+      ],
+      "note": "Q012 book now measured 214px; the 194px vector is the site standard (54 uses)."
+    },
+    {
+      "name": "is-text-burgundy",
+      "comboOn": "button is-chamfer",
+      "role": "Cream button with burgundy label",
+      "styles": {
+        "desktop": {
+          "color": "var(--_primitives---colors--burgundy)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q012"
+      ],
+      "replaces": [
+        {
+          "plan": "Q012",
+          "was": "colour inside is-chamfer"
+        }
+      ]
+    },
+    {
+      "name": "is-dark",
+      "comboOn": "button is-chamfer",
+      "role": "Dark fill, cream label",
+      "styles": {
+        "desktop": {
+          "background-color": "var(--_primitives---colors--neutral-darkest)",
+          "color": "var(--_primitives---colors--neutral-lightest)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q022"
+      ],
+      "replaces": [
+        {
+          "plan": "Q022",
+          "was": "is-clipped"
+        }
+      ]
+    },
+    {
+      "name": "is-burgundy",
+      "comboOn": "button is-chamfer",
+      "role": "Burgundy fill, light label (dining venue heroes)",
+      "styles": {
+        "desktop": {
+          "background-color": "var(--_primitives---colors--burgundy)",
+          "color": "var(--_primitives---colors--secondary)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q014"
+      ],
+      "replaces": [
+        {
+          "plan": "Q014",
+          "was": "is-burgundy on button"
+        }
+      ]
+    },
+    {
+      "name": "is-blue",
+      "comboOn": "button is-chamfer",
+      "role": "Zuma blue fill, light label",
+      "styles": {
+        "desktop": {
+          "background-color": "var(--_primitives---colors--blue)",
+          "color": "var(--_primitives---colors--secondary)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q014"
+      ],
+      "replaces": [
+        {
+          "plan": "Q014",
+          "was": "is-blue on button"
+        }
+      ],
+      "note": "Needs the new variable Colors/Blue (#489CCA)."
+    },
+    {
+      "name": "is-outline",
+      "comboOn": "button is-chamfer",
+      "role": "Outlined chamfer button, dark stroke and label, for cream backgrounds",
+      "styles": {
+        "desktop": {
+          "background-color": "transparent",
+          "clip-path": "none",
+          "background-image": "url(shared-assets/button-outline-dark.svg)",
+          "background-size": "100% 100%",
+          "background-repeat": "no-repeat",
+          "color": "var(--_primitives---colors--neutral-darkest)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q019"
+      ],
+      "replaces": [
+        {
+          "plan": "Q019",
+          "was": "is-chamfer (outline definition)"
+        }
+      ],
+      "note": "Upload docs/figma/build-plans/shared-assets/button-outline-dark.svg as a site asset and use its URL. A chamfered outline cannot come from border plus clip-path."
+    },
+    {
+      "name": "is-outline-light",
+      "comboOn": "button is-chamfer",
+      "role": "Outlined chamfer button, cream stroke and label, for images and dark backgrounds",
+      "styles": {
+        "desktop": {
+          "background-color": "transparent",
+          "clip-path": "none",
+          "background-image": "url(shared-assets/button-outline-light.svg)",
+          "background-size": "100% 100%",
+          "background-repeat": "no-repeat",
+          "color": "var(--_primitives---colors--neutral-lightest)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q021"
+      ],
+      "replaces": [
+        {
+          "plan": "Q021",
+          "was": "is-outline"
+        }
+      ],
+      "note": "Upload docs/figma/build-plans/shared-assets/button-outline-light.svg (same file as Q021/button-outline.svg)."
+    },
+    {
+      "name": "accordion_item",
+      "comboOn": null,
+      "role": "Runtime contract of src/utils/accordion.ts (docs/reference/component-patterns.md, Accordion contract); any future accordion reuses it",
+      "styles": {
+        "desktop": {
+          "border-bottom": "1px solid color-mix(in srgb, var(--_primitives---colors--neutral-darkest) 30%, transparent)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q015"
+      ],
+      "replaces": [],
+      "note": "Runtime contract of src/utils/accordion.ts; generic name so any accordion reuses it."
+    },
+    {
+      "name": "accordion_header",
+      "comboOn": null,
+      "role": "Click target the accordion module binds to (.accordion_header); module toggles is-active and aria-expanded on it",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "width": "100%",
+          "justify-content": "space-between",
+          "align-items": "center",
+          "column-gap": "2rem",
+          "padding-top": "2.625rem",
+          "padding-right": "0rem",
+          "padding-bottom": "0.625rem",
+          "padding-left": "0rem",
+          "border-top-width": "0px",
+          "border-right-width": "0px",
+          "border-bottom-width": "0px",
+          "border-left-width": "0px",
+          "background-color": "transparent",
+          "color": "inherit",
+          "text-align": "left",
+          "cursor": "pointer"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "column-gap": "1rem",
+          "padding-top": "1.75rem"
+        },
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q015"
+      ],
+      "replaces": [],
+      "note": "Runtime contract of src/utils/accordion.ts; generic name so any accordion reuses it."
+    },
+    {
+      "name": "accordion_question",
+      "comboOn": null,
+      "role": "Question text inside the trigger; carries heading-style-h4 so the trigger can stay a native button",
+      "styles": {
+        "desktop": {
+          "flex-grow": "1"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q015"
+      ],
+      "replaces": [],
+      "note": "Runtime contract of src/utils/accordion.ts; generic name so any accordion reuses it."
+    },
+    {
+      "name": "accordion_icon",
+      "comboOn": null,
+      "role": "Chevron wrapper (figure-style wrapper for the inline SVG); rotates with the header state",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "width": "1.5rem",
+          "height": "1.5rem",
+          "flex-shrink": "0",
+          "transform": "rotate(180deg)",
+          "transition": "transform 300ms ease"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q015"
+      ],
+      "replaces": [],
+      "note": "Runtime contract of src/utils/accordion.ts; generic name so any accordion reuses it.",
+      "states": {
+        "accordion_header.is-active": {
+          "transform": "rotate(0deg)"
+        }
+      }
+    },
+    {
+      "name": "accordion_content-wrapper",
+      "comboOn": null,
+      "role": "Next sibling of the header; the module animates its max-height",
+      "styles": {
+        "desktop": {
+          "overflow": "hidden",
+          "transition": "max-height 400ms ease"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q015"
+      ],
+      "replaces": [],
+      "note": "Runtime contract of src/utils/accordion.ts; generic name so any accordion reuses it."
+    },
+    {
+      "name": "accordion_content",
+      "comboOn": null,
+      "role": "Inner content the module measures (offsetHeight) for the open height",
+      "styles": {
+        "desktop": {
+          "padding-top": "0.9375rem",
+          "padding-bottom": "2.75rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {
+          "padding-top": "0.75rem",
+          "padding-bottom": "1.75rem"
+        },
+        "mobilePortrait": {}
+      },
+      "usedBy": [
+        "Q015"
+      ],
+      "replaces": [],
+      "note": "Runtime contract of src/utils/accordion.ts; generic name so any accordion reuses it."
+    }
+  ]
+}

@@ -1,30 +1,9 @@
 /* Generated from plan.json by generate-preview.mjs. Do not edit by hand. */
-:root {
-  --color-neutral-100: #F4EFDF;
-}
-
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; }
 
-.padding-global {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.padding-section-small {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.container-large {
-  width: 100%;
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .section_image-inset-single {
-  background-color: var(--color-neutral-100);
+  background-color: var(--_primitives---colors--neutral-lightest);
 }
 
 .image-inset-single_figure {
@@ -45,26 +24,5 @@ body { margin: 0; }
 .image-inset-single_figure.is-small {
   max-width: 46.5rem;
   aspect-ratio: 744 / 524;
-}
-
-@media (max-width: 991px) {
-.padding-section-small {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-}
-
-@media (max-width: 767px) {
-.padding-section-small {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-}
-
-@media (max-width: 479px) {
-.padding-section-small {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 }
 

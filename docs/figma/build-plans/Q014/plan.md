@@ -17,7 +17,7 @@ One native Webflow component for the page heroes: 24 instances on 22 pages. Buil
           - `h1` `.heading-style-h2` (optional)
           - `div` `.hero-fullbleed-centered_text .text-size-large` (optional) > `p`
         - `footer` `.hero-fullbleed-centered_footer` (optional)
-          - `a` `.button .is-octagon` (+ `is-burgundy` or `is-blue`)
+          - `a` `.button .is-chamfer` (+ `is-burgundy` or `is-blue`)
             - `div` `.text-size-regular .text-style-button`
 
 The section is `min-height: 100vh` with content pinned to the bottom (`justify-content: flex-end`); `padding-section-small` gives the 3rem bottom gap that Figma shows (43 to 47px). The heading, text and button stack with a 1.75rem gap, matching home/01.
@@ -28,7 +28,7 @@ New, owned by this plan: `section_hero-fullbleed-centered`, `hero-fullbleed-cent
 
 Reused: `padding-global`, `padding-section-small`, `container-large`, `heading-style-h2`, `text-size-large`, `text-size-regular`, `button`.
 
-Proposed shared (K01 settles names): `text-style-eyebrow-caps` and `text-style-button` (combos on `text-size-regular`), `is-octagon`, `is-burgundy`, `is-blue` (combos on `button`).
+Proposed shared (K01 settles names): `text-style-eyebrow-caps` and `text-style-button` (combos on `text-size-regular`), `is-chamfer`, `is-burgundy`, `is-blue` (combos on `button`).
 
 Variables: `color-neutral-100`, `color-neutral-900`, `color-neutral-300`, `color-secondary`, `color-brand-4a1217`, `color-brand-489cca`, `font-style-heading`, `font-style-body`.
 
@@ -49,7 +49,7 @@ Content, not variants: eyebrow, heading, text, button (text, link, colour combo)
 2. `is-text-dark` is new (not in the brief). Confirm the dark/cream split is intended, or say which colour wins once photos are in.
 3. Paragraph line height: dark-text instances use 1.3, cream ones 1.6. The plan uses 1.6 everywhere via `_text`; check it still wins over whatever Q001 sets on `text-size-large`.
 4. Button label: home uses CAPS-CAPTION-16, dining pages use Label / Button. The plan uses `text-style-button` for both.
-5. `is-octagon` uses `clip-path`; if the style panel cannot set it, K01 moves it to the global embed.
+5. `is-chamfer` uses `clip-path`; if the style panel cannot set it, K01 moves it to the global embed.
 6. Gutter: Figma puts the `is-left` eyebrow at x=40 on a 1600 frame; `container-large` puts it at x=80 at 1440 and x=160 at 1600. K01 decides whether full-bleed captions skip the container.
 7. Variable names `color-brand-4a1217` and `color-brand-489cca` are tokens.json suggestions; D01 does not name them and does not cover #489CCA.
 8. Optional element `gatch-24` from components.md appears in none of the 24 specs; no slot planned.
@@ -78,3 +78,16 @@ A Sonnet subagent compared each 1440 and 390 screenshot with its crop. Known exc
 **base with is-burgundy button, [preview-button-burgundy-1440.png](preview-button-burgundy-1440.png) vs dining-gardenterrace/01.** Matches: burgundy octagon button with cream label, same shape and size as Zuma, centred stack. Differs: same offsets as Zuma for the same reason.
 
 No plan changes came out of the compare: the remaining differences come from fallback fonts, are logged as open questions 3 and 6, or are under 10px of bottom padding (padding-section-small is reused rather than overridden). Re-check against the real fonts in the Designer session.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Class list `text-size-regular text-style-eyebrow-caps` is now `text-style-eyebrow-caps`.
+- Class list `button is-octagon` is now `button is-chamfer is-wide`.
+- Class list `text-size-regular text-style-button` is now `text-style-button`.
+- Class list `button` is now `button is-chamfer is-wide`.
+- `is-octagon` is now the shared `button is-chamfer`; every hero button adds `is-wide` (the old 12.125rem min-width). `is-burgundy` and `is-blue` are combos on `button is-chamfer`; `is-blue` needs the new Colors/Blue variable.
+- Variant `is-image-bg + is-1-image` has no style delta, so it is now a named variant with no modifier class.
+- `text-size-large` is used for Gatch 22/35.2; shared-classes.md lists the live correction to 1.375rem.
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

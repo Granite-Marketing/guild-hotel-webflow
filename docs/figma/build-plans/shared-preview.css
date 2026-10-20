@@ -1,0 +1,108 @@
+/* K01 preview stylesheet. Generated from shared-classes.json and the live site read of 2026-10-20.
+ Preview only: live reused classes (with the liveCorrections targets applied) plus the K01 shared classes.
+ Each preview links this file before its own preview.css, which keeps only family classes. Never written to Webflow. */
+:root {
+  --_primitives---colors--white: #fff;
+  --_primitives---colors--neutral-lightest: #F4EFDF;
+  --_primitives---colors--neutral-lighter: #D1D1D1;
+  --_primitives---colors--neutral-darkest: #262118;
+  --_primitives---colors--primary: #A48E59;
+  --_primitives---colors--secondary: #FBF5DE;
+  --_primitives---colors--accent: #29310C;
+  --_primitives---colors--red: #CB3629;
+  --_primitives---colors--burgundy: #4A1217;
+  --_primitives---colors--black: #000000;
+  --_primitives---colors--blue: #489CCA;
+  --_primitives---colors--tan: #906E58;
+  --_primitives---colors--navy: #00263E;
+  --_typography---font-styles--heading: "Sackers Gothic", "Sackers Heavy Gothic", Copperplate, "Copperplate Gothic Light", serif;
+  --_typography---font-styles--body: "Gatchtest", "Gatch Test", "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
+  --_typography---font-styles--accent: "Morello Pen", "Morello", "Snell Roundhand", "Apple Chancery", cursive;
+}
+h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0; font-family: var(--_typography---font-styles--heading); font-weight: 900; }
+h1 { font-size: 3.5rem; line-height: 1.2; } h2 { font-size: 3rem; line-height: 1.2; } h3 { font-size: 2.5rem; line-height: 1.2; }
+h4 { font-size: 2rem; line-height: 1.3; } h5 { font-size: 1.5rem; line-height: 1.4; } h6 { font-size: 1.25rem; line-height: 1.4; }
+.heading-style-h1 { font-family: var(--_typography---font-styles--heading); font-size: 3.5rem; line-height: 1; font-weight: 900; letter-spacing: 0em; text-transform: lowercase; }
+.heading-style-h2 { font-family: var(--_typography---font-styles--heading); font-size: 2.5rem; line-height: 1; font-weight: 900; letter-spacing: -0.05em; }
+.heading-style-h3 { font-family: var(--_typography---font-styles--heading); font-size: 1.875rem; line-height: 1; font-weight: 900; letter-spacing: -0.05em; }
+.heading-style-h4 { font-family: var(--_typography---font-styles--heading); font-size: 1.5rem; line-height: 1.2; font-weight: 900; letter-spacing: 0em; text-transform: lowercase; }
+.heading-style-h5 { font-family: var(--_typography---font-styles--heading); font-size: 1.25rem; line-height: 1.2; font-weight: 900; letter-spacing: 0em; text-transform: lowercase; }
+.text-size-large { font-size: 1.375rem; line-height: 1.6; }
+.text-size-medium { font-size: 1.25rem; line-height: 1.3; }
+.text-size-regular { font-size: 1.125rem; line-height: 1.6; }
+.text-size-small { font-size: 0.875rem; }
+.text-weight-normal { font-weight: 400; }
+.text-style-eyebrow-caps { font-family: var(--_typography---font-styles--heading); font-size: 1.125rem; line-height: 1.2; font-weight: 900; letter-spacing: -0.03em; text-transform: lowercase; }
+.text-style-caps-caption-16 { font-family: var(--_typography---font-styles--heading); font-size: 1rem; line-height: 1.2; font-weight: 900; letter-spacing: -0.03em; text-transform: lowercase; }
+.text-style-button { font-family: var(--_typography---font-styles--heading); font-size: 1rem; line-height: 1; font-weight: 900; letter-spacing: 0em; text-transform: lowercase; }
+.text-style-caption { font-family: var(--_typography---font-styles--heading); font-size: 0.875rem; line-height: 1.071; font-weight: 900; letter-spacing: 0em; text-transform: lowercase; }
+.text-style-script { font-family: var(--_typography---font-styles--accent); font-size: 3.75rem; line-height: 1.2; font-weight: 400; }
+.padding-global { padding-left: 2rem; padding-right: 2rem; }
+.padding-section-large { padding-top: 7rem; padding-bottom: 7rem; }
+.padding-section-medium { padding-top: 5rem; padding-bottom: 5rem; }
+.padding-section-small { padding-top: 3rem; padding-bottom: 3rem; }
+.container-large { width: 100%; max-width: 80rem; margin-left: auto; margin-right: auto; }
+.container-medium { width: 100%; max-width: 64rem; margin-left: auto; margin-right: auto; }
+.container-small { width: 100%; max-width: 48rem; margin-left: auto; margin-right: auto; }
+.button { padding: 0.75rem 1.5rem; border: 1px solid var(--_primitives---colors--neutral-darkest); background-color: var(--_primitives---colors--neutral-darkest); color: var(--_primitives---colors--white); text-align: center; text-decoration: none; }
+.button.is-link { padding: 0.25rem 0; border-style: none; background-color: transparent; color: var(--_primitives---colors--neutral-darkest); line-height: 1; text-decoration: none; }
+.text-style-caption-tracked { font-family: var(--_typography---font-styles--heading); font-weight: 900; font-size: 0.875rem; line-height: 1; letter-spacing: 0.05em; text-transform: lowercase; }
+.text-style-script.is-large { font-size: 5rem; }
+.heading-style-display { font-family: var(--_typography---font-styles--heading); font-weight: 900; font-size: 5rem; line-height: 1; text-transform: lowercase; }
+.padding-global.padding-section-xlarge { padding-top: 14rem; padding-bottom: 14rem; }
+.container-full { width: 100%; max-width: none; margin-left: auto; margin-right: auto; }
+.u-image { display: block; width: 100%; height: 100%; object-fit: cover; }
+.button.is-chamfer { display: inline-flex; justify-content: center; align-items: center; min-height: 2.3125rem; padding-top: 0.5625rem; padding-bottom: 0.5625rem; padding-left: 1.5rem; padding-right: 1.5rem; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-radius: 0px; background-color: var(--_primitives---colors--neutral-lightest); color: var(--_primitives---colors--neutral-darkest); font-family: var(--_typography---font-styles--heading); font-weight: 900; font-size: 1rem; line-height: 1; letter-spacing: 0em; text-transform: lowercase; text-align: center; text-decoration: none; clip-path: polygon(0 0.75rem, 0.6875rem 0, calc(100% - 0.6875rem) 0, 100% 0.75rem, 100% calc(100% - 0.75rem), calc(100% - 0.6875rem) 100%, 0.6875rem 100%, 0 calc(100% - 0.75rem)); }
+.button.is-chamfer.is-wide { min-width: 12.125rem; }
+.button.is-chamfer.is-text-burgundy { color: var(--_primitives---colors--burgundy); }
+.button.is-chamfer.is-dark { background-color: var(--_primitives---colors--neutral-darkest); color: var(--_primitives---colors--neutral-lightest); }
+.button.is-chamfer.is-burgundy { background-color: var(--_primitives---colors--burgundy); color: var(--_primitives---colors--secondary); }
+.button.is-chamfer.is-blue { background-color: var(--_primitives---colors--blue); color: var(--_primitives---colors--secondary); }
+.button.is-chamfer.is-outline { background-color: transparent; clip-path: none; background-image: url(shared-assets/button-outline-dark.svg); background-size: 100% 100%; background-repeat: no-repeat; color: var(--_primitives---colors--neutral-darkest); }
+.button.is-chamfer.is-outline-light { background-color: transparent; clip-path: none; background-image: url(shared-assets/button-outline-light.svg); background-size: 100% 100%; background-repeat: no-repeat; color: var(--_primitives---colors--neutral-lightest); }
+.accordion_item { border-bottom: 1px solid color-mix(in srgb, var(--_primitives---colors--neutral-darkest) 30%, transparent); }
+.accordion_header { display: flex; width: 100%; justify-content: space-between; align-items: center; column-gap: 2rem; padding-top: 2.625rem; padding-right: 0rem; padding-bottom: 0.625rem; padding-left: 0rem; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; background-color: transparent; color: inherit; text-align: left; cursor: pointer; }
+.accordion_question { flex-grow: 1; }
+.accordion_icon { display: flex; width: 1.5rem; height: 1.5rem; flex-shrink: 0; transform: rotate(180deg); transition: transform 300ms ease; }
+.accordion_header.is-active .accordion_icon { transform: rotate(0deg); }
+.accordion_content-wrapper { overflow: hidden; transition: max-height 400ms ease; }
+.accordion_content { padding-top: 0.9375rem; padding-bottom: 2.75rem; }
+@media (max-width: 991px) {
+  .heading-style-h1 { font-size: 3.25rem; }
+  .heading-style-h2 { font-size: 2.25rem; }
+  .heading-style-h3 { font-size: 1.75rem; }
+  .heading-style-h4 { font-size: 1.375rem; }
+  .text-style-script { font-size: 3.25rem; }
+  .padding-section-large { padding-top: 5rem; padding-bottom: 5rem; }
+  .padding-section-medium { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  .padding-section-small { padding-top: 2rem; padding-bottom: 2rem; }
+  .text-style-script.is-large { font-size: 4rem; }
+  .heading-style-display { font-size: 4rem; }
+  .padding-global.padding-section-xlarge { padding-top: 10rem; padding-bottom: 10rem; }
+}
+@media (max-width: 767px) {
+  .heading-style-h1 { font-size: 2.5rem; }
+  .heading-style-h2 { font-size: 1.875rem; }
+  .heading-style-h3 { font-size: 1.5rem; }
+  .heading-style-h4 { font-size: 1.25rem; }
+  .heading-style-h5 { font-size: 1.125rem; }
+  .text-size-large { font-size: 1.125rem; }
+  .text-size-medium { font-size: 1.125rem; }
+  .padding-section-large { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  .padding-section-medium { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  .padding-section-small { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+  .text-style-script.is-large { font-size: 3.25rem; }
+  .heading-style-display { font-size: 3.25rem; }
+  .padding-global.padding-section-xlarge { padding-top: 6rem; padding-bottom: 6rem; }
+  .accordion_header { column-gap: 1rem; padding-top: 1.75rem; }
+  .accordion_content { padding-top: 0.75rem; padding-bottom: 1.75rem; }
+}
+@media (max-width: 479px) {
+  .text-style-script { font-size: 2.5rem; }
+  .padding-section-large { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  .padding-section-medium { padding-top: 2rem; padding-bottom: 2rem; }
+  .padding-section-small { padding-top: 1rem; padding-bottom: 1rem; }
+  .text-style-script.is-large { font-size: 2.75rem; }
+  .heading-style-display { font-size: 2.5rem; }
+  .padding-global.padding-section-xlarge { padding-top: 5rem; padding-bottom: 5rem; }
+}

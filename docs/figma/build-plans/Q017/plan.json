@@ -14,18 +14,19 @@
     "tree": "Every node has a slot id. instances[] and previewInstances[] say which slots are hidden, which combos and utility swaps each slot takes, and the content."
   },
   "reusedClasses": [
+    "button",
+    "container-large",
+    "heading-style-h3",
+    "heading-style-h4",
+    "is-link",
     "padding-global",
     "padding-section-large",
     "padding-section-medium",
-    "container-large",
-    "heading-style-h1",
-    "heading-style-h3",
-    "heading-style-h4",
-    "text-weight-normal",
     "text-size-medium",
-    "text-size-regular",
-    "button",
-    "is-link"
+    "text-style-caps-caption-16",
+    "text-style-eyebrow-caps",
+    "text-style-script",
+    "text-weight-normal"
   ],
   "familyClasses": [
     {
@@ -34,8 +35,8 @@
       "styles": {
         "desktop": {
           "position": "relative",
-          "background-color": "var(--color-neutral-100)",
-          "color": "var(--color-neutral-900)"
+          "background-color": "var(--_primitives---colors--neutral-lightest)",
+          "color": "var(--_primitives---colors--neutral-darkest)"
         }
       }
     },
@@ -44,8 +45,8 @@
       "comboOn": "section_split-image-text-light",
       "styles": {
         "desktop": {
-          "background-color": "var(--color-accent)",
-          "color": "var(--color-neutral-100)"
+          "background-color": "var(--_primitives---colors--accent)",
+          "color": "var(--_primitives---colors--neutral-lightest)"
         }
       }
     },
@@ -54,8 +55,8 @@
       "comboOn": "section_split-image-text-light",
       "styles": {
         "desktop": {
-          "background-color": "var(--color-brand-906e58)",
-          "color": "var(--color-neutral-100)"
+          "background-color": "var(--_primitives---colors--tan)",
+          "color": "var(--_primitives---colors--neutral-lightest)"
         }
       }
     },
@@ -64,8 +65,8 @@
       "comboOn": "section_split-image-text-light",
       "styles": {
         "desktop": {
-          "background-color": "var(--color-brand-00263e)",
-          "color": "var(--color-neutral-100)"
+          "background-color": "var(--_primitives---colors--navy)",
+          "color": "var(--_primitives---colors--neutral-lightest)"
         }
       }
     },
@@ -104,7 +105,7 @@
           "margin": "0",
           "overflow": "hidden",
           "aspect-ratio": "647 / 831",
-          "background-color": "var(--color-neutral-300)"
+          "background-color": "var(--_primitives---colors--neutral-lighter)"
         },
         "tablet": {
           "align-self": "stretch",
@@ -441,75 +442,25 @@
   ],
   "proposedShared": [
     {
+      "name": "is-large",
+      "comboOn": "text-style-script",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
+    },
+    {
       "name": "container-full",
-      "why": "Full-width container for edge-to-edge 12-column layouts that align to the padding-global gutter instead of the 80rem column. Used by this component's cream layouts; image-led blocks on other pages (gallery, offers, staggered cards) align to the same 2.5rem page edge.",
-      "styles": {
-        "desktop": {
-          "width": "100%",
-          "max-width": "none",
-          "margin-left": "auto",
-          "margin-right": "auto"
-        }
-      }
-    },
-    {
-      "name": "text-style-caps-caption-16",
-      "why": "CAPS-CAPTION-16 combo from figma/tokens.json (suggestedComboClass); used for links and labels across many components.",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1rem",
-          "line-height": "1.2",
-          "letter-spacing": "-0.03em",
-          "text-transform": "lowercase"
-        }
-      }
-    },
-    {
-      "name": "text-style-eyebrow-caps",
-      "why": "EYEBROW-CAPS combo from figma/tokens.json (suggestedComboClass); optional eyebrow in this and at least five other components.",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1.125rem",
-          "line-height": "1.2",
-          "letter-spacing": "-0.03em",
-          "text-transform": "lowercase"
-        }
-      }
-    },
-    {
-      "name": "text-style-script",
-      "why": "Morello script display headings (figma/tokens.json maps Morello 80/80 to heading-style-h1, whose primary font is Sackers). Combo on heading-style-h1; also needed by script-intro-centered (Q016) and form-split-script-contact (Q022).",
-      "styles": {
-        "desktop": {
-          "font-family": "Morello, cursive",
-          "font-size": "5rem",
-          "line-height": "1",
-          "letter-spacing": "0",
-          "text-transform": "none"
-        },
-        "tablet": {
-          "font-size": "4rem"
-        },
-        "mobileLandscape": {
-          "font-size": "3.25rem"
-        },
-        "mobilePortrait": {
-          "font-size": "2.75rem"
-        }
-      }
+      "comboOn": null,
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     }
   ],
   "variables": [
-    "color-neutral-100",
-    "color-neutral-900",
-    "color-neutral-300",
-    "color-accent",
-    "color-brand-906e58",
-    "color-brand-00263e",
-    "font-style-heading",
-    "font-style-body"
+    "_primitives---colors--accent",
+    "_primitives---colors--navy",
+    "_primitives---colors--neutral-darkest",
+    "_primitives---colors--neutral-lighter",
+    "_primitives---colors--neutral-lightest",
+    "_primitives---colors--tan",
+    "_typography---font-styles--body",
+    "_typography---font-styles--heading"
   ],
   "tree": [
     {
@@ -613,7 +564,6 @@
                               "tag": "p",
                               "classes": [
                                 "split-image-text-light_eyebrow",
-                                "text-size-regular",
                                 "text-style-eyebrow-caps"
                               ],
                               "optional": true,
@@ -745,8 +695,8 @@
       "on": "section_split-image-text-light",
       "styleDeltas": {
         "desktop": {
-          "background-color": "var(--color-accent)",
-          "color": "var(--color-neutral-100)"
+          "background-color": "var(--_primitives---colors--accent)",
+          "color": "var(--_primitives---colors--neutral-lightest)"
         }
       },
       "alsoApplies": {
@@ -770,8 +720,8 @@
       "on": "section_split-image-text-light",
       "styleDeltas": {
         "desktop": {
-          "background-color": "var(--color-brand-906e58)",
-          "color": "var(--color-neutral-100)"
+          "background-color": "var(--_primitives---colors--tan)",
+          "color": "var(--_primitives---colors--neutral-lightest)"
         }
       },
       "alsoApplies": {
@@ -786,7 +736,7 @@
         "header": [
           "is-outdent"
         ],
-        "heading": "heading-style-h1 text-style-script (replaces heading-style-h4)"
+        "heading": "text-style-script is-large (replaces heading-style-h4)"
       },
       "crop": "figma/pages/history/sections/04-george-marston/section.webp"
     },
@@ -796,8 +746,8 @@
       "on": "section_split-image-text-light",
       "styleDeltas": {
         "desktop": {
-          "background-color": "var(--color-brand-00263e)",
-          "color": "var(--color-neutral-100)"
+          "background-color": "var(--_primitives---colors--navy)",
+          "color": "var(--_primitives---colors--neutral-lightest)"
         }
       },
       "alsoApplies": {
@@ -1239,9 +1189,8 @@
         ],
         "heading": [
           "split-image-text-light_heading",
-          "heading-style-h1",
-          "text-weight-normal",
-          "text-style-script"
+          "text-style-script",
+          "is-large"
         ]
       },
       "hidden": [
@@ -1714,154 +1663,7 @@
     "Brief variant is-tall (meetings-collection/08) is not part of this component; see excludedInstances."
   ],
   "previewAssumptions": {
-    "note": "Values the preview uses for reused Relume classes so the page renders. They come from figma/tokens.json classValues and docs/reference/breakpoints.md; Q001 owns the live values. Never written to Webflow from this plan.",
-    "variables": {
-      "color-neutral-100": "#F4EFDF",
-      "color-neutral-900": "#262118",
-      "color-neutral-300": "#D9D9D9",
-      "color-accent": "#29310C",
-      "color-brand-906e58": "#906E58",
-      "color-brand-00263e": "#00263E",
-      "font-style-heading": "'Sackers Heavy Gothic', 'Copperplate', 'Copperplate Gothic Light', serif",
-      "font-style-body": "'Gatch Test', 'Helvetica Neue', Arial, sans-serif"
-    },
-    "classes": {
-      "padding-global": {
-        "desktop": {
-          "padding-left": "2rem",
-          "padding-right": "2rem"
-        }
-      },
-      "padding-section-large": {
-        "desktop": {
-          "padding-top": "7rem",
-          "padding-bottom": "7rem"
-        },
-        "tablet": {
-          "padding-top": "5rem",
-          "padding-bottom": "5rem"
-        },
-        "mobileLandscape": {
-          "padding-top": "3.5rem",
-          "padding-bottom": "3.5rem"
-        },
-        "mobilePortrait": {
-          "padding-top": "2.5rem",
-          "padding-bottom": "2.5rem"
-        }
-      },
-      "padding-section-medium": {
-        "desktop": {
-          "padding-top": "5rem",
-          "padding-bottom": "5rem"
-        },
-        "tablet": {
-          "padding-top": "3.5rem",
-          "padding-bottom": "3.5rem"
-        },
-        "mobileLandscape": {
-          "padding-top": "2.5rem",
-          "padding-bottom": "2.5rem"
-        },
-        "mobilePortrait": {
-          "padding-top": "2rem",
-          "padding-bottom": "2rem"
-        }
-      },
-      "container-large": {
-        "desktop": {
-          "width": "100%",
-          "max-width": "80rem",
-          "margin-left": "auto",
-          "margin-right": "auto"
-        }
-      },
-      "heading-style-h1": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "3.5rem",
-          "line-height": "1",
-          "font-weight": "400",
-          "text-transform": "lowercase"
-        }
-      },
-      "heading-style-h3": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1.875rem",
-          "line-height": "1",
-          "letter-spacing": "-0.05em",
-          "font-weight": "400"
-        }
-      },
-      "heading-style-h4": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1.5rem",
-          "line-height": "1.2",
-          "font-weight": "400",
-          "text-transform": "lowercase"
-        },
-        "mobilePortrait": {
-          "font-size": "1.25rem"
-        }
-      },
-      "text-weight-normal": {
-        "desktop": {
-          "font-weight": "400"
-        }
-      },
-      "text-size-medium": {
-        "desktop": {
-          "font-family": "var(--font-style-body)",
-          "font-size": "1.25rem",
-          "line-height": "1.3"
-        },
-        "mobilePortrait": {
-          "font-size": "1.125rem"
-        }
-      },
-      "text-size-regular": {
-        "desktop": {
-          "font-family": "var(--font-style-body)",
-          "font-size": "1.125rem",
-          "line-height": "1.6"
-        }
-      },
-      "button": {
-        "desktop": {
-          "display": "inline-flex",
-          "align-items": "center",
-          "justify-content": "center",
-          "padding": "0.875rem 1.75rem",
-          "background-color": "var(--color-accent)",
-          "color": "var(--color-neutral-100)",
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1rem",
-          "line-height": "1",
-          "text-transform": "lowercase",
-          "text-decoration": "none",
-          "clip-path": "polygon(0.75rem 0, calc(100% - 0.75rem) 0, 100% 50%, calc(100% - 0.75rem) 100%, 0.75rem 100%, 0 50%)"
-        }
-      },
-      "is-link": {
-        "comboOn": "button",
-        "desktop": {
-          "padding": "0",
-          "background-color": "transparent",
-          "color": "inherit",
-          "text-decoration": "underline",
-          "text-underline-offset": "0.2em",
-          "clip-path": "none"
-        }
-      }
-    },
-    "body": {
-      "margin": "0",
-      "background-color": "var(--color-neutral-100)",
-      "color": "var(--color-neutral-900)",
-      "font-family": "var(--font-style-body)"
-    },
+    "note": "Element stand-ins for the preview only. K01 removed the class and variable stand-ins: previews load ../shared-preview.css instead.",
     "elements": {
       "*, *::before, *::after": {
         "box-sizing": "border-box"
@@ -1872,6 +1674,12 @@
       "a": {
         "color": "inherit"
       }
+    },
+    "body": {
+      "margin": "0",
+      "background-color": "var(--_primitives---colors--neutral-lightest)",
+      "color": "var(--_primitives---colors--neutral-darkest)",
+      "font-family": "var(--_typography---font-styles--body)"
     }
   },
   "excludedInstances": [
@@ -1880,5 +1688,17 @@
       "reason": "Sticky intro beside three image-and-list feature cards; a different structure from the rest of the cluster. Built as a unique item in the meetings-collection page entry (Stephen 2026-10-19: when unsure between a component variant and a unique item, make it a unique item).",
       "crop": "figma/pages/meetings-collection/sections/08-key-features-of-our-spaces/section.webp"
     }
-  ]
+  ],
+  "k01": {
+    "reconciledBy": "K01, 2026-10-20",
+    "sharedClasses": "docs/figma/build-plans/shared-classes.md",
+    "changes": [
+      "Class list `split-image-text-light_eyebrow text-size-regular text-style-eyebrow-caps` is now `split-image-text-light_eyebrow text-style-eyebrow-caps`.",
+      "Class list `heading-style-h1 text-style-script (replaces heading-style-h4)` is now `text-style-script is-large (replaces heading-style-h4)`.",
+      "Class list `split-image-text-light_heading heading-style-h1 text-weight-normal text-style-script` is now `split-image-text-light_heading text-style-script is-large`.",
+      "Script heading overrides (tan variant) use `text-style-script is-large`; line height is 1.2 (80/96) instead of the measured 1.",
+      "Section colour modifiers `is-tan` and `is-blue` need the new Colors/Tan and Colors/Navy variables.",
+      "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  }
 }

@@ -88,3 +88,10 @@ A Sonnet subagent compared every preview screenshot with its crop. The preview u
 **390 previews (no reference)**: single column, no overflow or overlap, captions readable at a 1.25rem inset.
 
 The thin dark lines at the top and bottom edges of some screenshots are the neighbouring preview labels, not a border on the section.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Class list `gallery-mosaic-captioned_caption text-size-regular text-style-caps-caption-16` is now `gallery-mosaic-captioned_caption text-style-caps-caption-16`.
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

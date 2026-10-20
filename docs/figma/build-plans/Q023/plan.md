@@ -67,3 +67,12 @@ The preview uses stand-in fonts (Snell Roundhand, Copperplate, Avenir Next) beca
 - Matches: grey placeholder frame with chamfers, the pill centred about 40px above the frame bottom, a 2-line heading and a 5-line body like Figma, and proportional tab spacing.
 - Differs: Figma's script slants more (font). Heading colour is as for wellness. The frame width was fixed in the same way.
 - 390: "conference center" is clipped at the pill edge until scrolled, with no scroll cue (open question). The frame is centred in the 100svh stage, which leaves gaps above and below at the start state.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Class list `tab-pills-intro_heading heading-style-h1 text-style-script` is now `tab-pills-intro_heading text-style-script is-large`.
+- The `is-media` modifier is kept: the brief's `is-media-center + is-1-image + is-tall` and `is-centered + is-tall` both reduce to the same frame, and every reference is centred (see deviations).
+- Script heading is `text-style-script is-large`. The live `text-style-eyebrow-caps` has no mobile step, so the tab labels stay 18px on mobile (the plan proposed 16px).
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

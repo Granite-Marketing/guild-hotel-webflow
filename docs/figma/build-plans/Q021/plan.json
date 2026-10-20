@@ -9,6 +9,8 @@
   },
   "siteId": "6ad6405eae8eac6d7b7c41a3",
   "reusedClasses": [
+    "button",
+    "figure",
     "heading-style-h1",
     "heading-style-h2",
     "heading-style-h3",
@@ -16,149 +18,151 @@
     "text-size-large",
     "text-size-medium",
     "text-size-regular",
-    "button",
-    "is-outline"
+    "text-style-eyebrow-caps"
   ],
-  "reusedClassAssumptions": [
-    {
-      "name": "heading-style-h1",
-      "source": "tokens.json Sackers Heavy Gothic/Display/Hero",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "3.5rem",
-          "line-height": "1",
-          "font-weight": "400"
-        },
-        "mobilePortrait": {
-          "font-size": "2.5rem"
+  "reusedClassAssumptions": {
+    "note": "Superseded by K01: live values (docs/reference/style-inventory.md) and docs/figma/build-plans/shared-classes.json replace these assumptions.",
+    "original": [
+      {
+        "name": "heading-style-h1",
+        "source": "tokens.json Sackers Heavy Gothic/Display/Hero",
+        "styles": {
+          "desktop": {
+            "font-family": "var(--_typography---font-styles--heading)",
+            "font-size": "3.5rem",
+            "line-height": "1",
+            "font-weight": "400"
+          },
+          "mobilePortrait": {
+            "font-size": "2.5rem"
+          }
+        }
+      },
+      {
+        "name": "heading-style-h2",
+        "source": "tokens.json H2-CAPS",
+        "styles": {
+          "desktop": {
+            "font-family": "var(--_typography---font-styles--heading)",
+            "font-size": "2.5rem",
+            "line-height": "1",
+            "letter-spacing": "-0.05em",
+            "font-weight": "400"
+          },
+          "mobilePortrait": {
+            "font-size": "2rem"
+          }
+        }
+      },
+      {
+        "name": "heading-style-h3",
+        "source": "tokens.json H3-CAPS",
+        "styles": {
+          "desktop": {
+            "font-family": "var(--_typography---font-styles--heading)",
+            "font-size": "1.875rem",
+            "line-height": "1",
+            "letter-spacing": "-0.05em",
+            "font-weight": "400"
+          },
+          "mobilePortrait": {
+            "font-size": "1.5rem"
+          }
+        }
+      },
+      {
+        "name": "heading-style-h4",
+        "source": "tokens.json H4-CAPS",
+        "styles": {
+          "desktop": {
+            "font-family": "var(--_typography---font-styles--heading)",
+            "font-size": "1.5rem",
+            "line-height": "1.2",
+            "font-weight": "400"
+          }
+        }
+      },
+      {
+        "name": "text-size-large",
+        "source": "tokens.json Gatch Test 22/35.2",
+        "styles": {
+          "desktop": {
+            "font-family": "var(--_typography---font-styles--body)",
+            "font-size": "1.375rem"
+          },
+          "mobilePortrait": {
+            "font-size": "1.125rem"
+          }
+        }
+      },
+      {
+        "name": "text-size-medium",
+        "source": "tokens.json Paragraph 20/26",
+        "styles": {
+          "desktop": {
+            "font-family": "var(--_typography---font-styles--body)",
+            "font-size": "1.25rem",
+            "line-height": "1.3"
+          }
+        }
+      },
+      {
+        "name": "text-size-regular",
+        "source": "tokens.json Gatch Test/Body/Regular 18/28.8",
+        "styles": {
+          "desktop": {
+            "font-family": "var(--_typography---font-styles--body)",
+            "font-size": "1.125rem",
+            "line-height": "1.6"
+          }
+        }
+      },
+      {
+        "name": "button",
+        "source": "figma/vectors/vector-25-194x37-236-8217.svg (54 uses) and the Label / Button style. The site-wide button owner (K01 or the first shared entry to build it) decides the final values.",
+        "styles": {
+          "desktop": {
+            "display": "inline-flex",
+            "justify-content": "center",
+            "align-items": "center",
+            "min-height": "2.3125rem",
+            "padding-left": "1.5rem",
+            "padding-right": "1.5rem",
+            "font-family": "var(--_typography---font-styles--heading)",
+            "font-size": "1rem",
+            "line-height": "1",
+            "text-transform": "lowercase",
+            "text-decoration": "none",
+            "color": "var(--_primitives---colors--neutral-darkest)",
+            "background-color": "var(--_primitives---colors--neutral-lightest)",
+            "clip-path": "polygon(0.75rem 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0.75rem 100%, 0 calc(100% - 0.75rem), 0 0.75rem)"
+          }
+        }
+      },
+      {
+        "name": "is-outline",
+        "comboOn": "button",
+        "source": "home/11 and home/15: cream outline, transparent fill. A chamfered outline cannot come from border plus clip-path; the assumption is an outline SVG as background image (asset to upload).",
+        "styles": {
+          "desktop": {
+            "color": "var(--_primitives---colors--neutral-lightest)",
+            "background-color": "transparent",
+            "clip-path": "none",
+            "background-image": "url(\"button-outline.svg\")",
+            "background-size": "100% 100%",
+            "background-repeat": "no-repeat"
+          }
         }
       }
-    },
-    {
-      "name": "heading-style-h2",
-      "source": "tokens.json H2-CAPS",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "2.5rem",
-          "line-height": "1",
-          "letter-spacing": "-0.05em",
-          "font-weight": "400"
-        },
-        "mobilePortrait": {
-          "font-size": "2rem"
-        }
-      }
-    },
-    {
-      "name": "heading-style-h3",
-      "source": "tokens.json H3-CAPS",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1.875rem",
-          "line-height": "1",
-          "letter-spacing": "-0.05em",
-          "font-weight": "400"
-        },
-        "mobilePortrait": {
-          "font-size": "1.5rem"
-        }
-      }
-    },
-    {
-      "name": "heading-style-h4",
-      "source": "tokens.json H4-CAPS",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1.5rem",
-          "line-height": "1.2",
-          "font-weight": "400"
-        }
-      }
-    },
-    {
-      "name": "text-size-large",
-      "source": "tokens.json Gatch Test 22/35.2",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-body)",
-          "font-size": "1.375rem"
-        },
-        "mobilePortrait": {
-          "font-size": "1.125rem"
-        }
-      }
-    },
-    {
-      "name": "text-size-medium",
-      "source": "tokens.json Paragraph 20/26",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-body)",
-          "font-size": "1.25rem",
-          "line-height": "1.3"
-        }
-      }
-    },
-    {
-      "name": "text-size-regular",
-      "source": "tokens.json Gatch Test/Body/Regular 18/28.8",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-body)",
-          "font-size": "1.125rem",
-          "line-height": "1.6"
-        }
-      }
-    },
-    {
-      "name": "button",
-      "source": "figma/vectors/vector-25-194x37-236-8217.svg (54 uses) and the Label / Button style. The site-wide button owner (K01 or the first shared entry to build it) decides the final values.",
-      "styles": {
-        "desktop": {
-          "display": "inline-flex",
-          "justify-content": "center",
-          "align-items": "center",
-          "min-height": "2.3125rem",
-          "padding-left": "1.5rem",
-          "padding-right": "1.5rem",
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1rem",
-          "line-height": "1",
-          "text-transform": "lowercase",
-          "text-decoration": "none",
-          "color": "var(--color-neutral-900)",
-          "background-color": "var(--color-neutral-100)",
-          "clip-path": "polygon(0.75rem 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0.75rem 100%, 0 calc(100% - 0.75rem), 0 0.75rem)"
-        }
-      }
-    },
-    {
-      "name": "is-outline",
-      "comboOn": "button",
-      "source": "home/11 and home/15: cream outline, transparent fill. A chamfered outline cannot come from border plus clip-path; the assumption is an outline SVG as background image (asset to upload).",
-      "styles": {
-        "desktop": {
-          "color": "var(--color-neutral-100)",
-          "background-color": "transparent",
-          "clip-path": "none",
-          "background-image": "url(\"button-outline.svg\")",
-          "background-size": "100% 100%",
-          "background-repeat": "no-repeat"
-        }
-      }
-    }
-  ],
+    ]
+  },
   "familyClasses": [
     {
       "name": "section_venue-card-fullbleed",
       "styles": {
         "desktop": {
           "position": "relative",
-          "background-color": "var(--color-neutral-100)"
+          "background-color": "var(--_primitives---colors--neutral-lightest)"
         }
       }
     },
@@ -175,7 +179,7 @@
           "padding-left": "2rem",
           "padding-right": "2rem",
           "text-align": "center",
-          "color": "var(--color-accent)"
+          "color": "var(--_primitives---colors--accent)"
         },
         "tablet": {
           "padding-top": "5rem"
@@ -212,7 +216,7 @@
           "width": "100%",
           "aspect-ratio": "1520 / 988",
           "overflow": "hidden",
-          "background-color": "var(--color-neutral-300)",
+          "background-color": "var(--_primitives---colors--neutral-lighter)",
           "clip-path": "polygon(2.25rem 0, calc(100% - 2.25rem) 0, 100% 2.125rem, 100% calc(100% - 2.125rem), calc(100% - 2.25rem) 100%, 2.25rem 100%, 0 calc(100% - 2.125rem), 0 2.125rem)"
         },
         "mobileLandscape": {
@@ -282,7 +286,7 @@
           "padding-left": "2.5rem",
           "padding-right": "2.5rem",
           "text-align": "center",
-          "color": "var(--color-neutral-100)",
+          "color": "var(--_primitives---colors--neutral-lightest)",
           "background-color": "rgba(0, 0, 0, 0.4)"
         },
         "mobilePortrait": {
@@ -364,8 +368,8 @@
           "padding-right": "2.25rem",
           "transform": "translateX(-50%)",
           "white-space": "nowrap",
-          "color": "var(--color-neutral-100)",
-          "background-color": "var(--color-brand-4a1217)",
+          "color": "var(--_primitives---colors--neutral-lightest)",
+          "background-color": "var(--_primitives---colors--burgundy)",
           "clip-path": "polygon(1.25rem 0, calc(100% - 1.25rem) 0, 100% 1rem, 100% calc(100% - 1rem), calc(100% - 1.25rem) 100%, 1.25rem 100%, 0 calc(100% - 1rem), 0 1rem)"
         },
         "tablet": {
@@ -436,48 +440,28 @@
   "proposedShared": [
     {
       "name": "heading-style-display",
-      "why": "Sackers Heavy Gothic 80/80 has no Relume level (heading-style-h1 is the 56px Hero). tokens.json counts 19 Sackers 80/80 text nodes (letter-spacing 0 and -4); all are venue-card headings today. A typography level, so it lives with the heading-style-* utilities, not in the family. Standalone class, not a combo.",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "5rem",
-          "line-height": "1",
-          "font-weight": "400"
-        },
-        "tablet": {
-          "font-size": "4rem"
-        },
-        "mobileLandscape": {
-          "font-size": "3.25rem"
-        },
-        "mobilePortrait": {
-          "font-size": "2.5rem"
-        }
-      }
+      "comboOn": null,
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     },
     {
-      "name": "text-style-eyebrow-caps",
-      "comboOn": "text-size-regular",
-      "why": "Figma named style EYEBROW-CAPS; tokens.json suggests this combo. Used for the venue tabs here and for eyebrows across many components. Same name as other wave 2 plans so K01 merges one definition.",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1.125rem",
-          "line-height": "1.2",
-          "letter-spacing": "-0.03em",
-          "text-transform": "lowercase"
-        }
-      }
+      "name": "is-chamfer",
+      "comboOn": "button",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
+    },
+    {
+      "name": "is-outline-light",
+      "comboOn": "button is-chamfer",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     }
   ],
   "variables": [
-    "color-neutral-100",
-    "color-neutral-300",
-    "color-neutral-900",
-    "color-accent",
-    "color-brand-4a1217",
-    "font-style-heading",
-    "font-style-body"
+    "_primitives---colors--accent",
+    "_primitives---colors--burgundy",
+    "_primitives---colors--neutral-darkest",
+    "_primitives---colors--neutral-lighter",
+    "_primitives---colors--neutral-lightest",
+    "_typography---font-styles--body",
+    "_typography---font-styles--heading"
   ],
   "tree": [
     {
@@ -634,7 +618,8 @@
                             {
                               "tag": "a",
                               "classes": [
-                                "button"
+                                "button",
+                                "is-chamfer"
                               ],
                               "attributes": {
                                 "href": "#"
@@ -692,7 +677,6 @@
                       "tag": "a",
                       "classes": [
                         "venue-card-fullbleed_tab",
-                        "text-size-regular",
                         "text-style-eyebrow-caps"
                       ],
                       "attributes": {
@@ -923,13 +907,13 @@
     {
       "name": "buttonLabel",
       "type": "text",
-      "element": "button",
+      "element": "button is-chamfer",
       "optional": true
     },
     {
       "name": "buttonLink",
       "type": "link",
-      "element": "button",
+      "element": "button is-chamfer",
       "optional": true
     },
     {
@@ -1261,9 +1245,9 @@
     },
     {
       "slot": "button-outline",
-      "local": "docs/figma/build-plans/Q021/button-outline.svg",
+      "local": "docs/figma/build-plans/shared-assets/button-outline-light.svg",
       "webflowAssetId": null,
-      "note": "Chamfered outline for button is-outline; generated from the 194x37 button vector. Belongs to the button owner; listed so it is not missed."
+      "note": "Outline for the shared button is-chamfer is-outline-light; upload once for all plans (see shared-classes.md)."
     }
   ],
   "instances": [
@@ -1439,7 +1423,7 @@
       "classes": {
         "heading": "heading-style-h1",
         "text": "text-size-regular",
-        "button": "button is-outline"
+        "button": "button is-chamfer is-outline-light"
       },
       "content": {
         "heading": "rooms & suites",
@@ -1466,7 +1450,7 @@
       "classes": {
         "heading": "heading-style-h2",
         "text": "text-size-medium",
-        "button": "button is-outline"
+        "button": "button is-chamfer is-outline-light"
       },
       "content": {
         "heading": "meetings & events",
@@ -2119,5 +2103,17 @@
       "what": "Modifiers are set on each element they change",
       "why": "Webflow cannot style descendants from a parent combo class, so is-tall, is-left and is-media-center are applied to the stage, media, content and header elements as listed in variants."
     }
-  ]
+  ],
+  "k01": {
+    "reconciledBy": "K01, 2026-10-20",
+    "sharedClasses": "docs/figma/build-plans/shared-classes.md",
+    "changes": [
+      "Class list `button` is now `button is-chamfer`.",
+      "Class list `venue-card-fullbleed_tab text-size-regular text-style-eyebrow-caps` is now `venue-card-fullbleed_tab text-style-eyebrow-caps`.",
+      "Class list `button is-outline` is now `button is-chamfer is-outline-light`.",
+      "`button` is now `button is-chamfer`; home/11 and home/15 use `is-outline-light` (cream stroke SVG in shared-assets/). `reusedClassAssumptions` is superseded by the live values and shared-classes.json.",
+      "Stage, media and tab classes stay in this family; see shared-classes.md \"Not merged\".",
+      "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  }
 }

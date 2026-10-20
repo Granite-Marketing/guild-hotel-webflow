@@ -63,3 +63,10 @@ Not adjusted on purpose: the type-driven differences come from fallback fonts, s
 ## Deviations
 
 See `deviations` in `plan.json`: the added `is-right` modifier, the container-large inset, the standalone text-style classes, the `is-tall` padding on the component, and the placeholder figure fill.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- `u-image` is not on the live site; it is a shared class to create.
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

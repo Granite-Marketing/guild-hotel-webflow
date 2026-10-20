@@ -19,9 +19,9 @@ Machine-readable plan: [plan.json](plan.json). Preview: [preview.html](preview.h
           - `ul.footer-links_list` (`role="list"`)
             - `li.footer-links_list-item` > `a.footer-links_link.text-style-caption` (8, 7, 5, 3, 3 links)
       - `div.footer-links_bottom`
-        - `div.footer-links_legal` > `p.footer-links_text.text-style-legal`: "copyright © `<span data-current-year>`2026`</span>` the guild hotel"
+        - `div.footer-links_legal` > `p.footer-links_text.text-style-caption`: "copyright © `<span data-current-year>`2026`</span>` the guild hotel"
         - `figure.footer-links_logo` > `img.footer-links_logo-image` (Tribute Portfolio SVG, not uploaded yet)
-        - `div.footer-links_credit` > `p.footer-links_text.text-style-legal`: "brand & website by" `a.footer-links_credit-link` "Studio circa"
+        - `div.footer-links_credit` > `p.footer-links_text.text-style-caption`: "brand & website by" `a.footer-links_credit-link` "Studio circa"
 
 ## Classes
 
@@ -30,7 +30,7 @@ Machine-readable plan: [plan.json](plan.json). Preview: [preview.html](preview.h
 - Proposed shared (named generically, from `figma/tokens.json` suggestions):
   - `text-style-eyebrow-caps`: heading font, 1.125rem, line-height 1.2, letter-spacing -0.03em, lowercase.
   - `text-style-caption`: heading font, 0.875rem, line-height 1, letter-spacing 0.05em, lowercase (648 uses site-wide).
-  - `text-style-legal`: same as `text-style-caption` with letter-spacing 0 (the 96 untracked uses). Standalone rather than a combo so it never competes with `text-style-caption` over letter-spacing.
+  - `text-style-caption`: same as `text-style-caption` with letter-spacing 0 (the 96 untracked uses). Standalone rather than a combo so it never competes with `text-style-caption` over letter-spacing.
 - Variables: `color-neutral-100` (text), `color-neutral-900` (fallback under the image), `font-style-heading`.
 
 Sackers Heavy Gothic is an all-caps face, so lowercase source text renders as caps; Webflow content is entered lowercase, matching Figma.
@@ -79,3 +79,12 @@ Sonnet comparison of the final screenshots against the reference crops.
 - Two columns, three rows of groups, then logo, copyright and credit stacked left-aligned. No overflow; "photoshoot guidelines" wraps to two lines. Logo left-aligned is a judgement call, listed in open question 3.
 
 The other 20 instance crops are identical in content to `home/19-the-hotel` (checked from spec texts and node lists), so the home comparison covers them.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Class list `footer-links_link text-style-caption` is now `footer-links_link text-style-caption-tracked`.
+- Class list `footer-links_text text-style-legal` is now `footer-links_text text-style-caption`.
+- Footer link captions use the new `text-style-caption-tracked`; legal lines use the live `text-style-caption` (line height 1.071 instead of 1).
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

@@ -8,15 +8,15 @@
     "section": "meetings-collection/06-request-for-proposal"
   },
   "reusedClasses": [
-    "padding-global",
-    "padding-section-large",
+    "button",
     "container-large",
-    "heading-style-h1",
     "heading-style-h2",
     "heading-style-h4",
+    "padding-global",
+    "padding-section-large",
     "text-size-medium",
-    "text-size-regular",
-    "button"
+    "text-style-caps-caption-16",
+    "text-style-script"
   ],
   "familyClasses": [
     {
@@ -24,8 +24,8 @@
       "styles": {
         "desktop": {
           "position": "relative",
-          "background-color": "var(--color-neutral-100)",
-          "color": "var(--color-neutral-900)"
+          "background-color": "var(--_primitives---colors--neutral-lightest)",
+          "color": "var(--_primitives---colors--neutral-darkest)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -110,7 +110,7 @@
       "styles": {
         "desktop": {
           "max-width": "31rem",
-          "color": "var(--color-accent)"
+          "color": "var(--_primitives---colors--accent)"
         }
       }
     },
@@ -143,7 +143,7 @@
       "name": "form-split-script-contact_detail-label",
       "styles": {
         "desktop": {
-          "color": "var(--color-accent)"
+          "color": "var(--_primitives---colors--accent)"
         }
       }
     },
@@ -151,7 +151,7 @@
       "name": "form-split-script-contact_detail-value",
       "styles": {
         "desktop": {
-          "color": "var(--color-accent)"
+          "color": "var(--_primitives---colors--accent)"
         }
       }
     },
@@ -170,7 +170,7 @@
       "name": "form-split-script-contact_link",
       "styles": {
         "desktop": {
-          "color": "var(--color-neutral-900)",
+          "color": "var(--_primitives---colors--neutral-darkest)",
           "text-decoration": "underline",
           "text-underline-offset": "0.2em"
         }
@@ -245,7 +245,7 @@
       "name": "form-split-script-contact_fieldset-header",
       "styles": {
         "desktop": {
-          "color": "var(--color-neutral-900)"
+          "color": "var(--_primitives---colors--neutral-darkest)"
         }
       }
     },
@@ -296,24 +296,24 @@
           "border-color": "rgba(38, 33, 24, 0.35)",
           "border-radius": "0rem",
           "background-color": "transparent",
-          "font-family": "var(--font-style-body)",
+          "font-family": "var(--_typography---font-styles--body)",
           "font-size": "1.125rem",
           "line-height": "1.2",
-          "color": "var(--color-neutral-900)"
+          "color": "var(--_primitives---colors--neutral-darkest)"
         }
       },
       "states": {
         "placeholder": {
-          "font-family": "var(--font-style-heading)",
+          "font-family": "var(--_typography---font-styles--heading)",
           "font-size": "1.125rem",
           "line-height": "1.2",
           "letter-spacing": "-0.03em",
           "text-transform": "lowercase",
-          "color": "var(--color-neutral-900)",
+          "color": "var(--_primitives---colors--neutral-darkest)",
           "opacity": "1"
         },
         "focus": {
-          "border-color": "var(--color-accent)",
+          "border-color": "var(--_primitives---colors--accent)",
           "outline-style": "none"
         }
       }
@@ -348,8 +348,8 @@
       "styles": {
         "desktop": {
           "padding": "1.5rem",
-          "background-color": "var(--color-neutral-900)",
-          "color": "var(--color-neutral-100)",
+          "background-color": "var(--_primitives---colors--neutral-darkest)",
+          "color": "var(--_primitives---colors--neutral-lightest)",
           "text-align": "left"
         }
       }
@@ -369,68 +369,22 @@
   ],
   "proposedShared": [
     {
-      "name": "text-style-script",
-      "comboOn": "heading-style-h1",
-      "why": "Morello 60/72 is used 53 times site-wide (figma/tokens.json textStyles) and the mapping says: apply heading-style-h1 plus a combo with only the differing properties; Relume has no script class",
-      "styles": {
-        "desktop": {
-          "font-family": "Morello, cursive",
-          "font-size": "3.75rem",
-          "font-weight": "400",
-          "line-height": "1.2",
-          "letter-spacing": "0em",
-          "text-transform": "none"
-        },
-        "tablet": {
-          "font-size": "3.25rem"
-        },
-        "mobilePortrait": {
-          "font-size": "2.5rem"
-        }
-      }
-    },
-    {
-      "name": "text-style-caps-caption-16",
-      "comboOn": "text-size-regular",
-      "why": "CAPS-CAPTION-16 is used 242 times site-wide; figma/tokens.json suggests this exact combo on text-size-regular",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1rem",
-          "line-height": "1.2",
-          "letter-spacing": "-0.03em",
-          "text-transform": "lowercase"
-        }
-      }
-    },
-    {
-      "name": "is-clipped",
+      "name": "is-chamfer",
       "comboOn": "button",
-      "why": "the dark clipped-corner button (figma/vectors/vector-25-234x37-309-728.svg) appears in 4 shared-component briefs; one button modifier instead of a per-family button",
-      "styles": {
-        "desktop": {
-          "padding": "0.5625rem 1.1875rem",
-          "border-width": "0rem",
-          "border-radius": "0rem",
-          "background-color": "var(--color-neutral-900)",
-          "color": "var(--color-neutral-100)",
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1rem",
-          "line-height": "1.2",
-          "letter-spacing": "-0.03em",
-          "text-transform": "lowercase",
-          "text-align": "center",
-          "clip-path": "polygon(0 0.75rem, 0.6875rem 0, calc(100% - 0.6875rem) 0, 100% 0.75rem, 100% calc(100% - 0.75rem), calc(100% - 0.6875rem) 100%, 0.6875rem 100%, 0 calc(100% - 0.75rem))"
-        }
-      }
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
+    },
+    {
+      "name": "is-dark",
+      "comboOn": "button is-chamfer",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     }
   ],
   "variables": [
-    "color-neutral-100",
-    "color-neutral-900",
-    "color-accent",
-    "font-style-heading",
-    "font-style-body"
+    "_primitives---colors--accent",
+    "_primitives---colors--neutral-darkest",
+    "_primitives---colors--neutral-lightest",
+    "_typography---font-styles--body",
+    "_typography---font-styles--heading"
   ],
   "tree": [
     {
@@ -486,7 +440,6 @@
                               "tag": "h2",
                               "element": "Heading",
                               "classes": [
-                                "heading-style-h1",
                                 "text-style-script"
                               ],
                               "altClasses": [
@@ -538,7 +491,6 @@
                                   "tag": "div",
                                   "classes": [
                                     "form-split-script-contact_detail-label",
-                                    "text-size-regular",
                                     "text-style-caps-caption-16"
                                   ],
                                   "attributes": {},
@@ -578,7 +530,6 @@
                               "element": "TextLink",
                               "classes": [
                                 "form-split-script-contact_link",
-                                "text-size-regular",
                                 "text-style-caps-caption-16"
                               ],
                               "repeat": true,
@@ -727,7 +678,8 @@
                                   "element": "FormButton",
                                   "classes": [
                                     "button",
-                                    "is-clipped"
+                                    "is-chamfer",
+                                    "is-dark"
                                   ],
                                   "attributes": {
                                     "type": "submit",
@@ -784,10 +736,11 @@
   ],
   "variants": [
     {
-      "modifier": "base",
+      "modifier": null,
       "on": "section_form-split-script-contact",
       "styleDeltas": {},
-      "crop": "figma/pages/guidelines/sections/06-photoshoot-request/section.webp"
+      "crop": "figma/pages/guidelines/sections/06-photoshoot-request/section.webp",
+      "name": "base"
     },
     {
       "modifier": "is-tall",
@@ -1223,5 +1176,18 @@
     "Instance vertical spacing in the base crops varies (top 94px to 219px); the plan uses padding-section-large for every base instance.",
     "Field underlines in Figma are #262118 rectangles but render as a light hairline in the crops; the plan uses rgba(38, 33, 24, 0.35) (color-neutral-900 at 35%). No variable exists for it; the Designer may use the neutral-900 variable with alpha if available.",
     "The submit button and caps labels render narrower in the preview than Figma (button about 197px vs 234px) because Copperplate stands in for Sackers Heavy Gothic; padding follows the Figma vector exactly, so recheck on the live site with the real font before changing it."
-  ]
+  ],
+  "k01": {
+    "reconciledBy": "K01, 2026-10-20",
+    "sharedClasses": "docs/figma/build-plans/shared-classes.md",
+    "changes": [
+      "Class list `heading-style-h1 text-style-script` is now `text-style-script`.",
+      "Class list `form-split-script-contact_detail-label text-size-regular text-style-caps-caption-16` is now `form-split-script-contact_detail-label text-style-caps-caption-16`.",
+      "Class list `form-split-script-contact_link text-size-regular text-style-caps-caption-16` is now `form-split-script-contact_link text-style-caps-caption-16`.",
+      "Class list `button is-clipped` is now `button is-chamfer is-dark`.",
+      "Submit button is `button is-chamfer is-dark` (was `is-clipped`); type is Label/Button instead of CAPS-CAPTION-16.",
+      "Script heading uses the live `text-style-script` (Morello 60/72); its tablet and mobile steps are a live correction.",
+      "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  }
 }

@@ -7,16 +7,17 @@
     "section": "home/12-the-neighborhood"
   },
   "reusedClasses": [
-    "padding-global",
-    "padding-section-large",
+    "button",
     "container-large",
-    "heading-style-h1",
+    "h2",
     "heading-style-h2",
     "heading-style-h4",
-    "text-weight-normal",
+    "padding-global",
+    "padding-section-large",
     "text-size-medium",
-    "text-size-regular",
-    "button"
+    "text-style-eyebrow-caps",
+    "text-style-script",
+    "text-weight-normal"
   ],
   "familyClasses": [
     {
@@ -25,8 +26,8 @@
         "desktop": {
           "position": "relative",
           "overflow": "hidden",
-          "background-color": "var(--color-neutral-100)",
-          "color": "var(--color-neutral-900)"
+          "background-color": "var(--_primitives---colors--neutral-lightest)",
+          "color": "var(--_primitives---colors--neutral-darkest)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -92,7 +93,7 @@
           "width": "100%",
           "max-width": "26.5625rem",
           "padding-top": "1.75rem",
-          "color": "var(--color-accent)"
+          "color": "var(--_primitives---colors--accent)"
         },
         "tablet": {
           "padding-top": "0"
@@ -301,80 +302,27 @@
   ],
   "proposedShared": [
     {
-      "name": "text-style-script",
-      "why": "Morello script display heading (combo on heading-style-h1); used by map-feature and the other morello-60/80 headings across the site",
-      "styles": {
-        "desktop": {
-          "font-family": "Morello",
-          "font-size": "5rem",
-          "line-height": "1",
-          "letter-spacing": "0",
-          "text-transform": "none"
-        },
-        "tablet": {
-          "font-size": "4rem"
-        },
-        "mobileLandscape": {
-          "font-size": "3.25rem"
-        },
-        "mobilePortrait": {
-          "font-size": "2.75rem"
-        }
-      }
-    },
-    {
-      "name": "text-style-eyebrow-caps",
-      "why": "EYEBROW-CAPS label (combo on text-size-regular), 393 uses in the file; token mapping suggests this name",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1.125rem",
-          "line-height": "1.2",
-          "letter-spacing": "-0.03em",
-          "text-transform": "lowercase"
-        }
-      }
-    },
-    {
-      "name": "text-style-button",
-      "why": "Sackers Label / Button type (combo on text-size-regular) for every CTA; token mapping suggests this name",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1rem",
-          "line-height": "1",
-          "letter-spacing": "0",
-          "text-transform": "lowercase"
-        }
-      }
+      "name": "is-large",
+      "comboOn": "text-style-script",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     },
     {
       "name": "is-chamfer",
-      "why": "Combo on button: the site-wide outlined button with clipped corners (vector-25 shape, 194x37); also used by hero, venue-card and overlay CTAs",
-      "styles": {
-        "desktop": {
-          "display": "inline-flex",
-          "align-items": "center",
-          "justify-content": "center",
-          "padding": "0.65625rem 1.5625rem",
-          "border": "0",
-          "background-color": "transparent",
-          "background-image": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 194 37' preserveAspectRatio='none'%3E%3Cpath d='M.5 24.6V12.2L11.2.5h170.8l11.5 11.7v12.4L182 36.5H11.2z' fill='%23F4EFDF' stroke='%23262118' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E\")",
-          "background-size": "100% 100%",
-          "background-repeat": "no-repeat",
-          "color": "var(--color-neutral-900)",
-          "text-decoration": "none"
-        }
-      },
-      "comboOn": "button"
+      "comboOn": "button",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
+    },
+    {
+      "name": "is-outline",
+      "comboOn": "button is-chamfer",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     }
   ],
   "variables": [
-    "color-neutral-100",
-    "color-neutral-900",
-    "color-accent",
-    "font-style-heading",
-    "font-style-body"
+    "_primitives---colors--accent",
+    "_primitives---colors--neutral-darkest",
+    "_primitives---colors--neutral-lightest",
+    "_typography---font-styles--body",
+    "_typography---font-styles--heading"
   ],
   "tree": [
     {
@@ -423,9 +371,8 @@
                             {
                               "tag": "h2",
                               "classes": [
-                                "heading-style-h1",
                                 "text-style-script",
-                                "text-weight-normal"
+                                "is-large"
                               ],
                               "attributes": {},
                               "prop": "heading",
@@ -464,8 +411,7 @@
                                   "classes": [
                                     "button",
                                     "is-chamfer",
-                                    "text-size-regular",
-                                    "text-style-button"
+                                    "is-outline"
                                   ],
                                   "attributes": {
                                     "href": "/neighborhood"
@@ -499,7 +445,6 @@
                                   "tag": "p",
                                   "classes": [
                                     "map-feature_text",
-                                    "text-size-regular",
                                     "text-style-eyebrow-caps"
                                   ],
                                   "attributes": {},
@@ -629,7 +574,7 @@
       "styleDeltas": {
         "desktop": {
           "aspect-ratio": "1600 / 1170",
-          "color": "var(--color-neutral-100)"
+          "color": "var(--_primitives---colors--neutral-lightest)"
         },
         "tablet": {
           "aspect-ratio": "auto"
@@ -816,12 +761,12 @@
     {
       "name": "buttonLabel",
       "type": "text",
-      "element": "button is-chamfer"
+      "element": "button is-chamfer is-outline"
     },
     {
       "name": "buttonLink",
       "type": "link",
-      "element": "button is-chamfer"
+      "element": "button is-chamfer is-outline"
     },
     {
       "name": "showList",
@@ -929,9 +874,8 @@
       "content": {
         "heading": "The Neighborhood",
         "headingClasses": [
-          "heading-style-h1",
           "text-style-script",
-          "text-weight-normal"
+          "is-large"
         ],
         "showAside": true,
         "text": "We’ve lived here for a century; let us show you around.",
@@ -1078,5 +1022,18 @@
     "The card's divider colour (rgba(244, 239, 223, 0.3)) is read from the crop; the spec lists no stroke.",
     "is-pin-1 to is-pin-4 are combos on map-feature_pin listed in familyClasses (with comboOn) because they sit in the tree on every instance; they place the four pins and are not plan variants.",
     "The image-bg map's Figma fills (a black COLOR-blend layer and a 10% black layer over the photo) become filter: grayscale(100%) brightness(0.9) on map-feature_image is-image-bg; the history illustration's MULTIPLY fill becomes mix-blend-mode: multiply."
-  ]
+  ],
+  "k01": {
+    "reconciledBy": "K01, 2026-10-20",
+    "sharedClasses": "docs/figma/build-plans/shared-classes.md",
+    "changes": [
+      "Class list `heading-style-h1 text-style-script text-weight-normal` is now `text-style-script is-large`.",
+      "Class list `button is-chamfer text-size-regular text-style-button` is now `button is-chamfer is-outline`.",
+      "Class list `map-feature_text text-size-regular text-style-eyebrow-caps` is now `map-feature_text text-style-eyebrow-caps`.",
+      "Class list `button is-chamfer` is now `button is-chamfer is-outline`.",
+      "Heading is `text-style-script is-large`; the reference is Morello 80/80 on one line, so the box is about 16px taller.",
+      "The outline button is `button is-chamfer is-outline` (dark stroke SVG in shared-assets/).",
+      "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  }
 }

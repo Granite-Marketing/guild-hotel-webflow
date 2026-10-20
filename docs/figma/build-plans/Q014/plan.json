@@ -7,13 +7,14 @@
     "section": "home/01-the-bold-handsome-heart-of-san"
   },
   "reusedClasses": [
-    "padding-global",
-    "padding-section-small",
+    "button",
     "container-large",
     "heading-style-h2",
+    "padding-global",
+    "padding-section-small",
     "text-size-large",
-    "text-size-regular",
-    "button"
+    "text-style-button",
+    "text-style-eyebrow-caps"
   ],
   "familyClasses": [
     {
@@ -26,8 +27,8 @@
           "justify-content": "flex-end",
           "min-height": "100vh",
           "overflow": "hidden",
-          "background-color": "var(--color-neutral-300)",
-          "color": "var(--color-neutral-100)"
+          "background-color": "var(--_primitives---colors--neutral-lighter)",
+          "color": "var(--_primitives---colors--neutral-lightest)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -160,7 +161,7 @@
       "comboOf": "section_hero-fullbleed-centered",
       "styles": {
         "desktop": {
-          "color": "var(--color-neutral-900)"
+          "color": "var(--_primitives---colors--neutral-darkest)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -186,86 +187,25 @@
   ],
   "proposedShared": [
     {
-      "name": "text-style-eyebrow-caps",
-      "on": "text-size-regular",
-      "why": "EYEBROW-CAPS style (Sackers 18/21.6, lowercase input rendered as caps); also proposed by Q013. Combo per the brief token mapping.",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1.125rem",
-          "line-height": "1.2",
-          "letter-spacing": "-0.03em",
-          "text-transform": "lowercase"
-        }
-      }
+      "name": "is-chamfer",
+      "comboOn": "button",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     },
     {
-      "name": "text-style-button",
-      "on": "text-size-regular",
-      "why": "Sackers Heavy Gothic / Label / Button (95 uses site-wide): every button label.",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1rem",
-          "line-height": "1",
-          "letter-spacing": "0",
-          "text-transform": "lowercase"
-        }
-      }
-    },
-    {
-      "name": "is-octagon",
-      "on": "button",
-      "why": "Guild button shape (figma/vectors/vector-25-194x37-236-8217.svg, chamfered corners); used by every CTA button in the design, not only this hero.",
-      "styles": {
-        "desktop": {
-          "display": "inline-flex",
-          "justify-content": "center",
-          "align-items": "center",
-          "min-width": "12.125rem",
-          "min-height": "2.3125rem",
-          "padding": "0.65625rem 1.25rem",
-          "border": "0",
-          "border-radius": "0",
-          "background-color": "var(--color-neutral-100)",
-          "color": "var(--color-neutral-900)",
-          "text-decoration": "none",
-          "clip-path": "polygon(0 67.1%, 0 32.4%, 0.6875rem 0, calc(100% - 0.7334rem) 0, 100% 32.4%, 100% 67.1%, calc(100% - 0.7334rem) 100%, 0.6875rem 100%)"
-        }
-      }
-    },
-    {
-      "name": "is-burgundy",
-      "on": "button",
-      "why": "Burgundy button fill (#4A1217) on dining venue heroes; generic colour modifier for any button.",
-      "styles": {
-        "desktop": {
-          "background-color": "var(--color-brand-4a1217)",
-          "color": "var(--color-secondary)"
-        }
-      }
-    },
-    {
-      "name": "is-blue",
-      "on": "button",
-      "why": "Zuma blue button fill (#489CCA); generic colour modifier for any button.",
-      "styles": {
-        "desktop": {
-          "background-color": "var(--color-brand-489cca)",
-          "color": "var(--color-secondary)"
-        }
-      }
+      "name": "is-wide",
+      "comboOn": "button is-chamfer",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     }
   ],
   "variables": [
-    "color-neutral-100",
-    "color-neutral-900",
-    "color-neutral-300",
-    "color-secondary",
-    "color-brand-4a1217",
-    "color-brand-489cca",
-    "font-style-heading",
-    "font-style-body"
+    "_primitives---colors--blue",
+    "_primitives---colors--burgundy",
+    "_primitives---colors--neutral-darkest",
+    "_primitives---colors--neutral-lighter",
+    "_primitives---colors--neutral-lightest",
+    "_primitives---colors--secondary",
+    "_typography---font-styles--body",
+    "_typography---font-styles--heading"
   ],
   "tree": [
     {
@@ -351,7 +291,6 @@
                         {
                           "tag": "div",
                           "classes": [
-                            "text-size-regular",
                             "text-style-eyebrow-caps"
                           ],
                           "optional": "eyebrow",
@@ -408,7 +347,8 @@
                           "tag": "a",
                           "classes": [
                             "button",
-                            "is-octagon"
+                            "is-chamfer",
+                            "is-wide"
                           ],
                           "attributes": {
                             "href": "{buttonLink}"
@@ -417,7 +357,6 @@
                             {
                               "tag": "div",
                               "classes": [
-                                "text-size-regular",
                                 "text-style-button"
                               ],
                               "attributes": {},
@@ -439,11 +378,12 @@
   ],
   "variants": [
     {
-      "modifier": "base",
+      "modifier": null,
       "on": "section_hero-fullbleed-centered",
       "description": "Light text (color-neutral-100), centred, no image: the placeholder fill shows. 15 of 21 brief base instances.",
       "styleDeltas": {},
-      "crop": "figma/pages/press/sections/01-press/section.webp"
+      "crop": "figma/pages/press/sections/01-press/section.webp",
+      "name": "base"
     },
     {
       "modifier": "is-text-dark",
@@ -451,17 +391,19 @@
       "description": "Dark text (color-neutral-900). Split out of the brief base: 6 instances, including the reference home/01.",
       "styleDeltas": {
         "desktop": {
-          "color": "var(--color-neutral-900)"
+          "color": "var(--_primitives---colors--neutral-darkest)"
         }
       },
       "crop": "figma/pages/home/sections/01-the-bold-handsome-heart-of-san/section.webp"
     },
     {
-      "modifier": "is-image-bg + is-1-image",
+      "modifier": null,
       "on": "section_hero-fullbleed-centered",
       "description": "Brief variant. No modifier class needed: the image prop fills _figure; the layout is base.",
       "styleDeltas": {},
-      "crop": "figma/pages/arts/sections/01-art-collection/section.webp"
+      "crop": "figma/pages/arts/sections/01-art-collection/section.webp",
+      "name": "is-image-bg + is-1-image",
+      "k01Note": "No style delta, so no modifier class is created (K01)."
     },
     {
       "modifier": "is-left",
@@ -535,7 +477,7 @@
     {
       "name": "buttonLink",
       "type": "link",
-      "element": "button",
+      "element": "button is-chamfer is-wide",
       "optional": true
     }
   ],
@@ -910,5 +852,19 @@
     "Figma overlaps on dining pages (button over paragraph at y832) are not reproduced: the footer sits 1.75rem below the text, as on home/01.",
     "Invisible background groups (Group 270990042, 270990050, 270990202) reported in some specs are off-canvas or zero-opacity leftovers; not built.",
     "arts/04 and rooms-individual/05 have identical text but different images (6f611716 vs d7332204), so they are two instances of one variant, not one reused instance."
-  ]
+  ],
+  "k01": {
+    "reconciledBy": "K01, 2026-10-20",
+    "sharedClasses": "docs/figma/build-plans/shared-classes.md",
+    "changes": [
+      "Class list `text-size-regular text-style-eyebrow-caps` is now `text-style-eyebrow-caps`.",
+      "Class list `button is-octagon` is now `button is-chamfer is-wide`.",
+      "Class list `text-size-regular text-style-button` is now `text-style-button`.",
+      "Class list `button` is now `button is-chamfer is-wide`.",
+      "`is-octagon` is now the shared `button is-chamfer`; every hero button adds `is-wide` (the old 12.125rem min-width). `is-burgundy` and `is-blue` are combos on `button is-chamfer`; `is-blue` needs the new Colors/Blue variable.",
+      "Variant `is-image-bg + is-1-image` has no style delta, so it is now a named variant with no modifier class.",
+      "`text-size-large` is used for Gatch 22/35.2; shared-classes.md lists the live correction to 1.375rem.",
+      "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  }
 }

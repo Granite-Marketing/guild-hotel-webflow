@@ -45,7 +45,7 @@ The real `accordion()` module was bundled and run against `preview.html` in Chro
 4. **Copy.** All 21 instances repeat room-specific placeholder questions, and only item 1 has an answer in Figma; items 2 to 6 reuse it as a placeholder. Per-page FAQs later would need component props or a FAQ collection.
 5. **Section spacing.** Bottom gap is about 227px everywhere; the top gap varies with the band crop (194, 134, 67px). Component padding is used for the extra; K01 may prefer a shared `padding-section-xlarge`.
 6. **Mobile.** No mobile frame in Figma; tablet and mobile values are derived. Questions wrap to 2 or 3 lines at 390px with `heading-style-h4` at 1.5rem; the responsive heading scale belongs to Q001.
-7. **Divider colour.** Plan uses `color-mix(in srgb, var(--color-neutral-900) 30%, transparent)`. If Webflow will not take `color-mix` on a border, K01 adds a variable (blended solid #B6B1A3) instead of a hard-coded rgba.
+7. **Divider colour.** Plan uses `color-mix(in srgb, var(--_primitives---colors--neutral-darkest) 30%, transparent)`. If Webflow will not take `color-mix` on a border, K01 adds a variable (blended solid #B6B1A3) instead of a hard-coded rgba.
 8. **Mobile answer size.** `text-size-medium` stays 1.25rem at 390px, larger than the questions. Q001 should scale it to 1rem to 1.125rem on mobile.
 
 ## Deviations from the conventions
@@ -83,3 +83,11 @@ Other instances: `gallery/05-faqs`, `contact/04-faqs` and `arts/09-faqs` crops a
 - Questions wrap to 2 or 3 lines with the chevron centred; dividers light, as on desktop.
 - Padding about 70px above and 65px below after iteration 1 (was about 44px and 41px).
 - Answer text at 20px dominates the 15px questions (open question 8, for Q001).
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Class list `text-size-regular text-weight-normal text-style-eyebrow-caps` is now `text-style-eyebrow-caps`.
+- The six `accordion_*` classes are shared (runtime contract of accordion.ts), defined in shared-classes.json.
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

@@ -8,10 +8,10 @@
     "section": "meetings-collection/09-meetings-events-gallery"
   },
   "reusedClasses": [
-    "heading-style-h4",
     "heading-style-h2",
-    "text-weight-normal",
-    "text-size-regular"
+    "heading-style-h4",
+    "text-style-caps-caption-16",
+    "text-weight-normal"
   ],
   "familyClasses": [
     {
@@ -19,8 +19,8 @@
       "styles": {
         "desktop": {
           "position": "relative",
-          "background-color": "var(--color-neutral-100)",
-          "color": "var(--color-neutral-900)"
+          "background-color": "var(--_primitives---colors--neutral-lightest)",
+          "color": "var(--_primitives---colors--neutral-darkest)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -56,7 +56,7 @@
         "desktop": {
           "margin-top": "0rem",
           "margin-bottom": "0rem",
-          "color": "var(--color-neutral-900)"
+          "color": "var(--_primitives---colors--neutral-darkest)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -159,7 +159,7 @@
         "desktop": {
           "margin-top": "0rem",
           "margin-bottom": "0rem",
-          "color": "var(--color-neutral-100)"
+          "color": "var(--_primitives---colors--neutral-lightest)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -178,7 +178,7 @@
           "max-width": "37.75rem",
           "margin-top": "0rem",
           "margin-bottom": "0rem",
-          "color": "var(--color-accent)"
+          "color": "var(--_primitives---colors--accent)"
         },
         "tablet": {
           "left": "2rem",
@@ -209,27 +209,12 @@
       }
     }
   ],
-  "proposedShared": [
-    {
-      "name": "text-style-caps-caption-16",
-      "why": "Figma named style CAPS-CAPTION-16 (236:8161, 242 uses site-wide). figma/tokens.json maps it to text-size-regular plus this suggested combo class; every captioned gallery, card and timeline caption needs it.",
-      "comboOn": "text-size-regular",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-weight": "400",
-          "line-height": "1.2",
-          "letter-spacing": "-0.03em",
-          "text-transform": "lowercase"
-        }
-      }
-    }
-  ],
+  "proposedShared": [],
   "variables": [
-    "color-neutral-100",
-    "color-neutral-900",
-    "color-accent",
-    "font-style-heading"
+    "_primitives---colors--accent",
+    "_primitives---colors--neutral-darkest",
+    "_primitives---colors--neutral-lightest",
+    "_typography---font-styles--heading"
   ],
   "tree": [
     {
@@ -313,7 +298,6 @@
                   "tag": "figcaption",
                   "classes": [
                     "gallery-mosaic-captioned_caption",
-                    "text-size-regular",
                     "text-style-caps-caption-16"
                   ],
                   "attributes": {},
@@ -360,7 +344,6 @@
                   "tag": "figcaption",
                   "classes": [
                     "gallery-mosaic-captioned_caption",
-                    "text-size-regular",
                     "text-style-caps-caption-16"
                   ],
                   "attributes": {},
@@ -407,7 +390,6 @@
                   "tag": "figcaption",
                   "classes": [
                     "gallery-mosaic-captioned_caption",
-                    "text-size-regular",
                     "text-style-caps-caption-16"
                   ],
                   "attributes": {},
@@ -455,7 +437,6 @@
                   "tag": "figcaption",
                   "classes": [
                     "gallery-mosaic-captioned_caption",
-                    "text-size-regular",
                     "text-style-caps-caption-16"
                   ],
                   "attributes": {},
@@ -796,5 +777,13 @@
     "Figure placeholder colour #D9D9D9 is a literal value (no variable); it only shows until images are set.",
     "Tile heights use aspect-ratio (1600 / 995 wide, 8 / 9 half) so the mosaic scales with viewport width; at 1440 the section is about 2602px tall against 2892px at the 1600 Figma frame.",
     "Below 768px the grid stacks to one column (wide tiles 4 / 5, half tiles 1 / 1). Figma has no mobile frame for this section."
-  ]
+  ],
+  "k01": {
+    "reconciledBy": "K01, 2026-10-20",
+    "sharedClasses": "docs/figma/build-plans/shared-classes.md",
+    "changes": [
+      "Class list `gallery-mosaic-captioned_caption text-size-regular text-style-caps-caption-16` is now `gallery-mosaic-captioned_caption text-style-caps-caption-16`.",
+      "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  }
 }
