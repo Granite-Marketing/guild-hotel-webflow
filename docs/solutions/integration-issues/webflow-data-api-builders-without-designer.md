@@ -225,6 +225,13 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 - **List items you pass come after the three seeded ones.** `BY_CUSTOM_TAG ul` with ten `li` children gives thirteen ListItems: the first three (consecutive ids ending in the ul id plus 1, 2, 3) are the seeded empties, then yours in order. Write each of yours with `set_settings` key `text`, then remove the first three.
 - **Legal or long copy: native elements, not RichText.** Headings inside a RichText take the tag styles (h2 at 2.5rem), and their size cannot be set headlessly. Native `h2.heading-style-h5`, paragraphs and a classed `ul` publish with the right styles. Paragraph text keeps `\n`; a family class with `white-space: pre-line` renders the line breaks, so a block of short lines can be one Paragraph.
 - **Publishing is site-wide and rate limited across sessions.** `publish_site` returns 429 ("at most once per minute") when another session published in the last minute. Any full-site publish by another session also publishes your page, so after a 429 check the staging URL with `curl` for your classes before retrying.
+
+## Notes from the History page (Q036, 2026-10-20)
+
+- **A whole one-off section goes in one `data_element_builder` call.** The history timeline (about 80 elements, 11 KB of schema) built in one append with every class stack and attribute intact. Generate the schema with a short script rather than by hand.
+- **Presence-only data attributes get a value.** The A04 contract checks presence (`[data-history-sticky-year]`); the builder was given `value: "true"` rather than an empty string, which it may reject.
+- **Grey Figma placeholders become empty figures.** When the snapshot has only #D9D9D9 rectangles and no asset, build an empty `figure` with the size and aspect ratio on its class, a #d9d9d9 fill, and `data-image-placeholder="<what goes here>"`, so the image slots are findable later.
+- **Placeholders for unbuilt Q005 to Q011 pieces** use the shared `section_placeholder` class (created by Q036) plus `data-placeholder="Q0xx"`.
 - **Builder calls can fail with `init-multiplayer-connection returned 429` (`RATE_LIMITED`)** when several page sessions write at once (Q040). Nothing is written; re-send the same call a little later and read the page back to confirm.
 
 ## Gotchas found assembling Home (Q031, 2026-10-20)
