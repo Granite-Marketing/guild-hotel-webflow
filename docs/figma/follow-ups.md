@@ -42,8 +42,10 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [x] Q025: visual check of `🧱 article-card-staggered` (`/build-article-card-staggered`) against the plan previews and crops in `docs/figma/build-plans/Q025/`: base instance, is-right, is-right with "culture", is-tall. Recheck spacing with the real Sackers and Gatch fonts. Stephen approved on 2026-10-20 ("all look pretty good").
 
 - [ ] Q042: visual check of `/static-template` on staging (https://the-guild-hotel-c34e71.webflow.io/static-template): Dark Site Nav, privacy policy section, CTA Booking Newsletter, Footer Links. Agent check: `docs/figma/build-plans/Q042/staging-notes.md`.
+- [ ] Q040: visual check of `/gallery` on staging (https://the-guild-hotel-c34e71.webflow.io/gallery): Site Nav, hero, filter grid with the sticky tag pill, two placeholders, FAQ, CTA, footer. Agent screenshots: `docs/figma/build-plans/Q040/`.
 
 ## Decisions for Stephen
+- [ ] Q040: gallery/02 is grey placeholders in Figma. The page uses 10 library photos tagged design, rooms, dining, wellness, guests and amenities as stand-ins. Decide the real photo set, and whether the grid becomes a CMS collection list with a category field (the filter already matches CMS-bound category names). The active tag shows the tab-pills underline; Figma shows only full opacity.
 - [ ] Q005: day and night switch has no specified behaviour (built as static controls, day active, hidden below 992px); booking URL for book now (Book link prop defaults to `#book`); experiences links to /arts until an experiences or happenings page exists; Shield nav states (236:8363, 236:8498) are unused in Figma and not built.
 - [ ] Q024: `is-small` cannot switch on an image-inset-single instance (same decision as Q014); it sits as a plain section on the build page. The plan's open questions also stand: is rooms-individual/04 a background video, which image fills the small variant on happenings-indiv and blog-indiv, should the rooms image bind to a CMS field, and the mobile aspect ratio.
 - [ ] Q021: open questions OQ2 (wellness and meetings intro moves from Q023 into this snap section) and OQ3 (legal and corporate as a static stack) are still on their defaults; confirm before those pages are built.
@@ -125,3 +127,9 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q042: the Site Nav "Book link" keeps its default `#book` on `/static-template`; set the real booking URL site-wide when known.
 - [ ] V02-Q016: visual check of the Tall, Wide and Bottom variant instances at the end of `/build-script-intro-centered` against reference sections S2 to S4 (staging).
 - [ ] V02-Q016: delete the old is-tall, is-wide and is-bottom reference sections on `/build-script-intro-centered` after the visual check (keep the combos until no page uses them).
+- [ ] Q040: enable `galleryFilter()` in `src/index.ts` slot E and release; `/gallery` carries `[data-gallery-filter]` now. Until then the tags do nothing on staging.
+- [ ] Q040: replace the two `section_placeholder` sections on `/gallery` (`data-placeholder` Q008 offers-slider-split, Q009 card-carousel-header-left) with the slider instances once built.
+- [ ] Q040: the page brief listed gallery/02 as a Q010 gallery-mosaic-captioned `is-compact` placeholder; it was built as the one-off `section_gallery-all` instead so the A05 filter could be wired. If Q010 later ships a filterable mosaic, swap it in and drop the family.
+- [ ] Q040: alt text for the 10 gallery photos (`/asset-metadata`); the images inherit library alt.
+- [ ] Q040: the faq-accordion instance on `/gallery` shows the component's default questions (no props); gallery/05 uses the same room questions.
+- [ ] Q040: on mobile the gallery tag pill is wider than the screen and scrolls sideways (`tab-pills-intro_tabs` overflow-x auto) with no scroll cue; consider wrapping or a fade edge.

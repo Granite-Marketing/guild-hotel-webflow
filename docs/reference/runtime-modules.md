@@ -486,6 +486,8 @@ Category filter for a gallery grid, driven by the sticky subnav tag pill
   `http://localhost:3000/fixtures/gallery-filter.html`; check:
   `npx playwright test tests/visual/gallery-filter.spec.ts`.
 - Order: slot E. It mutates layout, so it runs before slot G reveals.
+- Live use: `/gallery` `section_gallery-all` (Q040), tags are links with
+  `role="button"`; the tag pill reuses `tab-pills-intro_tabs`.
 
 ### historyStickyYear
 
