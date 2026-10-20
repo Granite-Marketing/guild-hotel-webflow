@@ -22,6 +22,10 @@ Session setup, before anything else: in your worktree root run `ln -sf ~/guild-h
 5. Insert instances with `data_component_builder`, set props and the Variant prop, build one-off sections with `data_element_builder` (create their classes first with `data_style_tool`), set page links with `static_link`, and add the animation data attributes.
 6. Read the page back and diff it against your plan. Add "visual check of /<slug>" and any Designer-only items to `docs/figma/follow-ups.md`.
 
+## Images
+
+Every image slot, instance image prop and figure gets a real photo from the site asset library (`data_assets_tool` list, `figma/assets.json`). The exact match does not matter; a grey box or `placeholder.svg` is never acceptable (Stephen, 2026-10-20). If a figure has no `img`, add one.
+
 ## Definition of done
 
 - Every section of the page brief is present in order, as an instance (with the right variant and props) or a one-off section.
