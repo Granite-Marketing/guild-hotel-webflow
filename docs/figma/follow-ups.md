@@ -203,7 +203,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q006: delete the build page in the Designer once the instances live on real pages.
 
 ## Q009 card-carousel-header-left (2026-10-20)
-- [ ] Q009 (R00): enable `cardCarouselHeaderLeft()` in `src/index.ts` (slot C, after `swiperSliders()`), with the Swiper 12 CSS (head) and JS (footer, before the bundle) in the site custom code if R00 has not added them; then release a tag. Until then staging shows the cards in a clipped row with dead arrows.
+- [x] Q009 (R00): enable `cardCarouselHeaderLeft()` in `src/index.ts` (slot C, after `swiperSliders()`), with the Swiper 12 CSS (head) and JS (footer, before the bundle) in the site custom code if R00 has not added them; then release a tag. Until then staging shows the cards in a clipped row with dead arrows.
 - [x] Q009: replace the marked sections with Card Carousel Header Left instances (history and gallery done 2026-10-20; the Dinings Template stand-in stays, see the page sections entry below): `/history` `8829d2d2-6596-bb48-7469-cb63d779021a` (history/09, Compact, defaults) and `/gallery` `2b4ad8af-eb33-7b35-11cd-f93c3882180f` (gallery/04, Base, defaults). Decide whether the Dinings Template stand-in `86d57348-f224-7d1f-8ca3-1011769f1eb2` (`section_card-stagger-header-left`, `data-placeholder="Q009"`, Q027) becomes an instance with dining labels or stays. Props per instance: `docs/figma/build-plans/Q009/plan.md`. Pages built later (press, arts, contact, rooms-individual, happenings and blog) place the instance directly.
 - [ ] Q009: real card photos (Image N + Show image N) and final card labels and links; cards 4 to 6 hold placeholder labels (meetings & events, arts, history).
 - [ ] Q009: rooms-individual/10 "discover other rooms" could bind to the Rooms collection once that template is CMS driven; today it is props.
@@ -236,7 +236,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [x] R00 (staging check 2026-10-20): all behaviours pass on webflow.io except /rooms image hover (fixed by Q007). Fix: `pointer-events: none` on `rooms-collection-room-grid_overlay`, which sits over the figure and catches the pointer.
 - [ ] R00: Webflow rewrote the GSAP footer tags to its own host at 3.15.0 (`cdn.prod.website-files.com/gsap/3.15.0/`); update `docs/reference/site-scripts.md` to match.
 - [ ] R00: the `🧱 site-nav` page footer still holds duplicate GSAP and Lenis tags plus an inline navToggle; empty it (harmless while the page is unpublished).
-- [ ] Next release (v1.1.2): enable `cardCarouselHeaderLeft()` (Q009) in `src/index.ts`; Q006 modals already use `modals()`.
+- [x] Next release (v1.1.2): enable `cardCarouselHeaderLeft()` (Q009) in `src/index.ts`; Q006 modals already use `modals()`.
 - [ ] V02-Q026: visual check of the `timeline-scatter-images Tall` instance (`44318675-d385-7bfe-151a-2014c7d5b255`) on `/build-timeline-scatter-images` against the is-tall reference section above it and the neighborhood/07 crop, in the Designer (the page is a draft, so staging returns 404). Classes read back identical to the reference section.
 - [ ] V02-Q026: delete the old is-tall reference section (`ff99cbf2-2677-0282-70e3-bb267dce160e`) on `/build-timeline-scatter-images` after the visual check (keep the combos; Tall uses them).
 - [ ] V02-Q026: neighborhood/07 (Q044) places `timeline-scatter-images Tall`, not the base component; it has no Variant prop.
@@ -330,7 +330,7 @@ Template `/post-categories/<slug>` (`6ad67d75485ab8562b6e34e0`): Site Nav, Hero 
 
 Component `Room List Hover Preview` (`a9d40053-f1b0-f862-ee0a-4f021e1933a9`), a full-screen dialog with id `all-rooms`. Built through the Data API, no Designer. Record: `docs/figma/build-plans/Q007/plan.md`.
 
-- [ ] R01: enable `roomListHoverPreview()` in `src/index.ts` (slot D, after `modals()`; it also needs `galleryFilter()`, already wired). Until then the dialog opens and filters on staging, but hovering a room does not change the preview (it stays on cozy courtyard queen).
+- [x] R01: enable `roomListHoverPreview()` in `src/index.ts` (slot D, after `modals()`; it also needs `galleryFilter()`, already wired). Until then the dialog opens and filters on staging, but hovering a room does not change the preview (it stays on cozy courtyard queen).
 - [ ] Room specs are stand-ins except cozy courtyard queen (4 guests, 52 m², from the Figma). Confirm guests and size for the other nine rooms with the client, and the room or suite category of each.
 - [ ] Every "view more" and room link goes to `/rooms-individual` (the one Room Detail page). Point each at its own room page once rooms become CMS items or separate pages.
 - [ ] Photos are real library room photos, but only seven exist for ten rooms: city level below ground and two bedroom loft suite share one, guild city level loft and guild corner loft suite share one, cozy courtyard king and guild double share one. Swap in per-room photography when it arrives.
@@ -364,3 +364,5 @@ Template `/legal-corporate/<slug>` assembled through the Data API; staging rende
 - [ ] Visual check by a subagent (2026-10-20): both items render all sections, no grey boxes or broken images, no mobile horizontal scroll, council boardroom dialog opens and closes, no console errors; dark grid and sticky split match the crops' layout.
 - [ ] Every photo is a stand-in from the library; replace with real imagery when it arrives.
 
+
+- [ ] R01 (v1.1.2): tag `v1.1.2` is pushed and served, but the site footer still loads v1.1.1 because the Data API footer write was blocked by the permission checker. Paste the footer line from `docs/reference/site-scripts.md`, publish to webflow.io, then check the card carousels and the /rooms hover preview. `playwright` `example.spec.ts` capture needs a live URL and fails offline; `gallery-filter.spec.ts` end-state check was flaky once and passed on rerun.
