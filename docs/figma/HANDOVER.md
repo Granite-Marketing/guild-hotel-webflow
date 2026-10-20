@@ -1,6 +1,8 @@
 # Guild Hotel build: orchestrator runbook
 
-**Wave 3 is current:** if any V02-* entry, M01, or Q027 to Q044 is not `done`, run `docs/figma/HANDOVER-wave3.md`, which builds on this file.
+**Wave 4 is current:** run `docs/figma/HANDOVER-wave4.md`, which builds on this file.
+
+**Wave 3 (done):** if any V02-* entry, M01, or Q027 to Q044 is not `done`, run `docs/figma/HANDOVER-wave3.md`, which builds on this file.
 
 **Wave 2 (done):** if any entry X01, C01, P012 to P026 or K01 in the ledger is not `done`, run `docs/figma/HANDOVER-wave2.md`, which builds on this file.
 
