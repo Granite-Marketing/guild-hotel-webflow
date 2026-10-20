@@ -164,6 +164,8 @@ Created by K02 on 2026-10-20 from the wave 2 plans (`docs/figma/build-plans/Q0xx
 
 Q020 `is-left` also sits on `image-trio-text_header`, `_list` and `_figure`; apply it to all three with the section. Empty chain paths (no CSS) exist for stacked combos the plans use, for example `split-image-text-light_content.is-start-7.is-bottom.is-wide-text` and `<heading>.text-style-script.is-large`; see section 6 of the write plan.
 
+Q019 (2026-10-20): `map-feature_pin` background-color now uses `--_primitives---colors--tan` (Colors/Tan) instead of `#906E58`. New empty combos: `.map-feature_text.text-size-medium`, `.map-feature_text.text-style-eyebrow-caps`, `.map-feature_link.text-size-medium`, `.heading-style-h4.text-weight-normal`.
+
 Not project classes: `(delete this)` is a Relume leftover.
 
 ---
