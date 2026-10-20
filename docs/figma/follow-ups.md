@@ -257,3 +257,12 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q037: visual check of `/guidelines` on staging (notes in `docs/figma/build-plans/Q037/`).
 - [ ] Q037: the hero has no image (Figma grey slot; Show Image is off); set Image and Show Image when the photo arrives. The guidelines/05 feature is an empty `figure` with `data-image-placeholder`; add a `u-image` Image when the collaborator photo arrives.
 - [ ] Snap groups (Home, Dining, Wellness): built as plain sections with `data-scroll-enlarge-snap` instead of Tab Pills Intro plus Venue Card instances, because tab-pills-intro has no panels slot. Accepted for the 80 to 90 percent target; converting needs a panels slot (Designer) or a dedicated snap-group component.
+
+## Q043 Contact (2026-10-20)
+
+- [ ] Q043 (Designer): visual check of `/contact` against the contact crops; agent notes in `docs/figma/build-plans/Q043/staging-notes.md`.
+- [ ] Q043: the contact heading is an h2 (the component's heading tag is fixed), so `/contact` has no h1. Add a heading-tag prop to form-split-script-contact, or set the tag in the Designer.
+- [ ] Q043: instagram and facebook links in form-split-script-contact have no URLs (no link props); add link props or set them when the handles are confirmed.
+- [ ] Q043: the 02 form uses visible labels above each line instead of Figma's in-line placeholders (placeholders cannot be set headlessly), so rows are taller than the crop. Switch to placeholders in the Designer if the in-line look is wanted, then remove `is-labelled`.
+- [ ] Q043: "privacy policy" links to `/static-template`; repoint when a privacy page exists. Form submit destination and notification address are still unset (site form settings).
+- [ ] Q043: the 03 carousel shows a static clipped row until `cardCarouselHeaderLeft()` ships (see the Q009 release item above).

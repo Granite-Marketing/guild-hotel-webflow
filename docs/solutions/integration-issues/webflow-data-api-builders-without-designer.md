@@ -282,3 +282,12 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 - **Builder `set_link` url with a `#hash` is dropped.** A TextLink with `link_type: "url"` and `#photoshoot-request` was created with no link, while an `email` link on a sibling kept its value. Write hash links afterwards with `set_settings` key `link`, `static_link { mode: "url", to: "#..." }`.
 - **Inline links inside running text.** A `DOM` `p` with children `DOM span` (text through `settings` key `text`), `TextLink`, `DOM span` builds a paragraph with inline links in one call. A `sup` DOM element before an inline (`display: inline`) paragraph gives superscript item numbers.
 - **In-page anchor before an instance.** A plain `DOM div` with `settings` `domId` appended just before the instance gives a link target without touching the component.
+
+## Gotchas found assembling Contact (Q043, 2026-10-20)
+
+- **`id` is a reserved builder attribute.** `set_attributes` with `id` rejects the whole `data_element_builder` call and leaves a partial tree. Set ids afterwards with `set_settings` key `domId` (works on form inputs and headings).
+- **`FormSelect` options cannot be set headlessly** (`options` is "not applicable", and no other key exists). A DOM `select` with DOM `option` children (`set_attributes` `name` on the select and `value` on each option, option text through `settings` key `text`) builds a working select in one call.
+- **Builder `Form` inputs default to the "Example Text" placeholder.** With visible labels, hide it with a combo whose `placeholder` pseudo sets `color: transparent` (`update_style` with `pseudo: "placeholder"`).
+- **A visibility prop bound to `FormForm` leaves the `w-form` wrapper in place.** In a grid it still takes a cell; hide the wrapper (variant `display: none`) when the form is off.
+- **CSS `rotate` composes with `transform`.** A variant (0,1,0) cannot beat a combo's `transform: rotate(-7.5deg)`, but `rotate: 7.5deg` on the same element cancels it.
+- **Extending a shared component without changing its instances:** new text props default to the current content and are bound to the existing elements; new optional rows are DOM elements built inside the definition (`scope_component_id`) with `visibility` and `text` bound to new props in the builder's `settings`, defaulting to hidden.
