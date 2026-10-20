@@ -178,3 +178,5 @@ Not project classes: `(delete this)` is a Relume leftover.
 4. **Reuse layout utilities**: aspect ratios, overlays, shadows, z-index helpers
 5. **Use generic names** for new shared patterns (describe the layout, not the content)
 6. **Update this doc** after each build with any new styles/components created
+
+Q020 (2026-10-20): `image-trio-text_item-heading` now carries the EYEBROW-CAPS values (heading font variable, 1.125rem, line-height 1.2, weight 900, letter-spacing -0.03em, lowercase); card titles no longer stack `text-style-eyebrow-caps`. The empty combo `.image-trio-text_item-heading.text-style-eyebrow-caps` is unused.

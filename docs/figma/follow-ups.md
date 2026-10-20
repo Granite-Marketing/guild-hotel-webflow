@@ -30,6 +30,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q022: set the placeholder on every form input to its label (the Data API rejects `placeholder`); the labels are in each input's aria-label and in `plan.json` instances.
 - [ ] Q022: decide whether to turn the form block, details and links into component slots (the Data API cannot: no slot prop type, and moving an element into a ComponentSlot fails). Without slots, every instance shows the photoshoot form.
 - [ ] Q016, Q020, Q021, Q022: visual check of `/build-script-intro-centered`, `/build-image-trio-text`, `/build-venue-card-fullbleed` and `/build-form-split-script-contact` in the Designer.
+- [x] Q025: visual check of `🧱 article-card-staggered` (`/build-article-card-staggered`) against the plan previews and crops in `docs/figma/build-plans/Q025/`: base instance, is-right, is-right with "culture", is-tall. Recheck spacing with the real Sackers and Gatch fonts. Stephen approved on 2026-10-20 ("all look pretty good").
 
 ## Decisions for Stephen
 - [ ] Q024: `is-small` cannot switch on an image-inset-single instance (same decision as Q014); it sits as a plain section on the build page. The plan's open questions also stand: is rooms-individual/04 a background video, which image fills the small variant on happenings-indiv and blog-indiv, should the rooms image bind to a CMS field, and the mobile aspect ratio.
@@ -51,6 +52,8 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q018: who supplies the 40 gallery images (4 per instance), and should the dining and legal/corporate galleries take them from CMS (Q027, Q028) instead of the Image props?
 - [ ] Q018: show the "A Landmark Reimagined" feature title on the meetings instance (Show Feature Title is off by default)? Also confirm the real gallery headings for dining-gardenterrace, dining-lobbybar and dining-poollounge (Figma copies "zuma gallery").
 - [ ] Q022: which form fields are required (all are optional now), plus the plan's open questions: submit destination, contact page media, social URLs.
+- [ ] Q025: collection pages as one Collection List (alternating left and right with an even-item rule) or five static sections as Figma draws them (plan open question 1). The component holds one card; is-right and is-tall are reference sections pending the variant decision shared with Q014, Q016, Q017 and Q020.
+- [ ] Q025: card image source (CMS image field on collection pages, manual upload for the neighborhood dining cards) and whether the neighborhood header should stick (plan open questions 4 and 5).
 
 ## Agent follow-ups
 - [ ] Q024: place image-inset-single on rooms-individual and arts (base, arts uses asset `6ad66fff134731ad1b927c11` with alt "Palm leaves in front of the Guild Hotel sign at night"), and is-small on happenings-indiv and blog-indiv once the variant and image decisions are made, then remove the build page.
@@ -88,6 +91,8 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [x] Q023 (Designer): visual check of `/build-tab-pills-intro` (base instance and both is-media sections). Stephen confirmed it looks fine on 2026-10-20.
 - [ ] Q023: three empty combos were created (listed in `docs/figma/build-plans/Q023/plan.json` `build.classesCreated`).
 - [ ] Q023: place the base component on press, happenings-collection and blog-collection (Show tab 4 off, tab links `#press` etc.), then remove the build page. Plan open questions still stand (scroll-spy or filters for base tabs, sticky pill, console warning on base instances, meetings tab copy, mobile tab overflow).
+- [ ] Q025: four empty combos were created (`docs/figma/build-plans/Q025/plan.json` `build.createdCombos`), including the shared `.heading-style-h3.text-weight-normal`, which other families can reuse.
+- [ ] Q025: place Article Card Staggered on happenings-collection and blog-collection, and copy the is-tall reference section to neighborhood/09, then remove the build page. Remove the #d9d9d9 figure fill once real images are bound.
 - [x] Q026 (Designer): visual check of `🧱 timeline-scatter-images` (base instance and `is-tall` reference section) against `docs/figma/build-plans/Q026/preview-*.png` and the guidelines/04 and neighborhood/07 crops; nothing was published. Checked by Stephen in the Designer on 2026-10-20: looks good.
 - [ ] Q026 (Designer): the `items` slot could not be created through the API. Convert `timeline-scatter-images_list` into a slot (or decide on static items plus component variants) so instances can add, reorder and re-size items; the is-tall instance on neighborhood needs this.
 - [ ] Q026: no photos exist for either instance; add Image elements (`u-image timeline-scatter-images_image`, needs the empty combo) when the collaborator and location photos arrive, and decide whether the guidelines list becomes a CMS collection list (plan open question 1).
