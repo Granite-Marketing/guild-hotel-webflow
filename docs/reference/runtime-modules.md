@@ -23,12 +23,12 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | gsapBasicAnimations | `gsapBasicAnimations.ts` | wired | G |
 | debugOverlay | `debugOverlay.ts` | opt-in | A |
 | scrollPin | `scrollPin.ts` | opt-in | B |
-| scrollEnlargeSnap | `scrollEnlargeSnap.ts` | opt-in | B |
+| scrollEnlargeSnap | `scrollEnlargeSnap.ts` | wired (R00) | B |
 | backgroundVideo | `backgroundVideo.ts` | opt-in | C |
 | heroTextReveal | `heroTextReveal.ts` | opt-in | C |
-| navToggle | `navToggle.ts` | opt-in | D |
-| imageHoverScale | `imageHoverScale.ts` | opt-in | D |
-| imageTrailHover | `imageTrailHover.ts` | opt-in | D |
+| navToggle | `navToggle.ts` | wired (R00) | D |
+| imageHoverScale | `imageHoverScale.ts` | wired (R00) | D |
+| imageTrailHover | `imageTrailHover.ts` | wired (R00) | D |
 | viewSwitcher | `viewSwitcher.ts` | opt-in | E |
 | cmsFilterLinks | `cmsFilterLinks.ts` | opt-in | E |
 | filterPanels | `filterPanels.ts` | opt-in | F (1st) |
@@ -41,6 +41,10 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | offersSliderSplit | `offersSliderSplit.ts` | opt-in (Q008, not wired yet) | C, after swiperSliders |
 | cardCarouselHeaderLeft | `cardCarouselHeaderLeft.ts` | opt-in (Q009, not wired yet) | C, after swiperSliders |
 | imageStackCollapse | `imageStackCollapse.ts` | opt-in | G |
+| galleryFilter | `galleryFilter.ts` | wired (R00) | E |
+| historyStickyYear | `historyStickyYear.ts` | wired (R00) | G |
+| offersSliderSplit | `offersSliderSplit.ts` | wired (R00) | C, after swiperSliders |
+| imageStackCollapse | `imageStackCollapse.ts` | wired (R00) | G |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
 
 To enable an opt-in module, uncomment its import and its call in
