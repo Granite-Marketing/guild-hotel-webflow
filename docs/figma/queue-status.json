@@ -2015,6 +2015,25 @@
       "modelReason": "manual, Stephen"
     },
     {
+      "id": "R00",
+      "title": "Early bundle release: enable modules, tag, add site footer scripts, check on staging",
+      "type": "release",
+      "lane": "agent",
+      "dependsOn": [
+        "Q005"
+      ],
+      "brief": "docs/figma/prep/R00-early-release.md",
+      "surface": "code",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Makes navbar, A01 to A05, accordion and hover scale run on staging. R01 stays the final release.",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Release plus site scripts plus behaviour checks"
+    },
+    {
       "id": "R01",
       "title": "Release: bundle the animation modules via webflow-deploy; Stephen updates the footer script URL",
       "type": "release",
