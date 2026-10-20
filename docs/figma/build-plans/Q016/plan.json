@@ -575,7 +575,8 @@
     "Build: the back-link text is a DOM span bound to the backLink prop; the LinkBlock itself is bound to backLinkUrl. Instance link props accept only url, email, phone, popover or modal, so the default is the url /rooms rather than a page link.",
     "Build: the image prop has no default (the API takes no image default), so the component definition shows an empty image until an instance sets one; Show image defaults to off. Instances set the image by passing the asset id as a string value.",
     "Build: is-tall, is-wide and is-bottom cannot switch on a component instance, so they sit on the build page as plain element sections (S2 to S4) pending the per-instance variant decision shared with Q014.",
-    "Build: three empty combos created so the stacks apply: .script-intro-centered_back-link.text-style-caps-caption-16, .script-intro-centered_paragraph.text-size-medium, .script-intro-centered_paragraph.text-size-medium.text-weight-normal."
+    "Build: three empty combos created so the stacks apply: .script-intro-centered_back-link.text-style-caps-caption-16, .script-intro-centered_paragraph.text-size-medium, .script-intro-centered_paragraph.text-size-medium.text-weight-normal.",
+    "V02 (2026-10-20): is-tall, is-wide and is-bottom are component variants Tall, Wide and Bottom, styles copied from the combos onto the combo-free base classes (section, _text, _figure) and read back equal. A page instance takes one variant, so no instance can be both Wide and Bottom; none in the plan needs that. Variant instances sit at the end of the build page; the old reference sections S2 to S4 stay until the visual check."
   ],
   "excludedInstances": [
     {
@@ -617,5 +618,11 @@
     "componentId": "bdff66b3-92d9-e1e3-dbc0-86a28e384c9b",
     "componentName": "script-intro-centered",
     "componentGroup": "Sections"
+  },
+  "variantIds": {
+    "propId": "a756475a-6061-cff6-3f67-57b297c53d34",
+    "is-tall": "ac455635-ebdb-afce-1b26-c3754520f0b3",
+    "is-wide": "16b2e029-4d87-68f1-ffc1-4a8294038434",
+    "is-bottom": "211f09b3-312a-f072-e7c4-4e0894618a51"
   }
 }

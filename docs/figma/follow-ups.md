@@ -109,3 +109,5 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q026: no photos exist for either instance; add Image elements (`u-image timeline-scatter-images_image`, needs the empty combo) when the collaborator and location photos arrive, and decide whether the guidelines list becomes a CMS collection list (plan open question 1).
 - [ ] Q026: thirteen empty combos were created (listed in `docs/figma/build-plans/Q026/plan.json` `build.createdCombos`).
 - [ ] Q026: place the component on guidelines (base) and neighborhood (`is-tall`, once the slot or variant decision is made), then remove the build page.
+- [ ] V02-Q016: visual check of the Tall, Wide and Bottom variant instances at the end of `/build-script-intro-centered` against reference sections S2 to S4 (staging).
+- [ ] V02-Q016: delete the old is-tall, is-wide and is-bottom reference sections on `/build-script-intro-centered` after the visual check (keep the combos until no page uses them).
