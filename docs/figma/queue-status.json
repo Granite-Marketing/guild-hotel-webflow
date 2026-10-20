@@ -1309,11 +1309,11 @@
       ],
       "brief": null,
       "surface": "rest",
-      "status": "review",
+      "status": "done",
       "session": "local_05dc33e1-a3fb-49e5-98e3-d06344feacd5",
       "branch": null,
       "pr": 33,
-      "notes": "Per decisions.md CMS model. Replace the two placeholder items (happenings-indiv, blog-indiv) with sample posts from the Figma happenings and blog pages; add Category (Reference to Post Categories), date, hero image, excerpt, body (RichText). Add field groups. Data API only.",
+      "notes": "Per decisions.md CMS model. Replace the two placeholder items (happenings-indiv, blog-indiv) with sample posts from the Figma happenings and blog pages; add Category (Reference to Post Categories), date, hero image, excerpt, body (RichText). Add field groups. Data API only. Verified live 2026-10-20 (6 draft posts, fields, groups). Placeholders happenings-indiv 6ad67dd7f7187cbc1ad0b2b9 and blog-indiv 6ad67dd7f7187cbc1ad0b2bb still to delete (required Category blocks publishing).",
       "model": "claude-sonnet-5-5",
       "effort": "medium",
       "modelReason": "Fully specified CMS writes"
