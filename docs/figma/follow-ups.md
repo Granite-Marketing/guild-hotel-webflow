@@ -28,6 +28,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q022: visual check of `/build-form-split-script-contact` (base instance plus the is-tall reference section) against `docs/figma/build-plans/Q022/preview-base-1440.png`, `preview-is-tall-1440.png` and the crops. Inputs show no placeholder text yet.
 - [ ] Q022: set the placeholder on every form input to its label (the Data API rejects `placeholder`); the labels are in each input's aria-label and in `plan.json` instances.
 - [ ] Q022: decide whether to turn the form block, details and links into component slots (the Data API cannot: no slot prop type, and moving an element into a ComponentSlot fails). Without slots, every instance shows the photoshoot form.
+- [ ] Q016, Q020, Q021, Q022: visual check of `/build-script-intro-centered`, `/build-image-trio-text`, `/build-venue-card-fullbleed` and `/build-form-split-script-contact` in the Designer.
 
 ## Decisions for Stephen
 - [ ] Q021: open questions OQ2 (wellness and meetings intro moves from Q023 into this snap section) and OQ3 (legal and corporate as a static stack) are still on their defaults; confirm before those pages are built.
@@ -76,3 +77,6 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q022: four empty combos were created (listed in `docs/figma/build-plans/Q022/plan.json` `build.classesCreated`).
 - [ ] Q022: place the component on guidelines, press, contact, legal and corporate (and the is-tall section on meetings-collection) once the slot decision is made, then remove the build page.
 - [ ] Q016: place `script-intro-centered` on the 9 pages (home uses `is-tall` once variants are decided), then remove the build page. happenings-indiv/02 and blog-indiv/02 still need their own entry.
+- [ ] Q021: add `data-eager` (and `loading=eager`) to the Venue Card Fullbleed component image; the wellness, meetings, legal and corporate tab groups are not built yet.
+- [ ] Q022: add `target=_blank` to the social links in the form-split-script-contact component.
+- [ ] Q020: the is-left reference sections have no `data-image-stack-collapse` attributes; add them where the A02 animation applies.
