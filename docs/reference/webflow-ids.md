@@ -71,6 +71,7 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 | Component | ID | Notes |
 |---|---|---|
 | Global Styles | `ab488b17-f25a-fbf8-5f54-4a3955eb57e5` | Relume starter global styles embed |
+| Hero Fullbleed Centered | `f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa` | Q014 shared page hero, built on `/build-hero-fullbleed-centered`; 15 props (9 content, 6 Show booleans) |
 
 ## Variable Collections
 
