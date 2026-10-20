@@ -224,3 +224,7 @@ Not project classes: `(delete this)` is a Relume leftover.
 6. **Update this doc** after each build with any new styles/components created
 
 Q020 (2026-10-20): `image-trio-text_item-heading` now carries the EYEBROW-CAPS values (heading font variable, 1.125rem, line-height 1.2, weight 900, letter-spacing -0.03em, lowercase); card titles no longer stack `text-style-eyebrow-caps`. The empty combo `.image-trio-text_item-heading.text-style-eyebrow-caps` is unused.
+
+W02 (2026-10-20, fix batches; details in `docs/figma/build-plans/W02/`):
+- New: `form-split-script-contact_fieldset-header.is-spaced` (gap above the second field group), `article-body_footer` (CTA wrapper in the Happenings & Stories article body).
+- Changed: `gallery-mosaic-captioned_caption` and `timeline-scatter-images_caption` now cream with a soft text-shadow; `history-timeline_label-wrap` align-items flex-start and `history-timeline_label` flex 0 0 auto (pills no longer collapse); `tab-pills-intro_tabs` and `venue-card-fullbleed_tabs` wrap and centre at small/tiny; `section_text-columns-info` padding-top 16rem on desktop only (Dinings template overlap).
