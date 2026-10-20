@@ -338,4 +338,29 @@ Component `Room List Hover Preview` (`a9d40053-f1b0-f862-ee0a-4f021e1933a9`), a 
 - [ ] "back to the quiz" closes the dialog (focus returns to the link that opened it); it does not scroll to the quiz start.
 - [ ] Visual check in the Designer: the dialog is hidden (`opacity: 0`) until `.is-open`; add `is-open` temporarily on the instance to edit it.
 - [ ] `🧱 room-list-hover-preview` (`/build-room-list-hover-preview`) is un-drafted for staging; delete it in the Designer once the release is done (pages cannot be deleted through the API).
+## Q030 Happenings & Stories post template (2026-10-20)
+
+Template `/happenings-stories/<slug>` (`6ad67d759914af41be21de84`): Site Nav, Hero (bound), article body (date and body bound), image-inset-single Small, Split Compact (body-highlight bound), more posts Collection List, Card Carousel, Offers Slider Split, CTA, Footer. One template for both categories. Staging: `/happenings-stories/locals-night-at-rodeo-bar` and the five other posts. Element map: `docs/figma/build-plans/Q030/build.md`.
+
+- [ ] Designer step (blocked headlessly): on the more posts Collection List `4048e357-02ea-e0d3-0a14-0d95030910f9`, add the filter **Category equals Current Post's Category** (the API refuses bound Reference filters). It already sorts by date descending, excludes the current post (Name not equal to the current Name, set through the API) and shows 2.
+- [ ] Designer step (blocked headlessly): on the card Link Block `bcf99744-d3ed-d1a5-4a9f-c5cf373c5aff`, set the link to **Current Happenings & Stories**. It is `#` for now (the API's collection page link publishes a static `/happenings-stories` href).
+- [ ] Sections 03 (inset) and 04 (split) use static library photos (courtyard `6ad66fee735773f253407335`, lounge `6ad670147e3d6550932e0fac`), the same on every post. Add `inset-image` and `highlight-image` fields if each post should carry its own.
+- [ ] The Figma section 02 shows a burgundy "learn more" button overlapping the paragraph; it was left out (no target for a post). Add it if a destination is decided.
+- [ ] Hero eyebrow shows the post Topic (dining, culture, conferences) and the article eyebrow shows the Date; the Figma eyebrow copy ("The Guild, a Tribute Portfolio Hotel") is lorem. Confirm the choice.
+- [ ] Rich text body: paragraphs are styled through the `article-body_rich-text` class (size and paragraph gap). Headings, lists or links inside the body take the tag styles; style them in the Designer if posts use them.
+- [ ] Offers Slider Split holds the component's placeholder offer copy.
+- [ ] Visual check against `figma/pages/happenings-indiv` and `blog-indiv` section.webp at 1440 and mobile once the filter and link are set.
+
+## Legal Corporates template (Q028, 2026-10-20)
+
+Template `/legal-corporate/<slug>` assembled through the Data API; staging renders `legal` and `corporate` with their own hero, intro and focus copy.
+
+- [ ] Visual check on staging against the Figma crops with a sample item: `/legal-corporate/legal` and `/legal-corporate/corporate`, desktop and mobile, including the sticky split and the venue snap section.
+- [ ] Corporate copy: the Figma pages are identical, so the corporate item's hero, intro and focus text are drafted, not client copy. Static sections (key features, packages, why teams choose, form details, map) still use the legal wording on both items; move more of them to CMS fields if the client supplies corporate copy.
+- [ ] legal/04 hover image (`2e81693530e933aa43a6c48a794614cca7c8822d`, the image that appears over a grid item) is not built; it belongs to the image hover interaction (Q007).
+- [ ] The four venue cards' body text is still Figma lorem, and only council boardroom opens a dialog (one Overlay Detail Panel Modal, dialog `council-boardroom`); the other three "discover more" buttons have no target.
+- [ ] Card Carousel Header Left (Q009) is not used here: the legal design has no carousel section. Offers Slider Split (Q008) is added after the gallery as on `/meetings`, with its placeholder offer copy.
+- [ ] Request for Proposal form (form-split-script-contact) shows the component's default field labels ("Example Text") and a "Shoot Details" heading from the photoshoot form; the legal/12 fields (first and last name, law firm, team size, check-in and check-out dates, special requirements) need a form variant or Designer edit. Same on `/meetings`.
+- [ ] Visual check by a subagent (2026-10-20): both items render all sections, no grey boxes or broken images, no mobile horizontal scroll, council boardroom dialog opens and closes, no console errors; dark grid and sticky split match the crops' layout.
+- [ ] Every photo is a stand-in from the library; replace with real imagery when it arrives.
 
