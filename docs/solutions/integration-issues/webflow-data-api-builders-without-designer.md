@@ -138,3 +138,11 @@ Rules for the build skill:
 - **HtmlEmbed code:** create the embed empty, then write it with `set_settings`, key `code`, `static_text.value`. The code and links survive `transform_element_to_component`.
 - **RichText seeds sample content (Q020).** `data_element_builder` `RichText` always creates Webflow's 16-element style-guide sample (H1 to H6, lorem, blockquote, lists, link, inline styles) ahead of any children you pass. Replace it in one write with `data_element_settings_tool > set_settings`, key `richText`, `static_text.rich_text_inner_text`; that leaves plain paragraphs only.
 - **Bullets inside RichText (Q020).** Set `richText` to a placeholder, then append `BY_CUSTOM_TAG ul` with `li` children. The List seeds three empty ListItems first, and `set_text` on the `li` children is dropped. Write each item with `set_settings`, key `text`, `static_text.value`, then remove the three seeded items and the placeholder paragraph.
+
+## Gotchas found in the Q016 build (2026-10-20)
+
+- **Image props:** `create_prop` takes no image default, and binding an image's `assetId` to the prop clears the definition's image. On an instance, `set_component_instance_prop_values` has no image type; pass the asset id as `type: "string"`. It reads back as the asset id.
+- **Link props:** prop defaults and instance values accept only `url`, `email`, `phone`, `popover` or `modal`; `page` is rejected. Use a url such as `/rooms`.
+- **LinkBlock text:** the LinkBlock exposes a `text` setting; bind the inner span's `text` instead, so the icon child is kept. A `DOM` span takes its text through `set_settings` key `text`.
+- **Optional wrappers:** bind each wrapper's `visibility` to a boolean prop; an empty text prop does not hide its wrapper.
+- **Heading newlines:** `set_text` and text props keep `\n`, so `white-space: pre-line` headings work without a line-break element.

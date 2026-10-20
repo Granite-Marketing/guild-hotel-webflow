@@ -102,3 +102,19 @@ For the Designer session to check against the real fonts: the list row height on
 - `button` is now `button is-chamfer`; home/11 and home/15 use `is-outline-light` (cream stroke SVG in shared-assets/). `reusedClassAssumptions` is superseded by the live values and shared-classes.json.
 - Stage, media and tab classes stay in this family; see shared-classes.md "Not merged".
 - Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).
+
+## Build (Q021, 2026-10-20)
+
+Built through the Data API on `🧱 venue-card-fullbleed` (`6ad712c8f7fb71b6e780492e`), with no Designer calls and nothing published. The base card was converted to the component "Venue Card Fullbleed" (`bbccdbb5-db17-02a1-a0cc-43ce0f5da371`).
+
+- **Props (15):** Intro Heading, Heading, Text, Button Label, Button Link (url), Image, Image Alt, Logo, Logo Alt, and the booleans Show Intro, Show Image, Show Logo, Show Heading, Show Text and Show Button. Intro and Logo are off by default. The Image prop has no default, so each instance sets it.
+- **Page, top to bottom:** base instance (legal/06), no-image instance (meetings-collection/03, Show Image off), home venues snap group (home/04 to 09, step 80, intro plus five panels), dining venues snap group (dining-collection/03 to 08, five panels plus the tab bar), `is-tall` (home/11) and `is-left` (home/15, list with the first row `is-active`).
+- **Classes created:** four empty combo paths, listed in `build.classesCreated` in [plan.json](plan.json). No standalone class was created and no live style changed.
+- **Assets uploaded:** the Zuma, Lobby Bar and Pool Lounge wordmarks (ids in `build.assetsUploaded` and `docs/reference/webflow-ids.md`).
+- **Read-back:** every element carries the planned tag, classes and snap attributes; all class stacks applied.
+- Build deviations are appended to `deviations` in [plan.json](plan.json).
+
+Designer follow-ups:
+
+1. Visual check of the build page against the `preview-*.png` files and the reference crops, including the `clip-path` chamfers (Q021-OQ9) and the snap animation once the bundle runs on staging.
+2. home/11 heading break: Figma breaks before "&" ("rooms" / "& suites"); add a line break if the real font does not wrap that way.

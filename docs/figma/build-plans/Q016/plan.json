@@ -432,17 +432,17 @@
   "assets": [
     {
       "slot": "image (home/02 building illustration)",
-      "webflowAssetId": null,
+      "webflowAssetId": "6ad74da48e7763c5db93ef04",
       "local": "figma/vectors/group-270989565-441x254-433-4759.svg"
     },
     {
       "slot": "image (rooms-collection/02 postmark stamp)",
-      "webflowAssetId": null,
+      "webflowAssetId": "6ad74da46b56ff1d7223e4d7",
       "local": "figma/vectors/group-191x191-379-1187.svg"
     },
     {
       "slot": "back-icon (rooms-individual/02 arrow)",
-      "webflowAssetId": null,
+      "webflowAssetId": "6ad74da5f1658ec1f273e890",
       "local": "figma/vectors/group-270990121-11x11-413-5536.svg"
     }
   ],
@@ -570,7 +570,12 @@
     "padding-section-xlarge is a new shared utility; the brief's padding-section-* set tops out at 7rem, half the Figma gap.",
     "Removed the trailing spaces from the dining-collection paragraph.",
     "Brief instances happenings-indiv/02 and blog-indiv/02 are not covered by this plan; see excludedInstances and openQuestions.",
-    "Preview scale: plan values are Figma px at 1600 converted 1:1 to rem, so at 1440 the preview reads about 10 percent larger than the crop scaled to 1440. Kept 1:1 on purpose; Webflow has no fluid type scale here."
+    "Preview scale: plan values are Figma px at 1600 converted 1:1 to rem, so at 1440 the preview reads about 10 percent larger than the crop scaled to 1440. Kept 1:1 on purpose; Webflow has no fluid type scale here.",
+    "Build (2026-10-20): added three boolean props (Show back link, default off; Show image, off; Show paragraph, on) bound to the visibility of script-intro-centered_back, _figure and _text. Webflow cannot hide a wrapper when its text prop is empty.",
+    "Build: the back-link text is a DOM span bound to the backLink prop; the LinkBlock itself is bound to backLinkUrl. Instance link props accept only url, email, phone, popover or modal, so the default is the url /rooms rather than a page link.",
+    "Build: the image prop has no default (the API takes no image default), so the component definition shows an empty image until an instance sets one; Show image defaults to off. Instances set the image by passing the asset id as a string value.",
+    "Build: is-tall, is-wide and is-bottom cannot switch on a component instance, so they sit on the build page as plain element sections (S2 to S4) pending the per-instance variant decision shared with Q014.",
+    "Build: three empty combos created so the stacks apply: .script-intro-centered_back-link.text-style-caps-caption-16, .script-intro-centered_paragraph.text-size-medium, .script-intro-centered_paragraph.text-size-medium.text-weight-normal."
   ],
   "excludedInstances": [
     {
@@ -605,5 +610,12 @@
       "Script heading is `text-style-script is-large` (Morello 80/96) with no `heading-style-h1`.",
       "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
     ]
+  },
+  "build": {
+    "date": "2026-10-20",
+    "page": "6ad712c471aebc47c94f1c20",
+    "componentId": "bdff66b3-92d9-e1e3-dbc0-86a28e384c9b",
+    "componentName": "script-intro-centered",
+    "componentGroup": "Sections"
   }
 }
