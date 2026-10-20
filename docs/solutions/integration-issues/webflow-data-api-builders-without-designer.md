@@ -282,3 +282,7 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 - **Builder `set_link` url with a `#hash` is dropped.** A TextLink with `link_type: "url"` and `#photoshoot-request` was created with no link, while an `email` link on a sibling kept its value. Write hash links afterwards with `set_settings` key `link`, `static_link { mode: "url", to: "#..." }`.
 - **Inline links inside running text.** A `DOM` `p` with children `DOM span` (text through `settings` key `text`), `TextLink`, `DOM span` builds a paragraph with inline links in one call. A `sup` DOM element before an inline (`display: inline`) paragraph gives superscript item numbers.
 - **In-page anchor before an instance.** A plain `DOM div` with `settings` `domId` appended just before the instance gives a link target without touching the component.
+## Notes from the Arts page (Q041, 2026-10-20)
+
+- **Modal trigger links take a bare `#` href.** A LinkBlock trigger with `href="#<dialog id>"` makes Webflow's in-page anchor scroll fire on click (the page jumped by the nav height and the URL took the hash), even though `modals.ts` opens the dialog. Use `href="#"` (set with `set_settings` key `link`, `static_link` url `#`); the link stays keyboard focusable and nothing scrolls.
+- **Filter item plus dialog trigger.** Keep `data-gallery-filter-item` on the figure (the element `galleryFilter` hides) and put `data-modal-open` on a LinkBlock inside it, so filtering and keyboard-accessible dialogs work together with no new code.
