@@ -6,12 +6,19 @@
     "pageId": "6ad66fd5f8bf4846e809dc45",
     "section": "rooms-individual/04-section"
   },
-  "reusedClasses": ["padding-global", "padding-section-small", "container-large"],
+  "reusedClasses": [
+    "container-large",
+    "is-small",
+    "padding-global",
+    "padding-section-small"
+  ],
   "familyClasses": [
     {
       "name": "section_image-inset-single",
       "styles": {
-        "desktop": { "background-color": "var(--color-neutral-100)" },
+        "desktop": {
+          "background-color": "var(--_primitives---colors--neutral-lightest)"
+        },
         "tablet": {},
         "mobileLandscape": {},
         "mobilePortrait": {}
@@ -48,32 +55,48 @@
     }
   ],
   "proposedShared": [],
-  "variables": ["color-neutral-100"],
+  "variables": [
+    "_primitives---colors--neutral-lightest"
+  ],
   "tree": [
     {
       "tag": "section",
-      "classes": ["section_image-inset-single"],
+      "classes": [
+        "section_image-inset-single"
+      ],
       "attributes": {},
       "children": [
         {
           "tag": "div",
-          "classes": ["padding-global", "padding-section-small"],
+          "classes": [
+            "padding-global",
+            "padding-section-small"
+          ],
           "attributes": {},
           "children": [
             {
               "tag": "div",
-              "classes": ["container-large"],
+              "classes": [
+                "container-large"
+              ],
               "attributes": {},
               "children": [
                 {
                   "tag": "figure",
-                  "classes": ["image-inset-single_figure"],
+                  "classes": [
+                    "image-inset-single_figure"
+                  ],
                   "attributes": {},
                   "children": [
                     {
                       "tag": "img",
-                      "classes": ["image-inset-single_image"],
-                      "attributes": { "loading": "lazy", "alt": "{image alt}" },
+                      "classes": [
+                        "image-inset-single_image"
+                      ],
+                      "attributes": {
+                        "loading": "lazy",
+                        "alt": "{image alt}"
+                      },
                       "children": []
                     }
                   ]
@@ -90,7 +113,10 @@
       "modifier": "is-small",
       "on": "image-inset-single_figure",
       "styleDeltas": {
-        "desktop": { "max-width": "46.5rem", "aspect-ratio": "744 / 524" },
+        "desktop": {
+          "max-width": "46.5rem",
+          "aspect-ratio": "744 / 524"
+        },
         "tablet": {},
         "mobileLandscape": {},
         "mobilePortrait": {}
@@ -99,8 +125,16 @@
     }
   ],
   "props": [
-    { "name": "image", "type": "image", "element": "image-inset-single_image" },
-    { "name": "image alt", "type": "text", "element": "image-inset-single_image" }
+    {
+      "name": "image",
+      "type": "image",
+      "element": "image-inset-single_image"
+    },
+    {
+      "name": "image alt",
+      "type": "text",
+      "element": "image-inset-single_image"
+    }
   ],
   "assets": [
     {
@@ -119,25 +153,37 @@
       "page": "rooms-individual",
       "section": "rooms-individual/04-section",
       "variant": "base",
-      "content": { "image": "assets/images/d7332204a5bee888af6d6fe5adf267bebfab8918.png", "image alt": "A hand writing 'Welcome to the Guild Hotel' in pencil on a card" }
+      "content": {
+        "image": "assets/images/d7332204a5bee888af6d6fe5adf267bebfab8918.png",
+        "image alt": "A hand writing 'Welcome to the Guild Hotel' in pencil on a card"
+      }
     },
     {
       "page": "arts",
       "section": "arts/03-section",
       "variant": "base",
-      "content": { "image": "assets/images/6f6117168648560af09fa8344fd7ec88a095e861.png", "image alt": "Palm leaves in front of the Guild Hotel sign at night" }
+      "content": {
+        "image": "assets/images/6f6117168648560af09fa8344fd7ec88a095e861.png",
+        "image alt": "Palm leaves in front of the Guild Hotel sign at night"
+      }
     },
     {
       "page": "happenings-indiv",
       "section": "happenings-indiv/03-section",
       "variant": "is-small",
-      "content": { "image": null, "image alt": null }
+      "content": {
+        "image": null,
+        "image alt": null
+      }
     },
     {
       "page": "blog-indiv",
       "section": "blog-indiv/03-section",
       "variant": "is-small",
-      "content": { "image": null, "image alt": null }
+      "content": {
+        "image": null,
+        "image alt": null
+      }
     }
   ],
   "openQuestions": [
@@ -154,5 +200,13 @@
     "No image-inset-single_component wrapper and no header or footer wrappers: the component has no text or CTA, and the figure is the only child of the container.",
     "Figma image width is 1253 px in a 1600 px frame (x 178); container-large gives 1280 px (x 160). The 27 px difference is accepted to stay on the shared container.",
     "Section background is set explicitly to color-neutral-100 (#F4EFDF per figma/tokens.json; the Relume default for that variable is #F5F5F5 until Q001 syncs it)."
-  ]
+  ],
+  "k01": {
+    "reconciledBy": "K01, 2026-10-20",
+    "sharedClasses": "docs/figma/build-plans/shared-classes.md",
+    "changes": [
+      "Only variable names changed.",
+      "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  }
 }

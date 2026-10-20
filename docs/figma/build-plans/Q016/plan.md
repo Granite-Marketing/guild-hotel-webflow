@@ -93,3 +93,12 @@ A Sonnet subagent compared each preview at 1440 with its crop (crop scaled from 
 - 390: fits.
 
 happenings-indiv/02 and blog-indiv/02 were compared against an earlier preview and then excluded from this plan, so no notes are kept for them.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Class list `script-intro-centered_back-link text-size-regular text-style-caps-caption-16` is now `script-intro-centered_back-link text-style-caps-caption-16`.
+- Class list `script-intro-centered_heading heading-style-h1 text-style-script` is now `script-intro-centered_heading text-style-script is-large`.
+- Script heading is `text-style-script is-large` (Morello 80/96) with no `heading-style-h1`.
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

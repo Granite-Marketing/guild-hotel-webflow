@@ -94,3 +94,15 @@ A Sonnet subagent compared each 1440 preview with its crop (Figma 1600 wide; cro
 ### 390 (no Figma mobile design)
 
 No layout bugs: no overflow or clipped text. Base stacks title, text, button, then a small map (open question 8). Image-bg puts the map on top at the 1600/1170 aspect with pins aligned and the card full width below. Centered wraps the heading to two lines and shows the illustration below.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Class list `heading-style-h1 text-style-script text-weight-normal` is now `text-style-script is-large`.
+- Class list `button is-chamfer text-size-regular text-style-button` is now `button is-chamfer is-outline`.
+- Class list `map-feature_text text-size-regular text-style-eyebrow-caps` is now `map-feature_text text-style-eyebrow-caps`.
+- Class list `button is-chamfer` is now `button is-chamfer is-outline`.
+- Heading is `text-style-script is-large`; the reference is Morello 80/80 on one line, so the box is about 16px taller.
+- The outline button is `button is-chamfer is-outline` (dark stroke SVG in shared-assets/).
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

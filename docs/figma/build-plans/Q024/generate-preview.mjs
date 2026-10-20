@@ -9,21 +9,6 @@ const planDir = dirname(fileURLToPath(import.meta.url))
 const repoRoot = join(planDir, '../../../..')
 const plan = JSON.parse(readFileSync(join(planDir, 'plan.json'), 'utf8'))
 
-// Variable values from figma/tokens.json (mapping.colors) until Q001 syncs them live.
-const variableValues = { 'color-neutral-100': '#F4EFDF' }
-
-// Reused classes keep their site values; these mirror CLAUDE.md and docs/reference/breakpoints.md.
-const reusedClassStyles = {
-  'padding-global': { desktop: { 'padding-left': '2rem', 'padding-right': '2rem' } },
-  'padding-section-small': {
-    desktop: { 'padding-top': '3rem', 'padding-bottom': '3rem' },
-    tablet: { 'padding-top': '2rem', 'padding-bottom': '2rem' },
-    mobileLandscape: { 'padding-top': '1.5rem', 'padding-bottom': '1.5rem' },
-    mobilePortrait: { 'padding-top': '1rem', 'padding-bottom': '1rem' },
-  },
-  'container-large': { desktop: { width: '100%', 'max-width': '80rem', 'margin-left': 'auto', 'margin-right': 'auto' } },
-}
-
 const breakpoints = [
   ['desktop', null],
   ['tablet', 991],
@@ -44,14 +29,11 @@ const addRule = (selector, stylesByBreakpoint) => {
   }
 }
 
-for (const [name, styles] of Object.entries(reusedClassStyles)) addRule(`.${name}`, styles)
 for (const familyClass of plan.familyClasses) addRule(`.${familyClass.name}`, familyClass.styles)
-for (const sharedClass of plan.proposedShared) addRule(`.${sharedClass.name}`, sharedClass.styles)
 for (const variant of plan.variants) addRule(`.${variant.on}.${variant.modifier}`, variant.styleDeltas)
 
-const rootVariables = plan.variables.map((name) => `  --${name}: ${variableValues[name]};`).join('\n')
 let css = `/* Generated from plan.json by generate-preview.mjs. Do not edit by hand. */\n`
-css += `:root {\n${rootVariables}\n}\n\n*, *::before, *::after { box-sizing: border-box; }\nbody { margin: 0; }\n\n`
+css += `*, *::before, *::after { box-sizing: border-box; }\nbody { margin: 0; }\n\n`
 for (const [breakpoint, maxWidth] of breakpoints) {
   const rules = ruleBlocks[breakpoint].join('\n\n')
   if (!rules) continue
@@ -97,6 +79,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Q024 image-inset-single preview</title>
+<link rel="stylesheet" href="../shared-preview.css">
 <link rel="stylesheet" href="preview.css">
 </head>
 <body>

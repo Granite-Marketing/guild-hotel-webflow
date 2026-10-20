@@ -11,11 +11,10 @@
     "props": "none: all 24 instances render identical content (brief: consider a component with no props)"
   },
   "reusedClasses": [
+    "button",
     "padding-global",
     "padding-section-large",
-    "heading-style-h1",
-    "text-weight-normal",
-    "button",
+    "text-style-script",
     "w-form-done",
     "w-form-fail"
   ],
@@ -26,8 +25,8 @@
         "desktop": {
           "position": "relative",
           "overflow": "hidden",
-          "background-color": "var(--color-neutral-900)",
-          "color": "var(--color-neutral-100)"
+          "background-color": "var(--_primitives---colors--neutral-darkest)",
+          "color": "var(--_primitives---colors--neutral-lightest)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -158,7 +157,7 @@
         "desktop": {
           "align-self": "stretch",
           "width": "1px",
-          "background-color": "var(--color-neutral-100)"
+          "background-color": "var(--_primitives---colors--neutral-lightest)"
         },
         "tablet": {},
         "mobileLandscape": {
@@ -234,16 +233,16 @@
           "padding": "0 0 0.5rem 0",
           "border-style": "none none solid none",
           "border-bottom-width": "1px",
-          "border-bottom-color": "var(--color-neutral-100)",
+          "border-bottom-color": "var(--_primitives---colors--neutral-lightest)",
           "border-radius": "0",
           "background-color": "transparent",
-          "color": "var(--color-neutral-100)",
-          "font-family": "var(--font-style-heading)",
+          "color": "var(--_primitives---colors--neutral-lightest)",
+          "font-family": "var(--_typography---font-styles--heading)",
           "font-size": "1rem",
           "line-height": "1",
           "text-transform": "lowercase",
           "::placeholder": {
-            "color": "var(--color-neutral-100)",
+            "color": "var(--_primitives---colors--neutral-lightest)",
             "opacity": "1"
           }
         },
@@ -259,9 +258,9 @@
           "margin-top": "1rem",
           "padding": "0.75rem 1rem",
           "background-color": "transparent",
-          "border": "1px solid var(--color-neutral-100)",
-          "color": "var(--color-neutral-100)",
-          "font-family": "var(--font-style-heading)",
+          "border": "1px solid var(--_primitives---colors--neutral-lightest)",
+          "color": "var(--_primitives---colors--neutral-lightest)",
+          "font-family": "var(--_typography---font-styles--heading)",
           "font-size": "0.875rem",
           "line-height": "1.2",
           "text-align": "center",
@@ -317,63 +316,31 @@
   ],
   "proposedShared": [
     {
+      "name": "text-style-caption-tracked",
+      "comboOn": null,
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
+    },
+    {
       "name": "is-chamfer",
-      "why": "Cream chamfered (octagonal) button used by this CTA and, from figma/vectors (vector-25-* shapes, 19 sizes), most buttons site-wide. Combo on the Relume `button` base.",
-      "on": "button",
-      "styles": {
-        "desktop": {
-          "display": "inline-flex",
-          "justify-content": "center",
-          "align-items": "center",
-          "min-height": "2.3125rem",
-          "padding": "0.5625rem 2.3125rem",
-          "border": "0",
-          "border-radius": "0",
-          "background-color": "var(--color-neutral-100)",
-          "color": "var(--color-brand-4a1217)",
-          "text-align": "center",
-          "text-decoration": "none",
-          "cursor": "pointer",
-          "clip-path": "polygon(0.6875rem 0, calc(100% - 0.6875rem) 0, 100% 32.35%, 100% 67.13%, calc(100% - 0.6875rem) 100%, 0.6875rem 100%, 0 67.13%, 0 32.35%)",
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1rem",
-          "line-height": "1.2",
-          "letter-spacing": "-0.03em",
-          "text-transform": "lowercase",
-          "font-weight": "400"
-        }
-      }
+      "comboOn": "button",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     },
     {
       "name": "is-wide",
-      "why": "Wider fixed-minimum button (book now is 214px against 144px for join us at the same padding). Combo on `button is-chamfer`.",
-      "on": "button is-chamfer",
-      "styles": {
-        "desktop": {
-          "min-width": "13.375rem"
-        }
-      }
+      "comboOn": "button is-chamfer",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     },
     {
-      "name": "text-style-caption",
-      "why": "Sackers 14/14/0.7 lowercase caption: 648 uses in figma/tokens.json textStyles; tokens mapping suggests this combo name.",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "0.875rem",
-          "line-height": "1",
-          "letter-spacing": "0.05em",
-          "text-transform": "lowercase",
-          "font-weight": "400"
-        }
-      }
+      "name": "is-text-burgundy",
+      "comboOn": "button is-chamfer",
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     }
   ],
   "variables": [
-    "color-neutral-100",
-    "color-neutral-900",
-    "color-brand-4a1217",
-    "font-style-heading"
+    "_primitives---colors--burgundy",
+    "_primitives---colors--neutral-darkest",
+    "_primitives---colors--neutral-lightest",
+    "_typography---font-styles--heading"
   ],
   "tree": [
     {
@@ -455,8 +422,7 @@
                             {
                               "tag": "h2",
                               "classes": [
-                                "heading-style-h1",
-                                "text-weight-normal"
+                                "text-style-script"
                               ],
                               "attributes": {},
                               "children": [],
@@ -476,6 +442,7 @@
                               "classes": [
                                 "button",
                                 "is-chamfer",
+                                "is-text-burgundy",
                                 "is-wide"
                               ],
                               "attributes": {
@@ -515,8 +482,7 @@
                             {
                               "tag": "h2",
                               "classes": [
-                                "heading-style-h1",
-                                "text-weight-normal"
+                                "text-style-script"
                               ],
                               "attributes": {},
                               "children": [],
@@ -572,7 +538,8 @@
                                       "tag": "input",
                                       "classes": [
                                         "button",
-                                        "is-chamfer"
+                                        "is-chamfer",
+                                        "is-text-burgundy"
                                       ],
                                       "attributes": {
                                         "type": "submit",
@@ -666,7 +633,7 @@
                     {
                       "tag": "div",
                       "classes": [
-                        "text-style-caption"
+                        "text-style-caption-tracked"
                       ],
                       "attributes": {},
                       "children": [
@@ -1085,6 +1052,20 @@
   "deviations": [
     "No container-large inside padding-global: the two columns are centred on the quarter lines of the full 1600 frame (x 400 and 1200). A 80rem container would pull them inward to about 480 and 1120.",
     "Button typography (CAPS-CAPTION-16) sits on the is-chamfer combo instead of a separate text-style-caps-caption-16 class, because a button carrying four stacked classes is fragile in Webflow.",
-    "Heading tags are h2 with heading-style-h1 styling: Morello 60/72 maps to heading-style-h1 in figma/tokens.json, but every page already has its own h1."
-  ]
+    "Heading tags are h2 with the live text-style-script (Morello 60/72), because every page already has its own h1. K01 replaced heading-style-h1, which is the Sackers display style."
+  ],
+  "k01": {
+    "reconciledBy": "K01, 2026-10-20",
+    "sharedClasses": "docs/figma/build-plans/shared-classes.md",
+    "changes": [
+      "Class list `heading-style-h1 text-weight-normal` is now `text-style-script` on both headings (Figma: Morello 60/72; heading-style-h1 is the Sackers display style).",
+      "Class list `button is-chamfer is-wide` is now `button is-chamfer is-text-burgundy is-wide`.",
+      "Class list `button is-chamfer` is now `button is-chamfer is-text-burgundy`.",
+      "Class list `text-style-caption` is now `text-style-caption-tracked`.",
+      "Class list `heading-style-h1 text-weight-normal` is now `text-style-script`.",
+      "Button width: `is-wide` is the standard 194px (12.125rem); book now measured 214px.",
+      "Button type: `is-chamfer` carries Label/Button (line height 1, no tracking) instead of CAPS-CAPTION-16.",
+      "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  }
 }

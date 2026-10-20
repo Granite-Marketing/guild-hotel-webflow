@@ -26,8 +26,7 @@ const addRule = (selector, byBreakpoint) => {
   }
 }
 
-for (const c of plan.reusedClassAssumptions) addRule(c.comboOn ? `.${c.comboOn}.${c.name}` : `.${c.name}`, c.styles)
-for (const c of plan.proposedShared) addRule(c.comboOn ? `.${c.comboOn}.${c.name}` : `.${c.name}`, c.styles)
+// Reused and proposedShared classes come from ../shared-preview.css, not from this generator.
 for (const c of plan.familyClasses) addRule(`.${c.name}`, c.styles)
 for (const v of plan.variants) addRule(`.${v.on}.${v.modifier}`, v.styleDeltas)
 
@@ -38,17 +37,8 @@ const css = [
   '   font fallbacks because the brand fonts are not available locally, and element resets',
   '   that the Relume global styles provide in Webflow. Sackers Heavy Gothic is an all-caps',
   '   face, so the fallback is uppercased to keep line lengths comparable. */',
-  ':root {',
-  '  --color-neutral-100: #f4efdf;',
-  '  --color-neutral-300: #d1d1d1;',
-  '  --color-neutral-900: #262118;',
-  '  --color-accent: #29310c;',
-  '  --color-brand-4a1217: #4a1217;',
-  '  --font-style-heading: "Sackers Heavy Gothic", Copperplate, "Copperplate Gothic", serif;',
-  '  --font-style-body: "Gatch Test", "Avenir Next", Futura, sans-serif;',
-  '}',
   '*, *::before, *::after { box-sizing: border-box; }',
-  'body { margin: 0; background: var(--color-neutral-100); font-family: var(--font-style-body); }',
+  'body { margin: 0; background: var(--_primitives---colors--neutral-lightest); font-family: var(--_typography---font-styles--body); }',
   'h1, h2, h3, h4, p, figure { margin: 0; }',
   '.heading-style-display, .heading-style-h1, .heading-style-h2, .heading-style-h3, .heading-style-h4, .button, .text-style-eyebrow-caps { text-transform: uppercase; }',
   '.preview-label { font: 12px/1 ui-monospace, monospace; padding: 8px 12px; background: #222; color: #fff; }',
@@ -146,6 +136,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Q021 venue-card-fullbleed preview</title>
+<link rel="stylesheet" href="../shared-preview.css">
 <link rel="stylesheet" href="preview.css">
 </head>
 <body>

@@ -7,19 +7,8 @@ import { fileURLToPath } from 'node:url'
 const planDir = dirname(fileURLToPath(import.meta.url))
 const repoRoot = join(planDir, '../../../..')
 const plan = JSON.parse(readFileSync(join(planDir, 'plan.json'), 'utf8'))
-const tokens = JSON.parse(readFileSync(join(repoRoot, 'figma/tokens.json'), 'utf8'))
 
-// Variable values come from the tokens.json mapping; fonts fall back to a
-// local caps face because the licensed fonts are not in the repo.
-const variableValues = {}
-for (const color of tokens.mapping.colors) if (color.target) variableValues[color.target] = color.hex
-for (const font of tokens.mapping.fontVariables)
-  variableValues[font.variable] = `"${font.value}", Copperplate, "Copperplate Gothic Light", serif`
-
-// Reused Relume utilities, values from CLAUDE.md and docs/reference/breakpoints.md
-const reusedStyles = {
-  'padding-global': { desktop: { 'padding-left': '2rem', 'padding-right': '2rem' } },
-}
+// Reused and K01 shared classes come from ../shared-preview.css (canonical stylesheet).
 
 const breakpoints = {
   desktop: null,
@@ -35,14 +24,11 @@ const declarations = (styles) =>
   Object.entries(styles).map(([property, value]) => `  ${property}: ${value};`).join('\n')
 
 const allClasses = [
-  ...Object.entries(reusedStyles).map(([name, styles]) => ({ name, styles })),
-  ...plan.proposedShared,
   ...plan.familyClasses,
 ]
 
 let css = `/* Generated from plan.json by render-preview.mjs. Do not edit by hand. */\n`
-css += `:root {\n${plan.variables.map((name) => `  --${name}: ${variableValues[name]};`).join('\n')}\n}\n`
-css += `*, *::before, *::after { box-sizing: border-box; }\nbody { margin: 0; font-family: var(--font-style-heading); }\n`
+css += `*, *::before, *::after { box-sizing: border-box; }\nbody { margin: 0; font-family: var(--_typography---font-styles--heading); }\n`
 css += `.preview-label { font: 12px/1.4 system-ui, sans-serif; padding: 8px 16px; background: #fff; color: #333; }\n`
 for (const [breakpoint, query] of Object.entries(breakpoints)) {
   const rules = []
@@ -89,6 +75,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Q013 footer-links preview</title>
+<link rel="stylesheet" href="../shared-preview.css">
 <link rel="stylesheet" href="preview.css">
 </head>
 <body>

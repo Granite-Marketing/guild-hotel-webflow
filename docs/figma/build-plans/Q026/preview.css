@@ -1,60 +1,12 @@
 /* Generated from plan.json by generate-preview.mjs. Do not edit by hand. */
 
-:root {
-  --color-neutral-100: #f4efdf;
-  --color-neutral-900: #262118;
-  --color-accent: #29310c;
-  --font-style-heading: 'Sackers Heavy Gothic', Copperplate, 'Copperplate Gothic Light', 'Arial', sans-serif;
-}
-
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; font-family: Arial, sans-serif; }
 /* Preview-only: stand-in for the all-caps Sackers face. */
 .timeline-scatter-images_heading, .timeline-scatter-images_caption { text-transform: uppercase; }
 
-.padding-global {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-.padding-section-large {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-}
-.heading-style-h3 {
-  font-size: 1.875rem;
-  line-height: 1;
-  letter-spacing: -0.05em;
-}
-.heading-style-h4 {
-  font-size: 1.5rem;
-  line-height: 1.2;
-}
-.text-weight-normal {
-  font-weight: 400;
-}
-.text-size-regular {
-  font-size: 1rem;
-}
-.u-image {
-  display: block;
-  max-width: 100%;
-}
-.text-style-caps-caption-16 {
-  font-family: var(--font-style-heading);
-  font-size: 1rem;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: -0.03em;
-}
-.text-style-eyebrow-caps {
-  font-family: var(--font-style-heading);
-  font-size: 1.125rem;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: -0.03em;
-}
 .section_timeline-scatter-images {
-  background-color: var(--color-neutral-100);
+  background-color: var(--_primitives---colors--neutral-lightest);
 }
 .timeline-scatter-images_component {
   position: relative;
@@ -70,8 +22,8 @@ body { margin: 0; font-family: Arial, sans-serif; }
 .timeline-scatter-images_heading {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: var(--font-style-heading);
-  color: var(--color-accent);
+  font-family: var(--_typography---font-styles--heading);
+  color: var(--_primitives---colors--accent);
 }
 .timeline-scatter-images_list {
   display: flex;
@@ -105,7 +57,7 @@ body { margin: 0; font-family: Arial, sans-serif; }
   bottom: 1.25rem;
   z-index: 1;
   margin: 0;
-  color: var(--color-accent);
+  color: var(--_primitives---colors--accent);
 }
 .timeline-scatter-images_header.is-tall {
   position: static;
@@ -114,7 +66,7 @@ body { margin: 0; font-family: Arial, sans-serif; }
   text-align: left;
 }
 .timeline-scatter-images_heading.is-tall {
-  color: var(--color-neutral-900);
+  color: var(--_primitives---colors--neutral-darkest);
 }
 .timeline-scatter-images_list.is-tall {
   row-gap: 3.125rem;
@@ -165,18 +117,9 @@ body { margin: 0; font-family: Arial, sans-serif; }
   aspect-ratio: 744 / 524;
 }
 
-@media (max-width: 991px) {
-  .padding-section-large {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-}
+
 
 @media (max-width: 767px) {
-  .padding-section-large {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-  }
   .timeline-scatter-images_header {
     position: static;
     margin-bottom: 2rem;
@@ -216,9 +159,4 @@ body { margin: 0; font-family: Arial, sans-serif; }
   }
 }
 
-@media (max-width: 479px) {
-  .padding-section-large {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-}
+

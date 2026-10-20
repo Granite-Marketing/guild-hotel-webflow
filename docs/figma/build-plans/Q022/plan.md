@@ -28,7 +28,7 @@ Build on `meetings-collection/06-request-for-proposal` (page `/meetings`, id `6a
                 - div .form-split-script-contact_fields (2-column grid, 1 column at 767)
                   - div .form-split-script-contact_field (+ `is-full` for full-width rows) > input .form-split-script-contact_input (placeholder + aria-label, default label deleted)
                   - div .form-split-script-contact_field .is-full > textarea .form-split-script-contact_input .is-textarea
-            - `footer` .form-split-script-contact_footer > submit .button .is-clipped
+            - `footer` .form-split-script-contact_footer > submit .button .is-chamfer is-dark
           - success and error messages .form-split-script-contact_message
         - `figure` .form-split-script-contact_media (optional, contact only: #D9D9D9 placeholder)
 
@@ -40,7 +40,7 @@ Proposed shared (for K01 to reconcile with sibling plans):
 
 - `text-style-script` on `heading-style-h1`: Morello 3.75rem / 1.2 (53 uses site-wide).
 - `text-style-caps-caption-16` on `text-size-regular`: the tokens.json suggested combo (242 uses).
-- `is-clipped` on `button`: dark clipped-corner button from vector 25 (4 shared briefs use it).
+- `is-chamfer is-dark` on `button`: dark clipped-corner button from vector 25 (4 shared briefs use it).
 
 Variables: `color-neutral-100`, `color-neutral-900`, `color-accent`, `font-style-heading`, `font-style-body`.
 
@@ -58,7 +58,7 @@ Variables: `color-neutral-100`, `color-neutral-900`, `color-accent`, `font-style
 5. Date and time fields use type=text to keep the placeholder look; confirm or accept native pickers.
 6. Container width: Figma content is about 1482px in a 1600 frame; container-large caps it at 1280.
 8. Base top padding: the base crops place the heading 94px to 240px below the band top, so one value cannot match all; the plan uses padding-section-large (7rem). The build session should confirm against neighbouring sections once pages are assembled.
-7. clip-path for `is-clipped` may need a custom CSS embed if the Webflow style panel lacks it.
+7. clip-path for `is-chamfer is-dark` may need a custom CSS embed if the Webflow style panel lacks it.
 
 ## Deviations
 
@@ -79,3 +79,15 @@ A Sonnet subagent compared each 1440 screenshot with its crop and judged each 39
 **base, contact** (`contact/01-contact-us`). Match: text column centred against the grey block, group pitch (89 vs 90px), line pitch, underlined social links with 40px gap, grey block colour and 905/726 ratio, caps heading. Still different: Figma labels are 18px EYEBROW-CAPS with wider tracking; the plan uses caps-caption-16 (recorded deviation). Fixed: label to value gap was 5px too large. 390: details first, then the grey block; no overflow.
 
 **base, legal** (`legal/12-a-landmark-reimagined`; corporate is identical). Match: three detail groups with 89px pitch, label to value gap, four field rows plus textarea, button, olive paragraph. Fixed: the form now starts level with the paragraph (was about 130px high). Still different: top padding about 100px short in this crop (open question 8); paragraph wraps to 4 lines (font width). 390: good.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Class list `heading-style-h1 text-style-script` is now `text-style-script`.
+- Class list `form-split-script-contact_detail-label text-size-regular text-style-caps-caption-16` is now `form-split-script-contact_detail-label text-style-caps-caption-16`.
+- Class list `form-split-script-contact_link text-size-regular text-style-caps-caption-16` is now `form-split-script-contact_link text-style-caps-caption-16`.
+- Class list `button is-clipped` is now `button is-chamfer is-dark`.
+- Submit button is `button is-chamfer is-dark` (was `is-clipped`); type is Label/Button instead of CAPS-CAPTION-16.
+- Script heading uses the live `text-style-script` (Morello 60/72); its tablet and mobile steps are a live correction.
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

@@ -7,14 +7,14 @@
     "section": "home/10-wellness"
   },
   "reusedClasses": [
-    "padding-global",
-    "padding-section-large",
     "heading-style-h3",
     "heading-style-h4",
-    "text-size-regular",
+    "padding-global",
+    "padding-section-large",
+    "text-rich-text",
     "text-size-medium",
-    "text-weight-normal",
-    "text-rich-text"
+    "text-style-eyebrow-caps",
+    "text-weight-normal"
   ],
   "familyClasses": [
     {
@@ -23,8 +23,8 @@
         "desktop": {
           "position": "relative",
           "overflow": "clip",
-          "background-color": "var(--color-neutral-100)",
-          "color": "var(--color-neutral-900)"
+          "background-color": "var(--_primitives---colors--neutral-lightest)",
+          "color": "var(--_primitives---colors--neutral-darkest)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -235,27 +235,13 @@
       }
     }
   ],
-  "proposedShared": [
-    {
-      "name": "text-style-eyebrow-caps",
-      "why": "Combo for EYEBROW-CAPS (Sackers 18/21.6, -0.03em, lowercase) on top of text-size-regular; 393 uses in the file, proposed by figma/tokens.json mapping. If Q001 creates it first, reuse that one.",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1.125rem",
-          "line-height": "1.2",
-          "letter-spacing": "-0.03em",
-          "text-transform": "lowercase"
-        }
-      }
-    }
-  ],
+  "proposedShared": [],
   "variables": [
-    "color-neutral-100",
-    "color-neutral-900",
-    "color-accent",
-    "font-style-heading",
-    "font-style-body"
+    "_primitives---colors--accent",
+    "_primitives---colors--neutral-darkest",
+    "_primitives---colors--neutral-lightest",
+    "_typography---font-styles--body",
+    "_typography---font-styles--heading"
   ],
   "tree": [
     {
@@ -375,8 +361,6 @@
                                   "tag": "h3",
                                   "classes": [
                                     "image-trio-text_item-heading",
-                                    "text-size-regular",
-                                    "text-weight-normal",
                                     "text-style-eyebrow-caps"
                                   ],
                                   "attributes": {},
@@ -416,8 +400,6 @@
                       "tag": "a",
                       "classes": [
                         "image-trio-text_link",
-                        "text-size-regular",
-                        "text-weight-normal",
                         "text-style-eyebrow-caps"
                       ],
                       "attributes": {
@@ -437,18 +419,21 @@
   ],
   "variants": [
     {
-      "modifier": "base",
+      "modifier": null,
       "on": "section_image-trio-text",
       "styleDeltas": {},
       "crop": "figma/pages/dining-zuma/sections/07-group-dining-events/section.webp",
-      "note": "Full-bleed trio of portrait figures (grey #D9D9D9 placeholders until photos arrive), centred header, paragraph and CTA below."
+      "note": "Full-bleed trio of portrait figures (grey #D9D9D9 placeholders until photos arrive), centred header, paragraph and CTA below.",
+      "name": "base"
     },
     {
-      "modifier": "is-media-left is-multi-image",
+      "modifier": null,
       "on": "section_image-trio-text",
       "styleDeltas": {},
       "crop": "figma/pages/home/sections/10-wellness/section.webp",
-      "note": "Same layout as base with real photos. The brief's modifier names come from the auto classifier; there is no style delta, so these combo classes are not created (see deviations). Heading uses heading-style-h3 instead of h4."
+      "note": "Same layout as base with real photos. The brief's modifier names come from the auto classifier; there is no style delta, so these combo classes are not created (see deviations). Heading uses heading-style-h3 instead of h4.",
+      "name": "is-media-left is-multi-image",
+      "k01Note": "No style delta, so no modifier class is created (K01)."
     },
     {
       "modifier": "is-left",
@@ -456,7 +441,7 @@
       "styleDeltas": {
         "desktop": {
           "section_image-trio-text": {
-            "color": "var(--color-accent)"
+            "color": "var(--_primitives---colors--accent)"
           },
           "image-trio-text_header": {
             "max-width": "none"
@@ -766,5 +751,15 @@
     "Section vertical padding uses padding-section-large (7rem). Figma shows about 120px above the wellness images, 40px above the dining images and about 166px above the legal heading; the gaps come from neighbouring sections, which page entries own.",
     "Bulleted lists use a Rich Text element (text-rich-text); nested list styling must be set in the Designer (MCP limitation).",
     "Card body text has no max-width: Figma's legal/03 text boxes are 378px inside 485px cards, but legal/11 lists use the full card width, and one Rich Text class cannot tell them apart without nested styling."
-  ]
+  ],
+  "k01": {
+    "reconciledBy": "K01, 2026-10-20",
+    "sharedClasses": "docs/figma/build-plans/shared-classes.md",
+    "changes": [
+      "Class list `image-trio-text_item-heading text-size-regular text-weight-normal text-style-eyebrow-caps` is now `image-trio-text_item-heading text-style-eyebrow-caps`.",
+      "Class list `image-trio-text_link text-size-regular text-weight-normal text-style-eyebrow-caps` is now `image-trio-text_link text-style-eyebrow-caps`.",
+      "Variant `is-media-left is-multi-image` has no style delta, so it is now a named variant with no modifier class.",
+      "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  }
 }

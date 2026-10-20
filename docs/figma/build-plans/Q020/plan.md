@@ -57,3 +57,12 @@ See `openQuestions` in plan.json. In short: variant switching (recommend Webflow
 ## Deviations
 
 See `deviations` in plan.json. In short: no combo classes for the wellness variant, a new `is-offset` item modifier, no `container-large`, vw units for the bleed, a 40px header gap where legal/11 has 56px, `padding-section-large` throughout, Rich Text for the bullet lists, and no body max-width.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Class list `image-trio-text_item-heading text-size-regular text-weight-normal text-style-eyebrow-caps` is now `image-trio-text_item-heading text-style-eyebrow-caps`.
+- Class list `image-trio-text_link text-size-regular text-weight-normal text-style-eyebrow-caps` is now `image-trio-text_link text-style-eyebrow-caps`.
+- Variant `is-media-left is-multi-image` has no style delta, so it is now a named variant with no modifier class.
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

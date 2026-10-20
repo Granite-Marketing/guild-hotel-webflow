@@ -7,13 +7,13 @@
     "section": "home/17-faqs"
   },
   "reusedClasses": [
-    "padding-global",
-    "padding-section-large",
     "container-large",
     "heading-style-h2",
     "heading-style-h4",
-    "text-size-regular",
+    "padding-global",
+    "padding-section-large",
     "text-size-medium",
+    "text-style-eyebrow-caps",
     "text-weight-normal"
   ],
   "familyClasses": [
@@ -21,8 +21,8 @@
       "name": "section_faq-accordion",
       "styles": {
         "desktop": {
-          "background-color": "var(--color-neutral-100)",
-          "color": "var(--color-neutral-900)"
+          "background-color": "var(--_primitives---colors--neutral-lightest)",
+          "color": "var(--_primitives---colors--neutral-darkest)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -88,114 +88,41 @@
   ],
   "proposedShared": [
     {
-      "name": "text-style-eyebrow-caps",
-      "why": "EYEBROW-CAPS is the most used Figma text style (393 uses); tokens.json already proposes this combo on text-size-regular",
-      "styles": {
-        "desktop": {
-          "font-family": "var(--font-style-heading)",
-          "font-size": "1.125rem",
-          "line-height": "1.2",
-          "letter-spacing": "-0.03em",
-          "text-transform": "lowercase"
-        }
-      }
-    },
-    {
       "name": "accordion_item",
-      "why": "Runtime contract of src/utils/accordion.ts (docs/reference/component-patterns.md, Accordion contract); any future accordion reuses it",
-      "styles": {
-        "desktop": {
-          "border-bottom": "1px solid color-mix(in srgb, var(--color-neutral-900) 30%, transparent)"
-        }
-      }
+      "comboOn": null,
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     },
     {
       "name": "accordion_header",
-      "why": "Click target the accordion module binds to (.accordion_header); module toggles is-active and aria-expanded on it",
-      "styles": {
-        "desktop": {
-          "display": "flex",
-          "width": "100%",
-          "justify-content": "space-between",
-          "align-items": "center",
-          "column-gap": "2rem",
-          "padding-top": "2.625rem",
-          "padding-right": "0rem",
-          "padding-bottom": "0.625rem",
-          "padding-left": "0rem",
-          "border-top-width": "0px",
-          "border-right-width": "0px",
-          "border-bottom-width": "0px",
-          "border-left-width": "0px",
-          "background-color": "transparent",
-          "color": "inherit",
-          "text-align": "left",
-          "cursor": "pointer"
-        },
-        "mobileLandscape": {
-          "column-gap": "1rem",
-          "padding-top": "1.75rem"
-        }
-      }
+      "comboOn": null,
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     },
     {
       "name": "accordion_question",
-      "why": "Question text inside the trigger; carries heading-style-h4 so the trigger can stay a native button",
-      "styles": {
-        "desktop": {
-          "flex-grow": "1"
-        }
-      }
+      "comboOn": null,
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     },
     {
       "name": "accordion_icon",
-      "why": "Chevron wrapper (figure-style wrapper for the inline SVG); rotates with the header state",
-      "styles": {
-        "desktop": {
-          "display": "flex",
-          "width": "1.5rem",
-          "height": "1.5rem",
-          "flex-shrink": "0",
-          "transform": "rotate(180deg)",
-          "transition": "transform 300ms ease"
-        }
-      },
-      "states": {
-        "accordion_header.is-active": {
-          "transform": "rotate(0deg)"
-        }
-      }
+      "comboOn": null,
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     },
     {
       "name": "accordion_content-wrapper",
-      "why": "Next sibling of the header; the module animates its max-height",
-      "styles": {
-        "desktop": {
-          "overflow": "hidden",
-          "transition": "max-height 400ms ease"
-        }
-      }
+      "comboOn": null,
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     },
     {
       "name": "accordion_content",
-      "why": "Inner content the module measures (offsetHeight) for the open height",
-      "styles": {
-        "desktop": {
-          "padding-top": "0.9375rem",
-          "padding-bottom": "2.75rem"
-        },
-        "mobileLandscape": {
-          "padding-top": "0.75rem",
-          "padding-bottom": "1.75rem"
-        }
-      }
+      "comboOn": null,
+      "definedIn": "docs/figma/build-plans/shared-classes.json"
     }
   ],
   "variables": [
-    "color-neutral-100",
-    "color-neutral-900",
-    "font-style-heading",
-    "font-style-body"
+    "_primitives---colors--neutral-darkest",
+    "_primitives---colors--neutral-lightest",
+    "_typography---font-styles--body",
+    "_typography---font-styles--heading"
   ],
   "tree": [
     {
@@ -237,8 +164,6 @@
                         {
                           "tag": "div",
                           "classes": [
-                            "text-size-regular",
-                            "text-weight-normal",
                             "text-style-eyebrow-caps"
                           ],
                           "attributes": {},
@@ -628,12 +553,21 @@
     "Copy: all 21 instances carry the same room-specific placeholder questions (rooms page copy on home, legal, press and so on), and only item 1 has an answer in Figma. Plan builds one Webflow component with no props and reuses item 1 answer as a placeholder for items 2 to 6. If per-page FAQs are expected later, the component needs props or a FAQ CMS collection; cms-proposal.md treats FAQ as static.",
     "Section spacing: the bottom gap is about 227px on every instance; the top gap varies with the band crop (194, 134, 67px). Plan uses padding-section-large plus 5rem top and 7rem bottom on faq-accordion_component (12rem and 14rem total at desktop). K01 may prefer a shared padding-section-xlarge instead of component padding.",
     "No mobile Figma frame exists; tablet and mobile values are derived. heading-style-h4 at 1.5rem wraps questions to 2 or 3 lines at 390px; Q001 owns the responsive heading scale, so check it there.",
-    "Divider colour: the crop shows a muted line, about 30% of #262118 on cream. Plan uses color-mix(in srgb, var(--color-neutral-900) 30%, transparent). If Webflow will not take color-mix on a border, K01 should add a variable (blended solid #B6B1A3) rather than hard-code rgba.",
+    "Divider colour: the crop shows a muted line, about 30% of #262118 on cream. Plan uses color-mix(in srgb, var(--_primitives---colors--neutral-darkest) 30%, transparent). If Webflow will not take color-mix on a border, K01 should add a variable (blended solid #B6B1A3) rather than hard-code rgba.",
     "Mobile answer size: text-size-medium stays 1.25rem at 390px, larger than the wrapped questions. Q001 should scale text-size-medium down at mobile (1rem to 1.125rem)."
   ],
   "deviations": [
     "Question text is a div with heading-style-h4 inside the button, not an h3 in a header wrapper: a button cannot contain a heading, and the module needs the trigger to be the direct previous sibling of the content wrapper.",
     "Chevron is an inline SVG embed using currentColor (redrawn as a stroked path from figma/vectors/frame-24x24-236-8173.svg) instead of an uploaded asset: the vector has no Webflow asset id and an embed follows the text colour.",
     "accordion_* classes are proposed shared, not faq-accordion_*: their names are fixed by the accordion runtime module contract."
-  ]
+  ],
+  "k01": {
+    "reconciledBy": "K01, 2026-10-20",
+    "sharedClasses": "docs/figma/build-plans/shared-classes.md",
+    "changes": [
+      "Class list `text-size-regular text-weight-normal text-style-eyebrow-caps` is now `text-style-eyebrow-caps`.",
+      "The six `accordion_*` classes are shared (runtime contract of accordion.ts), defined in shared-classes.json.",
+      "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  }
 }

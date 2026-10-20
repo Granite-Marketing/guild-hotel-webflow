@@ -68,3 +68,14 @@ See `openQuestions` in `plan.json`; the same list is in the PR description.
 ## Deviations from the brief
 
 See `deviations` in `plan.json`. Main ones: no `is-media-left` or `is-1-image` classes (they would be empty); compact is realised by utility swaps and element combos, not a section combo; tall is excluded as a unique item; grey placeholder rectangles are kept as image slots although the brief says 0 images.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Class list `split-image-text-light_eyebrow text-size-regular text-style-eyebrow-caps` is now `split-image-text-light_eyebrow text-style-eyebrow-caps`.
+- Class list `heading-style-h1 text-style-script (replaces heading-style-h4)` is now `text-style-script is-large (replaces heading-style-h4)`.
+- Class list `split-image-text-light_heading heading-style-h1 text-weight-normal text-style-script` is now `split-image-text-light_heading text-style-script is-large`.
+- Script heading overrides (tan variant) use `text-style-script is-large`; line height is 1.2 (80/96) instead of the measured 1.
+- Section colour modifiers `is-tan` and `is-blue` need the new Colors/Tan and Colors/Navy variables.
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

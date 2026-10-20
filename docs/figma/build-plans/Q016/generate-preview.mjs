@@ -10,27 +10,6 @@ const planDir = dirname(fileURLToPath(import.meta.url))
 const repoRoot = join(planDir, '../../../..')
 const plan = JSON.parse(readFileSync(join(planDir, 'plan.json'), 'utf8'))
 
-// Variable values from figma/tokens.json (mapping.colors, mapping.fontVariables) until Q001 syncs them live.
-// Fonts are not installed locally, so each font variable carries a fallback stack.
-const variableValues = {
-  'color-neutral-100': '#F4EFDF',
-  'color-neutral-900': '#262118',
-  'color-accent': '#29310C',
-  'font-style-heading': "'Sackers Heavy Gothic', Copperplate, 'Arial Narrow', sans-serif",
-  'font-style-body': "'Gatch Test', 'Avenir Next', Avenir, sans-serif",
-}
-
-// Reused classes keep their site values; these mirror CLAUDE.md, docs/reference/breakpoints.md
-// and the figma/tokens.json class values.
-const reusedClassStyles = {
-  'padding-global': { desktop: { 'padding-left': '2rem', 'padding-right': '2rem' } },
-  'container-large': { desktop: { width: '100%', 'max-width': '80rem', 'margin-left': 'auto', 'margin-right': 'auto' } },
-  'heading-style-h1': { desktop: { 'font-family': 'var(--font-style-heading)', 'font-size': '3.5rem', 'line-height': '1', 'text-transform': 'lowercase' } },
-  'text-size-medium': { desktop: { 'font-size': '1.25rem', 'line-height': '1.3' } },
-  'text-size-regular': { desktop: { 'font-size': '1rem', 'line-height': '1.5' } },
-  'text-weight-normal': { desktop: { 'font-weight': '400' } },
-}
-
 const breakpoints = [
   ['desktop', null],
   ['tablet', 991],
@@ -57,12 +36,10 @@ const instanceModifiers = plan.instances.flatMap((instance) =>
     modifiers.filter((modifier) => !plan.variants.some((variant) => variant.on === on && variant.modifier === modifier)).map((modifier) => `${on}.${modifier}`),
   ),
 )
-const unknownVariables = plan.variables.filter((name) => !(name in variableValues))
 const problems = [
   ...undeclared.map((name) => `class in tree not declared: ${name}`),
   ...variantTargets.map((variant) => `variant ${variant.modifier} targets undeclared class ${variant.on}`),
   ...instanceModifiers.map((name) => `instance modifier not declared in variants: ${name}`),
-  ...unknownVariables.map((name) => `variable without a preview value: ${name}`),
 ]
 if (process.argv.includes('--validate')) {
   if (problems.length) {
@@ -85,17 +62,12 @@ const addRule = (selector, stylesByBreakpoint) => {
   }
 }
 
-for (const [name, styles] of Object.entries(reusedClassStyles)) addRule(`.${name}`, styles)
-// Shared typography combos follow their base class, family classes follow both, as in Webflow's cascade.
-for (const sharedClass of plan.proposedShared) {
-  addRule(sharedClass.comboOn ? `.${sharedClass.comboOn}.${sharedClass.name}` : `.${sharedClass.name}`, sharedClass.styles)
-}
+// Reused and shared classes and the :root variables come from ../shared-preview.css; only family classes and variants are emitted here.
 for (const familyClass of plan.familyClasses) addRule(`.${familyClass.name}`, familyClass.styles)
 for (const variant of plan.variants) addRule(`.${variant.on}.${variant.modifier}`, variant.styleDeltas)
 
-const rootVariables = plan.variables.map((name) => `  --${name}: ${variableValues[name]};`).join('\n')
 let css = `/* Generated from plan.json by generate-preview.mjs. Do not edit by hand. */\n`
-css += `:root {\n${rootVariables}\n}\n\n*, *::before, *::after { box-sizing: border-box; }\nbody { margin: 0; font-family: var(--font-style-body); }\nh2, p, figure { margin: 0; }\n\n`
+css += `*, *::before, *::after { box-sizing: border-box; }\nbody { margin: 0; font-family: var(--_typography---font-styles--body); }\nh2, p, figure { margin: 0; }\n\n`
 for (const [breakpoint, maxWidth] of breakpoints) {
   const rules = ruleBlocks[breakpoint].join('\n\n')
   if (!rules) continue
@@ -161,7 +133,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Q016 script-intro-centered preview</title>
-<link rel="stylesheet" href="preview.css">
+<link rel="stylesheet" href="../shared-preview.css">\n<link rel="stylesheet" href="preview.css">
 </head>
 <body>
 ${blocks.join('\n')}

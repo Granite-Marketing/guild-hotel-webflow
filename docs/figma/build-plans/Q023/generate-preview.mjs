@@ -9,37 +9,14 @@ const planDir = dirname(fileURLToPath(import.meta.url))
 const repoRoot = join(planDir, '../../../..')
 const plan = JSON.parse(readFileSync(join(planDir, 'plan.json'), 'utf8'))
 
-// Variable values from figma/tokens.json (mapping.colors) and decisions.md D01, until Q001 syncs them live.
-const variableValues = {
-  'color-neutral-100': '#F4EFDF',
-  'color-accent': '#29310C',
-  'color-brand-4a1217': '#4A1217',
-}
-
 // The brand fonts are uploaded to Webflow only, so the preview swaps in the
 // closest macOS system faces. Plan values keep the real family names.
 const fontFallbacks = {
   Morello: '"Snell Roundhand", "Apple Chancery", cursive',
   '"Sackers Heavy Gothic"': 'Copperplate, "Copperplate Gothic", serif',
 }
-const bodyFont = '"Avenir Next", Avenir, system-ui, sans-serif'
 
-// Reused classes keep their site values; these mirror CLAUDE.md, docs/reference/breakpoints.md
-// and the figma/tokens.json mapping targets (Morello 80/96 -> heading-style-h1, Paragraph -> text-size-medium).
-const reusedClassStyles = {
-  'padding-global': { desktop: { 'padding-left': '2rem', 'padding-right': '2rem' } },
-  'container-large': { desktop: { width: '100%', 'max-width': '80rem', 'margin-left': 'auto', 'margin-right': 'auto' } },
-  'heading-style-h1': {
-    desktop: { 'font-size': '5rem', 'line-height': '1.1', 'font-weight': '700' },
-    tablet: { 'font-size': '4rem' },
-    mobileLandscape: { 'font-size': '3.25rem' },
-    mobilePortrait: { 'font-size': '2.75rem' },
-  },
-  'text-size-medium': {
-    desktop: { 'font-size': '1.25rem', 'line-height': '1.3' },
-    mobilePortrait: { 'font-size': '1.125rem' },
-  },
-}
+// Reused classes, typography and variables come from ../shared-preview.css.
 
 const breakpoints = [
   ['desktop', null],
@@ -64,15 +41,12 @@ const addRule = (selector, stylesByBreakpoint) => {
   }
 }
 
-for (const [name, styles] of Object.entries(reusedClassStyles)) addRule(`.${name}`, styles)
 for (const familyClass of plan.familyClasses) addRule(`.${familyClass.name}`, familyClass.styles)
-for (const sharedClass of plan.proposedShared) addRule(`.${sharedClass.name}`, sharedClass.styles)
 for (const variant of plan.variants) addRule(`.${variant.on}.${variant.modifier}`, variant.styleDeltas)
 
-const rootVariables = plan.variables.map((name) => `  --${name}: ${variableValues[name]};`).join('\n')
 let css = `/* Generated from plan.json by generate-preview.mjs. Do not edit by hand. */\n`
-css += `:root {\n${rootVariables}\n}\n\n*, *::before, *::after { box-sizing: border-box; }\n`
-css += `body { margin: 0; font-family: ${bodyFont}; }\np { margin: 0; }\n\n`
+css += `*, *::before, *::after { box-sizing: border-box; }\n`
+css += `body { margin: 0; font-family: var(--_typography---font-styles--body); }\np { margin: 0; }\n\n`
 css += `/* Preview only: stand-in for the Q021 venue-card panels that fill the panels slot. */\n`
 css += `[data-preview-standin] { position: absolute; inset: 0; margin: 0; }\n`
 css += `[data-preview-standin] img { display: block; width: 100%; height: 100%; object-fit: cover; }\n\n`
@@ -142,6 +116,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Q023 tab-pills-intro preview</title>
+<link rel="stylesheet" href="../shared-preview.css">
 <link rel="stylesheet" href="preview.css">
 </head>
 <body>

@@ -89,3 +89,12 @@ From a Sonnet comparison of each preview screenshot with its crop (pixel deltas 
 
 - Base: no overflow; heading wraps to two centred lines; single column alternating between the left edge and an indent, aspect ratios vary as on desktop, captions stay inside their boxes. Keeps the scatter character. Minor: the `is-xsmall` box is tall (about 411px) at 70% width.
 - is-tall: no overflow; full-width column of images in order with captions below each. The zig-zag collapses to one column, as planned.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Class list `text-size-regular text-style-caps-caption-16` is now `text-style-caps-caption-16`.
+- Class list `text-size-regular text-style-eyebrow-caps` is now `text-style-eyebrow-caps`.
+- `u-image` is a shared class to create (cover version; image wrappers set the size).
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

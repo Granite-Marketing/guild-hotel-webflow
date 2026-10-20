@@ -80,3 +80,16 @@ Fonts in the preview are fallbacks (Snell Roundhand for Morello, Copperplate for
 **preview-base-390** (no reference)
 - Coherent stacked order, 32px side margins, email field and join us fit on one row, no overflow or clipping, contrast fine.
 - Minor: caption wraps with one word on the second line; "*Email" close to its underline; chamfered ends read slightly arrow-like at this size. Revisit once real fonts are loaded.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Class list `heading-style-h1 text-weight-normal` is now `text-style-script` on both headings (Figma: Morello 60/72; heading-style-h1 is the Sackers display style).
+- Class list `button is-chamfer is-wide` is now `button is-chamfer is-text-burgundy is-wide`.
+- Class list `button is-chamfer` is now `button is-chamfer is-text-burgundy`.
+- Class list `text-style-caption` is now `text-style-caption-tracked`.
+- Class list `heading-style-h1 text-weight-normal` is now `text-style-script`.
+- Button width: `is-wide` is the standard 194px (12.125rem); book now measured 214px.
+- Button type: `is-chamfer` carries Label/Button (line height 1, no tracking) instead of CAPS-CAPTION-16.
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

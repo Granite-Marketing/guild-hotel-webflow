@@ -58,3 +58,10 @@ Compared by a Sonnet subagent. The Figma frame is 1600 wide and the preview shot
 | none (no mobile design) | `preview-*-390.png` | 32px gutters, no overflow, sensible cover crops, small variant goes full width | Not compared |
 
 Validation: plan.json parses, has every required key, every tree class and variant target is declared, asset paths exist, preview.css matches the plan values, no em dashes. The preview sets `loading="eager"` on images so screenshots wait for them; the plan keeps `lazy`.
+
+## K01 reconciliation (2026-10-20)
+
+`plan.json` is authoritative where this page differs. Shared classes, new variables and live corrections: [shared-classes.md](../shared-classes.md).
+
+- Only variable names changed.
+- Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).

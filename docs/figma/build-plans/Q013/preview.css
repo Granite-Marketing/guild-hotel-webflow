@@ -1,48 +1,15 @@
 /* Generated from plan.json by render-preview.mjs. Do not edit by hand. */
-:root {
-  --color-neutral-100: #F4EFDF;
-  --color-neutral-900: #262118;
-  --font-style-heading: "Sackers Heavy Gothic", Copperplate, "Copperplate Gothic Light", serif;
-}
 *, *::before, *::after { box-sizing: border-box; }
-body { margin: 0; font-family: var(--font-style-heading); }
+body { margin: 0; font-family: var(--_typography---font-styles--heading); }
 .preview-label { font: 12px/1.4 system-ui, sans-serif; padding: 8px 16px; background: #fff; color: #333; }
-.padding-global {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-.text-style-eyebrow-caps {
-  font-family: var(--font-style-heading);
-  font-weight: 400;
-  font-size: 1.125rem;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  text-transform: lowercase;
-}
-.text-style-caption {
-  font-family: var(--font-style-heading);
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1;
-  letter-spacing: 0.05em;
-  text-transform: lowercase;
-}
-.text-style-legal {
-  font-family: var(--font-style-heading);
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1;
-  letter-spacing: 0em;
-  text-transform: lowercase;
-}
 .section_footer-links {
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 43.75rem;
   overflow: hidden;
-  color: var(--color-neutral-100);
-  background-color: var(--color-neutral-900);
+  color: var(--_primitives---colors--neutral-lightest);
+  background-color: var(--_primitives---colors--neutral-darkest);
 }
 .footer-links_background {
   position: absolute;

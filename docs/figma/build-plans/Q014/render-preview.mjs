@@ -8,52 +8,9 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 const planDir = dirname(fileURLToPath(import.meta.url))
 const repoRoot = join(planDir, '../../../..')
 const plan = JSON.parse(readFileSync(join(planDir, 'plan.json'), 'utf8'))
-const tokens = JSON.parse(readFileSync(join(repoRoot, 'figma/tokens.json'), 'utf8'))
 const component = plan.component
 
-// Variable values come from the tokens.json mapping (plus the suggested brand
-// variables). The licensed fonts are not in the repo, so each falls back to a
-// local face: Copperplate renders lowercase input as small caps like Sackers.
-const variableValues = {}
-for (const color of tokens.mapping.colors) {
-  if (color.target) variableValues[color.target] ??= color.hex
-  else if (color.suggestedVariable && color.opacity === 1) variableValues[color.suggestedVariable] ??= color.hex
-}
-const fallbacks = { 'font-style-heading': 'Copperplate, serif', 'font-style-body': '"Helvetica Neue", Arial, sans-serif' }
-for (const font of tokens.mapping.fontVariables)
-  variableValues[font.variable] = `"${font.value}", ${fallbacks[font.variable]}`
-const missing = plan.variables.filter((name) => !variableValues[name])
-if (missing.length) throw new Error(`No preview value for variables: ${missing.join(', ')}`)
-
-// Reused classes: values Q001 sets from the tokens.json mapping, and the
-// Relume utilities from CLAUDE.md and docs/reference/breakpoints.md.
-const typeValues = (name) => {
-  const entry = tokens.mapping.typography.find((m) => (m.source.name || m.source.key) === name)
-  const v = entry.classValues
-  return {
-    'font-family': v.fontFamily === 'Gatch Test' ? 'var(--font-style-body)' : 'var(--font-style-heading)',
-    'font-weight': String(v.fontWeight),
-    'font-size': `${v.fontSizeRem}rem`,
-    'line-height': String(v.lineHeight),
-    'letter-spacing': `${v.letterSpacingEm}em`,
-  }
-}
-const reusedStyles = {
-  'padding-global': { desktop: { 'padding-left': '2rem', 'padding-right': '2rem' } },
-  'padding-section-small': {
-    desktop: { 'padding-top': '3rem', 'padding-bottom': '3rem' },
-    tablet: { 'padding-top': '2rem', 'padding-bottom': '2rem' },
-    mobileLandscape: { 'padding-top': '1.5rem', 'padding-bottom': '1.5rem' },
-    mobilePortrait: { 'padding-top': '1rem', 'padding-bottom': '1rem' },
-  },
-  'container-large': { desktop: { width: '100%', 'max-width': '80rem', 'margin-left': 'auto', 'margin-right': 'auto' } },
-  'heading-style-h2': { desktop: { margin: '0', ...typeValues('H2-CAPS') } },
-  'text-size-large': { desktop: typeValues('Gatch Test|400|22|35.2|0|ORIGINAL') },
-  'text-size-regular': { desktop: { 'font-size': '1rem' } },
-  button: { desktop: { cursor: 'pointer' } },
-}
-const unknownReused = plan.reusedClasses.filter((name) => !reusedStyles[name])
-if (unknownReused.length) throw new Error(`No preview style for reused classes: ${unknownReused.join(', ')}`)
+// Reused and K01 shared classes come from ../shared-preview.css (canonical stylesheet).
 
 const breakpoints = {
   desktop: null,
@@ -65,15 +22,12 @@ const declarations = (styles) =>
   Object.entries(styles).map(([property, value]) => `  ${property}: ${value};`).join('\n')
 
 const rulesets = [
-  ...Object.entries(reusedStyles).map(([name, styles]) => ({ selector: `.${name}`, styles })),
   ...plan.familyClasses.map((c) => ({ selector: c.comboOf ? `.${c.comboOf}.${c.name}` : `.${c.name}`, styles: c.styles })),
-  ...plan.proposedShared.map((c) => ({ selector: `.${c.on}.${c.name}`, styles: c.styles })),
 ]
 
 let css = '/* Generated from plan.json by render-preview.mjs. Do not edit by hand. */\n'
-css += `:root {\n${plan.variables.map((name) => `  --${name}: ${variableValues[name]};`).join('\n')}\n}\n`
 css += '*, *::before, *::after { box-sizing: border-box; }\n'
-css += 'body { margin: 0; font-family: var(--font-style-body); }\np { margin: 0; }\n'
+css += 'body { margin: 0; font-family: var(--_typography---font-styles--body); }\np { margin: 0; }\n'
 css += '.preview-label { font: 12px/1.4 system-ui, sans-serif; padding: 8px 16px; background: #fff; color: #333; }\n'
 for (const [breakpoint, query] of Object.entries(breakpoints)) {
   const rules = rulesets
@@ -109,7 +63,7 @@ const renderNode = (node, instance) => {
   const { content } = instance
   if (node.optional && !content[node.optional === 'button' ? 'buttonText' : node.optional]) return ''
   let classes = [...node.classes, ...instance.modifiers.filter((m) => m.on === node.classes[0]).map((m) => m.class)]
-  if (classes.includes('is-octagon') && content.buttonColor?.startsWith('is-')) classes = [...classes, content.buttonColor]
+  if (classes.includes('is-chamfer') && content.buttonColor?.startsWith('is-')) classes = [...classes, content.buttonColor]
   const attributes = Object.entries(node.attributes)
     .map(([key, value]) => (value === '' ? ` ${key}` : ` ${key}="${escapeHtml(fill(String(value), content))}"`))
     .join('')
@@ -125,6 +79,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Q014 hero-fullbleed-centered preview</title>
+<link rel="stylesheet" href="../shared-preview.css">
 <link rel="stylesheet" href="preview.css">
 </head>
 <body>
