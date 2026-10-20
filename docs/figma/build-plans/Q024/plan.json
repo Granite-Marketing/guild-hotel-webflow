@@ -236,5 +236,33 @@
       "is-small"
     ],
     "classesCreated": []
+  },
+  "v02": {
+    "date": "2026-10-20",
+    "variantIds": {
+      "componentId": "3eeb97fa-6550-7845-31ee-e997e4b8f2f1",
+      "variantPropId": "06d2aef1-4186-3b9f-f515-37143ac1d739",
+      "base": "base",
+      "is-small": "ed48680f-16db-4226-7dda-8e89d4535148"
+    },
+    "variants": [
+      {
+        "modifier": "is-small",
+        "name": "Small",
+        "variantId": "ed48680f-16db-4226-7dda-8e89d4535148",
+        "style": "image-inset-single_figure",
+        "breakpoints": {
+          "main": {
+            "max-width": "46.5rem",
+            "aspect-ratio": "744 / 524"
+          }
+        },
+        "readBack": "equal to .image-inset-single_figure.is-small; the base class has no breakpoint rules, so nothing is repeated below main",
+        "instance": "466dca97-60e6-0693-8a07-8f408d11bf66"
+      }
+    ],
+    "separateComponents": [],
+    "staging": "Published to webflow.io after un-drafting the build page; the variant publishes in the same rule as .image-inset-single_figure.is-small.",
+    "description": "Q024 inset image on a cream section. Props: Variant (Base, Small), image, image alt. Small narrows the figure to 46.5rem with a 744 / 524 aspect ratio (happenings and blog posts)."
   }
 }
