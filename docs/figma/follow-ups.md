@@ -12,6 +12,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q014: upload the Zuma wordmark (`figma/vectors/group-270989670-416x101-250-1958.svg`) and set it on the dining-zuma reference hero logo slot.
 - [ ] Q014: visual check of `/build-hero-fullbleed-centered` was done on 2026-10-20 and looked good; re-check once the Zuma logo and the blue and burgundy wide buttons are in.
 - [ ] Q015: visual check of `/build-faq-accordion` in the Designer (fonts and the static chevron are the known differences).
+- [ ] Q016: visual check of `/build-script-intro-centered` against `docs/figma/build-plans/Q016/preview-*-1440.png` (rotated Morello heading, building drawing, stamp below the text, back link). Nothing was compared yet.
 - [ ] C02: review the 6 draft sample posts (3 per category) and their invented dates; nothing is published.
 - [ ] K02: visual spot-check the 15 `🧱 <component>` draft pages for the new classes (padding, `text-size-large`, `text-style-script`, chamfer outline buttons).
 - [ ] Q012, Q013, Q014, Q015: delete each build page (`/build-<component>`) once its component sits on the real pages, and delete the probe pages `x01-probe` and `x01-probe-b`.
@@ -26,6 +27,8 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q014: button links are a `#` placeholder because the plan has no booking URL. Supply the URL, or keep `#`.
 - [ ] Q015: Link Block trigger (Enter works, Space does not) versus finding another way to get a native button. Options: accept the Link Block, or add Space handling in the accordion module.
 - [ ] Q015: `accordion_*` classes are shared by the module contract. Confirm they stay shared rather than being renamed to `faq-accordion_*`.
+- [ ] Q016: per-instance variants `is-tall`, `is-wide` and `is-bottom` cannot switch on a component instance (same decision as Q014). Until then they sit as plain sections on the build page.
+- [ ] Q016: plan open questions still stand: arts/02 green heading (`is-accent`?), the back-link target on every room page (`/rooms`), and the responsive scale.
 - [ ] Q013: sections with an extra "other dining options" slider (Group 270990062) belong to the dining venue page entries, not the footer. Confirm.
 
 ## Agent follow-ups
@@ -43,3 +46,4 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q012: upload and record any remaining assets in `figma/assets.json` and `webflow-ids.md` (Bonvoy `6ad744318e4b52f5c4d49ec6` and Tribute Portfolio `6ad744312406f6ae5126bc5f` are already recorded).
 - [ ] Q015: fix `validate-plan.mjs` failing on main with "proposedShared needs why" (K01 removed the `why` fields).
 - [ ] Q013: place the Footer Links component on the 24 pages (left for a later step), then remove the build page.
+- [ ] Q016: place `script-intro-centered` on the 9 pages (home uses `is-tall` once variants are decided), then remove the build page. happenings-indiv/02 and blog-indiv/02 still need their own entry.

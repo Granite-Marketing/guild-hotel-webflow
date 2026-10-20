@@ -102,3 +102,22 @@ happenings-indiv/02 and blog-indiv/02 were compared against an earlier preview a
 - Class list `script-intro-centered_heading heading-style-h1 text-style-script` is now `script-intro-centered_heading text-style-script is-large`.
 - Script heading is `text-style-script is-large` (Morello 80/96) with no `heading-style-h1`.
 - Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).
+
+## Build (Q016, 2026-10-20)
+
+Built through the Data API on `🧱 script-intro-centered` (`6ad712c471aebc47c94f1c20`), with no Designer calls. The source section became the component `script-intro-centered` (`bdff66b3-92d9-e1e3-dbc0-86a28e384c9b`, group Sections). The read-back matches the plan's tree, tags, class stacks and copy; the heading line breaks are stored as newlines. No standalone class was created and no live style changed.
+
+Build page, top to bottom:
+
+1. Component instance with defaults (arts/02 copy; back link and image hidden).
+2. `is-tall` section (home/02, building drawing), plain elements.
+3. Base with `_text.is-wide` (dining-collection/02), plain elements.
+4. Base with `_figure.is-bottom` (rooms-collection/02, stamp), plain elements.
+5. Component instance with the rooms-individual/02 content (Show back link on, Show paragraph off).
+
+- Assets uploaded (Stephen approved): building drawing `6ad74da48e7763c5db93ef04`, postmark stamp `6ad74da46b56ff1d7223e4d7`, back arrow `6ad74da5f1658ec1f273e890` (decorative). Library alt text set on the first two.
+- Props: heading, paragraph, image, image alt, backLink, backLinkUrl, plus Show back link, Show image and Show paragraph.
+- Empty combos created: `.script-intro-centered_back-link.text-style-caps-caption-16`, `.script-intro-centered_paragraph.text-size-medium`, `.script-intro-centered_paragraph.text-size-medium.text-weight-normal`.
+- Build deviations are appended to `deviations` in [plan.json](plan.json).
+
+Designer follow-ups: visual check of the build page against the preview PNGs; no rich text styling is needed.
