@@ -225,6 +225,7 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 - **List items you pass come after the three seeded ones.** `BY_CUSTOM_TAG ul` with ten `li` children gives thirteen ListItems: the first three (consecutive ids ending in the ul id plus 1, 2, 3) are the seeded empties, then yours in order. Write each of yours with `set_settings` key `text`, then remove the first three.
 - **Legal or long copy: native elements, not RichText.** Headings inside a RichText take the tag styles (h2 at 2.5rem), and their size cannot be set headlessly. Native `h2.heading-style-h5`, paragraphs and a classed `ul` publish with the right styles. Paragraph text keeps `\n`; a family class with `white-space: pre-line` renders the line breaks, so a block of short lines can be one Paragraph.
 - **Publishing is site-wide and rate limited across sessions.** `publish_site` returns 429 ("at most once per minute") when another session published in the last minute. Any full-site publish by another session also publishes your page, so after a 429 check the staging URL with `curl` for your classes before retrying.
+- **Builder calls can fail with `init-multiplayer-connection returned 429` (`RATE_LIMITED`)** when several page sessions write at once (Q040). Nothing is written; re-send the same call a little later and read the page back to confirm.
 
 ## Gotchas found assembling Home (Q031, 2026-10-20)
 
