@@ -612,6 +612,36 @@
       "webflowAssetId": "6ad6700eb28c9b39f95d814d",
       "local": "assets/images/a615ab07d022b6aa76066c2ac89bf41fd38923c5.jpg",
       "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad6700eb28c9b39f95d814d_a615ab07d022b6aa76066c2ac89bf41fd38923c5.jpg"
+    },
+    {
+      "slot": "Image Trio Text: Image 1/2/3 prop defaults",
+      "webflowAssetId": "6ad66feb58367429abb4835f, 6ad67005cf42363c3ffe3c69, 6ad67000240d911fb18d77af",
+      "local": [
+        "assets/images/0c5cb498b7eacbe1174374b129d91e21a3a9ddcd.jpg",
+        "assets/images/8451f6e554b7fcb023e2ad039346111e4863dfbe.png",
+        "assets/images/70a13b1d6cdae1be50f7d9ca4b2541937747ae45.jpg"
+      ],
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Image Trio Text Left: Image 1/2/3",
+      "webflowAssetId": "6ad67001f08ff78c37d85427, 6ad6701b6684c3e22ea4f00f, 6ad66ffdba96f2e53726bd55",
+      "local": [
+        "assets/images/745c085a4a4187ad24dd49e947e40a436a1ffbdd.png",
+        "assets/images/e462a0829a597ffc4060aaf8bb92466636f27cce.jpg",
+        "assets/images/5f867c9b46567c2df212f5570602c6afaa8b170e.jpg"
+      ],
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Image Trio Text Left Offset: Image 1/2/3",
+      "webflowAssetId": "6ad66ff8c71aabce9a919022, 6ad67017fb3a14e0db41143b, 6ad6700eb28c9b39f95d814d",
+      "local": [
+        "assets/images/329601abd0336770082f6f604d40ce84e20afc0a.png",
+        "assets/images/cec4b89085ea09ad21eb68b7b11a462e95e59cfa.png",
+        "assets/images/a615ab07d022b6aa76066c2ac89bf41fd38923c5.jpg"
+      ],
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
     }
   ],
   "instances": [

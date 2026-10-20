@@ -257,3 +257,16 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q037: visual check of `/guidelines` on staging (notes in `docs/figma/build-plans/Q037/`).
 - [ ] Q037: the hero has no image (Figma grey slot; Show Image is off); set Image and Show Image when the photo arrives. The guidelines/05 feature is an empty `figure` with `data-image-placeholder`; add a `u-image` Image when the collaborator photo arrives.
 - [ ] Snap groups (Home, Dining, Wellness): built as plain sections with `data-scroll-enlarge-snap` instead of Tab Pills Intro plus Venue Card instances, because tab-pills-intro has no panels slot. Accepted for the 80 to 90 percent target; converting needs a panels slot (Designer) or a dedicated snap-group component.
+
+## Fill placeholder images: components and CMS (2026-10-20)
+
+Stand-in library photos so staging shows no grey placeholder from a component or CMS field. Picks follow the slot loosely (rooms, food, exteriors); none is the final design image. Asset ids per slot are in each plan's `assets` (Q006, Q008, Q009, Q014, Q016 to Q022, Q024 to Q026). No new uploads; no new classes.
+
+- [x] Component image prop defaults set on every image prop that had none (hero, gallery mosaic, map feature x3, split image text, venue card x3, image trio x3, script intro, image inset, article card x2, offers slider, card carousel, overlay modal). Instances without an override now render the default.
+- [x] Show image defaults turned on for Offers Slider Split (1 to 5), Card Carousel Header Left (1 to 6), Article Card Staggered and Article Card Staggered Tall (1 to 3), so their figures show the image instead of a grey fill.
+- [x] Images added inside the empty grey figures: the four `timeline-scatter-images_image-wrap` boxes in timeline-scatter-images and in timeline-scatter-images Tall (class `timeline-scatter-images_image`), and `form-split-script-contact_media` (`u-image`). The split image text stamp now shows the postmark SVG.
+- [x] CMS: `intro-image` set on dining-poollounge, dining-lobbybar and dining-gardenterrace (republished; Zuma kept its image). `hero-image` set on all six Happenings & Stories posts (still drafts). Post Categories has no image field.
+- [ ] Staging check after publish (2026-10-20): no empty `img` src on home, rooms, gallery, history, dining, wellness, guidelines, neighborhood, static-template, meetings or the four dining items. Still grey, and page-level (not component or CMS): the `section_placeholder` sections on home, rooms, gallery and history (unbuilt Q007, Q008, Q009 slots), and the three `meetings-collection-features_figure` cards on `/meetings`.
+- [ ] Hero Fullbleed Centered Logo and Venue Card Logo props have no default; both are off by default (Show Logo false). Set a logo asset where an instance turns Show Logo on.
+- [ ] Article Card Staggered Tall: Image 2 and Image 3 have defaults but cards 2 and 3 are still not built.
+- [ ] Replace every stand-in with the real photo when imagery arrives; the existing "real photos" follow-ups above stay open.

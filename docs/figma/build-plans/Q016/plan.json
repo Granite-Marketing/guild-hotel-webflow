@@ -444,6 +444,12 @@
       "slot": "back-icon (rooms-individual/02 arrow)",
       "webflowAssetId": "6ad74da5f1658ec1f273e890",
       "local": "figma/vectors/group-270990121-11x11-413-5536.svg"
+    },
+    {
+      "slot": "script-intro-centered: image prop default",
+      "webflowAssetId": "6ad74da46b56ff1d7223e4d7",
+      "local": "figma/vectors (guild-postmark-stamp.svg)",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
     }
   ],
   "instances": [

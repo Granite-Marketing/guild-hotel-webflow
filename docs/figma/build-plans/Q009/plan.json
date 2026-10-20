@@ -65,6 +65,44 @@
     "compact": "fc0098cd-8c50-41b6-cf7f-14e7cc337d44"
   },
   "assets": {
+    "fillImagesDefaults": [
+      {
+        "slot": "Card Carousel Header Left: Image 1 prop (Show image 1 to 6 defaults now true)",
+        "webflowAssetId": "6ad67017fb3a14e0db41143b",
+        "local": "assets/images/cec4b89085ea09ad21eb68b7b11a462e95e59cfa.png",
+        "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+      },
+      {
+        "slot": "Image 2 prop",
+        "webflowAssetId": "6ad67005cf42363c3ffe3c69",
+        "local": "assets/images/8451f6e554b7fcb023e2ad039346111e4863dfbe.png",
+        "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+      },
+      {
+        "slot": "Image 3 prop",
+        "webflowAssetId": "6ad67000240d911fb18d77af",
+        "local": "assets/images/70a13b1d6cdae1be50f7d9ca4b2541937747ae45.jpg",
+        "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+      },
+      {
+        "slot": "Image 4 prop",
+        "webflowAssetId": "6ad67011134731ad1b928045",
+        "local": "assets/images/a97e194ea6811fe55bfcb2016b80ac2c0d524400.png",
+        "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+      },
+      {
+        "slot": "Image 5 prop",
+        "webflowAssetId": "6ad66ffe58367429abb48c84",
+        "local": "assets/images/632da0f26628d214360c513d3c0f6d8e91262fb4.jpg",
+        "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+      },
+      {
+        "slot": "Image 6 prop",
+        "webflowAssetId": "6ad66fee735773f253407335",
+        "local": "assets/images/237b8c39fb6d0a4d69aaa3bcad7953ea344d1ea1.jpg",
+        "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+      }
+    ],
     "placeholderImage": "6ad67011134731ad1b928045"
   },
   "classesCreated": {
