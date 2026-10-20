@@ -12,6 +12,11 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 - **Staging URL**: `the-guild-hotel-c34e71.webflow.io`
 - **Figma file**: `7KV5sqOiFIoei8gxhptDOU` (GUILD-WEB-NEW), see `figma/README.md`
 
+## Site custom code (R00)
+
+- **Bundle release**: v1.1.1, commit `1e3e1429a832235a38903d7df288fa881d22a8fa`; content of the head and footer blocks in `site-scripts.md`.
+- **Registered scripts**: none (site uses raw freeform head and footer blocks, not registered scripts).
+
 ## Pages
 
 | Page | ID | Slug | Figma page |
