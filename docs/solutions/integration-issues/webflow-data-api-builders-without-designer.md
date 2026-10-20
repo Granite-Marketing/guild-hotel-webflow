@@ -152,3 +152,7 @@ Rules for the build skill:
 - **LinkBlock text:** the LinkBlock exposes a `text` setting; bind the inner span's `text` instead, so the icon child is kept. A `DOM` span takes its text through `set_settings` key `text`.
 - **Optional wrappers:** bind each wrapper's `visibility` to a boolean prop; an empty text prop does not hide its wrapper.
 - **Heading newlines:** `set_text` and text props keep `\n`, so `white-space: pre-line` headings work without a line-break element.
+
+## Visual checks (Q020, 2026-10-20)
+
+- **Visual check by publishing to staging (Q020).** The Designer canvas can render Data API builds wrongly. On Q020 the eyebrow h3s showed at h3 tag size (about 40px) while the published page computed 18px as planned. Check the published page instead: build pages are created as drafts, so set `draft: false` with `data_pages_tool > update_page_settings`, then `data_sites_tool > publish_site` with `publishToWebflowSubdomain: true` and no custom domains. Read computed styles on `<site>.webflow.io/<slug>` in a browser. Stephen approved staging publishes for this project on 2026-10-20 (not shared with the client yet).
