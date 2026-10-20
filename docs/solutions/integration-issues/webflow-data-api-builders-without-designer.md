@@ -136,3 +136,10 @@ Rules for the build skill:
 - **A rejected builder call leaves a partial tree.** Elements created before the error stay on the page. Read the page back and remove the partial elements before retrying.
 - **TextBlock text:** the builder's `set_text` on a `TextBlock` is ignored, and `data_element_tool > set_text` says "This element doesn't support text". Write it with `data_element_settings_tool > set_settings`, key `text`, `static_text.value`.
 - **HtmlEmbed code:** create the embed empty, then write it with `set_settings`, key `code`, `static_text.value`. The code and links survive `transform_element_to_component`.
+
+## Gotchas found building forms and slots (Q022, 2026-10-20)
+
+- **`Form` seeds a default form.** The builder's `Form` type creates a FormWrapper with a FormForm holding Name and Email labels and inputs, a FormButton, and success and error messages. Remove the labels and inputs, restyle the rest, and move the FormButton into your `footer` wrapper with `move_element`.
+- **Input settings, not attributes.** `name`, `type` (text, email, tel, number) and `required` are settings on FormTextInput (`set_settings`). New inputs default to `required: true`. The form's `name` and the button's `buttonText` and `loadingText` are settings too.
+- **`placeholder` cannot be set headlessly.** The builder rejects it as a reserved attribute (and rejects the whole call, leaving a partial tree), `set_attributes` returns an internal error, and there is no placeholder setting. Set placeholders in the Designer.
+- **No slots through the API.** `create_prop` has no slot type. A builder `ComponentSlot` inside a definition creates a `Slot` element (a wrapping div), but `move_element` into it fails with an internal error. Use Show booleans and leave slots to the Designer.

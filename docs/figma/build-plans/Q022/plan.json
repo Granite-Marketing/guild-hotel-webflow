@@ -1175,7 +1175,13 @@
     "Field labels are rendered as styled placeholders with aria-label as the accessible name, matching the design (label sits on the underline), instead of visible label elements.",
     "Instance vertical spacing in the base crops varies (top 94px to 219px); the plan uses padding-section-large for every base instance.",
     "Field underlines in Figma are #262118 rectangles but render as a light hairline in the crops; the plan uses rgba(38, 33, 24, 0.35) (color-neutral-900 at 35%). No variable exists for it; the Designer may use the neutral-900 variable with alpha if available.",
-    "The submit button and caps labels render narrower in the preview than Figma (button about 197px vs 234px) because Copperplate stands in for Sackers Heavy Gothic; padding follows the Figma vector exactly, so recheck on the live site with the real font before changing it."
+    "The submit button and caps labels render narrower in the preview than Figma (button about 197px vs 234px) because Copperplate stands in for Sackers Heavy Gothic; padding follows the Figma vector exactly, so recheck on the live site with the real font before changing it.",
+    "Q022 build: the form, details and links are not slots. The props API has no slot type, and a ComponentSlot made by the element builder adds a wrapper div that the form block cannot be moved into (move_element fails). They are fixed content toggled by Show booleans; the component default is the guidelines/06 photoshoot form. Converting them to slots is a Designer step.",
+    "Q022 build: input placeholders are not set. The Data API rejects `placeholder` as an attribute (reserved in the builder, internal error in set_attributes) and has no placeholder setting. Each input keeps its aria-label; placeholders are a Designer step.",
+    "Q022 build: every input is set to not required, because the plan does not say which fields are required (Webflow defaults new inputs to required). Revisit with open question 4.",
+    "Q022 build: the is-tall variant is a plain reference section (meetings RFP), not an instance, because an instance cannot carry the root combo class. Same approach as Q017 and Q019.",
+    "Q022 build: detail values and links have no hrefs: the plan tree has no link element inside detail-value, and the social links are `#` (open question 3).",
+    "Q022 build: field and fieldset heading DOM ids live in the component definition (`photoshoot-*`), so two instances on one page would duplicate them; each page has one instance."
   ],
   "k01": {
     "reconciledBy": "K01, 2026-10-20",
@@ -1188,6 +1194,79 @@
       "Submit button is `button is-chamfer is-dark` (was `is-clipped`); type is Label/Button instead of CAPS-CAPTION-16.",
       "Script heading uses the live `text-style-script` (Morello 60/72); its tablet and mobile steps are a live correction.",
       "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  },
+  "build": {
+    "builtBy": "Q022, 2026-10-20",
+    "buildPage": "6ad712c99096987033862bfc",
+    "componentId": "2f0cac24-8156-b0d7-520c-f5128139d6b0",
+    "componentName": "form-split-script-contact",
+    "props": [
+      {
+        "name": "Heading",
+        "id": "3f767984-5771-cef7-0ea6-5978279c812e",
+        "type": "textContent"
+      },
+      {
+        "name": "Paragraph",
+        "id": "d3c419dc-eaf9-3089-a87e-c1588cef8faf",
+        "type": "textContent"
+      },
+      {
+        "name": "Show Paragraph",
+        "id": "332f9d9e-c3c4-c891-8313-02a8a819a95b",
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "name": "Show Details",
+        "id": "fc141058-a562-62ea-e243-c4306c1f08ab",
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "name": "Show Links",
+        "id": "13921f12-57d6-d4ec-32fb-c4a9cbf880d7",
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "name": "Show Form",
+        "id": "aec3f8de-1de0-ed64-19f0-0b8cbfdb363d",
+        "type": "boolean",
+        "default": true
+      },
+      {
+        "name": "Show Media",
+        "id": "26621e6f-901a-41e5-27f6-b323d8c46c48",
+        "type": "boolean",
+        "default": false
+      }
+    ],
+    "referenceSections": [
+      "is-tall"
+    ],
+    "classesCreated": [
+      {
+        "selector": ".form-split-script-contact_paragraph.text-size-medium",
+        "id": "4e67bba1-6ba6-b38d-3a72-8a335fc0e8fd",
+        "properties": "none"
+      },
+      {
+        "selector": ".form-split-script-contact_detail-value.text-size-medium",
+        "id": "e7b9248b-0bb5-47d4-a4aa-1b6d20c74689",
+        "properties": "none"
+      },
+      {
+        "selector": ".form-split-script-contact_detail-label.text-style-caps-caption-16",
+        "id": "a5ccd538-6682-33e0-04e8-2df94cb2bddb",
+        "properties": "none"
+      },
+      {
+        "selector": ".form-split-script-contact_link.text-style-caps-caption-16",
+        "id": "5c05a05b-e2b9-cf13-041a-a68c964d5f61",
+        "properties": "none"
+      }
     ]
   }
 }

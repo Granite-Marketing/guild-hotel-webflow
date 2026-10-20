@@ -81,6 +81,7 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 | Gallery Mosaic Captioned | `560e1b31-d612-0921-8773-8f9de2e2b06f` | Q018 four-tile gallery, built on `/build-gallery-mosaic-captioned` (2026-10-20); 12 props (6 text, 4 image, 2 Show booleans) |
 | Map Feature | `8e90ff20-1ed1-43a7-edce-89b7ea10c487` | Q019, built on `/build-map-feature` (2026-10-20); 22 props (Content, Button, Visibility, Places, Image groups); `is-image-bg` and `is-centered` are reference sections on the build page |
 | Split image text light | `663131a8-3362-867e-25ef-28b6d3d209a2` | Q017, built on `/build-split-image-text-light` (2026-10-20); 17 props (7 content, 2 image, 8 visibility booleans); variants are plain reference sections on the build page |
+| form-split-script-contact | `2f0cac24-8156-b0d7-520c-f5128139d6b0` | Q022, built on `/build-form-split-script-contact` (2026-10-20); 7 props (Heading, Paragraph, 5 Show booleans); default content is the guidelines/06 photoshoot form; `is-tall` is a reference section on the build page |
 
 ## Variable Collections
 
