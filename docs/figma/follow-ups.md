@@ -53,7 +53,10 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] K02 cleanup: replace six family image classes that duplicate `u-image` (`hero-fullbleed-centered_image`, `split-image-text-light_image`, `gallery-mosaic-captioned_image`, `image-trio-text_image`, `venue-card-fullbleed_image`, `image-inset-single_image`) with `u-image` on the components.
 - [ ] K02 cleanup: merge the four identical logo classes (`cta-booking-newsletter_logo`, `footer-links_logo-image`, `hero-fullbleed-centered_logo`, `venue-card-fullbleed_logo`) into one shared logo class.
 - [ ] K02: `accordion_item` border-bottom colour is a literal `rgba(38, 33, 24, 0.3)` and not bound to Neutral Darkest; rebind if Webflow allows an alpha variable.
-- [ ] Q020: apply `is-left` to `image-trio-text_header`, `_list` and `_figure` as well as the section.
+- [x] Q020: apply `is-left` to `image-trio-text_header`, `_list` and `_figure` as well as the section. Done in the Q020 build reference sections.
+- [ ] Q020: `is-left` and `is-left` + `is-offset` are plain reference sections, not instances; page entries need the same variant decision as Q014 and Q017 (Webflow component variants or unlinked copies). The heading size (h3 or h4) per instance has the same problem.
+- [ ] Q020 (Designer): set the Rich Text nested list styling on `image-trio-text_item-text` (list `padding-left` about 1rem, bullet colour inherit), which the MCP cannot do.
+- [ ] Q020: the reference-section figures have no image (grey #D9D9D9 placeholders). Add Image elements when the legal, corporate and dining photos arrive, and check `object-position` on the wellness middle photo (Figma crop).
 - [ ] Q014: add the per-instance variant mechanism once the decision above is made (component variants or a second component), and set the missing wide button combos on it.
 - [ ] Q012: upload and record any remaining assets in `figma/assets.json` and `webflow-ids.md` (Bonvoy `6ad744318e4b52f5c4d49ec6` and Tribute Portfolio `6ad744312406f6ae5126bc5f` are already recorded).
 - [ ] Q015: fix `validate-plan.mjs` failing on main with "proposedShared needs why" (K01 removed the `why` fields).
