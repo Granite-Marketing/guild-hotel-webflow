@@ -95,3 +95,13 @@ The thin dark lines at the top and bottom edges of some screenshots are the neig
 
 - Class list `gallery-mosaic-captioned_caption text-size-regular text-style-caps-caption-16` is now `gallery-mosaic-captioned_caption text-style-caps-caption-16`.
 - Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).
+
+## Build (2026-10-20)
+
+Built through the Data API on `🧱 gallery-mosaic-captioned` (`6ad712c63e506fddaa973910`, `/build-gallery-mosaic-captioned`) and converted to the component `Gallery Mosaic Captioned` (`560e1b31-d612-0921-8773-8f9de2e2b06f`). The page holds one instance with the meetings-collection/09 defaults. The read-back matches the plan tree, tags, classes and copy, except for the following:
+
+- **Five empty combos created** (approved by Stephen) so the planned stacks apply: `.gallery-mosaic-captioned_heading.heading-style-h4`, `.gallery-mosaic-captioned_heading.heading-style-h4.text-weight-normal`, `.gallery-mosaic-captioned_feature-title.heading-style-h2`, `.gallery-mosaic-captioned_feature-title.heading-style-h2.text-weight-normal`, `.gallery-mosaic-captioned_caption.text-style-caps-caption-16`. No standalone class was created and no class styles changed.
+- **12 props, all bound:** Heading, Feature Title and Caption 1 to 4 (text), Image 1 to 4 (image), Show Heading (on) and Show Feature Title (off). The two visibility props are booleans bound to the visibility setting, because `create_prop` has no visibility type.
+- **No image assets:** the plan has none, so the four tiles show Webflow's placeholder image.
+- **No `loading=lazy` attribute** on the images; Webflow images are lazy by default.
+- **Rich text styling:** none needed.

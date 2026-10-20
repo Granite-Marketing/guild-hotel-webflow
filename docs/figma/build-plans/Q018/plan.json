@@ -776,7 +776,12 @@
     "Caption bottom offset is 2.5rem on every tile; Figma has 2rem on the first full-width tile and 2.5rem on the others.",
     "Figure placeholder colour #D9D9D9 is a literal value (no variable); it only shows until images are set.",
     "Tile heights use aspect-ratio (1600 / 995 wide, 8 / 9 half) so the mosaic scales with viewport width; at 1440 the section is about 2602px tall against 2892px at the 1600 Figma frame.",
-    "Below 768px the grid stacks to one column (wide tiles 4 / 5, half tiles 1 / 1). Figma has no mobile frame for this section."
+    "Below 768px the grid stacks to one column (wide tiles 4 / 5, half tiles 1 / 1). Figma has no mobile frame for this section.",
+    "Q018 build (2026-10-20): the five combos the class stacks need did not exist, so this session created them empty with Stephen's approval: .gallery-mosaic-captioned_heading.heading-style-h4, .gallery-mosaic-captioned_heading.heading-style-h4.text-weight-normal, .gallery-mosaic-captioned_feature-title.heading-style-h2, .gallery-mosaic-captioned_feature-title.heading-style-h2.text-weight-normal, .gallery-mosaic-captioned_caption.text-style-caps-caption-16.",
+    "Q018 build: the plan's visibility props are boolean props (Show Heading, default on; Show Feature Title, default off) bound to the visibility setting of the header and feature header, because create_prop has no visibility type.",
+    "Q018 build: the images carry no explicit loading=lazy attribute; Webflow images load lazily by default, and a reserved attribute name would reject the whole builder call.",
+    "Q018 build: image props have no default asset (the plan has no asset ids), so all four tiles show the Webflow placeholder image over the #D9D9D9 figure background.",
+    "Q018 build: component is named 'Gallery Mosaic Captioned' (Title Case, matching Q012 to Q014) and prop display names are Title Case (Heading, Show Heading, Feature Title, Show Feature Title, Image 1 to 4, Caption 1 to 4)."
   ],
   "k01": {
     "reconciledBy": "K01, 2026-10-20",
@@ -785,5 +790,48 @@
       "Class list `gallery-mosaic-captioned_caption text-size-regular text-style-caps-caption-16` is now `gallery-mosaic-captioned_caption text-style-caps-caption-16`.",
       "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
     ]
+  },
+  "build": {
+    "by": "Q018",
+    "date": "2026-10-20",
+    "page": "6ad712c63e506fddaa973910",
+    "componentId": "560e1b31-d612-0921-8773-8f9de2e2b06f",
+    "componentName": "Gallery Mosaic Captioned",
+    "createdCombos": [
+      {
+        "selector": ".gallery-mosaic-captioned_heading.heading-style-h4",
+        "id": "ca42828d-c668-eb26-91b3-3034b58e3be5"
+      },
+      {
+        "selector": ".gallery-mosaic-captioned_heading.heading-style-h4.text-weight-normal",
+        "id": "2d46d43b-d51e-45af-ea86-9562e03975a7"
+      },
+      {
+        "selector": ".gallery-mosaic-captioned_feature-title.heading-style-h2",
+        "id": "ff2b9b50-49ff-ecbb-b03e-b969d8d57f6f"
+      },
+      {
+        "selector": ".gallery-mosaic-captioned_feature-title.heading-style-h2.text-weight-normal",
+        "id": "0d43d99a-e486-d663-f869-2728b86c7d42"
+      },
+      {
+        "selector": ".gallery-mosaic-captioned_caption.text-style-caps-caption-16",
+        "id": "4e97a20f-c62a-3c4e-35f3-535c9d9d5b2c"
+      }
+    ],
+    "props": {
+      "Heading": "3aab8783-f8f3-e498-0599-7ddbcbf5d1e9",
+      "Show Heading": "128a7ba8-2116-e014-5718-97f9541d1218",
+      "Feature Title": "9b94a9b9-d271-9268-3a20-e7d3e831c400",
+      "Show Feature Title": "e90568d5-57ae-46a2-6566-0f6b14ce903b",
+      "Image 1": "d41c4a29-3938-b380-5444-aac22708c480",
+      "Image 2": "39b3e286-5782-b9e9-4a6e-c3f97c32c205",
+      "Image 3": "9de150c6-324d-e6a3-8fa2-28b7ded767ab",
+      "Image 4": "020d0f17-9e6d-702f-fafa-8231b89df59a",
+      "Caption 1": "f46dfd48-84cd-7791-03be-917c0c122971",
+      "Caption 2": "484377f3-e3fe-d378-4dbb-ad6bb3a1709a",
+      "Caption 3": "937cab3d-dd52-1f15-fe41-b6a78a259809",
+      "Caption 4": "b220cf9b-f331-de64-6225-593713f3516c"
+    }
   }
 }
