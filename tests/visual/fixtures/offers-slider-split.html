@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fixture: offers slider split (Q008)</title>
+    <!--
+      Local preview for src/utils/offersSliderSplit.ts, loaded by
+      tests/visual/offers-slider-split.spec.ts. Swiper loads from jsDelivr as
+      on the site. Slider A is the base burgundy variant, B the blue variant
+      with an image, C a single slide (controls hidden).
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <style>
+      :root { --cream: #f4efdf; --burgundy: #4a1217; --dark: #262118; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--cream); font-family: system-ui, sans-serif; }
+      .hide { display: none !important; }
+      .section_offers-slider-split { position: relative; overflow: hidden; background: var(--burgundy); color: var(--cream); }
+      .section_offers-slider-split.is-blue { background: #b2c5d5; color: var(--dark); }
+      .section_offers-slider-split.is-tan { background: #906e58; color: var(--cream); }
+      .offers-slider-split_slider { position: relative; overflow: hidden; }
+      .offers-slider-split_slides { display: flex; }
+      .offers-slider-split_slide { flex-shrink: 0; width: 100%; }
+      .offers-slider-split_item { display: grid; grid-template-columns: 1fr 1fr; min-height: 56.25rem; }
+      .offers-slider-split_content { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; padding: 8rem 2rem; text-align: center; }
+      .offers-slider-split_header { display: flex; flex-direction: column; align-items: center; gap: 2rem; max-width: 31.625rem; }
+      .offers-slider-split_heading { margin: 0; font-size: 2.5rem; line-height: 1; font-weight: 900; letter-spacing: -0.05em; }
+      .offers-slider-split_text { margin: 0; font-size: 1.25rem; line-height: 1.3; }
+      .offers-slider-split_button {
+        display: inline-flex; padding: 0.5625rem 1.5rem; background: var(--cream); color: var(--burgundy);
+        text-transform: lowercase; text-decoration: none;
+        clip-path: polygon(0 0.75rem, 0.6875rem 0, calc(100% - 0.6875rem) 0, 100% 0.75rem, 100% calc(100% - 0.75rem), calc(100% - 0.6875rem) 100%, 0.6875rem 100%, 0 calc(100% - 0.75rem));
+      }
+      .offers-slider-split_figure { margin: 0; position: relative; overflow: hidden; background: #d9d9d9; }
+      .offers-slider-split_image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .offers-slider-split_overlay {
+        position: absolute; top: 0; bottom: 0; left: 0; width: 50%; z-index: 2;
+        display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+        padding: 2.625rem 2rem 2.125rem; pointer-events: none;
+      }
+      .offers-slider-split_eyebrow { margin: 0; text-transform: lowercase; }
+      .offers-slider-split_controls { display: flex; align-items: center; gap: 1.25rem; pointer-events: auto; }
+      .offers-slider-split_arrow { display: flex; align-items: center; width: 1.875rem; height: 0.875rem; color: inherit; }
+      .offers-slider-split_arrow.is-prev { opacity: 0.4; }
+      .offers-slider-split_counter { display: flex; gap: 0.75rem; margin: 0; font-size: 0.875rem; font-weight: 900; }
+      .offers-slider-split_total { opacity: 0.5; }
+      @media (max-width: 991px) {
+        .offers-slider-split_item { grid-template-columns: 1fr; min-height: auto; }
+        .offers-slider-split_content { min-height: 40rem; }
+        .offers-slider-split_figure { min-height: 25rem; }
+        .offers-slider-split_overlay { bottom: auto; width: 100%; height: 40rem; }
+      }
+    </style>
+  </head>
+  <body>
+  <section class="section_offers-slider-split swiper_slider " data-offers-slider aria-roledescription="carousel" aria-label="Offers A">
+    <div class="offers-slider-split_slider swiper offers">
+      <div class="offers-slider-split_slides swiper-wrapper">
+        <div class="offers-slider-split_slide swiper-slide">
+          <article class="offers-slider-split_item">
+            <div class="offers-slider-split_content">
+              <header class="offers-slider-split_header"><h2 class="offers-slider-split_heading">save on 5+ nights</h2><p class="offers-slider-split_text">Enjoy a considered stay with complimentary extras, tailored to the season.</p></header>
+              <footer class="offers-slider-split_footer"><a class="offers-slider-split_button" href="#">discover more</a></footer>
+            </div>
+            <figure class="offers-slider-split_figure"><img class="offers-slider-split_image" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></figure>
+          </article>
+        </div>
+        <div class="offers-slider-split_slide swiper-slide">
+          <article class="offers-slider-split_item">
+            <div class="offers-slider-split_content">
+              <header class="offers-slider-split_header"><h2 class="offers-slider-split_heading">wellness staycation</h2><p class="offers-slider-split_text">Enjoy a considered stay with complimentary extras, tailored to the season.</p></header>
+              <footer class="offers-slider-split_footer"><a class="offers-slider-split_button" href="#">discover more</a></footer>
+            </div>
+            <figure class="offers-slider-split_figure"><img class="offers-slider-split_image" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></figure>
+          </article>
+        </div>
+        <div class="offers-slider-split_slide swiper-slide">
+          <article class="offers-slider-split_item">
+            <div class="offers-slider-split_content">
+              <header class="offers-slider-split_header"><h2 class="offers-slider-split_heading">romantic escape</h2><p class="offers-slider-split_text">Enjoy a considered stay with complimentary extras, tailored to the season.</p></header>
+              <footer class="offers-slider-split_footer"><a class="offers-slider-split_button" href="#">discover more</a></footer>
+            </div>
+            <figure class="offers-slider-split_figure"><img class="offers-slider-split_image" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></figure>
+          </article>
+        </div>
+        <div class="offers-slider-split_slide swiper-slide">
+          <article class="offers-slider-split_item">
+            <div class="offers-slider-split_content">
+              <header class="offers-slider-split_header"><h2 class="offers-slider-split_heading">dine and stay</h2><p class="offers-slider-split_text">Enjoy a considered stay with complimentary extras, tailored to the season.</p></header>
+              <footer class="offers-slider-split_footer"><a class="offers-slider-split_button" href="#">discover more</a></footer>
+            </div>
+            <figure class="offers-slider-split_figure"><img class="offers-slider-split_image" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></figure>
+          </article>
+        </div>
+        <div class="offers-slider-split_slide swiper-slide">
+          <article class="offers-slider-split_item">
+            <div class="offers-slider-split_content">
+              <header class="offers-slider-split_header"><h2 class="offers-slider-split_heading">early booking</h2><p class="offers-slider-split_text">Enjoy a considered stay with complimentary extras, tailored to the season.</p></header>
+              <footer class="offers-slider-split_footer"><a class="offers-slider-split_button" href="#">discover more</a></footer>
+            </div>
+            <figure class="offers-slider-split_figure"><img class="offers-slider-split_image" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></figure>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="offers-slider-split_overlay">
+      <p class="offers-slider-split_eyebrow">offers &amp; packages</p>
+      <div class="offers-slider-split_controls" data-offers-slider-controls>
+        <a href="#" class="offers-slider-split_arrow is-prev" data-offers-slider-prev aria-label="Previous offer"><svg viewBox="0 0 30 14" width="30" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" style="transform:scaleX(-1)"><path d="M0 7h28M22 1l6 6-6 6"/></svg></a>
+        <p class="offers-slider-split_counter"><span data-offers-slider-current>01</span><span>/</span><span class="offers-slider-split_total" data-offers-slider-total>05</span></p>
+        <a href="#" class="offers-slider-split_arrow" data-offers-slider-next aria-label="Next offer"><svg viewBox="0 0 30 14" width="30" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M0 7h28M22 1l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+  <section class="section_offers-slider-split swiper_slider is-blue" data-offers-slider aria-roledescription="carousel" aria-label="Retail B">
+    <div class="offers-slider-split_slider swiper offers">
+      <div class="offers-slider-split_slides swiper-wrapper">
+        <div class="offers-slider-split_slide swiper-slide">
+          <article class="offers-slider-split_item">
+            <div class="offers-slider-split_content">
+              <header class="offers-slider-split_header"><h2 class="offers-slider-split_heading">fashionphile</h2><p class="offers-slider-split_text">Enjoy a considered stay with complimentary extras, tailored to the season.</p></header>
+              <footer class="offers-slider-split_footer"><a class="offers-slider-split_button" href="#">discover more</a></footer>
+            </div>
+            <figure class="offers-slider-split_figure"><img class="offers-slider-split_image" data-placeholder="1" alt="" loading="eager"></figure>
+          </article>
+        </div>
+        <div class="offers-slider-split_slide swiper-slide">
+          <article class="offers-slider-split_item">
+            <div class="offers-slider-split_content">
+              <header class="offers-slider-split_header"><h2 class="offers-slider-split_heading">vintage finds</h2><p class="offers-slider-split_text">Enjoy a considered stay with complimentary extras, tailored to the season.</p></header>
+              <footer class="offers-slider-split_footer"><a class="offers-slider-split_button" href="#">discover more</a></footer>
+            </div>
+            <figure class="offers-slider-split_figure"><img class="offers-slider-split_image" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></figure>
+          </article>
+        </div>
+        <div class="offers-slider-split_slide swiper-slide">
+          <article class="offers-slider-split_item">
+            <div class="offers-slider-split_content">
+              <header class="offers-slider-split_header"><h2 class="offers-slider-split_heading">private styling</h2><p class="offers-slider-split_text">Enjoy a considered stay with complimentary extras, tailored to the season.</p></header>
+              <footer class="offers-slider-split_footer"><a class="offers-slider-split_button" href="#">discover more</a></footer>
+            </div>
+            <figure class="offers-slider-split_figure"><img class="offers-slider-split_image" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></figure>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="offers-slider-split_overlay">
+      <p class="offers-slider-split_eyebrow">retail</p>
+      <div class="offers-slider-split_controls" data-offers-slider-controls>
+        <a href="#" class="offers-slider-split_arrow is-prev" data-offers-slider-prev aria-label="Previous offer"><svg viewBox="0 0 30 14" width="30" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" style="transform:scaleX(-1)"><path d="M0 7h28M22 1l6 6-6 6"/></svg></a>
+        <p class="offers-slider-split_counter"><span data-offers-slider-current>01</span><span>/</span><span class="offers-slider-split_total" data-offers-slider-total>05</span></p>
+        <a href="#" class="offers-slider-split_arrow" data-offers-slider-next aria-label="Next offer"><svg viewBox="0 0 30 14" width="30" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M0 7h28M22 1l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+  <section class="section_offers-slider-split swiper_slider is-tan" data-offers-slider aria-roledescription="carousel" aria-label="Single C">
+    <div class="offers-slider-split_slider swiper offers">
+      <div class="offers-slider-split_slides swiper-wrapper">
+        <div class="offers-slider-split_slide swiper-slide">
+          <article class="offers-slider-split_item">
+            <div class="offers-slider-split_content">
+              <header class="offers-slider-split_header"><h2 class="offers-slider-split_heading">one offer only</h2><p class="offers-slider-split_text">Enjoy a considered stay with complimentary extras, tailored to the season.</p></header>
+              <footer class="offers-slider-split_footer"><a class="offers-slider-split_button" href="#">discover more</a></footer>
+            </div>
+            <figure class="offers-slider-split_figure"><img class="offers-slider-split_image" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></figure>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="offers-slider-split_overlay">
+      <p class="offers-slider-split_eyebrow">the guild</p>
+      <div class="offers-slider-split_controls" data-offers-slider-controls>
+        <a href="#" class="offers-slider-split_arrow is-prev" data-offers-slider-prev aria-label="Previous offer"><svg viewBox="0 0 30 14" width="30" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" style="transform:scaleX(-1)"><path d="M0 7h28M22 1l6 6-6 6"/></svg></a>
+        <p class="offers-slider-split_counter"><span data-offers-slider-current>01</span><span>/</span><span class="offers-slider-split_total" data-offers-slider-total>05</span></p>
+        <a href="#" class="offers-slider-split_arrow" data-offers-slider-next aria-label="Next offer"><svg viewBox="0 0 30 14" width="30" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M0 7h28M22 1l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./offers-slider-split.js"></script>
+  </body>
+</html>
