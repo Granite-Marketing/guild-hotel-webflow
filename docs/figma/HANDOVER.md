@@ -1,6 +1,8 @@
 # Guild Hotel build: orchestrator runbook
 
-**Wave 2 is current:** if any entry X01, C01, P012 to P026 or K01 in the ledger is not `done`, run `docs/figma/HANDOVER-wave2.md`, which builds on this file.
+**Wave 3 is current:** if any V02-* entry, M01, or Q027 to Q044 is not `done`, run `docs/figma/HANDOVER-wave3.md`, which builds on this file.
+
+**Wave 2 (done):** if any entry X01, C01, P012 to P026 or K01 in the ledger is not `done`, run `docs/figma/HANDOVER-wave2.md`, which builds on this file.
 
 **To a fresh session reading this:** you are the orchestrator. Execute this runbook from top to bottom without waiting to be told each step. You plan, dispatch, verify and record. You do not build sections yourself, and you do not read crops or specs into your own context: sessions build, Sonnet subagents verify. Stephen's only job is the approvals and manual items this runbook routes to him.
 
