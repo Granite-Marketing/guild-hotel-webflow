@@ -1660,7 +1660,15 @@
     "Base instances use four layouts (edge, split, stagger, wide). They are expressed as element combos on the media and content (grid placement on a 12-column grid), not as extra section variants, because Webflow combos cannot style children from the section.",
     "Webflow component variants: one component with variants base, olive, blue, tan, compact plus layout variants edge, stagger-left, stagger-mid, wide, so instances pick a variant instead of re-classing elements. If component variants cannot change classes on nested elements, fall back to unlinked layout overrides per instance.",
     "Morello script heading uses heading-style-h1 plus a new shared text-style-script combo (font family, 5rem/1, no transform), because heading-style-h1 is Sackers.",
-    "Brief variant is-tall (meetings-collection/08) is not part of this component; see excludedInstances."
+    "Brief variant is-tall (meetings-collection/08) is not part of this component; see excludedInstances.",
+    "Q017 build (2026-10-20): eight stacks had no combo path, so this session created them empty with Stephen's yes: .split-image-text-light_eyebrow.text-style-eyebrow-caps, .split-image-text-light_heading.heading-style-h4, .split-image-text-light_heading.heading-style-h4.text-weight-normal, .split-image-text-light_heading.heading-style-h3, .split-image-text-light_heading.heading-style-h3.text-weight-normal, .split-image-text-light_body.text-size-medium, .split-image-text-light_caption.text-size-medium and .button.is-link.text-style-caps-caption-16.",
+    "Q017 build: colour variants (is-olive, is-blue, is-tan), compact and the base layouts (edge, staggerLeft, staggerMid, wide) change classes on the section and nested elements, which a component instance cannot switch. They exist on the build page as plain reference sections below the component, not instances (same pattern as Q014). Webflow component variants were not used.",
+    "Q017 build: the component default content is neighborhood/03 (downtown san diego, split layout), the only base instance that uses the tree default classes. Placeholder copy fills the hidden slots: Eyebrow, Body 2, Learn more.",
+    "Q017 build: the eight visibility props are booleans bound to each optional slot, because Webflow cannot hide an element when its prop is empty.",
+    "Q017 build: image slots without an asset are left as empty Image elements. Images with an asset (blue, tan) inherit the library alt; no alt was written. The plan alt is empty, so mark them decorative in the Designer if the library alt should not apply.",
+    "Q017 build: the tan stamp has no asset (figma/vectors/group-263x263-228-7875.svg is not uploaded), so its Image is empty on the tan reference section.",
+    "Q017 build: the tan heading stays an h2 (not the h1 the brief suggested), as in the tree and Q012.",
+    "Q017 build: CTA links are a # url placeholder."
   ],
   "previewAssumptions": {
     "note": "Element stand-ins for the preview only. K01 removed the class and variable stand-ins: previews load ../shared-preview.css instead.",
@@ -1699,6 +1707,65 @@
       "Script heading overrides (tan variant) use `text-style-script is-large`; line height is 1.2 (80/96) instead of the measured 1.",
       "Section colour modifiers `is-tan` and `is-blue` need the new Colors/Tan and Colors/Navy variables.",
       "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  },
+  "build": {
+    "builtBy": "Q017, 2026-10-20",
+    "buildPage": "6ad712c53e506fddaa973858",
+    "componentId": "663131a8-3362-867e-25ef-28b6d3d209a2",
+    "componentName": "Split image text light",
+    "props": 17,
+    "referenceSections": [
+      "olive",
+      "blue",
+      "tan",
+      "compact",
+      "edge",
+      "staggerLeft",
+      "staggerMid",
+      "wide"
+    ],
+    "classesCreated": [
+      {
+        "selector": ".split-image-text-light_eyebrow.text-style-eyebrow-caps",
+        "id": "ca1ead3b-136a-fcd0-a621-f0fe83207b11",
+        "properties": "none"
+      },
+      {
+        "selector": ".split-image-text-light_heading.heading-style-h4",
+        "id": "36327b9f-f010-8db0-a677-ab215026a413",
+        "properties": "none"
+      },
+      {
+        "selector": ".split-image-text-light_heading.heading-style-h4.text-weight-normal",
+        "id": "44df829b-6454-72c7-1729-60c9f185e9b0",
+        "properties": "none"
+      },
+      {
+        "selector": ".split-image-text-light_heading.heading-style-h3",
+        "id": "1a002808-682a-a386-76b1-7b3515d07812",
+        "properties": "none"
+      },
+      {
+        "selector": ".split-image-text-light_heading.heading-style-h3.text-weight-normal",
+        "id": "52fe396b-020b-9f5a-7ee2-6ac3240a6e6e",
+        "properties": "none"
+      },
+      {
+        "selector": ".split-image-text-light_body.text-size-medium",
+        "id": "7aa431b7-b607-7c96-fd5c-189c612af5f1",
+        "properties": "none"
+      },
+      {
+        "selector": ".split-image-text-light_caption.text-size-medium",
+        "id": "7921bb4c-f4e3-ac76-8d3b-b46873e99fdc",
+        "properties": "none"
+      },
+      {
+        "selector": ".button.is-link.text-style-caps-caption-16",
+        "id": "fc024fe7-3fea-3858-f496-00205211d2c5",
+        "properties": "none"
+      }
     ]
   }
 }
