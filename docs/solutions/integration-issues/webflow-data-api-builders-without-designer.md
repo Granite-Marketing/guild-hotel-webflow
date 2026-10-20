@@ -139,6 +139,12 @@ Rules for the build skill:
 - **RichText seeds sample content (Q020).** `data_element_builder` `RichText` always creates Webflow's 16-element style-guide sample (H1 to H6, lorem, blockquote, lists, link, inline styles) ahead of any children you pass. Replace it in one write with `data_element_settings_tool > set_settings`, key `richText`, `static_text.rich_text_inner_text`; that leaves plain paragraphs only.
 - **Bullets inside RichText (Q020).** Set `richText` to a placeholder, then append `BY_CUSTOM_TAG ul` with `li` children. The List seeds three empty ListItems first, and `set_text` on the `li` children is dropped. Write each item with `set_settings`, key `text`, `static_text.value`, then remove the three seeded items and the placeholder paragraph.
 
+## Gotchas found building forms and slots (Q022, 2026-10-20)
+
+- **`Form` seeds a default form.** The builder's `Form` type creates a FormWrapper with a FormForm holding Name and Email labels and inputs, a FormButton, and success and error messages. Remove the labels and inputs, restyle the rest, and move the FormButton into your `footer` wrapper with `move_element`.
+- **Input settings, not attributes.** `name`, `type` (text, email, tel, number) and `required` are settings on FormTextInput (`set_settings`). New inputs default to `required: true`. The form's `name` and the button's `buttonText` and `loadingText` are settings too.
+- **`placeholder` cannot be set headlessly.** The builder rejects it as a reserved attribute (and rejects the whole call, leaving a partial tree), `set_attributes` returns an internal error, and there is no placeholder setting. Set placeholders in the Designer.
+- **No slots through the API.** `create_prop` has no slot type. A builder `ComponentSlot` inside a definition creates a `Slot` element (a wrapping div), but `move_element` into it fails with an internal error. Use Show booleans and leave slots to the Designer.
 ## Gotchas found in the Q016 build (2026-10-20)
 
 - **Image props:** `create_prop` takes no image default, and binding an image's `assetId` to the prop clears the definition's image. On an instance, `set_component_instance_prop_values` has no image type; pass the asset id as `type: "string"`. It reads back as the asset id.

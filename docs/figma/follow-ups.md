@@ -25,6 +25,9 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q012, Q013, Q014, Q015: delete each build page (`/build-<component>`) once its component sits on the real pages, and delete the probe pages `x01-probe` and `x01-probe-b`.
 - [ ] Q012, Q013, Q014, Q015: no rich text styling is needed for any of these four components.
 - [ ] Q018: visual check of `/build-gallery-mosaic-captioned` in the Designer against `docs/figma/build-plans/Q018/preview-base-1440.png` and the meetings-collection/09 crop (nothing was compared yet; tiles show Webflow's placeholder image).
+- [ ] Q022: visual check of `/build-form-split-script-contact` (base instance plus the is-tall reference section) against `docs/figma/build-plans/Q022/preview-base-1440.png`, `preview-is-tall-1440.png` and the crops. Inputs show no placeholder text yet.
+- [ ] Q022: set the placeholder on every form input to its label (the Data API rejects `placeholder`); the labels are in each input's aria-label and in `plan.json` instances.
+- [ ] Q022: decide whether to turn the form block, details and links into component slots (the Data API cannot: no slot prop type, and moving an element into a ComponentSlot fails). Without slots, every instance shows the photoshoot form.
 
 ## Decisions for Stephen
 - [ ] Q021: open questions OQ2 (wellness and meetings intro moves from Q023 into this snap section) and OQ3 (legal and corporate as a static stack) are still on their defaults; confirm before those pages are built.
@@ -44,6 +47,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q013: sections with an extra "other dining options" slider (Group 270990062) belong to the dining venue page entries, not the footer. Confirm.
 - [ ] Q018: who supplies the 40 gallery images (4 per instance), and should the dining and legal/corporate galleries take them from CMS (Q027, Q028) instead of the Image props?
 - [ ] Q018: show the "A Landmark Reimagined" feature title on the meetings instance (Show Feature Title is off by default)? Also confirm the real gallery headings for dining-gardenterrace, dining-lobbybar and dining-poollounge (Figma copies "zuma gallery").
+- [ ] Q022: which form fields are required (all are optional now), plus the plan's open questions: submit destination, contact page media, social URLs.
 
 ## Agent follow-ups
 - [ ] Q021: four empty combos were created (`docs/figma/build-plans/Q021/plan.json` `build.classesCreated`). When placing on real pages, copy the home or dining snap section for each snap group (wellness and meetings need their tab labels and intro), and use the Venue Card Fullbleed component for the legal and corporate static cards, then remove the build page.
@@ -69,4 +73,6 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q012: upload and record any remaining assets in `figma/assets.json` and `webflow-ids.md` (Bonvoy `6ad744318e4b52f5c4d49ec6` and Tribute Portfolio `6ad744312406f6ae5126bc5f` are already recorded).
 - [ ] Q015: fix `validate-plan.mjs` failing on main with "proposedShared needs why" (K01 removed the `why` fields).
 - [ ] Q013: place the Footer Links component on the 24 pages (left for a later step), then remove the build page.
+- [ ] Q022: four empty combos were created (listed in `docs/figma/build-plans/Q022/plan.json` `build.classesCreated`).
+- [ ] Q022: place the component on guidelines, press, contact, legal and corporate (and the is-tall section on meetings-collection) once the slot decision is made, then remove the build page.
 - [ ] Q016: place `script-intro-centered` on the 9 pages (home uses `is-tall` once variants are decided), then remove the build page. happenings-indiv/02 and blog-indiv/02 still need their own entry.

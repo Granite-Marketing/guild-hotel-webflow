@@ -89,6 +89,7 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 | Map Feature | `8e90ff20-1ed1-43a7-edce-89b7ea10c487` | Q019, built on `/build-map-feature` (2026-10-20); 22 props (Content, Button, Visibility, Places, Image groups); `is-image-bg` and `is-centered` are reference sections on the build page |
 | Split image text light | `663131a8-3362-867e-25ef-28b6d3d209a2` | Q017, built on `/build-split-image-text-light` (2026-10-20); 17 props (7 content, 2 image, 8 visibility booleans); variants are plain reference sections on the build page |
 | Image Trio Text | `eae1d08c-c012-be1b-bafe-4ca88d995c14` | Q020, built on `/build-image-trio-text` (2026-10-20); 16 props (Header, CTA, Images, Items groups); `is-left` and `is-left` + `is-offset` are reference sections on the build page |
+| form-split-script-contact | `2f0cac24-8156-b0d7-520c-f5128139d6b0` | Q022, built on `/build-form-split-script-contact` (2026-10-20); 7 props (Heading, Paragraph, 5 Show booleans); default content is the guidelines/06 photoshoot form; `is-tall` is a reference section on the build page |
 | Venue Card Fullbleed | `bbccdbb5-db17-02a1-a0cc-43ce0f5da371` | Q021 static base card, built on `/build-venue-card-fullbleed` (2026-10-20); 15 props (5 content and button, 4 image, 6 Show booleans); snap groups, `is-tall` and `is-left` are plain reference sections on the build page |
 
 ## Variable Collections
