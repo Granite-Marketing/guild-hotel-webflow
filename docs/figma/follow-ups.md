@@ -218,7 +218,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 ## Q035 Meetings (2026-10-20)
 - [ ] Q035: visual check of `/meetings` on staging (`https://the-guild-hotel-c34e71.webflow.io/meetings`); notes and screenshots in `docs/figma/build-plans/Q035/`. Agent check: order and markers pass, A01 snap runs (panels and tabs switch), the council boardroom dialog opens and closes with ESC, the offers slider initialises, no overflow at 390.
 - [ ] Q035 (Q022 owner): the Request for Proposal section uses the Tall variant but shows the component's photoshoot fields; the RFP fields (contact information: first name, last name, email, phone, company; event details: date, number of people, start time, end time, additional details) need the form slot or a separate RFP form.
-- [ ] Q035: images still to come: council boardroom panel (Figma grey slot; Q021-OQ6, the small dark square in the crop is not built), the three key features card figures (`data-image-placeholder`), the four gallery tiles, the hero. Lobby terrace and 1 america plaza panels reuse the Figma photos; confirm 1 america plaza's photo (it is also the home wellness image).
+- [ ] Q035: images still to come (stand-ins now in place, real photos still needed): council boardroom panel (Figma grey slot; Q021-OQ6, the small dark square in the crop is not built), the three key features card figures (`data-image-placeholder`), the four gallery tiles, the hero. Lobby terrace and 1 america plaza panels reuse the Figma photos; confirm 1 america plaza's photo (it is also the home wellness image).
 - [ ] Q035: only council boardroom has a dialog (`council-boardroom`); the lobby terrace and 1 america plaza "discover more" buttons have no link until their room content exists. The dialog's item texts and floorplan link are component defaults.
 - [ ] Q035: tabs read the panel names (council boardroom, lobby terrace, 1 america plaza); Figma tabs read "council boardroom, terrace, conference center". Confirm names with the client. In the eyebrow caps font the "1" of "1 america plaza" reads like a bar.
 - [ ] Q035: "book your space" links to `/contact`; point it at the RFP section once that section can carry an id.
@@ -266,6 +266,19 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q041: the "by eva struble" line in the Oceano dialog is plain text; the artist dialog opens from the second gallery tile. Linking the byline needs a link prop on the Overlay Detail Panel Modal eyebrow.
 - [ ] Q041: the Figma gallery rows bleed off both edges; the build wraps centred like `/gallery`. Decide whether Arts wants the edge-to-edge mosaic.
 
+## Q038 Rooms individual (2026-10-20)
+
+- [ ] Q038 (Designer): visual check of `/rooms-individual` against the rooms-individual crops, mainly the one-off room description (03) and amenities grid (07). Notes in `docs/figma/build-plans/Q038/build.md`.
+- [ ] Q038: "view floorplan" links to `#`; point it at a floorplan PDF asset or page when one exists.
+- [ ] Q038: image choices are stand-ins from the library (room photos from rooms-collection); swap for the deluxe king suite photography when it arrives. Alt text on the two hero images was written in the build; review with `/asset-metadata`.
+- [ ] Q038: the Discover Other Rooms carousel does not initialise on staging until `cardCarouselHeaderLeft()` ships (see the v1.1.2 item above).
+- [ ] Q038: the carousel cards all link to `/rooms`; point each at its room page once a Rooms CMS template exists (Q009 notes rooms-individual could bind to the Rooms collection).
+## Q039 Press (2026-10-20)
+- [ ] Q039: visual check of `/press` on staging (`https://the-guild-hotel-c34e71.webflow.io/press`) against the press crops; build record and staging notes in `docs/figma/build-plans/Q039/build.md`.
+- [ ] Q039: press cards (03 to 07) show hotel photos with the publication name, not the Figma press logos. To show logos, upload the National Geographic, Forbes and Architectural Digest SVGs (`figma/vectors/`) and add a logo overlay (image prop plus Show boolean) to Article Card Staggered, or swap in logo-on-photo images.
+- [ ] Q039: the press enquiries form shows the component's photoshoot fields; the Figma press form has organization and expected publish date. Needs a Designer slot or a form variant (same as the Q022 slot follow-up).
+- [ ] Q039: tab-pills-intro links point at `#press`, `#design` and `#community`, which have no targets on the page.
+- [ ] Q039: "more of the guild" carousel arrows are dead on staging until `cardCarouselHeaderLeft()` ships in a released bundle (Q009 item above).
 ## Fill placeholder images: components and CMS (2026-10-20)
 
 Stand-in library photos so staging shows no grey placeholder from a component or CMS field. Picks follow the slot loosely (rooms, food, exteriors); none is the final design image. Asset ids per slot are in each plan's `assets` (Q006, Q008, Q009, Q014, Q016 to Q022, Q024 to Q026). No new uploads; no new classes.
@@ -274,7 +287,7 @@ Stand-in library photos so staging shows no grey placeholder from a component or
 - [x] Show image defaults turned on for Offers Slider Split (1 to 5), Card Carousel Header Left (1 to 6), Article Card Staggered and Article Card Staggered Tall (1 to 3), so their figures show the image instead of a grey fill.
 - [x] Images added inside the empty grey figures: the four `timeline-scatter-images_image-wrap` boxes in timeline-scatter-images and in timeline-scatter-images Tall (class `timeline-scatter-images_image`), and `form-split-script-contact_media` (`u-image`). The split image text stamp now shows the postmark SVG.
 - [x] CMS: `intro-image` set on dining-poollounge, dining-lobbybar and dining-gardenterrace (republished; Zuma kept its image). `hero-image` set on all six Happenings & Stories posts (still drafts). Post Categories has no image field.
-- [ ] Staging check after publish (2026-10-20): no empty `img` src on home, rooms, gallery, history, dining, wellness, guidelines, neighborhood, static-template, meetings or the four dining items. Still grey, and page-level (not component or CMS): the `section_placeholder` sections on home, rooms, gallery and history (unbuilt Q007, Q008, Q009 slots), and the three `meetings-collection-features_figure` cards on `/meetings`.
+- [ ] Staging check after publish (2026-10-20): no empty `img` src on home, rooms, gallery, history, dining, wellness, guidelines, neighborhood, static-template, meetings or the four dining items. Still grey, and page-level (not component or CMS): the `section_placeholder` sections on home, rooms, gallery and history (unbuilt Q007, Q008, Q009 slots), and the three `meetings-collection-features_figure` cards on `/meetings` (meetings cards filled since; see the Meetings item below).
 - [ ] Hero Fullbleed Centered Logo and Venue Card Logo props have no default; both are off by default (Show Logo false). Set a logo asset where an instance turns Show Logo on.
 - [ ] Article Card Staggered Tall: Image 2 and Image 3 have defaults but cards 2 and 3 are still not built.
 - [ ] Replace every stand-in with the real photo when imagery arrives; the existing "real photos" follow-ups above stay open.
@@ -289,6 +302,6 @@ Stand-in library photos on page-level sections and instance props, so staging sh
 - [x] Placeholder swaps (Q008, Q009): Home home/13 retail became Offers Slider Split Blue `30b825d4-bcde-7241-ae17-8d5c1209c9c0` (one slide, retail copy and photo) and home/16 Base `a5660ddd-9800-ec8a-c973-bd44cf6dfba3`; Rooms rooms-collection/09 Base `d76e0040-2c7c-848f-09fe-0a00f3c0ca43`; History history/09 Card Carousel Header Left Compact `1d8e9af5-d4ac-dcff-bd4f-79d0619e921f` and history/11 Offers Base `53cc018f-978c-1710-cd20-8c5b24c1cae0`; Gallery gallery/03 Offers Base `93811a07-d6df-a9c6-26a4-b32168e70920` and gallery/04 Card Carousel Base `b25f0f77-8f68-ab47-c317-7bfe510fe70d`. The seven placeholder sections were removed.
 - [ ] Dinings Template: the Q009 stand-in `86d57348-f224-7d1f-8ca3-1011769f1eb2` (`section_card-stagger-header-left`) was kept, not swapped: its labels are bound to the `other-dining-label-*` CMS fields, and it now shows photos. Decide whether it becomes a Card Carousel instance with props bound to those fields.
 - [ ] Rooms: the Q007 `section_placeholder` (`#all-rooms`) stays until Q007 is built.
-- [ ] `/meetings` was not covered by this pass: the switch to include it was blocked by the auto-mode permission check. Its key features figures still need images.
+- [x] `/meetings` (follow-up pass): stand-in photos in the hero (Show Image on, Base variant), the council boardroom panel and the three key features figures; gallery Images 1 and 4 varied. Per-slot asset ids in `docs/figma/build-plans/Q035/build.md`.
 - [ ] Offers sliders on Home, Rooms, History and Gallery hold the component's placeholder copy on slides 1 to 5 (except Home retail); set real offer copy and hide unused slides.
 - [ ] Every photo here is a stand-in; replace with the real imagery when it arrives, and run `/asset-metadata` for alt text (added images carry short generic alt).
