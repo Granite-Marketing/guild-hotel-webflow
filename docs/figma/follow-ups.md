@@ -4,6 +4,8 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 
 ## Stephen, in the Designer
 
+- [ ] Q019: visual check of `/build-map-feature` (base instance plus the is-image-bg and is-centered reference sections) against `docs/figma/build-plans/Q019/preview-*-1440.png`. No rich text styling is needed.
+
 - [ ] Q012: set the email input placeholder to `*Email` on the newsletter form (the Data API rejects `placeholder`).
 - [ ] Q012: mark the background image decorative, so future library alt text does not apply to it.
 - [ ] Q012: visual check of `/build-cta-booking-newsletter` against `docs/figma/build-plans/Q012/preview-base-1440.png` and the home/18 crop (nothing was compared yet).
@@ -22,6 +24,9 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q018: visual check of `/build-gallery-mosaic-captioned` in the Designer against `docs/figma/build-plans/Q018/preview-base-1440.png` and the meetings-collection/09 crop (nothing was compared yet; tiles show Webflow's placeholder image).
 
 ## Decisions for Stephen
+
+- [ ] Q019: `is-image-bg` and `is-centered` cannot switch on a Map Feature instance (same as Q014). Options: Webflow component variants, or separate components for the two variants.
+- [ ] Q019: the base map art shows Atlanta streets and Hotel Clermont; confirm it ships or supply a San Diego map. Also the four Directions URLs, and whether to export the masked history illustration (node 236:8254).
 
 - [ ] Q014: per-instance variants (`is-text-dark`, `is-left`, button colours `is-blue`, `is-burgundy`) cannot switch on a component instance. Options: Webflow component variants, or a second component for the dark-text heroes (and separate ones for the button colours).
 - [ ] Q012: the book now URL (`#` for now), the newsletter provider with success and error copy, and whether the Bonvoy logo should link.
@@ -42,7 +47,9 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q015: `.heading-style-h2.text-weight-normal` and the four accordion combos exist but are empty; decide whether they need styles or can stay empty, and promote `.heading-style-h2.text-weight-normal` to a shared combo if other families need it.
 - [ ] Q015: add the chevron custom code `.accordion_header.is-active .accordion_icon { transform: rotate(0deg); }` to site custom code.
 - [ ] Q015: change the accordion module so the first item is open on load.
-- [ ] Q019 (from the K02 check): bind the `map-feature_pin` colour to the new Tan variable (Colors/Tan #906E58).
+- [x] Q019 (from the K02 check): bind the `map-feature_pin` colour to the new Tan variable (Colors/Tan #906E58). Done in the Q019 build.
+- [ ] Q019: `.map-feature_content.is-image-bg` background is still a raw `#906E58`; bind it to Colors/Tan too.
+- [ ] Q019: place Map Feature on home, dining-collection, rooms-collection and rooms-individual (base), and decide how the is-image-bg (meetings, neighborhood, legal, corporate) and is-centered (history) sections ship, then remove the build page.
 - [ ] K02 cleanup: replace six family image classes that duplicate `u-image` (`hero-fullbleed-centered_image`, `split-image-text-light_image`, `gallery-mosaic-captioned_image`, `image-trio-text_image`, `venue-card-fullbleed_image`, `image-inset-single_image`) with `u-image` on the components.
 - [ ] K02 cleanup: merge the four identical logo classes (`cta-booking-newsletter_logo`, `footer-links_logo-image`, `hero-fullbleed-centered_logo`, `venue-card-fullbleed_logo`) into one shared logo class.
 - [ ] K02: `accordion_item` border-bottom colour is a literal `rgba(38, 33, 24, 0.3)` and not bound to Neutral Darkest; rebind if Webflow allows an alpha variable.

@@ -240,7 +240,7 @@
           "width": "4.25%",
           "aspect-ratio": "1 / 1",
           "border-radius": "50%",
-          "background-color": "#906E58"
+          "background-color": "var(--_primitives---colors--tan)"
         },
         "tablet": {},
         "mobileLandscape": {},
@@ -852,7 +852,7 @@
   "assets": [
     {
       "slot": "image (base: neighborhood map illustration)",
-      "webflowAssetId": null,
+      "webflowAssetId": "6ad74983c0f141bdb6fd4115",
       "local": "figma/vectors/group-270990043-1291x881-433-6592.svg"
     },
     {
@@ -1021,7 +1021,13 @@
     "Map pins are CSS circles in % positions inside the figure (is-pin-1 to is-pin-4) rather than the four ellipse SVGs; the section keeps the 1600/1170 aspect on desktop so the pins stay on the courthouses.",
     "The card's divider colour (rgba(244, 239, 223, 0.3)) is read from the crop; the spec lists no stroke.",
     "is-pin-1 to is-pin-4 are combos on map-feature_pin listed in familyClasses (with comboOn) because they sit in the tree on every instance; they place the four pins and are not plan variants.",
-    "The image-bg map's Figma fills (a black COLOR-blend layer and a 10% black layer over the photo) become filter: grayscale(100%) brightness(0.9) on map-feature_image is-image-bg; the history illustration's MULTIPLY fill becomes mix-blend-mode: multiply."
+    "The image-bg map's Figma fills (a black COLOR-blend layer and a 10% black layer over the photo) become filter: grayscale(100%) brightness(0.9) on map-feature_image is-image-bg; the history illustration's MULTIPLY fill becomes mix-blend-mode: multiply.",
+    "Q019 build (2026-10-20): the is-image-bg and is-centered variants are plain reference sections on the build page, not component instances, because a component instance cannot switch combo classes (same as Q014). The Map Feature component is the base variant.",
+    "Q019 build: map-feature_pin background-color is bound to Colors/Tan (--_primitives---colors--tan) instead of the raw #906E58. map-feature_content.is-image-bg still uses the raw hex.",
+    "Q019 build: the Button Link prop on the base instance is a url link to /neighborhood, not a page link: prop values accept only url, email, phone, popover and modal modes. The definition's page link was replaced by the prop binding.",
+    "Q019 build: props are 22, named in Title Case (Heading, Text, Button Label, Button Link, Show Aside, Show Button, Show List, Show Pins, Place Name/Walk/Link 1 to 4, Image, Image Alt). The four Directions links default to # in a new tab with rel noopener.",
+    "Q019 build: the base map SVG was uploaded as neighborhood-map.svg (6ad74983c0f141bdb6fd4115); the Image prop has no default, so each instance must set it.",
+    "Q019 build: created four empty combos so the stacks apply: .map-feature_text.text-size-medium, .map-feature_text.text-style-eyebrow-caps, .map-feature_link.text-size-medium and the shared .heading-style-h4.text-weight-normal."
   ],
   "k01": {
     "reconciledBy": "K01, 2026-10-20",
