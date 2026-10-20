@@ -30,6 +30,8 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 | Dining | `6ad66fd476d24ed37ac4c5cb` | `/dining` | dining-collection; assembled by Q032 (2026-10-20), Body `6ad66fd476d24ed37ac4c5d1` |
 | Guidelines | `6ad66fd44c7f57894534ada5` | `/guidelines` | guidelines; assembled by Q037 (2026-10-20), Body `6ad66fd44c7f57894534adac`; element ids in `docs/figma/build-plans/Q037/plan.md` |
 | Rooms | `6ad66fd5f8bf4846e809dbee` | `/rooms` | rooms-collection; assembled by Q033 (2026-10-20), Body `6ad66fd5f8bf4846e809dbf6` |
+| Room Detail | `6ad66fd5f8bf4846e809dc45` | `/rooms-individual` | rooms-individual; assembled by Q038 (2026-10-20), Body `6ad66fd5f8bf4846e809dc4b`; element ids in `docs/figma/build-plans/Q038/build.md` |
+| Press | `6ad66fd5735773f253406642` | `/press` | press |
 | Room Detail | `6ad66fd5f8bf4846e809dc45` | `/rooms-individual` | rooms-individual |
 | Press | `6ad66fd5735773f253406642` | `/press` | press; assembled by Q039 (2026-10-20), Body `6ad66fd5735773f253406673`; element ids in `docs/figma/build-plans/Q039/build.md` |
 | Gallery | `6ad66fd65794075272b95584` | `/gallery` | gallery |
