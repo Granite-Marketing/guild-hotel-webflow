@@ -215,6 +215,15 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q032: solana coffee has no `🍴 Dinings` item, so its "discover more" button has no link. Add a CMS item or a target URL.
 - [ ] Q032: the dining-collection tab "lobby terrace" was built as "garden terrace" to match the panel and the CMS item; confirm the venue name with the client.
 - [ ] Q032: hero has no image (Figma grey slot); set Image and Show Image when the asset arrives. Venue photo alt text is empty; run `/asset-metadata`.
+## Q035 Meetings (2026-10-20)
+- [ ] Q035: visual check of `/meetings` on staging (`https://the-guild-hotel-c34e71.webflow.io/meetings`); notes and screenshots in `docs/figma/build-plans/Q035/`. Agent check: order and markers pass, A01 snap runs (panels and tabs switch), the council boardroom dialog opens and closes with ESC, the offers slider initialises, no overflow at 390.
+- [ ] Q035 (Q022 owner): the Request for Proposal section uses the Tall variant but shows the component's photoshoot fields; the RFP fields (contact information: first name, last name, email, phone, company; event details: date, number of people, start time, end time, additional details) need the form slot or a separate RFP form.
+- [ ] Q035: images still to come: council boardroom panel (Figma grey slot; Q021-OQ6, the small dark square in the crop is not built), the three key features card figures (`data-image-placeholder`), the four gallery tiles, the hero. Lobby terrace and 1 america plaza panels reuse the Figma photos; confirm 1 america plaza's photo (it is also the home wellness image).
+- [ ] Q035: only council boardroom has a dialog (`council-boardroom`); the lobby terrace and 1 america plaza "discover more" buttons have no link until their room content exists. The dialog's item texts and floorplan link are component defaults.
+- [ ] Q035: tabs read the panel names (council boardroom, lobby terrace, 1 america plaza); Figma tabs read "council boardroom, terrace, conference center". Confirm names with the client. In the eyebrow caps font the "1" of "1 america plaza" reads like a bar.
+- [ ] Q035: "book your space" links to `/contact`; point it at the RFP section once that section can carry an id.
+- [ ] Q035: key features at 390 is long (2714px, 431px figures); consider smaller figures or a two-up layout at `small` after the client review.
+
 ## R00 early release (2026-10-20)
 - [ ] R00: push tag `v1.1.1` (`git push origin v1.1.1` from a checkout of the release commit `1e3e1429`). The auto mode classifier blocked the push from the R00 session. The bundle already serves at the commit-pinned jsDelivr URL.
 - [ ] R00: paste the site head and footer code from `docs/reference/site-scripts.md` into Site Settings > Custom Code (the classifier blocked `set_site_freeform_code`), empty the footer block on `🧱 site-nav`, then publish to webflow.io only.
