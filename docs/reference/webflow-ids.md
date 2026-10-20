@@ -43,6 +43,26 @@ Static pages created by Q004 on 2026-10-19 (slugs approved by Stephen: the four 
 |---|---|---|
 | Global Styles | `ab488b17-f25a-fbf8-5f54-4a3955eb57e5` | Relume starter global styles embed |
 
+## Variable Collections
+
+| Collection | ID |
+|---|---|
+| Primitives | `collection-0220e3ad-eb86-03ea-3026-8a5979301dd2` |
+| Color Schemes | `collection-139f4ef2-8521-8181-4a7f-fc90894e2d6f` |
+| Typography | `collection-3c6a4911-12c4-e415-7fe0-514cefa2d46d` |
+| UI Styles | `collection-08964abb-b13c-a798-071a-663d82b7f0a6` |
+
+Each has one mode, `base`. Variable IDs, values and the convention-name map live in `docs/reference/style-inventory.md` (Q001, 2026-10-20).
+
+## Custom Fonts
+
+| Family | Weight | Font ID |
+|---|---|---|
+| Sackers Gothic | 900 | `6ad67b3ff294f472f82ca72c` |
+| Gatchtest | 400 | `6ad67b1b1c2db33882637dce` |
+| Gatchtest | 500 | `6ad67b211c2db33882637e72` |
+| Morello Pen | 400 | `6ad67b4109d470f005e31d2b` |
+
 ## CMS Collections
 
 Created by C01 (2026-10-19); IDs are in the C01 section below. Proposed schemas: `docs/figma/cms-proposal.md`; field map: `docs/figma/build-plans/cms-fields.md`.
