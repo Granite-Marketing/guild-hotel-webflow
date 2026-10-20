@@ -128,3 +128,11 @@ Rules for the build skill:
 - Use `data_element_builder` with classes created first through `data_style_tool`.
 - Set page links through `data_element_settings_tool` (`static_link`, `mode: "page"`), never through the builder's `set_link` page type.
 - Give every session its own `agent_id`.
+
+## Gotchas found in the wave 2 parallel builds (Q015, 2026-10-20)
+
+- **Class stacks need their combo style to exist.** `data_element_builder` `set_style` with `["heading-style-h2", "text-weight-normal"]` drops every class silently when `.heading-style-h2.text-weight-normal` does not exist. The element comes back with no classes, and the call still reports success. `data_element_tool > set_style` returns `One or more styles not found`. Create the combo chain first (`create_style` with `parent_style_names`, the two-class level before the three-class level). Then read back `styleNames` on every element.
+- **No native `<button>`.** `BY_CUSTOM_TAG` with `button` becomes a Webflow Link holding "Button Text". `type` is a reserved attribute name, and using it rejects the call. Use a Link Block with `href="#"` for JS triggers.
+- **A rejected builder call leaves a partial tree.** Elements created before the error stay on the page. Read the page back and remove the partial elements before retrying.
+- **TextBlock text:** the builder's `set_text` on a `TextBlock` is ignored, and `data_element_tool > set_text` says "This element doesn't support text". Write it with `data_element_settings_tool > set_settings`, key `text`, `static_text.value`.
+- **HtmlEmbed code:** create the embed empty, then write it with `set_settings`, key `code`, `static_text.value`. The code and links survive `transform_element_to_component`.

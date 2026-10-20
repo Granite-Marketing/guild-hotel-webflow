@@ -559,7 +559,9 @@
   "deviations": [
     "Question text is a div with heading-style-h4 inside the button, not an h3 in a header wrapper: a button cannot contain a heading, and the module needs the trigger to be the direct previous sibling of the content wrapper.",
     "Chevron is an inline SVG embed using currentColor (redrawn as a stroked path from figma/vectors/frame-24x24-236-8173.svg) instead of an uploaded asset: the vector has no Webflow asset id and an embed follows the text colour.",
-    "accordion_* classes are proposed shared, not faq-accordion_*: their names are fixed by the accordion runtime module contract."
+    "accordion_* classes are proposed shared, not faq-accordion_*: their names are fixed by the accordion runtime module contract.",
+    "Build (2026-10-20): the trigger is a Link Block (href=\"#\") with class accordion_header, the plan's own fallback. The Data API cannot make a native button: BY_CUSTOM_TAG button becomes a Webflow Link, and type is a reserved attribute name. The module calls preventDefault, so the click works; Space does not activate a link, only Enter.",
+    "Build (2026-10-20): created five empty combo styles (no properties), approved by Stephen, so the planned stacks apply: .heading-style-h2.text-weight-normal, .accordion_question.heading-style-h4, .accordion_question.heading-style-h4.text-weight-normal, .accordion_content.text-size-medium, .accordion_content.text-size-medium.text-weight-normal. Webflow needs the two-class level before the three-class level."
   ],
   "k01": {
     "reconciledBy": "K01, 2026-10-20",
@@ -569,5 +571,12 @@
       "The six `accordion_*` classes are shared (runtime contract of accordion.ts), defined in shared-classes.json.",
       "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
     ]
+  },
+  "build": {
+    "date": "2026-10-20",
+    "page": "build-faq-accordion",
+    "pageId": "6ad712c2faaaa1926dd004e3",
+    "componentId": "064f3089-65e4-65ec-6f9a-dc5cb4ab8ee7",
+    "componentName": "faq-accordion"
   }
 }
