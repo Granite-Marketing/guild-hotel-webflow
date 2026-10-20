@@ -1,0 +1,661 @@
+{
+  "entry": "Q023",
+  "component": "tab-pills-intro",
+  "buildOn": {
+    "page": "wellness-collection",
+    "pageId": "6ad66fd7735773f253406791",
+    "section": "wellness-collection/02-from-movement-and-produce-to-deep"
+  },
+  "reusedClasses": [
+    "padding-global",
+    "container-large",
+    "heading-style-h1",
+    "text-size-medium"
+  ],
+  "familyClasses": [
+    {
+      "name": "section_tab-pills-intro",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "background-color": "var(--color-neutral-100)",
+          "color": "var(--color-accent)"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "tab-pills-intro_component",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+          "padding-top": "10rem",
+          "text-align": "center"
+        },
+        "tablet": {
+          "padding-top": "7rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "5rem"
+        },
+        "mobilePortrait": {
+          "padding-top": "4rem"
+        }
+      }
+    },
+    {
+      "name": "tab-pills-intro_header",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+          "row-gap": "5rem",
+          "max-width": "60rem"
+        },
+        "tablet": {
+          "row-gap": "3.5rem"
+        },
+        "mobileLandscape": {
+          "row-gap": "2.5rem"
+        },
+        "mobilePortrait": {
+          "row-gap": "2rem"
+        }
+      }
+    },
+    {
+      "name": "tab-pills-intro_heading",
+      "styles": {
+        "desktop": {
+          "margin-top": "0",
+          "margin-bottom": "0"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "tab-pills-intro_text",
+      "styles": {
+        "desktop": {
+          "max-width": "37.5rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "tab-pills-intro_stage",
+      "styles": {
+        "desktop": {
+          "display": "flex",
+          "justify-content": "center",
+          "padding-top": "3.75rem",
+          "padding-right": "2rem",
+          "padding-bottom": "3.5rem",
+          "padding-left": "2rem"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {
+          "padding-top": "2.5rem",
+          "padding-right": "1rem",
+          "padding-bottom": "2.5rem",
+          "padding-left": "1rem"
+        }
+      }
+    },
+    {
+      "name": "tab-pills-intro_frame",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "display": "flex",
+          "justify-content": "center",
+          "max-width": "100%"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
+      "name": "tab-pills-intro_tabs",
+      "styles": {
+        "desktop": {
+          "position": "relative",
+          "z-index": "50",
+          "display": "flex",
+          "align-items": "center",
+          "column-gap": "2.8125rem",
+          "height": "3.5rem",
+          "max-width": "100%",
+          "padding-right": "3.75rem",
+          "padding-left": "3.75rem",
+          "overflow-x": "auto",
+          "white-space": "nowrap",
+          "background-color": "var(--color-brand-4a1217)",
+          "clip-path": "polygon(1.25rem 0, calc(100% - 1.25rem) 0, 100% 1rem, 100% calc(100% - 1rem), calc(100% - 1.25rem) 100%, 1.25rem 100%, 0 calc(100% - 1rem), 0 1rem)"
+        },
+        "tablet": {
+          "column-gap": "2rem",
+          "padding-right": "2.5rem",
+          "padding-left": "2.5rem"
+        },
+        "mobileLandscape": {},
+        "mobilePortrait": {
+          "justify-content": "flex-start",
+          "column-gap": "1.5rem",
+          "padding-right": "1.5rem",
+          "padding-left": "1.5rem"
+        }
+      }
+    },
+    {
+      "name": "tab-pills-intro_tab",
+      "styles": {
+        "desktop": {
+          "flex": "0 0 auto",
+          "color": "var(--color-neutral-100)",
+          "opacity": "0.45",
+          "text-decoration": "none",
+          "transition": "opacity 300ms ease"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    }
+  ],
+  "proposedShared": [
+    {
+      "name": "text-style-script",
+      "why": "Morello pointed-pen script headings (Morello 60 and 80 styles, 74 text nodes across the file); stacks on a heading-style-* size class so every script heading shares one family and leading.",
+      "styles": {
+        "desktop": {
+          "font-family": "Morello",
+          "font-weight": "400",
+          "line-height": "1.2",
+          "letter-spacing": "0",
+          "text-transform": "none"
+        }
+      }
+    },
+    {
+      "name": "text-style-eyebrow-caps",
+      "why": "EYEBROW-CAPS named style (393 text nodes): tab labels, eyebrows and small caps labels in most components. Suggested combo name from figma/tokens.json.",
+      "styles": {
+        "desktop": {
+          "font-family": "\"Sackers Heavy Gothic\"",
+          "font-size": "1.125rem",
+          "font-weight": "400",
+          "line-height": "1.2",
+          "letter-spacing": "-0.03em",
+          "text-transform": "lowercase"
+        },
+        "mobilePortrait": {
+          "font-size": "1rem"
+        }
+      }
+    }
+  ],
+  "variables": [
+    "color-neutral-100",
+    "color-accent",
+    "color-brand-4a1217"
+  ],
+  "tree": [
+    {
+      "tag": "section",
+      "classes": [
+        "section_tab-pills-intro"
+      ],
+      "attributes": {
+        "data-scroll-enlarge-snap": ""
+      },
+      "children": [
+        {
+          "tag": "div",
+          "classes": [
+            "padding-global"
+          ],
+          "attributes": {},
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "container-large"
+              ],
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "tab-pills-intro_component"
+                  ],
+                  "attributes": {},
+                  "children": [
+                    {
+                      "tag": "header",
+                      "classes": [
+                        "tab-pills-intro_header"
+                      ],
+                      "attributes": {},
+                      "children": [
+                        {
+                          "tag": "h2",
+                          "classes": [
+                            "tab-pills-intro_heading",
+                            "heading-style-h1",
+                            "text-style-script"
+                          ],
+                          "attributes": {
+                            "aria-label": "{heading}"
+                          },
+                          "prop": "heading",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "tab-pills-intro_text",
+                            "text-size-medium"
+                          ],
+                          "attributes": {},
+                          "children": [
+                            {
+                              "tag": "p",
+                              "classes": [],
+                              "attributes": {},
+                              "prop": "text",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "tab-pills-intro_stage"
+          ],
+          "attributes": {
+            "data-scroll-enlarge-snap-stage": ""
+          },
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "tab-pills-intro_frame"
+              ],
+              "attributes": {
+                "data-scroll-enlarge-snap-media": ""
+              },
+              "children": [
+                {
+                  "tag": "slot",
+                  "classes": [],
+                  "attributes": {},
+                  "slot": "panels",
+                  "note": "Webflow component slot. Media instances drop one Q021 venue card per panel here, each carrying data-scroll-enlarge-snap-item. Base instances leave it empty.",
+                  "children": []
+                },
+                {
+                  "tag": "nav",
+                  "classes": [
+                    "tab-pills-intro_tabs"
+                  ],
+                  "attributes": {
+                    "aria-label": "{tabs label}"
+                  },
+                  "slot": "tabs",
+                  "note": "Webflow component slot holding the tab links; each instance adds one link per tab from the template below.",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "tab-pills-intro_tab",
+                        "text-style-eyebrow-caps"
+                      ],
+                      "attributes": {
+                        "href": "{tab href}",
+                        "data-scroll-enlarge-snap-tab": ""
+                      },
+                      "repeat": "tabs",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "modifier": "is-media",
+      "on": "tab-pills-intro_component",
+      "styleDeltas": {
+        "desktop": {
+          "padding-top": "7.5rem",
+          "padding-bottom": "10rem"
+        },
+        "tablet": {
+          "padding-top": "5.5rem",
+          "padding-bottom": "6rem"
+        },
+        "mobileLandscape": {
+          "padding-top": "4rem",
+          "padding-bottom": "4rem"
+        },
+        "mobilePortrait": {
+          "padding-top": "3rem",
+          "padding-bottom": "3rem"
+        }
+      },
+      "crop": "figma/pages/wellness-collection/sections/02-from-movement-and-produce-to-deep/section.webp"
+    },
+    {
+      "modifier": "is-media",
+      "on": "tab-pills-intro_header",
+      "styleDeltas": {
+        "desktop": {
+          "row-gap": "3.5rem"
+        },
+        "tablet": {
+          "row-gap": "2.5rem"
+        },
+        "mobileLandscape": {
+          "row-gap": "2rem"
+        }
+      },
+      "crop": "figma/pages/wellness-collection/sections/02-from-movement-and-produce-to-deep/section.webp"
+    },
+    {
+      "modifier": "is-media",
+      "on": "tab-pills-intro_stage",
+      "styleDeltas": {
+        "desktop": {
+          "height": "100svh",
+          "align-items": "center",
+          "padding-top": "1.25rem",
+          "padding-right": "1.25rem",
+          "padding-bottom": "1.25rem",
+          "padding-left": "1.25rem"
+        },
+        "mobilePortrait": {
+          "padding-top": "1rem",
+          "padding-right": "1rem",
+          "padding-bottom": "1rem",
+          "padding-left": "1rem"
+        }
+      },
+      "crop": "figma/pages/wellness-collection/sections/02-from-movement-and-produce-to-deep/section.webp"
+    },
+    {
+      "modifier": "is-media",
+      "on": "tab-pills-intro_frame",
+      "styleDeltas": {
+        "desktop": {
+          "width": "80.8333%",
+          "max-width": "none",
+          "aspect-ratio": "1261 / 712",
+          "align-items": "flex-end",
+          "overflow": "hidden",
+          "clip-path": "polygon(1.5rem 0, calc(100% - 1.5rem) 0, 100% 1.5rem, 100% calc(100% - 1.5rem), calc(100% - 1.5rem) 100%, 1.5rem 100%, 0 calc(100% - 1.5rem), 0 1.5rem)"
+        },
+        "mobileLandscape": {
+          "width": "100%",
+          "aspect-ratio": "4 / 3"
+        },
+        "mobilePortrait": {
+          "aspect-ratio": "4 / 5"
+        }
+      },
+      "crop": "figma/pages/wellness-collection/sections/02-from-movement-and-produce-to-deep/section.webp"
+    },
+    {
+      "modifier": "is-media",
+      "on": "tab-pills-intro_tabs",
+      "styleDeltas": {
+        "desktop": {
+          "position": "absolute",
+          "left": "50%",
+          "bottom": "2.5rem",
+          "max-width": "calc(100% - 2rem)",
+          "transform": "translateX(-50%)"
+        },
+        "mobilePortrait": {
+          "bottom": "1.5rem"
+        }
+      },
+      "crop": "figma/pages/meetings-collection/sections/02-intimate-spaces-for-celebration-collaboration/section.webp"
+    },
+    {
+      "modifier": "is-active",
+      "on": "tab-pills-intro_tab",
+      "styleDeltas": {
+        "desktop": {
+          "opacity": "1",
+          "text-decoration": "underline",
+          "text-decoration-thickness": "1px",
+          "text-underline-offset": "0.25rem"
+        }
+      },
+      "crop": "figma/pages/press/sections/02-a-room-for-every-stay/section.webp"
+    }
+  ],
+  "props": [
+    {
+      "name": "heading",
+      "type": "text",
+      "element": "tab-pills-intro_heading"
+    },
+    {
+      "name": "text",
+      "type": "text",
+      "element": "tab-pills-intro_text"
+    },
+    {
+      "name": "tabs label",
+      "type": "text",
+      "element": "tab-pills-intro_tabs"
+    },
+    {
+      "name": "tabs",
+      "type": "slot",
+      "element": "tab-pills-intro_tabs"
+    },
+    {
+      "name": "panels",
+      "type": "slot",
+      "element": "tab-pills-intro_frame"
+    },
+    {
+      "name": "variant",
+      "type": "variant",
+      "element": "section_tab-pills-intro",
+      "values": [
+        "base",
+        "media"
+      ]
+    }
+  ],
+  "assets": [],
+  "instances": [
+    {
+      "page": "wellness-collection",
+      "section": "wellness-collection/02-from-movement-and-produce-to-deep",
+      "variant": "is-media",
+      "content": {
+        "heading": "From movement\nand produce to deep rest.",
+        "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
+        "tabs label": "Wellness",
+        "tabs": [
+          {
+            "label": "in-room wellness",
+            "href": "#"
+          },
+          {
+            "label": "fitness center",
+            "href": "#"
+          },
+          {
+            "label": "mindful dining",
+            "href": "#"
+          },
+          {
+            "label": "wellness events",
+            "href": "#"
+          }
+        ],
+        "activeTab": 0,
+        "panels": [
+          "wellness-collection/03-in-room-wellness",
+          "wellness-collection/04-fitness-center",
+          "wellness-collection/05-mindful-dining",
+          "wellness-collection/06-wellness-events"
+        ],
+        "previewPanelImage": "assets/images/70a13b1d6cdae1be50f7d9ca4b2541937747ae45.jpg"
+      }
+    },
+    {
+      "page": "meetings-collection",
+      "section": "meetings-collection/02-intimate-spaces-for-celebration-collaboration",
+      "variant": "is-media",
+      "content": {
+        "heading": "Intimate spaces\nfor celebration & collaboration",
+        "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
+        "tabs label": "Meeting spaces",
+        "tabs": [
+          {
+            "label": "council boardroom",
+            "href": "#"
+          },
+          {
+            "label": "terrace",
+            "href": "#"
+          },
+          {
+            "label": "conference center",
+            "href": "#"
+          }
+        ],
+        "activeTab": 0,
+        "panels": [
+          "meetings-collection/03-council-boardroom",
+          "meetings-collection/04-lobby-terrace",
+          "meetings-collection/05-1-america-plaza"
+        ],
+        "previewPanelImage": "figma/vectors/vector-33-1261x712-288-4034.svg"
+      }
+    },
+    {
+      "page": "press",
+      "section": "press/02-a-room-for-every-stay",
+      "variant": "base",
+      "content": {
+        "heading": "A room\nfor every stay",
+        "text": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort.",
+        "tabs label": "Press categories",
+        "tabs": [
+          {
+            "label": "press",
+            "href": "#press"
+          },
+          {
+            "label": "design",
+            "href": "#design"
+          },
+          {
+            "label": "community",
+            "href": "#community"
+          }
+        ],
+        "activeTab": 0
+      }
+    },
+    {
+      "page": "happenings-collection",
+      "section": "happenings-collection/02-whats-on-in-san-diego",
+      "variant": "base",
+      "content": {
+        "heading": "What’s on\nin San Diego",
+        "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+        "tabs label": "Happenings categories",
+        "tabs": [
+          {
+            "label": "dining",
+            "href": "#dining"
+          },
+          {
+            "label": "culture",
+            "href": "#culture"
+          },
+          {
+            "label": "conferences",
+            "href": "#conferences"
+          }
+        ],
+        "activeTab": 0
+      }
+    },
+    {
+      "page": "blog-collection",
+      "section": "blog-collection/02-whats-on-in-san-diego",
+      "variant": "base",
+      "content": {
+        "heading": "What’s on\nin San Diego",
+        "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+        "tabs label": "Blog categories",
+        "tabs": [
+          {
+            "label": "dining",
+            "href": "#dining"
+          },
+          {
+            "label": "culture",
+            "href": "#culture"
+          },
+          {
+            "label": "conferences",
+            "href": "#conferences"
+          }
+        ],
+        "activeTab": 0
+      }
+    }
+  ],
+  "openQuestions": [
+    "Base tabs (press, happenings, blog) are in-page anchors to the category headings below. Nothing moves is-active as the reader scrolls, so the first tab stays active. Accept static, add a small scroll-spy module, or are happenings and blog tabs meant to be CMS filters (Finsweet) for Q029?",
+    "The vision review calls the pill nav 'floating'. Should the base pill nav stay sticky while the reader scrolls the cards below? The plan keeps it static.",
+    "Custom attributes are fixed in the component, so base instances also carry data-scroll-enlarge-snap. With an empty panels slot the module returns early but logs a console warning on press, happenings and blog. Accept, or make scrollEnlargeSnap skip silently when a root has no items (one-line change in src/utils/scrollEnlargeSnap.ts)?",
+    "Q021 home 04 to 09 uses the same pinned stage and frame without an intro. K01: promote tab-pills-intro_stage and tab-pills-intro_frame (is-media) to a shared pair (suggested enlarge-snap_stage, enlarge-snap_frame) if P021 plans its own.",
+    "Meetings tab labels (terrace, conference center) do not match the Q021 panel titles (lobby terrace, 1 america plaza). Which copy is right?",
+    "The Figma file has no mobile or tablet frames for these sections; all non-desktop values are proposals.",
+    "At 390 wide a long tab row scrolls sideways inside the pill (the last label is clipped, e.g. 'confe' on meetings) with no visible scroll cue. Accept, add an edge fade, or let the tabs wrap on mobile?"
+  ],
+  "deviations": [
+    "Three brief variants become one modifier, is-media. All three references centre their text (the brief's 'left-aligned' is a vision-review error), so is-centered changes nothing; is-1-image and is-tall both come from the media frame. The meetings frame is the same frame with Figma's #D9D9D9 placeholder where its first panel image will go.",
+    "The wellness frame image (asset 6ad67000240d911fb18d77af) is the first Q021 panel's image (it is also used by wellness-collection/03), so tab-pills-intro has no image of its own: the frame holds a panels slot for Q021 venue cards.",
+    "The H3-CAPS 'press' and 'dining' labels at the bottom of the base crops belong to the next section (press/03, happenings/03), so the brief's heading-size content note (h3-caps vs morello-80) does not apply. Every instance uses heading-style-h1 + text-style-script.",
+    "Heading colour is #000000 in the wellness and meetings references and #29310C in the base references. The plan inherits color-accent (#29310C) everywhere.",
+    "Paragraph widths in the references are 588, 636 and 660px; the plan uses one max-width of 37.5rem.",
+    "The base and media instances share one Webflow component; 'media' is a Webflow component variant that applies is-media to the component, header, stage, frame and tabs elements."
+  ]
+}
