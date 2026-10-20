@@ -36,6 +36,11 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | finsweetRefresh | `finsweetRefresh.ts` | opt-in | F (3rd) |
 | filterActiveState | `filterActiveState.ts` | opt-in | F (4th) |
 | scrollTextReveal | `scrollTextReveal.ts` | opt-in | G |
+| galleryFilter | `galleryFilter.ts` | opt-in | E |
+| historyStickyYear | `historyStickyYear.ts` | opt-in | G |
+| offersSliderSplit | `offersSliderSplit.ts` | opt-in (Q008, not wired yet) | C, after swiperSliders |
+| cardCarouselHeaderLeft | `cardCarouselHeaderLeft.ts` | opt-in (Q009, not wired yet) | C, after swiperSliders |
+| imageStackCollapse | `imageStackCollapse.ts` | opt-in | G |
 | galleryFilter | `galleryFilter.ts` | wired (R00) | E |
 | historyStickyYear | `historyStickyYear.ts` | wired (R00) | G |
 | offersSliderSplit | `offersSliderSplit.ts` | wired (R00) | C, after swiperSliders |
@@ -571,3 +576,7 @@ transforms.
 ## offersSliderSplit (Q008)
 
 Crossfading split slider for the Offers Slider Split component. Needs the Swiper 12 CDN CSS and JS. DOM contract: `.swiper_slider[data-offers-slider]` wraps `.swiper.offers` > `.swiper-wrapper` > `.swiper-slide`; `[data-offers-slider-controls]` holds `[data-offers-slider-prev]`, `[data-offers-slider-current]`, `[data-offers-slider-total]` and `[data-offers-slider-next]` (link blocks and spans, anywhere inside the root). The module writes the zero-padded total, updates the current number on every slide change, loops with a fade, and adds `hide` plus `aria-hidden` to the controls when there is one slide. The `offers` type class keeps `swiperSliders()` from also initialising the container. Fixture: `tests/visual/fixtures/offers-slider-split.html`.
+
+## cardCarouselHeaderLeft (Q009)
+
+Free-width card slider for the Card Carousel Header Left component. Needs the Swiper 12 CDN CSS and JS. DOM contract: `.swiper_slider[data-card-carousel]` wraps `.swiper.cards` > `.swiper-wrapper` > `.swiper-slide`; `[data-card-carousel-prev]` and `[data-card-carousel-next]` (link blocks) sit anywhere inside the root. Card widths and gaps come from the CSS (slide width plus `margin-right`), so the module runs Swiper with `slidesPerView: 'auto'` and `spaceBetween: 0`; Swiper measures the margin, and a non-zero `spaceBetween` would double the gap. The arrows get `is-disabled` at either end and `hide` when every card fits (Swiper lock). The `cards` type class keeps `swiperSliders()` from also initialising the container. Fixture: `tests/visual/fixtures/card-carousel-header-left.html`.
