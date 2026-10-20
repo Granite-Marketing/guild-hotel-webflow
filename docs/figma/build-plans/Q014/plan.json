@@ -66,6 +66,20 @@
       }
     },
     {
+      "name": "hero-fullbleed-centered_overlay",
+      "styles": {
+        "desktop": {
+          "position": "absolute",
+          "inset": "0",
+          "background-color": "rgba(0, 0, 0, 0.4)",
+          "pointer-events": "none"
+        },
+        "tablet": {},
+        "mobileLandscape": {},
+        "mobilePortrait": {}
+      }
+    },
+    {
       "name": "hero-fullbleed-centered_logo-wrapper",
       "styles": {
         "desktop": {
@@ -233,6 +247,16 @@
                 "alt": "",
                 "loading": "eager",
                 "data-eager": ""
+              },
+              "children": []
+            },
+            {
+              "tag": "div",
+              "classes": [
+                "hero-fullbleed-centered_overlay"
+              ],
+              "attributes": {
+                "aria-hidden": "true"
               },
               "children": []
             }
@@ -428,7 +452,7 @@
       "type": "image",
       "element": "hero-fullbleed-centered_image",
       "optional": true,
-      "visibility": "hide _figure when empty"
+      "visibility": "Show Image boolean (default true since 2026-10-20) hides _figure, and with it the _overlay"
     },
     {
       "name": "imageAlt",
@@ -860,7 +884,8 @@
     "Q014 build: button labels are a text-style-button div inside the link; the builder ignores set_text on a TextBlock, so label text was written with data_element_settings_tool key text.",
     "Q014 build: button links are a # url placeholder; no booking URL is in the plan.",
     "Q014 build: the Zuma logo slot has no asset, because the wordmark SVG is still not uploaded.",
-    "V02 (2026-10-20): Blue Button and Burgundy Button are component variants. Variant styles target a single class by name (combos such as .button.is-chamfer cannot be named), and a .button:where() rule loses to .button.is-chamfer, so the fill is a solid background-image gradient on .button (linear-gradient of Colors/Blue or Colors/Burgundy, painted over the cream background-color) and the label colour (Colors/Secondary) is set on .text-style-button. The reference buttons now use the new empty .button.is-chamfer.is-wide.is-blue and .is-burgundy combos."
+    "V02 (2026-10-20): Blue Button and Burgundy Button are component variants. Variant styles target a single class by name (combos such as .button.is-chamfer cannot be named), and a .button:where() rule loses to .button.is-chamfer, so the fill is a solid background-image gradient on .button (linear-gradient of Colors/Blue or Colors/Burgundy, painted over the cream background-color) and the label colour (Colors/Secondary) is set on .text-style-button. The reference buttons now use the new empty .button.is-chamfer.is-wide.is-blue and .is-burgundy combos.",
+    "Q014 overlay (2026-10-20, Stephen's request): hero-fullbleed-centered_overlay (black at 40%, absolute inset 0, pointer-events none, aria-hidden) sits after the image inside _figure, so the Show Image binding on _figure hides it too. Figma home/01 has no overlay (grey slot only), so the opacity is a design choice, not a spec value. No z-index change: _figure (z 0) is its own stacking context, under _logo-wrapper (z 1) and _component (z 2). The Text Dark variant sets display: none on the overlay. The Show Image prop default is now true."
   ],
   "k01": {
     "reconciledBy": "K01, 2026-10-20",
