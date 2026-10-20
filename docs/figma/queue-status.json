@@ -781,7 +781,8 @@
         "Q019",
         "Q020",
         "Q021",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q031-page-home.md",
       "surface": "designer",
@@ -812,7 +813,8 @@
         "Q019",
         "Q021",
         "Q027",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q032-page-dining-collection.md",
       "surface": "designer",
@@ -841,7 +843,8 @@
         "Q015",
         "Q016",
         "Q019",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q033-page-rooms-collection.md",
       "surface": "designer",
@@ -870,7 +873,8 @@
         "Q015",
         "Q021",
         "Q023",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q034-page-wellness-collection.md",
       "surface": "designer",
@@ -903,7 +907,8 @@
         "Q021",
         "Q022",
         "Q023",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q035-page-meetings-collection.md",
       "surface": "designer",
@@ -934,7 +939,8 @@
         "Q017",
         "Q018",
         "Q019",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q036-page-history.md",
       "surface": "designer",
@@ -964,7 +970,8 @@
         "Q016",
         "Q022",
         "Q026",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q037-page-guidelines.md",
       "surface": "designer",
@@ -996,7 +1003,8 @@
         "Q018",
         "Q019",
         "Q024",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q038-page-rooms-individual.md",
       "surface": "designer",
@@ -1025,7 +1033,8 @@
         "Q015",
         "Q022",
         "Q023",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q039-page-press.md",
       "surface": "designer",
@@ -1052,7 +1061,8 @@
         "Q013",
         "Q014",
         "Q015",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q040-page-gallery.md",
       "surface": "designer",
@@ -1082,7 +1092,8 @@
         "Q016",
         "Q017",
         "Q024",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q041-page-arts.md",
       "surface": "designer",
@@ -1107,7 +1118,8 @@
         "Q004",
         "Q012",
         "Q013",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q042-page-static-template.md",
       "surface": "designer",
@@ -1134,7 +1146,8 @@
         "Q013",
         "Q015",
         "Q022",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q043-page-contact.md",
       "surface": "designer",
@@ -1167,7 +1180,8 @@
         "Q019",
         "Q025",
         "Q026",
-        "D02"
+        "D02",
+        "V01"
       ],
       "brief": "docs/figma/briefs/Q044-page-neighborhood.md",
       "surface": "designer",
@@ -1670,6 +1684,25 @@
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "Exact class writes across 15 plans; mistakes propagate to every build"
+    },
+    {
+      "id": "V01",
+      "title": "Probe: Webflow component variants through the Data API (on Q014)",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "Q014"
+      ],
+      "brief": "docs/figma/prep/V01-component-variants.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Gates the page builds Q031 to Q044: pages need per-instance variants. Fallback is a separate component per visual variant.",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Probe design and judging evidence"
     },
     {
       "id": "R01",
