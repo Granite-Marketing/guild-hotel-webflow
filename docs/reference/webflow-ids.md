@@ -65,12 +65,14 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 |---|---|---|
 | button-outline-dark.svg | `6ad712867471777f5f7e40b1` | `button.is-chamfer.is-outline` |
 | button-outline-light.svg | `6ad7128647118d6eef7696f1` | `button.is-chamfer.is-outline-light` |
+| bonvoy.svg | `6ad744318e4b52f5c4d49ec6` | `cta-booking-newsletter_logo` (Q012) |
 
 ## Components
 
 | Component | ID | Notes |
 |---|---|---|
 | Global Styles | `ab488b17-f25a-fbf8-5f54-4a3955eb57e5` | Relume starter global styles embed |
+| CTA Booking Newsletter | `916e4ffc-007b-3572-a686-946c6645b2e8` | Q012, no props; instance on `🧱 cta-booking-newsletter` |
 
 ## Variable Collections
 

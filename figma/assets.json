@@ -542,8 +542,8 @@
   "brand": {
     "bonvoy": {
       "file": "figma/brand/bonvoy.svg",
-      "webflowAssetId": null,
-      "webflowUrl": null
+      "webflowAssetId": "6ad744318e4b52f5c4d49ec6",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad744318e4b52f5c4d49ec6_bonvoy.svg"
     },
     "building": {
       "file": "figma/brand/building.svg",
