@@ -291,3 +291,7 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 - **A visibility prop bound to `FormForm` leaves the `w-form` wrapper in place.** In a grid it still takes a cell; hide the wrapper (variant `display: none`) when the form is off.
 - **CSS `rotate` composes with `transform`.** A variant (0,1,0) cannot beat a combo's `transform: rotate(-7.5deg)`, but `rotate: 7.5deg` on the same element cancels it.
 - **Extending a shared component without changing its instances:** new text props default to the current content and are bound to the existing elements; new optional rows are DOM elements built inside the definition (`scope_component_id`) with `visibility` and `text` bound to new props in the builder's `settings`, defaulting to hidden.
+## Notes from the Arts page (Q041, 2026-10-20)
+
+- **Modal trigger links take a bare `#` href.** A LinkBlock trigger with `href="#<dialog id>"` makes Webflow's in-page anchor scroll fire on click (the page jumped by the nav height and the URL took the hash), even though `modals.ts` opens the dialog. Use `href="#"` (set with `set_settings` key `link`, `static_link` url `#`); the link stays keyboard focusable and nothing scrolls.
+- **Filter item plus dialog trigger.** Keep `data-gallery-filter-item` on the figure (the element `galleryFilter` hides) and put `data-modal-open` on a LinkBlock inside it, so filtering and keyboard-accessible dialogs work together with no new code.

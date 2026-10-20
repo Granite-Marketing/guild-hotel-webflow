@@ -266,6 +266,27 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q043: the 02 form uses visible labels above each line instead of Figma's in-line placeholders (placeholders cannot be set headlessly), so rows are taller than the crop. Switch to placeholders in the Designer if the in-line look is wanted, then remove `is-labelled`.
 - [ ] Q043: "privacy policy" links to `/static-template`; repoint when a privacy page exists. Form submit destination and notification address are still unset (site form settings).
 - [ ] Q043: the 03 carousel shows a static clipped row until `cardCarouselHeaderLeft()` ships (see the Q009 release item above).
+## Q041 Arts (2026-10-20)
+
+- [ ] Q041 (Designer): visual check of `/arts` against the arts section crops, mainly the dark gallery (06) and the Dark detail dialogs. Staging is published; the filter, all ten dialogs and Escape close were checked there with no console errors.
+- [ ] Q041: artwork dialogs `artwork-03` to `artwork-10` carry draft copy (artwork title, by artist name, year / dimensions / medium, lorem) and hotel photos. Replace with the real catalogue; an Artworks CMS collection with the CMS dialog pattern in `docs/reference/modal-setup.md` would scale better than ten static instances.
+- [ ] Q041: the arts filter tags (painting, photography, sculpture, artists) are working tags, not from the Figma; confirm the categories with the client.
+- [ ] Q041: the "by eva struble" line in the Oceano dialog is plain text; the artist dialog opens from the second gallery tile. Linking the byline needs a link prop on the Overlay Detail Panel Modal eyebrow.
+- [ ] Q041: the Figma gallery rows bleed off both edges; the build wraps centred like `/gallery`. Decide whether Arts wants the edge-to-edge mosaic.
+
+## Q038 Rooms individual (2026-10-20)
+
+- [ ] Q038 (Designer): visual check of `/rooms-individual` against the rooms-individual crops, mainly the one-off room description (03) and amenities grid (07). Notes in `docs/figma/build-plans/Q038/build.md`.
+- [ ] Q038: "view floorplan" links to `#`; point it at a floorplan PDF asset or page when one exists.
+- [ ] Q038: image choices are stand-ins from the library (room photos from rooms-collection); swap for the deluxe king suite photography when it arrives. Alt text on the two hero images was written in the build; review with `/asset-metadata`.
+- [ ] Q038: the Discover Other Rooms carousel does not initialise on staging until `cardCarouselHeaderLeft()` ships (see the v1.1.2 item above).
+- [ ] Q038: the carousel cards all link to `/rooms`; point each at its room page once a Rooms CMS template exists (Q009 notes rooms-individual could bind to the Rooms collection).
+## Q039 Press (2026-10-20)
+- [ ] Q039: visual check of `/press` on staging (`https://the-guild-hotel-c34e71.webflow.io/press`) against the press crops; build record and staging notes in `docs/figma/build-plans/Q039/build.md`.
+- [ ] Q039: press cards (03 to 07) show hotel photos with the publication name, not the Figma press logos. To show logos, upload the National Geographic, Forbes and Architectural Digest SVGs (`figma/vectors/`) and add a logo overlay (image prop plus Show boolean) to Article Card Staggered, or swap in logo-on-photo images.
+- [ ] Q039: the press enquiries form shows the component's photoshoot fields; the Figma press form has organization and expected publish date. Needs a Designer slot or a form variant (same as the Q022 slot follow-up).
+- [ ] Q039: tab-pills-intro links point at `#press`, `#design` and `#community`, which have no targets on the page.
+- [ ] Q039: "more of the guild" carousel arrows are dead on staging until `cardCarouselHeaderLeft()` ships in a released bundle (Q009 item above).
 ## Fill placeholder images: components and CMS (2026-10-20)
 
 Stand-in library photos so staging shows no grey placeholder from a component or CMS field. Picks follow the slot loosely (rooms, food, exteriors); none is the final design image. Asset ids per slot are in each plan's `assets` (Q006, Q008, Q009, Q014, Q016 to Q022, Q024 to Q026). No new uploads; no new classes.
