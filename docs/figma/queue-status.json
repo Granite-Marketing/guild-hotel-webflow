@@ -257,18 +257,19 @@
         "Q004",
         "D02",
         "P012",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q012-shared-cta-booking-newsletter.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q012/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q012/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q012. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "xhigh",
-      "modelReason": "24 instances, 1 variants: the class family every page reuses"
+      "effort": "high",
+      "modelReason": "24 instances, 1 variants: the class family every page reuses; plan approved, one step lower"
     },
     {
       "id": "Q013",
@@ -282,18 +283,19 @@
         "Q004",
         "D02",
         "P013",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q013-shared-footer-links.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q013/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q013/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q013. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "xhigh",
-      "modelReason": "24 instances, 1 variants: the class family every page reuses"
+      "effort": "high",
+      "modelReason": "24 instances, 1 variants: the class family every page reuses; plan approved, one step lower"
     },
     {
       "id": "Q014",
@@ -307,18 +309,19 @@
         "Q004",
         "D02",
         "P014",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q014-shared-hero-fullbleed-centered.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q014/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q014/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q014. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "xhigh",
-      "modelReason": "24 instances, 3 variants: the class family every page reuses"
+      "effort": "high",
+      "modelReason": "24 instances, 3 variants: the class family every page reuses; plan approved, one step lower"
     },
     {
       "id": "Q015",
@@ -332,18 +335,19 @@
         "Q004",
         "D02",
         "P015",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q015-shared-faq-accordion.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q015/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q015/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q015. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "xhigh",
-      "modelReason": "21 instances, 1 variants: the class family every page reuses"
+      "effort": "high",
+      "modelReason": "21 instances, 1 variants: the class family every page reuses; plan approved, one step lower"
     },
     {
       "id": "Q016",
@@ -357,18 +361,19 @@
         "Q004",
         "D02",
         "P016",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q016-shared-script-intro-centered.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q016/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q016/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q016. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "high",
-      "modelReason": "12 instances, 2 variants"
+      "effort": "medium",
+      "modelReason": "12 instances, 2 variants; plan approved, one step lower"
     },
     {
       "id": "Q017",
@@ -382,18 +387,19 @@
         "Q004",
         "D02",
         "P017",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q017-shared-split-image-text-light.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q017/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q017/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q017. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "xhigh",
-      "modelReason": "19 instances, 6 variants: the class family every page reuses"
+      "effort": "high",
+      "modelReason": "19 instances, 6 variants: the class family every page reuses; plan approved, one step lower"
     },
     {
       "id": "Q018",
@@ -407,18 +413,19 @@
         "Q004",
         "D02",
         "P018",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q018-shared-gallery-mosaic-captioned.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q018/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q018/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q018. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "high",
-      "modelReason": "10 instances, 1 variants"
+      "effort": "medium",
+      "modelReason": "10 instances, 1 variants; plan approved, one step lower"
     },
     {
       "id": "Q019",
@@ -432,18 +439,19 @@
         "Q004",
         "D02",
         "P019",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q019-shared-map-feature.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q019/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q019/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q019. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "high",
-      "modelReason": "9 instances, 3 variants"
+      "effort": "medium",
+      "modelReason": "9 instances, 3 variants; plan approved, one step lower"
     },
     {
       "id": "Q020",
@@ -457,18 +465,19 @@
         "Q004",
         "D02",
         "P020",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q020-shared-image-trio-text.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q020/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q020/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q020. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "high",
-      "modelReason": "9 instances, 3 variants"
+      "effort": "medium",
+      "modelReason": "9 instances, 3 variants; plan approved, one step lower"
     },
     {
       "id": "Q021",
@@ -482,18 +491,19 @@
         "Q004",
         "D02",
         "P021",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q021-shared-venue-card-fullbleed.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q021/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q021/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q021. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "xhigh",
-      "modelReason": "29 instances, 6 variants: the class family every page reuses"
+      "effort": "high",
+      "modelReason": "29 instances, 6 variants: the class family every page reuses; plan approved, one step lower"
     },
     {
       "id": "Q022",
@@ -507,18 +517,19 @@
         "Q004",
         "D02",
         "P022",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q022-shared-form-split-script-contact.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q022/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q022/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q022. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "high",
-      "modelReason": "6 instances, 2 variants"
+      "effort": "medium",
+      "modelReason": "6 instances, 2 variants; plan approved, one step lower"
     },
     {
       "id": "Q023",
@@ -532,18 +543,19 @@
         "Q004",
         "D02",
         "P023",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q023-shared-tab-pills-intro.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q023/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q023/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q023. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "high",
-      "modelReason": "5 instances, 3 variants"
+      "effort": "medium",
+      "modelReason": "5 instances, 3 variants; plan approved, one step lower"
     },
     {
       "id": "Q024",
@@ -557,18 +569,19 @@
         "Q004",
         "D02",
         "P024",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q024-shared-image-inset-single.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q024/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q024/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q024. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "high",
-      "modelReason": "4 instances, 2 variants"
+      "effort": "medium",
+      "modelReason": "4 instances, 2 variants; plan approved, one step lower"
     },
     {
       "id": "Q025",
@@ -582,18 +595,19 @@
         "Q004",
         "D02",
         "P025",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q025-shared-article-card-staggered.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q025/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q025/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q025. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "high",
-      "modelReason": "11 instances, 2 variants"
+      "effort": "medium",
+      "modelReason": "11 instances, 2 variants; plan approved, one step lower"
     },
     {
       "id": "Q026",
@@ -607,18 +621,19 @@
         "Q004",
         "D02",
         "P026",
-        "K01"
+        "K01",
+        "K02"
       ],
-      "brief": "docs/figma/briefs/Q026-shared-timeline-scatter-images.md",
-      "surface": "designer",
+      "brief": "docs/figma/prep/Q-parallel-build.md",
+      "surface": "rest",
       "status": "todo",
       "session": null,
       "branch": null,
       "pr": null,
-      "notes": "Wave 2: apply docs/figma/build-plans/Q026/ (HANDOVER-wave2.md section 5 step 5)",
+      "notes": "Wave 2: apply docs/figma/build-plans/Q026/ (HANDOVER-wave2.md section 5 step 5) Prompt: Execute docs/figma/prep/Q-parallel-build.md for entry Q026. Max four Q builds at once.",
       "model": "claude-opus-5-5",
-      "effort": "high",
-      "modelReason": "2 instances, 2 variants"
+      "effort": "medium",
+      "modelReason": "2 instances, 2 variants; plan approved, one step lower"
     },
     {
       "id": "Q027",
@@ -1607,14 +1622,33 @@
       ],
       "brief": "docs/figma/prep/K01-reconcile-plans.md",
       "surface": "code",
-      "status": "todo",
+      "status": "done",
       "session": null,
       "branch": null,
-      "pr": null,
+      "pr": 28,
       "notes": "",
       "model": "claude-opus-5-5",
       "effort": "high",
       "modelReason": "Cross-plan judgment on naming and merges"
+    },
+    {
+      "id": "K02",
+      "title": "Create shared classes, class families and 15 draft build pages",
+      "type": "prep",
+      "lane": "agent (approval)",
+      "dependsOn": [
+        "K01"
+      ],
+      "brief": "docs/figma/prep/K02-create-classes.md",
+      "surface": "rest",
+      "status": "todo",
+      "session": null,
+      "branch": null,
+      "pr": null,
+      "notes": "Must finish before any parallel Q build; no Q session creates classes.",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "modelReason": "Exact class writes across 15 plans; mistakes propagate to every build"
     },
     {
       "id": "R01",

@@ -56,6 +56,8 @@ All entries are in `docs/figma/queue-status.json` with `model`, `effort` and `br
 
 ## 6. If X01 passes
 
+**Decided 2026-10-20:** X01 passed and Stephen chose this route (`decisions.md`, Parallel builds). Run K02, then Q012 to Q026 with `docs/figma/prep/Q-parallel-build.md`, at most four at once, in queue order; this replaces section 5 step 5. The section below is kept for the reasoning.
+
 The proposal to put to Stephen: one session (call it K02) creates every class in `shared-classes.md` and every class family from the plans, with no elements, so no later session creates a class. After that, Q entries whose plans need no new classes can be built through the Data API in parallel worktree sessions, each on its own page, at most four at once. Anything that X01 shows the Data API cannot do (component conversion, interactions, some settings) stays on the Designer lane, serial.
 
 ## 7. Verification for wave 2
