@@ -3,6 +3,8 @@
 Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, #33, #35, #36, #37, #38 and the Q012 to Q015 `plan.json` deviations on main.
 
 ## Stephen, in the Designer
+- [ ] Q021: visual check of `/build-venue-card-fullbleed` (two component instances, the home and dining snap groups, is-tall and is-left) against `docs/figma/build-plans/Q021/preview-*.png` and the reference crops; check the clip-path chamfers on the frame and tab bar, and the is-left list row height and divider bleed.
+- [ ] Q021: home/11 heading break: Figma breaks "rooms" / "& suites"; add a line break if the real font wraps differently.
 
 - [ ] Q019: visual check of `/build-map-feature` (base instance plus the is-image-bg and is-centered reference sections) against `docs/figma/build-plans/Q019/preview-*-1440.png`. No rich text styling is needed.
 
@@ -24,6 +26,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q018: visual check of `/build-gallery-mosaic-captioned` in the Designer against `docs/figma/build-plans/Q018/preview-base-1440.png` and the meetings-collection/09 crop (nothing was compared yet; tiles show Webflow's placeholder image).
 
 ## Decisions for Stephen
+- [ ] Q021: open questions OQ2 (wellness and meetings intro moves from Q023 into this snap section) and OQ3 (legal and corporate as a static stack) are still on their defaults; confirm before those pages are built.
 
 - [ ] Q019: `is-image-bg` and `is-centered` cannot switch on a Map Feature instance (same as Q014). Options: Webflow component variants, or separate components for the two variants.
 - [ ] Q019: the base map art shows Atlanta streets and Hotel Clermont; confirm it ships or supply a San Diego map. Also the four Directions URLs, and whether to export the masked history illustration (node 236:8254).
@@ -40,6 +43,8 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q018: show the "A Landmark Reimagined" feature title on the meetings instance (Show Feature Title is off by default)? Also confirm the real gallery headings for dining-gardenterrace, dining-lobbybar and dining-poollounge (Figma copies "zuma gallery").
 
 ## Agent follow-ups
+- [ ] Q021: four empty combos were created (`docs/figma/build-plans/Q021/plan.json` `build.classesCreated`). When placing on real pages, copy the home or dining snap section for each snap group (wellness and meetings need their tab labels and intro), and use the Venue Card Fullbleed component for the legal and corporate static cards, then remove the build page.
+- [ ] Q014: the Zuma wordmark is now uploaded (`6ad74d2ed0e5a6a8fc1be09e`, by Q021); set it on the dining-zuma reference hero logo slot.
 
 - [ ] Q017: colour variants, compact and the four base layouts are plain reference sections, not instances. Page entries need the same decision as Q014 (Webflow component variants or unlinked copies) before placing them.
 - [ ] Q017: eight empty combo paths were created (listed in `docs/figma/build-plans/Q017/plan.json` `build.classesCreated`); `.button.is-link.text-style-caps-caption-16` sits under the shared `button` and may be reused by other families.

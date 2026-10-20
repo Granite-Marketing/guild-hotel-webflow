@@ -1075,12 +1075,12 @@
     {
       "slot": "logo",
       "local": "figma/vectors/group-270989670-416x101-250-1958.svg",
-      "webflowAssetId": null,
-      "note": "SVG not uploaded yet (figma/assets.json webflowAssetId null). Upload before the build.",
+      "webflowAssetId": "6ad74d2ed0e5a6a8fc1be09e",
       "usedBy": [
         "home/05-dress-up-for-the-rich-worldly",
         "dining-collection/04-dress-up-for-the-rich-worldly"
-      ]
+      ],
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad74d2ed0e5a6a8fc1be09e_zuma-wordmark.svg"
     },
     {
       "slot": "image",
@@ -1096,12 +1096,12 @@
     {
       "slot": "logo",
       "local": "figma/vectors/a-738x232-433-5771.svg",
-      "webflowAssetId": null,
-      "note": "SVG not uploaded yet (figma/assets.json webflowAssetId null). Upload before the build.",
+      "webflowAssetId": "6ad74d2f5fbf02cd56e2df7e",
       "usedBy": [
         "home/06-cocktail-classics-and-drinks-for-connaisseurs",
         "dining-collection/05-cocktail-classics-and-drinks-for-connaisseurs"
-      ]
+      ],
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad74d2f5fbf02cd56e2df7e_lobby-bar-wordmark.svg"
     },
     {
       "slot": "image",
@@ -1117,12 +1117,12 @@
     {
       "slot": "logo",
       "local": "figma/vectors/a-682x148-433-5793.svg",
-      "webflowAssetId": null,
-      "note": "SVG not uploaded yet (figma/assets.json webflowAssetId null). Upload before the build.",
+      "webflowAssetId": "6ad74d3052f189f238b78a70",
       "usedBy": [
         "home/07-our-new-pool-serves-up-san",
         "dining-collection/06-our-new-pool-serves-up-san"
-      ]
+      ],
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad74d3052f189f238b78a70_pool-lounge-wordmark.svg"
     },
     {
       "slot": "image",
@@ -1290,7 +1290,7 @@
         "logo": {
           "svg": "figma/vectors/group-270989670-416x101-250-1958.svg",
           "alt": "Zuma",
-          "webflowAssetId": null
+          "webflowAssetId": "6ad74d2ed0e5a6a8fc1be09e"
         },
         "image": {
           "figmaImageRef": "fa638bc2c84c8afc4c8daab6a935b35365944207",
@@ -1319,7 +1319,7 @@
         "logo": {
           "svg": "figma/vectors/a-738x232-433-5771.svg",
           "alt": "The Lobby Bar",
-          "webflowAssetId": null
+          "webflowAssetId": "6ad74d2f5fbf02cd56e2df7e"
         },
         "image": {
           "figmaImageRef": "57b7c9d475ed31c64fc14b589c293bc5f86142a8",
@@ -1348,7 +1348,7 @@
         "logo": {
           "svg": "figma/vectors/a-682x148-433-5793.svg",
           "alt": "Pool Lounge",
-          "webflowAssetId": null
+          "webflowAssetId": "6ad74d3052f189f238b78a70"
         },
         "image": {
           "figmaImageRef": "b0a187c5d40b728dda8eba29e50d1c301b9f1a68",
@@ -1515,7 +1515,7 @@
         "logo": {
           "svg": "figma/vectors/group-270989670-416x101-250-1958.svg",
           "alt": "Zuma",
-          "webflowAssetId": null
+          "webflowAssetId": "6ad74d2ed0e5a6a8fc1be09e"
         },
         "image": {
           "figmaImageRef": "fa638bc2c84c8afc4c8daab6a935b35365944207",
@@ -1544,7 +1544,7 @@
         "logo": {
           "svg": "figma/vectors/a-738x232-433-5771.svg",
           "alt": "The Lobby Bar",
-          "webflowAssetId": null
+          "webflowAssetId": "6ad74d2f5fbf02cd56e2df7e"
         },
         "image": {
           "figmaImageRef": "57b7c9d475ed31c64fc14b589c293bc5f86142a8",
@@ -1573,7 +1573,7 @@
         "logo": {
           "svg": "figma/vectors/a-682x148-433-5793.svg",
           "alt": "Pool Lounge",
-          "webflowAssetId": null
+          "webflowAssetId": "6ad74d3052f189f238b78a70"
         },
         "image": {
           "figmaImageRef": "b0a187c5d40b728dda8eba29e50d1c301b9f1a68",
@@ -2102,6 +2102,34 @@
     {
       "what": "Modifiers are set on each element they change",
       "why": "Webflow cannot style descendants from a parent combo class, so is-tall, is-left and is-media-center are applied to the stage, media, content and header elements as listed in variants."
+    },
+    {
+      "what": "Q021 build (2026-10-20): the component is the static base card only",
+      "why": "Webflow components cannot repeat items (Q021-OQ4), and an instance cannot switch the is-tall, is-left or is-media-center combos (same as Q014, Q017, Q019). The snap groups and the is-tall and is-left cards are plain reference sections on the build page."
+    },
+    {
+      "what": "Q021 build: the wellness, meetings, legal and corporate groups were not built on the build page",
+      "why": "They reuse the home and dining snap structure or the base component with different content; they are placed when the real pages are built."
+    },
+    {
+      "what": "Q021 build: no loading attribute on snap images",
+      "why": "data-eager is set, and eagerImages() promotes those images to eager at runtime; a custom loading attribute could clash with the Image element's own setting."
+    },
+    {
+      "what": "Q021 build: the dining tab and panel 07 both read garden terrace",
+      "why": "Q021-OQ7 default. Home panel 08 keeps lobby terrace."
+    },
+    {
+      "what": "Q021 build: no static is-active on the dining tabs",
+      "why": "scrollEnlargeSnap sets is-active and aria-current on the active tab at runtime. The home/15 list keeps a static is-active on its first row (Q021-OQ5)."
+    },
+    {
+      "what": "Q021 build: the is-left list rows are Link Blocks holding a div.heading-style-h3 TextBlock",
+      "why": "The builder ignores set_text on a TextBlock; the text was written with set_settings key text."
+    },
+    {
+      "what": "Q021 build: Button Link is a url prop defaulting to #",
+      "why": "Instance link props accept only url, email, phone, popover and modal modes (Q019 finding)."
     }
   ],
   "k01": {
@@ -2114,6 +2142,79 @@
       "`button` is now `button is-chamfer`; home/11 and home/15 use `is-outline-light` (cream stroke SVG in shared-assets/). `reusedClassAssumptions` is superseded by the live values and shared-classes.json.",
       "Stage, media and tab classes stay in this family; see shared-classes.md \"Not merged\".",
       "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  },
+  "build": {
+    "builtBy": "Q021, 2026-10-20",
+    "buildPage": "6ad712c8f7fb71b6e780492e",
+    "componentId": "bbccdbb5-db17-02a1-a0cc-43ce0f5da371",
+    "componentName": "Venue Card Fullbleed",
+    "props": 15,
+    "propNames": [
+      "Intro Heading",
+      "Heading",
+      "Text",
+      "Button Label",
+      "Button Link",
+      "Image",
+      "Image Alt",
+      "Logo",
+      "Logo Alt",
+      "Show Intro",
+      "Show Image",
+      "Show Logo",
+      "Show Heading",
+      "Show Text",
+      "Show Button"
+    ],
+    "instances": [
+      "base (legal/06 small conference center)",
+      "no-image (meetings-collection/03 council boardroom, Show Image off)"
+    ],
+    "referenceSections": [
+      "home-venues snap group (home/04 to 09, step 80)",
+      "dining-venues snap group with tabs (dining-collection/03 to 08)",
+      "is-tall (home/11)",
+      "is-left (home/15)"
+    ],
+    "classesCreated": [
+      {
+        "selector": ".venue-card-fullbleed_text.text-size-large",
+        "id": "202d2158-e078-9d12-8a81-08de4a9eb838",
+        "properties": "none"
+      },
+      {
+        "selector": ".venue-card-fullbleed_text.text-size-regular",
+        "id": "c0d10049-ec93-b3af-300e-00eda3625a27",
+        "properties": "none"
+      },
+      {
+        "selector": ".venue-card-fullbleed_text.text-size-medium",
+        "id": "c4b22d68-a673-e53d-64c4-efc823adc099",
+        "properties": "none"
+      },
+      {
+        "selector": ".venue-card-fullbleed_tab.text-style-eyebrow-caps",
+        "id": "42228ed6-66ec-1fbb-b56b-e406501a5f88",
+        "properties": "none"
+      }
+    ],
+    "assetsUploaded": [
+      {
+        "file": "figma/vectors/group-270989670-416x101-250-1958.svg",
+        "name": "zuma-wordmark.svg",
+        "webflowAssetId": "6ad74d2ed0e5a6a8fc1be09e"
+      },
+      {
+        "file": "figma/vectors/a-738x232-433-5771.svg",
+        "name": "lobby-bar-wordmark.svg",
+        "webflowAssetId": "6ad74d2f5fbf02cd56e2df7e"
+      },
+      {
+        "file": "figma/vectors/a-682x148-433-5793.svg",
+        "name": "pool-lounge-wordmark.svg",
+        "webflowAssetId": "6ad74d3052f189f238b78a70"
+      }
     ]
   }
 }
