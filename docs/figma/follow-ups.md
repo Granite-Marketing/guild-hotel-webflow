@@ -239,3 +239,5 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q044: the corporate CTA "corporate & legal packages" links to `/meetings`; repoint it once a legal and corporate listing page exists.
 - [ ] Q044: the Coronado Beach timeline items open the dialog by click only (figures with no tabindex). If keyboard access is wanted, `modals.ts` needs Enter and Space handling on non-link triggers, or the items need a link wrapper in the Tall component.
 - [ ] Q044: neighborhood/05's burgundy pill nav (dining, arts, beyond downtown, services) is not part of any component and is not built; decide whether it is a sticky in-page nav.
+- [ ] Q037: visual check of `/guidelines` on staging (notes in `docs/figma/build-plans/Q037/`).
+- [ ] Q037: the hero has no image (Figma grey slot; Show Image is off); set Image and Show Image when the photo arrives. The guidelines/05 feature is an empty `figure` with `data-image-placeholder`; add a `u-image` Image when the collaborator photo arrives.
