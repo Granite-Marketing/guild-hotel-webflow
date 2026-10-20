@@ -71,6 +71,9 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 | guild-postmark-stamp.svg | `6ad74da46b56ff1d7223e4d7` | `script-intro-centered_image`, rooms-collection/02 (Q016, figma node 379:1187) |
 | arrow-back.svg | `6ad74da5f1658ec1f273e890` | `script-intro-centered_back-icon` (Q016, figma node 413:5536) |
 | neighborhood-map.svg | `6ad74983c0f141bdb6fd4115` | Map Feature base image (Q019, figma node 433:6592) |
+| zuma-wordmark.svg | `6ad74d2ed0e5a6a8fc1be09e` | Venue card logo (Q021, figma node 250:1958); also the Q014 dining-zuma hero logo |
+| lobby-bar-wordmark.svg | `6ad74d2f5fbf02cd56e2df7e` | Venue card logo (Q021, figma node 433:5771) |
+| pool-lounge-wordmark.svg | `6ad74d3052f189f238b78a70` | Venue card logo (Q021, figma node 433:5793) |
 
 ## Components
 
@@ -85,6 +88,7 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 | Gallery Mosaic Captioned | `560e1b31-d612-0921-8773-8f9de2e2b06f` | Q018 four-tile gallery, built on `/build-gallery-mosaic-captioned` (2026-10-20); 12 props (6 text, 4 image, 2 Show booleans) |
 | Map Feature | `8e90ff20-1ed1-43a7-edce-89b7ea10c487` | Q019, built on `/build-map-feature` (2026-10-20); 22 props (Content, Button, Visibility, Places, Image groups); `is-image-bg` and `is-centered` are reference sections on the build page |
 | Split image text light | `663131a8-3362-867e-25ef-28b6d3d209a2` | Q017, built on `/build-split-image-text-light` (2026-10-20); 17 props (7 content, 2 image, 8 visibility booleans); variants are plain reference sections on the build page |
+| Venue Card Fullbleed | `bbccdbb5-db17-02a1-a0cc-43ce0f5da371` | Q021 static base card, built on `/build-venue-card-fullbleed` (2026-10-20); 15 props (5 content and button, 4 image, 6 Show booleans); snap groups, `is-tall` and `is-left` are plain reference sections on the build page |
 
 ## Variable Collections
 
