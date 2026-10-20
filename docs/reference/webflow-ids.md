@@ -31,7 +31,7 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 | Guidelines | `6ad66fd44c7f57894534ada5` | `/guidelines` | guidelines; assembled by Q037 (2026-10-20), Body `6ad66fd44c7f57894534adac`; element ids in `docs/figma/build-plans/Q037/plan.md` |
 | Rooms | `6ad66fd5f8bf4846e809dbee` | `/rooms` | rooms-collection; assembled by Q033 (2026-10-20), Body `6ad66fd5f8bf4846e809dbf6` |
 | Room Detail | `6ad66fd5f8bf4846e809dc45` | `/rooms-individual` | rooms-individual |
-| Press | `6ad66fd5735773f253406642` | `/press` | press |
+| Press | `6ad66fd5735773f253406642` | `/press` | press; assembled by Q039 (2026-10-20), Body `6ad66fd5735773f253406673`; element ids in `docs/figma/build-plans/Q039/build.md` |
 | Gallery | `6ad66fd65794075272b95584` | `/gallery` | gallery |
 | Arts | `6ad66fd7ba96f2e53726a2eb` | `/arts` | arts |
 | Wellness | `6ad66fd7735773f253406791` | `/wellness` | wellness-collection; assembled by Q034 (2026-10-20), Body `6ad66fd7735773f253406797` |
