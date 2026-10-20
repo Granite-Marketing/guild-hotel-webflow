@@ -2,7 +2,7 @@
 
 This document is the **live reference** for what already exists in The Guild Hotel Webflow project. Before creating ANY new style or element, check here first. If a match exists, reuse it.
 
-**Last updated:** 2026-10-20 by Q001 (token sync), regenerated from `style_tool > get_styles(query: "all")` on the live site: 600 styles (328 global, 245 combo, 27 tag).
+**Last updated:** 2026-10-20 by K02 (shared classes and wave 2 families), regenerated from `data_style_tool > get_styles(query: "all")` with every breakpoint on the live site: 901 styles (510 global, 364 combo, 27 tag).
 
 ---
 
@@ -38,10 +38,13 @@ The site keeps Relume's variable names. The project convention names (`color-pri
 | `color-neutral-700` | Colors/Neutral Dark | `--_primitives---colors--neutral-dark` | #484848 | `relume-variable--neutral-shade-5` |
 | (Relume only) | Colors/Neutral Darker | `--_primitives---colors--neutral-darker` | #222 | `relume-variable--neutral-shade-6` |
 | `color-neutral-900` | Colors/Neutral Darkest | `--_primitives---colors--neutral-darkest` | #262118 | `relume-variable--neutral-shade-7` |
+| (brand blue, K02) | Colors/Blue | `--_primitives---colors--blue` | #489CCA | `variable-f1330699-c5fe-75bc-bcf8-630b5a4086eb` |
+| (brand tan, K02) | Colors/Tan | `--_primitives---colors--tan` | #906E58 | `variable-cdc4b0e2-ec6d-8afb-20be-e56ed7d3047f` |
+| (brand navy, K02) | Colors/Navy | `--_primitives---colors--navy` | #00263E | `variable-bbb7c022-7587-5697-05f4-9fa10672c409` |
 
 Primitives also holds Relume's `Opacity/*` colours (White 5 to 60, Neutral Darkest 5 to 60, Transparent). The Neutral Darkest opacity steps are pure black at alpha, not #262118. Figma's many `#000000` alpha overlays have no variables; use these opacity steps where one is close, otherwise set the value on the class.
 
-No variables exist for success, error, warning or info, or for the low-use Figma colours (#2B2927, #906E58, #F26849, #489CCA and others in `figma/tokens.json`). Create one only when a component needs it, in Primitives, with a descriptive name.
+No variables exist for success, error, warning or info, or for the low-use Figma colours (#2B2927, #F26849 and others in `figma/tokens.json`). Create one only when a component needs it, in Primitives, with a descriptive name.
 
 ### Colour scheme (collection Color Schemes, `collection-139f4ef2-8521-8181-4a7f-fc90894e2d6f`)
 
@@ -77,13 +80,14 @@ Desktop values. Tablet is the `medium` breakpoint, mobile is `small`. Heading cl
 
 | Class | Font | Size / line height | Letter spacing | Case | Tablet / mobile size | Figma style |
 |---|---|---|---|---|---|---|
+| `heading-style-display` | Heading, 900 | 5rem / 1 | 0 | lowercase | 4 / 3.25 / 2.5rem (T / ML / MP) | Sackers 80/80 venue cards (K02) |
 | `heading-style-h1` | Heading, 900 | 3.5rem / 1 | 0 | lowercase | 3.25 / 2.5rem | Display/Hero |
 | `heading-style-h2` | Heading, 900 | 2.5rem / 1 | -0.05em | none | 2.25 / 1.875rem | H2-CAPS |
 | `heading-style-h3` | Heading, 900 | 1.875rem / 1 | -0.05em | none | 1.75 / 1.5rem | H3-CAPS |
 | `heading-style-h4` | Heading, 900 | 1.5rem / 1.2 | 0 | lowercase | 1.375 / 1.25rem | H4-CAPS |
 | `heading-style-h5` | Heading, 900 | 1.25rem / 1.2 | 0 | lowercase | none / 1.125rem | H5-CAPS |
 | `heading-style-h6` | inherits | 1.25rem / 1.4, 700 | | | none / 1.125rem | (Relume default, no Figma match) |
-| `text-size-large` | inherits | 1.25rem | | | none / 1.125rem | (Relume default; same size as medium) |
+| `text-size-large` | inherits | 1.375rem / 1.6 | | | none / 1.125rem | Gatch 22/35.2 (K02 correction) |
 | `text-size-medium` | inherits | 1.25rem / 1.3 | | | none / 1.125rem | Paragraph (321 uses) |
 | `text-size-regular` | inherits | 1.125rem / 1.6 | | | | Gatch Test/Body/Regular |
 | `text-size-small` | inherits | 0.875rem | | | | (Relume default) |
@@ -102,9 +106,11 @@ Each sets its own family, weight, size and line height. Use alone on the element
 | `text-style-button` | Heading, 900 | 1rem / 1 | 0 | lowercase | Label/Button (95) |
 | `text-style-caption` | Heading, 900 | 0.875rem / 1.071 | 0 | lowercase | Label/Caption (43) |
 | `text-style-eyebrow` | Heading, 900 | 1.125rem / 1.45 | 0 | none | Label/Eyebrow (6) |
-| `text-style-script` | Accent, 400 | 3.75rem / 1.2 | | | Morello 60/72 (53) |
+| `text-style-script` | Accent, 400 | 3.75rem / 1.2 (T 3.25, MP 2.5rem) | | | Morello 60/72 (53) |
+| `text-style-script.is-large` | combo | 5rem (T 4, ML 3.25, MP 2.75rem) | | | Morello 80/96 (16) |
+| `text-style-caption-tracked` | Heading, 900 | 0.875rem / 1 | 0.05em | lowercase | Sackers 14/14 tracked caption (K02) |
 
-Figma variants with no class yet (add as `is-` modifiers inside the component that uses them): Display/Card (h2 at line height 0.95, lowercase, 9 uses), Display/Section (h1 at 3rem, 6 uses), Label/Large (h5 at 1.3125rem / 0.948, 4 uses), Morello 80/96 (16 uses) and 80/80 (5 uses).
+Figma variants with no class yet (add as `is-` modifiers inside the component that uses them): Display/Card (h2 at line height 0.95, lowercase, 9 uses), Display/Section (h1 at 3rem, 6 uses), Label/Large (h5 at 1.3125rem / 0.948, 4 uses) and Morello 80/80 (5 uses; use `text-style-script is-large`).
 
 ### Relume text utilities (unchanged)
 
@@ -116,17 +122,17 @@ Figma variants with no class yet (add as `is-` modifiers inside the component th
 
 ---
 
-## Layout and Utility Families (Relume, unchanged)
+## Layout and Utility Families (Relume, with K02 corrections)
 
 | Family | Classes |
 |---|---|
-| Page structure | `page-wrapper`, `main-wrapper`, `padding-global`, `padding-section-{large,medium,small}` (combo on `padding-global`), `container-{large,medium,small}` |
+| Page structure | `page-wrapper`, `main-wrapper`, `padding-global` (2rem left and right), `padding-section-{large,medium,small}` (global classes carry the values: large 7 / 5 / 3.5 / 2.5rem, medium 5 / 3.5 / 2.5 / 2rem, small 3 / 2 / 1.5 / 1rem at D / T / ML / MP; the `padding-global.padding-section-*` combos are empty), `padding-global.padding-section-xlarge` (combo, 14 / 10 / 6 / 5rem, K02), `container-{large,medium,small}`, `container-full` (K02) |
 | Spacing | `margin-*` and `padding-*` directional bases (`-top`, `-bottom`, `-left`, `-right`, `-horizontal`, `-vertical`) with size combos (`-0`, `-tiny`, `-xxsmall` to `-xxhuge`, `-custom1` to `-custom3`); `spacer-{xxsmall..xxhuge}`; `spacing-clean` |
 | Sizing | `max-width-{xxsmall..xxlarge,full}`, `max-width-full-{tablet,mobile-landscape,mobile-portrait}`, `align-center` |
 | Visibility | `hide`, `hide-tablet`, `hide-mobile-landscape`, `hide-mobile-portrait`, `overflow-{auto,hidden,scroll,visible}`, `pointer-events-{auto,none}`, `z-index-{1,2}`, `layer` |
-| Media | `aspect-ratio-{landscape,portrait,square,widescreen}`, `icon-1x1-*`, `icon-embed-*`, `icon-height-*` |
+| Media | `u-image` (block, 100% by 100%, cover; K02), `aspect-ratio-{landscape,portrait,square,widescreen}`, `icon-1x1-*`, `icon-embed-*`, `icon-height-*` |
 | Effects | `shadow-{xxsmall..xxlarge}`, `divider-horizontal`, `background-color-black`, `inherit-color`, `display-inlineflex` |
-| Buttons | `button` with combos `is-secondary`, `is-alternate`, `is-small`, `is-icon`, `is-link`; `button-group` (`is-center`) |
+| Buttons | `button` with combos `is-secondary`, `is-alternate`, `is-small`, `is-icon`, `is-link`; `button-group` (`is-center`). Site button (K02): `button.is-chamfer` (chamfered cream, Label/Button type) with combos `is-wide`, `is-text-burgundy`, `is-dark`, `is-burgundy`, `is-blue`, `is-outline`, `is-outline-light`. The outline combos use the SVG assets `6ad712867471777f5f7e40b1` (dark) and `6ad7128647118d6eef7696f1` (light). |
 | UI bits | `tag` (`is-text`, `is-alternate`), `tab-link`, `tabs-menu`, `dropdown-chevron`, `slider-arrow` (`is-bottom-next`, `is-bottom-previous`, `is-centre-next`, `is-centre-previous`), `slider-arrow-icon`, `category-filter-menu`, `category-filter-link`, `menu-icon` |
 | Forms | `form_*` (component, form, field-wrapper, field-label, input with `is-select-input` and `is-text-area`, checkbox, radio, message-success, message-error), `error-text`, `success-text` |
 | Relume starter blocks | `navbar_*`, `footer_*`, `section_faq` / `faq_*`, `section_contact` / `contact_*`, `utility_*` (password and 404 pages) |
@@ -134,11 +140,31 @@ Figma variants with no class yet (add as `is-` modifiers inside the component th
 
 ## Project Component Families
 
-None yet. Record each shared class family here as build sessions create it (name, purpose, where used).
+Created by K02 on 2026-10-20 from the wave 2 plans (`docs/figma/build-plans/Q0xx/plan.json`); the write list is `docs/figma/build-plans/k02-write-plan.md`. Each parallel build session uses only its own family and the shared classes; none creates a class.
 
-Planned, not yet created: the wave 2 shared classes, new colour variables and corrections to existing utilities are listed in `docs/figma/build-plans/shared-classes.md` (K01). Move each row here once the Designer session creates it.
+**Shared accordion contract** (`src/utils/accordion.ts`): `accordion_item`, `accordion_header`, `accordion_question`, `accordion_icon`, `accordion_content-wrapper`, `accordion_content`. The icon's open state (`.accordion_header.is-active .accordion_icon`, rotate 0deg) is not a class style; the Q015 build adds it as CSS.
 
-Not project classes: `x01-probe_*` (9 classes and 2 combos) belong to the X01 probe and are deleted after it; `(delete this)` is a Relume leftover.
+| Entry | Family | Base classes | Combos | Modifiers |
+|---|---|---|---|---|
+| Q012 | `section_cta-booking-newsletter` / `cta-booking-newsletter_*` | 17 | 0 | none |
+| Q013 | `section_footer-links` / `footer-links_*` | 19 | 1 | `footer-links_padding` |
+| Q014 | `section_hero-fullbleed-centered` / `hero-fullbleed-centered_*` | 9 | 2 | `is-left`, `is-text-dark` |
+| Q015 | `section_faq-accordion` / `faq-accordion_*` | 4 | 0 | none |
+| Q016 | `section_script-intro-centered` / `script-intro-centered_*` | 11 | 3 | `is-bottom`, `is-tall`, `is-wide` |
+| Q017 | `section_split-image-text-light` / `split-image-text-light_*` | 12 | 18 | `is-below`, `is-blue`, `is-bottom`, `is-chamfer`, `is-end`, `is-end-half`, `is-olive`, `is-outdent`, `is-overlap`, `is-secondary`, `is-start-1`, `is-start-2`, `is-start-4`, `is-start-7`, `is-start-9`, `is-tan`, `is-wide`, `is-wide-text` |
+| Q018 | `section_gallery-mosaic-captioned` / `gallery-mosaic-captioned_*` | 10 | 1 | `is-wide` |
+| Q019 | `section_map-feature` / `map-feature_*` | 15 | 15 | `is-centered`, `is-image-bg`, `is-pin-1`, `is-pin-2`, `is-pin-3`, `is-pin-4` |
+| Q020 | `section_image-trio-text` / `image-trio-text_*` | 15 | 5 | `is-left`, `is-offset` |
+| Q021 | `section_venue-card-fullbleed` / `venue-card-fullbleed_*` | 17 | 11 | `is-active`, `is-left`, `is-media-center`, `is-tall` |
+| Q022 | `section_form-split-script-contact` / `form-split-script-contact_*` | 22 | 6 | `is-centered`, `is-full`, `is-offset`, `is-rotated`, `is-tall`, `is-textarea` |
+| Q023 | `section_tab-pills-intro` / `tab-pills-intro_*` | 9 | 6 | `is-active`, `is-media` |
+| Q024 | `section_image-inset-single` / `image-inset-single_*` | 3 | 1 | `is-small` |
+| Q025 | `section_article-card-staggered` / `article-card-staggered_*` | 9 | 7 | `is-right`, `is-tall` |
+| Q026 | `section_timeline-scatter-images` / `timeline-scatter-images_*` | 9 | 19 | `is-center`, `is-end`, `is-inset`, `is-large`, `is-lift`, `is-medium`, `is-small`, `is-tall`, `is-xlarge`, `is-xsmall` |
+
+Q020 `is-left` also sits on `image-trio-text_header`, `_list` and `_figure`; apply it to all three with the section. Empty chain paths (no CSS) exist for stacked combos the plans use, for example `split-image-text-light_content.is-start-7.is-bottom.is-wide-text` and `<heading>.text-style-script.is-large`; see section 6 of the write plan.
+
+Not project classes: `(delete this)` is a Relume leftover.
 
 ---
 
