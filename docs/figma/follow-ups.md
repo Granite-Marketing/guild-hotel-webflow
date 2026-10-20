@@ -125,3 +125,13 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q042: the Site Nav "Book link" keeps its default `#book` on `/static-template`; set the real booking URL site-wide when known.
 - [ ] V02-Q016: visual check of the Tall, Wide and Bottom variant instances at the end of `/build-script-intro-centered` against reference sections S2 to S4 (staging).
 - [ ] V02-Q016: delete the old is-tall, is-wide and is-bottom reference sections on `/build-script-intro-centered` after the visual check (keep the combos until no page uses them).
+
+## Q031 Home (2026-10-20)
+- [ ] Q031: visual check of `/` on staging (https://the-guild-hotel-c34e71.webflow.io/) against the home section crops. Agent results: `docs/figma/build-plans/Q031/staging-notes.md`.
+- [ ] Q031: enable `scrollEnlargeSnap()` (slot B), `imageTrailHover()` (slot D) and `imageStackCollapse()` (slot G) in `src/index.ts`, release a tag and update the footer script URL. Home now carries all three attribute sets (A01 on the 04 to 09 snap section, A03 on `home-art-stories_media`, A02 inside Image Trio Text). Left out of the Q031 PR because other page sessions share `src/index.ts`.
+- [ ] Q031: replace the two `section_placeholder` sections (home/13 retail, home/16 offers and packages, `data-placeholder="Q008"`) with Q008 offers-slider-split once it exists.
+- [ ] Q031: home/14 trail images are four static links to `/arts`. Bind them to the Arts CMS collection (`href="/arts#{{slug}}"`, Collection List items carrying `data-image-trail-hover-item`) once that collection exists; the Arts page items need `id` bound to the slug.
+- [ ] Q031: home/01 hero has no media (Figma shows a grey slot, likely a video). Add the hero image or `backgroundVideo` source when the asset arrives, and turn Show Image on.
+- [ ] Q031: home/03 Split (Olive) shows the component's placeholder image; the design has no photo yet.
+- [ ] Q031: Site Nav "Book link" and the hero button use `#book`; set the real booking URL site-wide when known.
+- [ ] Q031: alt text is empty on the five snap panel photos (`venue-card-fullbleed_image`) and the four trail images; run `/asset-metadata` for the Home assets.
