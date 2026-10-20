@@ -17,7 +17,8 @@
  *                 the same path, also from inside another open dialog (the
  *                 current one closes first and focus later returns to the
  *                 trigger that opened the first dialog).
- *   - Page load:  `location.hash` naming a dialog id opens that dialog.
+ *   - Page load:  `location.hash` naming a dialog id opens that dialog, and
+ *                 so does a later `hashchange` to one.
  *   - Close and scroll: a `[data-modal-close]` with `href="#{section-id}"`
  *                 pointing at a non-dialog element closes the dialog, then
  *                 scrolls to that element and moves focus there.
@@ -279,4 +280,10 @@ export const modals = () => {
 
   const initialDialog = getDialog(hashTarget(window.location.hash))
   if (initialDialog) openModal(initialDialog, null)
+
+  // Back/forward or a typed hash that names a dialog opens it.
+  window.addEventListener('hashchange', () => {
+    const dialog = getDialog(hashTarget(window.location.hash))
+    if (dialog) openModal(dialog, null)
+  })
 }

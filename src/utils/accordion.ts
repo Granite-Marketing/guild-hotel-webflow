@@ -21,6 +21,24 @@ export const accordion = () => {
     return `${content.offsetHeight + OPEN_HEIGHT_PADDING}px`
   }
 
+  // Re-apply the open height when an open item's content resizes (late
+  // images, font swap). Closed items are ignored.
+  const headerByContent = new Map<Element, HTMLElement>()
+  const contentObserver =
+    typeof ResizeObserver === 'undefined'
+      ? null
+      : new ResizeObserver((entries) => {
+          entries.forEach((entry) => {
+            const header = headerByContent.get(entry.target)
+            if (!header || header.getAttribute('aria-expanded') !== 'true') return
+            const contentWrapper = header.nextElementSibling as HTMLElement | null
+            const height = contentWrapper ? openHeight(contentWrapper) : null
+            if (contentWrapper && height && contentWrapper.style.maxHeight !== height) {
+              contentWrapper.style.maxHeight = height
+            }
+          })
+        })
+
   function setOpen(item: HTMLElement, isOpen: boolean) {
     item.setAttribute('aria-expanded', isOpen ? 'true' : 'false')
     item.classList.toggle('is-active', isOpen)
@@ -57,6 +75,12 @@ export const accordion = () => {
     contentWrapper.id = accordionTargetId
     contentWrapper.setAttribute('aria-labelledby', accordionId)
 
+    const content = contentWrapper.querySelector<HTMLElement>('.accordion_content')
+    if (content && contentObserver) {
+      headerByContent.set(content, item)
+      contentObserver.observe(content)
+    }
+
     if (!isNativeButton(item) && !isNativeLink(item)) {
       if (!item.hasAttribute('tabindex')) item.setAttribute('tabindex', '0')
       if (!item.hasAttribute('role')) item.setAttribute('role', 'button')
@@ -71,7 +95,8 @@ export const accordion = () => {
 
     item.addEventListener('keydown', (event) => {
       // Native buttons already click on Enter and Space; links click on Enter.
-      if (isNativeButton(item)) return
+      // Only the header itself: a nested input or link keeps its own keys.
+      if (event.target !== item || isNativeButton(item)) return
       const isSpace = event.key === ' ' || event.key === 'Spacebar'
       const isEnter = event.key === 'Enter'
       if (isSpace || (isEnter && !isNativeLink(item))) {

@@ -204,10 +204,13 @@ sibling and the measured element inside it is `.accordion_content`.
   a click uses) and every other header gets `aria-expanded="false"` and
   `max-height: 0px`.
 - Opening one header closes the others.
+- A `ResizeObserver` on each `.accordion_content` re-applies the open height
+  while that item is open (late images, font swap); closed items are ignored.
 - Keys: Space toggles a Link Block header (prevented so the page does not
   scroll); Enter uses the link's native click. A header that is neither a
   link nor a button gets `tabindex="0"`, `role="button"` and Enter support.
-  A native `<button>` header is left to the browser.
+  A native `<button>` header is left to the browser. Keys are handled only
+  when the header itself has focus, so a nested input keeps its own keys.
 - Ids: headers get `accordion-{n}`, wrappers `accordion-target-{n}`, wired
   with `aria-controls` / `aria-labelledby`.
 
@@ -229,7 +232,8 @@ W02 additions (no new attributes):
   (`preventDefault`, no page jump, URL unchanged), also from inside another
   open dialog: the current one closes and focus later returns to the
   trigger that opened the first dialog.
-- A `location.hash` naming a dialog id opens it on load.
+- A `location.hash` naming a dialog id opens it on load, and a later
+  `hashchange` to a dialog id (back/forward, typed URL) opens it too.
 - A `[data-modal-close]` with `href="#{section-id}"` on a non-dialog element
   closes the dialog, scrolls to the section with `smoothScroll.scrollTo()`
   and focuses it (adds `tabindex="-1"` if needed). Used by the "back to the

@@ -4,9 +4,10 @@ import * as esbuild from 'esbuild'
 /**
  * W02 runtime fixes, offline fixture:
  * - accordion opens only the first item on load, sets aria-expanded on every
- *   header, and toggles on Space and Enter;
+ *   header, toggles on Space and Enter on the header only, and re-applies
+ *   the open height when content grows;
  * - modals open from Enter and Space on a div trigger, from `#id` hash links
- *   (also inside an open dialog) and from location.hash on load;
+ *   (also inside an open dialog), from location.hash on load and on hashchange;
  * - a close control with `href="#section"` closes and scrolls to the section.
  */
 
@@ -58,6 +59,38 @@ test('accordion toggles on Space without scrolling, and on Enter', async ({ page
   expect(await page.evaluate(() => window.scrollY)).toBe(scrollBefore)
   await page.keyboard.press('Enter')
   await expect(second).toHaveAttribute('aria-expanded', 'false')
+})
+
+test('open item re-applies its height when content grows later', async ({ page }) => {
+  await load(page)
+  const wrapper = page.locator('.accordion_content-wrapper').first()
+  const before = parseFloat(await wrapper.evaluate((element) => (element as HTMLElement).style.maxHeight))
+  await page.locator('.accordion_content').first().evaluate((content) => {
+    const tall = document.createElement('div')
+    tall.style.height = '400px'
+    content.appendChild(tall)
+  })
+  await expect
+    .poll(async () => parseFloat(await wrapper.evaluate((element) => (element as HTMLElement).style.maxHeight)))
+    .toBeGreaterThanOrEqual(before + 400)
+})
+
+test('keys inside a nested input do not toggle the header', async ({ page }) => {
+  await load(page)
+  const third = page.locator('.accordion_header').nth(2)
+  const input = page.locator('.accordion_nested-input')
+  await input.focus()
+  await page.keyboard.press('Space')
+  await expect(input).toHaveValue(' ')
+  await expect(third).toHaveAttribute('aria-expanded', 'false')
+})
+
+test('a hashchange naming a dialog opens it', async ({ page }) => {
+  await load(page)
+  await page.evaluate(() => {
+    window.location.hash = 'all-rooms'
+  })
+  await expect(page.locator('#all-rooms')).toHaveClass(/is-open/)
 })
 
 test('Enter and Space on a div trigger open its dialog', async ({ page }) => {
