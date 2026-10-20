@@ -1,0 +1,130 @@
+---
+title: "Webflow Data API builders work without the Designer"
+date: "2026-10-19"
+category: "integration-issues"
+module: "webflow-mcp"
+component: "tooling"
+problem_type: "integration_issue"
+severity: "medium"
+root_cause: "missing_knowledge"
+resolution_type: "workflow_improvement"
+symptoms:
+  - "Native builds were serialised behind one open Designer session"
+  - "Unclear whether data_element_builder, data_whtml_builder and data_component_builder need the Designer"
+tags:
+  - webflow-mcp
+  - element-builder
+  - whtml-builder
+  - component-builder
+  - parallel-builds
+  - designer
+---
+
+# Webflow Data API builders work without the Designer
+
+## Problem
+
+Native components were built one at a time because the build skill drove the Designer. Ledger entry X01 probed whether the headless `data_*` builders (Webflow MCP 2.2.0) can build sections, classes and components with no Designer involvement, so later builds can run in parallel.
+
+## Setup
+
+- Site `6ad6405eae8eac6d7b7c41a3`, on 2026-10-19 between 20:28 and 20:35 UTC.
+- Two draft pages, `x01-probe` (`6ad67d5fba7363623522fef3`) and `x01-probe-b` (`6ad67d608726a8a445349dc0`). All classes were prefixed `x01-probe_`.
+- No `designer_tool` call was made. The Designer was held by another session (Q001, a token sync) that was working on other pages. This session never opened either probe page in the Designer.
+- Every call passed one `session_id` and one `agent_id`. The server says it cannot tell concurrent agents apart without `agent_id`, so each parallel build session needs its own.
+
+## Answers
+
+### 1. Do the builders add elements without the Designer?
+
+Yes. All three builders wrote to pages that no Designer was showing:
+
+- `data_element_builder` built a nested tree in one call: Section > article > header > h2, plus a paragraph, figure > image and footer > button and link. It applied classes, a combo and attributes.
+- `data_whtml_builder` inserted the same structure from HTML and CSS.
+- `data_component_builder` placed a component instance on the second page.
+- The read-back with `data_element_tool > get_all_elements` showed every element.
+
+Which builder fits best:
+
+- **`data_element_builder`** for production sections. Classes are named, image assets are set by id, and nothing gets renamed. It needs the classes created first with `data_style_tool`.
+- **`data_whtml_builder`** creates the markup and classes in one call. But it renames classes on conflict (see question 3), drops classes that have no CSS rule (`x01-probe_whtml-link` had none and was not created), and does not resolve `<img src>` to an asset, even with the site's own CDN URL (`partial_success` with `image_warnings`; the image ends up with `assetId: null`). Use it only for brand-new class families, then fix the images with `data_element_tool > set_image_asset`.
+- **`data_component_builder`** only inserts instances of components that already exist (by name). It does not build markup.
+
+`BY_CUSTOM_TAG` with `article`, `header`, `figure` and `footer` became Block elements with the right tag. `Button` came back as a `Link` element.
+
+### 2. Breakpoint styles and combo classes?
+
+Yes, through both routes. The read-back with `query_styles` and `include_breakpoints` showed:
+
+- `data_style_tool > create_style` created `x01-probe_card`. `update_style` with `breakpoint_id` `medium`, `small` and `tiny` stored 1.5rem, 1rem and 0.5rem. Each `update_style` response shows only the breakpoint it touched; the full set is visible only on read-back.
+- `create_style` with `parent_style_names: ["x01-probe_card"]` created the combo `.x01-probe_card.is-x01-probe-alt`. A `small` override on the combo was also stored.
+- WHTML CSS with `@media screen and (max-width: 991px)` and `(max-width: 479px)` became `medium` and `tiny` overrides. A `.a.b` selector became a combo class.
+
+### 3. A class name that already exists?
+
+It depends on the route:
+
+- **`data_style_tool > create_style`** returns an error: `A style at path "x01-probe_card" already exists` (`OPERATION_FAILED`). Nothing is changed. Builders must query first and reuse the class, or call `update_style`.
+- **`data_whtml_builder` with different CSS** creates a new class with a suffix. Redefining `.x01-probe_card` with other properties created `x01-probe_card-1`, and the element received that class. This breaks the one-class-family rule without any warning.
+- **`data_whtml_builder` with identical CSS** reuses the existing class. A second insert defining `.x01-probe_race2 { margin-top: 3rem; }` got `x01-probe_race2`, with no suffix.
+- **`data_element_builder` `set_style`** only references existing names, so it reuses them.
+
+### 4. Two calls create the same new class at the same time?
+
+Two tool calls were sent in parallel in one turn. No duplicate appeared, but the later call either failed or got renamed:
+
+- `create_style x01-probe_race` (margin 1rem) against `create_style x01-probe_race` (margin 2rem): the first created the class and the second got the "already exists" error. Exactly one class exists, with the first call's values.
+- WHTML `.x01-probe_race3 { margin-top: 4rem }` on page A against `.x01-probe_race3 { margin-top: 5rem }` on page B: A got `x01-probe_race3` and B got `x01-probe_race3-1`.
+
+The client may have serialised the two calls. Either way, the server never produced two classes with the same name.
+
+Rule for parallel builds: shared classes (utilities, shared families) must exist before parallel sessions start. Each session creates only its own `section_<component>` family, and never through WHTML CSS for a name another session might also create.
+
+### 5. Convert to a component and place it on another page?
+
+Yes:
+
+- `data_component_tool > transform_element_to_component` turned the element-builder section into "X01 Probe Card" (`174e2cb3-6a1a-3255-0c09-b75c8d3f44c7`, group "X01 Probe") and replaced the source with an instance.
+- `data_component_builder` with `insert_in_element` placed an instance on `x01-probe-b`.
+- `get_all_elements` with `scope_component_id` showed the full definition: classes, attributes, `assetId` and links.
+
+### 6. Custom attributes, image assets by id, link settings?
+
+- **Attributes:** yes, through `set_attributes` in the builder and `data_element_tool > set_attributes`. `data-animation-general`, `data-animation-order` and `aria-label` all persisted.
+- **Image by asset id:** yes in `data_element_builder` (`set_image_asset`, stored as `assetId`). For WHTML images, `data_element_tool > set_image_asset` works afterwards. `set_settings` with key `image` is rejected ("not applicable").
+- **Links:**
+  - `set_link` with `link_type: "url"` worked.
+  - **`set_link` with `link_type: "page"` in `data_element_builder` was silently dropped.** The element was created with no link setting and the call still returned success.
+  - Writing it afterwards with `data_element_settings_tool > set_settings`, key `link` and `static_link { mode: "page", to: <pageId>, open_in_new_tab: true }`, worked. It is stored as `{ mode: "page", to: { pageId } }`.
+
+### 7. Does an open Designer see the changes, and does it overwrite them?
+
+The writes did not need the Designer at all. The Q001 session held the Designer on other pages for the whole probe. A re-read of every `x01-probe` class at about 20:36 UTC showed all 11 classes intact. See "Designer coexistence check" below for what was confirmed in the Designer itself.
+
+## Designer coexistence check
+
+- **The Designer sees the changes live.** Stephen looked at the Designer that Q001 had open, without reloading. It listed both probe pages and the "X01 Probe Card" component.
+- **A Designer save did not overwrite them.** Q001 saved in the Designer after 20:30 UTC. A Data API re-read after that save showed the full probe intact: the page tree, the component definition, all 11 classes, and the `medium`, `small` and `tiny` values on `x01-probe_card`.
+- **Not tested:** a Designer user and a Data API call editing the same element or class at the same moment. Keep each parallel session on its own page and its own class family.
+
+## Cleanup and its gap
+
+- Removed through the MCP: every probe element (`remove_element`), the component (`unregister_component`, after `instanceCount: 0`), and all 11 classes (`remove_style`, combos first). A final `query_styles` for `x01-probe` returned nothing.
+- **Pages cannot be deleted headlessly.** `data_pages_tool` has no delete action, and `DELETE /v2/pages/{id}` returns `RouteNotFoundError` (404), while `GET` on the same id returns 200. Page deletion stays a manual Designer step. Parallel builds should therefore build on existing pages, or on pages the plan intends to keep.
+
+## Verdict
+
+Parallel Data API builds: yes. Several sessions can build native sections, classes and components at the same time, with no Designer involved.
+
+These must stay on the Designer, or run before the parallel sessions start:
+
+- Deleting pages.
+- Visual checks in the Designer canvas.
+- Rich text child styling, which the MCP cannot do.
+- Creating shared classes. One session does it first, because parallel creates either fail or come back with a `-1` suffix.
+
+Rules for the build skill:
+
+- Use `data_element_builder` with classes created first through `data_style_tool`.
+- Set page links through `data_element_settings_tool` (`static_link`, `mode: "page"`), never through the builder's `set_link` page type.
+- Give every session its own `agent_id`.
