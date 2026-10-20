@@ -143,3 +143,10 @@ Rules for the build skill:
 - **Input settings, not attributes.** `name`, `type` (text, email, tel, number) and `required` are settings on FormTextInput (`set_settings`). New inputs default to `required: true`. The form's `name` and the button's `buttonText` and `loadingText` are settings too.
 - **`placeholder` cannot be set headlessly.** The builder rejects it as a reserved attribute (and rejects the whole call, leaving a partial tree), `set_attributes` returns an internal error, and there is no placeholder setting. Set placeholders in the Designer.
 - **No slots through the API.** `create_prop` has no slot type. A builder `ComponentSlot` inside a definition creates a `Slot` element (a wrapping div), but `move_element` into it fails with an internal error. Use Show booleans and leave slots to the Designer.
+## Gotchas found in the Q016 build (2026-10-20)
+
+- **Image props:** `create_prop` takes no image default, and binding an image's `assetId` to the prop clears the definition's image. On an instance, `set_component_instance_prop_values` has no image type; pass the asset id as `type: "string"`. It reads back as the asset id.
+- **Link props:** prop defaults and instance values accept only `url`, `email`, `phone`, `popover` or `modal`; `page` is rejected. Use a url such as `/rooms`.
+- **LinkBlock text:** the LinkBlock exposes a `text` setting; bind the inner span's `text` instead, so the icon child is kept. A `DOM` span takes its text through `set_settings` key `text`.
+- **Optional wrappers:** bind each wrapper's `visibility` to a boolean prop; an empty text prop does not hide its wrapper.
+- **Heading newlines:** `set_text` and text props keep `\n`, so `white-space: pre-line` headings work without a line-break element.
