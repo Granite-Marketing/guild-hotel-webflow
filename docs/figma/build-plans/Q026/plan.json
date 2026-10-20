@@ -844,5 +844,23 @@
       "Caption 3": "caadfeca-3265-16f8-f797-322e8a8368f5",
       "Caption 4": "5663aa80-b008-e42b-24a0-d0b2abf26243"
     }
+  },
+  "v02": {
+    "date": "2026-10-20",
+    "variantIds": {
+      "componentId": "144b7315-3604-2419-b046-c09d180f1163",
+      "base": "base",
+      "is-tall": null
+    },
+    "separateComponents": {
+      "is-tall": {
+        "name": "timeline-scatter-images Tall",
+        "componentId": "33e949df-43c2-4806-b73e-d403ed483051",
+        "buildPageInstance": "44318675-d385-7bfe-151a-2014c7d5b255",
+        "referenceSection": "ff99cbf2-2677-0282-70e3-bb267dce160e"
+      }
+    },
+    "decision": "is-tall is a separate component, not a variant. It swaps the heading class (heading-style-h4 to heading-style-h3), the caption class (text-style-caps-caption-16 to text-style-eyebrow-caps) and gives each item its own size and offset modifiers (xlarge inset, xlarge end, alternating). A variant only restyles an element's first class, and all four items share timeline-scatter-images_item, so per-item differences cannot be expressed.",
+    "tallClasses": "Duplicated from timeline-scatter-images, then set_style (scope_component_id) on 16 elements to match the reference section: section, header, heading, list and captions carry is-tall; items are is-xlarge plus is-inset or is-end; wraps are is-xlarge. Read back equal to the reference section element for element. Prop ids are kept from the source; defaults set to the neighborhood/07 copy (beyond downtown san diego, Coronado Beach, oceanside, Coronado Beach, oceanside)."
   }
 }
