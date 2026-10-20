@@ -257,3 +257,10 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q037: visual check of `/guidelines` on staging (notes in `docs/figma/build-plans/Q037/`).
 - [ ] Q037: the hero has no image (Figma grey slot; Show Image is off); set Image and Show Image when the photo arrives. The guidelines/05 feature is an empty `figure` with `data-image-placeholder`; add a `u-image` Image when the collaborator photo arrives.
 - [ ] Snap groups (Home, Dining, Wellness): built as plain sections with `data-scroll-enlarge-snap` instead of Tab Pills Intro plus Venue Card instances, because tab-pills-intro has no panels slot. Accepted for the 80 to 90 percent target; converting needs a panels slot (Designer) or a dedicated snap-group component.
+
+## Q039 Press (2026-10-20)
+- [ ] Q039: visual check of `/press` on staging (`https://the-guild-hotel-c34e71.webflow.io/press`) against the press crops; build record and staging notes in `docs/figma/build-plans/Q039/build.md`.
+- [ ] Q039: press cards (03 to 07) show hotel photos with the publication name, not the Figma press logos. To show logos, upload the National Geographic, Forbes and Architectural Digest SVGs (`figma/vectors/`) and add a logo overlay (image prop plus Show boolean) to Article Card Staggered, or swap in logo-on-photo images.
+- [ ] Q039: the press enquiries form shows the component's photoshoot fields; the Figma press form has organization and expected publish date. Needs a Designer slot or a form variant (same as the Q022 slot follow-up).
+- [ ] Q039: tab-pills-intro links point at `#press`, `#design` and `#community`, which have no targets on the page.
+- [ ] Q039: "more of the guild" carousel arrows are dead on staging until `cardCarouselHeaderLeft()` ships in a released bundle (Q009 item above).
