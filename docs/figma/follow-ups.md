@@ -29,6 +29,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q022: set the placeholder on every form input to its label (the Data API rejects `placeholder`); the labels are in each input's aria-label and in `plan.json` instances.
 - [ ] Q022: decide whether to turn the form block, details and links into component slots (the Data API cannot: no slot prop type, and moving an element into a ComponentSlot fails). Without slots, every instance shows the photoshoot form.
 - [ ] Q016, Q020, Q021, Q022: visual check of `/build-script-intro-centered`, `/build-image-trio-text`, `/build-venue-card-fullbleed` and `/build-form-split-script-contact` in the Designer.
+- [ ] Q025: visual check of `🧱 article-card-staggered` (`/build-article-card-staggered`) against the plan previews and crops in `docs/figma/build-plans/Q025/`: base instance, is-right, is-right with "culture", is-tall. Recheck spacing with the real Sackers and Gatch fonts.
 
 ## Decisions for Stephen
 - [ ] Q021: open questions OQ2 (wellness and meetings intro moves from Q023 into this snap section) and OQ3 (legal and corporate as a static stack) are still on their defaults; confirm before those pages are built.
@@ -49,6 +50,8 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q018: who supplies the 40 gallery images (4 per instance), and should the dining and legal/corporate galleries take them from CMS (Q027, Q028) instead of the Image props?
 - [ ] Q018: show the "A Landmark Reimagined" feature title on the meetings instance (Show Feature Title is off by default)? Also confirm the real gallery headings for dining-gardenterrace, dining-lobbybar and dining-poollounge (Figma copies "zuma gallery").
 - [ ] Q022: which form fields are required (all are optional now), plus the plan's open questions: submit destination, contact page media, social URLs.
+- [ ] Q025: collection pages as one Collection List (alternating left and right with an even-item rule) or five static sections as Figma draws them (plan open question 1). The component holds one card; is-right and is-tall are reference sections pending the variant decision shared with Q014, Q016, Q017 and Q020.
+- [ ] Q025: card image source (CMS image field on collection pages, manual upload for the neighborhood dining cards) and whether the neighborhood header should stick (plan open questions 4 and 5).
 
 ## Agent follow-ups
 - [ ] Q021: four empty combos were created (`docs/figma/build-plans/Q021/plan.json` `build.classesCreated`). When placing on real pages, copy the home or dining snap section for each snap group (wellness and meetings need their tab labels and intro), and use the Venue Card Fullbleed component for the legal and corporate static cards, then remove the build page.
@@ -80,3 +83,5 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q021: add `data-eager` (and `loading=eager`) to the Venue Card Fullbleed component image; the wellness, meetings, legal and corporate tab groups are not built yet.
 - [ ] Q022: add `target=_blank` to the social links in the form-split-script-contact component.
 - [ ] Q020: the is-left reference sections have no `data-image-stack-collapse` attributes; add them where the A02 animation applies.
+- [ ] Q025: four empty combos were created (`docs/figma/build-plans/Q025/plan.json` `build.createdCombos`), including the shared `.heading-style-h3.text-weight-normal`, which other families can reuse.
+- [ ] Q025: place Article Card Staggered on happenings-collection and blog-collection, and copy the is-tall reference section to neighborhood/09, then remove the build page. Remove the #d9d9d9 figure fill once real images are bound.

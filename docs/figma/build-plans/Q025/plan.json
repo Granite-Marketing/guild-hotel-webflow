@@ -790,7 +790,13 @@
     "Layout sits in container-large (80rem) per convention. The Figma frame is 1600 wide with content from x 42 to x 1560, so at 1440 and wider the right-aligned card ends at the container edge (about 2.75rem further in than Figma) and the is-tall intro starts at the container edge (about 2.5rem further in).",
     "text-style-eyebrow-caps and text-style-caps-caption-16 are applied as standalone classes carrying the full type values, not as combos on text-size-regular as figma/tokens.json proposes, so they can be reused on any element. K01 reconciles.",
     "Extra vertical space on is-tall lives on article-card-staggered_component.is-tall (padding 4rem top and bottom on top of padding-section-small) because a component instance cannot swap the shared padding-section-* utility.",
-    "Card figure uses a #d9d9d9 fill with no variable as a placeholder until real images exist. Remove the fill once images are bound."
+    "Card figure uses a #d9d9d9 fill with no variable as a placeholder until real images exist. Remove the fill once images are bound.",
+    "Q025 build (2026-10-20): the component is the base single card only. The Data API has no slot props and an instance cannot switch the is-right or is-tall combos (same as Q016, Q017, Q020, Q021), so is-right, is-right with the culture header, and is-tall (3 cards) are plain reference sections on the build page.",
+    "Q025 build: the headingStyle class prop is not possible; the header holds two h2 headings (heading-style-h4 and heading-style-h3, both text-weight-normal) bound to one Heading prop, toggled by Show Small Heading (on) and Show Large Heading (off).",
+    "Q025 build: optional elements are boolean props bound to visibility (Show Header, Show Intro, Show Image, Show Eyebrow, Show Caption). Show Header defaults to off as the plan says, so the default instance shows the card only.",
+    "Q025 build: the Image prop has no default (API limit) and Show Image defaults to off, so the grey #d9d9d9 figure fill shows. The reference sections hold no img element at all, for the same placeholder look.",
+    "Q025 build: loading=\"lazy\" and alt=\"\" are left to the Image element defaults (alt inherits from the asset) instead of custom attributes.",
+    "Q025 build: the is-tall text stack is ordered article-card-staggered_text is-tall text-size-medium, so the combo path is .article-card-staggered_text.is-tall.text-size-medium; the .article-card-staggered_text.is-tall rule still matches."
   ],
   "k01": {
     "reconciledBy": "K01, 2026-10-20",
@@ -799,5 +805,52 @@
       "`u-image` is not on the live site; it is a shared class to create.",
       "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
     ]
+  },
+  "build": {
+    "by": "Q025",
+    "date": "2026-10-20",
+    "page": "6ad712cd74b1a594d93c88aa",
+    "componentId": "155bf09c-0bd4-9e9a-db53-4a8060b48cf1",
+    "componentName": "Article Card Staggered",
+    "componentGroup": "Shared",
+    "instance": "7297c66d-8ae6-39b7-7b90-747070804a72",
+    "referenceSections": {
+      "is-right": "7c3e1186-1454-9c66-deb0-48f9bd90e5eb",
+      "is-right + culture header (h3)": "e5321bc8-1e6d-2af8-4cca-d799d593168a",
+      "is-tall": "3c2ba3b7-47fa-4b0e-2bfe-a32ad505af29"
+    },
+    "createdCombos": [
+      {
+        "selector": ".article-card-staggered_intro.text-size-medium",
+        "id": "654aaf72-76ac-1810-7387-2f46efcfd2b7"
+      },
+      {
+        "selector": ".article-card-staggered_text.text-size-medium",
+        "id": "c1d420a9-12ea-3687-2a03-bc13c74c1bbe"
+      },
+      {
+        "selector": ".article-card-staggered_text.is-tall.text-size-medium",
+        "id": "854acadd-c9a2-0b2b-e922-b6db101b5060"
+      },
+      {
+        "selector": ".heading-style-h3.text-weight-normal",
+        "id": "3ba3a62f-ca6e-6d86-ce9c-a18ffd539cb7"
+      }
+    ],
+    "props": {
+      "Show Header": "4e06bb51-26e5-84b3-25af-f4ef943c5016",
+      "Heading": "04a1aa15-7e91-a261-61e7-57f8c3346fe0",
+      "Show Small Heading": "42fff605-c56e-ae3f-e5e5-f6e7a0b6b9d7",
+      "Show Large Heading": "5b427008-fa85-6945-13c7-d1b78309fcfe",
+      "Show Intro": "3dbb00d4-76d2-6898-bf65-bad39511acf8",
+      "Intro": "64a8bada-84d3-88fd-f3f3-4da091c4f87a",
+      "Show Image": "9258f35e-eb80-9433-93f2-4710c7def35d",
+      "Image": "c650b826-f916-0ef6-e511-4f6effd09808",
+      "Show Eyebrow": "866715dc-9fa8-0446-69fb-3e99e515cc82",
+      "Eyebrow": "66b37bd4-012b-54a6-4721-3df753b30de5",
+      "Show Caption": "27f183a5-3a7f-5ede-bdea-13bcd8176377",
+      "Caption": "b1991a04-404a-a730-0f15-11eb9de28a7a",
+      "Text": "a7c1b553-a777-2ed1-a75e-aa6efa0de284"
+    }
   }
 }
