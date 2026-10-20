@@ -83,7 +83,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q021: add `data-eager` (and `loading=eager`) to the Venue Card Fullbleed component image; the wellness, meetings, legal and corporate tab groups are not built yet.
 - [ ] Q022: add `target=_blank` to the social links in the form-split-script-contact component.
 - [ ] Q020: the is-left reference sections have no `data-image-stack-collapse` attributes; add them where the A02 animation applies.
-- [ ] Q026 (Designer): visual check of `🧱 timeline-scatter-images` (base instance and `is-tall` reference section) against `docs/figma/build-plans/Q026/preview-*.png` and the guidelines/04 and neighborhood/07 crops; nothing was published.
+- [x] Q026 (Designer): visual check of `🧱 timeline-scatter-images` (base instance and `is-tall` reference section) against `docs/figma/build-plans/Q026/preview-*.png` and the guidelines/04 and neighborhood/07 crops; nothing was published. Checked by Stephen in the Designer on 2026-10-20: looks good.
 - [ ] Q026 (Designer): the `items` slot could not be created through the API. Convert `timeline-scatter-images_list` into a slot (or decide on static items plus component variants) so instances can add, reorder and re-size items; the is-tall instance on neighborhood needs this.
 - [ ] Q026: no photos exist for either instance; add Image elements (`u-image timeline-scatter-images_image`, needs the empty combo) when the collaborator and location photos arrive, and decide whether the guidelines list becomes a CMS collection list (plan open question 1).
 - [ ] Q026: thirteen empty combos were created (listed in `docs/figma/build-plans/Q026/plan.json` `build.createdCombos`).
