@@ -162,4 +162,4 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q031 (V02-Q017 owner): on Home the Olive Split renders as a full 730px olive block with no cream bands or image overhang, the "uncover our history" CTA is dark on olive (Figma cream), and the empty Image prop publishes `src=""` (broken icon). Fix in the component or its Olive variant; set the image when a photo arrives. Staging notes: `docs/figma/build-plans/Q031/staging-notes.md`.
 - [ ] Q031 (Q015 owner): faq-accordion publishes with all six items expanded; Figma shows only the first open.
 - [ ] Q031 (Q012 owner): the CTA newsletter email field has no "*Email" placeholder (Designer-only, see the Q022 placeholder gotcha).
-
+- [ ] Pages: two global `section_placeholder` styles exist (ids 34766799 and 9333d82a, created by Q040 and Q036 in parallel). Keep one, repoint the other's elements, delete the duplicate.
