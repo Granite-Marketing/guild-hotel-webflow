@@ -66,7 +66,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q018: who supplies the 40 gallery images (4 per instance), and should the dining and legal/corporate galleries take them from CMS (Q027, Q028) instead of the Image props?
 - [ ] Q018: show the "A Landmark Reimagined" feature title on the meetings instance (Show Feature Title is off by default)? Also confirm the real gallery headings for dining-gardenterrace, dining-lobbybar and dining-poollounge (Figma copies "zuma gallery").
 - [ ] Q022: which form fields are required (all are optional now), plus the plan's open questions: submit destination, contact page media, social URLs.
-- [ ] Q025: collection pages as one Collection List (alternating left and right with an even-item rule) or five static sections as Figma draws them (plan open question 1). The component holds one card; is-right and is-tall are reference sections pending the variant decision shared with Q014, Q016, Q017 and Q020.
+- [ ] Q025: collection pages as one Collection List (alternating left and right with an even-item rule) or five static sections as Figma draws them (plan open question 1). The component holds one card; V02: is-right is now the Right variant and is-tall the separate component Article Card Staggered Tall.
 - [ ] Q025: card image source (CMS image field on collection pages, manual upload for the neighborhood dining cards) and whether the neighborhood header should stick (plan open questions 4 and 5).
 
 ## Agent follow-ups
@@ -163,6 +163,9 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q031 (Q015 owner): faq-accordion publishes with all six items expanded; Figma shows only the first open.
 - [ ] Q031 (Q012 owner): the CTA newsletter email field has no "*Email" placeholder (Designer-only, see the Q022 placeholder gotcha).
 - [ ] Pages: two global `section_placeholder` styles exist (ids 34766799 and 9333d82a, created by Q040 and Q036 in parallel). Keep one, repoint the other's elements, delete the duplicate.
+- [ ] V02-Q025: build cards 2 and 3 inside Article Card Staggered Tall (`658f6b02-60da-4e60-799a-540b8a036180`): two `article-card-staggered_item is-tall` blocks in the list, each with figure `is-tall` > Image `u-image`, header `article-card-staggered_content` > h3 `text-style-caps-caption-16` and `article-card-staggered_text is-tall text-size-medium` > p. Bind them to the Card 2 and Card 3 props (Image, Show Image as visibility, Caption, Text; ids in `docs/figma/build-plans/Q025/plan.json` `v02`). The element builder inside the definition was denied by the auto-mode classifier in the V02 session.
+- [ ] V02-Q025: visual check of the Right, Right with culture and Tall instances on `/build-article-card-staggered` in the Designer (the page is a draft, so staging returns 404; the published CSS for Right matches the is-right combo).
+- [ ] V02-Q025: delete the old is-right, is-right with culture and is-tall reference sections (`7c3e1186-1454-9c66-deb0-48f9bd90e5eb`, `e5321bc8-1e6d-2af8-4cca-d799d593168a`, `3c2ba3b7-47fa-4b0e-2bfe-a32ad505af29`) after the visual check and after Tall has its three cards.
 
 ## Q008 offers-slider-split (2026-10-20)
 - [ ] Q008 (R00): enable `offersSliderSplit()` in `src/index.ts` (slot C, after `swiperSliders()`), and add the Swiper 12 CSS (head) and JS (footer, before the bundle) to the site custom code if R00 has not; then release a tag. Until then staging shows the first slide only, with dead arrows.

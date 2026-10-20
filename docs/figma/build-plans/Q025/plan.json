@@ -852,5 +852,85 @@
       "Caption": "b1991a04-404a-a730-0f15-11eb9de28a7a",
       "Text": "a7c1b553-a777-2ed1-a75e-aa6efa0de284"
     }
+  },
+  "v02": {
+    "date": "2026-10-20",
+    "variantIds": {
+      "componentId": "155bf09c-0bd4-9e9a-db53-4a8060b48cf1",
+      "variantPropId": "62353da2-b5b1-62cb-98d1-9cdfea8519aa",
+      "base": "base",
+      "is-right": "c725504c-7f06-39a0-276e-18f876c7c43f"
+    },
+    "variants": [
+      {
+        "modifier": "is-right",
+        "name": "Right",
+        "variantId": "c725504c-7f06-39a0-276e-18f876c7c43f",
+        "styles": {
+          "article-card-staggered_component": {
+            "main": {
+              "margin-left": "auto",
+              "margin-right": "0"
+            },
+            "medium": {
+              "margin-left": "auto"
+            },
+            "small": {
+              "margin-left": "0"
+            }
+          }
+        },
+        "readBack": "matches the combo on main and small; the medium margin-left auto is extra, because the base medium rule (.article-card-staggered_component margin-left 2rem) comes after the single-class variant rule and would otherwise win at 991px and below. The combo wins there by specificity, so the computed result is the same. Checked in the published site CSS."
+      }
+    ],
+    "separateComponents": [
+      {
+        "modifier": "is-tall",
+        "name": "Article Card Staggered Tall",
+        "componentId": "658f6b02-60da-4e60-799a-540b8a036180",
+        "why": "Three cards in the list instead of one is structure, and the Data API has no slots. Duplicated from Article Card Staggered (Right variant deleted on the copy), with the existing is-tall combos on component, header, list, item, figure and text. Defaults: Show Header, Show Intro and Show Caption on, Show Eyebrow off, Text set to the dining copy. Props for cards 2 and 3 created (Show Image 2, Image 2, Caption 2, Text 2, and the same for 3), but their elements are not built: see blocked.",
+        "props": {
+          "Show Image 2": "41daeacc-1c61-114a-6939-63313bc4b18b",
+          "Image 2": "dcc5c911-9511-ae81-9bdf-39d628387160",
+          "Caption 2": "194fb048-6a0c-177b-4c59-69caac567c09",
+          "Text 2": "522a22c5-f789-92a4-a4df-46c19286aba0",
+          "Show Image 3": "6ff74c20-9e62-b522-d8b7-6f3531c86655",
+          "Image 3": "805f3fe2-0288-c257-15a5-928a4bb9399f",
+          "Caption 3": "5c420781-8809-aa1d-92ce-10023be5e097",
+          "Text 3": "38823cfd-5083-2931-1130-5670c788a036"
+        }
+      }
+    ],
+    "instancesPlaced": [
+      {
+        "after": "is-right reference section",
+        "instanceId": "a4ddd96d-c1a5-8a07-a324-8f4f442598d2",
+        "component": "Article Card Staggered",
+        "variant": "Right"
+      },
+      {
+        "after": "is-right + culture header reference section",
+        "instanceId": "85fd20ac-fa12-6fe4-53e8-ad6c67e7cef4",
+        "component": "Article Card Staggered",
+        "variant": "Right",
+        "props": {
+          "Show Header": true,
+          "Heading": "culture",
+          "Show Small Heading": false,
+          "Show Large Heading": true
+        }
+      },
+      {
+        "after": "is-tall reference section",
+        "instanceId": "7aa25459-b902-f0ca-d12a-a0f9f3ea68e1",
+        "component": "Article Card Staggered Tall"
+      }
+    ],
+    "blocked": [
+      "data_element_builder inside the Tall definition (cards 2 and 3: item, figure, image, content header, caption h3, text div, paragraph) was denied by the auto-mode classifier, so Tall shows one card and the card 2 and 3 props are not bound yet."
+    ],
+    "notVerified": [
+      "The build page is a draft, so staging returns 404 for it; only the published site CSS was checked."
+    ]
   }
 }
