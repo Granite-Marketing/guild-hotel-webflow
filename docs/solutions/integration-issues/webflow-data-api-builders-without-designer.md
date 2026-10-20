@@ -156,3 +156,8 @@ Rules for the build skill:
 ## Visual checks (Q020, 2026-10-20)
 
 - **Visual check by publishing to staging (Q020).** The Designer canvas can render Data API builds wrongly. On Q020 the eyebrow h3s showed at h3 tag size (about 40px) while the published page computed 18px as planned. Check the published page instead: build pages are created as drafts, so set `draft: false` with `data_pages_tool > update_page_settings`, then `data_sites_tool > publish_site` with `publishToWebflowSubdomain: true` and no custom domains. Read computed styles on `<site>.webflow.io/<slug>` in a browser. Stephen approved staging publishes for this project on 2026-10-20 (not shared with the client yet).
+
+## Gotchas found in the Q026 build (2026-10-20)
+
+- **Text elements with semantic tags:** a builder `DOM` element with `set_dom_config` `figcaption` and `settings` `[{ key: "text", static_text: { value } }]` creates a real `<figcaption>` with its text in one call, and its `text` setting binds to a text prop after conversion. Use it where `BY_CUSTOM_TAG` would give a Block that takes no text.
+- **Modifier stacks of three or four classes** (`_item is-large is-end is-lift`) apply only after each level exists as an empty combo; the published CSS of each two-class combo (`.x_item.is-lift`) still matches, so the deeper levels need no properties.

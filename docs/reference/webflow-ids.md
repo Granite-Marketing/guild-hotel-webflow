@@ -93,6 +93,7 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 | Venue Card Fullbleed | `bbccdbb5-db17-02a1-a0cc-43ce0f5da371` | Q021 static base card, built on `/build-venue-card-fullbleed` (2026-10-20); 15 props (5 content and button, 4 image, 6 Show booleans); snap groups, `is-tall` and `is-left` are plain reference sections on the build page |
 | Article Card Staggered | `155bf09c-0bd4-9e9a-db53-4a8060b48cf1` | Q025 single base card, group Shared, built on `/build-article-card-staggered` (2026-10-20); 13 props (6 content, 1 image, 6 Show booleans); `is-right`, `is-right` with the culture header and `is-tall` are plain reference sections on the build page |
 | image-inset-single | `3eeb97fa-6550-7845-31ee-e997e4b8f2f1` | Q024, group Sections, built on `/build-image-inset-single` (2026-10-20); 2 props (image, image alt); `is-small` is a plain reference section on the build page |
+| timeline-scatter-images | `144b7315-3604-2419-b046-c09d180f1163` | Q026, group Sections, built on `/build-timeline-scatter-images` (2026-10-20); 6 props (Heading, Show Heading, Caption 1 to 4); no slot, items fixed; `is-tall` is a reference section on the build page |
 
 ## Variable Collections
 
