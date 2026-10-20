@@ -33,3 +33,21 @@ Two one-off families, no combos (see `docs/reference/style-inventory.md`, Q035 r
 - 06: the Tall variant is applied, but the form fields are the component's photoshoot fields, not the RFP fields (contact information and event details). Slots cannot be set through the API (Q022 follow-up).
 - 10 and 14 are the live Q008 and Q006 components, not placeholders. No Q007 or Q009 element is in this page's brief, so no placeholders were needed.
 - "book your space" links to `/contact`; the RFP form section has no DOM id because it is a component instance.
+
+## Fill placeholder images (2026-10-20)
+
+Stand-in library photos so staging shows no grey slot on `/meetings`. The picks are loose (no exact match to the slot); replace them when the real imagery arrives. No uploads, no new classes. No `section_placeholder` (Q008, Q009) was on this page, so nothing was swapped.
+
+| Slot | Element | Change | Asset |
+|---|---|---|---|
+| 01 hero | `8c8972a9-62cb-24d1-7e3f-8b9e1749dd49` | Image set, Show Image on, Variant Text Dark to Base (light text over the photo) | `6ad66fef6684c3e22ea4dc76` |
+| 02 to 05 council boardroom panel | new `figure.venue-card-fullbleed_figure` `06e48a3d-a306-75a0-abdc-f5f43ce9ffbf` prepended in item `9151f20b-df16-06c1-c1ef-9bca836385f7`; Image `d3c26e33-66a9-79ea-f9f5-405b1cec6250` (`venue-card-fullbleed_image`, `data-scroll-enlarge-snap-image`, `data-eager`), same structure as the other two panels | `6ad6701cf08ff78c37d862e1` |
+| 08 Event Services figure | Image `01f390c5-4497-3d79-2e80-8da3581b0517` (`u-image`) in `47318079-3d68-8fb6-ad93-0ff2f48124c8` | `6ad6701a28c5dc695c82c539` |
+| 08 AV Capabilities figure | Image `aa15996c-f473-4701-f37b-e7cabde56c2d` (`u-image`) in `5d3b2871-1902-e4c8-7dc2-76846f033766` | `6ad66ffdba96f2e53726bd55` |
+| 08 Hotel Amenities figure | Image `1fe05fb4-a601-39b8-436c-6840efd3ca2a` (`u-image`) in `442aa855-cc6a-71b0-5476-34ef58288d6e` | `6ad66fee735773f253407335` |
+| 09 gallery Image 1 | `b0782e5f-4cbe-5a06-83e4-4fec128d2185` | override of the default, so it does not repeat an offers slide | `6ad66ffe58367429abb48c84` |
+| 09 gallery Image 4 | same instance | override of the default, same reason | `6ad6701b6684c3e22ea4f00f` |
+
+Images 2 and 3 of the gallery, the offers slider (10), the map (07) and the dialog (14) already had photos and were left as they are. The three feature figures keep their `data-image-placeholder` attribute as a marker for the real photo.
+
+Staging check (Playwright, 1440, scrolled to the end): 25 visible images, none broken, no visible figure without an `img`, hero text computes `rgb(244, 239, 223)`. The five dialog item images are lazy inside the closed dialog, so they do not load until it opens.
