@@ -156,6 +156,7 @@ Rules for the build skill:
 ## Visual checks (Q020, 2026-10-20)
 
 - **Visual check by publishing to staging (Q020).** The Designer canvas can render Data API builds wrongly. On Q020 the eyebrow h3s showed at h3 tag size (about 40px) while the published page computed 18px as planned. Check the published page instead: build pages are created as drafts, so set `draft: false` with `data_pages_tool > update_page_settings`, then `data_sites_tool > publish_site` with `publishToWebflowSubdomain: true` and no custom domains. Read computed styles on `<site>.webflow.io/<slug>` in a browser. Stephen approved staging publishes for this project on 2026-10-20 (not shared with the client yet).
+- **Designer drops some API-created utility combos (Q020).** On the card titles, the API and the published HTML both had `image-trio-text_item-heading text-style-eyebrow-caps`, but the Designer showed only `image-trio-text_item-heading` and rendered the h3 at tag size. For a family element whose only job is one text style, put the style values on the family class itself instead of stacking a global utility through an empty combo.
 
 ## Gotchas found in the Q026 build (2026-10-20)
 
