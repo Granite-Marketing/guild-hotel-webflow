@@ -718,7 +718,7 @@
     },
     {
       "id": "Q029",
-      "title": "CMS template: \ud83c\udff7\ufe0f Post Categories (listing page for Happenings and Blog)",
+      "title": "CMS template: 🏷️ Post Categories (listing page for Happenings and Blog)",
       "type": "cms",
       "lane": "agent (collection needs approval)",
       "dependsOn": [
@@ -752,7 +752,7 @@
     },
     {
       "id": "Q030",
-      "title": "CMS template: \ud83d\udcf0 Happenings & Stories (post detail)",
+      "title": "CMS template: 📰 Happenings & Stories (post detail)",
       "type": "cms",
       "lane": "agent (collection needs approval)",
       "dependsOn": [
@@ -2041,8 +2041,8 @@
       "dependsOn": [],
       "brief": "docs/figma/HANDOVER-wave4.md",
       "surface": "code",
-      "status": "todo",
-      "session": null,
+      "status": "in-progress",
+      "session": "local_923263e7-0cba-4ec6-984b-0e292ec58568",
       "branch": null,
       "pr": null,
       "notes": "Sonnet subagent; writes docs/figma/punch-list.md",
@@ -2115,8 +2115,8 @@
       "dependsOn": [],
       "brief": null,
       "surface": "code",
-      "status": "todo",
-      "session": null,
+      "status": "in-progress",
+      "session": "local_0f796c70-e92b-43fd-82dc-d7a243834e4f",
       "branch": null,
       "pr": null,
       "notes": "Run the webflow-deploy skill in a session on main; enable each module in src/index.ts for pages that carry its data attributes Wave 4: release v1.1.2 enabling cardCarouselHeaderLeft and the Q007 hover module.",
