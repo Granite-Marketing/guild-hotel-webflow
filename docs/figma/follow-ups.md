@@ -163,3 +163,10 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q031 (Q015 owner): faq-accordion publishes with all six items expanded; Figma shows only the first open.
 - [ ] Q031 (Q012 owner): the CTA newsletter email field has no "*Email" placeholder (Designer-only, see the Q022 placeholder gotcha).
 - [ ] Pages: two global `section_placeholder` styles exist (ids 34766799 and 9333d82a, created by Q040 and Q036 in parallel). Keep one, repoint the other's elements, delete the duplicate.
+
+## Q008 offers-slider-split (2026-10-20)
+- [ ] Q008 (R00): enable `offersSliderSplit()` in `src/index.ts` (slot C, after `swiperSliders()`), and add the Swiper 12 CSS (head) and JS (footer, before the bundle) to the site custom code if R00 has not; then release a tag. Until then staging shows the first slide only, with dead arrows.
+- [ ] Q008: replace the `section_placeholder[data-placeholder="Q008"]` sections with Offers Slider Split instances: `/` home/13-retail (Blue, retail props and Image 1 + Show image 1) and home/16 (Base); `/rooms` rooms-collection/09 (Base); `/history` history/11 (Base); `/gallery` gallery/03 (Base). Instance props per page: `docs/figma/build-plans/Q008/plan.md`. Pages built later place the instance directly.
+- [ ] Q008: real offer content (headings, text, links, photos) for slides 1 to 5; Figma shows one slide per instance, so slides 3 to 5 repeat placeholder copy. Hide unused slides with Show slide N.
+- [ ] Q008: visual check of `/build-offers-slider-split` in the Designer and on staging against the crops (agent notes in `docs/figma/build-plans/Q008/staging-notes.md`).
+- [ ] Q008: home/13 retail crop shows a cream cross logo over the photo; confirm whether it is part of the photo asset or an overlay to add.
