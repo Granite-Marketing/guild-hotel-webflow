@@ -1232,11 +1232,11 @@
     {
       "slot": "logo",
       "figmaNodeId": "250:2123",
-      "webflowAssetId": null,
-      "webflowUrl": null,
+      "webflowAssetId": "6ad744312406f6ae5126bc5f",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad744312406f6ae5126bc5f_tribute-portfolio-logo.svg",
       "local": "figma/vectors/group-270990038-152x31-250-2123.svg",
       "alt": "Tribute Portfolio",
-      "note": "Not uploaded yet (figma/assets.json webflowAssetId null). Upload before the build or use an inline SVG embed; see openQuestions."
+      "note": "Uploaded by Q013 on 2026-10-20 as tribute-portfolio-logo.svg (Stephen approved)."
     }
   ],
   "instances": [
@@ -1423,7 +1423,11 @@
     "Overlay: the rectangle has a third fill the snapshot spec omits (read from figma/raw/file.json.gz): a black linear gradient at 65% layer opacity, transparent at the rectangle top to opaque at 67.6%. Over the footer band that is 56% black at the top rising to 65% at 22% down, then flat. The plan stacks it over the 20% black fill on footer-links_overlay.",
     "Side margin is 2rem (padding-global) instead of the Figma 40px (2.5rem at 1600 wide).",
     "Copyright year is wrapped in <span data-current-year> so the currentYear module keeps it current.",
-    "Section background-color var(--_primitives---colors--neutral-darkest) is a fallback under the image so text stays legible while it loads; not in Figma."
+    "Section background-color var(--_primitives---colors--neutral-darkest) is a fallback under the image so text stays legible while it loads; not in Figma.",
+    "Q013 build: the class pairs footer-links_column-heading + text-style-eyebrow-caps, footer-links_link + text-style-caption-tracked and footer-links_text + text-style-caption need combo paths that K02 did not create; the builder applied no class until they existed. Q013 created the three empty combos under the orchestrator rule change, with Stephen's approval.",
+    "Q013 build: the legal line is 'copyright © ' + <span data-current-year>2026</span> + <span> the guild hotel</span>. The Data API cannot add a bare text node after an inline child, so the trailing text sits in a plain unclassed span. Rendered text is unchanged.",
+    "Q013 build: Webflow's List element seeds three empty list items; they were removed from each of the five lists (Stephen approved).",
+    "Q013 build: component is named 'Footer Links' (Title Case, matching the Q012 and Q014 components) rather than the slug footer-links."
   ],
   "k01": {
     "reconciledBy": "K01, 2026-10-20",
@@ -1433,6 +1437,20 @@
       "Class list `footer-links_text text-style-legal` is now `footer-links_text text-style-caption`.",
       "Footer link captions use the new `text-style-caption-tracked`; legal lines use the live `text-style-caption` (line height 1.071 instead of 1).",
       "Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`)."
+    ]
+  },
+  "build": {
+    "by": "Q013",
+    "date": "2026-10-20",
+    "page": "6ad712c0de3165cd9f83bb50",
+    "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+    "createdCombos": [
+      "footer-links_column-heading.text-style-eyebrow-caps",
+      "footer-links_link.text-style-caption-tracked",
+      "footer-links_text.text-style-caption"
+    ],
+    "uploadedAssets": [
+      "6ad744312406f6ae5126bc5f"
     ]
   }
 }

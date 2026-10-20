@@ -8,7 +8,8 @@
   },
   "webflowComponent": {
     "name": "CTA Booking Newsletter",
-    "props": "none: all 24 instances render identical content (brief: consider a component with no props)"
+    "props": "none: all 24 instances render identical content (brief: consider a component with no props)",
+    "id": "916e4ffc-007b-3572-a686-946c6645b2e8"
   },
   "reusedClasses": [
     "button",
@@ -670,10 +671,11 @@
     {
       "slot": "bonvoy-logo",
       "figmaNodeId": "250:2045",
-      "webflowAssetId": null,
+      "webflowAssetId": "6ad744318e4b52f5c4d49ec6",
       "local": "figma/brand/bonvoy.svg",
       "alt": "Marriott Bonvoy",
-      "note": "Not uploaded yet (figma/assets.json brand.bonvoy webflowAssetId null). Upload figma/brand/bonvoy.svg before the build, or place it by hand."
+      "note": "Uploaded by the Q012 build session on 2026-10-20 with Stephen's approval.",
+      "webflowUrl": "https://cdn.prod.website-files.com/6ad6405eae8eac6d7b7c41a3/6ad744318e4b52f5c4d49ec6_bonvoy.svg"
     }
   ],
   "instances": [
@@ -1052,7 +1054,12 @@
   "deviations": [
     "No container-large inside padding-global: the two columns are centred on the quarter lines of the full 1600 frame (x 400 and 1200). A 80rem container would pull them inward to about 480 and 1120.",
     "Button typography (CAPS-CAPTION-16) sits on the is-chamfer combo instead of a separate text-style-caps-caption-16 class, because a button carrying four stacked classes is fragile in Webflow.",
-    "Heading tags are h2 with the live text-style-script (Morello 60/72), because every page already has its own h1. K01 replaced heading-style-h1, which is the Sackers display style."
+    "Heading tags are h2 with the live text-style-script (Morello 60/72), because every page already has its own h1. K01 replaced heading-style-h1, which is the Sackers display style.",
+    "Q012 build: the email placeholder '*Email' is not set. The Data API rejects placeholder as a reserved attribute and has no placeholder setting; set it in the Designer.",
+    "Q012 build: Webflow's Form element shipped default Name label, Name input and Email label; all three were removed (the input carries aria-label 'Email' instead, as planned).",
+    "Q012 build: form name is 'Newsletter' (Webflow publishes name and data-name from one setting). DOM ids set to newsletter-form and newsletter-email instead of the default email-form and email, to avoid clashes with other forms on the same page.",
+    "Q012 build: success and error messages carry only cta-booking-newsletter_form-message; w-form-done and w-form-fail come from the Webflow element type itself.",
+    "Q012 build: background image alt is 'inherit' (an empty alt_text is stored as inherit). The asset has no library alt, so it renders empty today; mark it decorative in the Designer so later library alt text does not leak onto it."
   ],
   "k01": {
     "reconciledBy": "K01, 2026-10-20",

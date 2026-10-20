@@ -91,3 +91,11 @@ Other instances: `gallery/05-faqs`, `contact/04-faqs` and `arts/09-faqs` crops a
 - Class list `text-size-regular text-weight-normal text-style-eyebrow-caps` is now `text-style-eyebrow-caps`.
 - The six `accordion_*` classes are shared (runtime contract of accordion.ts), defined in shared-classes.json.
 - Variables use live CSS names (`--_primitives---colors--*`, `--_typography---font-styles--*`).
+
+## Build (2026-10-20)
+
+Built through the Data API on `🧱 faq-accordion` (`6ad712c2faaaa1926dd004e3`, `/build-faq-accordion`) and converted to the component `faq-accordion` (`064f3089-65e4-65ec-6f9a-dc5cb4ab8ee7`), no props. The read-back matches the plan tree, classes, copy, chevron embed and `href="#"` on all six items, except for the following:
+
+- **Trigger is a Link Block** (`href="#"`, class `accordion_header`), the plan's fallback. The Data API cannot make a native button, and `type` is a reserved attribute. Enter works through the module; Space does not activate a link.
+- **Five empty combos created** (approved by Stephen) so the planned stacks apply: `.heading-style-h2.text-weight-normal`, `.accordion_question.heading-style-h4`, `.accordion_question.heading-style-h4.text-weight-normal`, `.accordion_content.text-size-medium`, `.accordion_content.text-size-medium.text-weight-normal`.
+- **Still open:** the chevron state rule `.accordion_header.is-active .accordion_icon { transform: rotate(0deg); }` (site custom code), and the first item open on load (module change). Both were open questions 1 and 2.
