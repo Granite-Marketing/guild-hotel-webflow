@@ -184,3 +184,11 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q008: real offer content (headings, text, links, photos) for slides 1 to 5; Figma shows one slide per instance, so slides 3 to 5 repeat placeholder copy. Hide unused slides with Show slide N.
 - [ ] Q008: visual check of `/build-offers-slider-split` in the Designer and on staging against the crops (agent notes in `docs/figma/build-plans/Q008/staging-notes.md`).
 - [ ] Q008: home/13 retail crop shows a cream cross logo over the photo; confirm whether it is part of the photo asset or an overlay to add.
+
+## Q006 overlay-detail-panel-modal (2026-10-20)
+- [ ] Q006: page sessions place Overlay Detail Panel Modal instances and wire triggers with `data-modal-open` (table in `docs/figma/build-plans/Q006/plan.md`): Meetings (Q035) and the Legal Corporates template (Q028) "discover more" on the council boardroom venue card; Arts (Q041) artwork tile and artist link; Neighborhood (Q044) "Coronado Beach" item. Each instance sets Dialog id and Image.
+- [ ] Q006 (Q005 owner): the dining menu (Image Bg) and booking window (Burgundy) dialogs need triggers in the Site Nav: a "dining" menu entry and the "book" button with `data-modal-open` (the Book link prop is a URL today). Decide whether the two dialogs live inside the Site Nav component or on each page.
+- [ ] Q006: confirm what opens arts/12 (artist bio): no artist card exists in the Figma.
+- [ ] Q006: real photos and alt text for every dialog image (placeholder asset `6ad67011134731ad1b928045` on the build page).
+- [ ] Q006: visual check of `/build-overlay-detail-panel-modal` once R00 ships the bundle to the footer (staging has no script yet, so the triggers do nothing there today; the fixture spec covers the runtime).
+- [ ] Q006: delete the build page in the Designer once the instances live on real pages.
