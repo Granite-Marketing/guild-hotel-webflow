@@ -39,3 +39,14 @@ One one-off family, `section_neighborhood-corporate` / `neighborhood-corporate_*
 - Gallery captions drop the leading numerals of the Figma text ("1 Etiam ..."), as in the Q018 plan.
 - Article Card Staggered Tall renders the cards its definition has; cards 2 and 3 depend on the V02-Q025 follow-up.
 - The timeline items are not keyboard focusable, so the dialog opens by mouse or touch only.
+
+
+## Placeholder images filled (2026-10-20)
+
+Stand-in library photos (not the final design images), set through the Data API and checked on webflow.io staging: no grey placeholder remains. Added images use `u-image`.
+
+- Hero (`57b7e684-0c95-ca21-52d4-e91a0015c652`): Image `6ad66ffe58367429abb48c84`, Show Image on, Variant switched from Text Dark to Base for legibility.
+- Splits: downtown `6ad67001f08ff78c37d85427`; gaslamp `6ad6701b6684c3e22ea4f00f`; little italy `6ad66fef6684c3e22ea4dc76` plus second image `6ad67004134731ad1b927d6c`.
+- Offers (arts and culture, Tan) Images 1 to 5 on: `6ad670147e3d6550932e0fac`, `6ad67002c159d4564be772e7`, `6ad66fff134731ad1b927c11`, `6ad66ffb8d039779ba7cb0a7`, `6ad6701cf08ff78c37d862e1`. Offers (base) Images 1 to 5 on: `6ad66feb58367429abb4835f`, `6ad67000240d911fb18d77af`, `6ad67017fb3a14e0db41143b`, `6ad6700eb28c9b39f95d814d`, `6ad67015134731ad1b928187`.
+- Article Card Staggered Tall: Image `6ad6701fde86688556052e83`, Show Image on.
+- Corporate figures 1 to 4: `6ad66feb6684c3e22ea4da8d`, `6ad6701edd7f0762ee12bb55`, `6ad67017b28c9b39f95d840a`, `6ad67016f8bf4846e80a023a`.

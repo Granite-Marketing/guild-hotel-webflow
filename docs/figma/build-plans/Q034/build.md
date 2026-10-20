@@ -22,3 +22,11 @@ None created. Every class is from the shared families (`tab-pills-intro_*` with 
 - Sections 02 to 06 are one plain section, not a tab-pills-intro instance plus four Venue Card Fullbleed instances. The Figma animation (Wellness-Col-Animation-1) is the A01 `scrollEnlargeSnap` module, which needs the intro frame and all panels inside one root; tab-pills-intro has no panels slot (slots cannot be made headlessly) and Webflow cannot place elements inside an instance. Same approach as Home (Q031) and Dining (Q032), and as Q021-OQ2 and the P023 interface note describe.
 - The "discover more" buttons have no link: there are no wellness detail pages yet.
 - Offers slider is the live Q008 component, not a placeholder. No Q006, Q007 or Q009 element is in this page's brief, so no placeholders were needed.
+
+
+## Placeholder images filled (2026-10-20)
+
+Stand-in library photos (not the final design images), set through the Data API and checked on webflow.io staging: no grey placeholder remains. Added images use `u-image`.
+
+- Hero (`3e956e4d-d614-d864-aba1-1215e9dfa212`): Image `6ad67000240d911fb18d77af`, Show Image on, Variant switched from Text Dark to Base for legibility.
+- Offers Slider Split (`7710b922-9655-d111-9c84-f89bd4bb5d0a`) Images 1 to 5, Show image 1 to 5 on: `6ad66fe91ce40a5a6239b8ad`, `6ad6700eb28c9b39f95d814d`, `6ad66ffdba96f2e53726bd55`, `6ad67015134731ad1b928187`, `6ad6701a28c5dc695c82c539`.
