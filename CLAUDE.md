@@ -60,7 +60,7 @@ See `docs/reference/style-guide.md` for what the style guide must contain.
 - **Text weight:** `text-weight-xbold`, `text-weight-bold`, `text-weight-semibold`, `text-weight-medium`, `text-weight-normal`, `text-weight-light`
 - **Text alignment:** `text-align-left`, `text-align-center`, `text-align-right`
 - **Buttons:** `button` (base) + `is-secondary`, `is-ghost`, `is-outline`, `is-link`, `is-text`, `is-small`, `is-icon`, `is-alternate` (combo modifiers)
-- **Images:** `u-image`
+- **Images:** `u-image` (photos), `u-logo` (logos, auto height). Do not add family `_image` or `_logo` classes with the same CSS.
 - **Responsive visibility:** `hide`, `hide-tablet`, `hide-mobile-landscape`, `hide-mobile-portrait`
 
 ### Design Variables
