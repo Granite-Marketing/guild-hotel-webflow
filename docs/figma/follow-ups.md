@@ -3,6 +3,7 @@
 Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, #33, #35, #36, #37, #38 and the Q012 to Q015 `plan.json` deviations on main.
 
 ## Stephen, in the Designer
+- [ ] Q024: visual check of `/build-image-inset-single` (base instance with the rooms-individual image, and the is-small reference section) against `docs/figma/build-plans/Q024/preview-*-1440.png` and the reference crops. No rich text styling is needed.
 - [ ] Q021: visual check of `/build-venue-card-fullbleed` (two component instances, the home and dining snap groups, is-tall and is-left) against `docs/figma/build-plans/Q021/preview-*.png` and the reference crops; check the clip-path chamfers on the frame and tab bar, and the is-left list row height and divider bleed.
 - [ ] Q021: home/11 heading break: Figma breaks "rooms" / "& suites"; add a line break if the real font wraps differently.
 
@@ -31,6 +32,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q016, Q020, Q021, Q022: visual check of `/build-script-intro-centered`, `/build-image-trio-text`, `/build-venue-card-fullbleed` and `/build-form-split-script-contact` in the Designer.
 
 ## Decisions for Stephen
+- [ ] Q024: `is-small` cannot switch on an image-inset-single instance (same decision as Q014); it sits as a plain section on the build page. The plan's open questions also stand: is rooms-individual/04 a background video, which image fills the small variant on happenings-indiv and blog-indiv, should the rooms image bind to a CMS field, and the mobile aspect ratio.
 - [ ] Q021: open questions OQ2 (wellness and meetings intro moves from Q023 into this snap section) and OQ3 (legal and corporate as a static stack) are still on their defaults; confirm before those pages are built.
 
 - [ ] Q019: `is-image-bg` and `is-centered` cannot switch on a Map Feature instance (same as Q014). Options: Webflow component variants, or separate components for the two variants.
@@ -51,6 +53,7 @@ Kept by the orchestrator; tick items as they are done. Sources: merged PRs #32, 
 - [ ] Q022: which form fields are required (all are optional now), plus the plan's open questions: submit destination, contact page media, social URLs.
 
 ## Agent follow-ups
+- [ ] Q024: place image-inset-single on rooms-individual and arts (base, arts uses asset `6ad66fff134731ad1b927c11` with alt "Palm leaves in front of the Guild Hotel sign at night"), and is-small on happenings-indiv and blog-indiv once the variant and image decisions are made, then remove the build page.
 - [ ] Q021: four empty combos were created (`docs/figma/build-plans/Q021/plan.json` `build.classesCreated`). When placing on real pages, copy the home or dining snap section for each snap group (wellness and meetings need their tab labels and intro), and use the Venue Card Fullbleed component for the legal and corporate static cards, then remove the build page.
 - [ ] Q014: the Zuma wordmark is now uploaded (`6ad74d2ed0e5a6a8fc1be09e`, by Q021); set it on the dining-zuma reference hero logo slot.
 
