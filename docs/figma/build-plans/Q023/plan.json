@@ -747,5 +747,30 @@
       }
     ],
     "standaloneClassesCreated": []
+  },
+  "variantIds": {
+    "base": "base",
+    "media": "9bd0d616-a2cc-7ffb-c508-bf993eecf81b"
+  },
+  "variantPropId": "c5950a24-1677-5228-3720-ece49247f526",
+  "v02": {
+    "convertedBy": "V02, 2026-10-20",
+    "variants": [
+      {
+        "name": "Media",
+        "id": "9bd0d616-a2cc-7ffb-c508-bf993eecf81b",
+        "modifier": "is-media",
+        "styles": "is-media combo values copied to the first class of tab-pills-intro_component (main, medium, small, tiny), _header (main, medium, small), _stage (main, tiny), _frame (main, small, tiny) and _tabs (main, tiny); read back equal"
+      }
+    ],
+    "notVariants": [
+      "is-active stays a static class on the first tab (state, moved by scrollEnlargeSnap), not a component variant"
+    ],
+    "separateComponents": [],
+    "instances": {
+      "wellness (Media, 4 tabs)": "f6c5908b-212a-12d4-c1b3-d94548ce797d",
+      "meetings (Media, 3 tabs)": "4718f2e5-5b79-b06a-5408-0516c6d84a9f"
+    },
+    "note": "The variant instances have an empty frame: the component has no panels slot, so they lack the reference sections' panel image."
   }
 }
