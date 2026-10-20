@@ -798,7 +798,14 @@
       "note": "fields differ on every instance, so the form is a slot, not props"
     }
   ],
-  "assets": [],
+  "assets": [
+    {
+      "slot": "form-split-script-contact: new u-image Image in form-split-script-contact_media (element ca418b93-bce3-6be1-5c5e-44b696854361)",
+      "webflowAssetId": "6ad6701a28c5dc695c82c539",
+      "local": "assets/images/d8c0b016a9841abf507b2b7c64742e7080b675a8.jpg",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    }
+  ],
   "instances": [
     {
       "page": "meetings-collection",

@@ -25,3 +25,16 @@ Order matches Figma 01 to 13. No invisible text, no overlaps.
 - Console errors (1440): only a Cloudflare CSP "data:," connect-src block (Webflow/Cloudflare noise) and two "NaN" font-size:0 logs. No app errors. 390 run showed none beyond the same class.
 - Overflow at 390: scrollWidth 390 = clientWidth 390, no horizontal scroll, no widest offender. 1440 also clean.
 - Section heights at 390: hero 844, landmark 844 (both 100vh), timeline 5422.
+
+
+## Placeholder images filled (2026-10-20)
+
+Stand-in library photos (not the final design images), set through the Data API and checked on webflow.io staging: no grey placeholder remains. Added images use `u-image`.
+
+- Hero (`39f63008-e245-a805-3e0b-fd98f3dd4087`): Image `6ad6700aba96f2e53726c671`, Show Image on, Variant switched from Text Dark to Base so the text reads over the photo.
+- history-oasis figure: `6ad66ffb8d039779ba7cb0a7`.
+- Timeline figures, in order (1924 wide, 1924 building, 1924 detail, 1924 portrait, 1924-1970 portrait, postcard, detail, 2019 wide, portrait, detail, 2026 wide, interior, detail): `6ad670147e3d6550932e0fac`, `6ad6701edd7f0762ee12bb55`, `6ad6701cf08ff78c37d862e1`, `6ad67002c159d4564be772e7`, `6ad67011134731ad1b928045`, `6ad66fef6684c3e22ea4dc76`, `6ad66ff96684c3e22ea4e1af`, `6ad67015134731ad1b928187`, `6ad66feb58367429abb4835f`, `6ad66fff134731ad1b927c11`, `6ad66fee735773f253407335`, `6ad66ffa6684c3e22ea4e2ca`, `6ad6701a28c5dc695c82c539`.
+- Landmarks 1 to 4: `6ad66fe91ce40a5a6239b8ad`, `6ad6700eb28c9b39f95d814d`, `6ad66ffdba96f2e53726bd55`, `6ad66ff45794075272b9663f`.
+- Gallery Mosaic (`52f28a89-ecc8-606e-0a16-c341dda479e1`) Images 1 to 4: `6ad6700aba96f2e53726c671`, `6ad66fed15beaf9a7285e5c8`, `6ad67019735773f25340899e`, `6ad67016f8bf4846e80a023a`.
+- history/09 placeholder replaced with Card Carousel Header Left, Compact (`1d8e9af5-d4ac-dcff-bd4f-79d0619e921f`); card 6 relabelled "gallery" (`/gallery`), since this is the history page.
+- history/11 placeholder replaced with Offers Slider Split, Base (`53cc018f-978c-1710-cd20-8c5b24c1cae0`) with five library photos.

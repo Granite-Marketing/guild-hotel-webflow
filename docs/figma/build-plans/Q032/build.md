@@ -28,3 +28,12 @@ None created. Every class is from the shared families (`venue-card-fullbleed_*`,
 - Offers slider is the live Q008 component, not a placeholder.
 - No Q006, Q007 or Q009 element appears in this page's brief, so no placeholders were needed.
 - The brief's "bind the list to the collection" is met with static links to each item: the A01 snap group needs fixed panels, and a Collection List cannot be placed inside the five-panel structure headlessly.
+
+
+## Placeholder images filled (2026-10-20)
+
+Stand-in library photos (not the final design images), set through the Data API and checked on webflow.io staging: no grey placeholder remains. Added images use `u-image`.
+
+- Hero (`29267093-71d0-9eb4-2aa9-bae9ed679930`): Image `6ad66ffa6684c3e22ea4e2ca`, Variant switched from Text Dark to Base for legibility.
+- Offers Slider Split (`5645d5e3-13d8-4805-6b52-83c140f9419e`) Images 1 to 5, Show image 1 to 5 on: `6ad6701fde86688556052e83`, `6ad66ffa6684c3e22ea4e2ca`, `6ad66ff45794075272b9663f`, `6ad6701b6684c3e22ea4f00f`, `6ad66fee735773f253407335`.
+- Dinings Template (Q027, page `6ad67d7416e13e66c2b76107`): hero Image `6ad6701b6684c3e22ea4f00f`; Stagger Left split Image `6ad66fee735773f253407335`; image pair figures `6ad66ffa6684c3e22ea4e2ca` (square) and `6ad6701fde86688556052e83` (portrait); other dining cards 1 to 3 `6ad66ff45794075272b9663f`, `6ad66fe91ce40a5a6239b8ad`, `6ad6700eb28c9b39f95d814d`. The Q009 stand-in section was kept (CMS-bound labels).

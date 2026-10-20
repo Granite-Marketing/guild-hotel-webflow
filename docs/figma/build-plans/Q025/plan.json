@@ -626,6 +626,22 @@
       "webflowAssetId": null,
       "local": null,
       "note": "Every card image in the Figma file is a #D9D9D9 placeholder rectangle (spec images: []). No asset exists in figma/assets.json or assets/asset-manifest.json. The figure keeps a #d9d9d9 fill until real images arrive (CMS image field on collection pages, manual upload on neighborhood)."
+    },
+    {
+      "slot": "Article Card Staggered: Image prop default (Show Image default now true)",
+      "webflowAssetId": "6ad67002c159d4564be772e7",
+      "local": "assets/images/7895a2b999123e125c4a8c071b9b9c332197e810.png",
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
+    },
+    {
+      "slot": "Article Card Staggered Tall: Image, Image 2, Image 3 prop defaults (Show Image defaults now true)",
+      "webflowAssetId": "6ad67011134731ad1b928045, 6ad66fe91ce40a5a6239b8ad, 6ad67016f8bf4846e80a023a",
+      "local": [
+        "assets/images/a97e194ea6811fe55bfcb2016b80ac2c0d524400.png",
+        "assets/images/0b9e2eb0a6ceba7cdfaa282a5ba3a0778e2adb8c.jpg",
+        "assets/images/b940aa95950dd4de783e1c0ae2dfee90e4485143.png"
+      ],
+      "note": "Fill-images pass (2026-10-20): stand-in default so staging shows a photo, not the design image. Replace when real imagery arrives."
     }
   ],
   "instances": [
