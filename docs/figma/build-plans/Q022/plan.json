@@ -1268,5 +1268,20 @@
         "properties": "none"
       }
     ]
+  },
+  "variantIds": {
+    "base": "base",
+    "tall": "c284c9dc-42be-882d-5aca-03608bebfc95"
+  },
+  "variantPropId": "75def639-20c3-2cee-b8b1-a6ef470ca15c",
+  "v02": {
+    "date": "2026-10-20",
+    "is-tall": "component variant Tall: padding-top/bottom on section_form-split-script-contact at main (10.75rem, 8.25rem), medium (2rem, 2rem), small (0rem, 0rem); read back equal to the is-tall combo",
+    "instance": "7f9cb9e6-00d1-cbae-8e6e-18b2be87916b, after the is-tall reference section, Heading 'Request for Proposal'",
+    "notes": [
+      "The section base class sets no padding at any breakpoint, so no base rule overrides the variant below desktop.",
+      "The meetings RFP form fields differ from the photoshoot form; that is the existing slot follow-up, not a variant difference.",
+      "Staging publish blocked by the auto-mode classifier; not verified on webflow.io."
+    ]
   }
 }
