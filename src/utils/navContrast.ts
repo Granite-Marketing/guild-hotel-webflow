@@ -10,7 +10,8 @@
  *     .site-nav_bar       the bar whose midline is sampled
  *
  * Detection samples the bar midline at 25, 50 and 75 percent of the width
- * and calls it light when most points are light. At each point the first
+ * and calls it light when most points, including the centre (the logo),
+ * are light. At each point the first
  * element below the header (ignoring hairlines under 24px) with an opaque
  * background colour decides (light when its
  * relative luminance is above 0.5). An image, video or background image
@@ -24,6 +25,7 @@ const OPEN_CLASS = 'is-nav-open'
 const LIGHT_LUMINANCE = 0.5
 const MIN_SIZE = 24
 const SAMPLE_POINTS = [0.25, 0.5, 0.75]
+const CENTRE_INDEX = 1
 
 type Rgba = { red: number; green: number; blue: number; alpha: number }
 
@@ -78,10 +80,10 @@ export const navContrast = () => {
   const isLightBehindBar = () => {
     const rect = bar.getBoundingClientRect()
     const pointY = rect.top + rect.height / 2
-    const lightCount = SAMPLE_POINTS.filter((fraction) =>
-      isLightAt(window.innerWidth * fraction, pointY),
-    ).length
-    return lightCount > SAMPLE_POINTS.length / 2
+    const samples = SAMPLE_POINTS.map((fraction) => isLightAt(window.innerWidth * fraction, pointY))
+    const lightCount = samples.filter(Boolean).length
+    // The logo sits at the centre, so the centre point must be light too.
+    return samples[CENTRE_INDEX] && lightCount > SAMPLE_POINTS.length / 2
   }
 
   let frameRequested = false

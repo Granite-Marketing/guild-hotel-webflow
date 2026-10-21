@@ -581,7 +581,8 @@ background (the cream bands below photo heroes, first seen on Wellness).
   `site-nav_component.is-on-light` sets the dark text colour (every nav
   child uses `color: inherit`).
 - Detection samples the bar's midline with `elementsFromPoint` at 25, 50 and
-  75 percent of the width and needs a majority. At each point the first
+  75 percent of the width and needs a majority that includes the centre
+  point (the logo). At each point the first
   element under the header with an opaque background colour decides
   (luminance above 0.5 is light); elements under 24px in either dimension
   (dividers) are skipped. Images, video and background images
