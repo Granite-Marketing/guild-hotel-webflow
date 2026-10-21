@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.4
+
+### Patch Changes
+
+- b49211f: Add navContrast (scroll-aware nav text colour), roomGridHoverReveal (/rooms card details on hover) and hoverFollowImage (legal/04 hover photo).
+
 ## 1.1.3
 
 ### Patch Changes
