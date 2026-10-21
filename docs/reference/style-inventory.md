@@ -228,3 +228,9 @@ Q020 (2026-10-20): `image-trio-text_item-heading` now carries the EYEBROW-CAPS v
 W02 (2026-10-20, fix batches; details in `docs/figma/build-plans/W02/`):
 - New: `form-split-script-contact_fieldset-header.is-spaced` (gap above the second field group), `article-body_footer` (CTA wrapper in the Happenings & Stories article body).
 - Changed: `gallery-mosaic-captioned_caption` and `timeline-scatter-images_caption` now cream with a soft text-shadow; `history-timeline_label-wrap` align-items flex-start and `history-timeline_label` flex 0 0 auto (pills no longer collapse); `tab-pills-intro_tabs` and `venue-card-fullbleed_tabs` wrap and centre at small/tiny; `section_text-columns-info` padding-top 16rem on desktop only (Dinings template overlap).
+
+## Wave 5 changes (2026-10-21)
+
+- New: `card-stagger-header-left_link` (link wrapper around each other-dining card on the Dinings template); stagger moved to `card-stagger-header-left_card:nth-child(odd)` (6rem, 3rem at small) so hidden cards do not break it; `is-offset` unused.
+- New: combo `tab-pills-intro_tabs.is-scroll` (Gallery and Arts tag bars only): one line, horizontal scroll at small and tiny, so the sticky `gallery-all_tags-wrapper` no longer grows to three lines over the photos.
+- Changed: `map-feature_figure` aspect ratio 1/1 at small and 4/5 at tiny; `map-feature_image` object-position 25% 50% from small; `.map-feature_image.is-image-bg` keeps 50% 50% at small (Home, Rooms, Dining and Rooms Detail maps read larger on phones; Centered and Image Bg unchanged).
