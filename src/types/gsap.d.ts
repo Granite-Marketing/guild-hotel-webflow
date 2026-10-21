@@ -65,6 +65,11 @@ interface GsapInstance {
   timeline: (vars?: Record<string, unknown>) => GsapTimeline;
   matchMedia: () => GsapMatchMedia;
   delayedCall: (delay: number, callback: () => void) => GsapDelayedCall;
+  quickTo: (
+    target: unknown,
+    property: string,
+    vars?: Record<string, unknown>,
+  ) => (value: number) => void;
   ticker: {
     add: (fn: (time: number) => void) => void;
     lagSmoothing: (threshold: number) => void;
