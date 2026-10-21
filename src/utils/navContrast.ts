@@ -9,8 +9,10 @@
  *   [data-nav="header"]   fixed header (same element navToggle uses)
  *     .site-nav_bar       the bar whose midline is sampled
  *
- * Detection reads what is painted under the bar: the first element below
- * the header with an opaque background colour decides (light when its
+ * Detection samples the bar midline at 25, 50 and 75 percent of the width
+ * and calls it light when most points are light. At each point the first
+ * element below the header (ignoring hairlines under 24px) with an opaque
+ * background colour decides (light when its
  * relative luminance is above 0.5). An image, video or background image
  * counts as a photo and keeps the default cream text. Headers whose own
  * text is already dark (the Dark variant) are left alone, as is the open
@@ -20,6 +22,8 @@
 const LIGHT_CLASS = 'is-on-light'
 const OPEN_CLASS = 'is-nav-open'
 const LIGHT_LUMINANCE = 0.5
+const MIN_SIZE = 24
+const SAMPLE_POINTS = [0.25, 0.5, 0.75]
 
 type Rgba = { red: number; green: number; blue: number; alpha: number }
 
@@ -53,14 +57,14 @@ export const navContrast = () => {
 
   const bar = header.querySelector<HTMLElement>('.site-nav_bar') ?? header
 
-  const isLightBehindBar = () => {
-    const rect = bar.getBoundingClientRect()
-    const pointY = rect.top + rect.height / 2
-    const pointX = window.innerWidth / 2
-
+  const isLightAt = (pointX: number, pointY: number) => {
     for (const element of document.elementsFromPoint(pointX, pointY)) {
       if (header.contains(element)) continue
       if (isMedia(element)) return false
+
+      // Skip dividers and other hairlines painted over a photo.
+      const box = element.getBoundingClientRect()
+      if (box.width < MIN_SIZE || box.height < MIN_SIZE) continue
 
       const style = getComputedStyle(element)
       if (style.backgroundImage !== 'none') return false
@@ -69,6 +73,15 @@ export const navContrast = () => {
       if (background && background.alpha >= 0.5) return luminance(background) > LIGHT_LUMINANCE
     }
     return false
+  }
+
+  const isLightBehindBar = () => {
+    const rect = bar.getBoundingClientRect()
+    const pointY = rect.top + rect.height / 2
+    const lightCount = SAMPLE_POINTS.filter((fraction) =>
+      isLightAt(window.innerWidth * fraction, pointY),
+    ).length
+    return lightCount > SAMPLE_POINTS.length / 2
   }
 
   let frameRequested = false
