@@ -84,8 +84,11 @@ tree-shaken out of `dist/index.js`.
 
 `src/utils/smoothScroll.ts` is the one place that picks the engine. It
 exports `smoothScroll`, an object with `name`, `init()`, `stop()`, `start()`,
-`scrollTop()` and `describe()`. `src/index.ts` calls `smoothScroll.init()`;
-`modals.ts` and `navToggle.ts` call `smoothScroll.stop()` / `start()`;
+`scrollTo(element)`, `scrollTop()` and `describe()`. `src/index.ts` calls
+`smoothScroll.init()`; `modals.ts` and `navToggle.ts` call
+`smoothScroll.stop()` / `start()`; `modals.ts` calls `scrollTo()` for its
+close-and-scroll links (Lenis `scrollTo`, ScrollSmoother `scrollTo(el, true)`,
+native `scrollIntoView` when no engine is running);
 `debugOverlay.ts` reads `describe()` and `scrollTop()`. Swapping engines is
 the single export line in that file (see the checklist below).
 
@@ -191,11 +194,54 @@ fires animations early, most visibly on iOS.
 Sets the text of every `[data-current-year]` element (and the legacy
 `#current-year` id) to the current year. No order constraint.
 
+### accordion
+
+Toggles `.accordion_header` items; the content wrapper is the header's next
+sibling and the measured element inside it is `.accordion_content`.
+
+- On load the first header is open (`is-active`, `aria-expanded="true"`, its
+  wrapper's `max-height` set to the content height plus 126px, the same value
+  a click uses) and every other header gets `aria-expanded="false"` and
+  `max-height: 0px`.
+- Opening one header closes the others.
+- A `ResizeObserver` on each `.accordion_content` re-applies the open height
+  while that item is open (late images, font swap); closed items are ignored.
+- Keys: Space toggles a Link Block header (prevented so the page does not
+  scroll); Enter uses the link's native click. A header that is neither a
+  link nor a button gets `tabindex="0"`, `role="button"` and Enter support.
+  A native `<button>` header is left to the browser. Keys are handled only
+  when the header itself has focus, so a nested input keeps its own keys.
+- Ids: headers get `accordion-{n}`, wrappers `accordion-target-{n}`, wired
+  with `aria-controls` / `aria-labelledby`.
+
+Fixture and spec: `tests/visual/fixtures/runtime-keys-and-hash.{html,ts}`,
+`tests/visual/runtime-keys-and-hash.spec.ts`.
+
 ### modals
 
-Unchanged contract, see `modal-setup.md`. Now pauses scroll through
+Unchanged contract, see `modal-setup.md`. Pauses scroll through
 `smoothScroll.stop()` / `start()`, so it follows an engine swap with no edit.
 Under ScrollSmoother, dialogs and overlay must sit outside `#smooth-content`.
+
+W02 additions (no new attributes):
+
+- Enter and Space open a `[data-modal-open]` trigger that is not a native
+  link or button (Neighborhood timeline items). Such triggers get
+  `tabindex="0"` and `role="button"` at init when they have none.
+- `a[href="#{dialog-id}"]` opens that dialog through the same path
+  (`preventDefault`, no page jump, URL unchanged), also from inside another
+  open dialog: the current one closes and focus later returns to the
+  trigger that opened the first dialog.
+- A `location.hash` naming a dialog id opens it on load, and a later
+  `hashchange` to a dialog id (back/forward, typed URL) opens it too.
+- A `[data-modal-close]` with `href="#{section-id}"` on a non-dialog element
+  closes the dialog, scrolls to the section with `smoothScroll.scrollTo()`
+  and focuses it (adds `tabindex="-1"` if needed). Used by the "back to the
+  quiz" link in the /rooms all-rooms dialog. If the href names a dialog, it
+  switches to that dialog instead.
+
+Fixture and spec: `tests/visual/fixtures/runtime-keys-and-hash.{html,ts}`,
+`tests/visual/runtime-keys-and-hash.spec.ts`.
 
 ### debugOverlay
 

@@ -33,6 +33,23 @@ The script does all of the heavy lifting:
 - Traps focus within the dialog while open
 - Closes on ESC, close button, or overlay click
 - Returns focus to the trigger on close
+- Opens on Enter and Space for non-native triggers (see below)
+- Opens a dialog from any `#{id}` hash link and from `location.hash` on load
+- Closes and scrolls to a section when a close control has `href="#{section-id}"`
+
+## Keyboard, hash links and close-and-scroll
+
+None of these add attributes; existing dialogs keep working unchanged.
+
+| You want | Build it like this | What the script does |
+|---|---|---|
+| A div or card as a trigger (e.g. a Neighborhood timeline item) | `data-modal-open="{id}"` on the div | Adds `tabindex="0"` and `role="button"` if missing; Enter and Space open the dialog |
+| A plain link that opens a dialog | Link Block or Text Link with URL `#{id}` | `preventDefault` (no page jump, URL unchanged), then the normal open path |
+| A link inside dialog A that opens dialog B | Link with URL `#{b-id}` inside A | Closes A, opens B; closing B returns focus to the trigger that opened A |
+| A shareable URL that lands with a dialog open | `/page#{id}` | Opens that dialog on load, and on a later `hashchange` to that id |
+| A close control that also goes somewhere on the page (e.g. "back to the quiz" in the /rooms all-rooms dialog) | `data-modal-close` plus URL `#{section-id}` | Closes, scrolls to the section with the active scroll engine (native `scrollIntoView` without one), focuses it (adds `tabindex="-1"` if needed) |
+
+Close controls with `href="#"` behave as before: they only close.
 
 The script does NOT pause ScrollSmoother or lock body scroll. Native scroll
 is already prevented by ScrollSmoother's `overflow: hidden` on body, and the

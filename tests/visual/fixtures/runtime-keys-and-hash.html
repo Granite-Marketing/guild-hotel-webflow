@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Runtime keys and hash fixture</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      .accordion_content-wrapper { overflow: hidden; transition: max-height 0.2s; }
+      .accordion_content { padding: 1rem 0; }
+      [role="dialog"] { position: fixed; inset: 0; background: #fff; opacity: 0; pointer-events: none; overflow-y: auto; }
+      [role="dialog"].is-open { opacity: 1; pointer-events: auto; }
+      .spacer { height: 3000px; }
+    </style>
+  </head>
+  <body>
+    <nav class="nav_component">nav</nav>
+    <section class="section_faq">
+      <div class="accordion_item">
+        <a href="#" class="accordion_header w-inline-block"><span>first question</span></a>
+        <div class="accordion_content-wrapper"><div class="accordion_content"><p>first answer</p></div></div>
+      </div>
+      <div class="accordion_item">
+        <a href="#" class="accordion_header w-inline-block"><span>second question</span></a>
+        <div class="accordion_content-wrapper"><div class="accordion_content"><p>second answer</p></div></div>
+      </div>
+      <div class="accordion_item">
+        <a href="#" class="accordion_header w-inline-block"><span>third question</span><input class="accordion_nested-input" aria-label="nested input" /></a>
+        <div class="accordion_content-wrapper"><div class="accordion_content"><p>third answer</p></div></div>
+      </div>
+    </section>
+    <section class="section_timeline">
+      <div class="timeline_item" data-modal-open="timeline-dialog" aria-haspopup="dialog" aria-expanded="false">timeline item</div>
+      <a href="#all-rooms" class="rooms_link">see all rooms</a>
+    </section>
+    <div class="spacer"></div>
+    <section id="quiz" class="section_quiz"><h2>quiz</h2></section>
+    <div class="spacer"></div>
+
+    <div id="timeline-dialog" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+      <button type="button" data-modal-close aria-label="Close timeline">close</button>
+      <h2>timeline entry</h2>
+      <p>timeline body</p>
+      <a href="#all-rooms" class="timeline_rooms-link">rooms from timeline</a>
+    </div>
+    <div id="all-rooms" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+      <button type="button" data-modal-close aria-label="Close rooms">close</button>
+      <h2>all rooms</h2>
+      <p>rooms body</p>
+      <a href="#quiz" data-modal-close class="rooms_quiz-link">back to the quiz</a>
+    </div>
+    <script src="./runtime-keys-and-hash.js"></script>
+  </body>
+</html>

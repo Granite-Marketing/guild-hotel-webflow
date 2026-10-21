@@ -1,6 +1,6 @@
 // Checks plan.json against the shape in docs/figma/prep/P-build-plan.md and
 // that every class in the tree is declared. Run: node docs/figma/build-plans/Q015/validate-plan.mjs
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -16,13 +16,32 @@ expectType('component', 'string')
 expectType('buildOn', 'object')
 for (const key of ['reusedClasses', 'familyClasses', 'proposedShared', 'variables', 'tree', 'variants', 'props', 'assets', 'instances', 'openQuestions', 'deviations']) expectType(key, 'array')
 for (const key of ['page', 'pageId', 'section']) if (!plan.buildOn?.[key]) errors.push(`buildOn.${key} missing`)
+// K01 moved shared class styles into shared-classes.json: a proposedShared
+// entry may carry `definedIn` instead of inline `styles`, and `why` is optional.
+const sharedFiles = new Map()
+const sharedNamesIn = (relativePath) => {
+  if (!sharedFiles.has(relativePath)) {
+    const sharedPath = join(planDirectory, '..', '..', '..', '..', relativePath)
+    const names = existsSync(sharedPath)
+      ? new Set((JSON.parse(readFileSync(sharedPath, 'utf8')).shared ?? []).map((entry) => entry.name))
+      : null
+    sharedFiles.set(relativePath, names)
+  }
+  return sharedFiles.get(relativePath)
+}
+for (const entry of plan.proposedShared) {
+  if (!entry.definedIn) continue
+  const names = sharedNamesIn(entry.definedIn)
+  if (!names) errors.push(`${entry.name}: definedIn ${entry.definedIn} not found`)
+  else if (!names.has(entry.name)) errors.push(`${entry.name}: not listed in ${entry.definedIn}`)
+}
 for (const entry of [...plan.familyClasses, ...plan.proposedShared]) {
-  if (!entry.name || typeof entry.styles !== 'object') errors.push(`class entry malformed: ${JSON.stringify(entry).slice(0, 60)}`)
+  const hasStyles = typeof entry.styles === 'object' && entry.styles !== null
+  if (!entry.name || (!hasStyles && !entry.definedIn)) errors.push(`class entry malformed: ${JSON.stringify(entry).slice(0, 60)}`)
   for (const breakpoint of Object.keys(entry.styles ?? {})) {
     if (!['desktop', 'tablet', 'mobileLandscape', 'mobilePortrait'].includes(breakpoint)) errors.push(`${entry.name}: unknown breakpoint ${breakpoint}`)
   }
 }
-for (const entry of plan.proposedShared) if (!entry.why) errors.push(`${entry.name}: proposedShared needs why`)
 for (const entry of plan.familyClasses) {
   const ownFamily = entry.name === `section_${plan.component}` || entry.name.startsWith(`${plan.component}_`)
   if (!ownFamily) errors.push(`${entry.name}: familyClasses must be section_${plan.component} or ${plan.component}_*`)

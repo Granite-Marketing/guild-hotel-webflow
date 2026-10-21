@@ -56,6 +56,10 @@ export const lenisEngine: SmoothScrollEngine = {
   init: () => lenisGsap(gsap, ScrollTrigger),
   stop: () => lenis.stop(),
   start: () => lenis.start(),
+  scrollTo: (target: HTMLElement) => {
+    if (instance) instance.scrollTo(target)
+    else target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  },
   scrollTop: () => instance?.scroll ?? window.scrollY,
   describe: (): Record<string, string | number | boolean> =>
     instance

@@ -25,6 +25,8 @@ export interface SmoothScrollEngine {
   stop: () => void
   /** Resume page scroll. */
   start: () => void
+  /** Scroll the page to an element (engine-smoothed, else native). */
+  scrollTo: (target: HTMLElement) => void
   /** Current scroll offset in pixels. */
   scrollTop: () => number
   /** Engine-specific state for the debug overlay. */
