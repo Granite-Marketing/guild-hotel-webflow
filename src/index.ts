@@ -16,6 +16,7 @@
  */
 
 import { accordion } from '$utils/accordion'
+import { cardCarouselHeaderLeft } from '$utils/cardCarouselHeaderLeft'
 import { currentYear } from '$utils/currentYear'
 import { eagerImages } from '$utils/eagerImages'
 import { galleryFilter } from '$utils/galleryFilter'
@@ -27,6 +28,7 @@ import { imageTrailHover } from '$utils/imageTrailHover'
 import { modals } from '$utils/modals'
 import { navToggle } from '$utils/navToggle'
 import { offersSliderSplit } from '$utils/offersSliderSplit'
+import { roomListHoverPreview } from '$utils/roomListHoverPreview'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
 import { smoothScroll } from '$utils/smoothScroll'
 import { swiperSliders } from '$utils/swiperSliders'
@@ -62,6 +64,7 @@ window.Webflow.push(() => {
   // slot C: backgroundVideo(), heroTextReveal()
   swiperSliders()
   offersSliderSplit()
+  cardCarouselHeaderLeft()
 
   // slot D: navToggle(), imageHoverScale(), imageTrailHover()
   navToggle()
@@ -69,6 +72,7 @@ window.Webflow.push(() => {
   imageTrailHover()
   accordion()
   modals()
+  roomListHoverPreview()
 
   currentYear()
   // slot E: viewSwitcher(), cmsFilterLinks()
