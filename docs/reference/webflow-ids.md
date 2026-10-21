@@ -14,7 +14,7 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 
 ## Site custom code (R00)
 
-- **Bundle release**: v1.1.2, commit `a511cb050a63ebbb909cfc23decca9fae11ed53e` (footer swap pending, see `site-scripts.md`); content of the head and footer blocks in `site-scripts.md`.
+- **Bundle release**: v1.1.2, commit `a511cb050a63ebbb909cfc23decca9fae11ed53e` (live on staging footer); content of the head and footer blocks in `site-scripts.md`.
 - **Registered scripts**: none (site uses raw freeform head and footer blocks, not registered scripts).
 
 ## Pages

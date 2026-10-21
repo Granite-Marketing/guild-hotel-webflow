@@ -6,7 +6,7 @@ What Site Settings > Custom Code holds on site `6ad6405eae8eac6d7b7c41a3`, and t
 
 - **Bundle version:** v1.1.2 (release commit `a511cb050a63ebbb909cfc23decca9fae11ed53e`, tag `v1.1.2` pushed; jsDelivr serves it, byte-identical to `dist/index.js`).
 - **Tag URL:** `https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.1.2/dist/index.js`
-- **Footer state:** the live footer still names v1.1.1 until the line below is pasted (the Data API write was blocked by the permission checker in R01).
+- **Footer state:** staging footer names v1.1.2 (swapped by Stephen by hand; the Data API footer write was blocked by the permission checker).
 - **Repo visibility:** public since 2026-10-20 (jsDelivr only serves public repos).
 
 ## GSAP comes from Webflow, not the footer

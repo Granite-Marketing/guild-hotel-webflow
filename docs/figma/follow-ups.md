@@ -365,4 +365,4 @@ Template `/legal-corporate/<slug>` assembled through the Data API; staging rende
 - [ ] Every photo is a stand-in from the library; replace with real imagery when it arrives.
 
 
-- [ ] R01 (v1.1.2): tag `v1.1.2` is pushed and served, but the site footer still loads v1.1.1 because the Data API footer write was blocked by the permission checker. Paste the footer line from `docs/reference/site-scripts.md`, publish to webflow.io, then check the card carousels and the /rooms hover preview. `playwright` `example.spec.ts` capture needs a live URL and fails offline; `gallery-filter.spec.ts` end-state check was flaky once and passed on rerun.
+- [x] R01 (v1.1.2): footer swapped by hand and staging verified 2026-10-21: /history card carousel initialised (6 slides, no console errors), /rooms hover preview switches the active room. The Data API footer write is blocked by the permission checker, so footer swaps stay manual unless a permission rule is added. `example.spec.ts` capture needs a live URL and fails offline; `gallery-filter.spec.ts` was flaky once.
