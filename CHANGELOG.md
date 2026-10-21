@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.3
+
+### Patch Changes
+
+- Runtime fixes from wave 4: the FAQ accordion opens its first item on load, keeps aria-expanded in sync, re-measures open panels when content grows (late images), and supports Space as well as Enter. Dialogs now open from `#id` links (including from inside another dialog), from the URL hash on load and on hashchange, and from Enter or Space on non-link triggers; a close control with an `href="#section"` closes and scrolls to that section.
+
 ## 1.1.2
 
 ### Patch Changes
