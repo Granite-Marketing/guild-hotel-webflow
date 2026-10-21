@@ -37,7 +37,8 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 | Gallery | `6ad66fd65794075272b95584` | `/gallery` | gallery |
 | Arts | `6ad66fd7ba96f2e53726a2eb` | `/arts` | arts; assembled by Q041 (2026-10-20), Body `6ad66fd7ba96f2e53726a2f3`; element ids in `docs/figma/build-plans/Q041/build.md` |
 | Wellness | `6ad66fd7735773f253406791` | `/wellness` | wellness-collection; assembled by Q034 (2026-10-20), Body `6ad66fd7735773f253406797` |
-| Static Template | `6ad66fd802cc199b55b924be` | `/static-template` | static-template |
+| Privacy Policy | `6ad66fd802cc199b55b924be` | `/privacy-policy` | static-template; renamed from Static Template (2026-10-21); doubles as the legal page template (duplicate it for new legal pages). Footer Links and the Contact consent link point here as page links |
+| Accessibility | `6ad85678cff550a80a3287b0` | `/accessibility` | duplicated from Privacy Policy (2026-10-21), same elements and `static-template-privacy-policy_*` classes, placeholder accessibility statement; linked from Footer Links |
 | Contact | `6ad66fd8e0b7968459e18f22` | `/contact` | contact; assembled by Q043 (2026-10-20), Body `6ad66fd8e0b7968459e18f28`; instance and section ids in `docs/figma/build-plans/Q043/build.md` |
 | Meetings | `6ad66fd96684c3e22ea4d417` | `/meetings` | meetings-collection |
 | Neighborhood | `6ad66fdb02cc199b55b926ba` | `/neighborhood` | neighborhood; assembled by Q044 (2026-10-20), Body `6ad66fdb02cc199b55b926c5` |
