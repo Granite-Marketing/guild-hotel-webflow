@@ -617,8 +617,8 @@ back up fans them out again.
 | `data-image-stack-collapse` | the row wrapper | required; also the scroll trigger |
 | `data-image-stack-collapse-item` | each image wrapper (figure) | required, at least two |
 | `data-image-stack-collapse-item="anchor"` | the image that stays put | optional; defaults to the middle item |
-| `data-image-stack-collapse-start` | the row wrapper | optional ScrollTrigger start, default `top 75%` |
-| `data-image-stack-collapse-end` | the row wrapper | optional ScrollTrigger end, default `center center` |
+| `data-image-stack-collapse-start` | the row wrapper | optional ScrollTrigger start, default `top 55%` (F04: starts once the row is well in view) |
+| `data-image-stack-collapse-end` | the row wrapper | optional ScrollTrigger end, default `center 40%` |
 
 - Offsets are measured centre to centre from subpixel rects (with each
   item's own translate removed) and recomputed on every refresh
