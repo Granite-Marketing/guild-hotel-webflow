@@ -195,3 +195,24 @@ Sample post items (set ready to publish by Q029 on 2026-10-20 so the listing ren
 - Assets: `press-logo-national-geographic.svg` `6ad7e683ca3bcaf687bb5125`, `press-logo-forbes.svg` `6ad7e683558e3453e0caae39`, `press-logo-architectural-digest.svg` `6ad7e6862c1787a1a6c24f37` (Article Card Staggered Logo prop, /press); British Vogue logo `6ad7df8af5da742df2306bee` (Dinings `press-logo` field); cream history stamp `6ad7e14297b901c25753709d`.
 - Styles: `u-logo` `e579b641-c549-6f15-54bb-ff4e033713ff`.
 - Dinings fields added by W02 p4: `hero-logo`, `show-hero-logo`, `press-logo`, `menu-link`, `venue-site-link`, `gallery-heading`; Happenings & Stories: `inset-image`, `highlight-image` (field ids in `docs/figma/build-plans/W02/p4.md`).
+
+## F08 History timeline offsets (2026-10-21)
+
+Desktop-only % margin combos on History timeline elements (all reset to 0 at tablet). Shared `history-timeline_figure is-small` (`8573cc8e-1088-6b91-5385-17b1cdc19fef`) gained align-self start + margin-top 26.3%; `is-large` (`29ec84ac-58d4-667b-44f6-b8f32d1035e4`) gained align-self start. Both only used by the 1924-1970 and 2026 entries.
+
+| Combo | Style id | Element |
+|---|---|---|
+| `history-timeline_figure is-wide is-founding-wide` | `a4cb916b-eb2c-c430-bccd-7ffb2b8525a3` | `283c3db0-146b-a9d0-27ae-9a09e01e9e8d` |
+| `history-timeline_content is-founding` | `357dbac3-9328-9d22-b9e0-3c9211b84305` | `c1e006e4-03b6-2e84-067e-2548388445b2` |
+| `history-timeline_figure is-founding-square` | `5b37ff38-54ca-bf02-c77d-98a372f8409a` | `071a8456-444b-28df-1ecb-4829dc58978f` |
+| `history-timeline_figure is-portrait is-founding-portrait` | `64f979f2-b796-abfb-167d-b549aaa6c19f` | `2edd9ffd-1b69-7cad-2f34-91e59b4d40ea` |
+| `history-timeline_text is-founding` | `377bbeb3-2c30-bd52-8c10-4c71a56fcea1` | `4c5eb565-13ae-ef5d-c8d5-3e537f5a992c` |
+| `history-timeline_figure is-large is-ymca-large` | `0b977267-264d-bfcc-c42c-9fd64eb015fa` | `a3fa3b08-3b0e-50d6-1ab7-95f22808cebf` |
+| `history-timeline_content is-stacked is-ymca` | `d73d9f68-ece0-8c23-c59c-c59db7e57742` | `502f510d-93fe-1239-f66d-903dc66dbfa2` |
+| `history-timeline_figure is-ymca-square` | `2ec722a7-051f-091c-8b64-706a9d104a52` | `2cd76254-e014-cee4-6beb-8f5bb9f18ee8` |
+| `history-timeline_content is-stacked is-opening` | `d04ed0f3-8a1f-bfc4-7404-a628d3f3ec0c` | `e05ee4de-139f-c107-2aab-10f3323fdd17` |
+| `history-timeline_figure is-portrait is-opening-portrait` | `97f14f8d-c6ca-d5cf-cb71-bc216b5dea02` | `9ebe7c91-20ab-7cf7-089d-05fc1811264e` |
+| `history-timeline_figure is-opening-square` | `5f137601-7309-f799-1e83-a649925a4064` | `f951ae05-cdbb-d258-66ef-6ae066862368` |
+| `history-timeline_content is-future` | `cfb374d9-6c62-12ff-a41f-da0a6738355a` | `bc358f14-1d2c-9eb4-75a9-b845e0bacfdf` |
+
+Square figures carry their own combo name (not the entry name) because `.history-timeline_figure.is-x` would also match a sized figure carrying `is-x`.
