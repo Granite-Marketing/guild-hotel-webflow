@@ -57,28 +57,22 @@ From the W02 batches (the full group (a) list is in `docs/figma/punch-list.md`):
 
 ## 6. Wave 5 (2026-10-21, follow-up session)
 
-Webflow writes below are made but **not published**: the permission checker refused the webflow.io publish from this session (Stephen's go-ahead reached it through another session). Publish to the webflow.io subdomain only.
+Published to webflow.io (Stephen approved in chat). QA version 3 (same link as above): broken sections went from 10 to 2 and drift from 44 to 8 across 24 URLs. Findings: `docs/figma/qa-findings-v3.md`.
 
-Done, waiting for publish:
-- Dinings template "other dining options": four static venue cards, each hidden by its own CMS switch, so every venue lists the other three (ids in `docs/reference/webflow-ids.md`, Wave 5 additions).
-- Gallery and Arts tag bars: one swipeable line at 390 (combo `tab-pills-intro_tabs.is-scroll`). Desktop is unchanged; it already floats mid-grid as in Figma.
-- Map Feature reads larger on phones (Home, Rooms, Dining, Rooms Detail).
-- Post Categories cards show the topic eyebrow (bound to `topic`).
+Live on staging:
+- Dinings "other dining options": four static venue cards, each hidden by its own CMS switch, so every venue lists the other three.
+- Gallery and Arts tag bars: one swipeable line at 390 (`tab-pills-intro_tabs.is-scroll`). Desktop keeps the sticky bar that floats over the grid as in Figma.
+- Map Feature larger on phones; Post Categories cards show the topic eyebrow.
+- SEO: unique titles and descriptions on 13 static pages (Privacy Policy and Accessibility kept theirs); the four CMS templates take the title from the item name and the description from an item field. Dining `hero-intro` and Happenings `excerpt` are still lorem, so those descriptions read lorem until real copy lands.
+- Webflow halves of the new modules: Site Nav combo `is-on-light`, rooms "back to the quiz" link to `#rooms-quiz`, legal/04 hover photo markup.
 
-Code (PR 101, verified on staging with the bundle routed locally; merge was blocked, then release v1.1.4):
-- `navContrast`: nav text turns dark over light bands (Wellness intro and other pages). Needs the combo style below.
-- `roomGridHoverReveal`: /rooms card details and "view more" show on hover or focus.
-- `hoverFollowImage`: legal/04 hover photo. Needs the markup below.
-- Anchor fix: page-load hashes land below the nav after images load (`/meetings#request-for-proposal` was 2700px short).
+Code:
+- v1.1.4 released (PR 101): `navContrast`, `roomGridHoverReveal`, `hoverFollowImage`, page-load hash scroll below the nav.
+- PR 105: History sticky year label fades while text passes under it (CSS could not keep it off the text). Verified with the bundle routed locally; ships as v1.1.5 after merge.
 
-Blocked, for Stephen:
-- [ ] Publish the site to webflow.io.
-- [ ] Merge PR 101, then release v1.1.4 (`webflow-deploy`) and set the footer script to `https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.1.4/dist/index.js`.
-- [ ] Site Nav: add combo `is-on-light` on `site-nav_component` with text colour neutral-darkest (do not leave it applied; the module toggles it).
-- [ ] Room List Hover Preview component: "back to the quiz" link URL `#rooms-quiz` (it is `#` today, so the dialog closes without scrolling).
-- [ ] Legal Corporates Template, feature-grid-dark-eyebrow: `data-hover-image` on `feature-grid-dark-eyebrow_list`, `data-hover-image-item` on each `_item`, and a figure (`feature-grid-dark-eyebrow_hover-figure`, 23.5625rem wide, aspect 377/486, hidden at small and tiny) with image asset `6ad66ff2de86688556051da2` and `data-hover-image-media`.
-- [ ] History 05: the sticky 1924 pill still overlaps the "A YMCA landmark is born" copy at one scroll position at 1440 (the fix agent was refused).
-- [ ] SEO: every page and CMS template still has the generic title (the SEO agent was refused). Run the `update-seo` skill, and bind template titles to the item name in Page settings > SEO.
-- [ ] W03 QA re-run after the publish.
-
-Optional Designer tidy: delete Dinings fields `other-dining-label-1..3` and the unused `card-stagger-header-left_card.is-offset` combo.
+For Stephen:
+- [ ] Footer script to `https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.1.4/dist/index.js` (then v1.1.5 once PR 105 is released). Until then none of the new runtime behaviour is live.
+- [ ] Merge PR 105, then release v1.1.5.
+- [ ] Post Categories list filter and card links (section 4 above): the only broken sections left.
+- [ ] Do not run Style Manager Clean up before the footer bump: `site-nav_component.is-on-light` is applied only at runtime.
+- Optional: delete Dinings fields `other-dining-label-1..3` and the unused `card-stagger-header-left_card.is-offset` combo; the old `/static-template` URL now 404s (page is `/privacy-policy`), add a redirect if it was shared.
