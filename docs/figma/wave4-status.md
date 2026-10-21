@@ -54,3 +54,31 @@ From the W02 batches (the full group (a) list is in `docs/figma/punch-list.md`):
 - Rooms quiz module and room card hover reveal need new code and the D-quiz decision.
 - Press `#community` has no section in Figma.
 - Group (c) content and group (d) decisions in the punch list are untouched.
+
+## 6. Wave 5 (2026-10-21, follow-up session)
+
+Webflow writes below are made but **not published**: the permission checker refused the webflow.io publish from this session (Stephen's go-ahead reached it through another session). Publish to the webflow.io subdomain only.
+
+Done, waiting for publish:
+- Dinings template "other dining options": four static venue cards, each hidden by its own CMS switch, so every venue lists the other three (ids in `docs/reference/webflow-ids.md`, Wave 5 additions).
+- Gallery and Arts tag bars: one swipeable line at 390 (combo `tab-pills-intro_tabs.is-scroll`). Desktop is unchanged; it already floats mid-grid as in Figma.
+- Map Feature reads larger on phones (Home, Rooms, Dining, Rooms Detail).
+- Post Categories cards show the topic eyebrow (bound to `topic`).
+
+Code (PR 101, verified on staging with the bundle routed locally; merge was blocked, then release v1.1.4):
+- `navContrast`: nav text turns dark over light bands (Wellness intro and other pages). Needs the combo style below.
+- `roomGridHoverReveal`: /rooms card details and "view more" show on hover or focus.
+- `hoverFollowImage`: legal/04 hover photo. Needs the markup below.
+- Anchor fix: page-load hashes land below the nav after images load (`/meetings#request-for-proposal` was 2700px short).
+
+Blocked, for Stephen:
+- [ ] Publish the site to webflow.io.
+- [ ] Merge PR 101, then release v1.1.4 (`webflow-deploy`) and set the footer script to `https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.1.4/dist/index.js`.
+- [ ] Site Nav: add combo `is-on-light` on `site-nav_component` with text colour neutral-darkest (do not leave it applied; the module toggles it).
+- [ ] Room List Hover Preview component: "back to the quiz" link URL `#rooms-quiz` (it is `#` today, so the dialog closes without scrolling).
+- [ ] Legal Corporates Template, feature-grid-dark-eyebrow: `data-hover-image` on `feature-grid-dark-eyebrow_list`, `data-hover-image-item` on each `_item`, and a figure (`feature-grid-dark-eyebrow_hover-figure`, 23.5625rem wide, aspect 377/486, hidden at small and tiny) with image asset `6ad66ff2de86688556051da2` and `data-hover-image-media`.
+- [ ] History 05: the sticky 1924 pill still overlaps the "A YMCA landmark is born" copy at one scroll position at 1440 (the fix agent was refused).
+- [ ] SEO: every page and CMS template still has the generic title (the SEO agent was refused). Run the `update-seo` skill, and bind template titles to the item name in Page settings > SEO.
+- [ ] W03 QA re-run after the publish.
+
+Optional Designer tidy: delete Dinings fields `other-dining-label-1..3` and the unused `card-stagger-header-left_card.is-offset` combo.
