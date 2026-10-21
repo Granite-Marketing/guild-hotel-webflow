@@ -658,6 +658,13 @@ Collapse gallery (component `gallery-row-dark-titled`, `history/06`):
 - Local check: `pnpm exec playwright test history-sticky-year` (fixture in
   `tests/visual/fixtures/history-sticky-year.html`; add `--headed` to watch).
 
+- Label avoidance (v1.1.5): the sticky label fades out (autoAlpha) while a
+  text block that overlaps it horizontally crosses the label band (label
+  height plus 16px around the viewport centre). Text blocks are
+  `[data-history-sticky-year-avoid]`, `.history-timeline_text` and
+  `.history-timeline_item-header`. Fixes the 1924 pill covering the body
+  copy at 1440 and 390.
+
 ### imageStackCollapse
 
 A row of images slides together on scroll into a stack of one: every image
