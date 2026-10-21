@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.6
+
+### Patch Changes
+
+- Feedback batch 1 (2026-10-21): navTheme nav colour switching replaces navContrast (F01); scroll mask reveals with once-only line mask-in on the home Zuma section and the History landmark gallery (F03, F09); later start for the home Wellness trio (F04); hard-coded media tabs for home Meetings and Events (F06); sticky Reserve a Table on the Dinings template (F10); venue dialogs scroll inside themselves (F12); list-linked Google map for the legal courthouses, keyed from data-map-key (F13).
+
 ## 1.1.5
 
 ### Patch Changes
