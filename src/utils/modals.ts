@@ -29,9 +29,10 @@
  * animation, and easing via Webflow combo classes.
  *
  * Page-scroll lock: the active smooth-scroll engine (Lenis by default, see
- * `$utils/smoothScroll`) is stopped on open and resumed on close. This halts
- * page scrolling AND releases the modal's overflow-y:auto for native
- * wheel/touch handling. No body styles are touched.
+ * `$utils/smoothScroll`) is stopped on open and resumed on close. A stopped
+ * Lenis still cancels wheel and touch events, so every dialog gets
+ * `data-lenis-prevent` at init: the dialog's own overflow-y:auto then
+ * scrolls natively. No body styles are touched.
  *
  * Under ScrollSmoother the dialog and overlay must live OUTSIDE
  * `#smooth-content` in the Designer; this script does not reparent them.
@@ -59,6 +60,9 @@ export const modals = () => {
   if (!modalElements.length) return
 
   const overlayElement = document.querySelector<HTMLElement>('[data-modal-overlay]')
+
+  // Let a dialog scroll inside itself while the page engine is stopped.
+  modalElements.forEach((modal) => modal.setAttribute('data-lenis-prevent', ''))
 
   let activeModal: HTMLElement | null = null
   let activeTrigger: HTMLElement | null = null

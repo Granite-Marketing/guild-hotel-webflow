@@ -26,6 +26,7 @@ import { hoverFollowImage } from '$utils/hoverFollowImage'
 import { imageHoverScale } from '$utils/imageHoverScale'
 import { imageStackCollapse } from '$utils/imageStackCollapse'
 import { imageTrailHover } from '$utils/imageTrailHover'
+import { map } from '$utils/map'
 import { mediaTabs } from '$utils/mediaTabs'
 import { modals } from '$utils/modals'
 import { navTheme } from '$utils/navTheme'
@@ -85,6 +86,7 @@ window.Webflow.push(() => {
   modals()
   roomListHoverPreview()
   mediaTabs()
+  map()
 
   currentYear()
   // slot E: viewSwitcher(), cmsFilterLinks()

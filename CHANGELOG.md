@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.5
+
+### Patch Changes
+
+- 68b01ee: History sticky year label fades out while a timeline text block passes under it, so the 1924 pill never covers the body copy.
+
 ## 1.1.4
 
 ### Patch Changes

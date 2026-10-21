@@ -16,6 +16,12 @@
  *   [data-history-sticky-year-item="1924"]  milestone block; the value is
  *                                           the year shown while the block
  *                                           crosses the viewport centre
+ *   [data-history-sticky-year-avoid]        optional text block the label
+ *                                           must not cover; defaults to the
+ *                                           timeline text and item headers.
+ *                                           The label fades out while one
+ *                                           that overlaps it horizontally
+ *                                           crosses the label band.
  *
  * Collapse gallery (gallery-row-dark-titled):
  *
@@ -42,6 +48,9 @@ import { prepareLineMaskReveal } from '$utils/lineMaskReveal'
 
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
 const DEFAULT_COLLAPSE_DISTANCE = 3
+const AVOID_SELECTOR =
+  '[data-history-sticky-year-avoid], .history-timeline_text, .history-timeline_item-header'
+const AVOID_GAP = 16
 
 export const historyStickyYear = () => {
   const reducedMotion = window.matchMedia(REDUCED_MOTION).matches
@@ -114,6 +123,46 @@ const setupStickyYear = (root: HTMLElement, reducedMotion: boolean) => {
       end: 'bottom center',
       onToggle: (self: ScrollTriggerInstance) => {
         if (self.isActive) showYear(index)
+      },
+    })
+  })
+
+  setupLabelAvoidance(root, label, reducedMotion)
+}
+
+/** Fade the sticky label out while a text block passes under it. */
+const setupLabelAvoidance = (root: HTMLElement, label: HTMLElement, reducedMotion: boolean) => {
+  const blocks = Array.from(root.querySelectorAll<HTMLElement>(AVOID_SELECTOR)).filter(
+    (block) => !label.contains(block),
+  )
+  if (!blocks.length) return
+
+  const activeBlocks = new Set<HTMLElement>()
+
+  const overlapsLabel = (block: HTMLElement) => {
+    const blockRect = block.getBoundingClientRect()
+    const labelRect = label.getBoundingClientRect()
+    return blockRect.left < labelRect.right && blockRect.right > labelRect.left
+  }
+
+  const update = () => {
+    const isCovered = Array.from(activeBlocks).some(overlapsLabel)
+    const vars = { autoAlpha: isCovered ? 0 : 1 }
+    if (reducedMotion) gsap.set(label, vars)
+    else gsap.to(label, { ...vars, duration: 0.2, ease: 'power1.out', overwrite: 'auto' })
+  }
+
+  const bandOffset = () => label.offsetHeight / 2 + AVOID_GAP
+
+  blocks.forEach((block) => {
+    ScrollTrigger.create({
+      trigger: block,
+      start: () => `top center+=${bandOffset()}`,
+      end: () => `bottom center-=${bandOffset()}`,
+      onToggle: (self: ScrollTriggerInstance) => {
+        if (self.isActive) activeBlocks.add(block)
+        else activeBlocks.delete(block)
+        update()
       },
     })
   })

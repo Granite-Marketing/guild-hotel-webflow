@@ -52,6 +52,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | stickyCta | `stickyCta.ts` | wired (next release) | G, last |
 | roomGridHoverReveal | `roomGridHoverReveal.ts` | wired (v1.1.4) | D, after imageHoverScale |
 | hoverFollowImage | `hoverFollowImage.ts` | wired (v1.1.4) | D, after imageTrailHover |
+| map | `map.ts` (+ `mapNeeds.ts`) | wired (unreleased) | D, after roomListHoverPreview |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
 
 To enable an opt-in module, uncomment its import and its call in
@@ -219,6 +220,10 @@ sibling and the measured element inside it is `.accordion_content`.
   when the header itself has focus, so a nested input keeps its own keys.
 - Ids: headers get `accordion-{n}`, wrappers `accordion-target-{n}`, wired
   with `aria-controls` / `aria-labelledby`.
+
+F12 fix: every dialog gets `data-lenis-prevent` at init. A stopped Lenis
+still cancels wheel and touch events, so without it a tall dialog's own
+`overflow-y: auto` never scrolled.
 
 Fixture and spec: `tests/visual/fixtures/runtime-keys-and-hash.{html,ts}`,
 `tests/visual/runtime-keys-and-hash.spec.ts`.
@@ -575,6 +580,32 @@ photo, name, specs and "view more" in the media column.
 Fixture and spec: `tests/visual/fixtures/room-list-hover-preview.{html,ts}`,
 `tests/visual/room-list-hover-preview.spec.ts`.
 
+### map
+
+Styled Google map with list-linked markers (F13, Map Feature Image Bg on
+the legal and corporate template), ported from Editoria. Google Maps JS API,
+loaded on demand when the map nears the viewport. No key in source: the
+referrer-restricted browser key is an attribute set in Webflow.
+
+| Attribute | On | Value |
+|---|---|---|
+| `data-map` | element the map fills (the map figure) | none |
+| `data-map-key` | same element | Google Maps browser key |
+| `data-map-home` | same element, optional | `lat,lng` of the hotel (non-interactive marker) |
+| `data-map-home-title` | same element, optional | marker tooltip, e.g. `The Guild Hotel` |
+| `data-map-item` | each address row, same section | none (title = first child's text) or a title |
+
+- Coordinates come from each row's directions link:
+  `https://www.google.com/maps/dir/?api=1&destination={lat},{lng}`. A row
+  without one gets no marker; with no markers, or no key, nothing loads.
+- Hover or focus on a row highlights its marker; hover or click on a marker
+  highlights its row. Both get `is-active`; style `.map-feature_item.is-active`
+  in Webflow. Clicking a row (outside its link) also pans to the marker.
+- The static image stays underneath as the fallback. On a key or referrer
+  error Google calls `gm_authFailure` and the map canvas is removed.
+- Styling is a legacy `styles` array (no Map ID), so markers are custom
+  `OverlayView` buttons, not Advanced Markers.
+
 ### navContrast
 
 Unwired since F01: `navTheme` replaces it (one nav colour module only). Kept for reference.
@@ -662,6 +693,13 @@ Collapse gallery (component `gallery-row-dark-titled`, `history/06`):
 - Reduced motion: nothing is created; the gallery shows as laid out.
 - Local check: `pnpm exec playwright test history-sticky-year` (fixture in
   `tests/visual/fixtures/history-sticky-year.html`; add `--headed` to watch).
+
+- Label avoidance (v1.1.5): the sticky label fades out (autoAlpha) while a
+  text block that overlaps it horizontally crosses the label band (label
+  height plus 16px around the viewport centre). Text blocks are
+  `[data-history-sticky-year-avoid]`, `.history-timeline_text` and
+  `.history-timeline_item-header`. Fixes the 1924 pill covering the body
+  copy at 1440 and 390.
 
 ### imageStackCollapse
 
