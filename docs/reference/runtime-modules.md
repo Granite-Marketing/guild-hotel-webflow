@@ -46,6 +46,9 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | offersSliderSplit | `offersSliderSplit.ts` | wired (R00) | C, after swiperSliders |
 | imageStackCollapse | `imageStackCollapse.ts` | wired (R00) | G |
 | roomListHoverPreview | `roomListHoverPreview.ts` | wired (v1.1.2) | D, after modals |
+| navContrast | `navContrast.ts` | wired (v1.1.4) | D, after navToggle |
+| roomGridHoverReveal | `roomGridHoverReveal.ts` | wired (v1.1.4) | D, after imageHoverScale |
+| hoverFollowImage | `hoverFollowImage.ts` | wired (v1.1.4) | D, after imageTrailHover |
 | map | `map.ts` (+ `mapNeeds.ts`) | wired (unreleased) | D, after roomListHoverPreview |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
 
@@ -599,6 +602,55 @@ referrer-restricted browser key is an attribute set in Webflow.
   error Google calls `gm_authFailure` and the map canvas is removed.
 - Styling is a legacy `styles` array (no Map ID), so markers are custom
   `OverlayView` buttons, not Advanced Markers.
+
+### navContrast
+
+Switches the fixed Site Nav to dark text while its bar sits over a light
+background (the cream bands below photo heroes, first seen on Wellness).
+
+- Adds `is-on-light` to `[data-nav="header"]`; the Webflow combo class
+  `site-nav_component.is-on-light` sets the dark text colour (every nav
+  child uses `color: inherit`).
+- Detection samples the bar's midline with `elementsFromPoint` at 25, 50 and
+  75 percent of the width and needs a majority that includes the centre
+  point (the logo). At each point the first
+  element under the header with an opaque background colour decides
+  (luminance above 0.5 is light); elements under 24px in either dimension
+  (dividers) are skipped. Images, video and background images
+  count as photos and keep the cream text.
+- Skipped when the header text is already dark (the Dark variant), and the
+  class is removed while the menu is open (`is-nav-open`).
+- Updates on scroll (one read per animation frame), resize and header class
+  changes.
+
+### roomGridHoverReveal
+
+Hover reveal on the `/rooms` room grid (Q033): the guests and size line
+(`.rooms-collection-room-grid_details`) and the "view more" pill (`footer`)
+inside each `.rooms-collection-room-grid_card` stay hidden until the card is
+hovered or focused.
+
+- Class contract only; no attributes. Webflow shows the details, so touch
+  devices and a failed bundle keep them visible.
+- Skipped unless `(hover: hover) and (pointer: fine)` matches.
+
+### hoverFollowImage
+
+One photo that follows the pointer while an item in a grid is hovered
+(legal/04 "why teams choose the guild" on the Legal Corporates template).
+
+| Attribute | On | Value |
+|---|---|---|
+| `data-hover-image` | zone (list or grid wrapper) | none |
+| `data-hover-image-item` | each hover target | none |
+| `data-hover-image-src` | item, optional | photo URL to swap in for that item |
+| `data-hover-image-media` | figure holding one `img`, inside the zone | none |
+
+- The module makes the zone `position: relative` (if static), positions the
+  media absolutely, centres it on the pointer with `gsap.quickTo`, and fades
+  it with `autoAlpha`. Set the media width in its class (Figma 377 x 486).
+- The hovered item and the visible media get `is-active`.
+- Touch devices and `prefers-reduced-motion: reduce`: the media stays hidden.
 
 ### historyStickyYear
 
