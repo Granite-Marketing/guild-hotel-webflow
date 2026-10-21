@@ -46,6 +46,9 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | offersSliderSplit | `offersSliderSplit.ts` | wired (R00) | C, after swiperSliders |
 | imageStackCollapse | `imageStackCollapse.ts` | wired (R00) | G |
 | roomListHoverPreview | `roomListHoverPreview.ts` | wired (v1.1.2) | D, after modals |
+| navContrast | `navContrast.ts` | wired (v1.1.4) | D, after navToggle |
+| roomGridHoverReveal | `roomGridHoverReveal.ts` | wired (v1.1.4) | D, after imageHoverScale |
+| hoverFollowImage | `hoverFollowImage.ts` | wired (v1.1.4) | D, after imageTrailHover |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
 
 To enable an opt-in module, uncomment its import and its call in
@@ -568,6 +571,52 @@ photo, name, specs and "view more" in the media column.
 
 Fixture and spec: `tests/visual/fixtures/room-list-hover-preview.{html,ts}`,
 `tests/visual/room-list-hover-preview.spec.ts`.
+
+### navContrast
+
+Switches the fixed Site Nav to dark text while its bar sits over a light
+background (the cream bands below photo heroes, first seen on Wellness).
+
+- Adds `is-on-light` to `[data-nav="header"]`; the Webflow combo class
+  `site-nav_component.is-on-light` sets the dark text colour (every nav
+  child uses `color: inherit`).
+- Detection samples the bar's midline with `elementsFromPoint`: the first
+  element under the header with an opaque background colour decides
+  (luminance above 0.5 is light). Images, video and background images
+  count as photos and keep the cream text.
+- Skipped when the header text is already dark (the Dark variant), and the
+  class is removed while the menu is open (`is-nav-open`).
+- Updates on scroll (one read per animation frame), resize and header class
+  changes.
+
+### roomGridHoverReveal
+
+Hover reveal on the `/rooms` room grid (Q033): the guests and size line
+(`.rooms-collection-room-grid_details`) and the "view more" pill (`footer`)
+inside each `.rooms-collection-room-grid_card` stay hidden until the card is
+hovered or focused.
+
+- Class contract only; no attributes. Webflow shows the details, so touch
+  devices and a failed bundle keep them visible.
+- Skipped unless `(hover: hover) and (pointer: fine)` matches.
+
+### hoverFollowImage
+
+One photo that follows the pointer while an item in a grid is hovered
+(legal/04 "why teams choose the guild" on the Legal Corporates template).
+
+| Attribute | On | Value |
+|---|---|---|
+| `data-hover-image` | zone (list or grid wrapper) | none |
+| `data-hover-image-item` | each hover target | none |
+| `data-hover-image-src` | item, optional | photo URL to swap in for that item |
+| `data-hover-image-media` | figure holding one `img`, inside the zone | none |
+
+- The module makes the zone `position: relative` (if static), positions the
+  media absolutely, centres it on the pointer with `gsap.quickTo`, and fades
+  it with `autoAlpha`. Set the media width in its class (Figma 377 x 486).
+- The hovered item and the visible media get `is-active`.
+- Touch devices and `prefers-reduced-motion: reduce`: the media stays hidden.
 
 ### historyStickyYear
 

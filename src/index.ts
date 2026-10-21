@@ -22,12 +22,15 @@ import { eagerImages } from '$utils/eagerImages'
 import { galleryFilter } from '$utils/galleryFilter'
 import { gsapBasicAnimations } from '$utils/gsapBasicAnimations'
 import { historyStickyYear } from '$utils/historyStickyYear'
+import { hoverFollowImage } from '$utils/hoverFollowImage'
 import { imageHoverScale } from '$utils/imageHoverScale'
 import { imageStackCollapse } from '$utils/imageStackCollapse'
 import { imageTrailHover } from '$utils/imageTrailHover'
 import { modals } from '$utils/modals'
+import { navContrast } from '$utils/navContrast'
 import { navToggle } from '$utils/navToggle'
 import { offersSliderSplit } from '$utils/offersSliderSplit'
+import { roomGridHoverReveal } from '$utils/roomGridHoverReveal'
 import { roomListHoverPreview } from '$utils/roomListHoverPreview'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
 import { smoothScroll } from '$utils/smoothScroll'
@@ -68,8 +71,11 @@ window.Webflow.push(() => {
 
   // slot D: navToggle(), imageHoverScale(), imageTrailHover()
   navToggle()
+  navContrast()
   imageHoverScale()
+  roomGridHoverReveal()
   imageTrailHover()
+  hoverFollowImage()
   accordion()
   modals()
   roomListHoverPreview()
