@@ -18,7 +18,9 @@
  *                 current one closes first and focus later returns to the
  *                 trigger that opened the first dialog).
  *   - Page load:  `location.hash` naming a dialog id opens that dialog, and
- *                 so does a later `hashchange` to one.
+ *                 so does a later `hashchange` to one. A hash naming any
+ *                 other element re-scrolls to it after window load, so lazy
+ *                 images above it cannot leave the page short.
  *   - Close and scroll: a `[data-modal-close]` with `href="#{section-id}"`
  *                 pointing at a non-dialog element closes the dialog, then
  *                 scrolls to that element and moves focus there.
@@ -49,6 +51,7 @@ const FOCUSABLE_SELECTOR = [
   '[tabindex]:not([tabindex="-1"])',
 ].join(',')
 
+const HASH_SCROLL_TIMEOUT = 5000
 const NATIVE_ACTIVATION_SELECTOR = 'a[href], button, input, select, textarea, summary'
 
 export const modals = () => {
@@ -278,8 +281,42 @@ export const modals = () => {
     }
   })
 
-  const initialDialog = getDialog(hashTarget(window.location.hash))
+  const initialHash = hashTarget(window.location.hash)
+  const initialDialog = getDialog(initialHash)
   if (initialDialog) openModal(initialDialog, null)
+
+  // A page-load hash naming a section: the browser jumps before the lazy
+  // images above it load, which leaves the page short. Load those images,
+  // then scroll there again once the page has settled (below the nav).
+  const initialSection = !initialDialog && initialHash ? document.getElementById(initialHash) : null
+  if (initialSection) {
+    const imagesAbove = Array.from(document.images).filter(
+      (image) => image.compareDocumentPosition(initialSection) & Node.DOCUMENT_POSITION_FOLLOWING,
+    )
+    imagesAbove.forEach((image) => {
+      image.loading = 'eager'
+    })
+    const imagesLoaded = Promise.all(
+      imagesAbove
+        .filter((image) => !image.complete)
+        .map(
+          (image) =>
+            new Promise<void>((resolve) => {
+              image.addEventListener('load', () => resolve(), { once: true })
+              image.addEventListener('error', () => resolve(), { once: true })
+            }),
+        ),
+    )
+    const pageLoaded = new Promise<void>((resolve) => {
+      if (document.readyState === 'complete') resolve()
+      else window.addEventListener('load', () => resolve(), { once: true })
+    })
+    const timeout = new Promise<void>((resolve) => window.setTimeout(resolve, HASH_SCROLL_TIMEOUT))
+    Promise.race([Promise.all([imagesLoaded, pageLoaded]), timeout]).then(() => {
+      ScrollTrigger.refresh()
+      smoothScroll.scrollTo(initialSection)
+    })
+  }
 
   // Back/forward or a typed hash that names a dialog opens it.
   window.addEventListener('hashchange', () => {

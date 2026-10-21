@@ -51,14 +51,23 @@ export const lenisGsap = (
   scrollTriggerRefresh(document.body)
 }
 
+/** Height a fixed `[data-nav="header"]` covers at the top of the viewport. */
+const fixedNavOffset = () => {
+  const header = document.querySelector<HTMLElement>('[data-nav="header"]')
+  if (!header || getComputedStyle(header).position !== 'fixed') return 0
+  const bar = header.querySelector<HTMLElement>('.site-nav_bar') ?? header
+  return Math.max(0, bar.getBoundingClientRect().bottom)
+}
+
 export const lenisEngine: SmoothScrollEngine = {
   name: 'Lenis',
   init: () => lenisGsap(gsap, ScrollTrigger),
   stop: () => lenis.stop(),
   start: () => lenis.start(),
   scrollTo: (target: HTMLElement) => {
-    if (instance) instance.scrollTo(target)
-    else target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    const offset = -fixedNavOffset()
+    if (instance) instance.scrollTo(target, { offset })
+    else window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY + offset, behavior: 'smooth' })
   },
   scrollTop: () => instance?.scroll ?? window.scrollY,
   describe: (): Record<string, string | number | boolean> =>
