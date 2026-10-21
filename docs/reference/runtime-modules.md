@@ -46,7 +46,10 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | offersSliderSplit | `offersSliderSplit.ts` | wired (R00) | C, after swiperSliders |
 | imageStackCollapse | `imageStackCollapse.ts` | wired (R00) | G |
 | roomListHoverPreview | `roomListHoverPreview.ts` | wired (v1.1.2) | D, after modals |
-| navContrast | `navContrast.ts` | wired (v1.1.4) | D, after navToggle |
+| navContrast | `navContrast.ts` | unwired (replaced by navTheme, F01) | n/a |
+| navTheme | `navTheme.ts` | wired (next release) | D, after navToggle |
+| mediaTabs | `mediaTabs.ts` | wired (next release) | D, after roomListHoverPreview |
+| stickyCta | `stickyCta.ts` | wired (next release) | G, last |
 | roomGridHoverReveal | `roomGridHoverReveal.ts` | wired (v1.1.4) | D, after imageHoverScale |
 | hoverFollowImage | `hoverFollowImage.ts` | wired (v1.1.4) | D, after imageTrailHover |
 | map | `map.ts` (+ `mapNeeds.ts`) | wired (unreleased) | D, after roomListHoverPreview |
@@ -605,6 +608,8 @@ referrer-restricted browser key is an attribute set in Webflow.
 
 ### navContrast
 
+Unwired since F01: `navTheme` replaces it (one nav colour module only). Kept for reference.
+
 Switches the fixed Site Nav to dark text while its bar sits over a light
 background (the cream bands below photo heroes, first seen on Wellness).
 
@@ -676,13 +681,13 @@ Collapse gallery (component `gallery-row-dark-titled`, `history/06`):
 | Attribute | On | Purpose |
 |---|---|---|
 | `data-history-collapse` | section | Root, pinned for the scrub. Give it `overflow: clip` (the full-screen image overshoots) and a height of about `100vh`. The module sets `position: relative` inline if the root is static. |
-| `data-history-collapse-item` | each image wrapper (`figure`) | Moves and scales. The image inside needs `object-fit: cover`. The last item sits on top of the stack and is the one seen full screen. |
-| `data-history-collapse-fade` | heading and caption wrappers (optional) | Fade out while the image fills the screen, back in at the end. |
+| `data-history-collapse-item` | each image wrapper (`figure`) | Slides into the stack. The first item (or `="bleed"`) rides on top and is the one seen full bleed: a copy of its image at full size opens with a clip mask (F09), never a scale. |
+| `data-history-collapse-fade` | heading and caption wrappers (optional) | Mask in line by line once on arrival, then fade out while the stack forms. |
 | `data-history-collapse-distance="3"` | section (optional) | Pin length in viewport heights. Default 3. |
 
-- Timeline: items slide to the centre into one stack, the stack scales
-  uniformly to cover the visible root, then everything returns to the grid.
-  The natural layout is the start and end state, so no CSS pre-hiding.
+- Timeline: items slide to the centre into one stack, the bleed copy
+  crossfades over the stacked card and its clip opens to full bleed, then
+  holds until the pin ends. It does not return to the grid (F09).
 - Offsets are measured through the `offsetParent` chain, so refreshes
   mid-scroll stay correct.
 - Reduced motion: nothing is created; the gallery shows as laid out.
@@ -707,8 +712,8 @@ back up fans them out again.
 | `data-image-stack-collapse` | the row wrapper | required; also the scroll trigger |
 | `data-image-stack-collapse-item` | each image wrapper (figure) | required, at least two |
 | `data-image-stack-collapse-item="anchor"` | the image that stays put | optional; defaults to the middle item |
-| `data-image-stack-collapse-start` | the row wrapper | optional ScrollTrigger start, default `top 75%` |
-| `data-image-stack-collapse-end` | the row wrapper | optional ScrollTrigger end, default `center center` |
+| `data-image-stack-collapse-start` | the row wrapper | optional ScrollTrigger start, default `top 55%` (F04: starts once the row is well in view) |
+| `data-image-stack-collapse-end` | the row wrapper | optional ScrollTrigger end, default `center 40%` |
 
 - Offsets are measured centre to centre from subpixel rects (with each
   item's own translate removed) and recomputed on every refresh
@@ -725,6 +730,71 @@ back up fans them out again.
 - Local preview: `pnpm preview:fixtures`, then open
   `http://localhost:3001/tests/visual/fixtures/image-stack-collapse.html`.
   Playwright check: `npx playwright test image-stack-collapse`. Order: slot G.
+
+### navTheme
+
+Feedback F01, ported from NGA. The fixed Site Nav (`[data-nav="header"]`,
+bar `.site-nav_bar`) turns dark over light backgrounds and stays cream over
+photos and dark sections, splitting exactly at section edges. A fixed,
+aria-hidden, inert clone of the bar in the dark colour sits over the real
+bar; a `mask-image` gradient, recomputed every frame, shows it only where
+the bar overlaps a light area.
+
+- Light and dark come from each `section`'s background colour (transparent
+  sections inherit the nearest opaque ancestor's). Figures and videos at
+  least 60% of the viewport wide count as photos (cream nav), clipped to
+  their visible clip-path area; map art (`[class*="map"]`) is not a photo.
+- Overrides: `data-header-theme="dark"` forces the dark nav over an
+  element, `data-header-theme="white"` forces cream.
+- Skipped when the header already has dark text (Dark variant). The clone
+  hides while `is-nav-open` is set and snaps back with a fresh mask.
+- Order: slot D, after `navToggle()`.
+
+### scrollEnlargeSnap: F03 mask reveal
+
+Since F03 the frame no longer resizes: the media is sized to the stage
+content box once (on every refresh) and a chamfered `clip-path: polygon()`
+opens from the Designer start rect to full. The chamfer size is read from
+the media's own Designer clip-path. The first panel's content masks in line
+by line once the mask reaches full height, via `lineMaskReveal`.
+
+### lineMaskReveal (helper)
+
+`prepareLineMaskReveal(container)` hides a container's headings,
+paragraphs, figures, `.button`s and `[data-line-mask]` elements and returns
+`play()`, a one-shot line mask-in. Text is split with SplitText
+(`lines,words`, overflow hidden on lines, never `mask: 'lines'`); other
+targets rise from behind a clip wrapper. Reduced motion: nothing is hidden.
+
+### mediaTabs
+
+Feedback F06, modelled on Editoria's experiences hover switcher. Rows act as
+ARIA tabs that switch stacked media and content panels.
+
+| Attribute | On | Purpose |
+|---|---|---|
+| `data-media-tabs` | root | Guard selector. |
+| `data-media-tabs-list` | rows' wrapper (optional) | Gets `role="tablist"`. |
+| `data-media-tabs-tab` | each row (link or button) | Nth tab drives nth panel and media. Clicks never navigate. |
+| `data-media-tabs-media` | each background figure (optional) | Stacked; crossfades with the tab. |
+| `data-media-tabs-panel` | each content block | Stacked (same grid cell); crossfades, children slide in. |
+| `data-media-tabs-hover="false"` | root (optional) | Disable hover switching. |
+
+- First tab active on load; `is-active` on the active tab, panel and media;
+  roving tabindex; arrows, Home and End move between tabs; hover switches
+  on fine pointers. Inactive panels and media use `autoAlpha: 0`.
+- Guild home Meetings & Events: panels use `venue-card-fullbleed_panel`
+  (grid row 1 across all columns, so they overlap). Order: slot D.
+
+### stickyCta
+
+Feedback F10. `stickyCta(selector)` docks a button at the bottom centre of
+the viewport once its own spot rises to the dock line, keeping its parent's
+height so nothing jumps, and fades it out while
+`.section_cta-booking-newsletter` or `.section_footer-links` is on screen.
+Default selector `[data-sticky-cta]`; the Guild Dinings template passes a
+selector scoped to its page id because the button lives in the shared Hero
+component. Re-docks after every ScrollTrigger refresh.
 
 ## Not ported (project-specific)
 

@@ -15,7 +15,7 @@
  * The anchor stays put and is raised above the others; without an explicit
  * `="anchor"` the middle item is the anchor. Optional
  * `data-image-stack-collapse-start` / `-end` override the ScrollTrigger
- * positions (defaults `top 75%` / `center center`). The animation is
+ * positions (defaults `top 55%` / `center 40%`, so the row is well in view before it moves). The animation is
  * scrubbed, so scrolling back up fans the images out again.
  *
  * Offsets are measured centre to centre (current translate removed) and
@@ -25,8 +25,8 @@
  * no animation.
  */
 
-const DEFAULT_START = 'top 75%'
-const DEFAULT_END = 'center center'
+const DEFAULT_START = 'top 55%'
+const DEFAULT_END = 'center 40%'
 
 const findAnchor = (items: HTMLElement[]) =>
   items.find((item) => item.dataset.imageStackCollapseItem === 'anchor') ??

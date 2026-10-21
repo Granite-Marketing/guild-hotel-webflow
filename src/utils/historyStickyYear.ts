@@ -27,18 +27,24 @@
  *
  *   [data-history-collapse]                 section root, pinned while the
  *                                           timeline scrubs
- *   [data-history-collapse-item]            each gallery image wrapper
- *   [data-history-collapse-fade]            optional heading or caption that
- *                                           fades out while the image fills
- *                                           the screen
+ *   [data-history-collapse-item]            each gallery image wrapper; the
+ *                                           first (or the one set to
+ *                                           ="bleed") becomes full bleed
+ *   [data-history-collapse-fade]            optional heading or caption; masks
+ *                                           in line by line once as the
+ *                                           section arrives, then fades out
+ *                                           while the image fills the screen
  *   data-history-collapse-distance="3"      optional pin length in viewport
  *                                           heights (default 3)
  *
- * The collapse timeline runs gallery -> stacked into one image -> full
- * screen -> back to the gallery, so the natural layout is both the start
- * and the end state. Under prefers-reduced-motion the gallery stays as laid
+ * The collapse timeline runs gallery -> stacked into one image (bleed card
+ * on top) -> a clip mask opens on a full-bleed copy of the bleed image
+ * until it fills the screen (feedback F09: a mask, never a scale, and no
+ * return to the gallery). The natural layout is the start state. Under prefers-reduced-motion the gallery stays as laid
  * out and the year label swaps text without a tween.
  */
+
+import { prepareLineMaskReveal } from '$utils/lineMaskReveal'
 
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
 const DEFAULT_COLLAPSE_DISTANCE = 3
@@ -168,7 +174,12 @@ const setupCollapseGallery = (root: HTMLElement) => {
   )
   if (items.length < 2) return
 
-  const fades = root.querySelectorAll<HTMLElement>('[data-history-collapse-fade]')
+  const bleedItem =
+    items.find((item) => item.dataset.historyCollapseItem === 'bleed') ?? items[0]
+  const bleedImage = bleedItem.querySelector<HTMLImageElement>('img')
+  if (!bleedImage) return
+
+  const fades = Array.from(root.querySelectorAll<HTMLElement>('[data-history-collapse-fade]'))
   const distance =
     Number(root.getAttribute('data-history-collapse-distance')) ||
     DEFAULT_COLLAPSE_DISTANCE
@@ -201,12 +212,39 @@ const setupCollapseGallery = (root: HTMLElement) => {
     }
   }
 
-  const coverScale = (element: HTMLElement) =>
-    Math.max(
-      root.clientWidth / element.offsetWidth,
-      visibleHeight() / element.offsetHeight,
-    )
+  /** clip-path insets that frame the stacked bleed card inside the layer. */
+  const stackedCardInset = () => {
+    const width = bleedItem.offsetWidth
+    const height = bleedItem.offsetHeight
+    const horizontal = Math.max(0, (root.clientWidth - width) / 2)
+    const vertical = Math.max(0, (visibleHeight() - height) / 2)
+    return `inset(${vertical}px ${horizontal}px ${vertical}px ${horizontal}px)`
+  }
 
+  const layer = createBleedLayer(root, bleedImage)
+  const sizeLayer = () => {
+    layer.style.height = `${visibleHeight()}px`
+  }
+  sizeLayer()
+
+  // The bleed card rides on top of the stack.
+  items.forEach((item) => {
+    if (getComputedStyle(item).position === 'static') item.style.position = 'relative'
+    item.style.zIndex = item === bleedItem ? '2' : '1'
+  })
+
+  // Heading and caption mask in once as the section arrives (F09).
+  const reveals = fades.map((fade) => prepareLineMaskReveal(fade))
+  ScrollTrigger.create({
+    trigger: root,
+    start: 'top 70%',
+    once: true,
+    onEnter: () => reveals.forEach((reveal) => reveal.play()),
+  })
+
+  // gallery -> stack of one (bleed card on top) -> the clip mask opens on
+  // the bleed image until it fills the screen, and stays there: the image
+  // never scales and the gallery does not come back while pinned.
   const timeline = gsap.timeline({
     defaults: { ease: 'power2.inOut' },
     scrollTrigger: {
@@ -216,6 +254,7 @@ const setupCollapseGallery = (root: HTMLElement) => {
       pin: true,
       scrub: true,
       invalidateOnRefresh: true,
+      onRefresh: sizeLayer,
     },
   })
 
@@ -229,12 +268,57 @@ const setupCollapseGallery = (root: HTMLElement) => {
       },
       0,
     )
-    .to(fades, { autoAlpha: 0, duration: 0.4, ease: 'none' }, 0.8)
-    .to(
-      items,
-      { scale: (index: number) => coverScale(items[index]), duration: 1 },
+    .to(fades, { autoAlpha: 0, duration: 0.4, ease: 'none' }, 0.6)
+    // Swap the card for the same image at full-bleed size, framed to the
+    // card, then open the frame.
+    .fromTo(
+      layer,
+      { autoAlpha: 0, clipPath: stackedCardInset },
+      { autoAlpha: 1, duration: 0.2, ease: 'none', immediateRender: false },
       1,
     )
-    .to(items, { x: 0, y: 0, scale: 1, duration: 1.2 }, 2.4)
-    .to(fades, { autoAlpha: 1, duration: 0.4, ease: 'none' }, 3.2)
+    .fromTo(
+      layer,
+      { clipPath: stackedCardInset },
+      { clipPath: 'inset(0px 0px 0px 0px)', duration: 1.2, immediateRender: false },
+      1.2,
+    )
+    // Hold the full-bleed image for the rest of the pin.
+    .to({}, { duration: 0.4 }, 2.4)
+}
+
+/**
+ * A layer over the gallery holding a copy of the bleed image at full-bleed
+ * size. Only its clip-path changes, so the photo keeps one size throughout.
+ */
+const createBleedLayer = (root: HTMLElement, image: HTMLImageElement) => {
+  const layer = document.createElement('div')
+  layer.setAttribute('aria-hidden', 'true')
+  layer.dataset.historyCollapseBleed = ''
+  Object.assign(layer.style, {
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    width: '100%',
+    zIndex: '3',
+    pointerEvents: 'none',
+    overflow: 'hidden',
+    visibility: 'hidden',
+    opacity: '0',
+  })
+
+  const copy = image.cloneNode(true) as HTMLImageElement
+  copy.alt = ''
+  copy.loading = 'eager'
+  copy.sizes = '100vw'
+  copy.removeAttribute('data-history-collapse-item')
+  Object.assign(copy.style, {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    display: 'block',
+  })
+  layer.appendChild(copy)
+  root.appendChild(layer)
+  return layer
 }

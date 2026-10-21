@@ -27,14 +27,16 @@ import { imageHoverScale } from '$utils/imageHoverScale'
 import { imageStackCollapse } from '$utils/imageStackCollapse'
 import { imageTrailHover } from '$utils/imageTrailHover'
 import { map } from '$utils/map'
+import { mediaTabs } from '$utils/mediaTabs'
 import { modals } from '$utils/modals'
-import { navContrast } from '$utils/navContrast'
+import { navTheme } from '$utils/navTheme'
 import { navToggle } from '$utils/navToggle'
 import { offersSliderSplit } from '$utils/offersSliderSplit'
 import { roomGridHoverReveal } from '$utils/roomGridHoverReveal'
 import { roomListHoverPreview } from '$utils/roomListHoverPreview'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
 import { smoothScroll } from '$utils/smoothScroll'
+import { stickyCta } from '$utils/stickyCta'
 import { swiperSliders } from '$utils/swiperSliders'
 
 /*
@@ -54,6 +56,8 @@ import { swiperSliders } from '$utils/swiperSliders'
  *   import { scrollTextReveal } from '$utils/scrollTextReveal'       // slot G
  */
 
+const DININGS_TEMPLATE_PAGE_ID = '6ad67d7416e13e66c2b76107'
+
 window.Webflow ||= [] as unknown as WebflowQueue
 window.Webflow.push(() => {
   // Promote [data-eager] images before any ScrollTrigger exists, so
@@ -72,7 +76,8 @@ window.Webflow.push(() => {
 
   // slot D: navToggle(), imageHoverScale(), imageTrailHover()
   navToggle()
-  navContrast()
+  // F01: navTheme replaces navContrast (PR #101); one nav colour module only.
+  navTheme()
   imageHoverScale()
   roomGridHoverReveal()
   imageTrailHover()
@@ -80,6 +85,7 @@ window.Webflow.push(() => {
   accordion()
   modals()
   roomListHoverPreview()
+  mediaTabs()
   map()
 
   currentYear()
@@ -93,4 +99,7 @@ window.Webflow.push(() => {
   // slot G: scrollTextReveal()
   historyStickyYear()
   imageStackCollapse()
+  // F10: Reserve a Table on the Dinings template. The button sits in the
+  // shared Hero component, so it is scoped by the template's page id.
+  stickyCta(`html[data-wf-page="${DININGS_TEMPLATE_PAGE_ID}"] .section_hero-fullbleed-centered .button`)
 })
