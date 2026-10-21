@@ -362,6 +362,7 @@ Style and doc hygiene across the site; run last, as it touches many components.
 
 IDs are referenced from group (b) lines.
 
+- [ ] D-orphan-pages (client question, 2026-10-21): the Figma design links to none of these pages from any nav, footer or page: Legal (`/legal-corporate/legal`), Corporate (`/legal-corporate/corporate`), the Happenings and Blog category pages (`/post-categories/*`) and the posts (`/happenings-stories/*`). Ask the client whether each is a direct landing page (email, sales, ads) or should be findable, and from where (the menu has "discovery" and "experiences" groups that may be meant for them). Staging today: corporate is linked from the footer and the Neighborhood "corporate & legal packages" button (both added by us, not in Figma); legal, categories and posts have no inbound links. Once decided, also rename the CMS templates and slugs to names a client can find (Designer, since the API cannot rename collections).
 - [ ] D-booking-url: the book now URL (Site Nav, hero buttons, CTA all `#book` or `#`), and whether the Bonvoy logo links.
 - [ ] D-newsletter: newsletter provider and success and error copy.
 - [ ] D-footer-links: the 16 placeholder hrefs, Studio circa URL, responsive proposal, `section role=contentinfo` vs `footer`.
