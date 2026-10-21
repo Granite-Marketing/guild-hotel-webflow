@@ -25,6 +25,7 @@ import { historyStickyYear } from '$utils/historyStickyYear'
 import { imageHoverScale } from '$utils/imageHoverScale'
 import { imageStackCollapse } from '$utils/imageStackCollapse'
 import { imageTrailHover } from '$utils/imageTrailHover'
+import { map } from '$utils/map'
 import { modals } from '$utils/modals'
 import { navToggle } from '$utils/navToggle'
 import { offersSliderSplit } from '$utils/offersSliderSplit'
@@ -73,6 +74,7 @@ window.Webflow.push(() => {
   accordion()
   modals()
   roomListHoverPreview()
+  map()
 
   currentYear()
   // slot E: viewSwitcher(), cmsFilterLinks()
