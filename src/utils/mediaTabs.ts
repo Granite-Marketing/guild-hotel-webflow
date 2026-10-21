@@ -84,6 +84,13 @@ const setupTabs = (root: HTMLElement) => {
     panels[index].setAttribute('aria-labelledby', tabId)
   })
 
+  // The media stack uses z-index 0/1 to crossfade, so lift the content
+  // above it; otherwise the active image covers the tab rows.
+  const panelLayer = panels[0].parentElement
+  if (media.length && panelLayer && getComputedStyle(panelLayer).position !== 'static') {
+    panelLayer.style.zIndex = '2'
+  }
+
   let activeIndex = -1
 
   const activate = (index: number, animate: boolean) => {
