@@ -15,10 +15,13 @@
  *
  * Light areas are found automatically, so no Designer attributes are
  * needed:
- *   - a `section` whose own background colour is light (luminance > 0.5)
- *     counts as light; one with a dark background counts as dark;
+ *   - a `section` whose background colour is light (luminance > 0.5)
+ *     counts as light; one with a dark background counts as dark. A
+ *     transparent section takes the colour of its nearest opaque ancestor
+ *     (in the end the body);
  *   - a figure or video at least 60% of the viewport wide counts as dark
- *     (a photo keeps the cream nav), using its visible clip-path area;
+ *     (a photo keeps the cream nav), using its visible clip-path area.
+ *     Map artwork (any class containing "map") is not a photo;
  *   - `[data-header-theme="dark"]` forces the dark nav over an element and
  *     `[data-header-theme="white"]` forces the cream nav (NGA contract).
  * Darker areas are subtracted from lighter ones.
@@ -35,6 +38,7 @@ const OPEN_CLASS = 'is-nav-open'
 const LIGHT_LUMINANCE = 0.5
 const PHOTO_MIN_WIDTH = 0.6
 const PHOTO_SELECTOR = 'figure, video'
+const NOT_PHOTO_SELECTOR = '[class*="map"], [class*="map"] *'
 
 interface Interval {
   start: number
@@ -95,13 +99,18 @@ export const navTheme = () => {
       const forced = element.dataset.headerTheme
       if (forced === 'dark') return void lightAreas.push(element)
       if (forced === 'white') return void darkAreas.push(element)
-      const background = parseColor(getComputedStyle(element).backgroundColor)
-      if (!background || background.alpha < 0.5) return
+      const background = effectiveBackground(element)
+      if (!background) return
       if (luminance(background) > LIGHT_LUMINANCE) lightAreas.push(element)
       else darkAreas.push(element)
     })
     photos = Array.from(document.querySelectorAll<HTMLElement>(PHOTO_SELECTOR))
-      .filter((element) => !header.contains(element) && !overlay.contains(element))
+      .filter(
+        (element) =>
+          !header.contains(element) &&
+          !overlay.contains(element) &&
+          !element.matches(NOT_PHOTO_SELECTOR),
+      )
       .map((element) => ({ element, clipHost: findClipHost(element) }))
   }
   classifyAreas()
@@ -185,6 +194,17 @@ export const navTheme = () => {
   )
   // Content can change size or appear after load (CMS, Finsweet).
   window.addEventListener('load', classifyAreas, { once: true })
+}
+
+/** The first opaque background colour on the element or its ancestors. */
+const effectiveBackground = (element: HTMLElement): Rgba | null => {
+  let node: HTMLElement | null = element
+  while (node) {
+    const color = parseColor(getComputedStyle(node).backgroundColor)
+    if (color && color.alpha >= 0.5) return color
+    node = node.parentElement
+  }
+  return null
 }
 
 /** The element itself or its nearest ancestor that has a clip-path. */

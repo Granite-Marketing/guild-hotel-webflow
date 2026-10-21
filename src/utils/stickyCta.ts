@@ -73,7 +73,12 @@ export const stickyCta = (selector = DEFAULT_SELECTOR) => {
     },
     end: 'max',
     onRefreshInit: () => setStuck(false),
-    onRefresh: holdSpace,
+    // onToggle does not fire again when the trigger stays active through a
+    // refresh, so re-apply the docked state here.
+    onRefresh: (self: ScrollTriggerInstance) => {
+      holdSpace()
+      setStuck(self.isActive)
+    },
     onToggle: (self: ScrollTriggerInstance) => setStuck(self.isActive),
   })
 
