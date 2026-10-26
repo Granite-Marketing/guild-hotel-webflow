@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.1.8
+
+### Patch Changes
+
+- 81cc407: cmsItemLinks (F30): Happenings and Blog listing cards link to their post pages from bound slug attributes.
+- 81cc407: F24: form labels become screen-reader only; the label text is shown as the placeholder on the line.
+- 81cc407: hoverImageSwap for the rooms quiz (F25): hovering or focusing a "Who's checking in?" option swaps the right-hand photo.
+- 81cc407: History: the sticky year label no longer fades over timeline text (F19, reverts the v1.1.5 avoidance). The landmark mask opens on the same image at the card's framing and scales uniformly to full bleed, with one GSAP property per tween so scrubbing back and forth never flashes the unmasked photo (F20).
+- 81cc407: Panel mask reveals (F15, F28): panel copy masks in as one timeline after the media mask completes and reverses on the way back, with an end hold so the pin does not hand over too quickly; single-item sections supported.
+- 81cc407: mediaTabs (F16): tabs switch on click and keyboard only, and panel copy masks out before the incoming copy masks in, with no cross-fade.
+- 81cc407: navToggle (F23): the hamburger morphs to an X on open and back on close, with aria-expanded and Open menu / Close menu labels.
+- 81cc407: Smooth scroll inside every modal (own Lenis per open dialog, destroyed on close), eager images in dialogs, and Lenis measures the body and resizes on every ScrollTrigger refresh so the footer is always reachable (F18, F22, F29).
+
 ## 1.1.7
 
 ### Patch Changes
