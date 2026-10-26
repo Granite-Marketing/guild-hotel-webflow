@@ -12,9 +12,16 @@
  *       a[data-nav="link"]       links that close the menu when clicked
  *
  * Visuals live in CSS keyed off `.is-nav-open` on the header (menu
- * visibility, header background, blur, hamburger morph). The class is added
- * at open and removed when the close fade finishes, so CSS transitions on
- * the header run after the items have faded.
+ * visibility, header background, blur). The class is added at open and
+ * removed when the close fade finishes, so CSS transitions on the header run
+ * after the items have faded.
+ *
+ * Toggle icon: when the toggle holds an SVG with exactly three `rect` bars
+ * (the Guild hamburger, viewBox 0 0 37 16), GSAP morphs them into an X on
+ * open (top and bottom bars rotate about the viewBox centre, middle bar
+ * fades) and reverses immediately on close, in step with `aria-expanded`.
+ * Under prefers-reduced-motion the icon snaps. Any other toggle content is
+ * left alone. Labels: "Open menu" / "Close menu".
  *
  * Scroll: below the mobile breakpoint the active engine is paused on open
  * (`smoothScroll.stop()`) and resumed in the close timeline's onComplete,
@@ -27,8 +34,12 @@ import { smoothScroll } from '$utils/smoothScroll'
 
 const OPEN_CLASS = 'is-nav-open'
 const MOBILE_QUERY = '(max-width: 991px)'
-const OPEN_LABEL = 'Open navigation menu'
-const CLOSE_LABEL = 'Close navigation menu'
+const OPEN_LABEL = 'Open menu'
+const CLOSE_LABEL = 'Close menu'
+const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
+// Centre of the hamburger's 37x16 viewBox; the X geometry below assumes it.
+const ICON_ORIGIN = '18.5 8'
+const ICON_CROSS_BAR = { x: 8.5, y: 7, width: 20, height: 2 }
 
 export const navToggle = () => {
   const toggle = document.querySelector<HTMLElement>('[data-nav="open"]')
@@ -50,6 +61,26 @@ export const navToggle = () => {
     toggle.setAttribute('aria-controls', menu.id)
   }
 
+  // Sort by y: the Webflow embed's DOM order is middle, bottom, top.
+  const iconBars = Array.from(toggle.querySelectorAll<SVGRectElement>('svg rect')).sort(
+    (first, second) => Number(first.getAttribute('y') ?? 0) - Number(second.getAttribute('y') ?? 0),
+  )
+  let iconTimeline: GsapTimeline | null = null
+  if (iconBars.length === 3) {
+    const [topBar, middleBar, bottomBar] = iconBars
+    iconTimeline = gsap
+      .timeline({ paused: true, defaults: { duration: 0.35, ease: 'power2.inOut' } })
+      .to(topBar, { attr: ICON_CROSS_BAR, rotation: 45, svgOrigin: ICON_ORIGIN }, 0)
+      .to(bottomBar, { attr: ICON_CROSS_BAR, rotation: -45, svgOrigin: ICON_ORIGIN }, 0)
+      .to(middleBar, { autoAlpha: 0, duration: 0.2 }, 0)
+  }
+  const setIcon = (toOpen: boolean) => {
+    if (!iconTimeline) return
+    if (window.matchMedia(REDUCED_MOTION).matches) iconTimeline.progress(toOpen ? 1 : 0).pause()
+    else if (toOpen) iconTimeline.play()
+    else iconTimeline.reverse()
+  }
+
   let isAnimating = false
   let scrollWasStopped = false
 
@@ -66,6 +97,7 @@ export const navToggle = () => {
     }
     toggle.setAttribute('aria-expanded', 'true')
     toggle.setAttribute('aria-label', CLOSE_LABEL)
+    setIcon(true)
 
     const items = menuItems()
     if (items.length) {
@@ -82,6 +114,7 @@ export const navToggle = () => {
     isAnimating = true
     toggle.setAttribute('aria-expanded', 'false')
     toggle.setAttribute('aria-label', OPEN_LABEL)
+    setIcon(false)
 
     const timeline = gsap.timeline({
       onComplete: () => {

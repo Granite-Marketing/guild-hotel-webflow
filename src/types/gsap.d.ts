@@ -26,6 +26,19 @@ interface GsapTimeline {
     vars: Record<string, unknown>,
     position?: number | string,
   ) => GsapTimeline;
+  play: (from?: number | string) => GsapTimeline;
+  reverse: (from?: number | string) => GsapTimeline;
+  clear: (labels?: boolean) => GsapTimeline;
+  timeScale: {
+    (): number;
+    (value: number): GsapTimeline;
+  };
+  progress: {
+    (): number;
+    (value: number): GsapTimeline;
+  };
+  kill: () => void;
+  pause: () => GsapTimeline;
   scrollTrigger?: ScrollTriggerInstance;
 }
 
@@ -72,6 +85,7 @@ interface GsapInstance {
   ) => (value: number) => void;
   ticker: {
     add: (fn: (time: number) => void) => void;
+    remove: (fn: (time: number) => void) => void;
     lagSmoothing: (threshold: number) => void;
   };
 }
@@ -129,11 +143,13 @@ interface LenisInstance {
   resize: () => void;
   stop: () => void;
   start: () => void;
+  destroy: () => void;
   scrollTo: (target: number | string | HTMLElement, options?: Record<string, unknown>) => void;
   scroll: number;
   targetScroll: number;
   velocity: number;
   isScrolling: boolean;
+  limit: number;
 }
 
 interface LenisConstructor {

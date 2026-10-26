@@ -38,3 +38,15 @@ published HTML. Otherwise a publish by anyone ships an unlabelled field.
 
 The input's `::placeholder` state can still be styled through `data_style_tool`
 (`pseudo: "placeholder"`).
+
+## Runtime route (F24, 2026-10-26)
+
+A Designer placeholder is also identical across component instances, while the
+Photoshoot Request component's label text is prop-driven per page. So the site
+sets placeholders at runtime: `src/utils/formPlaceholders.ts` copies each form
+label's text into its control's placeholder (or a select's `option[value=""]`),
+removes `is-labelled` from the control, and adds `u-sr-only` to the label. A
+select with an empty value gets `is-placeholder`. The label only leaves the
+visual flow once the placeholder exists, so the rule above still holds: without
+JS the visible label remains. Contract: `docs/reference/runtime-modules.md`
+(formPlaceholders).

@@ -36,6 +36,27 @@ The script does all of the heavy lifting:
 - Opens on Enter and Space for non-native triggers (see below)
 - Opens a dialog from any `#{id}` hash link and from `location.hash` on load
 - Closes and scrolls to a section when a close control has `href="#{section-id}"`
+- Smooth-scrolls the dialog's content with its own Lenis instance while
+  open (destroyed on close; the page stays locked)
+
+## Smooth scroll inside dialogs
+
+Every modal with scrollable content scrolls smoothly; no attribute is
+needed when the dialog itself is the scroll container
+(`position: fixed; inset: 0; overflow-y: auto`, plus
+`overscroll-behavior: contain`). The script picks the container in this
+order:
+
+| Order | Container | When to use |
+|---|---|---|
+| 1 | `[data-modal-scroll]` inside the dialog | Optional override: an inner panel scrolls instead of the dialog |
+| 2 | The dialog, if its overflow-y is `auto` or `scroll` | Default for every current dialog |
+| 3 | First descendant with overflow-y `auto` or `scroll` | Fallback |
+| 4 | None | Dialog does not scroll; nothing is created |
+
+Lazy images inside a dialog are switched to eager on open so content does
+not shift after the dialog appears. Under `prefers-reduced-motion: reduce`
+the dialog scrolls natively. Touch scrolling stays native.
 
 ## Keyboard, hash links and close-and-scroll
 

@@ -15,6 +15,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | Module | File | Default | Slot in `src/index.ts` |
 |---|---|---|---|
 | eagerImages | `eagerImages.ts` | wired | first |
+| formPlaceholders | `formPlaceholders.ts` | wired (F24, next release) | directly after eagerImages |
 | smoothScroll (engine) | `smoothScroll.ts` + `lenisGsap.ts` | wired | after eagerImages |
 | swiperSliders | `swiperSliders.ts` | wired | C |
 | accordion | `accordion.ts` | wired | D |
@@ -31,6 +32,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | imageTrailHover | `imageTrailHover.ts` | wired (R00) | D |
 | viewSwitcher | `viewSwitcher.ts` | opt-in | E |
 | cmsFilterLinks | `cmsFilterLinks.ts` | opt-in | E |
+| cmsItemLinks | `cmsItemLinks.ts` | wired (F30, next release) | E, before galleryFilter |
 | filterPanels | `filterPanels.ts` | opt-in | F (1st) |
 | scrollHint | `scrollHint.ts` | opt-in | F (2nd) |
 | finsweetRefresh | `finsweetRefresh.ts` | opt-in | F (3rd) |
@@ -53,6 +55,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | roomGridHoverReveal | `roomGridHoverReveal.ts` | wired (v1.1.4) | D, after imageHoverScale |
 | hoverFollowImage | `hoverFollowImage.ts` | wired (v1.1.4) | D, after imageTrailHover |
 | map | `map.ts` (+ `mapNeeds.ts`) | wired (unreleased) | D, after roomListHoverPreview |
+| hoverImageSwap | `hoverImageSwap.ts` | wired (next release) | D, after roomListHoverPreview |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
 
 To enable an opt-in module, uncomment its import and its call in
@@ -104,6 +107,11 @@ the single export line in that file (see the checklist below).
 - Creates Lenis, feeds `ScrollTrigger.update` from `lenis.on('scroll')`,
   drives Lenis from `gsap.ticker`, disables lag smoothing.
 - Calls `scrollTriggerRefresh(document.body)`.
+- Constructs Lenis with `content: document.body` and calls `lenis.resize()`
+  on every ScrollTrigger `refresh` event (F18). Webflow sets
+  `html { height: 100% }`, so the default content element (html) never
+  resizes and Lenis' limit goes stale, leaving the footer out of reach. See
+  `docs/solutions/integration-issues/lenis-stale-limit-html-height-100.md`.
 - The legacy `lenis` export (`lenis.raw`, `lenis.stop()`, `lenis.start()`)
   stays for projects that import it directly; new code uses `smoothScroll`.
 - Native `position: sticky` and `position: fixed` work.
@@ -196,6 +204,42 @@ fires animations early, most visibly on iOS.
   image inside.
 - Order: first in `Webflow.push`. Engine notes: none; works with both.
 
+### formPlaceholders
+
+F24 (2026-10-26). Default for every form: the label text becomes the input
+placeholder on the underline and the `<label>` becomes screen-reader-only.
+
+- **DOM contract:** any `form label` that is not `.w-checkbox` / `.w-radio`.
+  The control is found by the label's `for`, then its next sibling, then the
+  first `input, textarea, select` in the same parent (checkbox, radio,
+  submit, button, hidden, file, image, reset, range and color inputs are
+  skipped).
+- **Text controls:** sets `placeholder` to the label text (whitespace
+  collapsed, authored casing; CSS lowercases split-script placeholders) and
+  removes `is-labelled` from the control, which reveals the existing
+  `::placeholder` style.
+- **Selects:** writes the label text into `option[value=""]` and toggles
+  `is-placeholder` on the select while its value is `""` (re-synced on
+  `change` and form `reset`). A select without an empty option keeps its
+  visible label.
+- **Labels:** adds `u-sr-only` and `is-sr-only`, and repairs the association
+  (`label.htmlFor = control.id`; gives the control an id from `for`, then
+  `field-{name}`, then `form-field-{n}` when it has none). Fixes the
+  published `for=""` on the Photoshoot Request component and the id-less
+  `contact-assist` select.
+- **Required Webflow styles:** global `u-sr-only` (visually hidden: absolute,
+  1px by 1px, margin -1px, overflow hidden, clip-path inset(50%), nowrap, no
+  border or padding); combo `.cta-booking-newsletter_label.u-sr-only` (or
+  `.cta-booking-newsletter_label.is-sr-only`) with the same properties so it
+  beats the newsletter label's own position, padding and margins at every
+  breakpoint; combo `.form-split-script-contact_input.is-placeholder` matching
+  the input's `::placeholder` font, colour, letter-spacing and text-transform.
+- **Opt out:** `data-form-label="visible"` on the form, a field wrapper, the
+  label or the control.
+- **No-JS fallback:** labels stay visible and `is-labelled` keeps the default
+  placeholder hidden, so no field ships unlabelled.
+- **Init slot:** directly after `eagerImages()`, before `smoothScroll.init()`.
+
 ### currentYear
 
 Sets the text of every `[data-current-year]` element (and the legacy
@@ -233,6 +277,31 @@ Fixture and spec: `tests/visual/fixtures/runtime-keys-and-hash.{html,ts}`,
 Unchanged contract, see `modal-setup.md`. Pauses scroll through
 `smoothScroll.stop()` / `start()`, so it follows an engine swap with no edit.
 Under ScrollSmoother, dialogs and overlay must sit outside `#smooth-content`.
+
+Dialog smooth scroll (F22, F29; project rule: every modal with scrollable
+content uses smooth scroll). No new attributes are required:
+
+- On open, the dialog's scroll container gets its own Lenis instance
+  (`wrapper` = `content` = `eventsTarget` = the container, driven by
+  `gsap.ticker`, no syncTouch so touch stays native). It is destroyed on
+  close; a dialog-to-dialog switch destroys the old one first. The page
+  engine stays stopped the whole time.
+- Scroll container: `[data-modal-scroll]` inside the dialog if present
+  (optional override), else the dialog when its overflow-y is auto/scroll,
+  else the first descendant with overflow-y auto/scroll, else none (native).
+  Every current dialog (`overlay-detail-panel-modal_component`,
+  `room-list-hover-preview_component`) is its own scroll container, so none
+  needs the attribute.
+- A ResizeObserver on the container's children calls `resize()` (the
+  container is `position: fixed; inset: 0`, so its own box never resizes).
+- Lazy images inside the dialog are promoted to eager before `is-open` is
+  added, and each one resizes the dialog Lenis when it lands.
+- `prefers-reduced-motion: reduce` or a missing `Lenis` global: native
+  scroll, nothing else changes.
+- `data-lenis-prevent` stays on every dialog: it keeps the stopped page
+  Lenis off dialog wheel events, and the dialog Lenis excludes its own root
+  from that check.
+- Recommended CSS on the dialog class: `overscroll-behavior: contain`.
 
 W02 additions (no new attributes):
 
@@ -298,13 +367,17 @@ image wipe and a text transition. Guild Figma Home-Animation-1 (home 04 to
 | `data-scroll-enlarge-snap-media` | inside stage | The frame. Style it at its small start size (for example `width: 79%`, `aspect-ratio: 16 / 9`), `position: relative`, `overflow: hidden`. The module grows it to the stage content box. Chamfered corners belong on this element. Do not set `max-width` or `max-height` on it. |
 | `data-scroll-enlarge-snap-item` | inside media, one per panel | Panels overlap (`position: absolute; inset: 0`). DOM order is panel order. |
 | `data-scroll-enlarge-snap-image` | inside item (optional) | Image that settles from `scale: 1.2` as its panel wipes in. Defaults to the first `img`. |
-| `data-scroll-enlarge-snap-content` | inside item (optional) | Its direct children (heading, text, CTA footer) fade and rise in, staggered. |
+| `data-scroll-enlarge-snap-content` | inside item (optional) | Its headings, paragraphs, logo figure and `.button` line-mask in, triggered after its mask/wipe completes, reverses on leave (`lineMaskReveal`). |
 | `data-scroll-enlarge-snap-tab` | inside root (optional) | Nth tab maps to nth item. Click scrolls to that panel. Keep tabs outside the items so they stay visible. |
 
-- Scroll timeline: step 1 enlarges the frame and fades in the first panel's
-  content; each later step wipes the next panel up from the bottom
-  (`clip-path`) while the previous content leaves. Snap points sit at the end
-  of each step; the first half of the enlarge scrolls freely.
+- Scroll timeline: step 1 opens the frame's mask; each later step wipes the
+  next panel up from the bottom (`clip-path`). Then a half-step end hold
+  keeps the last panel pinned. Snap points sit at the end of each step; the
+  first half of the enlarge and the end hold scroll freely.
+- Content (F15): never scrubbed. Each panel's content plays one line-mask
+  timeline once its mask (panel 0) or wipe (later panels) is 100% done, and
+  reverses (1.6x speed) as soon as the scroll moves past that panel's snap
+  point or back above its reveal point.
 - State: the active item and tab get `is-active`; the active tab also gets
   `aria-current="true"`. Style the tab underline from `is-active`.
 - The module sets inline `z-index` and `autoAlpha` on items (DOM order
@@ -364,7 +437,15 @@ Mobile nav open/close with a11y state and scroll pause.
     a[data-nav="link"]     clicking closes the menu
 ```
 
-- `aria-expanded` and `aria-label` (open / close) stay in sync on the toggle.
+- `aria-expanded` and `aria-label` ("Open menu" / "Close menu") stay in
+  sync on the toggle.
+- Toggle icon: an SVG inside the toggle with exactly three `rect` bars
+  morphs to an X on open (GSAP: top and bottom bars take 20x2 geometry and
+  rotate +/-45deg about `svgOrigin` 18.5 8, the middle bar fades) and
+  reverses immediately on close, together with `aria-expanded`. Bars are
+  matched by their `y` attribute, not DOM order. The X geometry assumes the
+  Guild hamburger's 37x16 viewBox. Reduced motion snaps. Other toggle
+  content (text, a different icon) is left alone.
 - Below 991px the engine is paused on open and resumed in the close
   timeline's `onComplete`, after the fade. Add `data-nav-lock="always"` to
   `[data-nav="header"]` to pause it at every width, for a menu that is full
@@ -441,6 +522,31 @@ Deep links into a Finsweet CMS Filter listing.
   `/works?category=Category+name`.
 - Optional `data-filter-param` changes the query key (default `category`); it
   must match the field the listing page filters by. Order: slot E.
+
+### cmsItemLinks
+
+Builds CMS item URLs for links Webflow cannot bind headlessly: the
+Collection List "Current item" link and links to a referenced item (both are
+Designer-only settings). Used by the /happenings and /blog listings and the
+Happenings & Stories template (F30).
+
+| Attribute | Element | Required | Value |
+| --- | --- | --- | --- |
+| `data-cms-link-slug` | `a` (Link or Link Block) | yes | bound to a CMS Slug field (the item's own Slug, or Reference > Slug) |
+| `data-cms-link-path` | same `a` | no | static collection path, e.g. `happenings-stories` |
+
+- `a[data-cms-link-path="happenings-stories"][data-cms-link-slug="{{ Slug }}"]`
+  becomes `/happenings-stories/{slug}`.
+- With no `data-cms-link-path`, the result is `/{slug}`. The post template's
+  "learn more" button binds the slug to Category > Slug, so the Post
+  Categories slugs `happenings` and `blog` resolve to the static
+  `/happenings` and `/blog` listing pages.
+- Leading and trailing slashes in either value are ignored. An empty slug
+  leaves the Designer href untouched, so keep a sensible static link (`#` on
+  cards, `/happenings` on the back link) as the no-JS fallback.
+- Once a native Designer "Current item" link is set, the module writes the
+  same URL, so the two coexist harmlessly. Order: slot E, before
+  `galleryFilter()`; it only rewrites `href`, so nothing depends on it.
 
 ### filterPanels
 
@@ -643,6 +749,35 @@ hovered or focused.
 - Class contract only; no attributes. Webflow shows the details, so touch
   devices and a failed bundle keep them visible.
 - Skipped unless `(hover: hover) and (pointer: fine)` matches.
+- F27: the /rooms grid is now a Collection List of 🛏️ Rooms. The card Link
+  inside each Collection Item keeps the class `rooms-collection-room-grid_card`
+  and the same children, so the contract is unchanged. Collection items render
+  server-side, so binding once at init still covers every card.
+
+### hoverImageSwap
+
+Feedback F25: on the /rooms quiz step "Who's checking in?", hovering or
+focusing an option crossfades the right-hand photo to that option's image.
+Leaving the options (pointer or focus) restores the default photo.
+
+| Attribute | On | Value |
+|---|---|---|
+| `data-hover-swap` | root (the quiz section) | `true`. Guard selector; one swap per root. |
+| `data-hover-swap-list` | options wrapper (optional) | `true`. Mouse leaving it restores the default. Falls back to the root. |
+| `data-hover-swap-trigger` | each option | key, for example `just-me` |
+| `data-hover-swap-media` | each stacked image in one figure | the same key; `default` on the resting image |
+
+- All media are absolutely positioned full-cover in one figure
+  (`rooms-collection-quiz_image` already is). Without a `default` key the
+  first media is the resting image.
+- No-JS fallback: non-default media carry the combo
+  `rooms-collection-quiz_image is-swap` (opacity 0, visibility hidden), so
+  only the default shows if the bundle fails.
+- The active media gets `is-active`; fades use `autoAlpha` (0.6s,
+  `power2.out`). Hover swaps only on fine pointers; focus always swaps.
+- Reduced motion: the swap is instant.
+- Never touches the option links' classes, `aria-pressed` or clicks; quiz
+  selection belongs to F26.
 
 ### hoverFollowImage
 
@@ -686,25 +821,34 @@ Collapse gallery (component `gallery-row-dark-titled`, `history/06`):
 | Attribute | On | Purpose |
 |---|---|---|
 | `data-history-collapse` | section | Root, pinned for the scrub. Give it `overflow: clip` (the full-screen image overshoots) and a height of about `100vh`. The module sets `position: relative` inline if the root is static. |
-| `data-history-collapse-item` | each image wrapper (`figure`) | Slides into the stack. The first item (or `="bleed"`) rides on top and is the one seen full bleed: a copy of its image at full size opens with a clip mask (F09), never a scale. |
+| `data-history-collapse-item` | each image wrapper (`figure`) | Slides into the stack. The first item (or `="bleed"`) rides on top and is the one seen full bleed: a copy of its image opens with a clip mask (F09). The copy starts at the card's framing and scales uniformly to full bleed while the clip opens (F20), so the photo never jumps. Put `data-eager` on its `img` so the natural size is known at init; the module also refreshes once the image loads. |
 | `data-history-collapse-fade` | heading and caption wrappers (optional) | Mask in line by line once on arrival, then fade out while the stack forms. |
 | `data-history-collapse-distance="3"` | section (optional) | Pin length in viewport heights. Default 3. |
 
-- Timeline: items slide to the centre into one stack, the bleed copy
-  crossfades over the stacked card and its clip opens to full bleed, then
+- Timeline (2.8 units): items slide to the centre into one stack (0 to 1);
+  at 1 the bleed layer appears pixel-identical to the stacked card (clip =
+  card rect, copy scale = card cover size over full-bleed cover size), then
+  the clip opens to `inset(0px)` while the copy scales to 1 (1 to 2.2), then
   holds until the pin ends. It does not return to the grid (F09).
+- One GSAP property per tween (F20): `autoAlpha`, `clipPath` and the copy's
+  `scale` each have their own tween, the latter two with
+  `immediateRender: true`. Two tweens sharing `clipPath` let a scrub reverse
+  restore `clip-path: none` while the layer stayed visible, which flashed the
+  unmasked photo. See
+  `docs/solutions/integration-issues/gsap-fromto-startat-shared-property-scrub-reverse.md`.
+- The page section after the pin (`gallery-mosaic-captioned` on History)
+  should hold the same four images, bleed image first, so the full-bleed
+  photo continues into the mosaic (Figma History-Animation-2).
 - Offsets are measured through the `offsetParent` chain, so refreshes
   mid-scroll stay correct.
 - Reduced motion: nothing is created; the gallery shows as laid out.
 - Local check: `pnpm exec playwright test history-sticky-year` (fixture in
   `tests/visual/fixtures/history-sticky-year.html`; add `--headed` to watch).
 
-- Label avoidance (v1.1.5): the sticky label fades out (autoAlpha) while a
-  text block that overlaps it horizontally crosses the label band (label
-  height plus 16px around the viewport centre). Text blocks are
-  `[data-history-sticky-year-avoid]`, `.history-timeline_text` and
-  `.history-timeline_item-header`. Fixes the 1924 pill covering the body
-  copy at 1440 and 390.
+- Label never fades (F19 reverted v1.1.5 avoidance): the label paints over
+  timeline text because its sticky wrapper has `z-index: 2`. Only the year
+  text inside it tweens on a year change. `[data-history-sticky-year-avoid]`
+  is no longer read.
 
 ### imageStackCollapse
 
@@ -760,21 +904,42 @@ the bar overlaps a light area.
 Since F03 the frame no longer resizes: the media is sized to the stage
 content box once (on every refresh) and a chamfered `clip-path: polygon()`
 opens from the Designer start rect to full. The chamfer size is read from
-the media's own Designer clip-path. The first panel's content masks in line
-by line once the mask reaches full height, via `lineMaskReveal`.
+the media's own Designer clip-path (no clip-path on the media gives a
+rectangular mask). The first panel's content masks in line by line once the
+mask reaches full height, via `lineMaskReveal`.
+
+### scrollEnlargeSnap: F15 triggered content and end hold
+
+Since F15 every panel's content (Zuma included, replacing F03's play-once)
+is a triggered `createLineMaskTimeline` reveal, not scrubbed tweens: heading,
+body and button mask in as one timeline after the mask or wipe completes,
+and reverse when the panel is left in either direction. The pin is
+`items + 0.5` steps long: the final half step is a free-scrolling hold so
+the last panel settles before the pin releases. Home uses
+`data-scroll-enlarge-snap-step="110"` for more distance per panel.
+
+Single-item use (F28, arts): one `-item` with no tabs. The inset image's
+mask grows to full bleed, the content masks in at full, then the end hold.
+The arts section is a native `section_venue-card-fullbleed` with `is-bleed`
+combos on stage (no padding), media (no chamfer, 1253/753 start size) and
+content (bottom-left, transparent).
 
 ### lineMaskReveal (helper)
 
-`prepareLineMaskReveal(container)` hides a container's headings,
+`createLineMaskTimeline(container)` hides a container's headings,
 paragraphs, figures, `.button`s and `[data-line-mask]` elements and returns
-`play()`, a one-shot line mask-in. Text is split with SplitText
+`play()` and `reverse()` on one paused timeline (reverse runs at 1.6x).
+The timeline is rebuilt on every SplitText re-split, keeping its progress
+and direction. `prepareLineMaskReveal(container)` wraps it as a one-shot
+`play()` (historyStickyYear, F09). Text is split with SplitText
 (`lines,words`, overflow hidden on lines, never `mask: 'lines'`); other
 targets rise from behind a clip wrapper. Reduced motion: nothing is hidden.
 
 ### mediaTabs
 
-Feedback F06, modelled on Editoria's experiences hover switcher. Rows act as
-ARIA tabs that switch stacked media and content panels.
+Feedback F06 and F16. Rows act as ARIA tabs that switch stacked media and
+content panels. Switching is click and keyboard only (F16); hover never
+switches.
 
 | Attribute | On | Purpose |
 |---|---|---|
@@ -782,12 +947,21 @@ ARIA tabs that switch stacked media and content panels.
 | `data-media-tabs-list` | rows' wrapper (optional) | Gets `role="tablist"`. |
 | `data-media-tabs-tab` | each row (link or button) | Nth tab drives nth panel and media. Clicks never navigate. |
 | `data-media-tabs-media` | each background figure (optional) | Stacked; crossfades with the tab. |
-| `data-media-tabs-panel` | each content block | Stacked (same grid cell); crossfades, children slide in. |
-| `data-media-tabs-hover="false"` | root (optional) | Disable hover switching. |
+| `data-media-tabs-panel` | each content block | Stacked (same grid cell); copy masks out, then in. |
+| `data-media-tabs-content` | inside a panel (optional) | Scopes the masked targets; defaults to the panel. |
 
 - First tab active on load; `is-active` on the active tab, panel and media;
-  roving tabindex; arrows, Home and End move between tabs; hover switches
-  on fine pointers. Inactive panels and media use `autoAlpha: 0`.
+  roving tabindex; arrows, Home and End move between tabs.
+- Text swap (F16): each panel's headings, paragraphs, `.button`s and
+  `[data-line-mask]` elements are mask targets. Text is split with SplitText
+  (`lines,words`, `autoSplit`, overflow hidden on the lines, never
+  `mask: 'lines'`); buttons move inside a `[data-media-tabs-clip]` wrapper.
+  On a switch the outgoing copy masks out upwards, the panels swap with
+  `gsap.set` (only the active panel has `autoAlpha: 1`, `zIndex: 1`), then
+  the incoming copy masks in from below. Panels are never tweened, so there
+  is no cross-fade and no overlap. Media still crossfades, starting at the
+  click. A rapid second click completes the running switch first.
+- Reduced motion: nothing is split; panels and media swap instantly.
 - Guild home Meetings & Events: panels use `venue-card-fullbleed_panel`
   (grid row 1 across all columns, so they overlap). Order: slot D.
 

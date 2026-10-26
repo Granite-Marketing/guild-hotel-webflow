@@ -35,6 +35,7 @@ const load = async (page: Page, query = '') => {
   await page.goto(`${origin}${FIXTURE_PATH}${query}`, { waitUntil: 'networkidle' })
   // Wait for the module to have set its initial state.
   await expect(page.locator('[data-nav="open"]')).toHaveAttribute('aria-expanded', 'false')
+  await expect(page.locator('[data-nav="open"]')).toHaveAttribute('aria-label', 'Open menu')
 }
 
 const header = (page: Page) => page.locator('[data-nav="header"]')
@@ -62,7 +63,7 @@ test('clicking the link toggle opens the menu without jumping or changing the UR
 
   await expect(header(page)).toHaveClass(/is-nav-open/)
   await expect(toggle(page)).toHaveAttribute('aria-expanded', 'true')
-  await expect(toggle(page)).toHaveAttribute('aria-label', 'Close navigation menu')
+  await expect(toggle(page)).toHaveAttribute('aria-label', 'Close menu')
   await expect.poll(() => menuVisibility(page)).toBe('visible')
   expect(page.url()).toBe(urlBefore)
   expect(page.url()).not.toContain('#')
@@ -92,6 +93,7 @@ test('clicking a menu link closes the menu', async ({ page }) => {
   await page.locator('[data-nav="link"]').first().click()
   await expect(header(page)).not.toHaveClass(/is-nav-open/)
   await expect(toggle(page)).toHaveAttribute('aria-expanded', 'false')
+  await expect(toggle(page)).toHaveAttribute('aria-label', 'Open menu')
 })
 
 test('Enter on the link toggle opens once and Space closes it', async ({ page }) => {
@@ -118,4 +120,33 @@ test('without data-nav-lock, opening at 1440 wide does not stop scroll', async (
   await toggle(page).click()
   await expect(header(page)).toHaveClass(/is-nav-open/)
   expect(await wheelMoves(page)).toBeGreaterThan(0)
+})
+
+/**
+ * The fixture SVG's rect at the given DOM index (0: middle bar y=6.8811,
+ * 1: bottom bar y=14, 2: top bar y=0). Located by index, not by the y
+ * attribute, because the morph tweens y.
+ */
+const bar = (page: Page, index: number) => page.locator('[data-nav="open"] svg rect').nth(index)
+
+test('the hamburger morphs to an X on open and back on close', async ({ page }) => {
+  await load(page)
+  const topBar = bar(page, 2)
+  const middleBar = bar(page, 0)
+
+  await toggle(page).click()
+  await expect(toggle(page)).toHaveAttribute('aria-controls', /.+/)
+  await expect
+    .poll(async () => (await topBar.getAttribute('transform')) ?? '')
+    .toMatch(/rotate\(45|matrix\(0\.707/)
+  await expect
+    .poll(() => middleBar.evaluate((element) => getComputedStyle(element).visibility))
+    .toBe('hidden')
+
+  // The fixture's open menu panel covers the toggle, so dispatch the click.
+  await toggle(page).dispatchEvent('click')
+  await expect(toggle(page)).toHaveAttribute('aria-label', 'Open menu')
+  await expect
+    .poll(() => middleBar.evaluate((element) => getComputedStyle(element).visibility))
+    .toBe('visible')
 })
