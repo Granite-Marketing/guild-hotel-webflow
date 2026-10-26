@@ -26,6 +26,10 @@ interface GsapTimeline {
     vars: Record<string, unknown>,
     position?: number | string,
   ) => GsapTimeline;
+  play: () => GsapTimeline;
+  reverse: () => GsapTimeline;
+  pause: () => GsapTimeline;
+  progress: (value: number) => GsapTimeline;
   scrollTrigger?: ScrollTriggerInstance;
 }
 

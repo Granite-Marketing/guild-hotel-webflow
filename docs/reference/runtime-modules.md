@@ -364,7 +364,15 @@ Mobile nav open/close with a11y state and scroll pause.
     a[data-nav="link"]     clicking closes the menu
 ```
 
-- `aria-expanded` and `aria-label` (open / close) stay in sync on the toggle.
+- `aria-expanded` and `aria-label` ("Open menu" / "Close menu") stay in
+  sync on the toggle.
+- Toggle icon: an SVG inside the toggle with exactly three `rect` bars
+  morphs to an X on open (GSAP: top and bottom bars take 20x2 geometry and
+  rotate +/-45deg about `svgOrigin` 18.5 8, the middle bar fades) and
+  reverses immediately on close, together with `aria-expanded`. Bars are
+  matched by their `y` attribute, not DOM order. The X geometry assumes the
+  Guild hamburger's 37x16 viewBox. Reduced motion snaps. Other toggle
+  content (text, a different icon) is left alone.
 - Below 991px the engine is paused on open and resumed in the close
   timeline's `onComplete`, after the fade. Add `data-nav-lock="always"` to
   `[data-nav="header"]` to pause it at every width, for a menu that is full
