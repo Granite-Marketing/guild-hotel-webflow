@@ -17,6 +17,7 @@
 
 import { accordion } from '$utils/accordion'
 import { cardCarouselHeaderLeft } from '$utils/cardCarouselHeaderLeft'
+import { cmsItemLinks } from '$utils/cmsItemLinks'
 import { currentYear } from '$utils/currentYear'
 import { eagerImages } from '$utils/eagerImages'
 import { galleryFilter } from '$utils/galleryFilter'
@@ -90,6 +91,8 @@ window.Webflow.push(() => {
 
   currentYear()
   // slot E: viewSwitcher(), cmsFilterLinks()
+  // F30: CMS card and category links (Designer cannot bind current-item links headlessly)
+  cmsItemLinks()
   galleryFilter()
   // slot F, in this order: filterPanels(), scrollHint(), finsweetRefresh(),
   //   filterActiveState()
