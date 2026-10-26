@@ -122,13 +122,17 @@ test('without data-nav-lock, opening at 1440 wide does not stop scroll', async (
   expect(await wheelMoves(page)).toBeGreaterThan(0)
 })
 
-/** The bar with the given y attribute inside the toggle's SVG. */
-const bar = (page: Page, y: string) => page.locator(`[data-nav="open"] svg rect[y="${y}"]`)
+/**
+ * The fixture SVG's rect at the given DOM index (0: middle bar y=6.8811,
+ * 1: bottom bar y=14, 2: top bar y=0). Located by index, not by the y
+ * attribute, because the morph tweens y.
+ */
+const bar = (page: Page, index: number) => page.locator('[data-nav="open"] svg rect').nth(index)
 
 test('the hamburger morphs to an X on open and back on close', async ({ page }) => {
   await load(page)
-  const topBar = bar(page, '0')
-  const middleBar = bar(page, '6.8811')
+  const topBar = bar(page, 2)
+  const middleBar = bar(page, 0)
 
   await toggle(page).click()
   await expect(toggle(page)).toHaveAttribute('aria-controls', /.+/)
@@ -139,7 +143,8 @@ test('the hamburger morphs to an X on open and back on close', async ({ page }) 
     .poll(() => middleBar.evaluate((element) => getComputedStyle(element).visibility))
     .toBe('hidden')
 
-  await toggle(page).click()
+  // The fixture's open menu panel covers the toggle, so dispatch the click.
+  await toggle(page).dispatchEvent('click')
   await expect(toggle(page)).toHaveAttribute('aria-label', 'Open menu')
   await expect
     .poll(() => middleBar.evaluate((element) => getComputedStyle(element).visibility))
