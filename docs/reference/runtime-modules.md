@@ -105,6 +105,11 @@ the single export line in that file (see the checklist below).
 - Creates Lenis, feeds `ScrollTrigger.update` from `lenis.on('scroll')`,
   drives Lenis from `gsap.ticker`, disables lag smoothing.
 - Calls `scrollTriggerRefresh(document.body)`.
+- Constructs Lenis with `content: document.body` and calls `lenis.resize()`
+  on every ScrollTrigger `refresh` event (F18). Webflow sets
+  `html { height: 100% }`, so the default content element (html) never
+  resizes and Lenis' limit goes stale, leaving the footer out of reach. See
+  `docs/solutions/integration-issues/lenis-stale-limit-html-height-100.md`.
 - The legacy `lenis` export (`lenis.raw`, `lenis.stop()`, `lenis.start()`)
   stays for projects that import it directly; new code uses `smoothScroll`.
 - Native `position: sticky` and `position: fixed` work.
@@ -234,6 +239,31 @@ Fixture and spec: `tests/visual/fixtures/runtime-keys-and-hash.{html,ts}`,
 Unchanged contract, see `modal-setup.md`. Pauses scroll through
 `smoothScroll.stop()` / `start()`, so it follows an engine swap with no edit.
 Under ScrollSmoother, dialogs and overlay must sit outside `#smooth-content`.
+
+Dialog smooth scroll (F22, F29; project rule: every modal with scrollable
+content uses smooth scroll). No new attributes are required:
+
+- On open, the dialog's scroll container gets its own Lenis instance
+  (`wrapper` = `content` = `eventsTarget` = the container, driven by
+  `gsap.ticker`, no syncTouch so touch stays native). It is destroyed on
+  close; a dialog-to-dialog switch destroys the old one first. The page
+  engine stays stopped the whole time.
+- Scroll container: `[data-modal-scroll]` inside the dialog if present
+  (optional override), else the dialog when its overflow-y is auto/scroll,
+  else the first descendant with overflow-y auto/scroll, else none (native).
+  Every current dialog (`overlay-detail-panel-modal_component`,
+  `room-list-hover-preview_component`) is its own scroll container, so none
+  needs the attribute.
+- A ResizeObserver on the container's children calls `resize()` (the
+  container is `position: fixed; inset: 0`, so its own box never resizes).
+- Lazy images inside the dialog are promoted to eager before `is-open` is
+  added, and each one resizes the dialog Lenis when it lands.
+- `prefers-reduced-motion: reduce` or a missing `Lenis` global: native
+  scroll, nothing else changes.
+- `data-lenis-prevent` stays on every dialog: it keeps the stopped page
+  Lenis off dialog wheel events, and the dialog Lenis excludes its own root
+  from that check.
+- Recommended CSS on the dialog class: `overscroll-behavior: contain`.
 
 W02 additions (no new attributes):
 

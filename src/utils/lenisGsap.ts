@@ -10,6 +10,13 @@
  * `position: fixed` keep working and `document.body` grows with content.
  * The engine-neutral ScrollTrigger refresh layers therefore observe the body.
  *
+ * Lenis measures `document.body`, not the default `document.documentElement`:
+ * Webflow's base CSS sets `html { height: 100% }`, so the html box never
+ * grows, Lenis' content ResizeObserver never fires and its scroll limit goes
+ * stale after lazy images, pin spacers or CMS content load (F18: the footer
+ * could not be reached). Every ScrollTrigger refresh also calls
+ * `lenis.resize()`, so the limit follows the same refresh layers.
+ *
  * Do not combine Lenis with ScrollTrigger.normalizeScroll: they fight over
  * touch input.
  */
@@ -36,7 +43,7 @@ export const lenisGsap = (
   gsapInstance: GsapInstance,
   scrollTrigger: ScrollTriggerStatic,
 ): void => {
-  instance = new Lenis({})
+  instance = new Lenis({ wrapper: window, content: document.body })
 
   gsapInstance.registerPlugin(scrollTrigger)
 
@@ -49,6 +56,11 @@ export const lenisGsap = (
   gsapInstance.ticker.lagSmoothing(0)
 
   scrollTriggerRefresh(document.body)
+
+  // Keep Lenis' scroll limit in step with every refresh (load, pageshow,
+  // body resize, pin creation). Runs from the refresh event, never from a
+  // scroll handler, so it cannot lock scroll.
+  scrollTrigger.addEventListener('refresh', () => instance?.resize())
 }
 
 /** Height a fixed `[data-nav="header"]` covers at the top of the viewport. */
