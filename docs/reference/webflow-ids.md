@@ -40,6 +40,8 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 | Contact | `6ad66fd8e0b7968459e18f22` | `/contact` | contact; assembled by Q043 (2026-10-20), Body `6ad66fd8e0b7968459e18f28`; instance and section ids in `docs/figma/build-plans/Q043/build.md` |
 | Meetings | `6ad66fd96684c3e22ea4d417` | `/meetings` | meetings-collection |
 | Neighborhood | `6ad66fdb02cc199b55b926ba` | `/neighborhood` | neighborhood; assembled by Q044 (2026-10-20), Body `6ad66fdb02cc199b55b926c5` |
+| Happenings | `6adf8565c9208d434c321a85` | `/happenings` | F30 (2026-10-26), duplicate of /press; instance ids in the feedback batch 2 section below |
+| Blog | `6adf856512eff9c0216feca8` | `/blog` | F30 (2026-10-26), duplicate of /press; instance ids in the feedback batch 2 section below |
 
 Static pages created by Q004 on 2026-10-19 (slugs approved by Stephen: the four `-collection` Figma pages use clean slugs). CMS template pages (dining-*, legal, corporate, happenings-*, blog-*) are created with their collections in Q027 to Q030; add their rows then.
 
@@ -228,3 +230,67 @@ Square figures carry their own combo name (not the entry name) because `.history
 
 Collection `6adf73e0711cfc5e16f51bb5` (slug `map-place`). Fields: `walk-time` cc589e25d5e071f1efb5a65e09c1759a, `coordinates` 46a398ff78a7d9c2bc795635df2fb516 (`lat, lng`), `order` e2c905ef609b7282c8e1318e89b98aeb. Shown by the Collection List in Map Feature Image Bg (`9f5fc2f4-169f-6e16-50c0-199b554b43cb`, item `...43cd` carries `data-map-item` and `data-map-coordinates`). The old static list and its 12 Place props were deleted. The list sort could not be set by MCP or in the Designer; display order is CMS created date (newest first), so item contents were assigned in reverse.
 
+## Feedback batch 2 (2026-10-26)
+
+Ids created or first cached by the F15 to F30 groups. Recorded by the integrator from each group's report; not re-read from the API.
+
+### F30 blog and happenings listings
+
+- Pages: Happenings `6adf8565c9208d434c321a85` (`/happenings`), Blog `6adf856512eff9c0216feca8` (`/blog`), both duplicates of /press. Body `6ad66fd5735773f253406673`, main `6f33cce2-3413-7ab7-f697-7980b49521fb`. Instances keep the /press element ids on both pages: Hero `954ba09c-c585-377c-a4e3-a643bbd37f21`, tab-pills-intro `a0cf1b8c-6599-1aeb-0aad-3babaa7eef51`, Offers `08ba98cb-4e73-8f2f-cf82-95a4a0cd939a`, Card Carousel Header Left `38b333ce-daa8-1aed-489f-f7a62cd23b21`, faq `d9c33fc8-fe56-f028-9b83-f8a86dad1ca0`, CTA `52c8df75-7bf3-a29f-bdce-158fef2bd370`, Site Nav `a0bd1537-003b-0e74-9517-515e8817d8c9`, Footer `64ef670f-ec28-a2e3-1928-29026e69ac73`.
+- Happenings topic groups (section / Collection List / card link): dining `0d9df6d2-d3e2-16be-e752-b7132be93918` / `c706a153-ad4f-e4b8-e4f2-72ba26467fc5` / `2dbef8f2-6cab-7393-c45b-d6d1e162157a`; culture `1ff8b291-444f-7296-a84f-cb141171b0e7` / `299be75f-7116-40f7-16d3-52bca67aa183` / `e93f435a-f345-9cc7-0f64-ce61ede3ac4e`; conferences `d41254d1-6bfb-84b6-584e-fea3bbed7bc1` / `ab7d9908-50e2-e3e9-77c1-d08c45998131` / `b5dcbcd0-f0cb-3e2e-815e-c0e7a07ff239`; empty-group HtmlEmbed `e1278dda-645e-595d-cd90-59765c8845d5`.
+- Blog topic groups (section / Collection List / card link): dining `1039286b-1202-56f0-fb02-14af241b80b0` / `bee9c2ca-2288-5ed8-aa78-38d08bc4a5e5` / `83ff5353-4041-51ed-4c8d-b8c63e633be8`; culture `96e407e4-bc57-82db-139a-c3e60fbd98e3` / `deb440fa-91ce-0ff1-fc30-d7579fe6746e` / `2523a640-02ce-ae73-d934-4f791cc3908a`; conferences `71717da2-a747-2b55-c04c-a596ace45400` / `e29221f4-8ae7-7ea7-9b66-d32845dd30b6` / `19fc353d-a390-9249-69e0-b1a7298c4250`; empty-group HtmlEmbed `fb7823b2-4f49-25e7-6a24-7f5a901b8bd3`.
+- Post Categories item slugs are now `happenings` (`6ad67dd6f57084c9b83ef704`) and `blog` (`6ad67dd6f57084c9b83ef706`); template URLs are `/post-categories/happenings` and `/post-categories/blog`.
+- Style `.article-card-staggered_header.is-group` `49c9014a-448e-10fc-301b-c769440bccbc`.
+- Site Nav menu links: happenings `aab2628a-dae9-6549-ee66-80b145a8fbd1` (after experiences), blog `86fd9983-9ca5-7338-57c4-ff2fdfbb33b9` (after gallery).
+- Footer Links: happenings li `5111474e-060a-f9c4-01ed-bf62c739f1cd`, link `c6843ab0-4191-cf48-4d0d-b7db79fde223` (experience column); blog li `526067f6-e693-a7fd-0cd0-a6e112fcf40b`, link `d8698602-9f97-6754-20d7-9272d3390bcd` (hotel column).
+- Binding field id for Category > Slug on Happenings & Stories: `3d27986165618c5d45dcff873530a2ae:::5db7cb81a370ac6e5bf5a3d08b1b7318`.
+
+### F17, F21 chamfer and link-bar styles (planned writes, not applied)
+
+| Style | id |
+|---|---|
+| `offers-slider-split_button` | `8d006641-252d-cc03-ed49-d95c8f86284a` |
+| `overlay-detail-panel-modal_button` | `8816daef-d51a-a212-020c-d04c879804ff` |
+| `overlay-detail-panel-modal_item-button` | `b5e2d69e-0d6b-5d39-bbf8-96d8e212d575` |
+| `history-timeline_label` | `87c3f212-f16b-f06d-13ac-4e64a2547fd1` |
+| `history-timeline_label-wrap` | `d6d8a0e0-81ee-c7f7-5e58-b44e23f59bb3` |
+| `history-timeline_label-text` | `f2edd435-cb9b-9c04-6bf1-a17fdf287336` |
+| `tab-pills-intro_tab` | `a0f252cd-42cd-bd83-f47f-c05fe5f71e06` |
+| `tab-pills-intro_tabs` | `bba7b479-c595-d4f4-9895-256ede9aeaaa` |
+| `venue-card-fullbleed_tab` | `206db50e-bd3e-ec81-c1dc-cc52c47347a6` |
+| `venue-card-fullbleed_tabs` | `2bdfd4ef-9b8d-1489-27e0-262ba21b4d0a` |
+
+### F22, F29 modal scroll styles
+
+- `overlay-detail-panel-modal_component` `3b753a7a-b6c6-f84b-98f9-73ee58aafc18`: base overflow-y auto, overscroll-behavior contain.
+- `room-list-hover-preview_component` `1432cf08-3b60-1b4c-d199-78937eb8cace`: base overflow-y auto, overscroll-behavior contain.
+- Overlay Detail Panel Modal Dark variant `569f778f-307a-cdc2-95c3-95b18a7c2c5c`: `overlay-detail-panel-modal_figure` is main `height: calc(100vh - 6.5rem)` (aspect-ratio auto, order 0), medium `height: auto` (aspect-ratio 681 / 796).
+
+### F20 History landmark
+
+| Resource | ID | Notes |
+|---|---|---|
+| Gallery Mosaic Captioned instance | `52f28a89-ecc8-606e-0a16-c341dda479e1` | on History; component `560e1b31-d612-0921-8773-8f9de2e2b06f` |
+| Mosaic props Image 1 to 4 | `d41c4a29-3938-b380-5444-aac22708c480`, `39b3e286-5782-b9e9-4a6e-c3f97c32c205`, `9de150c6-324d-e6a3-8fa2-28b7ded767ab`, `020d0f17-9e6d-702f-fafa-8231b89df59a` | History values: Zuma, succulent, fitness, pool |
+| Mosaic props Caption 1 to 4 | `f46dfd48-84cd-7791-03be-917c0c122971`, `484377f3-e3fe-d378-4dbb-ad6bb3a1709a`, `937cab3d-dd52-1f15-fe41-b6a78a259809`, `b220cf9b-f331-de64-6225-593713f3516c` | placeholder copy |
+| Mosaic props Heading / Show Heading / Feature Title / Show Feature Title | `3aab8783-f8f3-e498-0599-7ddbcbf5d1e9` / `128a7ba8-2116-e014-5718-97f9541d1218` / `9b94a9b9-d271-9268-3a20-e7d3e831c400` / `e90568d5-57ae-46a2-6566-0f6b14ce903b` | |
+| `section_history-landmark` | `895e47cc-0d7b-ef01-e840-7b3654d0461a` | `data-history-collapse`, distance 3 |
+| Landmark images Zuma / succulent / fitness / pool | `3ef9a39e-de20-3580-942d-76515eab48dd` (data-eager) / `c73a6076-9465-122a-092d-cb68c9f9d79e` / `d4f0a5c7-86f6-a1a0-0d62-0dff0ad69075` / `b26846ca-c610-66ad-5b17-45d6208a931b` | |
+| Assets Zuma / succulent / fitness / pool | `6ad66ff45794075272b9663f` / `6ad66fe91ce40a5a6239b8ad` / `6ad6700eb28c9b39f95d814d` / `6ad66ffdba96f2e53726bd55` | |
+
+### F23 Site Nav toggle
+
+- Toggle link `a.site-nav_toggle[data-nav="open"]` `fc94d1a2-3399-4de0-e836-0233a6c86ce2` in Site Nav component `fc94d1a2-3399-4de0-e836-0233a6c86cdf`; static aria-label "Open navigation menu" (navToggle overwrites it at init).
+- Hamburger icon embed `.site-nav_icon` `fc94d1a2-3399-4de0-e836-0233a6c86ce3` (inline SVG, three rect bars).
+
+### F24 form placeholders
+
+| Style | Selector | ID |
+|---|---|---|
+| `u-sr-only` (global utility) | `.u-sr-only` | `fabcef92-13f0-1e0a-8c66-80b9531dbd43` |
+| `u-sr-only` (combo on newsletter label) | `.cta-booking-newsletter_label.u-sr-only` | `d3438645-65e8-2613-aed8-4c8bf806e497` |
+| `is-placeholder` (combo on input) | `.form-split-script-contact_input.is-placeholder` | `7acbad24-1434-a2c3-48f9-8dcfd4b4a774` |
+| `form-split-script-contact_input` (existing) | `.form-split-script-contact_input` | `1fe11f28-e110-59a9-ea43-beac74d77b3d` |
+| `cta-booking-newsletter_label` (existing) | `.cta-booking-newsletter_label` | `3d9e555d-c4d8-2f60-f9a0-d06b1d661c65` |
+
+Contact select `c6518e72-8838-a8a1-906b-60929af12d99` carries custom attribute `id="contact-assist"`.
