@@ -3,6 +3,27 @@
 This document defines the MANDATORY element patterns for building components in Webflow.
 These patterns are non-negotiable — every element must follow them.
 
+## Page Shell (every page, including CMS templates)
+
+Every page has the same shell. Nothing but the shell sits directly on the Body.
+
+```
+Body
+  Block (div) .page-wrapper
+    Site Nav instance            <-- first child
+    Global Styles instance       <-- embed
+    Block (main) .main-wrapper
+      section ...                <-- every page section, in design order
+    Footer Links instance        <-- after main
+    dialogs / modals             <-- after the footer (see modal-setup.md)
+```
+
+- Sections (native or component instances) always go inside `main.main-wrapper`, never on the Body or loose in `.page-wrapper`.
+- New pages: build the shell first, then add sections with `append` on `main.main-wrapper`. A page duplicated from an existing page inherits the shell.
+- Verify with `get_all_elements` depth 2 after any page build: the Body has one child, `.page-wrapper`.
+- Exception: the Password utility page. Webflow refuses to move its form out of the Body ("Password button cannot be moved outside the Password Form"), so it keeps the Relume layout.
+- MCP: build the shell with `data_element_builder` (`DivBlock` `.page-wrapper`, then `BY_CUSTOM_TAG` `main` `.main-wrapper` inside it), then `move_element` each section with `append` on main. `move_element` cannot anchor `after` a component instance, so put trailing modals in place with `append` on `.page-wrapper`. Insert Global Styles with `data_component_builder` `before` main.
+
 ## Core Principle: Every Element Needs a Wrapper
 
 Never place headings, images, paragraphs, or interactive elements as direct children of layout containers. Always wrap them in a semantically-named div that provides spacing, sizing, and responsive control.
