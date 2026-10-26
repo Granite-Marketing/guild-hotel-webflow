@@ -595,8 +595,12 @@ referrer-restricted browser key is an attribute set in Webflow.
 | `data-map-home` | same element, optional | `lat,lng` of the hotel (non-interactive marker) |
 | `data-map-home-title` | same element, optional | marker tooltip, e.g. `The Guild Hotel` |
 | `data-map-item` | each address row, same section | none (title = first child's text) or a title |
+| `data-map-coordinates` | each row (bound to the 📍 Map Places Coordinates field) | `lat, lng`, as Google Maps copies it |
+| `data-map-directions` | the Directions link in a CMS row | none; its href is set to Google Maps directions |
 
-- Coordinates come from each row's directions link:
+- Rows come from the 📍 Map Places collection (name, walk time, coordinates,
+  order). Without `data-map-coordinates`, coordinates come from the row's
+  directions link:
   `https://www.google.com/maps/dir/?api=1&destination={lat},{lng}`. A row
   without one gets no marker; with no markers, or no key, nothing loads.
 - Hover or focus on a row highlights its marker; hover or click on a marker
