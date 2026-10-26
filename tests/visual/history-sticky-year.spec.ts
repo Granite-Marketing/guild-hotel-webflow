@@ -93,6 +93,19 @@ test.describe('historyStickyYear', () => {
       await expect(page.locator(yearItem(year))).toHaveClass(/is-active/)
     }
 
+    // F19: the label never fades while timeline text passes under it.
+    const labelBox = page.locator('[data-history-sticky-year-label]')
+    const centreY = page.viewportSize()!.height / 2
+    for (const year of ['1924', '1924-1970', '2019', '2026']) {
+      const textTop = await page.$eval(
+        `${yearItem(year)} .history-timeline_text`,
+        (element) => element.getBoundingClientRect().top + window.scrollY + element.getBoundingClientRect().height / 2,
+      )
+      await scrollTo(page, textTop - centreY)
+      await expect(labelBox).toHaveCSS('opacity', '1')
+      await expect(labelBox).toHaveCSS('visibility', 'visible')
+    }
+
     // Scrolling back up restores the earlier year.
     const firstTop = await itemTop(page, yearItem('1924'))
     await scrollTo(page, firstTop - viewportHalf + 200)
@@ -100,44 +113,100 @@ test.describe('historyStickyYear', () => {
     await expect(label).toHaveCSS('opacity', '1')
   })
 
-  test('gallery collapses, fills the screen, then returns to the grid', async ({ page }) => {
+  test('mask opens on the same image at card framing, without unmask flicker', async ({ page }) => {
     await openFixture(page)
     const start = await collapseStart(page)
     const viewport = page.viewportSize()!
     const pinLength = 3 * viewport.height
+    const total = 2.8
+    const at = (time: number) => scrollTo(page, start + pinLength * (time / total))
     const items = '[data-history-collapse-item]'
 
-    // Timeline position 1 of 3.6: stacked into one image at the centre.
-    await scrollTo(page, start + pinLength * (1 / 3.6))
+    // Timeline position 1: stacked into one image at the centre.
+    await at(1)
     const stacked = await centreOf(page, items)
     for (const centre of stacked) {
       expect(Math.abs(centre.x - viewport.width / 2)).toBeLessThan(2)
       expect(Math.abs(centre.y - viewport.height / 2)).toBeLessThan(2)
     }
 
-    // Timeline position 2.2: full screen, heading and caption hidden.
-    await scrollTo(page, start + pinLength * (2.2 / 3.6))
-    const top = await page.$eval(`${items}:last-child`, (element) => {
-      const rect = element.getBoundingClientRect()
-      return { left: rect.left, top: rect.top, right: rect.right, bottom: rect.bottom }
+    // Just past 1: the layer is up, framed to the card, and the photo
+    // renders at the same size and place as in the card (F20).
+    await at(1.06)
+    const match = await page.evaluate(() => {
+      const card = document.querySelector<HTMLElement>('[data-history-collapse-item]')!
+      const cardImage = card.querySelector<HTMLImageElement>('img')!
+      const layer = document.querySelector<HTMLElement>('[data-history-collapse-bleed]')!
+      const copy = layer.querySelector<HTMLImageElement>('img')!
+      const cardRect = card.getBoundingClientRect()
+      const cover = Math.max(
+        cardRect.width / cardImage.naturalWidth,
+        cardRect.height / cardImage.naturalHeight,
+      )
+      const imageWidth = cardImage.naturalWidth * cover
+      const imageHeight = cardImage.naturalHeight * cover
+      const copyRect = copy.getBoundingClientRect()
+      const layerRect = layer.getBoundingClientRect()
+      // Computed clip-path collapses equal sides: inset(top right? bottom? left?).
+      const values = (getComputedStyle(layer).clipPath.match(/[\d.]+px/g) ?? []).map(parseFloat)
+      const [top = 0, right = top, bottom = top, left = right] = values
+      const insets = [top, right, bottom, left]
+      return {
+        opacity: Number(getComputedStyle(layer).opacity),
+        clip: {
+          left: layerRect.left + (insets[3] ?? 0),
+          top: layerRect.top + (insets[0] ?? 0),
+          right: layerRect.right - (insets[1] ?? 0),
+          bottom: layerRect.bottom - (insets[2] ?? 0),
+        },
+        card: { left: cardRect.left, top: cardRect.top, right: cardRect.right, bottom: cardRect.bottom },
+        copy: {
+          width: copyRect.width,
+          height: copyRect.height,
+          x: copyRect.left + copyRect.width / 2,
+          y: copyRect.top + copyRect.height / 2,
+        },
+        image: {
+          width: imageWidth,
+          height: imageHeight,
+          x: cardRect.left + cardRect.width / 2,
+          y: cardRect.top + cardRect.height / 2,
+        },
+      }
     })
-    expect(top.left).toBeLessThanOrEqual(1)
-    expect(top.top).toBeLessThanOrEqual(1)
-    expect(top.right).toBeGreaterThanOrEqual(viewport.width - 1)
-    expect(top.bottom).toBeGreaterThanOrEqual(viewport.height - 1)
-    await expect(page.locator('[data-history-collapse-fade]').first()).toHaveCSS('visibility', 'hidden')
+    expect(match.opacity).toBeGreaterThan(0)
+    for (const side of ['left', 'top', 'right', 'bottom'] as const) {
+      expect(Math.abs(match.clip[side] - match.card[side])).toBeLessThan(4)
+    }
+    for (const key of ['x', 'y'] as const) {
+      expect(Math.abs(match.copy[key] - match.image[key])).toBeLessThan(2)
+    }
+    // Width and height drift by the eased scale just past 1, so allow 2%.
+    expect(Math.abs(match.copy.width / match.image.width - 1)).toBeLessThan(0.02)
+    expect(Math.abs(match.copy.height / match.image.height - 1)).toBeLessThan(0.02)
 
-    // Past the pin: end state is the untransformed gallery grid.
-    await scrollTo(page, start + pinLength + 50)
-    const transforms = await page.$$eval(items, (elements) =>
-      elements.map((element) => getComputedStyle(element).transform),
-    )
-    for (const transform of transforms) {
-      expect(['none', 'matrix(1, 0, 0, 1, 0, 0)']).toContain(transform)
+    // Scrub back and forth over the swap: whenever the layer shows, it is
+    // masked (clip-path never "none").
+    for (let round = 0; round < 3; round++) {
+      for (const progress of [0.5, 0.32, 0.38]) {
+        await scrollTo(page, start + pinLength * progress)
+        const state = await page.$eval('[data-history-collapse-bleed]', (layer) => {
+          const style = getComputedStyle(layer)
+          return { opacity: Number(style.opacity), clipPath: style.clipPath }
+        })
+        if (state.opacity > 0) expect(state.clipPath).not.toBe('none')
+      }
     }
-    for (const fade of await page.locator('[data-history-collapse-fade]').all()) {
-      await expect(fade).toHaveCSS('opacity', '1')
-    }
+
+    // End of the pin: full bleed, heading and caption hidden.
+    await at(total)
+    const end = await page.$eval('[data-history-collapse-bleed]', (layer) => {
+      const style = getComputedStyle(layer)
+      return { opacity: style.opacity, clipPath: style.clipPath }
+    })
+    expect(end.opacity).toBe('1')
+    expect(end.clipPath).toMatch(/^inset\(0px( 0px)*\)$/)
+    await expect(page.locator('[data-history-collapse-fade]').first()).toHaveCSS('visibility', 'hidden')
   })
 
   test('reduced motion shows the end state with no animation', async ({ page }) => {

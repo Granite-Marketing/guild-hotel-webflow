@@ -3,5 +3,5 @@
 // check is deterministic.
 import { historyStickyYear } from '../../../src/utils/historyStickyYear'
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger, SplitText)
 historyStickyYear()

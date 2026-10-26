@@ -16,12 +16,9 @@
  *   [data-history-sticky-year-item="1924"]  milestone block; the value is
  *                                           the year shown while the block
  *                                           crosses the viewport centre
- *   [data-history-sticky-year-avoid]        optional text block the label
- *                                           must not cover; defaults to the
- *                                           timeline text and item headers.
- *                                           The label fades out while one
- *                                           that overlaps it horizontally
- *                                           crosses the label band.
+ *
+ * The label always stays visible; it paints over timeline text (label-wrap
+ * z-index 2), never fades (F19 reverts #105).
  *
  * Collapse gallery (gallery-row-dark-titled):
  *
@@ -38,19 +35,18 @@
  *                                           heights (default 3)
  *
  * The collapse timeline runs gallery -> stacked into one image (bleed card
- * on top) -> a clip mask opens on a full-bleed copy of the bleed image
- * until it fills the screen (feedback F09: a mask, never a scale, and no
- * return to the gallery). The natural layout is the start state. Under prefers-reduced-motion the gallery stays as laid
- * out and the year label swaps text without a tween.
+ * on top) -> a clip mask opens on a copy of the bleed image until it fills
+ * the screen, with no return to the gallery (F09). The mask opens on the
+ * same image, card framing to full-bleed framing (F20), with uniform image
+ * scale; one property per tween to prevent unmask flicker. The natural
+ * layout is the start state. Under prefers-reduced-motion the gallery stays
+ * as laid out and the year label swaps text without a tween.
  */
 
 import { prepareLineMaskReveal } from '$utils/lineMaskReveal'
 
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
 const DEFAULT_COLLAPSE_DISTANCE = 3
-const AVOID_SELECTOR =
-  '[data-history-sticky-year-avoid], .history-timeline_text, .history-timeline_item-header'
-const AVOID_GAP = 16
 
 export const historyStickyYear = () => {
   const reducedMotion = window.matchMedia(REDUCED_MOTION).matches
@@ -127,45 +123,6 @@ const setupStickyYear = (root: HTMLElement, reducedMotion: boolean) => {
     })
   })
 
-  setupLabelAvoidance(root, label, reducedMotion)
-}
-
-/** Fade the sticky label out while a text block passes under it. */
-const setupLabelAvoidance = (root: HTMLElement, label: HTMLElement, reducedMotion: boolean) => {
-  const blocks = Array.from(root.querySelectorAll<HTMLElement>(AVOID_SELECTOR)).filter(
-    (block) => !label.contains(block),
-  )
-  if (!blocks.length) return
-
-  const activeBlocks = new Set<HTMLElement>()
-
-  const overlapsLabel = (block: HTMLElement) => {
-    const blockRect = block.getBoundingClientRect()
-    const labelRect = label.getBoundingClientRect()
-    return blockRect.left < labelRect.right && blockRect.right > labelRect.left
-  }
-
-  const update = () => {
-    const isCovered = Array.from(activeBlocks).some(overlapsLabel)
-    const vars = { autoAlpha: isCovered ? 0 : 1 }
-    if (reducedMotion) gsap.set(label, vars)
-    else gsap.to(label, { ...vars, duration: 0.2, ease: 'power1.out', overwrite: 'auto' })
-  }
-
-  const bandOffset = () => label.offsetHeight / 2 + AVOID_GAP
-
-  blocks.forEach((block) => {
-    ScrollTrigger.create({
-      trigger: block,
-      start: () => `top center+=${bandOffset()}`,
-      end: () => `bottom center-=${bandOffset()}`,
-      onToggle: (self: ScrollTriggerInstance) => {
-        if (self.isActive) activeBlocks.add(block)
-        else activeBlocks.delete(block)
-        update()
-      },
-    })
-  })
 }
 
 const setupCollapseGallery = (root: HTMLElement) => {
@@ -221,11 +178,47 @@ const setupCollapseGallery = (root: HTMLElement) => {
     return `inset(${vertical}px ${horizontal}px ${vertical}px ${horizontal}px)`
   }
 
-  const layer = createBleedLayer(root, bleedImage)
+  /** Width / height of the bleed photo; the figure's box until it loads. */
+  const imageAspect = () =>
+    bleedImage.naturalWidth && bleedImage.naturalHeight
+      ? bleedImage.naturalWidth / bleedImage.naturalHeight
+      : bleedItem.offsetWidth / Math.max(1, bleedItem.offsetHeight)
+
+  /** Rendered size of the photo when it covers a box (object-fit: cover). */
+  const coverSize = (boxWidth: number, boxHeight: number) => {
+    const aspect = imageAspect()
+    return boxWidth / boxHeight > aspect
+      ? { width: boxWidth, height: boxWidth / aspect }
+      : { width: boxHeight * aspect, height: boxHeight }
+  }
+
+  /**
+   * Uniform scale at which the full-bleed copy renders the photo exactly as
+   * the stacked card does (F20): card cover size over full-bleed cover size.
+   * The card img fills its figure (object-fit cover, centred), so the figure
+   * box stands in for it, as stackedCardInset does.
+   */
+  const cardMatchScale = () =>
+    coverSize(bleedItem.offsetWidth, bleedItem.offsetHeight).width /
+    coverSize(root.clientWidth, visibleHeight()).width
+
+  const { layer, copy } = createBleedLayer(root, bleedImage)
+
+  // The copy is sized to the full-bleed cover box of the photo itself (no
+  // object-fit crop), centred in the layer, so scaling it never changes
+  // which part of the photo shows, only its size.
   const sizeLayer = () => {
     layer.style.height = `${visibleHeight()}px`
+    const { width, height } = coverSize(root.clientWidth, visibleHeight())
+    copy.style.width = `${width}px`
+    copy.style.height = `${height}px`
   }
   sizeLayer()
+
+  // A lazy bleed image has no natural size yet: re-measure once it loads.
+  if (!bleedImage.complete || !bleedImage.naturalWidth) {
+    bleedImage.addEventListener('load', () => ScrollTrigger.refresh(true), { once: true })
+  }
 
   // The bleed card rides on top of the stack.
   items.forEach((item) => {
@@ -242,9 +235,15 @@ const setupCollapseGallery = (root: HTMLElement) => {
     onEnter: () => reveals.forEach((reveal) => reveal.play()),
   })
 
-  // gallery -> stack of one (bleed card on top) -> the clip mask opens on
-  // the bleed image until it fills the screen, and stays there: the image
-  // never scales and the gallery does not come back while pinned.
+  // Start state of the mask: framed to the card, photo at card scale. Set
+  // before the timeline so any reverse past position 1 lands here, never on
+  // clip-path "none".
+  gsap.set(copy, { xPercent: -50, yPercent: -50, scale: cardMatchScale() })
+  gsap.set(layer, { clipPath: stackedCardInset() })
+
+  // gallery -> stack of one (bleed card on top) -> the same image, framed
+  // and scaled to match the card, opens to full bleed and stays there; the
+  // gallery does not come back while pinned.
   const timeline = gsap.timeline({
     defaults: { ease: 'power2.inOut' },
     scrollTrigger: {
@@ -258,6 +257,9 @@ const setupCollapseGallery = (root: HTMLElement) => {
     },
   })
 
+  // One GSAP property per tween: two fromTo tweens sharing clipPath let a
+  // scrub reverse restore the pre-state ("none") while autoAlpha stayed up,
+  // which flashed the unmasked photo (F20). See docs/solutions.
   timeline
     .to(
       items,
@@ -269,27 +271,33 @@ const setupCollapseGallery = (root: HTMLElement) => {
       0,
     )
     .to(fades, { autoAlpha: 0, duration: 0.4, ease: 'none' }, 0.6)
-    // Swap the card for the same image at full-bleed size, framed to the
-    // card, then open the frame.
+    // The layer is pixel-identical to the card here, so the swap is instant.
     .fromTo(
       layer,
-      { autoAlpha: 0, clipPath: stackedCardInset },
-      { autoAlpha: 1, duration: 0.2, ease: 'none', immediateRender: false },
+      { autoAlpha: 0 },
+      { autoAlpha: 1, duration: 0.05, ease: 'none', immediateRender: false },
       1,
     )
     .fromTo(
       layer,
       { clipPath: stackedCardInset },
-      { clipPath: 'inset(0px 0px 0px 0px)', duration: 1.2, immediateRender: false },
-      1.2,
+      { clipPath: 'inset(0px 0px 0px 0px)', duration: 1.2, immediateRender: true },
+      1,
+    )
+    .fromTo(
+      copy,
+      { scale: cardMatchScale },
+      { scale: 1, duration: 1.2, immediateRender: true },
+      1,
     )
     // Hold the full-bleed image for the rest of the pin.
     .to({}, { duration: 0.4 }, 2.4)
 }
 
 /**
- * A layer over the gallery holding a copy of the bleed image at full-bleed
- * size. Only its clip-path changes, so the photo keeps one size throughout.
+ * A layer over the gallery holding a copy of the bleed image. The layer's
+ * clip-path is the mask; the copy only ever scales uniformly, so the photo
+ * keeps its aspect ratio throughout.
  */
 const createBleedLayer = (root: HTMLElement, image: HTMLImageElement) => {
   const layer = document.createElement('div')
@@ -312,13 +320,18 @@ const createBleedLayer = (root: HTMLElement, image: HTMLImageElement) => {
   copy.loading = 'eager'
   copy.sizes = '100vw'
   copy.removeAttribute('data-history-collapse-item')
+  copy.removeAttribute('data-eager')
   Object.assign(copy.style, {
-    width: '100%',
-    height: '100%',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    maxWidth: 'none',
     objectFit: 'cover',
     display: 'block',
+    transformOrigin: '50% 50%',
+    willChange: 'transform',
   })
   layer.appendChild(copy)
   root.appendChild(layer)
-  return layer
+  return { layer, copy }
 }
