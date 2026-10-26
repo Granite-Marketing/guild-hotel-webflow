@@ -57,3 +57,16 @@ Do these after the page deletes, because deleting pages orphans their classes.
 - [ ] **Clean up unused styles.** Style Manager (Style panel > the brush and list icon) > Clean up (top of the panel) > review the list > Remove. This removes every class and combo no element uses, which covers the empty combos the build sessions left behind and the classes that only lived on the build and probe pages.
   - Check the list before removing: the bundle adds `is-active`, `is-open`, `is-overflowing`, `is-video-ready` and `hide` at runtime, and Swiper adds `swiper-*` classes. Untick any of those combos if they appear.
 - [ ] Publish to the webflow.io subdomain only, then spot check Home, Rooms and Gallery.
+
+## 3. Feedback batch 2 leftovers (2026-10-26)
+
+Agents hide rather than delete, so these wait for Stephen in the Designer. Take a backup first.
+
+| Done | What | Where |
+|---|---|---|
+| [ ] | Delete every `🧱` build page and the two `X01 Probe` pages. Keep Starter Components and Style Guide. | Pages panel |
+| [ ] | Delete the hidden holder div `2e7a9908-8647-910b-7d08-c61ef179267e` (old image-inset-single and Hero instances, F28) | `/arts` |
+| [ ] | Delete the hidden static card list `7626f7b9-d6d1-6195-4802-49d0d8ca3959` (F27) | `/rooms` |
+| [ ] | Delete the draft page `room-detail-static` (`6ad66fd5f8bf4846e809dc45`), superseded by the Rooms template (F27) | Pages panel |
+| [ ] | F32: finish or delete the hidden Dining Collection List `6d849dd0-bd96-3cdd-c3ba-77644e482bf8` in the Footer Links component. The MCP cannot bind fields inside a component definition: select the link, bind its text to Name and set Link > Collection page > Current Dining, unhide it, then delete the static Dining items. | Footer Links component |
+| [ ] | Optional no-JS fallback: on the `/rooms` card link set Link > Collection page > Current Room (the bundle already sets the href from `data-cms-link-slug`). | `/rooms` |
