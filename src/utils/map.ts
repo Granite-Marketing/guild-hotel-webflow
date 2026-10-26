@@ -7,12 +7,17 @@
  *            figure). Its static image stays as the fallback: the map canvas
  *            is layered on top and removed again if the API fails.
  *            `data-map-key` holds the Google Maps browser key (referrer-
- *            restricted; kept out of source). Optional `data-map-home="lat,lng"` and `data-map-home-title`
+ *            restricted; kept out of source). Optional `data-map-zoom` sets
+ *            the starting zoom (default 15, the map is centred on all
+ *            markers). Optional `data-map-home="lat,lng"` and `data-map-home-title`
  *            add a distinct, non-interactive hotel marker.
- *   - Items: `[data-map-item]` in the same section, one per address. Each
- *            item's coordinates come from its Google Maps directions link
- *            (`a[href*="destination="]`, value `lat,lng`), so the link and
- *            the marker share one source. Items without one get no marker.
+ *   - Items: `[data-map-item]` in the same section, one per address
+ *            (the 📍 Map Places collection list). Coordinates come from
+ *            `data-map-coordinates="lat, lng"` (bound to the CMS field); any
+ *            `[data-map-directions]` link inside is pointed at Google Maps
+ *            directions for them. Static rows can instead carry the
+ *            coordinates in a directions link (`a[href*="destination="]`).
+ *            Items without coordinates get no marker.
  *
  * Hovering or focusing an item highlights its marker; hovering or clicking a
  * marker highlights its item (`is-active` on both). A click pins the
@@ -24,8 +29,8 @@
 import { mapNeeds } from '$utils/mapNeeds'
 
 const ACTIVE_CLASS = 'is-active'
-const DEFAULT_ZOOM = 16
-const MAX_ZOOM = 17
+const DEFAULT_ZOOM = 15
+const MAX_ZOOM = 18
 const PANEL_GAP = 48
 
 const pinColors = {
@@ -63,6 +68,19 @@ const parseLatLng = (value: string | null): google.maps.LatLngLiteral | null => 
   return { lat, lng }
 }
 
+const directionsUrl = ({ lat, lng }: google.maps.LatLngLiteral) =>
+  `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
+
+// CMS rows carry `data-map-coordinates`; static rows keep them in the link.
+const coordinatesOf = (item: HTMLElement) => {
+  const fromAttribute = parseLatLng(item.getAttribute('data-map-coordinates'))
+  if (!fromAttribute) return coordinatesFromLink(item)
+  item.querySelectorAll<HTMLAnchorElement>('[data-map-directions]').forEach((link) => {
+    link.href = directionsUrl(fromAttribute)
+  })
+  return fromAttribute
+}
+
 const coordinatesFromLink = (item: HTMLElement) => {
   const link = item.querySelector<HTMLAnchorElement>('a[href*="destination="]')
   if (!link) return null
@@ -93,7 +111,7 @@ const collectPoints = (root: HTMLElement) => {
   const scope = root.closest('section') ?? document
   const points: MapPoint[] = []
   scope.querySelectorAll<HTMLElement>('[data-map-item]').forEach((item) => {
-    const position = coordinatesFromLink(item)
+    const position = coordinatesOf(item)
     if (position) points.push({ title: itemTitle(item), position, item })
   })
   return points
@@ -102,10 +120,15 @@ const collectPoints = (root: HTMLElement) => {
 // Left padding so markers clear the content panel that overlaps the map.
 const boundsPadding = (root: HTMLElement): google.maps.Padding => {
   const padding = { top: 96, right: 96, bottom: 96, left: 96 }
-  const panel = root.closest('section')?.querySelector<HTMLElement>('[data-map-item]')
-    ?.parentElement?.parentElement
-  if (!panel) return padding
   const rootRect = root.getBoundingClientRect()
+  // The panel is the widest ancestor of a row that is still under half the map.
+  let panel: HTMLElement | null = null
+  let ancestor = root.closest('section')?.querySelector<HTMLElement>('[data-map-item]')?.parentElement
+  while (ancestor && !ancestor.contains(root)) {
+    if (ancestor.getBoundingClientRect().width < rootRect.width / 2) panel = ancestor
+    ancestor = ancestor.parentElement
+  }
+  if (!panel) return padding
   const panelRect = panel.getBoundingClientRect()
   const overlap = panelRect.right - rootRect.left
   if (overlap > 0 && overlap < rootRect.width / 2) padding.left = overlap + PANEL_GAP
@@ -125,9 +148,11 @@ const buildMap = async (root: HTMLElement, points: MapPoint[]) => {
   window.gm_authFailure = () => canvas.remove()
 
   const home = parseLatLng(root.getAttribute('data-map-home'))
+  const zoomAttribute = Number(root.getAttribute('data-map-zoom'))
+  const startZoom = zoomAttribute > 0 ? zoomAttribute : DEFAULT_ZOOM
   const googleMap = new GoogleMap(canvas, {
     center: home ?? points[0].position,
-    zoom: DEFAULT_ZOOM,
+    zoom: startZoom,
     maxZoom: MAX_ZOOM,
     styles: mapStyles,
     disableDefaultUI: true,
@@ -215,6 +240,7 @@ const buildMap = async (root: HTMLElement, points: MapPoint[]) => {
 
     const item = point.item
     if (!item) return
+    item.style.cursor = 'pointer'
     item.addEventListener('mouseenter', () => highlight(index))
     item.addEventListener('mouseleave', () => highlight(pinnedIndex))
     item.addEventListener('focusin', () => highlight(index))
@@ -227,7 +253,13 @@ const buildMap = async (root: HTMLElement, points: MapPoint[]) => {
     })
   })
 
-  if (points.length + (home ? 1 : 0) > 1) googleMap.fitBounds(bounds, boundsPadding(root))
+  // Centre on every marker, but never closer than the starting zoom.
+  if (points.length + (home ? 1 : 0) > 1) {
+    google.maps.event.addListenerOnce(googleMap, 'idle', () => {
+      if ((googleMap.getZoom() ?? startZoom) > startZoom) googleMap.setZoom(startZoom)
+    })
+    googleMap.fitBounds(bounds, boundsPadding(root))
+  }
 }
 
 export const map = () => {
