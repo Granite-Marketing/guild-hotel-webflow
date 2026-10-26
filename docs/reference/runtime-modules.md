@@ -686,25 +686,34 @@ Collapse gallery (component `gallery-row-dark-titled`, `history/06`):
 | Attribute | On | Purpose |
 |---|---|---|
 | `data-history-collapse` | section | Root, pinned for the scrub. Give it `overflow: clip` (the full-screen image overshoots) and a height of about `100vh`. The module sets `position: relative` inline if the root is static. |
-| `data-history-collapse-item` | each image wrapper (`figure`) | Slides into the stack. The first item (or `="bleed"`) rides on top and is the one seen full bleed: a copy of its image at full size opens with a clip mask (F09), never a scale. |
+| `data-history-collapse-item` | each image wrapper (`figure`) | Slides into the stack. The first item (or `="bleed"`) rides on top and is the one seen full bleed: a copy of its image opens with a clip mask (F09). The copy starts at the card's framing and scales uniformly to full bleed while the clip opens (F20), so the photo never jumps. Put `data-eager` on its `img` so the natural size is known at init; the module also refreshes once the image loads. |
 | `data-history-collapse-fade` | heading and caption wrappers (optional) | Mask in line by line once on arrival, then fade out while the stack forms. |
 | `data-history-collapse-distance="3"` | section (optional) | Pin length in viewport heights. Default 3. |
 
-- Timeline: items slide to the centre into one stack, the bleed copy
-  crossfades over the stacked card and its clip opens to full bleed, then
+- Timeline (2.8 units): items slide to the centre into one stack (0 to 1);
+  at 1 the bleed layer appears pixel-identical to the stacked card (clip =
+  card rect, copy scale = card cover size over full-bleed cover size), then
+  the clip opens to `inset(0px)` while the copy scales to 1 (1 to 2.2), then
   holds until the pin ends. It does not return to the grid (F09).
+- One GSAP property per tween (F20): `autoAlpha`, `clipPath` and the copy's
+  `scale` each have their own tween, the latter two with
+  `immediateRender: true`. Two tweens sharing `clipPath` let a scrub reverse
+  restore `clip-path: none` while the layer stayed visible, which flashed the
+  unmasked photo. See
+  `docs/solutions/integration-issues/gsap-fromto-startat-shared-property-scrub-reverse.md`.
+- The page section after the pin (`gallery-mosaic-captioned` on History)
+  should hold the same four images, bleed image first, so the full-bleed
+  photo continues into the mosaic (Figma History-Animation-2).
 - Offsets are measured through the `offsetParent` chain, so refreshes
   mid-scroll stay correct.
 - Reduced motion: nothing is created; the gallery shows as laid out.
 - Local check: `pnpm exec playwright test history-sticky-year` (fixture in
   `tests/visual/fixtures/history-sticky-year.html`; add `--headed` to watch).
 
-- Label avoidance (v1.1.5): the sticky label fades out (autoAlpha) while a
-  text block that overlaps it horizontally crosses the label band (label
-  height plus 16px around the viewport centre). Text blocks are
-  `[data-history-sticky-year-avoid]`, `.history-timeline_text` and
-  `.history-timeline_item-header`. Fixes the 1924 pill covering the body
-  copy at 1440 and 390.
+- Label never fades (F19 reverted v1.1.5 avoidance): the label paints over
+  timeline text because its sticky wrapper has `z-index: 2`. Only the year
+  text inside it tweens on a year change. `[data-history-sticky-year-avoid]`
+  is no longer read.
 
 ### imageStackCollapse
 
