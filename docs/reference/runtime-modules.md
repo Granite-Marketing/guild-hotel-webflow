@@ -773,8 +773,9 @@ targets rise from behind a clip wrapper. Reduced motion: nothing is hidden.
 
 ### mediaTabs
 
-Feedback F06, modelled on Editoria's experiences hover switcher. Rows act as
-ARIA tabs that switch stacked media and content panels.
+Feedback F06 and F16. Rows act as ARIA tabs that switch stacked media and
+content panels. Switching is click and keyboard only (F16); hover never
+switches.
 
 | Attribute | On | Purpose |
 |---|---|---|
@@ -782,12 +783,21 @@ ARIA tabs that switch stacked media and content panels.
 | `data-media-tabs-list` | rows' wrapper (optional) | Gets `role="tablist"`. |
 | `data-media-tabs-tab` | each row (link or button) | Nth tab drives nth panel and media. Clicks never navigate. |
 | `data-media-tabs-media` | each background figure (optional) | Stacked; crossfades with the tab. |
-| `data-media-tabs-panel` | each content block | Stacked (same grid cell); crossfades, children slide in. |
-| `data-media-tabs-hover="false"` | root (optional) | Disable hover switching. |
+| `data-media-tabs-panel` | each content block | Stacked (same grid cell); copy masks out, then in. |
+| `data-media-tabs-content` | inside a panel (optional) | Scopes the masked targets; defaults to the panel. |
 
 - First tab active on load; `is-active` on the active tab, panel and media;
-  roving tabindex; arrows, Home and End move between tabs; hover switches
-  on fine pointers. Inactive panels and media use `autoAlpha: 0`.
+  roving tabindex; arrows, Home and End move between tabs.
+- Text swap (F16): each panel's headings, paragraphs, `.button`s and
+  `[data-line-mask]` elements are mask targets. Text is split with SplitText
+  (`lines,words`, `autoSplit`, overflow hidden on the lines, never
+  `mask: 'lines'`); buttons move inside a `[data-media-tabs-clip]` wrapper.
+  On a switch the outgoing copy masks out upwards, the panels swap with
+  `gsap.set` (only the active panel has `autoAlpha: 1`, `zIndex: 1`), then
+  the incoming copy masks in from below. Panels are never tweened, so there
+  is no cross-fade and no overlap. Media still crossfades, starting at the
+  click. A rapid second click completes the running switch first.
+- Reduced motion: nothing is split; panels and media swap instantly.
 - Guild home Meetings & Events: panels use `venue-card-fullbleed_panel`
   (grid row 1 across all columns, so they overlap). Order: slot D.
 

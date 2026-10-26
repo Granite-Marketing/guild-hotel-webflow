@@ -26,6 +26,8 @@ interface GsapTimeline {
     vars: Record<string, unknown>,
     position?: number | string,
   ) => GsapTimeline;
+  progress: (value?: number) => GsapTimeline;
+  kill: () => void;
   scrollTrigger?: ScrollTriggerInstance;
 }
 
