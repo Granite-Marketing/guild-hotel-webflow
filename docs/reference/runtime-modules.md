@@ -31,6 +31,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | imageTrailHover | `imageTrailHover.ts` | wired (R00) | D |
 | viewSwitcher | `viewSwitcher.ts` | opt-in | E |
 | cmsFilterLinks | `cmsFilterLinks.ts` | opt-in | E |
+| cmsItemLinks | `cmsItemLinks.ts` | wired (F30, next release) | E, before galleryFilter |
 | filterPanels | `filterPanels.ts` | opt-in | F (1st) |
 | scrollHint | `scrollHint.ts` | opt-in | F (2nd) |
 | finsweetRefresh | `finsweetRefresh.ts` | opt-in | F (3rd) |
@@ -441,6 +442,31 @@ Deep links into a Finsweet CMS Filter listing.
   `/works?category=Category+name`.
 - Optional `data-filter-param` changes the query key (default `category`); it
   must match the field the listing page filters by. Order: slot E.
+
+### cmsItemLinks
+
+Builds CMS item URLs for links Webflow cannot bind headlessly: the
+Collection List "Current item" link and links to a referenced item (both are
+Designer-only settings). Used by the /happenings and /blog listings and the
+Happenings & Stories template (F30).
+
+| Attribute | Element | Required | Value |
+| --- | --- | --- | --- |
+| `data-cms-link-slug` | `a` (Link or Link Block) | yes | bound to a CMS Slug field (the item's own Slug, or Reference > Slug) |
+| `data-cms-link-path` | same `a` | no | static collection path, e.g. `happenings-stories` |
+
+- `a[data-cms-link-path="happenings-stories"][data-cms-link-slug="{{ Slug }}"]`
+  becomes `/happenings-stories/{slug}`.
+- With no `data-cms-link-path`, the result is `/{slug}`. The post template's
+  "learn more" button binds the slug to Category > Slug, so the Post
+  Categories slugs `happenings` and `blog` resolve to the static
+  `/happenings` and `/blog` listing pages.
+- Leading and trailing slashes in either value are ignored. An empty slug
+  leaves the Designer href untouched, so keep a sensible static link (`#` on
+  cards, `/happenings` on the back link) as the no-JS fallback.
+- Once a native Designer "Current item" link is set, the module writes the
+  same URL, so the two coexist harmlessly. Order: slot E, before
+  `galleryFilter()`; it only rewrites `href`, so nothing depends on it.
 
 ### filterPanels
 
