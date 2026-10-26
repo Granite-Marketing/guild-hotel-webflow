@@ -10,6 +10,6 @@ Built 2026-10-26 through the Data API (no Designer, no site publish). Ids are in
 
 ## Left for the Designer
 
-- Card Link inside the /rooms Collection List: Settings > Link > Collection page > Current 🛏️ Room.
+- Optional: the /rooms card Link can still be set to Collection page > Current Room as a no-JS fallback. It already carries the cmsItemLinks attributes (data-cms-link-path, data-cms-link-slug), so it links once the release is live.
 - Delete the hidden static list `7626f7b9-d6d1-6195-4802-49d0d8ca3959` and the superseded static page `room-detail-static` once the live site is checked.
 - Template gallery heading "deluxe king suite gallery", the description, amenities, gallery and carousel are still static placeholder copy; give each room its own fields later.
