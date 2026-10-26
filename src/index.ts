@@ -20,6 +20,7 @@ import { cardCarouselHeaderLeft } from '$utils/cardCarouselHeaderLeft'
 import { cmsItemLinks } from '$utils/cmsItemLinks'
 import { currentYear } from '$utils/currentYear'
 import { eagerImages } from '$utils/eagerImages'
+import { formPlaceholders } from '$utils/formPlaceholders'
 import { galleryFilter } from '$utils/galleryFilter'
 import { gsapBasicAnimations } from '$utils/gsapBasicAnimations'
 import { historyStickyYear } from '$utils/historyStickyYear'
@@ -64,6 +65,10 @@ window.Webflow.push(() => {
   // Promote [data-eager] images before any ScrollTrigger exists, so
   // window.load waits for them and the load refresh measures settled layout.
   eagerImages()
+  // F24: labels become sr-only and the placeholder carries the text; runs
+  // before the scroll engine because hiding labels shortens forms by ~22px
+  // per row and would shift ScrollTrigger positions.
+  formPlaceholders()
 
   // slot A: debugOverlay() (before the engine, so it logs the first refresh)
   smoothScroll.init()

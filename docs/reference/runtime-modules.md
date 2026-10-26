@@ -15,6 +15,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | Module | File | Default | Slot in `src/index.ts` |
 |---|---|---|---|
 | eagerImages | `eagerImages.ts` | wired | first |
+| formPlaceholders | `formPlaceholders.ts` | wired (F24, next release) | directly after eagerImages |
 | smoothScroll (engine) | `smoothScroll.ts` + `lenisGsap.ts` | wired | after eagerImages |
 | swiperSliders | `swiperSliders.ts` | wired | C |
 | accordion | `accordion.ts` | wired | D |
@@ -201,6 +202,42 @@ fires animations early, most visibly on iOS.
 - `[data-eager]` on any ancestor (section, card, Collection List): every lazy
   image inside.
 - Order: first in `Webflow.push`. Engine notes: none; works with both.
+
+### formPlaceholders
+
+F24 (2026-10-26). Default for every form: the label text becomes the input
+placeholder on the underline and the `<label>` becomes screen-reader-only.
+
+- **DOM contract:** any `form label` that is not `.w-checkbox` / `.w-radio`.
+  The control is found by the label's `for`, then its next sibling, then the
+  first `input, textarea, select` in the same parent (checkbox, radio,
+  submit, button, hidden, file, image, reset, range and color inputs are
+  skipped).
+- **Text controls:** sets `placeholder` to the label text (whitespace
+  collapsed, authored casing; CSS lowercases split-script placeholders) and
+  removes `is-labelled` from the control, which reveals the existing
+  `::placeholder` style.
+- **Selects:** writes the label text into `option[value=""]` and toggles
+  `is-placeholder` on the select while its value is `""` (re-synced on
+  `change` and form `reset`). A select without an empty option keeps its
+  visible label.
+- **Labels:** adds `u-sr-only` and `is-sr-only`, and repairs the association
+  (`label.htmlFor = control.id`; gives the control an id from `for`, then
+  `field-{name}`, then `form-field-{n}` when it has none). Fixes the
+  published `for=""` on the Photoshoot Request component and the id-less
+  `contact-assist` select.
+- **Required Webflow styles:** global `u-sr-only` (visually hidden: absolute,
+  1px by 1px, margin -1px, overflow hidden, clip-path inset(50%), nowrap, no
+  border or padding); combo `.cta-booking-newsletter_label.u-sr-only` (or
+  `.cta-booking-newsletter_label.is-sr-only`) with the same properties so it
+  beats the newsletter label's own position, padding and margins at every
+  breakpoint; combo `.form-split-script-contact_input.is-placeholder` matching
+  the input's `::placeholder` font, colour, letter-spacing and text-transform.
+- **Opt out:** `data-form-label="visible"` on the form, a field wrapper, the
+  label or the control.
+- **No-JS fallback:** labels stay visible and `is-labelled` keeps the default
+  placeholder hidden, so no field ships unlabelled.
+- **Init slot:** directly after `eagerImages()`, before `smoothScroll.init()`.
 
 ### currentYear
 
