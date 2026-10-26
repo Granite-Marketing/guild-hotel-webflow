@@ -223,3 +223,8 @@ Square figures carry their own combo name (not the entry name) because `.history
 - Room List Hover Preview "back to the quiz" link `a9d40053-f1b0-f862-ee0a-4f021e1933d7`, URL `#rooms-quiz`.
 - Legal Corporates Template hover photo (`hoverFollowImage`): zone `data-hover-image` on `feature-grid-dark-eyebrow_component` `2910d468-50a2-7498-238b-e9ba49e23d8c`, figure `1b9a7eb1-9d0e-a0ef-5262-bfdb290f8dc8` (`data-hover-image-media`, class `feature-grid-dark-eyebrow_hover-figure` `8572685d-310d-c2fb-769d-766c06bf37fa`), image `c1152b3b-4210-ce92-aa43-9f4fbcfc5d27` (asset `6ad66ff2de86688556051da2`).
 - SEO (2026-10-21): 13 static pages have unique titles and descriptions; the four CMS templates use `{{wf {"path":"name","type":"PlainText"\} }} | The Guild Hotel` titles, descriptions from `hero-intro` (Dinings), `hero-text` (Legal Corporates), `excerpt` (Happenings & Stories), and name plus a fixed sentence (Post Categories). Details in the wave 5 notes.
+
+## 📍 Map Places (2026-10-26)
+
+Collection `6adf73e0711cfc5e16f51bb5` (slug `map-place`). Fields: `walk-time` cc589e25d5e071f1efb5a65e09c1759a, `coordinates` 46a398ff78a7d9c2bc795635df2fb516 (`lat, lng`), `order` e2c905ef609b7282c8e1318e89b98aeb. Shown by the Collection List in Map Feature Image Bg (`9f5fc2f4-169f-6e16-50c0-199b554b43cb`, item `...43cd` carries `data-map-item` and `data-map-coordinates`). The old static list and its 12 Place props were deleted. The list sort could not be set by MCP or in the Designer; display order is CMS created date (newest first), so item contents were assigned in reverse.
+
