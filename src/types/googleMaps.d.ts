@@ -70,6 +70,10 @@ declare namespace google.maps {
     onRemove?(): void
   }
 
+  namespace event {
+    function addListenerOnce(instance: object, eventName: string, handler: () => void): void
+  }
+
   interface MapsLibrary {
     Map: typeof Map
     OverlayView: typeof OverlayView

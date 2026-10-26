@@ -591,6 +591,7 @@ referrer-restricted browser key is an attribute set in Webflow.
 |---|---|---|
 | `data-map` | element the map fills (the map figure) | none |
 | `data-map-key` | same element | Google Maps browser key |
+| `data-map-zoom` | same element, optional | starting zoom, default `15`; the map fits all markers but never zooms closer than this |
 | `data-map-home` | same element, optional | `lat,lng` of the hotel (non-interactive marker) |
 | `data-map-home-title` | same element, optional | marker tooltip, e.g. `The Guild Hotel` |
 | `data-map-item` | each address row, same section | none (title = first child's text) or a title |

@@ -7,7 +7,9 @@
  *            figure). Its static image stays as the fallback: the map canvas
  *            is layered on top and removed again if the API fails.
  *            `data-map-key` holds the Google Maps browser key (referrer-
- *            restricted; kept out of source). Optional `data-map-home="lat,lng"` and `data-map-home-title`
+ *            restricted; kept out of source). Optional `data-map-zoom` sets
+ *            the starting zoom (default 15, the map is centred on all
+ *            markers). Optional `data-map-home="lat,lng"` and `data-map-home-title`
  *            add a distinct, non-interactive hotel marker.
  *   - Items: `[data-map-item]` in the same section, one per address. Each
  *            item's coordinates come from its Google Maps directions link
@@ -24,8 +26,8 @@
 import { mapNeeds } from '$utils/mapNeeds'
 
 const ACTIVE_CLASS = 'is-active'
-const DEFAULT_ZOOM = 16
-const MAX_ZOOM = 17
+const DEFAULT_ZOOM = 15
+const MAX_ZOOM = 18
 const PANEL_GAP = 48
 
 const pinColors = {
@@ -125,9 +127,11 @@ const buildMap = async (root: HTMLElement, points: MapPoint[]) => {
   window.gm_authFailure = () => canvas.remove()
 
   const home = parseLatLng(root.getAttribute('data-map-home'))
+  const zoomAttribute = Number(root.getAttribute('data-map-zoom'))
+  const startZoom = zoomAttribute > 0 ? zoomAttribute : DEFAULT_ZOOM
   const googleMap = new GoogleMap(canvas, {
     center: home ?? points[0].position,
-    zoom: DEFAULT_ZOOM,
+    zoom: startZoom,
     maxZoom: MAX_ZOOM,
     styles: mapStyles,
     disableDefaultUI: true,
@@ -215,6 +219,7 @@ const buildMap = async (root: HTMLElement, points: MapPoint[]) => {
 
     const item = point.item
     if (!item) return
+    item.style.cursor = 'pointer'
     item.addEventListener('mouseenter', () => highlight(index))
     item.addEventListener('mouseleave', () => highlight(pinnedIndex))
     item.addEventListener('focusin', () => highlight(index))
@@ -227,7 +232,13 @@ const buildMap = async (root: HTMLElement, points: MapPoint[]) => {
     })
   })
 
-  if (points.length + (home ? 1 : 0) > 1) googleMap.fitBounds(bounds, boundsPadding(root))
+  // Centre on every marker, but never closer than the starting zoom.
+  if (points.length + (home ? 1 : 0) > 1) {
+    google.maps.event.addListenerOnce(googleMap, 'idle', () => {
+      if ((googleMap.getZoom() ?? startZoom) > startZoom) googleMap.setZoom(startZoom)
+    })
+    googleMap.fitBounds(bounds, boundsPadding(root))
+  }
 }
 
 export const map = () => {
