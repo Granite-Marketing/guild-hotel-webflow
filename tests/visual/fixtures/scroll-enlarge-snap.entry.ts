@@ -11,6 +11,7 @@ import homeLobbyBar from '../../../figma/pages/home/sections/06-cocktail-classic
 import homePool from '../../../figma/pages/home/sections/07-our-new-pool-serves-up-san/section.webp'
 import homeTerrace from '../../../figma/pages/home/sections/08-lobby-terrace/section.webp'
 import homeSolana from '../../../figma/pages/home/sections/09-solana-coffee/section.webp'
+import artsBleed from '../../../figma/pages/arts/sections/03-section/section.webp'
 import wellnessInRoom from '../../../figma/pages/wellness-collection/sections/03-in-room-wellness/section.webp'
 import wellnessFitness from '../../../figma/pages/wellness-collection/sections/04-fitness-center/section.webp'
 import wellnessDining from '../../../figma/pages/wellness-collection/sections/05-mindful-dining/section.webp'
@@ -23,6 +24,7 @@ declare global {
 }
 
 const images: Record<string, string> = {
+  'arts-bleed': artsBleed,
   'home-zuma': homeZuma,
   'home-lobby-bar': homeLobbyBar,
   'home-pool': homePool,

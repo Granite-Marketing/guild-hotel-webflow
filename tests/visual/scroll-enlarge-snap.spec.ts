@@ -11,11 +11,14 @@ import { serveFixtures } from '../../bin/fixtures.js'
 
 const FIXTURE = '/scroll-enlarge-snap.html'
 const SETTLE_MS = 1800
+/** Wellness: four panels plus the 0.5-step end hold. */
+const TOTAL_STEPS = 4.5
 
 interface PinState {
   start: number
   end: number
   mediaWidth: number
+  visibleWidth: number
   mediaHeight: number
   stageWidth: number
   stageHeight: number
@@ -50,10 +53,20 @@ const readState = (page: Page, id: string) =>
     const trigger = ScrollTrigger.getAll().find((candidate) => candidate.pin === stage)
     const style = getComputedStyle(stage)
     const mediaRect = media.getBoundingClientRect()
+    // The media is full size from the start; its clip-path polygon shows
+    // the visible frame (point 7 is the left inset, point 3 the right).
+    const visibleWidthOf = (element: HTMLElement, width: number) => {
+      const points = (element.style.clipPath.match(/^polygon\((.*)\)$/)?.[1] ?? '').split(',')
+      if (points.length < 8) return width
+      const left = parseFloat(points[6]) || 0
+      const right = Number(points[2].match(/100% - ([\d.]+)px/)?.[1] ?? 0)
+      return width - left - right
+    }
     return {
       start: trigger?.start ?? -1,
       end: trigger?.end ?? -1,
       mediaWidth: mediaRect.width,
+      visibleWidth: visibleWidthOf(media, mediaRect.width),
       mediaHeight: mediaRect.height,
       stageWidth: stage.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight),
       stageHeight: stage.clientHeight - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom),
@@ -69,12 +82,26 @@ const scrollToProgress = async (page: Page, id: string, progress: number) => {
   await page.waitForTimeout(SETTLE_MS)
 }
 
+/** yPercent of every split word in the nth item's content. */
+const readWordOffsets = (page: Page, id: string, itemIndex: number) =>
+  page.evaluate(
+    ({ sectionId, index }) => {
+      const root = document.getElementById(sectionId) as HTMLElement
+      const item = root.querySelectorAll<HTMLElement>('[data-scroll-enlarge-snap-item]')[index]
+      const words = Array.from(
+        item.querySelectorAll<HTMLElement>('[data-scroll-enlarge-snap-content] p > * > *'),
+      )
+      return words.map((word) => Number(gsap.getProperty(word, 'yPercent')))
+    },
+    { sectionId: id, index: itemIndex },
+  )
+
 test.describe('scrollEnlargeSnap', () => {
   test('starts as a smaller frame', async ({ page }) => {
     await open(page)
     const state = await readState(page, 'wellness')
     expect(state.end).toBeGreaterThan(state.start)
-    expect(state.mediaWidth).toBeLessThan(state.stageWidth * 0.85)
+    expect(state.visibleWidth).toBeLessThan(state.stageWidth * 0.85)
     expect(state.activeItem).toBe(0)
     expect(state.activeTab).toBe(0)
   })
@@ -83,7 +110,7 @@ test.describe('scrollEnlargeSnap', () => {
     await open(page)
     await scrollToProgress(page, 'wellness', 1)
     const state = await readState(page, 'wellness')
-    expect(Math.abs(state.mediaWidth - state.stageWidth)).toBeLessThan(2)
+    expect(Math.abs(state.visibleWidth - state.stageWidth)).toBeLessThan(2)
     expect(Math.abs(state.mediaHeight - state.stageHeight)).toBeLessThan(2)
     expect(state.activeItem).toBe(3)
     expect(state.activeTab).toBe(3)
@@ -92,10 +119,11 @@ test.describe('scrollEnlargeSnap', () => {
 
   test('snaps to the nearest panel when scrolling stops between panels', async ({ page }) => {
     await open(page)
-    // Four panels: snap points at 0.25, 0.5, 0.75 and 1. 0.43 is nearest 0.5.
+    // Four panels plus a half-step end hold (4.5 steps): snap points at
+    // 1/4.5, 2/4.5, 3/4.5 and 4/4.5. 0.43 is nearest 2/4.5.
     await scrollToProgress(page, 'wellness', 0.43)
     const state = await readState(page, 'wellness')
-    const snappedTop = state.start + (state.end - state.start) * 0.5
+    const snappedTop = state.start + (state.end - state.start) * (2 / TOTAL_STEPS)
     expect(Math.abs((await page.evaluate(() => window.scrollY)) - snappedTop)).toBeLessThan(4)
     expect(state.activeItem).toBe(1)
   })
@@ -115,9 +143,41 @@ test.describe('scrollEnlargeSnap', () => {
     await open(page)
     await scrollToProgress(page, 'home', 1)
     const state = await readState(page, 'home')
-    expect(Math.abs(state.mediaWidth - state.stageWidth)).toBeLessThan(2)
+    expect(Math.abs(state.visibleWidth - state.stageWidth)).toBeLessThan(2)
     expect(state.activeItem).toBe(4)
     expect(state.itemOpacity[4]).toBe(1)
+  })
+
+  test('panel content masks in after its wipe and reverses on leave', async ({ page }) => {
+    await open(page)
+    expect((await readWordOffsets(page, 'wellness', 1)).every((offset) => offset === 110)).toBe(
+      true,
+    )
+
+    await scrollToProgress(page, 'wellness', 2 / TOTAL_STEPS)
+    const shown = await readWordOffsets(page, 'wellness', 1)
+    expect(shown.length).toBeGreaterThan(0)
+    expect(shown.every((offset) => Math.abs(offset) < 1)).toBe(true)
+
+    // Back above the enlarge's free half: panel 1 has left and reverses.
+    await scrollToProgress(page, 'wellness', 0.05)
+    const hidden = await readWordOffsets(page, 'wellness', 1)
+    expect(hidden.every((offset) => offset === 110)).toBe(true)
+  })
+
+  test('single-item section grows to full bleed and reveals its text', async ({ page }) => {
+    await open(page)
+    const initial = await readState(page, 'arts')
+    expect(initial.visibleWidth).toBeLessThan(initial.stageWidth * 0.85)
+
+    // One item plus the end hold: the enlarge completes at 1/1.5.
+    await scrollToProgress(page, 'arts', 1 / 1.5)
+    const state = await readState(page, 'arts')
+    expect(Math.abs(state.visibleWidth - state.stageWidth)).toBeLessThan(2)
+    expect(Math.abs(state.mediaHeight - state.stageHeight)).toBeLessThan(2)
+    const words = await readWordOffsets(page, 'arts', 0)
+    expect(words.length).toBeGreaterThan(0)
+    expect(words.every((offset) => Math.abs(offset) < 1)).toBe(true)
   })
 
   test('reduced motion shows the end state with no animation', async ({ page }) => {

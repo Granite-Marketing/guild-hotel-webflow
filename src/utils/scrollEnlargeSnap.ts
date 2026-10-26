@@ -21,15 +21,19 @@
  *                                         from the start size to full.
  *         [data-scroll-enlarge-snap-item]       one panel per venue, stacked
  *           [data-scroll-enlarge-snap-image]    optional; else first <img>
- *           [data-scroll-enlarge-snap-content]  optional; the first panel's
- *                                               content masks in line by line
- *                                               once the mask is full height
- *                                               (once, not scrubbed); later
- *                                               panels' children fade
+ *           [data-scroll-enlarge-snap-content]  optional; each panel's content
+ *                                               masks in line by line as one
+ *                                               triggered (not scrubbed)
+ *                                               timeline once its mask/wipe
+ *                                               completes, reversing on leave
  *         [data-scroll-enlarge-snap-tab]        optional; nth tab = nth item
  *
  *   data-scroll-enlarge-snap-step="100"   on the root: scroll distance per
  *                                         step, in % of viewport height.
+ *
+ * After the last panel the stage stays pinned for half a step more (F15),
+ * so the last panel's content has room to settle before the pin releases.
+ * A single-item section (F28, arts) is just the enlarge plus that hold.
  *
  * The active item and tab get `is-active`; the active tab also gets
  * `aria-current="true"`. Clicking a tab scrolls to its panel.
@@ -38,12 +42,17 @@
  * panels swap instantly as the pinned stage scrolls, with no tweens or snap.
  */
 
-import { prepareLineMaskReveal } from '$utils/lineMaskReveal'
+import { createLineMaskTimeline } from '$utils/lineMaskReveal'
 
 const ROOT_SELECTOR = '[data-scroll-enlarge-snap]'
 const ACTIVE_CLASS = 'is-active'
 const DEFAULT_STEP_PERCENT = 100
-const TEXT_OFFSET = '2rem'
+/** Timeline length of a panel's wipe; its content reveals once it is done. */
+const WIPE_DURATION = 0.7
+/** Extra pinned distance after the last panel, in steps. */
+const END_HOLD = 0.5
+/** How far past its snap point (timeline units) a panel counts as left. */
+const LEAVE_TOLERANCE = 0.02
 
 interface SnapParts {
   root: HTMLElement
@@ -98,14 +107,38 @@ const readParts = (root: HTMLElement): SnapParts | null => {
 
 const initAnimated = (parts: SnapParts) => {
   const { stage, media, items, stepPercent } = parts
-  // One step to enlarge, then one step per panel change.
+  // One step to enlarge, then one step per panel change, then the end hold.
   const stepCount = items.length
-  const snapPoints = items.map((_, index) => (index + 1) / stepCount)
+  const totalSteps = stepCount + END_HOLD
+  const snapPoints = items.map((_, index) => (index + 1) / totalSteps)
 
   stackItems(items, 0)
-  const firstContent = items[0].querySelector<HTMLElement>('[data-scroll-enlarge-snap-content]')
-  const firstReveal = firstContent ? prepareLineMaskReveal(firstContent) : null
+  const reveals = items.map((item) => {
+    const content = item.querySelector<HTMLElement>('[data-scroll-enlarge-snap-content]')
+    return content ? createLineMaskTimeline(content) : null
+  })
   const mask = createChamferMask(stage, media)
+
+  // Which panel's content is shown at timeline time `time`: panel 0 once the
+  // enlarge mask is full, later panels once their wipe is done; each leaves
+  // as soon as the scroll moves past its snap point.
+  const contentIndexAt = (time: number) => {
+    for (let index = items.length - 1; index >= 0; index--) {
+      const revealAt = index === 0 ? 1 : index + WIPE_DURATION
+      const leaveAt = index === items.length - 1 ? Infinity : index + 1 + LEAVE_TOLERANCE
+      if (time >= revealAt - 0.001 && time <= leaveAt) return index
+    }
+    return -1
+  }
+
+  let shownIndex = -1
+  const syncContent = (progress: number) => {
+    const next = contentIndexAt(progress * totalSteps)
+    if (next === shownIndex) return
+    reveals[shownIndex]?.reverse()
+    reveals[next]?.play()
+    shownIndex = next
+  }
 
   let activeIndex = -1
   const setActive = (index: number) => {
@@ -120,7 +153,7 @@ const initAnimated = (parts: SnapParts) => {
     scrollTrigger: {
       trigger: stage,
       start: 'top top',
-      end: () => `+=${(window.innerHeight * stepPercent * stepCount) / 100}`,
+      end: () => `+=${(window.innerHeight * stepPercent * totalSteps) / 100}`,
       pin: true,
       scrub: 0.6,
       invalidateOnRefresh: true,
@@ -132,11 +165,14 @@ const initAnimated = (parts: SnapParts) => {
         // Without this a tab jump reads as a fling and overshoots to the end.
         inertia: false,
       },
-      onRefresh: mask.measure,
+      onRefresh: (self: ScrollTriggerInstance) => {
+        mask.measure()
+        syncContent(self.progress)
+      },
       onUpdate: (self: ScrollTriggerInstance) => {
-        setActive(clampIndex(Math.round(self.progress * stepCount) - 1, items.length))
-        // F03: the first panel's text masks in once the mask is full height.
-        if (self.progress >= snapPoints[0] - 0.001) firstReveal?.play()
+        setActive(clampIndex(Math.round(self.progress * totalSteps) - 1, items.length))
+        // F15: content masks in after its mask/wipe completes, out on leave.
+        syncContent(self.progress)
       },
     },
   })
@@ -151,32 +187,26 @@ const initAnimated = (parts: SnapParts) => {
   items.slice(1).forEach((item, offset) => {
     const previous = items[offset]
     const at = offset + 1
-    const text = contentChildren(item)
     const image = itemImage(item)
 
-    timeline.to(
-      contentChildren(previous),
-      { autoAlpha: 0, y: `-${TEXT_OFFSET}`, stagger: 0.05, duration: 0.3 },
-      at,
-    )
     timeline.set(item, { autoAlpha: 1 }, at)
     timeline.fromTo(
       item,
       { clipPath: 'inset(100% 0% 0% 0%)' },
-      { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.7, ease: 'power2.inOut' },
+      { clipPath: 'inset(0% 0% 0% 0%)', duration: WIPE_DURATION, ease: 'power2.inOut' },
       at,
     )
     if (image) {
       timeline.fromTo(image, { scale: 1.2 }, { scale: 1, duration: 1, ease: 'power2.out' }, at)
     }
-    timeline.fromTo(
-      text,
-      { autoAlpha: 0, y: TEXT_OFFSET },
-      { autoAlpha: 1, y: 0, stagger: 0.08, duration: 0.3 },
-      at + 0.6,
-    )
     timeline.set(previous, { autoAlpha: 0 }, at + 1)
   })
+
+  // F15: hold the last panel pinned so the timeline spans totalSteps.
+  timeline.to({}, { duration: END_HOLD }, stepCount)
+
+  // A load that restores a mid-section scroll shows the right content.
+  syncContent(timeline.scrollTrigger?.progress ?? 0)
 
   return bindTabs(parts, timeline.scrollTrigger, snapPoints)
 }
@@ -254,20 +284,19 @@ const bindTabs = (
     parts.tabs.forEach((tab, index) => tab.removeEventListener('click', handlers[index]))
 }
 
-/** Free scroll through the first half of the enlarge, then nearest panel. */
+/**
+ * Free scroll through the first half of the enlarge and through the end
+ * hold (so the pin can release), else the nearest panel.
+ */
 const snapToPanel = (value: number, snapPoints: number[]) => {
   if (value < snapPoints[0] / 2) return value
+  if (value > snapPoints[snapPoints.length - 1]) return value
   return snapPoints.reduce((nearest, point) =>
     Math.abs(point - value) < Math.abs(nearest - value) ? point : nearest,
   )
 }
 
 const clampIndex = (index: number, length: number) => Math.min(Math.max(index, 0), length - 1)
-
-const contentChildren = (item: HTMLElement): HTMLElement[] => {
-  const content = item.querySelector<HTMLElement>('[data-scroll-enlarge-snap-content]')
-  return content ? (Array.from(content.children) as HTMLElement[]) : []
-}
 
 const itemImage = (item: HTMLElement): HTMLElement | null =>
   item.querySelector<HTMLElement>('[data-scroll-enlarge-snap-image]') ??

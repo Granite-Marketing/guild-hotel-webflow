@@ -1,19 +1,23 @@
 /**
  * Line Mask Reveal (helper, not wired in index.ts)
  *
- * Prepares a container for a one-shot line mask-in. The targets are its
- * headings, paragraphs, figures (logos), `.button`s and any
- * `[data-line-mask]` element, in DOM order, skipping targets nested in
- * another target. Text is split
- * into lines and words: lines get overflow hidden and each line's words
- * rise into place, line after line. Non-text elements (a button, or the
- * logo) rise from behind a clip of their own. Returns
- * `play()`, which runs the reveal once; later calls do nothing. Used by
- * scrollEnlargeSnap (F03) and historyStickyYear's landmark gallery (F09).
+ * Prepares a container for a line mask-in. The targets are its headings,
+ * paragraphs, figures (logos), `.button`s and any `[data-line-mask]`
+ * element, in DOM order, skipping targets nested in another target. Text is
+ * split into lines and words: lines get overflow hidden and each line's
+ * words rise into place, line after line. Non-text elements (a button, or
+ * the logo) rise from behind a clip of their own.
+ *
+ * Two entry points share one paused timeline:
+ *   - `createLineMaskTimeline(container)` returns `play()` and `reverse()`
+ *     for a reveal that can run forward and back as often as needed. Used
+ *     by scrollEnlargeSnap (F03, F15, F28).
+ *   - `prepareLineMaskReveal(container)` returns a one-shot `play()`. Used
+ *     by historyStickyYear's landmark gallery (F09).
  *
  * An element counts as text when it is a heading or paragraph, or has the
- * `data-line-mask="text"` attribute. Under prefers-reduced-motion nothing is hidden and
- * `play()` is a no-op.
+ * `data-line-mask="text"` attribute. Under prefers-reduced-motion nothing
+ * is hidden and both calls are no-ops.
  */
 
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
@@ -21,8 +25,31 @@ const TEXT_TAGS = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P'])
 const DURATION = 0.9
 const LINE_STAGGER = 0.08
 const ELEMENT_STAGGER = 0.12
+/** Reverse runs faster than the reveal so a leaving panel clears quickly. */
+const REVERSE_SPEED = 1.6
+const HIDDEN = { yPercent: 110 }
+const SHOWN = { yPercent: 0, duration: DURATION, ease: 'power3.out' }
 
 const TARGET_SELECTOR = 'h1, h2, h3, h4, h5, h6, p, figure, .button, [data-line-mask]'
+
+interface TextPart {
+  kind: 'text'
+  element: HTMLElement
+  lines: HTMLElement[]
+  split: boolean
+}
+
+interface ElementPart {
+  kind: 'element'
+  element: HTMLElement
+}
+
+type RevealPart = TextPart | ElementPart
+
+export interface LineMaskTimeline {
+  play: () => void
+  reverse: () => void
+}
 
 const findTargets = (container: HTMLElement) => {
   const candidates = Array.from(container.querySelectorAll<HTMLElement>(TARGET_SELECTOR))
@@ -37,68 +64,98 @@ const findTargets = (container: HTMLElement) => {
 const isText = (element: HTMLElement) =>
   element.dataset.lineMask === 'text' || TEXT_TAGS.has(element.tagName)
 
-export const prepareLineMaskReveal = (container: HTMLElement) => {
+/**
+ * Builds a paused, reversible reveal for `container`. The timeline is
+ * rebuilt whenever SplitText re-splits (font swap, resize), keeping its
+ * progress and the last requested direction.
+ */
+export const createLineMaskTimeline = (container: HTMLElement): LineMaskTimeline => {
   const elements = findTargets(container)
-  let played = false
   if (!elements.length || window.matchMedia(REDUCED_MOTION).matches) {
-    return { play: () => undefined }
+    return { play: () => undefined, reverse: () => undefined }
   }
 
-  const playFunctions = elements.map((element) => {
-    if (isText(element)) {
-      let lines: HTMLElement[] = []
-      let pendingDelay: number | null = null
-      new SplitText(element, {
-        types: 'lines,words',
-        autoSplit: true,
-        onSplit: (self) => {
-          lines = self.lines ?? []
-          // Clip on the lines themselves, never `mask: 'lines'` (see the
-          // GSAP module conventions, rule 7).
-          gsap.set(lines, { overflow: 'hidden' })
-          if (played && pendingDelay === null) return undefined
-          gsap.set(self.words ?? [], { yPercent: 110 })
-          if (pendingDelay === null) return undefined
-          const delay = pendingDelay
-          pendingDelay = null
-          return revealLines(lines, delay)
-        },
-      })
-      return (delay: number) => {
-        if (!lines.length) {
-          pendingDelay = delay
-          return
-        }
-        revealLines(lines, delay)
-      }
-    }
+  const timeline = gsap.timeline({ paused: true })
+  let direction: 'forward' | 'reverse' | null = null
+  const parts: RevealPart[] = []
 
+  const runDirection = () => {
+    if (direction === 'forward') timeline.timeScale(1).play()
+    else if (direction === 'reverse') timeline.timeScale(REVERSE_SPEED).reverse()
+  }
+
+  const rebuild = () => {
+    // Wait until every text target has been split.
+    if (parts.some((part) => part.kind === 'text' && !part.split)) return
+    const progress = timeline.progress()
+    timeline.clear()
+    parts.forEach((part, index) => {
+      const offset = index * ELEMENT_STAGGER
+      if (part.kind === 'text') {
+        part.lines.forEach((line, lineIndex) => {
+          timeline.fromTo(line.children, HIDDEN, SHOWN, offset + lineIndex * LINE_STAGGER)
+        })
+        return
+      }
+      timeline.fromTo(part.element, HIDDEN, SHOWN, offset)
+    })
+    timeline.progress(progress)
+    runDirection()
+  }
+
+  // Register every part before splitting, so the first rebuild waits for
+  // all text targets instead of building from the first one alone.
+  elements.forEach((element) => {
+    if (isText(element)) {
+      parts.push({ kind: 'text', element, lines: [], split: false })
+      return
+    }
     wrapInClip(element)
-    gsap.set(element, { yPercent: 110 })
-    return (delay: number) =>
-      gsap.to(element, { yPercent: 0, duration: DURATION, ease: 'power3.out', delay })
+    parts.push({ kind: 'element', element })
   })
 
-  const play = () => {
-    if (played) return
-    played = true
-    playFunctions.forEach((playElement, index) => playElement(index * ELEMENT_STAGGER))
-  }
+  parts.forEach((part) => {
+    if (part.kind !== 'text') return
+    new SplitText(part.element, {
+      type: 'lines,words',
+      autoSplit: true,
+      onSplit: (self) => {
+        // Clip on the lines themselves, never `mask: 'lines'` (see the GSAP
+        // module conventions, rule 7). The timeline is owned here, so
+        // nothing is returned for SplitText to revert.
+        const lines = self.lines ?? []
+        gsap.set(lines, { overflow: 'hidden' })
+        part.lines = lines
+        part.split = true
+        rebuild()
+      },
+    })
+  })
+  rebuild()
 
-  return { play }
+  return {
+    play: () => {
+      direction = 'forward'
+      runDirection()
+    },
+    reverse: () => {
+      direction = 'reverse'
+      runDirection()
+    },
+  }
 }
 
-/** Each line's words rise together, one line after another. */
-const revealLines = (lines: HTMLElement[], delay: number) => {
-  const timeline = gsap.timeline({ delay })
-  lines.forEach((line, index) => {
-    timeline.to(
-      line.children,
-      { yPercent: 0, duration: DURATION, ease: 'power3.out' },
-      index * LINE_STAGGER,
-    )
-  })
-  return timeline
+/** One-shot reveal: `play()` runs the mask-in once; later calls do nothing. */
+export const prepareLineMaskReveal = (container: HTMLElement) => {
+  const reveal = createLineMaskTimeline(container)
+  let played = false
+  return {
+    play: () => {
+      if (played) return
+      played = true
+      reveal.play()
+    },
+  }
 }
 
 /**
