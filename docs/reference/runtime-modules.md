@@ -299,13 +299,17 @@ image wipe and a text transition. Guild Figma Home-Animation-1 (home 04 to
 | `data-scroll-enlarge-snap-media` | inside stage | The frame. Style it at its small start size (for example `width: 79%`, `aspect-ratio: 16 / 9`), `position: relative`, `overflow: hidden`. The module grows it to the stage content box. Chamfered corners belong on this element. Do not set `max-width` or `max-height` on it. |
 | `data-scroll-enlarge-snap-item` | inside media, one per panel | Panels overlap (`position: absolute; inset: 0`). DOM order is panel order. |
 | `data-scroll-enlarge-snap-image` | inside item (optional) | Image that settles from `scale: 1.2` as its panel wipes in. Defaults to the first `img`. |
-| `data-scroll-enlarge-snap-content` | inside item (optional) | Its direct children (heading, text, CTA footer) fade and rise in, staggered. |
+| `data-scroll-enlarge-snap-content` | inside item (optional) | Its headings, paragraphs, logo figure and `.button` line-mask in, triggered after its mask/wipe completes, reverses on leave (`lineMaskReveal`). |
 | `data-scroll-enlarge-snap-tab` | inside root (optional) | Nth tab maps to nth item. Click scrolls to that panel. Keep tabs outside the items so they stay visible. |
 
-- Scroll timeline: step 1 enlarges the frame and fades in the first panel's
-  content; each later step wipes the next panel up from the bottom
-  (`clip-path`) while the previous content leaves. Snap points sit at the end
-  of each step; the first half of the enlarge scrolls freely.
+- Scroll timeline: step 1 opens the frame's mask; each later step wipes the
+  next panel up from the bottom (`clip-path`). Then a half-step end hold
+  keeps the last panel pinned. Snap points sit at the end of each step; the
+  first half of the enlarge and the end hold scroll freely.
+- Content (F15): never scrubbed. Each panel's content plays one line-mask
+  timeline once its mask (panel 0) or wipe (later panels) is 100% done, and
+  reverses (1.6x speed) as soon as the scroll moves past that panel's snap
+  point or back above its reveal point.
 - State: the active item and tab get `is-active`; the active tab also gets
   `aria-current="true"`. Style the tab underline from `is-active`.
 - The module sets inline `z-index` and `autoAlpha` on items (DOM order
@@ -786,14 +790,34 @@ the bar overlaps a light area.
 Since F03 the frame no longer resizes: the media is sized to the stage
 content box once (on every refresh) and a chamfered `clip-path: polygon()`
 opens from the Designer start rect to full. The chamfer size is read from
-the media's own Designer clip-path. The first panel's content masks in line
-by line once the mask reaches full height, via `lineMaskReveal`.
+the media's own Designer clip-path (no clip-path on the media gives a
+rectangular mask). The first panel's content masks in line by line once the
+mask reaches full height, via `lineMaskReveal`.
+
+### scrollEnlargeSnap: F15 triggered content and end hold
+
+Since F15 every panel's content (Zuma included, replacing F03's play-once)
+is a triggered `createLineMaskTimeline` reveal, not scrubbed tweens: heading,
+body and button mask in as one timeline after the mask or wipe completes,
+and reverse when the panel is left in either direction. The pin is
+`items + 0.5` steps long: the final half step is a free-scrolling hold so
+the last panel settles before the pin releases. Home uses
+`data-scroll-enlarge-snap-step="110"` for more distance per panel.
+
+Single-item use (F28, arts): one `-item` with no tabs. The inset image's
+mask grows to full bleed, the content masks in at full, then the end hold.
+The arts section is a native `section_venue-card-fullbleed` with `is-bleed`
+combos on stage (no padding), media (no chamfer, 1253/753 start size) and
+content (bottom-left, transparent).
 
 ### lineMaskReveal (helper)
 
-`prepareLineMaskReveal(container)` hides a container's headings,
+`createLineMaskTimeline(container)` hides a container's headings,
 paragraphs, figures, `.button`s and `[data-line-mask]` elements and returns
-`play()`, a one-shot line mask-in. Text is split with SplitText
+`play()` and `reverse()` on one paused timeline (reverse runs at 1.6x).
+The timeline is rebuilt on every SplitText re-split, keeping its progress
+and direction. `prepareLineMaskReveal(container)` wraps it as a one-shot
+`play()` (historyStickyYear, F09). Text is split with SplitText
 (`lines,words`, overflow hidden on lines, never `mask: 'lines'`); other
 targets rise from behind a clip wrapper. Reduced motion: nothing is hidden.
 
