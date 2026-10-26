@@ -4,9 +4,9 @@ What Site Settings > Custom Code holds on site `6ad6405eae8eac6d7b7c41a3`, and t
 
 ## Release
 
-- **Bundle version:** v1.1.2 (release commit `a511cb050a63ebbb909cfc23decca9fae11ed53e`, tag `v1.1.2` pushed; jsDelivr serves it, byte-identical to `dist/index.js`).
-- **Tag URL:** `https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.1.2/dist/index.js`
-- **Footer state:** staging footer names v1.1.2 (swapped by Stephen by hand; the Data API footer write was blocked by the permission checker).
+- **Bundle version:** v1.1.8 (release commit `da39be9`, tag `v1.1.8` pushed; jsDelivr serves it, byte-identical to `dist/index.js`).
+- **Tag URL:** `https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.1.8/dist/index.js`
+- **Footer state:** staging footer names v1.1.8, written on 2026-10-26 with `data_scripts_tool` > `set_site_freeform_code` (location `footer`); the earlier permission block no longer applied.
 - **Repo visibility:** public since 2026-10-20 (jsDelivr only serves public repos).
 
 ## GSAP comes from Webflow, not the footer
@@ -24,7 +24,7 @@ Since Webflow's GSAP 3.15 rewrite, Webflow loads GSAP itself on every published 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.1.2/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.1.8/dist/index.js"></script>
 ```
 
 Through the Data API this is `data_scripts_tool` > `set_site_freeform_code` (location `footer`), which writes the raw block; registered scripts are not used because the bundle (21 KB) is far over the 2,000-character inline cap. See `webflow-scripts-api.md`.
