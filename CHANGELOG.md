@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.7
+
+### Patch Changes
+
+- Map: rows come from the Map Places CMS collection (`data-map-coordinates`), and each row's Directions link is pointed at Google Maps directions. List rows show a pointer, and the map starts wider (zoom 15, override with `data-map-zoom`).
+
 ## 1.1.6
 
 ### Patch Changes
