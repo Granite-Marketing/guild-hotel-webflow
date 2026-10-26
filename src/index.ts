@@ -25,6 +25,7 @@ import { galleryFilter } from '$utils/galleryFilter'
 import { gsapBasicAnimations } from '$utils/gsapBasicAnimations'
 import { historyStickyYear } from '$utils/historyStickyYear'
 import { hoverFollowImage } from '$utils/hoverFollowImage'
+import { hoverImageSwap } from '$utils/hoverImageSwap'
 import { imageHoverScale } from '$utils/imageHoverScale'
 import { imageStackCollapse } from '$utils/imageStackCollapse'
 import { imageTrailHover } from '$utils/imageTrailHover'
@@ -91,6 +92,8 @@ window.Webflow.push(() => {
   accordion()
   modals()
   roomListHoverPreview()
+  // F25: /rooms quiz option hover swaps the right-hand photo.
+  hoverImageSwap()
   mediaTabs()
   map()
 

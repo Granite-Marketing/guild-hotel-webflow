@@ -55,6 +55,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | roomGridHoverReveal | `roomGridHoverReveal.ts` | wired (v1.1.4) | D, after imageHoverScale |
 | hoverFollowImage | `hoverFollowImage.ts` | wired (v1.1.4) | D, after imageTrailHover |
 | map | `map.ts` (+ `mapNeeds.ts`) | wired (unreleased) | D, after roomListHoverPreview |
+| hoverImageSwap | `hoverImageSwap.ts` | wired (next release) | D, after roomListHoverPreview |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
 
 To enable an opt-in module, uncomment its import and its call in
@@ -748,6 +749,35 @@ hovered or focused.
 - Class contract only; no attributes. Webflow shows the details, so touch
   devices and a failed bundle keep them visible.
 - Skipped unless `(hover: hover) and (pointer: fine)` matches.
+- F27: the /rooms grid is now a Collection List of 🛏️ Rooms. The card Link
+  inside each Collection Item keeps the class `rooms-collection-room-grid_card`
+  and the same children, so the contract is unchanged. Collection items render
+  server-side, so binding once at init still covers every card.
+
+### hoverImageSwap
+
+Feedback F25: on the /rooms quiz step "Who's checking in?", hovering or
+focusing an option crossfades the right-hand photo to that option's image.
+Leaving the options (pointer or focus) restores the default photo.
+
+| Attribute | On | Value |
+|---|---|---|
+| `data-hover-swap` | root (the quiz section) | `true`. Guard selector; one swap per root. |
+| `data-hover-swap-list` | options wrapper (optional) | `true`. Mouse leaving it restores the default. Falls back to the root. |
+| `data-hover-swap-trigger` | each option | key, for example `just-me` |
+| `data-hover-swap-media` | each stacked image in one figure | the same key; `default` on the resting image |
+
+- All media are absolutely positioned full-cover in one figure
+  (`rooms-collection-quiz_image` already is). Without a `default` key the
+  first media is the resting image.
+- No-JS fallback: non-default media carry the combo
+  `rooms-collection-quiz_image is-swap` (opacity 0, visibility hidden), so
+  only the default shows if the bundle fails.
+- The active media gets `is-active`; fades use `autoAlpha` (0.6s,
+  `power2.out`). Hover swaps only on fine pointers; focus always swaps.
+- Reduced motion: the swap is instant.
+- Never touches the option links' classes, `aria-pressed` or clicks; quiz
+  selection belongs to F26.
 
 ### hoverFollowImage
 
