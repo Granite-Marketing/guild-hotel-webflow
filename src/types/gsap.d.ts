@@ -72,6 +72,7 @@ interface GsapInstance {
   ) => (value: number) => void;
   ticker: {
     add: (fn: (time: number) => void) => void;
+    remove: (fn: (time: number) => void) => void;
     lagSmoothing: (threshold: number) => void;
   };
 }
@@ -129,11 +130,13 @@ interface LenisInstance {
   resize: () => void;
   stop: () => void;
   start: () => void;
+  destroy: () => void;
   scrollTo: (target: number | string | HTMLElement, options?: Record<string, unknown>) => void;
   scroll: number;
   targetScroll: number;
   velocity: number;
   isScrolling: boolean;
+  limit: number;
 }
 
 interface LenisConstructor {

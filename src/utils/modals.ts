@@ -31,8 +31,24 @@
  * Page-scroll lock: the active smooth-scroll engine (Lenis by default, see
  * `$utils/smoothScroll`) is stopped on open and resumed on close. A stopped
  * Lenis still cancels wheel and touch events, so every dialog gets
- * `data-lenis-prevent` at init: the dialog's own overflow-y:auto then
- * scrolls natively. No body styles are touched.
+ * `data-lenis-prevent` at init: the page engine ignores wheel and touch
+ * inside a dialog. No body styles are touched.
+ *
+ * Dialog smooth scroll (every modal with scrollable content): on open the
+ * dialog's scroll container gets its own Lenis instance, driven by
+ * `gsap.ticker` and destroyed on close. The scroll container is:
+ *   1. `[data-modal-scroll]` inside the dialog, when present (opt-in
+ *      override for a dialog whose inner panel scrolls);
+ *   2. else the dialog itself when its computed overflow-y is auto/scroll;
+ *   3. else the first descendant whose overflow-y is auto/scroll;
+ *   4. else none, and the dialog keeps native behaviour.
+ * The dialog Lenis excludes its own root from the `data-lenis-prevent`
+ * check, so the attribute above does not block it. The container's own box
+ * is fixed, so a ResizeObserver on its children calls `resize()` when
+ * content grows, and lazy images inside the dialog are promoted to eager on
+ * open. Touch stays native (no syncTouch). Under
+ * `prefers-reduced-motion: reduce`, or with no Lenis global, the dialog
+ * scrolls natively.
  *
  * Under ScrollSmoother the dialog and overlay must live OUTSIDE
  * `#smooth-content` in the Designer; this script does not reparent them.
@@ -53,6 +69,7 @@ const FOCUSABLE_SELECTOR = [
 ].join(',')
 
 const HASH_SCROLL_TIMEOUT = 5000
+const SCROLLABLE_OVERFLOW = ['auto', 'scroll']
 const NATIVE_ACTIVATION_SELECTOR = 'a[href], button, input, select, textarea, summary'
 
 export const modals = () => {
@@ -66,6 +83,10 @@ export const modals = () => {
 
   let activeModal: HTMLElement | null = null
   let activeTrigger: HTMLElement | null = null
+
+  let modalLenis: LenisInstance | null = null
+  let modalResizeObserver: ResizeObserver | null = null
+  const modalTick = (time: number) => modalLenis?.raf(time * 1000)
 
   modalElements.forEach((modal) => {
     if (!modal.id) return
@@ -114,6 +135,66 @@ export const modals = () => {
     )
   }
 
+  function isScrollable(element: HTMLElement): boolean {
+    return SCROLLABLE_OVERFLOW.includes(getComputedStyle(element).overflowY)
+  }
+
+  /** The element that scrolls a dialog's content, or null when nothing does. */
+  function getScrollContainer(modal: HTMLElement): HTMLElement | null {
+    const override = modal.querySelector<HTMLElement>('[data-modal-scroll]')
+    if (override) return override
+    if (isScrollable(modal)) return modal
+    return (
+      Array.from(modal.querySelectorAll<HTMLElement>('*')).find((element) =>
+        isScrollable(element),
+      ) ?? null
+    )
+  }
+
+  /** Load a dialog's lazy images now, resizing the dialog Lenis as each lands. */
+  function loadModalImages(modal: HTMLElement) {
+    modal.querySelectorAll<HTMLImageElement>('img[loading="lazy"]').forEach((image) => {
+      image.loading = 'eager'
+      if (!image.complete) {
+        image.addEventListener('load', () => modalLenis?.resize(), { once: true })
+      }
+    })
+  }
+
+  /** Give the open dialog its own Lenis. The page engine is already stopped. */
+  function startModalScroll(modal: HTMLElement) {
+    stopModalScroll()
+
+    const scroller = getScrollContainer(modal)
+    if (!scroller) return
+    // Every open starts at the top (the close fade keeps the old position).
+    scroller.scrollTop = 0
+
+    if (typeof Lenis === 'undefined') return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    modalLenis = new Lenis({
+      wrapper: scroller,
+      content: scroller,
+      eventsTarget: scroller,
+      autoRaf: false,
+    })
+    gsap.ticker.add(modalTick)
+
+    // The scroller's box is fixed (inset 0), so its size never changes when
+    // content grows; watch the children instead.
+    modalResizeObserver = new ResizeObserver(() => modalLenis?.resize())
+    Array.from(scroller.children).forEach((child) => modalResizeObserver?.observe(child))
+  }
+
+  function stopModalScroll() {
+    gsap.ticker.remove(modalTick)
+    modalResizeObserver?.disconnect()
+    modalLenis?.destroy()
+    modalResizeObserver = null
+    modalLenis = null
+  }
+
   function openModal(modal: HTMLElement, trigger: HTMLElement | null) {
     if (activeModal === modal) return
 
@@ -128,6 +209,10 @@ export const modals = () => {
     activeModal = modal
     activeTrigger = returnTrigger
 
+    // Start image downloads before the open fade so the content is in place
+    // by the time the dialog is visible.
+    loadModalImages(modal)
+
     modal.classList.add('is-open')
     modal.setAttribute('aria-hidden', 'false')
     if (trigger?.hasAttribute('data-modal-open')) trigger.setAttribute('aria-expanded', 'true')
@@ -138,9 +223,10 @@ export const modals = () => {
       overlayElement.setAttribute('aria-hidden', 'false')
     }
 
-    // Stop the scroll engine so page scrolling halts and the modal's own
-    // overflow-y:auto takes over for native wheel/touch handling.
+    // Stop the page engine so page scrolling halts, then give the dialog's
+    // scroll container its own smooth scroll.
     smoothScroll.stop()
+    startModalScroll(modal)
 
     // Defer focus until the open transition has finished: focusing while the
     // modal is mid-slide can cause the browser's focus-into-view request to
@@ -189,6 +275,7 @@ export const modals = () => {
       overlayElement.setAttribute('aria-hidden', 'true')
     }
 
+    stopModalScroll()
     smoothScroll.start()
 
     if (restoreFocus) trigger?.focus({ preventScroll: true })
