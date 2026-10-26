@@ -38,6 +38,7 @@ interface GsapTimeline {
     (value: number): GsapTimeline;
   };
   kill: () => void;
+  pause: () => GsapTimeline;
   scrollTrigger?: ScrollTriggerInstance;
 }
 
