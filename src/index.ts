@@ -39,7 +39,9 @@ import { roomGridHoverReveal } from '$utils/roomGridHoverReveal'
 import { roomListHoverPreview } from '$utils/roomListHoverPreview'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
 import { smoothScroll } from '$utils/smoothScroll'
+import { staggerCards } from '$utils/staggerCards'
 import { stickyCta } from '$utils/stickyCta'
+import { stickyTabs } from '$utils/stickyTabs'
 import { swiperSliders } from '$utils/swiperSliders'
 
 /*
@@ -101,6 +103,8 @@ window.Webflow.push(() => {
   // slot E: viewSwitcher(), cmsFilterLinks()
   // F30: CMS card and category links (Designer cannot bind current-item links headlessly)
   cmsItemLinks()
+  // F36: alternate CMS cards across groups (Figma)
+  staggerCards()
   galleryFilter()
   // slot F, in this order: filterPanels(), scrollHint(), finsweetRefresh(),
   //   filterActiveState()
@@ -110,6 +114,8 @@ window.Webflow.push(() => {
   // slot G: scrollTextReveal()
   historyStickyYear()
   imageStackCollapse()
+  // F36: sticky topic bar on /happenings, /blog, /press
+  stickyTabs()
   // F10: Reserve a Table on the Dinings template. The button sits in the
   // shared Hero component, so it is scoped by the template's page id.
   stickyCta(`html[data-wf-page="${DININGS_TEMPLATE_PAGE_ID}"] .section_hero-fullbleed-centered .button`)
