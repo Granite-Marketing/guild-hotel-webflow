@@ -257,6 +257,13 @@ Ids created or first cached by the F15 to F30 groups. Recorded by the integrator
 - all-rooms dialog (component `a9d40053-f1b0-f862-ee0a-4f021e1933a9`): all 10 trigger and 10 view-more links now point to `/rooms-individual/<slug>`.
 - Learning: a component instance cannot be a before/after anchor for builder or move; to place native sections between instances, build or move everything with `append` into main in the final order.
 
+### F26 Rooms quiz CMS (seeded 2026-10-27 by `scripts/api/webflow/seed-rooms-quiz.mjs`)
+
+- Collection "🧭 Quiz Options" (slug `quiz-options`) `6ae08d40ba5f0d2f0a4a2720`. Fields: name `808e173f264830b6ed018d3c90d65a18`, slug `289e90b6bfbcc456505e226faa3d32f0`, `step` (Option) `91064fea8f4a9beaeba1a64cc6bc3740` (1 `581366eedce00805d8984d8766da77ff`, 2 `a28640cc8069cf99db3a38dcf7f50a68`, 3 `1d02c361d42d1692a1b4e21aafb3116b`), `sort-order` `cdf2eecffd244da5ec3f27434adc52e0`, `image` `66a64f4dab349c192adbdab5df4dd4ad`, `image-alt` `65f0fdd072f1b3e6179908646766d55e`.
+- Options (step, slug, id): 1 `just-me` `6ae08d43d10e48eb412d6267`, 1 `two-guests` `6ae08d43de9eaf36732e21bc`, 1 `3-4-guests` `6ae08d44464dcf3894123f33`, 1 `5-plus-guests` `6ae08d45464dcf3894123f55`; 2 `couples-getaway` `6ae08d46d4c3570609eedffe`, 2 `business-trip` `6ae08d4708ed329144e52816`, 2 `family-and-friends` `6ae08d483e922b99a5ff2f7d`, 2 `celebration` `6ae08d49d10e48eb412d64b7`, 2 `extended-stay` `6ae08d4a23c5bb5e2a1bc008`; 3 `spaciousness` `6ae08d4b1a8a089e0f1cd45d`, 3 `elevator-proximity` `6ae08d4c23c5bb5e2a1bc027`, 3 `courtyard-view` `6ae08d4d1a8a089e0f1cd564`, 3 `street-view` `6ae08d4ebd513d73ad401b9c`, 3 `quiet` `6ae08d50eb2c3f9058584469`. Step 2 and 3 photos are stand-ins.
+- Rooms field "Quiz options" (MultiReference, slug `quiz-options`) `d0dcbfaba0affa064faba51f030413ac`. All 12 rooms carry placeholder tags (one guest option, three stay types, three features); exact-match coverage 76/100. Re-running the seed keeps existing tags unless `--retag`.
+- Placeholder rooms (remove before client launch): `placeholder-single-1` `6ae08d571a8a089e0f1cda3f`, `placeholder-single-2` `6ae08d59d66c0afeb4159345`. Staged, go live with the next site publish.
+
 ### F17, F21 chamfer and link-bar styles (planned writes, not applied)
 
 | Style | id |
