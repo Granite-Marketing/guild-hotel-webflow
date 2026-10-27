@@ -277,6 +277,7 @@ Ids created or first cached by the F15 to F30 groups. Recorded by the integrator
 - `overlay-detail-panel-modal_component` `3b753a7a-b6c6-f84b-98f9-73ee58aafc18`: base overflow-y auto, overscroll-behavior contain.
 - `room-list-hover-preview_component` `1432cf08-3b60-1b4c-d199-78937eb8cace`: base overflow-y auto, overscroll-behavior contain.
 - Overlay Detail Panel Modal Dark variant `569f778f-307a-cdc2-95c3-95b18a7c2c5c`: `overlay-detail-panel-modal_figure` is main `height: calc(100vh - 6.5rem)` (aspect-ratio auto, order 0), medium `height: auto` (aspect-ratio 681 / 796).
+- F39 Dark variant `overlay-detail-panel-modal_bar` (style id: resolve with `get_styles`, not yet cached): `left` is main `calc(14.5rem + (100% - 19rem) * 0.56049)` (was 57%), medium `2rem` (was 1rem), small `1.25rem` (new). Top 2.375rem and right 4.5rem unchanged. Aligns back link with the text column.
 
 ### F20 History landmark
 
