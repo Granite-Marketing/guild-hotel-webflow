@@ -39,11 +39,15 @@
  *                                           in once the image is full bleed
  *
  * The collapse timeline runs gallery -> stacked into one image (bleed card
- * on top) -> a clip mask opens on a copy of the bleed image until it fills
- * the screen, with no return to the gallery (F09). The copy fills the
- * viewport (object-fit cover) and never scales (F37, supersedes F20); only
- * its clip-path animates, one property per tween to prevent unmask flicker. The natural
- * layout is the start state. Under prefers-reduced-motion the gallery stays
+ * on top) -> the same card opens to full bleed and stays there, with no
+ * return to the gallery. One image, no clone (F45, supersedes the F37 scale
+ * rule and the F09 copy): the bleed figure's clip-path window opens past its
+ * own box while the img scales from 1 to K = max(vw/fw, vh/fh) in lockstep,
+ * so the cover framing never changes. The window width is fw * scale, so the
+ * image always covers it. One property per element per tween (clipPath on
+ * the figure, scale on the img) prevents the F20 scrub-reverse flash. The
+ * natural layout is the start state. Under prefers-reduced-motion the gallery
+ * stays
  * as laid out and the year label swaps text without a tween.
  */
 
@@ -173,24 +177,6 @@ const setupCollapseGallery = (root: HTMLElement) => {
     }
   }
 
-  /** clip-path insets that frame the stacked bleed card inside the layer. */
-  const stackedCardInset = () => {
-    const width = bleedItem.offsetWidth
-    const height = bleedItem.offsetHeight
-    const horizontal = Math.max(0, (root.clientWidth - width) / 2)
-    const vertical = Math.max(0, (visibleHeight() - height) / 2)
-    return `inset(${vertical}px ${horizontal}px ${vertical}px ${horizontal}px)`
-  }
-
-  const { layer, copy } = createBleedLayer(root, bleedImage)
-
-  // The copy fills the layer (object-fit cover) and never scales (F37); only
-  // the layer height follows the visible viewport.
-  const sizeLayer = () => {
-    layer.style.height = `${visibleHeight()}px`
-  }
-  sizeLayer()
-
   // The bleed card rides on top of the stack.
   items.forEach((item) => {
     if (getComputedStyle(item).position === 'static') item.style.position = 'relative'
@@ -206,9 +192,20 @@ const setupCollapseGallery = (root: HTMLElement) => {
     onEnter: () => reveals.forEach((reveal) => reveal.play()),
   })
 
-  // Start state of the mask: framed to the card. Set before the timeline so
-  // any reverse past position 1 lands here, never on clip-path "none".
-  gsap.set(layer, { clipPath: stackedCardInset() })
+  // One image (F45): the bleed figure is the card in the gallery, the card in
+  // the stack and the full-bleed frame. The figure's clip-path window opens past
+  // its own box while the img scales so the cover framing never changes.
+  const openInset = () => {
+    const x = Math.max(0, (root.clientWidth - bleedItem.offsetWidth) / 2)
+    const y = Math.max(0, (visibleHeight() - bleedItem.offsetHeight) / 2)
+    return `inset(${-y}px ${-x}px ${-y}px ${-x}px)`
+  }
+  const openScale = () =>
+    Math.max(root.clientWidth / bleedItem.offsetWidth, visibleHeight() / bleedItem.offsetHeight)
+
+  // Start state, set before the timeline so a reverse lands on the static card.
+  gsap.set(bleedItem, { clipPath: 'inset(0px 0px 0px 0px)' })
+  gsap.set(bleedImage, { scale: 1, transformOrigin: '50% 50%', force3D: false })
 
   // Optional text overlay on the pinned image; hidden until the clip is full.
   const caption = root.querySelector<HTMLElement>('[data-history-collapse-caption]')
@@ -218,9 +215,8 @@ const setupCollapseGallery = (root: HTMLElement) => {
     gsap.set(caption, { autoAlpha: 0 })
   }
 
-  // gallery -> stack of one (bleed card on top) -> the same image at full
-  // size, clipped to the card, opens to full bleed and stays there; the
-  // gallery does not come back while pinned.
+  // gallery -> stack of one (bleed card on top) -> the same card opens to
+  // full bleed and stays there; the gallery does not come back while pinned.
   const timeline = gsap.timeline({
     defaults: { ease: 'power2.inOut' },
     scrollTrigger: {
@@ -230,13 +226,10 @@ const setupCollapseGallery = (root: HTMLElement) => {
       pin: true,
       scrub: true,
       invalidateOnRefresh: true,
-      onRefresh: sizeLayer,
     },
   })
 
-  // One GSAP property per tween: two fromTo tweens sharing clipPath let a
-  // scrub reverse restore the pre-state ("none") while autoAlpha stayed up,
-  // which flashed the unmasked photo (F20). See docs/solutions.
+  // Each GSAP property is tweened once, on its own element (F20). See docs/solutions.
   timeline
     .to(
       items,
@@ -248,67 +241,13 @@ const setupCollapseGallery = (root: HTMLElement) => {
       0,
     )
     .to(fades, { autoAlpha: 0, duration: 0.4, ease: 'none' }, 0.6)
-    // The full-size image is not pixel-identical to the card framing, so the
-    // swap is a short crossfade rather than an instant cut.
-    .fromTo(
-      layer,
-      { autoAlpha: 0 },
-      { autoAlpha: 1, duration: 0.25, ease: 'none', immediateRender: false },
-      1,
-    )
-    .fromTo(
-      layer,
-      { clipPath: stackedCardInset },
-      { clipPath: 'inset(0px 0px 0px 0px)', duration: 1.2, immediateRender: true },
-      1,
-    )
+    // Window and scale open together (F45); the card is centred by position 1.
+    .to(bleedItem, { clipPath: openInset, duration: 1.2 }, 1)
+    .to(bleedImage, { scale: openScale, duration: 1.2 }, 1)
     // Hold the full-bleed image for the rest of the pin.
     .to({}, { duration: 0.4 }, 2.4)
 
   if (caption) {
     timeline.to(caption, { autoAlpha: 1, duration: 0.4, ease: 'none' }, 2.2)
   }
-}
-
-/**
- * A layer over the gallery holding a copy of the bleed image. The layer's
- * clip-path is the mask; the copy fills the layer with object-fit cover and
- * never transforms (F37).
- */
-const createBleedLayer = (root: HTMLElement, image: HTMLImageElement) => {
-  const layer = document.createElement('div')
-  layer.setAttribute('aria-hidden', 'true')
-  layer.dataset.historyCollapseBleed = ''
-  Object.assign(layer.style, {
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    width: '100%',
-    zIndex: '3',
-    pointerEvents: 'none',
-    overflow: 'hidden',
-    visibility: 'hidden',
-    opacity: '0',
-  })
-
-  const copy = image.cloneNode(true) as HTMLImageElement
-  copy.alt = ''
-  copy.loading = 'eager'
-  copy.sizes = '100vw'
-  copy.removeAttribute('data-history-collapse-item')
-  copy.removeAttribute('data-eager')
-  Object.assign(copy.style, {
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    width: '100%',
-    height: '100%',
-    maxWidth: 'none',
-    objectFit: 'cover',
-    objectPosition: '50% 50%',
-    display: 'block',
-  })
-  layer.appendChild(copy)
-  root.appendChild(layer)
-  return { layer, copy }
 }

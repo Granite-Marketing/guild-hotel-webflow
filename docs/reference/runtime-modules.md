@@ -857,22 +857,22 @@ Collapse gallery (component `gallery-row-dark-titled`, `history/06`):
 | Attribute | On | Purpose |
 |---|---|---|
 | `data-history-collapse` | section | Root, pinned for the scrub. Give it `overflow: clip` (the full-screen image overshoots) and a height of about `100vh`. The module sets `position: relative` inline if the root is static. |
-| `data-history-collapse-item` | each image wrapper (`figure`) | Slides into the stack. The first item (or `="bleed"`) rides on top and is the one seen full bleed: a copy of its image opens with a clip mask (F09). The copy never scales (F37, supersedes the uniform scale of F20): it fills the layer with `object-fit: cover`, the layer is as tall as the visible viewport, and only the layer's `clip-path` animates. |
+| `data-history-collapse-item` | each image wrapper (`figure`) | Slides into the stack. The first item (or `="bleed"`) rides on top and is the one seen full bleed: this same figure and image open to full bleed (F45, supersedes the F09 copy and the F37 no-scale rule). There is no clone: the figure's `clip-path` window opens past its own box (negative inset) while the img scales from 1 to `K = max(vw/fw, vh/fh)` in lockstep, so the card framing never changes and the window always lies inside the image. |
 | `data-history-collapse-fade` | heading and caption wrappers (optional) | Mask in line by line once on arrival, then fade out while the stack forms. |
 | `data-history-collapse-distance="3"` | section (optional) | Pin length in viewport heights. Default 3. |
 | `data-history-collapse-caption` | text overlay (optional) | A Designer element, direct child of the section root. Default it to `opacity: 0; visibility: hidden` in its class; the module sets `z-index: 4` and `pointer-events: none` and fades it in (`autoAlpha`) at 2.2, once the clip is full. Under reduced motion the module does not run, so it stays hidden. |
 
 - Timeline (2.8 units): items slide to the centre into one stack (0 to 1);
-  at 1 the bleed layer crossfades in (0.25) with its clip at the card rect,
-  then the clip opens to `inset(0px)` (1 to 2.2), the caption fades in
-  (2.2 to 2.6), then it holds until the pin ends. It does not return to the
-  grid (F09). The full-size image is framed differently from the card, so a
-  small content shift at the swap is expected and is why it crossfades.
-- One GSAP property per tween (F20): `autoAlpha` and `clipPath` each have
-  their own tween, the latter with `immediateRender: true`. Two tweens
-  sharing `clipPath` let a scrub reverse restore `clip-path: none` while the
-  layer stayed visible, which flashed the unmasked photo. See
-  `docs/solutions/integration-issues/gsap-fromto-startat-shared-property-scrub-reverse.md`.
+  from 1 to 2.2 the bleed figure's `clipPath` opens from `inset(0px)` to a
+  negative inset to the viewport size and its img `scale` runs 1 to K, same
+  duration and ease; the caption fades in (2.2 to 2.6), then it holds until
+  the pin ends. It does not return to the grid (F09). The static (no JS)
+  figure is the card, so frame 1 is the card framing (F45).
+- One GSAP property per element (F20): `clipPath` is tweened only on the
+  figure and `scale` only on the img, so a scrub reverse cannot restore a
+  stale pre-state. Reverse returns to `inset(0px)` and scale 1. See
+  `docs/solutions/integration-issues/gsap-fromto-startat-shared-property-scrub-reverse.md`
+  and `history-landmark-one-element-clip-scale-lockstep.md`.
 - The page section after the pin (`gallery-mosaic-captioned` on History):
   its first figure is hidden on History because the pinned image plus
   caption replaces it.
