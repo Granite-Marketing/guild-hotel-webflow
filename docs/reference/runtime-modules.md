@@ -16,6 +16,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 |---|---|---|---|
 | eagerImages | `eagerImages.ts` | wired | first |
 | formPlaceholders | `formPlaceholders.ts` | wired (F24, next release) | directly after eagerImages |
+| buttonHover | `buttonHover.ts` | wired (F34, next release) | directly after formPlaceholders, before the scroll engine and swiperSliders |
 | smoothScroll (engine) | `smoothScroll.ts` + `lenisGsap.ts` | wired | after eagerImages |
 | swiperSliders | `swiperSliders.ts` | wired | C |
 | accordion | `accordion.ts` | wired | D |
@@ -239,6 +240,41 @@ placeholder on the underline and the `<label>` becomes screen-reader-only.
 - **No-JS fallback:** labels stay visible and `is-labelled` keeps the default
   placeholder hidden, so no field ships unlabelled.
 - **Init slot:** directly after `eagerImages()`, before `smoothScroll.init()`.
+
+### buttonHover
+
+F34 (2026-10-27). Site-wide button hover: the background fills from the
+bottom while the label rolls up and out and an identical copy rolls in. Same
+state on `:focus-visible`. Needs the CSS block in the site head
+(`docs/reference/site-scripts.md`, `<style data-button-hover>`); without it
+the copy span would show as a stacked duplicate, so release the head first.
+
+- **Selectors:** `.button` (all variants), `.offers-slider-split_button`,
+  `.overlay-detail-panel-modal_button`, `.overlay-detail-panel-modal_item-button`
+  (except the text-link variant `w-variant-0e56f707`). Not covered: the nav
+  `site-nav_book` text link, swiper arrows, filter toggles, tabs.
+- **Attributes (set by the module, no class toggling):** `data-btn` on the
+  button, `data-btn-label` wrapper around the label, `data-btn-copy`
+  (`aria-hidden`) on the rolling copy, `data-btn-fill` on submit inputs.
+  `data-btn-hover="off"` on a button opts out.
+- **Label host:** the button itself, or its single text-only child
+  (`div.text-style-button`). Only text nodes are wrapped, so icons stay.
+- **Submit inputs:** cannot hold spans, so they get `data-btn-fill` and the
+  CSS animates a background-image fill plus a colour change (no roll).
+- **Colours:** per-variant `--btn-fill` / `--btn-ink` custom properties in the
+  head CSS. The fill is a `::before` layer clipped by the same chamfer
+  polygon, so it respects the shape on outline variants too.
+- **Behaviour:** hover rules sit in `@media (hover:hover)` (no stuck fill on
+  touch); `:focus-visible` is the keyboard indicator on chamfer buttons;
+  `prefers-reduced-motion` falls back to a colour change.
+- **Caveat:** `p.button` is a text tag; if one is ever placed inside a
+  `lineMaskReveal` container, SplitText would split it. Opt it out with
+  `data-btn-hover="off"`.
+- **New button class:** add it to `BUTTON_SELECTOR` and give it a
+  `--btn-fill` / `--btn-ink` pair in the head CSS.
+- **Init slot:** directly after `formPlaceholders()`, before
+  `smoothScroll.init()` and `swiperSliders()` so Swiper clones inherit the
+  wrapped markup. A MutationObserver wraps buttons inserted later.
 
 ### currentYear
 
