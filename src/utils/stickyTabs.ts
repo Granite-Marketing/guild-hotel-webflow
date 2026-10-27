@@ -6,7 +6,8 @@
  * tab clicks land below the pinned bar.
  *
  * DOM contract:
- *   nav.tab-pills-intro_tabs[data-sticky-tabs]   the bar (set per page in the
+ *   nav.tab-pills-intro_tabs[data-sticky-tabs="true"]   the bar; the value comes
+ *                                                from the "Sticky tabs" component prop (set per page in the
  *                                                Designer; other pages never pin)
  *     a[href="#id"]                              one per section; the target
  *                                                element id must exist
@@ -34,7 +35,7 @@ const navBottom = () => {
 type TabEntry = { link: HTMLAnchorElement; target: HTMLElement }
 
 export const stickyTabs = () => {
-  const bars = document.querySelectorAll<HTMLElement>('[data-sticky-tabs]')
+  const bars = document.querySelectorAll<HTMLElement>('[data-sticky-tabs="true"]')
   if (!bars.length) return
 
   bars.forEach((tabs) => {

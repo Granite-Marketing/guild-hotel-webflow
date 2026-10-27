@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.10
+
+### Patch Changes
+
+- stickyTabs (F36): only bars with data-sticky-tabs="true" pin, so the attribute can be bound to a component prop that is empty by default.
+
 ## 1.1.9
 
 ### Patch Changes
