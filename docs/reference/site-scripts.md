@@ -95,3 +95,7 @@ Through the Data API this is `data_scripts_tool` > `set_site_freeform_code` (loc
 ## Globals the modules use
 
 `gsap`, `ScrollTrigger` (registered by the Lenis engine), `SplitText` (swiperSliders, scrollTextReveal, heroTextReveal), `Lenis`, `Swiper` (swiperSliders, offersSliderSplit, cardCarouselHeaderLeft). Every module has a selector-presence guard, so pages without its markup are unaffected.
+
+## Site head: button hover CSS (F34)
+
+Webflow styles cannot target pseudo-elements, so the F34 fill-and-roll CSS lives in the site head as `<style data-button-hover>…</style>`, after the existing head content. Source of truth: [`site-head/button-hover.css`](site-head/button-hover.css). `src/utils/buttonHover.ts` adds the `[data-btn]` markup it targets.
