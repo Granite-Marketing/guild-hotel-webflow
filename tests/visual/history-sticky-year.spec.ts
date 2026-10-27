@@ -113,7 +113,7 @@ test.describe('historyStickyYear', () => {
     await expect(label).toHaveCSS('opacity', '1')
   })
 
-  test('mask opens on the same image at card framing, without unmask flicker', async ({ page }) => {
+  test('one image opens from the card to full bleed in lockstep (F45)', async ({ page }) => {
     await openFixture(page)
     const start = await collapseStart(page)
     const viewport = page.viewportSize()!
@@ -122,91 +122,68 @@ test.describe('historyStickyYear', () => {
     const at = (time: number) => scrollTo(page, start + pinLength * (time / total))
     const items = '[data-history-collapse-item]'
 
-    // Timeline position 1: stacked into one image at the centre.
+    // No clone: one img per figure, no bleed layer.
+    const counts = await page.evaluate(() => ({
+      images: document.querySelector('[data-history-collapse]')!.querySelectorAll('img').length,
+      figures: document.querySelectorAll('[data-history-collapse-item]').length,
+      layers: document.querySelectorAll('[data-history-collapse-bleed]').length,
+    }))
+    expect(counts.images).toBe(counts.figures)
+    expect(counts.layers).toBe(0)
+
+    const bleedState = () =>
+      page.evaluate(() => {
+        const figure = document.querySelector<HTMLElement>('[data-history-collapse-item]')!
+        const image = figure.querySelector<HTMLImageElement>('img')!
+        const imageRect = image.getBoundingClientRect()
+        const matrix = new DOMMatrixReadOnly(getComputedStyle(image).transform)
+        return {
+          clipPath: getComputedStyle(figure).clipPath,
+          scale: matrix.a,
+          image: { left: imageRect.left, top: imageRect.top, right: imageRect.right, bottom: imageRect.bottom },
+          caption: Number(
+            getComputedStyle(document.querySelector('[data-history-collapse-caption]')!).opacity,
+          ),
+        }
+      })
+
+    // Position 1: stacked at the centre, still the static card (scale 1).
     await at(1)
     const stacked = await centreOf(page, items)
     for (const centre of stacked) {
       expect(Math.abs(centre.x - viewport.width / 2)).toBeLessThan(2)
       expect(Math.abs(centre.y - viewport.height / 2)).toBeLessThan(2)
     }
+    const card = await bleedState()
+    expect(Math.abs(card.scale - 1)).toBeLessThan(0.01)
+    expect(card.caption).toBe(0)
 
-    // Just past 1: the layer is up, framed to the card, and the photo
-    // renders at the same size and place as in the card (F20).
-    await at(1.06)
-    const match = await page.evaluate(() => {
-      const card = document.querySelector<HTMLElement>('[data-history-collapse-item]')!
-      const cardImage = card.querySelector<HTMLImageElement>('img')!
-      const layer = document.querySelector<HTMLElement>('[data-history-collapse-bleed]')!
-      const copy = layer.querySelector<HTMLImageElement>('img')!
-      const cardRect = card.getBoundingClientRect()
-      const cover = Math.max(
-        cardRect.width / cardImage.naturalWidth,
-        cardRect.height / cardImage.naturalHeight,
-      )
-      const imageWidth = cardImage.naturalWidth * cover
-      const imageHeight = cardImage.naturalHeight * cover
-      const copyRect = copy.getBoundingClientRect()
-      const layerRect = layer.getBoundingClientRect()
-      // Computed clip-path collapses equal sides: inset(top right? bottom? left?).
-      const values = (getComputedStyle(layer).clipPath.match(/[\d.]+px/g) ?? []).map(parseFloat)
-      const [top = 0, right = top, bottom = top, left = right] = values
-      const insets = [top, right, bottom, left]
-      return {
-        opacity: Number(getComputedStyle(layer).opacity),
-        clip: {
-          left: layerRect.left + (insets[3] ?? 0),
-          top: layerRect.top + (insets[0] ?? 0),
-          right: layerRect.right - (insets[1] ?? 0),
-          bottom: layerRect.bottom - (insets[2] ?? 0),
-        },
-        card: { left: cardRect.left, top: cardRect.top, right: cardRect.right, bottom: cardRect.bottom },
-        copy: {
-          width: copyRect.width,
-          height: copyRect.height,
-          x: copyRect.left + copyRect.width / 2,
-          y: copyRect.top + copyRect.height / 2,
-        },
-        image: {
-          width: imageWidth,
-          height: imageHeight,
-          x: cardRect.left + cardRect.width / 2,
-          y: cardRect.top + cardRect.height / 2,
-        },
-      }
-    })
-    expect(match.opacity).toBeGreaterThan(0)
-    for (const side of ['left', 'top', 'right', 'bottom'] as const) {
-      expect(Math.abs(match.clip[side] - match.card[side])).toBeLessThan(4)
+    // Mid-open and at the end: negative inset window, image covers the viewport.
+    for (const time of [2.2, total]) {
+      await at(time)
+      const state = await bleedState()
+      expect(state.clipPath).toMatch(/^inset\(-/)
+      expect(state.image.left).toBeLessThanOrEqual(1)
+      expect(state.image.top).toBeLessThanOrEqual(1)
+      expect(state.image.right).toBeGreaterThanOrEqual(viewport.width - 1)
+      expect(state.image.bottom).toBeGreaterThanOrEqual(viewport.height - 1)
     }
-    for (const key of ['x', 'y'] as const) {
-      expect(Math.abs(match.copy[key] - match.image[key])).toBeLessThan(2)
-    }
-    // Width and height drift by the eased scale just past 1, so allow 2%.
-    expect(Math.abs(match.copy.width / match.image.width - 1)).toBeLessThan(0.02)
-    expect(Math.abs(match.copy.height / match.image.height - 1)).toBeLessThan(0.02)
+    expect((await bleedState()).caption).toBe(1)
+    await expect(page.locator('[data-history-collapse-fade]').first()).toHaveCSS('visibility', 'hidden')
 
-    // Scrub back and forth over the swap: whenever the layer shows, it is
-    // masked (clip-path never "none").
+    // Scrub back and forth: the window is never unmasked.
     for (let round = 0; round < 3; round++) {
       for (const progress of [0.5, 0.32, 0.38]) {
         await scrollTo(page, start + pinLength * progress)
-        const state = await page.$eval('[data-history-collapse-bleed]', (layer) => {
-          const style = getComputedStyle(layer)
-          return { opacity: Number(style.opacity), clipPath: style.clipPath }
-        })
-        if (state.opacity > 0) expect(state.clipPath).not.toBe('none')
+        expect((await bleedState()).clipPath).not.toBe('none')
       }
     }
 
-    // End of the pin: full bleed, heading and caption hidden.
-    await at(total)
-    const end = await page.$eval('[data-history-collapse-bleed]', (layer) => {
-      const style = getComputedStyle(layer)
-      return { opacity: style.opacity, clipPath: style.clipPath }
-    })
-    expect(end.opacity).toBe('1')
-    expect(end.clipPath).toMatch(/^inset\(0px( 0px)*\)$/)
-    await expect(page.locator('[data-history-collapse-fade]').first()).toHaveCSS('visibility', 'hidden')
+    // Back at the top: static card again.
+    await at(0)
+    const origin = await bleedState()
+    expect(origin.clipPath).toMatch(/^inset\(0px( 0px)*\)$/)
+    expect(Math.abs(origin.scale - 1)).toBeLessThan(0.01)
   })
 
   test('reduced motion shows the end state with no animation', async ({ page }) => {

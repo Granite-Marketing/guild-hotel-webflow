@@ -1,9 +1,11 @@
 /**
- * Sticky Tabs (F36)
+ * Sticky Tabs (F36, F44)
  *
- * Pins the topic tab bar under the site nav on /happenings, /blog and /press
- * while the card sections scroll, highlights the section in view, and makes
- * tab clicks land below the pinned bar.
+ * Pins the topic tab bar to the bottom of the viewport, 2rem above the bottom
+ * edge like the gallery and arts sticky tag bars (`.gallery-all_tags-wrapper`
+ * is `sticky; bottom: 2rem`), on /happenings, /blog and /press while the card
+ * sections scroll, highlights the section in view, and makes tab clicks land
+ * just under the fixed site nav.
  *
  * DOM contract:
  *   nav.tab-pills-intro_tabs[data-sticky-tabs="true"]   the bar; the value comes
@@ -18,6 +20,9 @@
  * wrapper is only as tall as the bar, so sticky would hold for zero distance.
  * A ScrollTrigger pin (pinSpacing: false) keeps layout unchanged.
  *
+ * Exit (F49): the bar fades out over the last quarter viewport of the pin
+ * and stays hidden where it releases; scrolling back fades it in again.
+ *
  * Active state: `is-active` and `aria-current="true"` move to the link whose
  * section is under the bar; the first tab stays active before the first one.
  * Order: after staggerCards(), scrollEnlargeSnap(), swiperSliders() and
@@ -31,6 +36,11 @@ const navBottom = () => {
   const bar = header?.querySelector<HTMLElement>('.site-nav_bar') ?? header
   return Math.max(0, bar?.getBoundingClientRect().bottom ?? 0)
 }
+
+const BOTTOM_GAP_REM = 2
+const FADE_DISTANCE_VH = 0.25
+const bottomGap = () =>
+  BOTTOM_GAP_REM * parseFloat(getComputedStyle(document.documentElement).fontSize)
 
 type TabEntry = { link: HTMLAnchorElement; target: HTMLElement }
 
@@ -59,18 +69,43 @@ export const stickyTabs = () => {
     const fallbackSection = entries[entries.length - 1].target
     const lastSection = () =>
       [...sections].reverse().find(isRendered) ?? [...entries].reverse().find((e) => isRendered(e.target))?.target ?? fallbackSection
-    const clearance = () => navBottom() + tabs.offsetHeight
+    // Area covered by the fixed nav at the top; the bar sits at the bottom.
+    const clearance = () => navBottom()
+
+    const pinEnd = () =>
+      lastSection().getBoundingClientRect().bottom + window.scrollY - (window.innerHeight - bottomGap())
 
     ScrollTrigger.create({
       trigger: tabs,
-      start: () => `top top+=${navBottom()}`,
+      start: () => `bottom bottom-=${bottomGap()}`,
       // Absolute scroll position (not endTrigger) so the rendered last
-      // section is re-resolved on every refresh.
-      end: () => lastSection().getBoundingClientRect().bottom + window.scrollY - clearance(),
+      // section is re-resolved on every refresh. The pin releases when the
+      // last section's bottom reaches the bar's bottom, so the bar rests
+      // flush at the section end like the sticky gallery bars.
+      end: pinEnd,
       pin: tabs,
       pinSpacing: false,
       invalidateOnRefresh: true,
     })
+
+    // F49: fade the bar out over the last stretch so it never rests on the
+    // last card's text or against the next section; scrubbed, so it returns
+    // on the way back up.
+    gsap.fromTo(
+      tabs,
+      { autoAlpha: 1 },
+      {
+        autoAlpha: 0,
+        ease: 'none',
+        immediateRender: false,
+        scrollTrigger: {
+          start: () => pinEnd() - FADE_DISTANCE_VH * window.innerHeight,
+          end: pinEnd,
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      },
+    )
 
     const setActive = (active: HTMLAnchorElement) => {
       links.forEach((link) => {

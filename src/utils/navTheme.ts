@@ -26,7 +26,9 @@
  *     `[data-header-theme="white"]` forces the cream nav (NGA contract).
  * Darker areas are subtracted from lighter ones.
  *
- * Skipped when the header already uses the Dark variant (dark text). The
+ * When the header uses the Dark variant (dark text, as on /contact) the
+ * roles swap (F51): the clone is cream and shows wherever the dark clone
+ * would not, so the nav still turns cream over dark sections and photos. The
  * clone hides while the full-screen menu is open (`is-nav-open`) and snaps
  * back with a fresh mask when it closes, so it never flashes.
  */
@@ -34,6 +36,7 @@
 const HEADER_SELECTOR = '[data-nav="header"]'
 const BAR_SELECTOR = '.site-nav_bar'
 const DARK_COLOR = 'var(--_primitives---colors--neutral-darkest, #262118)'
+const LIGHT_COLOR = 'var(--_primitives---colors--neutral-lightest, #f4efdf)'
 const OPEN_CLASS = 'is-nav-open'
 const LIGHT_LUMINANCE = 0.5
 const PHOTO_MIN_WIDTH = 0.6
@@ -51,7 +54,8 @@ export const navTheme = () => {
   const header = document.querySelector<HTMLElement>(HEADER_SELECTOR)
   const bar = header?.querySelector<HTMLElement>(BAR_SELECTOR)
   if (!header || !bar) return
-  if (isDarkColor(getComputedStyle(header).color)) return
+  // Dark variant: the clone is cream and fills the complement of the light areas.
+  const darkBase = isDarkColor(getComputedStyle(header).color)
 
   const overlay = document.createElement('div')
   overlay.setAttribute('aria-hidden', 'true')
@@ -63,7 +67,7 @@ export const navTheme = () => {
     right: '0',
     zIndex: '101',
     pointerEvents: 'none',
-    color: DARK_COLOR,
+    color: darkBase ? LIGHT_COLOR : DARK_COLOR,
   })
   document.body.appendChild(overlay)
 
@@ -156,7 +160,11 @@ export const navTheme = () => {
       if (interval) dark.push(interval)
     })
 
-    const gradient = buildMaskGradient(subtractIntervals(light, dark), navHeight)
+    const lightVisible = subtractIntervals(light, dark)
+    const shown = darkBase
+      ? subtractIntervals([{ start: 0, end: navHeight }], lightVisible)
+      : lightVisible
+    const gradient = buildMaskGradient(shown, navHeight)
     if (gradient === lastGradient) return
     lastGradient = gradient
     overlay.style.maskImage = gradient

@@ -7,6 +7,7 @@
  *   [data-hover-image]                 zone (the list or grid wrapper)
  *     [data-hover-image-item]          each hover target
  *       optional data-hover-image-src  photo URL for this item
+ *       optional data-hover-image-alt  alt text for this item's photo
  *     [data-hover-image-media]         figure holding one <img>, placed
  *                                      anywhere inside the zone
  *
@@ -18,6 +19,8 @@
 
 const ACTIVE_CLASS = 'is-active'
 const DURATION = 0.35
+// The photo sits behind the grid text, dimmed so cream text stays readable.
+const HOVER_OPACITY = 0.55
 
 export const hoverFollowImage = () => {
   const zones = document.querySelectorAll<HTMLElement>('[data-hover-image]')
@@ -36,7 +39,7 @@ export const hoverFollowImage = () => {
 
     const image = media.querySelector<HTMLImageElement>('img')
     if (getComputedStyle(zone).position === 'static') gsap.set(zone, { position: 'relative' })
-    gsap.set(media, { position: 'absolute', top: 0, left: 0, xPercent: -50, yPercent: -50, zIndex: 2 })
+    gsap.set(media, { position: 'absolute', top: 0, left: 0, xPercent: -50, yPercent: -50, zIndex: 0 })
 
     const moveX = gsap.quickTo(media, 'x', { duration: 0.5, ease: 'power3.out' })
     const moveY = gsap.quickTo(media, 'y', { duration: 0.5, ease: 'power3.out' })
@@ -49,17 +52,21 @@ export const hoverFollowImage = () => {
 
     const show = (item: HTMLElement, event: PointerEvent) => {
       const source = item.getAttribute('data-hover-image-src')
+      const alt = item.getAttribute('data-hover-image-alt')
       if (image && source && image.getAttribute('src') !== source) {
         image.removeAttribute('srcset')
+        image.removeAttribute('sizes')
+        image.loading = 'eager'
         image.src = source
       }
+      if (image && alt !== null) image.alt = alt
       items.forEach((other) => other.classList.toggle(ACTIVE_CLASS, other === item))
       if (!media.classList.contains(ACTIVE_CLASS)) {
         const rect = zone.getBoundingClientRect()
         gsap.set(media, { x: event.clientX - rect.left, y: event.clientY - rect.top })
       }
       media.classList.add(ACTIVE_CLASS)
-      gsap.to(media, { autoAlpha: 1, duration: DURATION, ease: 'power2.out', overwrite: 'auto' })
+      gsap.to(media, { autoAlpha: HOVER_OPACITY, duration: DURATION, ease: 'power2.out', overwrite: 'auto' })
     }
 
     const hide = () => {
@@ -77,5 +84,20 @@ export const hoverFollowImage = () => {
       })
     })
     zone.addEventListener('pointermove', follow)
+
+    // Preload every item photo once, so the first hover never flashes the previous one.
+    zone.addEventListener(
+      'pointerenter',
+      () => {
+        items.forEach((item) => {
+          const source = item.getAttribute('data-hover-image-src')
+          if (source) {
+            const preload = new Image()
+            preload.src = source
+          }
+        })
+      },
+      { once: true },
+    )
   })
 }

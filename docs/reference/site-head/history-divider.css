@@ -1,0 +1,2 @@
+/* F50 History: cream 1px rule between the pinned landmark and the mosaic, as in Figma (the mosaic's first figure is hidden on History, so its grid gap has no top edge). */
+.pin-spacer:has(>.section_history-landmark)+.section_gallery-mosaic-captioned,.section_history-landmark+.section_gallery-mosaic-captioned{padding-top:1px}

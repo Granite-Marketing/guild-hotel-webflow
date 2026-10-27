@@ -883,12 +883,18 @@ One photo that follows the pointer while an item in a grid is hovered
 |---|---|---|
 | `data-hover-image` | zone (list or grid wrapper) | none |
 | `data-hover-image-item` | each hover target | none |
-| `data-hover-image-src` | item, optional | photo URL to swap in for that item |
+| `data-hover-image-src` | item, optional | photo URL to swap in for that item (srcset and sizes are dropped) |
+| `data-hover-image-alt` | item, optional | alt text set on the photo when that item is hovered |
 | `data-hover-image-media` | figure holding one `img`, inside the zone | none |
 
 - The module makes the zone `position: relative` (if static), positions the
   media absolutely, centres it on the pointer with `gsap.quickTo`, and fades
   it with `autoAlpha`. Set the media width in its class (Figma 377 x 486).
+- The photo renders behind the text (media `z-index: 0`) at 0.55 opacity
+  (`HOVER_OPACITY` in the module). The grid, header and footer wrappers need
+  `position: relative; z-index: 1` in Webflow so rules, text and logo paint
+  over it.
+- On the first pointer entry into the zone every item photo is preloaded.
 - The hovered item and the visible media get `is-active`.
 - Touch devices and `prefers-reduced-motion: reduce`: the media stays hidden.
 
@@ -916,22 +922,21 @@ Collapse gallery (component `gallery-row-dark-titled`, `history/06`):
 | Attribute | On | Purpose |
 |---|---|---|
 | `data-history-collapse` | section | Root, pinned for the scrub. Give it `overflow: clip` (the full-screen image overshoots) and a height of about `100vh`. The module sets `position: relative` inline if the root is static. |
-| `data-history-collapse-item` | each image wrapper (`figure`) | Slides into the stack. The first item (or `="bleed"`) rides on top and is the one seen full bleed: a copy of its image opens with a clip mask (F09). The copy never scales (F37, supersedes the uniform scale of F20): it fills the layer with `object-fit: cover`, the layer is as tall as the visible viewport, and only the layer's `clip-path` animates. |
+| `data-history-collapse-item` | each image wrapper (`figure`) | Slides into the stack. The first item (or `="bleed"`) rides on top and is the one seen full bleed: this same figure and image open to full bleed. Mask only, never scale (F48, Stephen's rule; supersedes the F45 scale lockstep): on init the module lays the img out at the full-bleed frame size (`vw x min(root height, vh)`, `object-fit: cover`, `sizes=100vw`), centred on its figure and overflowing it, so the card is a window onto the full-size photo. Only the figure's `clip-path` opens (negative inset) to reveal the rest. Layout re-runs on `refreshInit`. |
 | `data-history-collapse-fade` | heading and caption wrappers (optional) | Mask in line by line once on arrival, then fade out while the stack forms. |
 | `data-history-collapse-distance="3"` | section (optional) | Pin length in viewport heights. Default 3. |
 | `data-history-collapse-caption` | text overlay (optional) | A Designer element, direct child of the section root. Default it to `opacity: 0; visibility: hidden` in its class; the module sets `z-index: 4` and `pointer-events: none` and fades it in (`autoAlpha`) at 2.2, once the clip is full. Under reduced motion the module does not run, so it stays hidden. |
 
 - Timeline (2.8 units): items slide to the centre into one stack (0 to 1);
-  at 1 the bleed layer crossfades in (0.25) with its clip at the card rect,
-  then the clip opens to `inset(0px)` (1 to 2.2), the caption fades in
-  (2.2 to 2.6), then it holds until the pin ends. It does not return to the
-  grid (F09). The full-size image is framed differently from the card, so a
-  small content shift at the swap is expected and is why it crossfades.
-- One GSAP property per tween (F20): `autoAlpha` and `clipPath` each have
-  their own tween, the latter with `immediateRender: true`. Two tweens
-  sharing `clipPath` let a scrub reverse restore `clip-path: none` while the
-  layer stayed visible, which flashed the unmasked photo. See
-  `docs/solutions/integration-issues/gsap-fromto-startat-shared-property-scrub-reverse.md`.
+  from 1 to 2.2 the bleed figure's `clipPath` opens from `inset(0px)` to a
+  negative inset to the viewport size (the img never scales); the caption fades in (2.2 to 2.6), then it holds until
+  the pin ends. It does not return to the grid (F09). The card shows the
+  centre of the full-size photo from init onward, so nothing recrops.
+- One GSAP property per element (F20): `clipPath` is tweened only on the
+  figure and `x`/`y` only on the items, so a scrub reverse cannot restore a
+  stale pre-state. Reverse returns to `inset(0px)`. See
+  `docs/solutions/integration-issues/gsap-fromto-startat-shared-property-scrub-reverse.md`
+  and `history-landmark-one-element-clip-scale-lockstep.md`.
 - The page section after the pin (`gallery-mosaic-captioned` on History):
   its first figure is hidden on History because the pinned image plus
   caption replaces it.
@@ -991,7 +996,9 @@ the bar overlaps a light area.
   their visible clip-path area; map art (`[class*="map"]`) is not a photo.
 - Overrides: `data-header-theme="dark"` forces the dark nav over an
   element, `data-header-theme="white"` forces cream.
-- Skipped when the header already has dark text (Dark variant). The clone
+- Dark variant header (dark text, e.g. /contact): the clone is cream and
+  covers the complement of the dark clone's area, so the nav still turns
+  cream over dark sections and photos (F51). The clone
   hides while `is-nav-open` is set and snaps back with a fresh mask.
 - Order: slot D, after `navToggle()`.
 
@@ -1024,9 +1031,12 @@ content (bottom-left, transparent).
 
 Panel `i` is fully shown at `1 + i * 1.2` timeline steps (wipe 0.5, dwell
 0.7); the next wipe starts exactly when the dwell ends. Content is chosen
-from `timeline.time()` in the timeline's own `onUpdate` (scrub-aware), and a
-0.3s settle delay precedes each `play()` so a pass-through never starts a
-reveal that gets reversed half-way. The pin is
+from `timeline.time()` in the timeline's own `onUpdate` (scrub-aware). Copy
+becomes current `REVEAL_LEAD` (0.1) steps before the panel is fully shown (F42),
+and a 0.1s settle delay precedes each `play()` so a pass-through never starts a
+reveal that gets reversed half-way. F42 measured a 0.3 to 0.75 s gap between
+the mask finishing and the copy starting, caused by the scrub tail plus the old
+0.3s settle. The pin is
 `1 + 1.2 * (items - 1) + 0.5` steps long. `lineMaskReveal` `play()` and
 `reverse()` are idempotent. See
 `docs/solutions/integration-issues/scroll-driven-reveal-window-too-narrow.md`.
@@ -1091,14 +1101,14 @@ was removed because it restarts per Collection List and would out-rank
 
 ### stickyTabs
 
-Feedback F36. Pins `nav.tab-pills-intro_tabs[data-sticky-tabs="true"]` under the
-fixed site nav (offset measured from `[data-nav="header"] .site-nav_bar`,
-never hardcoded) until the last `.section_article-card-staggered` after it
-ends, with a ScrollTrigger pin and `pinSpacing: false`. CSS sticky cannot
+Feedback F36. Pins `nav.tab-pills-intro_tabs[data-sticky-tabs="true"]` to the bottom of
+the viewport, 2rem above the bottom edge (same offset as the gallery/arts
+sticky tag bar, F44), from the moment its natural position reaches that line
+until the last rendered `.section_article-card-staggered` after it ends, with a ScrollTrigger pin and `pinSpacing: false`. CSS sticky cannot
 work: the nav sits six wrappers deep in the component instance and its
 containing block is the 56px frame. Scrollspy moves `is-active` and
 `aria-current` across the tab links; clicks scroll through Lenis with an
-extra offset of the bar height (capture-phase handler, so Webflow's anchor
+offset of the fixed nav height only (capture-phase handler, so Webflow's anchor
 scroll does not run too) and update the hash. Tab targets are element ids
 (`#dining`, `#culture`, `#conferences`; `#press`, `#design`, `#community`).
 Only bars with `data-sticky-tabs="true"` pin; the value is bound to the tab-pills-intro "Sticky tabs" prop (empty by default). Order: after `staggerCards()`,
