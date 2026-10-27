@@ -135,10 +135,12 @@ export const createLineMaskTimeline = (container: HTMLElement): LineMaskTimeline
 
   return {
     play: () => {
+      if (direction === 'forward') return
       direction = 'forward'
       runDirection()
     },
     reverse: () => {
+      if (direction === 'reverse') return
       direction = 'reverse'
       runDirection()
     },
