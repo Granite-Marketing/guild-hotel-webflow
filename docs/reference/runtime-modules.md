@@ -857,27 +857,28 @@ Collapse gallery (component `gallery-row-dark-titled`, `history/06`):
 | Attribute | On | Purpose |
 |---|---|---|
 | `data-history-collapse` | section | Root, pinned for the scrub. Give it `overflow: clip` (the full-screen image overshoots) and a height of about `100vh`. The module sets `position: relative` inline if the root is static. |
-| `data-history-collapse-item` | each image wrapper (`figure`) | Slides into the stack. The first item (or `="bleed"`) rides on top and is the one seen full bleed: a copy of its image opens with a clip mask (F09). The copy starts at the card's framing and scales uniformly to full bleed while the clip opens (F20), so the photo never jumps. Put `data-eager` on its `img` so the natural size is known at init; the module also refreshes once the image loads. |
+| `data-history-collapse-item` | each image wrapper (`figure`) | Slides into the stack. The first item (or `="bleed"`) rides on top and is the one seen full bleed: a copy of its image opens with a clip mask (F09). The copy never scales (F37, supersedes the uniform scale of F20): it fills the layer with `object-fit: cover`, the layer is as tall as the visible viewport, and only the layer's `clip-path` animates. |
 | `data-history-collapse-fade` | heading and caption wrappers (optional) | Mask in line by line once on arrival, then fade out while the stack forms. |
 | `data-history-collapse-distance="3"` | section (optional) | Pin length in viewport heights. Default 3. |
+| `data-history-collapse-caption` | text overlay (optional) | A Designer element, direct child of the section root. Default it to `opacity: 0; visibility: hidden` in its class; the module sets `z-index: 4` and `pointer-events: none` and fades it in (`autoAlpha`) at 2.2, once the clip is full. Under reduced motion the module does not run, so it stays hidden. |
 
 - Timeline (2.8 units): items slide to the centre into one stack (0 to 1);
-  at 1 the bleed layer appears pixel-identical to the stacked card (clip =
-  card rect, copy scale = card cover size over full-bleed cover size), then
-  the clip opens to `inset(0px)` while the copy scales to 1 (1 to 2.2), then
-  holds until the pin ends. It does not return to the grid (F09).
-- One GSAP property per tween (F20): `autoAlpha`, `clipPath` and the copy's
-  `scale` each have their own tween, the latter two with
-  `immediateRender: true`. Two tweens sharing `clipPath` let a scrub reverse
-  restore `clip-path: none` while the layer stayed visible, which flashed the
-  unmasked photo. See
+  at 1 the bleed layer crossfades in (0.25) with its clip at the card rect,
+  then the clip opens to `inset(0px)` (1 to 2.2), the caption fades in
+  (2.2 to 2.6), then it holds until the pin ends. It does not return to the
+  grid (F09). The full-size image is framed differently from the card, so a
+  small content shift at the swap is expected and is why it crossfades.
+- One GSAP property per tween (F20): `autoAlpha` and `clipPath` each have
+  their own tween, the latter with `immediateRender: true`. Two tweens
+  sharing `clipPath` let a scrub reverse restore `clip-path: none` while the
+  layer stayed visible, which flashed the unmasked photo. See
   `docs/solutions/integration-issues/gsap-fromto-startat-shared-property-scrub-reverse.md`.
-- The page section after the pin (`gallery-mosaic-captioned` on History)
-  should hold the same four images, bleed image first, so the full-bleed
-  photo continues into the mosaic (Figma History-Animation-2).
+- The page section after the pin (`gallery-mosaic-captioned` on History):
+  its first figure is hidden on History because the pinned image plus
+  caption replaces it.
 - Offsets are measured through the `offsetParent` chain, so refreshes
   mid-scroll stay correct.
-- Reduced motion: nothing is created; the gallery shows as laid out.
+- Reduced motion: nothing is created; the gallery shows as the 4 landmark cards, with no caption.
 - Local check: `pnpm exec playwright test history-sticky-year` (fixture in
   `tests/visual/fixtures/history-sticky-year.html`; add `--headed` to watch).
 
