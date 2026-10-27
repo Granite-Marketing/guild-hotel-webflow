@@ -965,9 +965,12 @@ content (bottom-left, transparent).
 
 Panel `i` is fully shown at `1 + i * 1.2` timeline steps (wipe 0.5, dwell
 0.7); the next wipe starts exactly when the dwell ends. Content is chosen
-from `timeline.time()` in the timeline's own `onUpdate` (scrub-aware), and a
-0.3s settle delay precedes each `play()` so a pass-through never starts a
-reveal that gets reversed half-way. The pin is
+from `timeline.time()` in the timeline's own `onUpdate` (scrub-aware). Copy
+becomes current `REVEAL_LEAD` (0.1) steps before the panel is fully shown (F42),
+and a 0.1s settle delay precedes each `play()` so a pass-through never starts a
+reveal that gets reversed half-way. F42 measured a 0.3 to 0.75 s gap between
+the mask finishing and the copy starting, caused by the scrub tail plus the old
+0.3s settle. The pin is
 `1 + 1.2 * (items - 1) + 0.5` steps long. `lineMaskReveal` `play()` and
 `reverse()` are idempotent. See
 `docs/solutions/integration-issues/scroll-driven-reveal-window-too-narrow.md`.
