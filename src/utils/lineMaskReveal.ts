@@ -49,6 +49,8 @@ type RevealPart = TextPart | ElementPart
 export interface LineMaskTimeline {
   play: () => void
   reverse: () => void
+  /** True while any part of the copy is revealed (progress above zero). */
+  isRevealed: () => boolean
 }
 
 const findTargets = (container: HTMLElement) => {
@@ -72,7 +74,7 @@ const isText = (element: HTMLElement) =>
 export const createLineMaskTimeline = (container: HTMLElement): LineMaskTimeline => {
   const elements = findTargets(container)
   if (!elements.length || window.matchMedia(REDUCED_MOTION).matches) {
-    return { play: () => undefined, reverse: () => undefined }
+    return { play: () => undefined, reverse: () => undefined, isRevealed: () => false }
   }
 
   const timeline = gsap.timeline({ paused: true })
@@ -144,6 +146,7 @@ export const createLineMaskTimeline = (container: HTMLElement): LineMaskTimeline
       direction = 'reverse'
       runDirection()
     },
+    isRevealed: () => timeline.progress() > 0,
   }
 }
 
