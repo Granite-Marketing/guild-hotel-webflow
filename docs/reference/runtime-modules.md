@@ -1012,6 +1012,33 @@ switches.
 - Guild home Meetings & Events: panels use `venue-card-fullbleed_panel`
   (grid row 1 across all columns, so they overlap). Order: slot D.
 
+### staggerCards
+
+Feedback F36. Alternates `.article-card-staggered_component.is-cms-item`
+cards left/right continuously in DOM order across all category groups on
+the page (Figma: L, R, L, then R, L), by toggling `is-right` on odd
+positions. Hidden cards are skipped. Each `.article-card-staggered_header.is-group`
+gets `is-right` when its first card is right (empty groups use the side the
+next card would take). The Designer's `:nth-child(2n)` rule on `is-cms-item`
+was removed because it restarts per Collection List and would out-rank
+`is-right`. Order: slot E, after `cmsItemLinks()`, before any ScrollTrigger.
+
+### stickyTabs
+
+Feedback F36. Pins `nav.tab-pills-intro_tabs[data-sticky-tabs]` under the
+fixed site nav (offset measured from `[data-nav="header"] .site-nav_bar`,
+never hardcoded) until the last `.section_article-card-staggered` after it
+ends, with a ScrollTrigger pin and `pinSpacing: false`. CSS sticky cannot
+work: the nav sits six wrappers deep in the component instance and its
+containing block is the 56px frame. Scrollspy moves `is-active` and
+`aria-current` across the tab links; clicks scroll through Lenis with an
+extra offset of the bar height (capture-phase handler, so Webflow's anchor
+scroll does not run too) and update the hash. Tab targets are element ids
+(`#dining`, `#culture`, `#conferences`; `#press`, `#design`, `#community`).
+Only bars carrying `data-sticky-tabs` pin. Order: after `staggerCards()`,
+`scrollEnlargeSnap()`, `swiperSliders()`, `gsapBasicAnimations()`, next to
+`imageStackCollapse()`.
+
 ### stickyCta
 
 Feedback F10. `stickyCta(selector)` docks a button at the bottom centre of
