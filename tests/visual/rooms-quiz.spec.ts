@@ -125,6 +125,15 @@ test('AE2: with no exact match, guests plus one other answer shows under the clo
   await expect(empty(page)).toBeHidden()
 })
 
+test('an odd number of matches widens the last card, an even number widens none', async ({ page }) => {
+  await load(page)
+  await answer(page, ['5-plus-guests', 'business-trip', 'courtyard-view'])
+  await expect(room(page, 'c')).toHaveClass(/is-wide/)
+  await page.locator('[data-rooms-quiz-restart]').click()
+  await answer(page, ['two-guests', 'couples-getaway', 'quiet'])
+  await expect(page.locator('[data-room].is-wide')).toHaveCount(0)
+})
+
 test('with neither an exact nor a closest match the empty message shows and no cards', async ({ page }) => {
   await load(page)
   await answer(page, ['just-me', 'celebration', 'street-view'])

@@ -839,6 +839,7 @@ Ids: `docs/reference/webflow-ids.md` "F26 Rooms quiz CMS".
 | `fs-cmsnest-element="list"` | the room grid collection list | each of its items is a card; CMS Nest replaces the item's nest target with the room's options list |
 | `data-rooms-quiz-tag` | each Quiz Options item CMS Nest injects | option slug |
 | `data-rooms-quiz-timeout` | root, optional | ms to wait for CMS Nest (default 8000) |
+| `data-scroll-flush` | the quiz section and the recommendations section | `true`; `smoothScroll.scrollTo` lands them at the viewport top instead of below the transparent fixed nav |
 
 - The visible panel carries `is-active` (`.rooms-collection-quiz_component`
   is `display: none`, the `is-active` combo is `grid`). Step 1 has it in the
@@ -855,6 +856,9 @@ Ids: `docs/reference/webflow-ids.md` "F26 Rooms quiz CMS".
 - Matching: a card matches when its nest holds all three answers; otherwise
   cards holding the guest answer and at least one other show under the
   closest line; otherwise the empty line shows. Non-matching cards get `hide`.
+  With an odd number of matches the last card item gets `is-wide`
+  (`.rooms-collection-room-grid_item.is-wide` spans both columns at 16:9;
+  the card fills it through `height: 100%`).
 - CMS Nest dependency: Finsweet CMS Nest v1 (fetch mode) in the /rooms head
   code. Each card's first link is its room page; CMS Nest fetches it, reads
   the hidden Quiz options list on the Rooms Template (bound to the room's

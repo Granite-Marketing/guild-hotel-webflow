@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.16
+
+### Patch Changes
+
+- 46abb40: Rooms quiz: quiz and results scroll flush to the viewport top, and an odd last result card spans the row.
+- fa89ab3: Rooms quiz: the restart link no longer triggers Webflow's own anchor scroll, which pulled the quiz 92px off the top.
+
 ## 1.1.15
 
 ### Patch Changes
