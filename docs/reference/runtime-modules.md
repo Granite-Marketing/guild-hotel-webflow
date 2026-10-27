@@ -924,6 +924,12 @@ The arts section is a native `section_venue-card-fullbleed` with `is-bleed`
 combos on stage (no padding), media (no chamfer, 1253/753 start size) and
 content (bottom-left, transparent).
 
+The 🛏️ Rooms Template (F41) reuses the same structure with the `img` bound to the
+CMS image field `card-and-hero-image`, so each room expands its own photo. No
+new JS: the guard is attribute-based and the bundle loads site wide. The old
+image-inset-single and Hero Fullbleed Centered Left instances are hidden, not
+removed.
+
 ### lineMaskReveal (helper)
 
 `createLineMaskTimeline(container)` hides a container's headings,
