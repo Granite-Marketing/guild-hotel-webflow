@@ -16,6 +16,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 |---|---|---|---|
 | eagerImages | `eagerImages.ts` | wired | first |
 | formPlaceholders | `formPlaceholders.ts` | wired (F24, next release) | directly after eagerImages |
+| buttonHover | `buttonHover.ts` | wired (F34, next release) | directly after formPlaceholders, before the scroll engine and swiperSliders |
 | smoothScroll (engine) | `smoothScroll.ts` + `lenisGsap.ts` | wired | after eagerImages |
 | swiperSliders | `swiperSliders.ts` | wired | C |
 | accordion | `accordion.ts` | wired | D |
@@ -239,6 +240,41 @@ placeholder on the underline and the `<label>` becomes screen-reader-only.
 - **No-JS fallback:** labels stay visible and `is-labelled` keeps the default
   placeholder hidden, so no field ships unlabelled.
 - **Init slot:** directly after `eagerImages()`, before `smoothScroll.init()`.
+
+### buttonHover
+
+F34 (2026-10-27). Site-wide button hover: the background fills from the
+bottom while the label rolls up and out and an identical copy rolls in. Same
+state on `:focus-visible`. Needs the CSS block in the site head
+(`docs/reference/site-scripts.md`, `<style data-button-hover>`); without it
+the copy span would show as a stacked duplicate, so release the head first.
+
+- **Selectors:** `.button` (all variants), `.offers-slider-split_button`,
+  `.overlay-detail-panel-modal_button`, `.overlay-detail-panel-modal_item-button`
+  (except the text-link variant `w-variant-0e56f707`). Not covered: the nav
+  `site-nav_book` text link, swiper arrows, filter toggles, tabs.
+- **Attributes (set by the module, no class toggling):** `data-btn` on the
+  button, `data-btn-label` wrapper around the label, `data-btn-copy`
+  (`aria-hidden`) on the rolling copy, `data-btn-fill` on submit inputs.
+  `data-btn-hover="off"` on a button opts out.
+- **Label host:** the button itself, or its single text-only child
+  (`div.text-style-button`). Only text nodes are wrapped, so icons stay.
+- **Submit inputs:** cannot hold spans, so they get `data-btn-fill` and the
+  CSS animates a background-image fill plus a colour change (no roll).
+- **Colours:** per-variant `--btn-fill` / `--btn-ink` custom properties in the
+  head CSS. The fill is a `::before` layer clipped by the same chamfer
+  polygon, so it respects the shape on outline variants too.
+- **Behaviour:** hover rules sit in `@media (hover:hover)` (no stuck fill on
+  touch); `:focus-visible` is the keyboard indicator on chamfer buttons;
+  `prefers-reduced-motion` falls back to a colour change.
+- **Caveat:** `p.button` is a text tag; if one is ever placed inside a
+  `lineMaskReveal` container, SplitText would split it. Opt it out with
+  `data-btn-hover="off"`.
+- **New button class:** add it to `BUTTON_SELECTOR` and give it a
+  `--btn-fill` / `--btn-ink` pair in the head CSS.
+- **Init slot:** directly after `formPlaceholders()`, before
+  `smoothScroll.init()` and `swiperSliders()` so Swiper clones inherit the
+  wrapped markup. A MutationObserver wraps buttons inserted later.
 
 ### currentYear
 
@@ -821,27 +857,28 @@ Collapse gallery (component `gallery-row-dark-titled`, `history/06`):
 | Attribute | On | Purpose |
 |---|---|---|
 | `data-history-collapse` | section | Root, pinned for the scrub. Give it `overflow: clip` (the full-screen image overshoots) and a height of about `100vh`. The module sets `position: relative` inline if the root is static. |
-| `data-history-collapse-item` | each image wrapper (`figure`) | Slides into the stack. The first item (or `="bleed"`) rides on top and is the one seen full bleed: a copy of its image opens with a clip mask (F09). The copy starts at the card's framing and scales uniformly to full bleed while the clip opens (F20), so the photo never jumps. Put `data-eager` on its `img` so the natural size is known at init; the module also refreshes once the image loads. |
+| `data-history-collapse-item` | each image wrapper (`figure`) | Slides into the stack. The first item (or `="bleed"`) rides on top and is the one seen full bleed: a copy of its image opens with a clip mask (F09). The copy never scales (F37, supersedes the uniform scale of F20): it fills the layer with `object-fit: cover`, the layer is as tall as the visible viewport, and only the layer's `clip-path` animates. |
 | `data-history-collapse-fade` | heading and caption wrappers (optional) | Mask in line by line once on arrival, then fade out while the stack forms. |
 | `data-history-collapse-distance="3"` | section (optional) | Pin length in viewport heights. Default 3. |
+| `data-history-collapse-caption` | text overlay (optional) | A Designer element, direct child of the section root. Default it to `opacity: 0; visibility: hidden` in its class; the module sets `z-index: 4` and `pointer-events: none` and fades it in (`autoAlpha`) at 2.2, once the clip is full. Under reduced motion the module does not run, so it stays hidden. |
 
 - Timeline (2.8 units): items slide to the centre into one stack (0 to 1);
-  at 1 the bleed layer appears pixel-identical to the stacked card (clip =
-  card rect, copy scale = card cover size over full-bleed cover size), then
-  the clip opens to `inset(0px)` while the copy scales to 1 (1 to 2.2), then
-  holds until the pin ends. It does not return to the grid (F09).
-- One GSAP property per tween (F20): `autoAlpha`, `clipPath` and the copy's
-  `scale` each have their own tween, the latter two with
-  `immediateRender: true`. Two tweens sharing `clipPath` let a scrub reverse
-  restore `clip-path: none` while the layer stayed visible, which flashed the
-  unmasked photo. See
+  at 1 the bleed layer crossfades in (0.25) with its clip at the card rect,
+  then the clip opens to `inset(0px)` (1 to 2.2), the caption fades in
+  (2.2 to 2.6), then it holds until the pin ends. It does not return to the
+  grid (F09). The full-size image is framed differently from the card, so a
+  small content shift at the swap is expected and is why it crossfades.
+- One GSAP property per tween (F20): `autoAlpha` and `clipPath` each have
+  their own tween, the latter with `immediateRender: true`. Two tweens
+  sharing `clipPath` let a scrub reverse restore `clip-path: none` while the
+  layer stayed visible, which flashed the unmasked photo. See
   `docs/solutions/integration-issues/gsap-fromto-startat-shared-property-scrub-reverse.md`.
-- The page section after the pin (`gallery-mosaic-captioned` on History)
-  should hold the same four images, bleed image first, so the full-bleed
-  photo continues into the mosaic (Figma History-Animation-2).
+- The page section after the pin (`gallery-mosaic-captioned` on History):
+  its first figure is hidden on History because the pinned image plus
+  caption replaces it.
 - Offsets are measured through the `offsetParent` chain, so refreshes
   mid-scroll stay correct.
-- Reduced motion: nothing is created; the gallery shows as laid out.
+- Reduced motion: nothing is created; the gallery shows as the 4 landmark cards, with no caption.
 - Local check: `pnpm exec playwright test history-sticky-year` (fixture in
   `tests/visual/fixtures/history-sticky-year.html`; add `--headed` to watch).
 
@@ -914,7 +951,7 @@ Since F15 every panel's content (Zuma included, replacing F03's play-once)
 is a triggered `createLineMaskTimeline` reveal, not scrubbed tweens: heading,
 body and button mask in as one timeline after the mask or wipe completes,
 and reverse when the panel is left in either direction. The pin is
-`items + 0.5` steps long: the final half step is a free-scrolling hold so
+`items + 0.5` steps long (F33 changed the pitch, see below): the final half step is a free-scrolling hold so
 the last panel settles before the pin releases. Home uses
 `data-scroll-enlarge-snap-step="110"` for more distance per panel.
 
@@ -923,6 +960,23 @@ mask grows to full bleed, the content masks in at full, then the end hold.
 The arts section is a native `section_venue-card-fullbleed` with `is-bleed`
 combos on stage (no padding), media (no chamfer, 1253/753 start size) and
 content (bottom-left, transparent).
+
+### scrollEnlargeSnap: F33 schedule and settle gate
+
+Panel `i` is fully shown at `1 + i * 1.2` timeline steps (wipe 0.5, dwell
+0.7); the next wipe starts exactly when the dwell ends. Content is chosen
+from `timeline.time()` in the timeline's own `onUpdate` (scrub-aware), and a
+0.3s settle delay precedes each `play()` so a pass-through never starts a
+reveal that gets reversed half-way. The pin is
+`1 + 1.2 * (items - 1) + 0.5` steps long. `lineMaskReveal` `play()` and
+`reverse()` are idempotent. See
+`docs/solutions/integration-issues/scroll-driven-reveal-window-too-narrow.md`.
+
+The 🛏️ Rooms Template (F41) reuses the same structure with the `img` bound to the
+CMS image field `card-and-hero-image`, so each room expands its own photo. No
+new JS: the guard is attribute-based and the bundle loads site wide. The old
+image-inset-single and Hero Fullbleed Centered Left instances are hidden, not
+removed.
 
 ### lineMaskReveal (helper)
 
@@ -964,6 +1018,33 @@ switches.
 - Reduced motion: nothing is split; panels and media swap instantly.
 - Guild home Meetings & Events: panels use `venue-card-fullbleed_panel`
   (grid row 1 across all columns, so they overlap). Order: slot D.
+
+### staggerCards
+
+Feedback F36. Alternates `.article-card-staggered_component.is-cms-item`
+cards left/right continuously in DOM order across all category groups on
+the page (Figma: L, R, L, then R, L), by toggling `is-right` on odd
+positions. Hidden cards are skipped. Each `.article-card-staggered_header.is-group`
+gets `is-right` when its first card is right (empty groups use the side the
+next card would take). The Designer's `:nth-child(2n)` rule on `is-cms-item`
+was removed because it restarts per Collection List and would out-rank
+`is-right`. Order: slot E, after `cmsItemLinks()`, before any ScrollTrigger.
+
+### stickyTabs
+
+Feedback F36. Pins `nav.tab-pills-intro_tabs[data-sticky-tabs]` under the
+fixed site nav (offset measured from `[data-nav="header"] .site-nav_bar`,
+never hardcoded) until the last `.section_article-card-staggered` after it
+ends, with a ScrollTrigger pin and `pinSpacing: false`. CSS sticky cannot
+work: the nav sits six wrappers deep in the component instance and its
+containing block is the 56px frame. Scrollspy moves `is-active` and
+`aria-current` across the tab links; clicks scroll through Lenis with an
+extra offset of the bar height (capture-phase handler, so Webflow's anchor
+scroll does not run too) and update the hash. Tab targets are element ids
+(`#dining`, `#culture`, `#conferences`; `#press`, `#design`, `#community`).
+Only bars carrying `data-sticky-tabs` pin. Order: after `staggerCards()`,
+`scrollEnlargeSnap()`, `swiperSliders()`, `gsapBasicAnimations()`, next to
+`imageStackCollapse()`.
 
 ### stickyCta
 

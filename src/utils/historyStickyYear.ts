@@ -33,12 +33,16 @@
  *                                           while the image fills the screen
  *   data-history-collapse-distance="3"      optional pin length in viewport
  *                                           heights (default 3)
+ *   [data-history-collapse-caption]         optional text overlay (Designer
+ *                                           element, direct child of the
+ *                                           root); hidden by its class, fades
+ *                                           in once the image is full bleed
  *
  * The collapse timeline runs gallery -> stacked into one image (bleed card
  * on top) -> a clip mask opens on a copy of the bleed image until it fills
- * the screen, with no return to the gallery (F09). The mask opens on the
- * same image, card framing to full-bleed framing (F20), with uniform image
- * scale; one property per tween to prevent unmask flicker. The natural
+ * the screen, with no return to the gallery (F09). The copy fills the
+ * viewport (object-fit cover) and never scales (F37, supersedes F20); only
+ * its clip-path animates, one property per tween to prevent unmask flicker. The natural
  * layout is the start state. Under prefers-reduced-motion the gallery stays
  * as laid out and the year label swaps text without a tween.
  */
@@ -178,47 +182,14 @@ const setupCollapseGallery = (root: HTMLElement) => {
     return `inset(${vertical}px ${horizontal}px ${vertical}px ${horizontal}px)`
   }
 
-  /** Width / height of the bleed photo; the figure's box until it loads. */
-  const imageAspect = () =>
-    bleedImage.naturalWidth && bleedImage.naturalHeight
-      ? bleedImage.naturalWidth / bleedImage.naturalHeight
-      : bleedItem.offsetWidth / Math.max(1, bleedItem.offsetHeight)
-
-  /** Rendered size of the photo when it covers a box (object-fit: cover). */
-  const coverSize = (boxWidth: number, boxHeight: number) => {
-    const aspect = imageAspect()
-    return boxWidth / boxHeight > aspect
-      ? { width: boxWidth, height: boxWidth / aspect }
-      : { width: boxHeight * aspect, height: boxHeight }
-  }
-
-  /**
-   * Uniform scale at which the full-bleed copy renders the photo exactly as
-   * the stacked card does (F20): card cover size over full-bleed cover size.
-   * The card img fills its figure (object-fit cover, centred), so the figure
-   * box stands in for it, as stackedCardInset does.
-   */
-  const cardMatchScale = () =>
-    coverSize(bleedItem.offsetWidth, bleedItem.offsetHeight).width /
-    coverSize(root.clientWidth, visibleHeight()).width
-
   const { layer, copy } = createBleedLayer(root, bleedImage)
 
-  // The copy is sized to the full-bleed cover box of the photo itself (no
-  // object-fit crop), centred in the layer, so scaling it never changes
-  // which part of the photo shows, only its size.
+  // The copy fills the layer (object-fit cover) and never scales (F37); only
+  // the layer height follows the visible viewport.
   const sizeLayer = () => {
     layer.style.height = `${visibleHeight()}px`
-    const { width, height } = coverSize(root.clientWidth, visibleHeight())
-    copy.style.width = `${width}px`
-    copy.style.height = `${height}px`
   }
   sizeLayer()
-
-  // A lazy bleed image has no natural size yet: re-measure once it loads.
-  if (!bleedImage.complete || !bleedImage.naturalWidth) {
-    bleedImage.addEventListener('load', () => ScrollTrigger.refresh(true), { once: true })
-  }
 
   // The bleed card rides on top of the stack.
   items.forEach((item) => {
@@ -235,14 +206,20 @@ const setupCollapseGallery = (root: HTMLElement) => {
     onEnter: () => reveals.forEach((reveal) => reveal.play()),
   })
 
-  // Start state of the mask: framed to the card, photo at card scale. Set
-  // before the timeline so any reverse past position 1 lands here, never on
-  // clip-path "none".
-  gsap.set(copy, { xPercent: -50, yPercent: -50, scale: cardMatchScale() })
+  // Start state of the mask: framed to the card. Set before the timeline so
+  // any reverse past position 1 lands here, never on clip-path "none".
   gsap.set(layer, { clipPath: stackedCardInset() })
 
-  // gallery -> stack of one (bleed card on top) -> the same image, framed
-  // and scaled to match the card, opens to full bleed and stays there; the
+  // Optional text overlay on the pinned image; hidden until the clip is full.
+  const caption = root.querySelector<HTMLElement>('[data-history-collapse-caption]')
+  if (caption) {
+    caption.style.zIndex = '4'
+    caption.style.pointerEvents = 'none'
+    gsap.set(caption, { autoAlpha: 0 })
+  }
+
+  // gallery -> stack of one (bleed card on top) -> the same image at full
+  // size, clipped to the card, opens to full bleed and stays there; the
   // gallery does not come back while pinned.
   const timeline = gsap.timeline({
     defaults: { ease: 'power2.inOut' },
@@ -271,11 +248,12 @@ const setupCollapseGallery = (root: HTMLElement) => {
       0,
     )
     .to(fades, { autoAlpha: 0, duration: 0.4, ease: 'none' }, 0.6)
-    // The layer is pixel-identical to the card here, so the swap is instant.
+    // The full-size image is not pixel-identical to the card framing, so the
+    // swap is a short crossfade rather than an instant cut.
     .fromTo(
       layer,
       { autoAlpha: 0 },
-      { autoAlpha: 1, duration: 0.05, ease: 'none', immediateRender: false },
+      { autoAlpha: 1, duration: 0.25, ease: 'none', immediateRender: false },
       1,
     )
     .fromTo(
@@ -284,20 +262,18 @@ const setupCollapseGallery = (root: HTMLElement) => {
       { clipPath: 'inset(0px 0px 0px 0px)', duration: 1.2, immediateRender: true },
       1,
     )
-    .fromTo(
-      copy,
-      { scale: cardMatchScale },
-      { scale: 1, duration: 1.2, immediateRender: true },
-      1,
-    )
     // Hold the full-bleed image for the rest of the pin.
     .to({}, { duration: 0.4 }, 2.4)
+
+  if (caption) {
+    timeline.to(caption, { autoAlpha: 1, duration: 0.4, ease: 'none' }, 2.2)
+  }
 }
 
 /**
  * A layer over the gallery holding a copy of the bleed image. The layer's
- * clip-path is the mask; the copy only ever scales uniformly, so the photo
- * keeps its aspect ratio throughout.
+ * clip-path is the mask; the copy fills the layer with object-fit cover and
+ * never transforms (F37).
  */
 const createBleedLayer = (root: HTMLElement, image: HTMLImageElement) => {
   const layer = document.createElement('div')
@@ -323,13 +299,14 @@ const createBleedLayer = (root: HTMLElement, image: HTMLImageElement) => {
   copy.removeAttribute('data-eager')
   Object.assign(copy.style, {
     position: 'absolute',
-    top: '50%',
-    left: '50%',
+    top: '0',
+    left: '0',
+    width: '100%',
+    height: '100%',
     maxWidth: 'none',
     objectFit: 'cover',
+    objectPosition: '50% 50%',
     display: 'block',
-    transformOrigin: '50% 50%',
-    willChange: 'transform',
   })
   layer.appendChild(copy)
   root.appendChild(layer)

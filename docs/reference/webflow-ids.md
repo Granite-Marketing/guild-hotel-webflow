@@ -102,7 +102,7 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 | Component | ID | Notes |
 |---|---|---|
 | Global Styles | `ab488b17-f25a-fbf8-5f54-4a3955eb57e5` | Relume starter global styles embed |
-| Footer Links | `14efd120-8e4c-efe3-75b9-396e4792ed73` | Q013 site footer, no props; built on `🧱 footer-links` (2026-10-20) |
+| Footer Links | `14efd120-8e4c-efe3-75b9-396e4792ed73` | Q013 site footer, no props; built on `🧱 footer-links` (2026-10-20). Dining column gap (F35): the CMS list wrapper `6d849dd0-bd96-3cdd-c3ba-77644e482bf8` and the static "in-room dining" `ul.footer-links_list` are separate flex children of `footer-links_column` (row-gap 2rem, 1.25rem at max-width 767px), so the gap after the last CMS item is 32px (20px mobile) instead of the 12px list gap. Fix is combo class `is-after-cms` on the static ul only: margin-top -1.25rem, -0.5rem at max-width 767px. Ul element id not cached yet. |
 | CTA Booking Newsletter | `916e4ffc-007b-3572-a686-946c6645b2e8` | Q012, no props; instance on `🧱 cta-booking-newsletter` |
 | faq-accordion | `064f3089-65e4-65ec-6f9a-dc5cb4ab8ee7` | Q015, built on `/build-faq-accordion` (2026-10-20), no props |
 | Hero Fullbleed Centered | `f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa` | Q014 shared page hero, built on `/build-hero-fullbleed-centered`; 15 props (9 content, 6 Show booleans), plus the auto-created Variant prop `69451566-4154-e6c8-a0db-695c14d9c0af`; variants (V01) Text Dark `c5755984-9207-f25b-c049-f99910c92943`, Left `75108921-8bef-ba10-2260-5af2990c9e7d`; (V02) Blue Button `e8c11cfd-fe49-cdf5-9556-32d89df58988`, Burgundy Button `81c5f9ea-386b-7949-fba8-9ed7d1d78407` |
@@ -277,6 +277,7 @@ Ids created or first cached by the F15 to F30 groups. Recorded by the integrator
 - `overlay-detail-panel-modal_component` `3b753a7a-b6c6-f84b-98f9-73ee58aafc18`: base overflow-y auto, overscroll-behavior contain.
 - `room-list-hover-preview_component` `1432cf08-3b60-1b4c-d199-78937eb8cace`: base overflow-y auto, overscroll-behavior contain.
 - Overlay Detail Panel Modal Dark variant `569f778f-307a-cdc2-95c3-95b18a7c2c5c`: `overlay-detail-panel-modal_figure` is main `height: calc(100vh - 6.5rem)` (aspect-ratio auto, order 0), medium `height: auto` (aspect-ratio 681 / 796).
+- F39 Dark variant `overlay-detail-panel-modal_bar` (style id: resolve with `get_styles`, not yet cached): `left` is main `calc(14.5rem + (100% - 19rem) * 0.56049)` (was 57%), medium `2rem` (was 1rem), small `1.25rem` (new). Top 2.375rem and right 4.5rem unchanged. Aligns back link with the text column.
 
 ### F20 History landmark
 
@@ -306,3 +307,10 @@ Ids created or first cached by the F15 to F30 groups. Recorded by the integrator
 | `cta-booking-newsletter_label` (existing) | `.cta-booking-newsletter_label` | `3d9e555d-c4d8-2f60-f9a0-d06b1d661c65` |
 
 Contact select `c6518e72-8838-a8a1-906b-60929af12d99` carries custom attribute `id="contact-assist"`.
+
+## Feedback batch 3
+
+### F41 Rooms template enlarge image (planned, ids pending Designer write)
+- Page 🛏️ Rooms Template `6adf8f780ea92c0983eddac0`, collection `6adf8f780ea92c0983eddaac`, image field `card-and-hero-image` (`c468cf9d6abf07ad5f096b97840956ee`).
+- New section `section_venue-card-fullbleed` (arts structure with `is-bleed` combos) goes after native description section `9bf83316-7b0a-5325-0fcb-b74684ca546d`. Record new element ids here after the write.
+- Hide (do not delete) instances `9e24d43f-9036-d8f7-8de6-59dc2b6a0d14` (image-inset-single) and `4ce1de35-7611-04ea-4c15-d9c7fa602d24` (Hero Fullbleed Centered Left).

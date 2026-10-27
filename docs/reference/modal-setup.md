@@ -329,6 +329,12 @@ exists but has no CMS binding — re-do the purple binding step.
 7. **Forgetting the overlay's `z-index`.** The overlay needs to sit below the
    dialog but above page content. If clicks fall through, the stacking order
    is wrong.
+8. **Trigger without a matching dialog.** A link with `href="#some-id"` and no
+   `data-modal-open` (or a `data-modal-open` whose id has no dialog) is a plain
+   anchor, so the browser jumps to `#some-id` instead of opening anything.
+   Every venue panel needs its own trigger attribute and its own dialog
+   instance (F38: /meetings panels 2 and 3 pointed at `#request-for-proposal`).
+   Use `href="#"` on triggers so a missing dialog cannot cause a jump.
 
 ## Opting out of the overlay for a specific dialog
 

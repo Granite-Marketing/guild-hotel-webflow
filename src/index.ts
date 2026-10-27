@@ -16,6 +16,7 @@
  */
 
 import { accordion } from '$utils/accordion'
+import { buttonHover } from '$utils/buttonHover'
 import { cardCarouselHeaderLeft } from '$utils/cardCarouselHeaderLeft'
 import { cmsItemLinks } from '$utils/cmsItemLinks'
 import { currentYear } from '$utils/currentYear'
@@ -39,7 +40,9 @@ import { roomGridHoverReveal } from '$utils/roomGridHoverReveal'
 import { roomListHoverPreview } from '$utils/roomListHoverPreview'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
 import { smoothScroll } from '$utils/smoothScroll'
+import { staggerCards } from '$utils/staggerCards'
 import { stickyCta } from '$utils/stickyCta'
+import { stickyTabs } from '$utils/stickyTabs'
 import { swiperSliders } from '$utils/swiperSliders'
 
 /*
@@ -70,6 +73,10 @@ window.Webflow.push(() => {
   // before the scroll engine because hiding labels shortens forms by ~22px
   // per row and would shift ScrollTrigger positions.
   formPlaceholders()
+  // F34: wrap button labels for the fill-and-roll hover (CSS in the site head
+  // block). Before the scroll engine and before swiperSliders so Swiper loop
+  // clones copy already-wrapped markup.
+  buttonHover()
 
   // slot A: debugOverlay() (before the engine, so it logs the first refresh)
   smoothScroll.init()
@@ -101,6 +108,8 @@ window.Webflow.push(() => {
   // slot E: viewSwitcher(), cmsFilterLinks()
   // F30: CMS card and category links (Designer cannot bind current-item links headlessly)
   cmsItemLinks()
+  // F36: alternate CMS cards across groups (Figma)
+  staggerCards()
   galleryFilter()
   // slot F, in this order: filterPanels(), scrollHint(), finsweetRefresh(),
   //   filterActiveState()
@@ -110,6 +119,8 @@ window.Webflow.push(() => {
   // slot G: scrollTextReveal()
   historyStickyYear()
   imageStackCollapse()
+  // F36: sticky topic bar on /happenings, /blog, /press
+  stickyTabs()
   // F10: Reserve a Table on the Dinings template. The button sits in the
   // shared Hero component, so it is scoped by the template's page id.
   stickyCta(`html[data-wf-page="${DININGS_TEMPLATE_PAGE_ID}"] .section_hero-fullbleed-centered .button`)
