@@ -836,7 +836,7 @@ Ids: `docs/reference/webflow-ids.md` "F26 Rooms quiz CMS".
 | `data-rooms-quiz-results` | the recommendations and room grid sections | `true`; hidden by a `hide` combo |
 | `data-rooms-quiz-closest` / `-empty` / `-loading` | result lines | `true`; each hidden by a `hide` combo |
 | `data-rooms-quiz-restart` | "back to the quiz" on the results | `true` |
-| `data-rooms-quiz-tags` | CMS Nest target inside each room card item | empty; its parent is the card |
+| `fs-cmsnest-element="list"` | the room grid collection list | each of its items is a card; CMS Nest replaces the item's nest target with the room's options list |
 | `data-rooms-quiz-tag` | each Quiz Options item CMS Nest injects | option slug |
 | `data-rooms-quiz-timeout` | root, optional | ms to wait for CMS Nest (default 8000) |
 

@@ -16,9 +16,10 @@
  *   - Lines:    `[data-rooms-quiz-closest]`, `[data-rooms-quiz-empty]`,
  *               `[data-rooms-quiz-loading]`, each hidden with `hide`.
  *   - Restart:  `[data-rooms-quiz-restart]` clears answers, back to step 1.
- *   - Cards:    each `[data-rooms-quiz-tags]` nest target's parent is a room
- *               card; Finsweet CMS Nest fills the target with the room's
- *               options, each carrying `[data-rooms-quiz-tag="{slug}"]`.
+ *   - Cards:    each item of the `[fs-cmsnest-element="list"]` room list is a
+ *               room card. Finsweet CMS Nest replaces the card's nest target
+ *               with the room's options list, so the card is read whole: its
+ *               options each carry `[data-rooms-quiz-tag="{slug}"]`.
  *
  * Matching waits for CMS Nest (`window.fsAttributes` `cmsnest` callback).
  * If it has not reported when step 3 is answered, the loading line shows
@@ -61,9 +62,9 @@ export const roomsQuiz = () => {
   const closestLine = document.querySelector<HTMLElement>('[data-rooms-quiz-closest]')
   const emptyLine = document.querySelector<HTMLElement>('[data-rooms-quiz-empty]')
   const loadingLine = document.querySelector<HTMLElement>('[data-rooms-quiz-loading]')
-  const cards = Array.from(document.querySelectorAll<HTMLElement>('[data-rooms-quiz-tags]'))
-    .map((nestTarget) => ({ nestTarget, card: nestTarget.parentElement }))
-    .filter((entry): entry is { nestTarget: HTMLElement; card: HTMLElement } => entry.card !== null)
+  const cards = Array.from(
+    document.querySelectorAll<HTMLElement>('[fs-cmsnest-element="list"] > .w-dyn-items > .w-dyn-item'),
+  )
 
   const timeout = Number(root.dataset.roomsQuizTimeout) || NEST_TIMEOUT_MS
   let nestReady = false
@@ -102,9 +103,9 @@ export const roomsQuiz = () => {
     })
   }
 
-  const cardTags = (nestTarget: HTMLElement) =>
+  const cardTags = (card: HTMLElement) =>
     new Set(
-      Array.from(nestTarget.querySelectorAll<HTMLElement>('[data-rooms-quiz-tag]')).map(
+      Array.from(card.querySelectorAll<HTMLElement>('[data-rooms-quiz-tag]')).map(
         (tag) => tag.dataset.roomsQuizTag ?? '',
       ),
     )
@@ -119,7 +120,7 @@ export const roomsQuiz = () => {
     const picks = Array.from({ length: STEPS }, (_, index) => answers.get(index + 1) ?? '')
     const guestPick = answers.get(GUEST_STEP) ?? ''
     const otherPicks = picks.filter((_, index) => index + 1 !== GUEST_STEP)
-    const tagged = cards.map((entry) => ({ ...entry, tags: cardTags(entry.nestTarget) }))
+    const tagged = cards.map((card) => ({ card, tags: cardTags(card) }))
 
     let matches = tagged.filter(({ tags }) => picks.every((pick) => tags.has(pick)))
     let state: 'exact' | 'closest' | 'empty' = 'exact'
@@ -140,7 +141,7 @@ export const roomsQuiz = () => {
     if (nestReady) {
       showMatches()
     } else {
-      cards.forEach(({ card }) => setHidden(card, true))
+      cards.forEach((card) => setHidden(card, true))
       setLines('loading')
       const timedOut = new Promise<void>((resolve) => window.setTimeout(resolve, timeout))
       Promise.race([nestDone, timedOut]).then(() => {

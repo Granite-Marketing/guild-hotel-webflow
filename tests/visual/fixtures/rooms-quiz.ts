@@ -2,7 +2,8 @@
  * Fixture entry for rooms-quiz.html: runs hoverImageSwap (F25) and roomsQuiz
  * (F26) against the /rooms quiz markup. The room cards already hold their
  * nested options, so CMS Nest itself is not loaded; this entry plays its
- * part by firing the `cmsnest` callbacks. `?nest=hold` withholds them and
+ * part: after init it swaps each nest target for a nested options list, as
+ * CMS Nest does, then fires the `cmsnest` callbacks. `?nest=hold` withholds them and
  * empties every nest target, as an unfinished CMS Nest leaves the cards, to
  * exercise the loading timeout; `?timeout=<ms>` shortens it.
  */
@@ -21,6 +22,13 @@ hoverImageSwap()
 roomsQuiz()
 
 if (!holdNest) {
+  document.querySelectorAll('[data-rooms-quiz-tags]').forEach((nestTarget) => {
+    const nestedList = document.createElement('div')
+    nestedList.className = 'w-dyn-list'
+    nestedList.setAttribute('fs-cmsnest-collection', 'room-quiz-options')
+    nestedList.replaceChildren(...nestTarget.childNodes)
+    nestTarget.replaceWith(nestedList)
+  })
   for (const entry of window.fsAttributes ?? []) {
     const [key, callback] = entry as [string, (instances: unknown[]) => void]
     if (key === 'cmsnest') callback([])
