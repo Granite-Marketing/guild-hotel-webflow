@@ -74,6 +74,7 @@ Managed via Webflow's `variable_tool`. The Relume starter template ships with it
 **Important:** Always query existing variable collections first (`variable_tool → get_variable_collections`). Map Relume's existing variable names to the project conventions before creating new ones — prefer updating over creating duplicates.
 
 ### Semantic HTML (mandatory)
+- **Page shell on every page:** Body > `.page-wrapper` > Site Nav, Global Styles, `main.main-wrapper` (all sections), Footer, modals. Nothing else on the Body. See `docs/reference/component-patterns.md` → Page Shell.
 - `<section>` for page sections
 - `<article>` for component wrappers (NOT divs)
 - `<figure>` for images — **every image MUST be inside a figure/wrapper div**

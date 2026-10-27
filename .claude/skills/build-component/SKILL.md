@@ -560,6 +560,8 @@ For these, the automation handles the tedious work (creating elements, uploading
 
 ### 4.1 Create Element Structure
 
+**Page shell first.** Every section is placed inside `main.main-wrapper`, which sits in `.page-wrapper` on the Body (see Page Shell in `docs/reference/component-patterns.md`). If the target page has no shell, build it before any section; never append a section to the Body.
+
 Build top-down using `element_builder`. Max 3 nesting levels per call.
 
 **Every section follows the 4-layer pattern:**
