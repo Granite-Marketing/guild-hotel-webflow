@@ -38,6 +38,7 @@ import { navToggle } from '$utils/navToggle'
 import { offersSliderSplit } from '$utils/offersSliderSplit'
 import { roomGridHoverReveal } from '$utils/roomGridHoverReveal'
 import { roomListHoverPreview } from '$utils/roomListHoverPreview'
+import { roomsQuiz } from '$utils/roomsQuiz'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
 import { smoothScroll } from '$utils/smoothScroll'
 import { staggerCards } from '$utils/staggerCards'
@@ -99,8 +100,10 @@ window.Webflow.push(() => {
   accordion()
   modals()
   roomListHoverPreview()
-  // F25: /rooms quiz option hover swaps the right-hand photo.
+  // F25, F40: /rooms quiz option hover swaps the step's photo.
   hoverImageSwap()
+  // F26: /rooms quiz steps, selection and CMS-driven room matches.
+  roomsQuiz()
   mediaTabs()
   map()
 
