@@ -297,6 +297,26 @@ export const modals = () => {
     if (modal) openModal(modal, trigger)
   }
 
+  // A close control whose href names a page section: handled in the capture
+  // phase and stopped there, because Webflow.js scrolls same-page `#` links
+  // itself (clear of the nav) from its own document click handler, after
+  // ours has settled, and pushes the hash.
+  document.addEventListener(
+    'click',
+    (event) => {
+      const closeButton = (event.target as HTMLElement | null)?.closest<HTMLElement>('[data-modal-close]')
+      if (!closeButton || !activeModal) return
+      const targetId = hashTarget(closeButton.getAttribute('href'))
+      if (!targetId || getDialog(targetId)) return
+      const section = document.getElementById(targetId)
+      if (!section) return
+      event.preventDefault()
+      event.stopPropagation()
+      closeAndScrollTo(section)
+    },
+    true,
+  )
+
   document.addEventListener('click', (event) => {
     const target = event.target as HTMLElement | null
     const trigger = target?.closest<HTMLElement>('[data-modal-open]')

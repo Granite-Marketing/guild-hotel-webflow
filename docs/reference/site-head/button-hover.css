@@ -9,6 +9,8 @@
 .button.is-chamfer.is-blue{--btn-fill:var(--_primitives---colors--secondary);--btn-ink:var(--_primitives---colors--blue)}
 .button.is-chamfer.is-outline-light{--btn-fill:var(--_primitives---colors--neutral-lightest);--btn-ink:var(--_primitives---colors--neutral-darkest)}
 .button.is-chamfer.is-outline-light.is-active{--btn-fill:var(--_primitives---colors--burgundy);--btn-ink:var(--_primitives---colors--neutral-lightest)}
+/* F52 outline buttons draw their stroke with a stretched 194x37 SVG, so the fill chamfer scales with it (percentages from the SVG path), never poking past the stroke on taller or wider buttons */
+.button.is-chamfer:is(.is-outline,.is-outline-light){--btn-chamfer:polygon(0 32.97%,5.77% 0,93.84% 0,100% 32.97%,100% 66.49%,93.84% 100%,5.77% 100%,0 66.49%)}
 .button:where(.w-variant-81c5f9ea-386b-7949-fba8-9ed7d1d78407){--btn-fill:var(--_primitives---colors--secondary);--btn-ink:var(--_primitives---colors--burgundy)}
 .button:where(.w-variant-e8c11cfd-fe49-cdf5-9556-32d89df58988){--btn-fill:var(--_primitives---colors--secondary);--btn-ink:var(--_primitives---colors--blue)}
 .offers-slider-split_button:where(.w-variant-1993beed-24b7-3024-c815-349d23e9e282){--btn-fill:#b2c5d5;--btn-ink:var(--_primitives---colors--neutral-darkest)}
