@@ -16,6 +16,7 @@
  */
 
 import { accordion } from '$utils/accordion'
+import { buttonHover } from '$utils/buttonHover'
 import { cardCarouselHeaderLeft } from '$utils/cardCarouselHeaderLeft'
 import { cmsItemLinks } from '$utils/cmsItemLinks'
 import { currentYear } from '$utils/currentYear'
@@ -70,6 +71,10 @@ window.Webflow.push(() => {
   // before the scroll engine because hiding labels shortens forms by ~22px
   // per row and would shift ScrollTrigger positions.
   formPlaceholders()
+  // F34: wrap button labels for the fill-and-roll hover (CSS in the site head
+  // block). Before the scroll engine and before swiperSliders so Swiper loop
+  // clones copy already-wrapped markup.
+  buttonHover()
 
   // slot A: debugOverlay() (before the engine, so it logs the first refresh)
   smoothScroll.init()
