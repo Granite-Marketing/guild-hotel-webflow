@@ -16,10 +16,14 @@
  *   - Lines:    `[data-rooms-quiz-closest]`, `[data-rooms-quiz-empty]`,
  *               `[data-rooms-quiz-loading]`, each hidden with `hide`.
  *   - Restart:  `[data-rooms-quiz-restart]` clears answers, back to step 1.
+ *   - Scroll:   `data-scroll-flush` on the root and the first results section
+ *               lands them at the viewport top, under the transparent nav.
  *   - Cards:    each item of the `[fs-cmsnest-element="list"]` room list is a
  *               room card. Finsweet CMS Nest replaces the card's nest target
  *               with the room's options list, so the card is read whole: its
- *               options each carry `[data-rooms-quiz-tag="{slug}"]`.
+ *               options each carry `[data-rooms-quiz-tag="{slug}"]`. With an
+ *               odd number of matches the last card gets `is-wide` and spans
+ *               the row.
  *
  * Matching waits for CMS Nest (`window.fsAttributes` `cmsnest` callback).
  * If it has not reported when step 3 is answered, the loading line shows
@@ -31,6 +35,7 @@
 import { smoothScroll } from '$utils/smoothScroll'
 
 const ACTIVE_CLASS = 'is-active'
+const WIDE_CLASS = 'is-wide'
 const HIDDEN_CLASS = 'hide'
 const STEPS = 3
 const GUEST_STEP = 1
@@ -129,7 +134,11 @@ export const roomsQuiz = () => {
       state = matches.length ? 'closest' : 'empty'
     }
 
-    tagged.forEach(({ card }) => setHidden(card, !matches.some((match) => match.card === card)))
+    const lastOddMatch = matches.length % 2 === 1 ? matches[matches.length - 1].card : null
+    tagged.forEach(({ card }) => {
+      setHidden(card, !matches.some((match) => match.card === card))
+      card.classList.toggle(WIDE_CLASS, card === lastOddMatch)
+    })
     setLines(state)
     ScrollTrigger.refresh(true)
   }
