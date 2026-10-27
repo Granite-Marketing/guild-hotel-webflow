@@ -161,14 +161,11 @@ export const roomsQuiz = () => {
     if (resultSections[0]) smoothScroll.scrollTo(resultSections[0])
   }
 
-  // Runs from the restart click, before the scroll back to the quiz: a
-  // deferred refresh(true) would fire after that scroll settles and move the
-  // page off the quiz top.
   const hideResults = () => {
     evaluationId++
     resultSections.forEach((section) => setHidden(section, true))
     setLines('exact')
-    ScrollTrigger.refresh()
+    ScrollTrigger.refresh(true)
   }
 
   const choose = (option: HTMLElement) => {
@@ -210,6 +207,9 @@ export const roomsQuiz = () => {
   document.querySelectorAll<HTMLElement>('[data-rooms-quiz-restart]').forEach((restart) => {
     restart.addEventListener('click', (event) => {
       event.preventDefault()
+      // Webflow.js scrolls `#rooms-quiz` links itself, clear of the nav, after
+      // this scroll settles; keep the click from reaching its document handler.
+      event.stopPropagation()
       answers.clear()
       panels.forEach((_, step) => markSelected(step, undefined))
       hideResults()
