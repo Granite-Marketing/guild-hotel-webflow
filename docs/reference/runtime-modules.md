@@ -792,13 +792,13 @@ hovered or focused.
 
 ### hoverImageSwap
 
-Feedback F25: on the /rooms quiz step "Who's checking in?", hovering or
-focusing an option crossfades the right-hand photo to that option's image.
-Leaving the options (pointer or focus) restores the default photo.
+Feedback F25 and F40: on every /rooms quiz step, hovering or focusing an
+option crossfades the step's photo to that option's image. Leaving the
+options (pointer or focus) restores the default photo.
 
 | Attribute | On | Value |
 |---|---|---|
-| `data-hover-swap` | root (the quiz section) | `true`. Guard selector; one swap per root. |
+| `data-hover-swap` | root (each quiz step panel) | `true`. Guard selector; one swap per root. |
 | `data-hover-swap-list` | options wrapper (optional) | `true`. Mouse leaving it restores the default. Falls back to the root. |
 | `data-hover-swap-trigger` | each option | key, for example `just-me` |
 | `data-hover-swap-media` | each stacked image in one figure | the same key; `default` on the resting image |
@@ -813,7 +813,62 @@ Leaving the options (pointer or focus) restores the default photo.
   `power2.out`). Hover swaps only on fine pointers; focus always swaps.
 - Reduced motion: the swap is instant.
 - Never touches the option links' classes, `aria-pressed` or clicks; quiz
-  selection belongs to F26.
+  selection belongs to `roomsQuiz`.
+- A `hover-swap:reset` event on the root restores the default photo;
+  `roomsQuiz` fires it when it hides a step, so a hovered photo is not left
+  showing when the visitor comes back.
+- On /rooms the option images come from the Quiz Options Collection List in
+  each figure, after the static `default` photo.
+
+### roomsQuiz
+
+Feedback F26: the /rooms quiz shows one step at a time; clicking an option
+records it and advances, and after step 3 the results show the rooms linked
+to all three answers. Plan: `docs/plans/2026-10-27-001-feat-rooms-quiz-plan.md`.
+Ids: `docs/reference/webflow-ids.md` "F26 Rooms quiz CMS".
+
+| Attribute | On | Value |
+|---|---|---|
+| `data-rooms-quiz` | the quiz section (`id="rooms-quiz"`) | `true`. Guard selector. |
+| `data-rooms-quiz-step` | each step panel (`rooms-collection-quiz_component`) | `1`, `2`, `3` |
+| `data-rooms-quiz-option` | each option link (Quiz Options list) | option slug |
+| `data-rooms-quiz-back` | back link on steps 2 and 3 | `true` |
+| `data-rooms-quiz-results` | the recommendations and room grid sections | `true`; hidden by a `hide` combo |
+| `data-rooms-quiz-closest` / `-empty` / `-loading` | result lines | `true`; each hidden by a `hide` combo |
+| `data-rooms-quiz-restart` | "back to the quiz" on the results | `true` |
+| `data-rooms-quiz-tags` | CMS Nest target inside each room card item | empty; its parent is the card |
+| `data-rooms-quiz-tag` | each Quiz Options item CMS Nest injects | option slug |
+| `data-rooms-quiz-timeout` | root, optional | ms to wait for CMS Nest (default 8000) |
+
+- The visible panel carries `is-active` (`.rooms-collection-quiz_component`
+  is `display: none`, the `is-active` combo is `grid`). Step 1 has it in the
+  Designer, so without JS step 1 shows alone and the results stay hidden.
+- Selecting adds `is-active` and `aria-pressed="true"` to the option and
+  leaves its other classes (`is-fill`, variant) alone; the selected look is
+  the Designer combo `.button.is-chamfer.is-outline-light.is-fill.is-active`
+  plus the site-head hover colours in `docs/reference/site-head/button-hover.css`.
+- Focus moves to the new step's heading (given `tabindex="-1"`). Space on an
+  option selects it; Enter clicks natively. Option, back and restart clicks
+  call `preventDefault()` (the links carry `href="#"` or `#rooms-quiz`).
+- After step 3 the quiz stays on step 3; the results show, scroll into view
+  through the engine's `scrollTo`, then `ScrollTrigger.refresh(true)`.
+- Matching: a card matches when its nest holds all three answers; otherwise
+  cards holding the guest answer and at least one other show under the
+  closest line; otherwise the empty line shows. Non-matching cards get `hide`.
+- CMS Nest dependency: Finsweet CMS Nest v1 (fetch mode) in the /rooms head
+  code. Each card's first link is its room page; CMS Nest fetches it, reads
+  the hidden Quiz options list on the Rooms Template (bound to the room's
+  multi-reference field, items linking to their collection page) and injects
+  the matching items from the hidden Quiz Options source list on /rooms.
+  Matching is by collection-page href, so every list item must link to its
+  collection page, never `#`
+  (`docs/solutions/integration-issues/finsweet-cms-nest-v1-two-modes-collection-page-links.md`).
+  CMS Nest caches fetched pages until the next publish, so tag edits show
+  after a republish.
+- If CMS Nest has not reported when step 3 is answered, the loading line
+  shows until it does or the timeout passes; unfilled cards never match.
+- The all-rooms dialog's "back to the quiz" (`#rooms-quiz`) is handled by
+  `modals()`; the quiz keeps its state, so the visitor returns to their step.
 
 ### hoverFollowImage
 

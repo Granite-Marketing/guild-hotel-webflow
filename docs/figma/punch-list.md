@@ -192,7 +192,7 @@ Page `6ad64060ae8eac6d7b7c4241`. Notes `docs/figma/build-plans/Q031/`.
 
 ### Rooms
 Page `6ad66fd5f8bf4846e809dbee`. Notes `docs/figma/build-plans/Q033/`.
-- [ ] Quiz (three `section_rooms-collection-quiz` steps, `data-quiz-step` 1 to 3, buttons `data-quiz-option`) is static: write a `roomsQuiz` module (step switching, selected state, recommendations) after a brief (see D-quiz); "back to the quiz" points at `#rooms-quiz`.
+- [x] Quiz: one `section_rooms-collection-quiz` with three step panels, CMS-driven options and room matches, `roomsQuiz` module (F26, plan `docs/plans/2026-10-27-001-feat-rooms-quiz-plan.md`).
 - [ ] Room grid: hover reveal of the guests and size line and view-more pill (Figma card 4) by CSS or a small module; place the guests and size icons (`figma/vectors` frame-32x32 and group-270990163); cards 1 to 3 repeat card 4 values ("4 guests", "52 m²").
 - [ ] Quiz option text is 16px; Figma uses H5-CAPS 20px.
 - [ ] Card images carry `data-hover-scale="1.05"` and `imageHoverScale` is enabled; confirm hover works on staging after the overlay `pointer-events: none` fix (reported fixed by Q007).
@@ -385,7 +385,7 @@ IDs are referenced from group (b) lines.
 - [ ] D-gallery-titles: show the "A Landmark Reimagined" title on Meetings; real gallery headings for gardenterrace, lobbybar, poollounge.
 - [ ] D-gallery-cms: Gallery grid as a CMS collection list with a category field, and the real photo set; active tag shows the tab-pills underline vs Figma full opacity.
 - [ ] D-article-cards: Collection pages as one Collection List (alternating with an even-item rule) or five static sections; card image source; whether the neighborhood header sticks.
-- [ ] D-quiz: quiz module brief (step switching, filtering) and the Figma H5-CAPS 20px option size.
+- [x] D-quiz: quiz module brief (step switching, filtering), done by F26. The Figma H5-CAPS 20px option size stays open under Rooms.
 - [ ] D-arts-cms: Artworks CMS collection with the CMS dialog pattern vs ten static instances; Arts CMS collection for the Home image trail; edge-to-edge gallery (D-arts-gallery).
 - [ ] D-rooms-cms: Rooms CMS collection so cards, the all-rooms dialog and rooms-individual bind to items.
 - [ ] D-zuma-look: one look for all four Dinings or a Switch per look.
