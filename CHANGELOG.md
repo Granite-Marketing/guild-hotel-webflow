@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.15
+
+### Patch Changes
+
+- Sticky topic bar fades out before it releases (F49); the nav colour switch also works when the header uses the Dark variant, as on /contact (F51).
+
 ## 1.1.14
 
 ### Patch Changes

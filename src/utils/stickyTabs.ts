@@ -20,6 +20,9 @@
  * wrapper is only as tall as the bar, so sticky would hold for zero distance.
  * A ScrollTrigger pin (pinSpacing: false) keeps layout unchanged.
  *
+ * Exit (F49): the bar fades out over the last quarter viewport of the pin
+ * and stays hidden where it releases; scrolling back fades it in again.
+ *
  * Active state: `is-active` and `aria-current="true"` move to the link whose
  * section is under the bar; the first tab stays active before the first one.
  * Order: after staggerCards(), scrollEnlargeSnap(), swiperSliders() and
@@ -35,6 +38,7 @@ const navBottom = () => {
 }
 
 const BOTTOM_GAP_REM = 2
+const FADE_DISTANCE_VH = 0.25
 const bottomGap = () =>
   BOTTOM_GAP_REM * parseFloat(getComputedStyle(document.documentElement).fontSize)
 
@@ -68,6 +72,9 @@ export const stickyTabs = () => {
     // Area covered by the fixed nav at the top; the bar sits at the bottom.
     const clearance = () => navBottom()
 
+    const pinEnd = () =>
+      lastSection().getBoundingClientRect().bottom + window.scrollY - (window.innerHeight - bottomGap())
+
     ScrollTrigger.create({
       trigger: tabs,
       start: () => `bottom bottom-=${bottomGap()}`,
@@ -75,12 +82,30 @@ export const stickyTabs = () => {
       // section is re-resolved on every refresh. The pin releases when the
       // last section's bottom reaches the bar's bottom, so the bar rests
       // flush at the section end like the sticky gallery bars.
-      end: () =>
-        lastSection().getBoundingClientRect().bottom + window.scrollY - (window.innerHeight - bottomGap()),
+      end: pinEnd,
       pin: tabs,
       pinSpacing: false,
       invalidateOnRefresh: true,
     })
+
+    // F49: fade the bar out over the last stretch so it never rests on the
+    // last card's text or against the next section; scrubbed, so it returns
+    // on the way back up.
+    gsap.fromTo(
+      tabs,
+      { autoAlpha: 1 },
+      {
+        autoAlpha: 0,
+        ease: 'none',
+        immediateRender: false,
+        scrollTrigger: {
+          start: () => pinEnd() - FADE_DISTANCE_VH * window.innerHeight,
+          end: pinEnd,
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      },
+    )
 
     const setActive = (active: HTMLAnchorElement) => {
       links.forEach((link) => {

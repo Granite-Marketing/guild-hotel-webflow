@@ -992,7 +992,9 @@ the bar overlaps a light area.
   their visible clip-path area; map art (`[class*="map"]`) is not a photo.
 - Overrides: `data-header-theme="dark"` forces the dark nav over an
   element, `data-header-theme="white"` forces cream.
-- Skipped when the header already has dark text (Dark variant). The clone
+- Dark variant header (dark text, e.g. /contact): the clone is cream and
+  covers the complement of the dark clone's area, so the nav still turns
+  cream over dark sections and photos (F51). The clone
   hides while `is-nav-open` is set and snaps back with a fresh mask.
 - Order: slot D, after `navToggle()`.
 

@@ -102,3 +102,7 @@ Through the Data API this is `data_scripts_tool` > `set_site_freeform_code` (loc
 Webflow styles cannot target pseudo-elements, so the F34 fill-and-roll CSS lives in the site head as `<style data-button-hover>…</style>`, after the existing head content. Source of truth: [`site-head/button-hover.css`](site-head/button-hover.css). `src/utils/buttonHover.ts` adds the `[data-btn]` markup it targets.
 
 F43: the fill layer is a static chamfer-clipped box and the fill grows with background-size from the bottom (same technique as the submit inputs); the layer never translates, so its own chamfer edge is never visible.
+
+## Site head: History divider (F50)
+
+`<style data-history-divider>` after the button hover block. Source: `docs/reference/site-head/history-divider.css`.
