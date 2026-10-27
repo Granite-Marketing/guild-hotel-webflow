@@ -161,11 +161,14 @@ export const roomsQuiz = () => {
     if (resultSections[0]) smoothScroll.scrollTo(resultSections[0])
   }
 
+  // Runs from the restart click, before the scroll back to the quiz: a
+  // deferred refresh(true) would fire after that scroll settles and move the
+  // page off the quiz top.
   const hideResults = () => {
     evaluationId++
     resultSections.forEach((section) => setHidden(section, true))
     setLines('exact')
-    ScrollTrigger.refresh(true)
+    ScrollTrigger.refresh()
   }
 
   const choose = (option: HTMLElement) => {
