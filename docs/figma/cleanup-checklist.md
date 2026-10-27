@@ -70,3 +70,4 @@ Agents hide rather than delete, so these wait for Stephen in the Designer. Take 
 | [ ] | Delete the draft page `room-detail-static` (`6ad66fd5f8bf4846e809dc45`), superseded by the Rooms template (F27) | Pages panel |
 | [ ] | F32: finish or delete the hidden Dining Collection List `6d849dd0-bd96-3cdd-c3ba-77644e482bf8` in the Footer Links component. The MCP cannot bind fields inside a component definition: select the link, bind its text to Name and set Link > Collection page > Current Dining, unhide it, then delete the static Dining items. | Footer Links component |
 | [ ] | Optional no-JS fallback: on the `/rooms` card link set Link > Collection page > Current Room (the bundle already sets the href from `data-cms-link-slug`). | `/rooms` |
+- Home: the five hidden static dining panels inside `venue-card-fullbleed_media` (ids in webflow-ids.md, "Home dining panels from CMS").

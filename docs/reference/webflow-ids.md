@@ -334,3 +334,9 @@ Contact select `c6518e72-8838-a8a1-906b-60929af12d99` carries custom attribute `
 - Page 🛏️ Rooms Template `6adf8f780ea92c0983eddac0`, collection `6adf8f780ea92c0983eddaac`, image field `card-and-hero-image` (`c468cf9d6abf07ad5f096b97840956ee`).
 - New section `section_venue-card-fullbleed` (arts structure with `is-bleed` combos) goes after native description section `9bf83316-7b0a-5325-0fcb-b74684ca546d`. Record new element ids here after the write.
 - Hide (do not delete) instances `9e24d43f-9036-d8f7-8de6-59dc2b6a0d14` (image-inset-single) and `4ce1de35-7611-04ea-4c15-d9c7fa602d24` (Hero Fullbleed Centered Left).
+
+### Home dining panels from CMS (2026-10-27)
+- Home `section_venue-card-fullbleed` panels are a Collection List on 🍴 Dinings: wrapper `77a63678-1591-7ff3-17ff-5d7a15d75b81`, item `77a63678-1591-7ff3-17ff-5d7a15d75b83` (`venue-card-fullbleed_item`, `data-scroll-enlarge-snap-item`), image `f152b4eb-3d6c-0ff7-462a-af2d7a65c4ba`, heading `e026d879-cce2-3f83-1ef0-38b639235ee4`, tagline `29b0e878-fee1-5676-9c8b-35b10fff2eb1`, logo figure `e3541f21-3813-8213-bb12-5bb5e2b095cb`, logo image `07673065-760f-5a87-ebbb-831e67bbb0f6`, link `176a1756-4e98-7fef-e880-5d86f84de991` (cmsItemLinks, path `dining`). Sorted by Sort order ascending.
+- Dinings fields: Home card image `646717a6cc09a61c694ee8156cfc628f`, Home card tagline `686388c181e8cf098aadd212d9589d4f`, Home card logo `94eda87f196c97bcc9ac64ae4a6e354a`, Show home card logo `728aa903f38fdb2fd76c4d8ec6d8180f`, Show home card name `3cff2fa4df9f58a2471d0886c314f6ff` (keep it the opposite of the logo switch).
+- New item Solana Coffee `6ae0b8acc0da5ad663ec3476` (sort 5).
+- Hidden static panels to delete by hand: `44176885-8e8b-207a-b8f8-643151dc2c23`, `2bf38960-f15b-0c2e-a653-9c2ff43c655e`, `58021a4a-2282-3da9-d6f3-6cd255426a90`, `477fc8ce-2d4b-2299-a281-ba587a51697e`, `82c90605-c3b2-ea18-1c0c-666ddb6d32f7`.
