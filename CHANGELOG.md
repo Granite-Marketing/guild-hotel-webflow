@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.17
+
+### Patch Changes
+
+- Modals: a close control linking to a page section stops Webflow's own anchor scroll, so the dialog's "back to the quiz" lands flush on the quiz; outline button hover fill follows the stretched SVG outline (F52).
+
 ## 1.1.16
 
 ### Patch Changes
