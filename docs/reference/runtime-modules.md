@@ -879,12 +879,18 @@ One photo that follows the pointer while an item in a grid is hovered
 |---|---|---|
 | `data-hover-image` | zone (list or grid wrapper) | none |
 | `data-hover-image-item` | each hover target | none |
-| `data-hover-image-src` | item, optional | photo URL to swap in for that item |
+| `data-hover-image-src` | item, optional | photo URL to swap in for that item (srcset and sizes are dropped) |
+| `data-hover-image-alt` | item, optional | alt text set on the photo when that item is hovered |
 | `data-hover-image-media` | figure holding one `img`, inside the zone | none |
 
 - The module makes the zone `position: relative` (if static), positions the
   media absolutely, centres it on the pointer with `gsap.quickTo`, and fades
   it with `autoAlpha`. Set the media width in its class (Figma 377 x 486).
+- The photo renders behind the text (media `z-index: 0`) at 0.55 opacity
+  (`HOVER_OPACITY` in the module). The grid, header and footer wrappers need
+  `position: relative; z-index: 1` in Webflow so rules, text and logo paint
+  over it.
+- On the first pointer entry into the zone every item photo is preloaded.
 - The hovered item and the visible media get `is-active`.
 - Touch devices and `prefers-reduced-motion: reduce`: the media stays hidden.
 
