@@ -33,6 +33,7 @@ F34 (button hover) adds a second block to the head. It is keyed off the `[data-b
 .button.is-chamfer.is-burgundy{--btn-fill:var(--_primitives---colors--secondary);--btn-ink:var(--_primitives---colors--burgundy)}
 .button.is-chamfer.is-blue{--btn-fill:var(--_primitives---colors--secondary);--btn-ink:var(--_primitives---colors--blue)}
 .button.is-chamfer.is-outline-light{--btn-fill:var(--_primitives---colors--neutral-lightest);--btn-ink:var(--_primitives---colors--neutral-darkest)}
+.button.is-chamfer.is-outline-light.is-active{--btn-fill:var(--_primitives---colors--burgundy);--btn-ink:var(--_primitives---colors--neutral-lightest)}
 .button:where(.w-variant-81c5f9ea-386b-7949-fba8-9ed7d1d78407){--btn-fill:var(--_primitives---colors--secondary);--btn-ink:var(--_primitives---colors--burgundy)}
 .button:where(.w-variant-e8c11cfd-fe49-cdf5-9556-32d89df58988){--btn-fill:var(--_primitives---colors--secondary);--btn-ink:var(--_primitives---colors--blue)}
 .offers-slider-split_button:where(.w-variant-1993beed-24b7-3024-c815-349d23e9e282){--btn-fill:#b2c5d5;--btn-ink:var(--_primitives---colors--neutral-darkest)}
@@ -42,7 +43,7 @@ F34 (button hover) adds a second block to the head. It is keyed off the `[data-b
 .button.is-link.text-style-caps-caption-16 [data-btn-label]>span{text-decoration:underline;text-underline-offset:.25em}
 /* Fill layer (anchors and other elements that can hold children). */
 [data-btn]{position:relative;isolation:isolate;overflow:hidden}
-[data-btn]::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--btn-fill);clip-path:var(--btn-chamfer);transform:translateY(101%);transition:transform var(--btn-dur) var(--btn-ease)}
+[data-btn]::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(var(--btn-fill),var(--btn-fill)) no-repeat bottom/100% 0;clip-path:var(--btn-chamfer);transition:background-size var(--btn-dur) var(--btn-ease)}
 .button:not(.is-chamfer)[data-btn]::before{clip-path:none}
 /* Label roll: two stacked spans in one grid cell, clipped by the wrapper. */
 [data-btn-label]{display:inline-grid;overflow:hidden;padding-block:.2em;margin-block:-.2em;vertical-align:top}
@@ -51,18 +52,18 @@ F34 (button hover) adds a second block to the head. It is keyed off the `[data-b
 /* Submit inputs cannot hold children: fill only, growing from the bottom edge. */
 input[data-btn-fill]{background-image:linear-gradient(var(--btn-fill),var(--btn-fill));background-repeat:no-repeat;background-position:bottom;background-size:100% 0;transition:background-size var(--btn-dur) var(--btn-ease),color var(--btn-dur) var(--btn-ease)}
 @media (hover:hover){
- [data-btn]:hover::before{transform:none}
+ [data-btn]:hover::before{background-size:100% 100%}
  [data-btn]:hover [data-btn-label]>:first-child{transform:translateY(calc(-100% - .4em))}
  [data-btn]:hover [data-btn-copy]{transform:none}
  input.button[data-btn-fill]:hover{background-size:100% 100%;color:var(--btn-ink)}
 }
-[data-btn]:focus-visible::before{transform:none}
+[data-btn]:focus-visible::before{background-size:100% 100%}
 [data-btn]:focus-visible [data-btn-label]>:first-child{transform:translateY(calc(-100% - .4em))}
 [data-btn]:focus-visible [data-btn-copy]{transform:none}
 input.button[data-btn-fill]:focus-visible{background-size:100% 100%;color:var(--btn-ink)}
 /* Reduced motion: no movement, a plain colour change. */
 @media (prefers-reduced-motion:reduce){
- [data-btn]::before{transform:none;opacity:0;transition:opacity .15s linear}
+ [data-btn]::before{background-size:100% 100%;opacity:0;transition:opacity .15s linear}
  [data-btn-label]>[data-btn-copy]{display:none}
  [data-btn-label]>span{transition:color .15s linear}
  input[data-btn-fill]{transition:none}
@@ -99,3 +100,5 @@ Through the Data API this is `data_scripts_tool` > `set_site_freeform_code` (loc
 ## Site head: button hover CSS (F34)
 
 Webflow styles cannot target pseudo-elements, so the F34 fill-and-roll CSS lives in the site head as `<style data-button-hover>…</style>`, after the existing head content. Source of truth: [`site-head/button-hover.css`](site-head/button-hover.css). `src/utils/buttonHover.ts` adds the `[data-btn]` markup it targets.
+
+F43: the fill layer is a static chamfer-clipped box and the fill grows with background-size from the bottom (same technique as the submit inputs); the layer never translates, so its own chamfer edge is never visible.
