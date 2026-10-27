@@ -31,6 +31,15 @@
  *   data-scroll-enlarge-snap-step="100"   on the root: scroll distance per
  *                                         step, in % of viewport height.
  *
+ * Timeline schedule (F33): panel 0 is fully shown at t=1 (enlarge done).
+ * Each later panel wipes in over WIPE_DURATION and is then fully shown for
+ * DWELL steps before the next wipe starts, so every panel has a real dwell
+ * window (PITCH = WIPE_DURATION + DWELL per panel). Content is driven by
+ * the scrubbed timeline time (the timeline's own onUpdate), never raw scroll
+ * progress, so it follows what the user sees. A short SETTLE delay gates
+ * each reveal so a pass-through never starts a reveal that is reversed
+ * half-way.
+ *
  * After the last panel the stage stays pinned for half a step more (F15),
  * so the last panel's content has room to settle before the pin releases.
  * A single-item section (F28, arts) is just the enlarge plus that hold.
@@ -48,11 +57,15 @@ const ROOT_SELECTOR = '[data-scroll-enlarge-snap]'
 const ACTIVE_CLASS = 'is-active'
 const DEFAULT_STEP_PERCENT = 100
 /** Timeline length of a panel's wipe; its content reveals once it is done. */
-const WIPE_DURATION = 0.7
+const WIPE_DURATION = 0.5
+/** Steps a panel stays fully shown before the next wipe starts. */
+const DWELL = 0.7
+/** Timeline distance between consecutive fully-shown panels. */
+const PITCH = WIPE_DURATION + DWELL
+/** Seconds a panel must stay current before its content reveal plays. */
+const SETTLE = 0.3
 /** Extra pinned distance after the last panel, in steps. */
 const END_HOLD = 0.5
-/** How far past its snap point (timeline units) a panel counts as left. */
-const LEAVE_TOLERANCE = 0.02
 
 interface SnapParts {
   root: HTMLElement
@@ -107,10 +120,11 @@ const readParts = (root: HTMLElement): SnapParts | null => {
 
 const initAnimated = (parts: SnapParts) => {
   const { stage, media, items, stepPercent } = parts
-  // One step to enlarge, then one step per panel change, then the end hold.
-  const stepCount = items.length
-  const totalSteps = stepCount + END_HOLD
-  const snapPoints = items.map((_, index) => (index + 1) / totalSteps)
+  // One step to enlarge, then one pitch per panel change, then the end hold.
+  const shownAt = items.map((_, index) => 1 + index * PITCH)
+  const wipeAt = (index: number) => shownAt[index] - WIPE_DURATION
+  const totalSteps = shownAt[shownAt.length - 1] + END_HOLD
+  const snapPoints = shownAt.map((time) => time / totalSteps)
 
   stackItems(items, 0)
   const reveals = items.map((item) => {
@@ -119,28 +133,44 @@ const initAnimated = (parts: SnapParts) => {
   })
   const mask = createChamferMask(stage, media)
 
-  // Which panel's content is shown at timeline time `time`: panel 0 once the
-  // enlarge mask is full, later panels once their wipe is done; each leaves
-  // as soon as the scroll moves past its snap point.
+  // Which panel's content is shown at timeline time `time`: from the moment
+  // the panel is fully shown until exactly when the next wipe begins.
   const contentIndexAt = (time: number) => {
     for (let index = items.length - 1; index >= 0; index--) {
-      const revealAt = index === 0 ? 1 : index + WIPE_DURATION
-      const leaveAt = index === items.length - 1 ? Infinity : index + 1 + LEAVE_TOLERANCE
-      if (time >= revealAt - 0.001 && time <= leaveAt) return index
+      const leaveAt = index === items.length - 1 ? Infinity : wipeAt(index + 1)
+      if (time >= shownAt[index] - 0.001 && time < leaveAt) return index
     }
     return -1
   }
 
   let shownIndex = -1
-  const syncContent = (progress: number) => {
-    const next = contentIndexAt(progress * totalSteps)
-    if (next === shownIndex) return
-    reveals[shownIndex]?.reverse()
-    reveals[next]?.play()
-    shownIndex = next
+  let targetIndex = -1
+  let pending: GsapDelayedCall | null = null
+  const syncContent = (time: number, immediate = false) => {
+    const next = contentIndexAt(time)
+    if (next === targetIndex) return
+    targetIndex = next
+    pending?.kill()
+    pending = null
+    if (shownIndex !== -1 && shownIndex !== next) {
+      reveals[shownIndex]?.reverse()
+      shownIndex = -1
+    }
+    if (next === -1) return
+    const start = () => {
+      reveals[next]?.play()
+      shownIndex = next
+    }
+    if (immediate) start()
+    else pending = gsap.delayedCall(SETTLE, start)
   }
 
   let activeIndex = -1
+  const nearestIndex = (time: number) =>
+    shownAt.reduce(
+      (best, at, index) => (Math.abs(at - time) < Math.abs(shownAt[best] - time) ? index : best),
+      0,
+    )
   const setActive = (index: number) => {
     if (index === activeIndex) return
     activeIndex = index
@@ -150,6 +180,8 @@ const initAnimated = (parts: SnapParts) => {
 
   const timeline = gsap.timeline({
     defaults: { ease: 'none' },
+    // Content follows the scrubbed timeline, which lags scroll position.
+    onUpdate: () => syncContent(timeline.time()),
     scrollTrigger: {
       trigger: stage,
       start: 'top top',
@@ -167,12 +199,10 @@ const initAnimated = (parts: SnapParts) => {
       },
       onRefresh: (self: ScrollTriggerInstance) => {
         mask.measure()
-        syncContent(self.progress)
+        syncContent(self.progress * totalSteps, true)
       },
       onUpdate: (self: ScrollTriggerInstance) => {
-        setActive(clampIndex(Math.round(self.progress * totalSteps) - 1, items.length))
-        // F15: content masks in after its mask/wipe completes, out on leave.
-        syncContent(self.progress)
+        setActive(nearestIndex(self.progress * totalSteps))
       },
     },
   })
@@ -186,7 +216,7 @@ const initAnimated = (parts: SnapParts) => {
 
   items.slice(1).forEach((item, offset) => {
     const previous = items[offset]
-    const at = offset + 1
+    const at = wipeAt(offset + 1)
     const image = itemImage(item)
 
     timeline.set(item, { autoAlpha: 1 }, at)
@@ -197,18 +227,22 @@ const initAnimated = (parts: SnapParts) => {
       at,
     )
     if (image) {
-      timeline.fromTo(image, { scale: 1.2 }, { scale: 1, duration: 1, ease: 'power2.out' }, at)
+      timeline.fromTo(image, { scale: 1.2 }, { scale: 1, duration: WIPE_DURATION, ease: 'power2.out' }, at)
     }
-    timeline.set(previous, { autoAlpha: 0 }, at + 1)
+    timeline.set(previous, { autoAlpha: 0 }, at + WIPE_DURATION)
   })
 
   // F15: hold the last panel pinned so the timeline spans totalSteps.
-  timeline.to({}, { duration: END_HOLD }, stepCount)
+  timeline.to({}, { duration: END_HOLD }, shownAt[shownAt.length - 1])
 
   // A load that restores a mid-section scroll shows the right content.
-  syncContent(timeline.scrollTrigger?.progress ?? 0)
+  syncContent((timeline.scrollTrigger?.progress ?? 0) * totalSteps, true)
 
-  return bindTabs(parts, timeline.scrollTrigger, snapPoints)
+  const unbindTabs = bindTabs(parts, timeline.scrollTrigger, snapPoints)
+  return () => {
+    pending?.kill()
+    unbindTabs?.()
+  }
 }
 
 const initReduced = (parts: SnapParts) => {

@@ -914,7 +914,7 @@ Since F15 every panel's content (Zuma included, replacing F03's play-once)
 is a triggered `createLineMaskTimeline` reveal, not scrubbed tweens: heading,
 body and button mask in as one timeline after the mask or wipe completes,
 and reverse when the panel is left in either direction. The pin is
-`items + 0.5` steps long: the final half step is a free-scrolling hold so
+`items + 0.5` steps long (F33 changed the pitch, see below): the final half step is a free-scrolling hold so
 the last panel settles before the pin releases. Home uses
 `data-scroll-enlarge-snap-step="110"` for more distance per panel.
 
@@ -923,6 +923,17 @@ mask grows to full bleed, the content masks in at full, then the end hold.
 The arts section is a native `section_venue-card-fullbleed` with `is-bleed`
 combos on stage (no padding), media (no chamfer, 1253/753 start size) and
 content (bottom-left, transparent).
+
+### scrollEnlargeSnap: F33 schedule and settle gate
+
+Panel `i` is fully shown at `1 + i * 1.2` timeline steps (wipe 0.5, dwell
+0.7); the next wipe starts exactly when the dwell ends. Content is chosen
+from `timeline.time()` in the timeline's own `onUpdate` (scrub-aware), and a
+0.3s settle delay precedes each `play()` so a pass-through never starts a
+reveal that gets reversed half-way. The pin is
+`1 + 1.2 * (items - 1) + 0.5` steps long. `lineMaskReveal` `play()` and
+`reverse()` are idempotent. See
+`docs/solutions/integration-issues/scroll-driven-reveal-window-too-narrow.md`.
 
 ### lineMaskReveal (helper)
 
