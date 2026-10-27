@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.13
+
+### Patch Changes
+
+- 723dad6: hoverFollowImage: per-item photo and alt via data attributes, photo behind text at 0.55 opacity, preload on first zone entry (F46, F47)
+- af9a538: History landmark (F45): remove the cloned bleed image; one figure and img open from the framed card to full bleed with clip-path and scale in lockstep.
+- 313f181: F42: scroll-enlarge-snap copy now starts as the image mask completes (reveal lead 0.1 steps, settle 0.1s) instead of 0.3 to 0.75 s later.
+- 7d109b3: F44: stickyTabs pins the topic bar to the bottom of the viewport, 2rem above the edge, releasing at the last rendered card section.
+
 ## 1.1.12
 
 ### Patch Changes
