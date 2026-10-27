@@ -840,6 +840,7 @@ Ids: `docs/reference/webflow-ids.md` "F26 Rooms quiz CMS".
 | `data-rooms-quiz-tag` | each Quiz Options item CMS Nest injects | option slug |
 | `data-rooms-quiz-timeout` | root, optional | ms to wait for CMS Nest (default 8000) |
 | `data-scroll-flush` | the quiz section and the recommendations section | `true`; `smoothScroll.scrollTo` lands them at the viewport top instead of below the transparent fixed nav |
+| `data-header-theme` | the quiz section | `white`: navTheme keeps the cream nav over the burgundy panel and photo (the section itself is transparent, so it would read as light) |
 
 - The visible panel carries `is-active` (`.rooms-collection-quiz_component`
   is `display: none`, the `is-active` combo is `grid`). Step 1 has it in the
@@ -1001,6 +1002,10 @@ the bar overlaps a light area.
   cream over dark sections and photos (F51). The clone
   hides while `is-nav-open` is set and snaps back with a fresh mask.
 - Order: slot D, after `navToggle()`.
+- Same-page `#` links: Webflow.js scrolls them itself from a document click
+  handler, clear of the nav, after our scroll and pushes the hash. Modals
+  handle a section-close link in the capture phase and stop it; roomsQuiz
+  stops its restart link at the element.
 
 ### scrollEnlargeSnap: F03 mask reveal
 
