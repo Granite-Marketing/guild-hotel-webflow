@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fixture: rooms quiz</title>
+    <!-- Stand-ins for the Designer styles of F26 (docs/reference/webflow-ids.md, "/rooms quiz (U3)"). -->
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      .hide { display: none; }
+      .rooms-collection-quiz_component { display: none; grid-template-columns: 1fr 1fr; min-height: 600px; }
+      .rooms-collection-quiz_component.is-active { display: grid; }
+      .rooms-collection-quiz_options { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+      .rooms-collection-quiz_figure { position: relative; margin: 0; overflow: hidden; }
+      .rooms-collection-quiz_image { position: absolute; inset: 0; width: 100%; height: 100%; }
+      .rooms-collection-quiz_image.is-swap { opacity: 0; visibility: hidden; }
+      .button.is-fill { display: block; padding: 16px; border: 1px solid #333; }
+      .button.is-active { background: #6d1f2b; color: #fff; }
+      .spacer { height: 1200px; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <section id="rooms-quiz" data-rooms-quiz="true" class="section_rooms-collection-quiz is-first">
+        <div data-rooms-quiz-step="1" data-hover-swap="true" class="rooms-collection-quiz_component is-active">
+          <div class="rooms-collection-quiz_content">
+            <header class="rooms-collection-quiz_header"><p aria-label="Step 1 of 3" class="rooms-collection-quiz_counter">01 / 03</p><h2>who’s checking in?</h2></header>
+            <div class="w-dyn-list"><div role="list" data-hover-swap-list="true" class="rooms-collection-quiz_options w-dyn-items">
+              <div role="listitem" class="rooms-collection-quiz_option w-dyn-item"><a href="#" role="button" aria-pressed="false" data-rooms-quiz-option="just-me" data-hover-swap-trigger="just-me" class="button is-chamfer is-outline-light is-fill">Just me</a></div>
+              <div role="listitem" class="rooms-collection-quiz_option w-dyn-item"><a href="#" role="button" aria-pressed="false" data-rooms-quiz-option="two-guests" data-hover-swap-trigger="two-guests" class="button is-chamfer is-outline-light is-fill">Two guests</a></div>
+              <div role="listitem" class="rooms-collection-quiz_option w-dyn-item"><a href="#" role="button" aria-pressed="false" data-rooms-quiz-option="5-plus-guests" data-hover-swap-trigger="5-plus-guests" class="button is-chamfer is-outline-light is-fill">5+ guests</a></div>
+            </div></div>
+            <footer class="rooms-collection-quiz_footer"><a href="#" data-modal-open="all-rooms" class="rooms-collection-quiz_link">see all the rooms</a></footer>
+          </div>
+          <figure class="rooms-collection-quiz_figure">
+            <div data-hover-swap-media="default" class="rooms-collection-quiz_image" style="background: #ccc"></div>
+            <div class="w-dyn-list"><div class="w-dyn-items">
+              <div class="w-dyn-item"><div data-hover-swap-media="just-me" class="rooms-collection-quiz_image is-swap" style="background: #a00"></div></div>
+              <div class="w-dyn-item"><div data-hover-swap-media="two-guests" class="rooms-collection-quiz_image is-swap" style="background: #0a0"></div></div>
+              <div class="w-dyn-item"><div data-hover-swap-media="5-plus-guests" class="rooms-collection-quiz_image is-swap" style="background: #00a"></div></div>
+            </div></div>
+          </figure>
+        </div>
+        <div data-rooms-quiz-step="2" data-hover-swap="true" class="rooms-collection-quiz_component">
+          <div class="rooms-collection-quiz_content">
+            <header class="rooms-collection-quiz_header"><p aria-label="Step 2 of 3" class="rooms-collection-quiz_counter">02 / 03</p><h2>what type of stay are you planning?</h2></header>
+            <div class="w-dyn-list"><div role="list" data-hover-swap-list="true" class="rooms-collection-quiz_options w-dyn-items">
+              <div role="listitem" class="rooms-collection-quiz_option w-dyn-item"><a href="#" role="button" aria-pressed="false" data-rooms-quiz-option="couples-getaway" data-hover-swap-trigger="couples-getaway" class="button is-chamfer is-outline-light is-fill">Couples getaway</a></div>
+              <div role="listitem" class="rooms-collection-quiz_option w-dyn-item"><a href="#" role="button" aria-pressed="false" data-rooms-quiz-option="business-trip" data-hover-swap-trigger="business-trip" class="button is-chamfer is-outline-light is-fill">Business trip</a></div>
+              <div role="listitem" class="rooms-collection-quiz_option w-dyn-item"><a href="#" role="button" aria-pressed="false" data-rooms-quiz-option="celebration" data-hover-swap-trigger="celebration" class="button is-chamfer is-outline-light is-fill">Celebration</a></div>
+            </div></div>
+            <footer class="rooms-collection-quiz_footer"><a href="#rooms-quiz" data-rooms-quiz-back="true" class="rooms-collection-quiz_link">back</a><a href="#" data-modal-open="all-rooms" class="rooms-collection-quiz_link">see all the rooms</a></footer>
+          </div>
+          <figure class="rooms-collection-quiz_figure">
+            <div data-hover-swap-media="default" class="rooms-collection-quiz_image" style="background: #ddd"></div>
+            <div class="w-dyn-list"><div class="w-dyn-items">
+              <div class="w-dyn-item"><div data-hover-swap-media="couples-getaway" class="rooms-collection-quiz_image is-swap" style="background: #a0a"></div></div>
+              <div class="w-dyn-item"><div data-hover-swap-media="business-trip" class="rooms-collection-quiz_image is-swap" style="background: #aa0"></div></div>
+              <div class="w-dyn-item"><div data-hover-swap-media="celebration" class="rooms-collection-quiz_image is-swap" style="background: #0aa"></div></div>
+            </div></div>
+          </figure>
+        </div>
+        <div data-rooms-quiz-step="3" data-hover-swap="true" class="rooms-collection-quiz_component">
+          <div class="rooms-collection-quiz_content">
+            <header class="rooms-collection-quiz_header"><p aria-label="Step 3 of 3" class="rooms-collection-quiz_counter">03 / 03</p><h2>what matters most to you?</h2></header>
+            <div class="w-dyn-list"><div role="list" data-hover-swap-list="true" class="rooms-collection-quiz_options w-dyn-items">
+              <div role="listitem" class="rooms-collection-quiz_option w-dyn-item"><a href="#" role="button" aria-pressed="false" data-rooms-quiz-option="quiet" data-hover-swap-trigger="quiet" class="button is-chamfer is-outline-light is-fill">Quiet</a></div>
+              <div role="listitem" class="rooms-collection-quiz_option w-dyn-item"><a href="#" role="button" aria-pressed="false" data-rooms-quiz-option="courtyard-view" data-hover-swap-trigger="courtyard-view" class="button is-chamfer is-outline-light is-fill">Courtyard view</a></div>
+              <div role="listitem" class="rooms-collection-quiz_option w-dyn-item"><a href="#" role="button" aria-pressed="false" data-rooms-quiz-option="street-view" data-hover-swap-trigger="street-view" class="button is-chamfer is-outline-light is-fill">Street view</a></div>
+            </div></div>
+            <footer class="rooms-collection-quiz_footer"><a href="#rooms-quiz" data-rooms-quiz-back="true" class="rooms-collection-quiz_link">back</a><a href="#" data-modal-open="all-rooms" class="rooms-collection-quiz_link">see all the rooms</a></footer>
+          </div>
+          <figure class="rooms-collection-quiz_figure">
+            <div data-hover-swap-media="default" class="rooms-collection-quiz_image" style="background: #eee"></div>
+          </figure>
+        </div>
+      </section>
+
+      <section data-rooms-quiz-results="true" class="section_rooms-collection-recommendations hide">
+        <header>
+          <h2>our recommendations for your stay</h2>
+          <p data-rooms-quiz-closest="true" class="rooms-collection-recommendations_text hide">No room matches all three answers, so here are the closest matches.</p>
+          <p data-rooms-quiz-empty="true" class="rooms-collection-recommendations_text hide">We could not find a room for those answers.</p>
+          <p data-rooms-quiz-loading="true" role="status" class="rooms-collection-recommendations_text hide">Finding your rooms...</p>
+        </header>
+        <footer><a href="#rooms-quiz" data-rooms-quiz-restart="true">back to the quiz</a><a href="#" data-modal-open="all-rooms">see all rooms</a></footer>
+      </section>
+
+      <!-- Room cards as CMS Nest leaves them: each nest target holds the injected Quiz Options items. Room D's nest never filled. -->
+      <section data-rooms-quiz-results="true" class="section_rooms-collection-room-grid hide">
+        <div fs-cmsnest-element="list" class="w-dyn-list"><div role="list" class="rooms-collection-room-grid_list w-dyn-items">
+          <div role="listitem" class="w-dyn-item" data-room="a"><a href="/rooms-individual/a" class="rooms-collection-room-grid_card">Room A</a>
+            <div fs-cmsnest-element="nest-target" fs-cmsnest-collection="room-quiz-options" data-rooms-quiz-tags="" class="hide">
+              <div class="w-dyn-item"><a href="/quiz-options/two-guests" data-rooms-quiz-tag="two-guests"></a></div>
+              <div class="w-dyn-item"><a href="/quiz-options/couples-getaway" data-rooms-quiz-tag="couples-getaway"></a></div>
+              <div class="w-dyn-item"><a href="/quiz-options/business-trip" data-rooms-quiz-tag="business-trip"></a></div>
+              <div class="w-dyn-item"><a href="/quiz-options/quiet" data-rooms-quiz-tag="quiet"></a></div>
+            </div>
+          </div>
+          <div role="listitem" class="w-dyn-item" data-room="b"><a href="/rooms-individual/b" class="rooms-collection-room-grid_card">Room B</a>
+            <div fs-cmsnest-element="nest-target" fs-cmsnest-collection="room-quiz-options" data-rooms-quiz-tags="" class="hide">
+              <div class="w-dyn-item"><a href="/quiz-options/two-guests" data-rooms-quiz-tag="two-guests"></a></div>
+              <div class="w-dyn-item"><a href="/quiz-options/couples-getaway" data-rooms-quiz-tag="couples-getaway"></a></div>
+              <div class="w-dyn-item"><a href="/quiz-options/quiet" data-rooms-quiz-tag="quiet"></a></div>
+            </div>
+          </div>
+          <div role="listitem" class="w-dyn-item" data-room="c"><a href="/rooms-individual/c" class="rooms-collection-room-grid_card">Room C</a>
+            <div fs-cmsnest-element="nest-target" fs-cmsnest-collection="room-quiz-options" data-rooms-quiz-tags="" class="hide">
+              <div class="w-dyn-item"><a href="/quiz-options/5-plus-guests" data-rooms-quiz-tag="5-plus-guests"></a></div>
+              <div class="w-dyn-item"><a href="/quiz-options/business-trip" data-rooms-quiz-tag="business-trip"></a></div>
+            </div>
+          </div>
+          <div role="listitem" class="w-dyn-item" data-room="d"><a href="/rooms-individual/d" class="rooms-collection-room-grid_card">Room D</a>
+            <div fs-cmsnest-element="nest-target" fs-cmsnest-collection="room-quiz-options" data-rooms-quiz-tags="" class="hide"></div>
+          </div>
+        </div></div>
+      </section>
+      <div class="spacer"></div>
+    </main>
+    <script src="./rooms-quiz.js"></script>
+  </body>
+</html>
