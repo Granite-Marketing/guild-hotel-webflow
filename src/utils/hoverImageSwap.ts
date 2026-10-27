@@ -1,10 +1,10 @@
 /**
- * Hover image swap (feedback F25): on the /rooms quiz step "Who's checking
- * in?", hovering or focusing an option crossfades the right-hand photo to
- * the one keyed to that option. Leaving the options restores the default.
+ * Hover image swap (feedback F25, F40): on each /rooms quiz step, hovering
+ * or focusing an option crossfades the right-hand photo to the one keyed to
+ * that option. Leaving the options restores the default.
  *
  * DOM contract (built in Webflow, see docs/reference/runtime-modules.md):
- *   - Root:    `[data-hover-swap]` (the quiz section). One swap per root.
+ *   - Root:    `[data-hover-swap]` (each quiz step panel). One swap per root.
  *   - List:    `[data-hover-swap-list]`, optional, the options wrapper.
  *              Leaving it restores the default image. Falls back to the root.
  *   - Trigger: `[data-hover-swap-trigger="{key}"]` on each option.
@@ -80,6 +80,10 @@ const setupSwap = (root: HTMLElement) => {
 
   const list = root.querySelector<HTMLElement>('[data-hover-swap-list]') ?? root
   list.addEventListener('mouseleave', () => show(DEFAULT_KEY))
+
+  // roomsQuiz fires this when it hides a quiz panel, so a hovered photo is
+  // not left showing when the visitor comes back to that step.
+  root.addEventListener('hover-swap:reset', () => show(DEFAULT_KEY))
 
   root.addEventListener('focusout', (event) => {
     const nextFocus = event.relatedTarget
