@@ -1,9 +1,11 @@
 /**
- * Sticky Tabs (F36)
+ * Sticky Tabs (F36, F44)
  *
- * Pins the topic tab bar under the site nav on /happenings, /blog and /press
- * while the card sections scroll, highlights the section in view, and makes
- * tab clicks land below the pinned bar.
+ * Pins the topic tab bar to the bottom of the viewport, 2rem above the bottom
+ * edge like the gallery and arts sticky tag bars (`.gallery-all_tags-wrapper`
+ * is `sticky; bottom: 2rem`), on /happenings, /blog and /press while the card
+ * sections scroll, highlights the section in view, and makes tab clicks land
+ * just under the fixed site nav.
  *
  * DOM contract:
  *   nav.tab-pills-intro_tabs[data-sticky-tabs="true"]   the bar; the value comes
@@ -32,6 +34,10 @@ const navBottom = () => {
   return Math.max(0, bar?.getBoundingClientRect().bottom ?? 0)
 }
 
+const BOTTOM_GAP_REM = 2
+const bottomGap = () =>
+  BOTTOM_GAP_REM * parseFloat(getComputedStyle(document.documentElement).fontSize)
+
 type TabEntry = { link: HTMLAnchorElement; target: HTMLElement }
 
 export const stickyTabs = () => {
@@ -59,14 +65,18 @@ export const stickyTabs = () => {
     const fallbackSection = entries[entries.length - 1].target
     const lastSection = () =>
       [...sections].reverse().find(isRendered) ?? [...entries].reverse().find((e) => isRendered(e.target))?.target ?? fallbackSection
-    const clearance = () => navBottom() + tabs.offsetHeight
+    // Area covered by the fixed nav at the top; the bar sits at the bottom.
+    const clearance = () => navBottom()
 
     ScrollTrigger.create({
       trigger: tabs,
-      start: () => `top top+=${navBottom()}`,
+      start: () => `bottom bottom-=${bottomGap()}`,
       // Absolute scroll position (not endTrigger) so the rendered last
-      // section is re-resolved on every refresh.
-      end: () => lastSection().getBoundingClientRect().bottom + window.scrollY - clearance(),
+      // section is re-resolved on every refresh. The pin releases when the
+      // last section's bottom reaches the bar's bottom, so the bar rests
+      // flush at the section end like the sticky gallery bars.
+      end: () =>
+        lastSection().getBoundingClientRect().bottom + window.scrollY - (window.innerHeight - bottomGap()),
       pin: tabs,
       pinSpacing: false,
       invalidateOnRefresh: true,
