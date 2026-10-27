@@ -1,6 +1,7 @@
 ---
 title: "Finsweet CMS Nest v1 — two modes, and the #-link trap that silently empties every nest"
 date: "2026-07-13"
+last_updated: "2026-10-27"
 category: "integration-issues"
 component: "Webflow, Finsweet Attributes CMS Nest v1"
 tags: [finsweet, cms-nest, webflow, multi-reference, nest-target, slugs, collection-page-link, modal, cms-nesting]
@@ -110,6 +111,30 @@ link to **Current <Item>** (`collectionPage`), so its href became
 
 The earlier "always shows the first item" symptom was the same root cause upstream: when
 match URLs are all `#`/unresolvable, the library falls back to the first source item.
+
+## The nest target is replaced, not filled (F26 rooms quiz, 2026-10-27)
+
+In fetch mode CMS Nest **swaps the `nest-target` element out** for the fetched nested
+list (a `.w-dyn-list` carrying `fs-cmsnest-collection`, no `fs-cmsnest-element`). Any
+attribute or class you put on the nest target (`data-rooms-quiz-tags` here) is gone at
+runtime, so code that finds cards by querying the target matches nothing and the feature
+silently treats every card as empty. The fixture hid this because it pre-filled the
+target in place.
+
+- Read each card as a whole: query the parent list's items
+  (`[fs-cmsnest-element="list"] > .w-dyn-items > .w-dyn-item`) and look for the injected
+  items' own markers inside it (`[data-rooms-quiz-tag]` on the template's item link).
+  See `src/utils/roomsQuiz.ts`.
+- Make fixtures mimic the swap: replace each nest target with a
+  `div.w-dyn-list[fs-cmsnest-collection]` holding its children before firing the
+  `cmsnest` callbacks (`tests/visual/fixtures/rooms-quiz.ts`).
+- Changing the parent collection's URL slug breaks fetch mode too: every card fetch
+  404s and the nests stay empty. If the card hrefs are written by JS (a static
+  `data-cms-link-path`), update that path with the slug.
+- The card and item links have to be "Current item" collection-page links set in the
+  Designer; the MCP cannot set them (see
+  [`webflow-data-api-builders-without-designer.md`](./webflow-data-api-builders-without-designer.md),
+  "Link to current item").
 
 ## Solution checklist (fetch mode — the client-simple one)
 
