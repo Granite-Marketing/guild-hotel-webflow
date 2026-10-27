@@ -1,6 +1,7 @@
 ---
 title: "Webflow Data API builders work without the Designer"
 date: "2026-10-19"
+last_updated: "2026-10-27"
 category: "integration-issues"
 module: "webflow-mcp"
 component: "tooling"
@@ -304,7 +305,7 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 
 - **Collection Lists build headlessly.** `data_element_builder` type `CMSCollection` creates DynamoWrapper > DynamoList > DynamoItem plus a DynamoEmpty. Set `source` (`static_json` `{"collectionId": ...}`) and `sort` (`[{"fieldSlug":"date","direction":"descending"}]`) with `set_settings`; classes go on the DynamoList and DynamoItem with `set_style`. Inside the item, text binds with key `text` and images with key `assetId` (cms binding to an Image field); the published `<img>` carries the item's own alt text. The full settings contract is in the `webflow_guide_tool` output ("CMS Collection List Settings").
 - **"Reference equals current item" cannot be set headlessly.** A `filters` entry on a Reference field accepts only a static item id; a cms or page binding returns "does not support bound filter values in the Designer". Set the filter in the Designer.
-- **"Link to current item" cannot be set headlessly.** `static_link` mode `collectionPage` stores `{pageSlug}` and publishes that string as a relative href; mode `page` with the template page id publishes the bare template path. Neither resolves per item, and the link setting has no bindable sources. Set it in the Designer.
+- **"Link to current item" cannot be set headlessly.** `static_link` mode `collectionPage` stores `{pageSlug}` and publishes that string as a relative href; mode `page` with the template page id publishes the bare template path. Neither resolves per item, and the link setting has no bindable sources. Set it in the Designer. Confirmed again on the F26 rooms quiz (2026-10-27): the three CMS Nest item links published `href="detail_quiz-options"`, then `href="6ae08d40ba5f0d2f0a4a2726"` (template page id), then `href="#"`. Curl the published page for the hrefs after any MCP link write on a Collection Item. A bound `data-cms-link-slug` plus `cmsItemLinks` can rewrite hrefs in JS, but anything that reads the published HTML (CMS Nest fetch mode, crawlers) still sees the raw value.
 - **Alternating cards without a variant.** A combo on the item class with an `nth-child(even)` pseudo (`update_style` with `pseudo`) copies a variant's layout per item, since a Variant prop cannot follow the item.
 
 ## Gotchas found in the Q007 build (2026-10-20)

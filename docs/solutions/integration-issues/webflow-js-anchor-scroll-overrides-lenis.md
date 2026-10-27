@@ -75,5 +75,6 @@ Our scroll and Webflow's scroll both run, one after the other. Webflow's runs la
 - **Full-height sections** that should sit under a transparent fixed nav carry `data-scroll-flush`, so `smoothScroll.scrollTo` uses offset 0 (`src/utils/lenisGsap.ts:80`).
 
 ## Related Issues
+- `docs/solutions/integration-issues/webflow-data-api-builders-without-designer.md` ("Modal trigger links take a bare `#` href") records the same Webflow anchor scroll on dialog triggers; the fix there was `href="#"`.
 - `docs/solutions/integration-issues/scrollsmoother-modal-paused-scroll-lock.md` covers modal scroll locking under a smooth-scroll engine.
 - Contract notes: `docs/reference/runtime-modules.md` (navTheme and roomsQuiz sections).
