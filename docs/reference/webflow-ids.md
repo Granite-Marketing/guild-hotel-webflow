@@ -307,3 +307,10 @@ Ids created or first cached by the F15 to F30 groups. Recorded by the integrator
 | `cta-booking-newsletter_label` (existing) | `.cta-booking-newsletter_label` | `3d9e555d-c4d8-2f60-f9a0-d06b1d661c65` |
 
 Contact select `c6518e72-8838-a8a1-906b-60929af12d99` carries custom attribute `id="contact-assist"`.
+
+## Feedback batch 3
+
+### F41 Rooms template enlarge image (planned, ids pending Designer write)
+- Page 🛏️ Rooms Template `6adf8f780ea92c0983eddac0`, collection `6adf8f780ea92c0983eddaac`, image field `card-and-hero-image` (`c468cf9d6abf07ad5f096b97840956ee`).
+- New section `section_venue-card-fullbleed` (arts structure with `is-bleed` combos) goes after native description section `9bf83316-7b0a-5325-0fcb-b74684ca546d`. Record new element ids here after the write.
+- Hide (do not delete) instances `9e24d43f-9036-d8f7-8de6-59dc2b6a0d14` (image-inset-single) and `4ce1de35-7611-04ea-4c15-d9c7fa602d24` (Hero Fullbleed Centered Left).

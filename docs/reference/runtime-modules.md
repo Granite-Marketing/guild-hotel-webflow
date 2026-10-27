@@ -972,6 +972,12 @@ reveal that gets reversed half-way. The pin is
 `reverse()` are idempotent. See
 `docs/solutions/integration-issues/scroll-driven-reveal-window-too-narrow.md`.
 
+The 🛏️ Rooms Template (F41) reuses the same structure with the `img` bound to the
+CMS image field `card-and-hero-image`, so each room expands its own photo. No
+new JS: the guard is attribute-based and the bundle loads site wide. The old
+image-inset-single and Hero Fullbleed Centered Left instances are hidden, not
+removed.
+
 ### lineMaskReveal (helper)
 
 `createLineMaskTimeline(container)` hides a container's headings,
