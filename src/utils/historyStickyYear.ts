@@ -40,12 +40,13 @@
  *
  * The collapse timeline runs gallery -> stacked into one image (bleed card
  * on top) -> the same card opens to full bleed and stays there, with no
- * return to the gallery. One image, no clone (F45, supersedes the F37 scale
- * rule and the F09 copy): the bleed figure's clip-path window opens past its
- * own box while the img scales from 1 to K = max(vw/fw, vh/fh) in lockstep,
- * so the cover framing never changes. The window width is fw * scale, so the
- * image always covers it. One property per element per tween (clipPath on
- * the figure, scale on the img) prevents the F20 scrub-reverse flash. The
+ * return to the gallery. One image, mask only (F48, supersedes the F45 scale
+ * lockstep): the img is laid out at full-bleed size from the start, centred
+ * on its card and overflowing it, so the card is a window onto the full-size
+ * photo. Only the figure's clip-path opens; the img never scales, so its
+ * quality and framing never change. One property per element per tween
+ * (clipPath on the figure, x/y on the items) prevents the F20 scrub-reverse
+ * flash. The
  * natural layout is the start state. Under prefers-reduced-motion the gallery
  * stays
  * as laid out and the year label swaps text without a tween.
@@ -192,20 +193,38 @@ const setupCollapseGallery = (root: HTMLElement) => {
     onEnter: () => reveals.forEach((reveal) => reveal.play()),
   })
 
-  // One image (F45): the bleed figure is the card in the gallery, the card in
-  // the stack and the full-bleed frame. The figure's clip-path window opens past
-  // its own box while the img scales so the cover framing never changes.
+  // One image, mask only (F48): the img is sized to the full-bleed frame and
+  // centred on its card, which clips it. Opening the clip reveals the rest.
   const openInset = () => {
     const x = Math.max(0, (root.clientWidth - bleedItem.offsetWidth) / 2)
     const y = Math.max(0, (visibleHeight() - bleedItem.offsetHeight) / 2)
     return `inset(${-y}px ${-x}px ${-y}px ${-x}px)`
   }
-  const openScale = () =>
-    Math.max(root.clientWidth / bleedItem.offsetWidth, visibleHeight() / bleedItem.offsetHeight)
 
-  // Start state, set before the timeline so a reverse lands on the static card.
+  const layoutBleedImage = () => {
+    const frameWidth = root.clientWidth
+    const frameHeight = visibleHeight()
+    Object.assign(bleedImage.style, {
+      position: 'absolute',
+      width: `${frameWidth}px`,
+      height: `${frameHeight}px`,
+      maxWidth: 'none',
+      left: `${(bleedItem.offsetWidth - frameWidth) / 2}px`,
+      top: `${(bleedItem.offsetHeight - frameHeight) / 2}px`,
+      objectFit: 'cover',
+    })
+  }
+
+  // Full-bleed size needs the full-width source, not the card's.
+  bleedImage.sizes = '100vw'
+  bleedImage.loading = 'eager'
+  if (getComputedStyle(bleedItem).position === 'static') bleedItem.style.position = 'relative'
+  bleedItem.style.overflow = 'visible'
+  layoutBleedImage()
+  ScrollTrigger.addEventListener('refreshInit', layoutBleedImage)
+
+  // Start state, set before the timeline so a reverse lands on the card.
   gsap.set(bleedItem, { clipPath: 'inset(0px 0px 0px 0px)' })
-  gsap.set(bleedImage, { scale: 1, transformOrigin: '50% 50%', force3D: false })
 
   // Optional text overlay on the pinned image; hidden until the clip is full.
   const caption = root.querySelector<HTMLElement>('[data-history-collapse-caption]')
@@ -241,9 +260,8 @@ const setupCollapseGallery = (root: HTMLElement) => {
       0,
     )
     .to(fades, { autoAlpha: 0, duration: 0.4, ease: 'none' }, 0.6)
-    // Window and scale open together (F45); the card is centred by position 1.
+    // Only the mask opens (F48); the card is centred by position 1.
     .to(bleedItem, { clipPath: openInset, duration: 1.2 }, 1)
-    .to(bleedImage, { scale: openScale, duration: 1.2 }, 1)
     // Hold the full-bleed image for the rest of the pin.
     .to({}, { duration: 0.4 }, 2.4)
 

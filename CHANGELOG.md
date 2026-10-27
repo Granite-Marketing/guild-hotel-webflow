@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.14
+
+### Patch Changes
+
+- History landmark (F48): the image no longer scales. It is laid out at full-bleed size behind its card and only the clip-path mask opens to reveal it.
+
 ## 1.1.13
 
 ### Patch Changes
