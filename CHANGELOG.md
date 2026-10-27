@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.13
+
+### Patch Changes
+
+- 46abb40: Rooms quiz: quiz and results scroll flush to the viewport top, and an odd last result card spans the row.
+
 ## 1.1.12
 
 ### Patch Changes
