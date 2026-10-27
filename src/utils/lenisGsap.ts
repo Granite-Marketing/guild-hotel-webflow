@@ -77,7 +77,9 @@ export const lenisEngine: SmoothScrollEngine = {
   stop: () => lenis.stop(),
   start: () => lenis.start(),
   scrollTo: (target: HTMLElement) => {
-    const offset = -fixedNavOffset()
+    // A full-height section with `data-scroll-flush` lines up with the
+    // viewport top under the transparent nav, so no earlier section shows.
+    const offset = target.hasAttribute('data-scroll-flush') ? 0 : -fixedNavOffset()
     if (instance) instance.scrollTo(target, { offset })
     else window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY + offset, behavior: 'smooth' })
   },

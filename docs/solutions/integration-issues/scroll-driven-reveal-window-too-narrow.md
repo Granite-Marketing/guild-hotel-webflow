@@ -53,4 +53,7 @@ it), SplitText `onSplit` rebuilds (only on font swap or resize).
 - Give every snapped panel a dwell at least as long as its reveal's share of
   scroll.
 - Gate `play()` with a short settle delay so pass-through scrolling does not
-  start reveals that are immediately reversed.
+  start reveals that are immediately reversed. Keep it short (0.1s): F42
+  measured a 0.6 s gap between mask end and copy start with a 0.3s settle
+  stacked on the scrub tail, so copy also starts 0.1 timeline steps before the
+  panel is fully shown (`REVEAL_LEAD`).

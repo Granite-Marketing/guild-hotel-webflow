@@ -25,7 +25,10 @@ export interface SmoothScrollEngine {
   stop: () => void
   /** Resume page scroll. */
   start: () => void
-  /** Scroll the page to an element (engine-smoothed, else native). */
+  /**
+   * Scroll the page to an element (engine-smoothed, else native), clear of
+   * a fixed nav unless the element carries `data-scroll-flush`.
+   */
   scrollTo: (target: HTMLElement) => void
   /** Current scroll offset in pixels. */
   scrollTop: () => number
