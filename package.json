@@ -1,6 +1,6 @@
 {
   "name": "@granite-marketing/webflow-mcp-starter",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "Granite Marketing's private hybrid Webflow factory for React DevLink projects and native Webflow runtimes.",
   "type": "module",
   "main": "src/index.ts",

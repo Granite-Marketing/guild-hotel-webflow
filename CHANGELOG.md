@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.9
+
+### Patch Changes
+
+- fa4c3f7: F34: button hover fill from the bottom with a label roll (needs the matching site head CSS).
+- fa4c3f7: Panel mask text (F33): panel copy now follows the scrubbed timeline instead of raw scroll position, every panel has a real dwell window, and a short settle delay stops a pass-through from starting a reveal that is reversed half-way.
+- fa4c3f7: History landmark: the pinned image keeps full size and only its clip-path animates (F37); optional `data-history-collapse-caption` overlay.
+- fa4c3f7: Listings (F36): CMS article cards alternate left/right across category groups (`staggerCards`), and the topic tab bar pins under the nav on /happenings, /blog and /press with scrollspy and offset anchor clicks (`stickyTabs`).
+
 ## 1.1.8
 
 ### Patch Changes
