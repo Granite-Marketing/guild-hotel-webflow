@@ -6,7 +6,8 @@
  * tab clicks land below the pinned bar.
  *
  * DOM contract:
- *   nav.tab-pills-intro_tabs[data-sticky-tabs]   the bar (set per page in the
+ *   nav.tab-pills-intro_tabs[data-sticky-tabs="true"]   the bar; the value comes
+ *                                                from the "Sticky tabs" component prop (set per page in the
  *                                                Designer; other pages never pin)
  *     a[href="#id"]                              one per section; the target
  *                                                element id must exist
@@ -34,7 +35,7 @@ const navBottom = () => {
 type TabEntry = { link: HTMLAnchorElement; target: HTMLElement }
 
 export const stickyTabs = () => {
-  const bars = document.querySelectorAll<HTMLElement>('[data-sticky-tabs]')
+  const bars = document.querySelectorAll<HTMLElement>('[data-sticky-tabs="true"]')
   if (!bars.length) return
 
   bars.forEach((tabs) => {
@@ -50,14 +51,22 @@ export const stickyTabs = () => {
     const sections = [...document.querySelectorAll<HTMLElement>('.section_article-card-staggered')].filter(
       (section) => tabs.compareDocumentPosition(section) & Node.DOCUMENT_POSITION_FOLLOWING,
     )
-    const lastSection = sections[sections.length - 1] ?? entries[entries.length - 1].target
+    // Empty or display:none groups (for example the hidden conferences group
+    // on /happenings) have no layout, so they must not end the pin. Resolved
+    // on every refresh because CMS lists and tabs can change what renders.
+    const isRendered = (section: HTMLElement) =>
+      section.offsetParent !== null && section.offsetHeight > 0
+    const fallbackSection = entries[entries.length - 1].target
+    const lastSection = () =>
+      [...sections].reverse().find(isRendered) ?? [...entries].reverse().find((e) => isRendered(e.target))?.target ?? fallbackSection
     const clearance = () => navBottom() + tabs.offsetHeight
 
     ScrollTrigger.create({
       trigger: tabs,
       start: () => `top top+=${navBottom()}`,
-      endTrigger: lastSection,
-      end: () => `bottom top+=${clearance()}`,
+      // Absolute scroll position (not endTrigger) so the rendered last
+      // section is re-resolved on every refresh.
+      end: () => lastSection().getBoundingClientRect().bottom + window.scrollY - clearance(),
       pin: tabs,
       pinSpacing: false,
       invalidateOnRefresh: true,

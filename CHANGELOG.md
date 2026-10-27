@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.1.11
+
+### Patch Changes
+
+- 67bba6f: F36: stickyTabs ends the pin at the last rendered card section, ignoring hidden or empty groups. F33: scrollEnlargeSnap reverses every panel still revealed when leaving, so copy always masks out.
+
+## 1.1.10
+
+### Patch Changes
+
+- stickyTabs (F36): only bars with data-sticky-tabs="true" pin, so the attribute can be bound to a component prop that is empty by default.
+
 ## 1.1.9
 
 ### Patch Changes

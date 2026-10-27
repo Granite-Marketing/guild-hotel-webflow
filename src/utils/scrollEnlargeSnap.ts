@@ -152,10 +152,14 @@ const initAnimated = (parts: SnapParts) => {
     targetIndex = next
     pending?.kill()
     pending = null
-    if (shownIndex !== -1 && shownIndex !== next) {
-      reveals[shownIndex]?.reverse()
-      shownIndex = -1
-    }
+    // F33: leaving always plays the reverse mask-out. Every other panel with
+    // any copy still revealed is reversed too, not only the one tracked as
+    // shown, so a refresh or re-split mid-scroll can never strand copy that
+    // later vanishes without masking out.
+    reveals.forEach((reveal, index) => {
+      if (index !== next && reveal?.isRevealed()) reveal.reverse()
+    })
+    if (shownIndex !== next) shownIndex = -1
     if (next === -1) return
     const start = () => {
       reveals[next]?.play()

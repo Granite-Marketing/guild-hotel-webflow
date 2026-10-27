@@ -3,7 +3,7 @@
 /* Colours: --btn-fill is the hover background, --btn-ink the hover label. Default = cream button with dark label. */
 .button,.offers-slider-split_button,.overlay-detail-panel-modal_button,.overlay-detail-panel-modal_item-button{--btn-fill:var(--_primitives---colors--neutral-darkest);--btn-ink:var(--_primitives---colors--neutral-lightest)}
 .button:not(.is-chamfer){--btn-fill:var(--_primitives---colors--white);--btn-ink:var(--_primitives---colors--neutral-darkest)}
-.button.is-chamfer.is-dark,.overlay-detail-panel-modal_button{--btn-fill:var(--_primitives---colors--neutral-lightest);--btn-ink:var(--_primitives---colors--neutral-darkest)}
+.button.is-chamfer.is-dark,.overlay-detail-panel-modal_button{--btn-fill:var(--_primitives---colors--burgundy);--btn-ink:var(--_primitives---colors--neutral-lightest)}
 .button.is-chamfer.is-text-burgundy,.offers-slider-split_button,.overlay-detail-panel-modal_item-button{--btn-fill:var(--_primitives---colors--burgundy);--btn-ink:var(--_primitives---colors--neutral-lightest)}
 .button.is-chamfer.is-burgundy{--btn-fill:var(--_primitives---colors--secondary);--btn-ink:var(--_primitives---colors--burgundy)}
 .button.is-chamfer.is-blue{--btn-fill:var(--_primitives---colors--secondary);--btn-ink:var(--_primitives---colors--blue)}

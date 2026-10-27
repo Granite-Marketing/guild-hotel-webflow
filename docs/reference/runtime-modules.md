@@ -1087,7 +1087,7 @@ was removed because it restarts per Collection List and would out-rank
 
 ### stickyTabs
 
-Feedback F36. Pins `nav.tab-pills-intro_tabs[data-sticky-tabs]` under the
+Feedback F36. Pins `nav.tab-pills-intro_tabs[data-sticky-tabs="true"]` under the
 fixed site nav (offset measured from `[data-nav="header"] .site-nav_bar`,
 never hardcoded) until the last `.section_article-card-staggered` after it
 ends, with a ScrollTrigger pin and `pinSpacing: false`. CSS sticky cannot
@@ -1097,7 +1097,7 @@ containing block is the 56px frame. Scrollspy moves `is-active` and
 extra offset of the bar height (capture-phase handler, so Webflow's anchor
 scroll does not run too) and update the hash. Tab targets are element ids
 (`#dining`, `#culture`, `#conferences`; `#press`, `#design`, `#community`).
-Only bars carrying `data-sticky-tabs` pin. Order: after `staggerCards()`,
+Only bars with `data-sticky-tabs="true"` pin; the value is bound to the tab-pills-intro "Sticky tabs" prop (empty by default). Order: after `staggerCards()`,
 `scrollEnlargeSnap()`, `swiperSliders()`, `gsapBasicAnimations()`, next to
 `imageStackCollapse()`.
 
