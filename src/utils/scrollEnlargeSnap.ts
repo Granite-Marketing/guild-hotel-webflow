@@ -36,8 +36,8 @@
  * DWELL steps before the next wipe starts, so every panel has a real dwell
  * window (PITCH = WIPE_DURATION + DWELL per panel). Content is driven by
  * the scrubbed timeline time (the timeline's own onUpdate), never raw scroll
- * progress, so it follows what the user sees. A short SETTLE delay gates
- * each reveal so a pass-through never starts a reveal that is reversed
+ * progress, so it follows what the user sees. Copy starts REVEAL_LEAD steps
+ * before the wipe ends (F42), and a short SETTLE delay gates each reveal so a pass-through never starts a reveal that is reversed
  * half-way.
  *
  * After the last panel the stage stays pinned for half a step more (F15),
@@ -62,8 +62,14 @@ const WIPE_DURATION = 0.5
 const DWELL = 0.7
 /** Timeline distance between consecutive fully-shown panels. */
 const PITCH = WIPE_DURATION + DWELL
-/** Seconds a panel must stay current before its content reveal plays. */
-const SETTLE = 0.3
+/**
+ * Timeline steps before a panel is fully shown at which its copy may start
+ * (F42): the wipe is ~92% open by then and the text onset adds ~50 ms, so the
+ * copy lands as the mask completes instead of after the scrub tail.
+ */
+const REVEAL_LEAD = 0.1
+/** Seconds a panel must stay current before its reveal plays; short, only to absorb a pass-through. */
+const SETTLE = 0.1
 /** Extra pinned distance after the last panel, in steps. */
 const END_HOLD = 0.5
 
@@ -138,7 +144,7 @@ const initAnimated = (parts: SnapParts) => {
   const contentIndexAt = (time: number) => {
     for (let index = items.length - 1; index >= 0; index--) {
       const leaveAt = index === items.length - 1 ? Infinity : wipeAt(index + 1)
-      if (time >= shownAt[index] - 0.001 && time < leaveAt) return index
+      if (time >= shownAt[index] - REVEAL_LEAD && time < leaveAt) return index
     }
     return -1
   }
