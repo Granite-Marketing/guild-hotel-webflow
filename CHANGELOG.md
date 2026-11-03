@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.21
+
+### Patch Changes
+
+- 28fd577: Hexagon scroll masks close their chamfer as they open, so every section ends as a full-bleed 100vw x 100vh rectangle; the mobile tab dropdown label and rows centre on the capitals.
+
 ## 1.1.20
 
 ### Patch Changes
