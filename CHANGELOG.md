@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.18
+
+### Patch Changes
+
+- 91dbfb3: modals: dialog hash links (`#book`, a back link to another dialog) are handled in the capture phase so Webflow.js no longer scrolls the page or pushes the hash when the booking menu opens.
+
 ## 1.1.17
 
 ### Patch Changes
