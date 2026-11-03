@@ -73,3 +73,29 @@ M1 runs first and alone because it changes the base that every other comparison 
 - The Trello feedback board (later pass).
 - Copy and image content differences.
 - Desktop layout changes beyond the booking menu.
+
+## M5 changes (FAQ, hero, script intro)
+
+All style values apply at 767px and below only (Webflow `small` breakpoint, inherited by `tiny`; `tiny` overrides are reset where they exist). Desktop styles are untouched. Values come from `figma/mobile/nodes.json.gz` (`Guild/Sections/Mobile/FAQ`, `Guild/Sections/Mobile/Hero`, home `02 · A century of stories`, guidelines `Introduction · handwritten title + description`).
+
+| Style | Change | Figma source |
+|---|---|---|
+| `accordion_header` | padding 2.5rem 0 1rem, min-height 7rem | 40px item gap, 56px question row, 16px gap to divider (113px per closed row) |
+| `accordion_question.heading-style-h4` (existing empty combo) | font-size 1.125rem, line-height 1.2, letter-spacing 0 | question 18/21.6 |
+| `accordion_content` | padding-top 0, padding-bottom 1rem | answer 16/20 with 16px gaps |
+| `faq-accordion_component` | padding-top 5rem, padding-bottom 5rem | 120px section padding (with the 40px gutter section padding) |
+| `faq-accordion_header` | margin-bottom 0 (small and tiny) | first row's 40px top padding gives the 40px gap |
+| open chevron | site head style block: `.accordion_header.is-active .accordion_icon{transform:none}` under `max-width:767px` | open row chevron points up |
+| `hero-fullbleed-centered_component` | row-gap 1.5rem, padding-bottom 1rem | 24px copy to CTA, 32px bottom padding |
+| `hero-fullbleed-centered_header` | row-gap 1.5rem (small and tiny) | 24px title to description |
+| `hero-fullbleed-centered_heading` (new class on the hero h1, before `heading-style-h2`) | combo font-size 1.75rem, line-height 1.07 | title 28/30 |
+| `hero-fullbleed-centered_text` | font-size 1rem, line-height 1.25 | description 16/20 |
+| `hero-fullbleed-centered_button` (new class on the hero button) | min-width 0, min-height 2.25rem, padding left and right 1.5625rem | CTA 36px tall, 25px side padding |
+| `hero-fullbleed-centered_button-text` (new class on the hero button label) | font-size 0.875rem, letter-spacing -0.05em | label 14/18, -0.7px tracking |
+| `script-intro-centered_component` | row-gap 3rem, padding-top 2.5rem, padding-bottom 2.5rem | 48px gaps, 120px section padding |
+| `script-intro-centered_heading` | margin 0 auto, max-width 20rem (small and tiny) | 320px heading box |
+| `script-intro-centered_heading.text-style-script.is-large` (existing empty combo) | font-size 1.75rem, line-height 1.2 | home 31px and guidelines 27px; 28px keeps home on 2 lines and guidelines on 3 |
+
+Applied and published to staging on 2026-11-03; verified at 390px on home, guidelines and dining-zuma (closed FAQ rows 113px, all questions 2 lines, open chevron up, hero title 28/30, description 16/20, CTA 36px with 14px label, script heading 28px) and unchanged at 1440px. The guidelines script heading sits on 3 lines (Figma 2) because its copy carries a trailing line break.
+
+Not done here: the Zuma hero CTA is blue in Figma on desktop and mobile while the shared Dinings template uses the Burgundy Button variant for every venue; a per-venue colour needs a CMS field and is a separate change.
