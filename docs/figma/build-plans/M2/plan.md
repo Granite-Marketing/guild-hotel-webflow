@@ -85,6 +85,6 @@ Staging at 390px and 1440px, pointer and keyboard: open from top bar Book Now (d
 
 ## Still open
 
-- **Designer step (Stephen):** in the Overlay Detail Panel Modal component, select the Dinings Collection List (inside `_body`, visible on the Image Bg variant with Show venues on) and set Sort: Sort order ascending; bind the item image to Home card image, the title to Name and the text to Home card tagline. The Data API refuses these inside a component definition. Until then the venue cards show placeholders.
+- **Designer step (Stephen):** bindings done on 2026-11-03 (image, Name, Home card tagline); all five venues render on staging. **Sort is still unset**: the Designer errored and the Data API refuses it inside a component, so venues show newest first (Solana Coffee to Zuma). Set Sort: Sort order ascending on the Dinings Collection List when the Designer allows.
 - **Footer URL:** bump the Webflow footer script to the new tag to ship the `modals.ts` fix; until then `#book` clicks also trigger Webflow's anchor scroll.
 - The desktop chevron after "reserve a table" (not built).
