@@ -1,11 +1,5 @@
 # Changelog
 
-## 1.1.20
-
-### Patch Changes
-
-- 07a4a93: Venue cards fill the screen on mobile: scrollEnlargeSnap skips the enlarge step below 768px.
-
 ## 1.1.19
 
 ### Patch Changes
