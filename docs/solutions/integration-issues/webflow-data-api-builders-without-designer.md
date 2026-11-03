@@ -321,3 +321,9 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 - **Option and referenced fields bind as text.** An Option field binds to a `textContent` prop (the hero Eyebrow shows the topic name); a Reference's own fields show up in `get_bindable_sources` as `<refFieldId>:::<fieldId>` (for example Category Name).
 - **Paragraph spacing in a bound RichText without styling child tags:** give the RichText class `display: flex`, `flex-direction: column` and a `row-gap`.
 
+
+## Gotchas found building the booking menu (M2, 2026-11-03)
+
+- **A Collection List inside a component definition takes only its source headlessly.** `source` applies, but `sort` then fails with "No source connected. Set a source first." and every cms binding inside the item fails with "Element is not inside a CMS context", even with the component canvas open in a live Designer. Build the list and its item elements and classes through the API, then do the sort and the field bindings in the Designer. A Collection List on a page (outside a component) is fully headless, as above.
+- **`creation_position: "after"` on a component instance fails** with "Cannot insert elements directly into a component instance" (both builder and `insert_component_instance`). Append to the parent instead, for example the `.page-wrapper`.
+- **Dialog hash links need the capture phase too.** A `#book` link that opens a dialog is a same-page `#id` link, so Webflow.js scrolled to the fixed dialog and pushed the hash. `modals.ts` now opens dialogs from `a[href="#<dialog id>"]` in its capture-phase listener with `stopPropagation()` (see `webflow-js-anchor-scroll-overrides-lenis.md`).

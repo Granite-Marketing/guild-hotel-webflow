@@ -102,3 +102,36 @@ test('Escape and the backdrop close the dialog', async ({ page }) => {
   await page.mouse.click(100, 600)
   await expect(dialog).not.toHaveClass(/is-open/)
 })
+
+test('hash links step between dialogs and back, focus returns to the first link', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await load(page)
+  // M2 booking menu wiring: a page link names the first dialog, an item link
+  // inside it names the second, and the second's back control names the first.
+  await page.evaluate(() => {
+    const book = document.createElement('a')
+    book.href = '#book-menu'
+    book.id = 'book-link'
+    book.textContent = 'book now'
+    document.body.prepend(book)
+    document.querySelector('#book-menu .overlay-detail-panel-modal_item-button')?.setAttribute('href', '#dining-menu')
+    document.querySelector('#dining-menu .overlay-detail-panel-modal_back')?.setAttribute('href', '#book-menu')
+  })
+  const scrollBefore = await page.evaluate(() => window.scrollY)
+
+  await page.locator('#book-link').click()
+  await expect(page.locator('#book-menu')).toHaveClass(/is-open/)
+  await page.locator('#book-menu .overlay-detail-panel-modal_item-button').first().click()
+  await expect(page.locator('#dining-menu')).toHaveClass(/is-open/)
+  await expect(page.locator('#book-menu')).not.toHaveClass(/is-open/)
+
+  await page.locator('#dining-menu .overlay-detail-panel-modal_back').click()
+  await expect(page.locator('#book-menu')).toHaveClass(/is-open/)
+  await expect(page.locator('#dining-menu')).not.toHaveClass(/is-open/)
+
+  await page.keyboard.press('Escape')
+  await expect(page.locator('#book-menu')).not.toHaveClass(/is-open/)
+  await expect(page.locator('#book-link')).toBeFocused()
+  expect(await page.evaluate(() => window.location.hash)).toBe('')
+  expect(await page.evaluate(() => window.scrollY)).toBe(scrollBefore)
+})
