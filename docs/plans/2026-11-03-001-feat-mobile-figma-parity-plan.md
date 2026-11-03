@@ -47,6 +47,21 @@ M1 runs first and alone because it changes the base that every other comparison 
 | M6 | Collection selectors and listings | `section_tab-pills-intro` (compact dropdown pill), `section_article-card-staggered` (staggered cards), gallery filter and tile gutters, `section_venue-card-fullbleed` selector, `section_text-columns-info` | b, d, e, f |
 | M7 | Feature, form and image sections | `section_map-feature` mobile variant (full-bleed map, overlapping card, no extra photo), `overlay-detail-panel-modal` mobile (back arrow only, CTA, numbered specs, 2-column options), `section_form-split-script-contact`, staggered image sections (`split-image-text-light`, `image-pair-text`, `image-trio-text`, `timeline-scatter-images`), alignment fixes | a, b, c, e |
 
+### M1 result (2026-11-03, published to staging)
+
+All changes sit on the small (767px) and tiny (479px) breakpoints; desktop is untouched (checked at 1440px: gutter 32px, `text-size-medium` 20px, script intro 80px).
+
+| Style | Breakpoints | Property | Old | New |
+|---|---|---|---|---|
+| `padding-global` | small | padding left and right | 2rem (inherited) | 1.25rem |
+| `text-size-medium` | small | font size / line height | 1.125rem / 1.3 | 1rem / 1.25 |
+| `text-size-regular` | small | font size / line height | 1.125rem / 1.6 | 1rem / 1.25 |
+| `text-style-script.is-large` | small, tiny | font size | 3.25rem, 2.75rem | 2rem |
+| `text-style-script` | small, tiny | font size | 3.25rem (inherited), 2.5rem | 2.75rem |
+| `section_hero-fullbleed-centered` | small, tiny | min height | 100vh, 100svh | 800px |
+
+Verified at 390x844 on home, history, contact and rooms: 20px gutter, 16px / 20px body, home script intro on 2 lines with a 4-line paragraph as in Figma, hero 800px, no horizontal scroll. Not changed: base body (already 16px), `text-size-large` (hero text, M5), the script heading component variant. Figma intro scripts on press, happenings and blog are 54 to 56px, so those pages need a per-page size in M5.
+
 ## Booking menu (M2) behaviour
 
 - **Desktop:** Book Now opens a small panel in the top right: image left, maroon list right with Book a stay, Reserve a table (with arrow), Host an event, Book an appointment, and a close X (`renders/nav-desktop/`, frame window-1).

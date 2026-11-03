@@ -55,7 +55,7 @@ See `docs/reference/style-guide.md` for what the style guide must contain.
 
 ### Utility Classes
 - **Layout containers:** `container-large` (80rem), `container-medium` (64rem), `container-small` (48rem), `container-xl` (alias for container-large)
-- **Horizontal padding:** `padding-global` — fixed **2rem** left/right (NOT 5%). Applied to the wrapper div inside sections.
+- **Horizontal padding:** `padding-global` — fixed **2rem** left/right (NOT 5%), **1.25rem** (20px) below 768px to match the mobile Figma gutter. Applied to the wrapper div inside sections.
 - **Vertical padding:** `padding-section-large` (7rem), `padding-section-medium` (5rem), `padding-section-small` (3rem) — responsive, see `breakpoints.md`. Applied as combo class on same element as padding-global.
 - **Typography:** `heading-style-h1` through `heading-style-h6`, `text-size-large`, `text-size-medium`, `text-size-regular`, `text-size-small`, `text-rich-text`
 - **Text weight:** `text-weight-xbold`, `text-weight-bold`, `text-weight-semibold`, `text-weight-medium`, `text-weight-normal`, `text-weight-light`
