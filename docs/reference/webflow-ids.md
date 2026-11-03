@@ -340,3 +340,9 @@ Contact select `c6518e72-8838-a8a1-906b-60929af12d99` carries custom attribute `
 - Dinings fields: Home card image `646717a6cc09a61c694ee8156cfc628f`, Home card tagline `686388c181e8cf098aadd212d9589d4f`, Home card logo `94eda87f196c97bcc9ac64ae4a6e354a`, Show home card logo `728aa903f38fdb2fd76c4d8ec6d8180f`, Show home card name `3cff2fa4df9f58a2471d0886c314f6ff` (keep it the opposite of the logo switch).
 - New item Solana Coffee `6ae0b8acc0da5ad663ec3476` (sort 5).
 - Hidden static panels to delete by hand: `44176885-8e8b-207a-b8f8-643151dc2c23`, `2bf38960-f15b-0c2e-a653-9c2ff43c655e`, `58021a4a-2282-3da9-d6f3-6cd255426a90`, `477fc8ce-2d4b-2299-a281-ba587a51697e`, `82c90605-c3b2-ea18-1c0c-666ddb6d32f7`.
+
+## M7 mobile parity (2026-11-03)
+
+- Map Feature Image Bg (`5d830b69-6507-7d04-4828-069b2539cffb`) variant **Stacked** `a6eedfb4-4763-3aa6-88c1-4e4d7fd40feb` (small: `map-feature_component` full-bleed with padding-top for the map); Variant prop `46987a8f-669e-92a1-2b93-034c8cf33e23`. Meetings instance `4e3db501-831b-1b5b-afc1-4940b78cd846` uses Stacked.
+- timeline-scatter-images Tall (`33e949df-43c2-4806-b73e-d403ed483051`) variant **Stagger** `6a92abad-32b0-27fd-e4b6-5a5ebcbe05fb` (small: item max-width 87%); Variant prop `8c239c8f-35ae-dcfa-c80c-fdba806412de`. Neighborhood instance `f0bc6eb9-7e60-97a9-6b5c-90074ec14682` uses Stagger.
+- Variant ids written at small: Overlay Detail Panel Modal Centered `34ca996d-2f65-a59e-6eb0-09dd065e4534`; form-split-script-contact Tall `c284c9dc-42be-882d-5aca-03608bebfc95`; split-image-text-light Stagger Mid `8dcc8de6-914e-f2a6-a0b5-5f95af173bdf` and Wide `45de7441-0ac3-59ed-e7fb-5c6524848b2d`.
