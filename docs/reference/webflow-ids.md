@@ -355,3 +355,8 @@ Plan and specs: `docs/figma/build-plans/M2/`.
 - Site Nav new elements: `site-nav_modes-divider` `64b2b9ca-7b70-8683-5e69-8b2b11f86a15` (class `79f331d1-a0f1-4f78-1b6c-012d93c26aaa`), menu Book pill footer `site-nav_menu-cta` `09d441fd-3b6e-5517-00e6-28095c572eba` (class `8b72faf7-53e5-acd8-41d3-3124f6b19eed`) with link `b72137a6-3a79-1db5-50e4-8ce5b19b0199` (`button is-chamfer`, href bound to Book link). Class `site-nav_mode-label` `90621de8-b337-c7a2-326e-e6aff66ead91` on the day and night spans.
 - Site Nav medium rules: `site-nav_bar` grid `1fr auto 1fr`, `site-nav_start` display contents, `site-nav_logo` order 1, `site-nav_modes` shown (order 2, row-reverse), `site-nav_end` hidden, labels hidden, divider shown; `site-nav_menu-nav` flex-direction column at every size.
 
+
+### M6 mobile selectors (2026-11-03)
+- Dinings Template `text-columns-info_footer` `ef08e59e-e1c8-4fa5-2e4a-441796698213`; "browse the menu" `52aa9b80-c93e-4cba-93d4-a8b9a21a9bc0`; "discover {name}" link block `eeea8d64-cd44-b37b-cbe1-36d7c4f43bd8` (href = `venue-site-link`, hidden until a "is set" condition is added), name span `ace5e8eb-31d5-3a08-081e-747b03cb5dbc`.
+- Dinings field ids: Name `70ed532b8264438896ea60b6c714cb42`, Venue site link `f3d113ca4d82d0432a5b95ea45788c6d`.
+- Style ids: `article-card-staggered_component` `1dfea01d-7b6b-d601-1af4-f839882d2c25`, its `is-right` combo `2b5ed087-cb62-4c51-49f1-90ece5e3967f`, `article-card-staggered_header.is-right` `abc99c11-07dd-a77d-609b-1fc1dfa80dc0`, `gallery-all_grid` `8038febe-99b0-d824-f8b3-4583200cc6e2`, `text-columns-info_link` `55f0dad8-f633-e2e9-9636-ec48766ef19d`.
