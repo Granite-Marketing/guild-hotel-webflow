@@ -18,6 +18,7 @@ Create clients through `pnpm create:client`; never fork this private factory as 
 - **CLAUDE.md is a router.** Keep this file to rules and pointers; detailed setup, DOM contracts and gotchas live in `docs/reference/` and `docs/solutions/`, linked from here.
 - **One class family per component (hard rule).** Similar blocks share one `section_<component>` family; differences are `is-` modifiers or utility classes. Check `docs/figma/components.md` and the live styles before creating a family; see `build-component` Step 0.25. Five similar blocks with five unique class families is a failed build.
 - **Reuse styles before creating them.** Before building, read the site's existing styles (`get_styles` with all styles) and reuse generic classes for shared patterns (dividers, page heroes, section headers). Name new shared classes generically, not after the page they first appear on.
+- **Full-screen sizes use `vh` and `vw`, never `svh` or `svw`** (Stephen's standing preference), in Designer styles and bundle code.
 - **Shared vocabulary.** `CONCEPTS.md` defines project terms (mask reveal, line mask, feedback items); relevant when orienting or discussing feedback.
 - **Record learnings.** When a project hits a reusable gotcha, write it to that project's `docs/solutions/` with frontmatter, then back-port it here once a second project would benefit.
 
@@ -55,7 +56,7 @@ See `docs/reference/style-guide.md` for what the style guide must contain.
 
 ### Utility Classes
 - **Layout containers:** `container-large` (80rem), `container-medium` (64rem), `container-small` (48rem), `container-xl` (alias for container-large)
-- **Horizontal padding:** `padding-global` — fixed **2rem** left/right (NOT 5%). Applied to the wrapper div inside sections.
+- **Horizontal padding:** `padding-global` — fixed **2rem** left/right (NOT 5%), **1.25rem** (20px) below 768px to match the mobile Figma gutter. Applied to the wrapper div inside sections.
 - **Vertical padding:** `padding-section-large` (7rem), `padding-section-medium` (5rem), `padding-section-small` (3rem) — responsive, see `breakpoints.md`. Applied as combo class on same element as padding-global.
 - **Typography:** `heading-style-h1` through `heading-style-h6`, `text-size-large`, `text-size-medium`, `text-size-regular`, `text-size-small`, `text-rich-text`
 - **Text weight:** `text-weight-xbold`, `text-weight-bold`, `text-weight-semibold`, `text-weight-medium`, `text-weight-normal`, `text-weight-light`

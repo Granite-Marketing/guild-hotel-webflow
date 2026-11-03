@@ -1,5 +1,29 @@
 # Changelog
 
+## 1.1.21
+
+### Patch Changes
+
+- 28fd577: Hexagon scroll masks close their chamfer as they open, so every section ends as a full-bleed 100vw x 100vh rectangle; the mobile tab dropdown label and rows centre on the capitals.
+
+## 1.1.20
+
+### Patch Changes
+
+- cmsItemLinks: optional data-cms-link-anchor builds /path#slug links, so Home art trail items open their Arts dialog.
+
+## 1.1.19
+
+### Patch Changes
+
+- f5cbd47: M6: below 768px the tab pill bars (press, happenings, blog, neighborhood, gallery, arts) and the dining and meetings venue selectors collapse into the Figma compact dropdown pill.
+
+## 1.1.18
+
+### Patch Changes
+
+- 91dbfb3: modals: dialog hash links (`#book`, a back link to another dialog) are handled in the capture phase so Webflow.js no longer scrolls the page or pushes the hash when the booking menu opens.
+
 ## 1.1.17
 
 ### Patch Changes

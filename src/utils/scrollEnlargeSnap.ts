@@ -11,7 +11,7 @@
  *
  *   [data-scroll-enlarge-snap]            section root (the guard selector)
  *     [data-scroll-enlarge-snap-stage]    optional; the box that pins. Must
- *                                         have a fixed height (100svh).
+ *                                         have a fixed height (100vh).
  *                                         Defaults to the root.
  *       [data-scroll-enlarge-snap-media]  the frame. Designer styles it at
  *                                         its small START size (with its
@@ -356,8 +356,8 @@ interface Insets {
 /**
  * Sizes the media to the stage content box and returns a clip mask that
  * opens from the Designer start rect (progress 0) to the full box
- * (progress 1). The mask keeps the Designer's chamfered corners, read from
- * the media's own clip-path, so the corners never scale with the frame.
+ * (progress 1). It starts with the Designer's chamfered corners, read from
+ * the media's own clip-path, and closes them to square as it opens.
  */
 const createChamferMask = (stage: HTMLElement, media: HTMLElement) => {
   const state = { progress: 0 }
@@ -370,7 +370,10 @@ const createChamferMask = (stage: HTMLElement, media: HTMLElement) => {
     const right = start.right * remaining
     const bottom = start.bottom * remaining
     const left = start.left * remaining
-    const { x, y } = chamfer
+    // The corner cut closes with the frame, so every section ends as a plain
+    // full-bleed rectangle.
+    const x = chamfer.x * remaining
+    const y = chamfer.y * remaining
     media.style.clipPath = `polygon(${[
       `${left + x}px ${top}px`,
       `calc(100% - ${right + x}px) ${top}px`,
