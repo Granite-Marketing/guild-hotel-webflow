@@ -65,7 +65,7 @@ M1 runs first and alone because it changes the base that every other comparison 
 ## Decisions
 
 - **Footer link list (open, client):** Figma lists Hotel, Experience, Dining, Social with "The Lobby Terrace" and no Blog or Happenings; live adds Blog, Happenings, Solana Coffee and Garden Terrace. M3 matches layout only and leaves the links as they are until the client confirms.
-- **Day and night toggle:** shown on mobile as in Figma, using the same behaviour as desktop.
+- **Day and night toggle:** shown on mobile as in Figma, visual only. Its real job is to swap content in certain areas between a day and a night version; that behaviour is a separate later task and is not built here.
 - **Top bar Book Now on mobile:** Figma has no Book Now in the mobile bar; the Book button lives in the menu overlay and the hero. M2 follows Figma.
 
 ## Out of scope
