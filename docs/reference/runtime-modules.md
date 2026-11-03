@@ -531,8 +531,10 @@ an Arts CMS item linking to its anchor on the Arts page.
   centre, so they stay tappable. `gsap.matchMedia` swaps modes live.
 - Hidden items are `visibility: hidden`, so keyboard users cannot tab to them;
   keep the section CTA as the keyboard path.
-- Arts page dependency: each Arts item on `/arts` needs `id` bound to its slug
-  so the anchor resolves.
+- Arts page dependency: each Arts dialog on `/arts` has its `id` bound to the
+  art item's slug; the Home trail links use `cmsItemLinks` with
+  `data-cms-link-anchor` to point at `/arts#{slug}`, and `modals()` opens that
+  dialog on load.
 - Local preview: `pnpm dev`, then
   `http://localhost:3001/image-trail-hover.html` (fixture in
   `tests/visual/fixtures/`); check with
@@ -571,6 +573,7 @@ Happenings & Stories template (F30).
 | --- | --- | --- | --- |
 | `data-cms-link-slug` | `a` (Link or Link Block) | yes | bound to a CMS Slug field (the item's own Slug, or Reference > Slug) |
 | `data-cms-link-path` | same `a` | no | static collection path, e.g. `happenings-stories` |
+| `data-cms-link-anchor` | same `a` | no | empty; joins path and slug with `#`, e.g. `/arts#oceano` |
 
 - `a[data-cms-link-path="happenings-stories"][data-cms-link-slug="{{ Slug }}"]`
   becomes `/happenings-stories/{slug}`.

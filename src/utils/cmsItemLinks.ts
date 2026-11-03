@@ -6,9 +6,12 @@
  *
  * DOM contract:
  *   <a data-cms-link-slug="{{ Slug }}"             bound to a CMS Slug field
- *      data-cms-link-path="happenings-stories">    optional collection path
+ *      data-cms-link-path="happenings-stories"     optional collection path
+ *      data-cms-link-anchor>                      optional: slug as a hash
  *
  * Result: href="/happenings-stories/{slug}", or "/{slug}" with no path.
+ * With data-cms-link-anchor: href="/arts#{slug}", which modals() opens as
+ * the dialog with that id on page load.
  * Links with an empty slug keep their Designer href (the no-JS fallback).
  */
 
@@ -23,6 +26,7 @@ export const cmsItemLinks = () => {
     if (!slug) return
 
     const collectionPath = trimSlashes(link.getAttribute('data-cms-link-path') ?? '')
-    link.setAttribute('href', collectionPath ? `/${collectionPath}/${slug}` : `/${slug}`)
+    const separator = link.hasAttribute('data-cms-link-anchor') ? '#' : '/'
+    link.setAttribute('href', collectionPath ? `/${collectionPath}${separator}${slug}` : `/${slug}`)
   })
 }

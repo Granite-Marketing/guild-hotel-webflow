@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.20
+
+### Patch Changes
+
+- cmsItemLinks: optional data-cms-link-anchor builds /path#slug links, so Home art trail items open their Arts dialog.
+
 ## 1.1.19
 
 ### Patch Changes
