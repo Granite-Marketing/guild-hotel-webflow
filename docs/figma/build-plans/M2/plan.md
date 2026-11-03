@@ -97,3 +97,4 @@ Style and prop changes only, no code (live bundle v1.1.19 unchanged). Checked on
 2. **Desktop venue list background:** the dialog's flex row stretched the panel to the viewport height (900px) while the venues ran to 1447px. Image Bg `_component` now aligns items to the start, so the maroon panel grows with the list.
 3. **Mobile stamp to options gap:** a base small rule added `margin-top: 1.75rem` to `_list` and `padding: 14px 0` to `_item`. Both booking variants reset them at medium and small; stamp to first option is now 40px and the option pitch 48px, as in Figma.
 4. **Mobile venue list gap:** same list margin plus the hidden header; first venue now starts 40px below the back, wordmark and close bar, as in Figma.
+5. **Mobile menu hairline:** `site-nav_menu-footer` at small gets a 1px top border in cream at 0.32 opacity, inset 20px each side with 16px above the address (Figma `2 · Menu`, node 1243:19241). Desktop unchanged.
