@@ -38,3 +38,4 @@ dist/fixtures/
 
 # Fixture bundles built by the Playwright specs and preview:fixtures
 tests/visual/fixtures/*.js
+figma/mobile/.live/
