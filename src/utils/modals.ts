@@ -16,7 +16,9 @@
  *   - Hash link:  any `a[href="#{id}"]` whose id is a dialog opens it through
  *                 the same path, also from inside another open dialog (the
  *                 current one closes first and focus later returns to the
- *                 trigger that opened the first dialog).
+ *                 trigger that opened the first dialog). This includes a
+ *                 `[data-modal-close]` whose href names another dialog (a
+ *                 "back" link that steps to the previous dialog).
  *   - Page load:  `location.hash` naming a dialog id opens that dialog, and
  *                 so does a later `hashchange` to one. A hash naming any
  *                 other element re-scrolls to it after window load, so lazy
@@ -297,17 +299,26 @@ export const modals = () => {
     if (modal) openModal(modal, trigger)
   }
 
-  // A close control whose href names a page section: handled in the capture
-  // phase and stopped there, because Webflow.js scrolls same-page `#` links
-  // itself (clear of the nav) from its own document click handler, after
-  // ours has settled, and pushes the hash.
+  // Links whose href names a dialog, and close controls whose href names a
+  // page section: handled in the capture phase and stopped there, because
+  // Webflow.js scrolls same-page `#` links itself (clear of the nav) from its
+  // own document click handler, after ours has settled, and pushes the hash.
   document.addEventListener(
     'click',
     (event) => {
-      const closeButton = (event.target as HTMLElement | null)?.closest<HTMLElement>('[data-modal-close]')
-      if (!closeButton || !activeModal) return
-      const targetId = hashTarget(closeButton.getAttribute('href'))
-      if (!targetId || getDialog(targetId)) return
+      const link = (event.target as HTMLElement | null)?.closest<HTMLElement>('a[href^="#"]')
+      const targetId = hashTarget(link?.getAttribute('href') ?? null)
+      if (!link || !targetId) return
+
+      const targetDialog = getDialog(targetId)
+      if (targetDialog) {
+        event.preventDefault()
+        event.stopPropagation()
+        openModal(targetDialog, link)
+        return
+      }
+
+      if (!activeModal || !link.matches('[data-modal-close]')) return
       const section = document.getElementById(targetId)
       if (!section) return
       event.preventDefault()
@@ -326,28 +337,11 @@ export const modals = () => {
       return
     }
 
+    // Dialog and section hrefs were handled in the capture phase above.
     const closeButton = target?.closest<HTMLElement>('[data-modal-close]')
     if (closeButton && activeModal) {
       event.preventDefault()
-      const targetId = hashTarget(closeButton.getAttribute('href'))
-      const targetDialog = getDialog(targetId)
-      if (targetDialog) {
-        openModal(targetDialog, closeButton)
-        return
-      }
-      const section = targetId ? document.getElementById(targetId) : null
-      if (section) closeAndScrollTo(section)
-      else closeModal()
-      return
-    }
-
-    const hashLink = target?.closest<HTMLAnchorElement>('a[href^="#"]')
-    if (hashLink) {
-      const targetDialog = getDialog(hashTarget(hashLink.getAttribute('href')))
-      if (targetDialog) {
-        event.preventDefault()
-        openModal(targetDialog, hashLink)
-      }
+      closeModal()
     }
   })
 
