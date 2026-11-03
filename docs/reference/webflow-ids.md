@@ -340,3 +340,8 @@ Contact select `c6518e72-8838-a8a1-906b-60929af12d99` carries custom attribute `
 - Dinings fields: Home card image `646717a6cc09a61c694ee8156cfc628f`, Home card tagline `686388c181e8cf098aadd212d9589d4f`, Home card logo `94eda87f196c97bcc9ac64ae4a6e354a`, Show home card logo `728aa903f38fdb2fd76c4d8ec6d8180f`, Show home card name `3cff2fa4df9f58a2471d0886c314f6ff` (keep it the opposite of the logo switch).
 - New item Solana Coffee `6ae0b8acc0da5ad663ec3476` (sort 5).
 - Hidden static panels to delete by hand: `44176885-8e8b-207a-b8f8-643151dc2c23`, `2bf38960-f15b-0c2e-a653-9c2ff43c655e`, `58021a4a-2282-3da9-d6f3-6cd255426a90`, `477fc8ce-2d4b-2299-a281-ba587a51697e`, `82c90605-c3b2-ea18-1c0c-666ddb6d32f7`.
+
+### M6 mobile selectors (2026-11-03)
+- Dinings Template `text-columns-info_footer` `ef08e59e-e1c8-4fa5-2e4a-441796698213`; "browse the menu" `52aa9b80-c93e-4cba-93d4-a8b9a21a9bc0`; "discover {name}" link block `eeea8d64-cd44-b37b-cbe1-36d7c4f43bd8` (href = `venue-site-link`, hidden until a "is set" condition is added), name span `ace5e8eb-31d5-3a08-081e-747b03cb5dbc`.
+- Dinings field ids: Name `70ed532b8264438896ea60b6c714cb42`, Venue site link `f3d113ca4d82d0432a5b95ea45788c6d`.
+- Style ids: `article-card-staggered_component` `1dfea01d-7b6b-d601-1af4-f839882d2c25`, its `is-right` combo `2b5ed087-cb62-4c51-49f1-90ece5e3967f`, `article-card-staggered_header.is-right` `abc99c11-07dd-a77d-609b-1fc1dfa80dc0`, `gallery-all_grid` `8038febe-99b0-d824-f8b3-4583200cc6e2`, `text-columns-info_link` `55f0dad8-f633-e2e9-9636-ec48766ef19d`.

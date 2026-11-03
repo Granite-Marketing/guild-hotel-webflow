@@ -45,6 +45,7 @@ import { staggerCards } from '$utils/staggerCards'
 import { stickyCta } from '$utils/stickyCta'
 import { stickyTabs } from '$utils/stickyTabs'
 import { swiperSliders } from '$utils/swiperSliders'
+import { tabDropdown } from '$utils/tabDropdown'
 
 /*
  * Opt-in modules. Uncomment the import and the call, keeping the call in
@@ -78,6 +79,9 @@ window.Webflow.push(() => {
   // block). Before the scroll engine and before swiperSliders so Swiper loop
   // clones copy already-wrapped markup.
   buttonHover()
+  // M6: mobile tab bars collapse to a compact selector; before the scroll
+  // engine because it shortens the bars below 768px.
+  tabDropdown()
 
   // slot A: debugOverlay() (before the engine, so it logs the first refresh)
   smoothScroll.init()
