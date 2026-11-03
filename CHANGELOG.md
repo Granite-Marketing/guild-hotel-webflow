@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.22
+
+### Patch Changes
+
+- 43ce25b: Hexagon scroll masks keep their chamfered corners on desktop; they close to a full-screen rectangle only below 768px.
+
 ## 1.1.21
 
 ### Patch Changes
