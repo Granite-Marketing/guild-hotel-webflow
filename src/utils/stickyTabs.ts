@@ -44,111 +44,122 @@ const bottomGap = () =>
 
 type TabEntry = { link: HTMLAnchorElement; target: HTMLElement }
 
+// Mobile standard (Figma "fixed bottom"): every in-page tab pill pins on
+// mobile, even where the Designer prop leaves it unpinned on desktop.
+const MOBILE_BARS = '.tab-pills-intro_tabs:not(.is-media):not([data-sticky-tabs="true"])'
+
 export const stickyTabs = () => {
-  const bars = document.querySelectorAll<HTMLElement>('[data-sticky-tabs="true"]')
-  if (!bars.length) return
+  document
+    .querySelectorAll<HTMLElement>('[data-sticky-tabs="true"]')
+    .forEach((tabs) => pinTabs(tabs, true))
 
-  bars.forEach((tabs) => {
-    const links = [...tabs.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')]
-    const entries = links
-      .map((link) => ({ link, target: document.getElementById(link.hash.slice(1)) }))
-      .filter((entry): entry is TabEntry => entry.target !== null)
-    if (!entries.length) {
-      console.warn('[stickyTabs] no tab target resolves', tabs)
-      return
-    }
-
-    const sections = [...document.querySelectorAll<HTMLElement>('.section_article-card-staggered')].filter(
-      (section) => tabs.compareDocumentPosition(section) & Node.DOCUMENT_POSITION_FOLLOWING,
-    )
-    // Empty or display:none groups (for example the hidden conferences group
-    // on /happenings) have no layout, so they must not end the pin. Resolved
-    // on every refresh because CMS lists and tabs can change what renders.
-    const isRendered = (section: HTMLElement) =>
-      section.offsetParent !== null && section.offsetHeight > 0
-    const fallbackSection = entries[entries.length - 1].target
-    const lastSection = () =>
-      [...sections].reverse().find(isRendered) ?? [...entries].reverse().find((e) => isRendered(e.target))?.target ?? fallbackSection
-    // Area covered by the fixed nav at the top; the bar sits at the bottom.
-    const clearance = () => navBottom()
-
-    const pinEnd = () =>
-      lastSection().getBoundingClientRect().bottom + window.scrollY - (window.innerHeight - bottomGap())
-
-    ScrollTrigger.create({
-      trigger: tabs,
-      start: () => `bottom bottom-=${bottomGap()}`,
-      // Absolute scroll position (not endTrigger) so the rendered last
-      // section is re-resolved on every refresh. The pin releases when the
-      // last section's bottom reaches the bar's bottom, so the bar rests
-      // flush at the section end like the sticky gallery bars.
-      end: pinEnd,
-      pin: tabs,
-      pinSpacing: false,
-      invalidateOnRefresh: true,
-    })
-
-    // F49: fade the bar out over the last stretch so it never rests on the
-    // last card's text or against the next section; scrubbed, so it returns
-    // on the way back up.
-    gsap.fromTo(
-      tabs,
-      { autoAlpha: 1 },
-      {
-        autoAlpha: 0,
-        ease: 'none',
-        immediateRender: false,
-        scrollTrigger: {
-          start: () => pinEnd() - FADE_DISTANCE_VH * window.innerHeight,
-          end: pinEnd,
-          scrub: true,
-          invalidateOnRefresh: true,
-        },
-      },
-    )
-
-    const setActive = (active: HTMLAnchorElement) => {
-      links.forEach((link) => {
-        const on = link === active
-        link.classList.toggle('is-active', on)
-        if (on) link.setAttribute('aria-current', 'true')
-        else link.removeAttribute('aria-current')
-      })
-    }
-
-    entries.forEach(({ link, target }) => {
-      ScrollTrigger.create({
-        trigger: target,
-        start: () => `top top+=${clearance() + 1}`,
-        end: () => `bottom top+=${clearance() + 1}`,
-        onToggle: (self: ScrollTriggerInstance) => {
-          if (self.isActive) setActive(link)
-        },
-      })
-    })
-
-    // Capture phase on the bar so Webflow's own anchor scroll never also runs.
-    tabs.addEventListener(
-      'click',
-      (event) => {
-        const link = (event.target as Element).closest<HTMLAnchorElement>('a[href^="#"]')
-        const entry = entries.find((item) => item.link === link)
-        if (!link || !entry) return
-        event.preventDefault()
-        event.stopPropagation()
-        const offset = -clearance()
-        const immediate = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-        if (lenis.raw) lenis.raw.scrollTo(entry.target, { offset, immediate })
-        else {
-          window.scrollTo({
-            top: entry.target.getBoundingClientRect().top + window.scrollY + offset,
-            behavior: immediate ? 'auto' : 'smooth',
-          })
-        }
-        history.replaceState(null, '', link.hash)
-        setActive(link)
-      },
-      true,
-    )
+  const mobileBars = [...document.querySelectorAll<HTMLElement>(MOBILE_BARS)]
+  if (!mobileBars.length) return
+  gsap.matchMedia().add({ mobile: '(max-width: 767px)' }, () => {
+    const cleanups = mobileBars.map((tabs) => pinTabs(tabs, false))
+    return () => cleanups.forEach((cleanup) => cleanup?.())
   })
+}
+
+const pinTabs = (tabs: HTMLElement, warn: boolean) => {
+  const links = [...tabs.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')]
+  const entries = links
+    .map((link) => ({ link, target: document.getElementById(link.hash.slice(1)) }))
+    .filter((entry): entry is TabEntry => entry.target !== null)
+  if (!entries.length) {
+    // Filter bars (gallery, arts) have no in-page targets; only explicit bars warn.
+    if (warn) console.warn('[stickyTabs] no tab target resolves', tabs)
+    return
+  }
+
+  const sections = [...document.querySelectorAll<HTMLElement>('.section_article-card-staggered')].filter(
+    (section) => tabs.compareDocumentPosition(section) & Node.DOCUMENT_POSITION_FOLLOWING,
+  )
+  // Empty or display:none groups (for example the hidden conferences group
+  // on /happenings) have no layout, so they must not end the pin. Resolved
+  // on every refresh because CMS lists and tabs can change what renders.
+  const isRendered = (section: HTMLElement) =>
+    section.offsetParent !== null && section.offsetHeight > 0
+  const fallbackSection = entries[entries.length - 1].target
+  const lastSection = () =>
+    [...sections].reverse().find(isRendered) ?? [...entries].reverse().find((e) => isRendered(e.target))?.target ?? fallbackSection
+  // Area covered by the fixed nav at the top; the bar sits at the bottom.
+  const clearance = () => navBottom()
+
+  const pinEnd = () =>
+    lastSection().getBoundingClientRect().bottom + window.scrollY - (window.innerHeight - bottomGap())
+
+  ScrollTrigger.create({
+    trigger: tabs,
+    start: () => `bottom bottom-=${bottomGap()}`,
+    // Absolute scroll position (not endTrigger) so the rendered last
+    // section is re-resolved on every refresh. The pin releases when the
+    // last section's bottom reaches the bar's bottom, so the bar rests
+    // flush at the section end like the sticky gallery bars.
+    end: pinEnd,
+    pin: tabs,
+    pinSpacing: false,
+    invalidateOnRefresh: true,
+  })
+
+  // F49: fade the bar out over the last stretch so it never rests on the
+  // last card's text or against the next section; scrubbed, so it returns
+  // on the way back up.
+  gsap.fromTo(
+    tabs,
+    { autoAlpha: 1 },
+    {
+      autoAlpha: 0,
+      ease: 'none',
+      immediateRender: false,
+      scrollTrigger: {
+        start: () => pinEnd() - FADE_DISTANCE_VH * window.innerHeight,
+        end: pinEnd,
+        scrub: true,
+        invalidateOnRefresh: true,
+      },
+    },
+  )
+
+  const setActive = (active: HTMLAnchorElement) => {
+    links.forEach((link) => {
+      const on = link === active
+      link.classList.toggle('is-active', on)
+      if (on) link.setAttribute('aria-current', 'true')
+      else link.removeAttribute('aria-current')
+    })
+  }
+
+  entries.forEach(({ link, target }) => {
+    ScrollTrigger.create({
+      trigger: target,
+      start: () => `top top+=${clearance() + 1}`,
+      end: () => `bottom top+=${clearance() + 1}`,
+      onToggle: (self: ScrollTriggerInstance) => {
+        if (self.isActive) setActive(link)
+      },
+    })
+  })
+
+  // Capture phase on the bar so Webflow's own anchor scroll never also runs.
+  const onClick = (event: MouseEvent) => {
+      const link = (event.target as Element).closest<HTMLAnchorElement>('a[href^="#"]')
+      const entry = entries.find((item) => item.link === link)
+      if (!link || !entry) return
+      event.preventDefault()
+      event.stopPropagation()
+      const offset = -clearance()
+      const immediate = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (lenis.raw) lenis.raw.scrollTo(entry.target, { offset, immediate })
+      else {
+        window.scrollTo({
+          top: entry.target.getBoundingClientRect().top + window.scrollY + offset,
+          behavior: immediate ? 'auto' : 'smooth',
+        })
+      }
+      history.replaceState(null, '', link.hash)
+      setActive(link)
+  }
+  tabs.addEventListener('click', onClick, true)
+  return () => tabs.removeEventListener('click', onClick, true)
 }

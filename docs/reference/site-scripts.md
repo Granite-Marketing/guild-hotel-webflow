@@ -106,3 +106,7 @@ F43: the fill layer is a static chamfer-clipped box and the fill grows with back
 ## Site head: History divider (F50)
 
 `<style data-history-divider>` after the button hover block. Source: `docs/reference/site-head/history-divider.css`.
+
+## Site head: FAQ open chevron (M5)
+
+`<style data-faq-chevron>` after the History divider block. Below 768px the open FAQ row's chevron points up; Webflow classes cannot style a child from the header's `is-active` state. Source: `docs/reference/site-head/faq-chevron.css`.

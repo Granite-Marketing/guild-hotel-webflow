@@ -57,6 +57,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | hoverFollowImage | `hoverFollowImage.ts` | wired (v1.1.4) | D, after imageTrailHover |
 | map | `map.ts` (+ `mapNeeds.ts`) | wired (unreleased) | D, after roomListHoverPreview |
 | hoverImageSwap | `hoverImageSwap.ts` | wired (next release) | D, after roomListHoverPreview |
+| tabDropdown | `tabDropdown.ts` | wired (M6, next release) | before the scroll engine, after buttonHover |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
 
 To enable an opt-in module, uncomment its import and its call in
@@ -530,8 +531,10 @@ an Arts CMS item linking to its anchor on the Arts page.
   centre, so they stay tappable. `gsap.matchMedia` swaps modes live.
 - Hidden items are `visibility: hidden`, so keyboard users cannot tab to them;
   keep the section CTA as the keyboard path.
-- Arts page dependency: each Arts item on `/arts` needs `id` bound to its slug
-  so the anchor resolves.
+- Arts page dependency: each Arts dialog on `/arts` has its `id` bound to the
+  art item's slug; the Home trail links use `cmsItemLinks` with
+  `data-cms-link-anchor` to point at `/arts#{slug}`, and `modals()` opens that
+  dialog on load.
 - Local preview: `pnpm dev`, then
   `http://localhost:3001/image-trail-hover.html` (fixture in
   `tests/visual/fixtures/`); check with
@@ -570,6 +573,7 @@ Happenings & Stories template (F30).
 | --- | --- | --- | --- |
 | `data-cms-link-slug` | `a` (Link or Link Block) | yes | bound to a CMS Slug field (the item's own Slug, or Reference > Slug) |
 | `data-cms-link-path` | same `a` | no | static collection path, e.g. `happenings-stories` |
+| `data-cms-link-anchor` | same `a` | no | empty; joins path and slug with `#`, e.g. `/arts#oceano` |
 
 - `a[data-cms-link-path="happenings-stories"][data-cms-link-slug="{{ Slug }}"]`
   becomes `/happenings-stories/{slug}`.
@@ -1106,6 +1110,8 @@ was removed because it restarts per Collection List and would out-rank
 
 ### stickyTabs
 
+Mobile standard (2026-11-03): below 768px every `.tab-pills-intro_tabs` with in-page anchor links pins too, even without the `Sticky tabs` prop (Neighborhood); bars without resolvable anchors (gallery and arts filters) are skipped silently.
+
 Feedback F36. Pins `nav.tab-pills-intro_tabs[data-sticky-tabs="true"]` to the bottom of
 the viewport, 2rem above the bottom edge (same offset as the gallery/arts
 sticky tag bar, F44), from the moment its natural position reaches that line
@@ -1148,3 +1154,7 @@ Crossfading split slider for the Offers Slider Split component. Needs the Swiper
 ## cardCarouselHeaderLeft (Q009)
 
 Free-width card slider for the Card Carousel Header Left component. Needs the Swiper 12 CDN CSS and JS. DOM contract: `.swiper_slider[data-card-carousel]` wraps `.swiper.cards` > `.swiper-wrapper` > `.swiper-slide`; `[data-card-carousel-prev]` and `[data-card-carousel-next]` (link blocks) sit anywhere inside the root. Card widths and gaps come from the CSS (slide width plus `margin-right`), so the module runs Swiper with `slidesPerView: 'auto'` and `spaceBetween: 0`; Swiper measures the margin, and a non-zero `spaceBetween` would double the gap. The arrows get `is-disabled` at either end and `hide` when every card fits (Swiper lock). The `cards` type class keeps `swiperSliders()` from also initialising the container. Fixture: `tests/visual/fixtures/card-carousel-header-left.html`.
+
+## tabDropdown (M6)
+
+Below 768px every `.tab-pills-intro_tabs` (Wellness `is-media` included, centred at the frame bottom) and `.venue-card-fullbleed_tabs` becomes the Figma mobile selector: a 220x40 burgundy pill with the active label underlined and a menu icon; tapping it opens the full tab list upward with a close X. The module wraps the tabs in `[data-tab-dropdown-panel]`, appends `button[data-tab-dropdown-toggle]` (aria-expanded) and marks the bar `[data-tab-dropdown]`; its stylesheet is injected by the bundle and keyed off those attributes, so the Designer classes are unchanged and desktop renders `display: contents`. The owning module (stickyTabs, galleryFilter, scrollEnlargeSnap) still toggles `is-active`; a MutationObserver copies the active label into the pill. Tab clicks (capture phase), Escape and outside clicks close it. The bar keeps its 40px box and the panel grows out of it, so the stickyTabs pin and following layout never move. Runs before the scroll engine because it shortens the bars on mobile.

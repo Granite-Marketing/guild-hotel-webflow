@@ -121,17 +121,14 @@ test('card carousel: a single card locks and hides the arrows', async ({ page })
   await expect(slider.locator('[data-card-carousel-next]')).toBeHidden()
 })
 
-test('card carousel: stacks below the header at 390', async ({ page }) => {
+test('card carousel: stacks below the header at 390, swipe only', async ({ page }) => {
   await openFixture(page, 390, 844)
   const slider = carousel(page, 0)
   const header = await slider.locator('.card-carousel-header-left_content').boundingBox()
   const firstCard = await slider.locator('.swiper-slide').first().boundingBox()
   expect(firstCard!.y).toBeGreaterThan(header!.y + header!.height - 1)
-  expect(Math.round(firstCard!.width)).toBe(256)
-  const start = await firstSlideX(page, 0)
-  await slider.locator('[data-card-carousel-next]').click()
-  // One card plus the 1rem gap: 256 + 16.
-  await expect.poll(async () => Math.round(start - (await firstSlideX(page, 0)))).toBe(272)
-  await page.waitForTimeout(800)
+  // Figma mobile: 310px cards, no arrows.
+  expect(Math.round(firstCard!.width)).toBe(310)
+  await expect(slider.locator('[data-card-carousel-controls]')).toBeHidden()
   await slider.screenshot({ path: `${SCREENSHOT_DIRECTORY}/fixture-390.png` })
 })

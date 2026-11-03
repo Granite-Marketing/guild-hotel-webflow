@@ -1,0 +1,2 @@
+/* M5 FAQ: below 768px the open row's chevron points up, as in Figma mobile. accordion.ts toggles .is-active on the header; Webflow classes cannot style a child from a parent state. */
+@media (max-width:767px){.accordion_header.is-active .accordion_icon{transform:none}}
