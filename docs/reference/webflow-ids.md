@@ -379,3 +379,7 @@ Plan: `docs/figma/build-plans/ART-CMS/plan.md`.
 - Art modal gap (Stephen, 2026-11-03): combo `.overlay-detail-panel-modal_content.is-art` `b7372605-8540-0775-e536-a11e8ea49a65`, medium and below `padding-top: 0`, applied only to the content element `4e402659-32e2-fddb-7dd9-6c1d17f58327` inside Art Detail Modal. Stacked image-to-title gap 104px to 40px (mobile Figma is about 34px). Desktop is side by side and already matches the Figma (160px vs about 145px), so it is unchanged.
 
 Correction (2026-11-03, Stephen): full screen is mobile only. Desktop is back to its pre-PR 129 state: `venue-card-fullbleed_stage.is-media-center` main padding removed (base 1.25rem/2.5rem applies), padding 0 at small; `tab-pills-intro_stage.is-media` main padding 1.25rem; arts `is-bleed` media clip-path none at main (as before), chamfer polygons at small (2.25rem) and tiny (1rem). `scrollEnlargeSnap` closes the chamfer only below 768px.
+
+## Bottom menu standard (2026-11-03)
+
+Neighborhood anchors for the category menu (links `#dining`, `#arts`, `#beyond-downtown`, `#services` resolved nowhere before): `section_neighborhood-corporate` `27d33c91-12c5-fda1-b47b-d48cba90eb77` has DOM id `services`; component instances cannot take an id, so plain div wrappers hold them: `#arts` `db393c4c-b55f-32c1-5bc7-7215d68af2cd` (Offers Slider Split, arts & culture), `#beyond-downtown` `eae82305-f35e-70a9-9813-0c1d0c775766` (timeline-scatter-images Tall), `#dining` `8ae457cb-4758-3a37-d270-ed267afe0a2b` (Article Card Staggered Tall).

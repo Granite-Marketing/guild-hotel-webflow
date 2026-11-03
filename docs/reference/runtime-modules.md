@@ -1110,6 +1110,8 @@ was removed because it restarts per Collection List and would out-rank
 
 ### stickyTabs
 
+Mobile standard (2026-11-03): below 768px every `.tab-pills-intro_tabs` with in-page anchor links pins too, even without the `Sticky tabs` prop (Neighborhood); bars without resolvable anchors (gallery and arts filters) are skipped silently.
+
 Feedback F36. Pins `nav.tab-pills-intro_tabs[data-sticky-tabs="true"]` to the bottom of
 the viewport, 2rem above the bottom edge (same offset as the gallery/arts
 sticky tag bar, F44), from the moment its natural position reaches that line
@@ -1155,4 +1157,4 @@ Free-width card slider for the Card Carousel Header Left component. Needs the Sw
 
 ## tabDropdown (M6)
 
-Below 768px every `.tab-pills-intro_tabs` (except `is-media`) and `.venue-card-fullbleed_tabs` becomes the Figma mobile selector: a 220x40 burgundy pill with the active label underlined and a menu icon; tapping it opens the full tab list upward with a close X. The module wraps the tabs in `[data-tab-dropdown-panel]`, appends `button[data-tab-dropdown-toggle]` (aria-expanded) and marks the bar `[data-tab-dropdown]`; its stylesheet is injected by the bundle and keyed off those attributes, so the Designer classes are unchanged and desktop renders `display: contents`. The owning module (stickyTabs, galleryFilter, scrollEnlargeSnap) still toggles `is-active`; a MutationObserver copies the active label into the pill. Tab clicks (capture phase), Escape and outside clicks close it. The bar keeps its 40px box and the panel grows out of it, so the stickyTabs pin and following layout never move. Runs before the scroll engine because it shortens the bars on mobile.
+Below 768px every `.tab-pills-intro_tabs` (Wellness `is-media` included, centred at the frame bottom) and `.venue-card-fullbleed_tabs` becomes the Figma mobile selector: a 220x40 burgundy pill with the active label underlined and a menu icon; tapping it opens the full tab list upward with a close X. The module wraps the tabs in `[data-tab-dropdown-panel]`, appends `button[data-tab-dropdown-toggle]` (aria-expanded) and marks the bar `[data-tab-dropdown]`; its stylesheet is injected by the bundle and keyed off those attributes, so the Designer classes are unchanged and desktop renders `display: contents`. The owning module (stickyTabs, galleryFilter, scrollEnlargeSnap) still toggles `is-active`; a MutationObserver copies the active label into the pill. Tab clicks (capture phase), Escape and outside clicks close it. The bar keeps its 40px box and the panel grows out of it, so the stickyTabs pin and following layout never move. Runs before the scroll engine because it shortens the bars on mobile.
