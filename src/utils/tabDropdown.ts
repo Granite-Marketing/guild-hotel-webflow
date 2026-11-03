@@ -38,6 +38,10 @@ const CLOSE_ICON =
 // express; move it to the site head block if the head ever gets a CSS file.
 // Values from Figma mobile (pill 220x40, 12px chamfer, 24px side inset, 40px
 // option rows with 10px list padding, 14/18 caps at -0.05em, inactive 0.62).
+// text-box trims the line box to the caps so labels centre on the letters, not
+// the font's taller ascent (Sackers Gothic sat ~3.5px low). Its cap-height
+// metric is ~3px taller than the drawn capitals, so the label's -3px top
+// margin and the rows' 13/16 padding put the visible letters on centre.
 const STYLES = `
 [data-tab-dropdown-panel]{display:contents}
 [data-tab-dropdown-toggle]{display:none}
@@ -46,13 +50,13 @@ const STYLES = `
  .venue-card-fullbleed_tabs[data-tab-dropdown]{left:50%;right:auto;bottom:1.25rem;transform:translateX(-50%)}
  [data-tab-dropdown-panel]{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:max-content;min-width:100%;display:flex;flex-direction:column;padding:0 1.5rem;background-color:var(--_primitives---colors--burgundy);color:var(--_primitives---colors--neutral-lightest);clip-path:polygon(.75rem 0,calc(100% - .75rem) 0,100% .75rem,100% calc(100% - .75rem),calc(100% - .75rem) 100%,.75rem 100%,0 calc(100% - .75rem),0 .75rem)}
  [data-tab-dropdown-panel]>*{font-size:.875rem;line-height:1.125rem;letter-spacing:-.05em}
- [data-tab-dropdown-panel]>a{display:none;padding:.6875rem 0;border:0;opacity:.62}
+ [data-tab-dropdown-panel]>a{display:none;padding:.8125rem 0 1rem;border:0;opacity:.62;text-box:trim-both cap alphabetic}
  [data-tab-dropdown-panel]>a.is-active{opacity:1}
  [data-tab-dropdown].is-open [data-tab-dropdown-panel]{padding-top:.625rem}
  [data-tab-dropdown].is-open [data-tab-dropdown-panel]>a{display:block}
  [data-tab-dropdown].is-open [data-tab-dropdown-panel]>a:nth-last-child(2){margin-bottom:.625rem}
  [data-tab-dropdown-toggle]{display:flex;align-items:center;justify-content:space-between;gap:2.5rem;height:2.5rem;margin:0;padding:0;border:0;background:none;color:inherit;text-align:left;cursor:pointer}
- [data-tab-dropdown-label]{white-space:nowrap;border-bottom:1px solid currentColor}
+ [data-tab-dropdown-label]{white-space:nowrap;margin-top:-.1875rem;padding-bottom:.25rem;border-bottom:1px solid currentColor;text-box:trim-both cap alphabetic}
  [data-tab-dropdown-close],[data-tab-dropdown].is-open [data-tab-dropdown-menu]{display:none}
  [data-tab-dropdown].is-open [data-tab-dropdown-close]{display:block}
 }`
