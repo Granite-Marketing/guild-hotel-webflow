@@ -14,6 +14,21 @@ The window may travel (for example a card sliding to the centre) as long as the 
 
 A text entrance where each line of a heading or paragraph slides up from behind its own hidden edge, played as one timeline after the related mask reveal completes and reversed when the reader scrolls back.
 
+### Hexagon scroll mask
+
+A mask reveal whose window starts as the brand's chamfered hexagon frame inset on the page background and opens as the reader scrolls; on phones it ends full screen, edge to edge with no frame, while on larger screens it keeps the chamfered inset frame.
+
+Every hexagon scroll mask on the site behaves the same way, so a change to one is a change to all of them.
+
+## Navigation
+
+### Bottom menu
+
+The floating section menu pinned to the bottom of the screen on phones while its section is in view, shown closed as a chamfered pill with the active option's label and a burger icon, and opened to list every option.
+
+It is the one standard for section, category and venue menus on phones; a full row of option links is the larger-screen form only.
+*Avoid: tab pills, selector pill, sticky menu*
+
 ## Feedback
 
 ### Feedback item
