@@ -11,7 +11,7 @@
  *
  *   [data-scroll-enlarge-snap]            section root (the guard selector)
  *     [data-scroll-enlarge-snap-stage]    optional; the box that pins. Must
- *                                         have a fixed height (100svh).
+ *                                         have a fixed height (100vh).
  *                                         Defaults to the root.
  *       [data-scroll-enlarge-snap-media]  the frame. Designer styles it at
  *                                         its small START size (with its
@@ -30,6 +30,9 @@
  *
  *   data-scroll-enlarge-snap-step="100"   on the root: scroll distance per
  *                                         step, in % of viewport height.
+ *
+ * Below 768px there is no enlarge step: the Designer styles the frame full
+ * screen (100vw x 100vh, no chamfer) and panel 0 is shown at t=0.
  *
  * Timeline schedule (F33): panel 0 is fully shown at t=1 (enlarge done).
  * Each later panel wipes in over WIPE_DURATION and is then fully shown for
@@ -95,9 +98,12 @@ export const scrollEnlargeSnap = () => {
       {
         animate: '(prefers-reduced-motion: no-preference)',
         reduce: '(prefers-reduced-motion: reduce)',
+        mobile: '(max-width: 767px)',
       },
       (context) =>
-        context.conditions.reduce ? initReduced(parts) : initAnimated(parts),
+        context.conditions.reduce
+          ? initReduced(parts)
+          : initAnimated(parts, !context.conditions.mobile),
     )
   })
 }
@@ -124,10 +130,12 @@ const readParts = (root: HTMLElement): SnapParts | null => {
   }
 }
 
-const initAnimated = (parts: SnapParts) => {
+const initAnimated = (parts: SnapParts, enlarge: boolean) => {
   const { stage, media, items, stepPercent } = parts
   // One step to enlarge, then one pitch per panel change, then the end hold.
-  const shownAt = items.map((_, index) => 1 + index * PITCH)
+  // Mobile has no enlarge: the frame is full screen from the start (Figma).
+  const enlargeSteps = enlarge ? 1 : 0
+  const shownAt = items.map((_, index) => enlargeSteps + index * PITCH)
   const wipeAt = (index: number) => shownAt[index] - WIPE_DURATION
   const totalSteps = shownAt[shownAt.length - 1] + END_HOLD
   const snapPoints = shownAt.map((time) => time / totalSteps)
@@ -217,12 +225,14 @@ const initAnimated = (parts: SnapParts) => {
     },
   })
 
-  timeline.to(mask.state, {
-    progress: 1,
-    duration: 1,
-    ease: 'power1.inOut',
-    onUpdate: mask.apply,
-  })
+  if (enlarge) {
+    timeline.to(mask.state, {
+      progress: 1,
+      duration: 1,
+      ease: 'power1.inOut',
+      onUpdate: mask.apply,
+    })
+  }
 
   items.slice(1).forEach((item, offset) => {
     const previous = items[offset]
