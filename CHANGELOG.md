@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.23
+
+### Patch Changes
+
+- 7f0d7e5: Mobile bottom menu standard: Wellness uses the burger pill, and every in-page tab pill pins to the bottom on mobile (Neighborhood was not sticky).
+
 ## 1.1.22
 
 ### Patch Changes
