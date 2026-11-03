@@ -100,13 +100,18 @@ test('offers slider: panel and figure each take half the width at 1440', async (
   expect(figure!.x).toBeGreaterThan(content!.x)
 })
 
-test('offers slider: item stacks with the figure below at 390', async ({ page }) => {
+test('offers slider: figure sits inside the card between title and text at 390', async ({ page }) => {
   await openFixture(page, 390, 844)
   const active = sliderA(page).locator('.swiper-slide-active')
-  const content = await active.locator('.offers-slider-split_content').boundingBox()
+  const heading = await active.locator('.offers-slider-split_heading').boundingBox()
   const figure = await active.locator('.offers-slider-split_figure').boundingBox()
-  expect(content && figure).toBeTruthy()
-  expect(figure!.y).toBeGreaterThanOrEqual(content!.y + content!.height - 1)
-  expect(Math.abs(figure!.width - 390)).toBeLessThan(2)
+  const text = await active.locator('.offers-slider-split_text').boundingBox()
+  expect(heading && figure && text).toBeTruthy()
+  expect(figure!.y).toBeGreaterThanOrEqual(heading!.y + heading!.height)
+  expect(text!.y).toBeGreaterThanOrEqual(figure!.y + figure!.height)
+  // Figma mobile: 350 x 390 inside 20px gutters.
+  expect(Math.round(figure!.x)).toBe(20)
+  expect(Math.round(figure!.width)).toBe(350)
+  expect(Math.round(figure!.height)).toBe(390)
   await sliderA(page).screenshot({ path: `${SCREENSHOT_DIRECTORY}/fixture-390.png` })
 })
