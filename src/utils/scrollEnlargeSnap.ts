@@ -95,9 +95,12 @@ export const scrollEnlargeSnap = () => {
       {
         animate: '(prefers-reduced-motion: no-preference)',
         reduce: '(prefers-reduced-motion: reduce)',
+        mobile: '(max-width: 767px)',
       },
       (context) =>
-        context.conditions.reduce ? initReduced(parts) : initAnimated(parts),
+        context.conditions.reduce
+          ? initReduced(parts)
+          : initAnimated(parts, Boolean(context.conditions.mobile)),
     )
   })
 }
@@ -124,7 +127,7 @@ const readParts = (root: HTMLElement): SnapParts | null => {
   }
 }
 
-const initAnimated = (parts: SnapParts) => {
+const initAnimated = (parts: SnapParts, closeCorners: boolean) => {
   const { stage, media, items, stepPercent } = parts
   // One step to enlarge, then one pitch per panel change, then the end hold.
   const shownAt = items.map((_, index) => 1 + index * PITCH)
@@ -137,7 +140,7 @@ const initAnimated = (parts: SnapParts) => {
     const content = item.querySelector<HTMLElement>('[data-scroll-enlarge-snap-content]')
     return content ? createLineMaskTimeline(content) : null
   })
-  const mask = createChamferMask(stage, media)
+  const mask = createChamferMask(stage, media, closeCorners)
 
   // Which panel's content is shown at timeline time `time`: from the moment
   // the panel is fully shown until exactly when the next wipe begins.
@@ -356,10 +359,10 @@ interface Insets {
 /**
  * Sizes the media to the stage content box and returns a clip mask that
  * opens from the Designer start rect (progress 0) to the full box
- * (progress 1). It starts with the Designer's chamfered corners, read from
- * the media's own clip-path, and closes them to square as it opens.
+ * (progress 1). It keeps the Designer's chamfered corners, read from the
+ * media's own clip-path; below 768px it closes them to square as it opens.
  */
-const createChamferMask = (stage: HTMLElement, media: HTMLElement) => {
+const createChamferMask = (stage: HTMLElement, media: HTMLElement, closeCorners: boolean) => {
   const state = { progress: 0 }
   let start: Insets = { top: 0, right: 0, bottom: 0, left: 0 }
   let chamfer = { x: 0, y: 0 }
@@ -370,10 +373,11 @@ const createChamferMask = (stage: HTMLElement, media: HTMLElement) => {
     const right = start.right * remaining
     const bottom = start.bottom * remaining
     const left = start.left * remaining
-    // The corner cut closes with the frame, so every section ends as a plain
-    // full-bleed rectangle.
-    const x = chamfer.x * remaining
-    const y = chamfer.y * remaining
+    // Mobile: the corner cut closes with the frame, so the section ends as a
+    // plain full-screen rectangle. Desktop keeps the hexagon (Figma).
+    const corner = closeCorners ? remaining : 1
+    const x = chamfer.x * corner
+    const y = chamfer.y * corner
     media.style.clipPath = `polygon(${[
       `${left + x}px ${top}px`,
       `calc(100% - ${right + x}px) ${top}px`,

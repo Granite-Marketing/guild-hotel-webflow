@@ -378,6 +378,12 @@ Plan: `docs/figma/build-plans/ART-CMS/plan.md`.
 - Home art trail: Collection List `fb3de0d7-4fc4-f208-ee77-41404293a566` inside `home-art-stories_media` `ba005e8c-320c-eaf7-387f-5fd7dae49519`, item `...a568` holds trail link `cf95f345-0c95-f8a3-8071-b31ed7a6fab9` (`data-cms-link-path="arts"`, `data-cms-link-anchor`, `data-cms-link-slug` = Slug, href `/arts` fallback) and image `31ce028f-780f-fabd-80c2-7e100860d6ff`. Old static trail links `b5e4c3ae-…`, `93e53b26-…`, `ef6aae9d-…` hidden.
 - Art modal gap (Stephen, 2026-11-03): combo `.overlay-detail-panel-modal_content.is-art` `b7372605-8540-0775-e536-a11e8ea49a65`, medium and below `padding-top: 0`, applied only to the content element `4e402659-32e2-fddb-7dd9-6c1d17f58327` inside Art Detail Modal. Stacked image-to-title gap 104px to 40px (mobile Figma is about 34px). Desktop is side by side and already matches the Figma (160px vs about 145px), so it is unchanged.
 
+Correction (2026-11-03, Stephen): full screen is mobile only. Desktop is back to its pre-PR 129 state: `venue-card-fullbleed_stage.is-media-center` main padding removed (base 1.25rem/2.5rem applies), padding 0 at small; `tab-pills-intro_stage.is-media` main padding 1.25rem; arts `is-bleed` media clip-path none at main (as before), chamfer polygons at small (2.25rem) and tiny (1rem). `scrollEnlargeSnap` closes the chamfer only below 768px.
+
+## Bottom menu standard (2026-11-03)
+
+Neighborhood anchors for the category menu (links `#dining`, `#arts`, `#beyond-downtown`, `#services` resolved nowhere before): `section_neighborhood-corporate` `27d33c91-12c5-fda1-b47b-d48cba90eb77` has DOM id `services`; component instances cannot take an id, so plain div wrappers hold them: `#arts` `db393c4c-b55f-32c1-5bc7-7215d68af2cd` (Offers Slider Split, arts & culture), `#beyond-downtown` `eae82305-f35e-70a9-9813-0c1d0c775766` (timeline-scatter-images Tall), `#dining` `8ae457cb-4758-3a37-d270-ed267afe0a2b` (Article Card Staggered Tall).
+
 ## M7 mobile parity (2026-11-03)
 
 - Map Feature Image Bg (`5d830b69-6507-7d04-4828-069b2539cffb`) variant **Stacked** `a6eedfb4-4763-3aa6-88c1-4e4d7fd40feb` (small: `map-feature_component` full-bleed with padding-top for the map); Variant prop `46987a8f-669e-92a1-2b93-034c8cf33e23`. Meetings instance `4e3db501-831b-1b5b-afc1-4940b78cd846` uses Stacked.

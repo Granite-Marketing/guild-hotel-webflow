@@ -8,7 +8,7 @@
  * is `display: contents` and the toggle is hidden at 768px and up.
  *
  * DOM contract (existing markup, no Designer change):
- *   .tab-pills-intro_tabs (not .is-media) | .venue-card-fullbleed_tabs   the bar
+ *   .tab-pills-intro_tabs | .venue-card-fullbleed_tabs   the bar
  *     a.*_tab                                   tabs; whichever module owns the
  *                                               bar (stickyTabs, galleryFilter,
  *                                               scrollEnlargeSnap) keeps toggling
@@ -24,7 +24,7 @@
  * Order: before the scroll engine, since it shortens the bars on mobile.
  */
 
-const BARS = '.tab-pills-intro_tabs:not(.is-media), .venue-card-fullbleed_tabs'
+const BARS = '.tab-pills-intro_tabs, .venue-card-fullbleed_tabs'
 const OPEN_CLASS = 'is-open'
 
 // Figma: 16x8 menu glyph (three 0.8px lines) and a 10x10 hairline X.
@@ -47,7 +47,7 @@ const STYLES = `
 [data-tab-dropdown-toggle]{display:none}
 @media (max-width:767px){
  :is(.tab-pills-intro_tabs,.venue-card-fullbleed_tabs)[data-tab-dropdown]{display:block;width:13.75rem;max-width:none;height:2.5rem;padding:0;overflow:visible;background:none;clip-path:none}
- .venue-card-fullbleed_tabs[data-tab-dropdown]{left:50%;right:auto;bottom:1.25rem;transform:translateX(-50%)}
+ :is(.venue-card-fullbleed_tabs,.tab-pills-intro_tabs.is-media)[data-tab-dropdown]{left:50%;right:auto;bottom:1.25rem;transform:translateX(-50%)}
  [data-tab-dropdown-panel]{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:max-content;min-width:100%;display:flex;flex-direction:column;padding:0 1.5rem;background-color:var(--_primitives---colors--burgundy);color:var(--_primitives---colors--neutral-lightest);clip-path:polygon(.75rem 0,calc(100% - .75rem) 0,100% .75rem,100% calc(100% - .75rem),calc(100% - .75rem) 100%,.75rem 100%,0 calc(100% - .75rem),0 .75rem)}
  [data-tab-dropdown-panel]>*{font-size:.875rem;line-height:1.125rem;letter-spacing:-.05em}
  [data-tab-dropdown-panel]>a{display:none;padding:.8125rem 0 1rem;border:0;opacity:.62;text-box:trim-both cap alphabetic}
