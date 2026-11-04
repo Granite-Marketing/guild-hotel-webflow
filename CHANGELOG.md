@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.27
+
+### Patch Changes
+
+- f117903: Meetings & Events tabs: only the background image animates; the copy no longer masks out and in on switch.
+
 ## 1.1.26
 
 ### Patch Changes
