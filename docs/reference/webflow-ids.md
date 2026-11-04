@@ -389,3 +389,19 @@ Neighborhood anchors for the category menu (links `#dining`, `#arts`, `#beyond-d
 - Map Feature Image Bg (`5d830b69-6507-7d04-4828-069b2539cffb`) variant **Stacked** `a6eedfb4-4763-3aa6-88c1-4e4d7fd40feb` (small: `map-feature_component` full-bleed with padding-top for the map); Variant prop `46987a8f-669e-92a1-2b93-034c8cf33e23`. Meetings instance `4e3db501-831b-1b5b-afc1-4940b78cd846` uses Stacked.
 - timeline-scatter-images Tall (`33e949df-43c2-4806-b73e-d403ed483051`) variant **Stagger** `6a92abad-32b0-27fd-e4b6-5a5ebcbe05fb` (small: item max-width 87%); Variant prop `8c239c8f-35ae-dcfa-c80c-fdba806412de`. Neighborhood instance `f0bc6eb9-7e60-97a9-6b5c-90074ec14682` uses Stagger.
 - Variant ids written at small: Overlay Detail Panel Modal Centered `34ca996d-2f65-a59e-6eb0-09dd065e4534`; form-split-script-contact Tall `c284c9dc-42be-882d-5aca-03608bebfc95`; split-image-text-light Stagger Mid `8dcc8de6-914e-f2a6-a0b5-5f95af173bdf` and Wide `45de7441-0ac3-59ed-e7fb-5c6524848b2d`.
+
+## Mobile fix variants (2026-11-04, audit A)
+
+Page-only component variants created so mobile fixes stay on one page:
+
+| Component | Variant | ID | Used on |
+|---|---|---|---|
+| Image Trio Text | Home | `45b71a39-9a72-e800-bd67-7e1967d510de` | home wellness |
+| Map Feature | Home | `a65a3b03-fb07-bd94-4702-0e0a50312c90` | home neighborhood |
+| Split image text light | Olive Home | `50d0d660-fa88-c432-96fa-679fbe31a938` | home west coast |
+| Offers Slider Split | Home Press | `f84b5e41-318b-031e-bf40-a39878fb30b4` | home offers, press offers |
+| Card Carousel Header Left | Contact | `d0c45960-92d6-af25-7b58-b128d8a0affe` | contact |
+| Card Carousel Header Left | Press | `49cffb92-bfd3-18d8-c68b-64f96a7dd632` | press |
+| tab-pills-intro | Press | `59a1b413-f64f-13c3-5d27-710cb741a3c0` | press |
+| Article Card Staggered | Press Left | `0902c2b4-6d7a-a4a3-2fc7-34782f6e7bcd` | press (left cards) |
+| form-split-script-contact | Press | `69366689-4811-652d-211d-fe0e9582a917` | press enquiries |
