@@ -59,3 +59,28 @@ Before images are the audit captures already in `img/` (`home-1-live.jpg` nav, `
 | Venue card header eyebrow 14px (c, f) | plain `text-style-eyebrow-caps` in `venue-card-fullbleed_header` | partly | now 12px from the eyebrow fix (Figma 14); needs an element class, left with the venue card work already in progress in page sessions |
 | Script intro, tab-pills intro, map script, form script sizes and rotations | `text-style-script` combos | queued back | per-page values (27 to 56px); page combos belong to page sessions |
 | Venue card start clip, pinned stage height, split-image order and sizes, gallery figure aspects, overlay panel | component layout | queued back | layout work inside component families already being changed by page sessions this run; not touched here to avoid two writers |
+
+## Final shared-queue pass (after page sessions)
+
+Inputs: `shared-queue.md` in the integration checkout and the queued rows in `a`, `b`, `c`, `d`, `e`, `f` done files. Desktop check repeated on 18 pages at 1440px: no computed value change against the original baseline.
+
+How per-page script sizes work now: `.script-intro-centered_heading.text-style-script.is-large` and `.tab-pills-intro_heading.text-style-script.is-large` use `font-size: 1em` below 768px, and the parent header sets the size. Variant styles on the header can then win (a variant compiles to `:where()` and could never beat the three-class combo on the heading itself).
+
+| Queue row | Action | Change (below 768px) |
+|---|---|---|
+| Script intro sizes: home, dining, rooms, room template, guidelines, arts, neighborhood, legal, corporate, history (a, b C6, c, e, f) | fixed | `script-intro-centered_header` sizes: Base 35px (arts 35.5, neighborhood 33.6, legal 37.2, corporate 38.5); Tall 31.3px (home); Wide 30px (dining); Bottom 56px (rooms); new variant Large Heading 56px (room template); new variant Small Heading 26.9px (guidelines). The new variants are copies of Base, so desktop is unchanged |
+| Tab pills intro heading (d, c wellness, a press) | fixed | header 56px (happenings, blog), Press variant 53px, `is-media` and Media variant 36.8px (wellness) |
+| `tab-pills-intro_stage` bottom (d) | fixed | 40 -> 2px (small and tiny) |
+| Map script titles (c rooms, b C20 dining) | fixed | `.text-style-script.is-large` 32 -> 44.4px, line height 1; dining map variant 2rem -> 2.775rem |
+| Article card group label to image, group gap (d) | fixed | `.article-card-staggered_header.is-group` margin-bottom -8px; `section_article-card-staggered` padding-bottom 32px (last card to next label 48 more) |
+| Home art stories button filled dark (a home 10) | fixed | new combo `.button.is-chamfer.is-outline.is-dark-mobile`, fill #262118, label #f4efdf, chamfer clip; desktop stays outline |
+| Rooms quiz title 28/28 (c) | fixed | new `rooms-collection-quiz_heading` on the three quiz h2s, 28px / 28px / -0.05em |
+| Hero 660 on guidelines and legal and corporate (c, e) | fixed | new hero variant Short Mobile (copy of Base) with min-height 660px; guidelines and the Legal Corporates template hero switched to it |
+| Press email label 14px vs contact 12px (a press 3) | skipped | one combo serves both forms and the two Figma frames disagree by 2px; contact keeps the design-system 12px |
+| `stickyTabs.ts` pin from first paint (a press 1) | skipped | a JS behaviour change on three pages with scroll pinning; not safe to ship unattended. Left for a reviewed change |
+| Hero overlay 0.4 -> 0.5 (f) | skipped | not confirmed on other hero frames |
+| Venue card start clip, logos 280, text width 310, stage 612 (b C10 to C17, c, e, f) | skipped | GSAP start values and layout shared by 7 pages; type rows (title 28, copy 16/20) are already fixed |
+| Split image text light order, image sizes and gaps (e neighborhood, f arts) | skipped | needs page-only element combos in a component used on 5 pages; page sessions left it for a reviewed layout pass |
+| Overlay detail panel rows (e) | skipped | modal layout, shared by four page groups; no type rows left |
+| Card carousel variant padding-top 96 (c room template) | skipped | padding lives on the shared padding utility, not the variant |
+| Section padding G3, offers min-height, newsletter label colour, footer lists | skipped | see the first pass above |

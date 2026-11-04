@@ -398,3 +398,7 @@ Neighborhood anchors for the category menu (links `#dining`, `#arts`, `#beyond-d
 | `.form-split-script-contact_fieldset-heading.heading-style-h4` | `13152a87-41ec-4358-beb2-e328ba0473bd` | small only: 20px / 27px / -0.05em |
 | `article-card-staggered_title` | `a3bd4e23-634c-b64c-76d9-4ca808906bc4` | Article Card Staggered component title `…8d02`; happenings and blog page card titles |
 | `.article-card-staggered_title.text-style-eyebrow-caps` | `5aad4fe4-7022-4c79-74de-dff7d8c787d9` | small only: 14px / 16.8px |
+| `.button.is-chamfer.is-outline.is-dark-mobile` | `8eb972af-c72a-f8fd-8065-9a927dde8571` | home art stories button `c646bb3c-5d24-a68c-9c40-b1bfae796408`; mobile-only dark fill |
+| `rooms-collection-quiz_heading` | `e60cac7e-2e25-e9f7-abde-70ff6e920453` | rooms quiz h2s `231e48de-…`, `868313c8-…`, `c1a1b751-…`; combo with h4 `f661ec5f-0e9b-039f-f6e1-deac7a912e25` |
+| script-intro-centered variants | Large Heading `e4bd4c20-6499-56f7-64db-9fa47a4a1f40`, Small Heading `a23a1a12-25dc-a914-6611-89f4d3beedb4` | room template and guidelines instances |
+| Hero Fullbleed Centered variant | Short Mobile `54ea4c9c-7c59-c93a-98e3-4eb98a1b7ff2` | guidelines and Legal Corporates template heroes, 660px below 768 |
