@@ -1,0 +1,9 @@
+/* Story template (happenings and blog posts) below 768px, as in Figma mobile. Rules here target component variant classes and a sibling selector that Webflow classes cannot express. */
+@media (max-width:767px){
+.section_hero-fullbleed-centered:has(+.section_article-body) .hero-fullbleed-centered_header>.text-style-eyebrow-caps{display:none}
+.image-inset-single_figure.w-variant-ed48680f-16db-4226-7dda-8e89d4535148{width:15.25rem;aspect-ratio:244/200}
+.container-large.w-variant-a6df7398-8cb4-0616-9847-2ba4833207db{padding-top:3rem;padding-bottom:3.5rem}
+.w-variant-a6df7398-8cb4-0616-9847-2ba4833207db>.split-image-text-light_component{row-gap:6rem}
+.split-image-text-light_content.w-variant-a6df7398-8cb4-0616-9847-2ba4833207db{order:-1}
+.split-image-text-light_media.w-variant-a6df7398-8cb4-0616-9847-2ba4833207db{width:15.25rem;margin-left:auto;aspect-ratio:244/200}
+}
