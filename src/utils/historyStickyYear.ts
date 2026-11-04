@@ -199,17 +199,25 @@ const setupCollapseGallery = (root: HTMLElement) => {
     onEnter: () => reveals.forEach((reveal) => reveal.play()),
   })
 
+  // The card sits centred on the visible height; the open image must reach
+  // the bottom of whichever is tallest (section, 100vh, current window), or
+  // iOS Safari shows a band of section background under it.
+  const bleedHeight = () => {
+    const coverBottom = Math.max(root.offsetHeight, viewportProbe.offsetHeight, window.innerHeight)
+    return 2 * coverBottom - visibleHeight()
+  }
+
   // One image, mask only (F48): the img is sized to the full-bleed frame and
   // centred on its card, which clips it. Opening the clip reveals the rest.
   const openInset = () => {
     const x = Math.max(0, (root.clientWidth - bleedItem.offsetWidth) / 2)
-    const y = Math.max(0, (visibleHeight() - bleedItem.offsetHeight) / 2)
+    const y = Math.max(0, (bleedHeight() - bleedItem.offsetHeight) / 2)
     return `inset(${-y}px ${-x}px ${-y}px ${-x}px)`
   }
 
   const layoutBleedImage = () => {
     const frameWidth = root.clientWidth
-    const frameHeight = visibleHeight()
+    const frameHeight = bleedHeight()
     Object.assign(bleedImage.style, {
       position: 'absolute',
       width: `${frameWidth}px`,
