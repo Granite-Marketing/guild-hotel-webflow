@@ -21,6 +21,8 @@
  *
  * Without hover (touch) or with prefers-reduced-motion, the end state is shown
  * with no animation: the first `max` items stacked around the zone centre.
+ * Below 768px the first items sit in a fixed scattered collage instead
+ * (mobile Figma, Home Art & Stories); items past the layout stay hidden.
  * Each item gets `is-active` while visible.
  */
 
@@ -29,6 +31,17 @@ const DEFAULT_MAX_VISIBLE = 3
 const DEFAULT_DURATION = 0.6
 const STATIC_STEP_X = 125
 const STATIC_STEP_Y = 110
+// Mobile Figma collage: 160px tiles in a 350x852 frame, as % of the zone.
+const COLLAGE_TILE_WIDTH = '45.7%'
+const COLLAGE_LAYOUT = [
+  { left: '-15.7%', top: '2%' },
+  { left: '12%', top: '13.4%' },
+  { left: '34.9%', top: '31.8%' },
+  { left: '60%', top: '47.5%' },
+  { left: '30.9%', top: '63.8%' },
+  { left: '0.9%', top: '77.2%' },
+  { left: '-22%', top: '90.6%' },
+]
 
 const readNumber = (value: string | undefined, fallback: number) => {
   const parsed = value ? parseFloat(value) : NaN
@@ -154,6 +167,25 @@ const showEndState = (items: HTMLElement[], maxVisible: number) => {
   }
 }
 
+const showCollage = (items: HTMLElement[]) => {
+  gsap.set(items, { position: 'absolute', autoAlpha: 0 })
+
+  const shownItems = items.slice(0, COLLAGE_LAYOUT.length)
+  shownItems.forEach((item, index) => {
+    gsap.set(item, {
+      ...COLLAGE_LAYOUT[index],
+      width: COLLAGE_TILE_WIDTH,
+      zIndex: index + 1,
+      autoAlpha: 1,
+    })
+    item.classList.add('is-active')
+  })
+
+  return () => {
+    shownItems.forEach((item) => item.classList.remove('is-active'))
+  }
+}
+
 export const imageTrailHover = () => {
   const zones = document.querySelectorAll<HTMLElement>('[data-image-trail-hover]')
   if (!zones.length) return
@@ -174,10 +206,12 @@ export const imageTrailHover = () => {
     const mm = gsap.matchMedia()
     mm.add(
       {
+        isCollage: '(max-width: 767px)',
         isAnimated: '(hover: hover) and (prefers-reduced-motion: no-preference)',
         isStatic: '(hover: none), (prefers-reduced-motion: reduce)',
       },
       (context) => {
+        if (context.conditions.isCollage) return showCollage(items)
         if (context.conditions.isAnimated) {
           return startTrail(zone, items, threshold, maxVisible, duration)
         }

@@ -969,6 +969,17 @@ back up fans them out again.
 | `data-image-stack-collapse-item="anchor"` | the image that stays put | optional; defaults to the middle item |
 | `data-image-stack-collapse-start` | the row wrapper | optional ScrollTrigger start, default `top 55%` (F04: starts once the row is well in view) |
 | `data-image-stack-collapse-end` | the row wrapper | optional ScrollTrigger end, default `center 40%` |
+| `data-image-stack-collapse-progress` | a progress fill inside the row's parent | optional; below 768px scales from 1/n to n/n as slides change |
+
+- **Below 768px the collapse does not run.** The row becomes a Swiper slider:
+  the row is the Swiper wrapper, its parent the container, its direct
+  children the slides (`swiper-wrapper` and `swiper-slide` are added at
+  runtime and removed at 768px and up, so desktop never gets Swiper CSS).
+  Only the row takes the drag (`touchEventsTarget: 'wrapper'`). The parent
+  needs `overflow: hidden` and the row `column-gap: 0` on mobile (Swiper
+  spaces slides by 16px itself). Home Wellness and the Dinings template use
+  it through the Image Trio Text component, whose progress bar is
+  `image-trio-text_progress` > `image-trio-text_progress-fill`.
 
 - Offsets are measured centre to centre from subpixel rects (with each
   item's own translate removed) and recomputed on every refresh
@@ -1070,8 +1081,11 @@ targets rise from behind a clip wrapper. Reduced motion: nothing is hidden.
 ### mediaTabs
 
 Feedback F06 and F16. Rows act as ARIA tabs that switch stacked media and
-content panels. Switching is click and keyboard only (F16); hover never
-switches.
+content panels. On hover-capable devices (`(hover: hover) and
+(pointer: fine)`) hovering a row previews it and leaving the rows' wrapper
+returns to the committed row; a click or keyboard switch commits. Touch
+devices switch on tap. This reverses F16's click-only rule (client feedback,
+November 2026).
 
 | Attribute | On | Purpose |
 |---|---|---|
@@ -1092,7 +1106,7 @@ switches.
   `gsap.set` (only the active panel has `autoAlpha: 1`, `zIndex: 1`), then
   the incoming copy masks in from below. Panels are never tweened, so there
   is no cross-fade and no overlap. Media still crossfades, starting at the
-  click. A rapid second click completes the running switch first.
+  switch. A rapid second switch completes the running switch first.
 - Reduced motion: nothing is split; panels and media swap instantly.
 - Guild home Meetings & Events: panels use `venue-card-fullbleed_panel`
   (grid row 1 across all columns, so they overlap). Order: slot D.
