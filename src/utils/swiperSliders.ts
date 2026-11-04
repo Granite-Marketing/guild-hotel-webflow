@@ -101,7 +101,8 @@ export const swiperSliders = () => {
       })
     }
 
-    if (defaultSlider) {
+    // Shared components can leave a default slider with one visible slide; a looping Swiper of one breaks.
+    if (defaultSlider && defaultSlider.querySelectorAll('.swiper-slide').length > 1) {
       new Swiper(defaultSlider, {
         loop: true,
         speed: 1000,

@@ -146,6 +146,8 @@ Bullets are generated at runtime (not in Webflow Designer DOM), so they must be 
 }
 ```
 
+**Webflow gotcha:** the style API rejects custom properties, and the Swiper CDN stylesheet loads after the site CSS, so a plain `.swiper-pagination-bullet` Webflow class loses the cascade. Put bullet CSS in the Global Styles `style-overrides` embed, scoped under the pagination element's class (example: `.split-image-text-light_pagination`, History George Marston dashes).
+
 **Key CSS classes reference:**
 
 | Class | When applied | Default style |
