@@ -1070,8 +1070,11 @@ targets rise from behind a clip wrapper. Reduced motion: nothing is hidden.
 ### mediaTabs
 
 Feedback F06 and F16. Rows act as ARIA tabs that switch stacked media and
-content panels. Switching is click and keyboard only (F16); hover never
-switches.
+content panels. On hover-capable devices (`(hover: hover) and
+(pointer: fine)`) hovering a row previews it and leaving the rows' wrapper
+returns to the committed row; a click or keyboard switch commits. Touch
+devices switch on tap. This reverses F16's click-only rule (client feedback,
+November 2026).
 
 | Attribute | On | Purpose |
 |---|---|---|
@@ -1092,7 +1095,7 @@ switches.
   `gsap.set` (only the active panel has `autoAlpha: 1`, `zIndex: 1`), then
   the incoming copy masks in from below. Panels are never tweened, so there
   is no cross-fade and no overlap. Media still crossfades, starting at the
-  click. A rapid second click completes the running switch first.
+  switch. A rapid second switch completes the running switch first.
 - Reduced motion: nothing is split; panels and media swap instantly.
 - Guild home Meetings & Events: panels use `venue-card-fullbleed_panel`
   (grid row 1 across all columns, so they overlap). Order: slot D.

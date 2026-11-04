@@ -4,10 +4,13 @@
  * A row list that works as tabs: the active row switches a stacked panel
  * (background media plus a content block). Built for the Guild home
  * Meetings & Events section (feedback F06), with full ARIA tabs semantics.
- * Since F16 tabs switch on click and keyboard only, never on hover, and the
- * panel copy swaps with a sequenced mask: the outgoing copy masks out, then
- * the incoming copy masks in. Panels never cross-fade, so two copies are
- * never on screen together.
+ * On hover-capable devices hovering a row previews it (media, copy and active
+ * row switch) and leaving the list returns to the committed row; a click or
+ * keyboard switch commits. Touch devices switch on tap. This reverses F16's
+ * click-only rule (client feedback, November 2026). The panel copy swaps
+ * with a sequenced mask: the outgoing copy masks out, then the incoming copy
+ * masks in. Panels never cross-fade, so two copies are never on screen
+ * together.
  *
  * DOM contract (attributes, so Designer classes stay free):
  *
@@ -45,6 +48,7 @@ const ROOT_SELECTOR = '[data-media-tabs]'
 const ACTIVE_CLASS = 'is-active'
 const FADE_DURATION = 0.6
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
+const HOVER_POINTER = '(hover: hover) and (pointer: fine)'
 const TEXT_TAGS = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P'])
 const TARGET_SELECTOR = 'h1, h2, h3, h4, h5, h6, p, .button, [data-line-mask]'
 const HIDDEN_BELOW = 110
@@ -211,19 +215,34 @@ const setupTabs = (root: HTMLElement) => {
 
   activate(0, false)
 
+  // The tab a click or key last chose; hover only previews other tabs.
+  let committedIndex = 0
+  const commit = (index: number) => {
+    committedIndex = index
+    activate(index, true)
+  }
+  const canHover = window.matchMedia(HOVER_POINTER)
+
   tabs.forEach((tab, index) => {
     tab.addEventListener('click', (event) => {
       // Rows built as link blocks must not navigate; they are tabs.
       event.preventDefault()
-      activate(index, true)
+      commit(index)
     })
     tab.addEventListener('keydown', (event) => {
       const target = targetIndex(event.key, index, tabs.length)
       if (target === null) return
       event.preventDefault()
       tabs[target].focus()
-      activate(target, true)
+      commit(target)
     })
+    tab.addEventListener('mouseenter', () => {
+      if (canHover.matches) activate(index, true)
+    })
+  })
+
+  ;(list ?? tabs[0].parentElement)?.addEventListener('mouseleave', () => {
+    if (canHover.matches) activate(committedIndex, true)
   })
 }
 
