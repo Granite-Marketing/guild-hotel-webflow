@@ -49,7 +49,7 @@ interface GsapMatchMediaContext {
 
 interface GsapMatchMedia {
   add: (
-    conditions: Record<string, string>,
+    conditions: string | Record<string, string>,
     callback: (context: GsapMatchMediaContext) => void | (() => void),
   ) => void;
 }
@@ -218,6 +218,7 @@ interface SwiperInstance {
   slides: SwiperSlide[];
   activeIndex: number;
   previousIndex: number;
+  destroy(deleteInstance?: boolean, cleanStyles?: boolean): void;
 }
 
 interface SwiperConstructor {

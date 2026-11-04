@@ -969,6 +969,17 @@ back up fans them out again.
 | `data-image-stack-collapse-item="anchor"` | the image that stays put | optional; defaults to the middle item |
 | `data-image-stack-collapse-start` | the row wrapper | optional ScrollTrigger start, default `top 55%` (F04: starts once the row is well in view) |
 | `data-image-stack-collapse-end` | the row wrapper | optional ScrollTrigger end, default `center 40%` |
+| `data-image-stack-collapse-progress` | a progress fill inside the row's parent | optional; below 768px scales from 1/n to n/n as slides change |
+
+- **Below 768px the collapse does not run.** The row becomes a Swiper slider:
+  the row is the Swiper wrapper, its parent the container, its direct
+  children the slides (`swiper-wrapper` and `swiper-slide` are added at
+  runtime and removed at 768px and up, so desktop never gets Swiper CSS).
+  Only the row takes the drag (`touchEventsTarget: 'wrapper'`). The parent
+  needs `overflow: hidden` and the row `column-gap: 0` on mobile (Swiper
+  spaces slides by 16px itself). Home Wellness and the Dinings template use
+  it through the Image Trio Text component, whose progress bar is
+  `image-trio-text_progress` > `image-trio-text_progress-fill`.
 
 - Offsets are measured centre to centre from subpixel rects (with each
   item's own translate removed) and recomputed on every refresh
