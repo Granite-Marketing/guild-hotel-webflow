@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.26
+
+### Patch Changes
+
+- 25def7b: Home Art & Stories: below 768px the art images sit in a static scattered collage (mobile Figma) instead of the hover trail end state.
+- 330805a: Home Meetings & Events tabs preview on hover on desktop; a click commits the row and leaving the list returns to it.
+- 2a663b9: Home Wellness images become a swipeable slider with a progress bar below 768px; the image stack collapse now runs at 768px and up only.
+
 ## 1.1.25
 
 ### Patch Changes
