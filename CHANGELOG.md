@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.25
+
+### Patch Changes
+
+- 1289060: History collapse gallery: open image reaches the bottom of the section on iOS Safari.
+
 ## 1.1.24
 
 ### Patch Changes
