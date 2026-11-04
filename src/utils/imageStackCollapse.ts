@@ -23,10 +23,19 @@
  * across resizes and breakpoints. The anchor must not be transformed. Under
  * `prefers-reduced-motion: reduce` the end state (the stack) is shown with
  * no animation.
+ *
+ * Below 768px the collapse does not run; the row becomes a swipeable Swiper
+ * slider instead: the row is the Swiper wrapper, its parent the container and
+ * its direct children the slides (Swiper classes are added at runtime and
+ * removed again at 768px and up). An optional
+ * `[data-image-stack-collapse-progress]` fill inside the parent scales from
+ * 1/n to n/n as the slides change.
  */
 
 const DEFAULT_START = 'top 55%'
 const DEFAULT_END = 'center 40%'
+const MOBILE = '(max-width: 767px)'
+const DESKTOP = '(min-width: 768px)'
 
 const findAnchor = (items: HTMLElement[]) =>
   items.find((item) => item.dataset.imageStackCollapseItem === 'anchor') ??
@@ -56,6 +65,41 @@ const raiseAnchor = (items: HTMLElement[], anchor: HTMLElement) => {
   })
 }
 
+// Returns the matchMedia cleanup that restores the desktop DOM.
+const mountSlider = (stack: HTMLElement) => {
+  const container = stack.parentElement
+  if (!container) return
+  const slides = Array.from(stack.children)
+  const fill = container.querySelector<HTMLElement>('[data-image-stack-collapse-progress]')
+  const setProgress = (index: number) =>
+    fill && gsap.to(fill, { scaleX: (index + 1) / slides.length, duration: 0.4, ease: 'power2.out' })
+
+  stack.classList.add('swiper-wrapper')
+  slides.forEach((slide) => slide.classList.add('swiper-slide'))
+  if (fill) gsap.set(fill, { scaleX: 1 / slides.length, transformOrigin: 'left center' })
+
+  const swiper = new Swiper(container, {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    speed: 600,
+    grabCursor: true,
+    // Header and footer share the container; only the images take the drag.
+    touchEventsTarget: 'wrapper',
+    on: { slideChange: (instance: SwiperInstance) => setProgress(instance.activeIndex) },
+  })
+  // Swiper hides its a11y live region only under a `.swiper` class, which the
+  // container lacks; out of the flex flow it no longer adds a row gap.
+  const notification = container.querySelector<HTMLElement>('.swiper-notification')
+  if (notification) gsap.set(notification, { position: 'absolute' })
+
+  return () => {
+    swiper.destroy(true, true)
+    stack.classList.remove('swiper-wrapper')
+    slides.forEach((slide) => slide.classList.remove('swiper-slide'))
+    if (fill) gsap.set(fill, { clearProps: 'transform' })
+  }
+}
+
 export const imageStackCollapse = () => {
   const stacks = document.querySelectorAll<HTMLElement>('[data-image-stack-collapse]')
   if (!stacks.length) return
@@ -70,10 +114,11 @@ export const imageStackCollapse = () => {
     const movingItems = items.filter((item) => item !== anchor)
 
     const mm = gsap.matchMedia()
+    mm.add(MOBILE, () => mountSlider(stack))
     mm.add(
       {
-        allowsMotion: '(prefers-reduced-motion: no-preference)',
-        reducesMotion: '(prefers-reduced-motion: reduce)',
+        allowsMotion: `${DESKTOP} and (prefers-reduced-motion: no-preference)`,
+        reducesMotion: `${DESKTOP} and (prefers-reduced-motion: reduce)`,
       },
       (context) => {
         raiseAnchor(items, anchor)
