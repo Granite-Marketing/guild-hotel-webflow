@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.24
+
+### Patch Changes
+
+- 372464c: History collapse gallery: full-height image and smoother pin on iOS Safari (size by 100vh, not innerHeight; anticipatePin; GPU layers for the clip).
+
 ## 1.1.23
 
 ### Patch Changes
