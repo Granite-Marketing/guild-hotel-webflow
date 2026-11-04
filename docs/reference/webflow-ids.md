@@ -389,3 +389,12 @@ Neighborhood anchors for the category menu (links `#dining`, `#arts`, `#beyond-d
 - Map Feature Image Bg (`5d830b69-6507-7d04-4828-069b2539cffb`) variant **Stacked** `a6eedfb4-4763-3aa6-88c1-4e4d7fd40feb` (small: `map-feature_component` full-bleed with padding-top for the map); Variant prop `46987a8f-669e-92a1-2b93-034c8cf33e23`. Meetings instance `4e3db501-831b-1b5b-afc1-4940b78cd846` uses Stacked.
 - timeline-scatter-images Tall (`33e949df-43c2-4806-b73e-d403ed483051`) variant **Stagger** `6a92abad-32b0-27fd-e4b6-5a5ebcbe05fb` (small: item max-width 87%); Variant prop `8c239c8f-35ae-dcfa-c80c-fdba806412de`. Neighborhood instance `f0bc6eb9-7e60-97a9-6b5c-90074ec14682` uses Stagger.
 - Variant ids written at small: Overlay Detail Panel Modal Centered `34ca996d-2f65-a59e-6eb0-09dd065e4534`; form-split-script-contact Tall `c284c9dc-42be-882d-5aca-03608bebfc95`; split-image-text-light Stagger Mid `8dcc8de6-914e-f2a6-a0b5-5f95af173bdf` and Wide `45de7441-0ac3-59ed-e7fb-5c6524848b2d`.
+
+## Global mobile fixes (2026-11-04)
+
+| Style | ID | Notes |
+|---|---|---|
+| `form-split-script-contact_fieldset-heading` | `3d2174f9-a106-8e5d-8577-d46957ec2c0f` | Added to form group h4s (form-split-script-contact component elements `…d6cc`, `…d6db`; contact page `07a35c59-be98-d419-110c-e66052bd7c2f`) |
+| `.form-split-script-contact_fieldset-heading.heading-style-h4` | `13152a87-41ec-4358-beb2-e328ba0473bd` | small only: 20px / 27px / -0.05em |
+| `article-card-staggered_title` | `a3bd4e23-634c-b64c-76d9-4ca808906bc4` | Article Card Staggered component title `…8d02`; happenings and blog page card titles |
+| `.article-card-staggered_title.text-style-eyebrow-caps` | `5aad4fe4-7022-4c79-74de-dff7d8c787d9` | small only: 14px / 16.8px |
