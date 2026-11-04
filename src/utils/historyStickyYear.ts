@@ -156,7 +156,13 @@ const setupCollapseGallery = (root: HTMLElement) => {
     root.style.position = 'relative'
   }
 
-  const visibleHeight = () => Math.min(root.offsetHeight, window.innerHeight)
+  // iOS Safari: innerHeight is the small viewport (toolbar shown) and is not
+  // re-read when the toolbar hides (ignoreMobileResize), which left the full
+  // bleed image short. 100vh is the large viewport there and stable.
+  const viewportProbe = document.createElement('div')
+  viewportProbe.style.cssText = 'position:absolute;top:0;height:100vh;width:0;visibility:hidden;pointer-events:none'
+  root.append(viewportProbe)
+  const visibleHeight = () => Math.min(root.offsetHeight, viewportProbe.offsetHeight)
 
   const offsetWithinRoot = (element: HTMLElement) => {
     let left = 0
@@ -241,8 +247,10 @@ const setupCollapseGallery = (root: HTMLElement) => {
     scrollTrigger: {
       trigger: root,
       start: 'top top',
-      end: () => `+=${distance * window.innerHeight}`,
+      end: () => `+=${distance * viewportProbe.offsetHeight}`,
       pin: true,
+      // Pins a frame early so iOS native scroll does not jump past the pin start.
+      anticipatePin: 1,
       scrub: true,
       invalidateOnRefresh: true,
     },
@@ -255,6 +263,9 @@ const setupCollapseGallery = (root: HTMLElement) => {
       {
         x: (index: number) => deltaToCentre(items[index]).x,
         y: (index: number) => deltaToCentre(items[index]).y,
+        // Keeps the cards on their own GPU layers so Safari composites the
+        // clip-path below instead of repainting the full-screen photo each frame.
+        force3D: true,
         duration: 1,
       },
       0,
