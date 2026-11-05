@@ -396,3 +396,18 @@ Neighborhood anchors for the category menu (links `#dining`, `#arts`, `#beyond-d
 - Arts mobile mosaic sizes live in the arts tile embed `d1cc5f31-965c-8ffa-4861-f440a909d6a1` (max-width 767px block).
 - Art Detail Modal `is-art` combos (small only): `_panel` `a91ff8df-07eb-fe4f-b26a-f345e4dff72a`, `_bar` `27d7a61f-849a-10af-ab87-577f030c1040`, `_back` `be807ebd-4535-46e7-e2a7-a8678dddf180`, `_back-icon` `e337637e-a703-4ae4-a88a-0f5f71c6f3f1`, `_back-label` `dfd3c147-05ed-2da2-3131-dd55fbef865e`, `_layout` `748b456c-043b-f3d1-b765-76564f4af375`, `_header` `0287b837-d987-d7fc-1f1a-3e059f833602`, `_figure` `56568eb9-0f4d-c021-89d2-a0b2299f47b7`, `_body` `149569c9-2a63-16e5-3b1d-8866afc908b9`, `_caption` `2e204a2e-63a3-0dfd-a983-fa0562b01212`, `_eyebrow-link` `fb321fb0-7112-5ca5-5a67-5f7f1ec44c4a`; `_content.is-art` (existing) gained small display contents.
 - Dining-only variants (mobile fix, 2026-11-04): Split image text light "Olive Dining" `42c9f9a1-d85c-7fa8-47d7-f5d9df7eaa79` (Dinings Template intro instance `0f87c04b-e622-8542-b5b9-e63fcb77ed4b`), Image Trio Text "Dining" `0d31b24e-acf0-8dd5-cf1f-9e3e1163cd12`, Gallery Mosaic Captioned "Dining" `76af03c7-cd03-42c9-a8b6-104e98388a6c`, Map Feature "Dining" `0a163214-6dd2-ca63-86b5-432c1c1678d5` (/dining instance `afb2623e-14c5-c312-4886-1066ab5e3f8f`). Combo `text-style-eyebrow-caps.is-info-title` `f24ce554-adee-7c9f-39d6-bcff410ae599` on the text-columns-info titles.
+## Mobile fix variants (2026-11-04, audit A)
+
+Page-only component variants created so mobile fixes stay on one page:
+
+| Component | Variant | ID | Used on |
+|---|---|---|---|
+| Image Trio Text | Home | `45b71a39-9a72-e800-bd67-7e1967d510de` | home wellness |
+| Map Feature | Home | `a65a3b03-fb07-bd94-4702-0e0a50312c90` | home neighborhood |
+| Split image text light | Olive Home | `50d0d660-fa88-c432-96fa-679fbe31a938` | home west coast |
+| Offers Slider Split | Home Press | `f84b5e41-318b-031e-bf40-a39878fb30b4` | home offers, press offers |
+| Card Carousel Header Left | Contact | `d0c45960-92d6-af25-7b58-b128d8a0affe` | contact |
+| Card Carousel Header Left | Press | `49cffb92-bfd3-18d8-c68b-64f96a7dd632` | press |
+| tab-pills-intro | Press | `59a1b413-f64f-13c3-5d27-710cb741a3c0` | press |
+| Article Card Staggered | Press Left | `0902c2b4-6d7a-a4a3-2fc7-34782f6e7bcd` | press (left cards) |
+| form-split-script-contact | Press | `69366689-4811-652d-211d-fe0e9582a917` | press enquiries |
