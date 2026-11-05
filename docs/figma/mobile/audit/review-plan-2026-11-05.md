@@ -29,3 +29,29 @@ Source: `review-feedback-2026-11-05.md` (47 comments, 24 pages). Grouped by the 
 | N | Contact | Contact | Checkbox not centred on its two-line label | Align |
 
 Open questions for Stephen are listed at the end of the run, not guessed.
+
+## Status after the run (2026-11-05)
+
+Done and measured at 390px against the Figma; desktop guard (`layout-snapshot.mjs 1440`) clean apart from the intended Corporate RFP paragraph and a 1px dock of the venue "Reserve a table" button.
+
+- A: framed image starts 160px under the intro on Dining, Meetings, Wellness (Home unchanged). Arts and room page bleed frame 316x213, caption gap 20px.
+- B: Guidelines, Meetings, Corporate form titles centred (Contact stays left); Corporate paragraph shown (desktop Figma has it too); submit gap halved on Guidelines and Corporate; Corporate fields evenly spaced.
+- C: Rooms script gap +16px; History script-to-image gap doubled.
+- D/E: Key features centred; Packages heading left (head CSS); top rule on "Why teams" hidden; 120px below Key features; more space above Packages.
+- F: all-rooms preview card hidden on phones; result cards 390x540; names lowercase; links underlined.
+- G: room page 03 left 266x315 and 04 full width square; Little Italy closing image full width; Arts second image right 175x227 (head CSS, `docs/reference/site-head/mobile-variant-overrides.css`).
+- H: Dining selector visible from the first screen (v1.1.30); Reserve a table docked from load; Zuma intro second paragraph (mobile only); other dining cards snap with no scrollbar.
+- I: History caption uses a triggered line-mask reveal (v1.1.30); Discover the property top/bottom spacing increased.
+- J: Home hero button "book" on mobile, "book your stay" on desktop, 140px min width.
+- K: story "Learn more" floats on phones (v1.1.30); "More around town" left aligned.
+- M: Midway slide wide text (260px); corporate card rule below the caption, button 24px under it.
+- N: Contact checkbox centred on its two-line label.
+- Room page map meets Offers with no strip (Home variant, mobile only). Guidelines image added above "Our process" (mobile only, desktop Figma has none).
+
+## Open, needs Stephen
+
+1. Room card icons (people, size): need the two icon assets.
+2. Zuma "Discover Zuma" link: keep hidden until there is a URL, or drop it from the design?
+3. Meetings modal image as a slider on mobile and desktop: needs the extra venue images and is a build, not a fix.
+4. Meetings "keys over the image" and Corporate map card "needs to be larger": the screenshots do not show which element; please point at it.
+5. Two unused variants created on the way ("Packages" on Image Trio Text Left, "Arts Collection" on Split image text light): OK to delete?
