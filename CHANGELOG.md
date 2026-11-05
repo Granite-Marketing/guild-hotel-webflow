@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.34
+
+### Patch Changes
+
+- Selector pill turns cream over a section of its own colour; modal slider keeps the frame's aspect ratio; Contact checkbox styled at every width.
+
 ## 1.1.33
 
 ### Patch Changes

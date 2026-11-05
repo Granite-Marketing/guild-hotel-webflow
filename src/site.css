@@ -2,3 +2,4 @@
    Sources stay readable in docs/reference/site-head/. */
 @import '../docs/reference/site-head/mobile-variant-overrides.css';
 @import '../docs/reference/site-head/modal-slider.css';
+@import '../docs/reference/site-head/form-checkbox.css';

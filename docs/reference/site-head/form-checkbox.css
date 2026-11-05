@@ -1,0 +1,8 @@
+/* Contact privacy consent, every width: 18px outlined box centred on its label (one line on desktop, two on phones), 12px gap (Figma desktop and mobile) */
+.form-contact-fields_checkbox{position:relative;display:block;padding-left:1.875rem;line-height:1.25rem}
+.form-contact-fields_checkbox-input{-webkit-appearance:none;appearance:none;position:absolute;left:0;top:50%;float:none;width:1.125rem;height:1.125rem;margin:-.5625rem 0 0;border:1px solid #262118;border-radius:0;background:transparent center/.75rem no-repeat}
+.form-contact-fields_checkbox-input:checked{background-color:#262118;background-image:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none" stroke="%23f4efdf" stroke-width="1.5"%3E%3Cpath d="M2 6.2l2.6 2.6L10 3.4"/%3E%3C/svg%3E')}
+.form-contact-fields_checkbox-input:focus-visible{outline:1px solid #262118;outline-offset:2px}
+.form-contact-fields_checkbox .form-contact-fields_label,.form-contact-fields_checkbox .form-contact-fields_link{line-height:1.25rem}
+.form-contact-fields_checkbox .form-contact-fields_label{margin:0}
+.form-contact-fields_checkbox .form-contact-fields_link{margin:0 0 0 .35em}

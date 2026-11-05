@@ -1,6 +1,7 @@
 /* Venue modal image slider (src/utils/modalImageSlider.ts). Figma Meetings-Overlay: dashes over the image on desktop, a progress line under it on phones. */
 .overlay-detail-panel-modal_figure.is-slider{position:relative;overflow:visible}
-.overlay-detail-panel-modal_slider{width:100%;height:100%}
+/* Absolute so the slides fill the Designer frame (its aspect ratio) without stretching it */
+.overlay-detail-panel-modal_slider{position:absolute;inset:0;width:100%;height:100%}
 .overlay-detail-panel-modal_slider .swiper-slide{height:100%}
 .overlay-detail-panel-modal_slider .swiper-slide img{display:block;width:100%;height:100%;object-fit:cover}
 .overlay-detail-panel-modal_slider-dots{position:absolute;left:50%;bottom:1.25rem;z-index:2;display:flex;gap:.5rem;transform:translateX(-50%)}

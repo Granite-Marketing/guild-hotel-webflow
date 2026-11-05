@@ -49,6 +49,7 @@ const STYLES = `
  :is(.tab-pills-intro_tabs,.venue-card-fullbleed_tabs)[data-tab-dropdown]{display:block;width:13.75rem;max-width:none;height:2.5rem;padding:0;overflow:visible;background:none;clip-path:none}
  :is(.venue-card-fullbleed_tabs,.tab-pills-intro_tabs.is-media)[data-tab-dropdown]{left:50%;right:auto;bottom:1.25rem;transform:translateX(-50%)}
  [data-tab-dropdown-panel]{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:max-content;min-width:100%;display:flex;flex-direction:column;padding:0 1.5rem;background-color:var(--_primitives---colors--burgundy);color:var(--_primitives---colors--neutral-lightest);clip-path:polygon(.75rem 0,calc(100% - .75rem) 0,100% .75rem,100% calc(100% - .75rem),calc(100% - .75rem) 100%,.75rem 100%,0 calc(100% - .75rem),0 .75rem)}
+ [data-tab-dropdown].is-inverse [data-tab-dropdown-panel]{background-color:var(--_primitives---colors--neutral-lightest);color:var(--_primitives---colors--burgundy)}
  [data-tab-dropdown-panel]>*{font-size:.875rem;line-height:1.125rem;letter-spacing:-.05em}
  [data-tab-dropdown-panel]>a{display:none;padding:.8125rem 0 1rem;border:0;opacity:.62;text-box:trim-both cap alphabetic}
  [data-tab-dropdown-panel]>a.is-active{opacity:1}
@@ -120,6 +121,22 @@ export const tabDropdown = () => {
       if (event.key !== 'Escape' || !bar.classList.contains(OPEN_CLASS)) return
       setOpen(false)
       toggle.focus()
+    })
+
+    // Over a section of the pill's own colour (Neighborhood "corporate & services") the
+    // pill would vanish into it, so it flips to cream while its centre is over that section.
+    gsap.matchMedia().add({ mobile: '(max-width: 767px)' }, () => {
+      const pillColour = getComputedStyle(panel).backgroundColor
+      const pillCentre = () => 3 * parseFloat(getComputedStyle(document.documentElement).fontSize)
+      document.querySelectorAll<HTMLElement>('main section').forEach((section) => {
+        if (getComputedStyle(section).backgroundColor !== pillColour) return
+        ScrollTrigger.create({
+          trigger: section,
+          start: () => `top bottom-=${pillCentre()}`,
+          end: () => `bottom bottom-=${pillCentre()}`,
+          toggleClass: { targets: bar, className: 'is-inverse' },
+        })
+      })
     })
   })
 }
