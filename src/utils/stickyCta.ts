@@ -38,7 +38,9 @@ export const stickyCta = (selector = DEFAULT_SELECTOR) => {
   const measureDock = () => {
     const naturalBottom = holder.getBoundingClientRect().bottom + window.scrollY
     const gapAtTop = window.innerHeight - naturalBottom
-    dockGap = gapAtTop > 0 ? gapAtTop : DOCK_GAP
+    // One pixel under its own spot, so a first-screen button is docked from
+    // load instead of being clipped by the hero edge until the first scroll.
+    dockGap = gapAtTop > 0 ? Math.max(0, gapAtTop - 1) : DOCK_GAP
   }
 
   const holdSpace = () => {

@@ -1,0 +1,18 @@
+/* Mobile review 2026-11-05: per-page overrides below 768px that Webflow variants cannot express,
+   because the shared combo (.split-image-text-light_media.is-secondary) outranks variant styles,
+   or two instances share one variant. Desktop is untouched. Source for <style data-mobile-overrides>. */
+@media (max-width:767px){
+/* Room page: second split block. 03 left aligned and slightly bigger, 04 full width square */
+.section_split-image-text-light~.section_split-image-text-light .split-image-text-light_media.w-variant-473c3237-6d5f-b4e2-46df-945ff89461a7:not(.is-secondary){width:16.625rem;margin-left:0;margin-right:auto;align-self:flex-start;aspect-ratio:266/315}
+.section_split-image-text-light~.section_split-image-text-light .split-image-text-light_media.is-secondary.w-variant-473c3237-6d5f-b4e2-46df-945ff89461a7{width:100%;aspect-ratio:1/1}
+/* Neighborhood, Little Italy: closing image full width, 96px under the text */
+.split-image-text-light_media.is-secondary.w-variant-45de7441-0ac3-59ed-e7fb-5c6524848b2d{width:100%;aspect-ratio:350/410;margin-top:4rem}
+/* Arts, The Guild collection: second image small and right aligned */
+.split-image-text-light_media.is-secondary.w-variant-7fcd798f-2b39-4743-5474-3731e32ff4c3{width:10.9375rem;aspect-ratio:175/227;margin-left:auto;align-self:flex-end}
+/* Dining venues, Other dining options: snap card by card, no scrollbar (scroll-snap is supported in every current browser) */
+.card-stagger-header-left_list{scroll-snap-type:x mandatory;scroll-padding-left:1.25rem;scrollbar-width:none}
+.card-stagger-header-left_list::-webkit-scrollbar{display:none}
+.card-stagger-header-left_card{scroll-snap-align:start}
+/* Corporate and Legal: "Tailored packages" heading left aligned (Key features above stays centred) */
+.section_image-trio-text.is-left~.section_image-trio-text.is-left .image-trio-text_header{align-items:flex-start;text-align:left}
+}

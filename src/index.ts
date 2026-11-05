@@ -42,6 +42,7 @@ import { roomsQuiz } from '$utils/roomsQuiz'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
 import { smoothScroll } from '$utils/smoothScroll'
 import { staggerCards } from '$utils/staggerCards'
+import { earlyVenueTabs } from '$utils/earlyVenueTabs'
 import { stickyCta } from '$utils/stickyCta'
 import { stickyTabs } from '$utils/stickyTabs'
 import { swiperSliders } from '$utils/swiperSliders'
@@ -65,6 +66,7 @@ import { tabDropdown } from '$utils/tabDropdown'
  */
 
 const DININGS_TEMPLATE_PAGE_ID = '6ad67d7416e13e66c2b76107'
+const DINING_PAGE_ID = '6ad66fd476d24ed37ac4c5cb'
 
 window.Webflow ||= [] as unknown as WebflowQueue
 window.Webflow.push(() => {
@@ -131,4 +133,11 @@ window.Webflow.push(() => {
   // F10: Reserve a Table on the Dinings template. The button sits in the
   // shared Hero component, so it is scoped by the template's page id.
   stickyCta(`html[data-wf-page="${DININGS_TEMPLATE_PAGE_ID}"] .section_hero-fullbleed-centered .button`)
+  // Mobile review: the story "Learn more" floats over the copy on phones (Figma mobile).
+  // shortcut: decided once at load, so a resize across 768px keeps the first state; fine for phones.
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    stickyCta('.section_article-body .article-body_footer .button')
+    // Mobile review: the Dining venue selector shows from the first screen (Figma mobile).
+    earlyVenueTabs(`html[data-wf-page="${DINING_PAGE_ID}"]`)
+  }
 })

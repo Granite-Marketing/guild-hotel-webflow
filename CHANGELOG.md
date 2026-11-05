@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.30
+
+### Patch Changes
+
+- Mobile review fixes: Dining venue selector shows from the first screen, Reserve a Table is docked from load (no clipping), story Learn more floats on phones, and the History full-bleed caption masks in on a trigger instead of a scroll fade.
+
 ## 1.1.29
 
 ### Patch Changes
