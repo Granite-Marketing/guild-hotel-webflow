@@ -48,10 +48,19 @@ Done and measured at 390px against the Figma; desktop guard (`layout-snapshot.mj
 - N: Contact checkbox centred on its two-line label.
 - Room page map meets Offers with no strip (Home variant, mobile only). Guidelines image added above "Our process" (mobile only, desktop Figma has none).
 
+## Round two (Todoist comments posted 14:55 to 15:12, v1.1.33)
+
+- Venue masks (Dining, Wellness, Meetings, Arts, room page): the small frame is centred in its stage again, so the enlarge starts centred; the stage is pulled up by half a screen less half the frame, so the frame still sits about 160px under the intro copy. Home unchanged.
+- History: the caption stays hidden until the image is full screen, then masks in line by line (played, not scrubbed). Root cause: the reveal moved the line's children, which were inline spans that ignore transforms; it now moves the split words.
+- Maps: Meetings is half and half (map fills the top 656px, card below). Corporate, Legal and Neighborhood keep the card over the map with the map running on below it (Figma section height).
+- Contact: 18px outlined checkbox centred on the two-line label, 12px gap.
+- Zuma: "discover zuma" link under "browse the menu", shown only where the new Dinings switch "Show discover link" is on (Zuma only); target is the Zuma site, swap if the client has a specific page.
+- Meetings venue modal: the top image is a slider on every width (progress line on phones, dashes on desktop). Each venue has one photo, so the other venues' photos fill the extra slides until real galleries exist (`src/utils/modalImageSlider.ts`, marked shortcut).
+- Head CSS now ships as `dist/site.css` next to the bundle (one `<link>` in the head, same tag as the footer script); sources stay in `docs/reference/site-head/`. The site head was over the 10,000-character cap, and jsDelivr will not serve files under `docs/` because the repo is over its 50 MB package limit.
+
 ## Open, needs Stephen
 
 1. Room card icons: temporary drawn icons are live (mobile head CSS, marked TEMPORARY); swap the two data URIs when the real files arrive.
-2. Zuma "Discover Zuma" link: keep hidden until there is a URL, or drop it from the design?
-3. Meetings modal image as a slider on mobile and desktop: needs the extra venue images and is a build, not a fix.
-4. Meetings "keys over the image" and Corporate map card "needs to be larger": the screenshots do not show which element; please point at it.
+2. Zuma "Discover Zuma" link points at zumarestaurant.com; confirm the target.
+3. Meetings modal slider: real gallery images per venue (placeholders in use).
 5. Two unused variants created on the way ("Packages" on Image Trio Text Left, "Arts Collection" on Split image text light): OK to delete?
