@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.27
+
+### Patch Changes
+
+- 514a51a: Nav theme (F59): the real nav bar is now masked out wherever the dark clone shows, so the cream logo's antialiased edges no longer peek around the dark logo as a faint outline over photos.
+
 ## 1.1.26
 
 ### Patch Changes
