@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.32
+
+### Patch Changes
+
+- Venue modal image is a slider on every width, with a progress line on phones and dashes on desktop.
+
 ## 1.1.31
 
 ### Patch Changes

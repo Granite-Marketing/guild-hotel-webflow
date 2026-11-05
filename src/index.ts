@@ -32,6 +32,7 @@ import { imageStackCollapse } from '$utils/imageStackCollapse'
 import { imageTrailHover } from '$utils/imageTrailHover'
 import { map } from '$utils/map'
 import { mediaTabs } from '$utils/mediaTabs'
+import { modalImageSlider } from '$utils/modalImageSlider'
 import { modals } from '$utils/modals'
 import { navTheme } from '$utils/navTheme'
 import { navToggle } from '$utils/navToggle'
@@ -92,6 +93,8 @@ window.Webflow.push(() => {
 
   // slot C: backgroundVideo(), heroTextReveal()
   swiperSliders()
+  // Mobile review: the venue modal image is a slider on every width (Figma Meetings-Overlay).
+  modalImageSlider()
   offersSliderSplit()
   cardCarouselHeaderLeft()
 

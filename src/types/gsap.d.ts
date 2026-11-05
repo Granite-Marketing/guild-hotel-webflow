@@ -221,6 +221,7 @@ interface SwiperInstance {
   slides: SwiperSlide[];
   activeIndex: number;
   previousIndex: number;
+  slideTo(index: number, speed?: number): void;
   destroy(deleteInstance?: boolean, cleanStyles?: boolean): void;
 }
 

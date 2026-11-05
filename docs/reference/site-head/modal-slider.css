@@ -1,0 +1,14 @@
+/* Venue modal image slider (src/utils/modalImageSlider.ts). Figma Meetings-Overlay: dashes over the image on desktop, a progress line under it on phones. */
+.overlay-detail-panel-modal_figure.is-slider{position:relative;overflow:visible}
+.overlay-detail-panel-modal_slider{width:100%;height:100%}
+.overlay-detail-panel-modal_slider .swiper-slide{height:100%}
+.overlay-detail-panel-modal_slider .swiper-slide img{display:block;width:100%;height:100%;object-fit:cover}
+.overlay-detail-panel-modal_slider-dots{position:absolute;left:50%;bottom:1.25rem;z-index:2;display:flex;gap:.5rem;transform:translateX(-50%)}
+.overlay-detail-panel-modal_slider-dot{width:1rem;height:1px;padding:.5rem 0;border:0;background:linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)) center/100% 1px no-repeat;cursor:pointer;transition:width .3s,background-color .3s}
+.overlay-detail-panel-modal_slider-dot.is-active{width:1.5rem;background-image:linear-gradient(#fff,#fff)}
+@media (max-width:767px){
+.overlay-detail-panel-modal_figure.is-slider{margin-bottom:6.5625rem}
+.overlay-detail-panel-modal_slider-dots{left:0;right:0;bottom:auto;top:calc(100% + 3.25rem);gap:0;transform:none;background:linear-gradient(rgba(38,33,24,.2),rgba(38,33,24,.2)) center/100% 1px no-repeat}
+.overlay-detail-panel-modal_slider-dot,.overlay-detail-panel-modal_slider-dot.is-active{flex:1;width:auto;background:none}
+.overlay-detail-panel-modal_slider-dot.is-active{background:linear-gradient(#262118,#262118) center/100% 1px no-repeat}
+}
