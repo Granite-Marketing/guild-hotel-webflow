@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.34
+## 1.1.35
 
 ### Patch Changes
 
