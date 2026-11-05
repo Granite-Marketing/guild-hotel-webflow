@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.33
+
+### Patch Changes
+
+- Site head overrides ship as dist/site.css next to the bundle.
+
 ## 1.1.32
 
 ### Patch Changes
