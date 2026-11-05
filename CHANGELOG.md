@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.29
+
+### Patch Changes
+
+- Category pill on Blog and Happenings returns to the first category when scrolling back above the first group.
+
 ## 1.1.28
 
 ### Patch Changes
