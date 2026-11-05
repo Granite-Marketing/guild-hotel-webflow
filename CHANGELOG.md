@@ -1,10 +1,21 @@
 # Changelog
 
+## 1.1.36
+
+### Patch Changes
+
+- Carries the live v1.1.34 nav fix (F59) together with the mobile review fixes.
+
 ## 1.1.35
 
 ### Patch Changes
 
 - Selector pill turns cream over a section of its own colour; modal slider keeps the frame's aspect ratio; Contact checkbox styled at every width.
+## 1.1.34
+
+### Patch Changes
+
+- 514a51a: Nav theme (F59): the real nav bar is now masked out wherever the dark clone shows, so the cream logo's antialiased edges no longer peek around the dark logo as a faint outline over photos.
 
 ## 1.1.33
 
