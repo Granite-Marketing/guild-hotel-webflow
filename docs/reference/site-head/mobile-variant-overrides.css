@@ -15,4 +15,9 @@
 .card-stagger-header-left_card{scroll-snap-align:start}
 /* Corporate and Legal: "Tailored packages" heading left aligned (Key features above stays centred) */
 .section_image-trio-text.is-left~.section_image-trio-text.is-left .image-trio-text_header{align-items:flex-start;text-align:left}
+/* Rooms result cards: TEMPORARY guest and size icons (drawn placeholders, 24px slots from the Figma). Swap the two data URIs for the real icon files when supplied. */
+.rooms-collection-room-grid_details{align-items:center}
+.rooms-collection-room-grid_detail{display:inline-flex;align-items:center;column-gap:.5rem}
+.rooms-collection-room-grid_detail::before{content:"";flex:none;width:1.5rem;height:1.5rem;background:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23f4efdf" stroke-width="1"%3E%3Ccircle cx="9" cy="8.5" r="3"/%3E%3Cpath d="M3.5 18.5c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/%3E%3Ccircle cx="16" cy="9" r="2.5"/%3E%3Cpath d="M15.5 13.6c2.7.2 5 2 5 4.9"/%3E%3C/svg%3E') center/contain no-repeat}
+.rooms-collection-room-grid_detail+.rooms-collection-room-grid_detail::before{background-image:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23f4efdf" stroke-width="1"%3E%3Crect x="4.5" y="5.5" width="15" height="13"/%3E%3Cpath d="M8 9l-1.5-1.5M8 9V7.4M8 9H6.4M16 15l1.5 1.5M16 15v1.6M16 15h1.6"/%3E%3C/svg%3E')}
 }

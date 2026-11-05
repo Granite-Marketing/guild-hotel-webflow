@@ -50,7 +50,7 @@ Done and measured at 390px against the Figma; desktop guard (`layout-snapshot.mj
 
 ## Open, needs Stephen
 
-1. Room card icons (people, size): need the two icon assets.
+1. Room card icons: temporary drawn icons are live (mobile head CSS, marked TEMPORARY); swap the two data URIs when the real files arrive.
 2. Zuma "Discover Zuma" link: keep hidden until there is a URL, or drop it from the design?
 3. Meetings modal image as a slider on mobile and desktop: needs the extra venue images and is a build, not a fix.
 4. Meetings "keys over the image" and Corporate map card "needs to be larger": the screenshots do not show which element; please point at it.
