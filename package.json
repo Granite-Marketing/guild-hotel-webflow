@@ -33,6 +33,7 @@
     "update-metadata": "node scripts/api/webflow/update-metadata.cjs",
     "update-seo": "node scripts/api/webflow/update-seo.cjs",
     "parse-copy": "node scripts/api/webflow/parse-copy.cjs",
+    "trello:parse": "node scripts/trello/parse-board.mjs",
     "alt:inventory": "node scripts/api/anthropic/build-alt-inventory.mjs",
     "alt:generate": "node scripts/api/anthropic/generate-alt-text.mjs",
     "alt:payload": "node scripts/api/anthropic/build-apply-payload.mjs",
