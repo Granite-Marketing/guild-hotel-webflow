@@ -1,0 +1,4 @@
+/* Site stylesheet served from jsDelivr next to dist/index.js (one <link> in the Webflow head).
+   Sources stay readable in docs/reference/site-head/. */
+@import '../docs/reference/site-head/mobile-variant-overrides.css';
+@import '../docs/reference/site-head/modal-slider.css';

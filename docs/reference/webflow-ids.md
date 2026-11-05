@@ -389,3 +389,49 @@ Neighborhood anchors for the category menu (links `#dining`, `#arts`, `#beyond-d
 - Map Feature Image Bg (`5d830b69-6507-7d04-4828-069b2539cffb`) variant **Stacked** `a6eedfb4-4763-3aa6-88c1-4e4d7fd40feb` (small: `map-feature_component` full-bleed with padding-top for the map); Variant prop `46987a8f-669e-92a1-2b93-034c8cf33e23`. Meetings instance `4e3db501-831b-1b5b-afc1-4940b78cd846` uses Stacked.
 - timeline-scatter-images Tall (`33e949df-43c2-4806-b73e-d403ed483051`) variant **Stagger** `6a92abad-32b0-27fd-e4b6-5a5ebcbe05fb` (small: item max-width 87%); Variant prop `8c239c8f-35ae-dcfa-c80c-fdba806412de`. Neighborhood instance `f0bc6eb9-7e60-97a9-6b5c-90074ec14682` uses Stagger.
 - Variant ids written at small: Overlay Detail Panel Modal Centered `34ca996d-2f65-a59e-6eb0-09dd065e4534`; form-split-script-contact Tall `c284c9dc-42be-882d-5aca-03608bebfc95`; split-image-text-light Stagger Mid `8dcc8de6-914e-f2a6-a0b5-5f95af173bdf` and Wide `45de7441-0ac3-59ed-e7fb-5c6524848b2d`.
+
+### Gallery and arts mobile fixes (2026-11-04)
+
+- `gallery-all_scroller` `905de9f4-435c-b977-9471-955e27bed58d` (small: overflow-x auto, overflow-y hidden). On /gallery: new wrapper `03a5c029-e4e1-f9b6-6249-7e27b2fc1cd5` around grid `e51108a2-f6cb-cedd-a0df-94e6133b040c` (section `491dcc4a-ded6-d478-3c57-c03ccedf4070`). On /arts: the CMS wrapper `d709e584-55e2-e281-c915-c0c5b0cc9fbd`.
+- Arts mobile mosaic sizes live in the arts tile embed `d1cc5f31-965c-8ffa-4861-f440a909d6a1` (max-width 767px block).
+- Art Detail Modal `is-art` combos (small only): `_panel` `a91ff8df-07eb-fe4f-b26a-f345e4dff72a`, `_bar` `27d7a61f-849a-10af-ab87-577f030c1040`, `_back` `be807ebd-4535-46e7-e2a7-a8678dddf180`, `_back-icon` `e337637e-a703-4ae4-a88a-0f5f71c6f3f1`, `_back-label` `dfd3c147-05ed-2da2-3131-dd55fbef865e`, `_layout` `748b456c-043b-f3d1-b765-76564f4af375`, `_header` `0287b837-d987-d7fc-1f1a-3e059f833602`, `_figure` `56568eb9-0f4d-c021-89d2-a0b2299f47b7`, `_body` `149569c9-2a63-16e5-3b1d-8866afc908b9`, `_caption` `2e204a2e-63a3-0dfd-a983-fa0562b01212`, `_eyebrow-link` `fb321fb0-7112-5ca5-5a67-5f7f1ec44c4a`; `_content.is-art` (existing) gained small display contents.
+- Dining-only variants (mobile fix, 2026-11-04): Split image text light "Olive Dining" `42c9f9a1-d85c-7fa8-47d7-f5d9df7eaa79` (Dinings Template intro instance `0f87c04b-e622-8542-b5b9-e63fcb77ed4b`), Image Trio Text "Dining" `0d31b24e-acf0-8dd5-cf1f-9e3e1163cd12`, Gallery Mosaic Captioned "Dining" `76af03c7-cd03-42c9-a8b6-104e98388a6c`, Map Feature "Dining" `0a163214-6dd2-ca63-86b5-432c1c1678d5` (/dining instance `afb2623e-14c5-c312-4886-1066ab5e3f8f`). Combo `text-style-eyebrow-caps.is-info-title` `f24ce554-adee-7c9f-39d6-bcff410ae599` on the text-columns-info titles.
+## Mobile fix variants (2026-11-04, audit A)
+
+Page-only component variants created so mobile fixes stay on one page:
+
+| Component | Variant | ID | Used on |
+|---|---|---|---|
+| Image Trio Text | Home | `45b71a39-9a72-e800-bd67-7e1967d510de` | home wellness |
+| Map Feature | Home | `a65a3b03-fb07-bd94-4702-0e0a50312c90` | home neighborhood |
+| Split image text light | Olive Home | `50d0d660-fa88-c432-96fa-679fbe31a938` | home west coast |
+| Offers Slider Split | Home Press | `f84b5e41-318b-031e-bf40-a39878fb30b4` | home offers, press offers |
+| Card Carousel Header Left | Contact | `d0c45960-92d6-af25-7b58-b128d8a0affe` | contact |
+| Card Carousel Header Left | Press | `49cffb92-bfd3-18d8-c68b-64f96a7dd632` | press |
+| tab-pills-intro | Press | `59a1b413-f64f-13c3-5d27-710cb741a3c0` | press |
+| Article Card Staggered | Press Left | `0902c2b4-6d7a-a4a3-2fc7-34782f6e7bcd` | press (left cards) |
+| form-split-script-contact | Press | `69366689-4811-652d-211d-fe0e9582a917` | press enquiries |
+## Global mobile fixes (2026-11-04)
+
+| Style | ID | Notes |
+|---|---|---|
+| `form-split-script-contact_fieldset-heading` | `3d2174f9-a106-8e5d-8577-d46957ec2c0f` | Added to form group h4s (form-split-script-contact component elements `…d6cc`, `…d6db`; contact page `07a35c59-be98-d419-110c-e66052bd7c2f`) |
+| `.form-split-script-contact_fieldset-heading.heading-style-h4` | `13152a87-41ec-4358-beb2-e328ba0473bd` | small only: 20px / 27px / -0.05em |
+| `article-card-staggered_title` | `a3bd4e23-634c-b64c-76d9-4ca808906bc4` | Article Card Staggered component title `…8d02`; happenings and blog page card titles |
+| `.article-card-staggered_title.text-style-eyebrow-caps` | `5aad4fe4-7022-4c79-74de-dff7d8c787d9` | small only: 14px / 16.8px |
+| `.button.is-chamfer.is-outline.is-dark-mobile` | `8eb972af-c72a-f8fd-8065-9a927dde8571` | home art stories button `c646bb3c-5d24-a68c-9c40-b1bfae796408`; mobile-only dark fill |
+| `rooms-collection-quiz_heading` | `e60cac7e-2e25-e9f7-abde-70ff6e920453` | rooms quiz h2s `231e48de-…`, `868313c8-…`, `c1a1b751-…`; combo with h4 `f661ec5f-0e9b-039f-f6e1-deac7a912e25` |
+| script-intro-centered variants | Large Heading `e4bd4c20-6499-56f7-64db-9fa47a4a1f40`, Small Heading `a23a1a12-25dc-a914-6611-89f4d3beedb4` | room template and guidelines instances |
+| Hero Fullbleed Centered variant | Short Mobile `54ea4c9c-7c59-c93a-98e3-4eb98a1b7ff2` | guidelines and Legal Corporates template heroes, 660px below 768 |
+## History George Marston slider (2026-11-04)
+
+- Split image text light (`663131a8-3362-867e-25ef-28b6d3d209a2`) main figure now holds `split-image-text-light_slider-wrap swiper_slider` `0468e9b4-e9d7-0ec7-7299-cc3943e8a027` > `_slider swiper default` `925a803d-f674-f939-fd20-e97b1d293041` > `_slides swiper-wrapper` `8094e204-4bf3-175d-c367-136b65d10393` > three `_slide swiper-slide` (`cc8bf6b0-10ed-9f7d-bfe9-f88807675c65` holds the Image prop image, `18587711-f792-cb77-7bba-2fcb49b38788`, `b75076fc-5b78-1823-0e0c-2f2642544725`), plus `_pagination swiper-pagination` `6df850c5-73eb-9662-1824-5e0c47d6c3d0`.
+- Props (group Slider): Slide 2 image `06e1bc70-82a9-6a23-5b00-2d708fccdba4`, Slide 3 image `97f2b880-47b9-c51a-fc79-baee10d6e06f`, Slider visible `c6dc2733-40e7-4e4e-3cc9-046885f44ccb` (default false; shows slides 2 and 3 and the dashes). On only for History instance `9e330597-a057-06fa-a371-cf4db3c7d72c`, whose slides 2 and 3 repeat the Marston portrait `6ad67007cf42363c3ffe3d61` until real images exist.
+- Dash styles live in the Global Styles `style-overrides` embed (Swiper CSS variables plus `.split-image-text-light_pagination .swiper-pagination-bullet-active` width), because the style API rejects custom properties and Swiper's CDN CSS loads after the site CSS.
+- `split-image-text-light_stamp` small: absolute, left 69.4%, width 46.4%, margin-top 92.7% (of the article width, so it tracks the portrait's aspect ratio); `section_split-image-text-light` small: overflow-x clip.
+
+## History mobile image parity (2026-11-04)
+
+Small-breakpoint (below 768px) sizes matched to the mobile Figma (`14:11113`), measured at 390px. Patterns: full 350x480 (`is-full`, `is-wide`, `is-small`); left 266.5x315 = 76.1% (`is-founding-square`, `is-ymca-square`, `is-large`); right 175x226 = 50% + margin-left auto (`is-portrait is-founding-portrait`, `is-opening-square`); 244x200 = 69.7% (`is-portrait is-opening-portrait` left; `is-large is-ymca-large` and new `is-small is-future-small` `44143ec6-4850-8e50-ab41-8af9b0116aff` right, on 2026 detail figure `06504f20-0896-0fd7-b70a-8532dc2faa01`). `history-timeline_figure` small gets overflow hidden (without it the lazy image's natural height overrode the aspect ratio). Timeline list, item and row gaps 7.5rem at small, `is-founding-wide` margin-top -2.5rem (Figma 80px between 01 and 02). `map-feature_figure is-centered` small: 100% wide, 350 / 199. `gallery-mosaic-captioned_figure` and `is-wide` small: 13 / 16 (390x480, all 7 instances).
+- Year badges and labels (small only): the sticky `history-timeline_label-wrap` is hidden below 768px; four static badges `history-timeline_label is-static` (`41a5179b-cebc-dbb2-515c-30feef825cf1`; 24px, -0.1em, 36px tall, 6px chamfer, 40px from the image top, `is-founding` `198ed572-37bc-959d-33ad-52e6fa390e00` 58px) sit in the 1924 building, 1924-1970 portrait, 2019 wide and 2026 wide figures (`f8124f7f-37b7-6585-77b1-a96b96004876`, `d332098e-7fb3-f6ab-66ca-8bd6d84c56ed`, `219da847-684c-686f-ea74-53d4681e7ed9`, `2f443a4f-c2bb-4826-bed2-8c5685aee7c5`), hidden on desktop. Year eyebrows `history-timeline_year` (`75e5f12f-ad1d-d996-9c83-68c0f6837de3`, 12px, display none above 767px) open each item header (`eaa56c61-66a7-6c47-6d43-c72044102523`, `52cc5729-2c5f-c566-0fca-41836cf6d693`, `ee95dcd9-c8fb-81bf-a3f9-253ef5c2aa20`, `99af6a24-547b-99ac-1f24-c9df5916cf13`).
+- Mobile type: family classes added before the utilities, sizes on the full combo chain so they outrank them: `history-timeline_heading heading-style-h4 text-weight-normal` 18/27, `history-timeline_title heading-style-h2 text-weight-normal` 18/21.6, `history-timeline_range-text text-style-eyebrow` 12/18, `history-oasis_heading heading-style-h4 text-weight-normal` 18/21.6; `history-timeline_text` and `history-oasis_text` 16/20; oasis left aligned. Section spacing: `section_history-oasis` margin-top -4.5rem, padding-bottom 5rem; `section_history-timeline` padding 5rem / 7.5rem.

@@ -130,7 +130,7 @@ const pinTabs = (tabs: HTMLElement, warn: boolean) => {
     })
   }
 
-  entries.forEach(({ link, target }) => {
+  entries.forEach(({ link, target }, index) => {
     ScrollTrigger.create({
       trigger: target,
       start: () => `top top+=${clearance() + 1}`,
@@ -138,6 +138,8 @@ const pinTabs = (tabs: HTMLElement, warn: boolean) => {
       onToggle: (self: ScrollTriggerInstance) => {
         if (self.isActive) setActive(link)
       },
+      // Scrolling back above the first section hands the bar back to the first tab.
+      onLeaveBack: index === 0 ? () => setActive(link) : undefined,
     })
   })
 

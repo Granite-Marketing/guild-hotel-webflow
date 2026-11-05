@@ -1,10 +1,46 @@
 # Changelog
 
+## 1.1.33
+
+### Patch Changes
+
+- Site head overrides ship as dist/site.css next to the bundle.
+
+## 1.1.32
+
+### Patch Changes
+
+- Venue modal image is a slider on every width, with a progress line on phones and dashes on desktop.
+
+## 1.1.31
+
+### Patch Changes
+
+- Line mask reveal animates split words, not inline line children, so captions with inline spans stay hidden until revealed; History caption hidden until the image is full screen.
+
+## 1.1.30
+
+### Patch Changes
+
+- Mobile review fixes: Dining venue selector shows from the first screen, Reserve a Table is docked from load (no clipping), story Learn more floats on phones, and the History full-bleed caption masks in on a trigger instead of a scroll fade.
+
+## 1.1.29
+
+### Patch Changes
+
+- Category pill on Blog and Happenings returns to the first category when scrolling back above the first group.
+
+## 1.1.28
+
+### Patch Changes
+
+- a8a5072: History George Marston portrait is a slider with a dash indicator; the default Swiper slider no longer initialises with a single slide.
+
 ## 1.1.27
 
 ### Patch Changes
 
-- 514a51a: Nav theme (F59): the real nav bar is now masked out wherever the dark clone shows, so the cream logo's antialiased edges no longer peek around the dark logo as a faint outline over photos.
+- f117903: Meetings & Events tabs: only the background image animates; the copy no longer masks out and in on switch.
 
 ## 1.1.26
 

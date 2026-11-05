@@ -28,6 +28,7 @@ interface GsapTimeline {
   ) => GsapTimeline;
   play: (from?: number | string) => GsapTimeline;
   reverse: (from?: number | string) => GsapTimeline;
+  call: (callback: () => void, params?: unknown[], position?: number | string) => GsapTimeline;
   clear: (labels?: boolean) => GsapTimeline;
   timeScale: {
     (): number;
@@ -106,6 +107,8 @@ interface ScrollTriggerInstance {
   end: number;
   progress: number;
   isActive: boolean;
+  /** 1 while scrolling forward, -1 while scrolling back. */
+  direction: number;
   scroll: () => number;
   getVelocity: () => number;
   kill: (reset?: boolean) => void;
@@ -218,6 +221,7 @@ interface SwiperInstance {
   slides: SwiperSlide[];
   activeIndex: number;
   previousIndex: number;
+  slideTo(index: number, speed?: number): void;
   destroy(deleteInstance?: boolean, cleanStyles?: boolean): void;
 }
 

@@ -35,7 +35,8 @@ const TARGET_SELECTOR = 'h1, h2, h3, h4, h5, h6, p, figure, .button, [data-line-
 interface TextPart {
   kind: 'text'
   element: HTMLElement
-  lines: HTMLElement[]
+  /** Each line's words; the words, not the line's children, rise (inline spans ignore transforms). */
+  lineWords: HTMLElement[][]
   split: boolean
 }
 
@@ -94,8 +95,8 @@ export const createLineMaskTimeline = (container: HTMLElement): LineMaskTimeline
     parts.forEach((part, index) => {
       const offset = index * ELEMENT_STAGGER
       if (part.kind === 'text') {
-        part.lines.forEach((line, lineIndex) => {
-          timeline.fromTo(line.children, HIDDEN, SHOWN, offset + lineIndex * LINE_STAGGER)
+        part.lineWords.forEach((words, lineIndex) => {
+          timeline.fromTo(words, HIDDEN, SHOWN, offset + lineIndex * LINE_STAGGER)
         })
         return
       }
@@ -109,7 +110,7 @@ export const createLineMaskTimeline = (container: HTMLElement): LineMaskTimeline
   // all text targets instead of building from the first one alone.
   elements.forEach((element) => {
     if (isText(element)) {
-      parts.push({ kind: 'text', element, lines: [], split: false })
+      parts.push({ kind: 'text', element, lineWords: [], split: false })
       return
     }
     wrapInClip(element)
@@ -127,7 +128,8 @@ export const createLineMaskTimeline = (container: HTMLElement): LineMaskTimeline
         // nothing is returned for SplitText to revert.
         const lines = self.lines ?? []
         gsap.set(lines, { overflow: 'hidden' })
-        part.lines = lines
+        const words = self.words ?? []
+        part.lineWords = lines.map((line) => words.filter((word) => line.contains(word)))
         part.split = true
         rebuild()
       },

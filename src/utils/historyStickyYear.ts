@@ -52,7 +52,7 @@
  * as laid out and the year label swaps text without a tween.
  */
 
-import { prepareLineMaskReveal } from '$utils/lineMaskReveal'
+import { createLineMaskTimeline, prepareLineMaskReveal } from '$utils/lineMaskReveal'
 
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
 const DEFAULT_COLLAPSE_DISTANCE = 3
@@ -242,9 +242,17 @@ const setupCollapseGallery = (root: HTMLElement) => {
 
   // Optional text overlay on the pinned image; hidden until the clip is full.
   const caption = root.querySelector<HTMLElement>('[data-history-collapse-caption]')
+  // Its lines mask in as a triggered (not scrubbed) reveal once the image is
+  // full bleed, and mask out again if the reader scrolls back before that.
+  // The caption is a plain div in Designer, so mark it as text for the splitter.
+  if (caption && !caption.querySelector('h1, h2, h3, h4, h5, h6, p, [data-line-mask]')) {
+    caption.dataset.lineMask = 'text'
+  }
+  const captionReveal = caption ? createLineMaskTimeline(caption) : null
   if (caption) {
     caption.style.zIndex = '4'
     caption.style.pointerEvents = 'none'
+    // Hidden until the reveal: the index mark is an inline span the word mask cannot move.
     gsap.set(caption, { autoAlpha: 0 })
   }
 
@@ -284,7 +292,20 @@ const setupCollapseGallery = (root: HTMLElement) => {
     // Hold the full-bleed image for the rest of the pin.
     .to({}, { duration: 0.4 }, 2.4)
 
-  if (caption) {
-    timeline.to(caption, { autoAlpha: 1, duration: 0.4, ease: 'none' }, 2.2)
+  if (captionReveal) {
+    timeline.call(
+      () => {
+        // Called forwards and backwards; the scroll direction picks the reveal direction.
+        if (timeline.scrollTrigger?.direction === -1) {
+          captionReveal.reverse()
+          gsap.to(caption, { autoAlpha: 0, duration: 0.3, overwrite: true })
+        } else {
+          gsap.set(caption, { autoAlpha: 1, overwrite: true })
+          captionReveal.play()
+        }
+      },
+      undefined,
+      2.2,
+    )
   }
 }

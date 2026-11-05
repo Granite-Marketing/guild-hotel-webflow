@@ -11,7 +11,7 @@ const WATCH = process.argv.includes('--watch')
 const BUILD_DIRECTORY = 'dist'
 
 // Config entrypoint files
-const ENTRY_POINTS = ['src/index.ts']
+const ENTRY_POINTS = ['src/index.ts', 'src/site.css']
 
 // Local preview fixtures (dev only): each tests/visual/fixtures/<name>.html is
 // copied to dist/fixtures/ (gitignored) with its <name>.ts entry bundled next
