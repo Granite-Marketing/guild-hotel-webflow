@@ -169,6 +169,14 @@ export const navTheme = () => {
     lastGradient = gradient
     overlay.style.maskImage = gradient
     overlay.style.setProperty('-webkit-mask-image', gradient)
+    // F59: hide the real bar where the clone shows, so its antialiased edges
+    // never peek out around the clone as a faint outline.
+    const barGradient = buildMaskGradient(
+      subtractIntervals([{ start: 0, end: navHeight }], shown),
+      navHeight,
+    )
+    bar.style.maskImage = barGradient
+    bar.style.setProperty('-webkit-mask-image', barGradient)
   }
 
   // Hide the clone while the full-screen menu is open; on close, recompute
@@ -176,6 +184,8 @@ export const navTheme = () => {
   new MutationObserver(() => {
     if (header.classList.contains(OPEN_CLASS)) {
       overlay.style.visibility = 'hidden'
+      bar.style.removeProperty('mask-image')
+      bar.style.removeProperty('-webkit-mask-image')
       return
     }
     lastGradient = ''
