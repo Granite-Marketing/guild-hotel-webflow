@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.28
+
+### Patch Changes
+
+- a8a5072: History George Marston portrait is a slider with a dash indicator; the default Swiper slider no longer initialises with a single slide.
+
 ## 1.1.27
 
 ### Patch Changes
