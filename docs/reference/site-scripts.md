@@ -110,3 +110,7 @@ F43: the fill layer is a static chamfer-clipped box and the fill grows with back
 ## Site head: FAQ open chevron (M5)
 
 `<style data-faq-chevron>` after the History divider block. Below 768px the open FAQ row's chevron points up; Webflow classes cannot style a child from the header's `is-active` state. Source: `docs/reference/site-head/faq-chevron.css`.
+
+## Site head: story template mobile (audit D)
+
+`<style data-story-mobile>` in Site Settings head, source `docs/reference/site-head/story-mobile.css`. Below 768px it hides the hero topic eyebrow on the story template and sizes the Small `image-inset-single` and Compact `split-image-text-light` variants to the Figma mobile mosaic. Variant classes cannot be styled through the Data API, so they live here.
