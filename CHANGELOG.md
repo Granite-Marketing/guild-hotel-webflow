@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.31
+
+### Patch Changes
+
+- Line mask reveal animates split words, not inline line children, so captions with inline spans stay hidden until revealed; History caption hidden until the image is full screen.
+
 ## 1.1.30
 
 ### Patch Changes

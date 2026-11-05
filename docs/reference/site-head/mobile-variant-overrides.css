@@ -20,4 +20,23 @@
 .rooms-collection-room-grid_detail{display:inline-flex;align-items:center;column-gap:.5rem}
 .rooms-collection-room-grid_detail::before{content:"";flex:none;width:1.5rem;height:1.5rem;background:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23f4efdf" stroke-width="1"%3E%3Ccircle cx="9" cy="8.5" r="3"/%3E%3Cpath d="M3.5 18.5c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/%3E%3Ccircle cx="16" cy="9" r="2.5"/%3E%3Cpath d="M15.5 13.6c2.7.2 5 2 5 4.9"/%3E%3C/svg%3E') center/contain no-repeat}
 .rooms-collection-room-grid_detail+.rooms-collection-room-grid_detail::before{background-image:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23f4efdf" stroke-width="1"%3E%3Crect x="4.5" y="5.5" width="15" height="13"/%3E%3Cpath d="M8 9l-1.5-1.5M8 9V7.4M8 9H6.4M16 15l1.5 1.5M16 15v1.6M16 15h1.6"/%3E%3C/svg%3E')}
+/* Map with addresses card. Corporate, Legal, Neighborhood: the card overlays the top of the map and the map runs on below it (Figma section 1429px) */
+.section_map-feature.is-image-bg .map-feature_component:not(.w-variant-a6eedfb4-4763-3aa6-88c1-4e4d7fd40feb){padding-bottom:39.5rem}
+/* Meetings: half and half, the map fills the top block only and the card sits under it */
+.map-feature_component.w-variant-a6eedfb4-4763-3aa6-88c1-4e4d7fd40feb .map-feature_figure{bottom:auto;height:41rem}
+/* Contact privacy consent: 18px outlined box centred on the two-line label, 12px gap (Figma mobile) */
+.form-contact-fields_checkbox{position:relative;display:block;padding-left:1.875rem;min-height:2.5rem;line-height:1.25rem}
+.form-contact-fields_checkbox-input{-webkit-appearance:none;appearance:none;position:absolute;left:0;top:50%;float:none;width:1.125rem;height:1.125rem;margin:-.5625rem 0 0;border:1px solid #262118;border-radius:0;background:transparent center/.75rem no-repeat}
+.form-contact-fields_checkbox-input:checked{background-color:#262118;background-image:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none" stroke="%23f4efdf" stroke-width="1.5"%3E%3Cpath d="M2 6.2l2.6 2.6L10 3.4"/%3E%3C/svg%3E')}
+.form-contact-fields_checkbox-input:focus-visible{outline:1px solid #262118;outline-offset:2px}
+.form-contact-fields_checkbox .form-contact-fields_label,.form-contact-fields_checkbox .form-contact-fields_link{line-height:1.25rem}
+/* Venue masks (Dining, Wellness, Meetings, Arts, room page; Home keeps its strip): the small frame is centred in its pinned stage so the enlarge starts centred,
+   and the stage is pulled up by half a screen less half the frame so the frame still sits about 160px under the intro copy */
+.section_venue-card-fullbleed,.section_tab-pills-intro{display:flow-root}
+.venue-card-fullbleed_stage.is-media-center:not(:has(.is-strip)),.tab-pills-intro_stage.is-media{pointer-events:none}
+.venue-card-fullbleed_stage.is-media-center:not(:has(.is-strip))>*,.tab-pills-intro_stage.is-media>*{pointer-events:auto}
+.venue-card-fullbleed_media.is-media-center:not(.is-strip),.tab-pills-intro_frame.is-media{align-self:center}
+.venue-card-fullbleed_stage.is-media-center:not(:has(.is-strip)):not(:has(.is-bleed)){margin-top:calc(6.03125rem - 50vh)}
+.venue-card-fullbleed_stage.is-media-center:has(.is-bleed){margin-top:calc(6.65625rem - 50vh)}
+.tab-pills-intro_stage.is-media{margin-top:calc(6.0625rem - 50vh)}
 }

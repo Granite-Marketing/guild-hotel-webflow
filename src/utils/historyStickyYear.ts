@@ -252,7 +252,8 @@ const setupCollapseGallery = (root: HTMLElement) => {
   if (caption) {
     caption.style.zIndex = '4'
     caption.style.pointerEvents = 'none'
-    gsap.set(caption, { autoAlpha: 1 })
+    // Hidden until the reveal: the index mark is an inline span the word mask cannot move.
+    gsap.set(caption, { autoAlpha: 0 })
   }
 
   // gallery -> stack of one (bleed card on top) -> the same card opens to
@@ -295,8 +296,13 @@ const setupCollapseGallery = (root: HTMLElement) => {
     timeline.call(
       () => {
         // Called forwards and backwards; the scroll direction picks the reveal direction.
-        if (timeline.scrollTrigger?.direction === -1) captionReveal.reverse()
-        else captionReveal.play()
+        if (timeline.scrollTrigger?.direction === -1) {
+          captionReveal.reverse()
+          gsap.to(caption, { autoAlpha: 0, duration: 0.3, overwrite: true })
+        } else {
+          gsap.set(caption, { autoAlpha: 1, overwrite: true })
+          captionReveal.play()
+        }
       },
       undefined,
       2.2,
