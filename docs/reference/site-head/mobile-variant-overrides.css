@@ -33,4 +33,6 @@
 .venue-card-fullbleed_stage.is-media-center:not(:has(.is-strip)):not(:has(.is-bleed)){margin-top:calc(6.03125rem - 50vh)}
 .venue-card-fullbleed_stage.is-media-center:has(.is-bleed){margin-top:calc(6.65625rem - 50vh)}
 .tab-pills-intro_stage.is-media{margin-top:calc(6.0625rem - 50vh)}
+/* Corporate and Legal "Why teams choose the Guild": no rule above the first item (the list stacks into one column on phones) */
+.feature-grid-dark-eyebrow_list>:first-child .feature-grid-dark-eyebrow_item:first-child,.feature-grid-dark-eyebrow_list>.feature-grid-dark-eyebrow_item:first-child{border-top:0}
 }
