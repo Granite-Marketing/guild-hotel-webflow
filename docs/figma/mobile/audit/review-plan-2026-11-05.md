@@ -58,13 +58,13 @@ Done and measured at 390px against the Figma; desktop guard (`layout-snapshot.mj
 - Meetings venue modal: the top image is a slider on every width (progress line on phones, dashes on desktop). Each venue has one photo, so the other venues' photos fill the extra slides until real galleries exist (`src/utils/modalImageSlider.ts`, marked shortcut).
 - Head CSS now ships as `dist/site.css` next to the bundle (one `<link>` in the head, same tag as the footer script); sources stay in `docs/reference/site-head/`. The site head was over the 10,000-character cap, and jsDelivr will not serve files under `docs/` because the repo is over its 50 MB package limit.
 
-## Round three (comments posted 15:49 to 15:53, v1.1.35)
+## Round three (comments posted 15:49 to 15:53, live as v1.1.36)
 
 - Meetings venue modal: the slider had grown the desktop image to the photo's own shape (about 5:4); the slides now fill the Designer frame (2:1) absolutely.
 - Neighborhood: the burgundy category pill vanished over the burgundy "corporate & services" section; it now turns cream with burgundy text while its centre is over a section of its own colour (`tabDropdown`).
 - Contact: the checkbox styling applies at every width (desktop Figma is the same 18px outlined box, 12px gap); a word space before "privacy policy" restored.
 - Legal and Corporate "Why teams" top rule: already absent live on phone and desktop at 393px and 1440px; no change made.
-- v1.1.34 was already tagged on another branch (`claude/eloquent-bell-47541b`), so this release is v1.1.35.
+- v1.1.34 was tagged and set live from another branch (`claude/eloquent-bell-47541b`, F59 nav fix). It was merged here so nothing live is lost; v1.1.36 carries both.
 
 ## Open, needs Stephen
 
