@@ -1,0 +1,5 @@
+/* Happenings, blog and press cards: the image grows slightly on hover (desktop feedback, Happenings collection); the figure already clips it */
+@media (hover:hover){
+.article-card-staggered_item.is-link .u-image{transition:transform .6s cubic-bezier(.25,.1,.25,1)}
+.article-card-staggered_item.is-link:hover .u-image{transform:scale(1.05)}
+}

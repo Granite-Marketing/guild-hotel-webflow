@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.47
+
+### Patch Changes
+
+- Happenings cards: image grows slightly on hover.
+
 ## 1.1.46
 
 ### Patch Changes
