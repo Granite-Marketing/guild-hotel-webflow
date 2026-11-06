@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.41
+
+### Patch Changes
+
+- Press Offers instance deleted in the Designer, so its interim CSS hide is removed (F113).
+
 ## 1.1.40
 
 ### Patch Changes
