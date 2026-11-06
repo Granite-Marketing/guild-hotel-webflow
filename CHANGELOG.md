@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.45
+
+### Patch Changes
+
+- Rooms: quiz questions fade between steps, See all rooms gets a thin custom scrollbar, and the room card name sits optically lower at rest.
+
 ## 1.1.44
 
 ### Patch Changes

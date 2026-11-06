@@ -1,0 +1,5 @@
+/* See all rooms: thin cream scrollbar on the burgundy panel instead of the browser default (desktop feedback) */
+.room-list-hover-preview_component{scrollbar-width:thin;scrollbar-color:rgba(244,239,223,.45) transparent}
+.room-list-hover-preview_component::-webkit-scrollbar{width:4px}
+.room-list-hover-preview_component::-webkit-scrollbar-track{background:transparent}
+.room-list-hover-preview_component::-webkit-scrollbar-thumb{background:rgba(244,239,223,.45);border-radius:0}

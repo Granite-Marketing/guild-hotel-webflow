@@ -38,6 +38,8 @@ const ACTIVE_CLASS = 'is-active'
 const WIDE_CLASS = 'is-wide'
 const HIDDEN_CLASS = 'hide'
 const STEPS = 3
+const FADE_OUT = 0.25
+const FADE_IN = 0.45
 const GUEST_STEP = 1
 const NEST_TIMEOUT_MS = 8000
 // hoverImageSwap listens for this to put a panel back on its resting photo.
@@ -89,7 +91,7 @@ export const roomsQuiz = () => {
     if (heading && !heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1')
   })
 
-  const showStep = (step: number, moveFocus: boolean) => {
+  const swapStep = (step: number) =>
     panels.forEach((panel, panelStep) => {
       const isCurrent = panelStep === step
       if (!isCurrent && panel.classList.contains(ACTIVE_CLASS)) {
@@ -97,7 +99,36 @@ export const roomsQuiz = () => {
       }
       panel.classList.toggle(ACTIVE_CLASS, isCurrent)
     })
-    if (moveFocus) panels.get(step)?.querySelector<HTMLElement>('h2, h3')?.focus({ preventScroll: true })
+
+  // Desktop feedback: questions fade out and the next fades in, instead of swapping instantly.
+  const showStep = (step: number, moveFocus: boolean) => {
+    const next = panels.get(step)
+    const current = Array.from(panels.values()).find((panel) => panel.classList.contains(ACTIVE_CLASS))
+    const focusHeading = () => {
+      if (moveFocus) next?.querySelector<HTMLElement>('h2, h3')?.focus({ preventScroll: true })
+    }
+    gsap.killTweensOf(Array.from(panels.values()))
+    gsap.set(Array.from(panels.values()), { clearProps: 'opacity,visibility' })
+    if (!moveFocus || !current || !next || current === next) {
+      swapStep(step)
+      focusHeading()
+      return
+    }
+    gsap.to(current, {
+      autoAlpha: 0,
+      duration: FADE_OUT,
+      ease: 'power1.in',
+      onComplete: () => {
+        gsap.set(current, { clearProps: 'opacity,visibility' })
+        swapStep(step)
+        focusHeading()
+        gsap.fromTo(
+          next,
+          { autoAlpha: 0 },
+          { autoAlpha: 1, duration: FADE_IN, ease: 'power1.out', clearProps: 'opacity,visibility' },
+        )
+      },
+    })
   }
 
   const markSelected = (step: number, slug: string | undefined) => {

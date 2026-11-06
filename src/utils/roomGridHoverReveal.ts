@@ -23,6 +23,9 @@
 const CARD_SELECTOR = '.rooms-collection-room-grid_card'
 const TARGET_SELECTOR = '.rooms-collection-room-grid_details, footer'
 const DURATION = 0.45
+// Optical nudge (px): the name's line box keeps descender room below the caps, so an
+// exact 40px bottom inset reads as higher than the 40px left one.
+const OPTICAL_NUDGE = 6
 
 export const roomGridHoverReveal = () => {
   const cards = document.querySelectorAll<HTMLElement>(CARD_SELECTOR)
@@ -42,7 +45,8 @@ export const roomGridHoverReveal = () => {
     const restShift = () =>
       heading && header && content
         ? content.getBoundingClientRect().bottom -
-          (heading.getBoundingClientRect().bottom - Number(gsap.getProperty(header, 'y')))
+          (heading.getBoundingClientRect().bottom - Number(gsap.getProperty(header, 'y'))) +
+          OPTICAL_NUDGE
         : 0
     const video = card.querySelector<HTMLVideoElement>('video[data-hover-video]')
     const videoUrl = video?.dataset.hoverVideo?.trim()
