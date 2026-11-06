@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.50
+
+### Patch Changes
+
+- Beyond downtown arrow on a burgundy chip; venue modal top bar fits tablets.
+
 ## 1.1.49
 
 ### Patch Changes

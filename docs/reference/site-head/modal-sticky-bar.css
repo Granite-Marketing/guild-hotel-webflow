@@ -5,3 +5,8 @@
  .is-sticky-bar>.overlay-detail-panel-modal_footer{position:static;justify-self:end}
  [role=dialog]:has(.overlay-detail-panel-modal_extras) .overlay-detail-panel-modal_item{padding-top:.875rem;padding-bottom:.875rem}
 }
+/* Tablet: the panel padding drops to 32px, so pull the bar out by 8px (not 64px) to keep the arrow and CTA 24px from the edges; the title takes the middle space so the CTA stays on one line */
+@media (min-width:768px) and (max-width:991px){
+ .overlay-detail-panel-modal_header.is-sticky-bar{margin-left:-.5rem;margin-right:-.5rem;grid-template-columns:auto 1fr auto;column-gap:1rem;text-align:center}
+ .is-sticky-bar>.overlay-detail-panel-modal_footer .button{white-space:nowrap}
+}

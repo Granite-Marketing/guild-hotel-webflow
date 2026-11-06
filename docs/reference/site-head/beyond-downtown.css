@@ -1,5 +1,5 @@
-/* F97 Neighborhood "beyond downtown": each image card is a link (href "#" for now); on desktop hover an arrow (the card carousel arrow) eases into the top-right corner with the button hover easing. Phones show no arrow. */
-.timeline-scatter-images_link>.w-embed{position:absolute;top:1.5rem;right:1.5rem;opacity:0;transform:translateX(-.5rem);transition:opacity var(--btn-dur,.45s) var(--btn-ease,ease),transform var(--btn-dur,.45s) var(--btn-ease,ease)}
+/* F97 Neighborhood "beyond downtown": each image card is a link (href "#" for now); on desktop hover an arrow (the card carousel arrow) eases into the top-right corner with the button hover easing. Phones show no arrow. The arrow sits on a burgundy chamfered chip so it reads on light photos too. */
+.timeline-scatter-images_link>.w-embed{position:absolute;top:1.5rem;right:1.5rem;display:flex;align-items:center;justify-content:center;width:3.5rem;height:2.75rem;background-color:var(--_primitives---colors--burgundy);color:var(--_primitives---colors--neutral-lightest);clip-path:var(--btn-chamfer);opacity:0;transform:translateX(-.5rem);transition:opacity var(--btn-dur,.45s) var(--btn-ease,ease),transform var(--btn-dur,.45s) var(--btn-ease,ease)}
 @media (hover:hover) and (min-width:768px){
  .timeline-scatter-images_item:hover .timeline-scatter-images_link>.w-embed,.timeline-scatter-images_link:focus-visible>.w-embed{opacity:1;transform:none}
 }
