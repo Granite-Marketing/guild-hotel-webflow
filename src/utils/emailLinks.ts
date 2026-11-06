@@ -7,11 +7,13 @@
  * component prop, which cannot hold a link per instance.
  */
 
+// Press variant of form-split-script-contact; other forms keep plain text (signed off).
+const PRESS_FORM = '.section_form-split-script-contact.w-variant-69366689-4811-652d-211d-fe0e9582a917'
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export const emailLinks = () => {
   document
-    .querySelectorAll<HTMLElement>('.section_form-split-script-contact p, .section_form-split-script-contact div')
+    .querySelectorAll<HTMLElement>(`${PRESS_FORM} p, ${PRESS_FORM} div`)
     .forEach((element) => {
       const address = element.textContent?.trim() ?? ''
       if (element.children.length || !EMAIL.test(address)) return

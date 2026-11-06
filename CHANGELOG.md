@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.40
+
+### Patch Changes
+
+- Email mailto links only on the Press form (F112); Corporate and Legal forms keep their signed-off plain text.
+
 ## 1.1.39
 
 ### Patch Changes
