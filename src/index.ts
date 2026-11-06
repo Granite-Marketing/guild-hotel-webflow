@@ -50,6 +50,7 @@ import { smoothScroll } from '$utils/smoothScroll'
 import { staggerCards } from '$utils/staggerCards'
 import { earlyVenueTabs } from '$utils/earlyVenueTabs'
 import { stickyCta } from '$utils/stickyCta'
+import { scriptTiltSpace } from '$utils/scriptTiltSpace'
 import { stickyTabs } from '$utils/stickyTabs'
 import { swiperSliders } from '$utils/swiperSliders'
 import { tabDropdown } from '$utils/tabDropdown'
@@ -94,6 +95,8 @@ window.Webflow.push(() => {
   // M6: mobile tab bars collapse to a compact selector; before the scroll
   // engine because it shortens the bars below 768px.
   tabDropdown()
+  // Desktop feedback: tilted script headings get room for their tilt; before the scroll engine (changes page height).
+  scriptTiltSpace()
 
   // slot A: debugOverlay() (before the engine, so it logs the first refresh)
   smoothScroll.init()

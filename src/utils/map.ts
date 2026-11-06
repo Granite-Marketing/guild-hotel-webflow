@@ -189,24 +189,20 @@ const buildMap = async (root: HTMLElement, points: MapPoint[]) => {
   const bounds = new LatLngBounds()
 
   if (home) {
-    // F88: the hotel's own marker is a burgundy chamfered "the guild" label,
-    // far larger than the venue dots, so it reads first on every map.
+    // F88, desktop feedback: the hotel's own marker is a burgundy chamfered
+    // hexagon, a little larger than the venue dots, so it reads first without
+    // covering the map.
     const homePin = document.createElement('div')
     homePin.title = root.getAttribute('data-map-home-title') ?? ''
-    homePin.textContent = 'the guild'
     homePin.className = 'map-home-pin'
     Object.assign(homePin.style, {
-      zIndex: '2',
+      // Above the resting venue dots (2), level with a highlighted one (3).
+      zIndex: '3',
       transform: 'translate(-50%, -50%)',
-      padding: '0.75rem 1.5rem',
+      width: '2.75rem',
+      height: '2.75rem',
       background: '#4A1217',
-      color: '#F4EFDF',
-      fontFamily: 'var(--_typography---font-styles--heading, inherit)',
-      fontWeight: '900',
-      fontSize: '1rem',
-      letterSpacing: '-0.03em',
-      whiteSpace: 'nowrap',
-      clipPath: 'polygon(0 0.75rem, 0.6875rem 0, calc(100% - 0.6875rem) 0, 100% 0.75rem, 100% calc(100% - 0.75rem), calc(100% - 0.6875rem) 100%, 0.6875rem 100%, 0 calc(100% - 0.75rem))',
+      clipPath: 'polygon(0 30%, 30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%)',
       pointerEvents: 'none',
     })
     new PinOverlay(home, homePin).setMap(googleMap)

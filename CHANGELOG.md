@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.51
+
+### Patch Changes
+
+- Meetings: tilted script headings get room for their tilt, detail panels slide up from the bottom, and the Guild map marker is a smaller burgundy hexagon.
+
 ## 1.1.50
 
 ### Patch Changes
