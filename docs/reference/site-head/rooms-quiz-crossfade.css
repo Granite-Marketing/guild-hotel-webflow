@@ -1,0 +1,4 @@
+/* Rooms quiz (src/utils/roomsQuiz.ts): the steps share one grid cell so the next step crossfades in over the current one, which stays visible underneath (no flash of the page behind) */
+.section_rooms-collection-quiz{display:grid}
+.section_rooms-collection-quiz>.rooms-collection-quiz_component{grid-area:1/1}
+.section_rooms-collection-quiz>.rooms-collection-quiz_component.is-entering{display:grid}

@@ -38,8 +38,8 @@ const ACTIVE_CLASS = 'is-active'
 const WIDE_CLASS = 'is-wide'
 const HIDDEN_CLASS = 'hide'
 const STEPS = 3
-const FADE_OUT = 0.25
-const FADE_IN = 0.45
+const CROSSFADE = 0.6
+const ENTERING_CLASS = 'is-entering'
 const GUEST_STEP = 1
 const NEST_TIMEOUT_MS = 8000
 // hoverImageSwap listens for this to put a panel back on its resting photo.
@@ -100,7 +100,9 @@ export const roomsQuiz = () => {
       panel.classList.toggle(ACTIVE_CLASS, isCurrent)
     })
 
-  // Desktop feedback: questions fade out and the next fades in, instead of swapping instantly.
+  // Desktop feedback: the next question crossfades in over the current one, which
+  // stays fully visible underneath (CSS stacks the steps in one grid cell), so
+  // nothing behind the quiz ever shows through.
   const showStep = (step: number, moveFocus: boolean) => {
     const next = panels.get(step)
     const current = Array.from(panels.values()).find((panel) => panel.classList.contains(ACTIVE_CLASS))
@@ -108,27 +110,29 @@ export const roomsQuiz = () => {
       if (moveFocus) next?.querySelector<HTMLElement>('h2, h3')?.focus({ preventScroll: true })
     }
     gsap.killTweensOf(Array.from(panels.values()))
-    gsap.set(Array.from(panels.values()), { clearProps: 'opacity,visibility' })
+    panels.forEach((panel) => panel.classList.remove(ENTERING_CLASS))
+    gsap.set(Array.from(panels.values()), { clearProps: 'opacity,visibility,zIndex' })
     if (!moveFocus || !current || !next || current === next) {
       swapStep(step)
       focusHeading()
       return
     }
-    gsap.to(current, {
-      autoAlpha: 0,
-      duration: FADE_OUT,
-      ease: 'power1.in',
-      onComplete: () => {
-        gsap.set(current, { clearProps: 'opacity,visibility' })
-        swapStep(step)
-        focusHeading()
-        gsap.fromTo(
-          next,
-          { autoAlpha: 0 },
-          { autoAlpha: 1, duration: FADE_IN, ease: 'power1.out', clearProps: 'opacity,visibility' },
-        )
+    next.classList.add(ENTERING_CLASS)
+    focusHeading()
+    gsap.fromTo(
+      next,
+      { autoAlpha: 0, zIndex: 1 },
+      {
+        autoAlpha: 1,
+        duration: CROSSFADE,
+        ease: 'power1.inOut',
+        onComplete: () => {
+          swapStep(step)
+          next.classList.remove(ENTERING_CLASS)
+          gsap.set(next, { clearProps: 'opacity,visibility,zIndex' })
+        },
       },
-    })
+    )
   }
 
   const markSelected = (step: number, slug: string | undefined) => {
@@ -249,6 +253,13 @@ export const roomsQuiz = () => {
       hideResults()
       showStep(1, false)
       smoothScroll.scrollTo(root)
+      // Hiding the results refreshes ScrollTrigger once the scroll settles, which can
+      // move the quiz; land on its top again if it ended up off.
+      const settle = () => {
+        ScrollTrigger.removeEventListener('scrollEnd', settle)
+        if (Math.abs(root.getBoundingClientRect().top) > 2) smoothScroll.scrollTo(root)
+      }
+      ScrollTrigger.addEventListener('scrollEnd', settle)
       panels.get(1)?.querySelector<HTMLElement>('h2, h3')?.focus({ preventScroll: true })
     })
   })

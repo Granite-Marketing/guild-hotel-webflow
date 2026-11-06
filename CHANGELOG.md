@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.52
+
+### Patch Changes
+
+- Rooms quiz: steps crossfade with no flash, Back to the quiz re-lands on the quiz top.
+
 ## 1.1.51
 
 ### Patch Changes
