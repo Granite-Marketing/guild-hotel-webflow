@@ -1,5 +1,5 @@
-/* Happenings, blog and press cards: the image grows slightly on hover (desktop feedback, Happenings collection); the figure already clips it */
+/* Story cards (Happenings, blog, press lists and the More around town pair): the image grows slightly on hover (desktop feedback); each figure already clips it */
 @media (hover:hover){
-.article-card-staggered_item.is-link .u-image{transition:transform .6s cubic-bezier(.25,.1,.25,1)}
-.article-card-staggered_item.is-link:hover .u-image{transform:scale(1.05)}
+.article-card-staggered_item.is-link .u-image,.split-card-pair-captioned_card .split-card-pair-captioned_image{transition:transform .6s cubic-bezier(.25,.1,.25,1)}
+.article-card-staggered_item.is-link:hover .u-image,.split-card-pair-captioned_card:hover .split-card-pair-captioned_image{transform:scale(1.05)}
 }

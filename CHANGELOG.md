@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.48
+
+### Patch Changes
+
+- More around town cards: image grows slightly on hover.
+
 ## 1.1.47
 
 ### Patch Changes
