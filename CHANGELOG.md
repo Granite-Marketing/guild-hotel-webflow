@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.49
+
+### Patch Changes
+
+- Contact: sticky details column only on desktop; tablets keep the stacked layout.
+
 ## 1.1.48
 
 ### Patch Changes

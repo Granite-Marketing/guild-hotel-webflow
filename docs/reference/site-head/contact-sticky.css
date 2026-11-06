@@ -1,5 +1,5 @@
-/* /contact desktop (src/utils/contactStickyColumn.ts). F103: the details column sticks under the nav while the form, moved under the image, scrolls; 160px between image and form as before. */
-@media (min-width:768px){
+/* /contact desktop only (992px and up; tablets and phones keep the stacked layout) (src/utils/contactStickyColumn.ts). F103: the details column sticks under the nav while the form, moved under the image, scrolls; 160px between image and form as before. */
+@media (min-width:992px){
  .form-split-script-contact_component:has(>.form-contact-fields_form-block){row-gap:10rem}
  .form-split-script-contact_component:has(>.form-contact-fields_form-block)>.form-split-script-contact_content{grid-row:1/3;position:sticky;top:7rem;align-self:start}
  .form-split-script-contact_component>.form-contact-fields_form-block{grid-column:2;grid-row:2}

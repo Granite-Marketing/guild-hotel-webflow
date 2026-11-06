@@ -9,8 +9,8 @@
  * docs/reference/site-head/contact-sticky.css places it and makes the details
  * column sticky.
  *
- * Desktop only (768px and up): phones were signed off with the stacked layout.
- * shortcut: decided once at load, so a resize across 768px keeps the first state.
+ * Desktop only (992px and up): tablets and phones keep the stacked layout, where a sticky column would sit over the image.
+ * shortcut: decided once at load, so a resize across 992px keeps the first state.
  */
 
 export const contactStickyColumn = () => {
@@ -18,7 +18,7 @@ export const contactStickyColumn = () => {
   const grid = document.querySelector<HTMLElement>('.form-split-script-contact_component')
   const formBlock = formSection?.querySelector<HTMLElement>('.form-contact-fields_form-block')
   if (!formSection || !grid || !formBlock) return
-  if (!window.matchMedia('(min-width: 768px)').matches) return
+  if (!window.matchMedia('(min-width: 992px)').matches) return
   grid.append(formBlock)
   formSection.classList.add('hide')
 }
