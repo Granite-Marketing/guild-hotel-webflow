@@ -19,8 +19,10 @@ import { accordion } from '$utils/accordion'
 import { buttonHover } from '$utils/buttonHover'
 import { cardCarouselHeaderLeft } from '$utils/cardCarouselHeaderLeft'
 import { cmsItemLinks } from '$utils/cmsItemLinks'
+import { contactStickyColumn } from '$utils/contactStickyColumn'
 import { currentYear } from '$utils/currentYear'
 import { eagerImages } from '$utils/eagerImages'
+import { emailLinks } from '$utils/emailLinks'
 import { formPlaceholders } from '$utils/formPlaceholders'
 import { galleryFilter } from '$utils/galleryFilter'
 import { gsapBasicAnimations } from '$utils/gsapBasicAnimations'
@@ -33,6 +35,7 @@ import { imageTrailHover } from '$utils/imageTrailHover'
 import { map } from '$utils/map'
 import { mediaTabs } from '$utils/mediaTabs'
 import { modalImageSlider } from '$utils/modalImageSlider'
+import { modalStickyBar } from '$utils/modalStickyBar'
 import { modals } from '$utils/modals'
 import { navTheme } from '$utils/navTheme'
 import { navToggle } from '$utils/navToggle'
@@ -41,6 +44,7 @@ import { roomGridHoverReveal } from '$utils/roomGridHoverReveal'
 import { roomListHoverPreview } from '$utils/roomListHoverPreview'
 import { roomsQuiz } from '$utils/roomsQuiz'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
+import { sectionVideo } from '$utils/sectionVideo'
 import { smoothScroll } from '$utils/smoothScroll'
 import { staggerCards } from '$utils/staggerCards'
 import { earlyVenueTabs } from '$utils/earlyVenueTabs'
@@ -78,6 +82,9 @@ window.Webflow.push(() => {
   // before the scroll engine because hiding labels shortens forms by ~22px
   // per row and would shift ScrollTrigger positions.
   formPlaceholders()
+  // F103: before the scroll engine, since it moves the contact form and changes page height.
+  contactStickyColumn()
+  emailLinks()
   // F34: wrap button labels for the fill-and-roll hover (CSS in the site head
   // block). Before the scroll engine and before swiperSliders so Swiper loop
   // clones copy already-wrapped markup.
@@ -95,6 +102,9 @@ window.Webflow.push(() => {
   swiperSliders()
   // Mobile review: the venue modal image is a slider on every width (Figma Meetings-Overlay).
   modalImageSlider()
+  modalStickyBar()
+  // F106: Dinings second section plays its CMS video over the image when one is set.
+  sectionVideo()
   offersSliderSplit()
   cardCarouselHeaderLeft()
 
@@ -136,10 +146,10 @@ window.Webflow.push(() => {
   // F10: Reserve a Table on the Dinings template. The button sits in the
   // shared Hero component, so it is scoped by the template's page id.
   stickyCta(`html[data-wf-page="${DININGS_TEMPLATE_PAGE_ID}"] .section_hero-fullbleed-centered .button`)
-  // Mobile review: the story "Learn more" floats over the copy on phones (Figma mobile).
+  // Story "Learn more" floats over the copy (Figma mobile; F80 desktop too).
+  stickyCta('.section_article-body .article-body_footer .button')
   // shortcut: decided once at load, so a resize across 768px keeps the first state; fine for phones.
   if (window.matchMedia('(max-width: 767px)').matches) {
-    stickyCta('.section_article-body .article-body_footer .button')
     // Mobile review: the Dining venue selector shows from the first screen (Figma mobile).
     earlyVenueTabs(`html[data-wf-page="${DINING_PAGE_ID}"]`)
   }

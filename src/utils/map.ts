@@ -36,7 +36,6 @@ const PANEL_GAP = 48
 const pinColors = {
   normal: { fill: '#906E58', stroke: '#F4EFDF' },
   active: { fill: '#272516', stroke: '#F4EFDF' },
-  home: { fill: '#F4EFDF', stroke: '#272516' },
 }
 
 // Warm greyscale to sit under the tan content panel; POIs and transit hidden.
@@ -190,11 +189,26 @@ const buildMap = async (root: HTMLElement, points: MapPoint[]) => {
   const bounds = new LatLngBounds()
 
   if (home) {
+    // F88: the hotel's own marker is a burgundy chamfered "the guild" label,
+    // far larger than the venue dots, so it reads first on every map.
     const homePin = document.createElement('div')
     homePin.title = root.getAttribute('data-map-home-title') ?? ''
-    homePin.innerHTML = pinMarkup(24)
-    homePin.style.zIndex = '1'
-    paintPin(homePin, pinColors.home, 1)
+    homePin.textContent = 'the guild'
+    homePin.className = 'map-home-pin'
+    Object.assign(homePin.style, {
+      zIndex: '2',
+      transform: 'translate(-50%, -50%)',
+      padding: '0.75rem 1.5rem',
+      background: '#4A1217',
+      color: '#F4EFDF',
+      fontFamily: 'var(--_typography---font-styles--heading, inherit)',
+      fontWeight: '900',
+      fontSize: '1rem',
+      letterSpacing: '-0.03em',
+      whiteSpace: 'nowrap',
+      clipPath: 'polygon(0 0.75rem, 0.6875rem 0, calc(100% - 0.6875rem) 0, 100% 0.75rem, 100% calc(100% - 0.75rem), calc(100% - 0.6875rem) 100%, 0.6875rem 100%, 0 calc(100% - 0.75rem))',
+      pointerEvents: 'none',
+    })
     new PinOverlay(home, homePin).setMap(googleMap)
     bounds.extend(home)
   }

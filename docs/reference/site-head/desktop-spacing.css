@@ -1,0 +1,15 @@
+/* Desktop Trello round spacing (2026-11-06). Desktop only; mobile was signed off. */
+@media (min-width:768px){
+ /* F100 Blog and Happenings: less space from the intro subnav to the first list group (192px to 144px). Press keeps its own. */
+ .section_tab-pills-intro:not(:has(.w-variant-59a1b413-f64f-13c3-5d27-710cb741a3c0))+.section_article-card-staggered>.padding-section-small{padding-top:0}
+ /* F79, F101: room after the last list group before Offers & Packages (48px to 140px, Figma 139px). */
+ .section_article-card-staggered+.section_offers-slider-split{margin-top:5.75rem}
+ /* F81 Story template: gap between the two offset images 128px to 182px (Figma 202px at 1600 wide). */
+ .section_article-body~.section_image-inset-single+.section_split-image-text-light{margin-top:3.375rem}
+}
+@media (min-width:992px){
+ /* F85 History: "the guild builds the future" stays on one line; its header spans the empty middle column (it wrapped below about 1366px). */
+ .history-timeline_content.is-future>.history-timeline_item-header{grid-column:1/3}
+ /* F86 History: landmark content centres between the nav bar (92px) and the page bottom, not the full viewport. */
+ .section_history-landmark{padding-top:5.75rem}
+}

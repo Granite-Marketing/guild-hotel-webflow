@@ -21,6 +21,8 @@
 const DEFAULT_SELECTOR = '[data-sticky-cta]'
 const STUCK_CLASS = 'is-stuck'
 const DOCK_GAP = 24
+/** F105: on desktop the docked button settles this close to the bottom once the page scrolls. */
+const DESKTOP_GAP = 16
 const END_SELECTOR = '.section_cta-booking-newsletter, .section_footer-links'
 
 export const stickyCta = (selector = DEFAULT_SELECTOR) => {
@@ -34,13 +36,16 @@ export const stickyCta = (selector = DEFAULT_SELECTOR) => {
   // Docked distance from the viewport bottom. When the button starts in the
   // first screen, it docks exactly where it sits, so it never jumps.
   let dockGap = DOCK_GAP
+  const isDesktop = window.matchMedia('(min-width: 768px)').matches
+  let settled = false
+  const bottomGap = () => (isDesktop && settled ? DESKTOP_GAP : dockGap)
 
   const measureDock = () => {
     const naturalBottom = holder.getBoundingClientRect().bottom + window.scrollY
     const gapAtTop = window.innerHeight - naturalBottom
     // One pixel under its own spot, so a first-screen button is docked from
     // load instead of being clipped by the hero edge until the first scroll.
-    dockGap = gapAtTop > 0 ? Math.max(0, gapAtTop - 1) : DOCK_GAP
+    dockGap = gapAtTop > 0 ? Math.max(0, gapAtTop - 1) : isDesktop ? DESKTOP_GAP : DOCK_GAP
   }
 
   const holdSpace = () => {
@@ -57,7 +62,7 @@ export const stickyCta = (selector = DEFAULT_SELECTOR) => {
       gsap.set(button, {
         position: 'fixed',
         left: '50%',
-        bottom: dockGap,
+        bottom: bottomGap(),
         xPercent: -50,
         zIndex: 90,
       })
@@ -83,6 +88,19 @@ export const stickyCta = (selector = DEFAULT_SELECTOR) => {
     },
     onToggle: (self: ScrollTriggerInstance) => setStuck(self.isActive),
   })
+
+  // F105: a first-screen button docks where it sits, then eases down once
+  // the visitor has scrolled half a screen.
+  if (isDesktop) {
+    ScrollTrigger.create({
+      start: () => window.innerHeight / 2,
+      end: 'max',
+      onToggle: (self: ScrollTriggerInstance) => {
+        settled = self.isActive
+        if (isStuck) gsap.to(button, { bottom: bottomGap(), duration: 0.4, ease: 'power2.out' })
+      },
+    })
+  }
 
   if (!endSection) return
 

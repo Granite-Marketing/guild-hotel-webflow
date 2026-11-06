@@ -19,8 +19,8 @@
 
 const ACTIVE_CLASS = 'is-active'
 const DURATION = 0.35
-// The photo sits behind the grid text, dimmed so cream text stays readable.
-const HOVER_OPACITY = 0.55
+// F109: the photo shows in front of the grid text and dividers, at full strength.
+const HOVER_OPACITY = 1
 
 export const hoverFollowImage = () => {
   const zones = document.querySelectorAll<HTMLElement>('[data-hover-image]')
@@ -39,7 +39,7 @@ export const hoverFollowImage = () => {
 
     const image = media.querySelector<HTMLImageElement>('img')
     if (getComputedStyle(zone).position === 'static') gsap.set(zone, { position: 'relative' })
-    gsap.set(media, { position: 'absolute', top: 0, left: 0, xPercent: -50, yPercent: -50, zIndex: 0 })
+    gsap.set(media, { position: 'absolute', top: 0, left: 0, xPercent: -50, yPercent: -50, zIndex: 10 })
 
     const moveX = gsap.quickTo(media, 'x', { duration: 0.5, ease: 'power3.out' })
     const moveY = gsap.quickTo(media, 'y', { duration: 0.5, ease: 'power3.out' })

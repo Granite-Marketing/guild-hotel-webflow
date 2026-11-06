@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.39
+
+### Patch Changes
+
+- Desktop Trello round two: mobile tab pill no longer flips to cream, story and dining sticky CTAs (F80, F105), offset image and list spacing (F79, F81, F100, F101, F111), history timeline and landmark (F85, F86), venue modal sticky bar (F90 to F92), map home marker (F88), contact sticky column (F103), dining section video (F106), corporate hover image in front (F109), press email link and offers hidden (F112, F113).
+
 ## 1.1.38
 
 ### Patch Changes

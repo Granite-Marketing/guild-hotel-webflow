@@ -1,0 +1,9 @@
+/* Press (desktop Trello round, 2026-11-06). */
+/* F113: Offers & Packages removed from Press (form, FAQs, More of the Guild). Hidden here until Stephen approves deleting the instance in the Designer. */
+.section_form-split-script-contact.w-variant-69366689-4811-652d-211d-fe0e9582a917+.section_offers-slider-split{display:none}
+/* F112: the press email is an underlined mailto link (src/utils/emailLinks.ts). */
+a[data-email-link]{color:inherit;text-decoration:underline;text-underline-offset:.2em}
+@media (min-width:768px){
+ /* F111: room after the press list before the enquiries form (120px to 312px, Figma 350px at 1600 wide). */
+ .section_article-card-staggered+.section_form-split-script-contact{margin-top:12rem}
+}
