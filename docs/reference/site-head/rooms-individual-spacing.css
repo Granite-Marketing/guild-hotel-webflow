@@ -1,0 +1,6 @@
+/* Room page Back to rooms (F74/F75): tablet and landscape phones keep the desktop spacing instead of the large default padding; portrait phones keep their own mobile values */
+@media (min-width:480px) and (max-width:991px){
+.padding-section-xlarge.w-variant-e4bd4c20-6499-56f7-64db-9fa47a4a1f40{padding-top:3rem;padding-bottom:6rem}
+.script-intro-centered_component.w-variant-e4bd4c20-6499-56f7-64db-9fa47a4a1f40{padding-top:0;padding-bottom:0;row-gap:2.5rem}
+.script-intro-centered_back.w-variant-e4bd4c20-6499-56f7-64db-9fa47a4a1f40{margin-top:0;margin-bottom:1.5rem}
+}

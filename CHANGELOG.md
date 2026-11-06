@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.46
+
+### Patch Changes
+
+- Room pages: Back to rooms keeps the desktop spacing on tablets and landscape phones.
+
 ## 1.1.45
 
 ### Patch Changes
