@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.42
+
+### Patch Changes
+
+- Dinings template other dining options: card stagger for the Collection List in the More of the Guild classes (F107).
+
 ## 1.1.41
 
 ### Patch Changes

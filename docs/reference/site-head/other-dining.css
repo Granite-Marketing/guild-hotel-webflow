@@ -1,0 +1,7 @@
+/* F107 Dinings template "other dining options": a Collection List in the More of the Guild card classes. Its items share one figure class, so the tall, base, mid stagger of the component (is-tall, is-mid) repeats here by position. */
+.card-carousel-header-left_slides.w-dyn-items>.card-carousel-header-left_slide:nth-child(3n+1) .card-carousel-header-left_figure{height:31.375rem}
+.card-carousel-header-left_slides.w-dyn-items>.card-carousel-header-left_slide:nth-child(3n+3) .card-carousel-header-left_figure{height:28.9375rem}
+@media (max-width:767px){
+ .card-carousel-header-left_slides.w-dyn-items>.card-carousel-header-left_slide:nth-child(3n+1) .card-carousel-header-left_figure{height:27.3125rem}
+ .card-carousel-header-left_slides.w-dyn-items>.card-carousel-header-left_slide:nth-child(3n+3) .card-carousel-header-left_figure{height:25.1875rem}
+}
