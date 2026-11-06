@@ -190,8 +190,11 @@ export const roomsQuiz = () => {
     const back = target.closest<HTMLElement>('[data-rooms-quiz-back]')
     if (back) {
       event.preventDefault()
+      // F69: land flush with the viewport top; Webflow.js would stop clear of the nav.
+      event.stopPropagation()
       const step = Number(back.closest<HTMLElement>('[data-rooms-quiz-step]')?.dataset.roomsQuizStep)
       if (step > 1) showStep(step - 1, true)
+      smoothScroll.scrollTo(root)
     }
   })
 

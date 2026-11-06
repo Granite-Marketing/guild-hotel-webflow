@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.38
+
+### Patch Changes
+
+- Desktop Trello round: hexagon masks close to a full-screen rectangle on every breakpoint (F64), quiz Back lands flush (F69), room result name sits at the card inset and plays an optional hover video (F72, F73), flat script headings tilt on desktop (F76).
+
 ## 1.1.37
 
 ### Patch Changes
