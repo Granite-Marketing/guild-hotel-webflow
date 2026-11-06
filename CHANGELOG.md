@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.43
+
+### Patch Changes
+
+- Neighborhood beyond downtown cards are placeholder links with a desktop hover arrow (F97).
+
 ## 1.1.42
 
 ### Patch Changes

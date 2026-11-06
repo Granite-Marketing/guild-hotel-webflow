@@ -40,6 +40,7 @@ import { modals } from '$utils/modals'
 import { navTheme } from '$utils/navTheme'
 import { navToggle } from '$utils/navToggle'
 import { offersSliderSplit } from '$utils/offersSliderSplit'
+import { placeholderLinks } from '$utils/placeholderLinks'
 import { roomGridHoverReveal } from '$utils/roomGridHoverReveal'
 import { roomListHoverPreview } from '$utils/roomListHoverPreview'
 import { roomsQuiz } from '$utils/roomsQuiz'
@@ -85,6 +86,7 @@ window.Webflow.push(() => {
   // F103: before the scroll engine, since it moves the contact form and changes page height.
   contactStickyColumn()
   emailLinks()
+  placeholderLinks()
   // F34: wrap button labels for the fill-and-roll hover (CSS in the site head
   // block). Before the scroll engine and before swiperSliders so Swiper loop
   // clones copy already-wrapped markup.
