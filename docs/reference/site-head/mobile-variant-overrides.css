@@ -35,4 +35,6 @@
 .tab-pills-intro_stage.is-media{margin-top:calc(6.0625rem - 50vh)}
 /* Corporate and Legal "Why teams choose the Guild": no rule above the first item (the list stacks into one column on phones) */
 .feature-grid-dark-eyebrow_list>:first-child .feature-grid-dark-eyebrow_item:first-child,.feature-grid-dark-eyebrow_list>.feature-grid-dark-eyebrow_item:first-child{border-top:0}
+/* Rooms quiz results: the room cards section adds no bottom space, so the next section keeps the spacing it had before the quiz revealed the cards */
+.section_rooms-collection-room-grid{padding-bottom:0}
 }

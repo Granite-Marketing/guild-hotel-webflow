@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.44
+
+### Patch Changes
+
+- Rooms quiz: no extra space above the next section on phones once the results show
+
 ## 1.1.43
 
 ### Patch Changes
