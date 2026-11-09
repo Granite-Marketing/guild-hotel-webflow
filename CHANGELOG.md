@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.62
+
+### Patch Changes
+
+- Venue image stacks settle more slowly (snap 1.6 to 2.6s, scrub 2); the wellness page stack gets 200vh per panel like home.
+
 ## 1.1.61
 
 ### Patch Changes

@@ -55,3 +55,4 @@ Items 1 to 9 are live on staging and were checked at 1440, 991, 800, 650 and 390
 6. Underline on padded links (rooms quiz results, Safari): the line uses the content box, so it no longer runs into side padding.
 7. New `data-reveal="image-fade"`: fade in while the image settles from a slight zoom. Now on Gallery Mosaic figures, Map Feature figure and Meetings feature cards; large split images keep the bottom-up mask.
 8. Underline distance (mobile): the line now sits on an inline span round the link text, about 0.18em under the baseline on every link, instead of under the link box. v1.1.61.
+9. Wellness stacks (home and /wellness): snap 1.6 to 2.6s, scrub 2, 200vh per panel on both. v1.1.62.
