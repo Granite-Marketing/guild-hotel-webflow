@@ -190,6 +190,8 @@ interface SplitTypeInstance {
   words: HTMLElement[] | null;
   lines: HTMLElement[] | null;
   chars: HTMLElement[] | null;
+  /** Restores the original markup (never call it on an autoSplit instance). */
+  revert: () => void;
 }
 
 interface SplitTextOptions {

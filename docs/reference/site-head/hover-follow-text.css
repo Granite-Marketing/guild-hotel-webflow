@@ -1,4 +1,4 @@
-/* Desktop feedback (Corporate "why teams choose"): hovering shows the follow photo first; then the hovered item's chamfered panel and its text fade in on top of it, so the photo never covers what is being read. Leaving drops the item back under the photo at once (the photo covers it, or fades out to reveal it in place). */
+/* Desktop feedback (Corporate "why teams choose"): hovering shows the follow photo first; then the hovered item's chamfered panel fades in on top of it and its text masks in line by line (hoverFollowImage.ts), so the photo never covers what is being read. Leaving drops the item back under the photo at once (the photo covers it, or fades out to reveal it in place). */
 .feature-grid-dark-eyebrow_list{z-index:auto}
 .feature-grid-dark-eyebrow_item{position:relative}
 .feature-grid-dark-eyebrow_item::before{content:"";position:absolute;left:-1.25rem;right:-1.25rem;top:calc(var(--hover-panel-top,0px) - 1.25rem);height:calc(var(--hover-panel-height,100%) + 2.5rem);background:var(--_primitives---colors--neutral-darkest);clip-path:var(--btn-chamfer);opacity:0;pointer-events:none}
@@ -6,7 +6,5 @@
 .feature-grid-dark-eyebrow_item.is-active::before{z-index:11}
 .feature-grid-dark-eyebrow_item.is-active>*{position:relative;z-index:12}
 .feature-grid-dark-eyebrow_item.is-active::before{opacity:1;animation:hover-panel-in .7s cubic-bezier(.22,1,.36,1) .2s both}
-.feature-grid-dark-eyebrow_item.is-active>*{animation:hover-text-in .7s cubic-bezier(.22,1,.36,1) .3s both}
 @keyframes hover-panel-in{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
-@keyframes hover-text-in{from{opacity:0;transform:translateY(.5rem)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.feature-grid-dark-eyebrow_item.is-active::before,.feature-grid-dark-eyebrow_item.is-active>*{animation:none}}
+@media (prefers-reduced-motion:reduce){.feature-grid-dark-eyebrow_item.is-active::before{animation:none}}

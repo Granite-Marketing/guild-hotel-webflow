@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.57
+
+### Patch Changes
+
+- Corporate hover text masks in line by line over the panel instead of fading.
+
 ## 1.1.56
 
 ### Patch Changes

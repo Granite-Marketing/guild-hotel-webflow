@@ -21,6 +21,43 @@ const ACTIVE_CLASS = 'is-active'
 const DURATION = 0.5
 // F109: the photo shows in front of the grid text and dividers, at full strength.
 const HOVER_OPACITY = 1
+// The hovered item's text masks in line by line once its panel shows (panel fade starts at 0.2s in CSS).
+const LINE_DELAY = 0.3
+const LINE_STAGGER = 0.08
+const LINE_DURATION = 0.8
+
+type LineMask = { splits: SplitTypeInstance[]; timeline: GsapTimeline }
+const lineMasks = new Map<HTMLElement, LineMask>()
+
+// Each line rises from behind its own edge: SplitText lines, each wrapped in a clipping block.
+// Split fresh on every hover, so the lines always match the current width and font.
+const maskInLines = (item: HTMLElement) => {
+  restoreLines(item)
+  const targets = Array.from(item.children) as HTMLElement[]
+  if (!targets.length) return
+  const splits = targets.map((target) => new SplitText(target, { type: 'lines' }))
+  const lines = splits.flatMap((split) => split.lines ?? [])
+  lines.forEach((line) => {
+    const clip = document.createElement('div')
+    Object.assign(clip.style, { overflow: 'hidden', paddingBottom: '0.12em', marginBottom: '-0.12em' })
+    line.before(clip)
+    clip.append(line)
+  })
+  const timeline = gsap.timeline({ delay: LINE_DELAY })
+  lines.forEach((line, index) => {
+    timeline.fromTo(line, { yPercent: 110 }, { yPercent: 0, duration: LINE_DURATION, ease: 'power3.out' }, index * LINE_STAGGER)
+  })
+  lineMasks.set(item, { splits, timeline })
+}
+
+// Back to plain text (the clips sit inside the split elements, so revert removes them too).
+const restoreLines = (item: HTMLElement) => {
+  const mask = lineMasks.get(item)
+  if (!mask) return
+  mask.timeline.kill()
+  mask.splits.forEach((split) => split.revert())
+  lineMasks.delete(item)
+}
 
 export const hoverFollowImage = () => {
   const zones = document.querySelectorAll<HTMLElement>('[data-hover-image]')
@@ -68,6 +105,12 @@ export const hoverFollowImage = () => {
         item.style.setProperty('--hover-panel-top', `${first.top - itemTop}px`)
         item.style.setProperty('--hover-panel-height', `${last.bottom - first.top}px`)
       }
+      if (!item.classList.contains(ACTIVE_CLASS)) {
+        items.forEach((other) => {
+          if (other !== item) restoreLines(other)
+        })
+        maskInLines(item)
+      }
       items.forEach((other) => other.classList.toggle(ACTIVE_CLASS, other === item))
       if (!media.classList.contains(ACTIVE_CLASS)) {
         const rect = zone.getBoundingClientRect()
@@ -78,7 +121,10 @@ export const hoverFollowImage = () => {
     }
 
     const hide = () => {
-      items.forEach((item) => item.classList.remove(ACTIVE_CLASS))
+      items.forEach((item) => {
+        restoreLines(item)
+        item.classList.remove(ACTIVE_CLASS)
+      })
       media.classList.remove(ACTIVE_CLASS)
       gsap.to(media, { autoAlpha: 0, duration: DURATION, ease: 'power2.inOut', overwrite: 'auto' })
     }
