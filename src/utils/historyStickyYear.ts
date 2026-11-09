@@ -104,21 +104,51 @@ const setupStickyYear = (root: HTMLElement, reducedMotion: boolean) => {
       return
     }
 
-    gsap.killTweensOf(labelText)
+    // Animation feedback (History-Desktop): a softer swap. The year rolls
+    // out and in on longer eased tweens, and the badge eases to the new
+    // year's width instead of jumping.
+    gsap.killTweensOf([labelText, label])
     gsap.to(labelText, {
-      yPercent: -40,
+      yPercent: -60,
       autoAlpha: 0,
-      duration: 0.2,
-      ease: 'power2.in',
+      duration: 0.35,
+      ease: 'power2.inOut',
       onComplete: () => {
+        const fromWidth = label.offsetWidth
         labelText.textContent = years[activeIndex]
+        gsap.set(label, { clearProps: 'width' })
+        const toWidth = label.offsetWidth
+        if (fromWidth !== toWidth) {
+          gsap.fromTo(
+            label,
+            { width: fromWidth },
+            { width: toWidth, duration: 0.5, ease: 'power3.inOut', clearProps: 'width' },
+          )
+        }
         gsap.fromTo(
           labelText,
-          { yPercent: 40, autoAlpha: 0 },
-          { yPercent: 0, autoAlpha: 1, duration: 0.3, ease: 'power2.out' },
+          { yPercent: 60, autoAlpha: 0 },
+          { yPercent: 0, autoAlpha: 1, duration: 0.55, ease: 'power3.out' },
         )
       },
     })
+  }
+
+  // Animation feedback (History-Desktop): the sticky badge first appears in
+  // the middle of the first photo, not on its top edge. The badge's wrap is
+  // zero-height and sticky at the viewport centre; pushing it down by half
+  // the photo (and pulling the list back up the same amount) moves its start
+  // without shifting the layout.
+  const labelWrap = label.parentElement
+  const firstFigure = items[0].querySelector<HTMLElement>('figure')
+  if (labelWrap && firstFigure) {
+    const placeLabel = () => {
+      const offset = `${Math.round(firstFigure.offsetHeight / 2)}px`
+      labelWrap.style.marginTop = offset
+      labelWrap.style.marginBottom = `-${offset}`
+    }
+    placeLabel()
+    new ResizeObserver(placeLabel).observe(firstFigure)
   }
 
   items.forEach((item, index) => {

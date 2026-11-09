@@ -135,7 +135,11 @@ const setupTabs = (root: HTMLElement) => {
 
   tabs.forEach((tab, index) => {
     tab.addEventListener('click', (event) => {
-      // Rows built as link blocks must not navigate; they are tabs.
+      // A row linked to a real page navigates (home Meetings rows go to the
+      // Meetings & Events page, animation feedback); hover still previews.
+      // Rows left on "#" stay tabs and must not navigate.
+      const href = tab.getAttribute('href')
+      if (href && href !== '#') return
       event.preventDefault()
       commit(index)
     })

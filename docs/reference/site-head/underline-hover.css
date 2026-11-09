@@ -1,0 +1,8 @@
+/* Animation feedback (Trello Desktop-CTA-UnderlineText): underlined links swap text-decoration for a 1px background line. On hover the line wipes out to the right, then draws back in from the left, eased. [data-underline] comes from src/utils/underlineHover.ts. */
+[data-underline],[data-underline] *{text-decoration:none!important}
+[data-underline]{background:linear-gradient(currentColor,currentColor) no-repeat 100% 100%/100% 1px}
+a[data-underline]{padding-bottom:.15em}
+@keyframes underline-redraw{0%{background-position:100% 100%;background-size:100% 1px}50%{background-position:100% 100%;background-size:0 1px}50.01%{background-position:0 100%;background-size:0 1px}100%{background-position:0 100%;background-size:100% 1px}}
+@media (hover:hover){a:hover>[data-underline],a:hover [data-btn-label][data-underline],a[data-underline]:hover{animation:underline-redraw .9s cubic-bezier(.65,0,.35,1)}}
+a:focus-visible [data-underline],a[data-underline]:focus-visible{animation:underline-redraw .9s cubic-bezier(.65,0,.35,1)}
+@media (prefers-reduced-motion:reduce){[data-underline]{animation:none!important}}

@@ -16,6 +16,7 @@
  */
 
 import { accordion } from '$utils/accordion'
+import { anchorScroll } from '$utils/anchorScroll'
 import { buttonHover } from '$utils/buttonHover'
 import { cardCarouselHeaderLeft } from '$utils/cardCarouselHeaderLeft'
 import { cmsItemLinks } from '$utils/cmsItemLinks'
@@ -37,6 +38,7 @@ import { mediaTabs } from '$utils/mediaTabs'
 import { modalImageSlider } from '$utils/modalImageSlider'
 import { modalStickyBar } from '$utils/modalStickyBar'
 import { modals } from '$utils/modals'
+import { modalTextMask } from '$utils/modalTextMask'
 import { navTheme } from '$utils/navTheme'
 import { navToggle } from '$utils/navToggle'
 import { offersSliderSplit } from '$utils/offersSliderSplit'
@@ -46,6 +48,7 @@ import { roomListHoverPreview } from '$utils/roomListHoverPreview'
 import { roomsQuiz } from '$utils/roomsQuiz'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
 import { scrollReveal } from '$utils/scrollReveal'
+import { scriptReveal } from '$utils/scriptReveal'
 import { sectionVideo } from '$utils/sectionVideo'
 import { smoothScroll } from '$utils/smoothScroll'
 import { staggerCards } from '$utils/staggerCards'
@@ -55,6 +58,7 @@ import { scriptTiltSpace } from '$utils/scriptTiltSpace'
 import { stickyTabs } from '$utils/stickyTabs'
 import { swiperSliders } from '$utils/swiperSliders'
 import { tabDropdown } from '$utils/tabDropdown'
+import { underlineHover } from '$utils/underlineHover'
 
 /*
  * Opt-in modules. Uncomment the import and the call, keeping the call in
@@ -93,6 +97,7 @@ window.Webflow.push(() => {
   // block). Before the scroll engine and before swiperSliders so Swiper loop
   // clones copy already-wrapped markup.
   buttonHover()
+  underlineHover()
   // M6: mobile tab bars collapse to a compact selector; before the scroll
   // engine because it shortens the bars below 768px.
   tabDropdown()
@@ -124,6 +129,8 @@ window.Webflow.push(() => {
   hoverFollowImage()
   accordion()
   modals()
+  modalTextMask()
+  anchorScroll()
   roomListHoverPreview()
   // F25, F40: /rooms quiz option hover swaps the step's photo.
   hoverImageSwap()
@@ -145,6 +152,7 @@ window.Webflow.push(() => {
   // ScrollTrigger-creating reveals last, after DOM-mutating modules settle.
   gsapBasicAnimations()
   // Desktop feedback: data-reveal="fade|text-mask|image-mask" opt-in scroll reveals.
+  scriptReveal()
   scrollReveal()
   // slot G: scrollTextReveal()
   historyStickyYear()

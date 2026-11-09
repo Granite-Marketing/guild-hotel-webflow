@@ -1,0 +1,5 @@
+/* Animation feedback (History-Desktop): "Once opened, never closed" sits centred between the tan section above and the first timeline photo. Space above (section padding) equals space below (the intro's bottom padding) at every width: 184px desktop, 104px tablet, 100px phones. */
+.section_history-timeline>.padding-global{padding-top:11.5rem}
+.history-timeline_top{padding-bottom:11.5rem}
+@media (max-width:991px){.section_history-timeline>.padding-global{padding-top:6.5rem}.history-timeline_top{padding-bottom:6.5rem}}
+@media (max-width:767px){.section_history-timeline>.padding-global{padding-top:6.25rem}.history-timeline_top{padding-bottom:6.25rem}}

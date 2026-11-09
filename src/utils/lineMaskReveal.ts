@@ -55,7 +55,10 @@ export interface LineMaskTimeline {
 }
 
 const findTargets = (container: HTMLElement) => {
-  const candidates = Array.from(container.querySelectorAll<HTMLElement>(TARGET_SELECTOR))
+  // Script headings write themselves in (scriptReveal), so they are not masked here.
+  const candidates = Array.from(container.querySelectorAll<HTMLElement>(TARGET_SELECTOR)).filter(
+    (candidate) => candidate.dataset.scriptReveal === undefined,
+  )
   // A bare paragraph or heading passed as the container is its own target.
   if (!candidates.length && container.matches(TARGET_SELECTOR)) return [container]
   return candidates.filter(

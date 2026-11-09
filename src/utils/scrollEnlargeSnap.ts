@@ -196,12 +196,15 @@ const initAnimated = (parts: SnapParts) => {
       start: 'top top',
       end: () => `+=${(window.innerHeight * stepPercent * totalSteps) / 100}`,
       pin: true,
-      scrub: 0.6,
+      // Animation feedback (home wellness "too sensitive"): a heavier scrub
+      // and a longer settle before snapping, so a small scroll no longer
+      // flicks to the next panel.
+      scrub: 1.2,
       invalidateOnRefresh: true,
       snap: {
         snapTo: (value: number) => snapToPanel(value, snapPoints),
-        duration: { min: 0.2, max: 0.6 },
-        delay: 0.1,
+        duration: { min: 0.4, max: 1 },
+        delay: 0.25,
         ease: 'power1.inOut',
         // Without this a tab jump reads as a fling and overshoots to the end.
         inertia: false,

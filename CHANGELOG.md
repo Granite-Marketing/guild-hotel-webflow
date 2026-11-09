@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.58
+
+### Patch Changes
+
+- Animation feedback: scroll reveals tagged, cream hexagon buttons turn to an outline on hover, underline redraw on hover, script headings write in, booking menu copy masks in with an aligned header, calmer home venue stack, Meetings rows link through, History badge starts mid-photo with softer year swaps and a centred intro, eased anchor scroll on every section link.
+
 ## 1.1.57
 
 ### Patch Changes

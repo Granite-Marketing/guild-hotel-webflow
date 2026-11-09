@@ -1185,3 +1185,13 @@ Free-width card slider for the Card Carousel Header Left component. Needs the Sw
 ## tabDropdown (M6)
 
 Below 768px every `.tab-pills-intro_tabs` (Wellness `is-media` included, centred at the frame bottom) and `.venue-card-fullbleed_tabs` becomes the Figma mobile selector: a 220x40 burgundy pill with the active label underlined and a menu icon; tapping it opens the full tab list upward with a close X. The module wraps the tabs in `[data-tab-dropdown-panel]`, appends `button[data-tab-dropdown-toggle]` (aria-expanded) and marks the bar `[data-tab-dropdown]`; its stylesheet is injected by the bundle and keyed off those attributes, so the Designer classes are unchanged and desktop renders `display: contents`. The owning module (stickyTabs, galleryFilter, scrollEnlargeSnap) still toggles `is-active`; a MutationObserver copies the active label into the pill. Tab clicks (capture phase), Escape and outside clicks close it. The bar keeps its 40px box and the panel grows out of it, so the stickyTabs pin and following layout never move. Runs before the scroll engine because it shortens the bars on mobile.
+
+## Animation feedback round (2026-11-09, Trello "Animations")
+
+- **scriptReveal**: script (Morello Pen) headings write in line by line, left to right, on scroll. Found by computed font, no attribute. Marks them `data-script-reveal`; `lineMaskReveal` skips marked headings. Runs before `scrollReveal`.
+- **underlineHover**: links drawn with an underline get `data-underline` (the roll label of a `[data-btn]` link, or the link). CSS `underline-hover.css` wipes the line out to the right and back in from the left on hover. Runs after `buttonHover`.
+- **modalTextMask**: dialogs with `data-modal-reveal` (on the dialog or a wrapper, e.g. Booking Menu root) mask their panel copy in line by line on open and reverse on close. Watches `is-open` from `modals.ts`.
+- **anchorScroll**: every same-page `#section` link uses the eased `ANCHOR_SCROLL` jump. Capture phase; skips dialog ids, links inside dialogs and `[data-sticky-tabs="true"]` bars.
+- **mediaTabs**: a row link with a real href navigates on click; hover still previews.
+- **historyStickyYear**: the sticky badge starts in the middle of the first photo (label wrap margin from the photo height) and the year swap eases text and badge width.
+- **scrollEnlargeSnap**: scrub 1.2, snap delay 0.25s, duration 0.4 to 1s.
