@@ -20,6 +20,8 @@
  * devices, where there is no hover) every card keeps its details visible.
  */
 
+import { type EmbeddedVideo, embedVideo } from '$utils/embedVideo'
+
 const CARD_SELECTOR = '.rooms-collection-room-grid_card'
 const TARGET_SELECTOR = '.rooms-collection-room-grid_details, footer'
 const DURATION = 0.45
@@ -48,24 +50,33 @@ export const roomGridHoverReveal = () => {
           (heading.getBoundingClientRect().bottom - Number(gsap.getProperty(header, 'y'))) +
           OPTICAL_NUDGE
         : 0
-    const video = card.querySelector<HTMLVideoElement>('video[data-hover-video]')
-    const videoUrl = video?.dataset.hoverVideo?.trim()
-    if (video && !videoUrl) video.remove()
+    // F73: the Webflow video is only a placeholder carrying the URL and the class;
+    // embedVideo swaps in a file player or a YouTube/Vimeo iframe on first hover.
+    const placeholder = card.querySelector<HTMLVideoElement>('video[data-hover-video]')
+    const videoUrl = placeholder?.dataset.hoverVideo?.trim()
+    let player: EmbeddedVideo | null = null
+    if (placeholder && !videoUrl) placeholder.remove()
+    const showVideo = () => {
+      if (player && hovered) player.element.style.opacity = '1'
+    }
     const playVideo = () => {
-      if (!video || !videoUrl) return
-      if (!video.src) video.src = videoUrl
-      video.muted = true
-      video.play().then(
-        () => {
-          if (hovered) video.style.opacity = '1'
-        },
-        () => {},
-      )
+      if (!placeholder || !videoUrl || !placeholder.parentElement) {
+        player?.play()
+        if (player) player.ready.then(showVideo)
+        return
+      }
+      player = embedVideo(videoUrl, placeholder.parentElement)
+      if (!player) return placeholder.remove()
+      player.element.className = placeholder.className
+      player.element.setAttribute('aria-hidden', 'true')
+      placeholder.replaceWith(player.element)
+      player.play()
+      player.ready.then(showVideo)
     }
     const stopVideo = () => {
-      if (!video || !videoUrl) return
-      video.style.opacity = ''
-      video.pause()
+      if (!player) return
+      player.element.style.opacity = ''
+      player.pause()
     }
 
     let hovered = false

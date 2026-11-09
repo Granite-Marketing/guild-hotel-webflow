@@ -9,6 +9,8 @@
  * nothing. Reduced motion keeps the image.
  */
 
+import { embedVideo } from '$utils/embedVideo'
+
 export const sectionVideo = () => {
   const markers = document.querySelectorAll<HTMLElement>('[data-section-video]')
   if (!markers.length) return
@@ -21,17 +23,16 @@ export const sectionVideo = () => {
     if (!url || !image || !frame) return
 
     if (getComputedStyle(frame).position === 'static') frame.style.position = 'relative'
-    const video = document.createElement('video')
-    Object.assign(video, { src: url, muted: true, loop: true, autoplay: true, playsInline: true })
-    video.poster = image.currentSrc || image.src
+    const player = embedVideo(url, frame)
+    if (!player) return
+    const video = player.element
+    if (video instanceof HTMLVideoElement) {
+      video.autoplay = true
+      video.preload = 'auto'
+      video.poster = image.currentSrc || image.src
+      Object.assign(video.style, { position: 'absolute', inset: '0', width: '100%', height: '100%', objectFit: 'cover' })
+    }
     video.setAttribute('aria-hidden', 'true')
-    Object.assign(video.style, {
-      position: 'absolute',
-      inset: '0',
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-    })
     frame.append(video)
   })
 }

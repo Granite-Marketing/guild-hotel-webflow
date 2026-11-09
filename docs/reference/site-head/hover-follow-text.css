@@ -1,5 +1,7 @@
-/* Desktop feedback (Corporate "why teams choose"): the hovered item's text sits above the follow photo on the section colour, so the photo never covers what is being read. The shadow gives the text breathing room without moving the layout. */
-.feature-grid-dark-eyebrow_item.is-active{position:relative;z-index:11}
-.feature-grid-dark-eyebrow_item.is-active>*{background:var(--_primitives---colors--neutral-darkest);box-shadow:0 0 0 1rem var(--_primitives---colors--neutral-darkest)}
-/* The list is its own stacking layer (z-index 1), which would keep the item under the photo; drop it while hovering so only the hovered item rises. */
-.feature-grid-dark-eyebrow_list:has(.feature-grid-dark-eyebrow_item.is-active){z-index:auto}
+/* Desktop feedback (Corporate "why teams choose"): the hovered item's text sits above the follow photo on a chamfered panel in the section colour, so the photo never covers what is being read. The panel fades and settles in; the item keeps its raised layer until the fade out ends. */
+.feature-grid-dark-eyebrow_list{z-index:auto}
+.feature-grid-dark-eyebrow_item{position:relative;z-index:0;isolation:isolate;transition:z-index 0s linear .4s}
+.feature-grid-dark-eyebrow_item::before{content:"";position:absolute;left:-1.25rem;right:-1.25rem;top:calc(var(--hover-panel-top,0px) - 1.25rem);height:calc(var(--hover-panel-height,100%) + 2.5rem);z-index:-1;background:var(--_primitives---colors--neutral-darkest);clip-path:var(--btn-chamfer);opacity:0;transform:scale(.96);transition:opacity .4s cubic-bezier(.16,1,.3,1),transform .4s cubic-bezier(.16,1,.3,1);pointer-events:none}
+.feature-grid-dark-eyebrow_item.is-active{z-index:11;transition-delay:0s}
+.feature-grid-dark-eyebrow_item.is-active::before{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.feature-grid-dark-eyebrow_item::before{transform:none;transition:opacity .15s linear}}

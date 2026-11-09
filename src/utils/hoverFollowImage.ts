@@ -60,6 +60,14 @@ export const hoverFollowImage = () => {
         image.src = source
       }
       if (image && alt !== null) image.alt = alt
+      // The hovered item's text panel (CSS ::before) wraps its content, not the cell's min-height.
+      const itemTop = item.getBoundingClientRect().top
+      const first = item.firstElementChild?.getBoundingClientRect()
+      const last = item.lastElementChild?.getBoundingClientRect()
+      if (first && last) {
+        item.style.setProperty('--hover-panel-top', `${first.top - itemTop}px`)
+        item.style.setProperty('--hover-panel-height', `${last.bottom - first.top}px`)
+      }
       items.forEach((other) => other.classList.toggle(ACTIVE_CLASS, other === item))
       if (!media.classList.contains(ACTIVE_CLASS)) {
         const rect = zone.getBoundingClientRect()

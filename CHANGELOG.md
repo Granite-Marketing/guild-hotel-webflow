@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.54
+
+### Patch Changes
+
+- Room hover videos and the Dinings section video accept YouTube and Vimeo links as well as direct video files. Corporate hover text sits on a chamfered panel that fades in. Meetings Book your space outline is even on the diagonal edges.
+
 ## 1.1.53
 
 ### Patch Changes
