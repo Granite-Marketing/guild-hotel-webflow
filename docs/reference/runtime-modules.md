@@ -650,6 +650,19 @@ Mirrors Finsweet filter state onto styleable classes.
   text (restored when cleared).
 - Order: slot F, last of the group.
 
+### scrollReveal
+
+Opt-in scroll reveals for any block, set in the Designer as a custom attribute. Each plays once as the block's top reaches 85% of the viewport. Wired in `src/index.ts` after `gsapBasicAnimations()`.
+
+| Attribute | On | Effect |
+|---|---|---|
+| `data-reveal="fade"` | any block | soft dissolve: fades in while rising 2rem (1.2s, power3.out) |
+| `data-reveal="text-mask"` | a heading, paragraph or a wrapper | line mask via `lineMaskReveal`: each line's words rise from behind their edge; buttons and figures inside rise from their own clip |
+| `data-reveal="image-mask"` | the figure or image wrapper | mask reveal: the block opens upward from its bottom edge while the image inside settles from 1.15 scale |
+| `data-reveal-delay="0.2"` | with any of the above | seconds to wait, to stagger neighbours |
+
+Reduced motion shows everything at once. Do not combine with `.fade-in`, `.slide-in` or `data-scroll-text-reveal` on the same element.
+
 ### scrollTextReveal
 
 Scroll-triggered line reveal.

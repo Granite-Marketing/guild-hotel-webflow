@@ -45,6 +45,7 @@ import { roomGridHoverReveal } from '$utils/roomGridHoverReveal'
 import { roomListHoverPreview } from '$utils/roomListHoverPreview'
 import { roomsQuiz } from '$utils/roomsQuiz'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
+import { scrollReveal } from '$utils/scrollReveal'
 import { sectionVideo } from '$utils/sectionVideo'
 import { smoothScroll } from '$utils/smoothScroll'
 import { staggerCards } from '$utils/staggerCards'
@@ -143,6 +144,8 @@ window.Webflow.push(() => {
 
   // ScrollTrigger-creating reveals last, after DOM-mutating modules settle.
   gsapBasicAnimations()
+  // Desktop feedback: data-reveal="fade|text-mask|image-mask" opt-in scroll reveals.
+  scrollReveal()
   // slot G: scrollTextReveal()
   historyStickyYear()
   imageStackCollapse()

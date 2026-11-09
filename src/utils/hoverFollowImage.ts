@@ -18,7 +18,7 @@
  */
 
 const ACTIVE_CLASS = 'is-active'
-const DURATION = 0.35
+const DURATION = 0.5
 // F109: the photo shows in front of the grid text and dividers, at full strength.
 const HOVER_OPACITY = 1
 
@@ -41,8 +41,8 @@ export const hoverFollowImage = () => {
     if (getComputedStyle(zone).position === 'static') gsap.set(zone, { position: 'relative' })
     gsap.set(media, { position: 'absolute', top: 0, left: 0, xPercent: -50, yPercent: -50, zIndex: 10 })
 
-    const moveX = gsap.quickTo(media, 'x', { duration: 0.5, ease: 'power3.out' })
-    const moveY = gsap.quickTo(media, 'y', { duration: 0.5, ease: 'power3.out' })
+    const moveX = gsap.quickTo(media, 'x', { duration: 0.8, ease: 'power3.out' })
+    const moveY = gsap.quickTo(media, 'y', { duration: 0.8, ease: 'power3.out' })
 
     const follow = (event: PointerEvent) => {
       const rect = zone.getBoundingClientRect()
@@ -74,13 +74,13 @@ export const hoverFollowImage = () => {
         gsap.set(media, { x: event.clientX - rect.left, y: event.clientY - rect.top })
       }
       media.classList.add(ACTIVE_CLASS)
-      gsap.to(media, { autoAlpha: HOVER_OPACITY, duration: DURATION, ease: 'power2.out', overwrite: 'auto' })
+      gsap.to(media, { autoAlpha: HOVER_OPACITY, duration: DURATION, ease: 'power3.out', overwrite: 'auto' })
     }
 
     const hide = () => {
       items.forEach((item) => item.classList.remove(ACTIVE_CLASS))
       media.classList.remove(ACTIVE_CLASS)
-      gsap.to(media, { autoAlpha: 0, duration: DURATION, ease: 'power2.in', overwrite: 'auto' })
+      gsap.to(media, { autoAlpha: 0, duration: DURATION, ease: 'power2.inOut', overwrite: 'auto' })
     }
 
     items.forEach((item) => {

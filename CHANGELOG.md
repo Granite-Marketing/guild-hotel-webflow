@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.55
+
+### Patch Changes
+
+- New data-reveal attribute (fade, text-mask, image-mask, optional data-reveal-delay) for opt-in scroll reveals. Corporate hover panel and follow photo ease in more slowly and smoothly.
+
 ## 1.1.54
 
 ### Patch Changes
