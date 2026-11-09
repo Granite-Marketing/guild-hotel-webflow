@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.59
+
+### Patch Changes
+
+- History intro centred on phones too (drops the section top padding below 768px).
+
 ## 1.1.58
 
 ### Patch Changes
