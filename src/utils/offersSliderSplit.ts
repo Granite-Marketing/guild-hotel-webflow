@@ -13,14 +13,19 @@
  *       [data-offers-slider-current]             current slide number
  *       [data-offers-slider-total]               slide count
  *       [data-offers-slider-next]                link block, next slide
+ *   data-slide-mask="off"                      on the root: no text mask on slide change
  *
  * Slides hidden through a component visibility prop are not rendered, so
  * the total always matches the slides on the page. Uses its own `offers`
  * type class, so swiperSliders() leaves these wrappers alone.
  */
 
+import { createLineMaskTimeline, type LineMaskTimeline } from '$utils/lineMaskReveal'
+
 interface OffersSwiperInstance extends SwiperInstance {
   realIndex: number
+  activeIndex: number
+  slides: HTMLElement[]
 }
 
 const padNumber = (value: number) => String(value).padStart(2, '0')
@@ -52,7 +57,22 @@ export const offersSliderSplit = () => {
       if (currentLabel) currentLabel.textContent = padNumber(swiper.realIndex + 1)
     }
 
-    new Swiper(container, {
+    // Animation feedback (Trello Offers & Packages): each offer's copy masks
+    // in line by line; the leaving offer's copy masks out as it fades. On for
+    // every offers slider; data-slide-mask="off" on the root opts one out.
+    const reveals = new Map<HTMLElement, LineMaskTimeline>()
+    const masked = slider.dataset.slideMask !== 'off'
+    if (masked) container.querySelectorAll<HTMLElement>('.swiper-slide').forEach((slide) => {
+      const content = slide.querySelector<HTMLElement>('[class*="_content"]')
+      if (content) reveals.set(slide, createLineMaskTimeline(content))
+    })
+    let inView = false
+    const showActive = (swiper: OffersSwiperInstance) => {
+      const active = swiper.slides[swiper.activeIndex]
+      reveals.forEach((reveal, slide) => (slide === active ? inView && reveal.play() : reveal.reverse()))
+    }
+
+    const swiper = new Swiper(container, {
       loop: true,
       speed: 800,
       effect: 'fade',
@@ -69,7 +89,20 @@ export const offersSliderSplit = () => {
       },
       on: {
         init: updateCounter,
-        slideChange: updateCounter,
+        slideChange: (instance: OffersSwiperInstance) => {
+          updateCounter(instance)
+          showActive(instance)
+        },
+      },
+    }) as OffersSwiperInstance
+
+    ScrollTrigger.create({
+      trigger: slider,
+      start: 'top 70%',
+      once: true,
+      onEnter: () => {
+        inView = true
+        showActive(swiper)
       },
     })
   })

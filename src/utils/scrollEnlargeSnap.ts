@@ -199,13 +199,14 @@ const initAnimated = (parts: SnapParts) => {
       // Animation feedback (home wellness "too sensitive"): a heavier scrub
       // and a longer settle before snapping, so a small scroll no longer
       // flicks to the next panel.
-      scrub: 1.2,
+      scrub: 1.6,
       invalidateOnRefresh: true,
       snap: {
         snapTo: (value: number) => snapToPanel(value, snapPoints),
-        duration: { min: 0.4, max: 1 },
-        delay: 0.25,
-        ease: 'power1.inOut',
+        // Second round ("slow it down again"): longer, softer settle.
+        duration: { min: 0.8, max: 1.6 },
+        delay: 0.3,
+        ease: 'power2.inOut',
         // Without this a tab jump reads as a fling and overshoots to the end.
         inertia: false,
       },

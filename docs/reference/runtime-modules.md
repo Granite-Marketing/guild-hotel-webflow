@@ -1195,3 +1195,9 @@ Below 768px every `.tab-pills-intro_tabs` (Wellness `is-media` included, centred
 - **mediaTabs**: a row link with a real href navigates on click; hover still previews.
 - **historyStickyYear**: the sticky badge starts in the middle of the first photo (label wrap margin from the photo height) and the year swap eases text and badge width.
 - **scrollEnlargeSnap**: scrub 1.2, snap delay 0.25s, duration 0.4 to 1s.
+
+### Animation feedback round 2 (2026-11-09)
+
+- `data-reveal="image-fade"` (scrollReveal): the block fades in while its media settles from 1.12 scale. Use it where a bottom-up mask feels heavy (mosaics, card photos).
+- Offers Slider Split masks each slide's copy in line by line on change; `data-slide-mask="off"` on `[data-offers-slider]` turns it off.
+- Underlined `[data-btn]` links redraw the underline only; the label roll is suppressed by `underline-hover.css`.

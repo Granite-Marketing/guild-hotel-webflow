@@ -3,3 +3,7 @@
 .history-timeline_top{padding-bottom:11.5rem}
 @media (max-width:991px){.section_history-timeline>.padding-global{padding-top:6.5rem}.history-timeline_top{padding-bottom:6.5rem}}
 @media (max-width:767px){.section_history-timeline{padding-top:0}.section_history-timeline>.padding-global{padding-top:6.25rem}.history-timeline_top{padding-bottom:6.25rem}}
+/* Round 2: 1924 and 2026 sit on the vertical centre of the title and subtitle group, not its bottom. */
+.history-timeline_top{align-items:center}
+/* Round 2: Sackers Gothic figures sit 0.065em below the line box centre (measured ink box), so every year badge lifts its digits to the optical centre. */
+.history-timeline_label-text{position:relative;top:-.065em}

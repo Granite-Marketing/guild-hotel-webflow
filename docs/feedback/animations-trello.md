@@ -44,3 +44,13 @@ Left alone: heroes (above the fold), enlarge-snap venue cards and wellness tab i
 ## Shipped (v1.1.58, v1.1.59)
 
 Items 1 to 9 are live on staging and were checked at 1440, 991, 800, 650 and 390. Item 10 is parked. Known gap: in the Reserve a table menu the lowest Reserve buttons settle about 4s after opening (below the fold).
+
+## Round 2 (2026-11-09, v1.1.60)
+
+1. Split image text (1924 intro): underlined button links only redraw the line; the label roll is off for them, site-wide.
+2. Home venue stack (wellness): step 150 to 200, scrub 1.6, snap settles over 0.8 to 1.6s.
+3. History intro: 1924 and 2026 centred on the title and subtitle group (`align-items:center`).
+4. Year badges: digits lifted 0.065em to the optical centre (measured Sackers Gothic ink box).
+5. Offers sliders: copy masks in line by line on every slide change, on every Offers Slider Split; `data-slide-mask="off"` on the root opts one out. No other slider shows one text slide at a time.
+6. Underline on padded links (rooms quiz results, Safari): the line uses the content box, so it no longer runs into side padding.
+7. New `data-reveal="image-fade"`: fade in while the image settles from a slight zoom. Now on Gallery Mosaic figures, Map Feature figure and Meetings feature cards; large split images keep the bottom-up mask.

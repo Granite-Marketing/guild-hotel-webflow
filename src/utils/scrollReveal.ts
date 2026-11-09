@@ -10,6 +10,8 @@
  *   data-reveal="image-mask"  mask reveal: the block opens upward from its
  *                             bottom edge while the media inside settles
  *                             from a slight zoom
+ *   data-reveal="image-fade"  soft image: the block fades in while the media
+ *                             inside settles from a slight zoom
  * Optional data-reveal-delay="0.2" (seconds) staggers neighbours.
  *
  * Reduced motion shows everything at once. Runs after the DOM-mutating
@@ -47,6 +49,14 @@ export const scrollReveal = () => {
         once: true,
         onEnter: () => gsap.delayedCall(delay, reveal.play),
       })
+      return
+    }
+
+    if (kind === 'image-fade') {
+      const media = element.querySelector<HTMLElement>('img, video, iframe')
+      const timeline = gsap.timeline({ delay, scrollTrigger: { trigger: element, start: START, once: true } })
+      timeline.fromTo(element, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1.4, ease: 'power2.out' })
+      if (media) timeline.fromTo(media, { scale: 1.12 }, { scale: 1, duration: 2, ease: EASE }, 0)
       return
     }
 
