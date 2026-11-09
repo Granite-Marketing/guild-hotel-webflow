@@ -4,14 +4,14 @@ Catalogued 2026-11-09 from `https://trello.com/1/boards/Jvfr4sv3?cards=open&chec
 
 | # | Card | Ask (client words, trimmed) | Status |
 |---|------|-----------------------------|--------|
-| 1 | [General Text/Image Scroll Animation](https://trello.com/c/KqYXqR5h) | No description; Stephen to explain. | Open |
-| 2 | [Desktop-CTA-Buttons](https://trello.com/c/SZuQQHRK) | Hexagon CTA buttons animate as now, but hover turns them outlined: light background with dark text becomes light outline with light text. The inverse of the homepage Rooms section animation. | Open |
-| 3 | [Desktop-CTA-UnderlineText](https://trello.com/c/gZijWKzF) | Underline disappears, then mask reveals left to right on hover, with easing. | Open |
-| 4 | [Script Reveal](https://trello.com/c/EYNUTb3D) | No description; Stephen to explain. | Open |
-| 5 | [Offers & Packages](https://trello.com/c/CNbZe6BS) | Currently a dissolve; make it a text mask reveal like the large hexagon sections. | Open |
-| 6 | [Homepage-Desktop](https://trello.com/c/jpoQvaQd) | a) Wellness section image animation slower, too sensitive. b) Meetings section: hover only swaps the image; clicking a space or the CTA goes to the Meetings & Events page. | Open |
-| 7 | [RoomsIndividual-Desktop](https://trello.com/c/TUnd0W4L) | Offset image/text section soft dissolves in on scroll with easing. | Open (scrollReveal module ready, untagged) |
-| 8 | [History-Desktop](https://trello.com/c/WoIQFRFW) | a) George Marston stamp dissolves in on scroll. b) Timeline sticky middle number appears in the middle of the first large picture. c) "Once opened never closed": unify padding so text is centred between the two sections. d) Timeline number transitions (text and box) smoother. | Open |
+| 1 | [General Text/Image Scroll Animation](https://trello.com/c/KqYXqR5h) | No description; Stephen to explain. | Done v1.1.58 (2026-11-09) |
+| 2 | [Desktop-CTA-Buttons](https://trello.com/c/SZuQQHRK) | Hexagon CTA buttons animate as now, but hover turns them outlined: light background with dark text becomes light outline with light text. The inverse of the homepage Rooms section animation. | Done v1.1.58 (2026-11-09) |
+| 3 | [Desktop-CTA-UnderlineText](https://trello.com/c/gZijWKzF) | Underline disappears, then mask reveals left to right on hover, with easing. | Done v1.1.58 (2026-11-09) |
+| 4 | [Script Reveal](https://trello.com/c/EYNUTb3D) | No description; Stephen to explain. | Done v1.1.58 (2026-11-09) |
+| 5 | [Offers & Packages](https://trello.com/c/CNbZe6BS) | Currently a dissolve; make it a text mask reveal like the large hexagon sections. | Done v1.1.58 (2026-11-09) |
+| 6 | [Homepage-Desktop](https://trello.com/c/jpoQvaQd) | a) Wellness section image animation slower, too sensitive. b) Meetings section: hover only swaps the image; clicking a space or the CTA goes to the Meetings & Events page. | Done v1.1.58 (2026-11-09) |
+| 7 | [RoomsIndividual-Desktop](https://trello.com/c/TUnd0W4L) | Offset image/text section soft dissolves in on scroll with easing. | Done v1.1.58 (2026-11-09) |
+| 8 | [History-Desktop](https://trello.com/c/WoIQFRFW) | a) George Marston stamp dissolves in on scroll. b) Timeline sticky middle number appears in the middle of the first large picture. c) "Once opened never closed": unify padding so text is centred between the two sections. d) Timeline number transitions (text and box) smoother. | Done v1.1.58 (2026-11-09) |
 | 9 | [Subnav](https://trello.com/c/FjjStvdO) | Subnav anchor scroll slower and eased. | Done (`ANCHOR_SCROLL` in `src/utils/lenisGsap.ts`) |
 | 10 | [Arts/Gallery Animation](https://trello.com/c/IgLotIVs) | Missing "canvas" style animations on both pages. | Parked |
 
@@ -39,3 +39,8 @@ Most candidate blocks live inside shared Webflow components, so tagging by attri
 | fade | `.split-image-text-light_stamp` (George Marston stamp), `.script-intro-centered_figure`, CTA booking/newsletter text group |
 
 Left alone: heroes (above the fold), enlarge-snap venue cards and wellness tab intro, image-trio collapse list, history timeline and landmark, sliders, rooms quiz.
+
+
+## Shipped (v1.1.58, v1.1.59)
+
+Items 1 to 9 are live on staging and were checked at 1440, 991, 800, 650 and 390. Item 10 is parked. Known gap: in the Reserve a table menu the lowest Reserve buttons settle about 4s after opening (below the fold).
