@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.56
+
+### Patch Changes
+
+- Corporate hover: the photo shows first, then the chamfered panel and the hovered text fade in on top; the divider line stays under the photo.
+
 ## 1.1.55
 
 ### Patch Changes
