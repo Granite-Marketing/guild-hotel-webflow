@@ -29,7 +29,7 @@
  * gsapBasicAnimations(), so positions are measured on final layout.
  */
 
-import { lenis } from '$utils/lenisGsap'
+import { ANCHOR_SCROLL, lenis } from '$utils/lenisGsap'
 
 const navBottom = () => {
   const header = document.querySelector<HTMLElement>('[data-nav="header"]')
@@ -152,7 +152,7 @@ const pinTabs = (tabs: HTMLElement, warn: boolean) => {
       event.stopPropagation()
       const offset = -clearance()
       const immediate = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-      if (lenis.raw) lenis.raw.scrollTo(entry.target, { offset, immediate })
+      if (lenis.raw) lenis.raw.scrollTo(entry.target, { offset, immediate, ...ANCHOR_SCROLL })
       else {
         window.scrollTo({
           top: entry.target.getBoundingClientRect().top + window.scrollY + offset,

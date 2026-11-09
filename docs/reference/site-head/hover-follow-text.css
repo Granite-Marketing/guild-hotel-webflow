@@ -1,0 +1,5 @@
+/* Desktop feedback (Corporate "why teams choose"): the hovered item's text sits above the follow photo on the section colour, so the photo never covers what is being read. The shadow gives the text breathing room without moving the layout. */
+.feature-grid-dark-eyebrow_item.is-active{position:relative;z-index:11}
+.feature-grid-dark-eyebrow_item.is-active>*{background:var(--_primitives---colors--neutral-darkest);box-shadow:0 0 0 1rem var(--_primitives---colors--neutral-darkest)}
+/* The list is its own stacking layer (z-index 1), which would keep the item under the photo; drop it while hovering so only the hovered item rises. */
+.feature-grid-dark-eyebrow_list:has(.feature-grid-dark-eyebrow_item.is-active){z-index:auto}

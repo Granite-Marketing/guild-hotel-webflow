@@ -1,0 +1,3 @@
+/* Desktop feedback (Meetings key features): Book your space turns cream with an off-black outline and label on hover. The fill is inset so the dark button shows round it as the outline; it only reads on the cream page background. */
+.section_meetings-collection-features .button.is-chamfer.is-dark{--btn-fill:var(--_primitives---colors--neutral-lightest);--btn-ink:var(--_primitives---colors--neutral-darkest)}
+.section_meetings-collection-features .button.is-chamfer.is-dark[data-btn]::before{inset:1.5px}

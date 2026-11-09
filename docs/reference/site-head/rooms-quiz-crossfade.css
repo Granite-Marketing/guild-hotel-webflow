@@ -2,3 +2,5 @@
 .section_rooms-collection-quiz{display:grid}
 .section_rooms-collection-quiz>.rooms-collection-quiz_component{grid-area:1/1}
 .section_rooms-collection-quiz>.rooms-collection-quiz_component.is-entering{display:grid}
+/* CMS Nest drops each room's quiz tag list into its result card without the hide class; it only feeds the matching, so keep it out of the layout (it left a 168px gap under every card on phones). */
+.rooms-collection-room-grid_item>.w-dyn-list{display:none}

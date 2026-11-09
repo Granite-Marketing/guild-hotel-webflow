@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.53
+
+### Patch Changes
+
+- Final desktop round: quiz result cards sit flush on phones (hidden tag list no longer takes space), Corporate hover text sits above the follow photo, Meetings Book your space hovers cream with an off-black outline, subnav and quiz anchor scrolls slowed and eased.
+
 ## 1.1.52
 
 ### Patch Changes

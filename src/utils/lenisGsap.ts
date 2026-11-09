@@ -27,6 +27,13 @@ import { scrollTriggerRefresh } from '$utils/scrollTriggerRefresh'
 let instance: LenisInstance | null = null
 
 /** Raw handle kept for projects that already import `lenis` directly. */
+// Desktop feedback (Trello "Subnav"): anchor jumps were too fast; a fixed duration with an ease in and out reads calmer.
+export const ANCHOR_SCROLL = {
+  duration: 1.6,
+  easing: (progress: number) =>
+    progress < 0.5 ? 4 * progress ** 3 : 1 - (-2 * progress + 2) ** 3 / 2,
+}
+
 export const lenis = {
   get raw(): LenisInstance | null {
     return instance
@@ -80,7 +87,7 @@ export const lenisEngine: SmoothScrollEngine = {
     // A full-height section with `data-scroll-flush` lines up with the
     // viewport top under the transparent nav, so no earlier section shows.
     const offset = target.hasAttribute('data-scroll-flush') ? 0 : -fixedNavOffset()
-    if (instance) instance.scrollTo(target, { offset })
+    if (instance) instance.scrollTo(target, { offset, ...ANCHOR_SCROLL })
     else window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY + offset, behavior: 'smooth' })
   },
   scrollTop: () => instance?.scroll ?? window.scrollY,
