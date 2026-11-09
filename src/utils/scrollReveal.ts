@@ -11,7 +11,7 @@
  *                             bottom edge while the media inside settles
  *                             from a slight zoom
  *   data-reveal="image-fade"  soft image: the block fades in while the media
- *                             inside settles from a slight zoom
+ *                             inside settles from a slight (1.04) zoom
  * Optional data-reveal-delay="0.2" (seconds) staggers neighbours.
  *
  * Reduced motion shows everything at once. Runs after the DOM-mutating
@@ -55,8 +55,9 @@ export const scrollReveal = () => {
     if (kind === 'image-fade') {
       const media = element.querySelector<HTMLElement>('img, video, iframe')
       const timeline = gsap.timeline({ delay, scrollTrigger: { trigger: element, start: START, once: true } })
-      timeline.fromTo(element, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1.4, ease: 'power2.out' })
-      if (media) timeline.fromTo(media, { scale: 1.12 }, { scale: 1, duration: 2, ease: EASE }, 0)
+      // Round 3: quick, clear fade with only a slight settle.
+      timeline.fromTo(element, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.9, ease: 'power1.out' })
+      if (media) timeline.fromTo(media, { scale: 1.04 }, { scale: 1, duration: 1.1, ease: 'power2.out' }, 0)
       return
     }
 

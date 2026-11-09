@@ -400,6 +400,7 @@ image wipe and a text transition. Guild Figma Home-Animation-1 (home 04 to
 |---|---|---|
 | `data-scroll-enlarge-snap` | section root | Guard selector. One instance per root. |
 | `data-scroll-enlarge-snap-step` | root (optional) | Scroll distance per step in % of viewport height. Default `100`. |
+| `data-scroll-enlarge-snap-trigger` | root (optional) | Panel changes play as timed 1.6s wipes once their scroll point is crossed and reverse on the way up, instead of scrubbing; no snap. |
 | `data-scroll-enlarge-snap-stage` | inside root (optional) | The box that pins. Give it a fixed height (`100svh`). Its padding is the gap around the full-size frame. Defaults to the root itself. |
 | `data-scroll-enlarge-snap-media` | inside stage | The frame. Style it at its small start size (for example `width: 79%`, `aspect-ratio: 16 / 9`), `position: relative`, `overflow: hidden`. The module grows it to the stage content box. Chamfered corners belong on this element. Do not set `max-width` or `max-height` on it. |
 | `data-scroll-enlarge-snap-item` | inside media, one per panel | Panels overlap (`position: absolute; inset: 0`). DOM order is panel order. |

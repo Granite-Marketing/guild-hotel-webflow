@@ -30,6 +30,14 @@
  *
  *   data-scroll-enlarge-snap-step="100"   on the root: scroll distance per
  *                                         step, in % of viewport height.
+ *   data-scroll-enlarge-snap-trigger      on the root (optional): panel
+ *                                         changes are scroll-triggered, not
+ *                                         scrubbed. Crossing a panel's point
+ *                                         plays its wipe as a timed tween
+ *                                         (TRIGGERED_WIPE seconds) and
+ *                                         scrolling back plays it in
+ *                                         reverse; the enlarge stays scrubbed
+ *                                         and there is no snap.
  *
  * Timeline schedule (F33): panel 0 is fully shown at t=1 (enlarge done).
  * Each later panel wipes in over WIPE_DURATION and is then fully shown for
@@ -72,6 +80,8 @@ const REVEAL_LEAD = 0.1
 const SETTLE = 0.1
 /** Extra pinned distance after the last panel, in steps. */
 const END_HOLD = 0.5
+/** Seconds one triggered panel change takes (data-scroll-enlarge-snap-trigger). */
+const TRIGGERED_WIPE = 1.6
 
 interface SnapParts {
   root: HTMLElement
@@ -80,6 +90,7 @@ interface SnapParts {
   items: HTMLElement[]
   tabs: HTMLElement[]
   stepPercent: number
+  triggered: boolean
 }
 
 export const scrollEnlargeSnap = () => {
@@ -96,7 +107,12 @@ export const scrollEnlargeSnap = () => {
         animate: '(prefers-reduced-motion: no-preference)',
         reduce: '(prefers-reduced-motion: reduce)',
       },
-      (context) => (context.conditions.reduce ? initReduced(parts) : initAnimated(parts)),
+      (context) =>
+        context.conditions.reduce
+          ? initReduced(parts)
+          : parts.triggered
+            ? initTriggered(parts)
+            : initAnimated(parts),
     )
   })
 }
@@ -120,6 +136,122 @@ const readParts = (root: HTMLElement): SnapParts | null => {
     items,
     tabs: Array.from(root.querySelectorAll<HTMLElement>('[data-scroll-enlarge-snap-tab]')),
     stepPercent: stepAttribute > 0 ? stepAttribute : DEFAULT_STEP_PERCENT,
+    triggered: root.hasAttribute('data-scroll-enlarge-snap-trigger'),
+  }
+}
+
+/**
+ * Triggered mode (animation feedback round 3, wellness "still too fast"):
+ * the enlarge is scrubbed, but each panel change is a timed wipe that plays
+ * once its scroll point is crossed and plays back in reverse on the way up.
+ * Copy masks out as a change starts and in once the wipe lands.
+ */
+const initTriggered = (parts: SnapParts) => {
+  const { stage, media, items, stepPercent } = parts
+  const shownAt = items.map((_, index) => 1 + index * PITCH)
+  const totalSteps = shownAt[shownAt.length - 1] + END_HOLD
+  const snapPoints = shownAt.map((time) => time / totalSteps)
+  // A change fires half-way through the scroll range the scrubbed wipe used.
+  const changeAt = shownAt.map((at) => at - WIPE_DURATION / 2)
+
+  stackItems(items, 0)
+  markActive(parts, 0)
+  const reveals = items.map((item) => {
+    const content = item.querySelector<HTMLElement>('[data-scroll-enlarge-snap-content]')
+    return content ? createLineMaskTimeline(content) : null
+  })
+  const mask = createChamferMask(stage, media)
+
+  const panels = gsap.timeline({ paused: true })
+  items.slice(1).forEach((item, offset) => {
+    const at = offset * TRIGGERED_WIPE
+    const image = itemImage(item)
+    panels.set(item, { autoAlpha: 1 }, at)
+    panels.fromTo(
+      item,
+      { clipPath: 'inset(100% 0% 0% 0%)' },
+      { clipPath: 'inset(0% 0% 0% 0%)', duration: TRIGGERED_WIPE, ease: 'power2.inOut' },
+      at,
+    )
+    if (image) {
+      panels.fromTo(image, { scale: 1.2 }, { scale: 1, duration: TRIGGERED_WIPE, ease: 'power2.out' }, at)
+    }
+    panels.set(items[offset], { autoAlpha: 0 }, at + TRIGGERED_WIPE)
+  })
+
+  let wanted = -2
+  let move: GsapTimeline | null = null
+  const reverseCopy = (except = -1) =>
+    reveals.forEach((reveal, index) => {
+      if (index !== except && reveal?.isRevealed()) reveal.reverse()
+    })
+
+  // -1 while the frame is still enlarging, else the panel for this scroll time.
+  const panelFor = (time: number) => {
+    if (time < 1 - REVEAL_LEAD) return -1
+    let index = 0
+    changeAt.forEach((at, panel) => {
+      if (panel > 0 && time >= at) index = panel
+    })
+    return index
+  }
+
+  const goTo = (next: number, immediate = false) => {
+    if (next === wanted) return
+    wanted = next
+    move?.kill()
+    if (next === -1) {
+      reverseCopy()
+      return
+    }
+    markActive(parts, next)
+    const target = next * TRIGGERED_WIPE
+    if (immediate) {
+      panels.progress(panels.duration() ? target / panels.duration() : 0)
+      reveals[next]?.play()
+      return
+    }
+    if (Math.abs(panels.time() - target) < 0.001) {
+      reverseCopy(next)
+      reveals[next]?.play()
+      return
+    }
+    reverseCopy()
+    move = panels.tweenTo(target, {
+      // Several panels skipped at once (a tab jump) still land in a calm time.
+      duration: Math.min(Math.abs(panels.time() - target), TRIGGERED_WIPE * 1.5),
+      ease: 'none',
+      onComplete: () => {
+        if (wanted === next) reveals[next]?.play()
+      },
+    })
+  }
+
+  const timeline = gsap.timeline({
+    defaults: { ease: 'none' },
+    scrollTrigger: {
+      trigger: stage,
+      start: 'top top',
+      end: () => `+=${(window.innerHeight * stepPercent * totalSteps) / 100}`,
+      pin: true,
+      scrub: 1,
+      invalidateOnRefresh: true,
+      onRefresh: (self: ScrollTriggerInstance) => {
+        mask.measure()
+        goTo(panelFor(self.progress * totalSteps), true)
+      },
+      onUpdate: (self: ScrollTriggerInstance) => goTo(panelFor(self.progress * totalSteps)),
+    },
+  })
+  timeline.to(mask.state, { progress: 1, duration: 1, ease: 'power1.inOut', onUpdate: mask.apply })
+  timeline.to({}, { duration: totalSteps - 1 }, 1)
+
+  goTo(panelFor((timeline.scrollTrigger?.progress ?? 0) * totalSteps), true)
+
+  const unbindTabs = bindTabs(parts, timeline.scrollTrigger, snapPoints)
+  return () => {
+    move?.kill()
+    unbindTabs?.()
   }
 }
 

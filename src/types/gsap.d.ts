@@ -30,6 +30,8 @@ interface GsapTimeline {
   reverse: (from?: number | string) => GsapTimeline;
   call: (callback: () => void, params?: unknown[], position?: number | string) => GsapTimeline;
   clear: (labels?: boolean) => GsapTimeline;
+  duration: () => number;
+  tweenTo: (position: number | string, vars?: Record<string, unknown>) => GsapTimeline;
   timeScale: {
     (): number;
     (value: number): GsapTimeline;

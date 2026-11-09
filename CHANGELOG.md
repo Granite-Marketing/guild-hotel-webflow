@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.63
+
+### Patch Changes
+
+- Venue image stacks can be scroll-triggered (data-scroll-enlarge-snap-trigger): each panel change plays as a 1.6s timed wipe and reverses on the way up; on for home and wellness. Image fade reveal is quicker and subtler (0.9s fade, 1.04 settle).
+
 ## 1.1.62
 
 ### Patch Changes
