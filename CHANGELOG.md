@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.61
+
+### Patch Changes
+
+- Underlined links draw their line on an inline span round the text, so it sits just under the letters whatever padding, line height or flex the link has (rooms quiz links, mobile).
+
 ## 1.1.60
 
 ### Patch Changes
