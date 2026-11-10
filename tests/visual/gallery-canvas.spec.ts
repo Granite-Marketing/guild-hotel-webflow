@@ -113,7 +113,7 @@ test('mouse: drag pans the board, plain wheel scrolls the page', async ({ page }
   expect((await boardState(page, 'gallery')).scale).toBe(1)
 })
 
-test('zoom: buttons step and clamp at the ends; ctrl+wheel does not zoom the board', async ({ page }) => {
+test('zoom: minus and plus step and dim at the ends, the label names the level; ctrl+wheel does not zoom the board', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await openFixture(page)
   await page.mouse.move(720, 450)
@@ -126,7 +126,8 @@ test('zoom: buttons step and clamp at the ends; ctrl+wheel does not zoom the boa
   await page.locator('#gallery [data-gallery-canvas-zoom="in"]').click()
   await settle(page)
   expect((await boardState(page, 'gallery')).scale).toBeCloseTo(1.6)
-  await expect(page.locator('#gallery [data-gallery-canvas-zoom="in"]')).toHaveClass(/is-active/)
+  await expect(page.locator('#gallery [data-gallery-canvas-zoom="reset"]')).toHaveText('zoomed in')
+  await expect(page.locator('#gallery [data-gallery-canvas-zoom="in"]')).toHaveAttribute('aria-disabled', 'true')
 
   const zoomOut = page.locator('#gallery [data-gallery-canvas-zoom="out"]')
   await zoomOut.click()
@@ -135,8 +136,10 @@ test('zoom: buttons step and clamp at the ends; ctrl+wheel does not zoom the boa
   await settle(page)
   const zoomedOut = await boardState(page, 'gallery')
   expect(zoomedOut.scale).toBeCloseTo(0.5)
-  await expect(zoomOut).toHaveClass(/is-active/)
-  await expect(page.locator('#gallery [data-gallery-canvas-zoom="reset"]')).not.toHaveClass(/is-active/)
+  await expect(page.locator('#gallery [data-gallery-canvas-zoom="reset"]')).toHaveText('zoomed out')
+  await expect(zoomOut).toHaveAttribute('aria-disabled', 'true')
+  await expect(page.locator('#gallery [data-gallery-canvas-zoom="in"]')).toHaveAttribute('aria-disabled', 'false')
+  await expect(page.locator('#gallery .gallery-all_zoom .is-active')).toHaveCount(0)
   // At 0.5 the whole board fits the window.
   expect(zoomedOut.boardWidth * 0.5).toBeLessThanOrEqual(zoomedOut.windowWidth)
   await page.screenshot({ path: 'test-results/gallery-canvas-zoomed-out.png' })
@@ -153,7 +156,7 @@ test('filter: board re-lays out and returns to centre at Normal', async ({ page 
   expect(await page.locator('#gallery .gallery-all_item:not(.hide)').count()).toBeLessThan(24)
   expect(state.x).toBeCloseTo((state.windowWidth - state.boardWidth) / 2, 0)
   expect(state.y).toBeCloseTo((state.windowHeight - state.boardHeight) / 2, 0)
-  await expect(page.locator('#gallery [data-gallery-canvas-zoom="reset"]')).toHaveClass(/is-active/)
+  await expect(page.locator('#gallery [data-gallery-canvas-zoom="reset"]')).toHaveText('normal')
 })
 
 test('arts: a drag released on a tile does not open it, a click does', async ({ page }) => {

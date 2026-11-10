@@ -8,7 +8,9 @@
  *   - Items:    `[data-gallery-filter-item]`; their common parent is the board,
  *               and the board's parent is the window (works for the static
  *               /gallery grid and the /arts Collection List alike)
- *   - Zoom:     `[data-gallery-canvas-zoom="out|reset|in"]` links
+ *   - Zoom:     `[data-gallery-canvas-zoom="out|reset|in"]` links; out and in
+ *               show as minus and plus icons (CSS), the reset link's text
+ *               names the current zoom, and out/in get aria-disabled at the ends
  *   - Joystick: `.gallery-all_joystick` > `.gallery-all_joystick-knob`, shown
  *               (`is-active`) on touch screens only
  * Layout and window styles live in docs/reference/site-head/gallery-canvas.css.
@@ -216,13 +218,17 @@ export const galleryCanvas = () => {
 
     // -- Zoom -----------------------------------------------------------------
 
-    // The link for the current step shows as active: out, normal or in.
-    const ZOOM_ACTIONS = ['out', 'reset', 'in']
+    // Minus and plus step one level; the middle link names the current level
+    // and resets to Normal. Minus and plus dim at the ends of the range.
+    const ZOOM_LABELS = ['zoomed out', 'normal', 'zoomed in']
     const markZoomStep = () => {
       zoomLinks.forEach((link) => {
-        const isActive = link.getAttribute('data-gallery-canvas-zoom') === ZOOM_ACTIONS[zoomStep]
-        link.classList.toggle(ACTIVE_CLASS, isActive)
-        link.setAttribute('aria-pressed', String(isActive))
+        const action = link.getAttribute('data-gallery-canvas-zoom')
+        if (action === 'reset') link.textContent = ZOOM_LABELS[zoomStep]
+        else {
+          const atEnd = action === 'out' ? zoomStep === 0 : zoomStep === ZOOM_STEPS.length - 1
+          link.setAttribute('aria-disabled', String(atEnd))
+        }
       })
     }
 
