@@ -17,6 +17,24 @@
   outline-offset: -3px;
 }
 
+/* Edge fade: photos dissolve into the section colour at every edge of the window. */
+[data-gallery-canvas] {
+  --gallery-canvas-fade: #f4efdf;
+}
+
+[data-gallery-canvas].is-dark {
+  --gallery-canvas-fade: #262118;
+}
+
+[data-gallery-canvas] .gallery-all_scroller::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: inset 0 0 6rem 3rem var(--gallery-canvas-fade);
+}
+
 [data-gallery-canvas] .gallery-all_grid {
   position: absolute;
   top: 0;
@@ -126,6 +144,10 @@
 }
 
 @media screen and (max-width: 767px) {
+  [data-gallery-canvas] .gallery-all_scroller::after {
+    box-shadow: inset 0 0 3rem 1.25rem var(--gallery-canvas-fade);
+  }
+
   .tab-pills-intro_tabs.is-canvas-controls {
     gap: 1rem;
     padding-left: 1.5rem;

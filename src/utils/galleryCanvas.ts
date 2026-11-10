@@ -32,10 +32,12 @@ const KEY_PAN_RATIO = 0.4
 
 const rowMetrics = () => {
   const width = window.innerWidth
-  // Board width ratio: phones get a wider board so a row holds several photos.
-  if (width >= 992) return { rowHeight: 414, gap: 24, boardRatio: 2 }
-  if (width >= 768) return { rowHeight: 320, gap: 24, boardRatio: 2 }
-  return { rowHeight: 224, gap: 12, boardRatio: 3 }
+  // minWidthRatio: the board is never narrower than this many window widths,
+  // so there is always something to drag sideways; phones need more because a
+  // row there holds only one or two photos per screen.
+  if (width >= 992) return { rowHeight: 414, gap: 24, minWidthRatio: 1.5 }
+  if (width >= 768) return { rowHeight: 320, gap: 24, minWidthRatio: 1.5 }
+  return { rowHeight: 224, gap: 12, minWidthRatio: 2.5 }
 }
 
 const imageAspect = (item: HTMLElement) => {
@@ -86,14 +88,25 @@ export const galleryCanvas = () => {
     // -- Layout ---------------------------------------------------------------
 
     const layout = (animate: boolean) => {
-      const { rowHeight, gap, boardRatio } = rowMetrics()
-      const targetWidth = windowElement.clientWidth * boardRatio
+      const { rowHeight, gap, minWidthRatio } = rowMetrics()
       const visibleItems = items.filter((item) => !item.classList.contains(HIDDEN_CLASS))
+      const naturalWidths = visibleItems.map((item) => imageAspect(item) * rowHeight)
+
+      // Board width grows with the photo count: by default the board takes the
+      // window's shape (rows and width grow together), never narrower than
+      // minWidthRatio windows. `data-gallery-canvas-width="3"` on the root fixes
+      // it at that many window widths instead.
+      const windowWidth = windowElement.clientWidth
+      const windowHeight = windowElement.clientHeight || window.innerHeight
+      const fixedRatio = Number(root.getAttribute('data-gallery-canvas-width'))
+      const totalArea = naturalWidths.reduce((total, width) => total + width + gap, 0) * (rowHeight + gap)
+      const targetWidth = fixedRatio > 0
+        ? windowWidth * fixedRatio
+        : Math.max(windowWidth * minWidthRatio, Math.sqrt(totalArea * (windowWidth / windowHeight)))
 
       // Pack natural widths into rows, closing a row where it lands nearest the
       // target width, then stretch each full row flush (object-fit crops the
       // few percent) so both edges line up like the Figma rows.
-      const naturalWidths = visibleItems.map((item) => imageAspect(item) * rowHeight)
       const rows: number[][] = [[]]
       let rowWidth = 0
       naturalWidths.forEach((width, index) => {

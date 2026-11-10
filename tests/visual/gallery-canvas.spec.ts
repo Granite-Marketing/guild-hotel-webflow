@@ -65,12 +65,16 @@ const boardState = (page: Page, sectionId: string) =>
 
 const settle = (page: Page) => page.waitForTimeout(900)
 
-test('layout: brick rows at natural aspect, board about twice the window, centred', async ({ page }) => {
+test('layout: brick rows at natural aspect, board sized by photo count, centred', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await openFixture(page)
   const state = await boardState(page, 'gallery')
   expect(state.windowHeight).toBe(900)
-  expect(state.boardWidth).toBe(state.windowWidth * 2)
+  // 24 photos: wider than the 1.5-window minimum, and about the window's shape.
+  expect(state.boardWidth).toBeGreaterThanOrEqual(state.windowWidth * 1.5)
+  const boardShape = state.boardWidth / state.boardHeight
+  expect(boardShape).toBeGreaterThan((state.windowWidth / state.windowHeight) * 0.6)
+  expect(boardShape).toBeLessThan((state.windowWidth / state.windowHeight) * 1.6)
   expect(state.x).toBeCloseTo((state.windowWidth - state.boardWidth) / 2, 0)
 
   const rows = await page.locator('#gallery .gallery-all_item').evaluateAll((items) =>

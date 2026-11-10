@@ -719,7 +719,7 @@ Category filter for a gallery grid, driven by the sticky subnav tag pill
 
 - Root `[data-gallery-canvas]` on the `[data-gallery-filter]` section. The items' common parent is the board (`.gallery-all_grid`), its parent the window (`.gallery-all_scroller`); layout CSS in `docs/reference/site-head/gallery-canvas.css` (bundled into `site.css`), scoped to the attribute so venue galleries keep their grid.
 - Controls: `[data-gallery-canvas-zoom="out|reset|in"]` links; `.gallery-all_joystick > .gallery-all_joystick-knob` gets `is-active` on touch screens only.
-- Rows: fixed height (414 / 320 / 224px), photos at their natural aspect, full rows stretched flush (at most about 15%), never repeated. Board 2x the window width (3x on phones). Zoom steps 0.5, 1, 1.6.
+- Rows: fixed height (414 / 320 / 224px), photos at their natural aspect, full rows stretched flush (at most about 15%), never repeated. Board width follows the photo count: about the window's shape, at least 1.5 window widths (2.5 on phones); `data-gallery-canvas-width="<n>"` on the root fixes it at n window widths. Edges fade into the section colour (`::after` on the window). Zoom steps 0.5, 1, 1.6.
 - Mouse: GSAP Draggable + InertiaPlugin (Webflow GSAP 3.15.0 plugins, must be loaded on the site). Plain wheel scrolls the page; cmd/ctrl+wheel and pinch zoom one step. Touch: no board capture; joystick and buttons only.
 - Listens for `gallery-filter:change` (dispatched by galleryFilter) to re-lay out and glide back to centre at Normal.
 
