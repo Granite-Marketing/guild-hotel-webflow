@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.9
+
+### Patch Changes
+
+- Gallery canvas: zoom out and zoom in use magnifier icons with a minus and a plus, the zoom pill is tighter, and it sits 0.75rem above the filter pill at every breakpoint.
+
 ## 1.2.8
 
 ### Patch Changes
