@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.8
+
+### Patch Changes
+
+- Gallery canvas: the zoom pill sits centred directly above the filter pill on desktop too, not in the bottom right corner.
+
 ## 1.2.7
 
 ### Patch Changes

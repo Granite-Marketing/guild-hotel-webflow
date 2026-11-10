@@ -76,9 +76,10 @@
 
 .gallery-all_controls {
   position: absolute;
-  right: 2rem;
-  /* Sits above the filter pill: the filter pill is wide enough to reach it on 1440 screens. */
+  /* Centred directly above the filter pill on every breakpoint. */
+  right: 50%;
   bottom: 6.5rem;
+  transform: translateX(50%);
   z-index: 2;
   transition: opacity 0.3s, visibility 0.3s;
 }
@@ -174,15 +175,13 @@
 
 @media screen and (max-width: 991px) {
   /* The window spans the screen edge to edge; the filter pill and the
-     controls stack bottom centre so neither covers the other. */
+     controls sit a little closer to it. */
   [data-gallery-canvas] .gallery-all_tags-wrapper {
     max-width: calc(100vw - 2.5rem);
   }
 
   .gallery-all_controls {
-    right: 50%;
     bottom: 6rem;
-    transform: translateX(50%);
   }
 }
 
