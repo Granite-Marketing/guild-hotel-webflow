@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1
+
+### Patch Changes
+
+- 90955e4: Gallery canvas: the zoom pill sits above the filter pill so they no longer overlap on wide screens, and on phones the joystick sits beside the zoom links instead of above them.
+
 ## 1.2.0
 
 ### Minor Changes
