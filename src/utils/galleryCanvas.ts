@@ -216,17 +216,13 @@ export const galleryCanvas = () => {
 
     // -- Zoom -----------------------------------------------------------------
 
+    // The link for the current step shows as active: out, normal or in.
+    const ZOOM_ACTIONS = ['out', 'reset', 'in']
     const markZoomStep = () => {
-      const activeAction = zoomStep === NORMAL_STEP ? 'reset' : undefined
       zoomLinks.forEach((link) => {
-        const isActive = link.getAttribute('data-gallery-canvas-zoom') === activeAction
+        const isActive = link.getAttribute('data-gallery-canvas-zoom') === ZOOM_ACTIONS[zoomStep]
         link.classList.toggle(ACTIVE_CLASS, isActive)
         link.setAttribute('aria-pressed', String(isActive))
-        const action = link.getAttribute('data-gallery-canvas-zoom')
-        const atLimit =
-          (action === 'out' && zoomStep === 0) ||
-          (action === 'in' && zoomStep === ZOOM_STEPS.length - 1)
-        link.setAttribute('aria-disabled', String(atLimit))
       })
     }
 

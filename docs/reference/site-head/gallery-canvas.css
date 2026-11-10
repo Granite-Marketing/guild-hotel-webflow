@@ -97,11 +97,6 @@
   gap: 1.5rem;
 }
 
-.gallery-all_zoom [aria-disabled='true'] {
-  opacity: 0.35;
-  pointer-events: none;
-}
-
 .gallery-all_joystick {
   display: none;
   position: relative;

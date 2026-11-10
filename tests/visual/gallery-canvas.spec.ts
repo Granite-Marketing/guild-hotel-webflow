@@ -130,7 +130,8 @@ test('zoom: ctrl+wheel steps once per gesture, buttons clamp at the ends', async
   await settle(page)
   const zoomedOut = await boardState(page, 'gallery')
   expect(zoomedOut.scale).toBeCloseTo(0.5)
-  await expect(zoomOut).toHaveAttribute('aria-disabled', 'true')
+  await expect(zoomOut).toHaveClass(/is-active/)
+  await expect(page.locator('#gallery [data-gallery-canvas-zoom="reset"]')).not.toHaveClass(/is-active/)
   // At 0.5 the whole board fits the window.
   expect(zoomedOut.boardWidth * 0.5).toBeLessThanOrEqual(zoomedOut.windowWidth)
   await page.screenshot({ path: 'test-results/gallery-canvas-zoomed-out.png' })
