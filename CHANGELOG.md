@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.5
+
+### Patch Changes
+
+- f965fdb: Gallery canvas: stronger edge fade (deeper on every screen size).
+
 ## 1.2.4
 
 ### Patch Changes
