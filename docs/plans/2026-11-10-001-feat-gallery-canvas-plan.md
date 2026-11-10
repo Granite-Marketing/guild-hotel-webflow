@@ -18,6 +18,8 @@ execution: code + Webflow Designer (approval first)
 
 ## Key decisions (settled)
 
+- **Update 2026-11-10 (after staging review):** cmd/ctrl+wheel and pinch zoom removed as too fiddly; zoom is the three buttons only. Board width now follows the photo count (window-shaped, min 1.5 window widths, 2.5 on phones; `data-gallery-canvas-width` overrides). Edges fade into the section colour. Active class follows the current zoom step.
+
 - Two pages only: `/gallery` (static grid, cream) and `/arts` (CMS "Art Collection", `is-dark`).
 - Brick rows, fixed row height per breakpoint; each photo's width = natural aspect x row height. `tile-size`, `is-narrow`, `is-wide` stop driving layout. Board ~2x window width, no duplicates ever (the client fills it with content); an axis whose content is smaller than the window is centred and locked.
 - Filter change: board re-lays out from the remaining photos, camera glides to centre at Normal, incoming photos fade in through `galleryFilter`'s existing transition.

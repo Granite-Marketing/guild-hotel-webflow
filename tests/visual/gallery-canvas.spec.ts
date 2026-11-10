@@ -113,15 +113,20 @@ test('mouse: drag pans the board, plain wheel scrolls the page', async ({ page }
   expect((await boardState(page, 'gallery')).scale).toBe(1)
 })
 
-test('zoom: ctrl+wheel steps once per gesture, buttons clamp at the ends', async ({ page }) => {
+test('zoom: buttons step and clamp at the ends; ctrl+wheel does not zoom the board', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await openFixture(page)
   await page.mouse.move(720, 450)
   await page.keyboard.down('Control')
-  for (let tick = 0; tick < 5; tick += 1) await page.mouse.wheel(0, -40)
+  await page.mouse.wheel(0, -40)
   await page.keyboard.up('Control')
   await settle(page)
+  expect((await boardState(page, 'gallery')).scale).toBe(1)
+
+  await page.locator('#gallery [data-gallery-canvas-zoom="in"]').click()
+  await settle(page)
   expect((await boardState(page, 'gallery')).scale).toBeCloseTo(1.6)
+  await expect(page.locator('#gallery [data-gallery-canvas-zoom="in"]')).toHaveClass(/is-active/)
 
   const zoomOut = page.locator('#gallery [data-gallery-canvas-zoom="out"]')
   await zoomOut.click()

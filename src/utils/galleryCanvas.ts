@@ -13,8 +13,9 @@
  *               (`is-active`) on touch screens only
  * Layout and window styles live in docs/reference/site-head/gallery-canvas.css.
  *
- * Mouse: drag pans with inertia, plain wheel scrolls the page, cmd/ctrl+wheel
- * and trackpad pinch zoom one step. Touch: the board never captures a swipe;
+ * Mouse: drag pans with inertia; the wheel always scrolls the page. Zoom is
+ * the three buttons only (wheel and pinch zoom were dropped as too fiddly).
+ * Touch: the board never captures a swipe;
  * the joystick and zoom buttons move it. Rows are brick rows of a fixed height
  * with each photo at its natural aspect ratio; photos are never repeated.
  */
@@ -24,7 +25,6 @@ const NORMAL_STEP = 1
 const HIDDEN_CLASS = 'hide'
 const ACTIVE_CLASS = 'is-active'
 const FALLBACK_ASPECT = 4 / 3
-const WHEEL_GESTURE_SILENCE = 0.3
 const DRAG_CLICK_DISTANCE = 4
 const DRAG_CLICK_WINDOW_MS = 300
 const JOYSTICK_SPEED = 800
@@ -255,35 +255,6 @@ export const galleryCanvas = () => {
         else if (action === 'out') zoomTo(zoomStep - 1)
         else zoomTo(NORMAL_STEP)
       })
-    })
-
-    // A trackpad pinch is a burst of ctrl+wheel events: one step per burst.
-    let wheelGestureActive = false
-    const wheelGestureEnd = gsap.delayedCall(WHEEL_GESTURE_SILENCE, () => {
-      wheelGestureActive = false
-    }).pause()
-
-    windowElement.addEventListener(
-      'wheel',
-      (event) => {
-        if (!event.ctrlKey && !event.metaKey) return // plain wheel scrolls the page
-        event.preventDefault()
-        event.stopPropagation() // keep Lenis (listening on window) from scrolling
-        wheelGestureEnd.restart(true)
-        if (wheelGestureActive || event.deltaY === 0) return
-        wheelGestureActive = true
-        const box = windowElement.getBoundingClientRect()
-        zoomTo(zoomStep + (event.deltaY < 0 ? 1 : -1), event.clientX - box.left, event.clientY - box.top)
-      },
-      { passive: false },
-    )
-
-    // Safari reports trackpad pinch as gesture events, not ctrl+wheel.
-    windowElement.addEventListener('gesturestart', (event) => event.preventDefault())
-    windowElement.addEventListener('gestureend', (event) => {
-      event.preventDefault()
-      const scale = (event as Event & { scale?: number }).scale ?? 1
-      if (scale !== 1) zoomTo(zoomStep + (scale > 1 ? 1 : -1))
     })
 
     // -- Pan: mouse -----------------------------------------------------------
