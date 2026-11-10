@@ -59,3 +59,4 @@ Items 1 to 9 are live on staging and were checked at 1440, 991, 800, 650 and 390
 10. Wellness stacks (home and /wellness) are now scroll-triggered (`data-scroll-enlarge-snap-trigger`, step 100): crossing a panel point plays a 1.6s wipe, scrolling up plays it in reverse; the enlarge stays scrubbed; no snap. v1.1.63.
 11. `image-fade` is quicker and subtler: 0.9s fade, image settles from 1.04. v1.1.63.
 12. Home wellness three-image collapse (the "wellness" Stephen meant): no longer scrubbed; crossing `top 55%` plays a 1.6s collapse, scrolling back above plays it in reverse. v1.1.64.
+13. Undid items 2, 9 and 10: they changed the enlarge-snap stacks after misreading "wellness" (Stephen meant the home three-image collapse, item 12). Code back to its pre-round-2 state, home step back to 150, /wellness back to the default step, trigger attribute removed. v1.1.65.

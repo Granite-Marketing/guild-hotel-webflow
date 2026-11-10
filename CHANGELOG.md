@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.65
+
+### Patch Changes
+
+- Undo the enlarge-snap slow-downs and triggered mode (misread feedback).
+
 ## 1.1.64
 
 ### Patch Changes
