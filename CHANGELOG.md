@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.7
+
+### Patch Changes
+
+- Gallery canvas on phones: the zoom pill fades out while the filter menu is open, so the menu no longer opens over it.
+
 ## 1.2.6
 
 ### Patch Changes

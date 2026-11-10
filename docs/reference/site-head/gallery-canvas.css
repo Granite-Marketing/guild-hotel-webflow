@@ -80,6 +80,13 @@
   /* Sits above the filter pill: the filter pill is wide enough to reach it on 1440 screens. */
   bottom: 6.5rem;
   z-index: 2;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* The phone filter menu opens upward over the zoom pill, so the pill fades out while it is open. */
+[data-gallery-canvas]:has(.gallery-all_tags-wrapper .is-open) .gallery-all_controls {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .tab-pills-intro_tabs.is-canvas-controls {
