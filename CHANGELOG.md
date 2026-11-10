@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.64
+
+### Patch Changes
+
+- Home three-image collapse is a timed 1.6s animation that reverses on scroll up.
+
 ## 1.1.63
 
 ### Patch Changes

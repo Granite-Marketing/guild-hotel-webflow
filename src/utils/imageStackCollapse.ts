@@ -15,8 +15,10 @@
  * The anchor stays put and is raised above the others; without an explicit
  * `="anchor"` the middle item is the anchor. Optional
  * `data-image-stack-collapse-start` / `-end` override the ScrollTrigger
- * positions (defaults `top 55%` / `center 40%`, so the row is well in view before it moves). The animation is
- * scrubbed, so scrolling back up fans the images out again.
+ * positions (defaults `top 55%` / `center 40%`, so the row is well in view before it moves). The collapse
+ * is a timed animation (COLLAPSE_SECONDS) that plays once the row crosses the
+ * start point, and plays back in reverse when you scroll back above it
+ * (animation feedback round 3: scrubbed felt too fast). `-end` is unused.
  *
  * Offsets are measured centre to centre (current translate removed) and
  * recomputed on every ScrollTrigger refresh, so the stack stays aligned
@@ -34,6 +36,8 @@
 
 const DEFAULT_START = 'top 55%'
 const DEFAULT_END = 'center 40%'
+/** Seconds the collapse (and its reverse) takes. */
+const COLLAPSE_SECONDS = 1.6
 const MOBILE = '(max-width: 767px)'
 const DESKTOP = '(min-width: 768px)'
 
@@ -137,7 +141,7 @@ export const imageStackCollapse = () => {
             trigger: stack,
             start: stack.dataset.imageStackCollapseStart || DEFAULT_START,
             end: stack.dataset.imageStackCollapseEnd || DEFAULT_END,
-            scrub: true,
+            toggleActions: 'play none none reverse',
             invalidateOnRefresh: true,
           },
         })
@@ -149,6 +153,7 @@ export const imageStackCollapse = () => {
             {
               x: () => offsetToAnchor(item, anchor).x,
               y: () => offsetToAnchor(item, anchor).y,
+              duration: COLLAPSE_SECONDS,
               ease: 'power2.inOut',
             },
             0,
