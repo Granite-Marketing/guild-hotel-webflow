@@ -17,6 +17,10 @@
  * gets `is-active` and `aria-pressed="true"`. Stickiness of the tag bar is
  * plain CSS (`position: sticky`), which Lenis supports.
  *
+ * After each filter change the root dispatches `gallery-filter:change`
+ * (galleryCanvas listens), once the `hide` classes are set and before the
+ * incoming items fade in.
+ *
  * Detail modals (Arts page) need no code here: put `data-modal-open="{slug}"`
  * on the item and follow the CMS pattern in docs/reference/modal-setup.md;
  * `modals()` handles open, close and focus.
@@ -86,6 +90,8 @@ export const galleryFilter = () => {
     // Grid height changed: re-measure every trigger below the gallery.
     const showMatches = (category: string) => {
       applyVisibility(category)
+      // galleryCanvas re-lays out the board before the incoming photos fade in.
+      root.dispatchEvent(new CustomEvent('gallery-filter:change'))
       ScrollTrigger.refresh(true)
     }
 

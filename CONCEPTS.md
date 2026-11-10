@@ -27,6 +27,13 @@ The homepage Wellness section's row of three images that slide together into one
 It is what the client means by the homepage "Wellness animation"; the pinned full-bleed panel stacks (`scrollEnlargeSnap`) are a different effect.
 *Avoid: wellness stack, venue stack*
 
+### Gallery canvas
+
+The Gallery and Arts photo grids shown as a full-screen window onto a larger board of photos that the visitor drags to move around and zooms in three steps (zoomed out, normal, zoomed in); the page still scrolls past it as normal, and the filter rearranges the board.
+
+The smaller photo galleries on venue and template pages are not gallery canvases.
+*Avoid: draggable gallery, infinite gallery*
+
 ## Navigation
 
 ### Bottom menu

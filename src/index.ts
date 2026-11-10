@@ -25,6 +25,7 @@ import { currentYear } from '$utils/currentYear'
 import { eagerImages } from '$utils/eagerImages'
 import { emailLinks } from '$utils/emailLinks'
 import { formPlaceholders } from '$utils/formPlaceholders'
+import { galleryCanvas } from '$utils/galleryCanvas'
 import { galleryFilter } from '$utils/galleryFilter'
 import { gsapBasicAnimations } from '$utils/gsapBasicAnimations'
 import { historyStickyYear } from '$utils/historyStickyYear'
@@ -146,6 +147,8 @@ window.Webflow.push(() => {
   // F36: alternate CMS cards across groups (Figma)
   staggerCards()
   galleryFilter()
+  // Gallery canvas: /gallery and /arts drag and zoom board, after galleryFilter's initial hide classes.
+  galleryCanvas()
   // slot F, in this order: filterPanels(), scrollHint(), finsweetRefresh(),
   //   filterActiveState()
 

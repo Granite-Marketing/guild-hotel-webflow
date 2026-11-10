@@ -45,6 +45,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | cardCarouselHeaderLeft | `cardCarouselHeaderLeft.ts` | wired (v1.1.2) | C, after swiperSliders |
 | imageStackCollapse | `imageStackCollapse.ts` | opt-in | G |
 | galleryFilter | `galleryFilter.ts` | wired (R00) | E |
+| galleryCanvas | `galleryCanvas.ts` | wired (next release) | E, after galleryFilter |
 | historyStickyYear | `historyStickyYear.ts` | wired (R00) | G |
 | offersSliderSplit | `offersSliderSplit.ts` | wired (R00) | C, after swiperSliders |
 | imageStackCollapse | `imageStackCollapse.ts` | wired (R00) | G |
@@ -711,6 +712,16 @@ Category filter for a gallery grid, driven by the sticky subnav tag pill
 - Order: slot E. It mutates layout, so it runs before slot G reveals.
 - Live use: `/gallery` `section_gallery-all` (Q040), tags are links with
   `role="button"`; the tag pill reuses `tab-pills-intro_tabs`.
+
+### galleryCanvas
+
+/gallery and /arts photo grids as a 100vh drag and zoom board ("Gallery canvas" in CONCEPTS.md; plan `docs/plans/2026-11-10-001-feat-gallery-canvas-plan.md`).
+
+- Root `[data-gallery-canvas]` on the `[data-gallery-filter]` section. The items' common parent is the board (`.gallery-all_grid`), its parent the window (`.gallery-all_scroller`); layout CSS in `docs/reference/site-head/gallery-canvas.css` (bundled into `site.css`), scoped to the attribute so venue galleries keep their grid.
+- Controls: `[data-gallery-canvas-zoom="out|reset|in"]` links; `.gallery-all_joystick > .gallery-all_joystick-knob` gets `is-active` on touch screens only.
+- Rows: fixed height (414 / 320 / 224px), photos at their natural aspect, full rows stretched flush (at most about 15%), never repeated. Board 2x the window width (3x on phones). Zoom steps 0.5, 1, 1.6.
+- Mouse: GSAP Draggable + InertiaPlugin (Webflow GSAP 3.15.0 plugins, must be loaded on the site). Plain wheel scrolls the page; cmd/ctrl+wheel and pinch zoom one step. Touch: no board capture; joystick and buttons only.
+- Listens for `gallery-filter:change` (dispatched by galleryFilter) to re-lay out and glide back to centre at Normal.
 
 ### roomListHoverPreview
 

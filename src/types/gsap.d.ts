@@ -64,7 +64,7 @@ interface GsapDelayedCall {
 }
 
 interface GsapInstance {
-  registerPlugin: (plugin: unknown) => void;
+  registerPlugin: (...plugins: unknown[]) => void;
   from: (target: Element | string, vars: Record<string, unknown>) => void;
   fromTo: (
     target: unknown,
@@ -91,6 +91,9 @@ interface GsapInstance {
     add: (fn: (time: number) => void) => void;
     remove: (fn: (time: number) => void) => void;
     lagSmoothing: (threshold: number) => void;
+  };
+  utils: {
+    clamp: (min: number, max: number, value: number) => number;
   };
 }
 
@@ -140,6 +143,33 @@ interface ScrollTriggerStatic {
 
 declare const gsap: GsapInstance;
 declare const ScrollTrigger: ScrollTriggerStatic;
+
+// -- Draggable + InertiaPlugin (GSAP plugins, enabled in Webflow site settings) --
+
+interface DraggableInstance {
+  x: number;
+  y: number;
+  startX: number;
+  startY: number;
+  endX: number;
+  endY: number;
+  isDragging: boolean;
+  isPressed: boolean;
+  isThrowing: boolean;
+  pointerEvent: Event | undefined;
+  tween?: { kill: () => void };
+  update: (applyBounds?: boolean) => DraggableInstance;
+  applyBounds: (bounds: Record<string, number> | Element) => DraggableInstance;
+  endDrag: (event?: Event) => void;
+  kill: () => void;
+}
+
+interface DraggableStatic {
+  create: (target: Element | string, vars: Record<string, unknown>) => DraggableInstance[];
+}
+
+declare const Draggable: DraggableStatic;
+declare const InertiaPlugin: unknown;
 
 // -- Lenis (default smooth-scroll; loaded via CDN) --
 
