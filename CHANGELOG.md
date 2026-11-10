@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.4
+
+### Patch Changes
+
+- db4f4f8: Gallery canvas: zoom is the three buttons only. Cmd or ctrl plus the wheel and trackpad pinch no longer zoom the board.
+
 ## 1.2.3
 
 ### Patch Changes
