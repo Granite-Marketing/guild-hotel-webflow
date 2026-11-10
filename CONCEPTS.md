@@ -20,6 +20,13 @@ A mask reveal whose window starts as the brand's chamfered hexagon frame inset o
 
 Every hexagon scroll mask on the site behaves the same way, so a change to one is a change to all of them.
 
+### Image trio collapse
+
+The homepage Wellness section's row of three images that slide together into one stack as it scrolls into view (`imageStackCollapse`).
+
+It is what the client means by the homepage "Wellness animation"; the pinned full-bleed panel stacks (`scrollEnlargeSnap`) are a different effect.
+*Avoid: wellness stack, venue stack*
+
 ## Navigation
 
 ### Bottom menu
