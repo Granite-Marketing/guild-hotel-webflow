@@ -29,7 +29,7 @@ It is what the client means by the homepage "Wellness animation"; the pinned ful
 
 ### Gallery canvas
 
-The Gallery and Arts photo grids shown as a full-screen window onto a larger board of photos that the visitor drags to move around and zooms with three buttons (zoom out, normal, zoom in); the page still scrolls past it as normal, and the filter rearranges the board.
+The Gallery and Arts photo grids shown as a full-screen window onto a larger board of photos that the visitor drags to move around and zooms in three steps (overview, normal, close up) with zoom out and zoom in buttons; the page still scrolls past it as normal, and the filter rearranges the board.
 
 The smaller photo galleries on venue and template pages are not gallery canvases.
 *Avoid: draggable gallery, infinite gallery*

@@ -1,7 +1,7 @@
 ---
 title: "Webflow Data API builders work without the Designer"
 date: "2026-10-19"
-last_updated: "2026-10-27"
+last_updated: "2026-11-10"
 category: "integration-issues"
 module: "webflow-mcp"
 component: "tooling"
@@ -327,3 +327,12 @@ Page `/static-template` (`6ad66fd802cc199b55b924be`): Site Nav (Dark), one one-o
 - **A Collection List inside a component definition takes only its source headlessly.** `source` applies, but `sort` then fails with "No source connected. Set a source first." and every cms binding inside the item fails with "Element is not inside a CMS context", even with the component canvas open in a live Designer. Build the list and its item elements and classes through the API, then do the sort and the field bindings in the Designer. A Collection List on a page (outside a component) is fully headless, as above.
 - **`creation_position: "after"` on a component instance fails** with "Cannot insert elements directly into a component instance" (both builder and `insert_component_instance`). Append to the parent instead, for example the `.page-wrapper`.
 - **Dialog hash links need the capture phase too.** A `#book` link that opens a dialog is a same-page `#id` link, so Webflow.js scrolled to the fixed dialog and pushed the hash. `modals.ts` now opens dialogs from `a[href="#<dialog id>"]` in its capture-phase listener with `stopPropagation()` (see `webflow-js-anchor-scroll-overrides-lenis.md`).
+
+## Gotchas found moving the gallery to the CMS (2026-11-10)
+
+- **A Collection Item cannot change its tag.** `set_tag` on a DynamoItem returns "Element does not support setTag", so a CMS item stays a `div` (`role="listitem"`); a static grid of `figure` items becomes a list of divs. Keep image selectors class-based (`.gallery-all_item img`), not tag-based.
+- **An Option field bound to an attribute publishes the option name as typed.** `data-gallery-filter-item` bound to Category published `Design`, `Rooms` and so on, capitalised. `galleryFilter` lowercases both sides, so name options for display and do not rely on attribute case.
+- **List limit is a plain number setting.** `set_settings` key `limit` with `static_number` caps a Collection List (home art trail: 100 to 10). The default limit is 100, which is also Webflow's hard cap per list.
+- **Visibility off removes the element from the published HTML**, so an old static grid hidden with `set_visibility` false leaves no markup behind for scripts that read the first matching element.
+- **A custom CSS embed builds and componentises headlessly.** Builder type `HtmlEmbed`, then `set_settings` key `code` with `static_text`, then `transform_element_to_component`, then `insert_component_instance` on other pages. Why this matters: `docs/solutions/conventions/designer-visible-css-embed-component.md`.
+- **CMS items can be seeded in one call.** `POST /v2/collections/{id}/items` with `{"items": [...]}` (not `/items/bulk`, which expects another shape) and `isDraft: false` per item; image fields take `{"url": <library hostedUrl>, "alt": ...}` and re-import the file.
