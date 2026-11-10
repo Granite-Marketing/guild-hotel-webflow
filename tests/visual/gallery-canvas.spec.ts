@@ -126,7 +126,7 @@ test('zoom: minus and plus step and dim at the ends, the label names the level; 
   await page.locator('#gallery [data-gallery-canvas-zoom="in"]').click()
   await settle(page)
   expect((await boardState(page, 'gallery')).scale).toBeCloseTo(1.6)
-  await expect(page.locator('#gallery [data-gallery-canvas-zoom="reset"]')).toHaveText('zoomed in')
+  await expect(page.locator('#gallery [data-gallery-canvas-zoom="reset"]')).toHaveText('close up')
   await expect(page.locator('#gallery [data-gallery-canvas-zoom="in"]')).toHaveAttribute('aria-disabled', 'true')
 
   const zoomOut = page.locator('#gallery [data-gallery-canvas-zoom="out"]')
@@ -136,7 +136,7 @@ test('zoom: minus and plus step and dim at the ends, the label names the level; 
   await settle(page)
   const zoomedOut = await boardState(page, 'gallery')
   expect(zoomedOut.scale).toBeCloseTo(0.5)
-  await expect(page.locator('#gallery [data-gallery-canvas-zoom="reset"]')).toHaveText('zoomed out')
+  await expect(page.locator('#gallery [data-gallery-canvas-zoom="reset"]')).toHaveText('overview')
   await expect(zoomOut).toHaveAttribute('aria-disabled', 'true')
   await expect(page.locator('#gallery [data-gallery-canvas-zoom="in"]')).toHaveAttribute('aria-disabled', 'false')
   await expect(page.locator('#gallery .gallery-all_zoom .is-active')).toHaveCount(0)

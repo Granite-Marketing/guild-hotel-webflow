@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.6
+
+### Patch Changes
+
+- Gallery canvas zoom controls: zoom out and zoom in are now minus and plus icons that step one level and dim at the ends. The middle label names the current level (overview, normal, close up) and resets to normal. No zoom button shows as active any more.
+
 ## 1.2.5
 
 ### Patch Changes

@@ -220,7 +220,7 @@ export const galleryCanvas = () => {
 
     // Minus and plus step one level; the middle link names the current level
     // and resets to Normal. Minus and plus dim at the ends of the range.
-    const ZOOM_LABELS = ['zoomed out', 'normal', 'zoomed in']
+    const ZOOM_LABELS = ['overview', 'normal', 'close up']
     const markZoomStep = () => {
       zoomLinks.forEach((link) => {
         const action = link.getAttribute('data-gallery-canvas-zoom')
