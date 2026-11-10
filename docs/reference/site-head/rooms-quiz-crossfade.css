@@ -1,6 +1,9 @@
 /* Rooms quiz (src/utils/roomsQuiz.ts): the steps share one grid cell so the next step crossfades in over the current one, which stays visible underneath (no flash of the page behind) */
 .section_rooms-collection-quiz{display:grid}
-.section_rooms-collection-quiz>.rooms-collection-quiz_component{grid-area:1/1}
-.section_rooms-collection-quiz>.rooms-collection-quiz_component.is-entering{display:grid}
+.section_rooms-collection-quiz>.rooms-collection-quiz_component{grid-area:1/1;display:grid}
+/* Inactive steps stay rendered (crawlable) but invisible and out of the layout; the Designer base is display:none */
+.section_rooms-collection-quiz>.rooms-collection-quiz_component:not(.is-active):not(.is-entering){position:absolute;inset:0;min-height:0;overflow:hidden;visibility:hidden;pointer-events:none}
+/* Hidden quiz results, lines and cards: visibility instead of display:none so search engines still read them */
+.is-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;visibility:hidden!important;pointer-events:none}
 /* CMS Nest drops each room's quiz tag list into its result card without the hide class; it only feeds the matching, so keep it out of the layout (it left a 168px gap under every card on phones). */
 .rooms-collection-room-grid_item>.w-dyn-list{display:none}
