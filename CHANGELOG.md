@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.10
+
+### Patch Changes
+
+- Gallery canvas CSS moved out of the bundled stylesheet into the "Gallery Canvas Styles" embed component on /gallery and /arts, so the Webflow Designer shows the same layout as the live site. Board and photo positioning now only applies once the script has run.
+
 ## 1.2.9
 
 ### Patch Changes
