@@ -850,8 +850,8 @@ Ids: `docs/reference/webflow-ids.md` "F26 Rooms quiz CMS".
 | `data-rooms-quiz-step` | each step panel (`rooms-collection-quiz_component`) | `1`, `2`, `3` |
 | `data-rooms-quiz-option` | each option link (Quiz Options list) | option slug |
 | `data-rooms-quiz-back` | back link on steps 2 and 3 | `true` |
-| `data-rooms-quiz-results` | the recommendations and room grid sections | `true`; hidden by a `hide` combo |
-| `data-rooms-quiz-closest` / `-empty` / `-loading` | result lines | `true`; each hidden by a `hide` combo |
+| `data-rooms-quiz-results` | the recommendations and room grid sections | `true`; hidden by an `is-hidden` combo |
+| `data-rooms-quiz-closest` / `-empty` / `-loading` | result lines | `true`; each hidden by an `is-hidden` combo |
 | `data-rooms-quiz-restart` | "back to the quiz" on the results | `true` |
 | `fs-cmsnest-element="list"` | the room grid collection list | each of its items is a card; CMS Nest replaces the item's nest target with the room's options list |
 | `data-rooms-quiz-tag` | each Quiz Options item CMS Nest injects | option slug |
@@ -859,8 +859,14 @@ Ids: `docs/reference/webflow-ids.md` "F26 Rooms quiz CMS".
 | `data-scroll-flush` | the quiz section and the recommendations section | `true`; `smoothScroll.scrollTo` lands them at the viewport top instead of below the transparent fixed nav |
 | `data-header-theme` | the quiz section | `white`: navTheme keeps the cream nav over the burgundy panel and photo (the section itself is transparent, so it would read as light) |
 
-- The visible panel carries `is-active` (`.rooms-collection-quiz_component`
-  is `display: none`, the `is-active` combo is `grid`). Step 1 has it in the
+- Nothing in the quiz is `display: none`, so search engines read every step
+  and result. Hidden steps, results, lines and cards are `visibility: hidden`,
+  out of the layout (absolute) and `inert`; the CSS is bundled from
+  `docs/reference/site-head/rooms-quiz-crossfade.css` (the Designer base
+  `display: none` on `.rooms-collection-quiz_component` is overridden there).
+  Results and lines still carrying the old `hide` combo are switched to
+  `is-hidden` on load.
+- The visible panel carries `is-active`. Step 1 has it in the
   Designer, so without JS step 1 shows alone and the results stay hidden.
 - Selecting adds `is-active` and `aria-pressed="true"` to the option and
   leaves its other classes (`is-fill`, variant) alone; the selected look is
@@ -873,7 +879,7 @@ Ids: `docs/reference/webflow-ids.md` "F26 Rooms quiz CMS".
   through the engine's `scrollTo`, then `ScrollTrigger.refresh(true)`.
 - Matching: a card matches when its nest holds all three answers; otherwise
   cards holding the guest answer and at least one other show under the
-  closest line; otherwise the empty line shows. Non-matching cards get `hide`.
+  closest line; otherwise the empty line shows. Non-matching cards get `is-hidden`.
   With an odd number of matches the last card item gets `is-wide`
   (`.rooms-collection-room-grid_item.is-wide` spans both columns at 16:9;
   the card fills it through `height: 100%`).

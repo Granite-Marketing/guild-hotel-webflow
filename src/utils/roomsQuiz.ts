@@ -12,9 +12,12 @@
  *   - Option:   `[data-rooms-quiz-option="{slug}"]` inside a panel.
  *   - Back:     `[data-rooms-quiz-back]` inside panels 2 and 3.
  *   - Results:  `[data-rooms-quiz-results]`, one or more sections, hidden by
- *               a Designer `hide` combo until the quiz is finished.
+ *               an `is-hidden` combo until the quiz is finished.
  *   - Lines:    `[data-rooms-quiz-closest]`, `[data-rooms-quiz-empty]`,
- *               `[data-rooms-quiz-loading]`, each hidden with `hide`.
+ *               `[data-rooms-quiz-loading]`, each hidden with `is-hidden`.
+ *   Hidden items use `is-hidden` (visibility, not display:none) so search
+ *   engines still read them; inactive steps are hidden the same way in CSS
+ *   (docs/reference/site-head/rooms-quiz-crossfade.css). Both are `inert`.
  *   - Restart:  `[data-rooms-quiz-restart]` clears answers, back to step 1.
  *   - Scroll:   `data-scroll-flush` on the root and the first results section
  *               lands them at the viewport top, under the transparent nav.
@@ -36,7 +39,9 @@ import { smoothScroll } from '$utils/smoothScroll'
 
 const ACTIVE_CLASS = 'is-active'
 const WIDE_CLASS = 'is-wide'
-const HIDDEN_CLASS = 'hide'
+const HIDDEN_CLASS = 'is-hidden'
+// The Designer used to hide results and lines with `hide` (display:none).
+const LEGACY_HIDDEN_CLASS = 'hide'
 const STEPS = 3
 const CROSSFADE = 0.6
 const ENTERING_CLASS = 'is-entering'
@@ -45,8 +50,10 @@ const NEST_TIMEOUT_MS = 8000
 // hoverImageSwap listens for this to put a panel back on its resting photo.
 const SWAP_RESET_EVENT = 'hover-swap:reset'
 
-const setHidden = (element: Element | null, hidden: boolean) => {
-  element?.classList.toggle(HIDDEN_CLASS, hidden)
+const setHidden = (element: HTMLElement | null, hidden: boolean) => {
+  if (!element) return
+  element.classList.toggle(HIDDEN_CLASS, hidden)
+  element.inert = hidden
 }
 
 const waitForNest = () =>
@@ -73,6 +80,10 @@ export const roomsQuiz = () => {
     document.querySelectorAll<HTMLElement>('[fs-cmsnest-element="list"] > .w-dyn-items > .w-dyn-item'),
   )
 
+  for (const element of [...resultSections, closestLine, emptyLine, loadingLine]) {
+    if (element?.classList.replace(LEGACY_HIDDEN_CLASS, HIDDEN_CLASS)) element.inert = true
+  }
+
   const timeout = Number(root.dataset.roomsQuizTimeout) || NEST_TIMEOUT_MS
   let nestReady = false
   const nestDone = waitForNest().then(() => {
@@ -91,6 +102,10 @@ export const roomsQuiz = () => {
     if (heading && !heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1')
   })
 
+  panels.forEach((panel) => {
+    panel.inert = !panel.classList.contains(ACTIVE_CLASS)
+  })
+
   const swapStep = (step: number) =>
     panels.forEach((panel, panelStep) => {
       const isCurrent = panelStep === step
@@ -98,6 +113,7 @@ export const roomsQuiz = () => {
         panel.dispatchEvent(new Event(SWAP_RESET_EVENT))
       }
       panel.classList.toggle(ACTIVE_CLASS, isCurrent)
+      panel.inert = !isCurrent
     })
 
   // Desktop feedback: the next question crossfades in over the current one, which
@@ -118,6 +134,7 @@ export const roomsQuiz = () => {
       return
     }
     next.classList.add(ENTERING_CLASS)
+    next.inert = false
     focusHeading()
     gsap.fromTo(
       next,

@@ -17,7 +17,7 @@ export const anchorScroll = () => {
     (event) => {
       if (event.defaultPrevented) return
       const link = (event.target as Element | null)?.closest<HTMLAnchorElement>('a[href^="#"]')
-      if (!link || link.closest('[data-sticky-tabs="true"], [role="dialog"]')) return
+      if (!link || link.closest('[data-sticky-tabs="true"], [role="dialog"], [data-rooms-quiz-back], [data-rooms-quiz-restart]')) return
       const href = link.getAttribute('href') ?? ''
       if (href.length < 2) return
       const target = document.getElementById(decodeURIComponent(href.slice(1)))
