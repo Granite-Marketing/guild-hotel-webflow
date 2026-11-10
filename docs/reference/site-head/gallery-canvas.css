@@ -59,12 +59,15 @@
 .gallery-all_controls {
   position: absolute;
   right: 2rem;
-  bottom: 2rem;
+  /* Sits above the filter pill: the filter pill is wide enough to reach it on 1440 screens. */
+  bottom: 6.5rem;
   z-index: 2;
 }
 
 .tab-pills-intro_tabs.is-canvas-controls {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 1.5rem;
   width: auto;
