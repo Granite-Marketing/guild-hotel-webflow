@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.3
+
+### Patch Changes
+
+- fcd6d61: Gallery canvas: the zoom link for the current level shows as active (zoom out, normal or zoom in), instead of only normal.
+
 ## 1.2.2
 
 ### Patch Changes
