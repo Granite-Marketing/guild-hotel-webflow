@@ -8,6 +8,8 @@
     <style>
       body { margin: 0; font-family: sans-serif; }
       .hide { display: none; }
+      /* Mirrors docs/reference/site-head/rooms-quiz-crossfade.css (site.css). */
+      .is-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; visibility: hidden !important; pointer-events: none; }
       .rooms-collection-quiz_component { display: none; grid-template-columns: 1fr 1fr; min-height: 600px; }
       .rooms-collection-quiz_component.is-active { display: grid; }
       .rooms-collection-quiz_options { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
