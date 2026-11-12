@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.19
+
+### Patch Changes
+
+- Script headings show nothing before they draw in; the left swash of a line (the i of "in") no longer peeks out early.
+
 ## 1.2.18
 
 ### Patch Changes
