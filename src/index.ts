@@ -157,6 +157,8 @@ window.Webflow.push(() => {
   // Desktop feedback: data-reveal="fade|text-mask|image-mask" opt-in scroll reveals.
   scriptReveal()
   scrollReveal()
+  // Lifts the first-screen pre-hide (reveal-prehide.css) now that reveal start states are set.
+  document.documentElement.classList.add('reveal-ready')
   // slot G: scrollTextReveal()
   historyStickyYear()
   imageStackCollapse()

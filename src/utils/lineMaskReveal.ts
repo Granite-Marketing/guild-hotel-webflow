@@ -75,7 +75,7 @@ const isText = (element: HTMLElement) =>
  * rebuilt whenever SplitText re-splits (font swap, resize), keeping its
  * progress and the last requested direction.
  */
-export const createLineMaskTimeline = (container: HTMLElement): LineMaskTimeline => {
+export const createLineMaskTimeline = (container: HTMLElement, speed = 1): LineMaskTimeline => {
   const elements = findTargets(container)
   if (!elements.length || window.matchMedia(REDUCED_MOTION).matches) {
     return { play: () => undefined, reverse: () => undefined, isRevealed: () => false }
@@ -86,7 +86,7 @@ export const createLineMaskTimeline = (container: HTMLElement): LineMaskTimeline
   const parts: RevealPart[] = []
 
   const runDirection = () => {
-    if (direction === 'forward') timeline.timeScale(1).play()
+    if (direction === 'forward') timeline.timeScale(speed).play()
     else if (direction === 'reverse') timeline.timeScale(REVERSE_SPEED).reverse()
   }
 
@@ -155,9 +155,9 @@ export const createLineMaskTimeline = (container: HTMLElement): LineMaskTimeline
   }
 }
 
-/** One-shot reveal: `play()` runs the mask-in once; later calls do nothing. */
-export const prepareLineMaskReveal = (container: HTMLElement) => {
-  const reveal = createLineMaskTimeline(container)
+/** One-shot reveal: `play()` runs the mask-in once; later calls do nothing. `speed` above 1 plays it faster. */
+export const prepareLineMaskReveal = (container: HTMLElement, speed = 1) => {
+  const reveal = createLineMaskTimeline(container, speed)
   let played = false
   return {
     play: () => {

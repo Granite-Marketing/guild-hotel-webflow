@@ -1,5 +1,7 @@
 # JS Loading Flash Prevention
 
+> **Guild Hotel (current):** scroll reveals use `docs/reference/site-head/reveal-prehide.css`, bundled into `dist/site.css`. It keys off Webflow's own `html.w-mod-js` class and the `.reveal-ready` class that `src/index.ts` adds after `scrollReveal()`, so no head script is needed. A 3s CSS fail-safe shows content if the bundle never runs. The `.js-loading` setup below is the older starter pattern and is not installed on this site.
+
 Prevents flash of unstyled content (FOUC) for elements that animate on page load. CSS hides elements by default; JS removes the class after animations initialize.
 
 ## Current CSS
