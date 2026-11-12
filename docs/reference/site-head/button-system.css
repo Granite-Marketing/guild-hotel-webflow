@@ -1,0 +1,75 @@
+/* Button system (Trello Desktop-CTA-Buttons, contract in docs/reference/button-system.md).
+   button is-chamfer [colour] [is-outline]: filled at rest unless is-outline; hover wipes to the inverse from the bottom.
+   One technique for anchors and submit inputs: the element keeps a static chamfer clip-path; its background holds a 1px ring
+   (four edges plus four diagonal corner bands) and a fill layer whose height animates (docs/solutions/conventions/button-fill-static-clip.md).
+   Label roll: src/utils/buttonHover.ts wraps labels in [data-btn-label]; inputs swap colour instead.
+   :not(#_) lifts the paint above every Webflow combo and variant style, so this file alone decides fill, ring and label colour.
+   Lives in the "Button Styles" embed component inside Site Nav (Designer-visible). Minify: npx esbuild docs/reference/site-head/button-system.css --minify --target=chrome100 */
+:root{--btn-dur:.45s;--btn-ease:cubic-bezier(.65,0,.35,1);--btn-chamfer:polygon(0 .75rem,.6875rem 0,calc(100% - .6875rem) 0,100% .75rem,100% calc(100% - .75rem),calc(100% - .6875rem) 100%,.6875rem 100%,0 calc(100% - .75rem))}
+
+/* Colour pairs: --btn-colour is the fill, --btn-ink the label on the fill, --btn-outline the outline and its label (the fill colour unless set).
+   Burgundy and blue buttons sit on photos, so they outline in their light label colour to stay legible. */
+.button.is-chamfer:not(#_),.overlay-detail-panel-modal_item-button:not(#_){--btn-colour:var(--_primitives---colors--neutral-lightest);--btn-ink:var(--_primitives---colors--neutral-darkest)}
+.button.is-chamfer.is-text-burgundy:not(#_),.overlay-detail-panel-modal_item-button:not(#_){--btn-ink:var(--_primitives---colors--burgundy)}
+.button.is-chamfer.is-dark:not(#_){--btn-colour:var(--_primitives---colors--neutral-darkest);--btn-ink:var(--_primitives---colors--neutral-lightest)}
+.button.is-chamfer.is-burgundy:not(#_){--btn-colour:var(--_primitives---colors--burgundy);--btn-ink:var(--_primitives---colors--secondary);--btn-outline:var(--btn-ink)}
+.button.is-chamfer.is-blue:not(#_){--btn-colour:var(--_primitives---colors--blue);--btn-ink:var(--_primitives---colors--secondary);--btn-outline:var(--btn-ink)}
+/* Component variants that only recolour their button (keyed on the variant wrapper, which keeps its variant class). */
+.hero-fullbleed-centered_footer.w-variant-81c5f9ea-386b-7949-fba8-9ed7d1d78407 .button.is-chamfer:not(#_){--btn-colour:var(--_primitives---colors--burgundy);--btn-ink:var(--_primitives---colors--secondary);--btn-outline:var(--btn-ink)}
+.hero-fullbleed-centered_footer.w-variant-e8c11cfd-fe49-cdf5-9556-32d89df58988 .button.is-chamfer:not(#_){--btn-colour:var(--_primitives---colors--blue);--btn-ink:var(--_primitives---colors--secondary);--btn-outline:var(--btn-ink)}
+.section_offers-slider-split.w-variant-1993beed-24b7-3024-c815-349d23e9e282 .button.is-chamfer:not(#_){--btn-colour:var(--_primitives---colors--neutral-darkest);--btn-ink:#b2c5d5}
+.section_offers-slider-split.w-variant-33c1374c-e0f0-7e2f-88ab-e318ee666728 .button.is-chamfer:not(#_){--btn-colour:var(--_primitives---colors--neutral-lightest);--btn-ink:var(--_primitives---colors--tan)}
+
+/* The venue modal Reserve button keeps its class (its variants also drive the text tabs, which stay out of the system). */
+:is(.button.is-chamfer,.overlay-detail-panel-modal_item-button:not([class*="w-variant-0e56f707"],[class*="603a80753681"])):not(#_){
+ --cx:.6875rem;--cy:.75rem;--r:1px;--fill:100%;--btn-line:var(--btn-outline,var(--btn-colour));--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line);
+ --ring:var(--btn-line) 50%,var(--btn-line) calc(50% + var(--r)),#0000 calc(50% + var(--r));
+ opacity:1;color:var(--btn-rest);background-color:#0000;
+ clip-path:polygon(0 var(--cy),var(--cx) 0,calc(100% - var(--cx)) 0,100% var(--cy),100% calc(100% - var(--cy)),calc(100% - var(--cx)) 100%,var(--cx) 100%,0 calc(100% - var(--cy)));
+ background-image:linear-gradient(var(--btn-colour),var(--btn-colour)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(to bottom right,#0000 50%,var(--ring)),linear-gradient(to bottom left,#0000 50%,var(--ring)),linear-gradient(to top right,#0000 50%,var(--ring)),linear-gradient(to top left,#0000 50%,var(--ring));
+ background-position:50% 100%,0 0,0 100%,0 0,100% 0,0 0,100% 0,0 100%,100% 100%;
+ background-size:100% var(--fill),100% var(--r),100% var(--r),var(--r) 100%,var(--r) 100%,var(--cx) var(--cy),var(--cx) var(--cy),var(--cx) var(--cy),var(--cx) var(--cy);
+ background-repeat:no-repeat;
+ transition:background-size var(--btn-dur) var(--btn-ease),color var(--btn-dur) var(--btn-ease);
+ &::before,&::after{content:none}
+ /* Label hosts (text-style-button divs) carry their own Webflow colour: follow the button. */
+ & :not([data-btn-copy]){color:inherit}
+ & [data-btn-copy]{color:var(--btn-hover)}
+ /* Outlined at rest. The outline chamfer is a share of the box (from the old 194x37 outline SVG) so tall quiz options keep their corners. */
+ &:is(.is-outline,[class*="w-variant-72048989"]){--fill:0%;--btn-rest:var(--btn-line);--btn-hover:var(--btn-ink);--cx:5.77%;--cy:32.97%}
+ &:focus-visible{--fill:0%}
+ &:is(.is-outline,[class*="w-variant-72048989"]):focus-visible{--fill:100%}
+ &:not([data-btn]):focus-visible{color:var(--btn-hover)}
+ @media (hover:hover){
+  &:hover{--fill:0%}
+  &:is(.is-outline,[class*="w-variant-72048989"]):hover{--fill:100%}
+  &:not([data-btn]):hover{color:var(--btn-hover)}
+ }
+ /* Rooms quiz: the chosen option shows filled with a burgundy label and stays filled. */
+ &.is-outline.is-active,&.is-outline.is-active:is(:hover,:focus-visible){--fill:100%;--btn-rest:var(--_primitives---colors--burgundy);--btn-hover:var(--_primitives---colors--burgundy)}
+ /* Home art stories: dark outline on desktop, filled below 768px. */
+ @media (max-width:767px){
+  &.is-outline.is-dark-mobile{--fill:100%;--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line)}
+  &.is-outline.is-dark-mobile:is(:hover,:focus-visible){--fill:0%}
+ }
+ @media (prefers-reduced-motion:reduce){
+  transition:color .15s linear;
+  &:is(:hover,:focus-visible){color:var(--btn-hover)}
+ }
+}
+
+/* Label roll: two stacked spans in one grid cell, clipped by the wrapper. */
+[data-btn-label]{display:inline-grid;overflow:hidden;padding-block:.2em;margin-block:-.2em;vertical-align:top}
+[data-btn-label]>span{grid-area:1/1;display:block;transition:transform var(--btn-dur) var(--btn-ease)}
+[data-btn-label]>[data-btn-copy]{transform:translateY(calc(100% + .4em));color:var(--btn-hover)}
+.button.is-link.text-style-caps-caption-16 [data-btn-label]>span{text-decoration:underline;text-underline-offset:.25em}
+@media (hover:hover){
+ [data-btn]:hover [data-btn-label]>:first-child{transform:translateY(calc(-100% - .4em))}
+ [data-btn]:hover [data-btn-copy]{transform:none}
+}
+[data-btn]:focus-visible [data-btn-label]>:first-child{transform:translateY(calc(-100% - .4em))}
+[data-btn]:focus-visible [data-btn-copy]{transform:none}
+@media (prefers-reduced-motion:reduce){
+ [data-btn-label]>[data-btn-copy]{display:none}
+ [data-btn] [data-btn-label]>:first-child{transform:none!important}
+}

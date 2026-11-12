@@ -886,7 +886,7 @@ Ids: `docs/reference/webflow-ids.md` "F26 Rooms quiz CMS".
 - Selecting adds `is-active` and `aria-pressed="true"` to the option and
   leaves its other classes (`is-fill`, variant) alone; the selected look is
   the Designer combo `.button.is-chamfer.is-outline-light.is-fill.is-active`
-  plus the site-head hover colours in `docs/reference/site-head/button-hover.css`.
+  plus the button system CSS in `docs/reference/site-head/button-system.css` (Site Nav embed).
 - Focus moves to the new step's heading (given `tabindex="-1"`). Space on an
   option selects it; Enter clicks natively. Option, back and restart clicks
   call `preventDefault()` (the links carry `href="#"` or `#rooms-quiz`).
