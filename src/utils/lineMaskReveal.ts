@@ -20,6 +20,8 @@
  * is hidden and both calls are no-ops.
  */
 
+import { isScript } from '$utils/scriptReveal'
+
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
 const TEXT_TAGS = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P'])
 const DURATION = 0.9
@@ -55,12 +57,12 @@ export interface LineMaskTimeline {
 }
 
 const findTargets = (container: HTMLElement) => {
-  // Script headings write themselves in (scriptReveal), so they are not masked here.
+  // Script headings write themselves in (scriptReveal), so they are never masked here, tagged or not.
   const candidates = Array.from(container.querySelectorAll<HTMLElement>(TARGET_SELECTOR)).filter(
-    (candidate) => candidate.dataset.scriptReveal === undefined,
+    (candidate) => !isScript(candidate),
   )
   // A bare paragraph or heading passed as the container is its own target.
-  if (!candidates.length && container.matches(TARGET_SELECTOR)) return [container]
+  if (!candidates.length && container.matches(TARGET_SELECTOR) && !isScript(container)) return [container]
   return candidates.filter(
     (candidate) =>
       !candidates.some((other) => other !== candidate && other.contains(candidate)),
