@@ -14,6 +14,13 @@ The window may travel (for example a card sliding to the centre) as long as the 
 
 A text entrance where each line of a heading or paragraph slides up from behind its own hidden edge, played as one timeline after the related mask reveal completes and reversed when the reader scrolls back.
 
+### Script reveal
+
+The entrance for headings set in the handwritten script font: each line is uncovered left to right like a pen stroke, so the words appear to draw themselves in, and it plays in reverse when the reader scrolls back above it.
+
+A script heading is never given a line mask, even when the section around it uses one; the client expects every script heading to draw in the same way.
+*Avoid: script mask, handwriting animation*
+
 ### Hexagon scroll mask
 
 A mask reveal whose window starts as the brand's chamfered hexagon frame inset on the page background and opens as the reader scrolls; on phones it ends full screen, edge to edge with no frame, while on larger screens it keeps the chamfered inset frame.
