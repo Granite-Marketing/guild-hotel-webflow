@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.16
+
+### Patch Changes
+
+- Subnav (Trello, review 2026-11-12): the venue tab highlight follows the image (image fully in, then highlight, then copy); tab clicks highlight at once, start the wipe on the click and scale with the tabs crossed; page anchor jumps run 0.9s to 2.8s by distance. Also carries the v1.2.15 button system onto main.
+
 ## 1.2.15
 
 ### Patch Changes
