@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.17
+
+### Patch Changes
+
+- Script headings always draw in left to right and are never line-masked. Fixes the tab-pills-intro heading (happenings, press, blog, wellness) that v1.2.12 started splitting into rising words.
+
 ## 1.2.16
 
 ### Patch Changes
