@@ -462,3 +462,8 @@ Plan: `docs/plans/2026-11-10-001-feat-gallery-canvas-plan.md`. Layout CSS ships 
 
 - Site Nav component `fc94d1a2-3399-4de0-e836-0233a6c86cdf`, embed `3639f68c-0d1e-0355-fd6d-d61a7593a03d` holds `<style data-button-system>` (minified `docs/reference/site-head/button-system.css`).
 - Combo styles created: `.button.is-chamfer.is-dark.is-outline` `8993f494-c263-4e55-0364-509c609ad5cc`, `...is-dark.is-outline.is-dark-mobile` `04702217-1132-4bbe-4f8b-e0cc6d1a10c3`, `.button.is-chamfer.is-outline.is-fill` `a02f8aad-81bc-447d-4046-dcd8cd3ab3a7`.
+
+### Corporate/Legal template spacing (Trello Corporate/LegalTemplate-Desktop, 2026-11-12)
+
+- script-intro-centered variant Legal Corporate `53add6a3-3c55-e4ed-2f36-460edae2cb76`: `script-intro-centered_heading` max-width 47rem (medium 38rem), margin-left/right auto (two-line break after "focus,", same pattern as the Bottom variant); `padding-section-xlarge` padding 11rem to 9rem (main only).
+- Card Carousel Header Left variant Legal Corporate `69ec3688-574e-61b2-83e0-6c45e105cc09` (duplicate of Base): `section_card-carousel-header-left` padding-top 2rem main (medium 7rem, small 6rem kept as Base). Template instance `a801d156-90c7-64a8-7607-c16886341a7c` uses it. FAQ to "More of the Guild" gap at 1440: 439px to 256px.
