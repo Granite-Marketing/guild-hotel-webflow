@@ -61,3 +61,10 @@ Items 1 to 9 are live on staging and were checked at 1440, 991, 800, 650 and 390
 11. `image-fade` is quicker and subtler: 0.9s fade, image settles from 1.04. v1.1.63.
 12. Home wellness three-image collapse (the "wellness" Stephen meant): no longer scrubbed; crossing `top 55%` plays a 1.6s collapse, scrolling back above plays it in reverse. v1.1.64.
 13. Undid items 2, 9 and 10: they changed the enlarge-snap stacks after misreading "wellness" (Stephen meant the home three-image collapse, item 12). Code back to its pre-round-2 state, home step back to 150, /wellness back to the default step, trigger attribute removed. v1.1.65.
+
+## Scroll reveal timing and coverage (2026-11-12)
+
+- Every scroll reveal starts at `top 90%` (was 80% or 85%), runs about 20% shorter and eases out: `scrollReveal` (fade, text-mask at 1.25x, image-fade, image-mask now power4.out), `gsapBasicAnimations`, `scrollTextReveal` (not enabled on this site). Pinned and scrubbed modules unchanged.
+- Coverage: `AUTO_REVEALS` in `scrollReveal.ts` adds text-mask and image-fade to shared component classes on every page and CMS template (list and rules in `docs/reference/runtime-modules.md`). Not covered: nav, offers sliders, rooms quiz, enlarge-snap cards, wellness image collapse, history timeline badge, feature-grid hover items, forms, dialogs, tab and filter bars.
+- Script Reveal card: 2s, power2.out, 0.5s stagger, reverses on scroll-up (not scrubbed).
+

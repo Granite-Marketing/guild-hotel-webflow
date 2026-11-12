@@ -37,10 +37,11 @@ export const scriptReveal = () => {
           { clipPath: HIDDEN },
           {
             clipPath: SHOWN,
-            duration: 1.4,
-            ease: 'power2.inOut',
-            stagger: 0.35,
-            scrollTrigger: { trigger: heading, start: 'top 85%', once: true },
+            // Script Reveal card (2026-11-12): slower and eased; plays on enter, reverses when scrolled back above.
+            duration: 2,
+            ease: 'power2.out',
+            stagger: 0.5,
+            scrollTrigger: { trigger: heading, start: 'top 85%', toggleActions: 'play none none reverse' },
           },
         ),
     })

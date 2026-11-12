@@ -49,7 +49,7 @@ const revealLines = (
         delay: timing.delay,
         scrollTrigger: {
           trigger: triggerElement,
-          start: 'top 80%',
+          start: 'top 90%',
           end: 'bottom 20%',
         },
       })
@@ -77,15 +77,15 @@ export const scrollTextReveal = () => {
       if (element.children.length > 0) {
         Array.from(element.children).forEach((child, index) => {
           revealLines(child as HTMLElement, element, {
-            duration: 0.75,
-            lineStagger: 0.05,
-            delay: index * 0.75,
+            duration: 0.6,
+            lineStagger: 0.04,
+            delay: index * 0.6,
           })
         })
         return
       }
 
-      revealLines(element, element, { duration: 1, lineStagger: 0.15, delay: 0 })
+      revealLines(element, element, { duration: 0.8, lineStagger: 0.12, delay: 0 })
     })
 
     requestAnimationFrame(() => ScrollTrigger.refresh(true))
