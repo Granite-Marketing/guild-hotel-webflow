@@ -1,0 +1,20 @@
+/* Nav Book Now hover (Trello Nav-Desktop, parked F57 animation): the static chamfered hexagon (--btn-chamfer) fills from the bottom like every site button, label inverts, full opacity. Desktop only (992px+).
+   Same technique as button-hover.css: the clip-path'd ::before never moves, only its background-size animates (docs/solutions/conventions/button-fill-static-clip.md). No transform or scale.
+   Lives in the HTML embed inside the Site Nav component (Designer-visible). Minify with: npx esbuild docs/reference/site-head/nav-book-hover.css --minify
+   navTheme.ts clones the bar into body > [inert] with pointer-events none, so hover is read from the real link with body:has() and applied to both copies.
+   Fill sits 1.5px lower than the link (inset top .65625rem, bottom .84375rem) so the small-caps ink is centred: 13.5px above and below at 1440, measured per docs/solutions/conventions/sackers-small-caps-vertical-centring.md.
+   Fill = the nav colour under it, ink = the other one. Real bar is cream (dark on the Dark variant); the clone is the opposite. */
+@media (min-width:992px){
+ .site-nav_book{--book-fill:var(--_primitives---colors--neutral-lightest);--book-ink:var(--_primitives---colors--neutral-darkest);position:relative;isolation:isolate;opacity:1;transition:color var(--btn-dur,.45s) var(--btn-ease,cubic-bezier(.65,0,.35,1))}
+ body>[inert] .site-nav_book,[data-nav="header"].w-variant-08083309-2be0-2228-878a-7f1c05773f43 .site-nav_book{--book-fill:var(--_primitives---colors--neutral-darkest);--book-ink:var(--_primitives---colors--neutral-lightest)}
+ body:has([data-nav="header"].w-variant-08083309-2be0-2228-878a-7f1c05773f43)>[inert] .site-nav_book{--book-fill:var(--_primitives---colors--neutral-lightest);--book-ink:var(--_primitives---colors--neutral-darkest)}
+ .site-nav_book::before{content:"";position:absolute;inset:-.65625rem -1.25rem -.84375rem;z-index:-1;background:linear-gradient(var(--book-fill),var(--book-fill)) no-repeat bottom/100% 0;clip-path:var(--btn-chamfer,polygon(0 .75rem,.6875rem 0,calc(100% - .6875rem) 0,100% .75rem,100% calc(100% - .75rem),calc(100% - .6875rem) 100%,.6875rem 100%,0 calc(100% - .75rem)));transition:background-size var(--btn-dur,.45s) var(--btn-ease,cubic-bezier(.65,0,.35,1))}
+ body:has([data-nav="header"] .site-nav_book:is(:hover,:focus-visible)) .site-nav_book{color:var(--book-ink);opacity:1}
+ body:has([data-nav="header"] .site-nav_book:is(:hover,:focus-visible)) .site-nav_book::before{background-size:100% 100%}
+}
+/* Reduced motion: no movement, a plain colour change (as button-hover.css). */
+@media (min-width:992px) and (prefers-reduced-motion:reduce){
+ .site-nav_book::before{background-size:100% 100%;opacity:0;transition:opacity .15s linear}
+ .site-nav_book{transition:color .15s linear}
+ body:has([data-nav="header"] .site-nav_book:is(:hover,:focus-visible)) .site-nav_book::before{opacity:1}
+}

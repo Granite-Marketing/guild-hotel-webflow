@@ -312,6 +312,9 @@ Ids created or first cached by the F15 to F30 groups. Recorded by the integrator
 | Landmark images Zuma / succulent / fitness / pool | `3ef9a39e-de20-3580-942d-76515eab48dd` (data-eager) / `c73a6076-9465-122a-092d-cb68c9f9d79e` / `d4f0a5c7-86f6-a1a0-0d62-0dff0ad69075` / `b26846ca-c610-66ad-5b17-45d6208a931b` | |
 | Assets Zuma / succulent / fitness / pool | `6ad66ff45794075272b9663f` / `6ad66fe91ce40a5a6239b8ad` / `6ad6700eb28c9b39f95d814d` / `6ad66ffdba96f2e53726bd55` | |
 
+### Nav Book Now hexagon hover trial (2026-11-12)
+- HtmlEmbed `277538b8-2f97-d35d-7ca5-d9dff2ae3bce` (class `site-nav_embed`) in Site Nav component `fc94d1a2-3399-4de0-e836-0233a6c86cdf`, after the menu styles embed `fc94d1a2-3399-4de0-e836-0233a6c86d13`. Holds minified `docs/reference/site-head/nav-book-hover.css` (`<style data-nav-book-hover>`). Published to webflow.io only. To drop the trial, delete this one embed.
+
 ### F23 Site Nav toggle
 
 - Toggle link `a.site-nav_toggle[data-nav="open"]` `fc94d1a2-3399-4de0-e836-0233a6c86ce2` in Site Nav component `fc94d1a2-3399-4de0-e836-0233a6c86cdf`; static aria-label "Open navigation menu" (navToggle overwrites it at init).
