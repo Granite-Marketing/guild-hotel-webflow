@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.15
+
+### Patch Changes
+
+- Button system: every chamfer button is filled or outlined at rest and wipes to the inverse on hover. Old button hover CSS removed from the site stylesheet; the button script only adds the label roll.
+
 ## 1.2.14
 
 ### Patch Changes

@@ -1,5 +1,5 @@
 /* Nav Book Now hover (Trello Nav-Desktop, parked F57 animation): the static chamfered hexagon (--btn-chamfer) fills from the bottom like every site button, label inverts, full opacity. Desktop only (992px+).
-   Same technique as button-hover.css: the clip-path'd ::before never moves, only its background-size animates (docs/solutions/conventions/button-fill-static-clip.md). No transform or scale.
+   Same technique as the button system (button-system.css): the clip-path'd ::before never moves, only its background-size animates (docs/solutions/conventions/button-fill-static-clip.md). No transform or scale.
    Lives in the HTML embed inside the Site Nav component (Designer-visible). Minify with: npx esbuild docs/reference/site-head/nav-book-hover.css --minify
    navTheme.ts clones the bar into body > [inert] with pointer-events none, so hover is read from the real link with body:has() and applied to both copies.
    Fill sits 1.5px lower than the link (inset top .65625rem, bottom .84375rem) so the small-caps ink is centred: 13.5px above and below at 1440, measured per docs/solutions/conventions/sackers-small-caps-vertical-centring.md.
@@ -12,7 +12,7 @@
  body:has([data-nav="header"] .site-nav_book:is(:hover,:focus-visible)) .site-nav_book{color:var(--book-ink);opacity:1}
  body:has([data-nav="header"] .site-nav_book:is(:hover,:focus-visible)) .site-nav_book::before{background-size:100% 100%}
 }
-/* Reduced motion: no movement, a plain colour change (as button-hover.css). */
+/* Reduced motion: no movement, a plain colour change (as button-system.css). */
 @media (min-width:992px) and (prefers-reduced-motion:reduce){
  .site-nav_book::before{background-size:100% 100%;opacity:0;transition:opacity .15s linear}
  .site-nav_book{transition:color .15s linear}

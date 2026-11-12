@@ -18,7 +18,7 @@ last_updated: "2026-10-27"
 
 This is the same technique the submit inputs already use. Outline variants keep their stroke because the stroke is an element background image and the fill sits over it in the same colour.
 
-Source: `docs/reference/site-head/button-hover.css`.
+Source then: the retired F34 `button-hover.css`. The button system (2026-11-12, `docs/reference/site-head/button-system.css`) keeps the rule with no pseudo-element at all: the element itself holds the static chamfer clip, and the fill is a background layer whose height animates.
 
 ## Outline buttons: match the stretched SVG (F52, 2026-10-27)
 
@@ -29,3 +29,8 @@ Source: `docs/reference/site-head/button-hover.css`.
 ```
 
 Any button whose outline comes from a stretched image needs its fill clip derived from that image's geometry, not a fixed size. Solid chamfer buttons clip the element itself, so the rem chamfer stays correct for them.
+
+
+## Superseded by the button system (2026-11-12)
+
+The stretched SVG outlines and the ::before fill are gone. One technique serves anchors and submit inputs: a 1px ring drawn with background layers (four edges plus four diagonal corner bands, `linear-gradient(to bottom right, transparent 50%, colour 50% to 50% + 1px)` in each corner box) and a fill layer whose `background-size` height animates. The outline chamfer stays a share of the box (5.77% / 32.97%) so tall quiz options keep their corners. See `docs/reference/button-system.md`.

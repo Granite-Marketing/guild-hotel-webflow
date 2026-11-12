@@ -1,11 +1,12 @@
 /**
  * Button hover (feedback F34)
  *
- * Wraps each button label in two stacked spans so CSS (site head block, see
- * docs/reference/site-scripts.md) can fill the background from the bottom and
- * roll the label up while a copy rolls in. The module adds attributes only:
- *   [data-btn]        on the button (anchor, p, div): enables the fill layer
- *   [data-btn-fill]   on input[type=submit]: fill only (inputs cannot hold spans)
+ * Wraps each button label in two stacked spans so the button system CSS
+ * (docs/reference/site-head/button-system.css, embed in Site Nav) can roll the
+ * label up while a copy rolls in. The fill and outline need no
+ * script. The module adds attributes only:
+ *   [data-btn]        on the button (anchor, p, div): enables the label roll
+ *   [data-btn-fill]   on input[type=submit]: marker only (inputs cannot hold spans)
  *   [data-btn-label]  wrapper around the label, holding the real label span
  *                     and an aria-hidden copy span ([data-btn-copy])
  * No class toggling, so navTheme's class MutationObserver is unaffected.
@@ -13,8 +14,6 @@
  */
 const BUTTON_SELECTOR = [
   '.button',
-  '.offers-slider-split_button',
-  '.overlay-detail-panel-modal_button',
   '.overlay-detail-panel-modal_item-button:not([class*="w-variant-0e56f707"])',
 ].join(',')
 
