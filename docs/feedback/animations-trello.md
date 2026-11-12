@@ -12,7 +12,7 @@ Catalogued 2026-11-09 from `https://trello.com/1/boards/Jvfr4sv3?cards=open&chec
 | 6 | [Homepage-Desktop](https://trello.com/c/jpoQvaQd) | a) Wellness section image animation slower, too sensitive. b) Meetings section: hover only swaps the image; clicking a space or the CTA goes to the Meetings & Events page. | Done v1.1.58 (2026-11-09) |
 | 7 | [RoomsIndividual-Desktop](https://trello.com/c/TUnd0W4L) | Offset image/text section soft dissolves in on scroll with easing. | Done v1.1.58 (2026-11-09) |
 | 8 | [History-Desktop](https://trello.com/c/WoIQFRFW) | a) George Marston stamp dissolves in on scroll. b) Timeline sticky middle number appears in the middle of the first large picture. c) "Once opened never closed": unify padding so text is centred between the two sections. d) Timeline number transitions (text and box) smoother. | Done v1.1.58 (2026-11-09) |
-| 9 | [Subnav](https://trello.com/c/FjjStvdO) | Subnav anchor scroll slower and eased. | Done (`ANCHOR_SCROLL` in `src/utils/lenisGsap.ts`) |
+| 9 | [Subnav](https://trello.com/c/FjjStvdO) | Subnav anchor scroll slower and eased. | Done (`anchorScrollOptions` in `src/utils/lenisGsap.ts`; venue tab clicks and highlight in `src/utils/scrollEnlargeSnap.ts`) |
 | 10 | [Arts/Gallery Animation](https://trello.com/c/IgLotIVs) | Missing "canvas" style animations on both pages. | Parked |
 
 ## Stephen's notes (2026-11-09)

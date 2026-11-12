@@ -36,22 +36,29 @@
  * DWELL steps before the next wipe starts, so every panel has a real dwell
  * window (PITCH = WIPE_DURATION + DWELL per panel). Content is driven by
  * the scrubbed timeline time (the timeline's own onUpdate), never raw scroll
- * progress, so it follows what the user sees. Copy starts REVEAL_LEAD steps
- * before the wipe ends (F42), and a short SETTLE delay gates each reveal so a pass-through never starts a reveal that is reversed
- * half-way.
+ * progress, so it follows what the user sees. Trello "Subnav" (2026-11-12)
+ * fixes the order per panel: the image is fully in, the tab highlights, then
+ * the copy reveals TEXT_DELAY later (this replaces F42's early copy lead). The
+ * delay also absorbs a pass-through, so a reveal never starts and reverses
+ * half-way. Scrolling back up, a tab stays active until its image has fully
+ * wiped out.
  *
  * After the last panel the stage stays pinned for half a step more (F15),
  * so the last panel's content has room to settle before the pin releases.
  * A single-item section (F28, arts) is just the enlarge plus that hold.
  *
  * The active item and tab get `is-active`; the active tab also gets
- * `aria-current="true"`. Clicking a tab scrolls to its panel.
+ * `aria-current="true"`. Clicking a tab highlights it at once and scrolls to
+ * its panel: the dwell still ahead is skipped so the wipe starts on the click,
+ * and the duration grows with the number of tabs crossed. The highlight and
+ * copy stay on the clicked tab until its image is in (no flicker through the
+ * panels passed); any wheel, touch or key input hands control back to scroll.
  *
  * prefers-reduced-motion: the frame is set straight to its full size and
  * panels swap instantly as the pinned stage scrolls, with no tweens or snap.
  */
 
-import { anchorScrollOptions, lenis } from '$utils/lenisGsap'
+import { lenis } from '$utils/lenisGsap'
 import { createLineMaskTimeline } from '$utils/lineMaskReveal'
 
 const ROOT_SELECTOR = '[data-scroll-enlarge-snap]'
@@ -63,14 +70,15 @@ const WIPE_DURATION = 0.5
 const DWELL = 0.7
 /** Timeline distance between consecutive fully-shown panels. */
 const PITCH = WIPE_DURATION + DWELL
-/**
- * Timeline steps before a panel is fully shown at which its copy may start
- * (F42): the wipe is ~92% open by then and the text onset adds ~50 ms, so the
- * copy lands as the mask completes instead of after the scrub tail.
- */
-const REVEAL_LEAD = 0.1
-/** Seconds a panel must stay current before its reveal plays; short, only to absorb a pass-through. */
-const SETTLE = 0.1
+/** Seconds between a panel's image being fully in and its copy starting. */
+const TEXT_DELAY = 0.15
+/** Timeline tolerance for "fully shown" (image 99.7% open): the eased wipe looks done while the scrub still creeps in. */
+const FULL_EPSILON = 0.02
+/** Tab click duration: one tab over, each extra tab crossed, and the cap (seconds). */
+const TAB_HOP = { first: 0.9, extra: 0.35, max: 2.4 }
+/** Steps into a wipe (~2% of the image) that still count as wiped out, so a sliver never holds the tab. */
+const WIPE_GONE = 0.05
+const easeOutCubic = (progress: number) => 1 - (1 - progress) ** 3
 /** Extra pinned distance after the last panel, in steps. */
 const END_HOLD = 0.5
 
@@ -139,15 +147,34 @@ const initAnimated = (parts: SnapParts) => {
   })
   const mask = createChamferMask(stage, media)
 
+  // Tab the user clicked, while its scroll is under way (see bindTabs).
+  let clickedIndex: number | null = null
+
   // Which panel's content is shown at timeline time `time`: from the moment
-  // the panel is fully shown until exactly when the next wipe begins.
+  // the panel is fully shown until exactly when the next wipe begins. During
+  // a tab click only the clicked panel's copy may show.
   const contentIndexAt = (time: number) => {
     for (let index = items.length - 1; index >= 0; index--) {
       const leaveAt = index === items.length - 1 ? Infinity : wipeAt(index + 1)
-      if (time >= shownAt[index] - REVEAL_LEAD && time < leaveAt) return index
+      if (time >= shownAt[index] - FULL_EPSILON && time < leaveAt) {
+        return clickedIndex === null || clickedIndex === index ? index : -1
+      }
     }
     return -1
   }
+
+  // Last panel whose image is fully in at `time`.
+  const fullIndexAt = (time: number) =>
+    shownAt.reduce((last, at, index) => (time >= at - FULL_EPSILON ? index : last), 0)
+  // Going down a tab activates once its image is full; going up the current
+  // tab holds until its own wipe has (all but a few pixels) reversed.
+  const visibleIndexAt = (time: number, current: number) => {
+    const full = fullIndexAt(time)
+    return current > full && time > wipeAt(current) + WIPE_GONE ? current : full
+  }
+  // Panel `index` alone fills the stage: its wipe is done and the next has not begun.
+  const isFullyIn = (index: number, time: number) =>
+    time >= shownAt[index] - FULL_EPSILON && (index === items.length - 1 || time < wipeAt(index + 1))
 
   let shownIndex = -1
   let targetIndex = -1
@@ -172,7 +199,7 @@ const initAnimated = (parts: SnapParts) => {
       shownIndex = next
     }
     if (immediate) start()
-    else pending = gsap.delayedCall(SETTLE, start)
+    else pending = gsap.delayedCall(TEXT_DELAY, start)
   }
 
   // Trello "Subnav": on desktop the tab bar sat inside the opening mask and
@@ -183,7 +210,7 @@ const initAnimated = (parts: SnapParts) => {
   const desktop = window.matchMedia('(min-width: 768px)')
   let tabBarShown: boolean | null = null
   const syncTabBar = (time: number) => {
-    const show = !desktop.matches || time >= 0.999
+    const show = !desktop.matches || time >= 1 - FULL_EPSILON
     if (!tabBar || show === tabBarShown) return
     const first = tabBarShown === null
     tabBarShown = show
@@ -191,11 +218,6 @@ const initAnimated = (parts: SnapParts) => {
   }
 
   let activeIndex = -1
-  const nearestIndex = (time: number) =>
-    shownAt.reduce(
-      (best, at, index) => (Math.abs(at - time) < Math.abs(shownAt[best] - time) ? index : best),
-      0,
-    )
   const setActive = (index: number) => {
     if (index === activeIndex) return
     activeIndex = index
@@ -207,8 +229,12 @@ const initAnimated = (parts: SnapParts) => {
     defaults: { ease: 'none' },
     // Content follows the scrubbed timeline, which lags scroll position.
     onUpdate: () => {
-      syncContent(timeline.time())
-      syncTabBar(timeline.time())
+      const time = timeline.time()
+      // A tab click hands the highlight back once its image is in.
+      if (clickedIndex !== null && isFullyIn(clickedIndex, time)) clickedIndex = null
+      if (clickedIndex === null) setActive(visibleIndexAt(time, activeIndex))
+      syncContent(time)
+      syncTabBar(time)
     },
     scrollTrigger: {
       trigger: stage,
@@ -232,9 +258,6 @@ const initAnimated = (parts: SnapParts) => {
         mask.measure()
         syncContent(self.progress * totalSteps, true)
         syncTabBar(self.progress * totalSteps)
-      },
-      onUpdate: (self: ScrollTriggerInstance) => {
-        setActive(nearestIndex(self.progress * totalSteps))
       },
     },
   })
@@ -271,8 +294,59 @@ const initAnimated = (parts: SnapParts) => {
   syncContent((timeline.scrollTrigger?.progress ?? 0) * totalSteps, true)
   syncTabBar((timeline.scrollTrigger?.progress ?? 0) * totalSteps)
 
-  const unbindTabs = bindTabs(parts, timeline.scrollTrigger, snapPoints)
+  const trigger = timeline.scrollTrigger
+  const scrollAt = (time: number) =>
+    trigger ? trigger.start + ((trigger.end - trigger.start) * time) / totalSteps : 0
+  const timeNow = () =>
+    trigger ? (((lenis.raw?.scroll ?? window.scrollY) - trigger.start) / (trigger.end - trigger.start)) * totalSteps : 0
+
+  const goToPanel = (index: number) => {
+    const raw = lenis.raw
+    if (!trigger || !raw) {
+      window.scrollTo({ top: scrollAt(shownAt[index]) })
+      return
+    }
+    const now = timeNow()
+    const hops = Math.max(1, Math.abs(index - fullIndexAt(now)))
+    const motion = {
+      duration: Math.min(TAB_HOP.first + TAB_HOP.extra * (hops - 1), TAB_HOP.max),
+      easing: easeOutCubic,
+      force: true,
+    }
+    clickedIndex = index
+    setActive(index)
+
+    if (shownAt[index] > now + FULL_EPSILON) {
+      // Down: the current panel's remaining dwell looks static, so jump past
+      // it and start the next wipe on the click.
+      const next = shownAt.findIndex((at) => at > now + FULL_EPSILON)
+      if (next > 0 && wipeAt(next) > now) raw.scrollTo(scrollAt(wipeAt(next)), { immediate: true, force: true })
+      raw.scrollTo(scrollAt(shownAt[index]), motion)
+    } else if (shownAt[index] < now - FULL_EPSILON) {
+      // Up: the target's dwell is at the far end, so stop just past where the
+      // last wipe has fully reversed (the target is then current) and jump the
+      // static dwell.
+      const end = Math.max(Math.min(wipeAt(index + 1) - 2 * FULL_EPSILON, now), shownAt[index])
+      raw.scrollTo(scrollAt(end), {
+        ...motion,
+        onComplete: () => raw.scrollTo(scrollAt(shownAt[index]), { immediate: true, force: true }),
+      })
+    }
+  }
+
+  // Any direct input during a tab scroll hands the highlight back to scroll.
+  const releaseClick = () => {
+    if (clickedIndex === null) return
+    clickedIndex = null
+    setActive(visibleIndexAt(timeline.time(), activeIndex))
+    syncContent(timeline.time())
+  }
+  const inputEvents = ['wheel', 'touchstart', 'keydown'] as const
+  inputEvents.forEach((type) => window.addEventListener(type, releaseClick, { passive: true }))
+
+  const unbindTabs = bindTabs(parts, goToPanel)
   return () => {
+    inputEvents.forEach((type) => window.removeEventListener(type, releaseClick))
     pending?.kill()
     unbindTabs?.()
   }
@@ -306,7 +380,10 @@ const initReduced = (parts: SnapParts) => {
     },
   })
 
-  return bindTabs(parts, trigger, snapPoints)
+  return bindTabs(parts, (index) => {
+    const point = snapPoints[index]
+    if (point !== undefined) window.scrollTo({ top: trigger.start + (trigger.end - trigger.start) * point })
+  })
 }
 
 /** Overlays the items in DOM order and shows only `visibleIndex`. */
@@ -328,24 +405,14 @@ const markActive = (parts: SnapParts, index: number) => {
   })
 }
 
-/** Tab clicks jump to the panel's snap point; scrub then plays the transition. */
-const bindTabs = (
-  parts: SnapParts,
-  trigger: ScrollTriggerInstance | undefined,
-  snapPoints: number[],
-) => {
-  if (!trigger || !parts.tabs.length) return
+/** Binds each tab's click to `select(index)`. */
+const bindTabs = (parts: SnapParts, select: (index: number) => void) => {
+  if (!parts.tabs.length) return
 
   const handlers = parts.tabs.map((tab, index) => {
     const handler = (event: Event) => {
-      const point = snapPoints[index]
-      if (point === undefined) return
       event.preventDefault()
-      const top = trigger.start + (trigger.end - trigger.start) * point
-      // Trello "Subnav": an instant jump made the scrub race through every wipe; ease there instead.
-      const immediate = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-      if (lenis.raw) lenis.raw.scrollTo(top, { immediate, ...anchorScrollOptions(top - window.scrollY) })
-      else window.scrollTo({ top })
+      select(index)
     }
     tab.addEventListener('click', handler)
     return handler

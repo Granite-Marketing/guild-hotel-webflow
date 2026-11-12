@@ -26,16 +26,13 @@ import { scrollTriggerRefresh } from '$utils/scrollTriggerRefresh'
 
 let instance: LenisInstance | null = null
 
-// Desktop feedback (Trello "Subnav", round 2): anchor jumps still read too fast, most of all first tab to last.
-// Duration scales with distance: up to one viewport takes 1.6s, five or more take 3s. easeInOutSine peaks at
-// about 1.6x the average speed (easeInOutCubic peaked at 3x), so long jumps no longer rush through the middle.
-export const anchorScrollOptions = (distance: number) => {
-  const viewports = Math.abs(distance) / window.innerHeight
-  return {
-    duration: 1.6 + 1.4 * Math.min(Math.max((viewports - 1) / 4, 0), 1),
-    easing: (progress: number) => (1 - Math.cos(Math.PI * progress)) / 2,
-  }
-}
+// Trello "Subnav" (2026-11-12): duration grows with distance, about 0.9s for a short hop up to 2.8s from
+// five viewports, so neighbour links respond at once and long jumps stay calm. easeInOutSine peaks at about
+// 1.6x the average speed (easeInOutCubic peaked at 3x), so long jumps no longer rush through the middle.
+export const anchorScrollOptions = (distance: number) => ({
+  duration: Math.min(0.9 + 0.38 * (Math.abs(distance) / window.innerHeight), 2.8),
+  easing: (progress: number) => (1 - Math.cos(Math.PI * progress)) / 2,
+})
 
 /** Raw handle kept for projects that already import `lenis` directly. */
 export const lenis = {
