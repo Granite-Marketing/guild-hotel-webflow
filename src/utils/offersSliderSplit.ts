@@ -35,6 +35,8 @@ const IMAGE_DURATION = 1.2
 const IMAGE_EASE = 'power3.out'
 const CLOSED = { next: 'inset(0% 0% 0% 100%)', prev: 'inset(0% 100% 0% 0%)' }
 const OPEN = 'inset(0% 0% 0% 0%)'
+// Outgoing copy clears before the incoming heading rises far enough to overlap it (~120ms).
+const TEXT_FADE_DURATION = 0.15
 
 export const offersSliderSplit = () => {
   const sliders = document.querySelectorAll<HTMLElement>('[data-offers-slider]')
@@ -93,6 +95,14 @@ export const offersSliderSplit = () => {
     const revealImage = (instance: OffersSwiperInstance, direction: 'next' | 'prev') => {
       const incoming = instance.slides[instance.activeIndex]
       if (!incoming) return
+      // Outgoing copy fades out early so two headings never overlap; its image stays underneath.
+      visibleSlides.forEach((slide) => {
+        if (slide === incoming) return
+        const content = slide.querySelector<HTMLElement>('[class*="_content"]')
+        if (content) gsap.to(content, { autoAlpha: 0, duration: TEXT_FADE_DURATION, ease: 'power2.out', overwrite: true })
+      })
+      const incomingContent = incoming.querySelector<HTMLElement>('[class*="_content"]')
+      if (incomingContent) gsap.set(incomingContent, { autoAlpha: 1, overwrite: true })
       topLayer += 1
       incoming.style.zIndex = String(topLayer)
       visibleSlides.add(incoming)
