@@ -1,12 +1,24 @@
-/* Venue detail modals, desktop (src/utils/modalStickyBar.ts). F92: the back arrow, title and CTA row stays pinned while the panel scrolls; F91: the CTA sits 24px from the right, matching the arrow on the left; F90: tighter rows in the right column (75px to 55px). */
+/* Venue detail modals, desktop (src/utils/modalStickyBar.ts). F92: the back arrow, title and CTA row stays pinned while the panel scrolls; the arrow glyph sits 40px from the edge (Figma Meetings-Overlay); F90: tighter rows in the right column (75px to 55px). */
 @media (min-width:768px){
- .overlay-detail-panel-modal_header.is-sticky-bar{position:sticky;top:0;z-index:5;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;margin:-1rem -4rem 5rem;padding:1rem 0;background-color:#f4efdf}
+ .overlay-detail-panel-modal_header.is-sticky-bar{position:sticky;top:0;z-index:5;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;margin:-1rem -3.25rem 5rem;padding:1rem 0;background-color:#f4efdf}
  .is-sticky-bar>.overlay-detail-panel-modal_back{justify-self:start}
  .is-sticky-bar>.overlay-detail-panel-modal_footer{position:static;justify-self:end}
  [role=dialog]:has(.overlay-detail-panel-modal_extras) .overlay-detail-panel-modal_item{padding-top:.875rem;padding-bottom:.875rem}
 }
-/* Tablet: the panel padding drops to 32px, so pull the bar out by 8px (not 64px) to keep the arrow and CTA 24px from the edges; the title takes the middle space so the CTA stays on one line */
+/* Meetings feedback (2026-11-12): the carousel reaches the arrow and the CTA. Under the 1600px Figma frame width the image and CTA run out to where the 40px corner chamfer starts, so the CTA keeps clear of the title */
+@media (min-width:992px) and (max-width:1599px){
+ .is-sticky-bar>.overlay-detail-panel-modal_footer{margin-right:.25rem}
+ [role=dialog]:has(.overlay-detail-panel-modal_extras) .overlay-detail-panel-modal_figure{width:calc(100% + 6rem);max-width:none;margin-left:-3rem}
+}
+/* From 1600px the Figma frame as drawn: image inset 88px, CTA right edge on the image right edge, Details 485px, 160px gap, spec list to 51px inside the image */
+@media (min-width:1600px){
+ .is-sticky-bar>.overlay-detail-panel-modal_footer{margin-right:3.25rem}
+ [role=dialog]:has(.overlay-detail-panel-modal_extras) .overlay-detail-panel-modal_body{grid-template-columns:30.3125rem 1fr;padding-right:3.1875rem}
+ [role=dialog]:has(.overlay-detail-panel-modal_extras) .overlay-detail-panel-modal_list{width:auto}
+}
+/* Tablet: the panel padding drops to 32px, so pull the bar out by 8px to keep the arrow 24px from the edge, and keep the CTA on the image right edge; the title takes the middle space so the CTA stays on one line */
 @media (min-width:768px) and (max-width:991px){
+ .is-sticky-bar>.overlay-detail-panel-modal_footer{margin-right:.5rem}
  .overlay-detail-panel-modal_header.is-sticky-bar{margin-left:-.5rem;margin-right:-.5rem;grid-template-columns:auto 1fr auto;column-gap:1rem;text-align:center}
  .is-sticky-bar>.overlay-detail-panel-modal_footer .button{white-space:nowrap}
 }
