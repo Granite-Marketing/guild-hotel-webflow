@@ -2,7 +2,7 @@
  * Anchor Scroll (animation feedback, Trello "Subnav": make it global)
  *
  * Every same-page `#section` link scrolls with the calm eased jump the
- * subnav uses (ANCHOR_SCROLL through the smooth scroll engine, clear of the
+ * subnav uses (anchorScrollOptions through the smooth scroll engine, clear of the
  * fixed nav), instead of Webflow.js's quick default. Capture phase on the
  * document, so Webflow's own anchor scroll never also runs. Links that name
  * a dialog are left to modals.ts (registered first, it marks the event

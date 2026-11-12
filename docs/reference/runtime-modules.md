@@ -1212,7 +1212,7 @@ Below 768px every `.tab-pills-intro_tabs` (Wellness `is-media` included, centred
 - **scriptReveal**: script (Morello Pen) headings write in line by line, left to right, on scroll (2s per line, power2.out, 0.5s stagger; plays on enter and reverses when scrolled back above, Script Reveal card 2026-11-12). Found by computed font, no attribute. Marks them `data-script-reveal`; `lineMaskReveal` skips marked headings. Runs before `scrollReveal`.
 - **underlineHover**: links drawn with an underline get `data-underline` (the roll label of a `[data-btn]` link, or the link). CSS `underline-hover.css` wipes the line out to the right and back in from the left on hover. Runs after `buttonHover`.
 - **modalTextMask**: dialogs with `data-modal-reveal` (on the dialog or a wrapper, e.g. Booking Menu root) mask their panel copy in line by line on open and reverse on close. Watches `is-open` from `modals.ts`.
-- **anchorScroll**: every same-page `#section` link uses the eased `ANCHOR_SCROLL` jump. Capture phase; skips dialog ids, links inside dialogs and `[data-sticky-tabs="true"]` bars.
+- **anchorScroll**: every same-page `#section` link uses the eased, distance-scaled `anchorScrollOptions` jump (1.6s up to one viewport, 3s from five). Capture phase; skips dialog ids, links inside dialogs and `[data-sticky-tabs="true"]` bars.
 - **mediaTabs**: a row link with a real href navigates on click; hover still previews.
 - **historyStickyYear**: the sticky badge starts in the middle of the first photo (label wrap margin from the photo height) and the year swap eases text and badge width.
 - **scrollEnlargeSnap**: scrub 1.2, snap delay 0.25s, duration 0.4 to 1s.
