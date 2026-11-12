@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.22
+
+### Patch Changes
+
+- Meetings venue modals: the image carousel reaches the back arrow and the end of the Submit your request button. Under 1600px all three sit 40px from the panel edges; from 1600px the layout follows the Figma frame with the button on the image right edge.
+
 ## 1.2.21
 
 ### Patch Changes
