@@ -14,7 +14,8 @@
 const SCRIPT_FONT = 'morello'
 const SKIP = '[data-scroll-enlarge-snap-content], [data-history-collapse], [role="dialog"], .nav_component, .w-nav, .swiper'
 // Negative insets leave room for swashes that reach past the line box.
-const HIDDEN = 'inset(-30% 100% -30% -10%)'
+// Right inset 110% meets the -10% left inset, so nothing (not even a left swash) shows before the draw.
+const HIDDEN = 'inset(-30% 110% -30% -10%)'
 const SHOWN = 'inset(-30% -10% -30% -10%)'
 
 export const isScript = (element: HTMLElement) =>
