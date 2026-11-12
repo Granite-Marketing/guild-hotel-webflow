@@ -74,8 +74,8 @@ const PITCH = WIPE_DURATION + DWELL
 const TEXT_DELAY = 0.15
 /** Timeline tolerance for "fully shown" (image 99.7% open): the eased wipe looks done while the scrub still creeps in. */
 const FULL_EPSILON = 0.02
-/** Tab click duration: one tab over, each extra tab crossed, and the cap (seconds). */
-const TAB_HOP = { first: 0.9, extra: 0.35, max: 2.4 }
+/** Tab click duration: one tab over, each extra tab crossed (Stephen 2026-11-12: far jumps a little slower), and the cap (seconds). */
+const TAB_HOP = { first: 0.9, extra: 0.55, max: 3 }
 /** Steps into a wipe (~2% of the image) that still count as wiped out, so a sliver never holds the tab. */
 const WIPE_GONE = 0.05
 const easeOutCubic = (progress: number) => 1 - (1 - progress) ** 3
