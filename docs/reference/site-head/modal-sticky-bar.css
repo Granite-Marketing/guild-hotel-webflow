@@ -10,6 +10,11 @@
  .is-sticky-bar>.overlay-detail-panel-modal_footer{margin-right:.25rem}
  [role=dialog]:has(.overlay-detail-panel-modal_extras) .overlay-detail-panel-modal_figure{width:calc(100% + 6rem);max-width:none;margin-left:-3rem}
 }
+/* Small desktop: the centred title and the CTA no longer both fit, so the title takes the middle space and the CTA stays on one line (as on tablet) */
+@media (min-width:992px) and (max-width:1279px){
+ .overlay-detail-panel-modal_header.is-sticky-bar{grid-template-columns:auto 1fr auto;column-gap:1rem;text-align:center}
+ .is-sticky-bar>.overlay-detail-panel-modal_footer .button{white-space:nowrap}
+}
 /* From 1600px the Figma frame as drawn: image inset 88px, CTA right edge on the image right edge, Details 485px, 160px gap, spec list to 51px inside the image */
 @media (min-width:1600px){
  .is-sticky-bar>.overlay-detail-panel-modal_footer{margin-right:3.25rem}
