@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.21
+
+### Patch Changes
+
+- Subnav (Trello): far venue-tab jumps a little slower; each extra tab crossed adds 0.55s, capped at 3s. The next-tab hop is unchanged.
+
 ## 1.2.20
 
 ### Patch Changes
