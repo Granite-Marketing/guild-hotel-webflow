@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.24
+
+### Patch Changes
+
+- Meetings venue modals: on small desktops (992 to 1279px) the Submit your request button stays on one line beside the title.
+
 ## 1.2.23
 
 ### Patch Changes
