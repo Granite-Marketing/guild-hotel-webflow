@@ -46,6 +46,9 @@
   &:is(.is-outline,[class*="w-variant-72048989"]):hover{--fill:100%}
   &:not([data-btn]):hover{color:var(--btn-hover)}
  }
+ /* Floating dine buttons (stickyCta, is-stuck) cross cream, green and photo grounds, so they stay solid and swap colours instead
+    (Stephen 2026-11-12): the fill clears to a ground in the label colour, and the label takes the button colour. */
+ &.is-stuck{--btn-outline:var(--btn-ink);--btn-hover:var(--btn-colour);background-color:var(--btn-ink)}
  /* Rooms quiz: the chosen option shows filled with a burgundy label and stays filled. */
  &.is-outline.is-active,&.is-outline.is-active:is(:hover,:focus-visible){--fill:100%;--btn-rest:var(--_primitives---colors--burgundy);--btn-hover:var(--_primitives---colors--burgundy)}
  /* Home art stories: dark outline on desktop, filled below 768px. */
