@@ -26,14 +26,18 @@ import { scrollTriggerRefresh } from '$utils/scrollTriggerRefresh'
 
 let instance: LenisInstance | null = null
 
-/** Raw handle kept for projects that already import `lenis` directly. */
-// Desktop feedback (Trello "Subnav"): anchor jumps were too fast; a fixed duration with an ease in and out reads calmer.
-export const ANCHOR_SCROLL = {
-  duration: 1.6,
-  easing: (progress: number) =>
-    progress < 0.5 ? 4 * progress ** 3 : 1 - (-2 * progress + 2) ** 3 / 2,
+// Desktop feedback (Trello "Subnav", round 2): anchor jumps still read too fast, most of all first tab to last.
+// Duration scales with distance: up to one viewport takes 1.6s, five or more take 3s. easeInOutSine peaks at
+// about 1.6x the average speed (easeInOutCubic peaked at 3x), so long jumps no longer rush through the middle.
+export const anchorScrollOptions = (distance: number) => {
+  const viewports = Math.abs(distance) / window.innerHeight
+  return {
+    duration: 1.6 + 1.4 * Math.min(Math.max((viewports - 1) / 4, 0), 1),
+    easing: (progress: number) => (1 - Math.cos(Math.PI * progress)) / 2,
+  }
 }
 
+/** Raw handle kept for projects that already import `lenis` directly. */
 export const lenis = {
   get raw(): LenisInstance | null {
     return instance
@@ -87,7 +91,7 @@ export const lenisEngine: SmoothScrollEngine = {
     // A full-height section with `data-scroll-flush` lines up with the
     // viewport top under the transparent nav, so no earlier section shows.
     const offset = target.hasAttribute('data-scroll-flush') ? 0 : -fixedNavOffset()
-    if (instance) instance.scrollTo(target, { offset, ...ANCHOR_SCROLL })
+    if (instance) instance.scrollTo(target, { offset, ...anchorScrollOptions(target.getBoundingClientRect().top + offset) })
     else window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY + offset, behavior: 'smooth' })
   },
   scrollTop: () => instance?.scroll ?? window.scrollY,

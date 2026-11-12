@@ -51,6 +51,7 @@
  * panels swap instantly as the pinned stage scrolls, with no tweens or snap.
  */
 
+import { anchorScrollOptions, lenis } from '$utils/lenisGsap'
 import { createLineMaskTimeline } from '$utils/lineMaskReveal'
 
 const ROOT_SELECTOR = '[data-scroll-enlarge-snap]'
@@ -174,6 +175,21 @@ const initAnimated = (parts: SnapParts) => {
     else pending = gsap.delayedCall(SETTLE, start)
   }
 
+  // Trello "Subnav": on desktop the tab bar sat inside the opening mask and
+  // showed half-clipped while the first image grew. It fades in only once the
+  // scrubbed timeline reaches t=1 (mask fully open) and out again above it.
+  // Phones keep it visible: earlyVenueTabs docks it from the first screen.
+  const tabBar = parts.tabs[0]?.closest<HTMLElement>('nav')
+  const desktop = window.matchMedia('(min-width: 768px)')
+  let tabBarShown: boolean | null = null
+  const syncTabBar = (time: number) => {
+    const show = !desktop.matches || time >= 0.999
+    if (!tabBar || show === tabBarShown) return
+    const first = tabBarShown === null
+    tabBarShown = show
+    gsap.to(tabBar, { autoAlpha: show ? 1 : 0, duration: first ? 0 : 0.4, ease: 'power1.out', overwrite: true })
+  }
+
   let activeIndex = -1
   const nearestIndex = (time: number) =>
     shownAt.reduce(
@@ -190,7 +206,10 @@ const initAnimated = (parts: SnapParts) => {
   const timeline = gsap.timeline({
     defaults: { ease: 'none' },
     // Content follows the scrubbed timeline, which lags scroll position.
-    onUpdate: () => syncContent(timeline.time()),
+    onUpdate: () => {
+      syncContent(timeline.time())
+      syncTabBar(timeline.time())
+    },
     scrollTrigger: {
       trigger: stage,
       start: 'top top',
@@ -212,6 +231,7 @@ const initAnimated = (parts: SnapParts) => {
       onRefresh: (self: ScrollTriggerInstance) => {
         mask.measure()
         syncContent(self.progress * totalSteps, true)
+        syncTabBar(self.progress * totalSteps)
       },
       onUpdate: (self: ScrollTriggerInstance) => {
         setActive(nearestIndex(self.progress * totalSteps))
@@ -249,6 +269,7 @@ const initAnimated = (parts: SnapParts) => {
 
   // A load that restores a mid-section scroll shows the right content.
   syncContent((timeline.scrollTrigger?.progress ?? 0) * totalSteps, true)
+  syncTabBar((timeline.scrollTrigger?.progress ?? 0) * totalSteps)
 
   const unbindTabs = bindTabs(parts, timeline.scrollTrigger, snapPoints)
   return () => {
@@ -320,7 +341,11 @@ const bindTabs = (
       const point = snapPoints[index]
       if (point === undefined) return
       event.preventDefault()
-      window.scrollTo({ top: trigger.start + (trigger.end - trigger.start) * point })
+      const top = trigger.start + (trigger.end - trigger.start) * point
+      // Trello "Subnav": an instant jump made the scrub race through every wipe; ease there instead.
+      const immediate = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (lenis.raw) lenis.raw.scrollTo(top, { immediate, ...anchorScrollOptions(top - window.scrollY) })
+      else window.scrollTo({ top })
     }
     tab.addEventListener('click', handler)
     return handler
