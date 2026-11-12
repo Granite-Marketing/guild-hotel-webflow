@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.20
+
+### Patch Changes
+
+- The intro paragraph under the script heading on happenings, press, blog and wellness now rises in when it reaches the screen, instead of finishing early below the fold.
+
 ## 1.2.19
 
 ### Patch Changes
