@@ -6,17 +6,18 @@
  * one line after another. Found by computed font, so new script headings
  * need nothing in the Designer. Each gets [data-script-reveal], which
  * lineMaskReveal skips so a tagged container does not mask it twice.
- * Headings inside modules that run their own reveal (enlarge snap, history
- * landmark), the nav and dialogs are left alone.
+ * Headings inside modules that run their own reveal (enlarge snap panels,
+ * history landmark), the nav and dialogs are left alone; an enlarge snap
+ * section's own header (tab-pills-intro) still draws in.
  */
 
 const SCRIPT_FONT = 'morello'
-const SKIP = '[data-scroll-enlarge-snap], [data-history-collapse], [role="dialog"], .nav_component, .w-nav, .swiper'
+const SKIP = '[data-scroll-enlarge-snap-content], [data-history-collapse], [role="dialog"], .nav_component, .w-nav, .swiper'
 // Negative insets leave room for swashes that reach past the line box.
 const HIDDEN = 'inset(-30% 100% -30% -10%)'
 const SHOWN = 'inset(-30% -10% -30% -10%)'
 
-const isScript = (element: HTMLElement) =>
+export const isScript = (element: HTMLElement) =>
   getComputedStyle(element).fontFamily.toLowerCase().includes(SCRIPT_FONT)
 
 export const scriptReveal = () => {
