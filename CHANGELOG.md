@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.12
+
+### Patch Changes
+
+- Scroll reveals start earlier (top 90%), run about 20% shorter and ease out, so copy settles before mid-screen. Shared components (heroes, section headers, paragraphs, CTAs, card and feature images) now reveal on every page and CMS template through a class map in scrollReveal, with a bundled first-screen pre-hide so nothing flashes. Script Reveal is slower (2s, power2.out) and reverses when scrolled back above.
+
 ## 1.2.11
 
 ### Patch Changes
