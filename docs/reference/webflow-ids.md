@@ -457,3 +457,8 @@ Plan: `docs/plans/2026-11-10-001-feat-gallery-canvas-plan.md`. Layout CSS ships 
 - Home art trail Collection List `fb3de0d7-4fc4-f208-ee77-41404293a566`: limit 10 (sort-order ascending), so the homepage loads the first 10 pieces only.
 - Each Collection List shows at most 100 items; the /arts grid and its dialogs list hit that cap at 100 art pieces. Load-more or auto-loading is deferred.
 - Component "Gallery Canvas Styles" `51c17234-82ff-8a78-73f9-94810497ec9a` (group Embeds): one HTML embed with the minified `docs/reference/site-head/gallery-canvas.css`, so the Designer shows the canvas layout. Instances: /gallery first child of section `491dcc4a-ded6-d478-3c57-c03ccedf4070`, /arts `7d71ed9f-3a5c-0c3b-e8fe-fa30281c21a0` first child of section `24baf9eb-aff0-c360-f1f8-f888bded5884`. The CSS left `dist/site.css` in v1.2.10. Convention: `docs/solutions/conventions/designer-visible-css-embed-component.md`.
+
+## Button system (2026-11-12)
+
+- Site Nav component `fc94d1a2-3399-4de0-e836-0233a6c86cdf`, embed `3639f68c-0d1e-0355-fd6d-d61a7593a03d` holds `<style data-button-system>` (minified `docs/reference/site-head/button-system.css`).
+- Combo styles created: `.button.is-chamfer.is-dark.is-outline` `8993f494-c263-4e55-0364-509c609ad5cc`, `...is-dark.is-outline.is-dark-mobile` `04702217-1132-4bbe-4f8b-e0cc6d1a10c3`, `.button.is-chamfer.is-outline.is-fill` `a02f8aad-81bc-447d-4046-dcd8cd3ab3a7`.

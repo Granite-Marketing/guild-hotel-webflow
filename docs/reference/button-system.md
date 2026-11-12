@@ -64,6 +64,7 @@ button is-chamfer [colour] [is-outline] [size]
 - **Sizes and layout, unchanged:** `is-small`, `is-wide`, `is-fill`. Selection state, unchanged: `is-active` on the quiz options shows the filled state.
 - **Hover:** filled drains to a 1px outline, label to the outline colour; outlined fills from the bottom, label to the contrast colour. `--btn-dur` .45s and `--btn-ease` everywhere, label roll on every anchor (submit inputs swap colour, they cannot hold spans).
 - **Outline colour:** the button colour, except burgundy and blue buttons (article body, Lobby Bar and Zuma heroes), which sit on photos and outline in their light label colour so the outline stays legible.
+- **Floating dine buttons** (`is-stuck`, from `stickyCta.ts`: the dining heroes' Reserve a table and the article Learn more): while docked they cross cream, green and photo grounds, so they stay solid and swap colours on hover (cream ground, label in the button colour) instead of turning into an outline (Stephen, 2026-11-12).
 - **CSS:** one stylesheet, `docs/reference/site-head/button-system.css`, minified into the `<style data-button-system>` embed inside the Site Nav component (Designer-visible). It replaces `button-hover.css` (site head), `button-outline-hover.css` and `meetings-button.css` (bundle). No pseudo-elements: the element keeps a static chamfer clip-path and its background holds the ring and a fill layer whose height animates, so anchors and inputs share one technique. Every paint rule carries `:not(#_)` so Webflow combo and variant colours cannot override it.
 
 ### Migration
