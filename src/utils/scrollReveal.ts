@@ -80,7 +80,6 @@ const AUTO_REVEALS: Record<string, string[]> = {
     '.split-card-pair-captioned_title',
     '.static-template-privacy-policy_header',
     '.static-template-privacy-policy_body > *',
-    '.tab-pills-intro_header',
     '.tab-pills-intro_text',
     '.text-columns-info_header',
     '.text-columns-info_item',
