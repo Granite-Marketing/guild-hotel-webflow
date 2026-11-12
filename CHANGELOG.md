@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.25
+
+### Patch Changes
+
+- Meetings intro paragraph reveals as it scrolls into view; the venue modal no longer shows a stray wordmark letter beside the back arrow.
+
 ## 1.2.24
 
 ### Patch Changes
