@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.13
+
+### Patch Changes
+
+- Subnav (Trello): anchor and subnav jumps scale from 1.6s to 3s with distance and use a softer sine ease; scroll-enlarge venue tab clicks ease instead of jumping; the venue tab bar appears on desktop only once the first image is fully open.
+
 ## 1.2.12
 
 ### Patch Changes
