@@ -72,7 +72,7 @@ test('offers slider: counter, next and loop at 1440', async ({ page }) => {
 
   await slider.locator('[data-offers-slider-prev]').click()
   await expect(current).toHaveText('01')
-  // Swiper ignores clicks while a looped transition is running (800ms).
+  // Let the image window finish opening before the next click.
   await page.waitForTimeout(1000)
   await slider.locator('[data-offers-slider-prev]').click()
   await expect(current).toHaveText('05')
@@ -114,4 +114,45 @@ test('offers slider: figure sits inside the card between title and text at 390',
   expect(Math.round(figure!.width)).toBe(350)
   expect(Math.round(figure!.height)).toBe(390)
   await sliderA(page).screenshot({ path: `${SCREENSHOT_DIRECTORY}/fixture-390.png` })
+})
+
+test('offers slider: image opens through a still window, direction follows navigation', async ({ page }) => {
+  await openFixture(page, 1440, 900)
+  const slider = sliderA(page)
+  // anchored: the side the window opens from (its inset stays 0 while the other shrinks)
+  const step = async (button: 'next' | 'prev', anchored: 'right' | 'left') => {
+    const leavingIndex = await slider
+      .locator('.swiper-slide-active')
+      .evaluate((element) => Array.from(element.parentElement!.children).indexOf(element))
+    await slider.locator(`[data-offers-slider-${button}]`).click()
+    await page.waitForTimeout(300)
+    const state = await slider.evaluate((root, index) => {
+      const active = root.querySelector<HTMLElement>('.swiper-slide-active')!
+      const figure = active.querySelector<HTMLElement>('.offers-slider-split_figure')!
+      const figureBox = figure.getBoundingClientRect()
+      const imageBox = figure.querySelector('img')!.getBoundingClientRect()
+      const leaving = root.querySelector('.swiper-wrapper')!.children[index] as HTMLElement
+      return {
+        clip: getComputedStyle(figure).clipPath,
+        imageDrift: Math.abs(imageBox.left - figureBox.left) + Math.abs(imageBox.width - figureBox.width),
+        leavingOpacity: getComputedStyle(leaving).opacity,
+        onTop: Number(active.style.zIndex) > Number(leaving.style.zIndex || 0),
+      }
+    }, leavingIndex)
+    const [, right, , left] = state.clip.match(/inset\((.*)\)/)![1].split(' ').map(parseFloat)
+    const [fixed, moving] = anchored === 'right' ? [right, left] : [left, right]
+    expect(fixed).toBe(0)
+    expect(moving).toBeGreaterThan(0)
+    expect(moving).toBeLessThan(100)
+    expect(state.imageDrift).toBeLessThan(1)
+    expect(state.leavingOpacity).toBe('1')
+    expect(state.onTop).toBe(true)
+    await page.waitForTimeout(1200)
+    const shown = await slider.evaluate(
+      (root) => Array.from(root.querySelectorAll('.swiper-slide')).filter((slide) => getComputedStyle(slide).opacity === '1').length,
+    )
+    expect(shown).toBe(1)
+  }
+  await step('next', 'right')
+  await step('prev', 'left')
 })

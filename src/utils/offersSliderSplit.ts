@@ -13,7 +13,7 @@
  *       [data-offers-slider-current]             current slide number
  *       [data-offers-slider-total]               slide count
  *       [data-offers-slider-next]                link block, next slide
- *   data-slide-mask="off"                      on the root: no text mask on slide change
+ *   data-slide-mask="off"                      on the root: no text or image mask, plain crossfade
  *
  * Slides hidden through a component visibility prop are not rendered, so
  * the total always matches the slides on the page. Uses its own `offers`
@@ -29,6 +29,12 @@ interface OffersSwiperInstance extends SwiperInstance {
 }
 
 const padNumber = (value: number) => String(value).padStart(2, '0')
+
+// Image window: lands with the text mask (lineMaskReveal, power3.out 0.9s plus staggers).
+const IMAGE_DURATION = 1.2
+const IMAGE_EASE = 'power3.out'
+const CLOSED = { next: 'inset(0% 0% 0% 100%)', prev: 'inset(0% 100% 0% 0%)' }
+const OPEN = 'inset(0% 0% 0% 0%)'
 
 export const offersSliderSplit = () => {
   const sliders = document.querySelectorAll<HTMLElement>('[data-offers-slider]')
@@ -72,9 +78,52 @@ export const offersSliderSplit = () => {
       reveals.forEach((reveal, slide) => (slide === active ? inView && reveal.play() : reveal.reverse()))
     }
 
+    // Image mask (Trello Offers & Packages): Swiper switches instantly and
+    // the slides' visibility is owned here. The incoming slide sits on top
+    // and its still image opens through a clip-path window (next from the
+    // right edge, prev from the left); slides underneath stay visible until
+    // the window is fully open, so the background never shows.
+    const visibleSlides = new Set<HTMLElement>()
+    let topLayer = 1
+    const applyVisibility = (instance: OffersSwiperInstance) => {
+      instance.slides.forEach((slide) => {
+        slide.style.opacity = visibleSlides.has(slide) ? '1' : '0'
+      })
+    }
+    const revealImage = (instance: OffersSwiperInstance, direction: 'next' | 'prev') => {
+      const incoming = instance.slides[instance.activeIndex]
+      if (!incoming) return
+      topLayer += 1
+      incoming.style.zIndex = String(topLayer)
+      visibleSlides.add(incoming)
+      applyVisibility(instance)
+      const figure = incoming.querySelector<HTMLElement>('.offers-slider-split_figure')
+      const settle = () => {
+        if (instance.slides[instance.activeIndex] !== incoming) return // a newer reveal cleans up
+        visibleSlides.clear()
+        visibleSlides.add(incoming)
+        applyVisibility(instance)
+      }
+      if (!figure || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return settle()
+      gsap.fromTo(
+        figure,
+        { clipPath: CLOSED[direction] },
+        { clipPath: OPEN, duration: IMAGE_DURATION, ease: IMAGE_EASE, overwrite: true, onComplete: settle },
+      )
+    }
+    const maskEvents = masked
+      ? {
+          // Runs after the fade effect's own setTranslate, so this wins.
+          setTranslate: applyVisibility,
+          slideNextTransitionStart: (instance: OffersSwiperInstance) => revealImage(instance, 'next'),
+          slidePrevTransitionStart: (instance: OffersSwiperInstance) => revealImage(instance, 'prev'),
+        }
+      : {}
+
     const swiper = new Swiper(container, {
       loop: true,
-      speed: 800,
+      // Masked: no Swiper fade, the visuals above run the change.
+      speed: masked ? 0 : 800,
       effect: 'fade',
       fadeEffect: { crossFade: true },
       slidesPerView: 1,
@@ -88,7 +137,15 @@ export const offersSliderSplit = () => {
         nextEl: nextButton,
       },
       on: {
-        init: updateCounter,
+        ...maskEvents,
+        init: (instance: OffersSwiperInstance) => {
+          updateCounter(instance)
+          const first = instance.slides[instance.activeIndex]
+          if (masked && first) {
+            visibleSlides.add(first)
+            applyVisibility(instance)
+          }
+        },
         slideChange: (instance: OffersSwiperInstance) => {
           updateCounter(instance)
           showActive(instance)
