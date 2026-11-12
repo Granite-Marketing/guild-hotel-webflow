@@ -1,5 +1,6 @@
 /* Button system (Trello Desktop-CTA-Buttons, contract in docs/reference/button-system.md).
    button is-chamfer [colour] [is-outline]: filled at rest unless is-outline; hover wipes to the inverse from the bottom.
+   The wipe edge always travels up: an outline fills from the bottom, a fill clears from the bottom (it is anchored to the top), so the rolling label stays on a contrasting ground.
    One technique for anchors and submit inputs: the element keeps a static chamfer clip-path; its background holds a 1px ring
    (four edges plus four diagonal corner bands) and a fill layer whose height animates (docs/solutions/conventions/button-fill-static-clip.md).
    Label roll: src/utils/buttonHover.ts wraps labels in [data-btn-label]; inputs swap colour instead.
@@ -22,12 +23,12 @@
 
 /* The venue modal Reserve button keeps its class (its variants also drive the text tabs, which stay out of the system). */
 :is(.button.is-chamfer,.overlay-detail-panel-modal_item-button:not([class*="w-variant-0e56f707"],[class*="603a80753681"])):not(#_){
- --cx:.6875rem;--cy:.75rem;--r:1px;--fill:100%;--btn-line:var(--btn-outline,var(--btn-colour));--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line);
+ --cx:.6875rem;--cy:.75rem;--r:1px;--fill:100%;--fill-y:0%;--btn-line:var(--btn-outline,var(--btn-colour));--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line);
  --ring:var(--btn-line) 50%,var(--btn-line) calc(50% + var(--r)),#0000 calc(50% + var(--r));
  opacity:1;color:var(--btn-rest);background-color:#0000;
  clip-path:polygon(0 var(--cy),var(--cx) 0,calc(100% - var(--cx)) 0,100% var(--cy),100% calc(100% - var(--cy)),calc(100% - var(--cx)) 100%,var(--cx) 100%,0 calc(100% - var(--cy)));
  background-image:linear-gradient(var(--btn-colour),var(--btn-colour)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(to bottom right,#0000 50%,var(--ring)),linear-gradient(to bottom left,#0000 50%,var(--ring)),linear-gradient(to top right,#0000 50%,var(--ring)),linear-gradient(to top left,#0000 50%,var(--ring));
- background-position:50% 100%,0 0,0 100%,0 0,100% 0,0 0,100% 0,0 100%,100% 100%;
+ background-position:50% var(--fill-y),0 0,0 100%,0 0,100% 0,0 0,100% 0,0 100%,100% 100%;
  background-size:100% var(--fill),100% var(--r),100% var(--r),var(--r) 100%,var(--r) 100%,var(--cx) var(--cy),var(--cx) var(--cy),var(--cx) var(--cy),var(--cx) var(--cy);
  background-repeat:no-repeat;
  transition:background-size var(--btn-dur) var(--btn-ease),color var(--btn-dur) var(--btn-ease);
@@ -36,7 +37,7 @@
  & :not([data-btn-copy]){color:inherit}
  & [data-btn-copy]{color:var(--btn-hover)}
  /* Outlined at rest. The outline chamfer is a share of the box (from the old 194x37 outline SVG) so tall quiz options keep their corners. */
- &:is(.is-outline,[class*="w-variant-72048989"]){--fill:0%;--btn-rest:var(--btn-line);--btn-hover:var(--btn-ink);--cx:5.77%;--cy:32.97%}
+ &:is(.is-outline,[class*="w-variant-72048989"]){--fill:0%;--fill-y:100%;--btn-rest:var(--btn-line);--btn-hover:var(--btn-ink);--cx:5.77%;--cy:32.97%}
  &:focus-visible{--fill:0%}
  &:is(.is-outline,[class*="w-variant-72048989"]):focus-visible{--fill:100%}
  &:not([data-btn]):focus-visible{color:var(--btn-hover)}
@@ -49,7 +50,7 @@
  &.is-outline.is-active,&.is-outline.is-active:is(:hover,:focus-visible){--fill:100%;--btn-rest:var(--_primitives---colors--burgundy);--btn-hover:var(--_primitives---colors--burgundy)}
  /* Home art stories: dark outline on desktop, filled below 768px. */
  @media (max-width:767px){
-  &.is-outline.is-dark-mobile{--fill:100%;--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line)}
+  &.is-outline.is-dark-mobile{--fill:100%;--fill-y:0%;--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line)}
   &.is-outline.is-dark-mobile:is(:hover,:focus-visible){--fill:0%}
  }
  @media (prefers-reduced-motion:reduce){
