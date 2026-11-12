@@ -2,6 +2,7 @@
 @media (min-width:768px){
  .overlay-detail-panel-modal_header.is-sticky-bar{position:sticky;top:0;z-index:5;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;margin:-1rem -3.25rem 5rem;padding:1rem 0;background-color:#f4efdf}
  .is-sticky-bar>.overlay-detail-panel-modal_back{justify-self:start}
+ [role=dialog]:has(.overlay-detail-panel-modal_extras) .overlay-detail-panel-modal_wordmark{display:none}
  .is-sticky-bar>.overlay-detail-panel-modal_footer{position:static;justify-self:end}
  [role=dialog]:has(.overlay-detail-panel-modal_extras) .overlay-detail-panel-modal_item{padding-top:.875rem;padding-bottom:.875rem}
 }

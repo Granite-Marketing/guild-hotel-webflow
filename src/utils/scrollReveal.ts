@@ -38,7 +38,7 @@ const TEXT_MASK_SPEED = 1.25
 const AUTO_REVEALS: Record<string, string[]> = {
   'text-mask': [
     '.hero-fullbleed-centered_component',
-    '.venue-card-fullbleed_intro',
+    '.venue-card-fullbleed_intro > :not([data-script-reveal])',
     '.venue-card-fullbleed_content',
     '.image-trio-text_header',
     '.image-trio-text_footer',
