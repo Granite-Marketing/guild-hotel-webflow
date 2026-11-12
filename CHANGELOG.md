@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.23
+
+### Patch Changes
+
+- History: the sticky year badge stops at the end of the timeline again instead of sliding onto the "A Landmark Reimagined" section, and the 1924 and 2026 side years reveal with the "Once Opened, Never Closed" heading.
+
 ## 1.2.22
 
 ### Patch Changes
