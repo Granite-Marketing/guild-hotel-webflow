@@ -73,6 +73,7 @@ const AUTO_REVEALS: Record<string, string[]> = {
     '.guidelines-process_header',
     '.guidelines-process_item',
     '.history-timeline_header',
+    '.history-timeline_range',
     '.history-timeline_item-header',
     '.history-timeline_text',
     '.image-pair-text_content',

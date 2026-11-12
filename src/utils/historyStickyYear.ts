@@ -138,14 +138,17 @@ const setupStickyYear = (root: HTMLElement, reducedMotion: boolean) => {
   // the middle of the first photo, not on its top edge. The badge's wrap is
   // zero-height and sticky at the viewport centre; pushing it down by half
   // the photo (and pulling the list back up the same amount) moves its start
-  // without shifting the layout.
+  // without shifting the layout. The pull-up goes on the list, not on the
+  // wrap: a negative bottom margin on the sticky wrap lets it stick that much
+  // past the list end, into the landmark section (History-Desktop, 2026 badge).
   const labelWrap = label.parentElement
+  const list = labelWrap?.nextElementSibling as HTMLElement | null
   const firstFigure = items[0].querySelector<HTMLElement>('figure')
-  if (labelWrap && firstFigure) {
+  if (labelWrap && list && firstFigure) {
     const placeLabel = () => {
       const offset = `${Math.round(firstFigure.offsetHeight / 2)}px`
       labelWrap.style.marginTop = offset
-      labelWrap.style.marginBottom = `-${offset}`
+      list.style.marginTop = `-${offset}`
     }
     placeLabel()
     new ResizeObserver(placeLabel).observe(firstFigure)
