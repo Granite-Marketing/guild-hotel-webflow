@@ -1216,5 +1216,5 @@ Below 768px every `.tab-pills-intro_tabs` (Wellness `is-media` included, centred
 ### Animation feedback round 2 (2026-11-09)
 
 - `data-reveal="image-fade"` (scrollReveal): the block fades in while its media settles from 1.12 scale. Use it where a bottom-up mask feels heavy (mosaics, card photos).
-- Offers Slider Split masks each slide's copy in line by line on change; `data-slide-mask="off"` on `[data-offers-slider]` turns it off.
+- Offers Slider Split masks each slide's copy in line by line on change, and the incoming image opens through a clip-path window on its `.offers-slider-split_figure` (next from the right edge, prev from the left; the image never moves). Swiper switches at speed 0 and the module owns slide opacity and z-index, keeping the outgoing slide visible underneath until the window is open. `data-slide-mask="off"` on `[data-offers-slider]` turns both off and restores the 800ms crossfade.
 - Underlined `[data-btn]` links redraw the underline only; the label roll is suppressed by `underline-hover.css`.

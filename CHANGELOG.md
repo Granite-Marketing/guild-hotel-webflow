@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.11
+
+### Patch Changes
+
+- Offers Slider Split: the incoming image masks in through a still clip-path window (next from the right, prev from the left) over the outgoing image, timed with the copy mask.
+
 ## 1.2.10
 
 ### Patch Changes
