@@ -35,6 +35,8 @@ All headings use `color` from the `color-neutral-900` variable.
 
 ### Text Styles
 
+Relume template baseline. Each project overrides these; The Guild Hotel's live values are in `style-inventory.md`, and body paragraph size is also set on each component class (see `docs/solutions/conventions/sitewide-body-text-size-lives-on-component-classes.md`).
+
 | Class | `main` | `medium` | `small` | `tiny` | weight | line-height |
 |---|---|---|---|---|---|---|
 | `text-size-large` | 1.25rem | 1.125rem | 1rem | 1rem | 400 | 1.6 |
