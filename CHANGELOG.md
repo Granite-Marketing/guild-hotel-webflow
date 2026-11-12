@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.18
+
+### Patch Changes
+
+- 350ba63: Dining venue pages: the sticky "Reserve a table" button now stays above every section (the groups images no longer cover it) and leaves at "Other dining options".
+
 ## 1.2.17
 
 ### Patch Changes
