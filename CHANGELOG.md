@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.14
+
+### Patch Changes
+
+- 33d806d: Offers slider: the leaving offer's heading, text and button fade out in the first 150ms of a change, so two headings never overlap on mobile. The leaving image stays fully visible until the new image has opened.
+
 ## 1.2.13
 
 ### Patch Changes
