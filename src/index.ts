@@ -166,7 +166,11 @@ window.Webflow.push(() => {
   stickyTabs()
   // F10: Reserve a Table on the Dinings template. The button sits in the
   // shared Hero component, so it is scoped by the template's page id.
-  stickyCta(`html[data-wf-page="${DININGS_TEMPLATE_PAGE_ID}"] .section_hero-fullbleed-centered .button`)
+  // It leaves at "Other dining options" (DiningIndividual feedback, 2026-11-12).
+  stickyCta(
+    `html[data-wf-page="${DININGS_TEMPLATE_PAGE_ID}"] .section_hero-fullbleed-centered .button`,
+    '.section_card-carousel-header-left, .section_cta-booking-newsletter, .section_footer-links',
+  )
   // Story "Learn more" floats over the copy (Figma mobile; F80 desktop too).
   stickyCta('.section_article-body .article-body_footer .button')
   // shortcut: decided once at load, so a resize across 768px keeps the first state; fine for phones.
