@@ -780,6 +780,11 @@ referrer-restricted browser key is an attribute set in Webflow.
 - Hover or focus on a row highlights its marker; hover or click on a marker
   highlights its row. Both get `is-active`; style `.map-feature_item.is-active`
   in Webflow. Clicking a row (outside its link) also pans to the marker.
+- The Maps API script is fetched once the page has loaded and the browser is
+  idle (`importLibrary` only, no map load is billed); the map itself is still
+  built when the figure comes within 400px of the screen. The map does not
+  swallow wheel events (`gestureHandling: 'cooperative'` leaves them to the
+  page), so no `data-lenis-prevent` or pointer-events switch is needed.
 - The static image stays underneath as the fallback. On a key or referrer
   error Google calls `gm_authFailure` and the map canvas is removed.
 - Styling is a legacy `styles` array (no Map ID), so markers are custom
@@ -1106,11 +1111,28 @@ removed.
 `createLineMaskTimeline(container)` hides a container's headings,
 paragraphs, figures, `.button`s and `[data-line-mask]` elements and returns
 `play()` and `reverse()` on one paused timeline (reverse runs at 1.6x).
-The timeline is rebuilt on every SplitText re-split, keeping its progress
-and direction. `prepareLineMaskReveal(container)` wraps it as a one-shot
+The timeline is rebuilt (once per batch of re-splits, in a microtask)
+keeping its progress and direction. `prepareLineMaskReveal(container)` wraps it as a one-shot
 `play()` (historyStickyYear, F09). Text is split with SplitText
 (`lines,words`, overflow hidden on lines, never `mask: 'lines'`); other
 targets rise from behind a clip wrapper. Reduced motion: nothing is hidden.
+
+**Lazy splitting (page load and scroll, 2026-11-16).** Text is not split
+when the container is created. The calling module returns first, then one
+batch reads every text block's position and splits those within one
+viewport of the screen (first screen included, before the first paint);
+the rest is watched by one shared `IntersectionObserver` (one viewport of
+margin) and split when it nears the screen. `play()` and `reverse()` split
+anything still unsplit before they run, so a reveal never plays on plain
+text, and text that is not rendered (a closed dialog, an inactive slide) is
+split on first play or when it first shows. Unsplit text is plain, readable
+text. Contract for callers: do not read `lineWords` or assume the timeline
+is built right after `createLineMaskTimeline` returns (it builds in a
+microtask, before paint); element-only containers still build at once.
+Why: every split measures layout, and `autoSplit` re-splits on each font load
+(the Google map's Roboto included), so splitting every block at load froze
+the page for seconds. See
+`docs/solutions/integration-issues/page-load-scroll-freeze-2026-11-16.md`.
 
 ### mediaTabs
 
