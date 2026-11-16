@@ -38,6 +38,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | scrollHint | `scrollHint.ts` | opt-in | F (2nd) |
 | finsweetRefresh | `finsweetRefresh.ts` | opt-in | F (3rd) |
 | filterActiveState | `filterActiveState.ts` | opt-in | F (4th) |
+| pressCategories | `pressCategories.ts` | wired (#181, next release) | directly before tabDropdown, before the scroll engine |
 | scrollTextReveal | `scrollTextReveal.ts` | opt-in | G |
 | galleryFilter | `galleryFilter.ts` | opt-in | E |
 | historyStickyYear | `historyStickyYear.ts` | opt-in | G |
@@ -1202,6 +1203,21 @@ scroll does not run too) and update the hash. Tab targets are element ids
 Only bars with `data-sticky-tabs="true"` pin; the value is bound to the tab-pills-intro "Sticky tabs" prop (empty by default). Order: after `staggerCards()`,
 `scrollEnlargeSnap()`, `swiperSliders()`, `gsapBasicAnimations()`, next to
 `imageStackCollapse()`.
+
+### pressCategories
+
+#181. /press is one Collection List of every Press item (source Press, sorted by item Order), so new categories and items need no Designer work. The module re-orders the items by category Order (keeping item Order inside a category, so the `is-cms` `:nth-child(even)` left/right alternation runs unbroken), keeps only the first category heading of each category, and rebuilds the subnav tabs from the categories that have items. A category with no items gets no heading and no tab.
+
+DOM contract:
+
+| Element | Contract |
+|---|---|
+| `[data-press-list]` | the section around the Collection List; `.w-dyn-items` inside it holds the items |
+| `[data-press-item]` | each Collection Item; `data-press-category` = Press Category: Slug, `data-press-category-order` = Press Category: Order |
+| `[data-press-heading]` | header inside each item, DOM id = Press Category: Slug, h2 text = Press Category: Name |
+| `.tab-pills-intro_tabs a[href^="#"]` | the subnav; the first tab is cloned as the template for every category tab |
+
+Repeat headings are removed, not hidden, which also drops their duplicate ids. The first tab gets `is-active`; stickyTabs then runs the scrollspy and click scrolling. Without the bundle every item shows its category heading and the static tabs still reach the first heading of each category. Order: directly before `tabDropdown()` and the scroll engine, because it changes page height and replaces the tabs those modules use. Test: `npx playwright test tests/visual/press-categories.spec.ts`.
 
 ### stickyCta
 
