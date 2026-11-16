@@ -16,9 +16,9 @@ Staging: https://the-guild-hotel-c34e71.webflow.io (now on release v1.2.30). Eve
 
 **Neighborhood and Happenings hover (cards 10 and 11).** The "Beyond Downtown" images on [Neighborhood](https://the-guild-hotel-c34e71.webflow.io/neighborhood) and the "More around town" cards on a [Happenings story](https://the-guild-hotel-c34e71.webflow.io/happenings-stories/locals-night-at-rodeo-bar) zoom very slightly (1.04) on hover. [#185](https://github.com/Granite-Marketing/guild-hotel-webflow/issues/185)
 
-## Decisions for you
+## Assumptions I made
 
-1. **History photo mosaic.** The three photos under the landmark section on History still fade in rather than mask in, because that block is shared with nine other pages (Meetings, Corporate, Neighborhood and the Dining pages). Options: switch it to the mask everywhere (fits the "large images mask in" rule), or leave it as is.
+1. **History photo mosaic.** The photo grid lower on History ("Discover the Property" area) no longer animates; it is simply there. You said it did not need an animation. The same block is on Meetings, Corporate, Neighborhood and the Dining pages, so it is static there too.
 
 ## Left alone, as agreed
 
