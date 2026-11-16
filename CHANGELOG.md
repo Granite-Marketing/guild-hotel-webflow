@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.29
+
+### Patch Changes
+
+- 68bf7c7: History timeline images reveal with the image mask instead of the soft fade (#189).
+- e7416e8: Hover zoom on Happenings "More around town" and Neighborhood "Beyond Downtown" images is CSS at 1.04 (#185).
+- 003a327: Scroll reveal hands the image transform back to CSS when an image reveal finishes, so the 1.04 hover zoom plays on revealed cards (#185).
+
 ## 1.2.28
 
 ### Patch Changes
