@@ -17,6 +17,6 @@
     "docs/reference/site-head/button-system.css": ["docs/reference/button-system.md"]
   },
   "conventions": ["~/granite/knowledge/tech-conventions.md"],
-  "parallel": false,
+  "parallel": true,
   "budget": { "soft_cap_usd": 60 }
 }
