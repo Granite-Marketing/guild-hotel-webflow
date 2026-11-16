@@ -85,7 +85,7 @@ All in shared code:
    - Re-splits that land together rebuild the timeline once, in a microtask, not once per `onSplit`. A part that joins late keeps the playhead time, a re-split keeps progress.
 2. `src/utils/map.ts`: after `load` and an idle moment, fetch the Maps API script (`importLibrary('maps')` and `'core'`; no map is created, so no map load is billed). The map is still built near the viewport.
 
-Not changed on purpose: eager images (`data-eager`), the `ScrollTrigger.refresh(true)` layers, and SplitText `autoSplit` (never reverted by hand), per CLAUDE.md. None of them caused this: `window.load` is not on the scroll path, and the refresh layers did not move the position (above).
+Not changed on purpose: eager images (`data-eager`), the `ScrollTrigger.refresh(true)` layers, and SplitText `autoSplit` (never reverted in code), per CLAUDE.md. None of them caused this: `window.load` is not on the scroll path, and the refresh layers did not move the position (above).
 
 ## Measured after (same staging pages, my bundle served in place of the footer tag, same throttling)
 
