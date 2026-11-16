@@ -57,7 +57,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | roomGridHoverReveal | `roomGridHoverReveal.ts` | wired (v1.1.4) | D, after imageHoverScale |
 | hoverFollowImage | `hoverFollowImage.ts` | wired (v1.1.4) | D, after imageTrailHover |
 | map | `map.ts` (+ `mapNeeds.ts`) | wired (unreleased) | D, after roomListHoverPreview |
-| hoverImageSwap | `hoverImageSwap.ts` | wired (next release) | D, after roomListHoverPreview |
+| hoverImageSwap | `hoverImageSwap.ts` | wired (rooms quiz, Site Nav menu) | D, after roomListHoverPreview |
 | tabDropdown | `tabDropdown.ts` | wired (M6, next release) | before the scroll engine, after buttonHover |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
 
@@ -851,6 +851,28 @@ options (pointer or focus) restores the default photo.
   showing when the visitor comes back.
 - On /rooms the option images come from the Quiz Options Collection List in
   each figure, after the static `default` photo.
+
+#### Site Nav menu (#186, #188)
+
+The open menu uses the same contract, so hovering a page link dissolves the
+menu background to that page's photo. Built in the Site Nav component
+(`fc94d1a2-3399-4de0-e836-0233a6c86cdf`); no nav-specific code.
+
+| Attribute | On | Value |
+|---|---|---|
+| `data-hover-swap` | `.site-nav_menu` (`[data-nav="menu"]`) | `true` |
+| `data-hover-swap-list` | `.site-nav_menu-list` | `true` |
+| `data-hover-swap-trigger` | each `.site-nav_menu-link` | page key: `rooms`, `dining`, `wellness`, `happenings`, `history`, `meetings`, `neighborhood`, `arts`, `gallery`, `blog`, `contact` |
+| `data-hover-swap-media` | each `img.site-nav_menu-image` in `.site-nav_menu-figure` | the same key; `default` on the original first image |
+
+- `site-nav_menu-image` is absolute full-cover, so the images stack; every
+  non-default image carries the combo `site-nav_menu-image is-swap`
+  (opacity 0, visibility hidden).
+- To change a page's photo: open the Site Nav component, select
+  "Menu image: <page>" in the Navigator, replace the image. To add a page:
+  add a link with a new trigger key and an `is-swap` image with the same key.
+- Starting photos are each page's hero image (blog reuses the rooms photo
+  until it has its own).
 
 ### roomsQuiz
 
