@@ -13,6 +13,9 @@
  *   data-reveal="image-fade"  soft image: the block fades in while the media
  *                             inside settles from a slight (1.04) zoom
  * Optional data-reveal-delay="0.2" (seconds) staggers neighbours.
+ * Optional data-reveal-start="60" (0 to 100) sets where the reveal starts:
+ * the viewport percentage from the top at which the element's top triggers
+ * it (`top 60%`), for every mode. Missing or invalid keeps `top 90%`.
  *
  * Shared component blocks in AUTO_REVEALS get their mode in code, so every
  * page and CMS template using the component reveals without a Designer
@@ -28,8 +31,8 @@
  */
 
 import { prepareLineMaskReveal } from '$utils/lineMaskReveal'
+import { parseRevealStart } from '$utils/revealStart'
 
-const START = 'top 90%'
 const EASE = 'power3.out'
 /** The shared line mask runs 0.9s per line; 1.25x makes it about 20% shorter. */
 const TEXT_MASK_SPEED = 1.25
@@ -139,13 +142,14 @@ export const scrollReveal = () => {
 
   elements.forEach((element) => {
     const delay = Number(element.dataset.revealDelay) || 0
+    const start = parseRevealStart(element.dataset.revealStart)
     const kind = element.dataset.reveal
 
     if (kind === 'fade') {
       gsap.fromTo(
         element,
         { autoAlpha: 0, y: '2rem' },
-        { autoAlpha: 1, y: 0, duration: 1, delay, ease: EASE, scrollTrigger: { trigger: element, start: START, once: true } },
+        { autoAlpha: 1, y: 0, duration: 1, delay, ease: EASE, scrollTrigger: { trigger: element, start, once: true } },
       )
       return
     }
@@ -154,7 +158,7 @@ export const scrollReveal = () => {
       const reveal = prepareLineMaskReveal(element, TEXT_MASK_SPEED)
       ScrollTrigger.create({
         trigger: element,
-        start: START,
+        start,
         once: true,
         onEnter: () => gsap.delayedCall(delay, reveal.play),
       })
@@ -163,7 +167,7 @@ export const scrollReveal = () => {
 
     if (kind === 'image-fade') {
       const media = element.querySelector<HTMLElement>('img, video, iframe')
-      const timeline = gsap.timeline({ delay, scrollTrigger: { trigger: element, start: START, once: true } })
+      const timeline = gsap.timeline({ delay, scrollTrigger: { trigger: element, start, once: true } })
       // Round 3: quick, clear fade with only a slight settle.
       timeline.fromTo(element, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.7, ease: 'power1.out' })
       if (media) timeline.fromTo(media, { scale: 1.04 }, { scale: 1, duration: 0.9, ease: 'power2.out' }, 0)
@@ -172,7 +176,7 @@ export const scrollReveal = () => {
 
     if (kind === 'image-mask') {
       const media = element.querySelector<HTMLElement>('img, video, iframe')
-      const timeline = gsap.timeline({ delay, scrollTrigger: { trigger: element, start: START, once: true } })
+      const timeline = gsap.timeline({ delay, scrollTrigger: { trigger: element, start, once: true } })
       timeline.fromTo(element, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.1, ease: 'power4.out' })
       if (media) timeline.fromTo(media, { scale: 1.15 }, { scale: 1, duration: 1.4, ease: EASE }, 0)
       timeline.set(element, { clearProps: 'clipPath' })
