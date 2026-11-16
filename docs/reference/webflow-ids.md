@@ -467,3 +467,11 @@ Plan: `docs/plans/2026-11-10-001-feat-gallery-canvas-plan.md`. Layout CSS ships 
 
 - script-intro-centered variant Legal Corporate `53add6a3-3c55-e4ed-2f36-460edae2cb76`: `script-intro-centered_heading` max-width 47rem (medium 38rem), margin-left/right auto (two-line break after "focus,", same pattern as the Bottom variant); `padding-section-xlarge` padding 11rem to 9rem (main only).
 - Card Carousel Header Left variant Legal Corporate `69ec3688-574e-61b2-83e0-6c45e105cc09` (duplicate of Base): `section_card-carousel-header-left` padding-top 2rem main (medium 7rem, small 6rem kept as Base). Template instance `a801d156-90c7-64a8-7607-c16886341a7c` uses it. FAQ to "More of the Guild" gap at 1440: 439px to 256px.
+
+## Press collection (2026-11-16, #181)
+
+`📰 Press` (slug `press-item`) `6afb2abe0f4d8650f6774820`, created through the Data API to replace the five hand-placed Article Card Staggered instances on /press. Left and right alternation comes from CSS on the list, not from per-item data.
+
+Fields (slug: id): `name` (article title) 0e46547820f605e99380132f24d35a2b, `slug` 99b4090843faf2b750d005fab8776dbf, `publication` (PlainText, required) 3050155dcdbcab181b86167917ed612a, `external-url` (Link, required) 220f80cd24b47f6a23dfb1fdfc382956, `image` (Image) 41732b3109069e580d9ca6ece2314f06, `logo` (Image) db231d8144faf15aa5d9d4fe835adba2, `section-heading` (PlainText, optional label above the card) cad1b188b98d03bb81bf99f4ca4b924a, `order` (Number, sort ascending) 3243cd1e205c48536b3e4656eec32274.
+
+Items (all drafts until the Designer list replaces the static cards; `external-url` values are placeholder publication homepages until Omar sends article links): national-geographic `6afb2acdeba5601304223750` (order 1, section heading "press"), forbes `6afb2acdeba5601304223752` (2), there-san-diego `6afb2acdeba5601304223754` (3), global-grasshopper `6afb2acdeba5601304223756` (4, section heading "design"), architectural-digest `6afb2acdeba5601304223758` (5).
