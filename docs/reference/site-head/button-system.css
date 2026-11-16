@@ -23,7 +23,7 @@
 
 /* The venue modal Reserve button keeps its class (its variants also drive the text tabs, which stay out of the system). */
 :is(.button.is-chamfer,.overlay-detail-panel-modal_item-button:not([class*="w-variant-0e56f707"],[class*="603a80753681"])):not(#_){
- --cx:.6875rem;--cy:.75rem;--r:var(--btn-outline-width);--fill:100%;--fill-y:0%;--btn-line:var(--btn-outline,var(--btn-colour));--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line);
+ --cx:.6875rem;--cy:.75rem;--r:var(--btn-outline-width);--fill:100%;--fill-y:0%;--fy:0;--btn-line:var(--btn-outline,var(--btn-colour));--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line);
  --ring:#0000 calc(50% - 2px),var(--btn-line) calc(50% - 1px),var(--btn-line) calc(50% + var(--r) - .3px),#0000 calc(50% + var(--r) + .7px);
  opacity:1;color:var(--btn-rest);background-color:#0000;
  /* 1px tabs past each straight edge: the clip is not pixel-snapped but the background is, so a button on a half pixel lost half its top or bottom line. */
@@ -35,10 +35,18 @@
  transition:background-size var(--btn-dur) var(--btn-ease),color var(--btn-dur) var(--btn-ease);
  &::before,&::after{content:none}
  /* Label hosts (text-style-button divs) carry their own Webflow colour: follow the button. */
+ /* Drawn outline (buttonHover.ts adds svg.btn-art): an inline SVG is pixel-snapped like the box, so every edge and diagonal is an even 1px.
+    The background ring and clip above stay as the Designer view and the pre-script fallback. --fy anchors the fill: 0 top, 1 bottom. */
+ &[data-btn-art]{position:relative;isolation:isolate;background-image:none}
+ /* Floating buttons keep the clip: their ground is the outline colour, so the clipped corners cannot show. */
+ &[data-btn-art]:not(.is-stuck){clip-path:none}
+ & .btn-art{position:absolute;inset:0;z-index:-1;width:100%;height:100%;overflow:visible;pointer-events:none}
+ & .btn-art .ring{fill:none;stroke:var(--btn-line);stroke-width:var(--btn-outline-width)}
+ & .btn-art .fill{fill:var(--btn-colour);clip-path:inset(calc((100% - var(--fill)) * var(--fy)) 0 calc((100% - var(--fill)) * (1 - var(--fy))) 0);transition:clip-path var(--btn-dur) var(--btn-ease)}
  & :not([data-btn-copy]){color:inherit}
  & [data-btn-copy]{color:var(--btn-hover)}
  /* Outlined at rest. The outline chamfer is a share of the box (from the old 194x37 outline SVG) so tall quiz options keep their corners. */
- &:is(.is-outline,[class*="w-variant-72048989"]){--fill:0%;--fill-y:100%;--btn-rest:var(--btn-line);--btn-hover:var(--btn-ink);--cx:5.77%;--cy:32.97%}
+ &:is(.is-outline,[class*="w-variant-72048989"]){--fill:0%;--fill-y:100%;--fy:1;--btn-rest:var(--btn-line);--btn-hover:var(--btn-ink);--cx:5.77%;--cy:32.97%}
  &:focus-visible{--fill:0%}
  &:is(.is-outline,[class*="w-variant-72048989"]):focus-visible{--fill:100%}
  &:not([data-btn]):focus-visible{color:var(--btn-hover)}
@@ -54,11 +62,12 @@
  &.is-outline.is-active,&.is-outline.is-active:is(:hover,:focus-visible){--fill:100%;--btn-rest:var(--_primitives---colors--burgundy);--btn-hover:var(--_primitives---colors--burgundy)}
  /* Home art stories: dark outline on desktop, filled below 768px. */
  @media (max-width:767px){
-  &.is-outline.is-dark-mobile{--fill:100%;--fill-y:0%;--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line)}
+  &.is-outline.is-dark-mobile{--fill:100%;--fill-y:0%;--fy:0;--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line)}
   &.is-outline.is-dark-mobile:is(:hover,:focus-visible){--fill:0%}
  }
  @media (prefers-reduced-motion:reduce){
   transition:color .15s linear;
+  & .btn-art .fill{transition:none}
   &:is(:hover,:focus-visible){color:var(--btn-hover)}
  }
 }
