@@ -1,10 +1,6 @@
-/* Desktop feedback (Corporate "why teams choose"): hovering shows the follow photo first; then the hovered item's chamfered panel fades in on top of it and its text masks in line by line (hoverFollowImage.ts), so the photo never covers what is being read. Leaving drops the item back under the photo at once (the photo covers it, or fades out to reveal it in place). */
+/* Desktop feedback (Corporate "why teams choose"): hovering shows the follow photo with a dark tint; the hovered item's text sits directly on it in the section's light colour and masks in line by line (hoverFollowImage.ts). Card 8 (2026-11-16): no chamfered panel behind the text, the tinted photo gives the contrast. */
 .feature-grid-dark-eyebrow_list{z-index:auto}
 .feature-grid-dark-eyebrow_item{position:relative}
-.feature-grid-dark-eyebrow_item::before{content:"";position:absolute;left:-1.25rem;right:-1.25rem;top:calc(var(--hover-panel-top,0px) - 1.25rem);height:calc(var(--hover-panel-height,100%) + 2.5rem);background:var(--_primitives---colors--neutral-darkest);clip-path:var(--btn-chamfer);opacity:0;pointer-events:none}
-/* Only the panel and the text rise above the photo (z 10); the item itself stays below, so its divider line does too. */
-.feature-grid-dark-eyebrow_item.is-active::before{z-index:11}
+.feature-grid-dark-eyebrow_hover-figure::after{content:"";position:absolute;inset:0;background:#00000080;pointer-events:none}
+/* Only the text rises above the photo (z 10); the item itself stays below, so its divider line does too. */
 .feature-grid-dark-eyebrow_item.is-active>*{position:relative;z-index:12}
-.feature-grid-dark-eyebrow_item.is-active::before{opacity:1;animation:hover-panel-in .7s cubic-bezier(.22,1,.36,1) .2s both}
-@keyframes hover-panel-in{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.feature-grid-dark-eyebrow_item.is-active::before{animation:none}}
