@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.31
+
+### Patch Changes
+
+- 9b05f35: Hexagon buttons draw their fill and 1px outline in an inline SVG added by buttonHover, so the diagonals are as crisp and even as the straight edges at every zoom and no corner thins at half-pixel positions (#190). The CSS ring stays as the Designer and pre-script fallback.
+
 ## 1.2.30
 
 ### Patch Changes
