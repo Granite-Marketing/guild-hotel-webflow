@@ -171,6 +171,8 @@ export const scrollReveal = () => {
       // Round 3: quick, clear fade with only a slight settle.
       timeline.fromTo(element, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.7, ease: 'power1.out' })
       if (media) timeline.fromTo(media, { scale: 1.04 }, { scale: 1, duration: 0.9, ease: 'power2.out' }, 0)
+      // Hand the media's transform back to CSS so hover zooms (#185) apply.
+      if (media) timeline.set(media, { clearProps: 'transform' })
       return
     }
 
@@ -180,6 +182,7 @@ export const scrollReveal = () => {
       timeline.fromTo(element, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.1, ease: 'power4.out' })
       if (media) timeline.fromTo(media, { scale: 1.15 }, { scale: 1, duration: 1.4, ease: EASE }, 0)
       timeline.set(element, { clearProps: 'clipPath' })
+      if (media) timeline.set(media, { clearProps: 'transform' })
     }
   })
 }
