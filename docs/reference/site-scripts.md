@@ -4,9 +4,9 @@ What Site Settings > Custom Code holds on site `6ad6405eae8eac6d7b7c41a3`, and t
 
 ## Release
 
-- **Bundle version:** v1.2.28 (tag `v1.2.28` pushed 2026-11-16, adds the Press categories module; jsDelivr serves `dist/index.js` and `dist/site.css`).
-- **Tag URL:** `https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.2.28/dist/index.js`
-- **Footer state:** staging footer bundle and head `data-site-css` link both name v1.2.28, written on 2026-11-16 with `data_scripts_tool` > `set_site_freeform_code` (footer and head), staging published. Bump both tags on every release.
+- **Bundle version:** v1.2.30 (tag `v1.2.30` pushed 2026-11-16: Press categories, hover zoom fix, History image masks, first tab click fix; jsDelivr serves `dist/index.js` and `dist/site.css`).
+- **Tag URL:** `https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.2.30/dist/index.js`
+- **Footer state:** staging footer bundle and head `data-site-css` link both name v1.2.30, written on 2026-11-16 with `data_scripts_tool` > `set_site_freeform_code` (footer and head), staging published. Bump both tags on every release.
 - **Repo visibility:** public since 2026-10-20 (jsDelivr only serves public repos).
 
 ## GSAP comes from Webflow, not the footer
@@ -26,7 +26,7 @@ Since Webflow's GSAP 3.15 rewrite, Webflow loads GSAP itself on every published 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/InertiaPlugin.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.2.28/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.2.30/dist/index.js"></script>
 ```
 
 Through the Data API this is `data_scripts_tool` > `set_site_freeform_code` (location `footer`), which writes the raw block; registered scripts are not used because the bundle (21 KB) is far over the 2,000-character inline cap. See `webflow-scripts-api.md`.
