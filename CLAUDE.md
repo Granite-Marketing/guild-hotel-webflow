@@ -280,3 +280,17 @@ After any Webflow API or MCP call that returns resource IDs (pages, collections,
 - **Rich text block content** — Cannot programmatically add/edit content inside a RichText element.
 
 These limitations are why the Style Guide page must be pre-built from a template (Relume) rather than generated from scratch.
+
+## Agent skills
+
+### Issue tracker
+
+Issues and specs live in this repo's GitHub Issues. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default triage vocabulary (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: `CONCEPTS.md` serves as the glossary, ADRs in `docs/adr/`. See `docs/agents/domain.md`.
