@@ -1,0 +1,2 @@
+- Committed the freshly rebuilt dist/index.js rather than reverting it; alternatives: revert to the committed bundle; why: a clean pnpm build reproduces the working-tree version, so the committed bundle was stale against the merged tickets; landed: e5ec9bc
+- Left .claude/build/active.json untracked; alternatives: commit or ignore it; why: it is the pipeline's own run state under a protected path; landed: none

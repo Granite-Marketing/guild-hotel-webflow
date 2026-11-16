@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fixture: button outlines</title>
+    <!-- The shared stylesheet itself, so the fixture never drifts from what ships in the Site Nav embed. -->
+    <link rel="stylesheet" href="../../../docs/reference/site-head/button-system.css" />
+    <style>
+      :root{--_primitives---colors--neutral-lightest:#f3ecda;--_primitives---colors--neutral-darkest:#1f1b16;--_primitives---colors--burgundy:#6b1f2a;--_primitives---colors--blue:#2f4f6f;--_primitives---colors--secondary:#e8dcc0;--_primitives---colors--tan:#b8a27a}
+      body{margin:0;padding:24px;background:#8a8f7a;font:14px sans-serif;display:grid;gap:20px}
+      .row{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+      .button{display:inline-block;padding:.75rem 2rem;text-decoration:none;font:600 13px/1.2 sans-serif;letter-spacing:.1em;text-transform:uppercase;border:0;cursor:pointer}
+      .tall{display:block;width:194px;height:96px;box-sizing:border-box;padding-top:2rem;text-align:center}
+    </style>
+  </head>
+  <body>
+    <div class="row" data-group="outlined-rest">
+      <a href="#" data-case="outline-cream" class="button is-chamfer is-outline">Outline cream</a>
+      <a href="#" data-case="outline-dark" class="button is-chamfer is-dark is-outline">Outline dark</a>
+      <a href="#" data-case="outline-burgundy" class="button is-chamfer is-burgundy is-outline">Outline burgundy</a>
+      <a href="#" data-case="outline-blue" class="button is-chamfer is-blue is-outline">Outline blue</a>
+      <a href="#" data-case="outline-tall" class="button is-chamfer is-outline tall">Outline tall</a>
+    </div>
+    <div class="row" data-group="filled-hover">
+      <a href="#" data-case="filled-cream" class="button is-chamfer">Filled cream</a>
+      <a href="#" data-case="filled-dark" class="button is-chamfer is-dark">Filled dark (Book your space)</a>
+      <a href="#" data-case="filled-burgundy" class="button is-chamfer is-burgundy">Filled burgundy</a>
+      <a href="#" data-case="filled-blue" class="button is-chamfer is-blue">Filled blue</a>
+      <input type="submit" data-case="filled-input" class="button is-chamfer is-dark" value="Submit input" />
+    </div>
+  </body>
+</html>

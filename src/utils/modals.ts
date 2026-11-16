@@ -14,11 +14,11 @@
  *                 Such triggers get `tabindex="0"` and `role="button"` at
  *                 init if they have none.
  *   - Hash link:  any `a[href="#{id}"]` whose id is a dialog opens it through
- *                 the same path, also from inside another open dialog (the
- *                 current one closes first and focus later returns to the
- *                 trigger that opened the first dialog). This includes a
- *                 `[data-modal-close]` whose href names another dialog (a
- *                 "back" link that steps to the previous dialog).
+ *                 the same path, also from inside another open dialog (see
+ *                 "Dialog stack"). A `[data-modal-close]` whose href names
+ *                 another dialog is a "back" link: it steps to that dialog
+ *                 (the one beneath in the stack, else it replaces the
+ *                 current one).
  *   - Page load:  `location.hash` naming a dialog id opens that dialog, and
  *                 so does a later `hashchange` to one. A hash naming any
  *                 other element re-scrolls to it after window load, so lazy
@@ -26,6 +26,16 @@
  *   - Close and scroll: a `[data-modal-close]` with `href="#{section-id}"`
  *                 pointing at a non-dialog element closes the dialog, then
  *                 scrolls to that element and moves focus there.
+ *
+ * Dialog stack: opening a dialog from a trigger inside an open dialog pushes
+ * it. The dialog beneath loses `is-open` (hidden, `aria-hidden="true"`) but
+ * stays in the stack. Back, close, ESC and overlay click pop the top dialog:
+ * the one beneath is shown again and focus returns to the trigger inside it
+ * that opened the popped dialog. A dialog opened from the page closes to the
+ * page as before (scroll lock released, focus to the page trigger). Opening a
+ * dialog that is already in the stack pops down to it; opening from outside
+ * the top dialog (hashchange, page load) replaces the whole stack. Page scroll
+ * stays locked and the overlay stays open while any dialog is in the stack.
  *
  * Open state is expressed via the `is-open` class; CSS handles visibility,
  * animation, and easing via Webflow combo classes.
@@ -83,8 +93,14 @@ export const modals = () => {
   // Let a dialog scroll inside itself while the page engine is stopped.
   modalElements.forEach((modal) => modal.setAttribute('data-lenis-prevent', ''))
 
-  let activeModal: HTMLElement | null = null
-  let activeTrigger: HTMLElement | null = null
+  interface StackEntry {
+    modal: HTMLElement
+    /** The element that opened this dialog (null for hash and page load). */
+    trigger: HTMLElement | null
+  }
+  const stack: StackEntry[] = []
+  const topEntry = () => stack[stack.length - 1] ?? null
+  const topModal = () => topEntry()?.modal ?? null
 
   let modalLenis: LenisInstance | null = null
   let modalResizeObserver: ResizeObserver | null = null
@@ -197,32 +213,76 @@ export const modals = () => {
     modalLenis = null
   }
 
-  function openModal(modal: HTMLElement, trigger: HTMLElement | null) {
-    if (activeModal === modal) return
+  function showModal(modal: HTMLElement) {
+    modal.classList.add('is-open')
+    modal.setAttribute('aria-hidden', 'false')
+  }
 
-    // Opening from inside the current dialog: the inner link is about to be
-    // hidden, so keep the trigger that opened the first dialog as the return
-    // focus target.
-    const returnTrigger =
-      activeModal && trigger && activeModal.contains(trigger) ? activeTrigger : trigger
+  function hideModal(modal: HTMLElement) {
+    modal.classList.remove('is-open')
+    modal.setAttribute('aria-hidden', 'true')
+  }
 
-    if (activeModal) closeModal({ restoreFocus: false })
+  function openModal(
+    modal: HTMLElement,
+    trigger: HTMLElement | null,
+    { replaceTop = false }: { replaceTop?: boolean } = {},
+  ) {
+    if (topModal() === modal) return
 
-    activeModal = modal
-    activeTrigger = returnTrigger
+    // Already in the stack (a back link to the dialog beneath): pop down to it.
+    const existingIndex = stack.findIndex((entry) => entry.modal === modal)
+    if (existingIndex !== -1) {
+      popTo(existingIndex + 1, { restoreFocus: true })
+      return
+    }
+
+    const top = topEntry()
+    if (top && replaceTop) {
+      // A back link to a dialog that is not beneath: swap the top dialog and
+      // keep its return target.
+      const returnTrigger = top.trigger
+      popTo(stack.length - 1, { restoreFocus: false, keepPageLock: true })
+      pushModal(modal, returnTrigger, trigger)
+      return
+    }
+
+    if (top && trigger && top.modal.contains(trigger)) {
+      pushModal(modal, trigger, trigger)
+      return
+    }
+
+    // Opened from outside the top dialog (hashchange): replace the stack.
+    if (top) closeAll({ restoreFocus: false, keepPageLock: true })
+    pushModal(modal, trigger, trigger)
+  }
+
+  function pushModal(
+    modal: HTMLElement,
+    returnTrigger: HTMLElement | null,
+    expandedTrigger: HTMLElement | null,
+  ) {
+    const below = topEntry()
+    if (below) hideModal(below.modal)
+
+    stack.push({ modal, trigger: returnTrigger })
 
     // Start image downloads before the open fade so the content is in place
     // by the time the dialog is visible.
     loadModalImages(modal)
 
-    modal.classList.add('is-open')
-    modal.setAttribute('aria-hidden', 'false')
-    if (trigger?.hasAttribute('data-modal-open')) trigger.setAttribute('aria-expanded', 'true')
+    showModal(modal)
+    if (expandedTrigger?.hasAttribute('data-modal-open')) {
+      expandedTrigger.setAttribute('aria-expanded', 'true')
+    }
 
     const overlayEnabled = overlayElement && !modal.hasAttribute('data-modal-no-overlay')
     if (overlayEnabled) {
       overlayElement.classList.add('is-open')
       overlayElement.setAttribute('aria-hidden', 'false')
+    } else if (overlayElement) {
+      overlayElement.classList.remove('is-open')
+      overlayElement.setAttribute('aria-hidden', 'true')
     }
 
     // Stop the page engine so page scrolling halts, then give the dialog's
@@ -243,7 +303,7 @@ export const modals = () => {
     const delay = parseSecondsList(computed.transitionDelay)
     const waitMs = Math.max(50, (duration + delay) * 1000 + 50)
     window.setTimeout(() => {
-      if (activeModal !== modal) return
+      if (topModal() !== modal) return
       const focusable = getFocusableElements(modal)
       const firstFocusable = focusable[0] ?? modal
       firstFocusable.focus({ preventScroll: true })
@@ -262,33 +322,74 @@ export const modals = () => {
     )
   }
 
-  function closeModal({ restoreFocus = true }: { restoreFocus?: boolean } = {}) {
-    if (!activeModal) return
+  /**
+   * Pop dialogs until `depth` remain. Reveals the dialog beneath (focus to the
+   * trigger inside it that opened the popped one) or, at depth 0, returns to
+   * the page.
+   */
+  function popTo(
+    depth: number,
+    { restoreFocus = true, keepPageLock = false }: { restoreFocus?: boolean; keepPageLock?: boolean } = {},
+  ) {
+    if (stack.length <= depth) return
 
-    const modal = activeModal
-    const trigger = activeTrigger
+    let lastTrigger: HTMLElement | null = null
+    while (stack.length > depth) {
+      const entry = stack.pop() as StackEntry
+      hideModal(entry.modal)
+      if (entry.trigger?.hasAttribute('data-modal-open')) {
+        entry.trigger.setAttribute('aria-expanded', 'false')
+      }
+      lastTrigger = entry.trigger
+    }
 
-    modal.classList.remove('is-open')
-    modal.setAttribute('aria-hidden', 'true')
-    if (trigger?.hasAttribute('data-modal-open')) trigger.setAttribute('aria-expanded', 'false')
+    const remaining = topEntry()
+    if (remaining) {
+      showModal(remaining.modal)
+      startModalScroll(remaining.modal)
+      if (restoreFocus) focusTriggerAfterTransition(remaining.modal, lastTrigger)
+      return
+    }
 
     if (overlayElement) {
       overlayElement.classList.remove('is-open')
       overlayElement.setAttribute('aria-hidden', 'true')
     }
 
+    if (keepPageLock) return
     stopModalScroll()
     smoothScroll.start()
 
-    if (restoreFocus) trigger?.focus({ preventScroll: true })
+    if (restoreFocus) lastTrigger?.focus({ preventScroll: true })
+  }
 
-    activeModal = null
-    activeTrigger = null
+  /** Focus a trigger inside a re-shown dialog once its transition has settled. */
+  function focusTriggerAfterTransition(modal: HTMLElement, trigger: HTMLElement | null) {
+    const computed = getComputedStyle(modal)
+    const waitMs = Math.max(
+      50,
+      (parseSecondsList(computed.transitionDuration) + parseSecondsList(computed.transitionDelay)) *
+        1000 +
+        50,
+    )
+    window.setTimeout(() => {
+      if (topModal() !== modal) return
+      const target = trigger && modal.contains(trigger) ? trigger : getFocusableElements(modal)[0]
+      ;(target ?? modal).focus({ preventScroll: true })
+    }, waitMs)
+  }
+
+  function closeModal({ restoreFocus = true }: { restoreFocus?: boolean } = {}) {
+    popTo(stack.length - 1, { restoreFocus })
+  }
+
+  function closeAll(options: { restoreFocus?: boolean; keepPageLock?: boolean } = {}) {
+    popTo(0, options)
   }
 
   /** Close, then scroll to a page section and move focus there. */
   function closeAndScrollTo(section: HTMLElement) {
-    closeModal({ restoreFocus: false })
+    closeAll({ restoreFocus: false })
     smoothScroll.scrollTo(section)
     if (!section.matches(FOCUSABLE_SELECTOR)) section.setAttribute('tabindex', '-1')
     section.focus({ preventScroll: true })
@@ -314,11 +415,11 @@ export const modals = () => {
       if (targetDialog) {
         event.preventDefault()
         event.stopPropagation()
-        openModal(targetDialog, link)
+        openModal(targetDialog, link, { replaceTop: link.matches('[data-modal-close]') })
         return
       }
 
-      if (!activeModal || !link.matches('[data-modal-close]')) return
+      if (!topModal() || !link.matches('[data-modal-close]')) return
       const section = document.getElementById(targetId)
       if (!section) return
       event.preventDefault()
@@ -339,7 +440,7 @@ export const modals = () => {
 
     // Dialog and section hrefs were handled in the capture phase above.
     const closeButton = target?.closest<HTMLElement>('[data-modal-close]')
-    if (closeButton && activeModal) {
+    if (closeButton && topModal()) {
       event.preventDefault()
       closeModal()
     }
@@ -358,6 +459,7 @@ export const modals = () => {
       return
     }
 
+    const activeModal = topModal()
     if (!activeModal) return
 
     if (event.key === 'Escape') {

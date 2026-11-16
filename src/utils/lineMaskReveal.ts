@@ -18,6 +18,17 @@
  * An element counts as text when it is a heading or paragraph, or has the
  * `data-line-mask="text"` attribute. Under prefers-reduced-motion nothing
  * is hidden and both calls are no-ops.
+ *
+ * Splitting is the expensive part (every split measures layout, and
+ * autoSplit re-splits on each font load or resize), so text is split only
+ * when it matters (docs/solutions/integration-issues/page-load-scroll-freeze-2026-11-16.md):
+ *   - text in the first screen (or one viewport below it) is split in one
+ *     batch right after the calling module returns, before the first paint;
+ *   - text further down is split when it comes within one viewport of the
+ *     screen, or the moment its reveal is played or reversed;
+ *   - text that is not rendered (a closed dialog, an inactive slide) is split
+ *     when it first plays, or when it first becomes visible.
+ * Unsplit text is plain, readable text, so nothing hidden can be missed.
  */
 
 import { isScript } from '$utils/scriptReveal'
@@ -40,6 +51,8 @@ interface TextPart {
   /** Each line's words; the words, not the line's children, rise (inline spans ignore transforms). */
   lineWords: HTMLElement[][]
   split: boolean
+  /** Creates the SplitText once; later calls do nothing. */
+  ensureSplit: () => void
 }
 
 interface ElementPart {
@@ -54,6 +67,54 @@ export interface LineMaskTimeline {
   reverse: () => void
   /** True while any part of the copy is revealed (progress above zero). */
   isRevealed: () => boolean
+}
+
+/** Text within this many viewport heights of the screen is split ahead of its reveal. */
+const SPLIT_AHEAD = 1
+
+let splitQueue: Array<{ element: HTMLElement; split: () => void }> = []
+let splitObserver: IntersectionObserver | null = null
+
+const splitWhenNear = (entries: IntersectionObserverEntry[]) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return
+    splitObserver?.unobserve(entry.target)
+    splitCallbacks.get(entry.target)?.()
+  })
+}
+const splitCallbacks = new WeakMap<Element, () => void>()
+
+/**
+ * Splits the queued text that is in or near the first screen, all in one
+ * pass (rects first, so no split interleaves with a measurement), and hands
+ * the rest to one shared observer.
+ */
+const flushSplitQueue = () => {
+  const queue = splitQueue
+  splitQueue = []
+  const viewport = window.innerHeight
+  const near = queue.map(({ element }) => {
+    const rect = element.getBoundingClientRect()
+    // Off to the side (an inactive slide) counts as far away too.
+    const onScreenAcross = rect.right > 0 && rect.left < window.innerWidth
+    return (
+      rect.height > 0 && onScreenAcross && rect.bottom > -viewport * SPLIT_AHEAD && rect.top < viewport * (1 + SPLIT_AHEAD)
+    )
+  })
+  queue.forEach(({ element, split }, index) => {
+    if (near[index]) {
+      split()
+      return
+    }
+    splitObserver ||= new IntersectionObserver(splitWhenNear, { rootMargin: `${SPLIT_AHEAD * 100}% 0px` })
+    splitCallbacks.set(element, split)
+    splitObserver.observe(element)
+  })
+}
+
+const scheduleSplit = (element: HTMLElement, split: () => void) => {
+  if (!splitQueue.length) queueMicrotask(flushSplitQueue)
+  splitQueue.push({ element, split })
 }
 
 const findTargets = (container: HTMLElement) => {
@@ -92,13 +153,19 @@ export const createLineMaskTimeline = (container: HTMLElement, speed = 1): LineM
     else if (direction === 'reverse') timeline.timeScale(REVERSE_SPEED).reverse()
   }
 
+  let builtParts = 0
+  let rebuildQueued = false
   const rebuild = () => {
-    // Wait until every text target has been split.
-    if (parts.some((part) => part.kind === 'text' && !part.split)) return
+    const splitParts = parts.filter((part) => part.kind === 'element' || part.split)
+    // Keep the playhead through a re-split (same parts, so progress holds). A
+    // part that joined late keeps the time instead, so what already played stays shown.
     const progress = timeline.progress()
+    const time = timeline.time()
+    const joined = splitParts.length !== builtParts
+    builtParts = splitParts.length
     timeline.clear()
-    parts.forEach((part, index) => {
-      const offset = index * ELEMENT_STAGGER
+    splitParts.forEach((part) => {
+      const offset = parts.indexOf(part) * ELEMENT_STAGGER
       if (part.kind === 'text') {
         part.lineWords.forEach((words, lineIndex) => {
           timeline.fromTo(words, HIDDEN, SHOWN, offset + lineIndex * LINE_STAGGER)
@@ -107,50 +174,77 @@ export const createLineMaskTimeline = (container: HTMLElement, speed = 1): LineM
       }
       timeline.fromTo(part.element, HIDDEN, SHOWN, offset)
     })
-    timeline.progress(progress)
+    if (joined) timeline.time(time)
+    else timeline.progress(progress)
     runDirection()
   }
 
-  // Register every part before splitting, so the first rebuild waits for
-  // all text targets instead of building from the first one alone.
+  /** Re-splits of many elements land together (a font loads); rebuild once per batch. */
+  const queueRebuild = () => {
+    if (rebuildQueued) return
+    rebuildQueued = true
+    queueMicrotask(() => {
+      rebuildQueued = false
+      rebuild()
+    })
+  }
+
   elements.forEach((element) => {
     if (isText(element)) {
-      parts.push({ kind: 'text', element, lineWords: [], split: false })
+      let splitStarted = false
+      const part: TextPart = {
+        kind: 'text',
+        element,
+        lineWords: [],
+        split: false,
+        ensureSplit: () => {
+          if (splitStarted) return
+          splitStarted = true
+          new SplitText(element, {
+            type: 'lines,words',
+            autoSplit: true,
+            onSplit: (self) => {
+              // Clip on the lines themselves, never `mask: 'lines'` (see the GSAP
+              // module conventions, rule 7). The timeline is owned here, so
+              // nothing is returned for SplitText to revert.
+              const lines = self.lines ?? []
+              gsap.set(lines, { overflow: 'hidden' })
+              const words = self.words ?? []
+              part.lineWords = lines.map((line) => words.filter((word) => line.contains(word)))
+              part.split = true
+              queueRebuild()
+            },
+          })
+        },
+      }
+      parts.push(part)
+      scheduleSplit(element, part.ensureSplit)
       return
     }
     wrapInClip(element)
     parts.push({ kind: 'element', element })
   })
+  // Element-only containers have nothing to wait for.
+  if (parts.every((part) => part.kind === 'element')) rebuild()
 
-  parts.forEach((part) => {
-    if (part.kind !== 'text') return
-    new SplitText(part.element, {
-      type: 'lines,words',
-      autoSplit: true,
-      onSplit: (self) => {
-        // Clip on the lines themselves, never `mask: 'lines'` (see the GSAP
-        // module conventions, rule 7). The timeline is owned here, so
-        // nothing is returned for SplitText to revert.
-        const lines = self.lines ?? []
-        gsap.set(lines, { overflow: 'hidden' })
-        const words = self.words ?? []
-        part.lineWords = lines.map((line) => words.filter((word) => line.contains(word)))
-        part.split = true
-        rebuild()
-      },
+  /** A reveal that is about to run needs its text split, whether or not it was near. */
+  const ensureAllSplit = () => {
+    parts.forEach((part) => {
+      if (part.kind === 'text') part.ensureSplit()
     })
-  })
-  rebuild()
+  }
 
   return {
     play: () => {
       if (direction === 'forward') return
       direction = 'forward'
+      ensureAllSplit()
       runDirection()
     },
     reverse: () => {
       if (direction === 'reverse') return
       direction = 'reverse'
+      ensureAllSplit()
       runDirection()
     },
     isRevealed: () => timeline.progress() > 0,
