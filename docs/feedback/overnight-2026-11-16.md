@@ -12,6 +12,10 @@ Staging: https://the-guild-hotel-c34e71.webflow.io (now on release v1.2.31). Eve
 
 ![Before and after, zoomed](images/2026-11-16/190/overnight-svg-before-after-zoom.webp)
 
+**Paragraphs (card 4).** Omar chose 16px, so body text on desktop is now 16px on every page, while the text over the hero image at the top of each page stays at 18px as he asked. Phones and tablets were already 16px and are unchanged. [#182](https://github.com/Granite-Marketing/guild-hotel-webflow/issues/182)
+
+![History at 16px, live](images/2026-11-16/182/live-16px-oasis.webp)
+
 **History (card 7).** On [History](https://the-guild-hotel-c34e71.webflow.io/history) the George Marston stamp now appears the moment it enters the screen, "Once opened, never closed" waits until it is just above the middle of the screen, and the timeline photos open upward with the mask reveal. [#189](https://github.com/Granite-Marketing/guild-hotel-webflow/issues/189)
 
 **Corporate, Meetings and Neighborhood maps, and page loading (cards 8 and 9).** Pages scroll from your first touch while still loading, never jump back up, the hero text plays once, and scrolling over the map no longer pauses. Try [Corporate](https://the-guild-hotel-c34e71.webflow.io/legal-corporate/corporate), [Neighborhood](https://the-guild-hotel-c34e71.webflow.io/neighborhood) and [Meetings](https://the-guild-hotel-c34e71.webflow.io/meetings). [#176](https://github.com/Granite-Marketing/guild-hotel-webflow/issues/176)
@@ -25,6 +29,8 @@ Staging: https://the-guild-hotel-c34e71.webflow.io (now on release v1.2.31). Eve
 2. **Buttons: no SVG needed from the client.** I tested whether a better SVG file would help. It would not: the softness came from how the browser drew the outline, not from the shape. The fix needed no change in Webflow.
 3. **Buttons: what stays.** On a normal (non-retina) screen, the long shallow corners on the widest buttons still show tiny steps, which every screen does with a thin angled line. If you want them cleaner, the option is shorter, fixed-size corners on wide buttons; I left the design as it is.
 4. **Buttons: Safari.** I could only test in Chrome tonight. Please glance at a button in Safari.
+5. **Paragraphs: what counts as a hero.** Only the text over the big image at the top of each page stays at 18px. The text on the full-width venue photos further down (Dining, Wellness, Meetings) went to 16px like other body text. Small capital headings above sections keep their size.
+6. **Paragraphs: test page kept.** The History 16px test page is still on staging, hidden from search. I'll delete it once you say so.
 
 ## Left alone, as agreed
 

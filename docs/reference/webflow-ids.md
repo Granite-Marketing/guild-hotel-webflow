@@ -27,7 +27,7 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 | Password | `6ad64060ae8eac6d7b7c4242` | `/401` | - |
 | 404 | `6ad64060ae8eac6d7b7c4243` | `/404` | - |
 | History | `6ad66fd276d24ed37ac4c52f` | `/history` | history |
-| History 16px test | `6afb30142bc6eae4d68d3cd5` | `/history-16px-test` | #182 (2026-11-16): duplicate of History for Omar to judge 16px paragraphs; page-scoped style embed `454b5178-a9de-b68c-6291-006fac76573b` first in main; head has robots noindex. Delete once Omar decides. |
+| History 16px test | `6afb30142bc6eae4d68d3cd5` | `/history-16px-test` | #182 (2026-11-16): duplicate of History for Omar to judge 16px paragraphs; page-scoped style embed `454b5178-a9de-b68c-6291-006fac76573b` first in main; head has robots noindex. Omar chose 16px (rolled out site-wide 2026-11-16); delete on Stephen's yes. |
 | Dining | `6ad66fd476d24ed37ac4c5cb` | `/dining` | dining-collection; assembled by Q032 (2026-10-20), Body `6ad66fd476d24ed37ac4c5d1` |
 | Guidelines | `6ad66fd44c7f57894534ada5` | `/guidelines` | guidelines; assembled by Q037 (2026-10-20), Body `6ad66fd44c7f57894534adac`; element ids in `docs/figma/build-plans/Q037/plan.md` |
 | Rooms | `6ad66fd5f8bf4846e809dbee` | `/rooms` | rooms-collection; assembled by Q033 (2026-10-20), Body `6ad66fd5f8bf4846e809dbf6` |
@@ -102,7 +102,7 @@ Draft pages, one per wave 2 parallel build, created by K02 on 2026-10-20. Not in
 
 | Component | ID | Notes |
 |---|---|---|
-| Global Styles | `ab488b17-f25a-fbf8-5f54-4a3955eb57e5` | Relume starter global styles embed |
+| Global Styles | `ab488b17-f25a-fbf8-5f54-4a3955eb57e5` | Relume starter global styles embed. Also holds the `<style data-paragraph-size>` embed `642ce024-597a-077a-4751-83d60f9e31e6` (#182, desktop body text 16px, hero stays 18px; source `docs/reference/site-head/paragraph-size.css`). |
 | Footer Links | `14efd120-8e4c-efe3-75b9-396e4792ed73` | Q013 site footer, no props; built on `🧱 footer-links` (2026-10-20). Dining column gap (F35): the CMS list wrapper `6d849dd0-bd96-3cdd-c3ba-77644e482bf8` and the static "in-room dining" `ul.footer-links_list` are separate flex children of `footer-links_column` (row-gap 2rem, 1.25rem at max-width 767px), so the gap after the last CMS item is 32px (20px mobile) instead of the 12px list gap. Fix is combo class `is-after-cms` on the static ul only: margin-top -1.25rem, -0.5rem at max-width 767px. Ul element id not cached yet. |
 | CTA Booking Newsletter | `916e4ffc-007b-3572-a686-946c6645b2e8` | Q012, no props; instance on `🧱 cta-booking-newsletter` |
 | faq-accordion | `064f3089-65e4-65ec-6f9a-dc5cb4ab8ee7` | Q015, built on `/build-faq-accordion` (2026-10-20), no props |

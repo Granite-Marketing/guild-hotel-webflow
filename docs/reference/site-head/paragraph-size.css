@@ -1,0 +1,13 @@
+/* Trello card 4 (#182): Omar chose 16px body paragraphs on desktop; hero text stays 18px.
+   Below 992px these classes are already 1rem. Lives in the Global Styles component embed. */
+@media (min-width: 992px) {
+  .main-wrapper :is(
+    .text-size-medium, .text-size-regular, .venue-card-fullbleed_text,
+    .card-carousel-header-left_text, .card-stagger-header-left_text, .feature-grid-dark-eyebrow_text,
+    .guidelines-process_intro, .guidelines-process_text, .guidelines-process_link,
+    .history-landmark_text, .history-oasis_text, .history-timeline_text, .image-pair-text_text,
+    .meetings-collection-features_item, .meetings-collection-features_text, .neighborhood-corporate_text,
+    .offers-slider-split_text, .split-sticky-text-stacked-images_item-text, .split-sticky-text-stacked-images_text,
+    .text-columns-info_aside, .text-columns-info_text, .static-template-privacy-policy_list
+  ):not([class*="eyebrow-caps"], .hero-fullbleed-centered_text) { font-size: 1rem; }
+}
