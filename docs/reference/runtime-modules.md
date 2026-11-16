@@ -868,9 +868,16 @@ menu background to that page's photo. Built in the Site Nav component
 - `site-nav_menu-image` is absolute full-cover, so the images stack; every
   non-default image carries the combo `site-nav_menu-image is-swap`
   (opacity 0, visibility hidden).
-- To change a page's photo: open the Site Nav component, select
-  "Menu image: <page>" in the Navigator, replace the image. To add a page:
-  add a link with a new trigger key and an `is-swap` image with the same key.
+- Each image's source is bound to a Site Nav Image property (group "Menu
+  images"): "Menu image: Default", "Menu image: Stay", "Dine", "Wellness",
+  "Happenings", "Our History", "Meetings & Events", "Neighborhood", "Art",
+  "Gallery", "Blog", "Contact". Alt text is `inherit`, so it follows the
+  chosen image's library alt.
+- To change a photo site-wide: open the Site Nav component and change the
+  property's default in the Properties panel. Changing it on one page's
+  instance changes only that page.
+- To add a page: add an Image property, an `is-swap` image bound to it with
+  a new media key, and a link with the same trigger key.
 - Starting photos are each page's hero image (blog reuses the rooms photo
   until it has its own).
 
