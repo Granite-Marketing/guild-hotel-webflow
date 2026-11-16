@@ -238,6 +238,13 @@
   background-color: #4a1217;
 }
 
+/* Phone filter dropdown (tabDropdown.ts) on Arts: the panel inverts too, or
+   the open list shows wine text on its wine background. */
+[data-gallery-canvas].is-dark [data-tab-dropdown-panel] {
+  background-color: #f4efdf;
+  color: #4a1217;
+}
+
 @media screen and (max-width: 991px) {
   /* The window spans the screen edge to edge, so the filter pill keeps a gutter. */
   [data-gallery-canvas] .gallery-all_tags-wrapper {
@@ -250,10 +257,17 @@
     box-shadow: inset 0 0 5rem 2.25rem var(--gallery-canvas-fade);
   }
 
+  /* Same 40px box and 12px chamfer as the filter dropdown pill (Figma mobile). */
   .tab-pills-intro_tabs.is-canvas-controls {
     gap: 1rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    clip-path: polygon(0.75rem 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0.75rem 100%, 0 calc(100% - 0.75rem), 0 0.75rem);
+  }
+
+  /* The dropdown draws its own chamfered panel; the bar behind it stays clear. */
+  [data-gallery-canvas].is-dark .tab-pills-intro_tabs[data-tab-dropdown] {
+    background-color: transparent;
   }
 
   .gallery-all_controls {
@@ -261,7 +275,13 @@
   }
 
   .gallery-all_joystick {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .gallery-all_joystick-knob {
+    width: 0.875rem;
+    height: 0.875rem;
+    margin: -0.4375rem 0 0 -0.4375rem;
   }
 }
