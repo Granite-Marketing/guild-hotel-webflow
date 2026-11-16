@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modal back chain fixture</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      [role="dialog"] { position: fixed; inset: 0; opacity: 0; visibility: hidden; pointer-events: none; z-index: 20; }
+      [role="dialog"].is-open { opacity: 1; visibility: visible; }
+      .modal_overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); opacity: 0; visibility: hidden; z-index: 10; }
+      .modal_overlay.is-open { opacity: 1; visibility: visible; }
+      .dialog_panel { pointer-events: auto; position: absolute; top: 100px; left: 100px; width: 600px; height: 400px; background: #eee; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <button type="button" id="grid-trigger" data-modal-open="artwork">open artwork</button>
+    </main>
+
+    <div class="modal_overlay" data-modal-overlay data-modal-close aria-hidden="true"></div>
+
+    <div id="artwork" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+      <div class="dialog_panel">
+        <button type="button" data-modal-close id="artwork-back">back</button>
+        <h2>artwork</h2>
+        <p>artwork body</p>
+        <a href="#artist" id="artist-link">see the artist</a>
+        <button type="button" id="artist-button" data-modal-open="artist">artist button</button>
+      </div>
+    </div>
+    <div id="artist" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+      <div class="dialog_panel">
+        <button type="button" data-modal-close id="artist-back">back</button>
+        <h2>artist</h2>
+        <p>artist body</p>
+      </div>
+    </div>
+    <script src="./modal-back-chain.js"></script>
+  </body>
+</html>
