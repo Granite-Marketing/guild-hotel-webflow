@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.27
+
+### Patch Changes
+
+- 3d2d44e: Corporate key features: moving between items eases the text out before it masks back in, instead of a hard cut (#184).
+
 ## 1.2.26
 
 ### Patch Changes
