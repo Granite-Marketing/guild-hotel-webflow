@@ -177,6 +177,67 @@
   pointer-events: none;
 }
 
+/* Desktop (#180): zoom pill left of the filter pill on one row, the pair
+   centred. The section becomes a grid whose outer columns share the leftover
+   width, so the pair is centred whatever the filter labels' width. */
+@media screen and (min-width: 992px) {
+  .section_gallery-all[data-gallery-canvas] {
+    display: grid;
+    grid-template-columns: 1fr auto auto 1fr;
+    grid-template-rows: 100vh;
+    column-gap: 0.75rem;
+  }
+
+  [data-gallery-canvas] > .w-embed {
+    display: none;
+  }
+
+  [data-gallery-canvas] .gallery-all_scroller {
+    grid-area: 1 / 1 / 2 / -1;
+  }
+
+  [data-gallery-canvas] .gallery-all_controls,
+  [data-gallery-canvas] .gallery-all_tags-wrapper {
+    position: relative;
+    grid-row: 1;
+    align-self: end;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    margin-bottom: 2rem;
+    transform: none;
+  }
+
+  [data-gallery-canvas] .gallery-all_controls {
+    grid-column: 2;
+  }
+
+  [data-gallery-canvas] .gallery-all_tags-wrapper {
+    grid-column: 3;
+  }
+}
+
+/* Arts (#180): on the dark section the pills invert to cream with wine text. */
+[data-gallery-canvas].is-dark .tab-pills-intro_tabs {
+  background-color: #f4efdf;
+}
+
+[data-gallery-canvas].is-dark .tab-pills-intro_tab {
+  color: #4a1217;
+}
+
+[data-gallery-canvas].is-dark .tab-pills-intro_tab.is-active {
+  border-bottom-color: #4a1217;
+}
+
+[data-gallery-canvas].is-dark .gallery-all_joystick {
+  border-color: rgba(74, 18, 23, 0.5);
+}
+
+[data-gallery-canvas].is-dark .gallery-all_joystick-knob {
+  background-color: #4a1217;
+}
+
 @media screen and (max-width: 991px) {
   /* The window spans the screen edge to edge, so the filter pill keeps a gutter. */
   [data-gallery-canvas] .gallery-all_tags-wrapper {
