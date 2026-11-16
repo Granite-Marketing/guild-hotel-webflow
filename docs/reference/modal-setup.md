@@ -66,12 +66,36 @@ None of these add attributes; existing dialogs keep working unchanged.
 |---|---|---|
 | A div or card as a trigger (e.g. a Neighborhood timeline item) | `data-modal-open="{id}"` on the div | Adds `tabindex="0"` and `role="button"` if missing; Enter and Space open the dialog |
 | A plain link that opens a dialog | Link Block or Text Link with URL `#{id}` | Handled in the capture phase with `stopPropagation`, so Webflow.js neither scrolls nor pushes the hash, then the normal open path |
-| A link inside dialog A that opens dialog B | Link with URL `#{b-id}` inside A | Closes A, opens B; closing B returns focus to the trigger that opened A |
-| A back control in dialog B that returns to dialog A (e.g. the booking menu venue list) | `data-modal-close` plus URL `#{a-id}` (Overlay Detail Panel Modal: the **Back link** prop) | Closes B, opens A; focus return stays on the trigger that opened A |
+| A link inside dialog A that opens dialog B | Link with URL `#{b-id}` inside A | Pushes B on the dialog stack (A is hidden, not closed); Back, close, ESC or overlay click on B pops to A and focus returns to this link inside A |
+| A back control in dialog B that returns to dialog A (e.g. the booking menu venue list) | `data-modal-close` plus URL `#{a-id}` (Overlay Detail Panel Modal: the **Back link** prop) | Pops B to A when A is beneath it in the stack (focus goes to the link in A that opened B); if A is not in the stack, A replaces B and the page return target is unchanged |
 | A shareable URL that lands with a dialog open | `/page#{id}` | Opens that dialog on load, and on a later `hashchange` to that id |
 | A close control that also goes somewhere on the page (e.g. "back to the quiz" in the /rooms all-rooms dialog) | `data-modal-close` plus URL `#{section-id}` | Closes, scrolls to the section with the active scroll engine (native `scrollIntoView` without one), focuses it (adds `tabindex="-1"` if needed) |
 
-Close controls with `href="#"` behave as before: they only close.
+Close controls with `href="#"` behave as before: they only close (the top
+dialog).
+
+### Dialog stack (Back returns to the previous modal)
+
+The script keeps a stack of open dialogs. A trigger inside an open dialog
+(`data-modal-open` or a `#{id}` link) pushes the next dialog: the one beneath
+loses `is-open` and gets `aria-hidden="true"` but stays logically open. The
+page scroll lock and the overlay stay on while the stack is not empty.
+
+- Back, `[data-modal-close]`, ESC and an overlay click all pop the top dialog.
+  The dialog beneath is shown again and focus returns to the trigger inside it
+  that opened the popped dialog.
+- A dialog opened from the page (the grid) is a stack of one: closing it
+  releases scroll and returns focus to the page trigger, as before.
+- A link to a dialog already in the stack pops down to it.
+- Opening from outside the top dialog (a `hashchange`, page load) replaces the
+  stack.
+- A close control whose URL names a page section closes the whole stack, then
+  scrolls.
+
+Designer needs nothing new: the artwork modal's artist link just has to be a
+`data-modal-open` trigger or a `#{id}` link. Fixture:
+`tests/visual/fixtures/modal-back-chain.html`, spec
+`tests/visual/modal-back-chain.spec.ts`.
 
 The script does NOT pause ScrollSmoother or lock body scroll. Native scroll
 is already prevented by ScrollSmoother's `overflow: hidden` on body, and the
