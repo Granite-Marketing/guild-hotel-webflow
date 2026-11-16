@@ -6,4 +6,7 @@
 
 import { modals } from '../../../src/utils/modals'
 
+// gsap is not loaded from the CDN; modals.ts only adds and removes a ticker callback.
+Object.assign(window, { gsap: { ticker: { add: () => {}, remove: () => {} } } })
+
 modals()

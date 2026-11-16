@@ -118,16 +118,21 @@ test('a #id hash link opens the dialog without changing the URL', async ({ page 
   expect(new URL(page.url()).hash).toBe('')
 })
 
-test('a hash link inside an open dialog switches dialogs and keeps return focus', async ({ page }) => {
+test('a hash link inside an open dialog stacks dialogs; ESC steps back through them (#178)', async ({ page }) => {
   await load(page)
   const trigger = page.locator('.timeline_item')
+  const roomsLink = page.locator('.timeline_rooms-link')
   await trigger.click()
   await expect(page.locator('#timeline-dialog')).toHaveClass(/is-open/)
-  await page.locator('.timeline_rooms-link').click()
+  await roomsLink.click()
   await expect(page.locator('#timeline-dialog')).not.toHaveClass(/is-open/)
   await expect(page.locator('#all-rooms')).toHaveClass(/is-open/)
   await page.keyboard.press('Escape')
   await expect(page.locator('#all-rooms')).not.toHaveClass(/is-open/)
+  await expect(page.locator('#timeline-dialog')).toHaveClass(/is-open/)
+  await expect(roomsLink).toBeFocused()
+  await page.keyboard.press('Escape')
+  await expect(page.locator('#timeline-dialog')).not.toHaveClass(/is-open/)
   await expect(trigger).toBeFocused()
 })
 
