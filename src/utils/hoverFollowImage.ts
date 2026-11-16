@@ -21,12 +21,12 @@ const ACTIVE_CLASS = 'is-active'
 const DURATION = 0.5
 // F109: the photo shows in front of the grid text and dividers, at full strength.
 const HOVER_OPACITY = 1
-// The hovered item's text masks in line by line once its panel shows (panel fade starts at 0.2s in CSS).
-const LINE_DELAY = 0.3
+// The hovered item's text eases out first (no hard cut), then masks back in line by line.
+const FADE_DURATION = 0.25
 const LINE_STAGGER = 0.08
 const LINE_DURATION = 0.8
 
-type LineMask = { splits: SplitTypeInstance[]; timeline: GsapTimeline }
+type LineMask = { targets: HTMLElement[]; splits: SplitTypeInstance[]; timeline: GsapTimeline }
 const lineMasks = new Map<HTMLElement, LineMask>()
 
 // Each line rises from behind its own edge: SplitText lines, each wrapped in a clipping block.
@@ -43,11 +43,14 @@ const maskInLines = (item: HTMLElement) => {
     line.before(clip)
     clip.append(line)
   })
-  const timeline = gsap.timeline({ delay: LINE_DELAY })
+  const timeline = gsap.timeline()
+  timeline.to(targets, { autoAlpha: 0, duration: FADE_DURATION, ease: 'power1.inOut' })
+  timeline.set(lines, { yPercent: 110 })
+  timeline.set(targets, { autoAlpha: 1 })
   lines.forEach((line, index) => {
-    timeline.fromTo(line, { yPercent: 110 }, { yPercent: 0, duration: LINE_DURATION, ease: 'power3.out' }, index * LINE_STAGGER)
+    timeline.to(line, { yPercent: 0, duration: LINE_DURATION, ease: 'power3.out' }, FADE_DURATION + index * LINE_STAGGER)
   })
-  lineMasks.set(item, { splits, timeline })
+  lineMasks.set(item, { targets, splits, timeline })
 }
 
 // Back to plain text (the clips sit inside the split elements, so revert removes them too).
@@ -56,6 +59,7 @@ const restoreLines = (item: HTMLElement) => {
   if (!mask) return
   mask.timeline.kill()
   mask.splits.forEach((split) => split.revert())
+  gsap.set(mask.targets, { clearProps: 'opacity,visibility' })
   lineMasks.delete(item)
 }
 
@@ -97,14 +101,6 @@ export const hoverFollowImage = () => {
         image.src = source
       }
       if (image && alt !== null) image.alt = alt
-      // The hovered item's text panel (CSS ::before) wraps its content, not the cell's min-height.
-      const itemTop = item.getBoundingClientRect().top
-      const first = item.firstElementChild?.getBoundingClientRect()
-      const last = item.lastElementChild?.getBoundingClientRect()
-      if (first && last) {
-        item.style.setProperty('--hover-panel-top', `${first.top - itemTop}px`)
-        item.style.setProperty('--hover-panel-height', `${last.bottom - first.top}px`)
-      }
       if (!item.classList.contains(ACTIVE_CLASS)) {
         items.forEach((other) => {
           if (other !== item) restoreLines(other)

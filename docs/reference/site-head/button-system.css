@@ -2,11 +2,11 @@
    button is-chamfer [colour] [is-outline]: filled at rest unless is-outline; hover wipes to the inverse from the bottom.
    The wipe edge always travels up: an outline fills from the bottom, a fill clears from the bottom (it is anchored to the top), so the rolling label stays on a contrasting ground.
    One technique for anchors and submit inputs: the element keeps a static chamfer clip-path; its background holds a 1px ring
-   (four edges plus four diagonal corner bands) and a fill layer whose height animates (docs/solutions/conventions/button-fill-static-clip.md).
+   (four edges plus four diagonal corner bands, one thickness: --btn-outline-width) and a fill layer whose height animates (docs/solutions/conventions/button-fill-static-clip.md).
    Label roll: src/utils/buttonHover.ts wraps labels in [data-btn-label]; inputs swap colour instead.
    :not(#_) lifts the paint above every Webflow combo and variant style, so this file alone decides fill, ring and label colour.
    Lives in the "Button Styles" embed component inside Site Nav (Designer-visible). Minify: npx esbuild docs/reference/site-head/button-system.css --minify --target=chrome100 */
-:root{--btn-dur:.45s;--btn-ease:cubic-bezier(.65,0,.35,1);--btn-chamfer:polygon(0 .75rem,.6875rem 0,calc(100% - .6875rem) 0,100% .75rem,100% calc(100% - .75rem),calc(100% - .6875rem) 100%,.6875rem 100%,0 calc(100% - .75rem))}
+:root{--btn-outline-width:1px;--btn-dur:.45s;--btn-ease:cubic-bezier(.65,0,.35,1);--btn-chamfer:polygon(0 .75rem,.6875rem 0,calc(100% - .6875rem) 0,100% .75rem,100% calc(100% - .75rem),calc(100% - .6875rem) 100%,.6875rem 100%,0 calc(100% - .75rem))}
 
 /* Colour pairs: --btn-colour is the fill, --btn-ink the label on the fill, --btn-outline the outline and its label (the fill colour unless set).
    Burgundy and blue buttons sit on photos, so they outline in their light label colour to stay legible. */
@@ -23,8 +23,8 @@
 
 /* The venue modal Reserve button keeps its class (its variants also drive the text tabs, which stay out of the system). */
 :is(.button.is-chamfer,.overlay-detail-panel-modal_item-button:not([class*="w-variant-0e56f707"],[class*="603a80753681"])):not(#_){
- --cx:.6875rem;--cy:.75rem;--r:1px;--fill:100%;--fill-y:0%;--btn-line:var(--btn-outline,var(--btn-colour));--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line);
- --ring:var(--btn-line) 50%,var(--btn-line) calc(50% + var(--r)),#0000 calc(50% + var(--r));
+ --cx:.6875rem;--cy:.75rem;--r:var(--btn-outline-width);--fill:100%;--fill-y:0%;--btn-line:var(--btn-outline,var(--btn-colour));--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line);
+ --ring:#0000 calc(50% - 2px),var(--btn-line) calc(50% - 1px),var(--btn-line) calc(50% + var(--r) - .3px),#0000 calc(50% + var(--r) + .7px);
  opacity:1;color:var(--btn-rest);background-color:#0000;
  clip-path:polygon(0 var(--cy),var(--cx) 0,calc(100% - var(--cx)) 0,100% var(--cy),100% calc(100% - var(--cy)),calc(100% - var(--cx)) 100%,var(--cx) 100%,0 calc(100% - var(--cy)));
  background-image:linear-gradient(var(--btn-colour),var(--btn-colour)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(to bottom right,#0000 50%,var(--ring)),linear-gradient(to bottom left,#0000 50%,var(--ring)),linear-gradient(to top right,#0000 50%,var(--ring)),linear-gradient(to top left,#0000 50%,var(--ring));

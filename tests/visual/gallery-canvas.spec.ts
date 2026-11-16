@@ -93,6 +93,27 @@ test('layout: brick rows at natural aspect, board sized by photo count, centred'
   await page.screenshot({ path: 'test-results/gallery-canvas-1440.png' })
 })
 
+test('load: photos never change size once the board is visible (#180)', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  // Log every size the first photo takes while the board is showing.
+  await page.addInitScript(() => {
+    const sizes: string[] = []
+    ;(window as unknown as { visibleSizes: string[] }).visibleSizes = sizes
+    new MutationObserver(() => {
+      const item = document.querySelector<HTMLElement>('#gallery .gallery-all_item')
+      if (!item) return
+      const windowElement = item.parentElement!.parentElement!
+      if (getComputedStyle(windowElement).visibility === 'hidden') return
+      const size = `${item.style.width}x${item.style.height}`
+      if (item.style.width && sizes[sizes.length - 1] !== size) sizes.push(size)
+    }).observe(document, { attributes: true, subtree: true, attributeFilter: ['style'] })
+  })
+  await openFixture(page)
+  await settle(page)
+  const sizes = await page.evaluate(() => (window as unknown as { visibleSizes: string[] }).visibleSizes)
+  expect(sizes.length).toBe(1)
+})
+
 test('mouse: drag pans the board, plain wheel scrolls the page', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await openFixture(page)

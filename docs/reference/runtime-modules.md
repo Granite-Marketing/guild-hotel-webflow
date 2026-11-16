@@ -38,6 +38,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | scrollHint | `scrollHint.ts` | opt-in | F (2nd) |
 | finsweetRefresh | `finsweetRefresh.ts` | opt-in | F (3rd) |
 | filterActiveState | `filterActiveState.ts` | opt-in | F (4th) |
+| pressCategories | `pressCategories.ts` | wired (#181, next release) | directly before tabDropdown, before the scroll engine |
 | scrollTextReveal | `scrollTextReveal.ts` | opt-in | G |
 | galleryFilter | `galleryFilter.ts` | opt-in | E |
 | historyStickyYear | `historyStickyYear.ts` | opt-in | G |
@@ -57,7 +58,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | roomGridHoverReveal | `roomGridHoverReveal.ts` | wired (v1.1.4) | D, after imageHoverScale |
 | hoverFollowImage | `hoverFollowImage.ts` | wired (v1.1.4) | D, after imageTrailHover |
 | map | `map.ts` (+ `mapNeeds.ts`) | wired (unreleased) | D, after roomListHoverPreview |
-| hoverImageSwap | `hoverImageSwap.ts` | wired (next release) | D, after roomListHoverPreview |
+| hoverImageSwap | `hoverImageSwap.ts` | wired (rooms quiz, Site Nav menu) | D, after roomListHoverPreview |
 | tabDropdown | `tabDropdown.ts` | wired (M6, next release) | before the scroll engine, after buttonHover |
 | gsapSmoothScroll (ScrollSmoother engine) | `gsapSmoothScroll.ts` | opt-in | swap in `smoothScroll.ts` |
 
@@ -665,6 +666,7 @@ Scroll reveals for any block, set in the Designer as a custom attribute or appli
 | `data-reveal="text-mask"` | a heading, paragraph or a wrapper | line mask via `lineMaskReveal`: each line's words rise from behind their edge; buttons and figures inside rise from their own clip |
 | `data-reveal="image-mask"` | the figure or image wrapper | mask reveal: the block opens upward from its bottom edge while the image inside settles from 1.15 scale |
 | `data-reveal-delay="0.2"` | with any of the above | seconds to wait, to stagger neighbours |
+| `data-reveal-start="60"` | with any of the above | viewport percentage from the top (0 to 100) at which the element's top triggers the reveal (`60` is `top 60%`); missing or invalid keeps `top 90%`; still plays once |
 
 Reduced motion shows everything at once. Do not combine with `.fade-in`, `.slide-in` or `data-scroll-text-reveal` on the same element.
 
@@ -780,6 +782,11 @@ referrer-restricted browser key is an attribute set in Webflow.
 - Hover or focus on a row highlights its marker; hover or click on a marker
   highlights its row. Both get `is-active`; style `.map-feature_item.is-active`
   in Webflow. Clicking a row (outside its link) also pans to the marker.
+- The Maps API script is fetched once the page has loaded and the browser is
+  idle (`importLibrary` only, no map load is billed); the map itself is still
+  built when the figure comes within 400px of the screen. The map does not
+  swallow wheel events (`gestureHandling: 'cooperative'` leaves them to the
+  page), so no `data-lenis-prevent` or pointer-events switch is needed.
 - The static image stays underneath as the fallback. On a key or referrer
   error Google calls `gm_authFailure` and the map canvas is removed.
 - Styling is a legacy `styles` array (no Map ID), so markers are custom
@@ -851,6 +858,35 @@ options (pointer or focus) restores the default photo.
   showing when the visitor comes back.
 - On /rooms the option images come from the Quiz Options Collection List in
   each figure, after the static `default` photo.
+
+#### Site Nav menu (#186, #188)
+
+The open menu uses the same contract, so hovering a page link dissolves the
+menu background to that page's photo. Built in the Site Nav component
+(`fc94d1a2-3399-4de0-e836-0233a6c86cdf`); no nav-specific code.
+
+| Attribute | On | Value |
+|---|---|---|
+| `data-hover-swap` | `.site-nav_menu` (`[data-nav="menu"]`) | `true` |
+| `data-hover-swap-list` | `.site-nav_menu-list` | `true` |
+| `data-hover-swap-trigger` | each `.site-nav_menu-link` | page key: `rooms`, `dining`, `wellness`, `happenings`, `history`, `meetings`, `neighborhood`, `arts`, `gallery`, `blog`, `contact` |
+| `data-hover-swap-media` | each `img.site-nav_menu-image` in `.site-nav_menu-figure` | the same key; `default` on the original first image |
+
+- `site-nav_menu-image` is absolute full-cover, so the images stack; every
+  non-default image carries the combo `site-nav_menu-image is-swap`
+  (opacity 0, visibility hidden).
+- Each image's source is bound to a Site Nav Image property (group "Menu
+  images"): "Menu image: Default", "Menu image: Stay", "Dine", "Wellness",
+  "Happenings", "Our History", "Meetings & Events", "Neighborhood", "Art",
+  "Gallery", "Blog", "Contact". Alt text is `inherit`, so it follows the
+  chosen image's library alt.
+- To change a photo site-wide: open the Site Nav component and change the
+  property's default in the Properties panel. Changing it on one page's
+  instance changes only that page.
+- To add a page: add an Image property, an `is-swap` image bound to it with
+  a new media key, and a link with the same trigger key.
+- Starting photos are each page's hero image (blog reuses the rooms photo
+  until it has its own).
 
 ### roomsQuiz
 
@@ -1106,11 +1142,28 @@ removed.
 `createLineMaskTimeline(container)` hides a container's headings,
 paragraphs, figures, `.button`s and `[data-line-mask]` elements and returns
 `play()` and `reverse()` on one paused timeline (reverse runs at 1.6x).
-The timeline is rebuilt on every SplitText re-split, keeping its progress
-and direction. `prepareLineMaskReveal(container)` wraps it as a one-shot
+The timeline is rebuilt (once per batch of re-splits, in a microtask)
+keeping its progress and direction. `prepareLineMaskReveal(container)` wraps it as a one-shot
 `play()` (historyStickyYear, F09). Text is split with SplitText
 (`lines,words`, overflow hidden on lines, never `mask: 'lines'`); other
 targets rise from behind a clip wrapper. Reduced motion: nothing is hidden.
+
+**Lazy splitting (page load and scroll, 2026-11-16).** Text is not split
+when the container is created. The calling module returns first, then one
+batch reads every text block's position and splits those within one
+viewport of the screen (first screen included, before the first paint);
+the rest is watched by one shared `IntersectionObserver` (one viewport of
+margin) and split when it nears the screen. `play()` and `reverse()` split
+anything still unsplit before they run, so a reveal never plays on plain
+text, and text that is not rendered (a closed dialog, an inactive slide) is
+split on first play or when it first shows. Unsplit text is plain, readable
+text. Contract for callers: do not read `lineWords` or assume the timeline
+is built right after `createLineMaskTimeline` returns (it builds in a
+microtask, before paint); element-only containers still build at once.
+Why: every split measures layout, and `autoSplit` re-splits on each font load
+(the Google map's Roboto included), so splitting every block at load froze
+the page for seconds. See
+`docs/solutions/integration-issues/page-load-scroll-freeze-2026-11-16.md`.
 
 ### mediaTabs
 
@@ -1173,6 +1226,21 @@ scroll does not run too) and update the hash. Tab targets are element ids
 Only bars with `data-sticky-tabs="true"` pin; the value is bound to the tab-pills-intro "Sticky tabs" prop (empty by default). Order: after `staggerCards()`,
 `scrollEnlargeSnap()`, `swiperSliders()`, `gsapBasicAnimations()`, next to
 `imageStackCollapse()`.
+
+### pressCategories
+
+#181. /press is one Collection List of every Press item (source Press, sorted by item Order), so new categories and items need no Designer work. The module re-orders the items by category Order (keeping item Order inside a category, so the `is-cms` `:nth-child(even)` left/right alternation runs unbroken), keeps only the first category heading of each category, and rebuilds the subnav tabs from the categories that have items. A category with no items gets no heading and no tab.
+
+DOM contract:
+
+| Element | Contract |
+|---|---|
+| `[data-press-list]` | the section around the Collection List; `.w-dyn-items` inside it holds the items |
+| `[data-press-item]` | each Collection Item; `data-press-category` = Press Category: Slug, `data-press-category-order` = Press Category: Order |
+| `[data-press-heading]` | header inside each item, DOM id = Press Category: Slug, h2 text = Press Category: Name |
+| `.tab-pills-intro_tabs a[href^="#"]` | the subnav; the first tab is cloned as the template for every category tab |
+
+Repeat headings are removed, not hidden, which also drops their duplicate ids. The first tab gets `is-active`; stickyTabs then runs the scrollspy and click scrolling. Without the bundle every item shows its category heading and the static tabs still reach the first heading of each category. Order: directly before `tabDropdown()` and the scroll engine, because it changes page height and replaces the tabs those modules use. Test: `npx playwright test tests/visual/press-categories.spec.ts`.
 
 ### stickyCta
 

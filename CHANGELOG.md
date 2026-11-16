@@ -1,5 +1,24 @@
 # Changelog
 
+## 1.2.28
+
+### Patch Changes
+
+- 2822aab: Press: one CMS list grouped by category. pressCategories keeps one heading per category and builds the subnav tabs from the categories that have items (#181).
+
+## 1.2.27
+
+### Patch Changes
+
+- 3d2d44e: Corporate key features: moving between items eases the text out before it masks back in, instead of a hard cut (#184).
+
+## 1.2.26
+
+### Patch Changes
+
+- 6907a42: Corporate key features: no hexagon panel; the hover photo carries a dark tint and the text sits on it in the brand light colour (#184).
+- c80107a: Gallery canvas: photos no longer resize after the gallery loads (#180). The board stays hidden until every photo has loaded, lays out once with the real shapes, then fades in.
+
 ## 1.2.25
 
 ### Patch Changes
