@@ -16,7 +16,7 @@ tags: [z-index, stacking-context, hover-follow-image, pseudo-element, corporate]
 
 ## Problem
 
-On the Corporate "why teams choose" list a photo follows the cursor (`z-index: 10`) and covered the hovered item's text. It took four releases (v1.1.53 to v1.1.57) to get the photo, a dark chamfered panel and the text in the right order:
+On the Corporate "why teams choose" list a photo follows the cursor (`z-index: 10`) and covered the hovered item's text. It took four releases (v1.1.53 to v1.1.57) to get the photo, the text (a dark chamfered panel until card 8, 2026-11-16, replaced by a tint on the photo) in the right order:
 
 1. The list had `z-index: 1`, a stacking context, so nothing inside it could rise above the photo. Fix: `z-index: auto` on the list.
 2. Raising the whole item (`isolation: isolate` plus a delayed `z-index` transition) put the text above the photo but also the item's divider line, which then drew across the photo.
