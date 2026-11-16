@@ -24,7 +24,7 @@
 /* The venue modal Reserve button keeps its class (its variants also drive the text tabs, which stay out of the system). */
 :is(.button.is-chamfer,.overlay-detail-panel-modal_item-button:not([class*="w-variant-0e56f707"],[class*="603a80753681"])):not(#_){
  --cx:.6875rem;--cy:.75rem;--r:var(--btn-outline-width);--fill:100%;--fill-y:0%;--btn-line:var(--btn-outline,var(--btn-colour));--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line);
- --ring:#0000 calc(50% - 2px),var(--btn-line) calc(50% - 1px),var(--btn-line) calc(50% + var(--r) - .5px),#0000 calc(50% + var(--r) + .5px);
+ --ring:#0000 calc(50% - 2px),var(--btn-line) calc(50% - 1px),var(--btn-line) calc(50% + var(--r) - .3px),#0000 calc(50% + var(--r) + .7px);
  opacity:1;color:var(--btn-rest);background-color:#0000;
  clip-path:polygon(0 var(--cy),var(--cx) 0,calc(100% - var(--cx)) 0,100% var(--cy),100% calc(100% - var(--cy)),calc(100% - var(--cx)) 100%,var(--cx) 100%,0 calc(100% - var(--cy)));
  background-image:linear-gradient(var(--btn-colour),var(--btn-colour)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(var(--btn-line),var(--btn-line)),linear-gradient(to bottom right,#0000 50%,var(--ring)),linear-gradient(to bottom left,#0000 50%,var(--ring)),linear-gradient(to top right,#0000 50%,var(--ring)),linear-gradient(to top left,#0000 50%,var(--ring));
