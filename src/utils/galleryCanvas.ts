@@ -457,12 +457,28 @@ export const galleryCanvas = () => {
       })
     }
 
-    items.forEach((item) => {
-      const image = item.querySelector<HTMLImageElement>('img')
-      if (image && !(image.complete && image.naturalWidth)) {
-        image.addEventListener('load', relayoutSoon, { once: true })
+    // #180: CMS images carry no width or height, so a layout before they load
+    // guesses every aspect ratio and the photos visibly resize as each one
+    // arrives. Keep the window hidden until every photo has loaded (or
+    // failed), lay out once with the real ratios, then fade in. The window
+    // fades, not the board, because glideTo kills every tween on the board.
+    const pendingImages = items
+      .map((item) => item.querySelector<HTMLImageElement>('img'))
+      .filter((image): image is HTMLImageElement => !!image && !image.complete)
+    if (pendingImages.length) {
+      gsap.set(windowElement, { autoAlpha: 0 })
+      let remaining = pendingImages.length
+      const settle = () => {
+        remaining -= 1
+        if (remaining) return
+        relayoutSoon()
+        gsap.to(windowElement, { autoAlpha: 1, duration: reducedMotion.matches ? 0 : 0.4, delay: 0.05 })
       }
-    })
+      pendingImages.forEach((image) => {
+        image.addEventListener('load', settle, { once: true })
+        image.addEventListener('error', settle, { once: true })
+      })
+    }
 
     let lastWindowWidth = windowElement.clientWidth
     let lastWindowHeight = windowElement.clientHeight

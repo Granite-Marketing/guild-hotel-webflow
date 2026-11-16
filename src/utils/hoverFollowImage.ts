@@ -21,7 +21,7 @@ const ACTIVE_CLASS = 'is-active'
 const DURATION = 0.5
 // F109: the photo shows in front of the grid text and dividers, at full strength.
 const HOVER_OPACITY = 1
-// The hovered item's text masks in line by line once its panel shows (panel fade starts at 0.2s in CSS).
+// The hovered item's text masks in line by line just after the tinted photo starts to show.
 const LINE_DELAY = 0.3
 const LINE_STAGGER = 0.08
 const LINE_DURATION = 0.8
@@ -97,14 +97,6 @@ export const hoverFollowImage = () => {
         image.src = source
       }
       if (image && alt !== null) image.alt = alt
-      // The hovered item's text panel (CSS ::before) wraps its content, not the cell's min-height.
-      const itemTop = item.getBoundingClientRect().top
-      const first = item.firstElementChild?.getBoundingClientRect()
-      const last = item.lastElementChild?.getBoundingClientRect()
-      if (first && last) {
-        item.style.setProperty('--hover-panel-top', `${first.top - itemTop}px`)
-        item.style.setProperty('--hover-panel-height', `${last.bottom - first.top}px`)
-      }
       if (!item.classList.contains(ACTIVE_CLASS)) {
         items.forEach((other) => {
           if (other !== item) restoreLines(other)

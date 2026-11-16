@@ -1,0 +1,14 @@
+/*
+ * Press page: hide a category section and its subnav tab when the category has no items.
+ * Webflow renders .w-dyn-empty only when a Collection List is empty, so a section
+ * reappears on its own as soon as Omar adds an item in that category.
+ * Lives in the HTML embed component "Press Section Styles" (group Embeds) on /press.
+ */
+#press:has(.w-dyn-empty),
+#design:has(.w-dyn-empty),
+#community:has(.w-dyn-empty),
+body:has(#press .w-dyn-empty) a[href="#press"],
+body:has(#design .w-dyn-empty) a[href="#design"],
+body:has(#community .w-dyn-empty) a[href="#community"] {
+  display: none;
+}
