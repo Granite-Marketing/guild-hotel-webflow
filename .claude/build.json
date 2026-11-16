@@ -1,0 +1,22 @@
+{
+  "_comment": "Build manifest for /spec-build. Webflow custom-code bundle: TypeScript in src/, esbuild to dist/. Pages live on Webflow staging, so there is no local visual capture; Designer work never goes through the builder.",
+  "stack": "webflow",
+  "package_manager": "pnpm",
+  "base_branch": "main",
+  "commands": {
+    "test": { "id": "typecheck", "run": "pnpm check" },
+    "validate": [
+      { "id": "factory", "run": "pnpm test:factory" },
+      { "id": "build", "run": "pnpm build" }
+    ]
+  },
+  "test_paths": ["tests/**"],
+  "protected_paths": ["CLAUDE.md", ".claude/**", "pnpm-lock.yaml", "dist/**", "vendor/**"],
+  "dependencies": {
+    "src/**": ["CLAUDE.md", "docs/reference/runtime-modules.md", "docs/solutions/conventions/gsap-module-conventions.md"],
+    "docs/reference/site-head/button-system.css": ["docs/reference/button-system.md"]
+  },
+  "conventions": ["~/granite/knowledge/tech-conventions.md"],
+  "parallel": false,
+  "budget": { "soft_cap_usd": 60 }
+}
