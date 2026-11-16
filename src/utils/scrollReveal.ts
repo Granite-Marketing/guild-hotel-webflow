@@ -105,8 +105,9 @@ const AUTO_REVEALS: Record<string, string[]> = {
     '.split-sticky-text-stacked-images_figure',
     '.timeline-scatter-images_image-wrap',
     '.form-split-script-contact_media',
-    '.history-timeline_figure',
   ],
+  // History images mask in (#189).
+  'image-mask': ['.history-timeline_figure'],
 }
 
 /** Modules that animate their own copy or media; the nav sits outside main. */
