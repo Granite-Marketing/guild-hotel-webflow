@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.30
+
+### Patch Changes
+
+- 43a3906: Anchor and tab clicks sync smooth scroll to the real page position before scrolling, so the first Press tab click after a load (or a reload that keeps your place) lands on its heading instead of stopping short (#181).
+
 ## 1.2.29
 
 ### Patch Changes
