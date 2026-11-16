@@ -27,6 +27,7 @@ Last verified: 2026-10-20 via the Webflow Data API (K02 build pages and assets).
 | Password | `6ad64060ae8eac6d7b7c4242` | `/401` | - |
 | 404 | `6ad64060ae8eac6d7b7c4243` | `/404` | - |
 | History | `6ad66fd276d24ed37ac4c52f` | `/history` | history |
+| History 16px test | `6afb30142bc6eae4d68d3cd5` | `/history-16px-test` | #182 (2026-11-16): duplicate of History for Omar to judge 16px paragraphs; page-scoped style embed `454b5178-a9de-b68c-6291-006fac76573b` first in main; head has robots noindex. Delete once Omar decides. |
 | Dining | `6ad66fd476d24ed37ac4c5cb` | `/dining` | dining-collection; assembled by Q032 (2026-10-20), Body `6ad66fd476d24ed37ac4c5d1` |
 | Guidelines | `6ad66fd44c7f57894534ada5` | `/guidelines` | guidelines; assembled by Q037 (2026-10-20), Body `6ad66fd44c7f57894534adac`; element ids in `docs/figma/build-plans/Q037/plan.md` |
 | Rooms | `6ad66fd5f8bf4846e809dbee` | `/rooms` | rooms-collection; assembled by Q033 (2026-10-20), Body `6ad66fd5f8bf4846e809dbf6` |
