@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Line mask lazy split fixture</title>
+    <!--
+      Page-load and scroll fixture (ticket #176). A tall page of line-mask
+      reveals plus an image that never finishes loading, so `window.load`
+      never fires: the spec checks that scroll responds before load, that only
+      text near the screen is split up front, and that each reveal plays once.
+      Docs: docs/solutions/integration-issues/page-load-scroll-freeze-2026-11-16.md
+    -->
+    <style>
+      body { margin: 0; font-family: sans-serif; font-size: 1.5rem; }
+      .block { min-height: 70vh; padding: 3rem 2rem; box-sizing: border-box; }
+      .block p, .block h1 { max-width: 28rem; margin: 0; }
+    </style>
+  </head>
+  <body>
+<section class="block hero"><h1 data-fixture-reveal="hero">Hero heading that wraps over a couple of lines at this width</h1></section>
+    <section class="block"><p data-fixture-reveal="p1">Paragraph 1: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p2">Paragraph 2: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p3">Paragraph 3: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p4">Paragraph 4: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p5">Paragraph 5: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p6">Paragraph 6: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p7">Paragraph 7: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p8">Paragraph 8: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p9">Paragraph 9: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p10">Paragraph 10: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p11">Paragraph 11: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p12">Paragraph 12: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p13">Paragraph 13: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p14">Paragraph 14: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p15">Paragraph 15: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p16">Paragraph 16: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p17">Paragraph 17: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p18">Paragraph 18: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p19">Paragraph 19: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p20">Paragraph 20: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p21">Paragraph 21: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p22">Paragraph 22: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p23">Paragraph 23: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p24">Paragraph 24: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p25">Paragraph 25: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p26">Paragraph 26: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p27">Paragraph 27: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p28">Paragraph 28: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p29">Paragraph 29: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <section class="block"><p data-fixture-reveal="p30">Paragraph 30: the quick brown fox jumps over the lazy dog, again and again, so that this line wraps across more than one line of text.</p></section>
+    <img src="/never-finishes.png" alt="" width="10" height="10" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="./line-mask-lazy-split.js"></script>
+  </body>
+</html>

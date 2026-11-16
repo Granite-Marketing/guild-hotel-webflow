@@ -23,7 +23,14 @@
  * marker highlights its item (`is-active` on both). A click pins the
  * highlight until another item or marker is clicked.
  *
- * The API loads only when the root nears the viewport.
+ * The API script is fetched and compiled once the page has loaded and the
+ * browser is idle (so that work never lands mid-scroll), and the map itself
+ * is built only when the root nears the viewport (a map load is billed).
+ * Building a map makes Google add its Roboto font, which fires the document's
+ * font loading events and re-splits every SplitText on the page; the line
+ * mask only keeps near-screen text split (lineMaskReveal.ts), which keeps
+ * that burst short. See
+ * docs/solutions/integration-issues/page-load-scroll-freeze-2026-11-16.md.
  */
 
 import { mapNeeds } from '$utils/mapNeeds'
@@ -272,6 +279,21 @@ const buildMap = async (root: HTMLElement, points: MapPoint[]) => {
   }
 }
 
+/** Fetches the Maps API script after load, in an idle moment, without creating a map. */
+const warmUpApi = () => {
+  const warm = () => {
+    const run = () => {
+      Promise.all([google.maps.importLibrary('maps'), google.maps.importLibrary('core')]).catch(() => undefined)
+    }
+    // Safari has no requestIdleCallback.
+    const idle = (window as { requestIdleCallback?: (callback: () => void, options: { timeout: number }) => void }).requestIdleCallback
+    if (idle) idle.call(window, run, { timeout: 4000 })
+    else setTimeout(run, 1000)
+  }
+  if (document.readyState === 'complete') warm()
+  else window.addEventListener('load', warm, { once: true })
+}
+
 export const map = () => {
   const root = document.querySelector<HTMLElement>('[data-map]')
   if (!root) return
@@ -281,6 +303,7 @@ export const map = () => {
   if (!apiKey || !points.length) return
 
   mapNeeds(apiKey)
+  warmUpApi()
 
   const observer = new IntersectionObserver(
     (entries) => {
