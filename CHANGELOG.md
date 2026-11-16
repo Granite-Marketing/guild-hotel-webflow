@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.28
+
+### Patch Changes
+
+- 2822aab: Press: one CMS list grouped by category. pressCategories keeps one heading per category and builds the subnav tabs from the categories that have items (#181).
+
 ## 1.2.27
 
 ### Patch Changes
