@@ -469,6 +469,12 @@ Plan: `docs/plans/2026-11-10-001-feat-gallery-canvas-plan.md`. Layout CSS ships 
 - script-intro-centered variant Legal Corporate `53add6a3-3c55-e4ed-2f36-460edae2cb76`: `script-intro-centered_heading` max-width 47rem (medium 38rem), margin-left/right auto (two-line break after "focus,", same pattern as the Bottom variant); `padding-section-xlarge` padding 11rem to 9rem (main only).
 - Card Carousel Header Left variant Legal Corporate `69ec3688-574e-61b2-83e0-6c45e105cc09` (duplicate of Base): `section_card-carousel-header-left` padding-top 2rem main (medium 7rem, small 6rem kept as Base). Template instance `a801d156-90c7-64a8-7607-c16886341a7c` uses it. FAQ to "More of the Guild" gap at 1440: 439px to 256px.
 
+### #186/#188 Site Nav menu images
+
+- Site Nav component `fc94d1a2-3399-4de0-e836-0233a6c86cdf`: menu `...6cf4` (`data-hover-swap`), list `...6cf9` (`data-hover-swap-list`), figure `...6cf5`, default image `...6cf6` (`data-hover-swap-media="default"`, asset `6ad6700aba96f2e53726c671`).
+- Menu images (`site-nav_menu-image is-swap`, key: element id, asset id): rooms `f6c8fcb6-8dd4-60fa-9203-71d7e358450d` `6ad66ff96684c3e22ea4e1af`; dining `8c234f4e-0fa2-d969-829e-c07cb2c7643a` `6ad66ffa6684c3e22ea4e2ca`; wellness `a5c195a6-5ef4-4f64-c292-08e84674be23` `6ad67000240d911fb18d77af`; happenings `85d489bd-2a58-7756-af6e-f9294f68c48a` `6ad6701b6684c3e22ea4f00f`; history `c8db0c45-618f-2b75-7ac6-ef7e03f6576f` `6ad6700aba96f2e53726c671`; meetings `fcb26226-7112-036c-0e7e-634d3408c374` `6ad66fef6684c3e22ea4dc76`; neighborhood `74656b33-6d89-1aa5-77e8-89f6a3871a6d` `6ad66ffe58367429abb48c84`; arts `872a443c-b04b-422d-3289-1a4bd38fdc2e` `6ad670147e3d6550932e0fac`; gallery `588ce461-c0a4-b8ed-d84e-ad30fdbdd26f` `6ad67015134731ad1b928187`; blog `7751ee52-cfe9-6227-b91b-11bc68023bf0` `6ad66ff96684c3e22ea4e1af`; contact `53dba91f-ad2a-d5fc-3f2b-2d3154a71e55` `6ad6701a28c5dc695c82c539`.
+- Styles: `site-nav_menu-image` `b2ae28c1-b54d-f2c6-975e-4e4087facf4b` (now absolute, inset 0), combo `site-nav_menu-image.is-swap` `0e3336f3-b4d7-9f97-e4b6-48edc45c938a`.
+
 ## Press collection (2026-11-16, #181)
 
 `📰 Press` (slug `press-item`) `6afb2abe0f4d8650f6774820`, created through the Data API to replace the five hand-placed Article Card Staggered instances on /press. Left and right alternation comes from CSS on the list, not from per-item data.
