@@ -1,0 +1,299 @@
+{
+ "status": "complete",
+ "verdict": "Ready with fixes",
+ "scope": {
+  "base": "33bd764fc414a94398411a141cecf97ba5797831",
+  "branch": "build/174-spec-in-progress-feedback-code-fixes-bui",
+  "head_sha": "b1fcb66811669f62a7959436fe92683870cceda1",
+  "pr_url": null,
+  "files_changed": 24
+ },
+ "intent": "Four code-only fixes for a Webflow site bundle (TypeScript, GSAP/ScrollTrigger/SplitText/Lenis as CDN globals). (1) Page-load scroll freeze, jump-back and map stutter: line-mask text is now split lazily (near-screen batch, IntersectionObserver for the rest, split on play) and the Google Maps API script is warmed after load in idle time. (2) New optional data-reveal-start=\"<0-100>\" attribute on [data-reveal] elements gives ScrollTrigger start `top N%`; missing/invalid keeps `top 90%`. (3) modals.ts keeps a stack of open dialogs: opening from inside a dialog pushes, Back/close/ESC/click-outside pop to the previous one with focus returned to the trigger in it; a dialog opened from the page closes to the page as before. (4) Chamfer button outline uses one --btn-outline-width variable with smoother diagonal gradient stops. Must not regress existing behaviour (grid-opened modal closes to page; reveals without the attribute unchanged; reveals still play once). Gates: pnpm check, pnpm test:factory, pnpm build. Playwright fixtures under tests/visual/fixtures.",
+ "intent_confidence": "explicit",
+ "reviewers": [
+  "correctness",
+  "project-standards",
+  "testing",
+  "maintainability",
+  "adversarial",
+  "julik-frontend-races",
+  "learnings-researcher"
+ ],
+ "findings": [
+  {
+   "#": 1,
+   "autofix_class": "gated_auto",
+   "confidence": 75,
+   "evidence": [
+    "src/utils/modals.ts:279-286 -- const overlayEnabled = overlayElement && !modal.hasAttribute('data-modal-no-overlay') ... else if (overlayElement) { overlayElement.classList.remove('is-open') ...",
+    "src/utils/modals.ts:346-352 -- const remaining = topEntry(); if (remaining) { showModal(remaining.modal); startModalScroll(remaining.modal); ... return }  (no overlay handling)",
+    "src/utils/modals.ts:347 -- `if (remaining) { showModal(remaining.modal); startModalScroll(remaining.modal); ... return }` (no overlay handling before the return)",
+    "src/utils/modals.ts:279-286 -- pushModal toggles overlay per modal: `const overlayEnabled = overlayElement && !modal.hasAttribute('data-modal-no-overlay')` ... `else if (overlayElement) { overlayElement.classList.remove('is-open') ...`",
+    "Scenario: A(overlay) -> link to B(no-overlay) pushes and hides the overlay -> Back pops to A; overlay stays hidden."
+   ],
+   "file": "src/utils/modals.ts",
+   "first_evidence": "src/utils/modals.ts:279-286 -- const overlayEnabled = overlayElement && !modal.hasAttribute('data-modal-no-overlay') ... else if (overlayElement) { overlayElement.classList.remove('is-open') ...",
+   "independent_reviewers": [
+    "correctness",
+    "adversarial"
+   ],
+   "line": 346,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "correctness",
+    "adversarial",
+    "fast-pass"
+   ],
+   "severity": "P2",
+   "suggested_fix": "Extract the overlay on/off block from pushModal into applyOverlay(modal) and call it in popTo's `if (remaining)` branch before startModalScroll(remaining.modal). Add a modal-back-chain fixture case with a no-overlay dialog in the chain.",
+   "title": "Popping to a dialog does not restore its overlay state",
+   "why_it_matters": "Open dialog A (uses the global overlay), then open B from inside A where B has data-modal-no-overlay: pushModal removes is-open from the overlay. Pressing Back, ESC or close on B pops to A, but popTo only re-shows A and restarts its scroll; it never restores the overlay, so A is shown with no backdrop for the rest of its life. The reverse chain (A no-overlay, B overlay) leaves the overlay open on A after B closes. The site ships no-overlay dialogs (quiz, all-rooms), so mixed chains are plausible. Recomputing overlay state from the new top entry in popTo (the same rule pushModal uses) fixes it.",
+   "validation_status": "confirmed",
+   "validation_reason": "pushModal (modals.ts:279-286) toggles overlay per modal, but popTo's `if (remaining)` branch (346-351) returns without recomputing overlay state; incidence with mixed overlay/no-overlay chains not measured."
+  },
+  {
+   "#": 2,
+   "autofix_class": "gated_auto",
+   "confidence": 75,
+   "evidence": [
+    "src/utils/modals.ts:189 -- scroller.scrollTop = 0",
+    "src/utils/modals.ts:349 -- startModalScroll(remaining.modal)"
+   ],
+   "file": "src/utils/modals.ts",
+   "first_evidence": "src/utils/modals.ts:189 -- scroller.scrollTop = 0",
+   "independent_reviewers": [
+    "correctness"
+   ],
+   "line": 349,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "correctness"
+   ],
+   "severity": "P2",
+   "suggested_fix": "Give startModalScroll a { resetScroll = true } option and pass false from popTo; or save scroller.scrollTop in the StackEntry on push and restore it on pop. Assumption: keeping position is the desired behaviour.",
+   "title": "Back to previous dialog resets its scroll position to top",
+   "why_it_matters": "A user scrolls down inside dialog A, clicks a trigger to open B, then presses Back. popTo re-shows A via startModalScroll, which sets scroller.scrollTop = 0, so A is back at the top while focus goes (preventScroll) to a trigger that is off-screen. The user loses their place, which the push/pop feature is meant to preserve. startModalScroll's reset is only intended for a fresh open.",
+   "validation_status": "confirmed",
+   "validation_reason": "popTo calls startModalScroll(remaining.modal) (349), which unconditionally sets scroller.scrollTop = 0 (189), so the previous dialog's scroll position is lost on Back; incidence not measured."
+  },
+  {
+   "#": 3,
+   "autofix_class": "manual",
+   "confidence": 75,
+   "evidence": [
+    "src/utils/map.ts:293 -- if (document.readyState === 'complete') warm()",
+    "CLAUDE.md -- 'No polling loaders, no dedup guards, no readyState checks, no onLayoutReady queues'"
+   ],
+   "file": "src/utils/map.ts",
+   "first_evidence": "src/utils/map.ts:293 -- if (document.readyState === 'complete') warm()",
+   "independent_reviewers": [
+    "project-standards"
+   ],
+   "line": 293,
+   "owner": "human",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "project-standards"
+   ],
+   "severity": "P3",
+   "suggested_fix": "Either accept this as a documented exception (note it in runtime-modules.md), or drop the readyState branch and schedule the idle call directly from Webflow.push, since Webflow.push already runs late. Assumes the 'after load' timing is not strictly required.",
+   "title": "readyState check added in map warm-up despite no-readyState rule",
+   "why_it_matters": "CLAUDE.md 'Custom Code Delivery' says modules run inside Webflow.push with 'No polling loaders, no dedup guards, no readyState checks, no onLayoutReady queues'. The new warmUpApi branches on document.readyState to decide between running now and waiting for window load. Webflow.push fires after DOMContentLoaded, not load, so some deferral is legitimately needed, but the literal rule bans the readyState check; a plain window 'load' listener or an idle-callback only schedule would follow it."
+  },
+  {
+   "#": 4,
+   "autofix_class": "advisory",
+   "confidence": 75,
+   "evidence": [
+    "src/utils/modals.ts:245-246 -- popTo(stack.length - 1, { restoreFocus: false, keepPageLock: true }); pushModal(modal, returnTrigger, trigger)",
+    "src/utils/modals.ts:340-342 -- if (entry.trigger?.hasAttribute('data-modal-open')) { entry.trigger.setAttribute('aria-expanded', 'false') }",
+    "src/utils/modals.ts:245 -- `popTo(stack.length - 1, { restoreFocus: false, keepPageLock: true })` then `pushModal(modal, returnTrigger, trigger)` (expandedTrigger is the link)"
+   ],
+   "file": "src/utils/modals.ts",
+   "first_evidence": "src/utils/modals.ts:245-246 -- popTo(stack.length - 1, { restoreFocus: false, keepPageLock: true }); pushModal(modal, returnTrigger, trigger)",
+   "independent_reviewers": [
+    "correctness",
+    "adversarial"
+   ],
+   "line": 245,
+   "owner": "human",
+   "pre_existing": false,
+   "requires_verification": false,
+   "reviewers": [
+    "correctness",
+    "adversarial"
+   ],
+   "severity": "P3",
+   "suggested_fix": "In the replaceTop branch, pass returnTrigger as expandedTrigger: pushModal(modal, returnTrigger, returnTrigger).",
+   "title": "Page trigger aria-expanded stays false after back-link replace",
+   "why_it_matters": "When a back link (data-modal-close href=#B) targets a dialog not beneath in the stack, the old top entry is popped, which sets aria-expanded=false on the page trigger that opened it. The new dialog B inherits that trigger as its return target but pushModal is given the link, not the page trigger, as expandedTrigger, so the page trigger stays aria-expanded=false while a dialog it opened is open. Screen readers then misreport the control state until close."
+  }
+ ],
+ "actionable_findings": [
+  {
+   "#": 1,
+   "autofix_class": "gated_auto",
+   "confidence": 75,
+   "evidence": [
+    "src/utils/modals.ts:279-286 -- const overlayEnabled = overlayElement && !modal.hasAttribute('data-modal-no-overlay') ... else if (overlayElement) { overlayElement.classList.remove('is-open') ...",
+    "src/utils/modals.ts:346-352 -- const remaining = topEntry(); if (remaining) { showModal(remaining.modal); startModalScroll(remaining.modal); ... return }  (no overlay handling)",
+    "src/utils/modals.ts:347 -- `if (remaining) { showModal(remaining.modal); startModalScroll(remaining.modal); ... return }` (no overlay handling before the return)",
+    "src/utils/modals.ts:279-286 -- pushModal toggles overlay per modal: `const overlayEnabled = overlayElement && !modal.hasAttribute('data-modal-no-overlay')` ... `else if (overlayElement) { overlayElement.classList.remove('is-open') ...`",
+    "Scenario: A(overlay) -> link to B(no-overlay) pushes and hides the overlay -> Back pops to A; overlay stays hidden."
+   ],
+   "file": "src/utils/modals.ts",
+   "first_evidence": "src/utils/modals.ts:279-286 -- const overlayEnabled = overlayElement && !modal.hasAttribute('data-modal-no-overlay') ... else if (overlayElement) { overlayElement.classList.remove('is-open') ...",
+   "independent_reviewers": [
+    "correctness",
+    "adversarial"
+   ],
+   "line": 346,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "correctness",
+    "adversarial",
+    "fast-pass"
+   ],
+   "severity": "P2",
+   "suggested_fix": "Extract the overlay on/off block from pushModal into applyOverlay(modal) and call it in popTo's `if (remaining)` branch before startModalScroll(remaining.modal). Add a modal-back-chain fixture case with a no-overlay dialog in the chain.",
+   "title": "Popping to a dialog does not restore its overlay state",
+   "why_it_matters": "Open dialog A (uses the global overlay), then open B from inside A where B has data-modal-no-overlay: pushModal removes is-open from the overlay. Pressing Back, ESC or close on B pops to A, but popTo only re-shows A and restarts its scroll; it never restores the overlay, so A is shown with no backdrop for the rest of its life. The reverse chain (A no-overlay, B overlay) leaves the overlay open on A after B closes. The site ships no-overlay dialogs (quiz, all-rooms), so mixed chains are plausible. Recomputing overlay state from the new top entry in popTo (the same rule pushModal uses) fixes it.",
+   "validation_status": "confirmed",
+   "validation_reason": "pushModal (modals.ts:279-286) toggles overlay per modal, but popTo's `if (remaining)` branch (346-351) returns without recomputing overlay state; incidence with mixed overlay/no-overlay chains not measured."
+  },
+  {
+   "#": 2,
+   "autofix_class": "gated_auto",
+   "confidence": 75,
+   "evidence": [
+    "src/utils/modals.ts:189 -- scroller.scrollTop = 0",
+    "src/utils/modals.ts:349 -- startModalScroll(remaining.modal)"
+   ],
+   "file": "src/utils/modals.ts",
+   "first_evidence": "src/utils/modals.ts:189 -- scroller.scrollTop = 0",
+   "independent_reviewers": [
+    "correctness"
+   ],
+   "line": 349,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "correctness"
+   ],
+   "severity": "P2",
+   "suggested_fix": "Give startModalScroll a { resetScroll = true } option and pass false from popTo; or save scroller.scrollTop in the StackEntry on push and restore it on pop. Assumption: keeping position is the desired behaviour.",
+   "title": "Back to previous dialog resets its scroll position to top",
+   "why_it_matters": "A user scrolls down inside dialog A, clicks a trigger to open B, then presses Back. popTo re-shows A via startModalScroll, which sets scroller.scrollTop = 0, so A is back at the top while focus goes (preventScroll) to a trigger that is off-screen. The user loses their place, which the push/pop feature is meant to preserve. startModalScroll's reset is only intended for a fresh open.",
+   "validation_status": "confirmed",
+   "validation_reason": "popTo calls startModalScroll(remaining.modal) (349), which unconditionally sets scroller.scrollTop = 0 (189), so the previous dialog's scroll position is lost on Back; incidence not measured."
+  }
+ ],
+ "triage_groups": [
+  {
+   "title": "Modal stack state not re-synced on pop/replace",
+   "findings": [
+    1,
+    2,
+    4
+   ],
+   "context": "popTo and the replaceTop branch in src/utils/modals.ts do not re-apply per-dialog state (overlay, scroll, trigger aria) when revealing or swapping a dialog.",
+   "preferred_resolution": "Extract a shared per-dialog apply step from pushModal (overlay, aria-expanded, scroll restore) and call it from popTo and the replaceTop path. Handle #1 first.",
+   "why": "One refactor of the push/pop symmetry resolves all three."
+  }
+ ],
+ "pre_existing_findings": [],
+ "requirements_completeness": null,
+ "learnings": [
+  {
+   "type": "known_pattern",
+   "title": "Stale ScrollTrigger positions after late layout changes",
+   "citation": "docs/solutions/integration-issues/scrolltrigger-stale-positions-late-image-loads.md",
+   "note": "Lazy SplitText runs after [data-reveal] triggers exist and no ScrollTrigger.refresh(true) follows onSplit; plausible but unproven."
+  },
+  {
+   "type": "known_pattern",
+   "title": "Button outline ring offsets",
+   "citation": "docs/solutions/conventions/button-fill-static-clip.md",
+   "note": "button-system.css --ring uses hard-coded 2px/1px/.3px/.7px offsets, so diagonals do not scale with --btn-outline-width above 1px."
+  },
+  {
+   "type": "known_pattern",
+   "title": "Page-load scroll freeze diagnosis",
+   "citation": "docs/solutions/page-load-scroll-freeze-2026-11-16.md",
+   "note": "heroTextReveal, scriptReveal and scrollTextReveal still autoSplit-resplit on the Maps font load."
+  }
+ ],
+ "agent_native_gaps": [],
+ "deployment_notes": [],
+ "residual_risks": [
+  "lineMaskReveal: assumes SplitText with autoSplit calls onSplit synchronously on construction; if it waits on document.fonts.ready, a late-split container's non-text parts (buttons/figures) stay unhidden until the first split, and play() on a container could briefly run an empty timeline. Not verifiable here (gsap not in node_modules).",
+  "lineMaskReveal: isRevealed() on a played-but-not-yet-split (empty) timeline may read 1 under GSAP's zero-duration progress rule; the rebuild uses the joined/time path so reveal state recovers, but scrollEnlargeSnap could reverse an unsplit panel in that window.",
+  "map.ts warmUpApi relies on mapNeeds' stub; rejected warm-up is swallowed and scriptPromise resets on script error so buildMap retries. No defect found.",
+  "SplitText option is written as type: 'lines,words' (unchanged line) while docs/solutions/conventions/gsap-module-conventions.md rule 7 says the option is plural 'types:'; CLAUDE.md says 'type'. The two criteria files conflict and the line is pre-existing, so not flagged.",
+  "Dialog stack in modals.ts and lineMaskReveal split queue are not covered by a written project rule beyond the module pattern; behaviour was not assessed here (correctness reviewers own it).",
+  "Fixtures import the real src modules (modals.ts, lineMaskReveal.ts, revealStart.ts) via esbuild, so they do not re-implement production logic. The one exception is the scrollReveal wiring (start, once) in line-mask-lazy-split.ts, which is copied by hand.",
+  "Modal and line-mask Playwright specs were read, not run. pnpm test:factory was not run and covers only the parser.",
+  "lineMaskReveal rebuild(): `parts.indexOf(part)` inside the splitParts loop is O(n^2) per rebuild; fine for current part counts but runs on every font-load re-split batch.",
+  "modals.ts openModal now has four branches (existing, replaceTop, nested push, replace stack) plus hashchange; covered by the modal-back-chain spec but is the densest logic in the diff.",
+  "lineMaskReveal flushSplitQueue measures rects in a microtask right after the calling module returns; if scroll position is restored or Lenis repositions later, text near the final position is classed as far and is split by IntersectionObserver a frame later (visible unsplit then split). Not exercised in the reviewed fixtures.",
+  "Play on an unsplit reveal runs runDirection on a timeline with only element parts (or empty), then the text joins in a microtask via timeline.time(time); relies on GSAP zero-duration timeline play/reverse semantics that were not verified here.",
+  "lineMaskReveal.ts splitCallbacks is a WeakMap keyed by element: if two timelines ever target the same element (e.g. a data-reveal=text-mask block containing text that a module such as modalTextMask or offersSliderSplit also masks), the later scheduleSplit overwrites the earlier observer callback, so the earlier timeline only splits when its own play()/reverse() runs. AUTO_REVEALS and OWNED are meant to prevent the overlap; not proven reachable.",
+  "modals.ts popTo() re-shows the dialog beneath without re-evaluating the overlay: if a stacked dialog carries data-modal-no-overlay and its neighbour does not, popping leaves the overlay in the state set by the popped dialog. No current stacked pair mixes the two (only tooltip-style dialogs use the opt-out).",
+  "modals.ts startModalScroll() resets scrollTop to 0 each time a dialog is re-shown by Back, so the parent dialog returns scrolled to the top rather than where the user left it (behaviour, not a race; intent text does not promise preservation).",
+  "Unsplit far text (>1 viewport away) is visible plain text until the IntersectionObserver callback or a play() splits it; a very fast programmatic jump could show one frame of plain text before the words are hidden. Play-driven reveals split in a microtask before paint, so only the observer-driven path is exposed. Not verified in a real browser.",
+  "maintainability: modals.ts duplicate transition-wait focus helper (modals.ts:365) could reuse the existing helper.",
+  "maintainability: lineMaskReveal.ts:76 splitCallbacks declared below its use in splitWhenNear; move above for readability."
+ ],
+ "testing_gaps": [
+  "tests/visual/modal-back-chain has no case where chained dialogs differ in data-modal-no-overlay, or where the underlying dialog was scrolled before opening the next one.",
+  "lineMaskReveal: no test for play() or reverse() on text that is still unsplit, for non-rendered text (closed dialog or inactive slide) splitting when it first becomes visible, or for createLineMaskTimeline (only prepareLineMaskReveal is exercised).",
+  "map.ts warmUpApi (load or idle timing, Safari setTimeout fallback, no map created before the root nears the viewport) has no test.",
+  "modals: a dialog with data-modal-no-overlay pushed on top of one with an overlay (new else branch that closes the overlay) is untested, as are Tab focus-trap behaviour on the top dialog and rapid double Back.",
+  "modal-back-chain fixture does not cover a chain mixing data-modal-no-overlay and overlay dialogs, so the overlay-restore gap is untested.",
+  "No test covers play() called on a never-split text part (split happens in ensureSplit, rebuild runs in a microtask after runDirection ran against an empty timeline) combined with reverse() issued before the rebuild lands; the fixture tests cover lazy split and back-chain but not this ordering.",
+  "Hash back-link branches in modal stack (modals.ts:418: pop-to-existing, replaceTop, hashchange replace) have no test.",
+  "data-reveal-start wiring in scrollReveal.ts:145 is untested; the line-mask-lazy-split fixture copies the wiring by hand and its play-once assertion counts the fixture's own callback."
+ ],
+ "peer": {
+  "outcome": "in-process-fallback",
+  "coverage": "Cross-model pass not run: no different-provider peer CLI is installed on this host; the adversarial lens ran in-process."
+ },
+ "coverage": {
+  "depth": "full",
+  "notes": [
+   "Cross-model pass not run: no different-provider peer CLI is installed on this host; the adversarial lens ran in-process.",
+   "Project standards: CLAUDE.md used as instruction-file fallback (no CODING_STANDARDS.md).",
+   "Untracked build artefacts excluded.",
+   "No plan passed; plan documents are off-limits to this reviewer, so requirements completeness is not assessed here (the caller checks Done-when separately).",
+   "All reviewers ran on Sonnet per build-stage rule.",
+   "Semantic merges: adversarial 'Back from a no-overlay dialog...' (modals.ts:347) merged into #1; adversarial and fast-pass agreement recorded in reviewers only (in-process, no confidence raise); suppressed adversarial P3 anchor 50 aria-expanded merged into #4.",
+   "Mode-aware demotion count: 5. Demoted single-reviewer P2/P3 advisories: maintainability duplicate transition-wait focus helper (modals.ts:365, P2) and splitWhenNear reads splitCallbacks declared below (lineMaskReveal.ts:76, P3; safe at runtime since the callback runs later) to residual_risks; testing hash back-link branches untested (modals.ts:418, P2) and data-reveal-start wiring untested (scrollReveal.ts:145, P2) to testing_gaps; testing fixture play-once counts its own callback (line-mask-lazy-split.ts:30, P3 anchor 50) to testing_gaps.",
+   "Suppressed by confidence: 0 helper-suppressed after reconciliation; first_evidence_backfilled: 0; quote-the-line demotions: 0; malformed findings: 0; failed reviewers: none.",
+   "Learnings-researcher: no Compound Pack rule contradicted. Known-pattern notes carried: possible stale ScrollTrigger positions after lazy SplitText (no ScrollTrigger.refresh(true) after onSplit, plausible and unproven), map warm-up Maps font load still triggers autoSplit resplit in heroTextReveal/scriptReveal/scrollTextReveal, button-system.css --ring hard-coded offsets do not scale with --btn-outline-width above 1px.",
+   "Validator shortcut: 0 findings skipped (no cross-model peer with independence_verified).",
+   "Validator: one batch of 2 findings (#1, #2), both confirmed with incidence not measured; 0 rejected, 0 unresolved, 0 malformed, 0 failed, 0 shortcut-skipped. No protected-subject reclassification. No P0/P1 findings, so no degraded blockers.",
+   "Stage 5c skipped: apply_local is false (report only)."
+  ],
+  "suppressed_by_confidence": {},
+  "demotion_count": 5,
+  "first_evidence_backfilled": 0,
+  "validator": {
+   "confirmed": 2,
+   "rejected": 0,
+   "unresolved": 0,
+   "malformed": 0,
+   "failed": 0,
+   "shortcut_skipped": 0
+  }
+ },
+ "artifact_path": "/tmp/compound-engineering-1000/ce-code-review/20261116-164003-450bcf56",
+ "run_id": "20261116-164003-450bcf56"
+}
