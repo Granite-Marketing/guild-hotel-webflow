@@ -665,6 +665,7 @@ Scroll reveals for any block, set in the Designer as a custom attribute or appli
 | `data-reveal="text-mask"` | a heading, paragraph or a wrapper | line mask via `lineMaskReveal`: each line's words rise from behind their edge; buttons and figures inside rise from their own clip |
 | `data-reveal="image-mask"` | the figure or image wrapper | mask reveal: the block opens upward from its bottom edge while the image inside settles from 1.15 scale |
 | `data-reveal-delay="0.2"` | with any of the above | seconds to wait, to stagger neighbours |
+| `data-reveal-start="60"` | with any of the above | viewport percentage from the top (0 to 100) at which the element's top triggers the reveal (`60` is `top 60%`); missing or invalid keeps `top 90%`; still plays once |
 
 Reduced motion shows everything at once. Do not combine with `.fade-in`, `.slide-in` or `data-scroll-text-reveal` on the same element.
 
