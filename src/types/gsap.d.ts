@@ -186,6 +186,7 @@ interface LenisInstance {
   scrollTo: (target: number | string | HTMLElement, options?: Record<string, unknown>) => void;
   scroll: number;
   targetScroll: number;
+  animatedScroll: number;
   velocity: number;
   isScrolling: boolean;
   limit: number;

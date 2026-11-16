@@ -34,6 +34,18 @@ export const anchorScrollOptions = (distance: number) => ({
   easing: (progress: number) => (1 - Math.cos(Math.PI * progress)) / 2,
 })
 
+/**
+ * Lenis measures an element target from its own animated scroll, which lags a
+ * native scroll (the position restored on reload) until the next scroll event,
+ * so the first anchor click stopped short (#181). Snap it to the real position
+ * first; immediate to the current scroll moves nothing on screen.
+ */
+export const syncLenisScroll = (lenisInstance: LenisInstance) => {
+  if (Math.abs(lenisInstance.animatedScroll - window.scrollY) > 1) {
+    lenisInstance.scrollTo(window.scrollY, { immediate: true, force: true })
+  }
+}
+
 /** Raw handle kept for projects that already import `lenis` directly. */
 export const lenis = {
   get raw(): LenisInstance | null {
@@ -88,6 +100,7 @@ export const lenisEngine: SmoothScrollEngine = {
     // A full-height section with `data-scroll-flush` lines up with the
     // viewport top under the transparent nav, so no earlier section shows.
     const offset = target.hasAttribute('data-scroll-flush') ? 0 : -fixedNavOffset()
+    if (instance) syncLenisScroll(instance)
     if (instance) instance.scrollTo(target, { offset, ...anchorScrollOptions(target.getBoundingClientRect().top + offset) })
     else window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY + offset, behavior: 'smooth' })
   },
