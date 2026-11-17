@@ -18,6 +18,8 @@
 import { accordion } from '$utils/accordion'
 import { anchorScroll } from '$utils/anchorScroll'
 import { buttonHover } from '$utils/buttonHover'
+import { directionsLinks } from '$utils/directionsLinks'
+import { focusRing } from '$utils/focusRing'
 import { cardCarouselHeaderLeft } from '$utils/cardCarouselHeaderLeft'
 import { cmsItemLinks } from '$utils/cmsItemLinks'
 import { contactStickyColumn } from '$utils/contactStickyColumn'
@@ -109,6 +111,10 @@ window.Webflow.push(() => {
   tabDropdown()
   // Desktop feedback: tilted script headings get room for their tilt; before the scroll engine (changes page height).
   scriptTiltSpace()
+  // M31b: Directions links open in a new tab.
+  directionsLinks()
+  // M11a, M28: focus rings for keyboard use only, never after a tap or a script focus.
+  focusRing()
 
   // slot A: debugOverlay() (before the engine, so it logs the first refresh)
   smoothScroll.init()
