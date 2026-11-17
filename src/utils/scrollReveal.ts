@@ -202,7 +202,7 @@ const tagStaggeredRows = () => {
       const index = Math.max(0, siblings.indexOf(element))
       element.dataset.reveal = mode
       // An FAQ question is a plain div, which the line mask only splits when marked as its own target (M12).
-      if (mode === 'text-mask') element.setAttribute('data-line-mask', '')
+      if (mode === 'text-mask') element.setAttribute('data-line-mask', 'text')
       if (!element.dataset.revealDelay) element.dataset.revealDelay = String(Math.min(index * STAGGER_STEP, STAGGER_MAX))
     })
   })
