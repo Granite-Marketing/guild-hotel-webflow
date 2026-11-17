@@ -128,6 +128,7 @@ const AUTO_REVEALS: Record<string, string[]> = {
 const MOBILE_QUERY = '(max-width: 767px)'
 const STAGGER_STEP = 0.1
 const STAGGER_MAX = 0.5
+const COLLAGE_STEP = 0.2
 
 /**
  * Repeated rows: each entry tags its elements, delayed by position among the
@@ -135,14 +136,15 @@ const STAGGER_MAX = 0.5
  * `form-split-script-contact` form (Request for Proposal and the other
  * contact forms share the component).
  */
-const STAGGERED_REVEALS: { mode: string; selector: string; group: string }[] = [
+const STAGGERED_REVEALS: { mode: string; selector: string; group: string; insideFade?: boolean }[] = [
   { mode: 'text-mask', selector: '.faq-accordion_list .accordion_question', group: '.faq-accordion_list' },
   { mode: 'fade-only', selector: '.faq-accordion_list .accordion_item', group: '.faq-accordion_list' },
   { mode: 'fade-only', selector: '.form-split-script-contact_fieldset-header', group: '.form-split-script-contact_fieldsets' },
   { mode: 'fade-only', selector: '.form-split-script-contact_field', group: '.form-split-script-contact_fieldset' },
   // Stephen 17 Nov: every form fades its fields in, not only the contact and RFP forms.
   { mode: 'fade-only', selector: '.form-contact-fields_footer', group: '.form-contact-fields_form' },
-  { mode: 'fade-only', selector: '.cta-booking-newsletter_form > :is(label, input)', group: '.cta-booking-newsletter_form' },
+  // The newsletter column carries a Designer `fade` (it never slides, see scrollReveal below); its fields still stagger inside it.
+  { mode: 'fade-only', selector: '.cta-booking-newsletter_form > :is(label, input)', group: '.cta-booking-newsletter_form', insideFade: true },
 ]
 
 /**
@@ -151,8 +153,9 @@ const STAGGERED_REVEALS: { mode: string; selector: string; group: string }[] = [
  * matches `_item-figure` or any figure inside the row item, and does nothing
  * until they exist.
  */
-const MOBILE_REVEALS: { mode: string; selector: string }[] = [
-  { mode: 'fade-only', selector: 'main .home-art-stories_trail-figure' },
+const MOBILE_REVEALS: { mode: string; selector: string; step?: number }[] = [
+  // Collage tiles sit close together, so each waits a beat after the one before: one by one (M4).
+  { mode: 'fade-only', selector: 'main .home-art-stories_trail-figure', step: COLLAGE_STEP },
   { mode: 'image-fade', selector: 'main .feature-grid-dark-eyebrow_item-figure, main .feature-grid-dark-eyebrow_item figure' },
 ]
 
@@ -194,10 +197,11 @@ const tagSharedBlocks = () => {
 }
 
 const tagStaggeredRows = () => {
-  STAGGERED_REVEALS.forEach(({ mode, selector, group }) => {
+  STAGGERED_REVEALS.forEach(({ mode, selector, group, insideFade }) => {
     document.querySelectorAll<HTMLElement>(`main ${selector}`).forEach((element) => {
       // Like tagSharedBlocks, but forms are fair game (their fields are the point) and a row may hold its own tagged children.
-      if (element.dataset.reveal || element.closest(OWNED_BY_MODULE) || element.parentElement?.closest('[data-reveal]')) return
+      const revealedAncestor = element.parentElement?.closest<HTMLElement>('[data-reveal]')
+      if (element.dataset.reveal || element.closest(OWNED_BY_MODULE) || (revealedAncestor && !(insideFade && revealedAncestor.dataset.reveal === 'fade'))) return
       const siblings = Array.from(element.closest(group)?.querySelectorAll(selector) ?? [])
       const index = Math.max(0, siblings.indexOf(element))
       element.dataset.reveal = mode
@@ -229,13 +233,15 @@ const playFadeOnly = (element: HTMLElement, delay: number, start: string) => {
 const mobileReveals = () => {
   const mediaQueries = gsap.matchMedia()
   mediaQueries.add(MOBILE_QUERY, () => {
-    MOBILE_REVEALS.forEach(({ mode, selector }) => {
+    MOBILE_REVEALS.forEach(({ mode, selector, step = 0 }) => {
+      let shown = 0
       document.querySelectorAll<HTMLElement>(selector).forEach((element) => {
-        // Hidden rows (collage tiles past the mobile layout) have no box to reveal.
-        if (!element.getClientRects().length || element.closest('[data-reveal]')) return
+        // Hidden rows (collage tiles past the mobile layout) have no box to reveal or are kept hidden by their module.
+        if (!element.getClientRects().length || getComputedStyle(element).visibility === 'hidden' || element.closest('[data-reveal]')) return
         const start = parseRevealStart(element.dataset.revealStart)
-        if (mode === 'image-fade') playImageFade(element, 0, start)
-        else playFadeOnly(element, 0, start)
+        const delay = Math.min(shown++ * step, STAGGER_MAX)
+        if (mode === 'image-fade') playImageFade(element, delay, start)
+        else playFadeOnly(element, delay, start)
       })
     })
   })
