@@ -393,30 +393,34 @@ range) and `data-pin="sticky"` (pinned while the parent is in view), with
 
 ### scrollEnlargeSnap
 
-A framed image grows to fill its stage on scroll; the stage then stays
-pinned and further scrolling snaps through a stack of panels, each with an
-image wipe and a text transition. Guild Figma Home-Animation-1 (home 04 to
+A framed image grows to fill its stage on scroll; the section then locks
+and works as a vertical slider (#257): each gesture plays one timed panel
+transition (image wipe, then a text transition). Guild Figma Home-Animation-1 (home 04 to
 09, dining-collection 03, meetings-collection 02, wellness-collection 02).
 
 | Attribute | On | Meaning |
 |---|---|---|
 | `data-scroll-enlarge-snap` | section root | Guard selector. One instance per root. |
-| `data-scroll-enlarge-snap-step` | root (optional) | Scroll distance per step in % of viewport height. Default `100`. |
+| `data-scroll-enlarge-snap-step` | root (optional) | Scroll distance of the open step in % of the stage height. Default `100`. |
 | `data-scroll-enlarge-snap-stage` | inside root (optional) | The box that pins. Give it a fixed height (`100svh`). Its padding is the gap around the full-size frame. Defaults to the root itself. |
 | `data-scroll-enlarge-snap-media` | inside stage | The frame. Style it at its small start size (for example `width: 79%`, `aspect-ratio: 16 / 9`), `position: relative`, `overflow: hidden`. The module grows it to the stage content box. Chamfered corners belong on this element. Do not set `max-width` or `max-height` on it. |
 | `data-scroll-enlarge-snap-item` | inside media, one per panel | Panels overlap (`position: absolute; inset: 0`). DOM order is panel order. |
 | `data-scroll-enlarge-snap-image` | inside item (optional) | Image that settles from `scale: 1.2` as its panel wipes in. Defaults to the first `img`. |
 | `data-scroll-enlarge-snap-content` | inside item (optional) | Its headings, paragraphs, logo figure and `.button` line-mask in, triggered after its mask/wipe completes, reverses on leave (`lineMaskReveal`). |
-| `data-scroll-enlarge-snap-tab` | inside root (optional) | Nth tab maps to nth item. Click scrolls to that panel. Keep tabs outside the items so they stay visible. |
+| `data-scroll-enlarge-snap-tab` | inside root (optional) | Nth tab maps to nth item. Click plays one eased move to that panel. Keep tabs outside the items so they stay visible. |
 
-- Scroll timeline: step 1 opens the frame's mask; each later step wipes the
-  next panel up from the bottom (`clip-path`). Then a half-step end hold
-  keeps the last panel pinned. Snap points sit at the end of each step; the
-  first half of the enlarge and the end hold scroll freely.
-- Content (F15): never scrubbed. Each panel's content plays one line-mask
-  timeline once its mask (panel 0) or wipe (later panels) is 100% done, and
-  reverses (1.6x speed) as soon as the scroll moves past that panel's snap
-  point or back above its reveal point.
+- Pin: the open step (scrubbed mask) plus a half-step hold, about 1.5
+  screens whatever the panel count. When the frame is fully open the scroll
+  is held there (Lenis stopped, wheel and touch prevented by the Observer
+  inside ScrollTrigger, `ScrollTrigger.observe`, no extra plugin).
+- Gestures: wheel, trackpad, touch swipe, ArrowUp/Down and PageUp/Down each
+  move exactly one panel. Events less than 200ms apart are one gesture, so
+  trackpad inertia never skips panels. Up on the first panel or down on the
+  last releases the page with a short carry-on scroll; Home and End release.
+  Anchor scrolls (`smoothScroll.scrollTo`, sticky tabs) pass through without
+  locking via Lenis `userData.anchor`.
+- Content (F15): each panel's content line-masks in once its wipe is done
+  and masks out as soon as a move starts.
 - State: the active item and tab get `is-active`; the active tab also gets
   `aria-current="true"`. Style the tab underline from `is-active`.
 - The module sets inline `z-index` and `autoAlpha` on items (DOM order
@@ -424,10 +428,7 @@ image wipe and a text transition. Guild Figma Home-Animation-1 (home 04 to
   the media. Without JS the Designer view shows the frame at its start size
   with the last item on top.
 - `prefers-reduced-motion: reduce`: the frame is set straight to full size,
-  the stage still pins, and panels swap instantly at each step with no
-  tweens and no snap. Tabs jump to their panel.
-- Lenis: snap uses ScrollTrigger snap with `inertia: false`, so a tab jump
-  is not read as a fling.
+  the section still locks, and panels swap instantly per gesture or tab.
 - Local preview: `pnpm dev`, then
   `http://localhost:3001/scroll-enlarge-snap.html`. Check:
   `npx playwright test scroll-enlarge-snap`.

@@ -133,6 +133,8 @@ interface ScrollTriggerStatic {
   normalizeScroll: (enabled: boolean) => void;
   batch: (target: string, vars: Record<string, unknown>) => void;
   create: (vars: Record<string, unknown>) => ScrollTriggerInstance;
+  /** GSAP Observer, bundled inside ScrollTrigger (no separate plugin). */
+  observe: (vars: Record<string, unknown>) => { enable: () => void; disable: () => void; kill: () => void };
   getAll: () => ScrollTriggerInstance[];
   isInViewport: (trigger: unknown) => boolean;
   isTouch: number;
@@ -190,6 +192,8 @@ interface LenisInstance {
   velocity: number;
   isScrolling: boolean;
   limit: number;
+  /** Set from `scrollTo({ userData })` until that scroll completes. */
+  userData?: Record<string, unknown>;
 }
 
 interface LenisConstructor {
