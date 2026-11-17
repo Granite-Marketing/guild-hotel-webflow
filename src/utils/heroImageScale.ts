@@ -8,7 +8,7 @@
  *
  * DOM contract (Hero Fullbleed Centered component, every page that uses it):
  *   <figure class="hero-fullbleed-centered_figure">   the frame
- *     <img class="hero-fullbleed-centered_image">      the photo
+ *     <img> or <video>                                  the photo (u-image)
  *
  * The frame gets `overflow: hidden` from code, so the zoomed photo never
  * leaves it. Reduced motion leaves the photo still. The transform is cleared
@@ -16,7 +16,8 @@
  */
 
 const FRAME = '.hero-fullbleed-centered_figure'
-const IMAGE = '.hero-fullbleed-centered_image'
+// The photo carries the shared u-image class, not a family class.
+const IMAGE = 'img, video'
 
 export const HERO_IMAGE_START_SCALE = 1.12
 export const HERO_IMAGE_DURATION = 1.8

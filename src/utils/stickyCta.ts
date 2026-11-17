@@ -114,6 +114,9 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
   }
 
   // Docked once the button's natural bottom edge rises above the dock line.
+  // A below-fold button stays docked above its start too: iOS rubber-band scroll at the top goes negative and flashed it at its own spot.
+  const dockedAt = (self: ScrollTriggerInstance) => self.isActive || (belowFold && self.progress === 0)
+
   ScrollTrigger.create({
     trigger: holder,
     start: () => {
@@ -128,9 +131,9 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     onRefresh: (self: ScrollTriggerInstance) => {
       holdSpace()
       isStuck = false
-      setStuck(self.isActive)
+      setStuck(dockedAt(self))
     },
-    onToggle: (self: ScrollTriggerInstance) => setStuck(self.isActive),
+    onToggle: (self: ScrollTriggerInstance) => setStuck(dockedAt(self)),
   })
 
   // F105: a first-screen button docks where it sits, then eases down once

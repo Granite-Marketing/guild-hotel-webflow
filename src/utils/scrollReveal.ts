@@ -48,6 +48,7 @@ import { prepareLineMaskReveal } from '$utils/lineMaskReveal'
 import { parseRevealStart } from '$utils/revealStart'
 
 const EASE = 'power3.out'
+const HERO_SELECTOR = '.hero-fullbleed-centered_component'
 /** The shared line mask runs 0.9s per line; 1.25x makes it about 20% shorter. */
 const TEXT_MASK_SPEED = 1.25
 
@@ -186,10 +187,6 @@ const tagSharedBlocks = () => {
       element.dataset.reveal = mode
     })
   })
-  // M20/M21: the phone hero copy sits near the screen bottom, under `top 90%`, so it (and the docked Reserve button) waited for a scroll. Play it as soon as any of it is on screen.
-  document.querySelectorAll<HTMLElement>('main .hero-fullbleed-centered_component[data-reveal]').forEach((hero) => {
-    hero.dataset.revealStart ??= '100'
-  })
 }
 
 const tagStaggeredRows = () => {
@@ -262,6 +259,11 @@ export const scrollReveal = () => {
 
     if (kind === 'text-mask') {
       const reveal = prepareLineMaskReveal(element, TEXT_MASK_SPEED)
+      // The hero copy plays on load with the hero image zoom (M23), never on scroll: on phones it sits below `top 90%` and waited for a scroll (M20, M21).
+      if (element.matches(HERO_SELECTOR)) {
+        gsap.delayedCall(delay, reveal.play)
+        return
+      }
       ScrollTrigger.create({
         trigger: element,
         start,
