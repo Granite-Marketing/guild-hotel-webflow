@@ -19,6 +19,7 @@ const FRAME = '.hero-fullbleed-centered_figure'
 // The photo carries the shared u-image class, not a family class.
 const IMAGE = 'img, video'
 
+/** Keep in sync with the pre-load zoom in docs/reference/site-head/reveal-prehide.css. */
 export const HERO_IMAGE_START_SCALE = 1.12
 export const HERO_IMAGE_DURATION = 1.8
 
