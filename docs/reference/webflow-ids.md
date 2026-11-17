@@ -498,7 +498,7 @@ Items (published 2026-11-16; `external-url` values are placeholder publication h
 
 ### Mobile feedback Designer fixes (2026-11-17, spec #229, tickets #236 to #245)
 
-- Hero Fullbleed Centered: new variant "Centred Mobile" `01657e35-c8ea-ba29-677a-6c81e6c66f74` (content centred vertically below 768px), used only by the /rooms hero `bc0c1393-1d0f-8b55-c877-9b1e69e1ce9e`. All other Hero variants carry `min-height: 100svh` at small and tiny (was 800px).
+- Hero Fullbleed Centered: new variant "Centred Mobile" `01657e35-c8ea-ba29-677a-6c81e6c66f74` (content centred vertically below 768px), used only by the /rooms hero `bc0c1393-1d0f-8b55-c877-9b1e69e1ce9e`. All other Hero variants carry `min-height: 100svh` at small and tiny (was 800px; `54ea4c9c`, Corporate and Guidelines, was 660px).
 - Gallery Canvas Styles embed (`51c17234-82ff-8a78-73f9-94810497ec9a`): adds `[data-gallery-canvas] .gallery-all_scroller{height:100svh}` below 768px; source `docs/reference/site-head/gallery-canvas.css`.
 - Footer on phones: `cta-booking-newsletter_background` and `footer-links_background` are `position: fixed` at small inside `clip-path: inset(0)` sections (one pinned photo). Logos carry `data-eager`: Bonvoy `916e4ffc-007b-3572-a686-946c6645b308` (CTA Booking Newsletter), Tribute `14efd120-8e4c-efe3-75b9-396e4792edf9` (Footer Links).
 - /arts grid Collection List `d709e584-55e2-e281-c915-c0c5b0cc9fbd` filter: Category does not equal Artists (`ab98460e5525b70acda1162d698245d1`). "artists" filter pill `3bbb8f3c-b08a-b180-a1ff-f7a9f73c4335` hidden.
