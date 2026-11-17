@@ -82,7 +82,6 @@ import { underlineHover } from '$utils/underlineHover'
  */
 
 const DININGS_TEMPLATE_PAGE_ID = '6ad67d7416e13e66c2b76107'
-const DINING_PAGE_ID = '6ad66fd476d24ed37ac4c5cb'
 
 window.Webflow ||= [] as unknown as WebflowQueue
 window.Webflow.push(() => {
@@ -186,8 +185,6 @@ window.Webflow.push(() => {
   )
   // Story "Learn more" floats over the copy (Figma mobile; F80 desktop too).
   stickyCta('.section_article-body .article-body_footer .button')
-  // Off (Stephen 17 Nov, overrides the Dining mobile Figma): the venue selector shows only on the slider section.
-  // earlyVenueTabs(`html[data-wf-page="${DINING_PAGE_ID}"]`)
   // Pins created after the reveals (History's landmark pin) push everything below them down; recalculate in page order so lower reveals fire on time.
   ScrollTrigger.sort()
   ScrollTrigger.refresh()
