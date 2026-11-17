@@ -7,6 +7,7 @@ html.w-mod-js:not(.reveal-ready) :is([data-reveal], .hero-fullbleed-centered_com
   animation: reveal-failsafe 0s 3s forwards;
 }
 @keyframes reveal-failsafe { to { visibility: visible; } }
-/* M23 hero image zoom (heroImageScale.ts): start zoomed in before the bundle runs, so the photo never shows at full size and then jumps. Keep 1.12 in sync with HERO_IMAGE_START_SCALE. */
+/* M23 hero image zoom (heroImageScale.ts): start zoomed in before the bundle runs, so the photo never shows at full size and then jumps. Keep 1.12 in sync with HERO_IMAGE_START_SCALE. The same 3s fail-safe clears the zoom if the bundle never runs. */
 html.w-mod-js:not(.reveal-ready) .hero-fullbleed-centered_figure { overflow: hidden; }
-html.w-mod-js:not(.reveal-ready) .hero-fullbleed-centered_figure :is(img, video) { transform: scale(1.12); }
+html.w-mod-js:not(.reveal-ready) .hero-fullbleed-centered_figure :is(img, video) { transform: scale(1.12); animation: hero-zoom-failsafe 0s 3s forwards; }
+@keyframes hero-zoom-failsafe { to { transform: none; } }
