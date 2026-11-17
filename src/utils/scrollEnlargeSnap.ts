@@ -251,7 +251,8 @@ const initAnimated = (parts: SnapParts) => {
     scrollTrigger: {
       trigger: stage,
       start: 'top top',
-      end: () => `+=${(window.innerHeight * stepPercent * totalSteps) / 100}`,
+      // The stage (100vh) is stable on iOS; innerHeight changes with the toolbar and, times every step, moved the page below by ~900px on refresh (M6 footer jump).
+      end: () => `+=${(stage.offsetHeight * stepPercent * totalSteps) / 100}`,
       pin: true,
       // Animation feedback (home wellness "too sensitive"): a heavier scrub
       // and a longer settle before snapping, so a small scroll no longer
@@ -379,7 +380,7 @@ const initReduced = (parts: SnapParts) => {
   const trigger = ScrollTrigger.create({
     trigger: stage,
     start: 'top top',
-    end: () => `+=${(window.innerHeight * stepPercent * changeCount) / 100}`,
+    end: () => `+=${(stage.offsetHeight * stepPercent * changeCount) / 100}`,
     pin: true,
     invalidateOnRefresh: true,
     onUpdate: (self: ScrollTriggerInstance) => {
