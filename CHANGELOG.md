@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.33
+
+### Patch Changes
+
+- Sticky tabs: the bar stays fully visible to the end of the last section and fades only once the next section (on Press, the contact form) enters the viewport.
+
 ## 1.2.32
 
 ### Patch Changes

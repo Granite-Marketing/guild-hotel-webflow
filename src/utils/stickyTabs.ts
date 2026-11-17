@@ -20,8 +20,9 @@
  * wrapper is only as tall as the bar, so sticky would hold for zero distance.
  * A ScrollTrigger pin (pinSpacing: false) keeps layout unchanged.
  *
- * Exit (F49): the bar fades out over the last quarter viewport of the pin
- * and stays hidden where it releases; scrolling back fades it in again.
+ * Exit (F49, Stephen 2026-11-17): the bar stays fully visible to the end of
+ * the last section, then fades over a quarter viewport once the next
+ * section comes into view; scrolling back fades it in.
  *
  * Active state: `is-active` and `aria-current="true"` move to the link whose
  * section is under the bar; the first tab stays active before the first one.
@@ -89,6 +90,13 @@ const pinTabs = (tabs: HTMLElement, warn: boolean) => {
   const pinEnd = () =>
     lastSection().getBoundingClientRect().bottom + window.scrollY - (window.innerHeight - bottomGap())
 
+  // The fade waits for the next rendered section (Press: the contact form) to enter the viewport.
+  const fadeStart = () => {
+    let next = lastSection().nextElementSibling as HTMLElement | null
+    while (next && !isRendered(next)) next = next.nextElementSibling as HTMLElement | null
+    return next ? next.getBoundingClientRect().top + window.scrollY - window.innerHeight : pinEnd()
+  }
+
   ScrollTrigger.create({
     trigger: tabs,
     start: () => `bottom bottom-=${bottomGap()}`,
@@ -102,9 +110,9 @@ const pinTabs = (tabs: HTMLElement, warn: boolean) => {
     invalidateOnRefresh: true,
   })
 
-  // F49: fade the bar out over the last stretch so it never rests on the
-  // last card's text or against the next section; scrubbed, so it returns
-  // on the way back up.
+  // F49: fade the bar out once the last section has fully passed (it was
+  // fading over the last cards on /press); scrubbed, so it returns on the
+  // way back up.
   gsap.fromTo(
     tabs,
     { autoAlpha: 1 },
@@ -113,8 +121,8 @@ const pinTabs = (tabs: HTMLElement, warn: boolean) => {
       ease: 'none',
       immediateRender: false,
       scrollTrigger: {
-        start: () => pinEnd() - FADE_DISTANCE_VH * window.innerHeight,
-        end: pinEnd,
+        start: fadeStart,
+        end: () => fadeStart() + FADE_DISTANCE_VH * window.innerHeight,
         scrub: true,
         invalidateOnRefresh: true,
       },
