@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" class="w-mod-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fixture: hero copy and image play on load (M23, ticket #267)</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      .section_hero-fullbleed-centered { position: relative; height: 130svh; }
+      .hero-fullbleed-centered_figure { position: absolute; inset: 0; margin: 0; }
+      .hero-fullbleed-centered_image { display: block; width: 100%; height: 100%; object-fit: cover; background: #888; }
+      /* Copy sits below the first screen, past any scroll-reveal start line, so only an on-load play can show it without scrolling. */
+      .hero-fullbleed-centered_component { position: absolute; left: 0; right: 0; bottom: 4px; padding: 0 1rem; color: #fff; }
+      .spacer { height: 150vh; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="section_hero-fullbleed-centered">
+        <figure class="hero-fullbleed-centered_figure">
+          <img class="hero-fullbleed-centered_image" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+        </figure>
+        <div class="hero-fullbleed-centered_component"><h1 data-test="title">The Guild Hotel is a place to stay</h1></div>
+      </section>
+      <div class="spacer"></div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <!-- ?bundle=0 simulates a bundle that never loads (the CSS fail-safe). -->
+    <script>if (!/bundle=0/.test(location.search)) document.write('<script src="./hero-on-load.js"><\/script>')</script>
+  </body>
+</html>
