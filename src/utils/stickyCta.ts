@@ -15,10 +15,10 @@
  *
  * The button's parent keeps the button's height while it is docked, so the
  * layout above never jumps. The docked state is a `data-sticky-cta-docked`
- * attribute styled by a stylesheet this module injects (plus the `is-stuck`
- * class for any Designer styling), not inline GSAP styles: the hero's line
- * mask also animates this button and re-renders its inline style, which wiped
- * the docked position and left the button below the fold (M21). Hiding uses
+ * attribute and the `is-stuck` class plus inline `!important` styles
+ * (re-applied on every refresh), not plain GSAP styles: the hero's line mask
+ * also animates this button and rewrites its inline style, which left it
+ * below the fold (M21). Hiding uses
  * autoAlpha so a hidden button cannot be clicked.
  *
  * With `dockFromLoad`, a button whose own spot is below the first screen (a
@@ -32,19 +32,15 @@ const DOCK_GAP = 24
 /** F105: on desktop the docked button settles this close to the bottom once the page scrolls. */
 const DESKTOP_GAP = 16
 const DOCKED_ATTRIBUTE = 'data-sticky-cta-docked'
-const BOTTOM_VARIABLE = '--sticky-cta-bottom'
-const STYLE_ID = 'sticky-cta-style'
 const END_SELECTOR = '.section_cta-booking-newsletter, .section_footer-links'
 
-const injectStyle = () => {
-  if (document.getElementById(STYLE_ID)) return
-  const style = document.createElement('style')
-  style.id = STYLE_ID
-  // Individual `translate` keeps the centring off `transform`, which the line mask animates.
-  style.textContent = `[${DOCKED_ATTRIBUTE}]:not(#_){position:fixed;left:50%;bottom:var(${BOTTOM_VARIABLE},${DOCK_GAP}px);translate:-50% 0;z-index:90}`
-  document.head.appendChild(style)
-}
-
+/** Inline, with `important`, so the hero line mask rewriting this button's style cannot undo the dock. */
+const DOCK_STYLES: Array<[string, string]> = [
+  ['position', 'fixed'],
+  ['left', '50%'],
+  ['translate', '-50% 0'],
+  ['z-index', '90'],
+]
 export interface StickyCtaOptions {
   /**
    * Dock from load even when the button's own spot is below the first screen
@@ -92,12 +88,14 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     holder.style.minHeight = `${button.offsetHeight}px`
   }
   holdSpace()
-  injectStyle()
+
+  const setBottom = (px: number) => button.style.setProperty('bottom', `${px}px`, 'important')
 
   const applyDock = () => {
     button.classList.add(STUCK_CLASS)
     button.setAttribute(DOCKED_ATTRIBUTE, '')
-    button.style.setProperty(BOTTOM_VARIABLE, `${bottomGap()}px`)
+    DOCK_STYLES.forEach(([property, value]) => button.style.setProperty(property, value, 'important'))
+    setBottom(bottomGap())
     if (layer) layer.style.zIndex = '90'
   }
 
@@ -109,7 +107,8 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     } else {
       button.classList.remove(STUCK_CLASS)
       button.removeAttribute(DOCKED_ATTRIBUTE)
-      button.style.removeProperty(BOTTOM_VARIABLE)
+      DOCK_STYLES.forEach(([property]) => button.style.removeProperty(property))
+      button.style.removeProperty('bottom')
       if (layer) layer.style.zIndex = ''
     }
   }
@@ -142,7 +141,10 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
       end: 'max',
       onToggle: (self: ScrollTriggerInstance) => {
         settled = self.isActive
-        if (isStuck) gsap.to(button, { [BOTTOM_VARIABLE]: `${bottomGap()}px`, duration: 0.4, ease: 'power2.out' })
+        if (!isStuck) return
+        const current = parseFloat(getComputedStyle(button).bottom) || 0
+        const tween = { px: current }
+        gsap.to(tween, { px: bottomGap(), duration: 0.4, ease: 'power2.out', onUpdate: () => setBottom(tween.px) })
       },
     })
   }
