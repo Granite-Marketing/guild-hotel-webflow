@@ -197,3 +197,41 @@ test.describe('scrollEnlargeSnap', () => {
     expect(end).toBeGreaterThan(start)
   })
 })
+
+/**
+ * M18 (Stephen 17 Nov): the venue selector shows only once the slider's image
+ * is fully open, on phones and desktop, never from the top of the page.
+ */
+for (const viewport of [
+  { width: 390, height: 800 },
+  { width: 1440, height: 900 },
+]) {
+  test.describe(`venue selector at ${viewport.width}px`, () => {
+    test.use({ viewport })
+
+    const barVisibility = (page: Page) =>
+      page.$eval('#wellness nav', (nav) => {
+        const style = getComputedStyle(nav)
+        return { visibility: style.visibility, opacity: Number(style.opacity) }
+      })
+
+    test('hidden at the top and while the mask opens, shown once fully open', async ({ page }) => {
+      await open(page)
+      expect((await barVisibility(page)).visibility).toBe('hidden')
+
+      // Sample while the mask is still opening, before the snap settles it.
+      const { start, end } = await readState(page, 'wellness')
+      await page.evaluate((top) => window.scrollTo(0, top), start + ((end - start) * 0.3) / TOTAL_STEPS)
+      await page.waitForTimeout(500)
+      expect((await barVisibility(page)).visibility).toBe('hidden')
+
+      await scrollToProgress(page, 'wellness', 1 / TOTAL_STEPS)
+      await page.waitForTimeout(900)
+      expect(await barVisibility(page)).toEqual({ visibility: 'visible', opacity: 1 })
+
+      await scrollToProgress(page, 'wellness', 0.05)
+      await page.waitForTimeout(900)
+      expect((await barVisibility(page)).visibility).toBe('hidden')
+    })
+  })
+}

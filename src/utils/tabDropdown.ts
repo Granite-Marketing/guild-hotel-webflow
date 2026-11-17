@@ -117,11 +117,16 @@ export const tabDropdown = () => {
     const animated = [panel, ...tabs]
     const clearInline = () => gsap.set(animated, { clearProps: 'height,paddingTop,opacity,visibility,transform' })
     let expanded = false
+    // Only the latest open or close may finish: a killed timeline still fires
+    // its onComplete, which would otherwise close a menu that reopened.
+    let timeline: ReturnType<typeof gsap.timeline> | null = null
 
     const setOpen = (open: boolean) => {
       if (open === expanded) return
       expanded = open
       toggle.setAttribute('aria-expanded', String(open))
+      timeline?.kill()
+      timeline = null
       gsap.killTweensOf(animated)
 
       if (reducedMotion.matches) {
@@ -143,8 +148,9 @@ export const tabDropdown = () => {
         bar.classList.remove(CLOSING_CLASS)
         bar.classList.add(OPEN_CLASS)
         const full = metrics()
+        gsap.set(tabs, { clearProps: 'opacity,visibility,transform' })
         const linkOpacity = tabs.map((tab) => Number(getComputedStyle(tab).opacity))
-        gsap
+        timeline = gsap
           .timeline({ onComplete: clearInline })
           .fromTo(panel, start, { ...full, duration: OPEN_SECONDS, ease: 'power3.out' })
           .fromTo(
@@ -164,7 +170,7 @@ export const tabDropdown = () => {
 
       if (!bar.classList.contains(OPEN_CLASS)) return
       bar.classList.add(CLOSING_CLASS)
-      gsap
+      timeline = gsap
         .timeline({
           onComplete: () => {
             bar.classList.remove(OPEN_CLASS, CLOSING_CLASS)
