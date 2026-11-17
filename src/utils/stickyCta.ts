@@ -51,7 +51,8 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
   const holder = button.parentElement
   if (!holder) return
 
-  const endSection = document.querySelector<HTMLElement>(endSelector)
+  // The first end section actually on the page at this width: Dining phones show an extra "Other dining options" block that desktop hides (M22).
+  const endSection = Array.from(document.querySelectorAll<HTMLElement>(endSelector)).find((section) => section.offsetHeight > 0)
   // The fixed button only stacks inside its ancestors' layers (the hero
   // component is z-index 2), so later sections with z-indexed images covered
   // it. Lift the outermost z-indexed ancestor while docked.

@@ -183,7 +183,7 @@ window.Webflow.push(() => {
   // It leaves at "Other dining options" (DiningIndividual feedback, 2026-11-12).
   stickyCta(
     `html[data-wf-page="${DININGS_TEMPLATE_PAGE_ID}"] .section_hero-fullbleed-centered .button`,
-    '.section_card-carousel-header-left, .section_cta-booking-newsletter, .section_footer-links',
+    '.section_card-stagger-header-left, .section_card-carousel-header-left, .section_cta-booking-newsletter, .section_footer-links',
     { phoneShowAfter: 120 }, // Stephen 17 Nov: on phones it covered the copy or was cropped at the screen edge; show it docked after a short scroll
   )
   // Story "Learn more" floats over the copy (Figma mobile; F80 desktop too).
