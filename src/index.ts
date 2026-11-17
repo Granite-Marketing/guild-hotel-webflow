@@ -50,6 +50,7 @@ import { roomListHoverPreview } from '$utils/roomListHoverPreview'
 import { roomsQuiz } from '$utils/roomsQuiz'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
 import { scrollReveal } from '$utils/scrollReveal'
+import { heroImageScale } from '$utils/heroImageScale'
 import { scriptReveal } from '$utils/scriptReveal'
 import { sectionVideo } from '$utils/sectionVideo'
 import { smoothScroll } from '$utils/smoothScroll'
@@ -161,6 +162,8 @@ window.Webflow.push(() => {
   // Desktop feedback: data-reveal="fade|text-mask|image-mask" opt-in scroll reveals.
   scriptReveal()
   scrollReveal()
+  // M23: hero photo settles from a slight zoom on load (the text mask above is unchanged).
+  heroImageScale()
   // Lifts the first-screen pre-hide (reveal-prehide.css) now that reveal start states are set.
   document.documentElement.classList.add('reveal-ready')
   // slot G: scrollTextReveal()

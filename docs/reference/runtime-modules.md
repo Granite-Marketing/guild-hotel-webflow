@@ -464,6 +464,19 @@ On-load word reveal for the hero heading.
 - Lines get `overflow: hidden`, words rise from `y: 110%`. Pre-hide both in
   CSS (`js-loading-flash-prevention.md`). Order: slot C.
 
+### heroImageScale
+
+On-load scale-in for the full-bleed hero photo (M23). Wired in `src/index.ts`
+right after `scrollReveal()`; the hero text mask (scrollReveal `text-mask` on
+`.hero-fullbleed-centered_component`) is untouched.
+
+- `.hero-fullbleed-centered_image` inside `.hero-fullbleed-centered_figure`
+  (every Hero Fullbleed Centered instance). The figure gets `overflow: hidden`
+  from code.
+- Scale 1.12 to 1 over 1.8s, `power2.out`. No opacity change. The transform is
+  cleared at the end. Reduced motion: nothing runs.
+- Check: `npx playwright test tests/visual/hero-image-scale.spec.ts`.
+
 ### navToggle
 
 Mobile nav open/close with a11y state and scroll pause.
