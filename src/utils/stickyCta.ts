@@ -80,8 +80,6 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     holder.style.minHeight = ''
     holder.style.minHeight = `${button.offsetHeight}px`
   }
-  holdSpace()
-
   const setBottom = (px: number) => button.style.setProperty('bottom', `${px}px`, 'important')
 
   const applyDock = () => {
@@ -97,12 +95,23 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
   let atEnd = false
   const showIfDue = () =>
     gsap.to(button, { autoAlpha: !atEnd && (!phoneDelayed || isStuck) ? 1 : 0, duration: 0.3, overwrite: 'auto' })
-  if (phoneDelayed) gsap.set(button, { autoAlpha: 0 })
+  if (phoneDelayed) {
+    // Docked from load and out of the layout, so no empty slot is left under the hero copy.
+    gsap.set(button, { autoAlpha: 0 })
+    holder.style.display = 'contents'
+    applyDock()
+  } else {
+    holdSpace()
+  }
 
   const setStuck = (stuck: boolean) => {
     if (stuck === isStuck) return
     isStuck = stuck
-    if (phoneDelayed) showIfDue()
+    // A phoneDelayed button is docked for good; scroll only shows or hides it.
+    if (phoneDelayed) {
+      showIfDue()
+      return
+    }
     if (stuck) {
       applyDock()
     } else {
@@ -127,7 +136,8 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     // onToggle does not fire again when the trigger stays active through a
     // refresh, so re-apply the docked state here.
     onRefresh: (self: ScrollTriggerInstance) => {
-      holdSpace()
+      if (phoneDelayed) applyDock()
+      else holdSpace()
       isStuck = false
       setStuck(self.isActive)
     },
