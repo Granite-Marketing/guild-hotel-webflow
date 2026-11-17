@@ -40,7 +40,12 @@ const DOCK_STYLES: Array<[string, string]> = [
   ['left', '50%'],
   ['z-index', '90'],
 ]
-export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTOR) => {
+export interface StickyCtaOptions {
+  /** Phones only: hide the button until this many px of scroll, then show it docked (hero buttons whose own spot the screen edge crops). */
+  phoneShowAfter?: number
+}
+
+export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTOR, options: StickyCtaOptions = {}) => {
   const button = document.querySelector<HTMLElement>(selector)
   if (!button) return
   const holder = button.parentElement
@@ -60,6 +65,7 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
   let dockGap = DOCK_GAP
   const isDesktop = window.matchMedia('(min-width: 768px)').matches
   let settled = false
+  const phoneDelayed = !isDesktop && options.phoneShowAfter !== undefined
   const bottomGap = () => (isDesktop && settled ? DESKTOP_GAP : dockGap)
 
   const measureDock = () => {
@@ -67,7 +73,7 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     const gapAtTop = window.innerHeight - naturalBottom
     // One pixel under its own spot, so a first-screen button is docked from
     // load instead of being clipped by the hero edge until the first scroll.
-    dockGap = gapAtTop > 0 ? Math.max(0, gapAtTop - 1) : isDesktop ? DESKTOP_GAP : DOCK_GAP
+    dockGap = phoneDelayed ? DOCK_GAP : gapAtTop > 0 ? Math.max(0, gapAtTop - 1) : isDesktop ? DESKTOP_GAP : DOCK_GAP
   }
 
   const holdSpace = () => {
@@ -87,9 +93,16 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     if (layer) layer.style.zIndex = '90'
   }
 
+  // Shown in place from load, except a phoneDelayed button, which shows only once docked. All hide at the closing sections.
+  let atEnd = false
+  const showIfDue = () =>
+    gsap.to(button, { autoAlpha: !atEnd && (!phoneDelayed || isStuck) ? 1 : 0, duration: 0.3, overwrite: 'auto' })
+  if (phoneDelayed) gsap.set(button, { autoAlpha: 0 })
+
   const setStuck = (stuck: boolean) => {
     if (stuck === isStuck) return
     isStuck = stuck
+    if (phoneDelayed) showIfDue()
     if (stuck) {
       applyDock()
     } else {
@@ -107,7 +120,7 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     trigger: holder,
     start: () => {
       measureDock()
-      return `bottom bottom-=${dockGap}`
+      return phoneDelayed ? options.phoneShowAfter : `bottom bottom-=${dockGap}`
     },
     end: 'max',
     onRefreshInit: () => setStuck(false),
@@ -144,7 +157,9 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     trigger: endSection,
     start: 'top bottom',
     end: 'max',
-    onToggle: (self: ScrollTriggerInstance) =>
-      gsap.to(button, { autoAlpha: self.isActive ? 0 : 1, duration: 0.3, overwrite: 'auto' }),
+    onToggle: (self: ScrollTriggerInstance) => {
+      atEnd = self.isActive
+      showIfDue()
+    },
   })
 }

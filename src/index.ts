@@ -182,8 +182,8 @@ window.Webflow.push(() => {
   // It leaves at "Other dining options" (DiningIndividual feedback, 2026-11-12).
   stickyCta(
     `html[data-wf-page="${DININGS_TEMPLATE_PAGE_ID}"] .section_hero-fullbleed-centered .button`,
-    // The hero now fits the phone screen, so the button shows in its own spot under the copy and docks there (Stephen 17 Nov: docking at the bottom covered the copy).
     '.section_card-carousel-header-left, .section_cta-booking-newsletter, .section_footer-links',
+    { phoneShowAfter: 120 }, // Stephen 17 Nov: on phones it covered the copy or was cropped at the screen edge; show it docked after a short scroll
   )
   // Story "Learn more" floats over the copy (Figma mobile; F80 desktop too).
   stickyCta('.section_article-body .article-body_footer .button')
