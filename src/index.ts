@@ -174,6 +174,7 @@ window.Webflow.push(() => {
   stickyCta(
     `html[data-wf-page="${DININGS_TEMPLATE_PAGE_ID}"] .section_hero-fullbleed-centered .button`,
     '.section_card-carousel-header-left, .section_cta-booking-newsletter, .section_footer-links',
+    { dockFromLoad: true }, // M21: visible in the hero before any scroll, even on a tall phone hero
   )
   // Story "Learn more" floats over the copy (Figma mobile; F80 desktop too).
   stickyCta('.section_article-body .article-body_footer .button')
