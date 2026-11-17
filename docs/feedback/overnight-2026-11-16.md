@@ -1,6 +1,6 @@
 # Overnight, 16 November: what is live on staging
 
-Staging: https://the-guild-hotel-c34e71.webflow.io (now on release v1.2.34). Everything below was checked on the live staging site with screenshots on each ticket.
+Staging: https://the-guild-hotel-c34e71.webflow.io (now on release v1.2.35). Everything below was checked on the live staging site with screenshots on each ticket.
 
 ## Ready for you to check
 
@@ -38,7 +38,15 @@ Staging: https://the-guild-hotel-c34e71.webflow.io (now on release v1.2.34). Eve
 
 **Test page.** The History 16px test page is off staging (its address now shows "page not found"). Webflow's tools can only hide a page, so it still sits as a draft in the Designer; delete it there whenever convenient.
 
-You confirmed: hexagon corners stay as they are, and hero text stays 18px only over the top photo.
+You confirmed: hexagon corners stay as they are, and hero text stays 18px only over the top photo. You also confirmed the Arts, Press and History dates fixes.
+
+## Second round, 17 November
+
+**Venue sliders.** The old venue's text now finishes sliding out before the new venue's text starts, so two venues' text never move at once and the new one is always the one you see. This applies to every venue slider (Home, Dining, Wellness, Meetings, Corporate). In a fast-scroll test on Meetings the old version had 33 frames with both texts moving; the new one has none.
+
+**Photo grid numbers.** The small numbers before each caption now stay hidden and rise in with their caption. They had been showing on their own while the caption was still hidden. Top: before. Bottom: now, the same moment, with nothing showing yet.
+
+![Caption number before and after](images/2026-11-16/189/caption-number-before-after.webp)
 
 ## Assumptions I made
 
