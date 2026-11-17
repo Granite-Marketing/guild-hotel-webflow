@@ -658,12 +658,15 @@ Scroll reveals for any block, set in the Designer as a custom attribute or appli
 
 **Code-applied coverage.** `AUTO_REVEALS` in `scrollReveal.ts` maps shared component classes to a mode (`text-mask` for header, text and footer groups, `image-fade` for figures), so every page and CMS template using the component reveals with no Designer attribute. A Designer `data-reveal` wins. Blocks inside modules that animate their own copy or media are skipped (`OWNED`: enlarge-snap content, history collapse, offers sliders, image-stack collapse, rooms quiz, hover-follow items, room preview, dialogs, Swiper, forms). To add a component, add its wrapper class to the map; if it can sit in the first screen, add it to `docs/reference/site-head/reveal-prehide.css` too.
 
+**Staggered rows and mobile-only reveals (#233).** `STAGGERED_REVEALS` tags repeated rows in code with a delay of 0.1s per row (capped at 0.5s): each FAQ `.accordion_question` text-masks in and its `.accordion_item` (divider) fades in (M12); `form-split-script-contact` fieldset headers and fields fade in with `fade-only` (M30), skipping the `form` guard because the fields are the point. `MOBILE_REVEALS` run below 768px only, through `gsap.matchMedia` (reverted past it, desktop untouched): Home collage `.home-art-stories_trail-figure` fades in with `fade-only` as each reaches the trigger line (M4), and Corporate "Why teams choose the Guild" row images (`.feature-grid-dark-eyebrow_item-figure`, or any figure inside `.feature-grid-dark-eyebrow_item`) scale and fade with `image-fade` (M39); a no-op until the Webflow ticket adds them. Reduced motion shows everything at once. Fixture test: `tests/visual/scroll-reveal-fade-only.spec.ts`.
+
 **Flash prevention.** `reveal-prehide.css` (bundled) hides `[data-reveal]` and the first-screen auto classes while `html.w-mod-js` lacks `.reveal-ready`; `index.ts` adds `.reveal-ready` right after `scrollReveal()`. A 3s CSS animation shows them if the bundle never runs.
 
 | Attribute | On | Effect |
 |---|---|---|
 | `data-reveal="fade"` | any block | soft dissolve: fades in while rising 2rem (1.2s, power3.out) |
 | `data-reveal="text-mask"` | a heading, paragraph or a wrapper | line mask via `lineMaskReveal`: each line's words rise from behind their edge; buttons and figures inside rise from their own clip |
+| `data-reveal="fade-only"` | any block | opacity 0 to 1 only (0.8s, power1.out): no rise, no text mask, no zoom. For form fields and collage images |
 | `data-reveal="image-mask"` | the figure or image wrapper | mask reveal: the block opens upward from its bottom edge while the image inside settles from 1.15 scale |
 | `data-reveal-delay="0.2"` | with any of the above | seconds to wait, to stagger neighbours |
 | `data-reveal-start="60"` | with any of the above | viewport percentage from the top (0 to 100) at which the element's top triggers the reveal (`60` is `top 60%`); missing or invalid keeps `top 90%`; still plays once |
