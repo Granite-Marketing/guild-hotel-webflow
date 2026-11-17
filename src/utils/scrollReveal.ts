@@ -175,7 +175,8 @@ const OWNED_BY_MODULE = OWNED_MODULES.join(', ')
  * room pages, marked by the room description section.
  */
 const ROOM_PAGE_MARKER = '.rooms-individual-description_component'
-const ROOM_PAGE_IMAGE_FADE = ['.gallery-mosaic-captioned_figure']
+// The photo itself: its figure also holds a text-masked caption, and a block holding a tagged child is skipped.
+const ROOM_PAGE_IMAGE_FADE = ['.gallery-mosaic-captioned_figure > img']
 
 const tagSharedBlocks = () => {
   if (document.querySelector(ROOM_PAGE_MARKER)) {
@@ -203,7 +204,7 @@ const tagStaggeredRows = () => {
 }
 
 const playImageFade = (element: HTMLElement, delay: number, start: string) => {
-  const media = element.querySelector<HTMLElement>('img, video, iframe')
+  const media = element.matches('img, video, iframe') ? element : element.querySelector<HTMLElement>('img, video, iframe')
   const timeline = gsap.timeline({ delay, scrollTrigger: { trigger: element, start, once: true } })
   // Round 3: quick, clear fade with only a slight settle.
   timeline.fromTo(element, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.7, ease: 'power1.out' })
