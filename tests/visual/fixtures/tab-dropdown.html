@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fixture: tab dropdown</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <style>
+      body { margin: 0; background: #f4efdf; color: #262118; font-family: sans-serif; }
+      .fixture_frame { position: relative; height: 700px; }
+      .venue-card-fullbleed_tabs { position: absolute; left: 0; right: 0; bottom: 0; display: flex; gap: 1rem; padding: 0.5rem; }
+      .venue-card-fullbleed_tab { color: inherit; text-decoration: none; }
+      .fixture_after { height: 40px; background: #cdd; }
+    </style>
+  </head>
+  <body>
+    <div class="fixture_frame">
+      <div class="venue-card-fullbleed_tabs" data-fixture="bar">
+        <a class="venue-card-fullbleed_tab is-active" href="#zuma" data-fixture="first">Zuma</a>
+        <a class="venue-card-fullbleed_tab" href="#lobby">The Lobby Bar</a>
+        <a class="venue-card-fullbleed_tab" href="#pool">Pool Lounge</a>
+        <a class="venue-card-fullbleed_tab" href="#garden">Garden Terrace</a>
+        <a class="venue-card-fullbleed_tab" href="#solana">Solana Coffee</a>
+      </div>
+    </div>
+    <div class="fixture_after" data-fixture="after"></div>
+    <script src="tab-dropdown.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fixture: focus rings, script tilt space, directions links (#235)</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      /* Webflow base style: a ring on plain :focus, the case the module must quiet. */
+      a:focus, button:focus, [tabindex]:focus { outline: 3px solid rgb(255, 0, 0); outline-offset: 2px; }
+      .tilted { rotate: -7.38deg; font-size: 40px; margin: 0; }
+      .level { font-size: 40px; margin: 0; }
+      @media (min-width: 768px) { .level { rotate: -7.38deg; } }
+      @media (max-width: 767px) { .level { rotate: none; } }
+    </style>
+  </head>
+  <body>
+    <button id="close" type="button">Close</button>
+    <a id="link" href="#x">A link</a>
+    <h2 id="step-heading" tabindex="-1">What type of stay are you planning?</h2>
+    <button id="later" type="button">Later</button>
+
+    <h2 class="split-image-text-light_heading w-variant-9cd3f054-0bc5-3e71-98b6-562cb8361ab0 tilted" id="george">George Marston</h2>
+    <h2 class="meetings-collection-venues_heading level" id="venues">Venues</h2>
+
+    <a id="cms-dir" data-map-directions href="https://www.google.com/maps/dir/?api=1&destination=32.7,-117.1">Directions</a>
+    <a id="static-dir" href="https://www.google.com/maps/dir/?api=1&destination=32.8,-117.2">Directions</a>
+    <a id="plain" href="/about">About</a>
+  </body>
+</html>
