@@ -2,7 +2,5 @@
 @media (min-width:768px){
  .tab-pills-intro_heading.text-style-script,.meetings-collection-venues_heading{rotate:-7.38deg}
 }
-/* M26: History "George Marston" also tilts on phones, same angle as desktop (no media query). scriptTiltSpace adds the clearance. */
-.split-image-text-light_heading.w-variant-9cd3f054-0bc5-3e71-98b6-562cb8361ab0{rotate:-2.56deg}
-/* Stephen 17 Nov: a little more angle on phones. */
+/* M26 (Stephen 17 Nov): History "George Marston" tilts -5deg on phones only; desktop stays level. scriptTiltSpace adds the clearance. */
 @media (max-width:767px){.split-image-text-light_heading.w-variant-9cd3f054-0bc5-3e71-98b6-562cb8361ab0{rotate:-5deg}}
