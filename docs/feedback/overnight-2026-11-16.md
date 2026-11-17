@@ -1,6 +1,6 @@
 # Overnight, 16 November: what is live on staging
 
-Staging: https://the-guild-hotel-c34e71.webflow.io (now on release v1.2.31). Everything below was checked on the live staging site with screenshots on each ticket.
+Staging: https://the-guild-hotel-c34e71.webflow.io (now on release v1.2.34). Everything below was checked on the live staging site with screenshots on each ticket.
 
 ## Ready for you to check
 
@@ -22,15 +22,34 @@ Staging: https://the-guild-hotel-c34e71.webflow.io (now on release v1.2.31). Eve
 
 **Neighborhood and Happenings hover (cards 10 and 11).** The "Beyond Downtown" images on [Neighborhood](https://the-guild-hotel-c34e71.webflow.io/neighborhood) and the "More around town" cards on a [Happenings story](https://the-guild-hotel-c34e71.webflow.io/happenings-stories/locals-night-at-rodeo-bar) zoom very slightly (1.04) on hover. [#185](https://github.com/Granite-Marketing/guild-hotel-webflow/issues/185)
 
+## Morning fixes, 17 November (from your review)
+
+**Meetings venue slider.** Each venue now holds while you scroll at a normal pace: Council Boardroom holds for about two screens of scrolling after the image opens (it was under one), and every later venue for just over one. The same slider on Home, Dining, Wellness and Corporate got the same timing.
+
+**Arts full-screen image.** Once the image fills the screen it now holds for more than a screen of scrolling (it was half), so it no longer passes in a blink. Every section built the same way uses this new default.
+
+**Photo grid text.** The photos stay still, and the captions and the title on the grid now rise in line by line as they scroll in, on every page that has the block. On History this also needed a timing fix, because the pinned section above it made its text play before you reached it.
+
+**Press tab bar.** The Press / Design / Community bar now stays visible through the whole Community section and only fades as the contact form comes into view. Blog and Happenings work the same way.
+
+![Press tab bar over Community](images/2026-11-16/181/press-tabs-community.webp)
+
+**History dates.** The 1924 and 2026 labels now animate in at the same moment as "Once opened, never closed".
+
+**Test page.** The History 16px test page is off staging (its address now shows "page not found"). Webflow's tools can only hide a page, so it still sits as a draft in the Designer; delete it there whenever convenient.
+
+You confirmed: hexagon corners stay as they are, and hero text stays 18px only over the top photo.
+
 ## Assumptions I made
 
 1. **History photo mosaic.** The photo grid lower on History ("Discover the Property" area) no longer animates; it is simply there. You said it did not need an animation. The same block is on Meetings, Corporate, Neighborhood and the Dining pages, so it is static there too.
 
 2. **Buttons: no SVG needed from the client.** I tested whether a better SVG file would help. It would not: the softness came from how the browser drew the outline, not from the shape. The fix needed no change in Webflow.
-3. **Buttons: what stays.** On a normal (non-retina) screen, the long shallow corners on the widest buttons still show tiny steps, which every screen does with a thin angled line. If you want them cleaner, the option is shorter, fixed-size corners on wide buttons; I left the design as it is.
+3. **Buttons: what stays.** On a normal (non-retina) screen, the long shallow corners on the widest buttons still show tiny steps, which every screen does with a thin angled line. You confirmed the design stays as it is.
 4. **Buttons: Safari.** I could only test in Chrome tonight. Please glance at a button in Safari.
 5. **Paragraphs: what counts as a hero.** Only the text over the big image at the top of each page stays at 18px. The text on the full-width venue photos further down (Dining, Wellness, Meetings) went to 16px like other body text. Small capital headings above sections keep their size.
-6. **Paragraphs: test page kept.** The History 16px test page is still on staging, hidden from search. I'll delete it once you say so.
+6. **Slider sections are longer.** Holding each venue longer makes these sections about half as long again to scroll through (Home's two sections the most). I judged that the right trade for not skipping venues.
+7. **Press tab bar fade.** It fades over a quarter screen once the contact form appears, so for a moment it sits just below the last Community card as it fades.
 
 ## Left alone, as agreed
 
