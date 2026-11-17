@@ -5,10 +5,17 @@
  * grow taller than their box once rotated, so a long line runs into the text
  * below. Each one gets top and bottom margin equal to the height the tilt adds,
  * half its width times the sine of the angle (plus descender room below), so short and long headings both
- * clear their neighbours. Untilted headings (phones) get no margin.
+ * clear their neighbours. Phones are not skipped: any heading tilted at the current width
+ * gets room, and untilted headings get none (the rotation is set per breakpoint
+ * in script-tilt.css).
  */
 
-const SELECTOR = '.tab-pills-intro_heading.text-style-script, .meetings-collection-venues_heading'
+const SELECTOR = [
+  '.tab-pills-intro_heading.text-style-script',
+  '.meetings-collection-venues_heading',
+  // History "George Marston" (Tan variant); tilted on phones too (M26).
+  '.split-image-text-light_heading.w-variant-9cd3f054-0bc5-3e71-98b6-562cb8361ab0',
+].join(', ')
 
 // Script descenders (the long f, p, y) hang below the line box; a quarter of the font size covers them.
 const DESCENDER_ROOM = 0.25

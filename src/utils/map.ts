@@ -33,6 +33,7 @@
  * docs/solutions/integration-issues/page-load-scroll-freeze-2026-11-16.md.
  */
 
+import { openInNewTab } from '$utils/directionsLinks'
 import { mapNeeds } from '$utils/mapNeeds'
 
 const ACTIVE_CLASS = 'is-active'
@@ -83,6 +84,7 @@ const coordinatesOf = (item: HTMLElement) => {
   if (!fromAttribute) return coordinatesFromLink(item)
   item.querySelectorAll<HTMLAnchorElement>('[data-map-directions]').forEach((link) => {
     link.href = directionsUrl(fromAttribute)
+    openInNewTab(link)
   })
   return fromAttribute
 }
