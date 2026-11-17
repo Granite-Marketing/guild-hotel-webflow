@@ -182,4 +182,7 @@ window.Webflow.push(() => {
     // Mobile review: the Dining venue selector shows from the first screen (Figma mobile).
     earlyVenueTabs(`html[data-wf-page="${DINING_PAGE_ID}"]`)
   }
+  // Pins created after the reveals (History's landmark pin) push everything below them down; recalculate in page order so lower reveals fire on time.
+  ScrollTrigger.sort()
+  ScrollTrigger.refresh()
 })

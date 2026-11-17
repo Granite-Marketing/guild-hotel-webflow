@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.34
+
+### Patch Changes
+
+- Recalculate ScrollTriggers in page order after init, so reveals below a pin created later (History's landmark) fire when they reach the screen instead of a few screens early.
+
 ## 1.2.33
 
 ### Patch Changes
