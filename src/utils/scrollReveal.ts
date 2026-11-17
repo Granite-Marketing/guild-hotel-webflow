@@ -140,6 +140,9 @@ const STAGGERED_REVEALS: { mode: string; selector: string; group: string }[] = [
   { mode: 'fade-only', selector: '.faq-accordion_list .accordion_item', group: '.faq-accordion_list' },
   { mode: 'fade-only', selector: '.form-split-script-contact_fieldset-header', group: '.form-split-script-contact_fieldsets' },
   { mode: 'fade-only', selector: '.form-split-script-contact_field', group: '.form-split-script-contact_fieldset' },
+  // Stephen 17 Nov: every form fades its fields in, not only the contact and RFP forms.
+  { mode: 'fade-only', selector: '.form-contact-fields_footer', group: '.form-contact-fields_form' },
+  { mode: 'fade-only', selector: '.cta-booking-newsletter_form > :is(label, input)', group: '.cta-booking-newsletter_form' },
 ]
 
 /**

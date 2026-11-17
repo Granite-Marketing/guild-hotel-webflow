@@ -57,7 +57,6 @@ import { scriptReveal } from '$utils/scriptReveal'
 import { sectionVideo } from '$utils/sectionVideo'
 import { smoothScroll } from '$utils/smoothScroll'
 import { staggerCards } from '$utils/staggerCards'
-import { earlyVenueTabs } from '$utils/earlyVenueTabs'
 import { stickyCta } from '$utils/stickyCta'
 import { scriptTiltSpace } from '$utils/scriptTiltSpace'
 import { stickyTabs } from '$utils/stickyTabs'
@@ -187,11 +186,8 @@ window.Webflow.push(() => {
   )
   // Story "Learn more" floats over the copy (Figma mobile; F80 desktop too).
   stickyCta('.section_article-body .article-body_footer .button')
-  // shortcut: decided once at load, so a resize across 768px keeps the first state; fine for phones.
-  if (window.matchMedia('(max-width: 767px)').matches) {
-    // Mobile review: the Dining venue selector shows from the first screen (Figma mobile).
-    earlyVenueTabs(`html[data-wf-page="${DINING_PAGE_ID}"]`)
-  }
+  // Off (Stephen 17 Nov, overrides the Dining mobile Figma): the venue selector shows only on the slider section.
+  // earlyVenueTabs(`html[data-wf-page="${DINING_PAGE_ID}"]`)
   // Pins created after the reveals (History's landmark pin) push everything below them down; recalculate in page order so lower reveals fire on time.
   ScrollTrigger.sort()
   ScrollTrigger.refresh()

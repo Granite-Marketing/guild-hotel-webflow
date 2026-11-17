@@ -149,7 +149,7 @@ export const tabDropdown = () => {
           .fromTo(panel, start, { ...full, duration: OPEN_SECONDS, ease: 'power3.out' })
           .fromTo(
             tabs,
-            { autoAlpha: 0, yPercent: 60 },
+            { autoAlpha: 0, yPercent: 20 },
             {
               autoAlpha: (index: number) => linkOpacity[index],
               yPercent: 0,
@@ -173,7 +173,7 @@ export const tabDropdown = () => {
         })
         .to(tabs, {
           autoAlpha: 0,
-          yPercent: 60,
+          yPercent: 20,
           duration: LINK_SECONDS * 0.6,
           ease: 'power2.in',
           stagger: { each: LINK_STAGGER / 2, from: 'end' },
