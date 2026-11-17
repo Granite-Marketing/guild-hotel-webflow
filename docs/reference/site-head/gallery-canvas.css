@@ -253,6 +253,11 @@
 }
 
 @media screen and (max-width: 767px) {
+  /* M36: small viewport height on phones so the controls stay above the browser bar */
+  [data-gallery-canvas] .gallery-all_scroller {
+    height: 100svh;
+  }
+
   [data-gallery-canvas] .gallery-all_scroller::after {
     box-shadow: inset 0 0 5rem 2.25rem var(--gallery-canvas-fade);
   }
