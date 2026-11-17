@@ -1,0 +1,5 @@
+# Review decisions
+- Adversarial lens runs in-process (sonnet), no cross-model peer; alternatives: codex/grok/antigravity peer; why: no different-provider CLI installed (codex, grok absent) and build guard requires sonnet helpers; landed: ce-code-review run 20261117-140629-be23c381
+- Roster: correctness, project-standards (CLAUDE.md), testing, maintainability, julik-frontend-races, adversarial, learnings, all on sonnet; alternatives: add security/performance/reliability; why: no auth/input/query/retry surface in a front-end animation diff; landed: same run
+- Kept ce-code-review findings #3 and #5 as P2; promoted adversarial focusRing first-Tab finding to P2 (demoted by merge as single-reviewer) because it breaks the Done-when 'Tab key still shows a visible ring on every control'; rest as P3; alternatives: follow merge leaf exactly; why: Done-when line directly at stake; landed: docs/builds/228/review.md
+- Revised (replaces previous entry's promotion): focusRing first-Tab finding stays P3; why: Tab pressed while the document has focus fires keydown first, so only a Tab from browser chrome hits it; landed: docs/builds/228/review.md
