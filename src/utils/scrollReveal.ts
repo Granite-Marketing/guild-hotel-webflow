@@ -201,6 +201,8 @@ const tagStaggeredRows = () => {
       const siblings = Array.from(element.closest(group)?.querySelectorAll(selector) ?? [])
       const index = Math.max(0, siblings.indexOf(element))
       element.dataset.reveal = mode
+      // An FAQ question is a plain div, which the line mask only splits when marked as its own target (M12).
+      if (mode === 'text-mask') element.setAttribute('data-line-mask', '')
       if (!element.dataset.revealDelay) element.dataset.revealDelay = String(Math.min(index * STAGGER_STEP, STAGGER_MAX))
     })
   })
@@ -255,7 +257,8 @@ export const scrollReveal = () => {
     if (kind === 'fade') {
       gsap.fromTo(
         element,
-        { autoAlpha: 0, y: '2rem' },
+        // A block holding a form only fades: form fields never slide (Stephen 17 Nov), e.g. the newsletter column.
+        { autoAlpha: 0, y: element.querySelector('form') ? 0 : '2rem' },
         { autoAlpha: 1, y: 0, duration: 1, delay, ease: EASE, scrollTrigger: { trigger: element, start, once: true } },
       )
       return
