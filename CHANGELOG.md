@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.35
+
+### Patch Changes
+
+- Venue sliders: the incoming panel copy starts only after the outgoing copy has fully masked out. Line mask: a superscript word (collapsed line height) drops a full font size below its line, so caption numbers reveal with their caption instead of sitting visible.
+
 ## 1.2.34
 
 ### Patch Changes

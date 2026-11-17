@@ -42,6 +42,25 @@ const ELEMENT_STAGGER = 0.12
 const REVERSE_SPEED = 1.6
 const HIDDEN = { yPercent: 110 }
 const SHOWN = { yPercent: 0, duration: DURATION, ease: 'power3.out' }
+const WORD_SHOWN = { ...SHOWN, y: 0 }
+
+/**
+ * Extra drop (px) a word needs beyond yPercent 110 to clear its line's clip.
+ * Zero for ordinary words. A superscript (the mosaic caption number, Stephen
+ * 2026-11-17) has a collapsed line height, so its box is far shorter than its
+ * glyph (zero tall in the caption) and 110% of it barely moves: the number sat
+ * visible while its caption was hidden. Such a word drops by a full font size
+ * past the line's bottom edge instead.
+ */
+const extraDrop = (word: HTMLElement, line: HTMLElement) => {
+  const height = word.offsetHeight
+  const fontSize = parseFloat(getComputedStyle(word).fontSize)
+  if (height >= fontSize) return 0
+  // Resting top: undo any transform a rebuild finds mid-tween.
+  const shift = Number(gsap.getProperty(word, 'y')) + (Number(gsap.getProperty(word, 'yPercent')) * height) / 100
+  const restingTop = word.getBoundingClientRect().top - shift
+  return Math.max(0, line.getBoundingClientRect().bottom - restingTop + fontSize - height * 1.1)
+}
 
 const TARGET_SELECTOR = 'h1, h2, h3, h4, h5, h6, p, figure, .button, [data-line-mask]'
 
@@ -50,6 +69,8 @@ interface TextPart {
   element: HTMLElement
   /** Each line's words; the words, not the line's children, rise (inline spans ignore transforms). */
   lineWords: HTMLElement[][]
+  /** The split lines, index-matched to lineWords (each clips its words). */
+  lines: HTMLElement[]
   split: boolean
   /** Creates the SplitText once; later calls do nothing. */
   ensureSplit: () => void
@@ -67,6 +88,8 @@ export interface LineMaskTimeline {
   reverse: () => void
   /** True while any part of the copy is revealed (progress above zero). */
   isRevealed: () => boolean
+  /** Runs `callback` once the copy is fully masked out: now if it already is, else when its reverse completes. */
+  whenHidden: (callback: () => void) => void
 }
 
 /** Text within this many viewport heights of the screen is split ahead of its reveal. */
@@ -141,10 +164,18 @@ const isText = (element: HTMLElement) =>
 export const createLineMaskTimeline = (container: HTMLElement, speed = 1): LineMaskTimeline => {
   const elements = findTargets(container)
   if (!elements.length || window.matchMedia(REDUCED_MOTION).matches) {
-    return { play: () => undefined, reverse: () => undefined, isRevealed: () => false }
+    return { play: () => undefined, reverse: () => undefined, isRevealed: () => false, whenHidden: (callback) => callback() }
   }
 
-  const timeline = gsap.timeline({ paused: true })
+  let hiddenCallbacks: Array<() => void> = []
+  const timeline = gsap.timeline({
+    paused: true,
+    onReverseComplete: () => {
+      const callbacks = hiddenCallbacks
+      hiddenCallbacks = []
+      callbacks.forEach((callback) => callback())
+    },
+  })
   let direction: 'forward' | 'reverse' | null = null
   const parts: RevealPart[] = []
 
@@ -168,7 +199,13 @@ export const createLineMaskTimeline = (container: HTMLElement, speed = 1): LineM
       const offset = parts.indexOf(part) * ELEMENT_STAGGER
       if (part.kind === 'text') {
         part.lineWords.forEach((words, lineIndex) => {
-          timeline.fromTo(words, HIDDEN, SHOWN, offset + lineIndex * LINE_STAGGER)
+          const line = part.lines[lineIndex]
+          timeline.fromTo(
+            words,
+            { ...HIDDEN, y: (_index: number, word: HTMLElement) => (line ? extraDrop(word, line) : 0) },
+            WORD_SHOWN,
+            offset + lineIndex * LINE_STAGGER,
+          )
         })
         return
       }
@@ -196,6 +233,7 @@ export const createLineMaskTimeline = (container: HTMLElement, speed = 1): LineM
         kind: 'text',
         element,
         lineWords: [],
+        lines: [],
         split: false,
         ensureSplit: () => {
           if (splitStarted) return
@@ -211,6 +249,7 @@ export const createLineMaskTimeline = (container: HTMLElement, speed = 1): LineM
               gsap.set(lines, { overflow: 'hidden' })
               const words = self.words ?? []
               part.lineWords = lines.map((line) => words.filter((word) => line.contains(word)))
+              part.lines = lines as HTMLElement[]
               part.split = true
               queueRebuild()
             },
@@ -248,6 +287,10 @@ export const createLineMaskTimeline = (container: HTMLElement, speed = 1): LineM
       runDirection()
     },
     isRevealed: () => timeline.progress() > 0,
+    whenHidden: (callback) => {
+      if (timeline.progress() === 0) callback()
+      else hiddenCallbacks.push(callback)
+    },
   }
 }
 

@@ -201,8 +201,17 @@ const initAnimated = (parts: SnapParts) => {
       reveals[next]?.play()
       shownIndex = next
     }
-    if (immediate) start()
-    else pending = gsap.delayedCall(TEXT_DELAY, start)
+    if (immediate) return start()
+    // Stephen 2026-11-17: the outgoing copy finishes masking out before the
+    // incoming copy starts, so two panels' text never move at once.
+    const outgoing = reveals.filter((reveal, index) => index !== next && reveal?.isRevealed())
+    let waiting = outgoing.length
+    const afterOutro = () => {
+      if (targetIndex !== next || --waiting > 0) return
+      pending = gsap.delayedCall(TEXT_DELAY, start)
+    }
+    if (!waiting) pending = gsap.delayedCall(TEXT_DELAY, start)
+    else outgoing.forEach((reveal) => reveal?.whenHidden(afterOutro))
   }
 
   // Trello "Subnav": on desktop the tab bar sat inside the opening mask and
