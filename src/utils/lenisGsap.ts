@@ -101,7 +101,8 @@ export const lenisEngine: SmoothScrollEngine = {
     // viewport top under the transparent nav, so no earlier section shows.
     const offset = target.hasAttribute('data-scroll-flush') ? 0 : -fixedNavOffset()
     if (instance) syncLenisScroll(instance)
-    if (instance) instance.scrollTo(target, { offset, ...anchorScrollOptions(target.getBoundingClientRect().top + offset) })
+    // userData: scroll-enlarge-snap sections let an anchor scroll pass without locking (#257).
+    if (instance) instance.scrollTo(target, { offset, userData: { anchor: true }, ...anchorScrollOptions(target.getBoundingClientRect().top + offset) })
     else window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY + offset, behavior: 'smooth' })
   },
   scrollTop: () => instance?.scroll ?? window.scrollY,

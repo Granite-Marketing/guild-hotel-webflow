@@ -164,6 +164,7 @@ const pinTabs = (tabs: HTMLElement, warn: boolean) => {
       if (lenis.raw) lenis.raw.scrollTo(entry.target, {
         offset,
         immediate,
+        userData: { anchor: true },
         ...anchorScrollOptions(entry.target.getBoundingClientRect().top + offset),
       })
       else {
