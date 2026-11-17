@@ -24,7 +24,7 @@ export const focusRing = () => {
   const quieted = new WeakSet<HTMLElement>()
 
   const quiet = (element: HTMLElement) => {
-    element.style.setProperty('outline', 'none')
+    element.style.setProperty('outline', 'none', 'important')
     quieted.add(element)
   }
   const restore = (element: HTMLElement) => {
