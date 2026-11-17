@@ -217,12 +217,11 @@ const initAnimated = (parts: SnapParts) => {
   // Trello "Subnav": on desktop the tab bar sat inside the opening mask and
   // showed half-clipped while the first image grew. It fades in only once the
   // scrubbed timeline reaches t=1 (mask fully open) and out again above it.
-  // Phones keep it visible: earlyVenueTabs docks it from the first screen.
+  // Phones too (Stephen 17 Nov): the selector belongs to the slider section only.
   const tabBar = parts.tabs[0]?.closest<HTMLElement>('nav')
-  const desktop = window.matchMedia('(min-width: 768px)')
   let tabBarShown: boolean | null = null
   const syncTabBar = (time: number) => {
-    const show = !desktop.matches || time >= 1 - FULL_EPSILON
+    const show = time >= 1 - FULL_EPSILON
     if (!tabBar || show === tabBarShown) return
     const first = tabBarShown === null
     tabBarShown = show
@@ -251,7 +250,8 @@ const initAnimated = (parts: SnapParts) => {
     scrollTrigger: {
       trigger: stage,
       start: 'top top',
-      end: () => `+=${(window.innerHeight * stepPercent * totalSteps) / 100}`,
+      // The stage (100vh) is stable on iOS; innerHeight changes with the toolbar and, times every step, moved the page below by ~900px on refresh (M6 footer jump).
+      end: () => `+=${(stage.offsetHeight * stepPercent * totalSteps) / 100}`,
       pin: true,
       // Animation feedback (home wellness "too sensitive"): a heavier scrub
       // and a longer settle before snapping, so a small scroll no longer
@@ -379,7 +379,7 @@ const initReduced = (parts: SnapParts) => {
   const trigger = ScrollTrigger.create({
     trigger: stage,
     start: 'top top',
-    end: () => `+=${(window.innerHeight * stepPercent * changeCount) / 100}`,
+    end: () => `+=${(stage.offsetHeight * stepPercent * changeCount) / 100}`,
     pin: true,
     invalidateOnRefresh: true,
     onUpdate: (self: ScrollTriggerInstance) => {

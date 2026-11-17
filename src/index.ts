@@ -18,6 +18,8 @@
 import { accordion } from '$utils/accordion'
 import { anchorScroll } from '$utils/anchorScroll'
 import { buttonHover } from '$utils/buttonHover'
+import { directionsLinks } from '$utils/directionsLinks'
+import { focusRing } from '$utils/focusRing'
 import { cardCarouselHeaderLeft } from '$utils/cardCarouselHeaderLeft'
 import { cmsItemLinks } from '$utils/cmsItemLinks'
 import { contactStickyColumn } from '$utils/contactStickyColumn'
@@ -50,11 +52,11 @@ import { roomListHoverPreview } from '$utils/roomListHoverPreview'
 import { roomsQuiz } from '$utils/roomsQuiz'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
 import { scrollReveal } from '$utils/scrollReveal'
+import { heroImageScale } from '$utils/heroImageScale'
 import { scriptReveal } from '$utils/scriptReveal'
 import { sectionVideo } from '$utils/sectionVideo'
 import { smoothScroll } from '$utils/smoothScroll'
 import { staggerCards } from '$utils/staggerCards'
-import { earlyVenueTabs } from '$utils/earlyVenueTabs'
 import { stickyCta } from '$utils/stickyCta'
 import { scriptTiltSpace } from '$utils/scriptTiltSpace'
 import { stickyTabs } from '$utils/stickyTabs'
@@ -80,7 +82,6 @@ import { underlineHover } from '$utils/underlineHover'
  */
 
 const DININGS_TEMPLATE_PAGE_ID = '6ad67d7416e13e66c2b76107'
-const DINING_PAGE_ID = '6ad66fd476d24ed37ac4c5cb'
 
 window.Webflow ||= [] as unknown as WebflowQueue
 window.Webflow.push(() => {
@@ -108,6 +109,10 @@ window.Webflow.push(() => {
   tabDropdown()
   // Desktop feedback: tilted script headings get room for their tilt; before the scroll engine (changes page height).
   scriptTiltSpace()
+  // M31b: Directions links open in a new tab.
+  directionsLinks()
+  // M11a, M28: focus rings for keyboard use only, never after a tap or a script focus.
+  focusRing()
 
   // slot A: debugOverlay() (before the engine, so it logs the first refresh)
   smoothScroll.init()
@@ -161,6 +166,8 @@ window.Webflow.push(() => {
   // Desktop feedback: data-reveal="fade|text-mask|image-mask" opt-in scroll reveals.
   scriptReveal()
   scrollReveal()
+  // M23: hero photo settles from a slight zoom on load (the text mask above is unchanged).
+  heroImageScale()
   // Lifts the first-screen pre-hide (reveal-prehide.css) now that reveal start states are set.
   document.documentElement.classList.add('reveal-ready')
   // slot G: scrollTextReveal()
@@ -174,14 +181,10 @@ window.Webflow.push(() => {
   stickyCta(
     `html[data-wf-page="${DININGS_TEMPLATE_PAGE_ID}"] .section_hero-fullbleed-centered .button`,
     '.section_card-carousel-header-left, .section_cta-booking-newsletter, .section_footer-links',
+    { phoneShowAfter: 120 }, // Stephen 17 Nov: on phones it covered the copy or was cropped at the screen edge; show it docked after a short scroll
   )
   // Story "Learn more" floats over the copy (Figma mobile; F80 desktop too).
   stickyCta('.section_article-body .article-body_footer .button')
-  // shortcut: decided once at load, so a resize across 768px keeps the first state; fine for phones.
-  if (window.matchMedia('(max-width: 767px)').matches) {
-    // Mobile review: the Dining venue selector shows from the first screen (Figma mobile).
-    earlyVenueTabs(`html[data-wf-page="${DINING_PAGE_ID}"]`)
-  }
   // Pins created after the reveals (History's landmark pin) push everything below them down; recalculate in page order so lower reveals fire on time.
   ScrollTrigger.sort()
   ScrollTrigger.refresh()

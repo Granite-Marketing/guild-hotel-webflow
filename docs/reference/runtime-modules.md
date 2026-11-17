@@ -464,6 +464,19 @@ On-load word reveal for the hero heading.
 - Lines get `overflow: hidden`, words rise from `y: 110%`. Pre-hide both in
   CSS (`js-loading-flash-prevention.md`). Order: slot C.
 
+### heroImageScale
+
+On-load scale-in for the full-bleed hero photo (M23). Wired in `src/index.ts`
+right after `scrollReveal()`; the hero text mask (scrollReveal `text-mask` on
+`.hero-fullbleed-centered_component`) is untouched.
+
+- `.hero-fullbleed-centered_image` inside `.hero-fullbleed-centered_figure`
+  (every Hero Fullbleed Centered instance). The figure gets `overflow: hidden`
+  from code.
+- Scale 1.12 to 1 over 1.8s, `power2.out`. No opacity change. The transform is
+  cleared at the end. Reduced motion: nothing runs.
+- Check: `npx playwright test tests/visual/hero-image-scale.spec.ts`.
+
 ### navToggle
 
 Mobile nav open/close with a11y state and scroll pause.
@@ -658,12 +671,15 @@ Scroll reveals for any block, set in the Designer as a custom attribute or appli
 
 **Code-applied coverage.** `AUTO_REVEALS` in `scrollReveal.ts` maps shared component classes to a mode (`text-mask` for header, text and footer groups, `image-fade` for figures), so every page and CMS template using the component reveals with no Designer attribute. A Designer `data-reveal` wins. Blocks inside modules that animate their own copy or media are skipped (`OWNED`: enlarge-snap content, history collapse, offers sliders, image-stack collapse, rooms quiz, hover-follow items, room preview, dialogs, Swiper, forms). To add a component, add its wrapper class to the map; if it can sit in the first screen, add it to `docs/reference/site-head/reveal-prehide.css` too.
 
+**Staggered rows and mobile-only reveals (#233).** `STAGGERED_REVEALS` tags repeated rows in code with a delay of 0.1s per row (capped at 0.5s): each FAQ `.accordion_question` text-masks in and its `.accordion_item` (divider) fades in (M12); `form-split-script-contact` fieldset headers and fields fade in with `fade-only` (M30), skipping the `form` guard because the fields are the point. `MOBILE_REVEALS` run below 768px only, through `gsap.matchMedia` (reverted past it, desktop untouched): Home collage `.home-art-stories_trail-figure` fades in with `fade-only` as each reaches the trigger line (M4), and Corporate "Why teams choose the Guild" row images (`.feature-grid-dark-eyebrow_item-figure`, or any figure inside `.feature-grid-dark-eyebrow_item`) scale and fade with `image-fade` (M39); a no-op until the Webflow ticket adds them. Reduced motion shows everything at once. Fixture test: `tests/visual/scroll-reveal-fade-only.spec.ts`.
+
 **Flash prevention.** `reveal-prehide.css` (bundled) hides `[data-reveal]` and the first-screen auto classes while `html.w-mod-js` lacks `.reveal-ready`; `index.ts` adds `.reveal-ready` right after `scrollReveal()`. A 3s CSS animation shows them if the bundle never runs.
 
 | Attribute | On | Effect |
 |---|---|---|
 | `data-reveal="fade"` | any block | soft dissolve: fades in while rising 2rem (1.2s, power3.out) |
 | `data-reveal="text-mask"` | a heading, paragraph or a wrapper | line mask via `lineMaskReveal`: each line's words rise from behind their edge; buttons and figures inside rise from their own clip |
+| `data-reveal="fade-only"` | any block | opacity 0 to 1 only (0.8s, power1.out): no rise, no text mask, no zoom. For form fields and collage images |
 | `data-reveal="image-mask"` | the figure or image wrapper | mask reveal: the block opens upward from its bottom edge while the image inside settles from 1.15 scale |
 | `data-reveal-delay="0.2"` | with any of the above | seconds to wait, to stagger neighbours |
 | `data-reveal-start="60"` | with any of the above | viewport percentage from the top (0 to 100) at which the element's top triggers the reveal (`60` is `top 60%`); missing or invalid keeps `top 90%`; still plays once |
@@ -1252,6 +1268,16 @@ Default selector `[data-sticky-cta]`; the Guild Dinings template passes a
 selector scoped to its page id because the button lives in the shared Hero
 component. Re-docks after every ScrollTrigger refresh.
 
+M21 and M22 (2026-11-17): `stickyCta(selector, endSelector, { dockFromLoad })`.
+The docked state is the `data-sticky-cta-docked` attribute plus the `is-stuck`
+class, plus inline `!important` styles (`position: fixed`, `translate: -50% 0`, `bottom`, `z-index`)
+re-applied on every ScrollTrigger refresh, not plain GSAP styles, so the hero line mask rewriting the button's inline
+style and transform cannot undo it. `dockFromLoad: true` (the Dinings hero)
+docks a button whose own spot is below the first screen from load, so it shows
+before any scroll on a phone whose hero is taller than the screen. The Dinings
+call ends at `.section_card-carousel-header-left` ("Other dining options"),
+else the booking CTA or footer. Fixture: `tests/visual/fixtures/sticky-cta.html`.
+
 ## Not ported (project-specific)
 
 Recipes from earlier builds that stay as patterns rather than modules: nav
@@ -1274,6 +1300,8 @@ Free-width card slider for the Card Carousel Header Left component. Needs the Sw
 ## tabDropdown (M6)
 
 Below 768px every `.tab-pills-intro_tabs` (Wellness `is-media` included, centred at the frame bottom) and `.venue-card-fullbleed_tabs` becomes the Figma mobile selector: a 220x40 burgundy pill with the active label underlined and a menu icon; tapping it opens the full tab list upward with a close X. The module wraps the tabs in `[data-tab-dropdown-panel]`, appends `button[data-tab-dropdown-toggle]` (aria-expanded) and marks the bar `[data-tab-dropdown]`; its stylesheet is injected by the bundle and keyed off those attributes, so the Designer classes are unchanged and desktop renders `display: contents`. The owning module (stickyTabs, galleryFilter, scrollEnlargeSnap) still toggles `is-active`; a MutationObserver copies the active label into the pill. Tab clicks (capture phase), Escape and outside clicks close it. The bar keeps its 40px box and the panel grows out of it, so the stickyTabs pin and following layout never move. Runs before the scroll engine because it shortens the bars on mobile.
+
+M19: open and close are animated with GSAP. The panel's height eases from the pill row to full height (0.45s power3.out), then the links stagger in (fade plus a short rise, 0.06s apart); closing reverses it. `aria-expanded` flips immediately, `is-open` stays until the close tween ends (`is-closing` marks that window), links are clickable as soon as they are visible, and `prefers-reduced-motion` opens and closes instantly. The bar stays 40px and the panel is absolute, so page height never changes and no ScrollTrigger refresh is needed. Test: `npx playwright test tests/visual/tab-dropdown.spec.ts`.
 
 ## Animation feedback round (2026-11-09, Trello "Animations")
 

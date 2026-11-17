@@ -14,9 +14,16 @@
  * that template's page id instead.
  *
  * The button's parent keeps the button's height while it is docked, so the
- * layout above never jumps. The docked state is inline `position: fixed`
- * (plus the `is-stuck` class for any Designer styling); hiding uses
+ * layout above never jumps. The docked state is a `data-sticky-cta-docked`
+ * attribute and the `is-stuck` class plus inline `!important` styles
+ * (re-applied on every refresh), not plain GSAP styles: the hero's line mask
+ * also animates this button and rewrites its inline style, which left it
+ * below the fold (M21). Hiding uses
  * autoAlpha so a hidden button cannot be clicked.
+ *
+ * Centring is GSAP `xPercent`, not CSS `translate`: GSAP folds a CSS
+ * translate into its own transform, so both applied and pushed the docked
+ * button left of centre after a refresh.
  */
 
 const DEFAULT_SELECTOR = '[data-sticky-cta]'
@@ -24,9 +31,21 @@ const STUCK_CLASS = 'is-stuck'
 const DOCK_GAP = 24
 /** F105: on desktop the docked button settles this close to the bottom once the page scrolls. */
 const DESKTOP_GAP = 16
+const DOCKED_ATTRIBUTE = 'data-sticky-cta-docked'
 const END_SELECTOR = '.section_cta-booking-newsletter, .section_footer-links'
 
-export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTOR) => {
+/** Inline, with `important`, so the hero line mask rewriting this button's style cannot undo the dock. */
+const DOCK_STYLES: Array<[string, string]> = [
+  ['position', 'fixed'],
+  ['left', '50%'],
+  ['z-index', '90'],
+]
+export interface StickyCtaOptions {
+  /** Phones only: hide the button until this many px of scroll, then show it docked (hero buttons whose own spot the screen edge crops). */
+  phoneShowAfter?: number
+}
+
+export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTOR, options: StickyCtaOptions = {}) => {
   const button = document.querySelector<HTMLElement>(selector)
   if (!button) return
   const holder = button.parentElement
@@ -46,6 +65,7 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
   let dockGap = DOCK_GAP
   const isDesktop = window.matchMedia('(min-width: 768px)').matches
   let settled = false
+  const phoneDelayed = !isDesktop && options.phoneShowAfter !== undefined
   const bottomGap = () => (isDesktop && settled ? DESKTOP_GAP : dockGap)
 
   const measureDock = () => {
@@ -53,31 +73,54 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     const gapAtTop = window.innerHeight - naturalBottom
     // One pixel under its own spot, so a first-screen button is docked from
     // load instead of being clipped by the hero edge until the first scroll.
-    dockGap = gapAtTop > 0 ? Math.max(0, gapAtTop - 1) : isDesktop ? DESKTOP_GAP : DOCK_GAP
+    dockGap = phoneDelayed ? DOCK_GAP : gapAtTop > 0 ? Math.max(0, gapAtTop - 1) : isDesktop ? DESKTOP_GAP : DOCK_GAP
   }
 
   const holdSpace = () => {
     holder.style.minHeight = ''
     holder.style.minHeight = `${button.offsetHeight}px`
   }
-  holdSpace()
+  const setBottom = (px: number) => button.style.setProperty('bottom', `${px}px`, 'important')
+
+  const applyDock = () => {
+    button.classList.add(STUCK_CLASS)
+    button.setAttribute(DOCKED_ATTRIBUTE, '')
+    DOCK_STYLES.forEach(([property, value]) => button.style.setProperty(property, value, 'important'))
+    setBottom(bottomGap())
+    gsap.set(button, { xPercent: -50 })
+    if (layer) layer.style.zIndex = '90'
+  }
+
+  // Shown in place from load, except a phoneDelayed button, which shows only once docked. All hide at the closing sections.
+  let atEnd = false
+  const showIfDue = () =>
+    gsap.to(button, { autoAlpha: !atEnd && (!phoneDelayed || isStuck) ? 1 : 0, duration: 0.3, overwrite: 'auto' })
+  if (phoneDelayed) {
+    // Docked from load and out of the layout, so no empty slot is left under the hero copy.
+    gsap.set(button, { autoAlpha: 0 })
+    holder.style.display = 'contents'
+    applyDock()
+  } else {
+    holdSpace()
+  }
 
   const setStuck = (stuck: boolean) => {
     if (stuck === isStuck) return
     isStuck = stuck
-    button.classList.toggle(STUCK_CLASS, stuck)
+    // A phoneDelayed button is docked for good; scroll only shows or hides it.
+    if (phoneDelayed) {
+      showIfDue()
+      return
+    }
     if (stuck) {
-      gsap.set(button, {
-        position: 'fixed',
-        left: '50%',
-        bottom: bottomGap(),
-        xPercent: -50,
-        zIndex: 90,
-      })
-      if (layer) layer.style.zIndex = '90'
+      applyDock()
     } else {
+      button.classList.remove(STUCK_CLASS)
+      button.removeAttribute(DOCKED_ATTRIBUTE)
+      DOCK_STYLES.forEach(([property]) => button.style.removeProperty(property))
+      button.style.removeProperty('bottom')
+      gsap.set(button, { xPercent: 0 })
       if (layer) layer.style.zIndex = ''
-      gsap.set(button, { clearProps: 'position,left,bottom,zIndex,transform' })
     }
   }
 
@@ -86,14 +129,16 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     trigger: holder,
     start: () => {
       measureDock()
-      return `bottom bottom-=${dockGap}`
+      return phoneDelayed ? options.phoneShowAfter : `bottom bottom-=${dockGap}`
     },
     end: 'max',
     onRefreshInit: () => setStuck(false),
     // onToggle does not fire again when the trigger stays active through a
     // refresh, so re-apply the docked state here.
     onRefresh: (self: ScrollTriggerInstance) => {
-      holdSpace()
+      if (phoneDelayed) applyDock()
+      else holdSpace()
+      isStuck = false
       setStuck(self.isActive)
     },
     onToggle: (self: ScrollTriggerInstance) => setStuck(self.isActive),
@@ -107,7 +152,10 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
       end: 'max',
       onToggle: (self: ScrollTriggerInstance) => {
         settled = self.isActive
-        if (isStuck) gsap.to(button, { bottom: bottomGap(), duration: 0.4, ease: 'power2.out' })
+        if (!isStuck) return
+        const current = parseFloat(getComputedStyle(button).bottom) || 0
+        const tween = { px: current }
+        gsap.to(tween, { px: bottomGap(), duration: 0.4, ease: 'power2.out', onUpdate: () => setBottom(tween.px) })
       },
     })
   }
@@ -119,7 +167,9 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     trigger: endSection,
     start: 'top bottom',
     end: 'max',
-    onToggle: (self: ScrollTriggerInstance) =>
-      gsap.to(button, { autoAlpha: self.isActive ? 0 : 1, duration: 0.3, overwrite: 'auto' }),
+    onToggle: (self: ScrollTriggerInstance) => {
+      atEnd = self.isActive
+      showIfDue()
+    },
   })
 }
