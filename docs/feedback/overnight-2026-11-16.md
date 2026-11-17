@@ -42,7 +42,7 @@ You confirmed: hexagon corners stay as they are, and hero text stays 18px only o
 
 ## Second round, 17 November
 
-**Venue sliders.** The old venue's text now finishes sliding out before the new venue's text starts, so two venues' text never move at once and the new one is always the one you see. This applies to every venue slider (Home, Dining, Wellness, Meetings, Corporate). In a fast-scroll test on Meetings the old version had 33 frames with both texts moving; the new one has none.
+**Scroll mask sections.** In every section where the image grows to full screen and then steps through panels, the old panel's text now finishes sliding out before the new panel's text starts, so two texts never move at once and the new one is always the one you see. This is one global rule for all of them: Home (both), Dining, Wellness, Meetings, Corporate and Arts. The Offers & Packages slider stays as it is, since the client has not flagged it. In a fast-scroll test on Meetings the old version had 33 frames with both texts moving; the new one has none.
 
 **Photo grid numbers.** The small numbers before each caption now stay hidden and rise in with their caption. They had been showing on their own while the caption was still hidden. Top: before. Bottom: now, the same moment, with nothing showing yet.
 
