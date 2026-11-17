@@ -217,12 +217,11 @@ const initAnimated = (parts: SnapParts) => {
   // Trello "Subnav": on desktop the tab bar sat inside the opening mask and
   // showed half-clipped while the first image grew. It fades in only once the
   // scrubbed timeline reaches t=1 (mask fully open) and out again above it.
-  // Phones keep it visible: earlyVenueTabs docks it from the first screen.
+  // Phones too (Stephen 17 Nov): the selector belongs to the slider section only.
   const tabBar = parts.tabs[0]?.closest<HTMLElement>('nav')
-  const desktop = window.matchMedia('(min-width: 768px)')
   let tabBarShown: boolean | null = null
   const syncTabBar = (time: number) => {
-    const show = !desktop.matches || time >= 1 - FULL_EPSILON
+    const show = time >= 1 - FULL_EPSILON
     if (!tabBar || show === tabBarShown) return
     const first = tabBarShown === null
     tabBarShown = show
