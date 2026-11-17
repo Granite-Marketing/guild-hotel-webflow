@@ -21,11 +21,25 @@
  * list. The bar keeps a fixed 40px box and the panel grows upward out of it,
  * so a ScrollTrigger pin (stickyTabs) and the following layout never move.
  *
+ * Opening (M19) grows the panel's height from the pill row to its full height
+ * with easing, then staggers the links in; closing reverses it. The panel is
+ * absolute inside the fixed 40px bar, so the page height never changes and no
+ * ScrollTrigger refresh is needed. `aria-expanded` flips at once; `is-open`
+ * stays until a close finishes (`is-closing` marks that window) so the list is
+ * visible while it collapses. Links stay clickable throughout, and reduced
+ * motion opens and closes instantly.
+ *
  * Order: before the scroll engine, since it shortens the bars on mobile.
  */
 
 const BARS = '.tab-pills-intro_tabs, .venue-card-fullbleed_tabs'
 const OPEN_CLASS = 'is-open'
+const CLOSING_CLASS = 'is-closing'
+const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
+const OPEN_SECONDS = 0.45
+const CLOSE_SECONDS = 0.3
+const LINK_SECONDS = 0.35
+const LINK_STAGGER = 0.06
 
 // Figma: 16x8 menu glyph (three 0.8px lines) and a 10x10 hairline X.
 const MENU_ICON =
@@ -52,13 +66,13 @@ const STYLES = `
  [data-tab-dropdown-panel]>*{font-size:.875rem;line-height:1.125rem;letter-spacing:-.05em}
  [data-tab-dropdown-panel]>a{display:none;padding:.8125rem 0 1rem;border:0;opacity:.62;text-box:trim-both cap alphabetic}
  [data-tab-dropdown-panel]>a.is-active{opacity:1}
- [data-tab-dropdown].is-open [data-tab-dropdown-panel]{padding-top:.625rem}
+ [data-tab-dropdown].is-open [data-tab-dropdown-panel]{padding-top:.625rem;overflow:hidden}
  [data-tab-dropdown].is-open [data-tab-dropdown-panel]>a{display:block}
  [data-tab-dropdown].is-open [data-tab-dropdown-panel]>a:nth-last-child(2){margin-bottom:.625rem}
  [data-tab-dropdown-toggle]{display:flex;align-items:center;justify-content:space-between;gap:2.5rem;height:2.5rem;margin:0;padding:0;border:0;background:none;color:inherit;text-align:left;cursor:pointer}
  [data-tab-dropdown-label]{white-space:nowrap;margin-top:-.1875rem;padding-bottom:.25rem;border-bottom:1px solid currentColor;text-box:trim-both cap alphabetic}
- [data-tab-dropdown-close],[data-tab-dropdown].is-open [data-tab-dropdown-menu]{display:none}
- [data-tab-dropdown].is-open [data-tab-dropdown-close]{display:block}
+ [data-tab-dropdown-close],[data-tab-dropdown].is-open:not(.is-closing) [data-tab-dropdown-menu]{display:none}
+ [data-tab-dropdown].is-open:not(.is-closing) [data-tab-dropdown-close]{display:block}
 }`
 
 export const tabDropdown = () => {
@@ -99,12 +113,75 @@ export const tabDropdown = () => {
     syncLabel()
     new MutationObserver(syncLabel).observe(panel, { subtree: true, attributeFilter: ['class'] })
 
+    const reducedMotion = window.matchMedia(REDUCED_MOTION)
+    const animated = [panel, ...tabs]
+    const clearInline = () => gsap.set(animated, { clearProps: 'height,paddingTop,opacity,visibility,transform' })
+    let expanded = false
+
     const setOpen = (open: boolean) => {
-      bar.classList.toggle(OPEN_CLASS, open)
+      if (open === expanded) return
+      expanded = open
       toggle.setAttribute('aria-expanded', String(open))
+      gsap.killTweensOf(animated)
+
+      if (reducedMotion.matches) {
+        clearInline()
+        bar.classList.remove(CLOSING_CLASS)
+        bar.classList.toggle(OPEN_CLASS, open)
+        return
+      }
+
+      if (open) {
+        // Box heights are content-box, so animate the padding with the height.
+        const metrics = () => {
+          const { height, paddingTop } = getComputedStyle(panel)
+          return { height: parseFloat(height), paddingTop: parseFloat(paddingTop) }
+        }
+        const wasOpen = bar.classList.contains(OPEN_CLASS)
+        const start = wasOpen ? metrics() : { height: toggle.offsetHeight, paddingTop: 0 }
+        gsap.set(panel, { clearProps: 'height,paddingTop' })
+        bar.classList.remove(CLOSING_CLASS)
+        bar.classList.add(OPEN_CLASS)
+        const full = metrics()
+        const linkOpacity = tabs.map((tab) => Number(getComputedStyle(tab).opacity))
+        gsap
+          .timeline({ onComplete: clearInline })
+          .fromTo(panel, start, { ...full, duration: OPEN_SECONDS, ease: 'power3.out' })
+          .fromTo(
+            tabs,
+            { autoAlpha: 0, yPercent: 60 },
+            {
+              autoAlpha: (index: number) => linkOpacity[index],
+              yPercent: 0,
+              duration: LINK_SECONDS,
+              ease: 'power2.out',
+              stagger: LINK_STAGGER,
+            },
+            OPEN_SECONDS * 0.4,
+          )
+        return
+      }
+
+      if (!bar.classList.contains(OPEN_CLASS)) return
+      bar.classList.add(CLOSING_CLASS)
+      gsap
+        .timeline({
+          onComplete: () => {
+            bar.classList.remove(OPEN_CLASS, CLOSING_CLASS)
+            clearInline()
+          },
+        })
+        .to(tabs, {
+          autoAlpha: 0,
+          yPercent: 60,
+          duration: LINK_SECONDS * 0.6,
+          ease: 'power2.in',
+          stagger: { each: LINK_STAGGER / 2, from: 'end' },
+        })
+        .to(panel, { height: toggle.offsetHeight, paddingTop: 0, duration: CLOSE_SECONDS, ease: 'power2.inOut' }, '>-0.1')
     }
 
-    toggle.addEventListener('click', () => setOpen(!bar.classList.contains(OPEN_CLASS)))
+    toggle.addEventListener('click', () => setOpen(!expanded))
     // Capture phase: stickyTabs stops tab clicks from propagating past the bar.
     bar.addEventListener(
       'click',
@@ -117,7 +194,7 @@ export const tabDropdown = () => {
       if (!bar.contains(event.target as Node)) setOpen(false)
     })
     bar.addEventListener('keydown', (event) => {
-      if (event.key !== 'Escape' || !bar.classList.contains(OPEN_CLASS)) return
+      if (event.key !== 'Escape' || !expanded) return
       setOpen(false)
       toggle.focus()
     })
