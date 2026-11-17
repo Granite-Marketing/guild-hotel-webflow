@@ -1,0 +1,12 @@
+{"routes":[
+{"path":"/","frames":[{"at_ms":[0,400,1000,2000],"scroll_to":".home-art-stories_trail-figure","measure":[".home-art-stories_trail-figure"]},{"at_ms":[0,500,1500],"scroll_to":".faq-accordion_list","measure":[".faq-accordion_list .accordion_question"]}]},
+{"path":"/rooms","focus":["a","button"],"frames":[{"at_ms":[0,500,1500],"scroll_to":".faq-accordion_list","measure":[".faq-accordion_list .accordion_question",".faq-accordion_list .accordion_item"]}]},
+{"path":"/rooms/cozy-courtyard-king","frames":[{"at_ms":[0,500,1500],"scroll_to":"main figure","measure":["main figure"]}]},
+{"path":"/dining/dining-zuma","frames":[{"at_ms":[0,1000],"measure":[".tab-pills-intro_tabs",".venue-card-fullbleed_tabs"]}]},
+{"path":"/dining/solana-coffee","frames":[{"at_ms":[0,500,1500],"measure":[".tab-pills-intro_tabs",".venue-card-fullbleed_tabs"]}]},
+{"path":"/dining/dining-gardenterrace","frames":[{"at_ms":[0,500,1500,2500],"measure":[".hero_footer .button",".hero_footer"]}]},
+{"path":"/happenings","frames":[{"at_ms":[0,300,800,1500],"measure":[".hero-fullbleed-centered_figure img",".hero-fullbleed-centered_figure"]}]},
+{"path":"/history"},
+{"path":"/meetings","frames":[{"at_ms":[0,500,1500],"scroll_to":".form-split-script-contact_field","measure":[".form-split-script-contact_field"]}]},
+{"path":"/legal-corporate/corporate","frames":[{"at_ms":[0,500,1500],"scroll_to":".feature-grid-dark-eyebrow_item-figure","measure":[".feature-grid-dark-eyebrow_item-figure"]}]}
+]}

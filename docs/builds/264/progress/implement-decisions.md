@@ -1,0 +1,1 @@
+- Restore dist/index.js to base 48c0e74 rather than reverting all of 34469c9; alternatives: git revert 34469c9 (also undoes dist/site.css); why: gate named only dist/index.js, site.css is not flagged; landed: commit below
