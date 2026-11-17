@@ -1,22 +1,72 @@
 {
-  "_comment": "Build manifest for /spec-build. Webflow custom-code bundle: TypeScript in src/, esbuild to dist/. Pages live on Webflow staging, so there is no local visual capture; Designer work never goes through the builder.",
+  "_comment": "Build manifest for /spec-build. Webflow custom-code bundle: TypeScript in src/, esbuild to dist/. Pages live on Webflow staging: the visual stage loads staging with this build's own bundle swapped in, so nothing is released to check it. Designer work runs as a session on Stephen's Mac.",
   "stack": "webflow",
   "package_manager": "pnpm",
   "base_branch": "main",
   "commands": {
-    "test": { "id": "typecheck", "run": "pnpm check" },
+    "test": {
+      "id": "typecheck",
+      "run": "pnpm check"
+    },
     "validate": [
-      { "id": "factory", "run": "pnpm test:factory" },
-      { "id": "build", "run": "pnpm build" }
+      {
+        "id": "factory",
+        "run": "pnpm test:factory"
+      },
+      {
+        "id": "build",
+        "run": "pnpm build"
+      }
     ]
   },
-  "test_paths": ["tests/**"],
-  "protected_paths": ["CLAUDE.md", ".claude/**", "pnpm-lock.yaml", "dist/**", "vendor/**"],
+  "test_paths": [
+    "tests/**"
+  ],
+  "protected_paths": [
+    "CLAUDE.md",
+    ".claude/**",
+    "pnpm-lock.yaml",
+    "dist/**",
+    "vendor/**"
+  ],
   "dependencies": {
-    "src/**": ["CLAUDE.md", "docs/reference/runtime-modules.md", "docs/solutions/conventions/gsap-module-conventions.md"],
-    "docs/reference/site-head/button-system.css": ["docs/reference/button-system.md"]
+    "src/**": [
+      "CLAUDE.md",
+      "docs/reference/runtime-modules.md",
+      "docs/solutions/conventions/gsap-module-conventions.md"
+    ],
+    "docs/reference/site-head/button-system.css": [
+      "docs/reference/button-system.md"
+    ]
   },
-  "conventions": ["~/granite/knowledge/tech-conventions.md"],
+  "conventions": [
+    "~/granite/knowledge/tech-conventions.md"
+  ],
   "parallel": true,
-  "budget": { "soft_cap_usd": 60 }
+  "budget": {
+    "soft_cap_usd": 60
+  },
+  "visual": {
+    "url": "https://the-guild-hotel-c34e71.webflow.io",
+    "prepare": "pnpm build",
+    "replace": [
+      {
+        "url": "https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@*/dist/index.js",
+        "file": "dist/index.js"
+      },
+      {
+        "url": "https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@*/dist/site.css",
+        "file": "dist/site.css"
+      }
+    ],
+    "allow_hosts": [
+      "cdn.prod.website-files.com",
+      "cdn.jsdelivr.net",
+      "d3e54v103j8qbb.cloudfront.net"
+    ],
+    "ui_paths": [
+      "src/**",
+      "docs/reference/site-head/**"
+    ]
+  }
 }
