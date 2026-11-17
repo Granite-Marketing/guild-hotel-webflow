@@ -5,10 +5,20 @@
  * On load the first item is open (`is-active`, `aria-expanded="true"`) and
  * every other header is closed (`aria-expanded="false"`). Headers respond to
  * click, Enter and Space; Space is prevented so the page does not scroll.
+ *
+ * Scroll stability (M6): the height transition runs for ~0.4s. Browsers with
+ * scroll anchoring (Chrome, Edge, Firefox) move the scroll position to keep an
+ * on-screen element still while an item above it grows or shrinks, and when
+ * one item closes as another opens, the clamp at the page end drops the
+ * position by hundreds of pixels for good. Anchoring is switched off on the
+ * document for the length of each toggle so the scroll position stays put.
  */
 
 /** Extra room below the measured content so the open state never clips. */
 const OPEN_HEIGHT_PADDING = 9 * 14
+
+/** Longer than the Webflow max-height transition (0.4s) so anchoring returns only once the height settles. */
+const ANCHORING_OFF_MS = 700
 
 export const accordion = () => {
   const accordionTriggers = document.querySelectorAll<HTMLElement>('.accordion_header')
@@ -47,7 +57,16 @@ export const accordion = () => {
     contentWrapper.style.maxHeight = isOpen ? (openHeight(contentWrapper) ?? '0px') : '0px'
   }
 
+  let anchoringTimer: number | undefined
+  function pauseScrollAnchoring() {
+    const root = document.documentElement
+    root.style.overflowAnchor = 'none'
+    window.clearTimeout(anchoringTimer)
+    anchoringTimer = window.setTimeout(() => root.style.removeProperty('overflow-anchor'), ANCHORING_OFF_MS)
+  }
+
   function toggleAccordion(item: HTMLElement) {
+    pauseScrollAnchoring()
     accordionTriggers.forEach((otherItem) => {
       if (otherItem !== item) setOpen(otherItem, false)
     })
