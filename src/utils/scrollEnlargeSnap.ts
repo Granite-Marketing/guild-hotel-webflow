@@ -34,7 +34,8 @@
  * Timeline schedule (F33): panel 0 is fully shown at t=1 (enlarge done).
  * Each later panel wipes in over WIPE_DURATION and is then fully shown for
  * DWELL steps before the next wipe starts, so every panel has a real dwell
- * window (PITCH = WIPE_DURATION + DWELL per panel). Content is driven by
+ * window (PITCH = WIPE_DURATION + DWELL per panel). The first panel holds
+ * FIRST_HOLD steps longer. Content is driven by
  * the scrubbed timeline time (the timeline's own onUpdate), never raw scroll
  * progress, so it follows what the user sees. Trello "Subnav" (2026-11-12)
  * fixes the order per panel: the image is fully in, the tab highlights, then
@@ -43,7 +44,7 @@
  * half-way. Scrolling back up, a tab stays active until its image has fully
  * wiped out.
  *
- * After the last panel the stage stays pinned for half a step more (F15),
+ * After the last panel the stage stays pinned for END_HOLD steps more (F15),
  * so the last panel's content has room to settle before the pin releases.
  * A single-item section (F28, arts) is just the enlarge plus that hold.
  *
@@ -66,8 +67,10 @@ const ACTIVE_CLASS = 'is-active'
 const DEFAULT_STEP_PERCENT = 100
 /** Timeline length of a panel's wipe; its content reveals once it is done. */
 const WIPE_DURATION = 0.5
-/** Steps a panel stays fully shown before the next wipe starts. */
-const DWELL = 0.7
+/** Steps a panel stays fully shown before the next wipe starts (Stephen 2026-11-17: 0.7 left a normal-pace scroll no time on a panel). */
+const DWELL = 1.2
+/** Extra steps the first panel holds after the enlarge, so the scroll that opened the frame does not carry straight past it. */
+const FIRST_HOLD = 0.8
 /** Timeline distance between consecutive fully-shown panels. */
 const PITCH = WIPE_DURATION + DWELL
 /** Seconds between a panel's image being fully in and its copy starting. */
@@ -79,8 +82,8 @@ const TAB_HOP = { first: 0.9, extra: 0.55, max: 3 }
 /** Steps into a wipe (~2% of the image) that still count as wiped out, so a sliver never holds the tab. */
 const WIPE_GONE = 0.05
 const easeOutCubic = (progress: number) => 1 - (1 - progress) ** 3
-/** Extra pinned distance after the last panel, in steps. */
-const END_HOLD = 0.5
+/** Extra pinned distance after the last panel, in steps (Stephen 2026-11-17: 0.5 passed the full-screen Arts image almost at once). */
+const END_HOLD = 1.2
 
 interface SnapParts {
   root: HTMLElement
@@ -135,7 +138,7 @@ const readParts = (root: HTMLElement): SnapParts | null => {
 const initAnimated = (parts: SnapParts) => {
   const { stage, media, items, stepPercent } = parts
   // One step to enlarge, then one pitch per panel change, then the end hold.
-  const shownAt = items.map((_, index) => 1 + index * PITCH)
+  const shownAt = items.map((_, index) => 1 + (index > 0 ? FIRST_HOLD : 0) + index * PITCH)
   const wipeAt = (index: number) => shownAt[index] - WIPE_DURATION
   const totalSteps = shownAt[shownAt.length - 1] + END_HOLD
   const snapPoints = shownAt.map((time) => time / totalSteps)

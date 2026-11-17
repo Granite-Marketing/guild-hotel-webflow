@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.32
+
+### Patch Changes
+
+- Scroll enlarge snap: each venue panel holds longer (dwell 0.7 to 1.2 steps), the first panel holds 0.8 steps more after the enlarge, and the end hold grows from 0.5 to 1.2 steps, so a normal-pace scroll stays on each slide and on the full-screen Arts image.
+
 ## 1.2.31
 
 ### Patch Changes
