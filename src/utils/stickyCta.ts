@@ -21,9 +21,9 @@
  * below the fold (M21). Hiding uses
  * autoAlpha so a hidden button cannot be clicked.
  *
- * With `dockFromLoad`, a button whose own spot is below the first screen (a
- * hero taller than the viewport, as on phones) docks from load, so it is
- * visible before any scroll.
+ * Centring is GSAP `xPercent`, not CSS `translate`: GSAP folds a CSS
+ * translate into its own transform, so both applied and pushed the docked
+ * button left of centre after a refresh.
  */
 
 const DEFAULT_SELECTOR = '[data-sticky-cta]'
@@ -38,19 +38,9 @@ const END_SELECTOR = '.section_cta-booking-newsletter, .section_footer-links'
 const DOCK_STYLES: Array<[string, string]> = [
   ['position', 'fixed'],
   ['left', '50%'],
-  ['translate', '-50% 0'],
   ['z-index', '90'],
 ]
-export interface StickyCtaOptions {
-  /**
-   * Dock from load even when the button's own spot is below the first screen
-   * (a hero taller than the viewport). For a hero button; leave off for a
-   * button far down the page, which should dock only as it nears the screen.
-   */
-  dockFromLoad?: boolean
-}
-
-export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTOR, options: StickyCtaOptions = {}) => {
+export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTOR) => {
   const button = document.querySelector<HTMLElement>(selector)
   if (!button) return
   const holder = button.parentElement
@@ -70,14 +60,11 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
   let dockGap = DOCK_GAP
   const isDesktop = window.matchMedia('(min-width: 768px)').matches
   let settled = false
-  // The button's own spot starts below the first screen (tall hero).
-  let belowFold = false
   const bottomGap = () => (isDesktop && settled ? DESKTOP_GAP : dockGap)
 
   const measureDock = () => {
     const naturalBottom = holder.getBoundingClientRect().bottom + window.scrollY
     const gapAtTop = window.innerHeight - naturalBottom
-    belowFold = options.dockFromLoad === true && gapAtTop <= 0
     // One pixel under its own spot, so a first-screen button is docked from
     // load instead of being clipped by the hero edge until the first scroll.
     dockGap = gapAtTop > 0 ? Math.max(0, gapAtTop - 1) : isDesktop ? DESKTOP_GAP : DOCK_GAP
@@ -96,6 +83,7 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     button.setAttribute(DOCKED_ATTRIBUTE, '')
     DOCK_STYLES.forEach(([property, value]) => button.style.setProperty(property, value, 'important'))
     setBottom(bottomGap())
+    gsap.set(button, { xPercent: -50 })
     if (layer) layer.style.zIndex = '90'
   }
 
@@ -109,20 +97,17 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
       button.removeAttribute(DOCKED_ATTRIBUTE)
       DOCK_STYLES.forEach(([property]) => button.style.removeProperty(property))
       button.style.removeProperty('bottom')
+      gsap.set(button, { xPercent: 0 })
       if (layer) layer.style.zIndex = ''
     }
   }
 
   // Docked once the button's natural bottom edge rises above the dock line.
-  // A below-fold button stays docked above its start too: iOS rubber-band scroll at the top goes negative and flashed it at its own spot.
-  const dockedAt = (self: ScrollTriggerInstance) => self.isActive || (belowFold && self.progress === 0)
-
   ScrollTrigger.create({
     trigger: holder,
     start: () => {
       measureDock()
-      // Below the fold the natural spot is never seen, so dock from load (one pixel before the top, as progress 0 is not active).
-      return belowFold ? -1 : `bottom bottom-=${dockGap}`
+      return `bottom bottom-=${dockGap}`
     },
     end: 'max',
     onRefreshInit: () => setStuck(false),
@@ -131,9 +116,9 @@ export const stickyCta = (selector = DEFAULT_SELECTOR, endSelector = END_SELECTO
     onRefresh: (self: ScrollTriggerInstance) => {
       holdSpace()
       isStuck = false
-      setStuck(dockedAt(self))
+      setStuck(self.isActive)
     },
-    onToggle: (self: ScrollTriggerInstance) => setStuck(dockedAt(self)),
+    onToggle: (self: ScrollTriggerInstance) => setStuck(self.isActive),
   })
 
   // F105: a first-screen button docks where it sits, then eases down once
