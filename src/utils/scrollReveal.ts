@@ -186,6 +186,10 @@ const tagSharedBlocks = () => {
       element.dataset.reveal = mode
     })
   })
+  // M20/M21: the phone hero copy sits near the screen bottom, under `top 90%`, so it (and the docked Reserve button) waited for a scroll. Play it as soon as any of it is on screen.
+  document.querySelectorAll<HTMLElement>('main .hero-fullbleed-centered_component[data-reveal]').forEach((hero) => {
+    hero.dataset.revealStart ??= '100'
+  })
 }
 
 const tagStaggeredRows = () => {
