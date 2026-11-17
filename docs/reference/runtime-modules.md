@@ -1270,9 +1270,8 @@ component. Re-docks after every ScrollTrigger refresh.
 
 M21 and M22 (2026-11-17): `stickyCta(selector, endSelector, { dockFromLoad })`.
 The docked state is the `data-sticky-cta-docked` attribute plus the `is-stuck`
-class, styled by a `<style id="sticky-cta-style">` the module injects
-(`position: fixed`, `translate: -50% 0`, `bottom: var(--sticky-cta-bottom)`),
-not inline GSAP styles, so the hero line mask rewriting the button's inline
+class, plus inline `!important` styles (`position: fixed`, `translate: -50% 0`, `bottom`, `z-index`)
+re-applied on every ScrollTrigger refresh, not plain GSAP styles, so the hero line mask rewriting the button's inline
 style and transform cannot undo it. `dockFromLoad: true` (the Dinings hero)
 docks a button whose own spot is below the first screen from load, so it shows
 before any scroll on a phone whose hero is taller than the screen. The Dinings
