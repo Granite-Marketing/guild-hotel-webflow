@@ -113,6 +113,54 @@ test('opening does not change the page height', async ({ page }) => {
   expect(await page.evaluate(() => document.documentElement.scrollHeight)).toBe(before)
 })
 
+test('a quick double tap never leaves the list closed while reporting open', async ({ page }) => {
+  await load(page)
+  for (const gap of [0, 40, 120, 250]) {
+    // Open, then tap again mid-animation (close), then again (open).
+    await toggle(page).click()
+    await page.waitForTimeout(gap)
+    await toggle(page).click()
+    await page.waitForTimeout(gap)
+    await toggle(page).click()
+    await page.waitForTimeout(1200)
+    await expect(toggle(page)).toHaveAttribute('aria-expanded', 'true')
+    await expect(page.locator('[data-tab-dropdown]')).toHaveClass(/is-open/)
+    expect(await panelHeight(page)).toBeGreaterThan(150)
+    await expect(links(page).last()).toHaveCSS('opacity', '0.62')
+    await toggle(page).click()
+    await page.waitForTimeout(900)
+    await expect(toggle(page)).toHaveAttribute('aria-expanded', 'false')
+    await expect(page.locator('[data-tab-dropdown]')).not.toHaveClass(/is-open/)
+  }
+})
+
+test('open then close mid-animation ends closed and consistent', async ({ page }) => {
+  await load(page)
+  await toggle(page).click()
+  await page.waitForTimeout(100)
+  await toggle(page).click()
+  await page.waitForTimeout(900)
+  await expect(toggle(page)).toHaveAttribute('aria-expanded', 'false')
+  await expect(page.locator('[data-tab-dropdown]')).not.toHaveClass(/is-open/)
+  expect(await panelHeight(page)).toBeLessThanOrEqual(41)
+})
+
+test('links rise only slightly (under 8px) while opening', async ({ page }) => {
+  await load(page)
+  await toggle(page).click()
+  const rise = await page.evaluate(async () => {
+    const link = document.querySelector('[data-tab-dropdown-panel] > a') as HTMLElement
+    let max = 0
+    const end = performance.now() + 700
+    while (performance.now() < end) {
+      max = Math.max(max, Math.abs(new DOMMatrix(getComputedStyle(link).transform).m42))
+      await new Promise((resolve) => requestAnimationFrame(resolve))
+    }
+    return max
+  })
+  expect(rise).toBeLessThan(8)
+})
+
 test.describe('reduced motion', () => {
   test.use({ reducedMotion: 'reduce' })
 
