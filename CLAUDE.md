@@ -267,7 +267,7 @@ After any Webflow API or MCP call that returns resource IDs (pages, collections,
 ## Webflow MCP Notes
 - Element Builder (MCP 2.1+) nests to any depth in one call. Use `Paragraph`/`Heading` for text: `set_text` on a `TextBlock` is silently ignored (see `docs/solutions/integration-issues/webflow-mcp-element-builder-textblock-text-ignored.md`)
 - **CMS bindings via MCP:** `data_element_settings_tool` > `set_settings` can bind custom attributes (`key: "attributes"`, `value_binding`) and element text (`key: "text"`, `binding`) to CMS fields. The `attributes` write replaces the full list, so read first and re-include static attributes. Webflow refuses to delete a CMS field that is still bound (409), so unbind first (see `docs/solutions/workflow-issues/webflow-cms-field-limit-migration.md`)
-- **Never mutate Webflow without approval:** present the plan (elements, classes, CMS writes) and wait for a yes before any Designer or Data API change.
+- **Never mutate Webflow without approval:** present the plan (elements, classes, CMS writes) and wait for a yes before any Designer or Data API change. A ship-spec "yes, build it" on a round approves every designer ticket's written plan at once (Stephen, 2026-11-17).
 - Designer API requires Webflow Designer open + companion app running
 - **Site ID verification (mandatory on failure):** Always use the site ID from `docs/reference/webflow-ids.md`. If MCP calls fail twice, do a fresh `sites_list` API call to verify the cached ID is still correct — a wrong site ID produces a generic "Unable to connect" error that mimics connection issues.
 - Images uploaded via `/export-assets` skill or `pnpm run upload-assets` (MCP can't upload directly)
