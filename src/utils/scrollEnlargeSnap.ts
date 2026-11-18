@@ -2,10 +2,13 @@
  * Scroll Enlarge Snap
  *
  * A framed image is revealed to fill its stage on scroll by a growing clip
- * mask (the media itself never scales), then the stage stays pinned while
- * further scrolling snaps through a stack of panels, each with an image
- * wipe and a text transition. Used by the Guild home, dining,
- * meetings and wellness venue sections (Figma Home-Animation-1).
+ * mask (the media itself never scales). Once it is fully open the section
+ * locks and behaves like a vertical slider (#257, Stephen 2026-11-17): each
+ * scroll gesture (wheel flick, trackpad swipe, touch swipe, arrow and Page
+ * keys) plays exactly one timed transition to the next or previous
+ * panel, with an image wipe and a line-mask copy reveal. Scrolling up on the
+ * first panel or down on the last releases the page at once. Used by the
+ * Guild home, dining, meetings and wellness venue sections and Arts.
  *
  * DOM contract (attributes, so Designer classes stay free):
  *
@@ -22,41 +25,29 @@
  *         [data-scroll-enlarge-snap-item]       one panel per venue, stacked
  *           [data-scroll-enlarge-snap-image]    optional; else first <img>
  *           [data-scroll-enlarge-snap-content]  optional; each panel's content
- *                                               masks in line by line as one
- *                                               triggered (not scrubbed)
- *                                               timeline once its mask/wipe
- *                                               completes, reversing on leave
+ *                                               masks in line by line once
+ *                                               its panel is fully in, and
+ *                                               masks out when it leaves
  *         [data-scroll-enlarge-snap-tab]        optional; nth tab = nth item
  *
- *   data-scroll-enlarge-snap-step="100"   on the root: scroll distance per
- *                                         step, in % of viewport height.
+ *   data-scroll-enlarge-snap-step="100"   on the root: scroll distance of
+ *                                         the open step, in % of the stage.
  *
- * Timeline schedule (F33): panel 0 is fully shown at t=1 (enlarge done).
- * Each later panel wipes in over WIPE_DURATION and is then fully shown for
- * DWELL steps before the next wipe starts, so every panel has a real dwell
- * window (PITCH = WIPE_DURATION + DWELL per panel). The first panel holds
- * FIRST_HOLD steps longer. Content is driven by
- * the scrubbed timeline time (the timeline's own onUpdate), never raw scroll
- * progress, so it follows what the user sees. Trello "Subnav" (2026-11-12)
- * fixes the order per panel: the image is fully in, the tab highlights, then
- * the copy reveals TEXT_DELAY later (this replaces F42's early copy lead). The
- * delay also absorbs a pass-through, so a reveal never starts and reverses
- * half-way. Scrolling back up, a tab stays active until its image has fully
- * wiped out.
- *
- * After the last panel the stage stays pinned for END_HOLD steps more (F15),
- * so the last panel's content has room to settle before the pin releases.
- * A single-item section (F28, arts) is just the enlarge plus that hold.
+ * Pinned length: the open step plus HOLD. While locked the scroll is held at
+ * the lock point (Lenis stopped, wheel and touch default prevented) and
+ * panels move on a separate timed timeline, never on scroll, so a panel can
+ * never sit half-wiped. The hold is a buffer for iOS momentum: the stage is
+ * pinned, so any drift inside it is invisible and is set back.
  *
  * The active item and tab get `is-active`; the active tab also gets
- * `aria-current="true"`. Clicking a tab highlights it at once and scrolls to
- * its panel: the dwell still ahead is skipped so the wipe starts on the click,
- * and the duration grows with the number of tabs crossed. The highlight and
- * copy stay on the clicked tab until its image is in (no flicker through the
- * panels passed); any wheel, touch or key input hands control back to scroll.
+ * `aria-current="true"`. A gesture highlights the tab once its image is in,
+ * then the copy reveals TEXT_DELAY later (Trello "Subnav"). A tab click
+ * highlights at once and plays one eased move across every panel between.
+ * Hidden panels are `visibility: hidden`, so keyboard and screen reader users
+ * reach panels through the tabs (links) or the arrow keys.
  *
- * prefers-reduced-motion: the frame is set straight to its full size and
- * panels swap instantly as the pinned stage scrolls, with no tweens or snap.
+ * prefers-reduced-motion: the frame is full size from the start, the section
+ * still locks, and panels swap instantly.
  */
 
 import { lenis } from '$utils/lenisGsap'
@@ -65,25 +56,20 @@ import { createLineMaskTimeline } from '$utils/lineMaskReveal'
 const ROOT_SELECTOR = '[data-scroll-enlarge-snap]'
 const ACTIVE_CLASS = 'is-active'
 const DEFAULT_STEP_PERCENT = 100
-/** Timeline length of a panel's wipe; its content reveals once it is done. */
-const WIPE_DURATION = 0.5
-/** Steps a panel stays fully shown before the next wipe starts (Stephen 2026-11-17: 0.7 left a normal-pace scroll no time on a panel). */
-const DWELL = 1.2
-/** Extra steps the first panel holds after the enlarge, so the scroll that opened the frame does not carry straight past it. */
-const FIRST_HOLD = 0.8
-/** Timeline distance between consecutive fully-shown panels. */
-const PITCH = WIPE_DURATION + DWELL
+/** Pinned distance after the open step, in steps: the lock zone and iOS momentum buffer. */
+const HOLD = 0.5
 /** Seconds between a panel's image being fully in and its copy starting. */
 const TEXT_DELAY = 0.15
-/** Timeline tolerance for "fully shown" (image 99.7% open): the eased wipe looks done while the scrub still creeps in. */
+/** Timeline tolerance for "fully open" on the scrubbed open step. */
 const FULL_EPSILON = 0.02
-/** Tab click duration: one tab over, each extra tab crossed (Stephen 2026-11-12: far jumps a little slower), and the cap (seconds). */
-const TAB_HOP = { first: 0.9, extra: 0.55, max: 3 }
-/** Steps into a wipe (~2% of the image) that still count as wiped out, so a sliver never holds the tab. */
-const WIPE_GONE = 0.05
-const easeOutCubic = (progress: number) => 1 - (1 - progress) ** 3
-/** Extra pinned distance after the last panel, in steps (Stephen 2026-11-17: 0.5 passed the full-screen Arts image almost at once). */
-const END_HOLD = 1.2
+/** Move duration: one panel over, each extra panel a tab click crosses (Stephen 2026-11-12: far jumps a little slower), and the cap (seconds). */
+const HOP = { first: 1, extra: 0.55, max: 3 }
+/** A gap this long (ms) between wheel or touch events starts a new gesture, so trackpad inertia counts as one. */
+const GESTURE_GAP = 200
+/** Share of the stage the page travels on release. */
+const RELEASE_NUDGE = 0.25
+const NEXT_KEYS = ['ArrowDown', 'PageDown']
+const PREVIOUS_KEYS = ['ArrowUp', 'PageUp']
 
 interface SnapParts {
   root: HTMLElement
@@ -108,7 +94,7 @@ export const scrollEnlargeSnap = () => {
         animate: '(prefers-reduced-motion: no-preference)',
         reduce: '(prefers-reduced-motion: reduce)',
       },
-      (context) => (context.conditions.reduce ? initReduced(parts) : initAnimated(parts)),
+      (context) => initSlider(parts, Boolean(context.conditions.reduce)),
     )
   })
 }
@@ -135,13 +121,11 @@ const readParts = (root: HTMLElement): SnapParts | null => {
   }
 }
 
-const initAnimated = (parts: SnapParts) => {
+const initSlider = (parts: SnapParts, reduce: boolean) => {
   const { stage, media, items, stepPercent } = parts
-  // One step to enlarge, then one pitch per panel change, then the end hold.
-  const shownAt = items.map((_, index) => 1 + (index > 0 ? FIRST_HOLD : 0) + index * PITCH)
-  const wipeAt = (index: number) => shownAt[index] - WIPE_DURATION
-  const totalSteps = shownAt[shownAt.length - 1] + END_HOLD
-  const snapPoints = shownAt.map((time) => time / totalSteps)
+  // Reduced motion skips the open step: the frame is full size at once.
+  const openSteps = reduce ? 0 : 1
+  const lastIndex = items.length - 1
 
   stackItems(items, 0)
   const reveals = items.map((item) => {
@@ -149,49 +133,22 @@ const initAnimated = (parts: SnapParts) => {
     return content ? createLineMaskTimeline(content) : null
   })
   const mask = createChamferMask(stage, media)
-
-  // Tab the user clicked, while its scroll is under way (see bindTabs).
-  let clickedIndex: number | null = null
-
-  // Which panel's content is shown at timeline time `time`: from the moment
-  // the panel is fully shown until exactly when the next wipe begins. During
-  // a tab click only the clicked panel's copy may show.
-  const contentIndexAt = (time: number) => {
-    for (let index = items.length - 1; index >= 0; index--) {
-      const leaveAt = index === items.length - 1 ? Infinity : wipeAt(index + 1)
-      if (time >= shownAt[index] - FULL_EPSILON && time < leaveAt) {
-        return clickedIndex === null || clickedIndex === index ? index : -1
-      }
-    }
-    return -1
+  if (reduce) {
+    mask.state.progress = 1
+    mask.apply()
   }
-
-  // Last panel whose image is fully in at `time`.
-  const fullIndexAt = (time: number) =>
-    shownAt.reduce((last, at, index) => (time >= at - FULL_EPSILON ? index : last), 0)
-  // Going down a tab activates once its image is full; going up the current
-  // tab holds until its own wipe has (all but a few pixels) reversed.
-  const visibleIndexAt = (time: number, current: number) => {
-    const full = fullIndexAt(time)
-    return current > full && time > wipeAt(current) + WIPE_GONE ? current : full
-  }
-  // Panel `index` alone fills the stage: its wipe is done and the next has not begun.
-  const isFullyIn = (index: number, time: number) =>
-    time >= shownAt[index] - FULL_EPSILON && (index === items.length - 1 || time < wipeAt(index + 1))
 
   let shownIndex = -1
   let targetIndex = -1
   let pending: GsapDelayedCall | null = null
-  const syncContent = (time: number, immediate = false) => {
-    const next = contentIndexAt(time)
+  // Shows panel `next`'s copy (-1: none). The outgoing copy finishes masking
+  // out before the incoming copy starts (Stephen 2026-11-17), and every other
+  // revealed panel is reversed too, so no copy is ever stranded.
+  const syncContent = (next: number, immediate = false) => {
     if (next === targetIndex) return
     targetIndex = next
     pending?.kill()
     pending = null
-    // F33: leaving always plays the reverse mask-out. Every other panel with
-    // any copy still revealed is reversed too, not only the one tracked as
-    // shown, so a refresh or re-split mid-scroll can never strand copy that
-    // later vanishes without masking out.
     reveals.forEach((reveal, index) => {
       if (index !== next && reveal?.isRevealed()) reveal.reverse()
     })
@@ -202,8 +159,6 @@ const initAnimated = (parts: SnapParts) => {
       shownIndex = next
     }
     if (immediate) return start()
-    // Stephen 2026-11-17: the outgoing copy finishes masking out before the
-    // incoming copy starts, so two panels' text never move at once.
     const outgoing = reveals.filter((reveal, index) => index !== next && reveal?.isRevealed())
     let waiting = outgoing.length
     const afterOutro = () => {
@@ -214,18 +169,15 @@ const initAnimated = (parts: SnapParts) => {
     else outgoing.forEach((reveal) => reveal?.whenHidden(afterOutro))
   }
 
-  // Trello "Subnav": on desktop the tab bar sat inside the opening mask and
-  // showed half-clipped while the first image grew. It fades in only once the
-  // scrubbed timeline reaches t=1 (mask fully open) and out again above it.
-  // Phones too (Stephen 17 Nov): the selector belongs to the slider section only.
+  // Trello "Subnav": the tab bar fades in only once the frame is fully open
+  // (desktop and phones, Stephen 17 Nov) and out again above it.
   const tabBar = parts.tabs[0]?.closest<HTMLElement>('nav')
   let tabBarShown: boolean | null = null
-  const syncTabBar = (time: number) => {
-    const show = time >= 1 - FULL_EPSILON
-    if (!tabBar || show === tabBarShown) return
+  const syncTabBar = (open: boolean) => {
+    if (!tabBar || open === tabBarShown) return
     const first = tabBarShown === null
-    tabBarShown = show
-    gsap.to(tabBar, { autoAlpha: show ? 1 : 0, duration: first ? 0 : 0.4, ease: 'power1.out', overwrite: true })
+    tabBarShown = open
+    gsap.to(tabBar, { autoAlpha: open ? 1 : 0, duration: first ? 0 : 0.4, ease: 'power1.out', overwrite: true })
   }
 
   let activeIndex = -1
@@ -236,166 +188,188 @@ const initAnimated = (parts: SnapParts) => {
   }
   setActive(0)
 
+  // Panels: panel i is fully in at time i; each wipe is linear here and the
+  // move's own ease shapes it, so a multi-panel tab move is one smooth curve.
+  const panels = gsap.timeline({ paused: true, defaults: { ease: 'none' } })
+  items.slice(1).forEach((item, offset) => {
+    const image = itemImage(item)
+    // Just after the previous panel's rest time, so a panel at rest never leaves the next one visible (and focusable).
+    panels.set(item, { autoAlpha: 1 }, offset + 0.001)
+    panels.fromTo(item, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1 }, offset)
+    if (image) panels.fromTo(image, { scale: 1.2 }, { scale: 1, duration: 1, ease: 'power2.out' }, offset)
+    panels.set(items[offset], { autoAlpha: 0 }, offset + 1)
+  })
+
+  let currentIndex = 0
+  let moving: GsapTimeline | null = null
+  let open = reduce
+
+  const moveTo = (index: number, fromTab = false) => {
+    if (index === currentIndex && !moving) return
+    const hops = Math.max(1, Math.abs(index - panels.time()))
+    currentIndex = index
+    if (fromTab) setActive(index)
+    syncContent(-1)
+    moving?.kill()
+    const finish = () => {
+      moving = null
+      setActive(index)
+      if (open) syncContent(index)
+    }
+    if (reduce) {
+      panels.time(index)
+      return finish()
+    }
+    moving = panels.tweenTo(index, {
+      duration: Math.min(HOP.first + HOP.extra * (hops - 1), HOP.max),
+      ease: 'power2.inOut',
+      onComplete: finish,
+    })
+  }
+
   const timeline = gsap.timeline({
     defaults: { ease: 'none' },
-    // Content follows the scrubbed timeline, which lags scroll position.
     onUpdate: () => {
-      const time = timeline.time()
-      // A tab click hands the highlight back once its image is in.
-      if (clickedIndex !== null && isFullyIn(clickedIndex, time)) clickedIndex = null
-      if (clickedIndex === null) setActive(visibleIndexAt(time, activeIndex))
-      syncContent(time)
-      syncTabBar(time)
+      open = reduce || timeline.time() >= openSteps - FULL_EPSILON
+      syncContent(open && !moving ? currentIndex : -1)
+      syncTabBar(open)
     },
     scrollTrigger: {
       trigger: stage,
       start: 'top top',
-      // The stage (100vh) is stable on iOS; innerHeight changes with the toolbar and, times every step, moved the page below by ~900px on refresh (M6 footer jump).
-      end: () => `+=${(stage.offsetHeight * stepPercent * totalSteps) / 100}`,
+      // The stage (100vh) is stable on iOS; innerHeight changes with the toolbar (M6 footer jump).
+      end: () => `+=${(stage.offsetHeight * stepPercent * (openSteps + HOLD)) / 100}`,
       pin: true,
-      // Animation feedback (home wellness "too sensitive"): a heavier scrub
-      // and a longer settle before snapping, so a small scroll no longer
-      // flicks to the next panel.
-      scrub: 1.2,
+      // Only the open step scrubs; Lenis already smooths it.
+      scrub: reduce ? true : 0.5,
       invalidateOnRefresh: true,
-      snap: {
-        snapTo: (value: number) => snapToPanel(value, snapPoints),
-        duration: { min: 0.4, max: 1 },
-        delay: 0.25,
-        ease: 'power1.inOut',
-        // Without this a tab jump reads as a fling and overshoots to the end.
-        inertia: false,
-      },
-      onRefresh: (self: ScrollTriggerInstance) => {
+      onUpdate: (self: ScrollTriggerInstance) => maybeLock(self.scroll()),
+      onRefresh: () => {
         mask.measure()
-        syncContent(self.progress * totalSteps, true)
-        syncTabBar(self.progress * totalSteps)
+        if (reduce) {
+          mask.state.progress = 1
+          mask.apply()
+        }
+        if (locked) inZone(window.scrollY) ? holdScroll() : unlockInPlace()
       },
     },
   })
+  if (!reduce) timeline.to(mask.state, { progress: 1, duration: 1, ease: 'power1.inOut', onUpdate: mask.apply })
+  timeline.to({}, { duration: HOLD }, openSteps)
 
-  timeline.to(mask.state, {
-    progress: 1,
-    duration: 1,
-    ease: 'power1.inOut',
-    onUpdate: mask.apply,
-  })
+  const trigger = timeline.scrollTrigger as ScrollTriggerInstance
+  const lockPoint = () => trigger.start + (trigger.end - trigger.start) * (openSteps / (openSteps + HOLD))
+  // Venue selector hidden from first paint until the frame is fully open (M18); onUpdate only runs once scrolling starts.
+  syncTabBar(reduce || trigger.progress >= openSteps / (openSteps + HOLD) - 0.001)
 
-  items.slice(1).forEach((item, offset) => {
-    const previous = items[offset]
-    const at = wipeAt(offset + 1)
-    const image = itemImage(item)
-
-    timeline.set(item, { autoAlpha: 1 }, at)
-    timeline.fromTo(
-      item,
-      { clipPath: 'inset(100% 0% 0% 0%)' },
-      { clipPath: 'inset(0% 0% 0% 0%)', duration: WIPE_DURATION, ease: 'power2.inOut' },
-      at,
-    )
-    if (image) {
-      timeline.fromTo(image, { scale: 1.2 }, { scale: 1, duration: WIPE_DURATION, ease: 'power2.out' }, at)
-    }
-    timeline.set(previous, { autoAlpha: 0 }, at + WIPE_DURATION)
-  })
-
-  // F15: hold the last panel pinned so the timeline spans totalSteps.
-  timeline.to({}, { duration: END_HOLD }, shownAt[shownAt.length - 1])
-
-  // A load that restores a mid-section scroll shows the right content.
-  syncContent((timeline.scrollTrigger?.progress ?? 0) * totalSteps, true)
-  syncTabBar((timeline.scrollTrigger?.progress ?? 0) * totalSteps)
-
-  const trigger = timeline.scrollTrigger
-  const scrollAt = (time: number) =>
-    trigger ? trigger.start + ((trigger.end - trigger.start) * time) / totalSteps : 0
-  const timeNow = () =>
-    trigger ? (((lenis.raw?.scroll ?? window.scrollY) - trigger.start) / (trigger.end - trigger.start)) * totalSteps : 0
-
-  const goToPanel = (index: number) => {
-    const raw = lenis.raw
-    if (!trigger || !raw) {
-      window.scrollTo({ top: scrollAt(shownAt[index]) })
-      return
-    }
-    const now = timeNow()
-    const hops = Math.max(1, Math.abs(index - fullIndexAt(now)))
-    const motion = {
-      duration: Math.min(TAB_HOP.first + TAB_HOP.extra * (hops - 1), TAB_HOP.max),
-      easing: easeOutCubic,
-      force: true,
-    }
-    clickedIndex = index
-    setActive(index)
-
-    if (shownAt[index] > now + FULL_EPSILON) {
-      // Down: the current panel's remaining dwell looks static, so jump past
-      // it and start the next wipe on the click.
-      const next = shownAt.findIndex((at) => at > now + FULL_EPSILON)
-      if (next > 0 && wipeAt(next) > now) raw.scrollTo(scrollAt(wipeAt(next)), { immediate: true, force: true })
-      raw.scrollTo(scrollAt(shownAt[index]), motion)
-    } else if (shownAt[index] < now - FULL_EPSILON) {
-      // Up: the target's dwell is at the far end, so stop just past where the
-      // last wipe has fully reversed (the target is then current) and jump the
-      // static dwell.
-      const end = Math.max(Math.min(wipeAt(index + 1) - 2 * FULL_EPSILON, now), shownAt[index])
-      raw.scrollTo(scrollAt(end), {
-        ...motion,
-        onComplete: () => raw.scrollTo(scrollAt(shownAt[index]), { immediate: true, force: true }),
-      })
-    }
+  // Lock state: scroll held at the lock point while gestures drive panels.
+  let locked = false
+  const setScroll = (top: number) => {
+    if (lenis.raw) lenis.raw.scrollTo(top, { immediate: true, force: true })
+    else window.scrollTo(0, top)
+  }
+  const holdScroll = () => {
+    lenis.stop() // again, in case a modal closing restarted Lenis
+    if (Math.abs(window.scrollY - lockPoint()) > 1) setScroll(lockPoint())
   }
 
-  // Any direct input during a tab scroll hands the highlight back to scroll.
-  const releaseClick = () => {
-    if (clickedIndex === null) return
-    clickedIndex = null
-    setActive(visibleIndexAt(timeline.time(), activeIndex))
-    syncContent(timeline.time())
+  const lock = () => {
+    locked = true
+    // The scroll that brought the section in must not also move a panel.
+    gestureUsed = true
+    lastGesture = performance.now()
+    lastDirection = trigger.direction
+    holdScroll()
+    observer.enable()
+    window.addEventListener('keydown', onKey)
   }
-  const inputEvents = ['wheel', 'touchstart', 'keydown'] as const
-  inputEvents.forEach((type) => window.addEventListener(type, releaseClick, { passive: true }))
+  const release = (direction: 1 | -1) => {
+    locked = false
+    observer.disable()
+    window.removeEventListener('keydown', onKey)
+    // Jump just outside the zone (visually the same, the stage is pinned) and hand the scroll back.
+    const outside = direction === 1 ? trigger.end + 1 : lockPoint() - 3
+    setScroll(outside)
+    lenis.start()
+    // The releasing swipe's own scroll was prevented (iOS cancels a touch whose
+    // first move is prevented), so carry the page on a little: never feels stuck.
+    const nudge = outside + direction * stage.offsetHeight * RELEASE_NUDGE
+    if (lenis.raw) lenis.raw.scrollTo(nudge, { duration: 0.6 })
+    else window.scrollTo({ top: nudge, behavior: 'smooth' })
+  }
 
-  const unbindTabs = bindTabs(parts, goToPanel)
+  // iOS momentum that escaped the zone: let go where the page is, never yank it back (Stephen 18 Nov).
+  const unlockInPlace = () => {
+    locked = false
+    observer.disable()
+    window.removeEventListener('keydown', onKey)
+    lenis.start()
+  }
+  const inZone = (scroll: number) => scroll >= trigger.start - 1 && scroll <= trigger.end + 1
+
+  function maybeLock(scroll: number) {
+    if (locked) return inZone(scroll) ? holdScroll() : unlockInPlace()
+    // Anchor and tab-bar scrolls pass through without locking.
+    if (lenis.raw?.userData?.anchor) return
+    if (scroll >= lockPoint() - 1 && scroll <= trigger.end) lock()
+  }
+
+  // Moves one panel, or releases the page at either end.
+  const step = (direction: 1 | -1) => {
+    const next = currentIndex + direction
+    if (next < 0 || next > lastIndex) return release(direction)
+    moveTo(next)
+  }
+
+  let lastGesture = 0
+  let lastDirection = 0
+  let gestureUsed = false
+  const onGesture = (direction: 1 | -1) => {
+    const now = performance.now()
+    if (now - lastGesture > GESTURE_GAP || direction !== lastDirection) gestureUsed = false
+    lastGesture = now
+    lastDirection = direction
+    if (gestureUsed || moving) return
+    gestureUsed = true
+    step(direction)
+  }
+
+  // wheelSpeed -1: wheel down and a finger swiping up both read as onUp.
+  const observer = ScrollTrigger.observe({
+    target: window,
+    type: 'wheel,touch',
+    wheelSpeed: -1,
+    tolerance: 10,
+    preventDefault: true,
+    ignore: '[role="dialog"]',
+    onUp: () => onGesture(1),
+    onDown: () => onGesture(-1),
+  })
+  observer.disable()
+
+  function onKey(event: KeyboardEvent) {
+    if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return
+    if ((event.target as HTMLElement | null)?.closest('input, textarea, select, [contenteditable], [role="dialog"]')) return
+    const direction = NEXT_KEYS.includes(event.key) ? 1 : PREVIOUS_KEYS.includes(event.key) ? -1 : 0
+    // Home and End leave the slider and scroll as normal.
+    if (!direction) return void (['Home', 'End'].includes(event.key) && release(event.key === 'End' ? 1 : -1))
+    const index = currentIndex + direction
+    // At either end the key's own scroll carries on past the released section.
+    if (index < 0 || index > lastIndex) return release(direction)
+    event.preventDefault()
+    if (!moving) moveTo(index)
+  }
+
+  const unbindTabs = bindTabs(parts, (index) => moveTo(index, true))
+  // A load that restores a scroll inside the zone locks at once.
+  maybeLock(trigger.scroll())
   return () => {
-    inputEvents.forEach((type) => window.removeEventListener(type, releaseClick))
+    if (locked) release(1)
+    observer.kill()
+    moving?.kill()
     pending?.kill()
     unbindTabs?.()
   }
-}
-
-const initReduced = (parts: SnapParts) => {
-  const { stage, media, items, stepPercent } = parts
-
-  gsap.set(media, { width: '100%', height: '100%' })
-  stackItems(items, 0)
-  markActive(parts, 0)
-  if (items.length < 2) return
-
-  const changeCount = items.length - 1
-  const snapPoints = items.map((_, index) => index / changeCount)
-  let activeIndex = 0
-
-  const trigger = ScrollTrigger.create({
-    trigger: stage,
-    start: 'top top',
-    end: () => `+=${(stage.offsetHeight * stepPercent * changeCount) / 100}`,
-    pin: true,
-    invalidateOnRefresh: true,
-    onUpdate: (self: ScrollTriggerInstance) => {
-      const index = clampIndex(Math.round(self.progress * changeCount), items.length)
-      if (index === activeIndex) return
-      gsap.set(items[activeIndex], { autoAlpha: 0 })
-      gsap.set(items[index], { autoAlpha: 1 })
-      activeIndex = index
-      markActive(parts, index)
-    },
-  })
-
-  return bindTabs(parts, (index) => {
-    const point = snapPoints[index]
-    if (point !== undefined) window.scrollTo({ top: trigger.start + (trigger.end - trigger.start) * point })
-  })
 }
 
 /** Overlays the items in DOM order and shows only `visibleIndex`. */
@@ -433,20 +407,6 @@ const bindTabs = (parts: SnapParts, select: (index: number) => void) => {
   return () =>
     parts.tabs.forEach((tab, index) => tab.removeEventListener('click', handlers[index]))
 }
-
-/**
- * Free scroll through the first half of the enlarge and through the end
- * hold (so the pin can release), else the nearest panel.
- */
-const snapToPanel = (value: number, snapPoints: number[]) => {
-  if (value < snapPoints[0] / 2) return value
-  if (value > snapPoints[snapPoints.length - 1]) return value
-  return snapPoints.reduce((nearest, point) =>
-    Math.abs(point - value) < Math.abs(nearest - value) ? point : nearest,
-  )
-}
-
-const clampIndex = (index: number, length: number) => Math.min(Math.max(index, 0), length - 1)
 
 const itemImage = (item: HTMLElement): HTMLElement | null =>
   item.querySelector<HTMLElement>('[data-scroll-enlarge-snap-image]') ??

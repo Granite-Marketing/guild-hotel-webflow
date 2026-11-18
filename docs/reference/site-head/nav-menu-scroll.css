@@ -1,0 +1,25 @@
+/* Main menu on phones (Stephen 18 Nov): when the list is taller than the screen the
+   whole menu scrolls, with room at the bottom so the address, phone and email are
+   never cut off. navToggle sets data-lenis-prevent on the menu on phones so touch scroll works. */
+@media screen and (max-width: 767px) {
+  /* Ends above Safari's bottom bar even when it reappears on scroll-up (dvh tracks it). */
+  .site-nav_menu {
+    bottom: auto;
+    height: 100dvh;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* The photo and its tint stay put behind the list while it scrolls. */
+  .site-nav_menu-figure,
+  .site-nav_menu-overlay {
+    position: fixed;
+  }
+  .site-nav_menu-nav,
+  .site-nav_menu-social,
+  .site-nav_menu-footer {
+    flex-shrink: 0;
+  }
+  .site-nav_menu-footer {
+    padding-bottom: calc(3rem + env(safe-area-inset-bottom));
+  }
+}

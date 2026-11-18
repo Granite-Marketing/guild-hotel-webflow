@@ -8,8 +8,8 @@
  *                             their own edge (headings, paragraphs, buttons
  *                             and figures inside, or the element itself)
  *   data-reveal="image-mask"  mask reveal: the block opens upward from its
- *                             bottom edge while the media inside settles
- *                             from a slight zoom
+ *                             bottom edge, media at its final size (a block
+ *                             with its own clip-path is masked on its inner box)
  *   data-reveal="image-fade"  soft image: the block fades in while the media
  *                             inside settles from a slight (1.04) zoom
  *   data-reveal="fade-only"   fade only: opacity 0 to 1, no rise, no text mask,
@@ -83,8 +83,6 @@ const AUTO_REVEALS: Record<string, string[]> = {
     '.article-card-staggered_intro',
     '.article-card-staggered_content',
     '.card-carousel-header-left_header',
-    '.cta-booking-newsletter_header',
-    '.cta-booking-newsletter_actions',
     '.cta-script-centered-dark_text',
     '.cta-script-centered-dark_footer',
     '.faq-accordion_header',
@@ -128,6 +126,7 @@ const AUTO_REVEALS: Record<string, string[]> = {
 const MOBILE_QUERY = '(max-width: 767px)'
 const STAGGER_STEP = 0.1
 const STAGGER_MAX = 0.5
+const COLLAGE_STEP = 0.2
 
 /**
  * Repeated rows: each entry tags its elements, delayed by position among the
@@ -142,6 +141,7 @@ const STAGGERED_REVEALS: { mode: string; selector: string; group: string }[] = [
   { mode: 'fade-only', selector: '.form-split-script-contact_field', group: '.form-split-script-contact_fieldset' },
   // Stephen 17 Nov: every form fades its fields in, not only the contact and RFP forms.
   { mode: 'fade-only', selector: '.form-contact-fields_footer', group: '.form-contact-fields_form' },
+  // Footer newsletter fields stagger in (M30); the footer's headings, button and logo carry their own Designer attributes (Stephen 18 Nov).
   { mode: 'fade-only', selector: '.cta-booking-newsletter_form > :is(label, input)', group: '.cta-booking-newsletter_form' },
 ]
 
@@ -151,8 +151,9 @@ const STAGGERED_REVEALS: { mode: string; selector: string; group: string }[] = [
  * matches `_item-figure` or any figure inside the row item, and does nothing
  * until they exist.
  */
-const MOBILE_REVEALS: { mode: string; selector: string }[] = [
-  { mode: 'fade-only', selector: 'main .home-art-stories_trail-figure' },
+const MOBILE_REVEALS: { mode: string; selector: string; step?: number }[] = [
+  // Collage tiles sit close together, so each waits a beat after the one before: one by one (M4).
+  { mode: 'fade-only', selector: 'main .home-art-stories_trail-figure', step: COLLAGE_STEP },
   { mode: 'image-fade', selector: 'main .feature-grid-dark-eyebrow_item-figure, main .feature-grid-dark-eyebrow_item figure' },
 ]
 
@@ -172,19 +173,7 @@ const OWNED_MODULES = [
 const OWNED = ['[data-reveal]', ...OWNED_MODULES, 'form'].join(', ')
 const OWNED_BY_MODULE = OWNED_MODULES.join(', ')
 
-/**
- * M16: room detail gallery photos get the earlier scale and fade again
- * (restored from e5ed47c, image-fade on the Gallery Mosaic figures). Only on
- * room pages, marked by the room description section.
- */
-const ROOM_PAGE_MARKER = '.rooms-individual-description_component'
-// The photo itself: its figure also holds a text-masked caption, and a block holding a tagged child is skipped.
-const ROOM_PAGE_IMAGE_FADE = ['.gallery-mosaic-captioned_figure > img']
-
 const tagSharedBlocks = () => {
-  if (document.querySelector(ROOM_PAGE_MARKER)) {
-    AUTO_REVEALS['image-fade'] = [...AUTO_REVEALS['image-fade'], ...ROOM_PAGE_IMAGE_FADE]
-  }
   Object.entries(AUTO_REVEALS).forEach(([mode, selectors]) => {
     document.querySelectorAll<HTMLElement>(selectors.map((selector) => `main ${selector}`).join(', ')).forEach((element) => {
       if (element.closest(OWNED) || element.querySelector('[data-reveal]')) return
@@ -229,13 +218,15 @@ const playFadeOnly = (element: HTMLElement, delay: number, start: string) => {
 const mobileReveals = () => {
   const mediaQueries = gsap.matchMedia()
   mediaQueries.add(MOBILE_QUERY, () => {
-    MOBILE_REVEALS.forEach(({ mode, selector }) => {
+    MOBILE_REVEALS.forEach(({ mode, selector, step = 0 }) => {
+      let shown = 0
       document.querySelectorAll<HTMLElement>(selector).forEach((element) => {
-        // Hidden rows (collage tiles past the mobile layout) have no box to reveal.
-        if (!element.getClientRects().length || element.closest('[data-reveal]')) return
+        // Hidden rows (collage tiles past the mobile layout) have no box to reveal or are kept hidden by their module.
+        if (!element.getClientRects().length || getComputedStyle(element).visibility === 'hidden' || element.closest('[data-reveal]')) return
         const start = parseRevealStart(element.dataset.revealStart)
-        if (mode === 'image-fade') playImageFade(element, 0, start)
-        else playFadeOnly(element, 0, start)
+        const delay = Math.min(shown++ * step, STAGGER_MAX)
+        if (mode === 'image-fade') playImageFade(element, delay, start)
+        else playFadeOnly(element, delay, start)
       })
     })
   })
@@ -291,12 +282,15 @@ export const scrollReveal = () => {
     }
 
     if (kind === 'image-mask') {
-      const media = element.querySelector<HTMLElement>('img, video, iframe')
-      const timeline = gsap.timeline({ delay, scrollTrigger: { trigger: element, start, once: true } })
-      timeline.fromTo(element, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.1, ease: 'power4.out' })
-      if (media) timeline.fromTo(media, { scale: 1.15 }, { scale: 1, duration: 1.4, ease: EASE }, 0)
-      timeline.set(element, { clearProps: 'clipPath' })
-      if (media) timeline.set(media, { clearProps: 'transform' })
+      // A block with its own clip-path (the chamfered slider frame) keeps it: the mask runs on its
+      // inner box instead, so the shape never turns square mid-reveal. No zoom: the image is at its
+      // final size while the mask opens, so it never looks cropped afterwards (Stephen 18 Nov).
+      const ownClip = getComputedStyle(element).clipPath !== 'none'
+      const target = (ownClip && (element.firstElementChild as HTMLElement | null)) || element
+      gsap
+        .timeline({ delay, scrollTrigger: { trigger: element, start, once: true } })
+        .fromTo(target, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.1, ease: 'power4.out' })
+        .set(target, { clearProps: 'clipPath' })
     }
   })
 }

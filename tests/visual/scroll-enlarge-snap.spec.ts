@@ -3,16 +3,16 @@ import { expect, test, type Page } from '@playwright/test'
 import { serveFixtures } from '../../bin/fixtures.js'
 
 /**
- * scrollEnlargeSnap reaches its end state on scroll, snaps between panels,
- * follows tab clicks, and shows the end state at once under reduced motion.
+ * scrollEnlargeSnap (#257): the frame opens on scroll, then the section locks
+ * and each gesture moves exactly one panel; the page releases at both ends.
  * Runs without Webflow: the fixture server bundles the entry in memory.
  * GSAP and Lenis load from jsDelivr, so this needs network.
  */
 
 const FIXTURE = '/scroll-enlarge-snap.html'
 const SETTLE_MS = 1800
-/** Wellness: four panels plus the 0.5-step end hold. */
-const TOTAL_STEPS = 4.5
+/** Open step plus the 0.5-step hold. */
+const TOTAL_STEPS = 1.5
 
 interface PinState {
   start: number
@@ -82,6 +82,25 @@ const scrollToProgress = async (page: Page, id: string, progress: number) => {
   await page.waitForTimeout(SETTLE_MS)
 }
 
+/** Scrolls to the lock point (frame fully open) and waits for the lock. */
+const lockSection = async (page: Page, id: string) => {
+  await scrollToProgress(page, id, 1 / TOTAL_STEPS)
+  expect(await isLocked(page)).toBe(true)
+}
+
+const isLocked = (page: Page) =>
+  page.evaluate(() => document.documentElement.classList.contains('lenis-stopped'))
+
+/** One trackpad flick: a burst of wheel events with inertia, then a settle. */
+const flick = async (page: Page, direction: 1 | -1, settle = SETTLE_MS) => {
+  await page.mouse.move(400, 400)
+  for (let event = 0; event < 25; event++) {
+    await page.mouse.wheel(0, direction * Math.max(4, 80 - event * 3))
+    await page.waitForTimeout(16)
+  }
+  await page.waitForTimeout(settle)
+}
+
 /** yPercent of every split word in the nth item's content. */
 const readWordOffsets = (page: Page, id: string, itemIndex: number) =>
   page.evaluate(
@@ -97,51 +116,85 @@ const readWordOffsets = (page: Page, id: string, itemIndex: number) =>
   )
 
 test.describe('scrollEnlargeSnap', () => {
-  test('starts as a smaller frame', async ({ page }) => {
+  test('starts as a smaller frame with a short pin', async ({ page }) => {
     await open(page)
     const state = await readState(page, 'wellness')
-    expect(state.end).toBeGreaterThan(state.start)
     expect(state.visibleWidth).toBeLessThan(state.stageWidth * 0.85)
+    // Open step plus hold: 1.5 stage heights, not one screen per panel.
+    expect(state.end - state.start).toBeLessThan(state.stageHeight * 1.6 + 60)
     expect(state.activeItem).toBe(0)
     expect(state.activeTab).toBe(0)
   })
 
-  test('enlarges to fill the stage and reaches the last panel', async ({ page }) => {
+  test('opens fully, locks, and each flick moves exactly one panel', async ({ page }) => {
     await open(page)
-    await scrollToProgress(page, 'wellness', 1)
-    const state = await readState(page, 'wellness')
+    await lockSection(page, 'wellness')
+    let state = await readState(page, 'wellness')
     expect(Math.abs(state.visibleWidth - state.stageWidth)).toBeLessThan(2)
     expect(Math.abs(state.mediaHeight - state.stageHeight)).toBeLessThan(2)
-    expect(state.activeItem).toBe(3)
-    expect(state.activeTab).toBe(3)
-    expect(state.itemOpacity[3]).toBe(1)
+
+    for (const expected of [1, 2, 3]) {
+      await flick(page, 1)
+      state = await readState(page, 'wellness')
+      expect(state.activeItem).toBe(expected)
+      expect(state.activeTab).toBe(expected)
+      expect(state.itemOpacity.map((opacity, index) => (index === expected ? 1 : 0))).toEqual(state.itemOpacity)
+      expect(await isLocked(page)).toBe(true)
+    }
+    await flick(page, -1)
+    expect((await readState(page, 'wellness')).activeItem).toBe(2)
   })
 
-  test('snaps to the nearest panel when scrolling stops between panels', async ({ page }) => {
+  test('down on the last panel releases the page', async ({ page }) => {
     await open(page)
-    // Four panels plus a half-step end hold (4.5 steps): snap points at
-    // 1/4.5, 2/4.5, 3/4.5 and 4/4.5. 0.43 is nearest 2/4.5.
-    await scrollToProgress(page, 'wellness', 0.43)
+    await lockSection(page, 'wellness')
+    await page.locator('#wellness [data-scroll-enlarge-snap-tab]').nth(3).click()
+    await page.waitForTimeout(SETTLE_MS * 1.5)
+    await flick(page, 1)
     const state = await readState(page, 'wellness')
-    const snappedTop = state.start + (state.end - state.start) * (2 / TOTAL_STEPS)
-    expect(Math.abs((await page.evaluate(() => window.scrollY)) - snappedTop)).toBeLessThan(4)
-    expect(state.activeItem).toBe(1)
+    expect(await isLocked(page)).toBe(false)
+    expect(await page.evaluate(() => window.scrollY)).toBeGreaterThan(state.end)
   })
 
-  test('tab click moves to that panel', async ({ page }) => {
+  test('up on the first panel releases the page', async ({ page }) => {
     await open(page)
-    await scrollToProgress(page, 'wellness', 0.25)
+    await lockSection(page, 'wellness')
+    const { start, end } = await readState(page, 'wellness')
+    await flick(page, -1)
+    expect(await isLocked(page)).toBe(false)
+    expect(await page.evaluate(() => window.scrollY)).toBeLessThan(start + (end - start) / TOTAL_STEPS - 2)
+  })
+
+  test('tab click plays an eased move to that panel', async ({ page }) => {
+    await open(page)
+    await lockSection(page, 'wellness')
     await page.locator('#wellness [data-scroll-enlarge-snap-tab]').nth(2).click()
-    await page.waitForTimeout(SETTLE_MS)
-    const state = await readState(page, 'wellness')
-    expect(state.activeItem).toBe(2)
+    // Mid-move: the tab is already highlighted, the panel not yet fully in.
+    await page.waitForTimeout(300)
+    let state = await readState(page, 'wellness')
     expect(state.activeTab).toBe(2)
+    const clip = await page.evaluate(
+      () => getComputedStyle(document.querySelectorAll('#wellness [data-scroll-enlarge-snap-item]')[2]).clipPath,
+    )
+    expect(clip).not.toBe('inset(0%)')
+    await page.waitForTimeout(SETTLE_MS)
+    state = await readState(page, 'wellness')
+    expect(state.activeItem).toBe(2)
     expect(state.itemOpacity[2]).toBe(1)
   })
 
-  test('section without tabs or stage element reaches its end state', async ({ page }) => {
+  test('arrow keys move one panel while locked', async ({ page }) => {
     await open(page)
-    await scrollToProgress(page, 'home', 1)
+    await lockSection(page, 'wellness')
+    await page.keyboard.press('ArrowDown')
+    await page.waitForTimeout(SETTLE_MS)
+    expect((await readState(page, 'wellness')).activeItem).toBe(1)
+  })
+
+  test('section without tabs or stage element reaches its last panel', async ({ page }) => {
+    await open(page)
+    await lockSection(page, 'home')
+    for (let panel = 0; panel < 4; panel++) await flick(page, 1)
     const state = await readState(page, 'home')
     expect(Math.abs(state.visibleWidth - state.stageWidth)).toBeLessThan(2)
     expect(state.activeItem).toBe(4)
@@ -150,50 +203,85 @@ test.describe('scrollEnlargeSnap', () => {
 
   test('panel content masks in after its wipe and reverses on leave', async ({ page }) => {
     await open(page)
-    expect((await readWordOffsets(page, 'wellness', 1)).every((offset) => offset === 110)).toBe(
-      true,
-    )
-
-    await scrollToProgress(page, 'wellness', 2 / TOTAL_STEPS)
+    expect((await readWordOffsets(page, 'wellness', 1)).every((offset) => offset === 110)).toBe(true)
+    await lockSection(page, 'wellness')
+    await flick(page, 1)
     const shown = await readWordOffsets(page, 'wellness', 1)
     expect(shown.length).toBeGreaterThan(0)
     expect(shown.every((offset) => Math.abs(offset) < 1)).toBe(true)
 
-    // Back above the enlarge's free half: panel 1 has left and reverses.
-    await scrollToProgress(page, 'wellness', 0.05)
-    const hidden = await readWordOffsets(page, 'wellness', 1)
-    expect(hidden.every((offset) => offset === 110)).toBe(true)
+    await flick(page, -1)
+    expect((await readWordOffsets(page, 'wellness', 1)).every((offset) => offset === 110)).toBe(true)
   })
 
-  test('single-item section grows to full bleed and reveals its text', async ({ page }) => {
+  test('single-item section opens, holds, then releases on the next flick', async ({ page }) => {
     await open(page)
     const initial = await readState(page, 'arts')
     expect(initial.visibleWidth).toBeLessThan(initial.stageWidth * 0.85)
 
-    // One item plus the end hold: the enlarge completes at 1/1.5.
-    await scrollToProgress(page, 'arts', 1 / 1.5)
+    await lockSection(page, 'arts')
     const state = await readState(page, 'arts')
     expect(Math.abs(state.visibleWidth - state.stageWidth)).toBeLessThan(2)
-    expect(Math.abs(state.mediaHeight - state.stageHeight)).toBeLessThan(2)
     const words = await readWordOffsets(page, 'arts', 0)
     expect(words.length).toBeGreaterThan(0)
     expect(words.every((offset) => Math.abs(offset) < 1)).toBe(true)
+
+    await flick(page, 1)
+    expect(await isLocked(page)).toBe(false)
+    expect(await page.evaluate(() => window.scrollY)).toBeGreaterThan(state.end)
   })
 
-  test('reduced motion shows the end state with no animation', async ({ page }) => {
+  test('reduced motion: full frame and instant panel swaps', async ({ page }) => {
     await page.emulateMedia({ reducedMotion: 'reduce' })
     await open(page)
     const initial = await readState(page, 'wellness')
-    expect(Math.abs(initial.mediaWidth - initial.stageWidth)).toBeLessThan(2)
+    expect(Math.abs(initial.visibleWidth - initial.stageWidth)).toBeLessThan(2)
     expect(initial.itemOpacity).toEqual([1, 0, 0, 0])
 
-    const { start, end } = initial
-    await page.evaluate((top) => window.scrollTo(0, top), end)
-    // No tweens: the swap is visible on the next frame, not after a scrub.
-    await page.waitForTimeout(150)
+    await page.evaluate((top) => window.scrollTo(0, top), initial.start + 2)
+    await page.waitForTimeout(300)
+    expect(await isLocked(page)).toBe(true)
+    await flick(page, 1, 50)
     const state = await readState(page, 'wellness')
-    expect(state.itemOpacity).toEqual([0, 0, 0, 1])
-    expect(state.activeTab).toBe(3)
-    expect(end).toBeGreaterThan(start)
+    expect(state.itemOpacity).toEqual([0, 1, 0, 0])
+    expect(state.activeTab).toBe(1)
   })
 })
+
+/**
+ * M18 (Stephen 17 Nov): the venue selector shows only once the slider's image
+ * is fully open, on phones and desktop, never from the top of the page.
+ */
+for (const viewport of [
+  { width: 390, height: 800 },
+  { width: 1440, height: 900 },
+]) {
+  test.describe(`venue selector at ${viewport.width}px`, () => {
+    test.use({ viewport })
+
+    const barVisibility = (page: Page) =>
+      page.$eval('#wellness nav', (nav) => {
+        const style = getComputedStyle(nav)
+        return { visibility: style.visibility, opacity: Number(style.opacity) }
+      })
+
+    test('hidden at the top and while the mask opens, shown once fully open', async ({ page }) => {
+      await open(page)
+      expect((await barVisibility(page)).visibility).toBe('hidden')
+
+      // Sample while the mask is still opening, before the snap settles it.
+      const { start, end } = await readState(page, 'wellness')
+      await page.evaluate((top) => window.scrollTo(0, top), start + ((end - start) * 0.3) / TOTAL_STEPS)
+      await page.waitForTimeout(500)
+      expect((await barVisibility(page)).visibility).toBe('hidden')
+
+      await scrollToProgress(page, 'wellness', 1 / TOTAL_STEPS)
+      await page.waitForTimeout(900)
+      expect(await barVisibility(page)).toEqual({ visibility: 'visible', opacity: 1 })
+
+      await scrollToProgress(page, 'wellness', 0.05)
+      await page.waitForTimeout(900)
+      expect((await barVisibility(page)).visibility).toBe('hidden')
+    })
+  })
+}

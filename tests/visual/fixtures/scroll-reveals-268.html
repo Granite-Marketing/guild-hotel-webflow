@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scroll reveals fixture (ticket #268), class names copied from staging</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      .spacer { height: 120vh; }
+      img, .ph { display: block; width: 100%; height: 10rem; background: #aaa; }
+      figure { margin: 0; }
+      .home-art-stories_trail-item { display: block; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="spacer"></div>
+      <!-- M4: Home collage tiles, close together so they all trigger at once -->
+      <div data-image-trail-hover class="home-art-stories_media">
+        <a class="home-art-stories_trail-item" data-test="tile"><figure class="home-art-stories_trail-figure"><div class="ph"></div></figure></a>
+        <a class="home-art-stories_trail-item" data-test="tile"><figure class="home-art-stories_trail-figure"><div class="ph"></div></figure></a>
+        <a class="home-art-stories_trail-item" data-test="tile"><figure class="home-art-stories_trail-figure"><div class="ph"></div></figure></a>
+        <a class="home-art-stories_trail-item" data-test="hidden-tile" style="visibility: hidden"><figure class="home-art-stories_trail-figure"><div class="ph"></div></figure></a>
+      </div>
+      <div class="spacer"></div>
+      <!-- M30: newsletter form inside a Designer fade column, as on staging -->
+      <div class="cta-booking-newsletter_column">
+        <div class="cta-booking-newsletter_form-block">
+          <form class="cta-booking-newsletter_form">
+            <label class="cta-booking-newsletter_label">Email</label>
+            <input class="cta-booking-newsletter_input" placeholder="Email" />
+            <input class="button" type="submit" value="Join" />
+          </form>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <!-- M16: room page gallery -->
+      <section class="rooms-individual-description_component"><p>Room</p></section>
+      <div class="gallery-mosaic-captioned_grid">
+        <figure class="gallery-mosaic-captioned_figure is-wide"><img class="u-image" data-test="gallery" data-reveal="image-fade" alt="" /><figcaption class="gallery-mosaic-captioned_caption">Caption one</figcaption></figure>
+        <figure class="gallery-mosaic-captioned_figure"><img class="u-image" data-test="gallery" data-reveal="image-fade" alt="" /><figcaption class="gallery-mosaic-captioned_caption">Caption two</figcaption></figure>
+      </div>
+      <div class="spacer"></div>
+      <!-- M39: Corporate rows -->
+      <ul class="feature-grid-dark-eyebrow_list">
+        <li class="feature-grid-dark-eyebrow_column"><div data-hover-image-item class="feature-grid-dark-eyebrow_item"><p>location</p><figure class="feature-grid-dark-eyebrow_item-figure" data-test="why"><img class="u-image" alt="" /></figure></div></li>
+      </ul>
+      <div class="spacer"></div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="./scroll-reveals-268.js"></script>
+  </body>
+</html>

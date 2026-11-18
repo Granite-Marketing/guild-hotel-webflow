@@ -28,6 +28,7 @@ import { eagerImages } from '$utils/eagerImages'
 import { emailLinks } from '$utils/emailLinks'
 import { formPlaceholders } from '$utils/formPlaceholders'
 import { galleryCanvas } from '$utils/galleryCanvas'
+import { galleryLightbox } from '$utils/galleryLightbox'
 import { galleryFilter } from '$utils/galleryFilter'
 import { gsapBasicAnimations } from '$utils/gsapBasicAnimations'
 import { historyStickyYear } from '$utils/historyStickyYear'
@@ -37,6 +38,7 @@ import { imageHoverScale } from '$utils/imageHoverScale'
 import { imageStackCollapse } from '$utils/imageStackCollapse'
 import { imageTrailHover } from '$utils/imageTrailHover'
 import { map } from '$utils/map'
+import { mapAccordion } from '$utils/mapAccordion'
 import { mediaTabs } from '$utils/mediaTabs'
 import { modalImageSlider } from '$utils/modalImageSlider'
 import { modalStickyBar } from '$utils/modalStickyBar'
@@ -53,6 +55,7 @@ import { roomsQuiz } from '$utils/roomsQuiz'
 import { scrollEnlargeSnap } from '$utils/scrollEnlargeSnap'
 import { scrollReveal } from '$utils/scrollReveal'
 import { heroImageScale } from '$utils/heroImageScale'
+import { footerBackgroundPhoto } from '$utils/footerBackgroundPhoto'
 import { scriptReveal } from '$utils/scriptReveal'
 import { sectionVideo } from '$utils/sectionVideo'
 import { smoothScroll } from '$utils/smoothScroll'
@@ -148,6 +151,8 @@ window.Webflow.push(() => {
   roomsQuiz()
   mediaTabs()
   map()
+  // #294: phones show one map place open at a time.
+  mapAccordion()
 
   currentYear()
   // slot E: viewSwitcher(), cmsFilterLinks()
@@ -158,6 +163,8 @@ window.Webflow.push(() => {
   galleryFilter()
   // Gallery canvas: /gallery and /arts drag and zoom board, after galleryFilter's initial hide classes.
   galleryCanvas()
+  // #295: Gallery photos open in a Webflow lightbox that follows the filter.
+  galleryLightbox()
   // slot F, in this order: filterPanels(), scrollHint(), finsweetRefresh(),
   //   filterActiveState()
 
@@ -168,6 +175,8 @@ window.Webflow.push(() => {
   scrollReveal()
   // M23: hero photo settles from a slight zoom on load (the text mask above is unchanged).
   heroImageScale()
+  // M8: the footer photo is one plain, static image on phones (no zoom, no parallax).
+  footerBackgroundPhoto()
   // Lifts the first-screen pre-hide (reveal-prehide.css) now that reveal start states are set.
   document.documentElement.classList.add('reveal-ready')
   // slot G: scrollTextReveal()
@@ -180,7 +189,7 @@ window.Webflow.push(() => {
   // It leaves at "Other dining options" (DiningIndividual feedback, 2026-11-12).
   stickyCta(
     `html[data-wf-page="${DININGS_TEMPLATE_PAGE_ID}"] .section_hero-fullbleed-centered .button`,
-    '.section_card-carousel-header-left, .section_cta-booking-newsletter, .section_footer-links',
+    '.section_card-stagger-header-left, .section_card-carousel-header-left, .section_cta-booking-newsletter, .section_footer-links',
     { phoneShowAfter: 120 }, // Stephen 17 Nov: on phones it covered the copy or was cropped at the screen edge; show it docked after a short scroll
   )
   // Story "Learn more" floats over the copy (Figma mobile; F80 desktop too).

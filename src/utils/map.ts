@@ -125,16 +125,23 @@ const collectPoints = (root: HTMLElement) => {
   return points
 }
 
-// Left padding so markers clear the content panel that overlaps the map.
+// Padding so markers clear the content panel that overlaps the map (left on desktop, bottom when stacked).
 const boundsPadding = (root: HTMLElement): google.maps.Padding => {
   const padding = { top: 96, right: 96, bottom: 96, left: 96 }
   const rootRect = root.getBoundingClientRect()
   // The panel is the widest ancestor of a row that is still under half the map.
   let panel: HTMLElement | null = null
+  let outer: HTMLElement | null = null
   let ancestor = root.closest('section')?.querySelector<HTMLElement>('[data-map-item]')?.parentElement
   while (ancestor && !ancestor.contains(root)) {
     if (ancestor.getBoundingClientRect().width < rootRect.width / 2) panel = ancestor
+    outer = ancestor
     ancestor = ancestor.parentElement
+  }
+  // Stacked phone layout (#294): a full-width panel covers the bottom of the map, so markers sit above it.
+  const outerRect = outer?.getBoundingClientRect()
+  if (!panel && outerRect && outerRect.width >= rootRect.width * 0.8 && outerRect.top > rootRect.top + PANEL_GAP) {
+    return { top: 80, right: PANEL_GAP, bottom: Math.max(PANEL_GAP, rootRect.bottom - outerRect.top + PANEL_GAP), left: PANEL_GAP }
   }
   if (!panel) return padding
   const panelRect = panel.getBoundingClientRect()
@@ -271,6 +278,9 @@ const buildMap = async (root: HTMLElement, points: MapPoint[]) => {
       googleMap.panTo(point.position)
     })
   })
+
+  // Phone accordion (#294): the first place starts open, so its pin starts highlighted.
+  if (root.hasAttribute('data-map-accordion') && window.matchMedia('(max-width: 767px)').matches) pinHighlight(0)
 
   // Centre on every marker, but never closer than the starting zoom.
   if (points.length + (home ? 1 : 0) > 1) {

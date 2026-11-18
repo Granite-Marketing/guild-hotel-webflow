@@ -142,8 +142,9 @@ const scheduleSplit = (element: HTMLElement, split: () => void) => {
 
 const findTargets = (container: HTMLElement) => {
   // Script headings write themselves in (scriptReveal), so they are never masked here, tagged or not.
+  // Elements a variant hides (display: none) take no stagger slot: the Book menu's hidden figures and texts held its rows back by seconds (Stephen 18 Nov).
   const candidates = Array.from(container.querySelectorAll<HTMLElement>(TARGET_SELECTOR)).filter(
-    (candidate) => !isScript(candidate),
+    (candidate) => !isScript(candidate) && getComputedStyle(candidate).display !== 'none',
   )
   // A bare paragraph or heading passed as the container is its own target.
   if (!candidates.length && container.matches(TARGET_SELECTOR) && !isScript(container)) return [container]

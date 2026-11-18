@@ -1,0 +1,1665 @@
+{
+  "run": "run-3",
+  "base": "https://the-guild-hotel-c34e71.webflow.io",
+  "required_routes": [],
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "path": "/",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "home-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": ".home-art-stories_trail-figure",
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "home-phone-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".home-art-stories_trail-figure",
+                      "found": true,
+                      "x": -35,
+                      "y": 308,
+                      "width": 160,
+                      "height": 228,
+                      "opacity": "0.2344",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 35
+                    }
+                  ]
+                },
+                {
+                  "ms": 400,
+                  "image": "home-phone-frames-1-400ms.png",
+                  "measures": [
+                    {
+                      "selector": ".home-art-stories_trail-figure",
+                      "found": true,
+                      "x": -35,
+                      "y": 308,
+                      "width": 160,
+                      "height": 228,
+                      "opacity": "0.8886",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 35
+                    }
+                  ]
+                },
+                {
+                  "ms": 1000,
+                  "image": "home-phone-frames-1-1000ms.png",
+                  "measures": [
+                    {
+                      "selector": ".home-art-stories_trail-figure",
+                      "found": true,
+                      "x": -35,
+                      "y": 308,
+                      "width": 160,
+                      "height": 228,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 35
+                    }
+                  ]
+                },
+                {
+                  "ms": 2000,
+                  "image": "home-phone-frames-1-2000ms.png",
+                  "measures": [
+                    {
+                      "selector": ".home-art-stories_trail-figure",
+                      "found": true,
+                      "x": -35,
+                      "y": 308,
+                      "width": 160,
+                      "height": 228,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 35
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "scrollTo": ".faq-accordion_list",
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "home-phone-frames-2-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".faq-accordion_list .accordion_question",
+                      "found": true,
+                      "x": 20,
+                      "y": 62,
+                      "width": 307,
+                      "height": 43,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "home-phone-frames-2-500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".faq-accordion_list .accordion_question",
+                      "found": true,
+                      "x": 20,
+                      "y": 62,
+                      "width": 307,
+                      "height": 43,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "home-phone-frames-2-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".faq-accordion_list .accordion_question",
+                      "found": true,
+                      "x": 20,
+                      "y": 62,
+                      "width": 307,
+                      "height": 43,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "home-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": ".home-art-stories_trail-figure",
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "home-desktop-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".home-art-stories_trail-figure",
+                      "found": true,
+                      "x": -124,
+                      "y": 100,
+                      "width": 328,
+                      "height": 467,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "hidden",
+                      "outsideViewportPx": 124
+                    }
+                  ]
+                },
+                {
+                  "ms": 400,
+                  "image": "home-desktop-frames-1-400ms.png",
+                  "measures": [
+                    {
+                      "selector": ".home-art-stories_trail-figure",
+                      "found": true,
+                      "x": -124,
+                      "y": 100,
+                      "width": 328,
+                      "height": 467,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "hidden",
+                      "outsideViewportPx": 124
+                    }
+                  ]
+                },
+                {
+                  "ms": 1000,
+                  "image": "home-desktop-frames-1-1000ms.png",
+                  "measures": [
+                    {
+                      "selector": ".home-art-stories_trail-figure",
+                      "found": true,
+                      "x": -124,
+                      "y": 100,
+                      "width": 328,
+                      "height": 467,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "hidden",
+                      "outsideViewportPx": 124
+                    }
+                  ]
+                },
+                {
+                  "ms": 2000,
+                  "image": "home-desktop-frames-1-2000ms.png",
+                  "measures": [
+                    {
+                      "selector": ".home-art-stories_trail-figure",
+                      "found": true,
+                      "x": -124,
+                      "y": 100,
+                      "width": 328,
+                      "height": 467,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "hidden",
+                      "outsideViewportPx": 124
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "scrollTo": ".faq-accordion_list",
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "home-desktop-frames-2-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".faq-accordion_list .accordion_question",
+                      "found": true,
+                      "x": 242,
+                      "y": 197,
+                      "width": 900,
+                      "height": 29,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "home-desktop-frames-2-500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".faq-accordion_list .accordion_question",
+                      "found": true,
+                      "x": 242,
+                      "y": 197,
+                      "width": 900,
+                      "height": 29,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "home-desktop-frames-2-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".faq-accordion_list .accordion_question",
+                      "found": true,
+                      "x": 242,
+                      "y": 197,
+                      "width": 900,
+                      "height": 29,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "captured"
+    },
+    {
+      "route": "/rooms",
+      "path": "/rooms",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "rooms-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [
+            {
+              "selector": "a",
+              "outcome": "focused",
+              "image": "rooms-phone-focus-1.png"
+            },
+            {
+              "selector": "button",
+              "outcome": "not found"
+            }
+          ],
+          "frames": [
+            {
+              "scrollTo": ".faq-accordion_list",
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "rooms-phone-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".faq-accordion_list .accordion_question",
+                      "found": true,
+                      "x": 20,
+                      "y": 61,
+                      "width": 307,
+                      "height": 43,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    },
+                    {
+                      "selector": ".faq-accordion_list .accordion_item",
+                      "found": true,
+                      "x": 20,
+                      "y": 15,
+                      "width": 350,
+                      "height": 249,
+                      "opacity": "0.1513",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "rooms-phone-frames-1-500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".faq-accordion_list .accordion_question",
+                      "found": true,
+                      "x": 20,
+                      "y": 61,
+                      "width": 307,
+                      "height": 43,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    },
+                    {
+                      "selector": ".faq-accordion_list .accordion_item",
+                      "found": true,
+                      "x": 20,
+                      "y": 15,
+                      "width": 350,
+                      "height": 249,
+                      "opacity": "0.8852",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "rooms-phone-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".faq-accordion_list .accordion_question",
+                      "found": true,
+                      "x": 20,
+                      "y": 61,
+                      "width": 307,
+                      "height": 43,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    },
+                    {
+                      "selector": ".faq-accordion_list .accordion_item",
+                      "found": true,
+                      "x": 20,
+                      "y": 15,
+                      "width": 350,
+                      "height": 249,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "rooms-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [
+            {
+              "selector": "a",
+              "outcome": "focused",
+              "image": "rooms-desktop-focus-1.png"
+            },
+            {
+              "selector": "button",
+              "outcome": "not found"
+            }
+          ],
+          "frames": [
+            {
+              "scrollTo": ".faq-accordion_list",
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "rooms-desktop-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".faq-accordion_list .accordion_question",
+                      "found": true,
+                      "x": 242,
+                      "y": 196,
+                      "width": 900,
+                      "height": 29,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    },
+                    {
+                      "selector": ".faq-accordion_list .accordion_item",
+                      "found": true,
+                      "x": 242,
+                      "y": 154,
+                      "width": 956,
+                      "height": 182,
+                      "opacity": "0.6519",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "rooms-desktop-frames-1-500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".faq-accordion_list .accordion_question",
+                      "found": true,
+                      "x": 242,
+                      "y": 196,
+                      "width": 900,
+                      "height": 29,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    },
+                    {
+                      "selector": ".faq-accordion_list .accordion_item",
+                      "found": true,
+                      "x": 242,
+                      "y": 154,
+                      "width": 956,
+                      "height": 182,
+                      "opacity": "0.9137",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "rooms-desktop-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".faq-accordion_list .accordion_question",
+                      "found": true,
+                      "x": 242,
+                      "y": 196,
+                      "width": 900,
+                      "height": 29,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    },
+                    {
+                      "selector": ".faq-accordion_list .accordion_item",
+                      "found": true,
+                      "x": 242,
+                      "y": 154,
+                      "width": 956,
+                      "height": 182,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "captured"
+    },
+    {
+      "route": "/rooms/cozy-courtyard-king",
+      "path": "/rooms/cozy-courtyard-king",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "rooms-cozy-courtyard-king-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": "main figure",
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "rooms-cozy-courtyard-king-phone-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": "main figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 390,
+                      "height": 844,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "rooms-cozy-courtyard-king-phone-frames-1-500ms.png",
+                  "measures": [
+                    {
+                      "selector": "main figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 390,
+                      "height": 844,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "rooms-cozy-courtyard-king-phone-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": "main figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 390,
+                      "height": 844,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "rooms-cozy-courtyard-king-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": "main figure",
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "rooms-cozy-courtyard-king-desktop-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": "main figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 1440,
+                      "height": 900,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "rooms-cozy-courtyard-king-desktop-frames-1-500ms.png",
+                  "measures": [
+                    {
+                      "selector": "main figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 1440,
+                      "height": 900,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "rooms-cozy-courtyard-king-desktop-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": "main figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 1440,
+                      "height": 900,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "captured"
+    },
+    {
+      "route": "/dining/dining-zuma",
+      "path": "/dining/dining-zuma",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "dining-dining-zuma-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": null,
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "dining-dining-zuma-phone-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".tab-pills-intro_tabs",
+                      "found": false
+                    },
+                    {
+                      "selector": ".venue-card-fullbleed_tabs",
+                      "found": false
+                    }
+                  ]
+                },
+                {
+                  "ms": 1000,
+                  "image": "dining-dining-zuma-phone-frames-1-1000ms.png",
+                  "measures": [
+                    {
+                      "selector": ".tab-pills-intro_tabs",
+                      "found": false
+                    },
+                    {
+                      "selector": ".venue-card-fullbleed_tabs",
+                      "found": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "dining-dining-zuma-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": null,
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "dining-dining-zuma-desktop-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".tab-pills-intro_tabs",
+                      "found": false
+                    },
+                    {
+                      "selector": ".venue-card-fullbleed_tabs",
+                      "found": false
+                    }
+                  ]
+                },
+                {
+                  "ms": 1000,
+                  "image": "dining-dining-zuma-desktop-frames-1-1000ms.png",
+                  "measures": [
+                    {
+                      "selector": ".tab-pills-intro_tabs",
+                      "found": false
+                    },
+                    {
+                      "selector": ".venue-card-fullbleed_tabs",
+                      "found": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "captured"
+    },
+    {
+      "route": "/dining/solana-coffee",
+      "path": "/dining/solana-coffee",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "dining-solana-coffee-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": null,
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "dining-solana-coffee-phone-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".tab-pills-intro_tabs",
+                      "found": false
+                    },
+                    {
+                      "selector": ".venue-card-fullbleed_tabs",
+                      "found": false
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "dining-solana-coffee-phone-frames-1-500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".tab-pills-intro_tabs",
+                      "found": false
+                    },
+                    {
+                      "selector": ".venue-card-fullbleed_tabs",
+                      "found": false
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "dining-solana-coffee-phone-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".tab-pills-intro_tabs",
+                      "found": false
+                    },
+                    {
+                      "selector": ".venue-card-fullbleed_tabs",
+                      "found": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "dining-solana-coffee-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": null,
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "dining-solana-coffee-desktop-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".tab-pills-intro_tabs",
+                      "found": false
+                    },
+                    {
+                      "selector": ".venue-card-fullbleed_tabs",
+                      "found": false
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "dining-solana-coffee-desktop-frames-1-500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".tab-pills-intro_tabs",
+                      "found": false
+                    },
+                    {
+                      "selector": ".venue-card-fullbleed_tabs",
+                      "found": false
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "dining-solana-coffee-desktop-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".tab-pills-intro_tabs",
+                      "found": false
+                    },
+                    {
+                      "selector": ".venue-card-fullbleed_tabs",
+                      "found": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "captured"
+    },
+    {
+      "route": "/dining/dining-gardenterrace",
+      "path": "/dining/dining-gardenterrace",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "dining-dining-gardenterrace-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": null,
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "dining-dining-gardenterrace-phone-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero_footer .button",
+                      "found": false
+                    },
+                    {
+                      "selector": ".hero_footer",
+                      "found": false
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "dining-dining-gardenterrace-phone-frames-1-500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero_footer .button",
+                      "found": false
+                    },
+                    {
+                      "selector": ".hero_footer",
+                      "found": false
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "dining-dining-gardenterrace-phone-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero_footer .button",
+                      "found": false
+                    },
+                    {
+                      "selector": ".hero_footer",
+                      "found": false
+                    }
+                  ]
+                },
+                {
+                  "ms": 2500,
+                  "image": "dining-dining-gardenterrace-phone-frames-1-2500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero_footer .button",
+                      "found": false
+                    },
+                    {
+                      "selector": ".hero_footer",
+                      "found": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "dining-dining-gardenterrace-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": null,
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "dining-dining-gardenterrace-desktop-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero_footer .button",
+                      "found": false
+                    },
+                    {
+                      "selector": ".hero_footer",
+                      "found": false
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "dining-dining-gardenterrace-desktop-frames-1-500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero_footer .button",
+                      "found": false
+                    },
+                    {
+                      "selector": ".hero_footer",
+                      "found": false
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "dining-dining-gardenterrace-desktop-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero_footer .button",
+                      "found": false
+                    },
+                    {
+                      "selector": ".hero_footer",
+                      "found": false
+                    }
+                  ]
+                },
+                {
+                  "ms": 2500,
+                  "image": "dining-dining-gardenterrace-desktop-frames-1-2500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero_footer .button",
+                      "found": false
+                    },
+                    {
+                      "selector": ".hero_footer",
+                      "found": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "captured"
+    },
+    {
+      "route": "/happenings",
+      "path": "/happenings",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "happenings-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": null,
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "happenings-phone-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero-fullbleed-centered_figure img",
+                      "found": true,
+                      "x": -7,
+                      "y": -15,
+                      "width": 404,
+                      "height": 873,
+                      "opacity": "1",
+                      "transform": "matrix(1.0349, 0, 0, 1.0349, 0, 0)",
+                      "visibility": "visible",
+                      "outsideViewportPx": 15
+                    },
+                    {
+                      "selector": ".hero-fullbleed-centered_figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 390,
+                      "height": 844,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 300,
+                  "image": "happenings-phone-frames-1-300ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero-fullbleed-centered_figure img",
+                      "found": true,
+                      "x": -5,
+                      "y": -10,
+                      "width": 400,
+                      "height": 865,
+                      "opacity": "1",
+                      "transform": "matrix(1.0246, 0, 0, 1.0246, 0, 0)",
+                      "visibility": "visible",
+                      "outsideViewportPx": 10
+                    },
+                    {
+                      "selector": ".hero-fullbleed-centered_figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 390,
+                      "height": 844,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 800,
+                  "image": "happenings-phone-frames-1-800ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero-fullbleed-centered_figure img",
+                      "found": true,
+                      "x": -3,
+                      "y": -6,
+                      "width": 395,
+                      "height": 856,
+                      "opacity": "1",
+                      "transform": "matrix(1.0138, 0, 0, 1.0138, 0, 0)",
+                      "visibility": "visible",
+                      "outsideViewportPx": 6
+                    },
+                    {
+                      "selector": ".hero-fullbleed-centered_figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 390,
+                      "height": 844,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "happenings-phone-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero-fullbleed-centered_figure img",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 390,
+                      "height": 844,
+                      "opacity": "1",
+                      "transform": "matrix(1.0001, 0, 0, 1.0001, 0, 0)",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    },
+                    {
+                      "selector": ".hero-fullbleed-centered_figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 390,
+                      "height": 844,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "happenings-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": null,
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "happenings-desktop-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero-fullbleed-centered_figure img",
+                      "found": true,
+                      "x": -16,
+                      "y": -10,
+                      "width": 1473,
+                      "height": 920,
+                      "opacity": "1",
+                      "transform": "matrix(1.0227, 0, 0, 1.0227, 0, 0)",
+                      "visibility": "visible",
+                      "outsideViewportPx": 16
+                    },
+                    {
+                      "selector": ".hero-fullbleed-centered_figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 1440,
+                      "height": 900,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 300,
+                  "image": "happenings-desktop-frames-1-300ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero-fullbleed-centered_figure img",
+                      "found": true,
+                      "x": -7,
+                      "y": -5,
+                      "width": 1455,
+                      "height": 909,
+                      "opacity": "1",
+                      "transform": "matrix(1.0104, 0, 0, 1.0104, 0, 0)",
+                      "visibility": "visible",
+                      "outsideViewportPx": 7
+                    },
+                    {
+                      "selector": ".hero-fullbleed-centered_figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 1440,
+                      "height": 900,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 800,
+                  "image": "happenings-desktop-frames-1-800ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero-fullbleed-centered_figure img",
+                      "found": true,
+                      "x": -3,
+                      "y": -2,
+                      "width": 1446,
+                      "height": 904,
+                      "opacity": "1",
+                      "transform": "matrix(1.004, 0, 0, 1.004, 0, 0)",
+                      "visibility": "visible",
+                      "outsideViewportPx": 3
+                    },
+                    {
+                      "selector": ".hero-fullbleed-centered_figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 1440,
+                      "height": 900,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "happenings-desktop-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".hero-fullbleed-centered_figure img",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 1440,
+                      "height": 900,
+                      "opacity": "1",
+                      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    },
+                    {
+                      "selector": ".hero-fullbleed-centered_figure",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 1440,
+                      "height": 900,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "captured"
+    },
+    {
+      "route": "/history",
+      "path": "/history",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "history-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": []
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "history-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": []
+        }
+      ],
+      "status": "captured"
+    },
+    {
+      "route": "/meetings",
+      "path": "/meetings",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "meetings-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": ".form-split-script-contact_field",
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "meetings-phone-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".form-split-script-contact_field",
+                      "found": true,
+                      "x": 20,
+                      "y": 409,
+                      "width": 350,
+                      "height": 26,
+                      "opacity": "0.1211",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "meetings-phone-frames-1-500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".form-split-script-contact_field",
+                      "found": true,
+                      "x": 20,
+                      "y": 410,
+                      "width": 350,
+                      "height": 26,
+                      "opacity": "0.9271",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "meetings-phone-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".form-split-script-contact_field",
+                      "found": true,
+                      "x": 20,
+                      "y": 410,
+                      "width": 350,
+                      "height": 26,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "meetings-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": ".form-split-script-contact_field",
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "meetings-desktop-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".form-split-script-contact_field",
+                      "found": true,
+                      "x": 615,
+                      "y": 436,
+                      "width": 373,
+                      "height": 29,
+                      "opacity": "0.2431",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "meetings-desktop-frames-1-500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".form-split-script-contact_field",
+                      "found": true,
+                      "x": 615,
+                      "y": 436,
+                      "width": 373,
+                      "height": 29,
+                      "opacity": "0.9375",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "meetings-desktop-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".form-split-script-contact_field",
+                      "found": true,
+                      "x": 615,
+                      "y": 436,
+                      "width": 373,
+                      "height": 29,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "captured"
+    },
+    {
+      "route": "/legal-corporate/corporate",
+      "path": "/legal-corporate/corporate",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "legal-corporate-corporate-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": ".feature-grid-dark-eyebrow_item-figure",
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "legal-corporate-corporate-phone-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": ".feature-grid-dark-eyebrow_item-figure",
+                      "found": true,
+                      "x": 250,
+                      "y": 377,
+                      "width": 120,
+                      "height": 90,
+                      "opacity": "0.2256",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "legal-corporate-corporate-phone-frames-1-500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".feature-grid-dark-eyebrow_item-figure",
+                      "found": true,
+                      "x": 250,
+                      "y": 377,
+                      "width": 120,
+                      "height": 90,
+                      "opacity": "0.9541",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "legal-corporate-corporate-phone-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": ".feature-grid-dark-eyebrow_item-figure",
+                      "found": true,
+                      "x": 250,
+                      "y": 377,
+                      "width": 120,
+                      "height": 90,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "legal-corporate-corporate-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": ".feature-grid-dark-eyebrow_item-figure",
+              "shots": [],
+              "reason": "frames error: locator.scrollIntoViewIfNeeded: Timeout 28940.62599999999ms exceeded."
+            }
+          ]
+        }
+      ],
+      "status": "captured"
+    }
+  ],
+  "blocked_hosts": [
+    "challenges.cloudflare.com",
+    "maps.googleapis.com"
+  ],
+  "auth": "not configured",
+  "replaced": [
+    "https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@2ac539eb6dcfa7a11873d3fbd472075d097d221b/dist/index.js",
+    "https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@2ac539eb6dcfa7a11873d3fbd472075d097d221b/dist/site.css"
+  ],
+  "status": "captured",
+  "captured": 10,
+  "total": 10,
+  "problems": [],
+  "marker": "Visual capture: 10 of 10 pages captured"
+}
