@@ -8,8 +8,8 @@
  *                             their own edge (headings, paragraphs, buttons
  *                             and figures inside, or the element itself)
  *   data-reveal="image-mask"  mask reveal: the block opens upward from its
- *                             bottom edge while the media inside settles
- *                             from a slight zoom
+ *                             bottom edge, media at its final size (a block
+ *                             with its own clip-path is masked on its inner box)
  *   data-reveal="image-fade"  soft image: the block fades in while the media
  *                             inside settles from a slight (1.04) zoom
  *   data-reveal="fade-only"   fade only: opacity 0 to 1, no rise, no text mask,
@@ -282,12 +282,15 @@ export const scrollReveal = () => {
     }
 
     if (kind === 'image-mask') {
-      const media = element.querySelector<HTMLElement>('img, video, iframe')
-      const timeline = gsap.timeline({ delay, scrollTrigger: { trigger: element, start, once: true } })
-      timeline.fromTo(element, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.1, ease: 'power4.out' })
-      if (media) timeline.fromTo(media, { scale: 1.15 }, { scale: 1, duration: 1.4, ease: EASE }, 0)
-      timeline.set(element, { clearProps: 'clipPath' })
-      if (media) timeline.set(media, { clearProps: 'transform' })
+      // A block with its own clip-path (the chamfered slider frame) keeps it: the mask runs on its
+      // inner box instead, so the shape never turns square mid-reveal. No zoom: the image is at its
+      // final size while the mask opens, so it never looks cropped afterwards (Stephen 18 Nov).
+      const ownClip = getComputedStyle(element).clipPath !== 'none'
+      const target = (ownClip && (element.firstElementChild as HTMLElement | null)) || element
+      gsap
+        .timeline({ delay, scrollTrigger: { trigger: element, start, once: true } })
+        .fromTo(target, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.1, ease: 'power4.out' })
+        .set(target, { clearProps: 'clipPath' })
     }
   })
 }
