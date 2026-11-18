@@ -81,7 +81,7 @@ test.describe('M30 newsletter form', () => {
 })
 
 for (const width of [390, 1440]) {
-  test(`M16 room gallery photos scale and fade in at ${width}`, async ({ page }) => {
+  test(`M16 gallery photos (Designer image-fade) scale and fade in at ${width}`, async ({ page }) => {
     await load(page, width)
     expect(await opacity(page, '[data-test="gallery"]')).toBe(0)
     await page.locator('[data-test="gallery"]').first().scrollIntoViewIfNeeded()

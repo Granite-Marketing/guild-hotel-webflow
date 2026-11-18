@@ -173,19 +173,7 @@ const OWNED_MODULES = [
 const OWNED = ['[data-reveal]', ...OWNED_MODULES, 'form'].join(', ')
 const OWNED_BY_MODULE = OWNED_MODULES.join(', ')
 
-/**
- * M16: room detail gallery photos get the earlier scale and fade again
- * (restored from e5ed47c, image-fade on the Gallery Mosaic figures). Only on
- * room pages, marked by the room description section.
- */
-const ROOM_PAGE_MARKER = '.rooms-individual-description_component'
-// The photo itself: its figure also holds a text-masked caption, and a block holding a tagged child is skipped.
-const ROOM_PAGE_IMAGE_FADE = ['.gallery-mosaic-captioned_figure > img']
-
 const tagSharedBlocks = () => {
-  if (document.querySelector(ROOM_PAGE_MARKER)) {
-    AUTO_REVEALS['image-fade'] = [...AUTO_REVEALS['image-fade'], ...ROOM_PAGE_IMAGE_FADE]
-  }
   Object.entries(AUTO_REVEALS).forEach(([mode, selectors]) => {
     document.querySelectorAll<HTMLElement>(selectors.map((selector) => `main ${selector}`).join(', ')).forEach((element) => {
       if (element.closest(OWNED) || element.querySelector('[data-reveal]')) return
