@@ -91,6 +91,8 @@ export const navToggle = () => {
 
   const open = () => {
     header.classList.add(OPEN_CLASS)
+    // On phones the menu scrolls on its own (short screens, Safari's bar) while the page engine is stopped.
+    menu?.toggleAttribute('data-lenis-prevent', window.matchMedia(MOBILE_QUERY).matches)
     if (shouldLockScroll()) {
       smoothScroll.stop()
       scrollWasStopped = true

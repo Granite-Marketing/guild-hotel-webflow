@@ -259,6 +259,8 @@ const initSlider = (parts: SnapParts, reduce: boolean) => {
 
   const trigger = timeline.scrollTrigger as ScrollTriggerInstance
   const lockPoint = () => trigger.start + (trigger.end - trigger.start) * (openSteps / (openSteps + HOLD))
+  // Venue selector hidden from first paint until the frame is fully open (M18); onUpdate only runs once scrolling starts.
+  syncTabBar(reduce || trigger.progress >= openSteps / (openSteps + HOLD) - 0.001)
 
   // Lock state: scroll held at the lock point while gestures drive panels.
   let locked = false
