@@ -40,8 +40,21 @@ const navBottom = () => {
 
 const BOTTOM_GAP_REM = 2
 const FADE_DISTANCE_VH = 0.25
+const READING_LINE = '40%'
+// Safari's bottom bar reappears on scroll-up over the bottom of the large viewport;
+// the pinned bar sits above it (100lvh - 100svh, 0 elsewhere). Stephen 18 Nov.
+let toolbarAllowance: number | null = null
+const measureToolbar = () => {
+  const probe = document.createElement('div')
+  probe.style.cssText = 'position:fixed;visibility:hidden;pointer-events:none;height:calc(100lvh - 100svh)'
+  document.body.append(probe)
+  const height = probe.getBoundingClientRect().height
+  probe.remove()
+  return height
+}
 const bottomGap = () =>
-  BOTTOM_GAP_REM * parseFloat(getComputedStyle(document.documentElement).fontSize)
+  BOTTOM_GAP_REM * parseFloat(getComputedStyle(document.documentElement).fontSize) +
+  (toolbarAllowance ??= measureToolbar())
 
 type TabEntry = { link: HTMLAnchorElement; target: HTMLElement }
 
@@ -141,8 +154,10 @@ const pinTabs = (tabs: HTMLElement, warn: boolean) => {
   entries.forEach(({ link, target }, index) => {
     ScrollTrigger.create({
       trigger: target,
-      start: () => `top top+=${clearance() + 1}`,
-      end: () => `bottom top+=${clearance() + 1}`,
+      // A section is current once it crosses a reading line 40% down the screen, so the
+      // last one (Conferences) activates even though it never reaches the top (Stephen 18 Nov).
+      start: `top ${READING_LINE}`,
+      end: `bottom ${READING_LINE}`,
       onToggle: (self: ScrollTriggerInstance) => {
         if (self.isActive) setActive(link)
       },
