@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.3.0
+
+### Minor Changes
+
+- f377d39: Venue scroll sections work as a gesture slider (#257): once the image is full screen the section locks and each scroll, swipe or arrow key plays one panel transition; the page releases at the first and last panel. The pin drops from about 8 screens to 1.5.
+
+### Patch Changes
+
+- f377d39: 17 Nov mobile round (#264) with the 18 Nov fixes: static footer photo, scrolling phone menu, steady venue subnav, gesture venue slider with iOS momentum fix, Safari bar clearance for pinned pills, per-element footer reveals, faster Book menu, History reveal fixes, Blog category reading line, mobile map accordion (#294) and Gallery lightbox (#295).
+
 ## 1.2.35
 
 ### Patch Changes
