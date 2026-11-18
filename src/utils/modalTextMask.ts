@@ -11,7 +11,7 @@
 
 import { createLineMaskTimeline } from '$utils/lineMaskReveal'
 
-const MODAL_SPEED = 2
+const BOOK_MENU_SPEED = 2
 
 export const modalTextMask = () => {
   const dialogs = document.querySelectorAll<HTMLElement>(
@@ -21,9 +21,10 @@ export const modalTextMask = () => {
 
   dialogs.forEach((dialog) => {
     const panel = dialog.querySelector<HTMLElement>('[class*="_panel"]') ?? dialog
-    // Row buttons and arrows carry data-line-mask in the Designer. Twice the
-    // standard speed: a menu should open briskly (Stephen 18 Nov).
-    const reveal = createLineMaskTimeline(panel, MODAL_SPEED)
+    // Row buttons and arrows carry data-line-mask in the Designer. The Book menu's
+    // first panel opens at twice the speed; its sub-panels (Reserve a table) keep
+    // the standard reveal (Stephen 18 Nov).
+    const reveal = createLineMaskTimeline(panel, dialog.id === 'book' ? BOOK_MENU_SPEED : 1)
     new MutationObserver(() =>
       dialog.classList.contains('is-open') ? reveal.play() : reveal.reverse(),
     ).observe(dialog, { attributes: true, attributeFilter: ['class'] })
