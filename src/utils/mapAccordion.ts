@@ -15,6 +15,7 @@
 const MOBILE_QUERY = '(max-width: 767px)'
 const OPEN_CLASS = 'is-open'
 const DURATION = 0.4
+const CLOSED_SPACING = { rowGap: 0, paddingTop: '1rem', paddingBottom: '1rem' }
 
 export const mapAccordion = () => {
   const root = document.querySelector<HTMLElement>('[data-map][data-map-accordion]')
@@ -28,6 +29,11 @@ export const mapAccordion = () => {
 
   gsap.matchMedia().add(MOBILE_QUERY, () => {
     let openIndex = -1
+    // An open row keeps the Designer spacing; a closed row is just its name, with tighter padding.
+    const openSpacing = items.map((item) => {
+      const style = getComputedStyle(item)
+      return { rowGap: style.rowGap, paddingTop: style.paddingTop, paddingBottom: style.paddingBottom }
+    })
 
     const openAt = (index: number, instant = false) => {
       if (index === openIndex || index < 0) return
@@ -36,6 +42,12 @@ export const mapAccordion = () => {
         const open = itemIndex === index
         item.classList.toggle(OPEN_CLASS, open)
         item.setAttribute('aria-expanded', String(open))
+        gsap.to(item, {
+          ...(open ? openSpacing[itemIndex] : CLOSED_SPACING),
+          duration: instant ? 0 : DURATION,
+          ease: 'power2.inOut',
+          overwrite: true,
+        })
         gsap.to(details(item), {
           height: open ? 'auto' : 0,
           autoAlpha: open ? 1 : 0,
@@ -72,6 +84,7 @@ export const mapAccordion = () => {
         item.removeAttribute('aria-expanded')
       })
       gsap.set(allDetails, { clearProps: 'height,opacity,visibility,overflow' })
+      gsap.set(items, { clearProps: 'rowGap,paddingTop,paddingBottom' })
     }
   })
 }
