@@ -1,0 +1,5 @@
+/* Lenis's own required rule: a stopped page cannot scroll natively. Without it iOS touch
+   momentum kept carrying the page past a locked venue slider (Stephen 18 Nov). */
+html.lenis.lenis-stopped {
+  overflow: hidden;
+}

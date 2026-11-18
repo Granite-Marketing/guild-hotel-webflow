@@ -250,7 +250,7 @@ const initSlider = (parts: SnapParts, reduce: boolean) => {
           mask.state.progress = 1
           mask.apply()
         }
-        if (locked) holdScroll()
+        if (locked) inZone(window.scrollY) ? holdScroll() : unlockInPlace()
       },
     },
   })
@@ -298,8 +298,17 @@ const initSlider = (parts: SnapParts, reduce: boolean) => {
     else window.scrollTo({ top: nudge, behavior: 'smooth' })
   }
 
+  // iOS momentum that escaped the zone: let go where the page is, never yank it back (Stephen 18 Nov).
+  const unlockInPlace = () => {
+    locked = false
+    observer.disable()
+    window.removeEventListener('keydown', onKey)
+    lenis.start()
+  }
+  const inZone = (scroll: number) => scroll >= trigger.start - 1 && scroll <= trigger.end + 1
+
   function maybeLock(scroll: number) {
-    if (locked) return holdScroll()
+    if (locked) return inZone(scroll) ? holdScroll() : unlockInPlace()
     // Anchor and tab-bar scrolls pass through without locking.
     if (lenis.raw?.userData?.anchor) return
     if (scroll >= lockPoint() - 1 && scroll <= trigger.end) lock()
