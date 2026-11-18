@@ -11,6 +11,8 @@
 
 import { createLineMaskTimeline } from '$utils/lineMaskReveal'
 
+const MODAL_SPEED = 2
+
 export const modalTextMask = () => {
   const dialogs = document.querySelectorAll<HTMLElement>(
     '[role="dialog"][data-modal-reveal], [data-modal-reveal] [role="dialog"]',
@@ -19,11 +21,9 @@ export const modalTextMask = () => {
 
   dialogs.forEach((dialog) => {
     const panel = dialog.querySelector<HTMLElement>('[class*="_panel"]') ?? dialog
-    // Venue rows use their own button class, which the line mask does not pick up by default.
-    panel
-      .querySelectorAll<HTMLElement>('.overlay-detail-panel-modal_item-button')
-      .forEach((button) => (button.dataset.lineMask = ''))
-    const reveal = createLineMaskTimeline(panel)
+    // Row buttons and arrows carry data-line-mask in the Designer. Twice the
+    // standard speed: a menu should open briskly (Stephen 18 Nov).
+    const reveal = createLineMaskTimeline(panel, MODAL_SPEED)
     new MutationObserver(() =>
       dialog.classList.contains('is-open') ? reveal.play() : reveal.reverse(),
     ).observe(dialog, { attributes: true, attributeFilter: ['class'] })
