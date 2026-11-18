@@ -9,6 +9,11 @@
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
   }
+  /* The photo and its tint stay put behind the list while it scrolls. */
+  .site-nav_menu-figure,
+  .site-nav_menu-overlay {
+    position: fixed;
+  }
   .site-nav_menu-nav,
   .site-nav_menu-social,
   .site-nav_menu-footer {
