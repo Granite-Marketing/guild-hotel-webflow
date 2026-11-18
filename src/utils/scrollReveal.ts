@@ -264,7 +264,8 @@ export const scrollReveal = () => {
       gsap.fromTo(
         element,
         // A block holding a form only fades: form fields never slide (Stephen 17 Nov), e.g. the newsletter column.
-        { autoAlpha: 0, y: element.querySelector('form') ? 0 : '2rem' },
+        // The booking column beside it fades the same way, so Book and Join us match (Stephen 18 Nov).
+        { autoAlpha: 0, y: element.querySelector('form') || element.matches('.cta-booking-newsletter_column') ? 0 : '2rem' },
         { autoAlpha: 1, y: 0, duration: 1, delay, ease: EASE, scrollTrigger: { trigger: element, start, once: true } },
       )
       return
