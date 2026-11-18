@@ -83,8 +83,6 @@ const AUTO_REVEALS: Record<string, string[]> = {
     '.article-card-staggered_intro',
     '.article-card-staggered_content',
     '.card-carousel-header-left_header',
-    '.cta-booking-newsletter_header',
-    '.cta-booking-newsletter_actions',
     '.cta-script-centered-dark_text',
     '.cta-script-centered-dark_footer',
     '.faq-accordion_header',
@@ -136,15 +134,15 @@ const COLLAGE_STEP = 0.2
  * `form-split-script-contact` form (Request for Proposal and the other
  * contact forms share the component).
  */
-const STAGGERED_REVEALS: { mode: string; selector: string; group: string; insideFade?: boolean }[] = [
+const STAGGERED_REVEALS: { mode: string; selector: string; group: string }[] = [
   { mode: 'text-mask', selector: '.faq-accordion_list .accordion_question', group: '.faq-accordion_list' },
   { mode: 'fade-only', selector: '.faq-accordion_list .accordion_item', group: '.faq-accordion_list' },
   { mode: 'fade-only', selector: '.form-split-script-contact_fieldset-header', group: '.form-split-script-contact_fieldsets' },
   { mode: 'fade-only', selector: '.form-split-script-contact_field', group: '.form-split-script-contact_fieldset' },
   // Stephen 17 Nov: every form fades its fields in, not only the contact and RFP forms.
   { mode: 'fade-only', selector: '.form-contact-fields_footer', group: '.form-contact-fields_form' },
-  // The newsletter column carries a Designer `fade` (it never slides, see scrollReveal below); its fields still stagger inside it.
-  { mode: 'fade-only', selector: '.cta-booking-newsletter_form > :is(label, input)', group: '.cta-booking-newsletter_form', insideFade: true },
+  // Footer newsletter fields stagger in (M30); the footer's headings, button and logo carry their own Designer attributes (Stephen 18 Nov).
+  { mode: 'fade-only', selector: '.cta-booking-newsletter_form > :is(label, input)', group: '.cta-booking-newsletter_form' },
 ]
 
 /**
@@ -197,11 +195,10 @@ const tagSharedBlocks = () => {
 }
 
 const tagStaggeredRows = () => {
-  STAGGERED_REVEALS.forEach(({ mode, selector, group, insideFade }) => {
+  STAGGERED_REVEALS.forEach(({ mode, selector, group }) => {
     document.querySelectorAll<HTMLElement>(`main ${selector}`).forEach((element) => {
       // Like tagSharedBlocks, but forms are fair game (their fields are the point) and a row may hold its own tagged children.
-      const revealedAncestor = element.parentElement?.closest<HTMLElement>('[data-reveal]')
-      if (element.dataset.reveal || element.closest(OWNED_BY_MODULE) || (revealedAncestor && !(insideFade && revealedAncestor.dataset.reveal === 'fade'))) return
+      if (element.dataset.reveal || element.closest(OWNED_BY_MODULE) || element.parentElement?.closest('[data-reveal]')) return
       const siblings = Array.from(element.closest(group)?.querySelectorAll(selector) ?? [])
       const index = Math.max(0, siblings.indexOf(element))
       element.dataset.reveal = mode
@@ -264,8 +261,7 @@ export const scrollReveal = () => {
       gsap.fromTo(
         element,
         // A block holding a form only fades: form fields never slide (Stephen 17 Nov), e.g. the newsletter column.
-        // The booking column beside it fades the same way, so Book and Join us match (Stephen 18 Nov).
-        { autoAlpha: 0, y: element.querySelector('form') || element.matches('.cta-booking-newsletter_column') ? 0 : '2rem' },
+        { autoAlpha: 0, y: element.querySelector('form') ? 0 : '2rem' },
         { autoAlpha: 1, y: 0, duration: 1, delay, ease: EASE, scrollTrigger: { trigger: element, start, once: true } },
       )
       return

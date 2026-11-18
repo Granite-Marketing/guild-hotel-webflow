@@ -63,7 +63,7 @@ test.describe('M4 collage on a phone', () => {
 })
 
 test.describe('M30 newsletter form', () => {
-  test('fields fade in staggered with no slide, even inside a faded column', async ({ page }) => {
+  test('fields fade in staggered with no slide', async ({ page }) => {
     await load(page, 390)
     const delays = await page
       .locator('.cta-booking-newsletter_form > :is(label, input)')
@@ -72,7 +72,7 @@ test.describe('M30 newsletter form', () => {
     await page.locator('.cta-booking-newsletter_form').scrollIntoViewIfNeeded()
     const transforms: string[] = []
     for (let i = 0; i < 6; i++) {
-      transforms.push(await page.locator('.cta-booking-newsletter_form').evaluate((form) => getComputedStyle(form.closest('[data-reveal]') as Element).transform))
+      transforms.push(...(await page.locator('.cta-booking-newsletter_form > :is(label, input)').evaluateAll((fields) => fields.map((field) => getComputedStyle(field).transform))))
       await page.waitForTimeout(100)
     }
     expect(transforms.every((value) => value === 'none' || value === 'matrix(1, 0, 0, 1, 0, 0)')).toBe(true)
