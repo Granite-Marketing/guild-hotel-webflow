@@ -37,6 +37,7 @@ import { imageHoverScale } from '$utils/imageHoverScale'
 import { imageStackCollapse } from '$utils/imageStackCollapse'
 import { imageTrailHover } from '$utils/imageTrailHover'
 import { map } from '$utils/map'
+import { mapAccordion } from '$utils/mapAccordion'
 import { mediaTabs } from '$utils/mediaTabs'
 import { modalImageSlider } from '$utils/modalImageSlider'
 import { modalStickyBar } from '$utils/modalStickyBar'
@@ -149,6 +150,8 @@ window.Webflow.push(() => {
   roomsQuiz()
   mediaTabs()
   map()
+  // #294: phones show one map place open at a time.
+  mapAccordion()
 
   currentYear()
   // slot E: viewSwitcher(), cmsFilterLinks()

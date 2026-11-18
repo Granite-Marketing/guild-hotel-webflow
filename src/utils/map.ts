@@ -272,6 +272,9 @@ const buildMap = async (root: HTMLElement, points: MapPoint[]) => {
     })
   })
 
+  // Phone accordion (#294): the first place starts open, so its pin starts highlighted.
+  if (root.hasAttribute('data-map-accordion') && window.matchMedia('(max-width: 767px)').matches) pinHighlight(0)
+
   // Centre on every marker, but never closer than the starting zoom.
   if (points.length + (home ? 1 : 0) > 1) {
     google.maps.event.addListenerOnce(googleMap, 'idle', () => {
