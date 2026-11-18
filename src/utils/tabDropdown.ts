@@ -133,6 +133,18 @@ export const tabDropdown = () => {
       timeline = null
       gsap.killTweensOf(animated)
 
+      // The slide's own buttons (Discover more) sit just above the pill; an open menu
+      // would leave their top edge peeking over it, so they step aside while it is open (Stephen 18 Nov).
+      const neighbours = Array.from(bar.parentElement?.querySelectorAll<HTMLElement>('.button') ?? []).filter(
+        (button) => !bar.contains(button),
+      )
+      gsap.to(neighbours, {
+        autoAlpha: open ? 0 : 1,
+        duration: reducedMotion.matches ? 0 : 0.25,
+        overwrite: 'auto',
+        onComplete: open ? undefined : () => gsap.set(neighbours, { clearProps: 'opacity,visibility' }),
+      })
+
       if (reducedMotion.matches) {
         clearInline()
         bar.classList.remove(CLOSING_CLASS)
