@@ -28,6 +28,7 @@ import { eagerImages } from '$utils/eagerImages'
 import { emailLinks } from '$utils/emailLinks'
 import { formPlaceholders } from '$utils/formPlaceholders'
 import { galleryCanvas } from '$utils/galleryCanvas'
+import { galleryLightbox } from '$utils/galleryLightbox'
 import { galleryFilter } from '$utils/galleryFilter'
 import { gsapBasicAnimations } from '$utils/gsapBasicAnimations'
 import { historyStickyYear } from '$utils/historyStickyYear'
@@ -162,6 +163,8 @@ window.Webflow.push(() => {
   galleryFilter()
   // Gallery canvas: /gallery and /arts drag and zoom board, after galleryFilter's initial hide classes.
   galleryCanvas()
+  // #295: Gallery photos open in a Webflow lightbox that follows the filter.
+  galleryLightbox()
   // slot F, in this order: filterPanels(), scrollHint(), finsweetRefresh(),
   //   filterActiveState()
 

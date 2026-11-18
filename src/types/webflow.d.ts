@@ -4,6 +4,8 @@
  */
 interface WebflowQueue extends Array<() => void> {
   push: (callback: () => void) => number;
+  /** Webflow's own modules, e.g. `require('lightbox')?.ready()` to rebuild lightbox groups. */
+  require?: (module: string) => { ready?: () => void } | undefined;
 }
 
 interface Window {
