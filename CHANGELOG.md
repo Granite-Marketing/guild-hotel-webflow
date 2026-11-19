@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.6
+
+### Patch Changes
+
+- 771df17: Venue scroll sections: scrolling up out of the section masks the copy out again instead of hiding it at once.
+
 ## 1.3.5
 
 ### Patch Changes
