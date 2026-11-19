@@ -298,8 +298,9 @@ html:has([data-gallery-canvas].is-entered) {
   color: #4a1217;
 }
 
+/* The active filter is marked by full strength only; the underline is for the phone dropdown label (Stephen 19 Nov). */
 [data-gallery-canvas] .tab-pills-intro_tab.is-active {
-  border-bottom-color: #4a1217;
+  border-bottom-color: transparent;
 }
 
 /* Phone filter dropdown (tabDropdown.ts): the panel is cream too. */
