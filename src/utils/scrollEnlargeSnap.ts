@@ -58,8 +58,8 @@ const ACTIVE_CLASS = 'is-active'
 const DEFAULT_STEP_PERCENT = 100
 /** Pinned distance after the open step, in steps: the lock zone and iOS momentum buffer. */
 const HOLD = 0.5
-/** Share of a move after which the new copy starts: the eased wipe looks complete here (about 97% in), Stephen 19 Nov. */
-const COPY_HANDOFF = 0.85
+/** Share of a move after which the new copy starts: about 80% of the image is in, so text and image read as one motion (Stephen 19 Nov). */
+const COPY_HANDOFF = 0.7
 /** Timeline tolerance for "fully open" on the scrubbed open step. */
 const FULL_EPSILON = 0.02
 /** Move duration: one panel over, each extra panel a tab click crosses (Stephen 2026-11-12: far jumps a little slower), and the cap (seconds). */
