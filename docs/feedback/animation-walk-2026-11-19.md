@@ -7,7 +7,7 @@ Screenshots: `docs/feedback/images/2026-11-19/`.
 **Rules from Stephen (apply sitewide):**
 
 - **Fade means fade:** opacity only. No slide, no rise, no scale. In code that is `data-reveal="fade-only"`.
-- **Text links get a fade:** any text link under a text line animation ("Uncover our history", "Discover more", and the like) fades in.
+- **Text links get a fade, everywhere:** every static text link ("Uncover our history", "Discover more", "Browse the menu", "Enquire", and the like) fades in. Stephen will not call these out page by page any more; apply it sitewide.
 - **Attribute on the element itself** in the Designer, never on a wrapper and never applied by class in code (issue #293).
 - **Show before release:** preview changes locally and let Stephen see them before they go to staging.
 
@@ -103,3 +103,24 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Stephen:** when the section reaches full screen, the top menu flashes briefly. Possibly the light/dark nav check (`navTheme`) flipping while the frame opens.
 - **Screenshot:** `d1-dining-nav-flash.webp`.
 - **Status:** open. Sitewide fix in `navTheme`, likely new since today's venue changes; check v1.3.0 vs v1.3.6.
+
+### D2. "Browse the menu" fades in
+
+- **Where:** dining template (e.g. /dining/dining-gardenterrace), Dress code and Hours block.
+- **Stephen:** simple fade.
+- **Screenshot:** `d2-dining-browse-menu.webp`.
+- **Status:** open (covered by the sitewide text link rule).
+
+### D3. Right-hand image slides in; should mask in
+
+- **Where:** dining template, the two-image row (bartender left, cocktail right). The right image slides in.
+- **Stephen:** it should mask in, not slide.
+- **Screenshot:** `d3-dining-right-image.webp`.
+- **Status:** open.
+
+### D4. "Enquire" fades in
+
+- **Where:** dining template, Group dining & events block.
+- **Stephen:** the same text link fade as elsewhere.
+- **Screenshot:** `d4-dining-enquire.webp`.
+- **Status:** open (covered by the sitewide text link rule).
