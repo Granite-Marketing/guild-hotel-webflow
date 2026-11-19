@@ -7,3 +7,5 @@
 .is-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;visibility:hidden!important;pointer-events:none}
 /* CMS Nest drops each room's quiz tag list into its result card without the hide class; it only feeds the matching, so keep it out of the layout (it left a 168px gap under every card on phones). */
 .rooms-collection-room-grid_item>.w-dyn-list{display:none}
+/* R1 (Stephen 19 Nov): on phones a tapped answer's fill wiped in while the next step faded in and looked broken; the fill now appears at once there */
+@media (max-width:767px){[data-rooms-quiz-option] .btn-art .fill{transition:none!important}}
