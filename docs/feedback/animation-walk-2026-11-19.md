@@ -132,7 +132,7 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 
 - **Where:** "Our process" list, the small numbers above each step (1 to 6). The step text already animates.
 - **Stephen:** the numbers are missing an animation.
-- **Proposed (not yet confirmed):** fade, timed with each step's text.
+- **Decision (Stephen):** fade, timed with each step's text.
 - **Screenshot:** `g1-guidelines-numbers.webp`.
 - **Status:** open.
 
