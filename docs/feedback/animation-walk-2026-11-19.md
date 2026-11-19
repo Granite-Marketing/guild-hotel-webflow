@@ -85,3 +85,12 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Stephen:** "View floorplan" fades in. The feature list on the right (1 Queen Bed, 2 Guests, ...) fades in one row at a time, not text masked, so the left and right sides are not both masking at once.
 - **Screenshot:** `r3-room-description.webp`.
 - **Status:** open.
+
+## History
+
+### H1. Caption over the landmark photo needs a bottom gradient
+
+- **Where:** History page, the full-screen landmark photo after the mask reveal, with the small caps caption bottom left ("Etiam imperdiet sodales...").
+- **Stephen:** the caption is hard to read; add a gradient overlay at the bottom only, about the bottom 20 to 25% of the screen, not the whole image. The other images may already have an overlay; check why this one has none (it comes from the masked section).
+- **Screenshot:** `h1-history-caption-overlay.webp`.
+- **Status:** open. Build in the Designer (class or embed), not in code.
