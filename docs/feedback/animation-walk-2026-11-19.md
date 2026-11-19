@@ -57,6 +57,6 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 
 - **Where:** Home FAQs, the open answer text under the first question.
 - **Stephen:** it shows before everything else comes in; it needs an animation.
-- **Proposed (not yet confirmed):** text mask, matching the questions.
+- **Decision (Stephen):** text mask, the same as the questions.
 - **Screenshot:** `a5-home-faq-answer.webp`.
 - **Status:** open.
