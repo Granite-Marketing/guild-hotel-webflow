@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.8
+
+### Patch Changes
+
+- Book menu: hide the desktop wordmark again; keep photos out of the modal line mask so venue rows keep their image column and the panel image stays sticky.
+
 ## 1.3.7
 
 ### Patch Changes

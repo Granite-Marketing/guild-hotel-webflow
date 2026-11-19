@@ -1,3 +1,4 @@
 /* Animation feedback (Trello Offers & Packages): the modal bar's back arrow, wordmark and close X share one centre line. Inline SVGs sat on the text baseline, so the wordmark rode 6px low and the X 3px high. */
 .overlay-detail-panel-modal_bar svg{display:block}
-.overlay-detail-panel-modal_bar .w-embed{display:flex;align-items:center;justify-content:center}
+/* The wordmark is itself a .w-embed: exclude it, or this rule overrides its desktop display:none (Book menu logo, 19 Nov). */
+.overlay-detail-panel-modal_bar .w-embed:not(.overlay-detail-panel-modal_wordmark){display:flex;align-items:center;justify-content:center}
