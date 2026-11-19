@@ -14,6 +14,9 @@
  *                                               scrollEnlargeSnap) keeps toggling
  *                                               `is-active` on them
  *
+ * Optional: `data-tab-dropdown-hint="Filter by"` on the bar adds those words
+ * before the menu icon (gallery and arts filter).
+ *
  * The module wraps the tabs in [data-tab-dropdown-panel], appends a
  * button[data-tab-dropdown-toggle] and marks the bar [data-tab-dropdown];
  * the stylesheet below is keyed off those attributes, so without the bundle
@@ -35,7 +38,8 @@
  * Order: before the scroll engine, since it shortens the bars on mobile.
  */
 
-const BARS = '.tab-pills-intro_tabs, .venue-card-fullbleed_tabs'
+// The gallery's own control pills (zoom, enter, exit) are not tab bars.
+const BARS = '.tab-pills-intro_tabs:not(.is-canvas-controls), .venue-card-fullbleed_tabs'
 const OPEN_CLASS = 'is-open'
 const CLOSING_CLASS = 'is-closing'
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
@@ -55,7 +59,7 @@ const CLOSE_ICON =
 // shortcut: CSS ships in the bundle instead of the Designer because the open
 // state styles children of a JS-built panel, which Designer classes cannot
 // express; move it to the site head block if the head ever gets a CSS file.
-// Values from Figma mobile (pill 220x40, 12px chamfer, 24px side inset, 40px
+// Values from Figma mobile (pill 220x40, 7px chamfer from the 19 Nov softer corners, 24px side inset, 40px
 // option rows with 10px list padding, 14/18 caps at -0.05em, inactive 0.62).
 // text-box trims the line box to the caps so labels centre on the letters, not
 // the font's taller ascent (Sackers Gothic sat ~3.5px low). Its cap-height
@@ -72,7 +76,7 @@ const STYLES = `
 @media (max-width:767px){
  :is(.tab-pills-intro_tabs,.venue-card-fullbleed_tabs)[data-tab-dropdown]{display:block;width:13.75rem;max-width:none;height:2.5rem;padding:0;overflow:visible;background:none;clip-path:none}
  :is(.venue-card-fullbleed_tabs,.tab-pills-intro_tabs.is-media)[data-tab-dropdown]{left:50%;right:auto;bottom:calc(1.25rem + 100lvh - 100svh);transform:translateX(-50%)}
- [data-tab-dropdown-panel]{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:max-content;min-width:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:0 1.5rem;background-color:var(--_primitives---colors--burgundy);color:var(--_primitives---colors--neutral-lightest);clip-path:polygon(.75rem 0,calc(100% - .75rem) 0,100% .75rem,100% calc(100% - .75rem),calc(100% - .75rem) 100%,.75rem 100%,0 calc(100% - .75rem),0 .75rem)}
+ [data-tab-dropdown-panel]{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:max-content;min-width:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:0 1.5rem;background-color:var(--_primitives---colors--burgundy);color:var(--_primitives---colors--neutral-lightest);clip-path:polygon(.4375rem 0,calc(100% - .4375rem) 0,100% .4375rem,100% calc(100% - .4375rem),calc(100% - .4375rem) 100%,.4375rem 100%,0 calc(100% - .4375rem),0 .4375rem)}
  [data-tab-dropdown-panel]>*{flex-shrink:0;font-size:.875rem;line-height:1.125rem;letter-spacing:-.05em}
  [data-tab-dropdown-panel]>a{display:none;white-space:nowrap;padding:.8125rem 0 1rem;border:0;opacity:.62;text-box:trim-both cap alphabetic}
  [data-tab-dropdown-panel]>a.is-active{opacity:1}
@@ -112,6 +116,14 @@ export const tabDropdown = () => {
     toggle.className = tabs[0].className.replace(/\S+_tab\b|\bis-active\b/g, '').trim()
     toggle.innerHTML = `<span data-tab-dropdown-label></span>${MENU_ICON}${CLOSE_ICON}`
     const label = toggle.querySelector<HTMLElement>('[data-tab-dropdown-label]')!
+    // Optional words before the icon, from the bar's `data-tab-dropdown-hint` (gallery: "Filter by").
+    const hintText = bar.getAttribute('data-tab-dropdown-hint')
+    if (hintText) {
+      const hint = document.createElement('span')
+      hint.setAttribute('data-tab-dropdown-hint', '')
+      hint.textContent = hintText
+      label.after(hint)
+    }
     panel.append(toggle)
 
     bar.append(panel)

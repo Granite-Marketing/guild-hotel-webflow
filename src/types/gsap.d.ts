@@ -166,6 +166,8 @@ interface DraggableInstance {
   update: (applyBounds?: boolean) => DraggableInstance;
   applyBounds: (bounds: Record<string, number> | Element) => DraggableInstance;
   endDrag: (event?: Event) => void;
+  enable: () => DraggableInstance;
+  disable: () => DraggableInstance;
   kill: () => void;
 }
 
