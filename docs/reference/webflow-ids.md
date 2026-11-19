@@ -517,3 +517,10 @@ Per-element `data-reveal` attributes (tracker: `docs/feedback/animation-walk-202
 - History H1 gradient: class `history-landmark_overlay` `edef6f1c-ce1d-9f09-bc19-fb2fc4684aad`, element `aa9994fa-b18e-e95d-a316-5bcb2c5e9ef6` inside the first (bleed) landmark figure `bf9b65df-380d-f0da-5599-f560b6d1ad3a`.
 - Rooms Template description: header `f96b454a-7d02-75a8-e8b2-a645bd863eac`, floorplan link `69ec8908-accd-8089-82fd-c3a0d22dfb5c`, list `a405d4da-4daa-cfce-60cc-89b4fa3fd099`.
 - Dinings Template: portrait figure `d090b441-07c7-69cb-9d08-5acd464e9d53`, its paragraph `a5a1d6b8-7e43-a9da-1aa5-590894ae628b`.
+
+## Softer corners and touch gallery (19 Nov, v1.3.9)
+
+- Corner cut is 7px (`.4375rem`) everywhere: classes `tab-pills-intro_tabs` (also height `2.3125rem`, padding `1.5rem`, gap `2.5rem`), `venue-card-fullbleed_tabs` (same), `button.is-chamfer`, `overlay-detail-panel-modal_item-button`; the Site Nav button-system embed `3639f68c-0d1e-0355-fd6d-d61a7593a03d` (`--cx`, `--cy`, `--btn-chamfer`); Gallery Canvas Styles embed; `tabDropdown.ts`.
+- New classes `gallery-all_enter` `a20cccf0-fec6-b6f7-4be8-c50f123eb8d7`, `gallery-all_exit` `7722cac1-cfe1-e35a-225b-9789232dbdd4`.
+- /gallery: exit `7aca6344-c99e-55f1-66b9-4d4caa1e46e2` (in controls), enter `9b617733-4961-550e-36f4-585fd421d692` (last child of the section); filter nav `1387fa6c-e0ed-7c6a-c5c5-d0d3b650c5ea` has `data-tab-dropdown-hint`.
+- /arts: exit `77c88254-2b9b-f9f5-1551-a203447cd8dd`, enter `48510a81-5d78-6f05-147d-0a1fec4e9148`; filter nav `6dd7c4ec-52e2-1812-8f32-19a3645bc3ce`.

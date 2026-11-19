@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.9
+
+### Patch Changes
+
+- Softer 7px corners on every chamfered button, tab bar and gallery pill, and a tap-to-enter gallery on touch screens (/gallery, /arts) with filter, zoom and exit (Figma 19 Nov).
+
 ## 1.3.8
 
 ### Patch Changes

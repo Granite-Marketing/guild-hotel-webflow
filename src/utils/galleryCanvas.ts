@@ -9,27 +9,32 @@
  *               and the board's parent is the window (works for the static
  *               /gallery grid and the /arts Collection List alike)
  *   - Zoom:     `[data-gallery-canvas-zoom="out|reset|in"]` links; out and in
- *               show as minus and plus icons (CSS), the reset link's text
- *               names the current zoom, and out/in get aria-disabled at the ends
- *   - Joystick: `.gallery-all_joystick` > `.gallery-all_joystick-knob`, shown
- *               (`is-active`) on touch screens only
+ *               show as minus and plus icons (CSS), the reset link reads
+ *               "Zoom" and resets to Normal, and out/in get aria-disabled at the ends
+ *   - Enter:    `[data-gallery-canvas-enter]` link ("Tap to enter gallery")
+ *   - Exit:     `[data-gallery-canvas-exit]` link
  * Layout and window styles live in docs/reference/site-head/gallery-canvas.css.
  *
  * Mouse: drag pans with inertia; the wheel always scrolls the page. Zoom is
  * the three buttons only (wheel and pinch zoom were dropped as too fiddly).
- * Touch: the board never captures a swipe;
- * the joystick and zoom buttons move it. Rows are brick rows of a fixed height
- * with each photo at its natural aspect ratio; photos are never repeated.
+ * Touch (Figma 19 Nov): the root gets `is-gated` and the board stays still so
+ * a swipe scrolls the page. Tapping the window or the enter pill adds
+ * `is-entered`: the window fills the screen, page scroll stops and a finger
+ * drags the board; Exit or Escape returns to the page. Rows are brick rows of
+ * a fixed height with each photo at its natural aspect ratio; photos are never
+ * repeated.
  */
+
+import { smoothScroll } from '$utils/smoothScroll'
 
 const ZOOM_STEPS = [0.5, 1, 1.6]
 const NORMAL_STEP = 1
 const HIDDEN_CLASS = 'hide'
-const ACTIVE_CLASS = 'is-active'
+const GATED_CLASS = 'is-gated'
+const ENTERED_CLASS = 'is-entered'
 const FALLBACK_ASPECT = 4 / 3
 const DRAG_CLICK_DISTANCE = 4
 const DRAG_CLICK_WINDOW_MS = 300
-const JOYSTICK_SPEED = 800
 const KEY_PAN_RATIO = 0.4
 
 const rowMetrics = () => {
@@ -72,8 +77,9 @@ export const galleryCanvas = () => {
     if (!board || !windowElement) return
 
     const zoomLinks = Array.from(root.querySelectorAll<HTMLElement>('[data-gallery-canvas-zoom]'))
-    const joystick = root.querySelector<HTMLElement>('.gallery-all_joystick')
-    const joystickKnob = joystick?.querySelector<HTMLElement>('.gallery-all_joystick-knob')
+    const enterLink = root.querySelector<HTMLElement>('[data-gallery-canvas-enter]')
+    const exitLink = root.querySelector<HTMLElement>('[data-gallery-canvas-exit]')
+    const gated = !finePointer && !!enterLink
 
     let boardWidth = 0
     let boardHeight = 0
@@ -218,13 +224,13 @@ export const galleryCanvas = () => {
 
     // -- Zoom -----------------------------------------------------------------
 
-    // Minus and plus step one level; the middle link names the current level
-    // and resets to Normal. Minus and plus dim at the ends of the range.
+    // Minus and plus step one level; the middle "Zoom" link resets to Normal
+    // and names the current level to screen readers. Minus and plus dim at the ends.
     const ZOOM_LABELS = ['overview', 'normal', 'close up']
     const markZoomStep = () => {
       zoomLinks.forEach((link) => {
         const action = link.getAttribute('data-gallery-canvas-zoom')
-        if (action === 'reset') link.textContent = ZOOM_LABELS[zoomStep]
+        if (action === 'reset') link.setAttribute('aria-label', `Zoom: ${ZOOM_LABELS[zoomStep]}. Reset to normal`)
         else {
           const atEnd = action === 'out' ? zoomStep === 0 : zoomStep === ZOOM_STEPS.length - 1
           link.setAttribute('aria-disabled', String(atEnd))
@@ -263,12 +269,13 @@ export const galleryCanvas = () => {
       })
     })
 
-    // -- Pan: mouse -----------------------------------------------------------
+    // -- Pan: mouse, or a finger once the gallery is entered --------------------
 
     let lastDragEnd = 0
     let lastDragDistance = 0
+    let entered = false
 
-    if (finePointer) {
+    if (finePointer || gated) {
       boardDraggable = Draggable.create(board, {
         type: 'x,y',
         inertia: !reducedMotion.matches,
@@ -285,7 +292,7 @@ export const galleryCanvas = () => {
         allowContextMenu: true,
         onPress(this: DraggableInstance) {
           // Hybrid device: a finger scrolls the page, it never drags the board.
-          if ((this.pointerEvent as PointerEvent | undefined)?.pointerType === 'touch') {
+          if (!gated && (this.pointerEvent as PointerEvent | undefined)?.pointerType === 'touch') {
             this.endDrag(this.pointerEvent)
             return
           }
@@ -311,70 +318,56 @@ export const galleryCanvas = () => {
       )
     }
 
-    // -- Pan: touch joystick --------------------------------------------------
+    // -- Touch: tap to enter, Exit to leave -----------------------------------
 
-    if (!finePointer && joystick && joystickKnob) {
-      joystick.classList.add(ACTIVE_CLASS)
-      joystick.setAttribute('aria-hidden', 'true')
-      let vectorX = 0
-      let vectorY = 0
-      let pressed = false
-      let lastTick = 0
+    if (gated && boardDraggable) {
+      const draggable = boardDraggable
+      root.classList.add(GATED_CLASS)
+      // Not entered: the board is still and a swipe scrolls the page.
+      draggable.disable()
 
-      const moveBoard = () => {
-        const now = performance.now()
-        const deltaSeconds = Math.min((now - lastTick) / 1000, 0.1)
-        lastTick = now
-        const current = camera()
-        gsap.set(
-          board,
-          clamp({
-            x: current.x - vectorX * JOYSTICK_SPEED * deltaSeconds,
-            y: current.y - vectorY * JOYSTICK_SPEED * deltaSeconds,
-            scale: current.scale,
-          }),
-        )
-      }
-
-      const pointAt = (event: PointerEvent) => {
-        const box = joystick.getBoundingClientRect()
-        const radius = box.width / 2
-        let offsetX = event.clientX - (box.left + radius)
-        let offsetY = event.clientY - (box.top + radius)
-        const distance = Math.hypot(offsetX, offsetY)
-        if (distance > radius) {
-          offsetX = (offsetX / distance) * radius
-          offsetY = (offsetY / distance) * radius
+      const setEntered = (next: boolean) => {
+        if (next === entered) return
+        entered = next
+        root.classList.toggle(ENTERED_CLASS, next)
+        if (next) {
+          draggable.enable()
+          smoothScroll.stop()
+          exitLink?.focus({ preventScroll: true })
+        } else {
+          stopMotion()
+          draggable.disable()
+          smoothScroll.start()
+          enterLink?.focus({ preventScroll: true })
         }
-        vectorX = offsetX / radius
-        vectorY = offsetY / radius
-        gsap.set(joystickKnob, { x: offsetX, y: offsetY })
       }
 
-      const release = () => {
-        if (!pressed) return
-        pressed = false
-        vectorX = 0
-        vectorY = 0
-        gsap.ticker.remove(moveBoard)
-        gsap.to(joystickKnob, { x: 0, y: 0, duration: 0.6, ease: 'elastic.out(1, 0.6)' })
-      }
-
-      joystick.addEventListener('pointerdown', (event) => {
+      enterLink?.setAttribute('role', 'button')
+      exitLink?.setAttribute('role', 'button')
+      enterLink?.addEventListener('click', (event) => {
         event.preventDefault()
-        stopMotion()
-        pressed = true
-        // Keeps moves coming when the thumb slides off the ring.
-        if (event.isTrusted) joystick.setPointerCapture(event.pointerId)
-        pointAt(event)
-        lastTick = performance.now()
-        gsap.ticker.add(moveBoard)
+        setEntered(true)
       })
-      joystick.addEventListener('pointermove', (event) => {
-        if (pressed) pointAt(event)
+      exitLink?.addEventListener('click', (event) => {
+        event.preventDefault()
+        setEntered(false)
       })
-      joystick.addEventListener('pointerup', release)
-      joystick.addEventListener('pointercancel', release)
+      // Before entering, a tap anywhere on the board enters instead of opening a photo.
+      windowElement.addEventListener(
+        'click',
+        (event) => {
+          if (entered) return
+          event.preventDefault()
+          event.stopPropagation()
+          setEntered(true)
+        },
+        true,
+      )
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && entered && !document.querySelector('.w-lightbox-backdrop:not([style*="none"])')) {
+          setEntered(false)
+        }
+      })
     }
 
     // -- Keyboard and focus -----------------------------------------------------
@@ -489,9 +482,13 @@ export const galleryCanvas = () => {
       ) {
         return
       }
+      const widthChanged = windowElement.clientWidth !== lastWindowWidth
       lastWindowWidth = windowElement.clientWidth
       lastWindowHeight = windowElement.clientHeight
-      relayoutSoon()
+      // Entering or leaving the full-screen view (or a phone's toolbar) only
+      // changes the height: keep the rows and re-fit the camera, so photos never jump.
+      if (widthChanged) relayoutSoon()
+      else glideTo(camera(), 0)
     }).observe(windowElement)
 
     layout(false)
