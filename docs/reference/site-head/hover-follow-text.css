@@ -1,6 +1,0 @@
-/* Desktop feedback (Corporate "why teams choose"): hovering shows the follow photo with a dark tint; the hovered item's text sits directly on it in the section's light colour and masks in line by line (hoverFollowImage.ts). Card 8 (2026-11-16): no chamfered panel behind the text, the tinted photo gives the contrast. */
-.feature-grid-dark-eyebrow_list{z-index:auto}
-.feature-grid-dark-eyebrow_item{position:relative}
-.feature-grid-dark-eyebrow_hover-figure::after{content:"";position:absolute;inset:0;background:#00000080;pointer-events:none}
-/* Only the text rises above the photo (z 10); the item itself stays below, so its divider line does too. */
-.feature-grid-dark-eyebrow_item.is-active>*{position:relative;z-index:12}
