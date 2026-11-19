@@ -22,7 +22,7 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 | S2 | Old venue text has no outro and hides when the next image is in; new text starts at 60% of the wipe; no text flash during the wipe | live, v1.3.6 |
 | S3 | Scrolling up out of a venue section (first venue, e.g. Home "Zuma") masks the text out instead of vanishing (`s5-home-zuma-outro.webp`) | live, v1.3.6 |
 | S4 | Phone tab selector glides to its new width, no label fade, menu icon does not shrink, sitewide (`s4-tab-selector.png`) | live, v1.3.6 |
-| S5 | Map section freezes briefly on the first scroll over the map | in progress, separate session (map-scroll-freeze) |
+| S5 | Map section freezes briefly when the map appears (cause: Google's font load makes every animated text block re-measure) | fix ready, separate session (map-scroll-freeze), waiting on Stephen to put it on staging |
 
 ## Home
 
@@ -155,9 +155,9 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 
 - **Where:** the "Offers & packages" split slider at the top of /blog (and the same slider wherever it appears).
 - **Stephen:** asked for a recommendation; his idea is to mask the first image in from right to left, as the slides travel left to right.
-- **Proposed (not yet confirmed), played once when the slider scrolls into view:**
+- **Decision (Stephen, 19 Nov), played once when the slider scrolls into view:**
   1. The image masks in from its right edge towards the left.
   2. At 60% of that mask (the same handoff as the venue sections), "Offers & packages", the title and the line text-mask in, one after another.
   3. "Discover more" and the arrows with the 01 / 05 counter fade in last (fade only).
 - **Screenshot:** `b1-blog-offers-slider.webp`.
-- **Status:** open, waiting on Stephen.
+- **Status:** open.
