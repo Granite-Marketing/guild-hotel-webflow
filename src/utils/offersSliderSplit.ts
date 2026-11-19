@@ -15,6 +15,10 @@
  *       [data-offers-slider-next]                link block, next slide
  *   data-slide-mask="off"                      on the root: no text or image mask, plain crossfade
  *
+ * Intro (B1), once when the slider scrolls into view: the image opens from
+ * its right edge, the eyebrow and the slide copy line-mask in from 60% of
+ * it, and the slide's button and the arrows and counter fade in last.
+ *
  * Slides hidden through a component visibility prop are not rendered, so
  * the total always matches the slides on the page. Uses its own `offers`
  * type class, so swiperSliders() leaves these wrappers alone.
@@ -37,6 +41,12 @@ const CLOSED = { next: 'inset(0% 0% 0% 100%)', prev: 'inset(0% 100% 0% 0%)' }
 const OPEN = 'inset(0% 0% 0% 0%)'
 // Outgoing copy clears before the incoming heading rises far enough to overlap it (~120ms).
 const TEXT_FADE_DURATION = 0.15
+// B1 intro (Stephen 19 Nov): image opens from its right edge; the copy starts at 60% of it
+// (the venue-section handoff); the button and controls fade in once the copy has landed.
+const INTRO_COPY_AT = IMAGE_DURATION * 0.6
+const INTRO_FADE_AT = INTRO_COPY_AT + 0.9
+const INTRO_FADE_DURATION = 0.6
+const INTRO_STAGGER = 0.15
 
 export const offersSliderSplit = () => {
   const sliders = document.querySelectorAll<HTMLElement>('[data-offers-slider]')
@@ -75,6 +85,9 @@ export const offersSliderSplit = () => {
       if (content) reveals.set(slide, createLineMaskTimeline(content))
     })
     let inView = false
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const eyebrow = slider.querySelector<HTMLElement>('.offers-slider-split_eyebrow')
+    const eyebrowReveal = masked && eyebrow ? createLineMaskTimeline(eyebrow) : null
     const showActive = (swiper: OffersSwiperInstance) => {
       const active = swiper.slides[swiper.activeIndex]
       reveals.forEach((reveal, slide) => (slide === active ? inView && reveal.play() : reveal.reverse()))
@@ -130,6 +143,7 @@ export const offersSliderSplit = () => {
         }
       : {}
 
+    let intro: ReturnType<typeof gsap.timeline> | null = null
     const swiper = new Swiper(container, {
       loop: true,
       // Masked: no Swiper fade, the visuals above run the change.
@@ -157,20 +171,41 @@ export const offersSliderSplit = () => {
           }
         },
         slideChange: (instance: OffersSwiperInstance) => {
+          if (intro && intro.progress() < 1) intro.progress(1)
           updateCounter(instance)
           showActive(instance)
         },
       },
     }) as OffersSwiperInstance
 
+    const startCopy = () => {
+      inView = true
+      if (!eyebrowReveal) return showActive(swiper)
+      eyebrowReveal.play()
+      // The slide copy follows the eyebrow, one after another (B1).
+      gsap.delayedCall(INTRO_STAGGER, () => showActive(swiper))
+    }
+    // Paused until the slider is in view; a slide change before it ends finishes it at once (slideChange).
+    const firstSlide = swiper.slides[swiper.activeIndex]
+    const firstFigure = firstSlide?.querySelector<HTMLElement>('.offers-slider-split_figure')
+    const fadeIns = [firstSlide?.querySelector<HTMLElement>('.offers-slider-split_footer'), controls].filter(
+      (element): element is HTMLElement => Boolean(element),
+    )
+    if (masked && !reducedMotion && firstFigure) {
+      gsap.set(firstFigure, { clipPath: CLOSED.next })
+      gsap.set(fadeIns, { autoAlpha: 0 })
+      intro = gsap
+        .timeline({ paused: true, onComplete: () => gsap.set(fadeIns, { clearProps: 'opacity,visibility' }) })
+        .to(firstFigure, { clipPath: OPEN, duration: IMAGE_DURATION, ease: IMAGE_EASE }, 0)
+        .call(startCopy, [], INTRO_COPY_AT)
+        .to(fadeIns, { autoAlpha: 1, duration: INTRO_FADE_DURATION, ease: 'power1.out' }, INTRO_FADE_AT)
+    }
+
     ScrollTrigger.create({
       trigger: slider,
       start: 'top 70%',
       once: true,
-      onEnter: () => {
-        inView = true
-        showActive(swiper)
-      },
+      onEnter: () => (intro ? intro.play() : startCopy()),
     })
   })
 }

@@ -2,7 +2,7 @@
    .w-mod-js comes from Webflow's head script; src/index.ts adds .reveal-ready right after scrollReveal(). The 3s animation is the fail-safe if the bundle never runs.
    Code-tagged blocks get data-reveal only at runtime, so the ones that can sit in the first screen are listed by class (keep in sync with AUTO_REVEALS).
    Bundled via src/site.css; the Designer loads neither this file nor the bundle, so it shows every block as built. */
-html.w-mod-js:not(.reveal-ready) :is([data-reveal], .hero-fullbleed-centered_component, .static-template-privacy-policy_header, .static-template-privacy-policy_body > *, .form-split-script-contact_paragraph, .form-split-script-contact_details, .utility_form-block) {
+html.w-mod-js:not(.reveal-ready) :is([data-reveal], .hero-fullbleed-centered_component, .static-template-privacy-policy_header, .static-template-privacy-policy_body > *, .form-split-script-contact_paragraph, .form-split-script-contact_details, .utility_form-block, .section_offers-slider-split :is(.offers-slider-split_eyebrow, .offers-slider-split_figure, .offers-slider-split_footer, .offers-slider-split_controls)) {
   visibility: hidden;
   animation: reveal-failsafe 0s 3s forwards;
 }
