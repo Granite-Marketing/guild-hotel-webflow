@@ -66,6 +66,10 @@ const FULL_EPSILON = 0.02
 const HOP = { first: 1, extra: 0.55, max: 3 }
 /** A gap this long (ms) between wheel or touch events starts a new gesture, so trackpad inertia counts as one. */
 const GESTURE_GAP = 200
+/** A wheel delta this many times the previous one starts a new gesture, even inside a trackpad inertia stream. */
+const WHEEL_RISE = 1.5
+/** A swipe's own deltas rise for this long (ms) at its start; a rise inside it is not a new swipe. */
+const SWIPE_RAMP = 300
 /** Share of the stage the page travels on release. */
 const RELEASE_NUDGE = 0.25
 const NEXT_KEYS = ['ArrowDown', 'PageDown']
@@ -277,7 +281,7 @@ const initSlider = (parts: SnapParts, reduce: boolean) => {
     locked = true
     // The scroll that brought the section in must not also move a panel.
     gestureUsed = true
-    lastGesture = performance.now()
+    lastGesture = gestureStart = performance.now()
     lastDirection = trigger.direction
     holdScroll()
     observer.enable()
@@ -324,13 +328,30 @@ const initSlider = (parts: SnapParts, reduce: boolean) => {
   let lastGesture = 0
   let lastDirection = 0
   let gestureUsed = false
+  let gestureStart = 0
+  // A trackpad's inertia tail never pauses for GESTURE_GAP while the user keeps swiping, so the
+  // page stuck until a click made a pause (Stephen 19 Nov). Inertia only decays; a jump in the
+  // wheel delta is a fresh swipe.
+  let lastWheelSize = 0
+  let freshSwipe = false
+  window.addEventListener(
+    'wheel',
+    (event) => {
+      const size = Math.abs(event.deltaY)
+      if (size > lastWheelSize * WHEEL_RISE + 4) freshSwipe = true
+      lastWheelSize = size
+    },
+    { passive: true, capture: true },
+  )
   const onGesture = (direction: 1 | -1) => {
     const now = performance.now()
-    if (now - lastGesture > GESTURE_GAP || direction !== lastDirection) gestureUsed = false
+    if (now - lastGesture > GESTURE_GAP || direction !== lastDirection || (freshSwipe && !moving && now - gestureStart > SWIPE_RAMP)) gestureUsed = false
+    freshSwipe = false
     lastGesture = now
     lastDirection = direction
     if (gestureUsed || moving) return
     gestureUsed = true
+    gestureStart = now
     step(direction)
   }
 
