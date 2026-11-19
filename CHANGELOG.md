@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.3
+
+### Patch Changes
+
+- 17a01bc: Venue scroll sections: the new copy starts earlier, at 70% of the image wipe.
+
 ## 1.3.2
 
 ### Patch Changes
