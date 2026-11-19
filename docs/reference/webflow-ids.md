@@ -525,3 +525,4 @@ Per-element `data-reveal` attributes (tracker: `docs/feedback/animation-walk-202
 - /gallery: exit `7aca6344-c99e-55f1-66b9-4d4caa1e46e2` (in controls), enter `9b617733-4961-550e-36f4-585fd421d692` (last child of the section); filter nav `1387fa6c-e0ed-7c6a-c5c5-d0d3b650c5ea` has `data-tab-dropdown-hint`.
 - /arts: exit `77c88254-2b9b-f9f5-1551-a203447cd8dd`, enter `48510a81-5d78-6f05-147d-0a1fec4e9148`; filter nav `6dd7c4ec-52e2-1812-8f32-19a3645bc3ce`.
 - Subnavs (19 Nov, Stephen): no underline on the active tab on desktop; `border-bottom-color` removed from combos `tab-pills-intro_tab.is-active` `e70e42de-0283-762a-59e6-825143e633af` and `venue-card-fullbleed_tab.is-active` `6de4beaf-e3ed-f84b-a768-44b8cfa14edb`. The phone dropdown label keeps its underline.
+- Joystick elements removed from /gallery and /arts (Stephen, 19 Nov); the ids `90f2159e-…`, `19ed531f-…`, `102edc90-…`, `44c6ae09-…` above no longer exist.
