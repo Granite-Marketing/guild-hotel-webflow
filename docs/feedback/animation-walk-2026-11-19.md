@@ -195,3 +195,13 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Stephen:** the right-hand images mask in. The "Event services" title already animates; the list items under it fade in too (one row at a time, like R3).
 - **Screenshot:** `m1-meetings-features.webp`.
 - **Status:** open.
+
+## Contact (/contact)
+
+### C1. Contact details: titles and social links
+
+- **Where:** "Contact us" column: the small titles (Address, General enquiries, Groups meetings & events, Reservation billing questions) and the Instagram and Facebook links.
+- **Stephen:** animate the titles, and the Instagram and Facebook links.
+- **Proposed:** titles text-mask (as every other heading); Instagram and Facebook fade (sitewide text link rule).
+- **Screenshot:** `c1-contact-details.webp`.
+- **Status:** open.
