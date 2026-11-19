@@ -148,3 +148,16 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Where:** every form's submit button.
 - **Stephen:** add a fade.
 - **Status:** open.
+
+## Blog listing (/blog)
+
+### B1. Offers slider needs an intro animation
+
+- **Where:** the "Offers & packages" split slider at the top of /blog (and the same slider wherever it appears).
+- **Stephen:** asked for a recommendation; his idea is to mask the first image in from right to left, as the slides travel left to right.
+- **Proposed (not yet confirmed), played once when the slider scrolls into view:**
+  1. The image masks in from its right edge towards the left.
+  2. At 60% of that mask (the same handoff as the venue sections), "Offers & packages", the title and the line text-mask in, one after another.
+  3. "Discover more" and the arrows with the 01 / 05 counter fade in last (fade only).
+- **Screenshot:** `b1-blog-offers-slider.webp`.
+- **Status:** open, waiting on Stephen.
