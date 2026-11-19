@@ -8,6 +8,7 @@ Screenshots: `docs/feedback/images/2026-11-19/`.
 
 - **Fade means fade:** opacity only. No slide, no rise, no scale. In code that is `data-reveal="fade-only"`.
 - **Text links get a fade, everywhere:** every static text link ("Uncover our history", "Discover more", "Browse the menu", "Enquire", and the like) fades in. Stephen will not call these out page by page any more; apply it sitewide.
+- **Form submit buttons fade in, everywhere** (G3).
 - **Attribute on the element itself** in the Designer, never on a wrapper and never applied by class in code (issue #293).
 - **Show before release:** preview changes locally and let Stephen see them before they go to staging.
 
@@ -124,3 +125,26 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Stephen:** the same text link fade as elsewhere.
 - **Screenshot:** `d4-dining-enquire.webp`.
 - **Status:** open (covered by the sitewide text link rule).
+
+## Guidelines (/guidelines)
+
+### G1. Process list numbers do not animate
+
+- **Where:** "Our process" list, the small numbers above each step (1 to 6). The step text already animates.
+- **Stephen:** the numbers are missing an animation.
+- **Proposed (not yet confirmed):** fade, timed with each step's text.
+- **Screenshot:** `g1-guidelines-numbers.webp`.
+- **Status:** open.
+
+### G2. "Work from our collaborators" images mask in
+
+- **Where:** the collaborator photos (with @username captions) and the large photo after them.
+- **Stephen:** these should mask in, not fade and scale.
+- **Screenshots:** `g2-guidelines-collaborators-1.webp`, `-2`, `-3`.
+- **Status:** open.
+
+### G3. Form submit buttons fade in (sitewide)
+
+- **Where:** every form's submit button.
+- **Stephen:** add a fade.
+- **Status:** open.
