@@ -1,6 +1,0 @@
-/* F76: script (Morello) headings tilt upward as in their Figma frames. Script intro, map, form and contact CTA headers already tilt in Webflow; these did not. Tab-pills and meetings headings: desktop only, mobile was signed off flat. */
-@media (min-width:768px){
- .tab-pills-intro_heading.text-style-script,.meetings-collection-venues_heading{rotate:-7.38deg}
-}
-/* M26 (Stephen 17 Nov): History "George Marston" tilts -5deg on phones only; desktop stays level. scriptTiltSpace adds the clearance. */
-@media (max-width:767px){.split-image-text-light_heading.w-variant-9cd3f054-0bc5-3e71-98b6-562cb8361ab0{rotate:-5deg}}
