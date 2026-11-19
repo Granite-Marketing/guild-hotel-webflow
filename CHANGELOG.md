@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.11
+
+### Patch Changes
+
+- ef9f25c: Offers slider intro: image, copy and controls start a beat apart instead of in sequence.
+
 ## 1.3.10
 
 ### Patch Changes
