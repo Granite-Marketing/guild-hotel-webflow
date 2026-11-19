@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.4
+
+### Patch Changes
+
+- 8484bf1: Venue copy starts at 60% of the image wipe; phone tab selectors glide to their new width instead of jumping.
+
 ## 1.3.3
 
 ### Patch Changes
