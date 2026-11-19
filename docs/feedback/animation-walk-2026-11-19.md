@@ -33,7 +33,7 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Where:** Home hero (and every page hero with the load zoom, M23).
 - **Stephen:** the scale is sometimes jittery or sticky, maybe because it runs while the page is still loading.
 - **Screenshot:** `a1-home-hero.webp`.
-- **Status:** open.
+- **Status:** live, v1.3.10. The zoom now runs on the browser's compositor (Web Animation), so page-load work cannot drop its frames.
 
 ### A2. Fade on text links
 
@@ -71,7 +71,7 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Where:** Rooms page quiz ("Who's checking in?"), phones.
 - **Stephen:** tapping an answer shows the mask intro animation again and it looks broken. Stop it there, probably on phones only; perhaps a `no-animate` style attribute.
 - **Screenshot:** `r1-rooms-quiz.webp`.
-- **Status:** open. To check: which mask replays (step copy, buttons or the photo) before choosing the fix.
+- **Status:** live, v1.3.10. Cause: the tapped answer's button fill wiped in while the next step faded in. On phones the fill now shows at once.
 
 ## Room template (e.g. /rooms/guild-loft-suite)
 
@@ -105,7 +105,7 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Where:** Dining venue section (and other full-screen mask sections, including the room template).
 - **Stephen:** when the section reaches full screen, the top menu flashes briefly. Possibly the light/dark nav check (`navTheme`) flipping while the frame opens.
 - **Screenshot:** `d1-dining-nav-flash.webp`.
-- **Status:** open. Sitewide fix in `navTheme`, likely new since today's venue changes; check v1.3.0 vs v1.3.6.
+- **Status:** live, v1.3.10. Cause: as a mask finished opening it wrote tiny values in exponent form (7.5e-05px) that the nav's colour check misread, flipping the nav for a frame. Frame scan on staging is clean after the fix.
 
 ### D2. "Browse the menu" fades in
 
@@ -162,7 +162,7 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
   2. At 60% of that mask (the same handoff as the venue sections), "Offers & packages", the title and the line text-mask in, one after another.
   3. "Discover more" and the arrows with the 01 / 05 counter fade in last (fade only).
 - **Screenshot:** `b1-blog-offers-slider.webp`.
-- **Status:** open.
+- **Status:** live, v1.3.10, on every offers slider sitewide.
 
 ## Story template (offers & packages, happenings, blog posts)
 
@@ -207,3 +207,11 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Proposed:** titles text-mask (as every other heading); Instagram and Facebook fade (sitewide text link rule).
 - **Screenshot:** `c1-contact-details.webp`.
 - **Status:** live (Designer). Titles join the existing details text mask; Instagram and Facebook fade.
+
+## Other work from the walk (19 Nov)
+
+| # | Item | Status |
+|---|---|---|
+| K1 | Book menu panels broken against Figma (logo, Back jammed, spacing, left image not sticky, type too big) (`k1-figma-book-*.webp`) | live, v1.3.8 (PR #305) |
+| U1 | Softer corner cuts on every chamfered pill and bar (`u1-figma-pieces-*.png`) | live, v1.3.9 (PR #307) |
+| U2 | Mobile gallery: tap to enter, filter, zoom, exit (`u2-figma-gallery-mobile.webp`) | live, v1.3.9 (PR #307) |
