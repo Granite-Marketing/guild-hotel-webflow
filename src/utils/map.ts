@@ -291,6 +291,22 @@ const buildMap = async (root: HTMLElement, points: MapPoint[]) => {
   }
 }
 
+/**
+ * Google adds Roboto and Google Sans stylesheets when it builds the map. That font load fires
+ * `document.fonts` loadingdone mid-scroll, and SplitText autoSplit re-splits
+ * every live text block in one long task (660 ms on Meetings, 19 Nov). Roboto
+ * only styles Google's own controls, which fall back to Arial without it.
+ * See docs/solutions/integration-issues/map-scroll-freeze-roboto-2026-11-19.md.
+ */
+const blockGoogleFonts = () => {
+  const head = document.head
+  const insertBefore = head.insertBefore
+  head.insertBefore = function <T extends Node>(node: T, child: Node | null): T {
+    if (node instanceof HTMLLinkElement && node.href.startsWith('https://fonts.googleapis.com/')) return node
+    return insertBefore.call(this, node, child) as T
+  }
+}
+
 /** Fetches the Maps API script after load, in an idle moment, without creating a map. */
 const warmUpApi = () => {
   const warm = () => {
@@ -314,6 +330,7 @@ export const map = () => {
   const points = collectPoints(root)
   if (!apiKey || !points.length) return
 
+  blockGoogleFonts()
   mapNeeds(apiKey)
   warmUpApi()
 
