@@ -1,8 +1,0 @@
-/* Corporate package lists (M40, 2026-11-17): divider-line list style, a line between items only.
-   Shipped as an HTML embed (`style[data-divider-list]`) first in main on the Legal Corporates template,
-   element de3674bd-e3a6-880b-b87c-68dc17e286b2. Rich text children cannot take Webflow classes. */
-.image-trio-text_item-content.is-list .w-richtext ul { list-style: none; margin: 0; padding-left: 0; }
-.image-trio-text_item-content.is-list .w-richtext li { margin: 0; padding: .75rem 0; }
-.image-trio-text_item-content.is-list .w-richtext li:first-child { padding-top: 0; }
-.image-trio-text_item-content.is-list .w-richtext li:last-child { padding-bottom: 0; }
-.image-trio-text_item-content.is-list .w-richtext li + li { border-top: 1px solid rgba(41, 49, 12, .25); }
