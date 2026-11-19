@@ -22,7 +22,7 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 | S2 | Old venue text has no outro and hides when the next image is in; new text starts at 60% of the wipe; no text flash during the wipe | live, v1.3.6 |
 | S3 | Scrolling up out of a venue section (first venue, e.g. Home "Zuma") masks the text out instead of vanishing (`s5-home-zuma-outro.webp`) | live, v1.3.6 |
 | S4 | Phone tab selector glides to its new width, no label fade, menu icon does not shrink, sitewide (`s4-tab-selector.png`) | live, v1.3.6 |
-| S5 | Map section freezes briefly when the map appears (cause: Google's font load makes every animated text block re-measure) | fix ready, separate session (map-scroll-freeze), waiting on Stephen to put it on staging |
+| S5 | Map section freezes briefly when the map appears (cause: Google's font load makes every animated text block re-measure) | live, v1.3.7 (PR #303); not yet checked on a real trackpad |
 
 ## Home
 
@@ -160,4 +160,13 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
   2. At 60% of that mask (the same handoff as the venue sections), "Offers & packages", the title and the line text-mask in, one after another.
   3. "Discover more" and the arrows with the 01 / 05 counter fade in last (fade only).
 - **Screenshot:** `b1-blog-offers-slider.webp`.
+- **Status:** open.
+
+## Story template (offers & packages, happenings, blog posts)
+
+### P1. Image pair: both images mask in
+
+- **Where:** the story template's staggered two-image block (e.g. /happenings-stories/autumn-at-spa-adolphus). Same template for packages, happenings and blog posts.
+- **Stephen:** one image masks in and the other fades in; both should mask in.
+- **Screenshot:** `p1-story-image-pair.webp`.
 - **Status:** open.
