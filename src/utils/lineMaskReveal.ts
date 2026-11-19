@@ -138,11 +138,14 @@ const scheduleSplit = (element: HTMLElement, split: () => void) => {
   splitQueue.push({ element, split })
 }
 
-const findTargets = (container: HTMLElement) => {
+const findTargets = (container: HTMLElement, exclude?: string) => {
   // Script headings write themselves in (scriptReveal), so they are never masked here, tagged or not.
   // Elements a variant hides (display: none) take no stagger slot: the Book menu's hidden figures and texts held its rows back by seconds (Stephen 18 Nov).
   const candidates = Array.from(container.querySelectorAll<HTMLElement>(TARGET_SELECTOR)).filter(
-    (candidate) => !isScript(candidate) && getComputedStyle(candidate).display !== 'none',
+    (candidate) =>
+      !isScript(candidate) &&
+      !(exclude && candidate.matches(exclude)) &&
+      getComputedStyle(candidate).display !== 'none',
   )
   // A bare paragraph or heading passed as the container is its own target.
   if (!candidates.length && container.matches(TARGET_SELECTOR) && !isScript(container)) return [container]
@@ -160,8 +163,12 @@ const isText = (element: HTMLElement) =>
  * rebuilt whenever SplitText re-splits (font swap, resize), keeping its
  * progress and the last requested direction.
  */
-export const createLineMaskTimeline = (container: HTMLElement, speed = 1): LineMaskTimeline => {
-  const elements = findTargets(container)
+export const createLineMaskTimeline = (
+  container: HTMLElement,
+  speed = 1,
+  exclude?: string,
+): LineMaskTimeline => {
+  const elements = findTargets(container, exclude)
   if (!elements.length || window.matchMedia(REDUCED_MOTION).matches) {
     return { play: () => undefined, reverse: () => undefined, reset: () => undefined }
   }

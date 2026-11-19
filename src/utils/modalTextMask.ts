@@ -12,6 +12,12 @@
 import { createLineMaskTimeline } from '$utils/lineMaskReveal'
 
 const BOOK_MENU_SPEED = 2
+/**
+ * Photos stay out of the mask: its clip wrapper became the flex or grid child,
+ * so venue rows lost their 250px image column and the sticky panel image lost
+ * its tall parent (Stephen 19 Nov, Book menu "Reserve a table").
+ */
+const PHOTOS = '[class*="figure"]'
 
 export const modalTextMask = () => {
   const dialogs = document.querySelectorAll<HTMLElement>(
@@ -24,7 +30,7 @@ export const modalTextMask = () => {
     // Row buttons and arrows carry data-line-mask in the Designer. The Book menu's
     // first panel opens at twice the speed; its sub-panels (Reserve a table) keep
     // the standard reveal (Stephen 18 Nov).
-    const reveal = createLineMaskTimeline(panel, dialog.id === 'book' ? BOOK_MENU_SPEED : 1)
+    const reveal = createLineMaskTimeline(panel, dialog.id === 'book' ? BOOK_MENU_SPEED : 1, PHOTOS)
     new MutationObserver(() =>
       dialog.classList.contains('is-open') ? reveal.play() : reveal.reverse(),
     ).observe(dialog, { attributes: true, attributeFilter: ['class'] })
