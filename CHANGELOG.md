@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.12
+
+### Patch Changes
+
+- Gallery phone controls: filter bar edge to edge with zoom and Exit, labels and icons centred, picking a filter closes the menu at once.
+
 ## 1.3.11
 
 ### Patch Changes

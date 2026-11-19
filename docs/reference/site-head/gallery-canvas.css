@@ -179,7 +179,8 @@
   width: 1rem;
   height: 1rem;
   margin-right: 0.625rem;
-  vertical-align: -0.1875rem;
+  /* Centres the icon on the capitals, not the line box (Stephen 19 Nov). */
+  vertical-align: -0.34375rem;
   background-color: currentColor;
   -webkit-mask: var(--gallery-pill-icon) center / contain no-repeat;
   mask: var(--gallery-pill-icon) center / contain no-repeat;
@@ -197,6 +198,13 @@
   border-bottom-color: transparent;
 }
 
+/* Pill labels sit on the pill's centre: no tab underline room below them. */
+[data-gallery-canvas-enter],
+[data-gallery-canvas-exit],
+.gallery-all_zoom [data-gallery-canvas-zoom='reset'] {
+  padding-bottom: 0;
+  border-bottom-width: 0;
+}
 /* Before entering, the board is a still picture: no controls. */
 [data-gallery-canvas].is-gated:not(.is-entered) .gallery-all_controls,
 [data-gallery-canvas].is-gated:not(.is-entered) .gallery-all_tags-wrapper {
@@ -232,6 +240,9 @@ html:has([data-gallery-canvas].is-entered) {
 
 [data-gallery-canvas].is-entered .gallery-all_tags-wrapper {
   bottom: calc(2rem + 2.5rem + 0.75rem);
+  /* Edge to edge with zoom and Exit below (the class pads it on phones). */
+  padding-left: 0;
+  padding-right: 0;
   display: flex;
   justify-content: center;
 }
@@ -361,11 +372,21 @@ html:has([data-gallery-canvas].is-entered) {
     gap: 0.625rem;
   }
 
+  /* Same box as the underlined label, so "Filter by" lines up with it. */
   [data-gallery-canvas] [data-tab-dropdown-hint] {
     margin-left: auto;
+    margin-top: -0.1875rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid transparent;
     white-space: nowrap;
+    text-box: trim-both cap alphabetic;
   }
 
+  /* The menu and close icons centre on the capitals beside them. */
+  [data-gallery-canvas] [data-tab-dropdown-menu],
+  [data-gallery-canvas] [data-tab-dropdown-close] {
+    transform: translateY(-0.15625rem);
+  }
   [data-gallery-canvas] [data-tab-dropdown-panel] > a {
     padding: 0.5rem 0 0.6875rem;
     opacity: 1;
