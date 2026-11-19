@@ -421,7 +421,8 @@ transition (image wipe, then a text transition). Guild Figma Home-Animation-1 (h
   locking via Lenis `userData.anchor`.
 - Content (F15): each panel's content line-masks in at 60% of the move, while its wipe finishes
   (one continuous motion), and the old copy snaps
-  back to hidden at that moment, with no outro (Stephen 19 Nov).
+  back to hidden at that moment, with no outro (Stephen 19 Nov). Scrolling up out
+  of the section, as the frame closes, still masks the copy out.
 - State: the active item and tab get `is-active`; the active tab also gets
   `aria-current="true"`. Style the tab underline from `is-active`.
 - The module sets inline `z-index` and `autoAlpha` on items (DOM order

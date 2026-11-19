@@ -150,8 +150,11 @@ const initSlider = (parts: SnapParts, reduce: boolean) => {
   const syncContent = (next: number) => {
     if (next === targetIndex) return
     targetIndex = next
+    // Closing the frame (scrolling up out of the section) masks the copy out; panel changes hide it at once (Stephen 19 Nov).
     reveals.forEach((reveal, index) => {
-      if (index !== next) reveal?.reset()
+      if (index === next) return
+      if (next === -1) reveal?.reverse()
+      else reveal?.reset()
     })
     if (next === -1) return
     reveals[next]?.play()
