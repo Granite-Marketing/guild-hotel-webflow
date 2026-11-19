@@ -69,3 +69,19 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Stephen:** tapping an answer shows the mask intro animation again and it looks broken. Stop it there, probably on phones only; perhaps a `no-animate` style attribute.
 - **Screenshot:** `r1-rooms-quiz.webp`.
 - **Status:** open. To check: which mask replays (step copy, buttons or the photo) before choosing the fix.
+
+## Room template (e.g. /rooms/guild-loft-suite)
+
+### R2. "Back to rooms" link fades in
+
+- **Where:** room template, the "Back to rooms" link under the hero.
+- **Stephen:** add the fade, including the arrow icon.
+- **Screenshot:** `r2-room-back-link.webp`.
+- **Status:** open.
+
+### R3. Room description: floorplan link and feature list fade
+
+- **Where:** room template, "Room description" block.
+- **Stephen:** "View floorplan" fades in. The feature list on the right (1 Queen Bed, 2 Guests, ...) fades in one row at a time, not text masked, so the left and right sides are not both masking at once.
+- **Screenshot:** `r3-room-description.webp`.
+- **Status:** open.
