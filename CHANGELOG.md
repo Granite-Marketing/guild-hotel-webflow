@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.7
+
+### Patch Changes
+
+- 4c7cbb2: fix(map): stop Google Maps loading its fonts, which re-split every text reveal mid-scroll and froze the page past the map
+
 ## 1.3.6
 
 ### Patch Changes
