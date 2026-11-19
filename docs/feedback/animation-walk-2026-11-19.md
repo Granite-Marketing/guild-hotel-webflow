@@ -170,3 +170,19 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Stephen:** one image masks in and the other fades in; both should mask in.
 - **Screenshot:** `p1-story-image-pair.webp`.
 - **Status:** open.
+
+## Neighborhood (/neighborhood)
+
+### N1. Right-hand list images mask in
+
+- **Where:** "Dining around the Guild" (and the other tabbed lists: Arts, Beyond downtown, Services), the photos in the right-hand column.
+- **Stephen:** make these images mask in.
+- **Screenshot:** `n1-neighborhood-dining-images.webp`.
+- **Status:** open.
+
+### N2. Map panel "Directions" links do not animate
+
+- **Where:** map section, "Steps from key legal addresses" panel, the "Directions" link on each row. Everything else there animates.
+- **Stephen:** fix these (text link fade, per the sitewide rule).
+- **Screenshot:** `n2-neighborhood-map-directions.webp`.
+- **Status:** open. Same map panel on /meetings and /legal-corporate/corporate; fix all three.
