@@ -41,7 +41,7 @@
  *
  * The active item and tab get `is-active`; the active tab also gets
  * `aria-current="true"`. A gesture highlights the tab once its image is in,
- * and its copy reveals at that moment (Trello "Subnav"). A tab click
+ * and its copy reveals as the wipe looks done (Trello "Subnav"). A tab click
  * highlights at once and plays one eased move across every panel between.
  * Hidden panels are `visibility: hidden`, so keyboard and screen reader users
  * reach panels through the tabs (links) or the arrow keys.
@@ -58,8 +58,8 @@ const ACTIVE_CLASS = 'is-active'
 const DEFAULT_STEP_PERCENT = 100
 /** Pinned distance after the open step, in steps: the lock zone and iOS momentum buffer. */
 const HOLD = 0.5
-/** Copy reveal speed: quicker than the default line mask so it keeps up with the wipe. */
-const COPY_SPEED = 1.4
+/** Share of a move after which the new copy starts: the eased wipe looks complete here (about 97% in), Stephen 19 Nov. */
+const COPY_HANDOFF = 0.85
 /** Timeline tolerance for "fully open" on the scrubbed open step. */
 const FULL_EPSILON = 0.02
 /** Move duration: one panel over, each extra panel a tab click crosses (Stephen 2026-11-12: far jumps a little slower), and the cap (seconds). */
@@ -134,7 +134,7 @@ const initSlider = (parts: SnapParts, reduce: boolean) => {
   stackItems(items, 0)
   const reveals = items.map((item) => {
     const content = item.querySelector<HTMLElement>('[data-scroll-enlarge-snap-content]')
-    return content ? createLineMaskTimeline(content, COPY_SPEED) : null
+    return content ? createLineMaskTimeline(content) : null
   })
   const mask = createChamferMask(stage, media)
   if (reduce) {
@@ -190,6 +190,7 @@ const initSlider = (parts: SnapParts, reduce: boolean) => {
 
   let currentIndex = 0
   let moving: GsapTimeline | null = null
+  let handoff: GsapDelayedCall | null = null
   let open = reduce
 
   const moveTo = (index: number, fromTab = false) => {
@@ -198,13 +199,14 @@ const initSlider = (parts: SnapParts, reduce: boolean) => {
     const from = currentIndex
     currentIndex = index
     if (fromTab) setActive(index)
-    // The outgoing copy stays put under the wipe; finish() hides it as the new copy starts.
+    // The outgoing copy stays put under the wipe; the handoff hides it as the new copy starts.
     targetIndex = -2
     // Every other copy must be hidden before its panel wipes in (unsplit text showed, then jumped).
     reveals.forEach((reveal, i) => {
       if (i !== from) reveal?.reset()
     })
     moving?.kill()
+    handoff?.kill()
     const finish = () => {
       moving = null
       setActive(index)
@@ -216,6 +218,9 @@ const initSlider = (parts: SnapParts, reduce: boolean) => {
     }
     const duration = Math.min(HOP.first + HOP.extra * (hops - 1), HOP.max)
     moving = panels.tweenTo(index, { duration, ease: 'power2.inOut', onComplete: finish })
+    handoff = gsap.delayedCall(duration * COPY_HANDOFF, () => {
+      if (open) syncContent(index)
+    })
   }
 
   const timeline = gsap.timeline({
@@ -375,6 +380,7 @@ const initSlider = (parts: SnapParts, reduce: boolean) => {
     if (locked) release(1)
     observer.kill()
     moving?.kill()
+    handoff?.kill()
     unbindTabs?.()
   }
 }

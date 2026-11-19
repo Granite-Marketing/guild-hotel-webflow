@@ -419,8 +419,8 @@ transition (image wipe, then a text transition). Guild Figma Home-Animation-1 (h
   last releases the page with a short carry-on scroll; Home and End release.
   Anchor scrolls (`smoothScroll.scrollTo`, sticky tabs) pass through without
   locking via Lenis `userData.anchor`.
-- Content (F15): each panel's content line-masks in the moment its wipe is done
-  (one continuous motion, quicker than the default mask), and the old copy snaps
+- Content (F15): each panel's content line-masks in as its wipe looks done (85% of the move)
+  (one continuous motion), and the old copy snaps
   back to hidden at that moment, with no outro (Stephen 19 Nov).
 - State: the active item and tab get `is-active`; the active tab also gets
   `aria-current="true"`. Style the tab underline from `is-active`.
