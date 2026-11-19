@@ -267,7 +267,8 @@ const visibleVerticalRange = (element: HTMLElement, rect: DOMRect) => {
 /** Resolves `12px`, `50%` and `calc(100% - 12px)` against a length. */
 const resolveLength = (value: string | undefined, length: number) => {
   if (!value) return 0
-  const calc = value.match(/^calc\(\s*100%\s*-\s*([\d.]+)px\s*\)$/)
+  // D1: a mask finishing its open writes tiny values in exponent form (7.5e-05px); missing them flashed the nav for a frame.
+  const calc = value.match(/^calc\(\s*100%\s*-\s*([\d.eE+-]+)px\s*\)$/)
   if (calc) return length - parseFloat(calc[1])
   if (value.endsWith('%')) return (parseFloat(value) / 100) * length
   return parseFloat(value) || 0
