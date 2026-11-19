@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.1
+
+### Patch Changes
+
+- a4b1911: Venue scroll sections no longer get stuck on a trackpad: a new swipe counts even while the last swipe is still gliding.
+
 ## 1.3.0
 
 ### Minor Changes
