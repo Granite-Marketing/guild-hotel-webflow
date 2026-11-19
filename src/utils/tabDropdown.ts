@@ -30,7 +30,7 @@
  * ScrollTrigger refresh is needed. `aria-expanded` flips at once; `is-open`
  * stays until a close finishes (`is-closing` marks that window) so the list is
  * visible while it collapses. Links stay clickable throughout, and reduced
- * motion opens and closes instantly.
+ * motion opens and closes instantly; so does picking a tab.
  *
  * The pill's width glides to its new size whenever it changes (a new label,
  * opening, closing), on every bar sitewide. The label itself swaps at once.
@@ -163,7 +163,9 @@ export const tabDropdown = () => {
     // its onComplete, which would otherwise close a menu that reopened.
     let timeline: ReturnType<typeof gsap.timeline> | null = null
 
-    const setOpen = (open: boolean) => {
+    // instant: picking a tab closes at once with no outro, so the label swap
+    // and the close never overlap (Stephen 19 Nov, gallery filter felt jittery).
+    const setOpen = (open: boolean, instant = false) => {
       if (open === expanded) return
       expanded = open
       toggle.setAttribute('aria-expanded', String(open))
@@ -183,7 +185,7 @@ export const tabDropdown = () => {
         onComplete: open ? undefined : () => gsap.set(neighbours, { clearProps: 'opacity,visibility' }),
       })
 
-      if (reducedMotion.matches) {
+      if (reducedMotion.matches || instant) {
         clearInline()
         bar.classList.remove(CLOSING_CLASS)
         bar.classList.toggle(OPEN_CLASS, open)
@@ -248,7 +250,7 @@ export const tabDropdown = () => {
     bar.addEventListener(
       'click',
       (event) => {
-        if ((event.target as Element).closest('a')) setOpen(false)
+        if ((event.target as Element).closest('a')) setOpen(false, true)
       },
       true,
     )
