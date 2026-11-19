@@ -16,8 +16,8 @@
  *   data-slide-mask="off"                      on the root: no text or image mask, plain crossfade
  *
  * Intro (B1), once when the slider scrolls into view: the image opens from
- * its right edge, the eyebrow and the slide copy line-mask in from 60% of
- * it, and the slide's button and the arrows and counter fade in last.
+ * its right edge and, a beat apart, the eyebrow and slide copy line-mask in
+ * and the slide's button, arrows and counter fade in.
  *
  * Slides hidden through a component visibility prop are not rendered, so
  * the total always matches the slides on the page. Uses its own `offers`
@@ -41,12 +41,12 @@ const CLOSED = { next: 'inset(0% 0% 0% 100%)', prev: 'inset(0% 100% 0% 0%)' }
 const OPEN = 'inset(0% 0% 0% 0%)'
 // Outgoing copy clears before the incoming heading rises far enough to overlap it (~120ms).
 const TEXT_FADE_DURATION = 0.15
-// B1 intro (Stephen 19 Nov): image opens from its right edge; the copy starts at 60% of it
-// (the venue-section handoff); the button and controls fade in once the copy has landed.
-const INTRO_COPY_AT = IMAGE_DURATION * 0.6
-const INTRO_FADE_AT = INTRO_COPY_AT + 0.9
-const INTRO_FADE_DURATION = 0.6
-const INTRO_STAGGER = 0.15
+// B1 intro (Stephen 19 Nov): image, copy, then button and controls start almost together,
+// each a beat after the last ("all happen almost at the same time, just with a slight delay").
+const INTRO_COPY_AT = 0.1
+const INTRO_STAGGER = 0.1
+const INTRO_FADE_AT = 0.35
+const INTRO_FADE_DURATION = 0.8
 
 export const offersSliderSplit = () => {
   const sliders = document.querySelectorAll<HTMLElement>('[data-offers-slider]')
