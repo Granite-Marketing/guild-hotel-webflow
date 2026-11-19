@@ -94,3 +94,12 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Stephen:** the caption is hard to read; add a gradient overlay at the bottom only, about the bottom 20 to 25% of the screen, not the whole image. The other images may already have an overlay; check why this one has none (it comes from the masked section).
 - **Screenshot:** `h1-history-caption-overlay.webp`.
 - **Status:** open. Build in the Designer (class or embed), not in code.
+
+## Dining
+
+### D1. Nav flashes when a full-screen mask section opens
+
+- **Where:** Dining venue section (and other full-screen mask sections, including the room template).
+- **Stephen:** when the section reaches full screen, the top menu flashes briefly. Possibly the light/dark nav check (`navTheme`) flipping while the frame opens.
+- **Screenshot:** `d1-dining-nav-flash.webp`.
+- **Status:** open. Sitewide fix in `navTheme`, likely new since today's venue changes; check v1.3.0 vs v1.3.6.
