@@ -186,3 +186,12 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Stephen:** fix these (text link fade, per the sitewide rule).
 - **Screenshot:** `n2-neighborhood-map-directions.webp`.
 - **Status:** open. Same map panel on /meetings and /legal-corporate/corporate; fix all three.
+
+## Meetings (/meetings)
+
+### M1. Key features: images mask in, service list fades in
+
+- **Where:** "Key features of our spaces" section, the right-hand column.
+- **Stephen:** the right-hand images mask in. The "Event services" title already animates; the list items under it fade in too (one row at a time, like R3).
+- **Screenshot:** `m1-meetings-features.webp`.
+- **Status:** open.
