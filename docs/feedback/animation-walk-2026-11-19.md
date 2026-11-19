@@ -96,7 +96,7 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Where:** History page, the full-screen landmark photo after the mask reveal, with the small caps caption bottom left ("Etiam imperdiet sodales...").
 - **Stephen:** the caption is hard to read; add a gradient overlay at the bottom only, about the bottom 20 to 25% of the screen, not the whole image. The other images may already have an overlay; check why this one has none (it comes from the masked section).
 - **Screenshot:** `h1-history-caption-overlay.webp`.
-- **Status:** live (Designer). New `history-landmark_overlay` div inside the full-bleed card: bottom 25% gradient to 56% black, clipped with the photo so it only shows as the photo opens.
+- **Status:** live (Designer). New `history-landmark_overlay` div inside the full-bleed card: bottom 28% gradient to 72% black (strengthened after the check: the caption sits on pale stone at desktop), clipped with the photo so it only shows as the photo opens.
 
 ## Dining
 
