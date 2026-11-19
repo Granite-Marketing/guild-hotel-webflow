@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.5
+
+### Patch Changes
+
+- 99a02fc: Phone tab selector: the menu icon no longer shrinks while the width glides.
+
 ## 1.3.4
 
 ### Patch Changes
