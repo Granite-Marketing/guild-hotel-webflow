@@ -65,6 +65,7 @@ const CLOSE_ICON =
 // The panel packs its rows at the bottom (flex-end) so, while its height grows
 // or shrinks, the current label in the pill row never moves (M19, Stephen 18 Nov);
 // the last row's 3px margin makes its gap to that label match the gaps between rows.
+// The icons never shrink: mid width-glide a longer label briefly squeezed the menu icon (Stephen 19 Nov).
 const STYLES = `
 [data-tab-dropdown-panel]{display:contents}
 [data-tab-dropdown-toggle]{display:none}
@@ -80,6 +81,7 @@ const STYLES = `
  [data-tab-dropdown].is-open [data-tab-dropdown-panel]>a:nth-last-child(2){margin-bottom:.1875rem}
  [data-tab-dropdown-toggle]{display:flex;align-items:center;justify-content:space-between;gap:2.5rem;height:2.5rem;margin:0;padding:0;border:0;background:none;color:inherit;text-align:left;cursor:pointer}
  [data-tab-dropdown-label]{white-space:nowrap;margin-top:-.1875rem;padding-bottom:.25rem;border-bottom:1px solid currentColor;text-box:trim-both cap alphabetic}
+ [data-tab-dropdown-menu],[data-tab-dropdown-close]{flex-shrink:0}
  [data-tab-dropdown-close],[data-tab-dropdown].is-open:not(.is-closing) [data-tab-dropdown-menu]{display:none}
  [data-tab-dropdown].is-open:not(.is-closing) [data-tab-dropdown-close]{display:block}
 }`
