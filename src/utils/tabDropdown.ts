@@ -29,6 +29,9 @@
  * visible while it collapses. Links stay clickable throughout, and reduced
  * motion opens and closes instantly.
  *
+ * The pill's width glides to its new size whenever it changes (a new label,
+ * opening, closing), on every bar sitewide. The label itself swaps at once.
+ *
  * Order: before the scroll engine, since it shortens the bars on mobile.
  */
 
@@ -40,6 +43,8 @@ const OPEN_SECONDS = 0.45
 const CLOSE_SECONDS = 0.3
 const LINK_SECONDS = 0.35
 const LINK_STAGGER = 0.06
+/** Width glide when the pill's label changes (Stephen 19 Nov: no abrupt jumps; no label fade). */
+const WIDTH_SECONDS = 0.4
 
 // Figma: 16x8 menu glyph (three 0.8px lines) and a 10x10 hairline X.
 const MENU_ICON =
@@ -68,7 +73,7 @@ const STYLES = `
  :is(.venue-card-fullbleed_tabs,.tab-pills-intro_tabs.is-media)[data-tab-dropdown]{left:50%;right:auto;bottom:calc(1.25rem + 100lvh - 100svh);transform:translateX(-50%)}
  [data-tab-dropdown-panel]{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:max-content;min-width:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:0 1.5rem;background-color:var(--_primitives---colors--burgundy);color:var(--_primitives---colors--neutral-lightest);clip-path:polygon(.75rem 0,calc(100% - .75rem) 0,100% .75rem,100% calc(100% - .75rem),calc(100% - .75rem) 100%,.75rem 100%,0 calc(100% - .75rem),0 .75rem)}
  [data-tab-dropdown-panel]>*{flex-shrink:0;font-size:.875rem;line-height:1.125rem;letter-spacing:-.05em}
- [data-tab-dropdown-panel]>a{display:none;padding:.8125rem 0 1rem;border:0;opacity:.62;text-box:trim-both cap alphabetic}
+ [data-tab-dropdown-panel]>a{display:none;white-space:nowrap;padding:.8125rem 0 1rem;border:0;opacity:.62;text-box:trim-both cap alphabetic}
  [data-tab-dropdown-panel]>a.is-active{opacity:1}
  [data-tab-dropdown].is-open [data-tab-dropdown-panel]{padding-top:.625rem;overflow:hidden}
  [data-tab-dropdown].is-open [data-tab-dropdown-panel]>a{display:block}
@@ -110,14 +115,33 @@ export const tabDropdown = () => {
     bar.append(panel)
     bar.setAttribute('data-tab-dropdown', '')
 
+    const reducedMotion = window.matchMedia(REDUCED_MOTION)
+
+    // Applies a change that alters the pill's width and glides from the old width to the new one.
+    // Desktop (display: contents) measures 0 and skips the glide.
+    let widthTween: ReturnType<typeof gsap.timeline> | null = null
+    const glideWidth = (change: () => void) => {
+      const from = panel.getBoundingClientRect().width
+      widthTween?.kill()
+      gsap.set(panel, { clearProps: 'width' })
+      change()
+      const to = panel.getBoundingClientRect().width
+      if (!from || !to || Math.abs(from - to) < 1 || reducedMotion.matches) return
+      widthTween = gsap.timeline().fromTo(
+        panel,
+        { width: from },
+        { width: to, duration: WIDTH_SECONDS, ease: 'power2.inOut', onComplete: () => gsap.set(panel, { clearProps: 'width' }) },
+      )
+    }
+
     const syncLabel = () => {
       const active = tabs.find((tab) => tab.classList.contains('is-active')) ?? tabs[0]
-      label.textContent = active.textContent
+      const text = active.textContent ?? ''
+      if (label.textContent !== text) glideWidth(() => (label.textContent = text))
     }
     syncLabel()
     new MutationObserver(syncLabel).observe(panel, { subtree: true, attributeFilter: ['class'] })
 
-    const reducedMotion = window.matchMedia(REDUCED_MOTION)
     const animated = [panel, ...tabs]
     const clearInline = () => gsap.set(animated, { clearProps: 'height,paddingTop,opacity,visibility,transform' })
     let expanded = false
@@ -161,8 +185,10 @@ export const tabDropdown = () => {
         const wasOpen = bar.classList.contains(OPEN_CLASS)
         const start = wasOpen ? metrics() : { height: toggle.offsetHeight, paddingTop: 0 }
         gsap.set(panel, { clearProps: 'height,paddingTop' })
-        bar.classList.remove(CLOSING_CLASS)
-        bar.classList.add(OPEN_CLASS)
+        glideWidth(() => {
+          bar.classList.remove(CLOSING_CLASS)
+          bar.classList.add(OPEN_CLASS)
+        })
         const full = metrics()
         gsap.set(tabs, { clearProps: 'opacity,visibility,transform' })
         const linkOpacity = tabs.map((tab) => Number(getComputedStyle(tab).opacity))
@@ -189,7 +215,7 @@ export const tabDropdown = () => {
       timeline = gsap
         .timeline({
           onComplete: () => {
-            bar.classList.remove(OPEN_CLASS, CLOSING_CLASS)
+            glideWidth(() => bar.classList.remove(OPEN_CLASS, CLOSING_CLASS))
             clearInline()
           },
         })
