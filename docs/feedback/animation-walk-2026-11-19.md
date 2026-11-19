@@ -12,6 +12,8 @@ Screenshots: `docs/feedback/images/2026-11-19/`.
 - **Attribute on the element itself** in the Designer, never on a wrapper and never applied by class in code (issue #293).
 - **Show before release:** preview changes locally and let Stephen see them before they go to staging.
 
+**Sitewide rules, applied 19 Nov (live on staging):** text links fade on Home, Room, Dining, Contact, map panels and the shared link components; form submit buttons fade on every form. Not changed: links inside paragraphs (they mask with their text), quiz and slider links (their modules animate them), and the Rooms quiz recommendation links (they sit in the quiz flow, see R1).
+
 Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on staging), `held`.
 
 ## Scroll and venue sections (earlier today)
@@ -38,21 +40,21 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Where:** Home "West Coast Hospitality since 1924" ("Uncover our history"), Home "Wellness" ("Discover more"), and every text link like them.
 - **Stephen:** add a simple fade to these links.
 - **Screenshots:** `a2-home-history-link.webp`, `a2-home-wellness-link.webp`.
-- **Status:** open.
+- **Status:** live (Designer). Fade on the link in the shared Split image text and Image Trio Text components; the split block's text now masks per part (header, body) so the link can fade on its own.
 
 ### A3. Rooms & Suites block has no animation
 
 - **Where:** Home "Rooms & Suites" full-bleed block.
 - **Stephen:** text mask on the title and the subtitle; fade (opacity only) on "Explore more".
 - **Screenshot:** `a3-home-rooms.webp`.
-- **Status:** open.
+- **Status:** live (Designer). Rooms & Suites component: title and subtitle text-mask, "Explore more" fades.
 
 ### A4. Art & Stories large image: fade and scale, not a mask
 
 - **Where:** Home "Art & Stories", the large framed image.
 - **Stephen:** not a mask reveal; it should fade and scale in (the `image-fade` style).
 - **Screenshot:** `a4-home-art-image.webp`.
-- **Status:** open.
+- **Status:** live (Designer). Home Art & Stories image switched from `image-mask` to `image-fade`.
 
 ### A5. FAQ answer text does not animate
 
@@ -60,7 +62,7 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Stephen:** it shows before everything else comes in; it needs an animation.
 - **Decision (Stephen):** text mask, the same as the questions.
 - **Screenshot:** `a5-home-faq-answer.webp`.
-- **Status:** open.
+- **Status:** live (Designer). Every FAQ answer in the shared faq-accordion component text-masks just after its question.
 
 ## Rooms
 
@@ -78,14 +80,14 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Where:** room template, the "Back to rooms" link under the hero.
 - **Stephen:** add the fade, including the arrow icon.
 - **Screenshot:** `r2-room-back-link.webp`.
-- **Status:** open.
+- **Status:** live (Designer). Back link (with arrow) fades, on the shared script-intro component.
 
 ### R3. Room description: floorplan link and feature list fade
 
 - **Where:** room template, "Room description" block.
 - **Stephen:** "View floorplan" fades in. The feature list on the right (1 Queen Bed, 2 Guests, ...) fades in one row at a time, not text masked, so the left and right sides are not both masking at once.
 - **Screenshot:** `r3-room-description.webp`.
-- **Status:** open.
+- **Status:** live (Designer). Header text-masks, "View floorplan" fades, feature rows fade one at a time (0.1s apart).
 
 ## History
 
@@ -94,7 +96,7 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Where:** History page, the full-screen landmark photo after the mask reveal, with the small caps caption bottom left ("Etiam imperdiet sodales...").
 - **Stephen:** the caption is hard to read; add a gradient overlay at the bottom only, about the bottom 20 to 25% of the screen, not the whole image. The other images may already have an overlay; check why this one has none (it comes from the masked section).
 - **Screenshot:** `h1-history-caption-overlay.webp`.
-- **Status:** open. Build in the Designer (class or embed), not in code.
+- **Status:** live (Designer). New `history-landmark_overlay` div inside the full-bleed card: bottom 25% gradient to 56% black, clipped with the photo so it only shows as the photo opens.
 
 ## Dining
 
@@ -110,21 +112,21 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Where:** dining template (e.g. /dining/dining-gardenterrace), Dress code and Hours block.
 - **Stephen:** simple fade.
 - **Screenshot:** `d2-dining-browse-menu.webp`.
-- **Status:** open (covered by the sitewide text link rule).
+- **Status:** live (Designer). "Browse the menu" fades on the dining template.
 
 ### D3. Right-hand image slides in; should mask in
 
 - **Where:** dining template, the two-image row (bartender left, cocktail right). The right image slides in.
 - **Stephen:** it should mask in, not slide.
 - **Screenshot:** `d3-dining-right-image.webp`.
-- **Status:** open.
+- **Status:** live (Designer). Right-hand image now masks in; its paragraph text-masks on its own.
 
 ### D4. "Enquire" fades in
 
 - **Where:** dining template, Group dining & events block.
 - **Stephen:** the same text link fade as elsewhere.
 - **Screenshot:** `d4-dining-enquire.webp`.
-- **Status:** open (covered by the sitewide text link rule).
+- **Status:** live (Designer). Fades via the shared Image Trio Text link.
 
 ## Guidelines (/guidelines)
 
@@ -134,20 +136,20 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Stephen:** the numbers are missing an animation.
 - **Decision (Stephen):** fade, timed with each step's text.
 - **Screenshot:** `g1-guidelines-numbers.webp`.
-- **Status:** open.
+- **Status:** live (Designer). Each number fades with its step's text mask (same trigger).
 
 ### G2. "Work from our collaborators" images mask in
 
 - **Where:** the collaborator photos (with @username captions) and the large photo after them.
 - **Stephen:** these should mask in, not fade and scale.
 - **Screenshots:** `g2-guidelines-collaborators-1.webp`, `-2`, `-3`.
-- **Status:** open.
+- **Status:** live (Designer). Collaborator photos (timeline-scatter-images component) and the large photo after them mask in.
 
 ### G3. Form submit buttons fade in (sitewide)
 
 - **Where:** every form's submit button.
 - **Stephen:** add a fade.
-- **Status:** open.
+- **Status:** live (Designer). Submit buttons fade on the shared form-split component (Guidelines, Meetings, Corporate, Press); the Contact form and footer newsletter buttons already faded.
 
 ## Blog listing (/blog)
 
@@ -169,7 +171,7 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Where:** the story template's staggered two-image block (e.g. /happenings-stories/autumn-at-spa-adolphus). Same template for packages, happenings and blog posts.
 - **Stephen:** one image masks in and the other fades in; both should mask in.
 - **Screenshot:** `p1-story-image-pair.webp`.
-- **Status:** open.
+- **Status:** live (Designer). The inset image (image-inset-single component) now masks in like the other. Note: /arts uses the same component, so its inset image masks too.
 
 ## Neighborhood (/neighborhood)
 
@@ -178,14 +180,14 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Where:** "Dining around the Guild" (and the other tabbed lists: Arts, Beyond downtown, Services), the photos in the right-hand column.
 - **Stephen:** make these images mask in.
 - **Screenshot:** `n1-neighborhood-dining-images.webp`.
-- **Status:** open.
+- **Status:** live (Designer). Photos in the Article Card Staggered Tall component mask in.
 
 ### N2. Map panel "Directions" links do not animate
 
 - **Where:** map section, "Steps from key legal addresses" panel, the "Directions" link on each row. Everything else there animates.
 - **Stephen:** fix these (text link fade, per the sitewide rule).
 - **Screenshot:** `n2-neighborhood-map-directions.webp`.
-- **Status:** open. Same map panel on /meetings and /legal-corporate/corporate; fix all three.
+- **Status:** live (Designer). Directions links fade on the shared Map Feature Image Bg component (Meetings, Neighborhood, Corporate); each row's name and address now text-mask on their own.
 
 ## Meetings (/meetings)
 
@@ -194,7 +196,7 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Where:** "Key features of our spaces" section, the right-hand column.
 - **Stephen:** the right-hand images mask in. The "Event services" title already animates; the list items under it fade in too (one row at a time, like R3).
 - **Screenshot:** `m1-meetings-features.webp`.
-- **Status:** open.
+- **Status:** live (Designer). Images mask in, card titles text-mask, service rows fade one at a time.
 
 ## Contact (/contact)
 
@@ -204,4 +206,4 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Stephen:** animate the titles, and the Instagram and Facebook links.
 - **Proposed:** titles text-mask (as every other heading); Instagram and Facebook fade (sitewide text link rule).
 - **Screenshot:** `c1-contact-details.webp`.
-- **Status:** open.
+- **Status:** live (Designer). Titles join the existing details text mask; Instagram and Facebook fade.
