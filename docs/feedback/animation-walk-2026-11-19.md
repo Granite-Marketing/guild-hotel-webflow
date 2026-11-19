@@ -60,3 +60,12 @@ Status: `open`, `in progress`, `preview` (ready to look at locally), `live` (on 
 - **Decision (Stephen):** text mask, the same as the questions.
 - **Screenshot:** `a5-home-faq-answer.webp`.
 - **Status:** open.
+
+## Rooms
+
+### R1. Quiz steps replay a broken-looking mask on phones
+
+- **Where:** Rooms page quiz ("Who's checking in?"), phones.
+- **Stephen:** tapping an answer shows the mask intro animation again and it looks broken. Stop it there, probably on phones only; perhaps a `no-animate` style attribute.
+- **Screenshot:** `r1-rooms-quiz.webp`.
+- **Status:** open. To check: which mask replays (step copy, buttons or the photo) before choosing the fix.
