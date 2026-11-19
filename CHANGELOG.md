@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.2
+
+### Patch Changes
+
+- 3bfde24: Venue scroll sections: the new copy starts as its image finishes wiping in (85% of the move), the old copy hides instantly with no outro, and copy never flashes during the wipe.
+
 ## 1.3.1
 
 ### Patch Changes
