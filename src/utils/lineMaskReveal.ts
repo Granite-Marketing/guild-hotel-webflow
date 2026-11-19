@@ -86,10 +86,8 @@ type RevealPart = TextPart | ElementPart
 export interface LineMaskTimeline {
   play: () => void
   reverse: () => void
-  /** True while any part of the copy is revealed (progress above zero). */
-  isRevealed: () => boolean
-  /** Runs `callback` once the copy is fully masked out: now if it already is, else when its reverse completes. */
-  whenHidden: (callback: () => void) => void
+  /** Snaps the copy to its hidden start state at once, with no outro (splitting it first if needed). */
+  reset: () => void
 }
 
 /** Text within this many viewport heights of the screen is split ahead of its reveal. */
@@ -165,18 +163,10 @@ const isText = (element: HTMLElement) =>
 export const createLineMaskTimeline = (container: HTMLElement, speed = 1): LineMaskTimeline => {
   const elements = findTargets(container)
   if (!elements.length || window.matchMedia(REDUCED_MOTION).matches) {
-    return { play: () => undefined, reverse: () => undefined, isRevealed: () => false, whenHidden: (callback) => callback() }
+    return { play: () => undefined, reverse: () => undefined, reset: () => undefined }
   }
 
-  let hiddenCallbacks: Array<() => void> = []
-  const timeline = gsap.timeline({
-    paused: true,
-    onReverseComplete: () => {
-      const callbacks = hiddenCallbacks
-      hiddenCallbacks = []
-      callbacks.forEach((callback) => callback())
-    },
-  })
+  const timeline = gsap.timeline({ paused: true })
   let direction: 'forward' | 'reverse' | null = null
   const parts: RevealPart[] = []
 
@@ -287,10 +277,11 @@ export const createLineMaskTimeline = (container: HTMLElement, speed = 1): LineM
       ensureAllSplit()
       runDirection()
     },
-    isRevealed: () => timeline.progress() > 0,
-    whenHidden: (callback) => {
-      if (timeline.progress() === 0) callback()
-      else hiddenCallbacks.push(callback)
+    reset: () => {
+      direction = null
+      // Split now, so text that was never shown starts hidden instead of jumping when it plays.
+      ensureAllSplit()
+      timeline.pause().progress(0)
     },
   }
 }
