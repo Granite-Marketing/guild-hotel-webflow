@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.14
+
+### Patch Changes
+
+- 8a3a798: Card carousels count their cards again when they sit in the Cards slot or a CMS list.
+- Day and night content switch (spec #338): the nav Day and Night buttons swap text, images, videos and button links on tagged blocks, remembered in a cookie, day on first visit, empty night values keep day content, quick crossfade. Also: the card carousel slide fix and the "All" tab ordering fix from the CMS Designer round (#317).
+- 969c316: Filter tab bars keep their order when the tabs come from a CMS list (Arts, Gallery).
+
 ## 1.3.13
 
 ### Patch Changes
