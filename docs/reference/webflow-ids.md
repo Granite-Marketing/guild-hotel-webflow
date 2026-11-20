@@ -613,3 +613,17 @@ Layout variants became their own components (group as source, same prop ids as S
 - Rooms template new Edge instances `90d46d8d-eb1d-b9b0-a56b-2a524cb2d6bc`, `8bc48eb2-4325-ca87-3c8b-d72b497e1e16`; `/room-detail-static` `6f948212-6bd0-cff2-f287-a54b2fdba3b0`, `bc0cf7d0-27db-1e9f-6b4c-dac7c31ea407`.
 - Split image text light (`663131a8-...`) keeps 4 instances: Home (Olive Home), Neighborhood (Neighborhood Downtown), Dining template (Blue, Olive Dining). Its Edge, Edge Large, Wide, Stagger Left, Stagger Mid and Compact variants now have no instances; they stay until Stephen decides.
 - The room page second-Edge mobile rule now targets `.is-edge` in `mobile-variant-overrides.css` (v1.3.21); the Compact rules left the `data-story-mobile` head block.
+
+### X1 form split (2026-11-20)
+
+form-split-script-contact became five single-purpose components (group Sections). Field and detail labels are fixed text inside each component (no numbered props); only Photoshoot and Request for Proposal keep the Section ID prop (`313202aa-3827-a147-8028-b130b086d676`). Form names are unchanged ("Photoshoot Request" on every form, as before).
+
+| Component | ID | Page instance | Combo (`is-…`) |
+|---|---|---|---|
+| Form Photoshoot Request | `ae6ed4a3-2655-8c61-7d36-a87b4dd8d607` | /guidelines `63afbeba-7b83-26b8-4f12-924e4e36fb03` (Section ID `photoshoot-request`) | `is-photoshoot` header `0e3ce68a-117d-da93-dffc-04f69f10b003`, heading `5f0b01f2-fdac-0bc1-55cd-5ad8aceb8841` |
+| Form Request for Proposal | `07b1c49f-a979-a3d8-a93a-820f2f02b379` | /meetings `e11d6d47-01b3-9352-8de0-b00e8109f765` (Section ID `request-for-proposal`) | `is-proposal` section `10f173a6-13c3-bf0f-3b07-82d644b28a21`, header `dc6784b0-ba7c-c8bb-16c8-4544ab6fc2e8`, heading `5f7d9d65-7138-75a3-2ee8-1bf40542ff43`, footer `5d2f13c5-98c9-59ba-fa9f-762b4f82c438` |
+| Form Legal Corporate Proposal | `ac4f1278-12f1-0748-8e90-ad316983a2a1` | Legal Corporates template `c29b6bfa-964a-7935-6603-7198d47a1d82` | `is-corporate` header `6c9c5123-385a-5132-0c5c-a1aec77ac7fa`, heading `a362cc9b-aa21-46cc-431d-a0b15284bb5c`, fieldsets `2de1320f-a0c2-89d6-d368-f3ed033fa771` |
+| Form Press Enquiries | `06c49a08-f7ed-6064-538f-ea093f14b321` | /press `1ec73577-aa75-9258-ea03-07caad145b2a` | `is-press` section `c7b4cfec-b045-693a-395e-adf357d1c0d5` (emailLinks.ts hook, v1.3.22), header, heading, details, detail, form-block, fieldsets, footer |
+| Contact Details Map | `dcfc7720-8c7b-8825-2cfe-e1f230373a34` | /contact `9b9f25b9-498c-bb3d-7f2b-eac0e03748aa` | `is-contact` section `955049f8-aa8e-9d6f-a588-f5f7114013ce`, content, header, heading `bc3c29e6-84e4-bbff-0688-eff706553cc8`, details, detail, links, link, media, map |
+
+- form-split-script-contact (`2f0cac24-...`) now has 0 instances; its six variants stay until Stephen decides.
