@@ -18,6 +18,8 @@
  *   data-night-video   a frame element: a muted looping player (embedVideo,
  *                      the spec #317 media module) is laid over the day media
  *   data-night-href    link target of an <a>
+ *   img[data-night-image] (hidden, beside the day img) supplies the night picture
+ *                      from an image prop or CMS image field (see adoptNightImages)
  * The day values are remembered on the element (`data-day-*`), so switching
  * back restores them exactly.
  *
@@ -186,7 +188,26 @@ const syncControls = (mode: Mode) => {
   })
 }
 
+// A Webflow image prop or CMS image field cannot bind to an attribute, so a night
+// picture arrives as a hidden `<img data-night-image>` beside the day `<img>` in
+// the same frame. Copy its sources onto the day image as data-night-* values.
+// An empty image prop renders Webflow's placeholder, which counts as no night picture.
+const adoptNightImages = () => {
+  document.querySelectorAll<HTMLImageElement>('img[data-night-image]').forEach((source) => {
+    const target = source.parentElement?.querySelector<HTMLImageElement>('img:not([data-night-image])')
+    const src = source.getAttribute('src')?.trim() ?? ''
+    if (target && src && !src.includes('/placeholder')) {
+      IMAGE_ATTRIBUTES.forEach((attribute) => {
+        const value = source.getAttribute(attribute)
+        if (value) target.setAttribute(`data-night-${attribute}`, value)
+      })
+    }
+    source.remove()
+  })
+}
+
 export const dayNight = () => {
+  adoptNightImages()
   let mode = readMode()
   let inFlight: { targets: HTMLElement[] } | null = null
 
