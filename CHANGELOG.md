@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.20
+
+### Patch Changes
+
+- 8e6e018: Press cards now take their left/right position from the stagger script (restarting per category) instead of a Designer every-second-card rule.
+
 ## 1.3.19
 
 ### Patch Changes
