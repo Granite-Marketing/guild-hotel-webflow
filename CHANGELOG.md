@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.17
+
+### Patch Changes
+
+- Nav colour switch keeps working after pressing Day or Night: the nav clone no longer copies the real bar's mask when it is rebuilt.
+
 ## 1.3.16
 
 ### Patch Changes
