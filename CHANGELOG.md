@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.18
+
+### Patch Changes
+
+- 9544011: Category listings: tab pills now come from a categories Collection List in the tab-pills-intro Tabs slot (tabs for empty categories are removed, the first tab starts active), and card alternation restarts at each category so every category heading sits on the left.
+
 ## 1.3.17
 
 ### Patch Changes
