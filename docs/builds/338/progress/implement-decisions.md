@@ -1,0 +1,3 @@
+## Round 2
+- Restore dist/index.js and dist/site.css to base 0c9b237 rather than revert all of commit 71b17d2; alternatives: git revert 71b17d2 (would also undo the package.json test:factory fix that makes factory tests pass on Node 22); why: gate names only the dist paths, the package.json fix is needed; landed: dist/ restored in the fix commit
+- dist rebuild deferred to release via follow-up; alternatives: none allowed (protected path); why: tests build their own bundle with esbuild from src, so they do not need dist; landed: https://github.com/Granite-Marketing/guild-hotel-webflow/issues/358

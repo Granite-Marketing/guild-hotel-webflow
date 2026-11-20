@@ -23,6 +23,7 @@ import { focusRing } from '$utils/focusRing'
 import { cardCarouselHeaderLeft } from '$utils/cardCarouselHeaderLeft'
 import { cmsItemLinks } from '$utils/cmsItemLinks'
 import { contactStickyColumn } from '$utils/contactStickyColumn'
+import { dayNight } from '$utils/dayNight'
 import { currentYear } from '$utils/currentYear'
 import { eagerImages } from '$utils/eagerImages'
 import { emailLinks } from '$utils/emailLinks'
@@ -89,6 +90,8 @@ const DININGS_TEMPLATE_PAGE_ID = '6ad67d7416e13e66c2b76107'
 
 window.Webflow ||= [] as unknown as WebflowQueue
 window.Webflow.push(() => {
+  // #339: first of all, so night content is in place before any module splits text or measures layout.
+  dayNight()
   // Promote [data-eager] images before any ScrollTrigger exists, so
   // window.load waits for them and the load refresh measures settled layout.
   eagerImages()

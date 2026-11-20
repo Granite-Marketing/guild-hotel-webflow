@@ -18,6 +18,8 @@
  * flash before the bundle runs (docs/reference/js-loading-flash-prevention.md).
  */
 
+import { trackSplit } from '$utils/splitRegistry'
+
 export const heroTextReveal = () => {
   const heroTitle = document.querySelector<HTMLElement>('[data-hero-title]')
   if (!heroTitle) return
@@ -26,7 +28,7 @@ export const heroTextReveal = () => {
     document.querySelectorAll<HTMLElement>('[data-hero-reveal]'),
   )
 
-  new SplitText(heroTitle, {
+  trackSplit(heroTitle, {
     types: 'words, lines',
     autoSplit: true,
     onSplit: (self: SplitTypeInstance) => {
