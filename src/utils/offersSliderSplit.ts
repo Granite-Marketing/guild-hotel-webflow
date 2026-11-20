@@ -112,6 +112,9 @@ export const offersSliderSplit = () => {
     // the window is fully open, so the background never shows.
     const visibleSlides = new Set<HTMLElement>()
     let topLayer = 1
+    // The rising slide z-index stays inside the slider, so slides never cover
+    // the arrows and counter, with or without Swiper's own stylesheet.
+    container.style.isolation = 'isolate'
     const applyVisibility = (instance: OffersSwiperInstance) => {
       instance.slides.forEach((slide) => {
         slide.style.opacity = visibleSlides.has(slide) ? '1' : '0'
