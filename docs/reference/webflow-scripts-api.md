@@ -23,7 +23,7 @@ jsDelivr serves a new git tag as soon as it resolves, but Webflow keeps serving 
    curl -sI https://cdn.jsdelivr.net/gh/<org>/<repo>@vX.Y.Z/dist/index.js | head -1   # expect HTTP 200
    ```
 
-3. Edit the version in the footer `<script src>`, then publish.
+3. Edit the version in the footer `<script src>`, then publish. The site-wide head and footer are freeform site code, editable headlessly with the Webflow MCP `data_scripts_tool` (`get_site_freeform_code`, then `set_site_freeform_code` with the new version), so a session can bump the tag itself.
 
 Pointing the footer at a tag that jsDelivr has not resolved yet breaks every script on the live site until it does.
 
