@@ -100,7 +100,8 @@ export const tabDropdown = () => {
   document.head.append(style)
 
   bars.forEach((bar, barIndex) => {
-    const tabs = [...bar.querySelectorAll<HTMLAnchorElement>(':scope > a')]
+    // Tabs rendered by a Collection List sit one level down in `.w-dyn-item`; document order keeps the static All tab first.
+    const tabs = [...bar.querySelectorAll<HTMLAnchorElement>(':scope > a, :scope .w-dyn-item > a')]
     if (!tabs.length) return
 
     const panel = document.createElement('div')
