@@ -58,7 +58,8 @@ Refs: docs/specs/cms-components/refs/refs.json
 23. As an editor, I want Room details typed as a bulleted rich text list that renders as today's numbered rows (R1).
 24. As an editor, I want to tick a room's amenities from a shared Amenities list (R2).
 25. As an editor, I want Discover Other Rooms to list every other room automatically (R4).
-26. As Stephen, I want a list of fields we are unsure about, to ask Omar before anything is built for them (C1, X2).
+26. As a guest, I want Reserve a table to list every dining venue with its own image, text and booking link from the Dinings collection (K1).
+27. As Stephen, I want a list of fields we are unsure about, to ask Omar before anything is built for them (C1, X2).
 
 ## Implementation Decisions
 
@@ -68,7 +69,7 @@ Refs: docs/specs/cms-components/refs/refs.json
 - **Media collection.** A new collection, one item per photo or video (image, video link, alt, caption), referenced from Dinings and Rooms through a multi-reference "Gallery - Media" field. A multi-image field cannot hold video.
 - **Amenities collection.** Holds a name only, with a multi-reference from Rooms. The room template shows a Collection List filtered by the current room.
 - **FAQs collection.** Holds question, answer and sort order, general for now (no page scoping). A scoping field can be added later without rework.
-- **Meeting venues collection.** Drives the venue cards with their tab pills and the detail pop-ups on Meetings and on the Legal and Corporate template. Neighbourhood's Coronado Beach pop-up moves to the CMS (Map Places or its own collection, decided in its ticket). The Rooms "all rooms" pop-up is checked against the Rooms collection. Arts pop-ups already come from the CMS. The booking menus stay static.
+- **Meeting venues collection.** Drives the venue cards with their tab pills and the detail pop-ups on Meetings and on the Legal and Corporate template. Neighbourhood's Coronado Beach pop-up moves to the CMS (Map Places or its own collection, decided in its ticket). The Rooms "all rooms" pop-up is checked against the Rooms collection. Arts pop-ups already come from the CMS. The Book a stay menu stays static; Reserve a table lists Dinings (K1).
 - **Offers and Retail slides.** CMS-driven (one collection with a type field, or one per slider, decided in its ticket). The slider becomes its own component with a Collection List, not toggles. Arts & Culture on Neighbourhood (tan) is assumed to be the "one more like this".
 - **Component slots** replace fixed numbered props on Gallery Mosaic Captioned, Card Carousel Header Left, timeline-scatter-images, Article Card Staggered Tall, Corporate & Services (new component) and Key Features (new component).
 - **Gallery layout.** Items pair two side by side, then every third item spans full width. The pattern repeats for any count and is set with Webflow classes or a style embed the Designer can show.
