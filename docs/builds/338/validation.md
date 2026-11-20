@@ -91,3 +91,11 @@ sh: cross-env: command not found
 | `pnpm check` | 0 | - | pass |
 | `pnpm test:factory` | 0 | - | pass |
 | `pnpm build` | 0 | - | pass |
+
+## Attempt 1, mechanical, 2026-11-20 13:32, head 7e3e3d4
+
+| Command | Exit | Count | Result |
+|---|---|---|---|
+| `pnpm check` | 0 | - | pass |
+| `pnpm test:factory` | 0 | - | pass |
+| `pnpm build` | 0 | - | pass |
