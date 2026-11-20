@@ -8,7 +8,8 @@
  *   .swiper_slider[data-offers-slider]          root (scopes every query)
  *     .swiper.offers                             Swiper container
  *       .swiper-wrapper > .swiper-slide          one per offer
- *     [data-offers-slider-controls]              hidden when there is one slide
+ *     (a Collection List may wrap the slides: .w-dyn-list > .w-dyn-items > .w-dyn-item.swiper-slide)
+ *     [data-offers-slider-controls]              hidden (class `hide`) when there is one slide; zero slides: no-op
  *       [data-offers-slider-prev]                link block, previous slide
  *       [data-offers-slider-current]             current slide number
  *       [data-offers-slider-total]               slide count
@@ -56,7 +57,18 @@ export const offersSliderSplit = () => {
     const container = slider.querySelector<HTMLElement>('.swiper.offers')
     if (!container) return
 
-    const slideCount = container.querySelectorAll('.swiper-slide').length
+    // Slides come from whatever the page holds. A Collection List nests them
+    // (.w-dyn-list > .w-dyn-items > .w-dyn-item), so the slides' own parent is
+    // the Swiper wrapper and the element above it is the Swiper container.
+    const slideElements = container.querySelectorAll<HTMLElement>('.swiper-slide:not(.swiper-slide-duplicate)')
+    const slideCount = slideElements.length
+    if (slideCount === 0) return
+    const slidesParent = slideElements[0].parentElement
+    const swiperElement =
+      slidesParent && slidesParent !== container && !slidesParent.classList.contains('swiper-wrapper')
+        ? (slidesParent.parentElement ?? container)
+        : container
+    if (swiperElement !== container) slidesParent?.classList.add('swiper-wrapper')
     const controls = slider.querySelector<HTMLElement>('[data-offers-slider-controls]')
     const previousButton = slider.querySelector<HTMLElement>('[data-offers-slider-prev]')
     const nextButton = slider.querySelector<HTMLElement>('[data-offers-slider-next]')
@@ -100,6 +112,9 @@ export const offersSliderSplit = () => {
     // the window is fully open, so the background never shows.
     const visibleSlides = new Set<HTMLElement>()
     let topLayer = 1
+    // The rising slide z-index stays inside the slider, so slides never cover
+    // the arrows and counter, with or without Swiper's own stylesheet.
+    container.style.isolation = 'isolate'
     const applyVisibility = (instance: OffersSwiperInstance) => {
       instance.slides.forEach((slide) => {
         slide.style.opacity = visibleSlides.has(slide) ? '1' : '0'
@@ -144,7 +159,7 @@ export const offersSliderSplit = () => {
       : {}
 
     let intro: ReturnType<typeof gsap.timeline> | null = null
-    const swiper = new Swiper(container, {
+    const swiper = new Swiper(swiperElement, {
       loop: true,
       // Masked: no Swiper fade, the visuals above run the change.
       speed: masked ? 0 : 800,

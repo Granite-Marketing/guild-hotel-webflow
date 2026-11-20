@@ -39,6 +39,7 @@ Every module is called once from `src/index.ts` inside `Webflow.push`.
 | finsweetRefresh | `finsweetRefresh.ts` | opt-in | F (3rd) |
 | filterActiveState | `filterActiveState.ts` | opt-in | F (4th) |
 | pressCategories | `pressCategories.ts` | wired (#181, next release) | directly before tabDropdown, before the scroll engine |
+| categoryListing | `categoryListing.ts` | wired (#318) | directly after pressCategories |
 | scrollTextReveal | `scrollTextReveal.ts` | opt-in | G |
 | galleryFilter | `galleryFilter.ts` | opt-in | E |
 | historyStickyYear | `historyStickyYear.ts` | opt-in | G |
@@ -479,6 +480,33 @@ right after `scrollReveal()`; the hero text mask (scrollReveal `text-mask` on
 - Scale 1.12 to 1 over 1.8s, `power2.out`. No opacity change. The transform is
   cleared at the end. Reduced motion: nothing runs.
 - Check: `npx playwright test tests/visual/hero-image-scale.spec.ts`.
+
+### mediaVideo
+
+Any media frame can show a video instead of its image (Y1, Y2, Y3). Replaces
+`sectionVideo`; wired in `src/index.ts` after `modalStickyBar()`.
+
+```html
+<figure data-video-link="{{ CMS link field or component text prop }}">
+  <img class="u-image" src="..." alt="" />
+</figure>
+```
+
+- `data-video-link` on the frame (the element that holds the `<img>`). Works on
+  plain elements, inside components and inside Collection List items (every
+  frame is handled independently), the hero frame included.
+- Accepts a file (.mp4, .webm, .mov), YouTube or Vimeo link (shared parsing in
+  `embedVideo.ts`). Empty or whitespace-only: nothing is injected.
+- Injects a muted, looping, `playsinline`, autoplay `<video>` (or the iframe
+  for YouTube/Vimeo) absolutely covering the frame, copying the image's
+  `object-fit` and `object-position`. The image stays underneath as poster and
+  fallback and is never moved, so `heroImageScale` still animates it (it
+  finds the `<img>` first). Frame gets `position: relative` if static and
+  `overflow: hidden`.
+- Reduced motion: no video, image stays.
+- Legacy Dinings markup still works: a hidden `[data-section-video="{url}"]`
+  just before the section; the section's first image's parent is the frame.
+- Check: `npx playwright test tests/visual/media-video.spec.ts`.
 
 ### navToggle
 
@@ -1351,3 +1379,26 @@ M19: open and close are animated with GSAP. The panel's height eases from the pi
 - `data-reveal="image-fade"` (scrollReveal): the block fades in while its media settles from 1.12 scale. Use it where a bottom-up mask feels heavy (mosaics, card photos).
 - Offers Slider Split masks each slide's copy in line by line on change, and the incoming image opens through a clip-path window on its `.offers-slider-split_figure` (next from the right edge, prev from the left; the image never moves). Swiper switches at speed 0 and the module owns slide opacity and z-index, keeping the outgoing slide visible underneath until the window is open. `data-slide-mask="off"` on `[data-offers-slider]` turns both off and restores the 800ms crossfade.
 - Underlined `[data-btn]` links redraw the underline only; the label roll is suppressed by `underline-hover.css`.
+
+
+### categoryListing
+
+One Collection List of every item, grouped by category: keeps one heading per
+category, sorts items by category order and rebuilds the tab pills from the
+categories that have items. A new category appears and an emptied one
+disappears with no Designer work. Used for Blog, Happenings and Packages;
+`/press` keeps its older `data-press-*` attributes through `pressCategories`,
+a thin wrapper over the same code.
+
+- Root: `[data-category-list]` containing the `.w-dyn-items` list.
+- Item (direct child of the list): `[data-category-item]` with
+  `data-category="{slug}"` (Category: Slug) and `data-category-order="{n}"`
+  (Category: Order). Items without an order sort last.
+- Heading inside each item: `[data-category-heading]` (Category: Name). The
+  first per category gets `id="{slug}"`; repeats are removed, not hidden.
+- Tabs: `[data-category-tabs]` (inside the root, else the first on the page)
+  holding `a[href^="#"]`; the first link is the template. Tabs are rebuilt as
+  `#slug` links, first one `is-active`.
+- Items keep the list's own order inside a category, so nth-child
+  alternation runs unbroken. Without the bundle every heading shows.
+- Order: before tabDropdown and the scroll engine.

@@ -1,0 +1,27 @@
+/* Legal pages (static-template layout): rich text children. Paste minified into the Legal Rich Text Styles embed component. */
+.static-template-privacy-policy_rich-text > * { margin-top: 0; margin-bottom: 0; }
+.static-template-privacy-policy_rich-text > * + * { margin-top: 1.625rem; }
+.static-template-privacy-policy_rich-text p { white-space: pre-line; }
+.static-template-privacy-policy_rich-text h2,
+.static-template-privacy-policy_rich-text h3 { font-family: var(--_typography---font-styles--heading); font-size: 1.25rem; font-weight: 900; line-height: 1.2; letter-spacing: 0; text-transform: lowercase; }
+.static-template-privacy-policy_rich-text > h2:not(:first-child),
+.static-template-privacy-policy_rich-text > h3:not(:first-child) { margin-top: 7rem; }
+.static-template-privacy-policy_rich-text > h2 + *,
+.static-template-privacy-policy_rich-text > h3 + * { margin-top: 2.5rem; }
+.static-template-privacy-policy_rich-text ul,
+.static-template-privacy-policy_rich-text ol { padding-left: 1.75rem; overflow: visible; }
+.static-template-privacy-policy_rich-text li { margin: 0; }
+.static-template-privacy-policy_rich-text a { color: inherit; text-decoration: underline; }
+@media (max-width: 991px) {
+  .static-template-privacy-policy_rich-text > h2:not(:first-child),
+  .static-template-privacy-policy_rich-text > h3:not(:first-child) { margin-top: 4rem; }
+}
+@media (max-width: 767px) {
+  .static-template-privacy-policy_rich-text > * + * { margin-top: 1.25rem; }
+  .static-template-privacy-policy_rich-text > h2:not(:first-child),
+  .static-template-privacy-policy_rich-text > h3:not(:first-child) { margin-top: 3.5rem; }
+  .static-template-privacy-policy_rich-text > h2 + *,
+  .static-template-privacy-policy_rich-text > h3 + * { margin-top: 1.5rem; }
+  .static-template-privacy-policy_rich-text h2,
+  .static-template-privacy-policy_rich-text h3 { font-size: 1.125rem; color: #29310c; }
+}

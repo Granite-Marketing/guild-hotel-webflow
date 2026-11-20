@@ -50,6 +50,7 @@ import { navToggle } from '$utils/navToggle'
 import { offersSliderSplit } from '$utils/offersSliderSplit'
 import { placeholderLinks } from '$utils/placeholderLinks'
 import { pressCategories } from '$utils/pressCategories'
+import { categoryListing } from '$utils/categoryListing'
 import { roomGridHoverReveal } from '$utils/roomGridHoverReveal'
 import { roomListHoverPreview } from '$utils/roomListHoverPreview'
 import { roomsQuiz } from '$utils/roomsQuiz'
@@ -58,7 +59,7 @@ import { scrollReveal } from '$utils/scrollReveal'
 import { heroImageScale } from '$utils/heroImageScale'
 import { footerBackgroundPhoto } from '$utils/footerBackgroundPhoto'
 import { scriptReveal } from '$utils/scriptReveal'
-import { sectionVideo } from '$utils/sectionVideo'
+import { mediaVideo } from '$utils/mediaVideo'
 import { smoothScroll } from '$utils/smoothScroll'
 import { staggerCards } from '$utils/staggerCards'
 import { stickyCta } from '$utils/stickyCta'
@@ -110,6 +111,8 @@ window.Webflow.push(() => {
   // #181: one Press list grouped by category; drops repeat headings and
   // rebuilds the subnav tabs, so before tabDropdown and the scroll engine.
   pressCategories()
+  // #318: any other category listing (Blog, Happenings, Packages) by generic attributes.
+  categoryListing()
   // M6: mobile tab bars collapse to a compact selector; before the scroll
   // engine because it shortens the bars below 768px.
   tabDropdown()
@@ -130,8 +133,8 @@ window.Webflow.push(() => {
   // Mobile review: the venue modal image is a slider on every width (Figma Meetings-Overlay).
   modalImageSlider()
   modalStickyBar()
-  // F106: Dinings second section plays its CMS video over the image when one is set.
-  sectionVideo()
+  // Y1-Y3, F106: any frame with data-video-link (and legacy Dinings section video) plays its video over the image.
+  mediaVideo()
   offersSliderSplit()
   cardCarouselHeaderLeft()
 

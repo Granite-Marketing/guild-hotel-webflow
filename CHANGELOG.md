@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.13
+
+### Patch Changes
+
+- CMS and component cleanup (spec #317): one shared category listing module groups any CMS list by category and builds its tabs (Press runs on it; Blog, Happenings and Packages can adopt it by attributes). Any media frame can show a looping video from a video link, with the image as poster and fallback. The Offers slider works with any number of slides, including CMS lists.
+
 ## 1.3.12
 
 ### Patch Changes
