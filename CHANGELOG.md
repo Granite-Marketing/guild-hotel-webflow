@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.16
+
+### Patch Changes
+
+- f87d550: Fix: the CMS-driven Offers slider on Home crashed on load (its Collection List wrapper sat between the slider and its slides), which stopped every animation after it, including nav colour changes. The slider now lifts its slides into place, so all page animations run again.
+
 ## 1.3.15
 
 ### Patch Changes
