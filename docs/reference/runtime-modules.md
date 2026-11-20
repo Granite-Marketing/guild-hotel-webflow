@@ -1328,6 +1328,7 @@ The Day and Night content switch. It owns the mode, saves it in a cookie and swa
 | `data-night-sizes` | `<img>` | `sizes` (optional) |
 | `data-night-video` | a frame element | lays a muted looping player (`embedVideo`, same as `sectionVideo`; file, YouTube or Vimeo link) over the frame; Day removes it |
 | `data-night-href` | `<a>` | `href` |
+| `data-night-image` | a hidden `<img>` (class `hide`) beside the day `<img>` in the same parent | supplies `data-night-src`/`srcset`/`sizes` for the day image. Webflow cannot bind an image prop or CMS image field to an attribute, so bind the hidden image to "Night - Image" instead. An empty prop (Webflow placeholder) or empty field means no night picture. The day image swaps after load, so a night first load can show the day picture briefly. |
 
 An element can carry several (a button: `data-night-text` and `data-night-href`). The day values are kept on the element as `data-day-html`, `data-day-src`, `data-day-srcset`, `data-day-sizes` and `data-day-href`, so Day restores them exactly and Swiper clones carry them along.
 
