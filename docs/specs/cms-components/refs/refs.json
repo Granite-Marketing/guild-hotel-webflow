@@ -271,6 +271,22 @@
    "page": "/",
    "width": 1467,
    "note": "Same pop-up: Media, Body and Extras props with show toggles and lorem text, none of which should be hand-filled here."
+  },
+  {
+   "id": "A1",
+   "image": "a1-arts-filter-tabs-static.webp",
+   "role": "bug",
+   "page": "/arts",
+   "width": 1467,
+   "note": "Arts filter tabs (All, Painting, Photography, Sculpture) are hand-built links with typed data-gallery-filter-tag values. Should be built from a CMS categories collection."
+  },
+  {
+   "id": "A1",
+   "image": "a1-gallery-filter-tabs-static.webp",
+   "role": "bug",
+   "page": "/gallery",
+   "width": 1467,
+   "note": "Gallery filter tabs (All, Design, Wellness, Dining, Rooms, Amenities, Guests) are hand-built links. Should be built from a CMS categories collection."
   }
  ]
 }

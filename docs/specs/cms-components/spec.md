@@ -59,7 +59,8 @@ Refs: docs/specs/cms-components/refs/refs.json
 24. As an editor, I want to tick a room's amenities from a shared Amenities list (R2).
 25. As an editor, I want Discover Other Rooms to list every other room automatically (R4).
 26. As a guest, I want Reserve a table to list every dining venue with its own image, text and booking link from the Dinings collection (K1).
-27. As Stephen, I want a list of fields we are unsure about, to ask Omar before anything is built for them (C1, X2).
+27. As an editor, I want the Arts and Gallery filter tabs to come from a categories collection referenced by each item, so that a new category needs no Designer work (A1).
+28. As Stephen, I want a list of fields we are unsure about, to ask Omar before anything is built for them (C1, X2).
 
 ## Implementation Decisions
 
