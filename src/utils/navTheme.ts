@@ -73,6 +73,9 @@ export const navTheme = () => {
 
   const buildClone = () => {
     const clone = bar.cloneNode(true) as HTMLElement
+    // The bar carries the inverse mask (F59); a clone that copied it would hide exactly where it should show.
+    clone.style.removeProperty('mask-image')
+    clone.style.removeProperty('-webkit-mask-image')
     clone.querySelectorAll('[id]').forEach((element) => element.removeAttribute('id'))
     clone.querySelectorAll('[data-nav], [data-nav-mode]').forEach((element) => {
       element.removeAttribute('data-nav')
