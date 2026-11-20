@@ -49,6 +49,7 @@ import { navToggle } from '$utils/navToggle'
 import { offersSliderSplit } from '$utils/offersSliderSplit'
 import { placeholderLinks } from '$utils/placeholderLinks'
 import { pressCategories } from '$utils/pressCategories'
+import { categoryListing } from '$utils/categoryListing'
 import { roomGridHoverReveal } from '$utils/roomGridHoverReveal'
 import { roomListHoverPreview } from '$utils/roomListHoverPreview'
 import { roomsQuiz } from '$utils/roomsQuiz'
@@ -107,6 +108,8 @@ window.Webflow.push(() => {
   // #181: one Press list grouped by category; drops repeat headings and
   // rebuilds the subnav tabs, so before tabDropdown and the scroll engine.
   pressCategories()
+  // #318: any other category listing (Blog, Happenings, Packages) by generic attributes.
+  categoryListing()
   // M6: mobile tab bars collapse to a compact selector; before the scroll
   // engine because it shortens the bars below 768px.
   tabDropdown()
