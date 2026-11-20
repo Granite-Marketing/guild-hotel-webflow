@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.15
+
+### Patch Changes
+
+- c5cf0a5: Night pictures can come from an image prop or CMS image field through a hidden night image beside the day image.
+
 ## 1.3.14
 
 ### Patch Changes
