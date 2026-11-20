@@ -1,0 +1,182 @@
+{
+  "run": "run-1",
+  "base": "https://the-guild-hotel-c34e71.webflow.io",
+  "required_routes": [],
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    }
+  ],
+  "pages": [
+    {
+      "route": "/press",
+      "path": "/press",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "press-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": []
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "press-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": []
+        }
+      ],
+      "status": "captured"
+    },
+    {
+      "route": "/history",
+      "path": "/history",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "history-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": []
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "history-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": []
+        }
+      ],
+      "status": "captured"
+    },
+    {
+      "route": "/",
+      "path": "/",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "home-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": []
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "home-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": []
+        }
+      ],
+      "status": "captured"
+    },
+    {
+      "route": "/blog",
+      "path": "/blog",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "blog-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": []
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "blog-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": []
+        }
+      ],
+      "status": "captured"
+    },
+    {
+      "route": "/dining/solana-coffee",
+      "path": "/dining/solana-coffee",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "dining-solana-coffee-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": []
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "dining-solana-coffee-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": []
+        }
+      ],
+      "status": "captured"
+    }
+  ],
+  "blocked_hosts": [
+    "challenges.cloudflare.com"
+  ],
+  "auth": "not configured",
+  "replaced": [
+    "https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.3.12/dist/index.js",
+    "https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.3.12/dist/site.css"
+  ],
+  "status": "captured",
+  "captured": 5,
+  "total": 5,
+  "problems": [],
+  "marker": "Visual capture: 5 of 5 pages captured"
+}
