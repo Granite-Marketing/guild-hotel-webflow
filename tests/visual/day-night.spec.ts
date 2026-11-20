@@ -236,6 +236,40 @@ for (const viewport of [
       expect(back).toBe('Day hero heading that is long enough to wrap onto several lines on a phone')
     })
 
+    test('Night, Day, Night and a resize leave each split line once, on the night text', async ({ page }) => {
+      await open(page)
+      await page.waitForTimeout(1600)
+      for (const mode of ['night', 'day', 'night'] as const) {
+        await press(page, mode)
+        await settled(page)
+      }
+      // A width change makes autoSplit split again; it must keep the night text, not bring the day text back.
+      await page.setViewportSize({ width: viewport.width - 60, height: viewport.height })
+      await page.waitForTimeout(1600)
+      const read = () =>
+        page.evaluate(() => {
+          const normalise = (value: string | null) => (value ?? '').replace(/\s+/g, ' ').trim()
+          const lineNodes = (root: HTMLElement) =>
+            Array.from(root.children).filter((node) => node.tagName === 'DIV').map((node) => normalise(node.textContent))
+          const hero = document.querySelector<HTMLElement>('#hero')!
+          const masked = document.querySelector<HTMLElement>('#masked-heading')!
+          return { hero: normalise(hero.textContent), heroLines: lineNodes(hero), maskedLines: lineNodes(masked) }
+        })
+      const heroNight = 'Night hero heading that is long enough to wrap onto several lines on a phone'
+      const after = await read()
+      expect(after.hero).toBe(heroNight)
+      expect(after.heroLines.join(' ')).toBe(heroNight)
+      expect(after.maskedLines.join(' ')).toBe('Night masked heading that also wraps onto a second and a third line')
+
+      // Back to day after the resize restores the day text, again once per line.
+      await press(page, 'day')
+      await page.waitForTimeout(1800)
+      const heroDay = 'Day hero heading that is long enough to wrap onto several lines on a phone'
+      const back = await read()
+      expect(back.hero).toBe(heroDay)
+      expect(back.heroLines.join(' ')).toBe(heroDay)
+    })
+
     test('the content crossfades in about half a second', async ({ page }) => {
       await open(page)
       await page.waitForTimeout(1600)

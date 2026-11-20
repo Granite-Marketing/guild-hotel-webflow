@@ -28,14 +28,15 @@
  *
  * Crossfade (DN4): the changing elements fade out (0.25s), swap, and fade in
  * (0.25s) through GSAP autoAlpha. Reduced motion swaps instantly. Text that
- * SplitText has split is released before the swap and split again after
- * (`$utils/splitRegistry`), so lines never duplicate and the reveal replays.
+ * SplitText has split changes through `$utils/splitRegistry`, which re-splits
+ * the instance with the new text (never a manual revert), so lines never
+ * duplicate and the reveal replays.
  *
  * Run this first in Webflow.push, before any module that splits text.
  */
 
 import { embedVideo } from '$utils/embedVideo'
-import { rebuildSplit, releaseSplit } from '$utils/splitRegistry'
+import { changeSplitText } from '$utils/splitRegistry'
 
 type Mode = 'day' | 'night'
 
@@ -90,21 +91,22 @@ const swapText = (element: HTMLElement, mode: Mode) => {
   const text = nightValue(element, 'text')
   if (!text) return
   if (mode === 'day' && !element.hasAttribute('data-day-html')) return
-  releaseSplit(element) // plain text again, so the content below is the real one
-  const host = textHost(element)
-  remember(element, 'html', host.innerHTML)
-  const dayHtml = element.getAttribute('data-day-html')!.slice(2)
-  const label = element.querySelector<HTMLElement>('[data-btn-label]')
-  if (label?.children.length) {
-    // The roll label keeps its two spans (the second is the aria-hidden copy).
-    const value = mode === 'night' ? text : plainText(dayHtml)
-    Array.from(label.children).forEach((span) => (span.textContent = value))
-  } else if (mode === 'night') {
-    host.textContent = text
-  } else {
-    host.innerHTML = dayHtml
-  }
-  rebuildSplit(element)
+  // Runs on the plain (unsplit) content; a split element is split again afterwards.
+  changeSplitText(element, () => {
+    const host = textHost(element)
+    remember(element, 'html', host.innerHTML)
+    const dayHtml = element.getAttribute('data-day-html')!.slice(2)
+    const label = element.querySelector<HTMLElement>('[data-btn-label]')
+    if (label?.children.length) {
+      // The roll label keeps its two spans (the second is the aria-hidden copy).
+      const value = mode === 'night' ? text : plainText(dayHtml)
+      Array.from(label.children).forEach((span) => (span.textContent = value))
+    } else if (mode === 'night') {
+      host.textContent = text
+    } else {
+      host.innerHTML = dayHtml
+    }
+  })
 }
 
 const swapImage = (element: HTMLElement, mode: Mode) => {

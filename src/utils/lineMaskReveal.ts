@@ -237,7 +237,7 @@ export const createLineMaskTimeline = (
         ensureSplit: () => {
           if (splitStarted) return
           splitStarted = true
-          trackSplit(element, () => new SplitText(element, {
+          trackSplit(element, {
             type: 'lines,words',
             autoSplit: true,
             onSplit: (self) => {
@@ -252,7 +252,7 @@ export const createLineMaskTimeline = (
               part.split = true
               queueRebuild()
             },
-          }))
+          })
         },
       }
       parts.push(part)

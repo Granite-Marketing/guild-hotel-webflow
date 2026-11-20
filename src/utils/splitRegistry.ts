@@ -1,36 +1,76 @@
 /**
  * Split registry: lets dayNight change the text of an element that SplitText
- * has already split, without leaving duplicated or stale lines.
+ * has already split, without leaving duplicated or stale lines and without
+ * ever reverting an autoSplit instance by hand (CLAUDE.md SplitText rule).
  *
- * A module that splits text creates its instance through `trackSplit`. When
- * dayNight swaps that element's text it calls `releaseSplit` (the element is
- * plain text again, the module's animation is reverted), sets the new text,
- * then `rebuildSplit` (a fresh instance splits the new text and plays the
- * module's own onSplit animation again). Text that was never split needs
- * neither call.
+ * A module that splits text creates its instance through `trackSplit`, which
+ * builds the SplitText itself so it can add one hook. To change the text,
+ * dayNight calls `changeSplitText(element, apply)`. The registry asks the
+ * instance to re-split through its public `split()`: SplitText restores its
+ * stored markup, calls `onRevert` (where `apply` writes the new text), then
+ * reads the element again and splits the new text. The new text becomes the
+ * instance's own original, so later autoSplit re-splits (resize, font load)
+ * keep it. Text that was never split just runs `apply`.
+ *
+ * After a content change, an animation the module's onSplit returned is
+ * restarted (SplitText would otherwise carry its old time over), unless it is
+ * scroll-driven: a scroll reveal keeps the state its scroll position gives it.
  */
 
 interface TrackedSplit {
-  release: () => void
-  rebuild: () => void
+  change: (apply: () => void) => void
+}
+
+interface Restartable {
+  restart: () => unknown
+  scrollTrigger?: unknown
 }
 
 const tracked = new WeakMap<Element, TrackedSplit>()
 
-/** Creates a SplitText through `create` and remembers how to release and rebuild it. */
-export const trackSplit = (element: Element, create: () => SplitTypeInstance): SplitTypeInstance => {
-  let instance = create()
+const isRestartable = (value: unknown): value is Restartable =>
+  typeof value === 'object' && value !== null && typeof (value as Restartable).restart === 'function'
+
+/** Splits `element` with `options` (autoSplit included) and remembers how to change its text later. */
+export const trackSplit = (element: HTMLElement, options: SplitTextOptions): SplitTypeInstance => {
+  let pendingChange: (() => void) | null = null
+  let lastAnimation: unknown = null
+
+  const instance = new SplitText(element, {
+    ...options,
+    onRevert: (self: SplitTypeInstance) => {
+      // Runs after SplitText has put its stored markup back and before it reads the element again.
+      const apply = pendingChange
+      pendingChange = null
+      apply?.()
+      options.onRevert?.(self)
+    },
+    onSplit: (self: SplitTypeInstance) => {
+      lastAnimation = options.onSplit?.(self)
+      return lastAnimation
+    },
+  })
+
   tracked.set(element, {
-    release: () => instance.revert(),
-    rebuild: () => {
-      instance = create()
+    change: (apply) => {
+      if (!instance.isSplit) {
+        apply()
+        return
+      }
+      pendingChange = apply
+      instance.split()
+      if (isRestartable(lastAnimation) && !lastAnimation.scrollTrigger) lastAnimation.restart()
     },
   })
   return instance
 }
 
-/** Reverts the element's split, if it has one, so its text can change. */
-export const releaseSplit = (element: Element) => tracked.get(element)?.release()
-
-/** Splits the element's new text again, if it was split before. */
-export const rebuildSplit = (element: Element) => tracked.get(element)?.rebuild()
+/**
+ * Runs `apply` on the element's plain (unsplit) content and splits the result
+ * again if the element is split. `apply` must leave plain text or markup.
+ */
+export const changeSplitText = (element: Element, apply: () => void) => {
+  const split = tracked.get(element)
+  if (split) split.change(apply)
+  else apply()
+}

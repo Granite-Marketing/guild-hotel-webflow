@@ -28,7 +28,7 @@ export const heroTextReveal = () => {
     document.querySelectorAll<HTMLElement>('[data-hero-reveal]'),
   )
 
-  trackSplit(heroTitle, () => new SplitText(heroTitle, {
+  trackSplit(heroTitle, {
     types: 'words, lines',
     autoSplit: true,
     onSplit: (self: SplitTypeInstance) => {
@@ -53,5 +53,5 @@ export const heroTextReveal = () => {
 
       return timeline
     },
-  }))
+  })
 }

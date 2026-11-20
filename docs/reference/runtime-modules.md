@@ -1307,7 +1307,7 @@ An element can carry several (a button: `data-night-text` and `data-night-href`)
 
 **Crossfade (DN4).** The changing elements fade out for 0.25s, swap, and fade in for 0.25s through GSAP `autoAlpha` (about 0.5s in all; the duration is a taste item). Reduced motion swaps instantly.
 
-**SplitText.** On a night load the swap happens before anything splits. On a later switch, a split element is released, gets its new text, and is split again through `src/utils/splitRegistry.ts`, so lines never duplicate and the hero reveal replays. Any module that splits text a visitor may switch must create its instance with `trackSplit(element, () => new SplitText(...))`; `heroTextReveal`, `lineMaskReveal` and `scriptReveal` already do. `scrollTextReveal` and `swiperSliders` do not yet; do not put night attributes on their text.
+**SplitText.** On a night load the swap happens before anything splits. On a later switch, `src/utils/splitRegistry.ts` re-splits the element through the instance's own `split()`: SplitText restores its stored markup, the registry's `onRevert` hook writes the new text, and SplitText splits that. Nothing reverts an autoSplit instance by hand, later autoSplit re-splits (resize, font load) keep the new text, lines never duplicate, and the hero reveal replays (scroll-driven reveals keep their scroll state). Any module that splits text a visitor may switch must create its instance with `trackSplit(element, { ...SplitText options })`; `heroTextReveal`, `lineMaskReveal` and `scriptReveal` already do. `scrollTextReveal` and `swiperSliders` do not yet; do not put night attributes on their text.
 
 Test: `tests/visual/day-night.spec.ts` (two fixture pages, at 390 and 1440).
 

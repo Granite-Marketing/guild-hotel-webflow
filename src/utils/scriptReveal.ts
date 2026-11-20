@@ -32,7 +32,7 @@ export const scriptReveal = () => {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
   headings.forEach((heading) => {
-    trackSplit(heading, () => new SplitText(heading, {
+    trackSplit(heading, {
       type: 'lines',
       autoSplit: true,
       onSplit: (self) =>
@@ -48,6 +48,6 @@ export const scriptReveal = () => {
             scrollTrigger: { trigger: heading, start: 'top 85%', toggleActions: 'play none none reverse' },
           },
         ),
-    }))
+    })
   })
 }

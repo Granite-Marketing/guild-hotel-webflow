@@ -232,6 +232,10 @@ interface SplitTypeInstance {
   words: HTMLElement[] | null;
   lines: HTMLElement[] | null;
   chars: HTMLElement[] | null;
+  /** True while the element holds the split markup. */
+  isSplit: boolean;
+  /** Re-splits from the stored markup (SplitText reverts, calls onRevert, then reads the element again). */
+  split: (config?: SplitTextOptions) => SplitTypeInstance;
   /** Restores the original markup (never call it on an autoSplit instance). */
   revert: () => void;
 }
@@ -245,6 +249,7 @@ interface SplitTextOptions {
   linesClass?: string;
   charsClass?: string;
   onSplit?: (self: SplitTypeInstance) => unknown;
+  onRevert?: (self: SplitTypeInstance) => unknown;
 }
 
 interface SplitTypeConstructor {
