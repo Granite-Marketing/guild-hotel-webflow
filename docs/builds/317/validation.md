@@ -127,3 +127,11 @@ src/__heldout__/3-offers.heldout.ts(10,215): error TS2580: Cannot find name 'pro
 | `pnpm check` | 0 | - | pass |
 | `pnpm test:factory` | 0 | - | pass |
 | `pnpm build` | 0 | - | pass |
+
+## Attempt 1, mechanical, 2026-11-20 12:40, head 9f9fae4
+
+| Command | Exit | Count | Result |
+|---|---|---|---|
+| `pnpm check` | 0 | - | pass |
+| `pnpm test:factory` | 0 | - | pass |
+| `pnpm build` | 0 | - | pass |
