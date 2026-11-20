@@ -12,7 +12,11 @@
  *       data-category="{category slug}"             bound to Category: Slug
  *       data-category-order="{number}"              bound to Category: Order
  *       [data-category-heading]                     header bound to Category: Name
- *   [data-category-tabs] a[href^="#"]               the tab bar; first tab is the template
+ *   [data-category-tabs]                            the tab bar, either:
+ *     .w-dyn-item a[data-category-tab="{slug}"]     a categories Collection List in the
+ *                                                   component's Tabs slot (preferred); tabs
+ *                                                   for categories with no items are removed
+ *     a[href^="#"]                                  or one template tab, cloned per category
  *
  * Items are sorted by category order, keeping the list's own order inside a
  * category. Repeat headings are removed, not hidden, so duplicate ids go too.
@@ -69,8 +73,27 @@ export const buildCategoryListings = (selectors: CategoryListingSelectors) => {
     })
 
     const tabBar = root.querySelector<HTMLElement>(selectors.tabs) ?? document.querySelector<HTMLElement>(selectors.tabs)
-    const templateTab = tabBar?.querySelector<HTMLAnchorElement>('a[href^="#"]')
-    if (!tabBar || !templateTab) return
+    if (!tabBar) return
+
+    // CMS tabs (2026-11-20): a Collection List of categories in the tab slot; keep only categories with items.
+    const cmsTabs = [...tabBar.querySelectorAll<HTMLAnchorElement>('a[data-category-tab]')]
+    if (cmsTabs.length) {
+      const slugs = categories.map((category) => category.slug)
+      const kept = cmsTabs.filter((tab) => {
+        const slug = tab.dataset.categoryTab?.trim() ?? ''
+        if (!slugs.includes(slug)) {
+          ;(tab.closest('.w-dyn-item') ?? tab).remove()
+          return false
+        }
+        tab.href = `#${slug}`
+        return true
+      })
+      kept.forEach((tab, index) => tab.classList.toggle('is-active', index === 0))
+      return
+    }
+
+    const templateTab = tabBar.querySelector<HTMLAnchorElement>('a[href^="#"]')
+    if (!templateTab) return
 
     const tabs = categories.map(({ slug, name }, index) => {
       const tab = templateTab.cloneNode(true) as HTMLAnchorElement
