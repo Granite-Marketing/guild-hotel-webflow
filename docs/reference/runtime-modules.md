@@ -481,6 +481,33 @@ right after `scrollReveal()`; the hero text mask (scrollReveal `text-mask` on
   cleared at the end. Reduced motion: nothing runs.
 - Check: `npx playwright test tests/visual/hero-image-scale.spec.ts`.
 
+### mediaVideo
+
+Any media frame can show a video instead of its image (Y1, Y2, Y3). Replaces
+`sectionVideo`; wired in `src/index.ts` after `modalStickyBar()`.
+
+```html
+<figure data-video-link="{{ CMS link field or component text prop }}">
+  <img class="u-image" src="..." alt="" />
+</figure>
+```
+
+- `data-video-link` on the frame (the element that holds the `<img>`). Works on
+  plain elements, inside components and inside Collection List items (every
+  frame is handled independently), the hero frame included.
+- Accepts a file (.mp4, .webm, .mov), YouTube or Vimeo link (shared parsing in
+  `embedVideo.ts`). Empty or whitespace-only: nothing is injected.
+- Injects a muted, looping, `playsinline`, autoplay `<video>` (or the iframe
+  for YouTube/Vimeo) absolutely covering the frame, copying the image's
+  `object-fit` and `object-position`. The image stays underneath as poster and
+  fallback and is never moved, so `heroImageScale` still animates it (it
+  finds the `<img>` first). Frame gets `position: relative` if static and
+  `overflow: hidden`.
+- Reduced motion: no video, image stays.
+- Legacy Dinings markup still works: a hidden `[data-section-video="{url}"]`
+  just before the section; the section's first image's parent is the frame.
+- Check: `npx playwright test tests/visual/media-video.spec.ts`.
+
 ### navToggle
 
 Mobile nav open/close with a11y state and scroll pause.
