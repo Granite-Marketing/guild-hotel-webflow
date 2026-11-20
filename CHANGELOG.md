@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.22
+
+### Patch Changes
+
+- X1 split: the press email becomes a mailto link inside the new Form Press Enquiries component (selector moves from the old Press variant to the `is-press` combo).
+
 ## 1.3.21
 
 ### Patch Changes
