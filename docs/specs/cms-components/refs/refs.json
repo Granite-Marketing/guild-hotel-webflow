@@ -1,0 +1,260 @@
+{
+ "refs": [
+  {
+   "id": "H1",
+   "image": "h1-backlink-url-typed.png",
+   "role": "bug",
+   "page": "/",
+   "width": 1467,
+   "note": "Designer link prop typed as a URL path (/rooms). Where the page exists on the site, link to the page itself, not a typed slash path. Global."
+  },
+  {
+   "id": "H2",
+   "image": "h2-split-image-text-props.webp",
+   "role": "bug",
+   "page": "/",
+   "width": 1467,
+   "note": "Split image text light: too much functionality and too many visibility settings in one component. Break it up. Panel shows typed /history URL too (see H1)."
+  },
+  {
+   "id": "H3",
+   "image": "h3-image-trio-text-props.webp",
+   "role": "bug",
+   "page": "/",
+   "width": 1467,
+   "note": "Image Trio Text: borderline, too much functionality (paragraph visible, CTA visible, items header and text). CTA link typed as /wellness instead of the page (see H1)."
+  },
+  {
+   "id": "H4",
+   "image": "h4-venue-card-tall-props.webp",
+   "role": "bug",
+   "page": "/",
+   "width": 1467,
+   "note": "Venue Card Fullbleed Tall: too many toggles. Show Image makes no sense; Show Intro does nothing when toggled."
+  },
+  {
+   "id": "H5",
+   "image": "h5-map-feature-props.webp",
+   "role": "bug",
+   "page": "/",
+   "width": 1467,
+   "note": "Map Feature: is title, description, button and image, but carries a long list of place name, walk and link props. Simplify."
+  },
+  {
+   "id": "H6",
+   "image": "h6-faq-static.webp",
+   "role": "bug",
+   "page": "/",
+   "width": 1467,
+   "note": "faq-accordion has no properties and static questions. Should be driven by a CMS collection."
+  },
+  {
+   "id": "Y1",
+   "image": "y1-history-timeline-image.webp",
+   "role": "bug",
+   "page": "/history",
+   "width": 1467,
+   "note": "History timeline image (1924) is image only; should also accept a video. Aspect ratio must hold for both."
+  },
+  {
+   "id": "Y3",
+   "image": "y3-gallery-mosaic-props.webp",
+   "role": "bug",
+   "page": "/history",
+   "width": 1467,
+   "note": "Gallery Mosaic Captioned uses fixed Image 1-4 props and Show Figure toggles. Should use a component slot: two items sit side by side, a third becomes the big image below; grows and shrinks with item count. Applies on every page that uses it."
+  },
+  {
+   "id": "Y4",
+   "image": "y4-card-carousel-static-cards.webp",
+   "role": "bug",
+   "page": "/history",
+   "width": 1467,
+   "note": "More of the Guild (Card Carousel Header Left) uses fixed Card 1-4 props (label, link, image, show image). Should use a component slot. Links typed as /wellness, /meetings (see H1)."
+  },
+  {
+   "id": "G1",
+   "image": "g1-timeline-scatter-images-props.webp",
+   "role": "bug",
+   "page": "/guidelines",
+   "width": 1467,
+   "note": "timeline-scatter-images exposes only Caption 1-4 props; the images themselves cannot be changed from the component."
+  },
+  {
+   "id": "B1",
+   "image": "b1-blog-static-category-sections.webp",
+   "role": "bug",
+   "page": "/blog",
+   "width": 1467,
+   "note": "Blog has one hand-built section and Collection List per category (dining, culture, conferences). A new category would need Designer work. Should be one list grouped by category, like /press."
+  },
+  {
+   "id": "L1",
+   "image": "l1-accessibility-static-paragraphs.webp",
+   "role": "target",
+   "page": "/accessibility",
+   "width": 1467,
+   "note": "Today built from separate paragraph and heading elements. The look (large title left, caps section headings with space above and below, body text, bullet lists) is the target; the build underneath must become one rich text element. Ignore the element selection outlines."
+  },
+  {
+   "id": "N1",
+   "image": "n1-scatter-images-tall-captions-only.webp",
+   "role": "bug",
+   "page": "/neighborhood",
+   "width": 1467,
+   "note": "timeline-scatter-images (Tall variant, Beyond Downtown San Diego) exposes only Caption 1-4; images not editable. Same component as G1."
+  },
+  {
+   "id": "N2",
+   "image": "n2-corporate-services-static-list.webp",
+   "role": "bug",
+   "page": "/neighborhood",
+   "width": 1467,
+   "note": "Corporate & Services section is a plain section (section_neighborhood-corporate), not a component; card count fixed. Should be a component whose cards sit in a slot."
+  },
+  {
+   "id": "N3",
+   "image": "n3-article-card-staggered-tall-props.webp",
+   "role": "bug",
+   "page": "/neighborhood",
+   "width": 1467,
+   "note": "Article Card Staggered Tall (Dining Around the Guild) uses fixed Card 1-n props with Show Image toggles. Cards should sit in a slot so the count can grow or shrink."
+  },
+  {
+   "id": "M1",
+   "image": "m1-empty-div-request-for-proposal.webp",
+   "role": "bug",
+   "page": "/meetings",
+   "width": 1467,
+   "note": "Empty Div with id request-for-proposal below the venue cards. It is the jump target for a #request-for-proposal link on the page; an empty element should not carry it."
+  },
+  {
+   "id": "M2",
+   "image": "m2-meetings-features-not-component.webp",
+   "role": "bug",
+   "page": "/meetings",
+   "width": 1467,
+   "note": "Key Features of Our Spaces (meetings-collection-features_component) is a plain div, not a component; its list items are fixed."
+  },
+  {
+   "id": "M3",
+   "image": "m3-venue-modals-static.webp",
+   "role": "bug",
+   "page": "/meetings",
+   "width": 1467,
+   "note": "Venue cards (Council Boardroom, Lobby Terrace, One America Plaza) and their Overlay Detail Panel Modals are hand-built static instances, each button wired by a typed data-modal-open id. Should come from a CMS collection."
+  },
+  {
+   "id": "L2",
+   "image": "l2-privacy-policy-static-paragraphs.webp",
+   "role": "target",
+   "page": "/privacy-policy",
+   "width": 1467,
+   "note": "Privacy Policy built from separate paragraphs on the same static-template layout as L1. The look is the target; the body must become one rich text element. Ignore selection outlines."
+  },
+  {
+   "id": "O1",
+   "image": "o1-retail-slider-static-slides.webp",
+   "role": "bug",
+   "page": "/",
+   "width": 1467,
+   "note": "Retail (Shops at the Guild) Offers Slider Split: slides are fixed Slide 1-5 props with Show slide and Show image toggles. Should come from a CMS collection."
+  },
+  {
+   "id": "O1",
+   "image": "o1-offers-slider-static-slides.webp",
+   "role": "bug",
+   "page": "/",
+   "width": 1467,
+   "note": "Offers & Packages Offers Slider Split: same fixed Slide 1-5 props, repeated on about 15 pages. Should come from a CMS collection so every page shows the same offers."
+  },
+  {
+   "id": "D1",
+   "image": "d1-dining-cms-toggles.png",
+   "role": "bug",
+   "page": "/dining/solana-coffee",
+   "width": 1467,
+   "note": "Dining CMS item has Split navy / Split olive switches and a Show card switch per venue for Other dining options. Other dining options should list every other venue automatically, excluding the current one."
+  },
+  {
+   "id": "D1",
+   "image": "d1-dining-split-not-bound.webp",
+   "role": "bug",
+   "page": "/dining/solana-coffee",
+   "width": 1467,
+   "note": "Dining template: Split image text light shows placeholder props (Eyebrow, lorem body, Body 2, CTA #) not bound to the CMS item. Most of the template is not connected to the CMS."
+  },
+  {
+   "id": "D3",
+   "image": "d3-other-dining-labels-multiline.png",
+   "role": "bug",
+   "page": "/dining/solana-coffee",
+   "width": 1467,
+   "note": "Other dining label 1-3 fields are multi-line text for one-line values. Single values must be single-line fields; these label fields should not exist at all."
+  },
+  {
+   "id": "D4",
+   "image": "d4-dining-gallery-fixed-images.webp",
+   "role": "bug",
+   "page": "/dining/solana-coffee",
+   "width": 1467,
+   "note": "Gallery Mosaic Captioned on the Dining template: heading bound to a CMS field, but images are fixed Image 1-n props, so each venue cannot have its own number of photos or videos."
+  },
+  {
+   "id": "D5",
+   "image": "d5-dining-explore-the-space.webp",
+   "role": "bug",
+   "page": "/dining/solana-coffee",
+   "width": 1467,
+   "note": "Explore the Space (Split image text light, Stagger Left): the heading is the same on every venue, so it needs no CMS field. Placeholder props (Eyebrow, Body 2, CTA #, lorem caption) also visible."
+  },
+  {
+   "id": "C1",
+   "image": "c1-corporate-key-features.webp",
+   "role": "bug",
+   "page": "/legal-corporate/corporate",
+   "width": 1467,
+   "note": "Context only: Key Features (Image Trio Text Left) on the Legal & Corporate template. Whether it is per item or shared across Legal and Corporate is an open question for Omar; not built in this spec."
+  },
+  {
+   "id": "R1",
+   "image": "r1-room-description-list.webp",
+   "role": "bug",
+   "page": "/rooms/cozy-king",
+   "width": 1467,
+   "note": "Room Description: numbered detail rows (bed, guests, size, more lines) are hand-built static elements, not CMS. Keep the look (superscript numbers, divider lines); content must come from the room's CMS item."
+  },
+  {
+   "id": "R2",
+   "image": "r2-room-amenities-grid.webp",
+   "role": "bug",
+   "page": "/rooms/cozy-king",
+   "width": 1467,
+   "note": "In Room Amenities: 4-column grid of amenity names with dividers, hand-built and static. Keep the look; content must come from the CMS."
+  },
+  {
+   "id": "R3",
+   "image": "r3-room-gallery-fixed-images.webp",
+   "role": "bug",
+   "page": "/rooms/cozy-king",
+   "width": 1467,
+   "note": "Room gallery (Gallery Mosaic Captioned) uses fixed Image 1-n props; must grow and shrink per room."
+  },
+  {
+   "id": "R4",
+   "image": "r4-discover-other-rooms-static.webp",
+   "role": "bug",
+   "page": "/rooms/cozy-king",
+   "width": 1467,
+   "note": "Discover Other Rooms (Card Carousel Header Left) uses fixed Card props with typed /rooms/cozy-king links. Should list other rooms from the Rooms collection, excluding the current room."
+  },
+  {
+   "id": "R5",
+   "image": "r5-room-map-shared.webp",
+   "role": "bug",
+   "page": "/rooms/cozy-king",
+   "width": 1467,
+   "note": "Context only: The Neighborhood map on room pages stays the same on every room; no CMS field needed."
+  }
+ ]
+}
