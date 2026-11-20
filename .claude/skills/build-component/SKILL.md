@@ -700,6 +700,14 @@ Run before the first publish. Skip on subsequent iteration loops.
    Invoke `/accessibility-audit`
    - If critical issues: fix heading hierarchy, missing labels, touch targets
 
+5. **Designer checklist** (every run, including fixes; Stephen, 20 Nov 2026). The live page cannot show these, so read each changed component's props and the CMS fields through the MCP:
+   - No leftover hand-filled content or props from another use; a CMS-driven block holds no hand-typed copies of its items.
+   - Short text props and fields (titles, tags, labels, button text) are single-line; paragraphs, alt descriptions and night text are multi-line.
+   - One component per layout. Variants only for small changes (alignment, colour, showing or hiding one or two elements); a different layout is a separate component.
+   - IDs sit on the component (a Section ID prop), never on a wrapper element; plain Div Blocks, never Custom Elements with tag div.
+   - Repeating content lives in a slot or a CMS list, never in numbered props.
+   - Every changed page loads with a clean browser console at 390 and 1440 (one module error stops every module after it).
+
 Present quality gate results to the user before proceeding:
 ```
 Quality Gate Results:
