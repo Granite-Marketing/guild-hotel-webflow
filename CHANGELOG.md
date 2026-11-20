@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.21
+
+### Patch Changes
+
+- X1 split: the room page's second Split Image Text Edge block keeps its mobile image sizes after moving off the old Edge variant. The Wide and Edge Large second-image rules moved into Designer classes, so they leave the site stylesheet.
+
 ## 1.3.20
 
 ### Patch Changes
