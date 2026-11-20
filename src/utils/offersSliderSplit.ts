@@ -58,17 +58,20 @@ export const offersSliderSplit = () => {
     if (!container) return
 
     // Slides come from whatever the page holds. A Collection List nests them
-    // (.w-dyn-list > .w-dyn-items > .w-dyn-item), so the slides' own parent is
-    // the Swiper wrapper and the element above it is the Swiper container.
+    // (.w-dyn-list > .w-dyn-items > .w-dyn-item). Swiper only finds a wrapper
+    // that is a direct child of its container, so the slides' parent is lifted
+    // into the container in place of the list wrapper (20 Nov: a nested CMS
+    // wrapper made Swiper throw and stopped every module after this one).
     const slideElements = container.querySelectorAll<HTMLElement>('.swiper-slide:not(.swiper-slide-duplicate)')
     const slideCount = slideElements.length
     if (slideCount === 0) return
     const slidesParent = slideElements[0].parentElement
-    const swiperElement =
-      slidesParent && slidesParent !== container && !slidesParent.classList.contains('swiper-wrapper')
-        ? (slidesParent.parentElement ?? container)
-        : container
-    if (swiperElement !== container) slidesParent?.classList.add('swiper-wrapper')
+    if (slidesParent && slidesParent !== container && slidesParent.parentElement !== container) {
+      const listWrapper = [...container.children].find((child) => child.contains(slidesParent))
+      if (listWrapper) listWrapper.replaceWith(slidesParent)
+    }
+    if (slidesParent && slidesParent !== container) slidesParent.classList.add('swiper-wrapper')
+    const swiperElement = container
     const controls = slider.querySelector<HTMLElement>('[data-offers-slider-controls]')
     const previousButton = slider.querySelector<HTMLElement>('[data-offers-slider-prev]')
     const nextButton = slider.querySelector<HTMLElement>('[data-offers-slider-next]')
