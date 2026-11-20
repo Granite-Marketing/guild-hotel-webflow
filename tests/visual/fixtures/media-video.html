@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fixture: media video</title>
+    <style>
+      body { margin: 0; background: #f4efdf; }
+      figure { margin: 0 0 20px; }
+      .frame { width: 100%; aspect-ratio: 4 / 3; }
+      .frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 30% 40%; background: #888; }
+      .section_hero-fullbleed-centered { position: relative; height: 400px; }
+      .hero-fullbleed-centered_figure { position: absolute; inset: 0; }
+      .hero-fullbleed-centered_figure img { display: block; width: 100%; height: 100%; object-fit: cover; }
+      .list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    </style>
+  </head>
+  <body>
+    <section class="section_hero-fullbleed-centered">
+      <figure class="hero-fullbleed-centered_figure" id="hero" data-video-link="{VIDEO}">
+        <img class="u-image" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+      </figure>
+    </section>
+    <figure class="frame" id="plain" data-video-link="{VIDEO}">
+      <img class="u-image" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+    </figure>
+    <div class="list">
+      <div class="item"><figure class="frame" id="item-1" data-video-link="{VIDEO}"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></figure></div>
+      <div class="item"><figure class="frame" id="item-2" data-video-link="{VIDEO}"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></figure></div>
+      <div class="item"><figure class="frame" id="item-empty" data-video-link=""><img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></figure></div>
+    </div>
+    <figure class="frame" id="blank" data-video-link="   "><img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></figure>
+    <div hidden data-section-video="{VIDEO}"></div>
+    <section id="legacy"><figure class="frame" id="legacy-frame"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></figure></section>
+    <script src="./media-video.js"></script>
+  </body>
+</html>

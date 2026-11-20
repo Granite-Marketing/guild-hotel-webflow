@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "create:client": "node ./scripts/factory/create-client-project.mjs",
-    "test:factory": "node --test tests/factory/*.test.mjs",
+    "test:factory": "node --experimental-strip-types --test tests/factory/*.test.mjs",
     "factory:verify": "pnpm test:factory && pnpm check && pnpm build && pnpm test:figma",
     "factory:tokens": "node ./scripts/factory/generate-token-adapters.mjs",
     "factory:blueprint": "node ./scripts/factory/validate-blueprint.mjs",

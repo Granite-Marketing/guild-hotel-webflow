@@ -156,3 +156,53 @@ test('offers slider: image opens through a still window, direction follows navig
   await step('next', 'right')
   await step('prev', 'left')
 })
+
+// O1: any slide count, Collection List wrapping, empty list.
+const sliderD = (page: Page) => page.locator('[data-offers-slider]').nth(3)
+const sliderE = (page: Page) => page.locator('[data-offers-slider]').nth(4)
+const sliderF = (page: Page) => page.locator('[data-offers-slider]').nth(5)
+
+const cycleThree = async (page: Page, slider: ReturnType<typeof sliderD>) => {
+  const current = slider.locator('[data-offers-slider-current]')
+  await slider.scrollIntoViewIfNeeded()
+  await expect(slider.locator('[data-offers-slider-total]')).toHaveText('03')
+  await expect(current).toHaveText('01')
+  for (const expected of ['02', '03', '01']) {
+    await slider.locator('[data-offers-slider-next]').click()
+    await expect(current).toHaveText(expected)
+    await page.waitForTimeout(1000)
+  }
+  await slider.locator('[data-offers-slider-prev]').click()
+  await expect(current).toHaveText('03')
+}
+
+for (const [width, height] of [[390, 844], [1440, 900]]) {
+  test(`offers slider: three slides count 01 / 03 and loop at ${width}`, async ({ page }) => {
+    await openFixture(page, width, height)
+    await cycleThree(page, sliderD(page))
+  })
+
+  test(`offers slider: three slides inside a Collection List at ${width}`, async ({ page }) => {
+    await openFixture(page, width, height)
+    await cycleThree(page, sliderE(page))
+  })
+
+  test(`offers slider: one slide shows no arrows or counter at ${width}`, async ({ page }) => {
+    await openFixture(page, width, height)
+    const slider = sliderC(page)
+    await expect(slider.locator('[data-offers-slider-prev]')).toBeHidden()
+    await expect(slider.locator('[data-offers-slider-next]')).toBeHidden()
+    await expect(slider.locator('[data-offers-slider-current]')).toBeHidden()
+    await expect(slider.locator('[data-offers-slider-total]')).toBeHidden()
+  })
+}
+
+test('offers slider: an empty Collection List does nothing and does not throw', async ({ page }) => {
+  const errors: string[] = []
+  page.on('pageerror', (error) => errors.push(error.message))
+  await openFixture(page, 1440, 900)
+  const slider = sliderF(page)
+  await expect(slider.locator('[data-offers-slider-total]')).toHaveText('05')
+  expect(await slider.locator('.swiper-initialized').count()).toBe(0)
+  expect(errors).toEqual([])
+})
