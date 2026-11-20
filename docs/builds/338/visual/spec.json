@@ -1,0 +1,6 @@
+{"routes":[
+{"path":"/","focus":["[data-day-night=\"day\"]","[data-day-night=\"night\"]"]},
+{"path":"/dining"},
+{"path":"/rooms"},
+{"path":"/tests/visual/fixtures/day-night-a.html","not_captured":"fixture page lives only in the repo test folder and is not served by the staging site the capture loads"}
+]}

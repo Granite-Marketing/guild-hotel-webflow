@@ -1,0 +1,422 @@
+{
+ "status": "complete",
+ "verdict": "Ready with fixes",
+ "verdict_reasoning": "Open P1 (#1, splitRegistry reverts autoSplit SplitText against CLAUDE.md) caps the verdict. Fix order: #1, then #3 and #5 together (same tween), then #2 and #4.",
+ "scope": {
+  "base": "0c9b237d828c580bfacc6c2ca555e8ecb3c8af6b",
+  "branch": "build/338-spec-day-and-night-content-switch-20-nov",
+  "head_sha": "0e607c66de155acd45513a309fc966f5053a874d",
+  "pr_url": null,
+  "files_changed": 19
+ },
+ "intent": "Add a Day/Night content switch runtime module (src/utils/dayNight.ts) for a Webflow site: nav buttons [data-day-night] set a one-year cookie `guild-mode`, a root class is-day/is-night, and tagged elements swap text, img src/srcset/sizes, video (via embedVideo media module) and link href from data-night-* attributes, restoring day values exactly on switch back. Empty night values keep day. ~0.5s autoAlpha crossfade, instant under reduced motion. A head snippet + CSS hide tagged elements on a night load until swapped (no day flash). A split registry lets SplitText-animated text (hero reveal, line masks, script reveal) be released and re-split after a swap with no duplicated lines. Playwright fixture spec covers it.",
+ "intent_confidence": "explicit",
+ "reviewers": [
+  "correctness",
+  "project-standards",
+  "testing",
+  "maintainability",
+  "adversarial",
+  "julik-frontend-races",
+  "learnings-researcher"
+ ],
+ "findings": [
+  {
+   "#": 1,
+   "autofix_class": "manual",
+   "confidence": 100,
+   "evidence": [
+    "CLAUDE.md (Custom Code Delivery, SplitText): \"Never call `.revert()` manually when `autoSplit: true`.\"",
+    "julik-frontend-races: registry reverts autoSplit SplitText instances at src/utils/splitRegistry.ts:24 against the CLAUDE.md rule",
+    "src/utils/heroTextReveal.ts: trackSplit(heroTitle, () => new SplitText(heroTitle, { types: 'words, lines', autoSplit: true, ...",
+    "src/utils/splitRegistry.ts:24 -- release: () => instance.revert(),"
+   ],
+   "file": "src/utils/splitRegistry.ts",
+   "first_evidence": "src/utils/splitRegistry.ts:24 -- release: () => instance.revert(),",
+   "independent_reviewers": [
+    "project-standards",
+    "julik-frontend-races"
+   ],
+   "line": 24,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "project-standards",
+    "julik-frontend-races"
+   ],
+   "severity": "P1",
+   "suggested_fix": "Drop the manual revert: change the text and let autoSplit: true re-split (onSplit re-runs the module animation). If a hard reset is needed, destroy and recreate through a path that does not call revert() on an autoSplit instance, and verify no duplicate lines after Night then Day then Night with the fixture hero.",
+   "title": "splitRegistry manually calls revert() on autoSplit SplitText instances",
+   "why_it_matters": "CLAUDE.md forbids calling .revert() by hand on an autoSplit SplitText, because GSAP auto-resplits on resize and font swap and a manual revert races with that. All three tracked callers (heroTextReveal, lineMaskReveal, scriptReveal) pass autoSplit: true, so every day/night text swap on split text reverts an instance whose autoSplit observer stays live and can re-split the element behind the module's back. That risks the duplicated lines the done-when says must not appear. Alternative that fits the rule: swap the text and let autoSplit re-split it, or recreate the split without a manual revert.",
+   "validation_status": "confirmed",
+   "validation_reason": "src/utils/splitRegistry.ts:24 calls instance.revert() on instances that heroTextReveal.ts:33, lineMaskReveal.ts:242 and scriptReveal.ts:37 create with autoSplit: true, which CLAUDE.md forbids; observer behavior after revert was not measured (gsap SplitText source not installed locally)."
+  },
+  {
+   "#": 2,
+   "autofix_class": "gated_auto",
+   "confidence": 75,
+   "evidence": [
+    "docs/reference/site-head/day-night.css:2 -- html.is-night:not(.night-ready) :is([data-night-text], [data-night-src], [data-night-srcset], [data-night-video], [data-night-href]):not([data-night-text=\"\"], [data-night-src=\"\"], [data-night-srcset=\"\"], [data-night-video=\"\"], [data-night-href=\"\"])",
+    "src/utils/dayNight.ts:157 -- hasNightContent uses .some(...) so the module swaps such an element"
+   ],
+   "file": "docs/reference/site-head/day-night.css",
+   "first_evidence": "docs/reference/site-head/day-night.css:2 -- html.is-night:not(.night-ready) :is([data-night-text], [data-night-src], [data-night-srcset], [data-night-video], [data-night-href]):not([data-night-text=\"\"], [data-night-src=\"\"], [data-night-srcset=\"\"], [data-night-video=\"\"], [data-night-href=\"\"])",
+   "independent_reviewers": [
+    "correctness"
+   ],
+   "line": 2,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "correctness"
+   ],
+   "severity": "P2",
+   "suggested_fix": "Replace the single :not(...) with one :is(...) per attribute that requires a non-empty value, e.g. selectors like html.is-night:not(.night-ready) [data-night-text]:not([data-night-text=\"\"]), ... [data-night-src]:not([data-night-src=\"\"]) etc., comma-separated so each attribute qualifies independently. Add a fixture element with a mixed empty/non-empty pair.",
+   "title": "Head CSS fails to hide elements with one empty night attribute",
+   "why_it_matters": "On a night load, any tagged element that has a real night value plus one empty sibling attribute (for example a night image with data-night-src set and data-night-srcset=\"\", or a link with night text and data-night-href=\"\") is not hidden, because :not(a, b, c) excludes the element when any listed empty attribute matches. The day copy and day photo then show until the bundle swaps them, breaking the done-when 'no day text or image visible before night content appears'. CMS-bound attributes commonly emit empty strings, so mixed elements are realistic. Hiding must match the module's rule (hidden if at least one night value is non-empty).",
+   "validation_status": "confirmed",
+   "validation_reason": "day-night.css:2 uses a single :not(...) list so an element with one non-empty night attribute and any empty sibling night attribute matches the exclusion and stays visible, while dayNight.ts:157 hasNightContent uses .some() and swaps it; incidence of mixed empty attributes in CMS output not measured."
+  },
+  {
+   "#": 3,
+   "autofix_class": "gated_auto",
+   "confidence": 75,
+   "evidence": [
+    "Scenario: tagged .button below fold, reveal tween not yet played -> press Night -> overwrite:true kills it -> button stays at yPercent 110 inside its clip. Text parts are safe (tweens target words), and a tagged heading in the same group masks the bug because its rebuildSplit triggers queueRebuild.",
+    "src/utils/dayNight.ts:219-223 -- gsap.to(targets, { autoAlpha: 0, duration: HALF_FADE, ease: 'none', overwrite: true,",
+    "src/utils/dayNight.ts:219-226 -- gsap.to(targets, { autoAlpha: 0, duration: HALF_FADE, ease: 'none', overwrite: true,",
+    "src/utils/dayNight.ts:223 -- overwrite: true,",
+    "src/utils/dayNight.ts:237 -- gsap.set(targets, { clearProps: 'opacity,visibility' })",
+    "src/utils/lineMaskReveal.ts:158 -- TARGET_SELECTOR = 'h1, h2, h3, h4, h5, h6, p, figure, .button, [data-line-mask]'",
+    "src/utils/lineMaskReveal.ts:208 -- timeline.fromTo(part.element, HIDDEN, SHOWN, offset)  (element-kind parts such as .button are tweened directly)",
+    "src/utils/scrollReveal.ts:213 -- { autoAlpha: 0 },  (fromTo on the element with scrollTrigger, killed by overwrite: true)",
+    "src/utils/scrollReveal.ts:252-253 -- { autoAlpha: 0, y: element.querySelector('form') ? 0 : '2rem' }, { autoAlpha: 1, y: 0, ... scrollTrigger: { trigger: element, start, once: true } }"
+   ],
+   "file": "src/utils/dayNight.ts",
+   "first_evidence": "src/utils/dayNight.ts:219-223 -- gsap.to(targets, { autoAlpha: 0, duration: HALF_FADE, ease: 'none', overwrite: true,",
+   "independent_reviewers": [
+    "correctness",
+    "adversarial",
+    "julik-frontend-races"
+   ],
+   "line": 219,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "correctness",
+    "adversarial",
+    "julik-frontend-races"
+   ],
+   "severity": "P2",
+   "suggested_fix": "Record each target's current opacity/visibility before the fade-out and fade back to those values instead of clearProps; use overwrite: 'auto' (or no overwrite) so unrelated scroll-reveal tweens on the same element are not killed. Assumption: an element still pending a scroll reveal should stay hidden after the swap.",
+   "title": "Crossfade overwrite:true kills other modules' pending reveal tweens and clearProps wipes their start state",
+   "why_it_matters": "Pressing Night or Day kills every other GSAP tween on the tagged elements (overwrite: true) and then clears their inline opacity/visibility. A tagged element that also carries data-reveal=\"fade\" and has not been scrolled to yet is sitting at autoAlpha 0, y 2rem with a once-only ScrollTrigger; after the switch it is revealed early, stays displaced 2rem down (y is not cleared), and its reveal is gone. Switching from the nav at the top of a page means almost everything below the fold is still pending, so this hits the common case. Capturing each target's opacity before the fade and tweening back to it, with overwrite 'auto', leaves the reveal tween alone.",
+   "merged_from": [
+    "correctness dayNight.ts:223",
+    "adversarial dayNight.ts:219",
+    "julik-frontend-races dayNight.ts:219"
+   ],
+   "validation_status": "confirmed",
+   "validation_reason": "dayNight.ts:219-223 fades with overwrite: true and :237 clears opacity/visibility, which kills and wipes pending scrollReveal/lineMaskReveal element tweens on tagged elements; reachable only when a tagged element also carries a reveal, incidence not measured."
+  },
+  {
+   "#": 4,
+   "autofix_class": "gated_auto",
+   "confidence": 75,
+   "evidence": [
+    "src/utils/dayNight.ts:228 -- void Promise.all(images.map(imageReady)).then(() => {",
+    "src/utils/dayNight.ts:167-175 -- image.complete ? Promise.resolve() : new Promise<void>(... window.setTimeout(done, IMAGE_WAIT_MS)",
+    "src/utils/eagerImages.ts -- exists to promote lazy images, so Webflow images default to loading=lazy"
+   ],
+   "file": "src/utils/dayNight.ts",
+   "first_evidence": "src/utils/dayNight.ts:228 -- void Promise.all(images.map(imageReady)).then(() => {",
+   "independent_reviewers": [
+    "julik-frontend-races"
+   ],
+   "line": 228,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "julik-frontend-races"
+   ],
+   "severity": "P2",
+   "suggested_fix": "Filter images to those within the viewport (getBoundingClientRect) before awaiting imageReady, and let offscreen ones load on their own; optionally lower IMAGE_WAIT_MS to ~400ms.",
+   "title": "Offscreen lazy images hold the whole crossfade hidden for 1.2s",
+   "why_it_matters": "After the swap the fade-in waits on Promise.all over every tagged image, not only visible ones. A lazy-loaded image below the fold has not started loading, so complete stays false and only the 1200ms timeout resolves it. The visible headings and photos stay invisible for about 1.45s instead of 0.5s on any page with a tagged lazy image off-screen, and the nav switch feels broken. Waiting only on images that intersect the viewport (or forcing the swapped image eager) removes the stall.",
+   "validation_status": "confirmed",
+   "validation_reason": "dayNight.ts:228 awaits imageReady over every tagged image, and an offscreen lazy image with a swapped src keeps complete false until the 1200ms IMAGE_WAIT_MS timeout (line 45, 174); not measured in a browser."
+  },
+  {
+   "#": 5,
+   "autofix_class": "gated_auto",
+   "confidence": 75,
+   "evidence": [
+    "src/utils/dayNight.ts:209 -- if (inFlight) finishNow(inFlight.targets)",
+    "src/utils/dayNight.ts:199-200 -- gsap.killTweensOf(targets); gsap.set(targets, { clearProps: 'opacity,visibility' })"
+   ],
+   "file": "src/utils/dayNight.ts",
+   "first_evidence": "src/utils/dayNight.ts:209 -- if (inFlight) finishNow(inFlight.targets)",
+   "independent_reviewers": [
+    "julik-frontend-races"
+   ],
+   "line": 209,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "julik-frontend-races"
+   ],
+   "severity": "P3",
+   "suggested_fix": "In finishNow only call gsap.killTweensOf(targets); leave opacity as is and let the next gsap.to read the current value (overwrite already kills the old tweens).",
+   "title": "Reversing mid-crossfade pops elements to full opacity before fading out",
+   "why_it_matters": "When the visitor presses the other button while a crossfade is running, finishNow immediately clears opacity and visibility on the old targets. During the fade-out the element jumps from partially faded to fully visible for a frame; during the image wait (hidden, content already swapped) it flashes the half-loaded swapped content at full opacity before the new fade-out starts. Killing the tweens without clearing, and letting the new tween start from the current opacity, avoids the pop.",
+   "validation_status": "confirmed",
+   "validation_reason": "dayNight.ts:209 finishNow runs gsap.set clearProps opacity,visibility at line 200 on a mid-fade reversal before the new autoAlpha:0 tween, producing a one-frame pop to full opacity; minor and not measured."
+  }
+ ],
+ "actionable_findings": [
+  {
+   "#": 1,
+   "autofix_class": "manual",
+   "confidence": 100,
+   "evidence": [
+    "CLAUDE.md (Custom Code Delivery, SplitText): \"Never call `.revert()` manually when `autoSplit: true`.\"",
+    "julik-frontend-races: registry reverts autoSplit SplitText instances at src/utils/splitRegistry.ts:24 against the CLAUDE.md rule",
+    "src/utils/heroTextReveal.ts: trackSplit(heroTitle, () => new SplitText(heroTitle, { types: 'words, lines', autoSplit: true, ...",
+    "src/utils/splitRegistry.ts:24 -- release: () => instance.revert(),"
+   ],
+   "file": "src/utils/splitRegistry.ts",
+   "first_evidence": "src/utils/splitRegistry.ts:24 -- release: () => instance.revert(),",
+   "independent_reviewers": [
+    "project-standards",
+    "julik-frontend-races"
+   ],
+   "line": 24,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "project-standards",
+    "julik-frontend-races"
+   ],
+   "severity": "P1",
+   "suggested_fix": "Drop the manual revert: change the text and let autoSplit: true re-split (onSplit re-runs the module animation). If a hard reset is needed, destroy and recreate through a path that does not call revert() on an autoSplit instance, and verify no duplicate lines after Night then Day then Night with the fixture hero.",
+   "title": "splitRegistry manually calls revert() on autoSplit SplitText instances",
+   "why_it_matters": "CLAUDE.md forbids calling .revert() by hand on an autoSplit SplitText, because GSAP auto-resplits on resize and font swap and a manual revert races with that. All three tracked callers (heroTextReveal, lineMaskReveal, scriptReveal) pass autoSplit: true, so every day/night text swap on split text reverts an instance whose autoSplit observer stays live and can re-split the element behind the module's back. That risks the duplicated lines the done-when says must not appear. Alternative that fits the rule: swap the text and let autoSplit re-split it, or recreate the split without a manual revert.",
+   "validation_status": "confirmed",
+   "validation_reason": "src/utils/splitRegistry.ts:24 calls instance.revert() on instances that heroTextReveal.ts:33, lineMaskReveal.ts:242 and scriptReveal.ts:37 create with autoSplit: true, which CLAUDE.md forbids; observer behavior after revert was not measured (gsap SplitText source not installed locally)."
+  },
+  {
+   "#": 2,
+   "autofix_class": "gated_auto",
+   "confidence": 75,
+   "evidence": [
+    "docs/reference/site-head/day-night.css:2 -- html.is-night:not(.night-ready) :is([data-night-text], [data-night-src], [data-night-srcset], [data-night-video], [data-night-href]):not([data-night-text=\"\"], [data-night-src=\"\"], [data-night-srcset=\"\"], [data-night-video=\"\"], [data-night-href=\"\"])",
+    "src/utils/dayNight.ts:157 -- hasNightContent uses .some(...) so the module swaps such an element"
+   ],
+   "file": "docs/reference/site-head/day-night.css",
+   "first_evidence": "docs/reference/site-head/day-night.css:2 -- html.is-night:not(.night-ready) :is([data-night-text], [data-night-src], [data-night-srcset], [data-night-video], [data-night-href]):not([data-night-text=\"\"], [data-night-src=\"\"], [data-night-srcset=\"\"], [data-night-video=\"\"], [data-night-href=\"\"])",
+   "independent_reviewers": [
+    "correctness"
+   ],
+   "line": 2,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "correctness"
+   ],
+   "severity": "P2",
+   "suggested_fix": "Replace the single :not(...) with one :is(...) per attribute that requires a non-empty value, e.g. selectors like html.is-night:not(.night-ready) [data-night-text]:not([data-night-text=\"\"]), ... [data-night-src]:not([data-night-src=\"\"]) etc., comma-separated so each attribute qualifies independently. Add a fixture element with a mixed empty/non-empty pair.",
+   "title": "Head CSS fails to hide elements with one empty night attribute",
+   "why_it_matters": "On a night load, any tagged element that has a real night value plus one empty sibling attribute (for example a night image with data-night-src set and data-night-srcset=\"\", or a link with night text and data-night-href=\"\") is not hidden, because :not(a, b, c) excludes the element when any listed empty attribute matches. The day copy and day photo then show until the bundle swaps them, breaking the done-when 'no day text or image visible before night content appears'. CMS-bound attributes commonly emit empty strings, so mixed elements are realistic. Hiding must match the module's rule (hidden if at least one night value is non-empty).",
+   "validation_status": "confirmed",
+   "validation_reason": "day-night.css:2 uses a single :not(...) list so an element with one non-empty night attribute and any empty sibling night attribute matches the exclusion and stays visible, while dayNight.ts:157 hasNightContent uses .some() and swaps it; incidence of mixed empty attributes in CMS output not measured."
+  },
+  {
+   "#": 3,
+   "autofix_class": "gated_auto",
+   "confidence": 75,
+   "evidence": [
+    "Scenario: tagged .button below fold, reveal tween not yet played -> press Night -> overwrite:true kills it -> button stays at yPercent 110 inside its clip. Text parts are safe (tweens target words), and a tagged heading in the same group masks the bug because its rebuildSplit triggers queueRebuild.",
+    "src/utils/dayNight.ts:219-223 -- gsap.to(targets, { autoAlpha: 0, duration: HALF_FADE, ease: 'none', overwrite: true,",
+    "src/utils/dayNight.ts:219-226 -- gsap.to(targets, { autoAlpha: 0, duration: HALF_FADE, ease: 'none', overwrite: true,",
+    "src/utils/dayNight.ts:223 -- overwrite: true,",
+    "src/utils/dayNight.ts:237 -- gsap.set(targets, { clearProps: 'opacity,visibility' })",
+    "src/utils/lineMaskReveal.ts:158 -- TARGET_SELECTOR = 'h1, h2, h3, h4, h5, h6, p, figure, .button, [data-line-mask]'",
+    "src/utils/lineMaskReveal.ts:208 -- timeline.fromTo(part.element, HIDDEN, SHOWN, offset)  (element-kind parts such as .button are tweened directly)",
+    "src/utils/scrollReveal.ts:213 -- { autoAlpha: 0 },  (fromTo on the element with scrollTrigger, killed by overwrite: true)",
+    "src/utils/scrollReveal.ts:252-253 -- { autoAlpha: 0, y: element.querySelector('form') ? 0 : '2rem' }, { autoAlpha: 1, y: 0, ... scrollTrigger: { trigger: element, start, once: true } }"
+   ],
+   "file": "src/utils/dayNight.ts",
+   "first_evidence": "src/utils/dayNight.ts:219-223 -- gsap.to(targets, { autoAlpha: 0, duration: HALF_FADE, ease: 'none', overwrite: true,",
+   "independent_reviewers": [
+    "correctness",
+    "adversarial",
+    "julik-frontend-races"
+   ],
+   "line": 219,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "correctness",
+    "adversarial",
+    "julik-frontend-races"
+   ],
+   "severity": "P2",
+   "suggested_fix": "Record each target's current opacity/visibility before the fade-out and fade back to those values instead of clearProps; use overwrite: 'auto' (or no overwrite) so unrelated scroll-reveal tweens on the same element are not killed. Assumption: an element still pending a scroll reveal should stay hidden after the swap.",
+   "title": "Crossfade overwrite:true kills other modules' pending reveal tweens and clearProps wipes their start state",
+   "why_it_matters": "Pressing Night or Day kills every other GSAP tween on the tagged elements (overwrite: true) and then clears their inline opacity/visibility. A tagged element that also carries data-reveal=\"fade\" and has not been scrolled to yet is sitting at autoAlpha 0, y 2rem with a once-only ScrollTrigger; after the switch it is revealed early, stays displaced 2rem down (y is not cleared), and its reveal is gone. Switching from the nav at the top of a page means almost everything below the fold is still pending, so this hits the common case. Capturing each target's opacity before the fade and tweening back to it, with overwrite 'auto', leaves the reveal tween alone.",
+   "merged_from": [
+    "correctness dayNight.ts:223",
+    "adversarial dayNight.ts:219",
+    "julik-frontend-races dayNight.ts:219"
+   ],
+   "validation_status": "confirmed",
+   "validation_reason": "dayNight.ts:219-223 fades with overwrite: true and :237 clears opacity/visibility, which kills and wipes pending scrollReveal/lineMaskReveal element tweens on tagged elements; reachable only when a tagged element also carries a reveal, incidence not measured."
+  },
+  {
+   "#": 4,
+   "autofix_class": "gated_auto",
+   "confidence": 75,
+   "evidence": [
+    "src/utils/dayNight.ts:228 -- void Promise.all(images.map(imageReady)).then(() => {",
+    "src/utils/dayNight.ts:167-175 -- image.complete ? Promise.resolve() : new Promise<void>(... window.setTimeout(done, IMAGE_WAIT_MS)",
+    "src/utils/eagerImages.ts -- exists to promote lazy images, so Webflow images default to loading=lazy"
+   ],
+   "file": "src/utils/dayNight.ts",
+   "first_evidence": "src/utils/dayNight.ts:228 -- void Promise.all(images.map(imageReady)).then(() => {",
+   "independent_reviewers": [
+    "julik-frontend-races"
+   ],
+   "line": 228,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "julik-frontend-races"
+   ],
+   "severity": "P2",
+   "suggested_fix": "Filter images to those within the viewport (getBoundingClientRect) before awaiting imageReady, and let offscreen ones load on their own; optionally lower IMAGE_WAIT_MS to ~400ms.",
+   "title": "Offscreen lazy images hold the whole crossfade hidden for 1.2s",
+   "why_it_matters": "After the swap the fade-in waits on Promise.all over every tagged image, not only visible ones. A lazy-loaded image below the fold has not started loading, so complete stays false and only the 1200ms timeout resolves it. The visible headings and photos stay invisible for about 1.45s instead of 0.5s on any page with a tagged lazy image off-screen, and the nav switch feels broken. Waiting only on images that intersect the viewport (or forcing the swapped image eager) removes the stall.",
+   "validation_status": "confirmed",
+   "validation_reason": "dayNight.ts:228 awaits imageReady over every tagged image, and an offscreen lazy image with a swapped src keeps complete false until the 1200ms IMAGE_WAIT_MS timeout (line 45, 174); not measured in a browser."
+  },
+  {
+   "#": 5,
+   "autofix_class": "gated_auto",
+   "confidence": 75,
+   "evidence": [
+    "src/utils/dayNight.ts:209 -- if (inFlight) finishNow(inFlight.targets)",
+    "src/utils/dayNight.ts:199-200 -- gsap.killTweensOf(targets); gsap.set(targets, { clearProps: 'opacity,visibility' })"
+   ],
+   "file": "src/utils/dayNight.ts",
+   "first_evidence": "src/utils/dayNight.ts:209 -- if (inFlight) finishNow(inFlight.targets)",
+   "independent_reviewers": [
+    "julik-frontend-races"
+   ],
+   "line": 209,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "julik-frontend-races"
+   ],
+   "severity": "P3",
+   "suggested_fix": "In finishNow only call gsap.killTweensOf(targets); leave opacity as is and let the next gsap.to read the current value (overwrite already kills the old tweens).",
+   "title": "Reversing mid-crossfade pops elements to full opacity before fading out",
+   "why_it_matters": "When the visitor presses the other button while a crossfade is running, finishNow immediately clears opacity and visibility on the old targets. During the fade-out the element jumps from partially faded to fully visible for a frame; during the image wait (hidden, content already swapped) it flashes the half-loaded swapped content at full opacity before the new fade-out starts. Killing the tweens without clearing, and letting the new tween start from the current opacity, avoids the pop.",
+   "validation_status": "confirmed",
+   "validation_reason": "dayNight.ts:209 finishNow runs gsap.set clearProps opacity,visibility at line 200 on a mid-fade reversal before the new autoAlpha:0 tween, producing a one-frame pop to full opacity; minor and not measured."
+  }
+ ],
+ "triage_groups": [
+  {
+   "title": "Crossfade and animation interference",
+   "findings": [
+    3,
+    5
+   ],
+   "context": "Both live in the dayNight.ts fade tween: overwrite:true kills other modules' tweens, and a mid-fade reversal pops to full opacity.",
+   "preferred_resolution": "Fix #3 first (scope overwrite / avoid clearProps on foreign start state), then #5 in the same tween.",
+   "why": "Same tween, one fix path"
+  }
+ ],
+ "pre_existing_findings": [],
+ "requirements_completeness": null,
+ "learnings": [
+  {
+   "type": "known_pattern",
+   "title": "GSAP module conventions",
+   "citation": "docs/solutions/conventions/gsap-module-conventions.md",
+   "note": "autoAlpha and class toggles are honored; swapVideo inline position styles are a low-severity residual."
+  },
+  {
+   "type": "known_pattern",
+   "title": "ScrollTrigger refresh after content-size change",
+   "citation": "docs/solutions/integration-issues/scrolltrigger-stale-positions-late-image-loads.md",
+   "note": "dayNight.ts does not call ScrollTrigger.refresh(true) after a swap; likely gap, unconfirmed."
+  },
+  {
+   "type": "known_pattern",
+   "title": "Head CSS delivery paths",
+   "citation": "docs/solutions/workflow-issues/site-head-css-two-delivery-paths.md",
+   "note": "day-night-head.js must be pasted into the Webflow site head separately; a release alone does not deliver it."
+  },
+  {
+   "type": "known_pattern",
+   "title": "Crossfade out-then-in",
+   "citation": "docs/solutions/ui-bugs/step-crossfade-flashes-page-behind.md",
+   "note": "Acceptable for text; images and video show the background briefly."
+  }
+ ],
+ "agent_native_gaps": [],
+ "deployment_notes": [],
+ "residual_risks": [
+  "Night video: embedded player laid over day media with no wait on player.ready, so day media can show until frames arrive (correctness).",
+  "If applyContent throws on a night load, night-ready is never added and tagged elements stay hidden until the 3s CSS failsafe (correctness).",
+  "Night attribute list repeated in three places, drift risk (maintainability, dayNight.ts:48, P3).",
+  "package.json test:factory script change is unrelated to the day/night spec (fast-pass, P3, anchor 50).",
+  "swapVideo writes inline position styles the Designer cannot see (learnings: gsap-module-conventions, low severity)."
+ ],
+ "testing_gaps": [
+  "scriptReveal re-split after a swap has no test (tests/visual/day-night.spec.ts:194, P2, testing).",
+  "Line-mask animation after a switch is only checked as text, not motion (tests/visual/day-night.spec.ts:230, P2, testing).",
+  "Day restore of a video is never exercised (tests/visual/fixtures/day-night-a.html:33, P3 anchor 50).",
+  "No fixture for a non-empty night value alongside an empty sibling night attribute on night first paint.",
+  "No test for rapid Night/Day toggling mid-fade or a tagged element that also has data-reveal."
+ ],
+ "coverage": {
+  "depth": "full",
+  "peer": "not-run",
+  "notes": [
+   "Cross-model peer not started: build pipeline requires all reviewers on Sonnet and forbids unattended code egress; adversarial lens ran in-process (Sonnet).",
+   "project standards: CLAUDE.md used as instruction-file fallback (no CODING_STANDARDS.md)",
+   "untracked pipeline artefacts under docs/builds/338 and .claude/build excluded",
+   "all reviewers ran on Sonnet per build-stage model rule",
+   "Semantic merge: correctness dayNight.ts:223, adversarial dayNight.ts:219 and julik dayNight.ts:219 merged into #3; julik splitRegistry.ts:24 (P2, anchor 50) merged into #1.",
+   "Demoted before validation (soft bucket): testing P2 findings on scriptReveal and line-mask coverage moved to testing_gaps (single-reviewer testing advisories); maintainability P3 attribute-list duplication moved to residual_risks; 3 candidates suppressed at anchor 50 (julik revert duplicate merged, package.json fast-pass, video-restore test gap) ; demotion count 3 (2 testing, 1 maintainability).",
+   "Learnings: ScrollTrigger.refresh(true) after swap flagged as unconfirmed gap, not promoted (no established consequence); inline styles in swapVideo low severity, residual only; head-snippet delivery is a release step (docs: site-head-css-two-delivery-paths), informational.",
+   "first_evidence_backfilled: 10 on first pass; quote-the-line demotions: 0. No plan discovered: settlement suppression not evaluated. No review policy.",
+   "No cross-model peer: no adversarial-<provider> corroboration, so no validator shortcut applies."
+  ],
+  "validator": "One batch of 5 findings: 5 confirmed, 0 rejected, 0 unresolved, 0 malformed, 0 failed, 0 shortcut-skipped (no cross-model peer). All five confirmations note incidence was not measured.",
+  "suppressed_by_anchor": "3 candidates suppressed at anchor 50; 3 demoted to soft buckets",
+  "first_evidence_backfilled": 10,
+  "quote_the_line_demotions": 0,
+  "settlement": "No plan discovered; settlement suppression not evaluated.",
+  "removable_surface": null
+ },
+ "peer": {
+  "outcome": "not-run",
+  "coverage": "Cross-model peer not started: build pipeline requires all reviewers on Sonnet and forbids unattended code egress; adversarial lens ran in-process (Sonnet)."
+ },
+ "artifact_path": "/tmp/compound-engineering-501/ce-code-review/20261120-130814-3f8637b0",
+ "run_id": "20261120-130814-3f8637b0"
+}
