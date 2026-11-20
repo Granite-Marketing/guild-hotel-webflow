@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.19
+
+### Patch Changes
+
+- f2a25f0: Press category headings now restart the card alternation too, so every Press category heading sits on the left like the other listing pages.
+
 ## 1.3.18
 
 ### Patch Changes
