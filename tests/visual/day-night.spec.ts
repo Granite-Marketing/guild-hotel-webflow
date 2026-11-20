@@ -68,7 +68,8 @@ const snapshot = (page: Page) =>
       emptyPhotoSrc: document.querySelector<HTMLImageElement>('#photo-empty')!.currentSrc,
       videoSrc: video?.getAttribute('src') ?? null,
       linkHref: link.getAttribute('href'),
-      linkLabel: link.textContent!.replace(/\s+/g, ' ').trim(),
+      // The button's roll label holds the text twice (the second is the aria-hidden copy); both must match.
+      linkLabel: Array.from(link.querySelectorAll('[data-btn-label] > span')).map((span) => span.textContent).join('|'),
       linkHtml: link.innerHTML,
       mode: document.documentElement.classList.contains('is-night') ? 'night' : 'day',
       pressed: Array.from(document.querySelectorAll('[data-day-night]')).map((button) => button.getAttribute('aria-pressed')),
@@ -101,7 +102,7 @@ for (const viewport of [
       expect(night.photoSrc).toContain('day-night-night.svg')
       expect(night.videoSrc).toContain('day-night-night.mp4')
       expect(night.linkHref).toBe('/night-link')
-      expect(night.linkLabel).toBe('Night button')
+      expect(night.linkLabel).toBe('Night button|Night button')
       // The day picture must not survive in srcset, or the browser would keep choosing it.
       expect(night.photoAttrs[1]).not.toContain('day-night-day')
 
@@ -273,7 +274,9 @@ for (const viewport of [
       await press(page, 'night')
       const right = await snapshot(page)
       expect(right.heading).toBe(NIGHT_HEADING)
-      expect(right.photoSrc).toContain('day-night-night.svg')
+      // The picture itself loads a moment later; the attributes are already night.
+      expect(right.photoAttrs[0]).toContain('day-night-night.svg')
+      await expect.poll(() => page.locator('#photo').evaluate((photo: HTMLImageElement) => photo.currentSrc)).toContain('day-night-night.svg')
       expect(await page.evaluate(() => getComputedStyle(document.querySelector('#heading')!).opacity)).toBe('1')
     })
   })
