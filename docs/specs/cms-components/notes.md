@@ -140,3 +140,9 @@ Running tab of every item, in Stephen's words, with our reading underneath. The 
     2. Clearly the same on every item (fixed headings like "Explore the Space", the room map): stays static on the template, no field (D5, R5).
     3. Unsure: left as it is today, not turned into a field, and listed in the spec's Questions for Omar so Stephen can ask him (C1 is the first).
   - The spec carries the Questions for Omar list; the build does not create fields for bucket 3.
+
+## Booking Menu, Reserve a table pop-up (every page)
+
+- **K1** Stephen: "Ooh, also overlay booking a table. These fields, I believe, should actually be coming from the dining CMS collections."
+  - Finding: the pop-up (dialog `book-table`, an Overlay Detail Panel Modal instance inside Booking Menu) already lists venues from a Dinings Collection List, but each venue's reserve link is `#`, and the instance still carries leftover props from other uses (heading "council boardroom", eyebrow "by eva struble", an artwork caption, Media, Body and Extras with lorem text).
+  - Reading: every venue row in Reserve a table (image, name, text, reserve link) is bound to Dinings fields, adding a "Booking - Reserve Link" field if none exists. The pop-up keeps no hand-filled venue content; under X1 it becomes its own simple component (or a variant with only its props) instead of a 60-prop Overlay Detail Panel Modal. Overrides the earlier note that the booking menus stay static: Reserve a table is CMS-driven; Book a stay stays a static menu.

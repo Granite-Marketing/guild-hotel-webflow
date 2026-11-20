@@ -255,6 +255,22 @@
    "page": "/rooms/cozy-king",
    "width": 1467,
    "note": "Context only: The Neighborhood map on room pages stays the same on every room; no CMS field needed."
+  },
+  {
+   "id": "K1",
+   "image": "k1-book-table-modal-props.webp",
+   "role": "bug",
+   "page": "/",
+   "width": 1467,
+   "note": "Booking Menu, Reserve a table pop-up (Overlay Detail Panel Modal, Image Bg, id book-table): carries leftover content props from other uses (heading council boardroom, eyebrow by eva struble, artwork caption) and 60 suggested props. Its content should come from the Dinings collection."
+  },
+  {
+   "id": "K1",
+   "image": "k1-book-table-modal-props-more.png",
+   "role": "bug",
+   "page": "/",
+   "width": 1467,
+   "note": "Same pop-up: Media, Body and Extras props with show toggles and lorem text, none of which should be hand-filled here."
   }
  ]
 }
