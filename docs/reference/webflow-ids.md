@@ -526,3 +526,8 @@ Per-element `data-reveal` attributes (tracker: `docs/feedback/animation-walk-202
 - /arts: exit `77c88254-2b9b-f9f5-1551-a203447cd8dd`, enter `48510a81-5d78-6f05-147d-0a1fec4e9148`; filter nav `6dd7c4ec-52e2-1812-8f32-19a3645bc3ce`.
 - Subnavs (19 Nov, Stephen): no underline on the active tab on desktop; `border-bottom-color` removed from combos `tab-pills-intro_tab.is-active` `e70e42de-0283-762a-59e6-825143e633af` and `venue-card-fullbleed_tab.is-active` `6de4beaf-e3ed-f84b-a768-44b8cfa14edb`. The phone dropdown label keeps its underline.
 - Joystick elements removed from /gallery and /arts (Stephen, 19 Nov); the ids `90f2159e-…`, `19ed531f-…`, `102edc90-…`, `44c6ae09-…` above no longer exist.
+
+## CMS and components spec #317, Designer tickets (2026-11-20)
+
+- **❓ FAQs** collection `6b00284dcf7ddb2b615e8b7c` (slug `faqs`, #325): Question (name) `35aabccee3c90080b51096f3c5f5cc99`, Answer (RichText) `8bada67023cdc4d3df27b266ddf8cfa6`, Sort order (Number, `sort-order`) `f77d98b8a3df6ee8bf2719a30db26e23`. Seeded with the six faq-accordion questions (items `6b002865fb7e3ab87c801c69` to `...c73`). faq-accordion Collection List `850a0454-d3d4-68ea-924c-25819e44e0af` (list `...e0b0`, item `...e0b1`).
+- **Legal Rich Text Styles** component `7078c6ea-16c9-d700-35be-37d4efe7f1ef` (group Embeds, #329): style embed for `static-template-privacy-policy_rich-text` children, source `docs/reference/site-head/legal-rich-text.css`. Instances: Accessibility `d0bf0cb7-1426-a128-8e03-000070a8e3e7`, Privacy Policy `d75c8945-f7b9-9f76-185a-81c3088e13db`. Rich text elements: Accessibility `17ade4d6-7c18-4065-248a-fc99b80c375f`, Privacy Policy `8f7c8ff8-cfa2-2f88-03c5-51f52050881f`. Class `static-template-privacy-policy_rich-text` `7ae18d2d-b26b-fd23-6d4a-e24af812fd4c`.
