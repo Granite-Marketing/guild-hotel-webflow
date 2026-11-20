@@ -8,7 +8,7 @@
  * the grouping is built at runtime by categoryListing.
  *
  * DOM contract:
- *   .article-card-staggered_component.is-cms-item   each CMS card, in DOM order
+ *   .article-card-staggered_component.is-cms-item   each CMS card, in DOM order (Press: .is-cms)
  *   .article-card-staggered_header.is-group         category heading, either inside
  *                                                   the first card of its category
  *                                                   (single list) or in the same
@@ -18,7 +18,7 @@
  * Hidden cards are not counted. Order: after categoryListing().
  */
 
-const CARD = '.article-card-staggered_component.is-cms-item'
+const CARD = '.article-card-staggered_component.is-cms-item, .article-card-staggered_component.is-cms'
 const GROUP_HEADER = '.article-card-staggered_header.is-group'
 // A card holding its category heading starts a category (single-list pages; Press uses its own attribute).
 const CATEGORY_START = `${GROUP_HEADER}, [data-category-heading], [data-press-heading]`
