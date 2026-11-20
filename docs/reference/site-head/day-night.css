@@ -1,0 +1,6 @@
+/* Day and night switch (dayNight.ts). On a night load, tagged elements that have a night value stay hidden until the module has swapped their content, so the day copy and photo never show first. The head snippet (day-night-head.js) sets html.is-night from the cookie before first paint; dayNight() adds .night-ready once the swap is done. The 3s animation is the fail-safe if the bundle never runs. */
+html.is-night:not(.night-ready) :is([data-night-text], [data-night-src], [data-night-srcset], [data-night-video], [data-night-href]):not([data-night-text=""], [data-night-src=""], [data-night-srcset=""], [data-night-video=""], [data-night-href=""]) {
+  visibility: hidden;
+  animation: day-night-failsafe 0s 3s forwards;
+}
+@keyframes day-night-failsafe { to { visibility: visible; } }

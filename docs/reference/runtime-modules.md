@@ -1282,6 +1282,35 @@ before any scroll on a phone whose hero is taller than the screen. The Dinings
 call ends at `.section_card-carousel-header-left` ("Other dining options"),
 else the booking CTA or footer. Fixture: `tests/visual/fixtures/sticky-cta.html`.
 
+### dayNight (spec #338, ticket #339)
+
+The Day and Night content switch. It owns the mode, saves it in a cookie and swaps the content of tagged elements. Content only: colours, theme and layout never change by mode (DN1). Source: `src/utils/dayNight.ts`. Runs **first** in `Webflow.push`, before `eagerImages` and every module that splits text or measures layout.
+
+**Mode.** Day by default (DN2). The cookie `guild-mode` (`day` or `night`) lasts one year, path `/`, `SameSite=Lax`, host-only (the site's own domain; `www` and the bare domain are separate). The root element carries `is-day` or `is-night`, and `night-ready` once the night content is swapped in.
+
+**Nav buttons.** Any element with `data-day-night="day"` or `data-day-night="night"`. The pressed one gets `aria-pressed="true"` and the `is-active` class; the other `aria-pressed="false"`. Non-native elements get `role="button"` and `tabindex="0"`; Enter and Space work.
+
+**Night attributes.** Bind each to the "Night - <Field>" field or prop (DN5). An empty or missing value leaves that part on day (DN3). Only the parts DN6 allows.
+
+| Attribute | On | Swaps |
+| --- | --- | --- |
+| `data-night-text` | heading, paragraph, button | the text (plain text; a button's roll label keeps its two spans) |
+| `data-night-src` | `<img>` | `src` |
+| `data-night-srcset` | `<img>` | `srcset`. With a night `src` but no night `srcset`, the day `srcset` is removed so the browser cannot keep the day picture |
+| `data-night-sizes` | `<img>` | `sizes` (optional) |
+| `data-night-video` | a frame element | lays a muted looping player (`embedVideo`, same as `sectionVideo`; file, YouTube or Vimeo link) over the frame; Day removes it |
+| `data-night-href` | `<a>` | `href` |
+
+An element can carry several (a button: `data-night-text` and `data-night-href`). The day values are kept on the element as `data-day-html`, `data-day-src`, `data-day-srcset`, `data-day-sizes` and `data-day-href`, so Day restores them exactly and Swiper clones carry them along.
+
+**No day flash.** Paste `docs/reference/site-head/day-night-head.js` (125 characters, far under Webflow's 2,000-character inline limit) as an inline script in the site head; it adds `is-night` from the cookie before first paint. `docs/reference/site-head/day-night.css` (bundled by `src/site.css`) hides tagged elements that have a night value until `night-ready`; a 3s fail-safe animation shows them if the bundle never runs.
+
+**Crossfade (DN4).** The changing elements fade out for 0.25s, swap, and fade in for 0.25s through GSAP `autoAlpha` (about 0.5s in all; the duration is a taste item). Reduced motion swaps instantly.
+
+**SplitText.** On a night load the swap happens before anything splits. On a later switch, a split element is released, gets its new text, and is split again through `src/utils/splitRegistry.ts`, so lines never duplicate and the hero reveal replays. Any module that splits text a visitor may switch must create its instance with `trackSplit(element, () => new SplitText(...))`; `heroTextReveal`, `lineMaskReveal` and `scriptReveal` already do. `scrollTextReveal` and `swiperSliders` do not yet; do not put night attributes on their text.
+
+Test: `tests/visual/day-night.spec.ts` (two fixture pages, at 390 and 1440).
+
 ## Not ported (project-specific)
 
 Recipes from earlier builds that stay as patterns rather than modules: nav

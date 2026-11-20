@@ -32,6 +32,7 @@
  */
 
 import { isScript } from '$utils/scriptReveal'
+import { trackSplit } from '$utils/splitRegistry'
 
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
 const TEXT_TAGS = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P'])
@@ -236,7 +237,7 @@ export const createLineMaskTimeline = (
         ensureSplit: () => {
           if (splitStarted) return
           splitStarted = true
-          new SplitText(element, {
+          trackSplit(element, () => new SplitText(element, {
             type: 'lines,words',
             autoSplit: true,
             onSplit: (self) => {
@@ -251,7 +252,7 @@ export const createLineMaskTimeline = (
               part.split = true
               queueRebuild()
             },
-          })
+          }))
         },
       }
       parts.push(part)

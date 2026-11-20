@@ -11,6 +11,8 @@
  * section's own header (tab-pills-intro) still draws in.
  */
 
+import { trackSplit } from '$utils/splitRegistry'
+
 const SCRIPT_FONT = 'morello'
 const SKIP = '[data-scroll-enlarge-snap-content], [data-history-collapse], [role="dialog"], .nav_component, .w-nav, .swiper'
 // Negative insets leave room for swashes that reach past the line box.
@@ -30,7 +32,7 @@ export const scriptReveal = () => {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
   headings.forEach((heading) => {
-    new SplitText(heading, {
+    trackSplit(heading, () => new SplitText(heading, {
       type: 'lines',
       autoSplit: true,
       onSplit: (self) =>
@@ -46,6 +48,6 @@ export const scriptReveal = () => {
             scrollTrigger: { trigger: heading, start: 'top 85%', toggleActions: 'play none none reverse' },
           },
         ),
-    })
+    }))
   })
 }
