@@ -20,6 +20,8 @@
 
 const CARD = '.article-card-staggered_component.is-cms-item'
 const GROUP_HEADER = '.article-card-staggered_header.is-group'
+// A card holding its category heading starts a category (single-list pages; Press uses its own attribute).
+const CATEGORY_START = `${GROUP_HEADER}, [data-category-heading], [data-press-heading]`
 
 export const staggerCards = () => {
   const cards = [...document.querySelectorAll<HTMLElement>(CARD)].filter(
@@ -31,7 +33,7 @@ export const staggerCards = () => {
   let previousSection: Element | null = null
   cards.forEach((card) => {
     const section = card.closest('section')
-    if (card.querySelector(GROUP_HEADER) || section !== previousSection) position = 0
+    if (card.querySelector(CATEGORY_START) || section !== previousSection) position = 0
     previousSection = section
     card.classList.toggle('is-right', position % 2 === 1)
     position += 1
