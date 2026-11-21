@@ -18,11 +18,11 @@
  */
 const BUTTON_SELECTOR = [
   '.button',
-  '.overlay-detail-panel-modal_item-button:not([class*="w-variant-0e56f707"])',
+  '.overlay-detail-panel-modal_item-button:not([class*="w-variant-0e56f707"],.is-booking)',
 ].join(',')
 
 const CHAMFER_SELECTOR =
-  '.button.is-chamfer, .overlay-detail-panel-modal_item-button:not([class*="w-variant-0e56f707"],[class*="603a80753681"])'
+  '.button.is-chamfer, .overlay-detail-panel-modal_item-button:not([class*="w-variant-0e56f707"],.is-booking,[class*="603a80753681"])'
 const SVG_NS = 'http://www.w3.org/2000/svg'
 
 /** Octagon inset by `inset` px on every side, diagonals kept parallel to the chamfer. */
