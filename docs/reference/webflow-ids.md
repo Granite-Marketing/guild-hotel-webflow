@@ -627,3 +627,10 @@ form-split-script-contact became five single-purpose components (group Sections)
 | Contact Details Map | `dcfc7720-8c7b-8825-2cfe-e1f230373a34` | /contact `9b9f25b9-498c-bb3d-7f2b-eac0e03748aa` | `is-contact` section `955049f8-aa8e-9d6f-a588-f5f7114013ce`, content, header, heading `bc3c29e6-84e4-bbff-0688-eff706553cc8`, details, detail, links, link, media, map |
 
 - form-split-script-contact (`2f0cac24-...`) now has 0 instances; its six variants stay until Stephen decides.
+
+### X1 Booking Menu Panel (2026-11-21)
+
+- **Booking Menu Panel** `2fbda863-9fc6-56a5-3f2d-8bb94ef82de3` (group Modals): the Book menu dialog (`id="book"`), image and four fixed links (book a stay, reserve a table with chevron, host an event, book an appointment). No props, no variants. Lives in Booking Menu (`6c8187bb-...`) as instance `5cb00adb-d995-aa35-4ff5-e54d287f5027`, before the native `book-table` dialog.
+- Combo `is-booking` on component `75a0b24f-1486-8433-1ab8-88a38488d758`, panel `4fcead1a-6bf7-f4c0-6d77-9dbd4b5f6daa`, bar, close, layout, figure, content, stamp, body, list, item, item-content, item-button `9456c186-9751-f041-b2cc-f54b2eff334c` (hover opacity 1), item-arrow (Burgundy variant styles).
+- `.is-booking` joins the Burgundy exclusion in the button system (Site Nav `<style data-button-system>` embed `3639f68c-0d1e-0355-fd6d-d61a7593a03d` and `src/utils/buttonHover.ts`, v1.3.23).
+- Overlay Detail Panel Modal (`44cccc51-...`) now only has the ten static Q041 art dialogs on /arts, which nothing opens (Art Detail Modal replaced them). Kept for Stephen to decide.

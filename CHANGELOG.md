@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.23
+
+### Patch Changes
+
+- X1 split: the Book menu links in the new Booking Menu Panel keep their plain hover (button system and label roll skip `.is-booking`).
+
 ## 1.3.22
 
 ### Patch Changes

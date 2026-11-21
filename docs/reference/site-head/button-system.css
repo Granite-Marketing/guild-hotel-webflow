@@ -22,7 +22,7 @@
 .section_offers-slider-split.w-variant-33c1374c-e0f0-7e2f-88ab-e318ee666728 .button.is-chamfer:not(#_){--btn-colour:var(--_primitives---colors--neutral-lightest);--btn-ink:var(--_primitives---colors--tan)}
 
 /* The venue modal Reserve button keeps its class (its variants also drive the text tabs, which stay out of the system). */
-:is(.button.is-chamfer,.overlay-detail-panel-modal_item-button:not([class*="w-variant-0e56f707"],[class*="603a80753681"])):not(#_){
+:is(.button.is-chamfer,.overlay-detail-panel-modal_item-button:not([class*="w-variant-0e56f707"],.is-booking,[class*="603a80753681"])):not(#_){
  --cx:.4375rem;--cy:.4375rem;--r:var(--btn-outline-width);--fill:100%;--fill-y:0%;--fy:0;--btn-line:var(--btn-outline,var(--btn-colour));--btn-rest:var(--btn-ink);--btn-hover:var(--btn-line);
  --ring:#0000 calc(50% - 2px),var(--btn-line) calc(50% - 1px),var(--btn-line) calc(50% + var(--r) - .3px),#0000 calc(50% + var(--r) + .7px);
  opacity:1;color:var(--btn-rest);background-color:#0000;
