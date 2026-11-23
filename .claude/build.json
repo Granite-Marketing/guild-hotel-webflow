@@ -6,7 +6,7 @@
   "commands": {
     "test": {
       "id": "typecheck",
-      "run": "pnpm check"
+      "run": "node scripts/build-preflight.mjs && pnpm check"
     },
     "validate": [
       {
@@ -15,10 +15,15 @@
       },
       {
         "id": "build",
-        "run": "pnpm build"
+        "run": "pnpm build:check"
       }
     ]
   },
+  "preflight": [
+    {
+      "run": "node scripts/build-preflight.mjs"
+    }
+  ],
   "test_paths": [
     "tests/**"
   ],
@@ -48,15 +53,15 @@
   },
   "visual": {
     "url": "https://the-guild-hotel-c34e71.webflow.io",
-    "prepare": "pnpm build",
+    "prepare": "node scripts/build-preflight.mjs && pnpm build:check",
     "replace": [
       {
         "url": "https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@*/dist/index.js",
-        "file": "dist/index.js"
+        "file": ".build-check/index.js"
       },
       {
         "url": "https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@*/dist/site.css",
-        "file": "dist/site.css"
+        "file": ".build-check/site.css"
       }
     ],
     "allow_hosts": [

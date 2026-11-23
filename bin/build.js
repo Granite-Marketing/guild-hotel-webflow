@@ -7,8 +7,8 @@ import { serveFixtures } from './fixtures.js'
 const PRODUCTION = process.env.NODE_ENV === 'production'
 const WATCH = process.argv.includes('--watch')
 
-// Config output
-const BUILD_DIRECTORY = 'dist'
+// Config output. dist/ is tracked and ships at release; checks build into a folder of their own.
+const BUILD_DIRECTORY = process.env.BUILD_DIR || 'dist'
 
 // Config entrypoint files
 const ENTRY_POINTS = ['src/index.ts', 'src/site.css']

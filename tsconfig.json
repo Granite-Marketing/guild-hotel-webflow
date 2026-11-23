@@ -14,5 +14,5 @@
     }
   },
   "include": ["src/*.ts", "src/utils/**/*.ts", "src/types/**/*.ts"],
-  "exclude": ["node_modules", "dist", "scripts"]
+  "exclude": ["node_modules", "dist", "scripts", "**/__heldout__/**"]
 }
