@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
-import { existsSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
+import { existsSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, rmSync, rmdirSync, symlinkSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import test from 'node:test'
@@ -43,18 +43,23 @@ test("the build's checks never write the tracked dist files", () => {
   assert.ok(!commands.some((run) => /\bpnpm (run )?build(?!:check)/.test(run)), 'a check runs the release build')
   assert.ok(MANIFEST.visual.replace.every((r) => !r.file.startsWith('dist/')), 'page checks read the tracked bundle')
   // Marked, so it differs from the release bundle whatever the branch holds.
-  execFileSync(process.execPath, ['bin/build.js'], { cwd: ROOT, env: { ...process.env, NODE_ENV: 'development', BUILD_DIR: '.build-check/test' } })
+  execFileSync(process.execPath, ['bin/build.js'], { cwd: ROOT, env: { ...process.env, NODE_ENV: 'development', GUILD_BUILD_DIR: '.build-check/test' } })
   assert.ok(existsSync(path.join(ROOT, '.build-check/test/index.js')))
   assert.deepEqual(['dist/index.js', 'dist/site.css'].map(sha), before)
 })
 
 test('a held-out check file under src never reaches the typecheck', (t) => {
   for (const dir of ['src/__heldout__', 'src/utils/__heldout__']) {
-    const full = path.join(ROOT, dir)
+    // A folder of our own inside it: src/__heldout__ is where a validator keeps its checks while it works.
+    const full = path.join(ROOT, dir, `setup-test-${process.pid}`)
+    const existed = existsSync(path.join(ROOT, dir))
     mkdirSync(full, { recursive: true })
-    t.after(() => rmSync(full, { recursive: true, force: true }))
+    t.after(() => {
+      rmSync(full, { recursive: true, force: true })
+      if (!existed) rmdirSync(path.join(ROOT, dir))
+    })
     writeFileSync(path.join(full, 'setup-test.heldout.ts'), 'process.exit(notDefinedAnywhere)\n')
   }
   const files = execFileSync(bin('tsc'), ['--noEmit', '--listFilesOnly'], { cwd: ROOT, encoding: 'utf8' })
-  assert.ok(!files.includes('__heldout__'))
+  assert.ok(!files.includes('setup-test-'))
 })

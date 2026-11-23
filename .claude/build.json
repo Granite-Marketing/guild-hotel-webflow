@@ -6,7 +6,7 @@
   "commands": {
     "test": {
       "id": "typecheck",
-      "run": "node scripts/build-preflight.mjs && pnpm check"
+      "run": "node scripts/build-preflight.mjs packages && pnpm check"
     },
     "validate": [
       {
@@ -53,7 +53,7 @@
   },
   "visual": {
     "url": "https://the-guild-hotel-c34e71.webflow.io",
-    "prepare": "node scripts/build-preflight.mjs && pnpm build:check",
+    "prepare": "node scripts/build-preflight.mjs packages && pnpm build:check",
     "replace": [
       {
         "url": "https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@*/dist/index.js",
