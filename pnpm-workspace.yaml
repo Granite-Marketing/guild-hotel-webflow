@@ -1,0 +1,6 @@
+packages:
+  - .
+# pnpm refuses an install that would skip these build scripts, so a fresh checkout could not install.
+allowBuilds:
+  esbuild: true
+  sharp: true

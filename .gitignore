@@ -33,6 +33,9 @@ Content/
 # Figma snapshot cache: full-page renders, step markers, call ledger (see figma/README.md)
 figma/.cache/
 
+# The bundle the build's checks and page checks make (pnpm build:check); dist/ changes only at release
+.build-check/
+
 # Dev-only fixture builds (bin/build.js --watch)
 dist/fixtures/
 
