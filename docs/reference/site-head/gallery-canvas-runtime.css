@@ -1,3 +1,7 @@
 /* Gallery canvas states that exist only once the bundle runs (galleryCanvas, tabDropdown, modals), so they ship in the bundle; the layout itself is gallery-canvas.css, the embed on /gallery and /arts. */
 /* P-E7: the entered board's pills sit above everything (z-index 1001), an open artwork pop-up included. */
 :root:has([role="dialog"].is-open) [data-gallery-canvas].is-entered :is(.gallery-all_tags-wrapper, .gallery-all_controls) { visibility: hidden; }
+/* P-E10: the phone filter dropdown is absolute inside a shrink-to-fit wrapper, so a mouse in a narrow window (never entered) saw a 32px sliver. Same width as the touch filter bar. */
+@media screen and (max-width: 767px) {
+  [data-gallery-canvas]:not(.is-entered) .gallery-all_tags-wrapper { width: calc(100% - 4rem); padding-inline: 0; }
+}
