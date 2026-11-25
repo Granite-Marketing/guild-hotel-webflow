@@ -28,3 +28,13 @@ Rules for both lanes: the page rendered on staging is the evidence, not a report
 - W-C19, C20, C22 (descriptions), M12, M13. C20 removes only the empty header and the four hidden links the row names: if either would count as deleting content, report it.
 
 Both lanes: if a row belongs to the other lane, say so in the report.
+
+## Lane B, part 2: rollout (Stephen, 2026-11-25: "Venues look good too btw - we call rollout site-wide component and CMs remodelling")
+
+Read as approval to apply the Meeting Venues pattern everywhere and the naming proposals in [the list](final-review-2026-11-25-list.md). Run after part 1.
+
+- **CMS, all other 20 collections:** folders and field order as in the Webflow review table, night fields renamed `<day name> (Night)`, and the `Settings - ...` labels, Meeting Venues included. Rooms keeps three image names and Beyond Downtown `Card - Image (Night, Pop-up)`, as recommended. One collection at a time: read the schema first, rename, write the complete groups list, read back, and check ids, slugs, items and a bound element are unchanged.
+- **Components:** night props renamed and moved to their day twin's group, as in the review table. Variant renames as in list section 2A, names only. Where a rename also needed a merge, rename and leave the merge.
+- **Not approved, do not do:** deleting or merging any component, variant, prop, field, item, page or class; unpublishing; new fields; moving page content into the CMS; title size or width controls; any change to how a page looks. Report them as waiting.
+- Publish nothing except for part 1; renames need no publish.
+- Update `docs/reference/webflow-ids.md` for names that changed.
