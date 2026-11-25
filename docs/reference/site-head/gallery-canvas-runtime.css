@@ -1,0 +1,3 @@
+/* Gallery canvas states that exist only once the bundle runs (galleryCanvas, tabDropdown, modals), so they ship in the bundle; the layout itself is gallery-canvas.css, the embed on /gallery and /arts. */
+/* P-E7: the entered board's pills sit above everything (z-index 1001), an open artwork pop-up included. */
+:root:has([role="dialog"].is-open) [data-gallery-canvas].is-entered :is(.gallery-all_tags-wrapper, .gallery-all_controls) { visibility: hidden; }
