@@ -57,7 +57,7 @@ Re-checked by the coordinating session on live staging, 25 Nov: slider button co
 5. Beyond Downtown: night pop-up image pairs with the card image. Recommended `Card - Image (Night, Pop-up)`. The pop-up gallery field connects to nothing: build the slider you asked for, or remove.
 6. Meeting Venues Features: ten text and image fields never show. Remove?
 7. Move /dining venue list (W-H1), the Home venue tabs (W-C4) and /wellness panels (W-H2) into the CMS? /dining and Home are recommended, they are your X2 rule.
-8. Two topic fields on Packages and Stories (W-M15) and an old Gallery category (W-M14): merge. Two dining switches repeat "is it filled" (W-M5).
+8. Two topic fields on Packages and Stories (W-M15) and an old Gallery category (W-M14): merge. Five dining switches repeat "is it filled" (W-M5).
 9. Reserve a table: the pop-up reads Info - Venue Site Link, not Booking - Reserve Link, so filling Reserve links would not fix it (W-M1, the binding is inferred). Rebind to the Reserve field.
 10. Placeholder rooms are live, and the quiz recommends only them for "Just me" (P-C3, C4; W-M8). Unpublish: the quiz would then find no room for that answer until real rooms are tagged.
 
