@@ -15,6 +15,8 @@ Read-only. Nothing on the site, in the CMS or in the code changes until Stephen 
 2. No variant is named after a page. Rename it for what it does, and say the breakpoint when the change is only there (for example "Tablet Stacked"). Names are proposals until Stephen approves them.
 3. Title size and width controls are an idea to assess, not approved work.
 4. Nothing is deleted, renamed or rebound during the review.
+5. Approved by Stephen 2026-11-25, to apply after the review confirms the pairs: night fields and props are named `<day name> (Night)`. Where the day value is the item Name, use the block's name (`Card - Name (Night)`). Every collection gets folders (Webflow field groups), with each night field directly under its day field, and folders and fields in the order they appear on the page ("Can you order CMS fields? Like put things in chronological order?"). Replaces DN5 in the day and night spec.
+6. Still open: night fields with no clear day field (Rooms Feature fields, Beyond Downtown pop-up image).
 
 ## What is known
 
@@ -40,6 +42,7 @@ Through the Webflow MCP, read every component's settings, variants, props and in
 - variants: id, instances, pages, what they change per breakpoint; duplicates and no-effect variants; a proposed functional name for each page-named one;
 - components: unused, duplicated purpose, jumbo, numbered or dead props, hand-typed content that belongs in the CMS, typed links, wrong single or multi-line prop type, Custom Elements, IDs on wrappers;
 - CMS: unused or empty fields, unclear labels, hard-coded lists that should be collections, missing references, items lacking required content (Reserve links, night content, videos);
+- folders and order: for each collection, the folders and the field order inside them, following the page from top to bottom, then settings (links, sort order, switches) last; Name and Slug cannot go in a folder;
 - title size and width controls: which components would need them, the fixed steps actually used today, whether a prop can drive a data attribute, and whether the Designer canvas shows it. Assess only.
 
 ## Output, both lanes
