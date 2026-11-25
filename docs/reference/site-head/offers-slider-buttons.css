@@ -1,0 +1,4 @@
+/* Retail (.blue) and Arts & Culture (.tan) slider buttons: button-system.md rows 17 and 18, the same two rules as button-system.css.
+   shortcut: carried in the bundle because the Button Styles embed in Site Nav still holds the old variant ids; delete this file once button-system.css is pasted there again. */
+.section_offers-slider-split.blue .button.is-chamfer:not(#_){--btn-colour:var(--_primitives---colors--neutral-darkest);--btn-ink:#b2c5d5}
+.section_offers-slider-split.tan .button.is-chamfer:not(#_){--btn-colour:var(--_primitives---colors--neutral-lightest);--btn-ink:var(--_primitives---colors--tan)}
