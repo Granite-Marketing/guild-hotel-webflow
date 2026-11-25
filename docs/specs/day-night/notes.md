@@ -27,4 +27,5 @@ All 21 tags in the Figma snapshot (`figma/raw/file.json.gz`), mapped to the sect
 - **DN3** A block with no night version filled in: "Show the day content". Editors fill night content only where it really differs; nothing shows blank.
 - **DN4** Switching: "Quick crossfade". Text and images fade from one version to the other in about half a second. Taste item: the duration.
 - **DN5** How editors enter night content: "Night twin fields". Each marked block gets night fields or props beside the day ones, named "Night - <Field>" (for example "Night - Heading", "Night - Image"). Empty means the day value shows (DN3).
+  - **Superseded 2026-11-25 (Stephen: "It should be `Card - Intro (Night)` just so it's similar", then "Yes to all your other suggestions, proximity and folders are essential for making it easy to change"):** a night field or prop is named after its day twin plus "(Night)" and sits directly under it in the same folder. Empty still means the day value shows. See `docs/specs/cms-components/final-review-2026-11-25.md`. Not yet applied in Webflow.
 - **DN6** What can change at night: "Image or video", "Heading and text", "Button text and link".
