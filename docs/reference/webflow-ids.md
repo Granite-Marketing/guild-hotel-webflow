@@ -659,3 +659,158 @@ Each had 0 instances, and a scan of every page and component definition found no
 - Press Section Styles `e77687b2-205a-6e4f-e22b-b43f671f9e23`
 
 Kept because still used: Split image text light (4), Overlay Detail Panel Modal (10 static dialogs on /arts that nothing opens).
+
+## Names after the remodelling rollout (2026-11-25)
+
+Display names only: every field, prop and variant keeps its id, and every field keeps its slug. Where older lines above use an old name, this table wins. Record: `docs/specs/cms-components/final-review-2026-11-25-fixes-webflow.md`.
+
+### CMS fields
+
+| Collection | Field id | Slug | Was | Now |
+|---|---|---|---|---|
+| 🍴 Dinings | `63c651cf987f786c0a9bbdadc6d59653` | `sort-order` | Card - Sort Order | Settings - Sort Order |
+| 🍴 Dinings | `077299153af1ebe690650bf12ebabb52` | `split-section---look` | Split Section - Look | Settings - Page Colour |
+| 🍴 Dinings | `bf1e0c9ecd32e63d6fcbcc434ba78092` | `night---home-card-image` | Night - Home Card Image | Home Card - Image (Night) |
+| 🍴 Dinings | `5d576926c88d961d6a6df2491f1d95bb` | `night---home-card-heading` | Night - Home Card Heading | Home Card - Name (Night) |
+| 🍴 Dinings | `b8f0662e9f48ab7accc2b0896e2f26e0` | `night---home-card-tagline` | Night - Home Card Tagline | Home Card - Tagline (Night) |
+| 📰 Happenings & Stories | `3d27986165618c5d45dcff873530a2ae` | `category` | Post - Category | Settings - Category |
+| 📰 Happenings & Stories | `101bc574a26dc6f44acb63f556b40042` | `card---topic` | Card - Topic | Settings - Topic |
+| 📰 Happenings & Stories | `b31d639e86a84543aeb8dcb1aa2fcba6` | `topic` | Post - Topic | Settings - Topic Label |
+| 📰 Happenings & Stories | `ad0c2566ded18b287e0d7f5313169e44` | `date` | Post - Date | Settings - Date |
+| 📍 Map Places | `e2c905ef609b7282c8e1318e89b98aeb` | `order` | Place - Sort Order | Settings - Sort Order |
+| 🛏️ Rooms | `5222d3966cb63053995ca2802f43b030` | `sort-order` | Card - Sort Order | Settings - Sort Order |
+| 🛏️ Rooms | `baf9f2feb60cdb165cfee8e651be218a` | `room-type` | Card - Room Type | Settings - Room Type |
+| 🛏️ Rooms | `2842d7cc5d042dfa315c7f6d43af4bba` | `show-in-recommendations-grid` | Card - Show In Recommendations | Settings - Show In Recommendations |
+| 🛏️ Rooms | `c468cf9d6abf07ad5f096b97840956ee` | `card-and-hero-image` | Hero - Card And Hero Image | Room - Image |
+| 🛏️ Rooms | `61f3dbfa04564c796c335b848d6660f5` | `night---card-image` | Night - Card Image | Room - Image (Night, Card) |
+| 🛏️ Rooms | `23109efec94a92a80e230f8715b208c5` | `night---hero-image` | Night - Hero Image | Room - Image (Night, Hero) |
+| 🛏️ Rooms | `77f12fccda41916e838fed0f7b82d989` | `night---feature-image` | Night - Feature Image | Room - Image (Night, Feature) |
+| 🛏️ Rooms | `3fadc8d310e6709750dd0c5536d55b7b` | `night---card-heading` | Night - Card Heading | Card - Name (Night) |
+| 🛏️ Rooms | `d629e628291943c712b171a20715aca4` | `night---hero-heading` | Night - Hero Heading | Hero - Name (Night) |
+| 🛏️ Rooms | `a3ff806809e9f8ea7d6c6d92a7e7b0bc` | `night---hero-text` | Night - Hero Text | Hero - Intro (Night) |
+| 🛏️ Rooms | `ee34198bd3a330f597899917bcd2174c` | `night---feature-video` | Night - Feature Video | Feature - Video (Night) |
+| 🛏️ Rooms | `ac216030075509bb58ac61533d456d01` | `night---feature-text` | Night - Feature Text | Feature - Text (Night) |
+| 🧭 Quiz Options | `91064fea8f4a9beaeba1a64cc6bc3740` | `step` | Quiz - Step | Settings - Quiz Step |
+| 🧭 Quiz Options | `cdf2eecffd244da5ec3f27434adc52e0` | `sort-order` | Quiz - Sort Order | Settings - Sort Order |
+| 🖼️ Art Collection | `ef04d9c4338c2194c7339ea5bb38eaaa` | `sort-order` | Card - Sort Order | Settings - Sort Order |
+| 🖼️ Art Collection | `0bd419969a18943fe61f5555ca0f076f` | `category` | Art - Type | Settings - Type |
+| 🖼️ Art Collection | `c5f18e1c77a4b9059f7482c551d64fc1` | `card---category` | Card - Category | Settings - Category |
+| 📸 Gallery Photos | `c16baba88e384fb59545764801a5cb90` | `sort-order` | Photo - Sort Order | Settings - Sort Order |
+| 📸 Gallery Photos | `f654122590fb89fbe5294025eb14d4bb` | `card---category` | Card - Category | Settings - Category |
+| 📸 Gallery Photos | `0d0beb373da9a79311f499c757fc7316` | `category` | Photo - Category | Settings - Category (Old) |
+| 📰 Press | `3243cd1e205c48536b3e4656eec32274` | `order` | Card - Sort Order | Settings - Sort Order |
+| 📰 Press | `376cecea332874074444310c7d676cfb` | `press-category` | Card - Category | Settings - Category |
+| 🏷️ Press Categories | `c6af895139bdcf06d1a9c236f2ada149` | `order` | Category - Sort Order | Settings - Sort Order |
+| 🎁 Packages | `3781b9f8bcdbacfc34435b74840cb713` | `card---topic` | Card - Topic | Settings - Topic |
+| 🎁 Packages | `d2d60380fc929173561617806480fcaa` | `topic` | Package - Topic | Settings - Topic Label |
+| 🎁 Packages | `6617b2f977dee9cbb66fe99c1fe0c60a` | `date` | Package - Date | Settings - Date |
+| ❓ FAQs | `f77d98b8a3df6ee8bf2719a30db26e23` | `sort-order` | FAQ - Sort Order | Settings - Sort Order |
+| 🏛️ Meeting Venues | `fec7f04d7a1e5bccdae42dfc281d7884` | `sort-order` | Card - Sort Order | Settings - Sort Order |
+| 🏛️ Meeting Venues | `1ffcb148508b11e78c1e5fbf9bd341fd` | `pages---meetings` | Pages - Meetings | Settings - Show On Meetings |
+| 🏛️ Meeting Venues | `367e789bcd921cdf8a72f927f8a8f9ef` | `pages---legal-corporate` | Pages - Legal & Corporate | Settings - Show On Legal & Corporate |
+| 🏖️ Beyond Downtown Places | `c841314d63ccd6780390adca7577820c` | `sort-order` | Card - Sort Order | Settings - Sort Order |
+| 🏖️ Beyond Downtown Places | `aa85a47b649d59806df94fb0de4f196c` | `night---pop-up-image` | Night - Pop-up Image | Card - Image (Night, Pop-up) |
+| 🏖️ Beyond Downtown Places | `699284ab472b2ba0e49cbe87396321d5` | `night---pop-up-text` | Night - Pop-up Text | Pop-up - Text (Night) |
+| 🛎️ Amenities | `aeb182d1a218e5e2094fbaf74032771f` | `sort-order` | Sort order | Settings - Sort Order |
+| 🖼️ Media | `a5a30e30431b028568aca7d03e54257d` | `media---sort-order` | Media - Sort Order | Settings - Sort Order |
+| 🔖 Topics | `7c209bb769ff082dce266a4397e5c67d` | `sort-order` | Sort Order | Settings - Sort Order |
+| 🏷️ Art Categories | `51465338cf2d434427e7822444b4237c` | `sort-order` | Sort Order | Settings - Sort Order |
+| 🏷️ Gallery Categories | `56b8ae787f72e6697df594ae8266efe2` | `sort-order` | Sort Order | Settings - Sort Order |
+| 🏷️ Offers | `c37cfb4805b46985995a78339d302455` | `slide---sort-order` | Slide - Sort Order | Settings - Sort Order |
+| 🏷️ Offers | `98656026dc765e98e2fab101672b21d3` | `slide---slider` | Slide - Slider | Settings - Slider |
+| 🏛️ Meeting Venues | (pilot, earlier on 25 Nov) | `night---card-image`, `night---card-heading`, `night---card-intro` | Night - Card Image, Heading, Intro | Card - Image (Night), Card - Name (Night), Card - Intro (Night) |
+
+Every collection has its folders in the order of the table in `final-review-2026-11-25-webflow.md`; Settings is first wherever a general setting exists.
+
+### Component night props (moved out of the Night group)
+
+| Component | Prop id | Was | Now | Group |
+|---|---|---|---|---|
+| Hero Fullbleed Centered | `21b09566-03fd-0051-818f-6f35c27f5fb9` | Night - Image | Image (Night) | Background |
+| Hero Fullbleed Centered | `97c44009-a084-4f44-6102-e721f79d0785` | Night - Video | Video Link (Night) | Background |
+| Hero Fullbleed Centered | `2c401db1-96d5-7fbc-68c2-7ea0e151ac56` | Night - Heading | Heading (Night) | Content |
+| Hero Fullbleed Centered | `32288b4b-153b-10c9-5dd3-899cd39ec703` | Night - Button Text | Button Text (Night) | Button |
+| Hero Fullbleed Centered | `2ed09e14-1566-f905-edf9-168537ceca08` | Night - Button Link | Button Link (Night) | Button |
+| Hero Fullbleed Centered | `86753272-8614-a075-f9e4-f37b9b151c1a` | Night - Text | Text (Night) | Content |
+| Split image text light | `22f24909-4cb8-d01f-dda8-1c461c55affe` | Night - Image | Image (Night) | Images |
+| Split image text light | `54038270-27b7-6232-ae84-437b289ac64d` | Night - Video | Video (Night) | Images |
+| Split image text light | `000e7667-74c5-858a-16c3-0d2698038cb0` | Night - Heading | Heading (Night) | Content |
+| Split image text light | `78558e6b-1567-5f43-15bd-3b714afa4d7c` | Night - Button Text | CTA label (Night) | Content |
+| Split image text light | `e982fcea-d4f2-0b76-93e5-c907566942a7` | Night - Button Link | CTA (Night) | Content |
+| Split image text light | `858c6171-3e04-be31-36e1-15b742ca1404` | Night - Text | Body (Night) | Content |
+| Venue Card Fullbleed Tall | `56b4192c-b197-c8ee-3c9a-e6791c20a872` | Night - Image | Image (Night) | Image |
+| Venue Card Fullbleed Tall | `253ea9c9-f8e5-381c-ca71-6f529ab829e6` | Night - Video | Video (Night) | Image |
+| Venue Card Fullbleed Tall | `d181cbd9-dbf9-2625-3bec-af376cf95ca4` | Night - Heading | Heading (Night) | Content |
+| Venue Card Fullbleed Tall | `c2815958-c118-e5ce-3fd8-fcb5693033e4` | Night - Button Text | Button Label (Night) | Button |
+| Venue Card Fullbleed Tall | `fce9ab5f-4abb-969e-751f-e7a86dd985ee` | Night - Button Link | Button Link (Night) | Button |
+| Venue Card Fullbleed Tall | `4d023148-db3e-68a2-a0f0-c97151354bf7` | Night - Text | Text (Night) | Content |
+| Art Detail Modal | `a8711651-ed04-7e53-8bf6-136d38fb7ce8` | Night - Image | Image (Night) | Media |
+| Art Detail Modal | `66c06093-dcad-41b3-24df-7a536e5e1d77` | Night - Text | Text (Night) | Body |
+| Article Card Tall Item | `74ac4aba-b27c-c7a1-af6e-2f1244b585ec` | Night - Image | Image (Night) | none |
+| Article Card Tall Item | `a6d0d9d1-1eee-4564-8303-2a573be959bb` | Night - Heading | Heading (Night) | none |
+| Article Card Tall Item | `68056cc1-8542-d901-2fe5-fbef8d23a4ba` | Night - Text | Text (Night) | none |
+| Split Image Text Edge | `22f24909-4cb8-d01f-dda8-1c461c55affe` | Night - Image | Image (Night) | Images |
+| Split Image Text Edge | `54038270-27b7-6232-ae84-437b289ac64d` | Night - Video | Video (Night) | Images |
+| Split Image Text Edge | `000e7667-74c5-858a-16c3-0d2698038cb0` | Night - Heading | Heading (Night) | Content |
+| Split Image Text Edge | `858c6171-3e04-be31-36e1-15b742ca1404` | Night - Text | Body (Night) | Content |
+| Split Image Text Edge Large | `22f24909-4cb8-d01f-dda8-1c461c55affe` | Night - Image | Image (Night) | Images |
+| Split Image Text Edge Large | `54038270-27b7-6232-ae84-437b289ac64d` | Night - Video | Video (Night) | Images |
+| Split Image Text Edge Large | `000e7667-74c5-858a-16c3-0d2698038cb0` | Night - Heading | Heading (Night) | Content |
+| Split Image Text Edge Large | `858c6171-3e04-be31-36e1-15b742ca1404` | Night - Text | Body (Night) | Content |
+| Split Image Text Wide | `22f24909-4cb8-d01f-dda8-1c461c55affe` | Night - Image | Image (Night) | Images |
+| Split Image Text Wide | `54038270-27b7-6232-ae84-437b289ac64d` | Night - Video | Video (Night) | Images |
+| Split Image Text Wide | `000e7667-74c5-858a-16c3-0d2698038cb0` | Night - Heading | Heading (Night) | Content |
+| Split Image Text Wide | `858c6171-3e04-be31-36e1-15b742ca1404` | Night - Text | Body (Night) | Content |
+| Split Image Text Stagger Left | `22f24909-4cb8-d01f-dda8-1c461c55affe` | Night - Image | Image (Night) | Images |
+| Split Image Text Stagger Left | `54038270-27b7-6232-ae84-437b289ac64d` | Night - Video | Video (Night) | Images |
+| Split Image Text Stagger Left | `000e7667-74c5-858a-16c3-0d2698038cb0` | Night - Heading | Heading (Night) | Content |
+| Split Image Text Stagger Left | `858c6171-3e04-be31-36e1-15b742ca1404` | Night - Text | Body (Night) | Content |
+| Split Image Text Stagger Mid | `22f24909-4cb8-d01f-dda8-1c461c55affe` | Night - Image | Image (Night) | Images |
+| Split Image Text Stagger Mid | `54038270-27b7-6232-ae84-437b289ac64d` | Night - Video | Video (Night) | Images |
+| Split Image Text Stagger Mid | `000e7667-74c5-858a-16c3-0d2698038cb0` | Night - Heading | Heading (Night) | Content |
+| Split Image Text Stagger Mid | `858c6171-3e04-be31-36e1-15b742ca1404` | Night - Text | Body (Night) | Content |
+| Split Image Text Compact | `22f24909-4cb8-d01f-dda8-1c461c55affe` | Night - Image | Image (Night) | Images |
+| Split Image Text Compact | `54038270-27b7-6232-ae84-437b289ac64d` | Night - Video | Video (Night) | Images |
+| Split Image Text Compact | `000e7667-74c5-858a-16c3-0d2698038cb0` | Night - Heading | Heading (Night) | Content |
+| Split Image Text Compact | `858c6171-3e04-be31-36e1-15b742ca1404` | Night - Text | Body (Night) | Content |
+| Venue Detail Modal | `a8711651-ed04-7e53-8bf6-136d38fb7ce8` | Night - Image | Image (Night) | Media |
+| Venue Detail Modal | `66c06093-dcad-41b3-24df-7a536e5e1d77` | Night - Text | Text (Night) | Body |
+| Place Detail Modal | `a8711651-ed04-7e53-8bf6-136d38fb7ce8` | Night - Image | Image (Night) | Media |
+| Place Detail Modal | `66c06093-dcad-41b3-24df-7a536e5e1d77` | Night - Text | Text (Night) | Body |
+
+### Variants (names only)
+
+| Component | Variant id | Was | Now |
+|---|---|---|---|
+| Hero Fullbleed Centered | `1eb6c0d5-60d0-db3a-5e94-41f3cf7f9625` | Home | Mobile Short Button Label |
+| Gallery Mosaic Captioned | `76af03c7-cd03-42c9-a8b6-104e98388a6c` | Dining | Mobile Lower Heading |
+| Map Feature | `a65a3b03-fb07-bd94-4702-0e0a50312c90` | Home | Mobile Full Bleed |
+| Map Feature | `0a163214-6dd2-ca63-86b5-432c1c1678d5` | Dining | Mobile Full Bleed 2 |
+| Split image text light | `755a49f7-834d-0950-117b-678866226119` | Neighborhood Downtown | Mobile Text First |
+| Image Trio Text | `45b71a39-9a72-e800-bd67-7e1967d510de` | Home | Mobile Left Aligned |
+| Image Trio Text | `0d31b24e-acf0-8dd5-cf1f-9e3e1163cd12` | Dining | Mobile Left Aligned 2 |
+| script-intro-centered | `0fb367ce-08e1-818d-cb19-a30723516b7e` | Arts | Mobile Tight Heading |
+| script-intro-centered | `4395a28c-f653-e0ab-3acd-2e573bc7345a` | Neighborhood | Mobile Medium Heading |
+| script-intro-centered | `53add6a3-3c55-e4ed-2f36-460edae2cb76` | Legal Corporate | Short Padding, Wide Heading |
+| script-intro-centered | `7a7cf0d6-246e-60d6-f246-c8de364be62f` | History | Short Bottom Padding |
+| script-intro-centered | `a23a1a12-25dc-a914-6611-89f4d3beedb4` | Small Heading | Mobile Small Heading |
+| script-intro-centered | `e4bd4c20-6499-56f7-64db-9fa47a4a1f40` | Large Heading | Tight Padding, Mobile Large Heading |
+| script-intro-centered | `ac455635-ebdb-afce-1b26-c3754520f0b3` | Tall | Extra Bottom Space |
+| script-intro-centered | `211f09b3-312a-f072-e7c4-4e0894618a51` | Bottom | Image Below |
+| tab-pills-intro | `59a1b413-f64f-13c3-5d27-710cb741a3c0` | Press | Mobile Small Heading, Wide Pill |
+| Map Feature Image Bg | `a6eedfb4-4763-3aa6-88c1-4e4d7fd40feb` | Stacked | Mobile Stacked |
+| Card Carousel Header Left | `69ec3688-574e-61b2-83e0-6c45e105cc09` | Legal Corporate | Desktop Tight Top |
+| Card Carousel Header Left | `d0c45960-92d6-af25-7b58-b128d8a0affe` | Contact | Short Bottom Padding |
+
+Split image text light `50d0d660-fa88-c432-96fa-679fbe31a938` (Olive Home) and `42c9f9a1-d85c-7fa8-47d7-f5d9df7eaa79` (Olive Dining) keep their names: "Olive" is already taken by an unused variant.
+
+### Added in the review fixes
+
+- Global Styles embed "hide when empty" `8e647df2-82d2-101a-ab51-f4e8893040b9`: press logo box, dining menu link, pop-up floorplan link, slider button, artwork byline, 404 button label.
+- tab-pills-intro embed `dc689a59-9bf2-33be-7a81-aad0e8ea4d73`: the empty slot wrapper no longer takes a gap.
+- Art Detail Modal plain byline span `f3f22d50-245e-889b-4369-75a40e53fd8e` (bound to Eyebrow).
+- Contact Details Map links: address `ccf57e65-54d5-efdb-28f3-6aded36f5b17`, phone `ec978391-5397-c667-29a0-83de7fe7b6cc`, info `ec978391-5397-c667-29a0-83de7fe7b6d0`, sales `55f792b7-582f-eecf-bff0-86b8c0550930`, billing `0c7c1481-b356-b75d-8c15-3c6cf2a20ba6` (class `text-style-link`).
+- Combos: `venue-card-fullbleed_tabs.is-compact` `e6028591-638b-e2c4-28d9-43c018fbb543`, `venue-card-fullbleed_tab.text-style-eyebrow-caps.is-compact` `978e64ef-eea1-29d2-a687-deb1de79214d` (legal template tabs).
+- Form Legal Corporate Proposal root has DOM id `request-for-proposal`; Venue Detail Modal button `bf7623e5-058f-ec80-12e2-20bb187eaff2` has `data-modal-close`.
+- Removed: Arts `0e92d885-...` (second Gallery Canvas Styles), Gallery `3d0bee30-...` (second Global Styles), Booking Menu empty header `f2b614be-...e07`, three hidden Footer Links items (`...edbf`, `...edc2`, `...edc8`).
+- Form names: Photoshoot Request, Meetings Proposal Request, Legal and Corporate Proposal Request, Press Enquiry.
