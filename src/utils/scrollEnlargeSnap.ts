@@ -109,7 +109,8 @@ const readParts = (root: HTMLElement): SnapParts | null => {
     root.querySelectorAll<HTMLElement>('[data-scroll-enlarge-snap-item]'),
   )
   if (!media || !items.length) {
-    console.warn('[scrollEnlargeSnap] needs a -media element and at least one -item', root)
+    // No items: a tab-pills-intro without venues (the listing pages), not a broken build.
+    if (items.length) console.warn('[scrollEnlargeSnap] needs a -media element and at least one -item', root)
     return null
   }
 

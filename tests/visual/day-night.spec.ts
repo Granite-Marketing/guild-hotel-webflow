@@ -39,7 +39,7 @@ test.beforeEach(async ({ page }) => {
   // The head snippet and CSS are pasted into the real site head; the fixtures carry a marker where they go.
   await page.route('**/day-night-*.html', async (route) => {
     const response = await route.fetch()
-    const body = (await response.text()).replace('<!--HEAD-->', `<style>${HEAD_CSS}</style><script>${HEAD_JS}</script>`)
+    const body = (await response.text()).replace('<!--HEAD-->', `<style>${HEAD_CSS}</style><script data-day-night>${HEAD_JS}</script>`)
     await route.fulfill({ response, body })
   })
 })
@@ -72,7 +72,7 @@ const snapshot = (page: Page) =>
       linkLabel: Array.from(link.querySelectorAll('[data-btn-label] > span')).map((span) => span.textContent).join('|'),
       linkHtml: link.innerHTML,
       mode: document.documentElement.classList.contains('is-night') ? 'night' : 'day',
-      pressed: Array.from(document.querySelectorAll('[data-day-night]')).map((button) => button.getAttribute('aria-pressed')),
+      pressed: Array.from(document.querySelectorAll('[data-day-night]:not(script)')).map((button) => button.getAttribute('aria-pressed')),
     }
   })
 
@@ -116,6 +116,8 @@ for (const viewport of [
       const state = await snapshot(page)
       expect(state.mode).toBe('day')
       expect(state.pressed).toEqual(['true', 'false'])
+      // The head snippet's script tag shares the attribute name but is not a button (P-F6).
+      expect(await page.locator('script[data-day-night]').evaluate((tag) => tag.getAttributeNames())).toEqual(['data-day-night'])
       expect(state.heading).toBe(DAY_HEADING)
     })
 

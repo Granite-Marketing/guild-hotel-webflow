@@ -3,4 +3,7 @@ html.is-night:not(.night-ready) :is([data-night-text], [data-night-src], [data-n
   visibility: hidden;
   animation: day-night-failsafe 0s 3s forwards;
 }
+/* P-F5: the Designer draws Day as the pressed button; on a night load show Night pressed from the first paint (the .site-nav_mode opacities, until dayNight() sets is-active). */
+html.is-night:not(.night-ready) [data-day-night="day"] { opacity: 0.5; }
+html.is-night:not(.night-ready) [data-day-night="night"] { opacity: 1; }
 @keyframes day-night-failsafe { to { visibility: visible; } }

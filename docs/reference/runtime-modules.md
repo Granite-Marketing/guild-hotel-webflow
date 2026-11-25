@@ -255,7 +255,7 @@ the copy span would show as a stacked duplicate, so release the head first.
 
 - **Selectors:** `.button` (all variants), `.offers-slider-split_button`,
   `.overlay-detail-panel-modal_button`, `.overlay-detail-panel-modal_item-button`
-  (except the text-link variant `w-variant-0e56f707`). Not covered: the nav
+  (except `.is-booking` rows). Not covered: the nav
   `site-nav_book` text link, swiper arrows, filter toggles, tabs.
 - **Attributes (set by the module, no class toggling):** `data-btn` on the
   button, `data-btn-label` wrapper around the label, `data-btn-copy`
@@ -1128,6 +1128,10 @@ the bar overlaps a light area.
   sections inherit the nearest opaque ancestor's). Figures and videos at
   least 60% of the viewport wide count as photos (cream nav), clipped to
   their visible clip-path area; map art (`[class*="map"]`) is not a photo.
+  A narrower photo (half of a split section, a card) turns the nav cream only
+  across its own width, and only when the photo is clearly dark (70% of its
+  pixels below 0.2 luminance and 90% below 0.4, read once from its smallest
+  file); over mixed and bright photos the nav keeps the section's colour.
 - Overrides: `data-header-theme="dark"` forces the dark nav over an
   element, `data-header-theme="white"` forces cream.
 - Dark variant header (dark text, e.g. /contact): the clone is cream and

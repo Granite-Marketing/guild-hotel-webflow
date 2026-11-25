@@ -245,7 +245,8 @@ export const createLineMaskTimeline = (
               // module conventions, rule 7). The timeline is owned here, so
               // nothing is returned for SplitText to revert.
               const lines = self.lines ?? []
-              gsap.set(lines, { overflow: 'hidden' })
+              // An empty paragraph splits into no lines, and GSAP warns about an empty target.
+              if (lines.length) gsap.set(lines, { overflow: 'hidden' })
               const words = self.words ?? []
               part.lineWords = lines.map((line) => words.filter((word) => line.contains(word)))
               part.lines = lines as HTMLElement[]

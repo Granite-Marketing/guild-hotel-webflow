@@ -13,8 +13,8 @@
 const SELECTOR = [
   '.tab-pills-intro_heading.text-style-script',
   '.meetings-collection-venues_heading',
-  // History "George Marston" (Tan variant); tilted on phones too (M26).
-  '.split-image-text-light_heading.w-variant-9cd3f054-0bc5-3e71-98b6-562cb8361ab0',
+  // History "George Marston" (Split image text slider); tilted on phones only (M26).
+  '[data-wf--split-image-text-slider--variant] .split-image-text-light_heading',
 ].join(', ')
 
 // Script descenders (the long f, p, y) hang below the line box; a quarter of the font size covers them.

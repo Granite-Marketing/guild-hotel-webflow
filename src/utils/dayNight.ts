@@ -47,7 +47,8 @@ const ONE_YEAR = 60 * 60 * 24 * 365
 const HALF_FADE = 0.25
 const IMAGE_WAIT_MS = 1200
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
-const BUTTON_SELECTOR = '[data-day-night]'
+// By value: the head snippet's script tag carries the bare attribute.
+const BUTTON_SELECTOR = '[data-day-night="day"], [data-day-night="night"]'
 const TAGGED_SELECTOR = '[data-night-text], [data-night-src], [data-night-srcset], [data-night-video], [data-night-href]'
 const IMAGE_ATTRIBUTES = ['src', 'srcset', 'sizes'] as const
 

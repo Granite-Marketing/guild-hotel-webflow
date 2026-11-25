@@ -31,7 +31,7 @@ const load = async (page: Page) => {
 const georgeStyle = (page: Page) =>
   page.locator('#george').evaluate((el) => {
     const style = getComputedStyle(el)
-    return { rotate: style.rotate, top: parseFloat(style.marginTop), bottom: parseFloat(style.marginBottom) }
+    return { rotate: style.rotate, transform: style.transform, top: parseFloat(style.marginTop), bottom: parseFloat(style.marginBottom) }
   })
 
 test.describe('phone', () => {
@@ -40,6 +40,7 @@ test.describe('phone', () => {
     await load(page)
     const george = await georgeStyle(page)
     expect(george.rotate).toBe('-5deg')
+    expect(george.transform).toBe('none')
     expect(george.top).toBeGreaterThan(0)
     expect(george.bottom).toBeGreaterThan(george.top)
   })

@@ -22,6 +22,9 @@
  *   - a figure or video at least 60% of the viewport wide counts as dark
  *     (a photo keeps the cream nav), using its visible clip-path area.
  *     Map artwork (any class containing "map") is not a photo;
+ *   - a narrower photo (half of a split section, a card) counts as dark only
+ *     across its own width and only if it is clearly dark all over, so the
+ *     nav stays dark over the light half and over mixed or bright photos (P-E3);
  *   - `[data-header-theme="dark"]` forces the dark nav over an element and
  *     `[data-header-theme="white"]` forces the cream nav (NGA contract).
  * Darker areas are subtracted from lighter ones.
@@ -41,11 +44,21 @@ const OPEN_CLASS = 'is-nav-open'
 const LIGHT_LUMINANCE = 0.5
 const PHOTO_MIN_WIDTH = 0.6
 const PHOTO_SELECTOR = 'figure, video'
+/** Clearly dark: 70% of the pixels are below 0.2 luminance (where cream text starts to read better than dark) and 90% below 0.4. */
+const DARK_PHOTO_LIMITS = [[0.7, 0.2], [0.9, 0.4]]
+const SAMPLE_SIZE = 16
 const NOT_PHOTO_SELECTOR = '[class*="map"], [class*="map"] *'
 
 interface Interval {
   start: number
   end: number
+}
+
+/** A narrow dark photo under the bar: the columns it spans and its vertical interval. */
+interface DarkBlock {
+  left: number
+  right: number
+  interval: Interval
 }
 
 type Rgba = { red: number; green: number; blue: number; alpha: number }
@@ -74,8 +87,7 @@ export const navTheme = () => {
   const buildClone = () => {
     const clone = bar.cloneNode(true) as HTMLElement
     // The bar carries the inverse mask (F59); a clone that copied it would hide exactly where it should show.
-    clone.style.removeProperty('mask-image')
-    clone.style.removeProperty('-webkit-mask-image')
+    clearMask(clone)
     clone.querySelectorAll('[id]').forEach((element) => element.removeAttribute('id'))
     clone.querySelectorAll('[data-nav], [data-nav-mode]').forEach((element) => {
       element.removeAttribute('data-nav')
@@ -147,10 +159,15 @@ export const navTheme = () => {
       const interval = bandInterval(rect.top, rect.bottom)
       if (interval) dark.push(interval)
     })
+    const barWidth = overlay.clientWidth
+    const darkBlocks: DarkBlock[] = []
     const minPhotoWidth = window.innerWidth * PHOTO_MIN_WIDTH
     photos.forEach(({ element, clipHost }) => {
       const rect = element.getBoundingClientRect()
-      if (rect.top > navHeight || rect.bottom < 0 || rect.width < minPhotoWidth) return
+      const wide = rect.width >= minPhotoWidth
+      // Judged as soon as it is on screen, so its tone is known before it reaches the bar.
+      if (!wide && (rect.top > window.innerHeight || rect.bottom < 0 || !isDarkPhoto(element))) return
+      if (rect.top > navHeight || rect.bottom < 0) return
       let top = rect.top
       let bottom = rect.bottom
       if (clipHost) {
@@ -160,26 +177,41 @@ export const navTheme = () => {
         bottom = Math.min(bottom, clipped.bottom)
       }
       const interval = bandInterval(top, bottom)
-      if (interval) dark.push(interval)
+      if (!interval) return
+      if (wide) {
+        dark.push(interval)
+        return
+      }
+      // Whole pixels, so neighbouring columns never leave a seam.
+      const left = Math.max(0, Math.round(rect.left))
+      const right = Math.min(barWidth, Math.round(rect.right))
+      if (right > left && isShown(element)) darkBlocks.push({ left, right, interval })
     })
 
-    const lightVisible = subtractIntervals(light, dark)
-    const shown = darkBase
-      ? subtractIntervals([{ start: 0, end: navHeight }], lightVisible)
-      : lightVisible
-    const gradient = buildMaskGradient(shown, navHeight)
-    if (gradient === lastGradient) return
-    lastGradient = gradient
-    overlay.style.maskImage = gradient
-    overlay.style.setProperty('-webkit-mask-image', gradient)
+    // One column per stretch between photo edges; a single full-width column when no narrow photo is under the bar.
+    const edges = [...new Set([0, barWidth, ...darkBlocks.flatMap(({ left, right }) => [left, right])])].sort((first, second) => first - second)
+    const fullBar = [{ start: 0, end: navHeight }]
+    const columns = edges.slice(1).map((right, index) => {
+      const left = edges[index]
+      const blocks = darkBlocks.filter((block) => block.left <= left && block.right >= right)
+      const lightVisible = subtractIntervals(light, [...dark, ...blocks.map(({ interval }) => interval)])
+      const shown = darkBase ? subtractIntervals(fullBar, lightVisible) : lightVisible
+      return { left, right, shown }
+    })
+    const mask = (inverse: boolean) =>
+      columns
+        .map(({ left, right, shown }) => {
+          const gradient = buildMaskGradient(inverse ? subtractIntervals(fullBar, shown) : shown, navHeight)
+          return `${gradient} ${left}px 0 / ${right - left}px 100% no-repeat`
+        })
+        .join(', ')
+    const overlayMask = mask(false)
+    if (overlayMask === lastGradient) return
+    lastGradient = overlayMask
+    setMask(overlay, overlayMask)
     // F59: hide the real bar where the clone shows, so its antialiased edges
     // never peek out around the clone as a faint outline.
-    const barGradient = buildMaskGradient(
-      subtractIntervals([{ start: 0, end: navHeight }], shown),
-      navHeight,
-    )
-    bar.style.maskImage = barGradient
-    bar.style.setProperty('-webkit-mask-image', barGradient)
+    setMask(bar, mask(true))
   }
 
   // Hide the clone while the full-screen menu is open; on close, recompute
@@ -187,8 +219,7 @@ export const navTheme = () => {
   new MutationObserver(() => {
     if (header.classList.contains(OPEN_CLASS)) {
       overlay.style.visibility = 'hidden'
-      bar.style.removeProperty('mask-image')
-      bar.style.removeProperty('-webkit-mask-image')
+      clearMask(bar)
       return
     }
     lastGradient = ''
@@ -215,6 +246,57 @@ export const navTheme = () => {
   )
   // Content can change size or appear after load (CMS, Finsweet).
   window.addEventListener('load', classifyAreas, { once: true })
+}
+
+const setMask = (element: HTMLElement, mask: string) => {
+  element.style.setProperty('-webkit-mask', mask)
+  element.style.setProperty('mask', mask)
+}
+
+const clearMask = (element: HTMLElement) => {
+  element.style.removeProperty('-webkit-mask')
+  element.style.removeProperty('mask')
+}
+
+/** Stacked tabs and hover images are in the layout but not on show. */
+const isShown = (element: HTMLElement) =>
+  element.checkVisibility?.({ checkOpacity: true, checkVisibilityCSS: true }) ?? true
+
+const darkPhotos = new Map<string, boolean>()
+
+/** Whether a narrow photo is dark. A photo not sampled yet counts as light (the nav's own colour for the section). */
+const isDarkPhoto = (element: HTMLElement) => {
+  const image = element.querySelector('img')
+  if (!image) return element.matches('video') || !!element.querySelector('video')
+  // The smallest srcset file is enough to read a tone.
+  const source = image.srcset.split(/\s+[\d.]+[wx]/)[0].trim() || image.currentSrc || image.src
+  if (!source) return false
+  if (!darkPhotos.has(source)) samplePhoto(source)
+  return darkPhotos.get(source) ?? false
+}
+
+// shortcut: one tone for the whole photo, caption gradients not counted; sample the strip under the bar if a half-dark photo ever reads wrong.
+const samplePhoto = (source: string) => {
+  darkPhotos.set(source, false)
+  const image = new Image()
+  image.crossOrigin = 'anonymous' // the pixels are only readable over CORS, which Webflow's CDN allows
+  image.onload = () => {
+    const canvas = document.createElement('canvas')
+    canvas.width = canvas.height = SAMPLE_SIZE
+    const context = canvas.getContext('2d', { willReadFrequently: true })
+    if (!context) return
+    context.drawImage(image, 0, 0, SAMPLE_SIZE, SAMPLE_SIZE)
+    const { data } = context.getImageData(0, 0, SAMPLE_SIZE, SAMPLE_SIZE)
+    const tones: number[] = []
+    for (let pixel = 0; pixel < data.length; pixel += 4) {
+      if (data[pixel + 3] >= 128) tones.push(luminance({ red: data[pixel], green: data[pixel + 1], blue: data[pixel + 2], alpha: 1 }))
+    }
+    // A mostly see-through picture (a logo) is not a photo.
+    if (tones.length * 2 < SAMPLE_SIZE * SAMPLE_SIZE) return
+    tones.sort((first, second) => first - second)
+    darkPhotos.set(source, DARK_PHOTO_LIMITS.every(([share, limit]) => tones[Math.floor(tones.length * share)] < limit))
+  }
+  image.src = source
 }
 
 /** The first opaque background colour on the element or its ancestors. */
