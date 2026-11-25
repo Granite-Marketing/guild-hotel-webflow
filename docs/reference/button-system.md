@@ -81,7 +81,7 @@ button is-chamfer [colour] [is-outline] [size]
 
 ### Where each class lives (Webflow)
 
-- Offers Slider Split: 5 slide links, `button is-chamfer is-text-burgundy`. Blue and Tan variant colours come from the section variant class in the CSS.
+- Offers Slider Split: 5 slide links, `button is-chamfer is-text-burgundy`. The Retail and Arts & Culture sliders are components of their own since the split (Nov 2026): their colours come from the plain class on the section, `.blue` and `.tan`.
 - Map Feature, Map Feature Image Bg, Map Feature Centered: `button is-chamfer is-dark is-outline`.
 - Venue Card Fullbleed Tall (1) and Left (3): `button is-chamfer is-outline`.
 - Home art stories link: `button is-chamfer is-dark is-outline is-dark-mobile` (filled below 768px).
