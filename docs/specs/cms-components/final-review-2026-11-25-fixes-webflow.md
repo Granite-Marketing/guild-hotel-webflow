@@ -57,7 +57,7 @@ Brief: [final-review-2026-11-25-fixes.md](final-review-2026-11-25-fixes.md). Par
 | Night props | 51 of 51 renamed and in their day twin's group (13 components). No Night group left. Instance values kept (Home hero night image and heading read back). |
 | Variants | 19 of 21 renamed. "Mobile Full Bleed" and "Mobile Left Aligned" each covered two variants that were to be merged, so the second has a "2"; the merges wait. **Choice needed:** Olive Home and Olive Dining keep their names, because an unused variant is already called Olive. |
 | Hero "Mobile Short Button Label" | Renamed only. The clipped label is a look change and waits. |
-| Bindings | All 119 CMS bindings on the 23 bound instances match the before record. One bound element or list read in 17 of 21 collections through elements or instances; Gallery Categories and Art Categories filters not read, Legal Corporates and Post Categories read through their hero. Night image, text, video and link attributes read on the Hero, Split, Split Edge and Place pop-up: bound to the same prop ids, now named (Night). |
+| Bindings | All 119 CMS bindings on the 23 bound instances match the before record. A bound element, instance or list read for 19 of 21 collections (Amenities, Map Places, FAQs and Offers: the list only). Gallery Categories and Art Categories not read. Night image, text, video and link attributes read on the Hero, Split, Split Edge and Place pop-up: bound to the same prop ids, now named (Night). |
 
 Where Webflow puts a moved prop: at the end of its group, so a night prop follows its block but is directly under its twin only where the twin is last (for example Venue Detail Modal). The exact order inside a group needs a drag in the Designer.
 
