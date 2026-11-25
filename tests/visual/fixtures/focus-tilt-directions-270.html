@@ -10,11 +10,13 @@
       /* A stylesheet ring marked !important, which an inline non-important outline loses to. */
       button:focus, a:focus { outline: 3px solid rgb(255, 0, 0) !important; }
       h2 { font-size: 40px; margin: 0; }
+      /* The Webflow Tan variant tilts through transform on phones; it must not add to the rotate. */
+      @media (max-width: 767px) { .split-image-text-light_heading { transform: rotate(-7.38deg); } }
     </style>
   </head>
   <body>
     <button id="back" type="button">Back</button>
-    <h2 class="split-image-text-light_heading w-variant-9cd3f054-0bc5-3e71-98b6-562cb8361ab0" id="george">George Marston</h2>
+    <section data-wf--split-image-text-slider--variant="tan"><h2 class="split-image-text-light_heading" id="george">George Marston</h2></section>
     <a data-map-directions id="d1" href="https://example.com/a">Directions</a>
     <a id="d2" href="https://www.google.com/maps/dir/?api=1&destination=1,2">Directions</a>
   </body>
