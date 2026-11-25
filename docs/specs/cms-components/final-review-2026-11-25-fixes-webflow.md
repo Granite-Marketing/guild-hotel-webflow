@@ -1,10 +1,12 @@
 # Final review fixes, Lane B: Webflow record (2026-11-25)
 
-Brief: [final-review-2026-11-25-fixes.md](final-review-2026-11-25-fixes.md). Part 1 is on staging. Part 2 (names and folders) is saved in Webflow and not published, as briefed. Ids that changed or were added: the last section of `docs/reference/webflow-ids.md`.
+Brief: [final-review-2026-11-25-fixes.md](final-review-2026-11-25-fixes.md). Part 1 is on staging. Part 2 (names and folders) was not published for its own sake, as briefed, but the last Part 1 correction (22:22) carried the saved names to staging. Ids that changed or were added: the last section of `docs/reference/webflow-ids.md`.
 
 ## How it was checked
 
 - **Baseline.** Staging was published once with no change of mine (21:18), so Stephen's unpublished edits are in the baseline and not mistaken for mine. 24 pages and the 404 were captured at 1440, 991, 800, 650 and 390 before (set C) and after (set H): every element's position, size, display, text, link, alt, colour and font size, plus a picture. All 125 differ, and each difference was read and traced to a row below, or to three known moving parts: the newsletter spam check, map tiles and lazy images in the gallery and footer.
+- **After the renames.** All 25 pages were captured again after the 22:22 publish (set I) and compared with set H: 12 of 125 differ, all from the two footer logos loading late, plus the guidelines headline fixed in between. The renames changed nothing visitors see.
+- **Limit.** Sets C, H and I were captured with animations off. Behaviour (pop-ups, controls, hidden items) was checked with animations on.
 - **Console.** Full scroll of all 24 pages at 1440 and 390 after the last publish: no page errors. The only two messages are on Contact, from the form spam check, and were there before.
 - **Part 2.** Schemas, folders, 205 items, 55 components with props and variants were saved before. After each collection the fields, slugs, types, options, help text, folders and every item were compared by script. Same for every prop and variant.
 
@@ -55,7 +57,7 @@ Brief: [final-review-2026-11-25-fixes.md](final-review-2026-11-25-fixes.md). Par
 | Night props | 51 of 51 renamed and in their day twin's group (13 components). No Night group left. Instance values kept (Home hero night image and heading read back). |
 | Variants | 19 of 21 renamed. "Mobile Full Bleed" and "Mobile Left Aligned" each covered two variants that were to be merged, so the second has a "2"; the merges wait. **Choice needed:** Olive Home and Olive Dining keep their names, because an unused variant is already called Olive. |
 | Hero "Mobile Short Button Label" | Renamed only. The clipped label is a look change and waits. |
-| Bindings | BINDINGS_RESULT |
+| Bindings | All 119 CMS bindings on the 23 bound instances match the before record. One bound element or list read in 17 of 21 collections through elements or instances; Gallery Categories and Art Categories filters not read, Legal Corporates and Post Categories read through their hero. Night image, text, video and link attributes read on the Hero, Split, Split Edge and Place pop-up: bound to the same prop ids, now named (Night). |
 
 Where Webflow puts a moved prop: at the end of its group, so a night prop follows its block but is directly under its twin only where the twin is last (for example Venue Detail Modal). The exact order inside a group needs a drag in the Designer.
 
@@ -68,12 +70,16 @@ Where Webflow puts a moved prop: at the end of its group, so a night prop follow
 
 ## Independent check
 
-VERIFY_RESULT
+A separate Sonnet session checked 19 claims at the five widths with animations on.
+
+- **It found one real fault:** the Retail slider buttons showed again with animations on. The reveal code wraps the button, so my rule missed it, and my own captures had animations off. Rule fixed, published 22:22, and every hidden item re-checked with animations on at five widths: 0 buttons on all five slides, 0 dead menu links, 0 floorplan links, 0 dead bylines, one press logo (the filled one).
+- **It reported one thing outside the brief:** every room's gallery is headed "deluxe king suite gallery" (typed on the template).
+- It saw the form land 224 to 396 px down after the pop-up closes. Re-measured: 92 at 1440 and 64 at 390 once the scroll ends.
+- The rest passed, except items it did not screenshot at every width.
 
 ## Not checked
 
 - Real iPhones and Safari, screen readers, and form submission.
 - The CMS editor and props panel as an editor sees them (folder order, prop order inside groups).
-- Part 2 on the published site: nothing was published after the renames.
 - Figma: no row pointed at a design.
 - Split-sticky photos on Legal and Corporate have alt text that does not match the photo (a note being written is called "a private suite"). Found while looking, not in the brief, unchanged.
