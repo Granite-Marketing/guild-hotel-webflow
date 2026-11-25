@@ -136,6 +136,135 @@ Width key: all = every width; 991 / 767 / 479 = that width and below; 992+ = des
 | T4 | Limits | A prop of this kind is free text, so a typo does nothing (see C12). Variants give a proper dropdown but only one per component. It does not give a different value per width unless each step is defined per width in CSS. | Prop types available. | n/a | if approved: named steps ("small", "wide"), each step defined at all widths | Designer, code |
 | T5 | Recommendation | Keep small, medium, large as variants for common looks. Add one Title size and one Title width attribute to script-intro first. It replaces V20 to V25. The CSS must sit in an HTML embed component so the canvas shows it. | Repo rule `designer-visible-css-embed-component.md`. | n/a | ask | Designer, code |
 
+## Night fields and props beside their day twins
+
+Every pair was read from the bindings, not the label: 16 CMS night fields and 51 night props. Text pairs sit on one element (day value as its text, night value in `data-night-text`); image pairs are two images in one frame. **None of the 67 sits next to its twin today.** CMS night fields are last or outside the folders; component night props all sit in a "Night" group at the bottom. "(Night)" names follow Stephen's 25 Nov rule.
+
+### CMS fields
+
+| Collection | Night field today | Replaces (from the binding) | Where | Proposed name | Next to its twin? | Note |
+|---|---|---|---|---|---|---|
+| Meeting Venues | Night - Card Image | Card - Image | /meetings venue card | Card - Image (Night) | no, 24 fields apart | Night is bound on /meetings only. The same venue cards on Legal and Corporate have no night binding. |
+| Meeting Venues | Night - Card Heading | item Name | /meetings venue card | Card - Name (Night) | no | Name cannot go in a folder. |
+| Meeting Venues | Night - Card Intro | Card - Intro | /meetings venue card | Card - Intro (Night) | no | |
+| Dinings | Night - Home Card Image | Home Card - Image | Home dining list | Home Card - Image (Night) | no | Not on the other-dining cards or the Reserve pop-up, which use the same day image. |
+| Dinings | Night - Home Card Heading | item Name | Home dining list | Home Card - Name (Night) | no | Only visible where Show Name is on: 2 of 5 venues. |
+| Dinings | Night - Home Card Tagline | Home Card - Tagline | Home dining list | Home Card - Tagline (Night) | no | |
+| Rooms | Night - Hero Image | Hero - Card And Hero Image | Rooms template hero | Room - Image (Night, Hero) | no | One day field feeds three places, each with its own night field, so "day name (Night)" cannot be used three times. **Ask:** three names as here (recommended, no rebinding), or one night image for all three. |
+| Rooms | Night - Card Image | Hero - Card And Hero Image | quiz result card on /rooms | Room - Image (Night, Card) | no | Not on Discover Other Rooms. |
+| Rooms | Night - Feature Image | Hero - Card And Hero Image | Rooms template feature band | Room - Image (Night, Feature) | no | Answers the open question: it has a day twin. |
+| Rooms | Night - Hero Heading | item Name | Rooms template hero | Hero - Name (Night) | no | |
+| Rooms | Night - Hero Text | Hero - Intro | Rooms template hero | Hero - Intro (Night) | no | |
+| Rooms | Night - Feature Text | fixed text typed on the template (lorem, same on every room) | feature band | Feature - Text (Night) | no twin | **Ask:** add a day field or drop it. |
+| Rooms | Night - Feature Video | nothing; by day the frame shows the image above | feature band | Feature - Video (Night) | no twin | Plays over the feature image. **Ask:** keep or drop. |
+| Rooms | Night - Card Heading | item Name | quiz result card on /rooms | Card - Name (Night) | no | |
+| Beyond Downtown Places | Night - Pop-up Image | Card - Image | pop-up on /neighborhood | Card - Image (Night, Pop-up) | no | Its twin is Card - Image, not Pop-up - Gallery (bound to nothing). The card itself does not change at night, so the name says pop-up. **Ask.** |
+| Beyond Downtown Places | Night - Pop-up Text | Pop-up - Text | pop-up on /neighborhood | Pop-up - Text (Night) | no | |
+
+Night text typed on the page, with no field: /dining has night slots on Lobby Bar, Pool Lounge and Garden Terrace (video, image, text, button text, button link; heading on Garden Terrace). One is filled, the Garden Terrace paragraph. They go with H1.
+
+### Component props
+
+| Component | Night prop today | Replaces (from the binding) | Proposed name | Move to group |
+|---|---|---|---|---|
+| Hero Fullbleed Centered | Night - Image | Image | Image (Night) | Background |
+| | Night - Video | Video Link (same frame) | Video Link (Night) | Background |
+| | Night - Heading | Heading | Heading (Night) | Content |
+| | Night - Text | Text | Text (Night) | Content |
+| | Night - Button Text | Button Text | Button Text (Night) | Button |
+| | Night - Button Link | Button Link | Button Link (Night) | Button |
+| Venue Card Fullbleed Tall | Night - Image | Image | Image (Night) | Image |
+| | Night - Video | nothing; the image shows by day | Video (Night) | Image |
+| | Night - Heading | Heading | Heading (Night) | Content |
+| | Night - Text | Text | Text (Night) | Content |
+| | Night - Button Text | Button Label | Button Label (Night) | Button |
+| | Night - Button Link | Button Link | Button Link (Night) | Button |
+| Split image text light | Night - Image | Image | Image (Night) | Images |
+| | Night - Video | nothing; the image shows by day | Video (Night) | Images |
+| | Night - Heading | Heading | Heading (Night) | Content |
+| | Night - Text | Body | Body (Night) | Content |
+| | Night - Button Text | CTA label | CTA label (Night) | Content |
+| | Night - Button Link | CTA | CTA (Night) | Content |
+| Split Image Text Compact, Edge, Edge Large, Stagger Left, Stagger Mid, Wide (6, same four each) | Night - Image, Video, Heading, Text | Image; nothing; Heading; Body | Image (Night); Video (Night); Heading (Night); Body (Night) | Images; Images; Content; Content |
+| Article Card Tall Item | Night - Image, Heading, Text | Image; Heading; Text | Image (Night); Heading (Night); Text (Night) | none (card has no groups) |
+| Art Detail Modal, Venue Detail Modal, Place Detail Modal | Night - Image, Text | Image; Text | Image (Night); Text (Night) | Media; Body |
+
+Only Place Detail Modal and the Rooms hero feed night props from the CMS; Art and Venue Detail night props are set nowhere. No component has a second-image night twin (Split Edge, Edge Large, Wide). A prop's group can be set by the tools; its place inside the group cannot, so "directly under" may need a drag in the Designer.
+
+### Does renaming a field touch its slug or bindings?
+
+- **Evidence: no.** On 20 Nov the CMS audit renamed fields by display name. 56 of its renamed fields still exist; all 56 have the same id and the same slug as before (compared with `cms-audit-332.md`), for example "Intro - Video Link" is still `section-video`. 24 of them are bound through component props and the bindings read correctly today, others were read on elements (Other Dining - Heading, Focus - Heading, Card - Image).
+- **Why:** bindings store the field id, list filters and sorts store the slug, and page SEO uses the slug. None stores the display name. `seed-rooms-quiz.mjs` finds its field by slug.
+- **Documentation:** Webflow's update-field page accepts display name, required and help text only, so a rename cannot set a slug. It does not say what happens to the slug or bindings, and Webflow's help article refused to load.
+- **Props** bind by prop id in the same way. No prop rename was available to compare, so that is by design, not evidence.
+
+## Folders and field order (proposal, nothing applied)
+
+Order: Settings first (general settings only), then the card or listing, then the page or pop-up from top to bottom, each night field under its day field. A switch that belongs to one block stays beside it. An arrow marks a rename. Checked by script: all 166 groupable fields in 21 collections appear exactly once, and no two labels or folders in a collection share a name.
+
+- The write replaces the whole list, so each collection below is complete. Name and Slug cannot be in a folder in any collection (FAQs calls Name "Question"); they stay at the top.
+- Existing folders: Rooms (Card, Room page, Quiz) and Happenings & Stories (Post details, Hero and card, Content). All are kept; Post details becomes Settings. Gallery - Media and the eight night fields in Rooms, and Card - Topic in Stories, were outside every folder.
+- Sort order becomes "Settings - Sort Order" everywhere. Five collections have no other groupable field; Legal Corporates and Post Categories have no general setting, so no Settings folder.
+- Whether the editor shows folder fields in the given order is what the tool says ("ordered field IDs"); not seen in the editor.
+
+| Collection | Folders today | Folder | Fields in order |
+|---|---|---|---|
+| 🍴 Dinings | none | 1. Settings | Card - Sort Order → **Settings - Sort Order**; Split Section - Look → **Settings - Page Colour** |
+|  |  | 2. Home Card | Home Card - Image; Night - Home Card Image → **Home Card - Image (Night)**; Home Card - Logo; Home Card - Show Logo; Home Card - Show Name; Night - Home Card Heading → **Home Card - Name (Night)**; Home Card - Tagline; Night - Home Card Tagline → **Home Card - Tagline (Night)** |
+|  |  | 3. Hero | Hero - Image; Hero - Logo; Hero - Show Logo; Hero - Heading; Hero - Intro; Booking - Reserve Link |
+|  |  | 4. Intro | Intro - Image; Intro - Video Link; Intro - Heading; Intro - Text; Intro - Caption |
+|  |  | 5. Info | Info - Dress Code; Info - Hours; Info - Menu Link; Info - Venue Site Link; Info - Show Discover Link |
+|  |  | 6. Explore | Explore - Image; Explore - Text |
+|  |  | 7. Image Pair | Image Pair - Image 1; Image Pair - Image 2; Image Pair - Text |
+|  |  | 8. Press | Press - Show Quote; Press - Quote; Press - Logo |
+|  |  | 9. Gallery | Gallery - Heading; Gallery - Media |
+|  |  | 10. Other Dining | Other Dining - Heading; Other Dining - Intro |
+| 🧑‍⚖️ Legal Corporates | none | 1. Hero | Hero - Image; Hero - Heading; Hero - Text |
+|  |  | 2. Intro | Intro - Heading; Intro - Text |
+|  |  | 3. Focus | Focus - Heading; Focus - Text |
+| 🏷️ Post Categories | none | 1. Hero | Hero - Heading |
+| 📰 Happenings & Stories | Post details, Hero and card, Content | 1. Settings | Post - Category → **Settings - Category**; Card - Topic → **Settings - Topic**; Post - Topic → **Settings - Topic Label**; Post - Date → **Settings - Date** |
+|  |  | 2. Hero and card | Hero - Image; Hero - Excerpt |
+|  |  | 3. Content | Body - Text; Inset - Image; Highlight - Text; Highlight - Image |
+| 📍 Map Places | none | 1. Settings | Place - Sort Order → **Settings - Sort Order** |
+|  |  | 2. Place | Place - Walk Time; Place - Coordinates |
+| 🛏️ Rooms | Card, Room page, Quiz | 1. Settings | Card - Sort Order → **Settings - Sort Order**; Card - Room Type → **Settings - Room Type**; Card - Show In Recommendations → **Settings - Show In Recommendations** |
+|  |  | 2. Card | Hero - Card And Hero Image → **Room - Image**; Night - Card Image → **Room - Image (Night, Card)**; Night - Hero Image → **Room - Image (Night, Hero)**; Night - Feature Image → **Room - Image (Night, Feature)**; Night - Card Heading → **Card - Name (Night)**; Card - Guests Label; Card - Size Label |
+|  |  | 3. Room page | Night - Hero Heading → **Hero - Name (Night)**; Hero - Intro; Night - Hero Text → **Hero - Intro (Night)**; Room Description - Text; Room Description - Details; Night - Feature Video → **Feature - Video (Night)**; Night - Feature Text → **Feature - Text (Night)**; Amenities - Items; Gallery - Media |
+|  |  | 4. Quiz | Quiz - Max Guests; Quiz - Options; Quiz - Hover Video |
+| 🧭 Quiz Options | none | 1. Settings | Quiz - Step → **Settings - Quiz Step**; Quiz - Sort Order → **Settings - Sort Order** |
+|  |  | 2. Option | Quiz - Image; Quiz - Image Alt |
+| 🖼️ Art Collection | none | 1. Settings | Card - Sort Order → **Settings - Sort Order**; Art - Type → **Settings - Type**; Card - Category → **Settings - Category** |
+|  |  | 2. Card | Card - Image; Card - Image Alt; Card - Tile Size |
+|  |  | 3. Pop-up | Pop-up - Byline; Pop-up - Artist; Pop-up - Caption; Pop-up - Description |
+| 📸 Gallery Photos | none | 1. Settings | Photo - Sort Order → **Settings - Sort Order**; Card - Category → **Settings - Category**; Photo - Category → **Settings - Category (Old)** |
+|  |  | 2. Photo | Photo - Image; Photo - Image Alt |
+| 📰 Press | none | 1. Settings | Card - Sort Order → **Settings - Sort Order**; Card - Category → **Settings - Category** |
+|  |  | 2. Card | Card - Image; Card - Logo; Card - Description; Card - Link |
+| 🏷️ Press Categories | none | 1. Settings | Category - Sort Order → **Settings - Sort Order** |
+| 🎁 Packages | none | 1. Settings | Card - Topic → **Settings - Topic**; Package - Topic → **Settings - Topic Label**; Package - Date → **Settings - Date** |
+|  |  | 2. Hero and card | Hero - Image; Hero - Excerpt |
+|  |  | 3. Content | Body - Text; Inset - Image; Highlight - Text; Highlight - Image |
+| ❓ FAQs | none | 1. Settings | FAQ - Sort Order → **Settings - Sort Order** |
+|  |  | 2. Answer | Answer - Text |
+| 🏛️ Meeting Venues | none | 1. Settings | Card - Sort Order → **Settings - Sort Order**; Pages - Meetings → **Settings - Show On Meetings**; Pages - Legal & Corporate → **Settings - Show On Legal & Corporate** |
+|  |  | 2. Card | Card - Image; Night - Card Image → **Card - Image (Night)**; Night - Card Heading → **Card - Name (Night)**; Card - Intro; Night - Card Intro → **Card - Intro (Night)** |
+|  |  | 3. Pop-up | Pop-up - Image; Pop-up - Text; Pop-up - Layout Options; Pop-up - Floorplan Link |
+|  |  | 4. Features | Features - 1 Title; Features - 1 Text; Features - 1 Image; Features - 2 Title; Features - 2 Text; Features - 2 Image; Features - 3 Title; Features - 3 Text; Features - 3 Image; Features - 4 Title; Features - 4 Text; Features - 4 Image; Features - 5 Title; Features - 5 Text; Features - 5 Image |
+| 🏖️ Beyond Downtown Places | none | 1. Settings | Card - Sort Order → **Settings - Sort Order** |
+|  |  | 2. Card | Card - Image; Night - Pop-up Image → **Card - Image (Night, Pop-up)** |
+|  |  | 3. Pop-up | Pop-up - Text; Night - Pop-up Text → **Pop-up - Text (Night)**; Pop-up - Learn More Link; Pop-up - Gallery |
+| 🛎️ Amenities | none | 1. Settings | Sort order → **Settings - Sort Order** |
+| 🖼️ Media | none | 1. Settings | Media - Sort Order → **Settings - Sort Order** |
+|  |  | 2. Media | Media - Image; Media - Video Link; Media - Alt Text; Media - Caption |
+| 🔖 Topics | none | 1. Settings | Sort Order → **Settings - Sort Order** |
+| 🏷️ Art Categories | none | 1. Settings | Sort Order → **Settings - Sort Order** |
+| 🏷️ Gallery Categories | none | 1. Settings | Sort Order → **Settings - Sort Order** |
+| 🏷️ Offers | none | 1. Settings | Slide - Sort Order → **Settings - Sort Order**; Slide - Slider → **Settings - Slider** |
+|  |  | 2. Slide | Slide - Text; Slide - Link; Slide - Image |
+
+Notes for Stephen's list, none decided here: Rooms image names (three nights, one day); Feature Text and Feature Video; Beyond Downtown image name; "Settings - Topic Label" is the second topic field (M15) and "Settings - Category (Old)" the leftover (M14), both better removed than renamed; Other Dining fields may become static (M2); Meeting Venues feature text and images may go (C2), so apply folders after those decisions or the write must be repeated; Booking - Reserve Link keeps its name and sits in Hero, where its button is, and the pop-up should use it too (M1).
+
 ## Not checked
 
 - **Single or multi-line.** The Webflow tools do not say whether a text prop or a plain text CMS field is single or multi-line. Needs the Designer open, or a person looking at the panel. Values with line breaks exist in Dinings Hours, Intro Heading, Press Quote, Meeting Venues Layout Options, Art Caption, Amenities Name.
@@ -143,8 +272,9 @@ Width key: all = every width; 991 / 767 / 479 = that width and below; 992+ = des
 - **Real renders of each variant at 991.** The comparison is on computed styles with the site's own CSS, outside its page. Page-only embeds and JavaScript could hide or add a difference. Lane A's render decides for V2 to V4, V11 and V18.
 - **Edits after the last publish.** Home and eleven templates show a last edit on 24 Nov 17:33 to 17:38, after the 23 Nov publish. Trees and props are the current Designer; the stylesheet and HTML are the 23 Nov publish. The 12 deleted-variant ids may go at the next publish.
 - **Style Guide page instances.** The tool errors on that draft. By count it and 404 hold the two Global Styles not found elsewhere. 401 and Starter Components have none. The 15 unpublished CMS templates were not opened; every other component's count is fully accounted for without them.
+- **Field order in the editor**, whether order inside a prop group can be set by a tool, and Webflow's own help text on renaming (page refused to load).
 - **Every link.** Link type (page or typed) was read on 24 buttons plus all link props. Other plain links were only checked for `#` in the HTML.
-- **Prop bindings** on Overlay Detail Panel Modal, the two long forms, Site Nav, FAQ Accordion, Offers Slider and Key Features Item. The rest (35 components, 578 elements) was read by a helper that typed its results up by hand; I re-read 9 of its 218 bound elements and all matched.
+- **Prop bindings** on Overlay Detail Panel Modal, the two long forms, Site Nav, FAQ Accordion, Offers Slider and Key Features Item. The rest (35 components, 578 elements) was read by a helper that typed its results up by hand; I re-read 32 of its 218 bound elements and all matched. The night pairs on the six smaller Split components rest on its reading; every other night pair was read directly.
 - **Conditional visibility** was read only where named above. Figma was not compared (Lane A).
 - Published HTML was crawled for 17 static pages, 5 venues, 2 legal pages, 3 rooms, 1 story and 1 package.
 
