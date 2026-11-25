@@ -17,6 +17,7 @@ Read-only. Nothing on the site, in the CMS or in the code changes until Stephen 
 4. Nothing is deleted, renamed or rebound during the review.
 5. Approved by Stephen 2026-11-25, to apply after the review confirms the pairs: night fields and props are named `<day name> (Night)`. Where the day value is the item Name, use the block's name (`Card - Name (Night)`). Every collection gets folders (Webflow field groups), with each night field directly under its day field, and folders and fields in the order they appear on the page ("Can you order CMS fields? Like put things in chronological order?"). Replaces DN5 in the day and night spec.
    - Stephen, 2026-11-25, go-ahead: "Please do, cause fields in chronological order and then putting night next to it is perfect. I then also like having settings in the CMS at the top of the collection unless it's specific for a certain field. If it's general eg sort order or category top of CMS collection items."
+   - Pilot applied to Meeting Venues 2026-11-25, waiting for Stephen's look before the other collections: folders Settings, Card, Pop-up, Features; three night fields renamed. Read back: ids, slugs and the sampled item unchanged, the /meetings night image is still bound. Not seen in the editor. The three Settings labels (`Card - Sort Order`, `Pages - Meetings`, `Pages - Legal & Corporate`) keep their names until Stephen approves the proposed `Settings - ...` ones.
 6. Still open: night fields with no clear day field (Rooms Feature fields, Beyond Downtown pop-up image).
 
 ## What is known
