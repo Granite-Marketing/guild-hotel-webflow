@@ -10,15 +10,17 @@
  * never moved or replaced (heroImageScale keeps animating it).
  *
  * An empty or blank link changes nothing. Reduced motion keeps the image.
- * Links: file (.mp4, .webm, .mov), YouTube, Vimeo (see embedVideo.ts).
+ * Links: file (.mp4, .webm, .mov), Dropbox, YouTube, Vimeo (see embedVideo.ts).
+ * Inside a hexagon scroll mask panel, scrollEnlargeSnap scales the whole frame
+ * (image and video together) when `hasVideoLink(frame)` is true (#428).
  *
  * Legacy markup (Dinings): a hidden `[data-section-video="{url}"]` marker
  * sits just before the section; its first image's parent is the frame.
  */
 
-import { embedVideo } from '$utils/embedVideo'
+import { embedVideo, parseVideoUrl } from '$utils/embedVideo'
 
-const FRAME_SELECTOR = '[data-video-link]'
+export const FRAME_SELECTOR = '[data-video-link]'
 const LEGACY_MARKER_SELECTOR = '[data-section-video]'
 
 const coverFrame = (frame: HTMLElement, image: HTMLImageElement, url: string) => {
@@ -45,6 +47,12 @@ const coverFrame = (frame: HTMLElement, image: HTMLImageElement, url: string) =>
   video.setAttribute('aria-hidden', 'true')
   frame.append(video)
   player.play()
+}
+
+/** True when this frame will show a video: its link is set and playable. */
+export const hasVideoLink = (frame: HTMLElement) => {
+  const url = frame.dataset.videoLink?.trim()
+  return Boolean(url && parseVideoUrl(url))
 }
 
 export const mediaVideo = () => {

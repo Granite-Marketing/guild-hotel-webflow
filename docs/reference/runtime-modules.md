@@ -406,7 +406,7 @@ transition (image wipe, then a text transition). Guild Figma Home-Animation-1 (h
 | `data-scroll-enlarge-snap-stage` | inside root (optional) | The box that pins. Give it a fixed height (`100svh`). Its padding is the gap around the full-size frame. Defaults to the root itself. |
 | `data-scroll-enlarge-snap-media` | inside stage | The frame. Style it at its small start size (for example `width: 79%`, `aspect-ratio: 16 / 9`), `position: relative`, `overflow: hidden`. The module grows it to the stage content box. Chamfered corners belong on this element. Do not set `max-width` or `max-height` on it. |
 | `data-scroll-enlarge-snap-item` | inside media, one per panel | Panels overlap (`position: absolute; inset: 0`). DOM order is panel order. |
-| `data-scroll-enlarge-snap-image` | inside item (optional) | Image that settles from `scale: 1.2` as its panel wipes in. Defaults to the first `img`. |
+| `data-scroll-enlarge-snap-image` | inside item (optional) | Image that settles from `scale: 1.2` as its panel wipes in. Defaults to the first `img`. When its frame has a playable `data-video-link`, the frame settles instead (see mediaVideo). |
 | `data-scroll-enlarge-snap-content` | inside item (optional) | Its headings, paragraphs, logo figure and `.button` line-mask in, triggered after its mask/wipe completes, reverses on leave (`lineMaskReveal`). |
 | `data-scroll-enlarge-snap-tab` | inside root (optional) | Nth tab maps to nth item. Click plays one eased move to that panel. Keep tabs outside the items so they stay visible. |
 
@@ -495,8 +495,18 @@ Any media frame can show a video instead of its image (Y1, Y2, Y3). Replaces
 - `data-video-link` on the frame (the element that holds the `<img>`). Works on
   plain elements, inside components and inside Collection List items (every
   frame is handled independently), the hero frame included.
-- Accepts a file (.mp4, .webm, .mov), YouTube or Vimeo link (shared parsing in
-  `embedVideo.ts`). Empty or whitespace-only: nothing is injected.
+- Accepts a file (.mp4, .webm, .mov), Dropbox, YouTube or Vimeo link (shared
+  parsing in `embedVideo.ts`). Empty or whitespace-only: nothing is injected.
+- Dropbox (#428): any `dropbox.com` or `dl.dropbox.com` link (`/scl/fi/` share
+  links with `dl=0`, `dl=1` or `raw=1`, old `/s/` links) and direct
+  `dl.dropboxusercontent.com` links become the direct file on
+  `dl.dropboxusercontent.com`, keeping `rlkey` and dropping `dl`, `raw` and
+  `st`. Paste the link exactly as Dropbox's Share button gives it.
+- Hexagon scroll mask panels (#428): put `data-video-link` on the panel's
+  image frame (the `<img>`'s parent). When the link is playable,
+  `scrollEnlargeSnap` settles the whole frame from `scale: 1.2`, so the video
+  and image move together; blank or broken links keep the image-only move.
+  Check: `npx playwright test tests/visual/scroll-enlarge-snap-video.spec.ts`.
 - Injects a muted, looping, `playsinline`, autoplay `<video>` (or the iframe
   for YouTube/Vimeo) absolutely covering the frame, copying the image's
   `object-fit` and `object-position`. The image stays underneath as poster and
