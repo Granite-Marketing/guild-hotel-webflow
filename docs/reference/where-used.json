@@ -1,0 +1,3469 @@
+{
+ "base": "https://the-guild-hotel-c34e71.webflow.io",
+ "generated": "2026-11-26T19:45:24.101Z",
+ "pages": [
+  "/",
+  "/accessibility",
+  "/arts",
+  "/blog",
+  "/contact",
+  "/dining",
+  "/dining/dining-gardenterrace",
+  "/dining/dining-lobbybar",
+  "/dining/dining-poollounge",
+  "/dining/dining-zuma",
+  "/dining/solana-coffee",
+  "/gallery",
+  "/guidelines",
+  "/happenings",
+  "/history",
+  "/legal-corporate/corporate",
+  "/legal-corporate/legal",
+  "/meetings",
+  "/neighborhood",
+  "/packages",
+  "/press",
+  "/privacy-policy",
+  "/rooms",
+  "/rooms/city-level-below-ground",
+  "/rooms/cozy-courtyard-king",
+  "/rooms/cozy-courtyard-queen",
+  "/rooms/cozy-king",
+  "/rooms/cozy-queen",
+  "/rooms/guild-city-level-loft",
+  "/rooms/guild-corner-loft-suite",
+  "/rooms/guild-double",
+  "/rooms/guild-loft-suite",
+  "/rooms/placeholder-single-1",
+  "/rooms/placeholder-single-2",
+  "/rooms/two-bedroom-loft-suite",
+  "/wellness"
+ ],
+ "families": {
+  "accordion": [
+   "/",
+   "/arts",
+   "/blog",
+   "/contact",
+   "/dining",
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee",
+   "/gallery",
+   "/guidelines",
+   "/happenings",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/neighborhood",
+   "/packages",
+   "/press",
+   "/rooms",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite",
+   "/wellness"
+  ],
+  "article-card-staggered": [
+   "/blog",
+   "/happenings",
+   "/neighborhood",
+   "/packages",
+   "/press"
+  ],
+  "booking-menu": [
+   "/",
+   "/accessibility",
+   "/arts",
+   "/blog",
+   "/contact",
+   "/dining",
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee",
+   "/gallery",
+   "/guidelines",
+   "/happenings",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/neighborhood",
+   "/packages",
+   "/press",
+   "/privacy-policy",
+   "/rooms",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite",
+   "/wellness"
+  ],
+  "card-carousel-header-left": [
+   "/arts",
+   "/blog",
+   "/contact",
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee",
+   "/gallery",
+   "/happenings",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/packages",
+   "/press",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite"
+  ],
+  "cta-booking-newsletter": [
+   "/",
+   "/accessibility",
+   "/arts",
+   "/blog",
+   "/contact",
+   "/dining",
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee",
+   "/gallery",
+   "/guidelines",
+   "/happenings",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/neighborhood",
+   "/packages",
+   "/press",
+   "/privacy-policy",
+   "/rooms",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite",
+   "/wellness"
+  ],
+  "cta-script-centered-dark": [
+   "/contact"
+  ],
+  "faq-accordion": [
+   "/",
+   "/arts",
+   "/blog",
+   "/contact",
+   "/dining",
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee",
+   "/gallery",
+   "/guidelines",
+   "/happenings",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/neighborhood",
+   "/packages",
+   "/press",
+   "/rooms",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite",
+   "/wellness"
+  ],
+  "feature-grid-dark-eyebrow": [
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal"
+  ],
+  "footer-links": [
+   "/",
+   "/accessibility",
+   "/arts",
+   "/blog",
+   "/contact",
+   "/dining",
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee",
+   "/gallery",
+   "/guidelines",
+   "/happenings",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/neighborhood",
+   "/packages",
+   "/press",
+   "/privacy-policy",
+   "/rooms",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite",
+   "/wellness"
+  ],
+  "form-contact-fields": [
+   "/contact"
+  ],
+  "form-split-script-contact": [
+   "/contact",
+   "/guidelines",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/press"
+  ],
+  "gallery-all": [
+   "/arts",
+   "/gallery"
+  ],
+  "gallery-mosaic-captioned": [
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/neighborhood",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite"
+  ],
+  "guidelines-feature": [
+   "/guidelines"
+  ],
+  "guidelines-process": [
+   "/guidelines"
+  ],
+  "hero-fullbleed-centered": [
+   "/",
+   "/arts",
+   "/blog",
+   "/dining",
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee",
+   "/gallery",
+   "/guidelines",
+   "/happenings",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/neighborhood",
+   "/packages",
+   "/press",
+   "/rooms",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite",
+   "/wellness"
+  ],
+  "history-landmark": [
+   "/history"
+  ],
+  "history-oasis": [
+   "/history"
+  ],
+  "history-timeline": [
+   "/history"
+  ],
+  "home-art-stories": [
+   "/"
+  ],
+  "image-inset-single": [
+   "/arts"
+  ],
+  "image-pair-text": [
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee"
+  ],
+  "image-trio-text": [
+   "/",
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal"
+  ],
+  "map-feature": [
+   "/",
+   "/dining",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/neighborhood",
+   "/rooms",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite"
+  ],
+  "meetings-collection-features": [
+   "/meetings"
+  ],
+  "meetings-collection-venues": [
+   "/meetings"
+  ],
+  "neighborhood-corporate": [
+   "/neighborhood"
+  ],
+  "offers-slider-split": [
+   "/",
+   "/arts",
+   "/blog",
+   "/dining",
+   "/gallery",
+   "/happenings",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/neighborhood",
+   "/packages",
+   "/rooms",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite",
+   "/wellness"
+  ],
+  "overlay-detail-panel-modal": [
+   "/",
+   "/accessibility",
+   "/arts",
+   "/blog",
+   "/contact",
+   "/dining",
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee",
+   "/gallery",
+   "/guidelines",
+   "/happenings",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/neighborhood",
+   "/packages",
+   "/press",
+   "/privacy-policy",
+   "/rooms",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite",
+   "/wellness"
+  ],
+  "quote-band-dark": [
+   "/dining/dining-zuma"
+  ],
+  "room-list-hover-preview": [
+   "/rooms"
+  ],
+  "rooms-collection-quiz": [
+   "/rooms"
+  ],
+  "rooms-collection-recommendations": [
+   "/rooms"
+  ],
+  "rooms-collection-room-grid": [
+   "/rooms"
+  ],
+  "rooms-individual-amenities": [
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite"
+  ],
+  "rooms-individual-description": [
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite"
+  ],
+  "script-intro-centered": [
+   "/",
+   "/arts",
+   "/dining",
+   "/guidelines",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/neighborhood",
+   "/rooms",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite"
+  ],
+  "site-nav": [
+   "/",
+   "/accessibility",
+   "/arts",
+   "/blog",
+   "/contact",
+   "/dining",
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee",
+   "/gallery",
+   "/guidelines",
+   "/happenings",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/neighborhood",
+   "/packages",
+   "/press",
+   "/privacy-policy",
+   "/rooms",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite",
+   "/wellness"
+  ],
+  "split-image-text-light": [
+   "/",
+   "/arts",
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee",
+   "/history",
+   "/neighborhood",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite"
+  ],
+  "split-sticky-text-stacked-images": [
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal"
+  ],
+  "static-template-privacy-policy": [
+   "/accessibility",
+   "/privacy-policy"
+  ],
+  "swiper": [
+   "/",
+   "/arts",
+   "/blog",
+   "/contact",
+   "/dining",
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee",
+   "/gallery",
+   "/happenings",
+   "/history",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/neighborhood",
+   "/packages",
+   "/press",
+   "/rooms",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite",
+   "/wellness"
+  ],
+  "tab-pills-intro": [
+   "/arts",
+   "/blog",
+   "/gallery",
+   "/happenings",
+   "/neighborhood",
+   "/packages",
+   "/press",
+   "/wellness"
+  ],
+  "text-columns-info": [
+   "/dining/dining-gardenterrace",
+   "/dining/dining-lobbybar",
+   "/dining/dining-poollounge",
+   "/dining/dining-zuma",
+   "/dining/solana-coffee"
+  ],
+  "timeline-scatter-images": [
+   "/guidelines",
+   "/neighborhood"
+  ],
+  "venue-card-fullbleed": [
+   "/",
+   "/arts",
+   "/dining",
+   "/legal-corporate/corporate",
+   "/legal-corporate/legal",
+   "/meetings",
+   "/rooms/city-level-below-ground",
+   "/rooms/cozy-courtyard-king",
+   "/rooms/cozy-courtyard-queen",
+   "/rooms/cozy-king",
+   "/rooms/cozy-queen",
+   "/rooms/guild-city-level-loft",
+   "/rooms/guild-corner-loft-suite",
+   "/rooms/guild-double",
+   "/rooms/guild-loft-suite",
+   "/rooms/placeholder-single-1",
+   "/rooms/placeholder-single-2",
+   "/rooms/two-bedroom-loft-suite",
+   "/wellness"
+  ]
+ },
+ "attributes": {
+  "data-animation-general": {
+   "pages": [
+    "/blog",
+    "/contact",
+    "/happenings",
+    "/packages"
+   ],
+   "readBy": []
+  },
+  "data-animation-order": {
+   "pages": [
+    "/contact"
+   ],
+   "readBy": []
+  },
+  "data-article-card-slot": {
+   "pages": [
+    "/neighborhood"
+   ],
+   "readBy": []
+  },
+  "data-beyond-downtown": {
+   "pages": [
+    "/neighborhood"
+   ],
+   "readBy": []
+  },
+  "data-button-system": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": []
+  },
+  "data-card-carousel": {
+   "pages": [
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/packages",
+    "/press",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite"
+   ],
+   "readBy": [
+    "cardCarouselHeaderLeft"
+   ]
+  },
+  "data-card-carousel-controls": {
+   "pages": [
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/packages",
+    "/press",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite"
+   ],
+   "readBy": []
+  },
+  "data-card-carousel-next": {
+   "pages": [
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/packages",
+    "/press",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite"
+   ],
+   "readBy": [
+    "cardCarouselHeaderLeft"
+   ]
+  },
+  "data-card-carousel-prev": {
+   "pages": [
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/packages",
+    "/press",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite"
+   ],
+   "readBy": [
+    "cardCarouselHeaderLeft"
+   ]
+  },
+  "data-card-carousel-stagger": {
+   "pages": [
+    "/arts",
+    "/blog",
+    "/contact",
+    "/gallery",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/packages",
+    "/press",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite"
+   ],
+   "readBy": []
+  },
+  "data-category": {
+   "pages": [
+    "/blog",
+    "/happenings",
+    "/packages"
+   ],
+   "readBy": [
+    "categoryListing",
+    "staggerCards"
+   ]
+  },
+  "data-category-heading": {
+   "pages": [
+    "/blog",
+    "/happenings",
+    "/packages"
+   ],
+   "readBy": [
+    "categoryListing",
+    "staggerCards"
+   ]
+  },
+  "data-category-item": {
+   "pages": [
+    "/blog",
+    "/happenings",
+    "/packages"
+   ],
+   "readBy": [
+    "categoryListing"
+   ]
+  },
+  "data-category-list": {
+   "pages": [
+    "/blog",
+    "/happenings",
+    "/packages"
+   ],
+   "readBy": [
+    "categoryListing"
+   ]
+  },
+  "data-category-order": {
+   "pages": [
+    "/blog",
+    "/happenings",
+    "/packages"
+   ],
+   "readBy": [
+    "categoryListing"
+   ]
+  },
+  "data-category-tab": {
+   "pages": [
+    "/blog",
+    "/happenings",
+    "/packages",
+    "/press"
+   ],
+   "readBy": [
+    "categoryListing"
+   ]
+  },
+  "data-category-tabs": {
+   "pages": [
+    "/blog",
+    "/happenings",
+    "/packages",
+    "/press"
+   ],
+   "readBy": [
+    "categoryListing"
+   ]
+  },
+  "data-cms-link-anchor": {
+   "pages": [
+    "/"
+   ],
+   "readBy": [
+    "cmsItemLinks"
+   ]
+  },
+  "data-cms-link-path": {
+   "pages": [
+    "/",
+    "/blog",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/happenings",
+    "/packages",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite"
+   ],
+   "readBy": [
+    "cmsItemLinks"
+   ]
+  },
+  "data-cms-link-slug": {
+   "pages": [
+    "/",
+    "/blog",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/happenings",
+    "/packages",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite"
+   ],
+   "readBy": [
+    "cmsItemLinks"
+   ]
+  },
+  "data-corporate-slot": {
+   "pages": [
+    "/neighborhood"
+   ],
+   "readBy": []
+  },
+  "data-current-year": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "currentYear"
+   ]
+  },
+  "data-day-night": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "dayNight"
+   ]
+  },
+  "data-divider-list": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal"
+   ],
+   "readBy": []
+  },
+  "data-eager": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "eagerImages",
+    "gsapSmoothScroll"
+   ]
+  },
+  "data-faq-chevron": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": []
+  },
+  "data-gallery-canvas": {
+   "pages": [
+    "/arts",
+    "/gallery"
+   ],
+   "readBy": [
+    "galleryCanvas"
+   ]
+  },
+  "data-gallery-canvas-css": {
+   "pages": [
+    "/arts",
+    "/gallery"
+   ],
+   "readBy": []
+  },
+  "data-gallery-canvas-enter": {
+   "pages": [
+    "/arts",
+    "/gallery"
+   ],
+   "readBy": [
+    "galleryCanvas"
+   ]
+  },
+  "data-gallery-canvas-exit": {
+   "pages": [
+    "/arts",
+    "/gallery"
+   ],
+   "readBy": [
+    "galleryCanvas"
+   ]
+  },
+  "data-gallery-canvas-zoom": {
+   "pages": [
+    "/arts",
+    "/gallery"
+   ],
+   "readBy": [
+    "galleryCanvas"
+   ]
+  },
+  "data-gallery-filter": {
+   "pages": [
+    "/arts",
+    "/gallery",
+    "/rooms"
+   ],
+   "readBy": [
+    "galleryCanvas",
+    "galleryFilter",
+    "galleryLightbox"
+   ]
+  },
+  "data-gallery-filter-item": {
+   "pages": [
+    "/arts",
+    "/gallery",
+    "/rooms"
+   ],
+   "readBy": [
+    "galleryCanvas",
+    "galleryFilter",
+    "galleryLightbox"
+   ]
+  },
+  "data-gallery-filter-tag": {
+   "pages": [
+    "/arts",
+    "/gallery",
+    "/rooms"
+   ],
+   "readBy": [
+    "galleryFilter"
+   ]
+  },
+  "data-gallery-lightbox": {
+   "pages": [
+    "/gallery"
+   ],
+   "readBy": [
+    "galleryLightbox"
+   ]
+  },
+  "data-gallery-mosaic-layout": {
+   "pages": [
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite"
+   ],
+   "readBy": []
+  },
+  "data-header-theme": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "navTheme"
+   ]
+  },
+  "data-history-collapse": {
+   "pages": [
+    "/history"
+   ],
+   "readBy": [
+    "historyStickyYear",
+    "scriptReveal",
+    "scrollReveal"
+   ]
+  },
+  "data-history-collapse-caption": {
+   "pages": [
+    "/history"
+   ],
+   "readBy": [
+    "historyStickyYear"
+   ]
+  },
+  "data-history-collapse-distance": {
+   "pages": [
+    "/history"
+   ],
+   "readBy": [
+    "historyStickyYear"
+   ]
+  },
+  "data-history-collapse-fade": {
+   "pages": [
+    "/history"
+   ],
+   "readBy": [
+    "historyStickyYear"
+   ]
+  },
+  "data-history-collapse-item": {
+   "pages": [
+    "/history"
+   ],
+   "readBy": [
+    "historyStickyYear"
+   ]
+  },
+  "data-history-divider": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": []
+  },
+  "data-history-sticky-year": {
+   "pages": [
+    "/history"
+   ],
+   "readBy": [
+    "historyStickyYear"
+   ]
+  },
+  "data-history-sticky-year-item": {
+   "pages": [
+    "/history"
+   ],
+   "readBy": [
+    "historyStickyYear"
+   ]
+  },
+  "data-history-sticky-year-label": {
+   "pages": [
+    "/history"
+   ],
+   "readBy": [
+    "historyStickyYear"
+   ]
+  },
+  "data-history-sticky-year-text": {
+   "pages": [
+    "/history"
+   ],
+   "readBy": [
+    "historyStickyYear"
+   ]
+  },
+  "data-hover-image": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal"
+   ],
+   "readBy": [
+    "hoverFollowImage",
+    "scrollReveal"
+   ]
+  },
+  "data-hover-image-alt": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal"
+   ],
+   "readBy": [
+    "hoverFollowImage"
+   ]
+  },
+  "data-hover-image-item": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal"
+   ],
+   "readBy": [
+    "hoverFollowImage",
+    "scrollReveal"
+   ]
+  },
+  "data-hover-image-media": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal"
+   ],
+   "readBy": [
+    "hoverFollowImage"
+   ]
+  },
+  "data-hover-image-src": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal"
+   ],
+   "readBy": [
+    "hoverFollowImage"
+   ]
+  },
+  "data-hover-scale": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "imageHoverScale"
+   ]
+  },
+  "data-hover-scale-duration": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "imageHoverScale"
+   ]
+  },
+  "data-hover-swap": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "hoverImageSwap"
+   ]
+  },
+  "data-hover-swap-list": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "hoverImageSwap"
+   ]
+  },
+  "data-hover-swap-media": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "hoverImageSwap"
+   ]
+  },
+  "data-hover-swap-trigger": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "hoverImageSwap"
+   ]
+  },
+  "data-hover-video": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "roomGridHoverReveal"
+   ]
+  },
+  "data-image-placeholder": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": []
+  },
+  "data-image-stack-collapse": {
+   "pages": [
+    "/",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee"
+   ],
+   "readBy": [
+    "imageStackCollapse",
+    "scrollReveal"
+   ]
+  },
+  "data-image-stack-collapse-item": {
+   "pages": [
+    "/",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee"
+   ],
+   "readBy": [
+    "imageStackCollapse"
+   ]
+  },
+  "data-image-stack-collapse-progress": {
+   "pages": [
+    "/",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee"
+   ],
+   "readBy": [
+    "imageStackCollapse"
+   ]
+  },
+  "data-image-trail-hover": {
+   "pages": [
+    "/"
+   ],
+   "readBy": [
+    "imageTrailHover"
+   ]
+  },
+  "data-image-trail-hover-item": {
+   "pages": [
+    "/"
+   ],
+   "readBy": [
+    "imageTrailHover"
+   ]
+  },
+  "data-key-features-slot": {
+   "pages": [
+    "/meetings"
+   ],
+   "readBy": []
+  },
+  "data-legal-rich-text": {
+   "pages": [
+    "/accessibility",
+    "/privacy-policy"
+   ],
+   "readBy": []
+  },
+  "data-lenis-prevent": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "modals",
+    "navToggle"
+   ]
+  },
+  "data-line-mask": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "historyStickyYear",
+    "lineMaskReveal",
+    "modalTextMask",
+    "scrollReveal"
+   ]
+  },
+  "data-map": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood"
+   ],
+   "readBy": [
+    "directionsLinks",
+    "map",
+    "mapAccordion",
+    "mapNeeds"
+   ]
+  },
+  "data-map-accordion": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood"
+   ],
+   "readBy": [
+    "map",
+    "mapAccordion"
+   ]
+  },
+  "data-map-coordinates": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood"
+   ],
+   "readBy": [
+    "map"
+   ]
+  },
+  "data-map-directions": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood"
+   ],
+   "readBy": [
+    "directionsLinks",
+    "map"
+   ]
+  },
+  "data-map-home": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood"
+   ],
+   "readBy": [
+    "map"
+   ]
+  },
+  "data-map-home-title": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood"
+   ],
+   "readBy": [
+    "map"
+   ]
+  },
+  "data-map-item": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood"
+   ],
+   "readBy": [
+    "map",
+    "mapAccordion"
+   ]
+  },
+  "data-map-key": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood"
+   ],
+   "readBy": [
+    "map",
+    "mapNeeds"
+   ]
+  },
+  "data-map-zoom": {
+   "pages": [
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood"
+   ],
+   "readBy": [
+    "map"
+   ]
+  },
+  "data-media-tabs": {
+   "pages": [
+    "/"
+   ],
+   "readBy": [
+    "mediaTabs"
+   ]
+  },
+  "data-media-tabs-list": {
+   "pages": [
+    "/"
+   ],
+   "readBy": [
+    "mediaTabs"
+   ]
+  },
+  "data-media-tabs-media": {
+   "pages": [
+    "/"
+   ],
+   "readBy": [
+    "mediaTabs"
+   ]
+  },
+  "data-media-tabs-panel": {
+   "pages": [
+    "/"
+   ],
+   "readBy": [
+    "mediaTabs"
+   ]
+  },
+  "data-media-tabs-tab": {
+   "pages": [
+    "/"
+   ],
+   "readBy": [
+    "mediaTabs"
+   ]
+  },
+  "data-modal-close": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "modals"
+   ]
+  },
+  "data-modal-no-overlay": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "modals"
+   ]
+  },
+  "data-modal-open": {
+   "pages": [
+    "/arts",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/rooms"
+   ],
+   "readBy": [
+    "galleryFilter",
+    "modals",
+    "placeholderLinks"
+   ]
+  },
+  "data-modal-reveal": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "modalTextMask",
+    "scrollReveal"
+   ]
+  },
+  "data-nav": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "lenisGsap",
+    "navContrast",
+    "navTheme",
+    "navToggle",
+    "stickyTabs"
+   ]
+  },
+  "data-nav-book-hover": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": []
+  },
+  "data-nav-lock": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "navToggle"
+   ]
+  },
+  "data-nav-mode": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "navTheme"
+   ]
+  },
+  "data-night-href": {
+   "pages": [
+    "/",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee"
+   ],
+   "readBy": [
+    "dayNight"
+   ]
+  },
+  "data-night-image": {
+   "pages": [
+    "/",
+    "/arts",
+    "/blog",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "dayNight"
+   ]
+  },
+  "data-night-text": {
+   "pages": [
+    "/",
+    "/arts",
+    "/blog",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "dayNight"
+   ]
+  },
+  "data-night-video": {
+   "pages": [
+    "/",
+    "/arts",
+    "/blog",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "dayNight"
+   ]
+  },
+  "data-offers-slider": {
+   "pages": [
+    "/",
+    "/arts",
+    "/blog",
+    "/dining",
+    "/gallery",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "offersSliderSplit",
+    "scrollReveal"
+   ]
+  },
+  "data-offers-slider-controls": {
+   "pages": [
+    "/",
+    "/arts",
+    "/blog",
+    "/dining",
+    "/gallery",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "offersSliderSplit"
+   ]
+  },
+  "data-offers-slider-current": {
+   "pages": [
+    "/",
+    "/arts",
+    "/blog",
+    "/dining",
+    "/gallery",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "offersSliderSplit"
+   ]
+  },
+  "data-offers-slider-next": {
+   "pages": [
+    "/",
+    "/arts",
+    "/blog",
+    "/dining",
+    "/gallery",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "offersSliderSplit"
+   ]
+  },
+  "data-offers-slider-prev": {
+   "pages": [
+    "/",
+    "/arts",
+    "/blog",
+    "/dining",
+    "/gallery",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "offersSliderSplit"
+   ]
+  },
+  "data-offers-slider-total": {
+   "pages": [
+    "/",
+    "/arts",
+    "/blog",
+    "/dining",
+    "/gallery",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "offersSliderSplit"
+   ]
+  },
+  "data-paragraph-size": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": []
+  },
+  "data-press-category": {
+   "pages": [
+    "/press"
+   ],
+   "readBy": [
+    "pressCategories"
+   ]
+  },
+  "data-press-category-order": {
+   "pages": [
+    "/press"
+   ],
+   "readBy": [
+    "pressCategories"
+   ]
+  },
+  "data-press-heading": {
+   "pages": [
+    "/press"
+   ],
+   "readBy": [
+    "pressCategories",
+    "staggerCards"
+   ]
+  },
+  "data-press-item": {
+   "pages": [
+    "/press"
+   ],
+   "readBy": [
+    "pressCategories"
+   ]
+  },
+  "data-press-list": {
+   "pages": [
+    "/press"
+   ],
+   "readBy": [
+    "pressCategories"
+   ]
+  },
+  "data-reveal": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "revealStart",
+    "scrollReveal"
+   ]
+  },
+  "data-reveal-delay": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "scrollReveal"
+   ]
+  },
+  "data-reveal-start": {
+   "pages": [
+    "/history"
+   ],
+   "readBy": [
+    "revealStart",
+    "scrollReveal"
+   ]
+  },
+  "data-room-preview": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "roomListHoverPreview",
+    "scrollReveal"
+   ]
+  },
+  "data-room-preview-panel": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "roomListHoverPreview"
+   ]
+  },
+  "data-room-preview-trigger": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "roomListHoverPreview"
+   ]
+  },
+  "data-room-template-styles": {
+   "pages": [
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite"
+   ],
+   "readBy": []
+  },
+  "data-rooms-quiz": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "anchorScroll",
+    "roomsQuiz",
+    "scrollReveal"
+   ]
+  },
+  "data-rooms-quiz-back": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "anchorScroll",
+    "roomsQuiz"
+   ]
+  },
+  "data-rooms-quiz-closest": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "roomsQuiz"
+   ]
+  },
+  "data-rooms-quiz-empty": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "roomsQuiz"
+   ]
+  },
+  "data-rooms-quiz-loading": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "roomsQuiz"
+   ]
+  },
+  "data-rooms-quiz-option": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "roomsQuiz"
+   ]
+  },
+  "data-rooms-quiz-restart": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "anchorScroll",
+    "roomsQuiz"
+   ]
+  },
+  "data-rooms-quiz-results": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "roomsQuiz"
+   ]
+  },
+  "data-rooms-quiz-step": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "roomsQuiz"
+   ]
+  },
+  "data-rooms-quiz-tag": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "roomsQuiz"
+   ]
+  },
+  "data-rooms-quiz-tags": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": []
+  },
+  "data-scatter-layout": {
+   "pages": [
+    "/guidelines"
+   ],
+   "readBy": []
+  },
+  "data-scroll-enlarge-snap": {
+   "pages": [
+    "/",
+    "/arts",
+    "/blog",
+    "/dining",
+    "/happenings",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/packages",
+    "/press",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "scriptReveal",
+    "scrollEnlargeSnap",
+    "scrollReveal"
+   ]
+  },
+  "data-scroll-enlarge-snap-content": {
+   "pages": [
+    "/",
+    "/arts",
+    "/dining",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "scriptReveal",
+    "scrollEnlargeSnap",
+    "scrollReveal"
+   ]
+  },
+  "data-scroll-enlarge-snap-image": {
+   "pages": [
+    "/",
+    "/arts",
+    "/dining",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "scrollEnlargeSnap"
+   ]
+  },
+  "data-scroll-enlarge-snap-item": {
+   "pages": [
+    "/",
+    "/arts",
+    "/dining",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "scrollEnlargeSnap"
+   ]
+  },
+  "data-scroll-enlarge-snap-media": {
+   "pages": [
+    "/",
+    "/arts",
+    "/blog",
+    "/dining",
+    "/happenings",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/packages",
+    "/press",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "scrollEnlargeSnap"
+   ]
+  },
+  "data-scroll-enlarge-snap-stage": {
+   "pages": [
+    "/",
+    "/arts",
+    "/blog",
+    "/dining",
+    "/happenings",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/packages",
+    "/press",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "scrollEnlargeSnap"
+   ]
+  },
+  "data-scroll-enlarge-snap-step": {
+   "pages": [
+    "/",
+    "/arts",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite"
+   ],
+   "readBy": [
+    "scrollEnlargeSnap"
+   ]
+  },
+  "data-scroll-enlarge-snap-tab": {
+   "pages": [
+    "/blog",
+    "/dining",
+    "/happenings",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/packages",
+    "/press",
+    "/wellness"
+   ],
+   "readBy": [
+    "scrollEnlargeSnap"
+   ]
+  },
+  "data-scroll-flush": {
+   "pages": [
+    "/rooms"
+   ],
+   "readBy": [
+    "lenisGsap",
+    "roomsQuiz",
+    "smoothScroll"
+   ]
+  },
+  "data-section-video": {
+   "pages": [
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee"
+   ],
+   "readBy": [
+    "mediaVideo"
+   ]
+  },
+  "data-site-css": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": []
+  },
+  "data-sticky-tabs": {
+   "pages": [
+    "/blog",
+    "/happenings",
+    "/neighborhood",
+    "/packages",
+    "/press"
+   ],
+   "readBy": [
+    "anchorScroll",
+    "stickyTabs"
+   ]
+  },
+  "data-story-mobile": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": []
+  },
+  "data-tab-dropdown-hint": {
+   "pages": [
+    "/arts",
+    "/gallery"
+   ],
+   "readBy": [
+    "tabDropdown"
+   ]
+  },
+  "data-tile-size": {
+   "pages": [
+    "/arts"
+   ],
+   "readBy": []
+  },
+  "data-turnstile-sitekey": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": []
+  },
+  "data-video-link": {
+   "pages": [
+    "/",
+    "/arts",
+    "/blog",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": [
+    "mediaVideo"
+   ]
+  },
+  "data-wait": {
+   "pages": [
+    "/",
+    "/accessibility",
+    "/arts",
+    "/blog",
+    "/contact",
+    "/dining",
+    "/dining/dining-gardenterrace",
+    "/dining/dining-lobbybar",
+    "/dining/dining-poollounge",
+    "/dining/dining-zuma",
+    "/dining/solana-coffee",
+    "/gallery",
+    "/guidelines",
+    "/happenings",
+    "/history",
+    "/legal-corporate/corporate",
+    "/legal-corporate/legal",
+    "/meetings",
+    "/neighborhood",
+    "/packages",
+    "/press",
+    "/privacy-policy",
+    "/rooms",
+    "/rooms/city-level-below-ground",
+    "/rooms/cozy-courtyard-king",
+    "/rooms/cozy-courtyard-queen",
+    "/rooms/cozy-king",
+    "/rooms/cozy-queen",
+    "/rooms/guild-city-level-loft",
+    "/rooms/guild-corner-loft-suite",
+    "/rooms/guild-double",
+    "/rooms/guild-loft-suite",
+    "/rooms/placeholder-single-1",
+    "/rooms/placeholder-single-2",
+    "/rooms/two-bedroom-loft-suite",
+    "/wellness"
+   ],
+   "readBy": []
+  }
+ }
+}
