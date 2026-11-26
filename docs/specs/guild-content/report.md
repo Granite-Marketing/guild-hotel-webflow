@@ -8,14 +8,15 @@ Sources: the copy map ([`catalogue/copy-map.md`](catalogue/copy-map.md)), the pi
 
 - Written: 203 CMS text values (13 of them the pop-up corrections after the eye check), 72 page texts and props, and 14 new CMS fields; 3 earlier texts put back where a line had gone to the wrong place. Nothing else was touched: no image field, no class, no layout.
 - Copy check after the upload: 259 rows done (91 before), 51 differs, 26 missing, 479 unchecked by design (second versions, not on site, no copy yet, held, joined lines).
-- Of the 77 differs and missing rows: 57 are copy waiting for the Designer to bind the new fields; 14 are live, confirmed by reading the published page (the check found the same placeholder text in another block on the page); 5 are item names kept as they are; 1 is a room size that shows on the room cards, not on the room page the check opens.
+- After the Designer bindings (26 Nov, section 7): 314 done, 14 differs, 8 missing. Of the 57 rows that waited on bindings, 55 now read done and 2 are live with the typo fix (the check compares the doc's wording).
+- Before the bindings, of the 77 differs and missing rows: 57 were copy waiting for the Designer to bind the new fields; 14 are live, confirmed by reading the published page (the check found the same placeholder text in another block on the page); 5 are item names kept as they are; 1 is a room size that shows on the room cards, not on the room page the check opens.
 
 ## 1. Proven
 
 Each page's mapped lines are on staging, by the copy check plus a direct text check of the published page for the rows the check could not see.
 
-- Pages ready to tick as uploaded in the tracker: Homepage, History, Dining collection, Wellness collection, Meetings collection, Legal, Corporate (except the lines waiting for bindings), Rooms collection, Press, Gallery, Arts, Neighborhood, Happenings, Blog.
-- Venue pages: Zuma, Garden Terrace, Lobby Bar and Pool Lounge carry their own hero, intro, explore, image pair and dress code copy. Their Group Dining heading waits for its binding.
+- Pages ready to tick as uploaded in the tracker: Homepage, History, Dining collection, Wellness collection, Meetings collection, Legal, Corporate, Rooms collection, Press, Gallery, Arts, Neighborhood, Happenings, Blog.
+- Venue pages: Zuma, Garden Terrace, Lobby Bar and Pool Lounge carry their own hero, intro, explore, image pair and dress code copy. Their Group Dining heading is bound to its own field (26 Nov).
 - Meeting pop-ups: Council Boardroom, Garden Terrace (the "lobby terrace" venue, see Differs) and 1 America Plaza carry their pop-up text; Council Boardroom and Garden Terrace also their size and layouts; the Small and Large Conference Centers their text and five feature lines. Checked in the open pop-ups.
 - Rooms: every room item with doc copy has its own hero line, description, stats list and card labels; no two rooms share description text. The two placeholder rooms keep today's text.
 - No image field was written: the upload script refuses any field that is not plain or rich text, and the log shows only text fields.
@@ -30,7 +31,7 @@ Each page's mapped lines are on staging, by the copy check plus a direct text ch
 
 ## 2. Not done, with reasons
 
-- 57 rows are written into the new CMS fields but do not show yet: the template text has to be bound to each field in the Designer (list in section 7). Until then the pages show today's template text.
+- Done 26 Nov: the 57 rows written into the new CMS fields now show; 13 template spots are bound in the Designer (section 7). The 14th, the venue card "discover more" button, cannot read the page's field and already shows the doc's text.
 - Lobby Bar meeting pop-up (15 lines): staging has no Lobby Bar meeting venue (Meetings shows Council Boardroom, lobby terrace and 1 America Plaza). Not created.
 - Four ADA rooms (Society King, Artisan King, Apprentice Queen and Apprentice King ADA): no room items. Not created.
 - Contact: the doc is empty (C3). Wellness sub-pages (in-room wellness, fitness centre, mindful dining, wellness events): on hold (C3). All left as they are.
@@ -101,9 +102,11 @@ The content docs' wording is live. The SEO sheet suggests these H1s, "wording to
 
 Note: the Neighborhood suggestion was written for the old H1; the doc's new H1 is "EXCITEMENT AT YOUR DOORSTEP".
 
-## 7. Designer bindings left (Stephen's Mac)
+## 7. Designer bindings (done 26 Nov)
 
-Bind each template element to its new plain text field (Designer: select the element or component instance on the CMS template page, then bind the text or prop to the field). Every item already has a value, so binding never blanks a page. Field ids are in `docs/reference/webflow-ids.md`.
+Bound in the Designer and published 26 Nov: 13 of the 14 rows below. Proof: every published item page (12 rooms, 5 dining venues, Legal and Corporate) shows its own field value for each bound spot; layout checked headless at 390 and 1440. Copy check rerun: 55 of the 57 waiting rows read done; `Guild-Rooms-SubPages:263` and `:266` are live but carry the typo fix (Guild Loft Suite, not City Level Loft), so they still differ from the doc.
+
+Exception: the "discover more" link (Why Choose - Link Text) is the venue card button inside the Meeting Venues list, not in the dark feature grid. Webflow only lets it bind to Meeting Venues fields, so it stays as template text; it already reads "discover more", the same as the doc, and the check reads those rows done. The field is kept in case the venue cards ever move out of the list.
 
 | Template | Element | Field |
 |---|---|---|

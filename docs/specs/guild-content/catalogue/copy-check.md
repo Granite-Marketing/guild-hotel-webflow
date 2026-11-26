@@ -1,6 +1,6 @@
 # Copy check
 
-Generated 2026-11-26T20:11:25.905Z by `pnpm copy-check` from `copy-map.json` against https://the-guild-hotel-c34e71.webflow.io (headless, 1440 wide). Read only: nothing is written to Webflow.
+Generated 2026-11-26T21:28:56.027Z by `pnpm copy-check` from `copy-map.json` against https://the-guild-hotel-c34e71.webflow.io (headless, 1440 wide). Read only: nothing is written to Webflow.
 
 done: the new text is on the page (case and whitespace ignored). differs: the target is there but reads differently. missing: neither is there. unchecked: not checked, reason given.
 
@@ -8,9 +8,9 @@ done: the new text is on the page (case and whitespace ignored). differs: the ta
 
 | status | rows |
 |---|---|
-| done | 259 |
-| differs | 51 |
-| missing | 26 |
+| done | 314 |
+| differs | 14 |
+| missing | 8 |
 | unchecked | 479 |
 | total | 815 |
 
@@ -26,27 +26,27 @@ done: the new text is on the page (case and whitespace ignored). differs: the ta
 | /dining/dining-gardenterrace | 6 | 0 | 0 | 3 |
 | /dining/dining-lobbybar | 6 | 0 | 0 | 3 |
 | /dining/dining-poollounge | 6 | 0 | 0 | 2 |
-| /dining/dining-zuma | 9 | 2 | 0 | 9 |
+| /dining/dining-zuma | 11 | 0 | 0 | 9 |
 | /gallery | 2 | 0 | 0 | 3 |
 | /happenings | 3 | 1 | 0 | 4 |
 | /history | 24 | 0 | 0 | 8 |
-| /legal-corporate/corporate | 14 | 5 | 0 | 42 |
+| /legal-corporate/corporate | 19 | 0 | 0 | 42 |
 | /legal-corporate/legal | 6 | 0 | 0 | 0 |
 | /meeting-venues/* | 32 | 0 | 1 | 32 |
 | /meetings | 5 | 0 | 0 | 50 |
 | /neighborhood | 10 | 8 | 0 | 27 |
 | /press | 3 | 1 | 0 | 8 |
 | /rooms | 5 | 1 | 0 | 19 |
-| /rooms/city-level-below-ground | 6 | 0 | 2 | 12 |
-| /rooms/cozy-courtyard-king | 6 | 0 | 2 | 11 |
-| /rooms/cozy-courtyard-queen | 6 | 0 | 2 | 12 |
-| /rooms/cozy-king | 6 | 0 | 2 | 11 |
-| /rooms/cozy-queen | 13 | 30 | 2 | 21 |
-| /rooms/guild-city-level-loft | 5 | 0 | 3 | 11 |
-| /rooms/guild-corner-loft-suite | 6 | 0 | 2 | 13 |
-| /rooms/guild-double | 6 | 0 | 2 | 12 |
+| /rooms/city-level-below-ground | 8 | 0 | 0 | 12 |
+| /rooms/cozy-courtyard-king | 8 | 0 | 0 | 11 |
+| /rooms/cozy-courtyard-queen | 8 | 0 | 0 | 12 |
+| /rooms/cozy-king | 8 | 0 | 0 | 11 |
+| /rooms/cozy-queen | 45 | 0 | 0 | 21 |
+| /rooms/guild-city-level-loft | 7 | 0 | 1 | 11 |
+| /rooms/guild-corner-loft-suite | 8 | 0 | 0 | 13 |
+| /rooms/guild-double | 8 | 0 | 0 | 12 |
 | /rooms/guild-loft-suite | 5 | 0 | 3 | 13 |
-| /rooms/two-bedroom-loft-suite | 5 | 0 | 3 | 15 |
+| /rooms/two-bedroom-loft-suite | 7 | 0 | 1 | 15 |
 | /wellness | 12 | 0 | 0 | 0 |
 | /wellness/fitness-centre | 0 | 0 | 0 | 1 |
 | /wellness/in-room-wellness | 0 | 0 | 0 | 1 |
@@ -239,13 +239,13 @@ done 6, differs 0, missing 0, unchecked 2
 
 ## /dining/dining-zuma
 
-done 9, differs 2, missing 0, unchecked 9
+done 11, differs 0, missing 0, unchecked 9
 
 | row | status | new text | found or reason |
 |---|---|---|---|
 | `Guild-Dining-GardenTerrace:16` | done | Group Dining & Events | on /dining/dining-gardenterrace |
-| `Guild-Dining-LobbyBar:14` | differs | GROUP DINING AND EVENTS | found: group dining & events |
-| `Guild-Dining-PoolLounge:13` | differs | GROUP DINING AND EVENTS | found: group dining & events |
+| `Guild-Dining-LobbyBar:14` | done | GROUP DINING AND EVENTS | on /dining/dining-lobbybar |
+| `Guild-Dining-PoolLounge:13` | done | GROUP DINING AND EVENTS | on /dining/dining-poollounge |
 | `Guild-Dining-Zuma:2` | done | ZUMA SAN DIEGO |  |
 | `Guild-Dining-Zuma:4` | done | Welcome to the deliciously glamorous energy of California’s first Zuma |  |
 | `Guild-Dining-Zuma:6` | done | CONTEMPORARY JAPANESE IZAKAYA |  |
@@ -332,7 +332,7 @@ done 24, differs 0, missing 0, unchecked 8
 
 ## /legal-corporate/corporate
 
-done 14, differs 5, missing 0, unchecked 42
+done 19, differs 0, missing 0, unchecked 42
 
 | row | status | new text | found or reason |
 |---|---|---|---|
@@ -342,11 +342,11 @@ done 14, differs 5, missing 0, unchecked 42
 | `Guild-Corporate:7` | done | The Guild has mastered the art and science of helping corporate teams work co... |  |
 | `Guild-Corporate:9` | unchecked | After hours, you’ll adjourn to the Lobby Bar, The Courtyard or Pool Lounge to... | second version: the alternate is listed for Omar, not published |
 | `Guild-Corporate:12` | done | KEY FEATURES |  |
-| `Guild-Corporate:14` | differs | High-Speed Encrypted Wi-Fi | found: High-Speed, Encrypted Wi-Fi |
+| `Guild-Corporate:14` | done | High-Speed Encrypted Wi-Fi |  |
 | `Guild-Corporate:15` | unchecked | Fast, secure internet throughout the hotel. Ideal for managing sensitive docu... | not on site: no element to check |
 | `Guild-Corporate:17` | done | 24/7 Controlled Security |  |
 | `Guild-Corporate:18` | unchecked | When you need enhanced security, we have the people and the experience. | not on site: no element to check |
-| `Guild-Corporate:20` | differs | Elevated Work Spaces | found: Quiet, Professional Workspaces |
+| `Guild-Corporate:20` | done | Elevated Work Spaces |  |
 | `Guild-Corporate:21` | unchecked | Our meeting rooms are quiet, efficient and design-forward to ensure successfu... | not on site: no element to check |
 | `Guild-Corporate:23` | done | WHY TEAMS CHOOSE THE GUILD |  |
 | `Guild-Corporate:26` | unchecked | Right Place | not on site: no element to check |
@@ -368,8 +368,8 @@ done 14, differs 5, missing 0, unchecked 42
 | `Guild-Corporate:62` | unchecked | Secure Storage and Services | not on site: no element to check |
 | `Guild-Corporate:63` | unchecked | 24/7 access to printing and scanning for late nights, and safe storage when y... | not on site: no element to check |
 | `Guild-Corporate:67` | done | Discover More |  |
-| `Guild-Corporate:78` | differs | Steps From Downtown | found: Steps from key legal addresses |
-| `Guild-Corporate:79` | differs | The Guild offers privacy for meetings on the doorstep of every important attr... | found: Four courthouses sit within a short walk of The Guild, so your team can move between hearings, prep sessions a... |
+| `Guild-Corporate:78` | done | Steps From Downtown |  |
+| `Guild-Corporate:79` | done | The Guild offers privacy for meetings on the doorstep of every important attr... |  |
 | `Guild-Corporate:80` | unchecked | and city business. | joined into 79: the head row carries the composed text |
 | `Guild-Legal:9` | done | KEY FEATURES | on /legal-corporate/legal |
 | `Guild-Legal:12` | done | WHY TEAMS CHOOSE THE GUILD | on /legal-corporate/legal |
@@ -387,7 +387,7 @@ done 14, differs 5, missing 0, unchecked 42
 | `Guild-Legal:51` | unchecked | Secure Storage and Services | not on site: no element to check |
 | `Guild-Legal:56` | done | Discover More | on /legal-corporate/legal |
 | `Guild-Legal:67` | done | Steps From Key Legal Addresses | on /legal-corporate/legal |
-| `Guild-Legal:68` | differs | The Guild is the right place to prepare, and it puts your team minutes from e... | found: Four courthouses sit within a short walk of The Guild, so your team can move between hearings, prep sessions a... |
+| `Guild-Legal:68` | done | The Guild is the right place to prepare, and it puts your team minutes from e... | on /legal-corporate/legal |
 | `Guild-Legal:69` | unchecked | minutes from everywhere you need to be during trials. | joined into 68: the head row carries the composed text |
 | `no-copy:/legal-corporate/corporate:prop|ac90d2ee-dd2a-f59c-f73a-b7813177d476|ebeb1a92-d766-3614-254d-19c94cdb7b4f` | unchecked |  | no copy yet: staging text is a placeholder |
 | `no-copy:/legal-corporate/corporate:prop|ac90d2ee-dd2a-f59c-f73a-b7813177d476|f79f92db-cfe5-c3f4-bec2-ca3718e9faed` | unchecked |  | no copy yet: staging text is a placeholder |
@@ -650,7 +650,7 @@ done 5, differs 1, missing 0, unchecked 19
 
 ## /rooms/city-level-below-ground
 
-done 6, differs 0, missing 2, unchecked 12
+done 8, differs 0, missing 0, unchecked 12
 
 | row | status | new text | found or reason |
 |---|---|---|---|
@@ -663,8 +663,8 @@ done 6, differs 0, missing 2, unchecked 12
 | `Guild-Rooms-SubPages:177` | done | 310sqft / 28sqm \| 340sqft / 31sqm. |  |
 | `Guild-Rooms-SubPages:178` | unchecked | 340sqft / 31sqm. | joined into 177: the head row carries the composed text |
 | `Guild-Rooms-SubPages:179` | unchecked | No View. | joined into 175: the head row carries the composed text |
-| `Guild-Rooms-SubPages:182` | missing | After a day downtown, the City Level Below Ground offers room to breathe. |  |
-| `Guild-Rooms-SubPages:185` | missing | The City Level Below Ground has it all. Colors and textures designed to sooth... |  |
+| `Guild-Rooms-SubPages:182` | done | After a day downtown, the City Level Below Ground offers room to breathe. |  |
+| `Guild-Rooms-SubPages:185` | done | The City Level Below Ground has it all. Colors and textures designed to sooth... |  |
 | `Guild-Rooms-SubPages:190` | unchecked | le labo santal 33 bath amenities | not on site: no element to check |
 | `Guild-Rooms-SubPages:191` | unchecked | iron & board (steamer upon request) | not on site: no element to check |
 | `Guild-Rooms-SubPages:192` | unchecked | curated local art | not on site: no element to check |
@@ -677,7 +677,7 @@ done 6, differs 0, missing 2, unchecked 12
 
 ## /rooms/cozy-courtyard-king
 
-done 6, differs 0, missing 2, unchecked 11
+done 8, differs 0, missing 0, unchecked 11
 
 | row | status | new text | found or reason |
 |---|---|---|---|
@@ -689,8 +689,8 @@ done 6, differs 0, missing 2, unchecked 11
 | `Guild-Rooms-SubPages:136` | done | 2 Guests |  |
 | `Guild-Rooms-SubPages:137` | done | 200sqft / 18sqm \| 225sqft / 20sqm. |  |
 | `Guild-Rooms-SubPages:138` | unchecked | 225sqft / 20sqm. | joined into 137: the head row carries the composed text |
-| `Guild-Rooms-SubPages:141` | missing | After a night out, the Courtyard King offers room to breathe. |  |
-| `Guild-Rooms-SubPages:144` | missing | The Courtyard King offers a soothing space with cool neutral colors and luxur... |  |
+| `Guild-Rooms-SubPages:141` | done | After a night out, the Courtyard King offers room to breathe. |  |
+| `Guild-Rooms-SubPages:144` | done | The Courtyard King offers a soothing space with cool neutral colors and luxur... |  |
 | `Guild-Rooms-SubPages:149` | unchecked | le labo santal 33 bath amenities | not on site: no element to check |
 | `Guild-Rooms-SubPages:150` | unchecked | iron & board (steamer upon request) | not on site: no element to check |
 | `Guild-Rooms-SubPages:151` | unchecked | curated local art | not on site: no element to check |
@@ -703,7 +703,7 @@ done 6, differs 0, missing 2, unchecked 11
 
 ## /rooms/cozy-courtyard-queen
 
-done 6, differs 0, missing 2, unchecked 12
+done 8, differs 0, missing 0, unchecked 12
 
 | row | status | new text | found or reason |
 |---|---|---|---|
@@ -716,8 +716,8 @@ done 6, differs 0, missing 2, unchecked 12
 | `Guild-Rooms-SubPages:56` | done | 2 Guests |  |
 | `Guild-Rooms-SubPages:57` | done | 180sqft / 16sqm \| 206sqft / 19sqm. |  |
 | `Guild-Rooms-SubPages:58` | unchecked | 206sqft / 19sqm. | joined into 57: the head row carries the composed text |
-| `Guild-Rooms-SubPages:61` | missing | After a night out, the Courtyard Queen offers room to breathe. |  |
-| `Guild-Rooms-SubPages:64` | missing | The Courtyard Queen feels expansive and restful. Colors are soothing, and lux... |  |
+| `Guild-Rooms-SubPages:61` | done | After a night out, the Courtyard Queen offers room to breathe. |  |
+| `Guild-Rooms-SubPages:64` | done | The Courtyard Queen feels expansive and restful. Colors are soothing, and lux... |  |
 | `Guild-Rooms-SubPages:69` | unchecked | le labo santal 33 bath amenities | not on site: no element to check |
 | `Guild-Rooms-SubPages:70` | unchecked | iron & board (steamer upon request) | not on site: no element to check |
 | `Guild-Rooms-SubPages:71` | unchecked | curated local art | not on site: no element to check |
@@ -730,7 +730,7 @@ done 6, differs 0, missing 2, unchecked 12
 
 ## /rooms/cozy-king
 
-done 6, differs 0, missing 2, unchecked 11
+done 8, differs 0, missing 0, unchecked 11
 
 | row | status | new text | found or reason |
 |---|---|---|---|
@@ -742,8 +742,8 @@ done 6, differs 0, missing 2, unchecked 11
 | `Guild-Rooms-SubPages:96` | done | 2 Guests |  |
 | `Guild-Rooms-SubPages:97` | done | 180sqft / 16sqm \| 206sqft / 19sqm. |  |
 | `Guild-Rooms-SubPages:98` | unchecked | 206sqft / 19sqm. | joined into 97: the head row carries the composed text |
-| `Guild-Rooms-SubPages:101` | missing | After a night out, the Cozy King is a sanctuary. |  |
-| `Guild-Rooms-SubPages:104` | missing | The Cozy King thinks big. Cool interior colors are restful, and luxury linens... |  |
+| `Guild-Rooms-SubPages:101` | done | After a night out, the Cozy King is a sanctuary. |  |
+| `Guild-Rooms-SubPages:104` | done | The Cozy King thinks big. Cool interior colors are restful, and luxury linens... |  |
 | `Guild-Rooms-SubPages:109` | unchecked | le labo santal 33 bath amenities | not on site: no element to check |
 | `Guild-Rooms-SubPages:110` | unchecked | iron & board (steamer upon request) | not on site: no element to check |
 | `Guild-Rooms-SubPages:111` | unchecked | curated local art | not on site: no element to check |
@@ -756,13 +756,13 @@ done 6, differs 0, missing 2, unchecked 11
 
 ## /rooms/cozy-queen
 
-done 13, differs 30, missing 2, unchecked 21
+done 45, differs 0, missing 0, unchecked 21
 
 | row | status | new text | found or reason |
 |---|---|---|---|
 | `Guild-Rooms-SubPages:2` | done | COZY QUEEN |  |
 | `Guild-Rooms-SubPages:3` | done | Perfectly Intimate |  |
-| `Guild-Rooms-SubPages:5` | differs | The Art of Solo Travel | found: A room for every stay |
+| `Guild-Rooms-SubPages:5` | done | The Art of Solo Travel |  |
 | `Guild-Rooms-SubPages:7` | unchecked | Small is Beautiful | second version: the alternate is listed for Omar, not published |
 | `Guild-Rooms-SubPages:10` | unchecked | Cozy Queen Room | not on site: no element to check |
 | `Guild-Rooms-SubPages:12` | done | Snuggle up in our most intimate room. Cozy Queens are perfect for solo travel... |  |
@@ -770,10 +770,10 @@ done 13, differs 30, missing 2, unchecked 21
 | `Guild-Rooms-SubPages:16` | done | 1 Queen Bed 2 Guests 180sqft / 16sqm \| 200sqft / 18sqm |  |
 | `Guild-Rooms-SubPages:17` | done | 2 Guests |  |
 | `Guild-Rooms-SubPages:18` | done | 180sqft / 16sqm \| 200sqft / 18sqm |  |
-| `Guild-Rooms-SubPages:21` | missing | After a night out, the Cozy Queen offers privacy and room to breathe. |  |
-| `Guild-Rooms-SubPages:24` | missing | The Cozy Queen is an intimate room with big ideas. Colors are soothing and lu... |  |
-| `Guild-Rooms-SubPages:26` | differs | In-Room Amenities | found: in room amenities |
-| `Guild-Rooms-SubPages:27` | differs | The little things make all the difference. The scent of the room upon arrival... | found: Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Intege... |
+| `Guild-Rooms-SubPages:21` | done | After a night out, the Cozy Queen offers privacy and room to breathe. |  |
+| `Guild-Rooms-SubPages:24` | done | The Cozy Queen is an intimate room with big ideas. Colors are soothing and lu... |  |
+| `Guild-Rooms-SubPages:26` | done | In-Room Amenities |  |
+| `Guild-Rooms-SubPages:27` | done | The little things make all the difference. The scent of the room upon arrival... |  |
 | `Guild-Rooms-SubPages:29` | unchecked | le labo santal 33 bath amenities | not on site: no element to check |
 | `Guild-Rooms-SubPages:30` | unchecked | iron & board (steamer upon request) | not on site: no element to check |
 | `Guild-Rooms-SubPages:31` | unchecked | curated local art | not on site: no element to check |
@@ -783,39 +783,39 @@ done 13, differs 30, missing 2, unchecked 21
 | `Guild-Rooms-SubPages:35` | unchecked | music player (via bluetooth tv) | not on site: no element to check |
 | `Guild-Rooms-SubPages:36` | unchecked | high-speed Wi-fi | not on site: no element to check |
 | `Guild-Rooms-SubPages:39` | unchecked | The Guild’s accessible accommodations have lowered features throughout, and m... | not on site: no element to check |
-| `Guild-Rooms-SubPages:44` | differs | Intimacy with a Point of View | found: A room for every stay |
+| `Guild-Rooms-SubPages:44` | done | Intimacy with a Point of View | on /rooms/cozy-courtyard-queen |
 | `Guild-Rooms-SubPages:52` | done | View Floorplan | on /rooms/cozy-courtyard-queen |
-| `Guild-Rooms-SubPages:66` | differs | In-Room Amenities | found: in room amenities |
-| `Guild-Rooms-SubPages:67` | differs | The little things make all the difference. The scent of the room as the door ... | found: Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Intege... |
-| `Guild-Rooms-SubPages:84` | differs | King-Sized Comfort | found: A room for every stay |
+| `Guild-Rooms-SubPages:66` | done | In-Room Amenities | on /rooms/cozy-courtyard-queen |
+| `Guild-Rooms-SubPages:67` | done | The little things make all the difference. The scent of the room as the door ... | on /rooms/cozy-courtyard-queen |
+| `Guild-Rooms-SubPages:84` | done | King-Sized Comfort | on /rooms/cozy-king |
 | `Guild-Rooms-SubPages:91` | done | View Floorplan | on /rooms/cozy-king |
-| `Guild-Rooms-SubPages:106` | differs | In-Room Amenities | found: in room amenities |
-| `Guild-Rooms-SubPages:107` | differs | Details deliver in the Cozy King. The scent of the room sets the tone. The ar... | found: Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Intege... |
-| `Guild-Rooms-SubPages:124` | differs | Intimacy with a Point of View | found: A room for every stay |
+| `Guild-Rooms-SubPages:106` | done | In-Room Amenities | on /rooms/cozy-king |
+| `Guild-Rooms-SubPages:107` | done | Details deliver in the Cozy King. The scent of the room sets the tone. The ar... | on /rooms/cozy-king |
+| `Guild-Rooms-SubPages:124` | done | Intimacy with a Point of View | on /rooms/cozy-courtyard-king |
 | `Guild-Rooms-SubPages:132` | done | View Floorplan | on /rooms/cozy-courtyard-king |
-| `Guild-Rooms-SubPages:146` | differs | In-Room Amenities | found: in room amenities |
-| `Guild-Rooms-SubPages:147` | differs | Take a deep breath; the scent of the room sets the luxurious tone. Artwork is... | found: Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Intege... |
-| `Guild-Rooms-SubPages:164` | differs | Space meets privacy | found: A room for every stay |
+| `Guild-Rooms-SubPages:146` | done | In-Room Amenities | on /rooms/cozy-courtyard-king |
+| `Guild-Rooms-SubPages:147` | done | Take a deep breath; the scent of the room sets the luxurious tone. Artwork is... | on /rooms/cozy-courtyard-king |
+| `Guild-Rooms-SubPages:164` | done | Space meets privacy | on /rooms/city-level-below-ground |
 | `Guild-Rooms-SubPages:171` | done | View Floorplan | on /rooms/city-level-below-ground |
-| `Guild-Rooms-SubPages:187` | differs | In-Room Amenities | found: in room amenities |
-| `Guild-Rooms-SubPages:188` | differs | This is a room for all the senses: a luxurious scent sets the tone and the ar... | found: Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Intege... |
-| `Guild-Rooms-SubPages:205` | differs | Street Smart City Space. | found: A room for every stay |
+| `Guild-Rooms-SubPages:187` | done | In-Room Amenities | on /rooms/city-level-below-ground |
+| `Guild-Rooms-SubPages:188` | done | This is a room for all the senses: a luxurious scent sets the tone and the ar... | on /rooms/city-level-below-ground |
+| `Guild-Rooms-SubPages:205` | done | Street Smart City Space. | on /rooms/guild-city-level-loft |
 | `Guild-Rooms-SubPages:212` | done | View Floorplan | on /rooms/guild-city-level-loft |
-| `Guild-Rooms-SubPages:226` | differs | In-Room Amenities | found: in room amenities |
-| `Guild-Rooms-SubPages:227` | differs | Every detail is intentional: the room scent is luxurious and inviting; the ar... | found: Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Intege... |
-| `Guild-Rooms-SubPages:244` | differs | Loft Space For All. | found: A room for every stay |
+| `Guild-Rooms-SubPages:226` | done | In-Room Amenities | on /rooms/guild-city-level-loft |
+| `Guild-Rooms-SubPages:227` | done | Every detail is intentional: the room scent is luxurious and inviting; the ar... | on /rooms/guild-city-level-loft |
+| `Guild-Rooms-SubPages:244` | done | Loft Space For All. | on /rooms/guild-loft-suite |
 | `Guild-Rooms-SubPages:251` | done | View Floorplan | on /rooms/guild-loft-suite |
-| `Guild-Rooms-SubPages:268` | differs | In-Room Amenities | found: in room amenities |
-| `Guild-Rooms-SubPages:269` | differs | The pleasing scent of the room sets a luxurious, welcoming tone. The artwork ... | found: Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Intege... |
-| `Guild-Rooms-SubPages:286` | differs | The view from here | found: A room for every stay |
-| `Guild-Rooms-SubPages:306` | differs | In-Room Amenities | found: in room amenities |
-| `Guild-Rooms-SubPages:307` | differs | Every detail delights in the Guild Corner Loft Suite: the pleasing scent of t... | found: Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Intege... |
-| `Guild-Rooms-SubPages:325` | differs | Perfect Proportions | found: A room for every stay |
-| `Guild-Rooms-SubPages:344` | differs | In-Room Amenities | found: in room amenities |
-| `Guild-Rooms-SubPages:345` | differs | The Guild Double is full of luxurious details, like the pleasing scent of the... | found: Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Intege... |
-| `Guild-Rooms-SubPages:362` | differs | You Belong at the Top | found: A room for every stay |
-| `Guild-Rooms-SubPages:384` | differs | In-Room Amenities | found: in room amenities |
-| `Guild-Rooms-SubPages:385` | differs | Two Bedroom Loft Suites offer details designed to please: a scent that define... | found: Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Intege... |
+| `Guild-Rooms-SubPages:268` | done | In-Room Amenities | on /rooms/guild-loft-suite |
+| `Guild-Rooms-SubPages:269` | done | The pleasing scent of the room sets a luxurious, welcoming tone. The artwork ... | on /rooms/guild-loft-suite |
+| `Guild-Rooms-SubPages:286` | done | The view from here | on /rooms/guild-corner-loft-suite |
+| `Guild-Rooms-SubPages:306` | done | In-Room Amenities | on /rooms/guild-corner-loft-suite |
+| `Guild-Rooms-SubPages:307` | done | Every detail delights in the Guild Corner Loft Suite: the pleasing scent of t... | on /rooms/guild-corner-loft-suite |
+| `Guild-Rooms-SubPages:325` | done | Perfect Proportions | on /rooms/guild-double |
+| `Guild-Rooms-SubPages:344` | done | In-Room Amenities | on /rooms/guild-double |
+| `Guild-Rooms-SubPages:345` | done | The Guild Double is full of luxurious details, like the pleasing scent of the... | on /rooms/guild-double |
+| `Guild-Rooms-SubPages:362` | done | You Belong at the Top | on /rooms/two-bedroom-loft-suite |
+| `Guild-Rooms-SubPages:384` | done | In-Room Amenities | on /rooms/two-bedroom-loft-suite |
+| `Guild-Rooms-SubPages:385` | done | Two Bedroom Loft Suites offer details designed to please: a scent that define... | on /rooms/two-bedroom-loft-suite |
 | `no-copy:/rooms/cozy-queen:prop|67e58af5-a074-f1f6-457a-54bc8ecd98eb|0df84d45-603f-3795-7593-9010ebf7c540` | unchecked |  | no copy yet: staging text is a placeholder |
 | `no-copy:/rooms/cozy-queen:page|1f55e7f5-81e2-baad-5aa1-fb6c0a4fd3f6` | unchecked |  | no copy yet: staging text is a placeholder |
 | `no-copy:/rooms/cozy-queen:page|a2999053-7a62-4c6a-c544-6aa8cb360b07` | unchecked |  | no copy yet: staging text is a placeholder |
@@ -829,7 +829,7 @@ done 13, differs 30, missing 2, unchecked 21
 
 ## /rooms/guild-city-level-loft
 
-done 5, differs 0, missing 3, unchecked 11
+done 7, differs 0, missing 1, unchecked 11
 
 | row | status | new text | found or reason |
 |---|---|---|---|
@@ -841,8 +841,8 @@ done 5, differs 0, missing 3, unchecked 11
 | `Guild-Rooms-SubPages:216` | done | 2 Guests |  |
 | `Guild-Rooms-SubPages:217` | done | 280sqft 25sqm \| 300sqft / 27sqm. |  |
 | `Guild-Rooms-SubPages:218` | unchecked | 300sqft / 27sqm. | joined into 217: the head row carries the composed text |
-| `Guild-Rooms-SubPages:221` | missing | After a night out, the City Level Loft offers room to breathe. |  |
-| `Guild-Rooms-SubPages:224` | missing | The City Level Loft is as generously proportioned as it is restful, with luxu... |  |
+| `Guild-Rooms-SubPages:221` | done | After a night out, the City Level Loft offers room to breathe. |  |
+| `Guild-Rooms-SubPages:224` | done | The City Level Loft is as generously proportioned as it is restful, with luxu... |  |
 | `Guild-Rooms-SubPages:229` | unchecked | le labo santal 33 bath amenities | not on site: no element to check |
 | `Guild-Rooms-SubPages:230` | unchecked | iron & board (steamer upon request) | not on site: no element to check |
 | `Guild-Rooms-SubPages:231` | unchecked | curated local art | not on site: no element to check |
@@ -855,7 +855,7 @@ done 5, differs 0, missing 3, unchecked 11
 
 ## /rooms/guild-corner-loft-suite
 
-done 6, differs 0, missing 2, unchecked 13
+done 8, differs 0, missing 0, unchecked 13
 
 | row | status | new text | found or reason |
 |---|---|---|---|
@@ -869,8 +869,8 @@ done 6, differs 0, missing 2, unchecked 13
 | `Guild-Rooms-SubPages:296` | unchecked | City View | joined into 293: the head row carries the composed text |
 | `Guild-Rooms-SubPages:297` | done | 446sqft / 40sqm \| 463sqft / 42sqm |  |
 | `Guild-Rooms-SubPages:298` | unchecked | 463sqft / 42sqm | joined into 297: the head row carries the composed text |
-| `Guild-Rooms-SubPages:301` | missing | Room to get ready. Space to stretch out. The Guild Corner Loft Suite is a pre... |  |
-| `Guild-Rooms-SubPages:304` | missing | Guild Corner Loft Suites offer thoughtful interiors, custom furniture as styl... |  |
+| `Guild-Rooms-SubPages:301` | done | Room to get ready. Space to stretch out. The Guild Corner Loft Suite is a pre... |  |
+| `Guild-Rooms-SubPages:304` | done | Guild Corner Loft Suites offer thoughtful interiors, custom furniture as styl... |  |
 | `Guild-Rooms-SubPages:309` | unchecked | le labo santal 33 bath amenities | not on site: no element to check |
 | `Guild-Rooms-SubPages:310` | unchecked | iron & board (steamer upon request) | not on site: no element to check |
 | `Guild-Rooms-SubPages:311` | unchecked | curated local art | not on site: no element to check |
@@ -883,7 +883,7 @@ done 6, differs 0, missing 2, unchecked 13
 
 ## /rooms/guild-double
 
-done 6, differs 0, missing 2, unchecked 12
+done 8, differs 0, missing 0, unchecked 12
 
 | row | status | new text | found or reason |
 |---|---|---|---|
@@ -896,8 +896,8 @@ done 6, differs 0, missing 2, unchecked 12
 | `Guild-Rooms-SubPages:334` | done | 2-4 Guests |  |
 | `Guild-Rooms-SubPages:335` | done | 275sqft /25sqm \| 294sqft /26sqm. |  |
 | `Guild-Rooms-SubPages:336` | unchecked | 294sqft /26sqm. | joined into 335: the head row carries the composed text |
-| `Guild-Rooms-SubPages:339` | missing | Going out is grand. Coming home is better. The Guild Double is San Diego de l... |  |
-| `Guild-Rooms-SubPages:342` | missing | Guild Doubles offer custom interiors and tailored furniture as stylish as it ... |  |
+| `Guild-Rooms-SubPages:339` | done | Going out is grand. Coming home is better. The Guild Double is San Diego de l... |  |
+| `Guild-Rooms-SubPages:342` | done | Guild Doubles offer custom interiors and tailored furniture as stylish as it ... |  |
 | `Guild-Rooms-SubPages:347` | unchecked | le labo santal 33 bath amenities | not on site: no element to check |
 | `Guild-Rooms-SubPages:348` | unchecked | iron & board (steamer upon request) | not on site: no element to check |
 | `Guild-Rooms-SubPages:349` | unchecked | curated local art | not on site: no element to check |
@@ -938,7 +938,7 @@ done 5, differs 0, missing 3, unchecked 13
 
 ## /rooms/two-bedroom-loft-suite
 
-done 5, differs 0, missing 3, unchecked 15
+done 7, differs 0, missing 1, unchecked 15
 
 | row | status | new text | found or reason |
 |---|---|---|---|
@@ -954,8 +954,8 @@ done 5, differs 0, missing 3, unchecked 15
 | `Guild-Rooms-SubPages:374` | unchecked | Terrace | joined into 370: the head row carries the composed text |
 | `Guild-Rooms-SubPages:375` | unchecked | Bathrooms: 2.5 | joined into 370: the head row carries the composed text |
 | `Guild-Rooms-SubPages:376` | done | 1809sqft \| 163sqm. |  |
-| `Guild-Rooms-SubPages:379` | missing | Going out is grand. Coming home to the Two-Bedroom Loft Suite is even better. |  |
-| `Guild-Rooms-SubPages:382` | missing | More than a mere home away from home, the Two-Bedroom Loft Suite is the best ... |  |
+| `Guild-Rooms-SubPages:379` | done | Going out is grand. Coming home to the Two-Bedroom Loft Suite is even better. |  |
+| `Guild-Rooms-SubPages:382` | done | More than a mere home away from home, the Two-Bedroom Loft Suite is the best ... |  |
 | `Guild-Rooms-SubPages:387` | unchecked | le labo santal 33 bath amenities | not on site: no element to check |
 | `Guild-Rooms-SubPages:388` | unchecked | iron & board (steamer upon request) | not on site: no element to check |
 | `Guild-Rooms-SubPages:389` | unchecked | curated local art | not on site: no element to check |
