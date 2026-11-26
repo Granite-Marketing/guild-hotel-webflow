@@ -84,16 +84,52 @@ export function countHeadings(items, key = 'tag') {
   return counts
 }
 
-/** Matches each row to an element by text (case and punctuation ignored); repeated texts take the next unused element in page order. */
+const sectionWords = (domSection) => new Set(normText((domSection ?? '').replace(/^section_/, '').replace(/[-_]/g, ' ')).split(' ').filter(Boolean))
+
+const textMatches = (row, entry, wanted) => wanted !== '' && normText(entry.text) === wanted
+  && (row.kind === 'logo' ? entry.tag === 'img' || entry.hasImage : entry.tag !== 'img')
+
+/** Page section (section_ class) each sheet section label sits in, learned from its rows whose text appears once on the page. */
+function learnSections(rows, elements) {
+  const votes = new Map()
+  for (const row of rows) {
+    const wanted = normText(row.text)
+    const candidates = elements.filter((entry) => textMatches(row, entry, wanted))
+    if (candidates.length !== 1 || !candidates[0].section) continue
+    const tally = votes.get(row.section) ?? new Map()
+    tally.set(candidates[0].section, (tally.get(candidates[0].section) ?? 0) + 1)
+    votes.set(row.section, tally)
+  }
+  const learned = new Map()
+  for (const [label, tally] of votes) learned.set(label, [...tally].sort((first, second) => second[1] - first[1])[0][0])
+  return learned
+}
+
+/** How well an element's page section fits a row's sheet section: 2 learned from the row's section, 1 shares a word, 0 neither. */
+function sectionFit(row, entry, learned) {
+  if (!entry.section) return 0
+  if (learned.get(row.section) === entry.section) return 2
+  const labelWords = normText(row.section).split(' ').filter((word) => word.length > 2)
+  const classWords = sectionWords(entry.section)
+  return labelWords.some((word) => classWords.has(word)) ? 1 : 0
+}
+
+/**
+ * Matches each row to an element by section and text (case and punctuation ignored). Among elements with the row's
+ * text, the one whose page section best fits the row's sheet section wins; repeated texts in the same section take the
+ * next unused element in page order.
+ */
 export function matchRows(rows, elements) {
+  const learned = learnSections(rows, elements)
   const used = new Set()
   const matchedOrders = new Set()
   let lastOrder = -1
   const results = rows.map((row) => {
     const wanted = normText(row.text)
-    const candidates = elements.filter((entry) => wanted !== '' && !used.has(entry.order) && normText(entry.text) === wanted
-      && (row.kind === 'logo' ? entry.tag === 'img' || entry.hasImage : entry.tag !== 'img'))
-    const found = candidates.find((entry) => entry.order > lastOrder) ?? candidates[0]
+    const candidates = elements.filter((entry) => !used.has(entry.order) && textMatches(row, entry, wanted))
+    const bestFit = Math.max(-1, ...candidates.map((entry) => sectionFit(row, entry, learned)))
+    const fitting = candidates.filter((entry) => sectionFit(row, entry, learned) === bestFit)
+    const found = fitting.find((entry) => entry.order > lastOrder) ?? fitting[0]
     if (!found) return { row, status: 'not-found' }
     used.add(found.order)
     matchedOrders.add(found.order)

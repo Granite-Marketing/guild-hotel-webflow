@@ -63,6 +63,30 @@ test('repeated texts match in page order', () => {
   assert.deepEqual(results.map((result) => [result.status, result.foundTag]), [['failed', 'h2'], ['passed', 'p']])
 })
 
+test('the section decides between repeated texts: a Footer row skips the same text in an earlier section', () => {
+  // MUTATION: matching by text and page order only would give the Footer row the offers slider's paragraph (order 1).
+  const elements = [
+    element(0, 'h2', 'Explore', { section: 'section_hero' }),
+    element(1, 'p', 'Explore', { section: 'section_offers-slider-split' }),
+    element(2, 'h2', 'Explore', { section: 'section_footer-links' }),
+  ]
+  const rows = [row({ number: 1, section: 'Hero', text: 'Explore', proposedTag: 'h2' }), row({ number: 2, section: 'Footer', text: 'Explore', proposedTag: 'p' })]
+  const { results } = matchRows(rows, elements)
+  assert.deepEqual(results.map((result) => [result.element.order, result.status, result.foundTag]), [[0, 'passed', 'h2'], [2, 'failed', 'h2']])
+})
+
+test('a section label the page classes do not name is learned from its rows with unique text', () => {
+  // MUTATION: without learning, the "Reservations" row would take the first unused "Book now" (order 1, in the hero).
+  const elements = [
+    element(0, 'h2', 'Plan your stay', { section: 'section_cta-booking-newsletter' }),
+    element(1, 'p', 'Book now', { section: 'section_home-hero' }),
+    element(2, 'h3', 'Book now', { section: 'section_cta-booking-newsletter' }),
+  ]
+  const rows = [row({ number: 1, section: 'Reservations', text: 'Plan your stay', proposedTag: 'h2' }), row({ number: 2, section: 'Reservations', text: 'Book now', proposedTag: 'h3' })]
+  const { results } = matchRows(rows, elements)
+  assert.deepEqual(results.map((result) => result.element.order), [0, 2])
+})
+
 test('a wrapped logo passes only as an h3 that contains the image, found by its alt text', () => {
   const logoRow = row({ text: 'Zuma San Diego', kind: 'logo', proposedTag: 'h3' })
   const wrapped = matchRows([logoRow], [element(0, 'h3', 'Zuma San Diego', { hasImage: true })])

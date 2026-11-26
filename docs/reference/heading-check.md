@@ -21,7 +21,7 @@ It is read only: headless page loads and link crawling (GET) are the only networ
 
 ## How rows are matched
 
-- By text, ignoring case and punctuation. The sheet's section names are shown in the report but not used to match, because they are not class names.
+- By section and text, ignoring case and punctuation. Among elements with a row's text, the one whose page section (its `section_` class) fits the row's sheet section wins: first the page section learned from that sheet section's rows whose text appears once, then a shared word ("Footer" and `section_footer-links`). Repeated texts in the same section match in page order.
 - Repeated texts match in page order: each row takes the next unused element after the previous match.
 - Logo rows (`Zuma (logo, alt text "Zuma San Diego")`) match on the alt text. Template rows (`[room name], e.g. Cozy Queen`) match on the example, so the room and venue tabs use the first path listed in the tab (`/rooms/guild-city-level-loft`, `/dining/dining-zuma`).
 - Pages are loaded at 1440 wide and scrolled once so lazy content renders. Hidden copies (second slideshow copies, tab panels) are in the page and are matched like any other element, as the sheet expects.
