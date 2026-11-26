@@ -30,10 +30,10 @@
  "summary": {
   "rows": 815,
   "rowsByStatus": {
-   "change": 336,
+   "change": 338,
    "same": 55,
    "second version listed": 13,
-   "not on site": 288,
+   "not on site": 286,
    "no copy yet": 118,
    "held": 5
   },
@@ -3613,13 +3613,13 @@
    "id": "Guild-Dining-GardenTerrace:2",
    "doc": "Guild-Dining-GardenTerrace",
    "line": 2,
-   "page": "/dining/*",
+   "page": "/dining/dining-gardenterrace",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Garden Terrace",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-gardenterrace",
+    "itemPath": "/dining/dining-gardenterrace",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -3662,13 +3662,13 @@
    "id": "Guild-Dining-GardenTerrace:3",
    "doc": "Guild-Dining-GardenTerrace",
    "line": 3,
-   "page": "/dining/*",
+   "page": "/dining/dining-gardenterrace",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Garden Terrace",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-gardenterrace",
+    "itemPath": "/dining/dining-gardenterrace",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -3705,13 +3705,13 @@
    "id": "Guild-Dining-GardenTerrace:5",
    "doc": "Guild-Dining-GardenTerrace",
    "line": 5,
-   "page": "/dining/*",
+   "page": "/dining/dining-gardenterrace",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Garden Terrace",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-gardenterrace",
+    "itemPath": "/dining/dining-gardenterrace",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -3748,13 +3748,13 @@
    "id": "Guild-Dining-GardenTerrace:6",
    "doc": "Guild-Dining-GardenTerrace",
    "line": 6,
-   "page": "/dining/*",
+   "page": "/dining/dining-gardenterrace",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Garden Terrace",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-gardenterrace",
+    "itemPath": "/dining/dining-gardenterrace",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -3791,13 +3791,13 @@
    "id": "Guild-Dining-GardenTerrace:8",
    "doc": "Guild-Dining-GardenTerrace",
    "line": 8,
-   "page": "/dining/*",
+   "page": "/dining/dining-gardenterrace",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Garden Terrace",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-gardenterrace",
+    "itemPath": "/dining/dining-gardenterrace",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -3834,13 +3834,13 @@
    "id": "Guild-Dining-GardenTerrace:11",
    "doc": "Guild-Dining-GardenTerrace",
    "line": 11,
-   "page": "/dining/*",
+   "page": "/dining/dining-gardenterrace",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Garden Terrace",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-gardenterrace",
+    "itemPath": "/dining/dining-gardenterrace",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -3873,13 +3873,13 @@
    "id": "Guild-Dining-GardenTerrace:12",
    "doc": "Guild-Dining-GardenTerrace",
    "line": 12,
-   "page": "/dining/*",
+   "page": "/dining/dining-gardenterrace",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Garden Terrace",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-gardenterrace",
+    "itemPath": "/dining/dining-gardenterrace",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -3916,13 +3916,13 @@
    "id": "Guild-Dining-GardenTerrace:14",
    "doc": "Guild-Dining-GardenTerrace",
    "line": 14,
-   "page": "/dining/*",
+   "page": "/dining/dining-gardenterrace",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Garden Terrace",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-gardenterrace",
+    "itemPath": "/dining/dining-gardenterrace",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4016,13 +4016,13 @@
    "id": "Guild-Dining-GardenTerrace:17",
    "doc": "Guild-Dining-GardenTerrace",
    "line": 17,
-   "page": "/dining/*",
+   "page": "/dining/dining-gardenterrace",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Garden Terrace",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-gardenterrace",
+    "itemPath": "/dining/dining-gardenterrace",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4059,13 +4059,13 @@
    "id": "Guild-Dining-LobbyBar:2",
    "doc": "Guild-Dining-LobbyBar",
    "line": 2,
-   "page": "/dining/*",
+   "page": "/dining/dining-lobbybar",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Lobby Bar",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-lobbybar",
+    "itemPath": "/dining/dining-lobbybar",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4108,13 +4108,13 @@
    "id": "Guild-Dining-LobbyBar:3",
    "doc": "Guild-Dining-LobbyBar",
    "line": 3,
-   "page": "/dining/*",
+   "page": "/dining/dining-lobbybar",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Lobby Bar",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-lobbybar",
+    "itemPath": "/dining/dining-lobbybar",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4151,13 +4151,13 @@
    "id": "Guild-Dining-LobbyBar:5",
    "doc": "Guild-Dining-LobbyBar",
    "line": 5,
-   "page": "/dining/*",
+   "page": "/dining/dining-lobbybar",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Lobby Bar",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-lobbybar",
+    "itemPath": "/dining/dining-lobbybar",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4194,13 +4194,13 @@
    "id": "Guild-Dining-LobbyBar:6",
    "doc": "Guild-Dining-LobbyBar",
    "line": 6,
-   "page": "/dining/*",
+   "page": "/dining/dining-lobbybar",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Lobby Bar",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-lobbybar",
+    "itemPath": "/dining/dining-lobbybar",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4237,13 +4237,13 @@
    "id": "Guild-Dining-LobbyBar:8",
    "doc": "Guild-Dining-LobbyBar",
    "line": 8,
-   "page": "/dining/*",
+   "page": "/dining/dining-lobbybar",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Lobby Bar",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-lobbybar",
+    "itemPath": "/dining/dining-lobbybar",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4276,13 +4276,13 @@
    "id": "Guild-Dining-LobbyBar:9",
    "doc": "Guild-Dining-LobbyBar",
    "line": 9,
-   "page": "/dining/*",
+   "page": "/dining/dining-lobbybar",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Lobby Bar",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-lobbybar",
+    "itemPath": "/dining/dining-lobbybar",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4315,13 +4315,13 @@
    "id": "Guild-Dining-LobbyBar:11",
    "doc": "Guild-Dining-LobbyBar",
    "line": 11,
-   "page": "/dining/*",
+   "page": "/dining/dining-lobbybar",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Lobby Bar",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-lobbybar",
+    "itemPath": "/dining/dining-lobbybar",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4354,13 +4354,13 @@
    "id": "Guild-Dining-LobbyBar:12",
    "doc": "Guild-Dining-LobbyBar",
    "line": 12,
-   "page": "/dining/*",
+   "page": "/dining/dining-lobbybar",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Lobby Bar",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-lobbybar",
+    "itemPath": "/dining/dining-lobbybar",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4455,13 +4455,13 @@
    "id": "Guild-Dining-LobbyBar:15",
    "doc": "Guild-Dining-LobbyBar",
    "line": 15,
-   "page": "/dining/*",
+   "page": "/dining/dining-lobbybar",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Lobby Bar",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-lobbybar",
+    "itemPath": "/dining/dining-lobbybar",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4498,13 +4498,13 @@
    "id": "Guild-Dining-PoolLounge:2",
    "doc": "Guild-Dining-PoolLounge",
    "line": 2,
-   "page": "/dining/*",
+   "page": "/dining/dining-poollounge",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Pool Lounge",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-poollounge",
+    "itemPath": "/dining/dining-poollounge",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4547,13 +4547,13 @@
    "id": "Guild-Dining-PoolLounge:3",
    "doc": "Guild-Dining-PoolLounge",
    "line": 3,
-   "page": "/dining/*",
+   "page": "/dining/dining-poollounge",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Pool Lounge",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-poollounge",
+    "itemPath": "/dining/dining-poollounge",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4590,13 +4590,13 @@
    "id": "Guild-Dining-PoolLounge:5",
    "doc": "Guild-Dining-PoolLounge",
    "line": 5,
-   "page": "/dining/*",
+   "page": "/dining/dining-poollounge",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Pool Lounge",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-poollounge",
+    "itemPath": "/dining/dining-poollounge",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4633,13 +4633,13 @@
    "id": "Guild-Dining-PoolLounge:6",
    "doc": "Guild-Dining-PoolLounge",
    "line": 6,
-   "page": "/dining/*",
+   "page": "/dining/dining-poollounge",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Pool Lounge",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-poollounge",
+    "itemPath": "/dining/dining-poollounge",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4676,13 +4676,13 @@
    "id": "Guild-Dining-PoolLounge:8",
    "doc": "Guild-Dining-PoolLounge",
    "line": 8,
-   "page": "/dining/*",
+   "page": "/dining/dining-poollounge",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Pool Lounge",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-poollounge",
+    "itemPath": "/dining/dining-poollounge",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4719,13 +4719,13 @@
    "id": "Guild-Dining-PoolLounge:10",
    "doc": "Guild-Dining-PoolLounge",
    "line": 10,
-   "page": "/dining/*",
+   "page": "/dining/dining-poollounge",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Pool Lounge",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-poollounge",
+    "itemPath": "/dining/dining-poollounge",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4758,13 +4758,13 @@
    "id": "Guild-Dining-PoolLounge:11",
    "doc": "Guild-Dining-PoolLounge",
    "line": 11,
-   "page": "/dining/*",
+   "page": "/dining/dining-poollounge",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Pool Lounge",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-poollounge",
+    "itemPath": "/dining/dining-poollounge",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -4859,13 +4859,13 @@
    "id": "Guild-Dining-PoolLounge:14",
    "doc": "Guild-Dining-PoolLounge",
    "line": 14,
-   "page": "/dining/*",
+   "page": "/dining/dining-poollounge",
    "cmsItem": {
     "collection": "dining",
     "collectionName": "🍴 Dinings",
     "name": "Pool Lounge",
-    "slug": null,
-    "itemPath": null,
+    "slug": "dining-poollounge",
+    "itemPath": "/dining/dining-poollounge",
     "itemPathDerived": false,
     "listingPaths": [
      "/dining"
@@ -14782,16 +14782,26 @@
    "docRole": "heading",
    "scriptHeading": false,
    "newText": "HALL OF JUSTICE",
-   "status": "not on site",
-   "targetKind": "not-on-site",
-   "target": null,
-   "currentText": "dining around the guild",
+   "status": "change",
+   "targetKind": "component-prop",
+   "target": {
+    "tag": "h3",
+    "section": "section_neighborhood-corporate",
+    "liveOrder": null,
+    "textHint": "san diego convention center",
+    "component": "Corporate Services Card",
+    "property": "Title",
+    "propertyId": "50c41ceb-41ed-41f3-628c-42868f48543a",
+    "instance": "6f1a0b25-7493-5449-2219-1c55c07b7666",
+    "overridden": false
+   },
+   "currentText": "san diego convention center",
    "confidence": 0.46,
    "needsConfirm": false,
    "confirmReasons": [
     "matched by position and role only, staging text does not resemble the doc line"
    ],
-   "reason": "checked on staging: the slot is the \"dining around the guild\" heading; Hall of Justice has no card on staging",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
    "joinedInto": null,
@@ -14803,8 +14813,8 @@
    "duplicateOf": null,
    "conflictsWith": [],
    "pick": {
-    "decision": "reject",
-    "note": "checked on staging: the slot is the \"dining around the guild\" heading; Hall of Justice has no card on staging"
+    "decision": "retarget",
+    "note": "checked on staging after upload: the fourth Corporate & Services card (placeholder) holds the doc's fourth court, Hall of Justice"
    }
   },
   {
@@ -14816,16 +14826,26 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "The Guild is a three-minute walk from the Hall of Justice, and the hotel has become a trusted host for firms working on cases to be tried there. The Hall of Justice contains courtrooms for the Superior Court of California - County of San Diego, the San Diego County District Attorney’s Office, the Sheriff’s Court Services Bureau, Probation, Adult Forensic Services, the Public Defender, and the U.S. Attorney.",
-   "status": "not on site",
-   "targetKind": "not-on-site",
-   "target": null,
-   "currentText": "In hac habitasse platea dictumst. Etiam dapibus augue tortor. In hac habitasse platea dictumst. Etiam dapibus augue tortor",
+   "status": "change",
+   "targetKind": "component-prop",
+   "target": {
+    "tag": null,
+    "section": null,
+    "liveOrder": null,
+    "textHint": "Pellentesque dui metus",
+    "component": "Corporate Services Card",
+    "property": "Text",
+    "propertyId": "a0497df0-1856-c25b-6589-2709393cc613",
+    "instance": "6f1a0b25-7493-5449-2219-1c55c07b7666",
+    "overridden": false
+   },
+   "currentText": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,",
    "confidence": 0.46,
    "needsConfirm": false,
    "confirmReasons": [
     "matched by position and role only, staging text does not resemble the doc line"
    ],
-   "reason": "checked on staging: the slot is the dining articles intro; Hall of Justice has no card on staging",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
    "joinedInto": null,
@@ -14843,8 +14863,8 @@
    "duplicateOf": null,
    "conflictsWith": [],
    "pick": {
-    "decision": "reject",
-    "note": "checked on staging: the slot is the dining articles intro; Hall of Justice has no card on staging"
+    "decision": "retarget",
+    "note": "checked on staging after upload: the fourth Corporate & Services card (placeholder) holds the doc's fourth court, Hall of Justice"
    }
   },
   {
@@ -14906,14 +14926,14 @@
     "tag": null,
     "section": null,
     "liveOrder": null,
-    "textHint": "Reviews, lists and features about The Guild, from the writers and editors who ha",
-    "component": "tab-pills-intro",
+    "textHint": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+    "component": "Hero Fullbleed Centered",
     "property": "Content/Text",
-    "propertyId": "201b39ab-c1e5-2b88-2d64-115d2eaccec1",
-    "instance": "a0cf1b8c-6599-1aeb-0aad-3babaa7eef51",
-    "overridden": true
+    "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+    "instance": "954ba09c-c585-377c-a4e3-a643bbd37f21",
+    "overridden": false
    },
-   "currentText": "Reviews, lists and features about The Guild, from the writers and editors who have stayed with us.",
+   "currentText": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
    "confidence": 0.48,
    "needsConfirm": false,
    "confirmReasons": [
@@ -14931,8 +14951,8 @@
    "duplicateOf": null,
    "conflictsWith": [],
    "pick": {
-    "decision": "accept",
-    "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+    "decision": "retarget",
+    "note": "checked on staging after upload: the line sits under the hero heading, so it goes to the hero text (placeholder); the lower intro keeps its own copy"
    }
   },
   {

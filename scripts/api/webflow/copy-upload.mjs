@@ -6,6 +6,8 @@
 // Usage: node scripts/api/webflow/copy-upload.mjs --list
 //        node scripts/api/webflow/copy-upload.mjs --batch /arts [--apply] [--publish]
 //        node scripts/api/webflow/copy-upload.mjs --publish-only
+// Page text on the primary locale cannot be written by the Data API (it only accepts secondary locales), so a page
+// batch is run dry with COPY_PLAN=<file>: the plan is applied in the Designer (Webflow MCP) and logged with --log-plan.
 // Credentials: WEBFLOW_API_TOKEN, WEBFLOW_SITE_ID from the environment.
 import fs from 'node:fs'
 import path from 'node:path'
@@ -118,6 +120,7 @@ async function pageBatch(batch, rows, apply) {
       }
     }
   }
+  if (process.env.COPY_PLAN) fs.writeFileSync(process.env.COPY_PLAN, JSON.stringify({ batch, pageId: page.pageId, updates: [...updates.values()], entries }, null, 1))
   if (apply && updates.size) {
     const site = await api('GET', `/v2/sites/${SITE}`)
     const result = await api('POST', `/v2/pages/${page.pageId}/dom?localeId=${site.locales.primary.id}`, { nodes: [...updates.values()] })
@@ -189,6 +192,13 @@ export async function main(argv) {
   const args = new Map()
   for (let index = 0; index < argv.length; index++) args.set(argv[index], argv[index + 1]?.startsWith('--') ? true : argv[index + 1] ?? true)
   if (args.has('--publish-only')) return publish()
+  if (args.has('--log-plan')) { // a page plan applied in the Designer: log its entries as written
+    const plan = readJson(args.get('--log-plan'))
+    const entries = plan.entries.map((entry) => ({ ...entry, time: new Date().toISOString(), result: entry.result === 'would write' ? 'written (Designer)' : entry.result }))
+    writeLog([...readLog(), ...entries])
+    if (args.has('--publish')) await publish()
+    return
+  }
   const map = readJson(MAP)
   const rows = writableRows(map.rows)
   const batches = new Map()

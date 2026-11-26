@@ -608,7 +608,9 @@ const DINING_LABELS = [
 
 function diningVenueRows(docName, config, parsed, index, model) {
   const collection = model.collections[config.collection]
-  const item = itemByName(collection, config.itemName)
+  const found = itemByName(collection, config.itemName)
+  // the catalogue only saw the Zuma item page; the registry gives the other venues' slugs so the check opens their pages
+  const item = found && !found.itemPath && config.slug ? { ...found, slug: config.slug, itemPath: `/${config.collection}/${config.slug}` } : found
   const page = index.pages.get(config.templatePage)
   const entries = parsed.entries
   if (!item) return entries.flatMap((entry) => expandEntryRows(docName, entry, noTarget(docName, entry, `no ${config.collection} item named ${config.itemName}`)))

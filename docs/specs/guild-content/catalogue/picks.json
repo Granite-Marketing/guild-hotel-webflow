@@ -3232,13 +3232,47 @@
   },
   {
    "id": "Guild-Neighborhood:55",
-   "pick": "reject",
-   "note": "checked on staging: the slot is the \"dining around the guild\" heading; Hall of Justice has no card on staging"
+   "pick": "retarget",
+   "note": "checked on staging after upload: the fourth Corporate & Services card (placeholder) holds the doc's fourth court, Hall of Justice",
+   "set": {
+    "status": "change",
+    "targetKind": "component-prop",
+    "reason": null,
+    "target": {
+     "tag": "h3",
+     "section": "section_neighborhood-corporate",
+     "liveOrder": null,
+     "textHint": "san diego convention center",
+     "component": "Corporate Services Card",
+     "property": "Title",
+     "propertyId": "50c41ceb-41ed-41f3-628c-42868f48543a",
+     "instance": "6f1a0b25-7493-5449-2219-1c55c07b7666",
+     "overridden": false
+    },
+    "currentText": "san diego convention center"
+   }
   },
   {
    "id": "Guild-Neighborhood:56",
-   "pick": "reject",
-   "note": "checked on staging: the slot is the dining articles intro; Hall of Justice has no card on staging"
+   "pick": "retarget",
+   "note": "checked on staging after upload: the fourth Corporate & Services card (placeholder) holds the doc's fourth court, Hall of Justice",
+   "set": {
+    "status": "change",
+    "targetKind": "component-prop",
+    "reason": null,
+    "target": {
+     "tag": null,
+     "section": null,
+     "liveOrder": null,
+     "textHint": "Pellentesque dui metus",
+     "component": "Corporate Services Card",
+     "property": "Text",
+     "propertyId": "a0497df0-1856-c25b-6589-2709393cc613",
+     "instance": "6f1a0b25-7493-5449-2219-1c55c07b7666",
+     "overridden": false
+    },
+    "currentText": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,"
+   }
   },
   {
    "id": "Guild-Corporate:73",
@@ -3660,8 +3694,22 @@
   },
   {
    "id": "Guild-Press:3",
-   "pick": "accept",
-   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+   "pick": "retarget",
+   "note": "checked on staging after upload: the line sits under the hero heading, so it goes to the hero text (placeholder); the lower intro keeps its own copy",
+   "set": {
+    "target": {
+     "tag": null,
+     "section": null,
+     "liveOrder": null,
+     "textHint": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
+     "component": "Hero Fullbleed Centered",
+     "property": "Content/Text",
+     "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+     "instance": "954ba09c-c585-377c-a4e3-a643bbd37f21",
+     "overridden": false
+    },
+    "currentText": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non."
+   }
   },
   {
    "id": "Guild-Press:5",
