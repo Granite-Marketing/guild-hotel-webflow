@@ -58,7 +58,7 @@ export async function main(argv) {
     staging: options.fixtures ? `saved pages in ${path.relative(ROOT, options.fixtures)}` : STAGING,
   })
   fs.mkdirSync(options.out, { recursive: true })
-  fs.writeFileSync(path.join(options.out, 'copy-check.json'), JSON.stringify(report, null, 1).replace(/—/g, '\\u2014') + '\n')
+  fs.writeFileSync(path.join(options.out, 'copy-check.json'), JSON.stringify(report, null, 1).replace(/\u2014/g, '\\u2014') + '\n')
   fs.writeFileSync(path.join(options.out, 'copy-check.md'), renderCopyCheckMarkdown(report))
   console.log(JSON.stringify(report.summary))
   return report

@@ -125,7 +125,7 @@ test('the report groups rows by page with counts per status and overall, from th
   assert.match(markdown, /## \/history/)
   assert.match(markdown, /held: left as it is/)
   assert.ok(['a', 'b', 'c'].every((id) => markdown.includes(`\`${id}\``)), 'every row appears in the report')
-  assert.ok(!markdown.includes('—'))
+  assert.ok(!markdown.includes('\u2014'))
 })
 
 // Browser extraction on saved page fixtures (headless chromium, 1440 wide, file:// URLs only).
