@@ -47,7 +47,8 @@
     "test:figma": "node --test tests/figma/*.test.mjs",
     "figma:inventory": "node scripts/api/figma/build-inventory.mjs",
     "figma:vectors": "node scripts/api/figma/export-vectors.mjs",
-    "figma:queue": "node scripts/api/figma/build-queue.mjs"
+    "figma:queue": "node scripts/api/figma/build-queue.mjs",
+    "where-used": "node scripts/api/webflow/where-used.mjs"
   },
   "keywords": [
     "webflow",
