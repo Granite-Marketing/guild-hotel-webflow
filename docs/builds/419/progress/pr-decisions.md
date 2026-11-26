@@ -1,0 +1,1 @@
+- PR body built from ASSUMPTIONS, validation, visual summary; alternatives: none; why: stage spec; landed: PR body

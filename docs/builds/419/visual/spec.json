@@ -1,0 +1,1 @@
+{"routes":[{"path":"/"},{"path":"/rooms"},{"path":"/tests/visual/fixtures/heading-tags-420.html","not_captured":"Playwright fixture served by the test web server, not by the staging site the capture uses (HTTP 404)"}]}
