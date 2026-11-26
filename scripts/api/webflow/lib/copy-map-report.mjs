@@ -88,7 +88,7 @@ export function renderCopyMapMarkdown(output) {
     groups.get(key).push(row)
   }
   out.push('## Rows by page', '')
-  for (const [key, group] of [...groups].sort((a, b) => String(a[0]).localeCompare(String(b[0])))) {
+  for (const [key, group] of [...groups].sort((left, right) => String(left[0]).localeCompare(String(right[0])))) {
     out.push(`### ${key}`, '', '| doc line | status | target | current | new | flags |', '|---|---|---|---|---|---|')
     for (const row of group) {
       const docLine = row.doc ? `${row.doc.replace('Guild-', '')}:${row.line ?? '-'}` : '-'

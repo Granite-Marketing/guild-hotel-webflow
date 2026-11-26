@@ -86,12 +86,12 @@ function observedItemNames(pages) {
   const byPath = new Map(pages.map((page) => [page.path, page]))
   const texts = (pagePath, predicate) => (byPath.get(pagePath)?.elements || []).filter(predicate).map((element) => element.textContent.trim())
   return {
-    rooms: texts('/rooms', (e) => e.inCmsList && e.section === 'section_rooms-collection-room-grid' && e.tag === 'h3'),
-    dining: texts('/dining', (e) => e.inCmsList && e.tag === 'div' && !e.section),
-    'beyond-downtown-places': texts('/neighborhood', (e) => e.inCmsList && e.source === 'cms' && e.tag === 'h2' && !e.section),
+    rooms: texts('/rooms', (element) => element.inCmsList && element.section === 'section_rooms-collection-room-grid' && element.tag === 'h3'),
+    dining: texts('/dining', (element) => element.inCmsList && element.tag === 'div' && !element.section),
+    'beyond-downtown-places': texts('/neighborhood', (element) => element.inCmsList && element.source === 'cms' && element.tag === 'h2' && !element.section),
     'meeting-venues': [
-      ...texts('/meetings', (e) => e.inCmsList && e.section === 'section_venue-card-fullbleed' && e.tag === 'h3'),
-      ...texts('/legal-corporate/corporate', (e) => e.inCmsList && e.section === 'section_venue-card-fullbleed' && e.tag === 'h3'),
+      ...texts('/meetings', (element) => element.inCmsList && element.section === 'section_venue-card-fullbleed' && element.tag === 'h3'),
+      ...texts('/legal-corporate/corporate', (element) => element.inCmsList && element.section === 'section_venue-card-fullbleed' && element.tag === 'h3'),
     ],
   }
 }
@@ -99,7 +99,7 @@ function observedItemNames(pages) {
 function collectionModels(catalogue) {
   const names = observedItemNames(catalogue.pages)
   const samples = catalogue.pages.filter((page) => page.kind === 'cms-sample' && !page.path.includes('<'))
-  const hintsOf = (page) => (page.elements || []).filter((e) => e.source === 'cms' && ['h1', 'h2', 'blockquote'].includes(e.tag) && !/offers-slider|faq-accordion/.test(e.section || '')).map((e) => ({ tag: e.tag, text: e.textContent }))
+  const hintsOf = (page) => (page.elements || []).filter((element) => element.source === 'cms' && ['h1', 'h2', 'blockquote'].includes(element.tag) && !/offers-slider|faq-accordion/.test(element.section || '')).map((element) => ({ tag: element.tag, text: element.textContent }))
   const out = {}
   for (const collection of catalogue.collections) {
     const sample = samples.find((page) => templateOf(page.path) === `/${collection.slug}`)
@@ -130,8 +130,8 @@ function collectionModels(catalogue) {
 const CMS_LIST_SECTIONS = /offers-slider|faq-accordion|venue-card-fullbleed|room-grid|article-card/
 function boundSections(record) {
   return [...new Set((record.elements || [])
-    .filter((e) => e.source === 'cms' && ['h1', 'h2', 'blockquote'].includes(e.tag) && e.section && !CMS_LIST_SECTIONS.test(e.section))
-    .map((e) => e.section))]
+    .filter((element) => element.source === 'cms' && ['h1', 'h2', 'blockquote'].includes(element.tag) && element.section && !CMS_LIST_SECTIONS.test(element.section))
+    .map((element) => element.section))]
 }
 
 export function buildCopyModel({ catalogue, pageDoms, componentsById }) {

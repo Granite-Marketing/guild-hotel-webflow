@@ -115,7 +115,7 @@ export function parseDoc(markdown, { foldRepeatedBlocks = false } = {}) {
   })
   const last = entries[entries.length - 1]
   if (last) for (const note of pendingNotes) attachNote(note, last)
-  return { entries: foldRepeatedBlocks ? foldRepeated(entries) : entries, notes: notes.sort((a, b) => a.line - b.line) }
+  return { entries: foldRepeatedBlocks ? foldRepeated(entries) : entries, notes: notes.sort((left, right) => left.line - right.line) }
 }
 
 // A heading that comes back later with its own body (no "or" between them) is a second version of that block.
@@ -181,7 +181,7 @@ const ROLE_FIT = {
 function indexModel(model) {
   const pages = new Map()
   for (const page of model.pages) {
-    const slots = page.slots.filter((slotItem) => !CHROME_COMPONENTS.has(slotItem.component)).sort((a, b) => a.order - b.order)
+    const slots = page.slots.filter((slotItem) => !CHROME_COMPONENTS.has(slotItem.component)).sort((left, right) => left.order - right.order)
     pages.set(page.path, { ...page, slots })
   }
   const componentPages = new Map((model.components || []).map((component) => [component.name, component.pages || {}]))
@@ -554,9 +554,9 @@ function roomRows(docName, config, parsed, index, model) {
       else rows.push(...none(entry, 'bed, view or terrace line: the room card holds only guests and size labels'))
     }
     if (sizeEntries.length) rows.push(...groupRows(docName, sizeEntries, (first, text) => cmsFieldRow(docName, first, { ...ctx, fieldSlug: 'size-label', text, confidence: sizeEntries.length > 1 ? 0.6 : 0.85, reasons: sizeEntries.length > 1 ? ['doc gives the sizes on separate lines; confirm how they join'] : [] }), ' | '))
-    if (templateEntries.length && page) rows.push(...templateRows(docName, templateEntries.sort((a, b) => a.line - b.line), page, index, new Set()))
+    if (templateEntries.length && page) rows.push(...templateRows(docName, templateEntries.sort((left, right) => left.line - right.line), page, index, new Set()))
   }
-  rows.sort((a, b) => a.line - b.line)
+  rows.sort((left, right) => left.line - right.line)
   return { rows, rooms: { matched, docRoomsWithoutItem, itemsWithoutDoc } }
 }
 
@@ -637,7 +637,7 @@ function diningVenueRows(docName, config, parsed, index, model) {
     else rows.push(...none([heading, ...body], 'further text block: the dining item has no field for a second intro section'))
   }
   if (templateEntries.length && page) rows.push(...templateRows(docName, templateEntries, page, index, new Set()))
-  rows.sort((a, b) => a.line - b.line)
+  rows.sort((left, right) => left.line - right.line)
   return rows
 }
 
@@ -674,7 +674,7 @@ function legalCorporateRows(docName, config, parsed, index, model) {
   const leftovers = remaining.filter((entry) => !consumed.has(entry.line))
   if (page) rows.push(...templateRows(docName, leftovers, page, index, new Set()))
   else for (const entry of leftovers) rows.push(...expandEntryRows(docName, entry, noTarget(docName, entry, 'no template page in the catalogue')))
-  rows.sort((a, b) => a.line - b.line)
+  rows.sort((left, right) => left.line - right.line)
   return rows
 }
 
@@ -686,7 +686,7 @@ function meetingModalRows(docName, config, parsed, index, model) {
   const entries = parsed.entries
   const occurrences = config.venues.map((venue) => ({ venue, key: nameKey(venue), positions: entries.map((entry, position) => (entry.bold && nameKey(entry.text) === nameKey(venue) ? position : -1)).filter((position) => position >= 0) }))
     .filter((venue) => venue.positions.length)
-    .sort((a, b) => a.positions[0] - b.positions[0])
+    .sort((left, right) => left.positions[0] - right.positions[0])
   const rows = []
   const bodyRange = new Map()
   occurrences.forEach((venue, order) => {
@@ -741,7 +741,7 @@ function meetingModalRows(docName, config, parsed, index, model) {
     rows.push(...group(textEntries, 'pop-up---text', '\n\n', { confidence: 0.85 }))
     rows.push(...group(layoutEntries, 'pop-up---layout-options', '\n', { confidence: 0.75 }))
   }
-  rows.sort((a, b) => a.line - b.line)
+  rows.sort((left, right) => left.line - right.line)
   return rows
 }
 
