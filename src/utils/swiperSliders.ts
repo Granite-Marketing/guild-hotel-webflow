@@ -101,10 +101,18 @@ export const swiperSliders = () => {
       })
     }
 
+    // Slot slides (History "Slides") arrive inside the slot's unclassed div; Swiper only counts direct children.
+    const defaultWrapper = defaultSlider?.querySelector<HTMLElement>('.swiper-wrapper')
+    if (defaultWrapper && !defaultWrapper.querySelector(':scope > .swiper-slide')) {
+      defaultWrapper.replaceChildren(...defaultWrapper.querySelectorAll('.swiper-slide'))
+    }
+    const defaultSlideCount = defaultSlider?.querySelectorAll('.swiper-slide').length ?? 0
+
     // Shared components can leave a default slider with one visible slide; a looping Swiper of one breaks.
-    if (defaultSlider && defaultSlider.querySelectorAll('.swiper-slide').length > 1) {
+    if (defaultSlider && defaultSlideCount > 1) {
       new Swiper(defaultSlider, {
-        loop: true,
+        // Loop duplicates slides; with two it glitches, so it starts at three.
+        loop: defaultSlideCount > 2,
         speed: 1000,
         slidesPerView: 1,
         grabCursor: true,

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.28
+
+### Patch Changes
+
+- abb4520: History slider: slides come from a "Slides" slot (any number). The default slider lifts slot slides out of the slot's wrapper before Swiper starts, and loops only with three or more slides.
+
 ## 1.3.27
 
 ### Patch Changes
