@@ -45,6 +45,51 @@ test('a row is missing when neither the new text nor the target is on the page',
   assert.equal(result.foundText, undefined)
 })
 
+test('a row is differs, not done, when the new text is on another element while the target still shows its old text', () => {
+  // Guild-Neighborhood shape: the h2 still reads the old heading; the new words sit in a paragraph further down.
+  const row = pageRow({ newText: 'Dining nearby', currentText: 'dining around the guild', target: { tag: 'h2', section: 'section_dining', liveOrder: 0 } })
+  const pages = { '/arts': okPage(element('h2', 'Dining around the Guild', { section: 'section_dining' }), element('p', 'Dining nearby', { section: 'section_dining' })) }
+  const result = statusOf(row, pages)
+  assert.equal(result.status, 'differs')
+  assert.equal(result.foundText, 'Dining around the Guild')
+})
+
+test('a row is differs when an element of the target tag and section shows the new text but the old text is nearer the target order', () => {
+  const row = pageRow({ newText: 'Book now', currentText: 'reserve', target: { tag: 'a', section: 'section_cta', liveOrder: 0 } })
+  const pages = { '/arts': okPage(element('a', 'Reserve', { section: 'section_cta' }), element('a', 'Book now', { section: 'section_cta' })) }
+  assert.equal(statusOf(row, pages).status, 'differs')
+})
+
+test('a row is done when its target slot shows the new text although the old text survives elsewhere on the page', () => {
+  const row = pageRow({ newText: 'Book now', currentText: 'discover more', target: { tag: 'a', section: 'section_cta', liveOrder: 3 } })
+  const pages = { '/arts': okPage(
+    element('a', 'Discover More', { section: 'section_rooms' }),
+    element('p', 'intro', { section: 'section_cta' }),
+    element('p', 'body', { section: 'section_cta' }),
+    element('a', 'Book now', { section: 'section_cta' }),
+  ) }
+  assert.equal(statusOf(row, pages).status, 'done')
+})
+
+test('a row whose new text differs from the current text only in case is done', () => {
+  const pages = { '/arts': okPage(element('h1', 'art & stories', { section: 'section_hero' })) }
+  assert.equal(statusOf(pageRow({ currentText: 'art & stories' }), pages).status, 'done')
+})
+
+test('a row with no locatable target is done when the new text is anywhere on the page, and missing otherwise', () => {
+  const row = pageRow({ currentText: 'gone', target: { tag: null, section: null } })
+  assert.equal(statusOf(row, { '/arts': okPage(element('h3', 'Art & Stories', { section: 'section_other' })) }).status, 'done')
+  assert.equal(statusOf(row, { '/arts': okPage(element('h3', 'other', { section: 'section_other' })) }).status, 'missing')
+})
+
+test('a slider clone showing the new text never makes a row done', () => {
+  const row = pageRow({ currentText: 'gone', target: { tag: null, section: null } })
+  const pages = { '/arts': okPage(element('h1', 'Art & Stories', { section: 'section_hero', swiperClone: true })) }
+  assert.equal(statusOf(row, pages).status, 'missing')
+  const located = { '/arts': okPage(element('h1', 'Art & Stories', { section: 'section_hero', swiperClone: true }), element('h1', 'Art Collection', { section: 'section_hero' })) }
+  assert.equal(statusOf(pageRow(), located).status, 'differs')
+})
+
 test('a CMS row is checked on the item page when one exists, not on the listing', () => {
   const row = cmsRow({ itemPath: '/rooms/cozy-queen', listingPaths: ['/rooms'] }, { newText: 'Cozy Queen Suite' })
   const pages = {

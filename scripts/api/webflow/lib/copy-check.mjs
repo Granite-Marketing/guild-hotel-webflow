@@ -12,14 +12,18 @@
 //   page rows: row.page
 //   CMS rows: cmsItem.itemPath when the item has its own page, otherwise cmsItem.listingPaths, then row.appearsOn
 //
-// How the target is located (in this order, first hit wins; clones made by the slider are never used):
-//   1. done: any element on a checked page whose normalised text equals the normalised new text
-//      (limit: a short line such as "Discover More" also counts as done when another element shows it)
-//   2. by text: an element whose normalised text equals the row's current text (or starts with the
-//      truncated textHint when there is no current text); ties go to the same tag, then the same
-//      section, then the order closest to target.liveOrder
-//   3. by position: the element with target.tag, target.section and order equal to target.liveOrder
-//   otherwise missing. With several pages (listings) the best result wins: done, then differs, then missing.
+// How the target is located (clones made by the slider are never used):
+//   1. candidates: elements whose normalised text equals the row's current text (or starts with the
+//      truncated textHint when there is no current text), plus elements showing the new text that sit on
+//      the target's tag and section (each only checked when the target names it)
+//   2. the best candidate wins: same tag, then same section, then the order closest to target.liveOrder;
+//      on a tie a current-text element wins, so a target still showing old text is never done
+//      done when the winner shows the new text, differs (with the found text) otherwise
+//   3. no candidate: the element with target.tag, target.section and order equal to target.liveOrder,
+//      done when it shows the new text, differs otherwise
+//   4. no locatable target at all: done when any element shows the new text, otherwise missing
+//      (limit: only for rows with no target, a short line such as "Discover More" elsewhere counts)
+//   With several pages (listings) the best result wins: done, then differs, then missing.
 export const STATUSES = ['done', 'differs', 'missing', 'unchecked']
 
 const collapse = (text) => (text || '').replace(/\s+/g, ' ').trim().toLowerCase()
@@ -61,26 +65,27 @@ const rank = { done: 3, differs: 2, missing: 1 }
 
 function locateOnPage(row, elements) {
   const usable = elements.filter((candidate) => !candidate.swiperClone)
-  if (elements.some((candidate) => sameText(candidate.textContent, row.newText))) return { status: 'done' }
   const target = row.target || {}
   const currentText = row.currentText ? collapse(row.currentText) : null
   const hint = currentText ? null : collapse(target.textHint)
-  const byText = usable.filter((candidate) => {
+  const showsCurrent = (candidate) => {
     const text = collapse(candidate.textContent)
     if (currentText) return text === currentText || collapseWithoutSpaces(candidate.textContent) === collapseWithoutSpaces(row.currentText)
     return hint !== '' && text.startsWith(hint)
-  })
+  }
+  const showsNew = (candidate) => sameText(candidate.textContent, row.newText)
+  const onTargetSlot = (candidate) => (!target.tag || candidate.tag === target.tag) && (!target.section || candidate.section === target.section)
   const distance = (candidate) => (Number.isInteger(target.liveOrder) ? Math.abs(candidate.order - target.liveOrder) : 0)
-  byText.sort((left, right) => {
-    const leftScore = (left.tag === target.tag ? 0 : 2) + (left.section === target.section ? 0 : 1)
-    const rightScore = (right.tag === target.tag ? 0 : 2) + (right.section === target.section ? 0 : 1)
-    return leftScore - rightScore || distance(left) - distance(right) || left.order - right.order
-  })
-  let found = byText[0]
+  const score = (candidate) => (candidate.tag === target.tag ? 0 : 2) + (candidate.section === target.section ? 0 : 1)
+  const candidates = usable.filter((candidate) => showsCurrent(candidate) || (showsNew(candidate) && onTargetSlot(candidate)))
+  candidates.sort((left, right) =>
+    score(left) - score(right) || distance(left) - distance(right) || Number(showsCurrent(right)) - Number(showsCurrent(left)) || left.order - right.order)
+  let found = candidates[0]
   if (!found && target.tag && Number.isInteger(target.liveOrder)) {
     found = usable.find((candidate) => candidate.order === target.liveOrder && candidate.tag === target.tag && (candidate.section ?? null) === (target.section ?? null))
   }
-  return found ? { status: 'differs', foundText: found.textContent.replace(/\s+/g, ' ').trim() } : { status: 'missing' }
+  if (found) return showsNew(found) ? { status: 'done' } : { status: 'differs', foundText: found.textContent.replace(/\s+/g, ' ').trim() }
+  return usable.some(showsNew) ? { status: 'done' } : { status: 'missing' }
 }
 
 export function checkRow(row, pages) {
