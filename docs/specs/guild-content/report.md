@@ -57,7 +57,7 @@ Each page's mapped lines are on staging, by the copy check plus a direct text ch
 - Doc typos fixed (27 Nov, Stephen: clear mistakes get fixed, not parked): Neighborhood "Since the1860s, the Gaslight has seen it all" now reads "Since the 1860s, the Gaslamp has seen it all"; the Guild Loft Suite photo caption and feature text named the "City Level Loft" (pasted from that section) and now name the Guild Loft Suite.
 - "Fitness Centre" on Wellness follows the doc; the rest of the site uses US spelling ("center").
 - Corporate line 9 ("After hours, you'll adjourn to the Lobby Bar...") is listed as a second version of line 7, but it reads like a second paragraph. Worth asking Omar.
-- Placeholder text still showing in blocks the docs do not cover, seen while checking: the second and third Meetings tabs on the Homepage ("Inspired spaces breed bright ideas"), the Neighborhood dining articles, lower Arts sections and the room template's photo caption and feature text (until bound).
+- Placeholder text still showing in blocks the docs do not cover, seen while checking: the Neighborhood dining articles, lower Arts sections and the room template's photo caption and feature text (until bound).
 - Two Press fixes after the first check: the Press subtitle had gone into the lower intro, so it was moved to the hero and the intro's own copy was put back; the doc's fourth court (Hall of Justice) went on the fourth Corporate & Services card, which still showed placeholder text.
 
 ## 5. For Omar: deviations
