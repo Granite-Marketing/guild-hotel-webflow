@@ -8,7 +8,7 @@ Board: Guild-Dev-QA (`Jvfr4sv3`). Prepared for the 16:30 review, launch 1 Dec. S
 
 | Group | Done | Partly | Not started | Waiting on Omar |
 |---|---|---|---|---|
-| Trello cards (16) | 13 | 1 | 1 | 2 (Arts/Gallery, Meetings collection) |
+| Trello card rows (18, Arts/Gallery appears twice) | 14 | 1 | 1 | 2 (Arts/Gallery, Meetings collection) |
 | Omar mobile round, M1 to M41 | 37 | 0 | 0 | 4 (M1, M5b, M33, M35) |
 | Animation walk 19 Nov (30 items) | 30 | 0 | 0 | 0 |
 
