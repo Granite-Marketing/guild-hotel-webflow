@@ -53,3 +53,5 @@ Checks: see below.
 ## Round 3 (26 Nov): all photos keep the white menu
 
 Stephen, 26 Nov: "photos should be white", then "Yes, all photos white". This overrides the P-E3 rounds 1 and 2 tone sampling: every photo under the bar, wide or narrow, dark or pale, keeps the cream nav (narrow ones across their own width only). Tone grid and per-group strip code removed from `navTheme.ts`; `nav-theme.spec.ts` updated.
+
+Stephen, 26 Nov: the menu stays see-through and its mask effect is not to be changed. Content passing under it (for example the Meetings form button at 390) is expected; no background strip.
