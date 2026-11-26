@@ -35,6 +35,7 @@
     "update-seo": "node scripts/api/webflow/update-seo.cjs",
     "parse-copy": "node scripts/api/webflow/parse-copy.cjs",
     "copy-map": "node scripts/api/webflow/copy-map.mjs",
+    "copy-check": "node scripts/api/webflow/copy-check.mjs",
     "alt:inventory": "node scripts/api/anthropic/build-alt-inventory.mjs",
     "alt:generate": "node scripts/api/anthropic/generate-alt-text.mjs",
     "alt:payload": "node scripts/api/anthropic/build-apply-payload.mjs",
