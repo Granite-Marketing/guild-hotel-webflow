@@ -6,7 +6,7 @@ What Site Settings > Custom Code holds on site `6ad6405eae8eac6d7b7c41a3`, and t
 
 - **Bundle version:** v1.2.35 (tags pushed 2026-11-17: v1.2.35 venue slider copy waits for the outgoing copy to mask out, superscript words drop a full font size in line masks; v1.2.32 longer venue slider and full-screen holds, v1.2.33 Press tab bar fades after the last section, v1.2.34 ScrollTriggers recalculated in page order after init; jsDelivr serves `dist/index.js` and `dist/site.css`). Pairs with the `<style data-button-system>` embed in Site Nav, which must carry the `[data-btn-art]` rules.
 - **Tag URL:** `https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.2.31/dist/index.js`
-- **Footer state:** staging footer bundle and head `data-site-css` link both name v1.2.35, written on 2026-11-17 with `data_scripts_tool` > `set_site_freeform_code` (footer and head), staging published. Bump both tags on every release.
+- **Footer state:** staging footer bundle and head `data-site-css` link both name v1.3.28, written on 2026-11-26 with `data_scripts_tool` > `set_site_freeform_code` (footer and head), staging published. Bump both tags on every release.
 - **Repo visibility:** public since 2026-10-20 (jsDelivr only serves public repos).
 
 ## GSAP comes from Webflow, not the footer
