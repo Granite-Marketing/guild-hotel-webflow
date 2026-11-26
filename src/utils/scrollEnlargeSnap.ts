@@ -52,6 +52,7 @@
 
 import { lenis } from '$utils/lenisGsap'
 import { createLineMaskTimeline } from '$utils/lineMaskReveal'
+import { FRAME_SELECTOR as VIDEO_FRAME_SELECTOR, hasVideoLink } from '$utils/mediaVideo'
 
 const ROOT_SELECTOR = '[data-scroll-enlarge-snap]'
 const ACTIVE_CLASS = 'is-active'
@@ -184,11 +185,11 @@ const initSlider = (parts: SnapParts, reduce: boolean) => {
   // move's own ease shapes it, so a multi-panel tab move is one smooth curve.
   const panels = gsap.timeline({ paused: true, defaults: { ease: 'none' } })
   items.slice(1).forEach((item, offset) => {
-    const image = itemImage(item)
+    const settleTarget = itemSettleTarget(item)
     // Just after the previous panel's rest time, so a panel at rest never leaves the next one visible (and focusable).
     panels.set(item, { autoAlpha: 1 }, offset + 0.001)
     panels.fromTo(item, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1 }, offset)
-    if (image) panels.fromTo(image, { scale: 1.2 }, { scale: 1, duration: 1, ease: 'power2.out' }, offset)
+    if (settleTarget) panels.fromTo(settleTarget, { scale: 1.2 }, { scale: 1, duration: 1, ease: 'power2.out' }, offset)
     panels.set(items[offset], { autoAlpha: 0 }, offset + 1)
   })
 
@@ -428,6 +429,16 @@ const bindTabs = (parts: SnapParts, select: (index: number) => void) => {
 const itemImage = (item: HTMLElement): HTMLElement | null =>
   item.querySelector<HTMLElement>('[data-scroll-enlarge-snap-image]') ??
   item.querySelector<HTMLElement>('img')
+
+// #428: mediaVideo adds a panel's video later (after this timeline is built),
+// beside the image in its frame. A frame with a playable link settles as a
+// whole, so image and video move from the same start size together. A blank
+// or broken link keeps today's image-only move.
+const itemSettleTarget = (item: HTMLElement): HTMLElement | null => {
+  const image = itemImage(item)
+  const frame = image?.closest<HTMLElement>(VIDEO_FRAME_SELECTOR)
+  return frame && item.contains(frame) && hasVideoLink(frame) ? frame : image
+}
 
 interface Insets {
   top: number

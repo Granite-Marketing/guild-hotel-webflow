@@ -1,7 +1,7 @@
 /**
  * Embed video: turns a CMS video link into a muted, looping, silent
  * background player. Clients paste whatever they have, so it accepts a
- * direct file (.mp4, .webm, .mov), a YouTube link (watch, youtu.be, shorts,
+ * direct file (.mp4, .webm, .mov), any Dropbox link (made direct), a YouTube link (watch, youtu.be, shorts,
  * embed) or a Vimeo link (vimeo.com/123, unlisted vimeo.com/123/hash, player
  * URLs). YouTube and Vimeo play in a chrome-free iframe scaled to cover the
  * frame like object-fit: cover.
@@ -41,7 +41,22 @@ export const parseVideoUrl = (raw: string): Source | null => {
     const hash = url.searchParams.get('h') ?? (parts[index + 1] && /^[0-9a-f]+$/i.test(parts[index + 1]) ? parts[index + 1] : undefined)
     return { kind: 'vimeo', id: parts[index], hash }
   }
+  if (DROPBOX_HOSTS.includes(url.hostname)) return { kind: 'file', url: dropboxFileUrl(url) }
   return { kind: 'file', url: url.href }
+}
+
+// V1 (#428): a Dropbox share link opens a web page, not the file. The same path
+// on dl.dropboxusercontent.com serves the file itself with byte ranges, so a
+// plain video element plays it. rlkey is the access key and stays; dl, raw and
+// st (a per-share session token) are dropped. Old /s/ links work the same way.
+const DROPBOX_HOSTS = ['www.dropbox.com', 'dropbox.com', 'dl.dropbox.com', 'dl.dropboxusercontent.com']
+const DROPBOX_DROPPED_PARAMS = ['dl', 'raw', 'st']
+
+const dropboxFileUrl = (url: URL) => {
+  const direct = new URL(url.href)
+  direct.hostname = 'dl.dropboxusercontent.com'
+  DROPBOX_DROPPED_PARAMS.forEach((name) => direct.searchParams.delete(name))
+  return direct.href
 }
 
 const iframeSrc = (source: Exclude<Source, { kind: 'file' }>) =>
