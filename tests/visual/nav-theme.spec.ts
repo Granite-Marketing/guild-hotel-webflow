@@ -2,9 +2,8 @@ import { expect, test } from '@playwright/test'
 import * as esbuild from 'esbuild'
 
 /**
- * navTheme (P-E3): a narrow dark photo turns the nav cream across its own width
- * only, a narrow bright photo leaves it dark, and a day/night click keeps the masks.
- * Round 2: the photo is judged by the strip behind the nav's links, so a pale top strip keeps the dark nav until it passes.
+ * navTheme: every narrow photo, dark or pale, turns the nav cream across its own
+ * width only (Stephen, 26 Nov: all photos white), and a day/night click keeps the masks.
  */
 
 const picture = (colour: string, top = colour) =>
@@ -28,17 +27,7 @@ const page_ = (figures: string) => `
     <header data-nav="header"><div class="site-nav_bar"><span id="mode">mode</span><a href="#">logo</a></div></header>
     <section>${figures}</section>`
 
-const cloneColumns = (page: import('@playwright/test').Page) =>
-  page.evaluate(() => {
-    const style = getComputedStyle(document.querySelector<HTMLElement>('body > [inert]')!)
-    return style.maskPosition.split(', ').map((position, index) => ({
-      left: parseFloat(position),
-      width: parseFloat(style.maskSize.split(', ')[index]),
-      hidden: style.maskImage.split(/,\s*(?=linear-gradient)/)[index].includes('rgb(0, 0, 0)') === false,
-    }))
-  })
-
-test('narrow photos change the nav only across their own width, by their own tone', async ({ page }) => {
+test('narrow photos, dark or pale, turn the nav cream across their own width only', async ({ page }) => {
   await page.setViewportSize({ width: 1000, height: 600 })
   await page.setContent(
     page_(`<figure style="left:100px"><img src="${picture('#181008')}"></figure>
@@ -66,7 +55,9 @@ test('narrow photos change the nav only across their own width, by their own ton
   const expected = [
     { left: 0, width: 100, hidden: false },
     { left: 100, width: 300, hidden: true },
-    { left: 400, width: 600, hidden: false },
+    { left: 400, width: 200, hidden: false },
+    { left: 600, width: 300, hidden: true },
+    { left: 900, width: 100, hidden: false },
   ]
   await expect.poll(async () => (await masks()).clone).toEqual(expected)
   expect((await masks()).bar).toEqual(expected.map((column) => ({ ...column, hidden: !column.hidden })))
@@ -80,20 +71,4 @@ test('narrow photos change the nav only across their own width, by their own ton
   // Past the photos: one full-width column again.
   await page.evaluate(() => window.scrollTo(0, 500))
   await expect.poll(async () => (await masks()).clone).toEqual([{ left: 0, width: 1000, hidden: false }])
-})
-
-test('a dark photo with a pale top strip keeps the dark nav until the dark part reaches the bar', async ({ page }) => {
-  await page.setViewportSize({ width: 1000, height: 600 })
-  await page.setContent(page_(`<figure style="left:100px"><img src="${picture('#181008', '#f8f8f8')}"></figure>`))
-  await page.addScriptTag({ content: await bundle() })
-
-  // The pale strip (top 80px of the photo) is behind the link: dark nav across the whole bar.
-  await page.waitForTimeout(300)
-  await expect.poll(() => cloneColumns(page)).toEqual([{ left: 0, width: 1000, hidden: false }])
-  await page.evaluate(() => window.scrollTo(0, 150))
-  await expect.poll(() => cloneColumns(page)).toEqual([
-    { left: 0, width: 100, hidden: false },
-    { left: 100, width: 300, hidden: true },
-    { left: 400, width: 600, hidden: false },
-  ])
 })
