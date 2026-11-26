@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.26
+
+### Patch Changes
+
+- Every photo, wide or narrow, keeps the white menu bar (Stephen, 26 Nov).
+
 ## 1.3.25
 
 ### Patch Changes
