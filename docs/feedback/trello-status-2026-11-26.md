@@ -71,3 +71,17 @@ Board: Guild-Dev-QA (`Jvfr4sv3`). Prepared for the 16:30 review, launch 1 Dec. S
 | Subnav | [FjjStvdO](https://trello.com/c/FjjStvdO) | Slower eased anchor scroll | `anchorScrollOptions`, 9 Nov |
 
 Mobile round (no cards): M2 to M32, M34, M36 to M41 done, tickets #230 to #245 closed 17 Nov, shipped in the v1.3.x bundles; Packages M41 via #246. Animation walk (no cards): S1 to S5, A1 to A5, R1 to R3, H1, D1 to D4, G1 to G3, B1, P1, N1, N2, M1, C1, K1, U1, U2 all live on staging v1.3.1 to v1.3.10.
+
+## Corrections (Stephen, 26 Nov, after review)
+
+This list was built from tickets that had not been closed. Stephen's corrections, which override the sections above:
+
+- Filter menu shape: done (softer corners, 19 Nov). #191 closed.
+- Gallery canvas, reveal audit and scroll mask length: done.
+- Gallery drag and tapped image (M33, M35): built and working on /gallery.
+- Animation attributes in the Designer (#293): not doing. Animations stay in code served from the CDN, never moved into Webflow unless required. #293 closed.
+- Nav colour over dark photos: fine in most places, dropped.
+- 404 page: only needs to link home, dropped.
+- Alt text and room descriptions: sort with content. Dining "enquire" links: the client provides them.
+- For the 26 Nov call with Omar: the Meetings "Submit your request" form, Home Meetings & Events tabs on phones (M5b), the floorplan link, the tab icon and share image.
+- Venue order in the footer and the Book Now pop-up: Stephen checks.
