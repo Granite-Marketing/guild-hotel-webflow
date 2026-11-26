@@ -1,0 +1,33 @@
+{
+ "path": "/404",
+ "kind": "static",
+ "pageId": "6ad64060ae8eac6d7b7c4243",
+ "title": "404",
+ "url": "https://the-guild-hotel-c34e71.webflow.io/404",
+ "file": "404.json",
+ "httpStatus": 200,
+ "documentTitle": "Not Found",
+ "metaDescription": null,
+ "elements": [
+  {
+   "order": 0,
+   "tag": "h3",
+   "id": null,
+   "innerText": "Page Not Found",
+   "textContent": "Page Not Found",
+   "rawTextContent": "Page Not Found",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  }
+ ],
+ "status": "ok"
+}

@@ -1,0 +1,89 @@
+{
+ "page": {
+  "id": "6ad85678cff550a80a3287b0",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Accessibility",
+  "slug": "accessibility",
+  "createdOn": "2026-10-21T06:06:48.928Z",
+  "lastUpdated": "2026-11-20T11:49:54.326Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Accessibility | The Guild Hotel",
+   "description": "Our commitment to making The Guild Hotel website accessible to every guest, and how to tell us about any barriers you find."
+  },
+  "openGraph": {
+   "title": "Accessibility | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Our commitment to making The Guild Hotel website accessible to every guest, and how to tell us about any barriers you find.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/accessibility",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "f2c60fa7-f332-8496-09de-76e192997757",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "a3aba222-4f77-fa33-083a-68d6445e8d7b",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "2fee4cbf-6584-d26e-a7bd-09e29edc8d73",
+   "type": "component-instance",
+   "componentId": "7078c6ea-16c9-d700-35be-37d4efe7f1ef",
+   "propertyOverrides": []
+  },
+  {
+   "id": "9ef4b1e5-2a03-b2d2-d7dc-17e482a2f82f",
+   "type": "text",
+   "text": {
+    "html": "<h1 class=\"static-template-privacy-policy_heading heading-style-h2\">accessibility</h1>",
+    "text": "accessibility"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "17ade4d6-7c18-4065-248a-fc99b80c375f",
+   "type": "text",
+   "text": {
+    "html": "<div class=\"static-template-privacy-policy_rich-text\"><h2 data-w-id=\"be9fa74b-e2ad-8a64-06d9-da7b920c393f\">Our commitment to accessibility</h2><p data-w-id=\"1b586846-5644-1fa0-ce3f-6d82288e1531\">The Guild, a Tribute Portfolio Hotel\nWe want everyone who visits our website to be able to find information, explore the hotel and plan their stay with ease, whatever device or assistive technology they use.</p><p data-w-id=\"0a801301-95c6-7e83-0d77-b49570f85d87\">We aim to follow recognised web accessibility guidance, such as the Web Content Accessibility Guidelines (WCAG), and to keep improving the site as it changes. This statement is a general placeholder and will be updated with fuller detail.</p><p data-w-id=\"f5603bee-3d3b-059d-bb34-4a97ee166f1a\">Feedback and contact: if you have difficulty using any part of this website, or need information in a different format, please get in touch through our contact page and we will do our best to help.</p><h2 data-w-id=\"f5dc5095-dc8e-7939-a6d1-d5d86b9bea21\">Measures We Take</h2><p data-w-id=\"15513dc3-542d-82b6-c48e-0870d3da25a7\">Measures we aim to apply across the website include:</p><ul data-w-id=\"1c170f06-3119-83b0-309a-4e00f351fdf9\"><li data-w-id=\"4d9b4f19-be48-1e82-651c-0b062abd85e8\">Clear headings and a logical page structure</li><li data-w-id=\"d9ff3322-e94e-599c-4ec9-024b8db4f1a3\">Text alternatives for meaningful images</li><li data-w-id=\"150aca0c-4a48-8bef-0eea-b65b4058c567\">Keyboard access to links, menus and forms</li><li data-w-id=\"616b2e6c-06e0-ab24-9056-495065997712\">Visible focus states on interactive elements</li><li data-w-id=\"c7b1042a-66f2-c431-25bd-80c78a0d0339\">Readable text sizes and colour contrast</li><li data-w-id=\"b3201c34-2239-27ec-8d81-2f687c7b5619\">Layouts that adapt to different screen sizes</li><li data-w-id=\"ecc240bb-de06-b53e-d4f3-1d6fa1eeffb5\">Descriptive link and button labels</li><li data-w-id=\"9c5f8d23-a612-a8cb-ae81-6559548f2089\">Clearly labelled form fields</li><li data-w-id=\"10dfddbb-82ea-c706-b812-c5c5f78ec0e3\">Compatibility with common screen readers and browsers</li><li data-w-id=\"f1f2a3cc-b79a-18c2-368a-dc9063508352\">Ongoing reviews as new content is added</li></ul></div>",
+    "text": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "93b1e49f-59df-43fe-835d-8c94a3fbe157",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "7960c68b-c923-6c1d-8347-4ae3a403645f",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "7c7fa480-f222-a2f1-1c58-66a9aca165c5",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-20T11:49:54.349Z"
+}

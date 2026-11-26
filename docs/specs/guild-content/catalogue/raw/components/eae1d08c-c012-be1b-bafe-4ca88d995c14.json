@@ -1,0 +1,66 @@
+{
+ "component": {
+  "id": "eae1d08c-c012-be1b-bafe-4ca88d995c14",
+  "name": "Image Trio Text",
+  "description": "Full-bleed trio of portrait images with centred heading, paragraph and button. The card layouts are separate components: Image Trio Text Left and Image Trio Text Left Offset.",
+  "group": "Image Trio Text"
+ },
+ "nodes": [
+  {
+   "id": "eae1d08c-c012-be1b-bafe-4ca88d995c1f",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "eae1d08c-c012-be1b-bafe-4ca88d995c29",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "eae1d08c-c012-be1b-bafe-4ca88d995c33",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "ebeb1a92-d766-3614-254d-19c94cdb7b4f",
+   "type": "Plain Text",
+   "label": "Header/Heading",
+   "text": {
+    "html": null,
+    "text": "wellness"
+   }
+  },
+  {
+   "propertyId": "d323685b-9532-0899-8770-7c03c325631a",
+   "type": "Plain Text",
+   "label": "Header/Paragraph",
+   "text": {
+    "html": null,
+    "text": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo."
+   }
+  },
+  {
+   "propertyId": "fcf7826c-f83e-523c-5ba8-b97a71cd74f7",
+   "type": "Plain Text",
+   "label": "CTA/CTA Text",
+   "text": {
+    "html": null,
+    "text": "discover more"
+   }
+  }
+ ]
+}

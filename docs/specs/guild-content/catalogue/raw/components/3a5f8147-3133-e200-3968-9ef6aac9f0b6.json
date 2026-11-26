@@ -1,0 +1,45 @@
+{
+ "component": {
+  "id": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+  "name": "FAQ Accordion",
+  "description": "FAQ section listing every FAQ from the CMS by sort order.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "3a5f8147-3133-e200-3968-9ef6aac9f0c7",
+   "type": "html-embed",
+   "html": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4.5 15 12 7.5 19.5 15\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "3a5f8147-3133-e200-3968-9ef6aac9f0cc",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "534aa72b-a79e-7f84-837d-4fd0d8cf8e82",
+   "type": "Plain Text",
+   "label": "Text",
+   "text": {
+    "html": null,
+    "text": "faqs"
+   }
+  },
+  {
+   "propertyId": "ced23012-2b99-bcc0-f232-2e5bb0d2f70a",
+   "type": "Plain Text",
+   "label": "Title",
+   "text": {
+    "html": null,
+    "text": "your questions, answered"
+   }
+  }
+ ]
+}

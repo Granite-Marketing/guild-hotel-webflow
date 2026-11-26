@@ -1,0 +1,123 @@
+{
+ "component": {
+  "id": "4e402659-32e2-fddb-7dd9-6c1d17f58318",
+  "name": "Art Detail Modal",
+  "description": "Arts page CMS dialog. Copy of Overlay Detail Panel Modal without the venues Collection List, so it can sit inside the art Collection Lists.",
+  "group": "Modals"
+ },
+ "nodes": [
+  {
+   "id": "4e402659-32e2-fddb-7dd9-6c1d17f5831e",
+   "type": "html-embed",
+   "html": "<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M20 12H4M10 6l-6 6 6 6\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "4e402659-32e2-fddb-7dd9-6c1d17f58323",
+   "type": "html-embed",
+   "html": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 3l18 18M21 3L3 21\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "4e402659-32e2-fddb-7dd9-6c1d17f58326",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "acdadfd2-4df9-bb81-e663-f1560e402896",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "4e402659-32e2-fddb-7dd9-6c1d17f58329",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": "6ad74da46b56ff1d7223e4d7"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "4e402659-32e2-fddb-7dd9-6c1d17f5832d",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"overlay-detail-panel-modal_eyebrow\"><a class=\"overlay-detail-panel-modal_eyebrow-link is-art\" href=\"#\" data-w-id=\"4e402659-32e2-fddb-7dd9-6c1d17f5832e\"></a><div data-w-id=\"f3f22d50-245e-889b-4369-75a40e53fd8e\"></div></p>",
+    "text": ""
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "62e4dd14-c690-dbaf-aa26-eda0aedf9fbe",
+   "type": "Plain Text",
+   "label": "Artist dialog id",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+   "type": "Plain Text",
+   "label": "Header/Heading",
+   "text": {
+    "html": null,
+    "text": "council boardroom"
+   }
+  },
+  {
+   "propertyId": "7319d118-d240-ca86-36e8-071c77d6ce26",
+   "type": "Plain Text",
+   "label": "Header/Eyebrow",
+   "text": {
+    "html": null,
+    "text": "by eva struble"
+   }
+  },
+  {
+   "propertyId": "ceef8a78-7413-ed6a-f295-6383f720ad1a",
+   "type": "Plain Text",
+   "label": "Header/Caption",
+   "text": {
+    "html": null,
+    "text": "2024 | 48 x 60 in\nOil and acrylic on canvas"
+   }
+  },
+  {
+   "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+   "type": "Alt Text",
+   "label": "Media/Image alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+   "type": "Plain Text",
+   "label": "Body/Text",
+   "text": {
+    "html": null,
+    "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+   }
+  },
+  {
+   "propertyId": "66c06093-dcad-41b3-24df-7a536e5e1d77",
+   "type": "Plain Text",
+   "label": "Body/Text (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  }
+ ]
+}

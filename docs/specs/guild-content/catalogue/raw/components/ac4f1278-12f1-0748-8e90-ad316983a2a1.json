@@ -1,0 +1,238 @@
+{
+ "component": {
+  "id": "ac4f1278-12f1-0748-8e90-ad316983a2a1",
+  "name": "Form Legal Corporate Proposal",
+  "description": "Legal and corporate pages: proposal form with contact details.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2a7",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"text-style-script is-corporate\">Request for Proposal</h2>",
+    "text": "Request for Proposal"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2aa",
+   "type": "text",
+   "text": {
+    "html": "<p>Proin sed nisl nisi. Quisque porttitor, nisl sed eleifend mattis, risus tellus pulvinar metus, a lacinia lacus neque sit amet purus. Donec efficitur leo sed urna tempus, eu congue ex convallis.</p>",
+    "text": "Proin sed nisl nisi. Quisque porttitor, nisl sed eleifend mattis, risus tellus pulvinar metus, a lacinia lacus neque sit amet purus. Donec efficitur leo sed urna tempus, eu congue ex convallis."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2ad",
+   "type": "text",
+   "text": {
+    "html": "<div class=\"form-split-script-contact_detail-label text-style-caps-caption-16\">trial team concierge</div>",
+    "text": "trial team concierge"
+   },
+   "attributes": {
+    "data-line-mask": "text"
+   }
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2af",
+   "type": "text",
+   "text": {
+    "html": "<p>legalteams@theguildhotel.com</p>",
+    "text": "legalteams@theguildhotel.com"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2c6",
+   "type": "text",
+   "text": {
+    "html": "<h3 id=\"photoshoot-contact-heading\" class=\"form-split-script-contact_fieldset-heading heading-style-h4\">contact information</h3>",
+    "text": "contact information"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2c9",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">First Name</label>",
+    "text": "First Name"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2ca",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "First Name"
+   }
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2cc",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Last Name</label>",
+    "text": "Last Name"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2cd",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Last Name"
+   }
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2cf",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Email Address</label>",
+    "text": "Email Address"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2d0",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Email Address"
+   }
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2d2",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Phone Number</label>",
+    "text": "Phone Number"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2d3",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Phone Number"
+   }
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2df",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Law firm / Company</label>",
+    "text": "Law firm / Company"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2e0",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Law firm / Company"
+   }
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2e2",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Team size</label>",
+    "text": "Team size"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2e3",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Team size"
+   }
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2e5",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Check-in date</label>",
+    "text": "Check-in date"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2e6",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Check-in date"
+   }
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2e8",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Check-out date</label>",
+    "text": "Check-out date"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2e9",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Check-out date"
+   }
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2eb",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Special requirements</label>",
+    "text": "Special requirements"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2ec",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Special requirements"
+   }
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2ee",
+   "type": "submit-button",
+   "waitingText": "sending",
+   "value": "submit your request",
+   "attributes": {
+    "data-reveal": "fade-only"
+   }
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2f0",
+   "type": "text",
+   "text": {
+    "html": "<div>Thank you! Your submission has been received!</div>",
+    "text": "Thank you! Your submission has been received!"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac4f1278-12f1-0748-8e90-ad316983a2f3",
+   "type": "text",
+   "text": {
+    "html": "<div>Oops! Something went wrong while submitting the form.</div>",
+    "text": "Oops! Something went wrong while submitting the form."
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": []
+}

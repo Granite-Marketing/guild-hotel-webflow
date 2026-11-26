@@ -1,0 +1,65 @@
+Homepage: heading structure,,,,,,,
+Page,https://the-guild-hotel-c34e71.webflow.io/,,,,,,
+Title tag,Historic Urban Resort in San Diego | The Guild Hotel,,,,,,
+Checked on,17 November 2026 (staging),,,,,,
+,,,,,,,
+Tag,Now,Proposed,,,,,
+H1,"=COUNTIF(D12:D58,""H1"")","=COUNTIF(E12:E58,""H1"")",,,,,
+H2,"=COUNTIF(D12:D58,""H2"")","=COUNTIF(E12:E58,""H2"")",,,,,
+H3,"=COUNTIF(D12:D58,""H3"")","=COUNTIF(E12:E58,""H3"")",,,,,
+,,,,,,,
+#,Section,Heading text (as on staging),Tag now,Proposed tag,Action,Why (SEO reason),Note for the designer
+=ROW()-11,Hero,"the bold, handsome heart of san diego",H1,H1,"Keep, update text","The H1 is the strongest signal of what the page is about. The big ""THE GUILD HOTEL"" at the top is a logo graphic, so Google can't read it. Right now the hotel name isn't in the H1 at all.","Suggested text: ""The Guild Hotel: the bold, handsome heart of San Diego"". Same styling. Wording to agree with Kevin."
+=ROW()-11,Intro,A century of stories meets a new hospitality,H2,H2,Keep,"This is a main section of the page (the introduction to the hotel), so it should be an H2.",
+=ROW()-11,History,West Coast Hospitality since 1924,H2,H2,Keep,"This is its own section with the 1924 history of the building. It supports searches like ""historic hotel San Diego"".",
+=ROW()-11,Dining,an unexpected resort dining experience,H2,H2,Keep,This is the main Dining section. The dining venues below sit under it as H3s.,
+=ROW()-11,Dining slideshow,"Zuma (logo, alt text ""Zuma San Diego"")",No heading (logo image),H3,Wrap logo in H3,"This card shows only the Zuma logo, so there is no heading for Zuma in the code. Google can't tell that Zuma is one of the hotel's dining venues. An H3 fixes that.","Wrap the logo in an H3. Its alt text (""Zuma San Diego"") becomes the heading text, so nothing changes visually."
+=ROW()-11,Dining slideshow,"Lobby Bar (logo, alt text ""Lobby Bar"")",No heading (logo image),H3,Wrap logo in H3,"This card shows only the Lobby Bar logo, so there is no heading for the Lobby Bar in the code. An H3 tells Google it's one of the dining venues.",Same as the Zuma logo: wrap it in an H3.
+=ROW()-11,Dining slideshow,Garden Terrace,H3,H3,Keep,"A dining venue inside the Dining section, so H3 is correct.",
+=ROW()-11,Dining slideshow,"Pool Lounge (logo, alt text ""Pool Lounge"")",No heading (logo image),H3,Wrap logo in H3,"This card shows only the Pool Lounge logo, so there is no heading for the Pool Lounge in the code. An H3 tells Google it's one of the venues.",Same as the Zuma logo: wrap it in an H3.
+=ROW()-11,Dining slideshow,Solana Coffee,H3,H3,Keep,"A dining venue inside the Dining section, so H3 is correct.",
+=ROW()-11,Dining slideshow (second copy in the code),lobby terrace,H3,p,Change to p,"The code holds a second copy of the dining slideshow that doesn't show on desktop. Google still reads it, so the venues appear twice as headings. Each venue should be a heading only once.","Could you confirm what this second copy is (mobile layout or leftover)? Only one copy should carry the H3s. Also: this card says ""lobby terrace"", the main slideshow says ""Lobby Bar""."
+=ROW()-11,Dining slideshow (second copy in the code),solana coffee,H3,p,Change to p,"This is the second, hidden copy of the Solana Coffee card. Solana Coffee is already an H3 in the main slideshow, so it shouldn't be a heading twice.","Second copy of the dining slideshow, see the ""lobby terrace"" row above."
+=ROW()-11,Wellness,wellness,H2,H2,Keep,Main section of the page.,"Placeholder text in this section, see content notes."
+=ROW()-11,Rooms,rooms & suites,H2,H2,Keep,"Main section of the page, and one of the most important ones for bookings.",
+=ROW()-11,Neighborhood,The Neighborhood,H2,H2,Keep,Main section of the page. It supports local searches about the area.,
+=ROW()-11,Retail slider,retail,p,H2,Change p to H2,"Label of the retail slider. With the card titles as paragraphs, the section would have no heading at all, so this label should be the H2.","Already styled as a label (offers-slider-split_eyebrow), so it looks the same. Optional wording: ""Shops at The Guild"" says more than ""retail"" alone. To agree with Kevin."
+=ROW()-11,Retail slider,shops at the guild,H2,H3,Change to H3,"The only card in this slider about retail. It can sit under the new ""retail"" H2 as an H3.",
+=ROW()-11,Retail slider,wellness staycation,H2,p,Change to p,"This is an offer card inside a slider, not a section of the page. Offers change over time and the same offer appears several times on the homepage.",
+=ROW()-11,Retail slider,save on 5+ nights,H2,p,Change to p,"This is an offer card inside a slider, not a section of the page. Offers change over time and the same offer appears several times on the homepage.",
+=ROW()-11,Retail slider,wellness staycation,H2,p,Change to p,"This is the same ""wellness staycation"" offer card again, repeated in the slider. A repeated card shouldn't be a heading.",
+=ROW()-11,Retail slider,save on 5+ nights,H2,p,Change to p,"This is the same ""save on 5+ nights"" offer card again, repeated in the slider. A repeated card shouldn't be a heading.",
+=ROW()-11,Art & stories,art & stories,H2,H2,Keep,Main section of the page.,
+=ROW()-11,Meetings & events (tab 1),meetings & events,H2,H2,Keep,Main section of the page. The three event spaces below sit under it as H3s.,
+=ROW()-11,Meetings & events (tab 2),meetings & events,H2,p,Change to p,"The Meetings & events section is built as three tabs, and each tab repeats the heading ""meetings & events"". So the code has this H2 three times. It should be there only once (in tab 1).",
+=ROW()-11,Meetings & events (tab 3),meetings & events,H2,p,Change to p,"Same situation as tab 2: the third tab repeats the heading ""meetings & events"". It should be an H2 only once (in tab 1).",
+=ROW()-11,Meetings & events (tab labels),council boardroom,"div (plain text, not a heading)",H3,Change div to H3,"This is the name of an event space. Planners search for named spaces, and as an H3 it sits clearly under Meetings & events.","Already styled as an H3, so it looks the same."
+=ROW()-11,Meetings & events (tab labels),courtyard,"div (plain text, not a heading)",H3,Change div to H3,"This is the name of an event space. Planners search for named spaces, and as an H3 it sits clearly under Meetings & events.",
+=ROW()-11,Meetings & events (tab labels),conference center,"div (plain text, not a heading)",H3,Change div to H3,"This is the name of an event space. Planners search for named spaces, and as an H3 it sits clearly under Meetings & events.",
+=ROW()-11,Offers slider 2,offers & packages,p,H2,Change p to H2,"Label of the offers section. With the offer card titles as paragraphs, this label is the only heading left for the section, so it should be the H2.","Already styled as a label (offers-slider-split_eyebrow), so it looks the same."
+=ROW()-11,Offers slider 2,save on 5+ nights,H2,p,Change to p,"This is an offer card in the second offers slider. The same offers already appear in the first slider, so they shouldn't be headings.",
+=ROW()-11,Offers slider 2,wellness staycation,H2,p,Change to p,"This is an offer card in the second offers slider. The same offers already appear in the first slider, so they shouldn't be headings.",
+=ROW()-11,Offers slider 2,save on 5+ nights,H2,p,Change to p,"This is an offer card in the second offers slider, repeated. Repeated cards shouldn't be headings.",
+=ROW()-11,Offers slider 2,wellness staycation,H2,p,Change to p,"This is an offer card in the second offers slider, repeated. Repeated cards shouldn't be headings.",
+=ROW()-11,Offers slider 2,save on 5+ nights,H2,p,Change to p,"This is an offer card in the second offers slider, repeated. Repeated cards shouldn't be headings.",
+=ROW()-11,FAQ,"your questions, answered",H2,H2,Keep,"Main section of the page. The FAQ questions below sit under it as H3s. The small line ""faqs"" above it is already a paragraph, which is correct.",
+=ROW()-11,FAQ,how many guests can stay in this room?,"div (plain text, not a heading)",H3,Change div to H3,"Each FAQ question should be its own H3 under ""your questions, answered"". This helps Google and AI tools (ChatGPT, Google AI Overviews) match each question to its answer and show it in results.","Already styled as a heading, so it looks the same. These are room questions, see content notes."
+=ROW()-11,FAQ,can i request a crib or an extra bed?,"div (plain text, not a heading)",H3,Change div to H3,"Each FAQ question should be its own H3 under ""your questions, answered"". This helps Google and AI tools match each question to its answer.",
+=ROW()-11,FAQ,are connecting rooms available?,"div (plain text, not a heading)",H3,Change div to H3,"Each FAQ question should be its own H3 under ""your questions, answered"". This helps Google and AI tools match each question to its answer.",
+=ROW()-11,FAQ,is an accessible version of this room available?,"div (plain text, not a heading)",H3,Change div to H3,"Each FAQ question should be its own H3 under ""your questions, answered"". This helps Google and AI tools match each question to its answer.",
+=ROW()-11,FAQ,will my room look exactly like the photos?,"div (plain text, not a heading)",H3,Change div to H3,"Each FAQ question should be its own H3 under ""your questions, answered"". This helps Google and AI tools match each question to its answer.",
+=ROW()-11,FAQ,what amenities are included with my stay?,"div (plain text, not a heading)",H3,Change div to H3,"Each FAQ question should be its own H3 under ""your questions, answered"". This helps Google and AI tools match each question to its answer.",
+=ROW()-11,Booking block,Book your escape,H2,p,Change to p,"This is a booking call to action, not a section title.",
+=ROW()-11,Newsletter block,Stay in the loop,H2,p,Change to p,"This is the newsletter sign-up, not a section title.",
+=ROW()-11,Footer,the hotel,H2,p,Change to p,"This is a footer column label. The footer is on every page, so as an H2 it adds noise to the outline of every page on the site.","The footer is shared by every page, so fixing it once fixes it site-wide."
+=ROW()-11,Footer,experience,H2,p,Change to p,"This is a footer column label. The footer is on every page, so as an H2 it adds noise to the outline of every page on the site.",
+=ROW()-11,Footer,dining,H2,p,Change to p,"This is a footer column label. The footer is on every page, so as an H2 it adds noise to the outline of every page on the site.",
+=ROW()-11,Footer,social,H2,p,Change to p,"This is a footer column label. The footer is on every page, so as an H2 it adds noise to the outline of every page on the site.",
+=ROW()-11,Footer,links,H2,p,Change to p,"This is a footer column label. The footer is on every page, so as an H2 it adds noise to the outline of every page on the site.",
+,,,,,,,
+"Content notes (not tag changes, for the content team)",,,,,,,
+1.0,FAQ,"The six FAQ questions are about a single room (""this room""). The homepage needs its own questions, for example location, parking, Zuma, the pool, pets and the history of the building. These are the answers AI tools look for.",,,,,
+2.0,Wellness,The Wellness section and the Wellness staycation cards still have placeholder text (lorem ipsum). I know you are still working on it,,,,,
+3.0,Rooms & suites,"The Rooms & suites image has no alt text. Suggested: ""Suite at The Guild Hotel in downtown San Diego"".",,,,,
+4.0,Lobby Bar,"The venue is called ""Lobby Bar"" in the slideshow and ""lobby terrace"" in the second copy. Please confirm the right name.",,,,,
+5.0,Offers,"The offer cards link to ""#"" on staging. They need their offer page links before launch.",,,,,

@@ -1,0 +1,73 @@
+{
+ "component": {
+  "id": "5d830b69-6507-7d04-4828-069b2539cffb",
+  "name": "Map Feature Image Bg",
+  "description": "Map fills the section with a tan card bottom left: heading, text and the Map Places list from the CMS. Set Image on each instance.",
+  "group": null
+ },
+ "nodes": [
+  {
+   "id": "ff5ebdf1-bb36-d950-0ecc-86368ab96a23",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"map-feature_link text-size-medium\" href=\"#\">Directions</a>",
+    "text": "Directions"
+   },
+   "attributes": {
+    "target": "_blank",
+    "rel": "noopener",
+    "data-reveal": "fade-only",
+    "data-reveal-delay": "0.2"
+   }
+  },
+  {
+   "id": "9f5fc2f4-169f-6e16-50c0-199b554b43cf",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "5d830b69-6507-7d04-4828-069b2539d020",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {
+    "loading": "lazy"
+   }
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "cb9c481f-b5dc-1c74-716f-3d3606e28333",
+   "type": "Plain Text",
+   "label": "Content/Heading",
+   "text": {
+    "html": null,
+    "text": "The Neighborhood"
+   }
+  },
+  {
+   "propertyId": "b8f3c5b9-efe9-e6a4-5af7-6ab68b883833",
+   "type": "Plain Text",
+   "label": "Content/Text",
+   "text": {
+    "html": null,
+    "text": "We’ve lived here for a century; let us show you around."
+   }
+  },
+  {
+   "propertyId": "d8b278ad-b9fa-a7bf-d679-42cae05a0989",
+   "type": "Alt Text",
+   "label": "Image/Image Alt",
+   "text": {
+    "html": null,
+    "text": "Hand-drawn map of the streets and landmarks around the hotel"
+   }
+  }
+ ]
+}

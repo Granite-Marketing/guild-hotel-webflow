@@ -1,0 +1,75 @@
+{
+ "component": {
+  "id": "e1b3f20f-32ae-6a0e-152e-8f6755746b38",
+  "name": "Article Card Tall Item",
+  "description": "One card for the Cards slot of Article Card Staggered Tall: image, heading, text.",
+  "group": "Shared"
+ },
+ "nodes": [
+  {
+   "id": "e1b3f20f-32ae-6a0e-152e-8f6755746b3a",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "09c2828d-0d7c-4d1d-f975-58f30d8fd0f8",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "7e077e4f-9a98-5593-df20-6e6f08dfd7fa",
+   "type": "Alt Text",
+   "label": "Image Alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "43488e1d-d3af-2bc8-63be-a90945c187b0",
+   "type": "Plain Text",
+   "label": "Heading",
+   "text": {
+    "html": null,
+    "text": "dining 1"
+   }
+  },
+  {
+   "propertyId": "f5bc36db-23ff-40e8-2b02-29303c1b7997",
+   "type": "Plain Text",
+   "label": "Text",
+   "text": {
+    "html": null,
+    "text": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu."
+   }
+  },
+  {
+   "propertyId": "a6d0d9d1-1eee-4564-8303-2a573be959bb",
+   "type": "Plain Text",
+   "label": "Heading (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "68056cc1-8542-d901-2fe5-fbef8d23a4ba",
+   "type": "Plain Text",
+   "label": "Text (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  }
+ ]
+}

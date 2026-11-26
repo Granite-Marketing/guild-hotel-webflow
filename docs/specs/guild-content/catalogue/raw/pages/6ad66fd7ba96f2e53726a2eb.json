@@ -1,0 +1,978 @@
+{
+ "page": {
+  "id": "6ad66fd7ba96f2e53726a2eb",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Arts",
+  "slug": "arts",
+  "createdOn": "2026-10-19T19:30:31.192Z",
+  "lastUpdated": "2026-11-25T21:49:20.925Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Art Collection | The Guild Hotel",
+   "description": "Explore The Guild Collection of painting, photography and sculpture through a curator's eyes, featuring San Diego artists such as Eva Struble."
+  },
+  "openGraph": {
+   "title": "Art Collection | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Explore The Guild Collection of painting, photography and sculpture through a curator's eyes, featuring San Diego artists such as Eva Struble.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/arts",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "b736f7a7-f1f2-944b-dc9d-8d335ace24f8",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "871cea3d-c025-027f-98dc-d3199027d86b",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "751143d3-d97f-3311-549b-5016f05578f1",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "c789159e-15bc-af82-a16d-23d3980bbb44",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "art collection"
+     }
+    },
+    {
+     "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non."
+     }
+    }
+   ]
+  },
+  {
+   "id": "4ea2f711-b714-c3f3-e3f9-0712ff7c81bf",
+   "type": "component-instance",
+   "componentId": "bdff66b3-92d9-e1e3-dbc0-86a28e384c9b",
+   "propertyOverrides": [
+    {
+     "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+     "type": "Plain Text",
+     "label": "Content/heading",
+     "text": {
+      "html": null,
+      "text": "An art collection\nthrough a curator’s eyes"
+     }
+    },
+    {
+     "propertyId": "0df84d45-603f-3795-7593-9010ebf7c540",
+     "type": "Plain Text",
+     "label": "Content/paragraph",
+     "text": {
+      "html": null,
+      "text": "Paintings, photography and sculpture by San Diego artists, chosen for The Guild and shown in its halls, rooms and public spaces."
+     }
+    }
+   ]
+  },
+  {
+   "id": "e8583348-3dc4-ee15-6fd2-d23bf25a737c",
+   "type": "image",
+   "image": {
+    "alt": "Palm leaves in front of the Guild Hotel sign at night",
+    "assetId": "6ad66fff134731ad1b927c11"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "c9d0efd0-ad39-a1cc-e31f-9ad775187ad2",
+   "type": "text",
+   "text": {
+    "html": "<p>Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.</p>",
+    "text": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "40725dea-61be-f473-19fa-a0382b2e6503",
+   "type": "component-instance",
+   "componentId": "cf4debe5-17ee-5d74-1d63-85f7a7d28e2d",
+   "propertyOverrides": [
+    {
+     "propertyId": "8cb8fc44-2bf1-ef44-01ba-38d1b52f5d6b",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "the guild collection"
+     }
+    },
+    {
+     "propertyId": "3f50e93d-a968-f004-4199-cfd4d1bccba7",
+     "type": "Plain Text",
+     "label": "Content/Body",
+     "text": {
+      "html": null,
+      "text": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum."
+     }
+    }
+   ]
+  },
+  {
+   "id": "7d71ed9f-3a5c-0c3b-e8fe-fa30281c21a0",
+   "type": "component-instance",
+   "componentId": "51c17234-82ff-8a78-73f9-94810497ec9a",
+   "propertyOverrides": []
+  },
+  {
+   "id": "5b439088-cef6-d70d-5f86-7d2ed4630256",
+   "type": "image",
+   "image": {
+    "alt": "Oceano by Eva Struble, oil and acrylic on canvas",
+    "assetId": "6ad66ffb8d039779ba7cb0a7"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "84fab2f6-3abb-3af4-99cb-9ceab0b85375",
+   "type": "image",
+   "image": {
+    "alt": "Eva Struble seated in front of her paintings",
+    "assetId": "6ad67002c159d4564be772e7"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f0ce9230-f0e2-b156-d6b9-7a9648b531f6",
+   "type": "image",
+   "image": {
+    "alt": "Artwork in The Guild collection",
+    "assetId": "6ad6701cf08ff78c37d862e1"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "4b2bc155-4864-c03b-261c-67b69d8baa1a",
+   "type": "image",
+   "image": {
+    "alt": "Artwork in The Guild collection",
+    "assetId": "6ad670147e3d6550932e0fac"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "686d63c7-bedc-ba57-2ef6-d8a54c422be0",
+   "type": "image",
+   "image": {
+    "alt": "Artwork in The Guild collection",
+    "assetId": "6ad67007cf42363c3ffe3d61"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "84f78516-8381-1e7b-b67f-1b812972e03e",
+   "type": "image",
+   "image": {
+    "alt": "Artwork in The Guild collection",
+    "assetId": "6ad67011134731ad1b928045"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "af08ab9d-2e64-0e1c-6c58-a4ec0a223912",
+   "type": "image",
+   "image": {
+    "alt": "Artwork in The Guild collection",
+    "assetId": "6ad66ff96684c3e22ea4e1af"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f2d6d52b-d46b-6fd4-e0f4-080639502e5d",
+   "type": "image",
+   "image": {
+    "alt": "Artwork in The Guild collection",
+    "assetId": "6ad66fff134731ad1b927c11"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d7e7bc45-411e-2339-6bb6-5a98680e62c2",
+   "type": "image",
+   "image": {
+    "alt": "Artwork in The Guild collection",
+    "assetId": "6ad67017fb3a14e0db41143b"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "9ab3d289-c3a5-7179-9937-9df83d781a99",
+   "type": "image",
+   "image": {
+    "alt": "Artwork in The Guild collection",
+    "assetId": "6ad66ff0f8bf4846e809ead6"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "c3e039ac-c5e0-b902-2f3d-852e13540c3c",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d709e584-55e2-e281-c915-c0c5b0cc9fc1",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "7a46c28f-6e75-148a-7bd1-e21a44af6f3e",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps is-active\" href=\"#art-all\">all</a>",
+    "text": "all"
+   },
+   "attributes": {
+    "data-gallery-filter-tag": "all",
+    "role": "button",
+    "aria-pressed": "true"
+   }
+  },
+  {
+   "id": "02ee90f2-fc69-2099-6950-42d4b74bbbd4",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "c34c5912-a8c3-6d9a-7e12-e0e709165655",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#\">zoom out</a>",
+    "text": "zoom out"
+   },
+   "attributes": {
+    "data-gallery-canvas-zoom": "out",
+    "role": "button"
+   }
+  },
+  {
+   "id": "3d95835d-323a-fc61-75cc-9170a1d35797",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#\">zoom</a>",
+    "text": "zoom"
+   },
+   "attributes": {
+    "data-gallery-canvas-zoom": "reset",
+    "role": "button"
+   }
+  },
+  {
+   "id": "c7a3240c-e60f-fa23-591a-2845db8fc6c6",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#\">zoom in</a>",
+    "text": "zoom in"
+   },
+   "attributes": {
+    "data-gallery-canvas-zoom": "in",
+    "role": "button"
+   }
+  },
+  {
+   "id": "d90904ab-a658-2192-a152-d8ac10fea115",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#\">exit</a>",
+    "text": "exit"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "3c324672-23a7-d839-8969-3aa36a779879",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#\">tap to enter gallery</a>",
+    "text": "tap to enter gallery"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ff0b7c50-9c36-73be-1917-feb68b9f5ab9",
+   "type": "component-instance",
+   "componentId": "f5403de4-dabb-14c3-ecf8-c945d0a8e22e",
+   "propertyOverrides": []
+  },
+  {
+   "id": "4f4430df-35b3-dba4-d38c-1f382754d7c4",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "rooms"
+     }
+    }
+   ]
+  },
+  {
+   "id": "1752a929-173f-617b-929d-8cf79bb725f8",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "dining"
+     }
+    }
+   ]
+  },
+  {
+   "id": "fdfa45e1-5c13-ab12-7b08-77704249b8c8",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "wellness"
+     }
+    }
+   ]
+  },
+  {
+   "id": "a2452872-4925-def2-d6ef-9a77c8fb1eac",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "4edfed43-990c-5629-a39f-6ff67117eb9f",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "55358a1f-ce84-5de5-0b80-2cc7c25c5587",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "06790a4a-2694-bff2-71ce-0239bb16aa94",
+   "type": "component-instance",
+   "componentId": "3eeb97fa-6550-7845-31ee-e997e4b8f2f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "74b6d39f-054a-e3b2-e321-5cfb6f0663e9",
+     "type": "Alt Text",
+     "label": "Image/image alt",
+     "text": {
+      "html": null,
+      "text": "Palm leaves in front of the Guild Hotel sign at night"
+     }
+    }
+   ]
+  },
+  {
+   "id": "8c21e1d4-1ce5-9e81-e8ed-39ddc83d9201",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "ea4346d7-9eb6-7786-7b78-307824025840",
+     "type": "Plain Text",
+     "label": "Content/Eyebrow",
+     "text": {
+      "html": null,
+      "text": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus."
+     }
+    }
+   ]
+  },
+  {
+   "id": "67c487b4-5f6c-84aa-4a04-c35b21cb4199",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "1cda090e-4233-5cb3-2b1b-fc179e084188",
+   "type": "component-instance",
+   "componentId": "44cccc51-37cb-2526-e426-133987071983",
+   "propertyOverrides": [
+    {
+     "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "eva struble"
+     }
+    },
+    {
+     "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+     "type": "Alt Text",
+     "label": "Media/Image alt",
+     "text": {
+      "html": null,
+      "text": "Eva Struble seated in front of her paintings"
+     }
+    },
+    {
+     "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+     "type": "Plain Text",
+     "label": "Body/Text",
+     "text": {
+      "html": null,
+      "text": "Eva Struble is a San Diego-based artist whose work examines landscape through social, environmental, and personal histories. Her practice explores human-altered environments, regional botany, and the ways nature and human intervention continually reshape one another."
+     }
+    }
+   ]
+  },
+  {
+   "id": "285066ec-e924-16d7-e000-731e947102cb",
+   "type": "component-instance",
+   "componentId": "44cccc51-37cb-2526-e426-133987071983",
+   "propertyOverrides": [
+    {
+     "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "‘oceano’"
+     }
+    },
+    {
+     "propertyId": "7319d118-d240-ca86-36e8-071c77d6ce26",
+     "type": "Plain Text",
+     "label": "Header/Eyebrow",
+     "text": {
+      "html": null,
+      "text": "by eva struble"
+     }
+    },
+    {
+     "propertyId": "ceef8a78-7413-ed6a-f295-6383f720ad1a",
+     "type": "Plain Text",
+     "label": "Header/Caption",
+     "text": {
+      "html": null,
+      "text": "2024 | 48 x 60 in\nOil and acrylic on canvas"
+     }
+    },
+    {
+     "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+     "type": "Alt Text",
+     "label": "Media/Image alt",
+     "text": {
+      "html": null,
+      "text": "Oceano by Eva Struble, oil and acrylic on canvas"
+     }
+    },
+    {
+     "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+     "type": "Plain Text",
+     "label": "Body/Text",
+     "text": {
+      "html": null,
+      "text": "Eva’s work unfolds through layered color, texture, and abstraction, conjuring the atmospheric qualities of a coastal landscape without settling into a singular representation of place. The work speaks to the deep relationship between landscape and the daily life of Southern California, where the natural environment is not simply a backdrop, but integral of how the region is experienced, remembered, and understood."
+     }
+    }
+   ]
+  },
+  {
+   "id": "7499f787-1406-8316-3f16-9d312f300896",
+   "type": "component-instance",
+   "componentId": "44cccc51-37cb-2526-e426-133987071983",
+   "propertyOverrides": [
+    {
+     "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "artwork title"
+     }
+    },
+    {
+     "propertyId": "7319d118-d240-ca86-36e8-071c77d6ce26",
+     "type": "Plain Text",
+     "label": "Header/Eyebrow",
+     "text": {
+      "html": null,
+      "text": "by artist name"
+     }
+    },
+    {
+     "propertyId": "ceef8a78-7413-ed6a-f295-6383f720ad1a",
+     "type": "Plain Text",
+     "label": "Header/Caption",
+     "text": {
+      "html": null,
+      "text": "year | dimensions\nmedium"
+     }
+    },
+    {
+     "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+     "type": "Alt Text",
+     "label": "Media/Image alt",
+     "text": {
+      "html": null,
+      "text": "Artwork in The Guild collection"
+     }
+    },
+    {
+     "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+     "type": "Plain Text",
+     "label": "Body/Text",
+     "text": {
+      "html": null,
+      "text": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum."
+     }
+    }
+   ]
+  },
+  {
+   "id": "4f5a37c1-c8c5-11da-6f0e-0c11341a78d6",
+   "type": "component-instance",
+   "componentId": "44cccc51-37cb-2526-e426-133987071983",
+   "propertyOverrides": [
+    {
+     "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "artwork title"
+     }
+    },
+    {
+     "propertyId": "7319d118-d240-ca86-36e8-071c77d6ce26",
+     "type": "Plain Text",
+     "label": "Header/Eyebrow",
+     "text": {
+      "html": null,
+      "text": "by artist name"
+     }
+    },
+    {
+     "propertyId": "ceef8a78-7413-ed6a-f295-6383f720ad1a",
+     "type": "Plain Text",
+     "label": "Header/Caption",
+     "text": {
+      "html": null,
+      "text": "year | dimensions\nmedium"
+     }
+    },
+    {
+     "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+     "type": "Alt Text",
+     "label": "Media/Image alt",
+     "text": {
+      "html": null,
+      "text": "Artwork in The Guild collection"
+     }
+    },
+    {
+     "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+     "type": "Plain Text",
+     "label": "Body/Text",
+     "text": {
+      "html": null,
+      "text": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum."
+     }
+    }
+   ]
+  },
+  {
+   "id": "961da8e9-7c04-2a79-baea-b263a603ce6d",
+   "type": "component-instance",
+   "componentId": "44cccc51-37cb-2526-e426-133987071983",
+   "propertyOverrides": [
+    {
+     "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "artwork title"
+     }
+    },
+    {
+     "propertyId": "7319d118-d240-ca86-36e8-071c77d6ce26",
+     "type": "Plain Text",
+     "label": "Header/Eyebrow",
+     "text": {
+      "html": null,
+      "text": "by artist name"
+     }
+    },
+    {
+     "propertyId": "ceef8a78-7413-ed6a-f295-6383f720ad1a",
+     "type": "Plain Text",
+     "label": "Header/Caption",
+     "text": {
+      "html": null,
+      "text": "year | dimensions\nmedium"
+     }
+    },
+    {
+     "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+     "type": "Alt Text",
+     "label": "Media/Image alt",
+     "text": {
+      "html": null,
+      "text": "Artwork in The Guild collection"
+     }
+    },
+    {
+     "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+     "type": "Plain Text",
+     "label": "Body/Text",
+     "text": {
+      "html": null,
+      "text": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum."
+     }
+    }
+   ]
+  },
+  {
+   "id": "5886ffa9-16dd-7591-8ac8-7980dd8c90c8",
+   "type": "component-instance",
+   "componentId": "44cccc51-37cb-2526-e426-133987071983",
+   "propertyOverrides": [
+    {
+     "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "artwork title"
+     }
+    },
+    {
+     "propertyId": "7319d118-d240-ca86-36e8-071c77d6ce26",
+     "type": "Plain Text",
+     "label": "Header/Eyebrow",
+     "text": {
+      "html": null,
+      "text": "by artist name"
+     }
+    },
+    {
+     "propertyId": "ceef8a78-7413-ed6a-f295-6383f720ad1a",
+     "type": "Plain Text",
+     "label": "Header/Caption",
+     "text": {
+      "html": null,
+      "text": "year | dimensions\nmedium"
+     }
+    },
+    {
+     "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+     "type": "Alt Text",
+     "label": "Media/Image alt",
+     "text": {
+      "html": null,
+      "text": "Artwork in The Guild collection"
+     }
+    },
+    {
+     "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+     "type": "Plain Text",
+     "label": "Body/Text",
+     "text": {
+      "html": null,
+      "text": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum."
+     }
+    }
+   ]
+  },
+  {
+   "id": "6d876517-1561-b2a4-5fdd-0373192bb6e1",
+   "type": "component-instance",
+   "componentId": "44cccc51-37cb-2526-e426-133987071983",
+   "propertyOverrides": [
+    {
+     "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "artwork title"
+     }
+    },
+    {
+     "propertyId": "7319d118-d240-ca86-36e8-071c77d6ce26",
+     "type": "Plain Text",
+     "label": "Header/Eyebrow",
+     "text": {
+      "html": null,
+      "text": "by artist name"
+     }
+    },
+    {
+     "propertyId": "ceef8a78-7413-ed6a-f295-6383f720ad1a",
+     "type": "Plain Text",
+     "label": "Header/Caption",
+     "text": {
+      "html": null,
+      "text": "year | dimensions\nmedium"
+     }
+    },
+    {
+     "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+     "type": "Alt Text",
+     "label": "Media/Image alt",
+     "text": {
+      "html": null,
+      "text": "Artwork in The Guild collection"
+     }
+    },
+    {
+     "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+     "type": "Plain Text",
+     "label": "Body/Text",
+     "text": {
+      "html": null,
+      "text": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum."
+     }
+    }
+   ]
+  },
+  {
+   "id": "7e7e7949-ea19-5092-d086-77fff91beae4",
+   "type": "component-instance",
+   "componentId": "44cccc51-37cb-2526-e426-133987071983",
+   "propertyOverrides": [
+    {
+     "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "artwork title"
+     }
+    },
+    {
+     "propertyId": "7319d118-d240-ca86-36e8-071c77d6ce26",
+     "type": "Plain Text",
+     "label": "Header/Eyebrow",
+     "text": {
+      "html": null,
+      "text": "by artist name"
+     }
+    },
+    {
+     "propertyId": "ceef8a78-7413-ed6a-f295-6383f720ad1a",
+     "type": "Plain Text",
+     "label": "Header/Caption",
+     "text": {
+      "html": null,
+      "text": "year | dimensions\nmedium"
+     }
+    },
+    {
+     "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+     "type": "Alt Text",
+     "label": "Media/Image alt",
+     "text": {
+      "html": null,
+      "text": "Artwork in The Guild collection"
+     }
+    },
+    {
+     "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+     "type": "Plain Text",
+     "label": "Body/Text",
+     "text": {
+      "html": null,
+      "text": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ffa3e9cd-0baa-105c-4f52-3b88cead0a98",
+   "type": "component-instance",
+   "componentId": "44cccc51-37cb-2526-e426-133987071983",
+   "propertyOverrides": [
+    {
+     "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "artwork title"
+     }
+    },
+    {
+     "propertyId": "7319d118-d240-ca86-36e8-071c77d6ce26",
+     "type": "Plain Text",
+     "label": "Header/Eyebrow",
+     "text": {
+      "html": null,
+      "text": "by artist name"
+     }
+    },
+    {
+     "propertyId": "ceef8a78-7413-ed6a-f295-6383f720ad1a",
+     "type": "Plain Text",
+     "label": "Header/Caption",
+     "text": {
+      "html": null,
+      "text": "year | dimensions\nmedium"
+     }
+    },
+    {
+     "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+     "type": "Alt Text",
+     "label": "Media/Image alt",
+     "text": {
+      "html": null,
+      "text": "Artwork in The Guild collection"
+     }
+    },
+    {
+     "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+     "type": "Plain Text",
+     "label": "Body/Text",
+     "text": {
+      "html": null,
+      "text": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum."
+     }
+    }
+   ]
+  },
+  {
+   "id": "9a7bafd9-6915-a3d0-28b9-ebbe1c505fcf",
+   "type": "component-instance",
+   "componentId": "44cccc51-37cb-2526-e426-133987071983",
+   "propertyOverrides": [
+    {
+     "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "artwork title"
+     }
+    },
+    {
+     "propertyId": "7319d118-d240-ca86-36e8-071c77d6ce26",
+     "type": "Plain Text",
+     "label": "Header/Eyebrow",
+     "text": {
+      "html": null,
+      "text": "by artist name"
+     }
+    },
+    {
+     "propertyId": "ceef8a78-7413-ed6a-f295-6383f720ad1a",
+     "type": "Plain Text",
+     "label": "Header/Caption",
+     "text": {
+      "html": null,
+      "text": "year | dimensions\nmedium"
+     }
+    },
+    {
+     "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+     "type": "Alt Text",
+     "label": "Media/Image alt",
+     "text": {
+      "html": null,
+      "text": "Artwork in The Guild collection"
+     }
+    },
+    {
+     "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+     "type": "Plain Text",
+     "label": "Body/Text",
+     "text": {
+      "html": null,
+      "text": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum."
+     }
+    }
+   ]
+  },
+  {
+   "id": "b462261a-5cd9-1d8b-f6e5-d4b317da0650",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  },
+  {
+   "id": "baf1e5a6-f6b4-afd6-5e1a-4d6904b050ec",
+   "type": "component-instance",
+   "componentId": "4e402659-32e2-fddb-7dd9-6c1d17f58318",
+   "propertyOverrides": []
+  },
+  {
+   "id": "438c4fed-c368-cd52-7ca7-433ffb192364",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "12203225-e1c0-00dc-027f-a3cec9537d14",
+   "type": "component-instance",
+   "componentId": "4e402659-32e2-fddb-7dd9-6c1d17f58318",
+   "propertyOverrides": []
+  },
+  {
+   "id": "5e96290c-aa6f-40b6-f65c-7f1d2533387b",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  }
+ ],
+ "lastUpdated": "2026-11-25T21:49:21.001Z"
+}

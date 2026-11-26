@@ -1,0 +1,66 @@
+{
+ "component": {
+  "id": "bdff66b3-92d9-e1e3-dbc0-86a28e384c9b",
+  "name": "script-intro-centered",
+  "description": "Centered script-heading intro. Pick the look with the Variant prop. Content and Show image, Show paragraph, Show back link are props.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "bdff66b3-92d9-e1e3-dbc0-86a28e384ca1",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": "6ad74da5f1658ec1f273e890"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bdff66b3-92d9-e1e3-dbc0-86a28e384ca5",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+   "type": "Plain Text",
+   "label": "Content/heading",
+   "text": {
+    "html": null,
+    "text": "An art collection\nthrough a curator’s eyes"
+   }
+  },
+  {
+   "propertyId": "0df84d45-603f-3795-7593-9010ebf7c540",
+   "type": "Plain Text",
+   "label": "Content/paragraph",
+   "text": {
+    "html": null,
+    "text": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort."
+   }
+  },
+  {
+   "propertyId": "4847f1eb-e957-0144-e10e-92569ab9c48a",
+   "type": "Alt Text",
+   "label": "Image/image alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "d932c13c-1670-4ef1-f3fd-e1009039b35b",
+   "type": "Plain Text",
+   "label": "Back link/backLink",
+   "text": {
+    "html": null,
+    "text": "back"
+   }
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "component": {
+  "id": "f8269db7-7b82-27f1-dd64-8dd069d633f6",
+  "name": "Venue Card Fullbleed Tall",
+  "description": "Edge-to-edge venue card, about square: large heading, text and outline button. Optional logo, night image, video and text.",
+  "group": "Venue Card Fullbleed"
+ },
+ "nodes": [
+  {
+   "id": "f8269db7-7b82-27f1-dd64-8dd069d633fd",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {
+    "data-eager": "true",
+    "loading": "eager"
+   }
+  },
+  {
+   "id": "0e3b2199-97a0-6bce-f7c6-290a9ce9cfbe",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f8269db7-7b82-27f1-dd64-8dd069d63401",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "1eb617a1-26ff-6916-fd05-7eddfa607258",
+   "type": "Plain Text",
+   "label": "Content/Heading",
+   "text": {
+    "html": null,
+    "text": "small conference center"
+   }
+  },
+  {
+   "propertyId": "37504da3-38ce-3238-2f23-44693fb79d3e",
+   "type": "Plain Text",
+   "label": "Content/Text",
+   "text": {
+    "html": null,
+    "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"
+   }
+  },
+  {
+   "propertyId": "d181cbd9-dbf9-2625-3bec-af376cf95ca4",
+   "type": "Plain Text",
+   "label": "Content/Heading (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "4d023148-db3e-68a2-a0f0-c97151354bf7",
+   "type": "Plain Text",
+   "label": "Content/Text (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "0453ce75-d3f9-6b3a-1081-4e9bde64870d",
+   "type": "Plain Text",
+   "label": "Button/Button Label",
+   "text": {
+    "html": null,
+    "text": "discover more"
+   }
+  },
+  {
+   "propertyId": "c2815958-c118-e5ce-3fd8-fcb5693033e4",
+   "type": "Plain Text",
+   "label": "Button/Button Label (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "fce9ab5f-4abb-969e-751f-e7a86dd985ee",
+   "type": "Plain Text",
+   "label": "Button/Button Link (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "34f5bc70-f127-0ab1-46e0-893576ef4c6f",
+   "type": "Alt Text",
+   "label": "Image/Image Alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "b86d0fae-add2-e233-7efc-1c55d6d1868f",
+   "type": "Alt Text",
+   "label": "Image/Logo Alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "253ea9c9-f8e5-381c-ca71-6f529ab829e6",
+   "type": "Plain Text",
+   "label": "Image/Video (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  }
+ ]
+}

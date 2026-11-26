@@ -1,0 +1,34 @@
+{
+ "page": {
+  "id": "6b0041e06d88d6d2996cc77e",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b0041e06d88d6d2996cc777",
+  "title": "🛎️ Amenities Template",
+  "slug": "detail_amenities",
+  "createdOn": "2026-11-20T12:49:36.414Z",
+  "lastUpdated": "2026-11-24T17:34:05.938Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/amenities",
+  "localeId": null
+ },
+ "nodes": [],
+ "lastUpdated": "2026-11-20T12:49:36.438Z"
+}

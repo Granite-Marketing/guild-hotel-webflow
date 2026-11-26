@@ -1,0 +1,1540 @@
+{
+ "path": "/press",
+ "kind": "static",
+ "pageId": "6ad66fd5735773f253406642",
+ "title": "Press",
+ "url": "https://the-guild-hotel-c34e71.webflow.io/press",
+ "file": "press.json",
+ "httpStatus": 200,
+ "documentTitle": "Press and Media | The Guild Hotel",
+ "metaDescription": "The Guild Hotel as featured in National Geographic, Forbes, Architectural Digest and more. For press enquiries, email press@theguildhotel.com.",
+ "elements": [
+  {
+   "order": 0,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "stay",
+   "rawTextContent": "stay",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 1,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "dine",
+   "rawTextContent": "dine",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 2,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "wellness",
+   "rawTextContent": "wellness",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 3,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "happenings",
+   "rawTextContent": "happenings",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 4,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "our history",
+   "rawTextContent": "our history",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 5,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "meetings & events",
+   "rawTextContent": "meetings & events",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 6,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "neighborhood",
+   "rawTextContent": "neighborhood",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 7,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "art",
+   "rawTextContent": "art",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 8,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "gallery",
+   "rawTextContent": "gallery",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 9,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "blog",
+   "rawTextContent": "blog",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 10,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "packages",
+   "rawTextContent": "packages",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 11,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "contact",
+   "rawTextContent": "contact",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 12,
+   "tag": "h1",
+   "id": null,
+   "innerText": "press",
+   "textContent": "press",
+   "rawTextContent": "press",
+   "fontSize": "40px",
+   "textTransform": "lowercase",
+   "classes": [
+    "hero-fullbleed-centered_heading",
+    "heading-style-h2"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_hero-fullbleed-centered",
+   "sectionClasses": [
+    "section_hero-fullbleed-centered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 13,
+   "tag": "h2",
+   "id": null,
+   "innerText": "In the press",
+   "textContent": "In the press",
+   "rawTextContent": "In the press",
+   "fontSize": "80px",
+   "textTransform": "none",
+   "classes": [
+    "tab-pills-intro_heading",
+    "text-style-script",
+    "is-large",
+    "w-variant-59a1b413-f64f-13c3-5d27-710cb741a3c0"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_tab-pills-intro",
+   "sectionClasses": [
+    "section_tab-pills-intro"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 14,
+   "tag": "h2",
+   "id": null,
+   "innerText": "reviews",
+   "textContent": "Reviews",
+   "rawTextContent": "Reviews",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 15,
+   "tag": "h3",
+   "id": null,
+   "innerText": "the 12 best hotels in san diego | the guild hotel",
+   "textContent": "The 12 Best Hotels In San Diego | The Guild Hotel",
+   "rawTextContent": "The 12 Best Hotels In San Diego | The Guild Hotel",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 16,
+   "tag": "h3",
+   "id": null,
+   "innerText": "the 13 best hotels in san diego, california",
+   "textContent": "The 13 Best Hotels in San Diego, California",
+   "rawTextContent": "The 13 Best Hotels in San Diego, California",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 17,
+   "tag": "h3",
+   "id": null,
+   "innerText": "the best san diego restaurants for your wedding day",
+   "textContent": "The Best San Diego Restaurants for Your Wedding Day",
+   "rawTextContent": "The Best San Diego Restaurants for Your Wedding Day",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 18,
+   "tag": "h3",
+   "id": null,
+   "innerText": "‘car-free in california’ was our organizing motto for a recent girlfriend getaway.",
+   "textContent": "‘Car-free in California’ was our organizing motto for a recent girlfriend getaway.",
+   "rawTextContent": "‘Car-free in California’ was our organizing motto for a recent girlfriend getaway.",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 19,
+   "tag": "h3",
+   "id": null,
+   "innerText": "“a real respite from the crowds with a peaceful courtyard and charming, historic details…” – business insider",
+   "textContent": "“A real respite from the crowds with a peaceful courtyard and charming, historic details…” – Business Insider",
+   "rawTextContent": "“A real respite from the crowds with a peaceful courtyard and charming, historic details…” – Business Insider",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 20,
+   "tag": "h3",
+   "id": null,
+   "innerText": "“come for the chic design, good food…” the guild hotel review on cn traveler",
+   "textContent": "“Come for the chic design, good food…” The Guild Hotel review on CN Traveler",
+   "rawTextContent": "“Come for the chic design, good food…” The Guild Hotel review on CN Traveler",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 21,
+   "tag": "h3",
+   "id": null,
+   "innerText": "the best san diego hotels for every kind of traveler",
+   "textContent": "The best San Diego hotels for every kind of traveler",
+   "rawTextContent": "The best San Diego hotels for every kind of traveler",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 22,
+   "tag": "h2",
+   "id": null,
+   "innerText": "lists",
+   "textContent": "Lists",
+   "rawTextContent": "Lists",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 23,
+   "tag": "h3",
+   "id": null,
+   "innerText": "the 15 best cocktail lounges in san diego",
+   "textContent": "The 15 Best Cocktail Lounges in San Diego",
+   "rawTextContent": "The 15 Best Cocktail Lounges in San Diego",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 24,
+   "tag": "h3",
+   "id": null,
+   "innerText": "14 must-try spring menus from some of san diego’s best restaurants",
+   "textContent": "14 Must-Try Spring Menus From Some Of San Diego’s Best Restaurants",
+   "rawTextContent": "14 Must-Try Spring Menus From Some Of San Diego’s Best Restaurants",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 25,
+   "tag": "h3",
+   "id": null,
+   "innerText": "where to eat for valentine’s day in san diego this year",
+   "textContent": "Where to Eat for Valentine’s Day in San Diego This Year",
+   "rawTextContent": "Where to Eat for Valentine’s Day in San Diego This Year",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 26,
+   "tag": "h3",
+   "id": null,
+   "innerText": "here are the must-see san diego hotels on our radar",
+   "textContent": "Here Are the Must-See San Diego Hotels on Our Radar",
+   "rawTextContent": "Here Are the Must-See San Diego Hotels on Our Radar",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 27,
+   "tag": "h3",
+   "id": null,
+   "innerText": "a travel guide to san diego, america’s finest city",
+   "textContent": "A Travel Guide to San Diego, America’s Finest City",
+   "rawTextContent": "A Travel Guide to San Diego, America’s Finest City",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 28,
+   "tag": "h3",
+   "id": null,
+   "innerText": "the 20 best hotels in san diego in 2019",
+   "textContent": "The 20 Best Hotels in San Diego in 2019",
+   "rawTextContent": "The 20 Best Hotels in San Diego in 2019",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 29,
+   "tag": "h3",
+   "id": null,
+   "innerText": "2019’s hottest new hotels – travelocity",
+   "textContent": "2019’s Hottest New Hotels – Travelocity",
+   "rawTextContent": "2019’s Hottest New Hotels – Travelocity",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 30,
+   "tag": "h2",
+   "id": null,
+   "innerText": "f&b",
+   "textContent": "F&B",
+   "rawTextContent": "F&B",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 31,
+   "tag": "h3",
+   "id": null,
+   "innerText": "the guild hotel kicks off new cocktail exploration series featuring batch 22",
+   "textContent": "The Guild Hotel Kicks Off New Cocktail Exploration Series Featuring Batch 22",
+   "rawTextContent": "The Guild Hotel Kicks Off New Cocktail Exploration Series Featuring Batch 22",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 32,
+   "tag": "h3",
+   "id": null,
+   "innerText": "13 ways to celebrate national tequila day at houston's top bars & restaurants",
+   "textContent": "13 Ways To Celebrate National Tequila Day At Houston's Top Bars & Restaurants",
+   "rawTextContent": "13 Ways To Celebrate National Tequila Day At Houston's Top Bars & Restaurants",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 33,
+   "tag": "h3",
+   "id": null,
+   "innerText": "we asked 7 bartenders: what’s the most underrated tequila?",
+   "textContent": "We Asked 7 Bartenders: What’s the Most Underrated Tequila?",
+   "rawTextContent": "We Asked 7 Bartenders: What’s the Most Underrated Tequila?",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 34,
+   "tag": "h3",
+   "id": null,
+   "innerText": "the re-launched guild bar captures the spirit of the roaring 20’s with sophistication and style",
+   "textContent": "The Re-Launched Guild Bar Captures The Spirit of the Roaring 20’s With Sophistication and Style",
+   "rawTextContent": "The Re-Launched Guild Bar Captures The Spirit of the Roaring 20’s With Sophistication and Style",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 35,
+   "tag": "h2",
+   "id": null,
+   "innerText": "design",
+   "textContent": "Design",
+   "rawTextContent": "Design",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 36,
+   "tag": "h3",
+   "id": null,
+   "innerText": "one of san diego’s revered architectural gems has undergone an £80m renovation to emerge as a 162-key luxury boutique hotel.",
+   "textContent": "One of San Diego’s revered architectural gems has undergone an £80m renovation to emerge as a 162-key luxury boutique hotel.",
+   "rawTextContent": "One of San Diego’s revered architectural gems has undergone an £80m renovation to emerge as a 162-key luxury boutique hotel.",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 37,
+   "tag": "h3",
+   "id": null,
+   "innerText": "“…military history of the city and the renaissance style meet design”",
+   "textContent": "“…military history of the city and the Renaissance style meet design”",
+   "rawTextContent": "“…military history of the city and the Renaissance style meet design” ",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 38,
+   "tag": "h3",
+   "id": null,
+   "innerText": "“…a venue flooded with natural light…” – california meetings & events fall 2019",
+   "textContent": "“…a venue flooded with natural light…” – California Meetings & Events Fall 2019",
+   "rawTextContent": "“…a venue flooded with natural light…” – California Meetings & Events Fall 2019",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 39,
+   "tag": "h2",
+   "id": null,
+   "innerText": "community",
+   "textContent": "Community",
+   "rawTextContent": "Community",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 40,
+   "tag": "h3",
+   "id": null,
+   "innerText": "visiting petco park: this is what you need to know",
+   "textContent": "Visiting Petco Park: This is what you need to know",
+   "rawTextContent": "Visiting Petco Park: This is what you need to know",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 41,
+   "tag": "h3",
+   "id": null,
+   "innerText": "the guild hotel hosts free monthly sculpt + flow series with barre + bay wreath",
+   "textContent": "The Guild Hotel Hosts Free Monthly Sculpt + Flow Series With BARRE + Bay Wreath",
+   "rawTextContent": "The Guild Hotel Hosts Free Monthly Sculpt + Flow Series With BARRE + Bay Wreath",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 42,
+   "tag": "h3",
+   "id": null,
+   "innerText": "the aisle launch party at the guild hotel",
+   "textContent": "The Aisle Launch Party at The Guild Hotel",
+   "rawTextContent": "The Aisle Launch Party at The Guild Hotel",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "article-card-staggered_title",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_article-card-staggered",
+   "sectionClasses": [
+    "section_article-card-staggered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 43,
+   "tag": "h2",
+   "id": null,
+   "innerText": "Press Enquiries",
+   "textContent": "Press Enquiries",
+   "rawTextContent": "Press Enquiries",
+   "fontSize": "60px",
+   "textTransform": "none",
+   "classes": [
+    "text-style-script",
+    "is-press"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_form-split-script-contact",
+   "sectionClasses": [
+    "section_form-split-script-contact",
+    "is-press"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 44,
+   "tag": "h3",
+   "id": "photoshoot-contact-heading",
+   "innerText": "contact information",
+   "textContent": "contact information",
+   "rawTextContent": "contact information",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "form-split-script-contact_fieldset-heading",
+    "heading-style-h4"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_form-split-script-contact",
+   "sectionClasses": [
+    "section_form-split-script-contact",
+    "is-press"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 45,
+   "tag": "h2",
+   "id": null,
+   "innerText": "your questions, answered",
+   "textContent": "your questions, answered",
+   "rawTextContent": "your questions, answered",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "heading-style-h2",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 46,
+   "tag": "div",
+   "id": null,
+   "innerText": "how many guests can stay in this room?",
+   "textContent": "How many guests can stay in this room?",
+   "rawTextContent": "How many guests can stay in this room?",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "accordion_question",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 47,
+   "tag": "div",
+   "id": null,
+   "innerText": "can i request a crib or an extra bed?",
+   "textContent": "Can I request a crib or an extra bed?",
+   "rawTextContent": "Can I request a crib or an extra bed?",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "accordion_question",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 48,
+   "tag": "div",
+   "id": null,
+   "innerText": "are connecting rooms available?",
+   "textContent": "Are connecting rooms available?",
+   "rawTextContent": "Are connecting rooms available?",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "accordion_question",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 49,
+   "tag": "div",
+   "id": null,
+   "innerText": "is an accessible version of this room available?",
+   "textContent": "Is an accessible version of this room available?",
+   "rawTextContent": "Is an accessible version of this room available?",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "accordion_question",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 50,
+   "tag": "div",
+   "id": null,
+   "innerText": "will my room look exactly like the photos?",
+   "textContent": "Will my room look exactly like the photos?",
+   "rawTextContent": "Will my room look exactly like the photos?",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "accordion_question",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 51,
+   "tag": "div",
+   "id": null,
+   "innerText": "what amenities are included with my stay?",
+   "textContent": "What amenities are included with my stay?",
+   "rawTextContent": "What amenities are included with my stay?",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "accordion_question",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 52,
+   "tag": "h2",
+   "id": null,
+   "innerText": "more of the guild",
+   "textContent": "more of the guild",
+   "rawTextContent": "more of the guild",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "card-carousel-header-left_heading",
+    "w-variant-49cffb92-bfd3-18d8-c68b-64f96a7dd632"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_card-carousel-header-left",
+   "sectionClasses": [
+    "section_card-carousel-header-left",
+    "w-variant-49cffb92-bfd3-18d8-c68b-64f96a7dd632",
+    "swiper_slider"
+   ],
+   "variantIds": [
+    "w-variant-49cffb92-bfd3-18d8-c68b-64f96a7dd632"
+   ],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 53,
+   "tag": "h2",
+   "id": null,
+   "innerText": "Book your escape",
+   "textContent": "Book your escape",
+   "rawTextContent": "Book your escape",
+   "fontSize": "60px",
+   "textTransform": "none",
+   "classes": [
+    "text-style-script"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_cta-booking-newsletter",
+   "sectionClasses": [
+    "section_cta-booking-newsletter"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 54,
+   "tag": "h2",
+   "id": null,
+   "innerText": "Stay in the loop",
+   "textContent": "Stay in the loop",
+   "rawTextContent": "Stay in the loop",
+   "fontSize": "60px",
+   "textTransform": "none",
+   "classes": [
+    "text-style-script"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_cta-booking-newsletter",
+   "sectionClasses": [
+    "section_cta-booking-newsletter"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 55,
+   "tag": "h2",
+   "id": null,
+   "innerText": "the hotel",
+   "textContent": "the hotel",
+   "rawTextContent": "the hotel",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 56,
+   "tag": "h2",
+   "id": null,
+   "innerText": "experience",
+   "textContent": "experience",
+   "rawTextContent": "experience",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 57,
+   "tag": "h2",
+   "id": null,
+   "innerText": "dining",
+   "textContent": "dining",
+   "rawTextContent": "dining",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 58,
+   "tag": "h2",
+   "id": null,
+   "innerText": "social",
+   "textContent": "social",
+   "rawTextContent": "social",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 59,
+   "tag": "h2",
+   "id": null,
+   "innerText": "links",
+   "textContent": "links",
+   "rawTextContent": "links",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 60,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Solana Coffee",
+   "rawTextContent": "Solana Coffee",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 61,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Pool Lounge",
+   "rawTextContent": "Pool Lounge",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 62,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Lobby Bar",
+   "rawTextContent": "Lobby Bar",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 63,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Garden Terrace",
+   "rawTextContent": "Garden Terrace",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 64,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Zuma San Diego",
+   "rawTextContent": "Zuma San Diego",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  }
+ ],
+ "status": "ok"
+}

@@ -50,6 +50,13 @@ The floating section menu pinned to the bottom of the screen on phones while its
 It is the one standard for section, category and venue menus on phones; a full row of option links is the larger-screen form only.
 *Avoid: tab pills, selector pill, sticky menu*
 
+### Day and night
+
+The two content versions of the site, switched by the Day and Night buttons in the nav: pressing Night swaps each tagged block's image or video, heading, text, button label and link to its night version, with a quick crossfade, and the choice is remembered on every page and later visit. First visits start on Day.
+
+Only the blocks tagged "Day / Night content switch" in Figma switch (listed in `docs/specs/day-night/notes.md`); colours and layout never change, and a block with no night version keeps showing its day content. Editors fill "Night - <Field>" props and CMS fields beside the day ones.
+*Avoid: dark mode, theme switch*
+
 ## Feedback
 
 ### Feedback item

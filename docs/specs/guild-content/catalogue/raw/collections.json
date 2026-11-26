@@ -1,0 +1,2706 @@
+[
+ {
+  "id": "6ad67d7316e13e66c2b760d7",
+  "displayName": "🍴 Dinings",
+  "singularName": "🍴 Dining",
+  "slug": "dining",
+  "createdOn": "2026-10-19T20:28:35.741Z",
+  "lastUpdated": "2026-11-25T21:58:17.385Z",
+  "fields": [
+   {
+    "id": "a12380119d472b70dd45f91789af3ebf",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "hero-heading",
+    "displayName": "Hero - Heading",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "f932bc9eac4e78e6dabf2a4960ea3e8e",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "hero-intro",
+    "displayName": "Hero - Intro",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "013209ec315eebd7a70571d12141516f",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "intro-image",
+    "displayName": "Intro - Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "ae37b5ef4767d6e216b8d5aed2ff2762",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "other-dining-heading",
+    "displayName": "Other Dining - Heading",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "1db3846d47828d3e66a284c56ba04b21",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "other-dining-intro",
+    "displayName": "Other Dining - Intro",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "abab1d030d2356f75a28f54324240606",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "press-quote",
+    "displayName": "Press - Quote",
+    "helpText": "Optional quote band below the image pair (shown only when filled). Zuma only in the design.",
+    "validations": null
+   },
+   {
+    "id": "7e25bc91cd6301841d6bd29d700c0164",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Switch",
+    "slug": "show-press-quote",
+    "displayName": "Press - Show Quote",
+    "helpText": "Turn on to show the press quote band.",
+    "validations": null
+   },
+   {
+    "id": "c3e904183cdd02f7727bdf3cc1fd860a",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "hero-image",
+    "displayName": "Hero - Image",
+    "helpText": "Full-bleed hero photo for this venue.",
+    "validations": null
+   },
+   {
+    "id": "6b2e731604db342ce54b655550933aea",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "hero-logo",
+    "displayName": "Hero - Logo",
+    "helpText": "Optional venue wordmark shown in the hero (Zuma in the design).",
+    "validations": null
+   },
+   {
+    "id": "17f855c669bbea7dcbd505169a9e2cf6",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Switch",
+    "slug": "show-hero-logo",
+    "displayName": "Hero - Show Logo",
+    "helpText": "Turn on when Hero logo is filled.",
+    "validations": null
+   },
+   {
+    "id": "f48184429471577b552f621e90493945",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "press-logo",
+    "displayName": "Press - Logo",
+    "helpText": "Publication logo under the press quote.",
+    "validations": null
+   },
+   {
+    "id": "895c84f8d474aba3ace70c7d3bb46609",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Link",
+    "slug": "menu-link",
+    "displayName": "Info - Menu Link",
+    "helpText": "URL for the browse the menu link.",
+    "validations": null
+   },
+   {
+    "id": "f3d113ca4d82d0432a5b95ea45788c6d",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Link",
+    "slug": "venue-site-link",
+    "displayName": "Info - Venue Site Link",
+    "helpText": "Venue's own website (for example discover zuma).",
+    "validations": null
+   },
+   {
+    "id": "a2b7686cfd818559100f8cd943c6428d",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "gallery-heading",
+    "displayName": "Gallery - Heading",
+    "helpText": "Heading over the gallery mosaic.",
+    "validations": null
+   },
+   {
+    "id": "63c651cf987f786c0a9bbdadc6d59653",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": "Lower numbers show first in lists such as the footer",
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "646717a6cc09a61c694ee8156cfc628f",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "home-card-image",
+    "displayName": "Home Card - Image",
+    "helpText": "Photo for this venue's panel in the home page dining section.",
+    "validations": null
+   },
+   {
+    "id": "686388c181e8cf098aadd212d9589d4f",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "home-card-tagline",
+    "displayName": "Home Card - Tagline",
+    "helpText": "One line shown under the name on the home page dining panel.",
+    "validations": null
+   },
+   {
+    "id": "94eda87f196c97bcc9ac64ae4a6e354a",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "home-card-logo",
+    "displayName": "Home Card - Logo",
+    "helpText": "Optional wordmark shown instead of the name on the home page dining panel.",
+    "validations": null
+   },
+   {
+    "id": "728aa903f38fdb2fd76c4d8ec6d8180f",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Switch",
+    "slug": "show-home-card-logo",
+    "displayName": "Home Card - Show Logo",
+    "helpText": "Turn on to show the Home card logo instead of the venue name.",
+    "validations": null
+   },
+   {
+    "id": "3cff2fa4df9f58a2471d0886c314f6ff",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Switch",
+    "slug": "show-home-card-name",
+    "displayName": "Home Card - Show Name",
+    "helpText": "Turn on to show the venue name on the home page dining panel. Keep opposite of Show home card logo.",
+    "validations": null
+   },
+   {
+    "id": "8634bd5c0b10e058f225857884ff47f1",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Switch",
+    "slug": "show-discover-link",
+    "displayName": "Info - Show Discover Link",
+    "helpText": "Shows the Discover link under Browse the menu. Turn on only when Venue site link is set.",
+    "validations": null
+   },
+   {
+    "id": "1d7a7df1a16b4c67ef5c6a71ff3fd444",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Link",
+    "slug": "section-video",
+    "displayName": "Intro - Video Link",
+    "helpText": "Optional. Paste a YouTube or Vimeo link, or a direct video file link (.mp4). It plays silently on a loop in place of the second section's image. Vimeo needs a paid Vimeo plan to hide its player buttons. Leave empty to keep the image.",
+    "validations": null
+   },
+   {
+    "id": "da5164b319a8df459c6ca1f38a3b0ef9",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "MultiReference",
+    "slug": "gallery---media",
+    "displayName": "Gallery - Media",
+    "helpText": "Photos or videos in this venue's gallery.",
+    "validations": {
+     "collectionId": "6b00441f4488d60a1aa27565"
+    }
+   },
+   {
+    "id": "ea39631051896b1870f885e15ee4fe02",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "intro---heading",
+    "displayName": "Intro - Heading",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "1c58e01fa801b00536c294304b59ec04",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "intro---text",
+    "displayName": "Intro - Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "99b5fc0e6099140b72f09125762a8afe",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "intro---caption",
+    "displayName": "Intro - Caption",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "9928d568cdb0a134b3c22bb9c95ceeb9",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "info---dress-code",
+    "displayName": "Info - Dress Code",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "281e995655ee6a92c3b3077389864acf",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "info---hours",
+    "displayName": "Info - Hours",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "7da291d55f4666da3cbeb2df49e526cb",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "explore---text",
+    "displayName": "Explore - Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "5c1f347166052bec62bd04c2217bd62c",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "explore---image",
+    "displayName": "Explore - Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "3eb64cf9bf937d28384ed61bbc3b3c41",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "image-pair---image-1",
+    "displayName": "Image Pair - Image 1",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "5b8efcf8e25143933a4516224f5dc305",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "image-pair---image-2",
+    "displayName": "Image Pair - Image 2",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "194789420cb51315920bcccac7590d86",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "image-pair---text",
+    "displayName": "Image Pair - Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "b2a76ac8e38ce0e770321d0b67088e33",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Link",
+    "slug": "booking---reserve-link",
+    "displayName": "Booking - Reserve Link",
+    "helpText": "Where reserve a table goes for this venue (hero button and the Reserve a table pop-up).",
+    "validations": null
+   },
+   {
+    "id": "bf1e0c9ecd32e63d6fcbcc434ba78092",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "night---home-card-image",
+    "displayName": "Home Card - Image (Night)",
+    "helpText": "Optional. Shown on the home page card at night; empty keeps the day image.",
+    "validations": null
+   },
+   {
+    "id": "5d576926c88d961d6a6df2491f1d95bb",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "night---home-card-heading",
+    "displayName": "Home Card - Name (Night)",
+    "helpText": "Optional. Empty keeps the day name.",
+    "validations": null
+   },
+   {
+    "id": "b8f0662e9f48ab7accc2b0896e2f26e0",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "night---home-card-tagline",
+    "displayName": "Home Card - Tagline (Night)",
+    "helpText": "Optional. Empty keeps the day tagline.",
+    "validations": null
+   },
+   {
+    "id": "077299153af1ebe690650bf12ebabb52",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Option",
+    "slug": "split-section---look",
+    "displayName": "Settings - Page Colour",
+    "helpText": "Colour of the hero split section for this venue.",
+    "validations": {
+     "options": [
+      {
+       "name": "Navy",
+       "id": "ff50ddda79b375a682e44ce91720134f"
+      },
+      {
+       "name": "Olive",
+       "id": "071d1d1dd1c93a5e15798ec7c9dfb8d2"
+      }
+     ]
+    }
+   },
+   {
+    "id": "70ed532b8264438896ea60b6c714cb42",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "3bba39cd5afe0e08d04382f6e7477637",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 5
+ },
+ {
+  "id": "6ad67d74943352af06e37843",
+  "displayName": "🧑‍⚖️ Legal Corporates",
+  "singularName": "🧑‍⚖️ Legal Corporate",
+  "slug": "legal-corporate",
+  "createdOn": "2026-10-19T20:28:36.323Z",
+  "lastUpdated": "2026-11-25T21:59:23.779Z",
+  "fields": [
+   {
+    "id": "db07dee1dad8a585505d5401deafa965",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "hero-heading",
+    "displayName": "Hero - Heading",
+    "helpText": "Large heading over the hero image.",
+    "validations": null
+   },
+   {
+    "id": "42736c35f04338d22674a4d32b304eba",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "hero-text",
+    "displayName": "Hero - Text",
+    "helpText": "One line under the hero heading.",
+    "validations": null
+   },
+   {
+    "id": "1b2841347d62727df418322ac155f151",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "hero-image",
+    "displayName": "Hero - Image",
+    "helpText": "Full-bleed hero photo.",
+    "validations": null
+   },
+   {
+    "id": "0a0776cf9b0f67e6565821b8538eeb6f",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "intro-heading",
+    "displayName": "Intro - Heading",
+    "helpText": "Script intro heading. Line breaks are kept.",
+    "validations": null
+   },
+   {
+    "id": "644db29b64005969232cc9bf1bf1dd0a",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "intro-text",
+    "displayName": "Intro - Text",
+    "helpText": "Script intro paragraph.",
+    "validations": null
+   },
+   {
+    "id": "646a98eead2d19434a9ee6823fb4a515",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "focus-heading",
+    "displayName": "Focus - Heading",
+    "helpText": "Sticky heading beside the stacked images.",
+    "validations": null
+   },
+   {
+    "id": "d20219d92802d779b8d922414f684076",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "focus-text",
+    "displayName": "Focus - Text",
+    "helpText": "Paragraph under the sticky heading.",
+    "validations": null
+   },
+   {
+    "id": "91b6a0155af3703c7f23b118a95e0f82",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "d900f99a94a4e1d364b9b03bb5c8021c",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 2
+ },
+ {
+  "id": "6ad67d74485ab8562b6e34da",
+  "displayName": "🏷️ Post Categories",
+  "singularName": "🏷️ Post Category",
+  "slug": "post-categories",
+  "createdOn": "2026-10-19T20:28:36.892Z",
+  "lastUpdated": "2026-11-25T21:59:24.316Z",
+  "fields": [
+   {
+    "id": "0af5cdb8abb9c97b54f59decff37e1d3",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "hero-heading",
+    "displayName": "Hero - Heading",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "db29760651f9663bd8534536e8f556cb",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "5db7cb81a370ac6e5bf5a3d08b1b7318",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 2
+ },
+ {
+  "id": "6ad67d759914af41be21de7e",
+  "displayName": "📰 Happenings & Stories",
+  "singularName": "📰 Happenings & Story",
+  "slug": "happenings-stories",
+  "createdOn": "2026-10-19T20:28:37.400Z",
+  "lastUpdated": "2026-11-25T21:59:03.035Z",
+  "fields": [
+   {
+    "id": "ad0c2566ded18b287e0d7f5313169e44",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "DateTime",
+    "slug": "date",
+    "displayName": "Settings - Date",
+    "helpText": null,
+    "validations": {
+     "format": "date-time"
+    }
+   },
+   {
+    "id": "e36ae823db95ead0fa58ec6c1b246390",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "hero-image",
+    "displayName": "Hero - Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "c25832d101a86377abced703154a077c",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "excerpt",
+    "displayName": "Hero - Excerpt",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "719d754b805d05fc5e1d5a811a9602da",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "RichText",
+    "slug": "body",
+    "displayName": "Body - Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "7dc35af6b101817c0c72c4feabfd46a5",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "body-highlight",
+    "displayName": "Highlight - Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "3d27986165618c5d45dcff873530a2ae",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "Reference",
+    "slug": "category",
+    "displayName": "Settings - Category",
+    "helpText": null,
+    "validations": {
+     "collectionId": "6ad67d74485ab8562b6e34da"
+    }
+   },
+   {
+    "id": "b31d639e86a84543aeb8dcb1aa2fcba6",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Option",
+    "slug": "topic",
+    "displayName": "Settings - Topic Label",
+    "helpText": null,
+    "validations": {
+     "options": [
+      {
+       "name": "dining",
+       "id": "26fc859228e1e68b33305764f8c42913"
+      },
+      {
+       "name": "culture",
+       "id": "aa76d85c5d771487b69e806d8df9afa0"
+      },
+      {
+       "name": "conferences",
+       "id": "961f923ef32ab852ff148c6655235f43"
+      }
+     ]
+    }
+   },
+   {
+    "id": "b82a0fa7bdf0f18df6840996489fc07d",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "inset-image",
+    "displayName": "Inset - Image",
+    "helpText": "Photo for the inset image section below the article body.",
+    "validations": null
+   },
+   {
+    "id": "2f8361400cfe1081d5e1faec6ac5116b",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "highlight-image",
+    "displayName": "Highlight - Image",
+    "helpText": "Photo beside the body highlight text.",
+    "validations": null
+   },
+   {
+    "id": "101bc574a26dc6f44acb63f556b40042",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Reference",
+    "slug": "card---topic",
+    "displayName": "Settings - Topic",
+    "helpText": "Which section of the listing this post sits in.",
+    "validations": {
+     "collectionId": "6b004916ae933f3d6c917f37"
+    }
+   },
+   {
+    "id": "c2faac5623dab0a0e70d8057511c0dc4",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "af3e51c35655f4da9c0aa3a81db2295d",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 6
+ },
+ {
+  "id": "6adf73e0711cfc5e16f51bb5",
+  "displayName": "📍 Map Places",
+  "singularName": "Map Place",
+  "slug": "map-place",
+  "createdOn": "2026-10-26T15:38:08.198Z",
+  "lastUpdated": "2026-11-25T21:59:25.432Z",
+  "fields": [
+   {
+    "id": "cc589e25d5e071f1efb5a65e09c1759a",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "walk-time",
+    "displayName": "Place - Walk Time",
+    "helpText": "Shown under the name, e.g. 6-minute walk",
+    "validations": null
+   },
+   {
+    "id": "46a398ff78a7d9c2bc795635df2fb516",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "coordinates",
+    "displayName": "Place - Coordinates",
+    "helpText": "Latitude, longitude. In Google Maps, right-click the place and click the numbers to copy them, e.g. 32.7173280, -117.1660471",
+    "validations": null
+   },
+   {
+    "id": "e2c905ef609b7282c8e1318e89b98aeb",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "order",
+    "displayName": "Settings - Sort Order",
+    "helpText": "Lower numbers show first in the list",
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "31b5b12dcf26ea5454f31d24b3ff95e4",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "df15c3e35c774bbe18577538fb8e6460",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 4
+ },
+ {
+  "id": "6adf8f780ea92c0983eddaac",
+  "displayName": "🛏️ Rooms",
+  "singularName": "🛏️ Room",
+  "slug": "rooms",
+  "createdOn": "2026-10-26T17:35:52.138Z",
+  "lastUpdated": "2026-11-25T21:58:57.098Z",
+  "fields": [
+   {
+    "id": "baf9f2feb60cdb165cfee8e651be218a",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Option",
+    "slug": "room-type",
+    "displayName": "Settings - Room Type",
+    "helpText": null,
+    "validations": {
+     "options": [
+      {
+       "name": "Room",
+       "id": "16d76cea806f4aa1a651791ffaa77bb4"
+      },
+      {
+       "name": "Suite",
+       "id": "2d55fb41d8a9a223fd08d20a3cb54c2b"
+      }
+     ]
+    }
+   },
+   {
+    "id": "cc8cf5ea7ee31dd7be74faf4cb8ed2b6",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "guests-label",
+    "displayName": "Card - Guests Label",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "6a3824d22771cbde62bda4111c37497d",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "size-label",
+    "displayName": "Card - Size Label",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "7822499a0b088fdf38d63b51b099bd82",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "max-guests",
+    "displayName": "Quiz - Max Guests",
+    "helpText": null,
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "c468cf9d6abf07ad5f096b97840956ee",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "card-and-hero-image",
+    "displayName": "Room - Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "cf28cb64f1b4c30f0136edb70467dcda",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "hero-intro",
+    "displayName": "Hero - Intro",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "2842d7cc5d042dfa315c7f6d43af4bba",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Switch",
+    "slug": "show-in-recommendations-grid",
+    "displayName": "Settings - Show In Recommendations",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "5222d3966cb63053995ca2802f43b030",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": null,
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "d0dcbfaba0affa064faba51f030413ac",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "MultiReference",
+    "slug": "quiz-options",
+    "displayName": "Quiz - Options",
+    "helpText": "Quiz answers this room suits",
+    "validations": {
+     "collectionId": "6ae08d40ba5f0d2f0a4a2720"
+    }
+   },
+   {
+    "id": "5a06396e1ab7a352cb88b2a539f4ab56",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Link",
+    "slug": "hover-video",
+    "displayName": "Quiz - Hover Video",
+    "helpText": "Optional. Paste a YouTube or Vimeo link, or a direct video file link (.mp4). It plays silently on a loop when a guest hovers the room card in the quiz results; the card image shows until it starts. Vimeo needs a paid Vimeo plan to hide its player buttons. Leave empty to show the image only.",
+    "validations": null
+   },
+   {
+    "id": "a3bfb63db1218df83d21181e1c3fa98a",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "room-description---text",
+    "displayName": "Room Description - Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "39bca1f4c0b30f5db9f97c0423a90e4b",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "RichText",
+    "slug": "room-description---details",
+    "displayName": "Room Description - Details",
+    "helpText": "Bulleted list. Bed, guests and size first; each bullet shows as a numbered row.",
+    "validations": null
+   },
+   {
+    "id": "2c60a3c7ed6efe52311e86dc43e6ca85",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "MultiReference",
+    "slug": "amenities",
+    "displayName": "Amenities - Items",
+    "helpText": "Tick the amenities this room has.",
+    "validations": {
+     "collectionId": "6b0041e06d88d6d2996cc777"
+    }
+   },
+   {
+    "id": "ea17ca1cb529ca7c22a11562f3e23b4d",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "MultiReference",
+    "slug": "gallery---media",
+    "displayName": "Gallery - Media",
+    "helpText": "Photos or videos in this room's gallery.",
+    "validations": {
+     "collectionId": "6b00441f4488d60a1aa27565"
+    }
+   },
+   {
+    "id": "23109efec94a92a80e230f8715b208c5",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "night---hero-image",
+    "displayName": "Room - Image (Night, Hero)",
+    "helpText": "Optional. Empty keeps the day image.",
+    "validations": null
+   },
+   {
+    "id": "d629e628291943c712b171a20715aca4",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "night---hero-heading",
+    "displayName": "Hero - Name (Night)",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "a3ff806809e9f8ea7d6c6d92a7e7b0bc",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "night---hero-text",
+    "displayName": "Hero - Intro (Night)",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "77f12fccda41916e838fed0f7b82d989",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "night---feature-image",
+    "displayName": "Room - Image (Night, Feature)",
+    "helpText": "Full-width image block under the description. Optional.",
+    "validations": null
+   },
+   {
+    "id": "ee34198bd3a330f597899917bcd2174c",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Link",
+    "slug": "night---feature-video",
+    "displayName": "Feature - Video (Night)",
+    "helpText": "Optional .mp4, YouTube or Vimeo link for the full-width block at night.",
+    "validations": null
+   },
+   {
+    "id": "ac216030075509bb58ac61533d456d01",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "night---feature-text",
+    "displayName": "Feature - Text (Night)",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "61f3dbfa04564c796c335b848d6660f5",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "night---card-image",
+    "displayName": "Room - Image (Night, Card)",
+    "helpText": "Room card picture shown in Night mode on /rooms. Leave empty to keep the day picture.",
+    "validations": null
+   },
+   {
+    "id": "3fadc8d310e6709750dd0c5536d55b7b",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "night---card-heading",
+    "displayName": "Card - Name (Night)",
+    "helpText": "Room card name shown in Night mode on /rooms. Leave empty to keep the day name.",
+    "validations": null
+   },
+   {
+    "id": "3519f8d9ccc29fc4a6d06af65f5dc2dc",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "657cd6fcd4b050129d03075fa8864cfe",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 12
+ },
+ {
+  "id": "6ae08d40ba5f0d2f0a4a2720",
+  "displayName": "🧭 Quiz Options",
+  "singularName": "🧭 Quiz Option",
+  "slug": "quiz-options",
+  "createdOn": "2026-10-27T11:38:40.352Z",
+  "lastUpdated": "2026-11-25T21:59:26.544Z",
+  "fields": [
+   {
+    "id": "91064fea8f4a9beaeba1a64cc6bc3740",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Option",
+    "slug": "step",
+    "displayName": "Settings - Quiz Step",
+    "helpText": "Quiz step this option belongs to",
+    "validations": {
+     "options": [
+      {
+       "name": "1",
+       "id": "581366eedce00805d8984d8766da77ff"
+      },
+      {
+       "name": "2",
+       "id": "a28640cc8069cf99db3a38dcf7f50a68"
+      },
+      {
+       "name": "3",
+       "id": "1d02c361d42d1692a1b4e21aafb3116b"
+      }
+     ]
+    }
+   },
+   {
+    "id": "cdf2eecffd244da5ec3f27434adc52e0",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": "Order within the step, lowest first",
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "66a64f4dab349c192adbdab5df4dd4ad",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "image",
+    "displayName": "Quiz - Image",
+    "helpText": "Photo shown when the option is hovered or focused",
+    "validations": null
+   },
+   {
+    "id": "65f0fdd072f1b3e6179908646766d55e",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "image-alt",
+    "displayName": "Quiz - Image Alt",
+    "helpText": "Alt text for the photo",
+    "validations": null
+   },
+   {
+    "id": "808e173f264830b6ed018d3c90d65a18",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "289e90b6bfbcc456505e226faa3d32f0",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 14
+ },
+ {
+  "id": "6aea1e6d64c7d7b0d10c4012",
+  "displayName": "🖼️ Art Collection",
+  "singularName": "🖼️ Art Piece",
+  "slug": "art",
+  "createdOn": "2026-11-03T17:48:29.533Z",
+  "lastUpdated": "2026-11-25T21:59:27.968Z",
+  "fields": [
+   {
+    "id": "0bd419969a18943fe61f5555ca0f076f",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Option",
+    "slug": "category",
+    "displayName": "Settings - Type",
+    "helpText": "Filter tab on the Arts page.",
+    "validations": {
+     "options": [
+      {
+       "name": "Painting",
+       "id": "46019741ea026965bb38daabdd574ce4"
+      },
+      {
+       "name": "Photography",
+       "id": "d1b486ba72b33bbd4b1ae8723efb8f5e"
+      },
+      {
+       "name": "Sculpture",
+       "id": "a8cd9d3fc544db60b35dfe6b8f9537d0"
+      },
+      {
+       "name": "Artists",
+       "id": "ab98460e5525b70acda1162d698245d1"
+      }
+     ]
+    }
+   },
+   {
+    "id": "75f824edc8b79ecadb308213e4191504",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "image",
+    "displayName": "Card - Image",
+    "helpText": "Grid tile, popup and homepage hover image.",
+    "validations": null
+   },
+   {
+    "id": "9de8650770412b88f80fa29296240576",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "image-alt",
+    "displayName": "Card - Image Alt",
+    "helpText": "Describe the image for screen readers.",
+    "validations": null
+   },
+   {
+    "id": "8af62c3e4e85f84ee4c5f0a1a9ff3ff7",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "artist-name",
+    "displayName": "Pop-up - Byline",
+    "helpText": "Artworks only. Shown under the title exactly as written, for example: by eva struble",
+    "validations": null
+   },
+   {
+    "id": "6f5b6d91583e668c4383590cff5c6270",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Reference",
+    "slug": "artist",
+    "displayName": "Pop-up - Artist",
+    "helpText": "Artworks only. The artist item the \"by\" link opens.",
+    "validations": {
+     "collectionId": "6aea1e6d64c7d7b0d10c4012"
+    }
+   },
+   {
+    "id": "d4cc155c801af29b34a6dc89e5ac4a07",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "caption",
+    "displayName": "Pop-up - Caption",
+    "helpText": "Artworks only. Year | size on the first line, medium on the second.",
+    "validations": null
+   },
+   {
+    "id": "aead1451e80d910e2fe7f29f30413ccf",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "description",
+    "displayName": "Pop-up - Description",
+    "helpText": "Popup body text.",
+    "validations": null
+   },
+   {
+    "id": "13fb4cc1ba1939fb8c3e2ea6bf41cbbf",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Option",
+    "slug": "tile-size",
+    "displayName": "Card - Tile Size",
+    "helpText": "Width of the grid tile.",
+    "validations": {
+     "options": [
+      {
+       "name": "Standard",
+       "id": "6a228d964a43332e28e8aa95ad771212"
+      },
+      {
+       "name": "Narrow",
+       "id": "35578f5fa1dec9cd55f6e553ec946717"
+      },
+      {
+       "name": "Wide",
+       "id": "8d5470fea34443a9ce57cf0c897128b9"
+      }
+     ]
+    }
+   },
+   {
+    "id": "ef04d9c4338c2194c7339ea5bb38eaaa",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": "Lower numbers show first.",
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "c5f18e1c77a4b9059f7482c551d64fc1",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Reference",
+    "slug": "card---category",
+    "displayName": "Settings - Category",
+    "helpText": "Filter tab this item sits under.",
+    "validations": {
+     "collectionId": "6b004a9fa6412b2e1b0da166"
+    }
+   },
+   {
+    "id": "84fa6469a81cfd589939edf96044d6af",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "b213e9858baff670033abcf16e7cd52f",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 35
+ },
+ {
+  "id": "6af3531acf4b88863f651db9",
+  "displayName": "📸 Gallery Photos",
+  "singularName": "📸 Gallery Photo",
+  "slug": "gallery-photo",
+  "createdOn": "2026-11-10T17:23:38.121Z",
+  "lastUpdated": "2026-11-26T16:00:44.222Z",
+  "fields": [
+   {
+    "id": "d78b5d2567a03b7dcdc34bea932e95ca",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "Image",
+    "slug": "image",
+    "displayName": "Photo - Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "dee2c5a0760f95855e3dcf8593f41f61",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "image-alt",
+    "displayName": "Photo - Image Alt",
+    "helpText": "Describe the photo for screen readers, under 120 characters.",
+    "validations": null
+   },
+   {
+    "id": "c16baba88e384fb59545764801a5cb90",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": "Lower numbers show first.",
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "f654122590fb89fbe5294025eb14d4bb",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Reference",
+    "slug": "card---category",
+    "displayName": "Settings - Category",
+    "helpText": "Filter tab this item sits under.",
+    "validations": {
+     "collectionId": "6b004aa45539170e389006b5"
+    }
+   },
+   {
+    "id": "40f5791368cd447996dd1ec86fa8076a",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "7dfd0ae9d43393bce939dc1287c4b9ba",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 35
+ },
+ {
+  "id": "6afb2abe0f4d8650f6774820",
+  "displayName": "📰 Press",
+  "singularName": "Press Item",
+  "slug": "press-item",
+  "createdOn": "2026-11-16T16:09:35.001Z",
+  "lastUpdated": "2026-11-25T21:59:43.868Z",
+  "fields": [
+   {
+    "id": "3050155dcdbcab181b86167917ed612a",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "publication",
+    "displayName": "Card - Description",
+    "helpText": "Name of the publication, e.g. Forbes",
+    "validations": null
+   },
+   {
+    "id": "220f80cd24b47f6a23dfb1fdfc382956",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "Link",
+    "slug": "external-url",
+    "displayName": "Card - Link",
+    "helpText": "Link to the article. Opens in a new tab",
+    "validations": null
+   },
+   {
+    "id": "41732b3109069e580d9ca6ece2314f06",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "image",
+    "displayName": "Card - Image",
+    "helpText": "Card image",
+    "validations": null
+   },
+   {
+    "id": "db231d8144faf15aa5d9d4fe835adba2",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "logo",
+    "displayName": "Card - Logo",
+    "helpText": "Publication logo",
+    "validations": null
+   },
+   {
+    "id": "3243cd1e205c48536b3e4656eec32274",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "order",
+    "displayName": "Settings - Sort Order",
+    "helpText": "Lower numbers show first",
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "376cecea332874074444310c7d676cfb",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "Reference",
+    "slug": "press-category",
+    "displayName": "Settings - Category",
+    "helpText": "Which section of the Press page this item appears in",
+    "validations": {
+     "collectionId": "6afb3561e46519364ff54c39"
+    }
+   },
+   {
+    "id": "0e46547820f605e99380132f24d35a2b",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "99b4090843faf2b750d005fab8776dbf",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 24
+ },
+ {
+  "id": "6afb3561e46519364ff54c39",
+  "displayName": "🏷️ Press Categories",
+  "singularName": "Press Category",
+  "slug": "press-category",
+  "createdOn": "2026-11-16T16:54:57.455Z",
+  "lastUpdated": "2026-11-25T21:59:44.774Z",
+  "fields": [
+   {
+    "id": "c6af895139bdcf06d1a9c236f2ada149",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "order",
+    "displayName": "Settings - Sort Order",
+    "helpText": "Lower numbers show first on the Press page",
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "262d60527759350c9025b85adeb719bd",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "7ccef46d45d4114041df7cff6559b5ec",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 5
+ },
+ {
+  "id": "6afc5ac0f547318572484bb6",
+  "displayName": "🎁 Packages",
+  "singularName": "🎁 Package",
+  "slug": "packages",
+  "createdOn": "2026-11-17T13:46:40.452Z",
+  "lastUpdated": "2026-11-25T21:59:46.023Z",
+  "fields": [
+   {
+    "id": "6617b2f977dee9cbb66fe99c1fe0c60a",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "DateTime",
+    "slug": "date",
+    "displayName": "Settings - Date",
+    "helpText": null,
+    "validations": {
+     "format": "date-time"
+    }
+   },
+   {
+    "id": "7ed4662a1ea1b38b4f00802ad5d36f91",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "hero-image",
+    "displayName": "Hero - Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "f21b41ecec69a8ac2b792ec1d677da0b",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "excerpt",
+    "displayName": "Hero - Excerpt",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "b67e60a1cac65c5bee29ba380079a8a3",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "RichText",
+    "slug": "body",
+    "displayName": "Body - Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "22de5893d67b6800ce4b9b947bede6f4",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "body-highlight",
+    "displayName": "Highlight - Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "d2d60380fc929173561617806480fcaa",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Option",
+    "slug": "topic",
+    "displayName": "Settings - Topic Label",
+    "helpText": null,
+    "validations": {
+     "options": [
+      {
+       "name": "dining",
+       "id": "7e597e7246955d65ba876b2c9a7ee032"
+      },
+      {
+       "name": "culture",
+       "id": "d3a9017fe31881cdab5bbe0534d09c67"
+      },
+      {
+       "name": "conferences",
+       "id": "c98b69b1193764a5226168e94bc33773"
+      }
+     ]
+    }
+   },
+   {
+    "id": "4561658e29a43402a10201ffe14e446b",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "inset-image",
+    "displayName": "Inset - Image",
+    "helpText": "Photo for the inset image section below the article body.",
+    "validations": null
+   },
+   {
+    "id": "ab9fdefc07d130aea306713f0fcae591",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "highlight-image",
+    "displayName": "Highlight - Image",
+    "helpText": "Photo beside the body highlight text.",
+    "validations": null
+   },
+   {
+    "id": "3781b9f8bcdbacfc34435b74840cb713",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Reference",
+    "slug": "card---topic",
+    "displayName": "Settings - Topic",
+    "helpText": "Which section of the listing this package sits in.",
+    "validations": {
+     "collectionId": "6b004916ae933f3d6c917f37"
+    }
+   },
+   {
+    "id": "d4f8a358ea52be372502f83b2d3d6934",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "50b0c7a3e9dff29839c5badaf075a135",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 4
+ },
+ {
+  "id": "6b00284dcf7ddb2b615e8b7c",
+  "displayName": "❓ FAQs",
+  "singularName": "❓ FAQ",
+  "slug": "faqs",
+  "createdOn": "2026-11-20T11:00:29.776Z",
+  "lastUpdated": "2026-11-25T21:59:46.740Z",
+  "fields": [
+   {
+    "id": "8bada67023cdc4d3df27b266ddf8cfa6",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "RichText",
+    "slug": "answer",
+    "displayName": "Answer - Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "f77d98b8a3df6ee8bf2719a30db26e23",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": "Lower numbers show first.",
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "35aabccee3c90080b51096f3c5f5cc99",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Question",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "eaa524af9425b085d6247ff6b2513edf",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 6
+ },
+ {
+  "id": "6b0036f73a65bcfa50f491e9",
+  "displayName": "🏛️ Meeting Venues",
+  "singularName": "🏛️ Meeting Venue",
+  "slug": "meeting-venues",
+  "createdOn": "2026-11-20T12:03:03.084Z",
+  "lastUpdated": "2026-11-25T21:59:58.469Z",
+  "fields": [
+   {
+    "id": "c132197b9c45898b7daccf59252253c7",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "card---image",
+    "displayName": "Card - Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "5bb75ffded8442667f1ed42b2a6b7bda",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "card---intro",
+    "displayName": "Card - Intro",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "bfc53d5c467aa527e26d6cc8be6a8a57",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "pop-up---image",
+    "displayName": "Pop-up - Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "b7f0a39b63128ebbd204c58bd34d5156",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "pop-up---text",
+    "displayName": "Pop-up - Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "43be41bb99f1f43f28a6ef1653964b51",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "pop-up---layout-options",
+    "displayName": "Pop-up - Layout Options",
+    "helpText": "One layout per line, e.g. Classroom: 21",
+    "validations": null
+   },
+   {
+    "id": "075d62cc98dbbb43f6324cae40f8a06a",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Link",
+    "slug": "pop-up---floorplan-link",
+    "displayName": "Pop-up - Floorplan Link",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "1ffcb148508b11e78c1e5fbf9bd341fd",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Switch",
+    "slug": "pages---meetings",
+    "displayName": "Settings - Show On Meetings",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "367e789bcd921cdf8a72f927f8a8f9ef",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Switch",
+    "slug": "pages---legal-corporate",
+    "displayName": "Settings - Show On Legal & Corporate",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "fec7f04d7a1e5bccdae42dfc281d7884",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": null,
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "b766c393ebbb662be8d1a85454d0cf66",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "features---1-title",
+    "displayName": "Features - 1 Title",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "d9b635d8b2f3aeae49b921bb94df3608",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "features---1-text",
+    "displayName": "Features - 1 Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "be798724c6b98ae881310dcc932bc1a2",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "features---1-image",
+    "displayName": "Features - 1 Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "287c749646d21000359a990b708f465f",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "features---2-title",
+    "displayName": "Features - 2 Title",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "461ee5a5c38495e0b668d9f07f78a772",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "features---2-text",
+    "displayName": "Features - 2 Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "c171fb31dfec8732e0243a70b06e36fd",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "features---2-image",
+    "displayName": "Features - 2 Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "3dd935f4b135bf3b442c22b129b3b505",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "features---3-title",
+    "displayName": "Features - 3 Title",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "eac819bbeb307d76bc2da1fef5714151",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "features---3-text",
+    "displayName": "Features - 3 Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "dd23194bc396178f2d147f22e1f1dada",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "features---3-image",
+    "displayName": "Features - 3 Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "bfc63a09d94f63a03d28e9fcaf13119f",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "features---4-title",
+    "displayName": "Features - 4 Title",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "6ea311f55a383fc9eeff3da90cff810a",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "features---4-text",
+    "displayName": "Features - 4 Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "6d8846e0b5e208c674edc617f3d648b2",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "features---4-image",
+    "displayName": "Features - 4 Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "f0ce6f6724e0ec1b1f1496f1228e19d4",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "features---5-title",
+    "displayName": "Features - 5 Title",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "3a43ceb544e1bc9f2be2024e4407767d",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "features---5-text",
+    "displayName": "Features - 5 Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "25e7b13c2b5e36e0c23398b6d9c9a39c",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "features---5-image",
+    "displayName": "Features - 5 Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "83d296657a74fadf02bfe93d42657d07",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "night---card-image",
+    "displayName": "Card - Image (Night)",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "c6fa6f2fbe0cd757ee3bf19be68f50e5",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "night---card-heading",
+    "displayName": "Card - Name (Night)",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "1c59d1061731508c03db2ec051726f62",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "night---card-intro",
+    "displayName": "Card - Intro (Night)",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "981f9ab0cb4dd2ab5deb125f6f7d4790",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "3379204f3179adeda2005ab8bbbdae81",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 6
+ },
+ {
+  "id": "6b003ce85ffdb768a6e73915",
+  "displayName": "🏖️ Beyond Downtown Places",
+  "singularName": "🏖️ Beyond Downtown Place",
+  "slug": "beyond-downtown-places",
+  "createdOn": "2026-11-20T12:28:24.109Z",
+  "lastUpdated": "2026-11-25T22:00:00.003Z",
+  "fields": [
+   {
+    "id": "c20824ea90c5545bbd984f35fc0669ba",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "card---image",
+    "displayName": "Card - Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "308010497de7a57775e3b2103f6aef1b",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "pop-up---text",
+    "displayName": "Pop-up - Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "c07d66741b6060390f7e1d93e1e426e2",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Link",
+    "slug": "pop-up---learn-more-link",
+    "displayName": "Pop-up - Learn More Link",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "b8b34da828d433f0d61eb52249bce05d",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "MultiImage",
+    "slug": "pop-up---gallery",
+    "displayName": "Pop-up - Gallery",
+    "helpText": "Images for the pop-up slider. The first one shows today.",
+    "validations": null
+   },
+   {
+    "id": "c841314d63ccd6780390adca7577820c",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": null,
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "aa85a47b649d59806df94fb0de4f196c",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "night---pop-up-image",
+    "displayName": "Card - Image (Night, Pop-up)",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "699284ab472b2ba0e49cbe87396321d5",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "night---pop-up-text",
+    "displayName": "Pop-up - Text (Night)",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "ac53efb4895b679e94a32a89bfd0b705",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "bd615a61118e9127705effa6b942654f",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 2
+ },
+ {
+  "id": "6b0041e06d88d6d2996cc777",
+  "displayName": "🛎️ Amenities",
+  "singularName": "Amenity",
+  "slug": "amenities",
+  "createdOn": "2026-11-20T12:49:36.167Z",
+  "lastUpdated": "2026-11-25T22:00:00.753Z",
+  "fields": [
+   {
+    "id": "aeb182d1a218e5e2094fbaf74032771f",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": null,
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "15b9e10818b3c19505454ecfa8feaf07",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "1933aa142eb25a42b6db9d071a34197b",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 8
+ },
+ {
+  "id": "6b00441f4488d60a1aa27565",
+  "displayName": "🖼️ Media",
+  "singularName": "Media item",
+  "slug": "media",
+  "createdOn": "2026-11-20T12:59:11.816Z",
+  "lastUpdated": "2026-11-25T22:00:02.362Z",
+  "fields": [
+   {
+    "id": "712d17990b01844c74a5580fa12d1fb8",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "media---image",
+    "displayName": "Media - Image",
+    "helpText": "Always set: it is the poster and the fallback when a video is set.",
+    "validations": null
+   },
+   {
+    "id": "2ba9e27995b4fcf73ed0004c4e2616c0",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Link",
+    "slug": "media---video-link",
+    "displayName": "Media - Video Link",
+    "helpText": "Optional. A .mp4 file, YouTube or Vimeo link plays silently in place of the image.",
+    "validations": null
+   },
+   {
+    "id": "483238d8461ef74ad411fb7d4f3f5d26",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "media---alt-text",
+    "displayName": "Media - Alt Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "b4cf6e819f77c13d116fbc79b13f99e9",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "media---caption",
+    "displayName": "Media - Caption",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "a5a30e30431b028568aca7d03e54257d",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "media---sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": null,
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "7d76e55d7744d411ed6ce1c6adf1c304",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "f18d0123cd3ff2db4ce03fcbbd2a1a52",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 8
+ },
+ {
+  "id": "6b004916ae933f3d6c917f37",
+  "displayName": "🔖 Topics",
+  "singularName": "Topic",
+  "slug": "topics",
+  "createdOn": "2026-11-20T13:20:22.289Z",
+  "lastUpdated": "2026-11-25T22:00:11.273Z",
+  "fields": [
+   {
+    "id": "7c209bb769ff082dce266a4397e5c67d",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": null,
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "00eda88c37069573e5c9fdef9fea0dff",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "6121b6974e3b39886454ff62fcc9d572",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 3
+ },
+ {
+  "id": "6b004a9fa6412b2e1b0da166",
+  "displayName": "🏷️ Art Categories",
+  "singularName": "Art Category",
+  "slug": "art-categories",
+  "createdOn": "2026-11-20T13:26:55.683Z",
+  "lastUpdated": "2026-11-25T22:00:14.187Z",
+  "fields": [
+   {
+    "id": "51465338cf2d434427e7822444b4237c",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": null,
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "287ad92cc888684f3088dfba7740dc55",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "62af711fdfcad546291ebe92a3e8c827",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 3
+ },
+ {
+  "id": "6b004aa45539170e389006b5",
+  "displayName": "🏷️ Gallery Categories",
+  "singularName": "Gallery Category",
+  "slug": "gallery-categories",
+  "createdOn": "2026-11-20T13:27:00.579Z",
+  "lastUpdated": "2026-11-25T22:00:18.653Z",
+  "fields": [
+   {
+    "id": "56b8ae787f72e6697df594ae8266efe2",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": null,
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "44259109cf64b8d641f40e95af123959",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "9a55cde416046ff3475b22f1cff460b3",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 6
+ },
+ {
+  "id": "6b0056f7a2110448c9442119",
+  "displayName": "🏷️ Offers",
+  "singularName": "Offer",
+  "slug": "offers",
+  "createdOn": "2026-11-20T14:19:35.926Z",
+  "lastUpdated": "2026-11-25T22:00:24.129Z",
+  "fields": [
+   {
+    "id": "d1c7b87a10bf6ad506de851f8d1b9876",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "PlainText",
+    "slug": "slide---text",
+    "displayName": "Slide - Text",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "f81c57f953a333609558afdd35d3042f",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Image",
+    "slug": "slide---image",
+    "displayName": "Slide - Image",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "098bc69bfc4905b027e32e155cb75a5f",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Link",
+    "slug": "slide---link",
+    "displayName": "Slide - Link",
+    "helpText": null,
+    "validations": null
+   },
+   {
+    "id": "c37cfb4805b46985995a78339d302455",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Number",
+    "slug": "slide---sort-order",
+    "displayName": "Settings - Sort Order",
+    "helpText": null,
+    "validations": {
+     "format": "integer",
+     "allowNegative": true,
+     "precision": 1
+    }
+   },
+   {
+    "id": "98656026dc765e98e2fab101672b21d3",
+    "isEditable": true,
+    "isRequired": false,
+    "type": "Option",
+    "slug": "slide---slider",
+    "displayName": "Settings - Slider",
+    "helpText": "Which slider shows this slide.",
+    "validations": {
+     "options": [
+      {
+       "name": "Offers & Packages",
+       "id": "aeb7507fa3c407e50b8bec057bd54626"
+      },
+      {
+       "name": "Retail",
+       "id": "a2f3d8292fc286686e7e79dad9296bf7"
+      },
+      {
+       "name": "Arts & Culture",
+       "id": "89969b32683d89022fe73dc95ccf18e2"
+      }
+     ]
+    }
+   },
+   {
+    "id": "465597bebf09e3541715bee6ba61a97b",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "name",
+    "displayName": "Name",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256
+    }
+   },
+   {
+    "id": "62786b0c074b7de21956ec2d5784bf36",
+    "isEditable": true,
+    "isRequired": true,
+    "type": "PlainText",
+    "slug": "slug",
+    "displayName": "Slug",
+    "helpText": null,
+    "validations": {
+     "maxLength": 256,
+     "pattern": {},
+     "messages": {
+      "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+      "maxLength": "Must be less than 256 characters"
+     }
+    }
+   }
+  ],
+  "itemCount": 15
+ }
+]

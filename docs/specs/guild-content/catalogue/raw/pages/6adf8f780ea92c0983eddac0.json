@@ -1,0 +1,341 @@
+{
+ "page": {
+  "id": "6adf8f780ea92c0983eddac0",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6adf8f780ea92c0983eddaac",
+  "title": "🛏️ Rooms Template",
+  "slug": "detail_rooms",
+  "createdOn": "2026-10-26T17:35:52.439Z",
+  "lastUpdated": "2026-11-25T21:48:17.909Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "{{wf {\"path\":\"name\",\"type\":\"PlainText\"\\} }} | The Guild Hotel",
+   "description": "{{wf {\"path\":\"hero-intro\",\"type\":\"PlainText\"\\} }}"
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/rooms",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "3ac2e8e7-4783-afb0-217a-2cdc6c700bed",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "e6aa731a-b32d-ba7b-52b1-21b20e855b62",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "05e278dc-423f-fcf5-ab2d-ac4d008a2d61",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": []
+  },
+  {
+   "id": "67e58af5-a074-f1f6-457a-54bc8ecd98eb",
+   "type": "component-instance",
+   "componentId": "bdff66b3-92d9-e1e3-dbc0-86a28e384c9b",
+   "propertyOverrides": [
+    {
+     "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+     "type": "Plain Text",
+     "label": "Content/heading",
+     "text": {
+      "html": null,
+      "text": "A room for every stay"
+     }
+    },
+    {
+     "propertyId": "d932c13c-1670-4ef1-f3fd-e1009039b35b",
+     "type": "Plain Text",
+     "label": "Back link/backLink",
+     "text": {
+      "html": null,
+      "text": "back to rooms"
+     }
+    }
+   ]
+  },
+  {
+   "id": "4b865eb2-4646-7110-588c-b318fed413be",
+   "type": "component-instance",
+   "componentId": "77695709-bc70-2a66-8f8d-f8a27baaa513",
+   "propertyOverrides": []
+  },
+  {
+   "id": "1f55e7f5-81e2-baad-5aa1-fb6c0a4fd3f6",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"rooms-individual-description_heading\">room description</h2>",
+    "text": "room description"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "69ec8908-accd-8089-82fd-c3a0d22dfb5c",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-link text-style-caps-caption-16\" href=\"#\">view floorplan</a>",
+    "text": "view floorplan"
+   },
+   "attributes": {
+    "data-reveal": "fade-only",
+    "data-reveal-delay": "0.2"
+   }
+  },
+  {
+   "id": "d53bf91f-dc04-932f-833e-c7c99246e31b",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "609b470f-6acc-f182-419d-1124228ec64a",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "a2999053-7a62-4c6a-c544-6aa8cb360b07",
+   "type": "text",
+   "text": {
+    "html": "<p>Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.</p>",
+    "text": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "9e24d43f-9036-d8f7-8de6-59dc2b6a0d14",
+   "type": "component-instance",
+   "componentId": "3eeb97fa-6550-7845-31ee-e997e4b8f2f1",
+   "propertyOverrides": []
+  },
+  {
+   "id": "4ce1de35-7611-04ea-4c15-d9c7fa602d24",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "1f04865b-02e3-a2e5-7f9a-8f6563d7bfa9",
+     "type": "Alt Text",
+     "label": "Background/Image Alt",
+     "text": {
+      "html": null,
+      "text": "King bed with a tan headboard beside a tall arched window"
+     }
+    },
+    {
+     "propertyId": "ea4346d7-9eb6-7786-7b78-307824025840",
+     "type": "Plain Text",
+     "label": "Content/Eyebrow",
+     "text": {
+      "html": null,
+      "text": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus."
+     }
+    }
+   ]
+  },
+  {
+   "id": "90d46d8d-eb1d-b9b0-a56b-2a524cb2d6bc",
+   "type": "component-instance",
+   "componentId": "82aba62a-5075-5840-0ddc-ad171238ba74",
+   "propertyOverrides": [
+    {
+     "propertyId": "3f50e93d-a968-f004-4199-cfd4d1bccba7",
+     "type": "Plain Text",
+     "label": "Content/Body",
+     "text": {
+      "html": null,
+      "text": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum."
+     }
+    }
+   ]
+  },
+  {
+   "id": "0e19698c-7821-d499-fcda-bece759aa552",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"rooms-individual-amenities_heading\">in room amenities</h2>",
+    "text": "in room amenities"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "37fae948-f3a7-2144-06d3-2a6e59c2bcf6",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-individual-amenities_text\">Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci</p>",
+    "text": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "347e499d-b2eb-1604-3437-a0c470a52f7e",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "8bc48eb2-4325-ca87-3c8b-d72b497e1e16",
+   "type": "component-instance",
+   "componentId": "82aba62a-5075-5840-0ddc-ad171238ba74",
+   "propertyOverrides": [
+    {
+     "propertyId": "3f50e93d-a968-f004-4199-cfd4d1bccba7",
+     "type": "Plain Text",
+     "label": "Content/Body",
+     "text": {
+      "html": null,
+      "text": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum."
+     }
+    }
+   ]
+  },
+  {
+   "id": "eb313bbd-581f-6c71-f842-75034b9234ca",
+   "type": "component-instance",
+   "componentId": "560e1b31-d612-0921-8773-8f9de2e2b06f",
+   "propertyOverrides": [
+    {
+     "propertyId": "3aab8783-f8f3-e498-0599-7ddbcbf5d1e9",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "deluxe king suite gallery"
+     }
+    }
+   ]
+  },
+  {
+   "id": "bdb59464-fb2a-8293-537d-7cc9ab52b552",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": []
+  },
+  {
+   "id": "8a3efe46-8967-b065-e42b-92f36e085313",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "11717bc2-0e89-aeb8-91f6-efbc30a4cb05",
+   "type": "component-instance",
+   "componentId": "f5403de4-dabb-14c3-ecf8-c945d0a8e22e",
+   "propertyOverrides": [
+    {
+     "propertyId": "904cb47f-1b96-e29c-fad1-dc7ea9ccccef",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "discover other rooms"
+     }
+    },
+    {
+     "propertyId": "92f67272-7dd9-19b0-cb11-d2a41b7a2adb",
+     "type": "Plain Text",
+     "label": "Content/Section label",
+     "text": {
+      "html": null,
+      "text": "discover other rooms"
+     }
+    }
+   ]
+  },
+  {
+   "id": "8dd04107-e73a-5048-a245-06e82ba777aa",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "dfda5e29-183d-80bd-b954-04302cc9fa31",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "3a5178d5-d96b-852a-30b2-630b1a48f742",
+   "type": "component-instance",
+   "componentId": "8e90ff20-1ed1-43a7-edce-89b7ea10c487",
+   "propertyOverrides": []
+  },
+  {
+   "id": "5c0064c3-7720-bbc3-67a9-9c1048278c11",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "3ff52602-1057-8170-4b41-a8c05a5b2b56",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "e7046e6d-1e77-66f5-5a34-8faa805d932a",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "5175e6c5-231e-741a-9ce7-48fcf3db33d8",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "aa3a1808-d681-5777-6630-1378866d15e5",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "42936cd8-03b3-cafa-a1b4-b57996ca854c",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-25T21:48:17.982Z"
+}

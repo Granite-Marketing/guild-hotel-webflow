@@ -1,0 +1,321 @@
+{
+ "component": {
+  "id": "bf7623e5-058f-ec80-12e2-20bb187eaf9c",
+  "name": "Venue Detail Modal",
+  "description": "Meeting venue pop-up (Meetings, Legal and Corporate): image, details, layout options, floorplan link, five features and the request button. CMS-bound.",
+  "group": "Modals"
+ },
+ "nodes": [
+  {
+   "id": "bf7623e5-058f-ec80-12e2-20bb187eafa2",
+   "type": "html-embed",
+   "html": "<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M20 12H4M10 6l-6 6 6 6\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "bf7623e5-058f-ec80-12e2-20bb187eafa6",
+   "type": "html-embed",
+   "html": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 3l18 18M21 3L3 21\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "bf7623e5-058f-ec80-12e2-20bb187eafa9",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bf7623e5-058f-ec80-12e2-20bb187eafaa",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bf7623e5-058f-ec80-12e2-20bb187eafad",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": "6ad74da46b56ff1d7223e4d7"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bf7623e5-058f-ec80-12e2-20bb187eafc0",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bf7623e5-058f-ec80-12e2-20bb187eafca",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bf7623e5-058f-ec80-12e2-20bb187eafd5",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bf7623e5-058f-ec80-12e2-20bb187eafdf",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bf7623e5-058f-ec80-12e2-20bb187eafe9",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+   "type": "Plain Text",
+   "label": "Header/Heading",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+   "type": "Alt Text",
+   "label": "Media/Image alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "e5b4574f-6bdb-6bce-7286-ed3379124e68",
+   "type": "Plain Text",
+   "label": "Body/Subheading",
+   "text": {
+    "html": null,
+    "text": "details"
+   }
+  },
+  {
+   "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+   "type": "Plain Text",
+   "label": "Body/Text",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "66c06093-dcad-41b3-24df-7a536e5e1d77",
+   "type": "Plain Text",
+   "label": "Body/Text (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "ec4e1ee7-5094-9fdb-1324-d20350044895",
+   "type": "Plain Text",
+   "label": "Extras/Extras heading",
+   "text": {
+    "html": null,
+    "text": "layout options"
+   }
+  },
+  {
+   "propertyId": "a42a4374-955d-db93-af52-0dab121b2145",
+   "type": "Plain Text",
+   "label": "Extras/Options",
+   "text": {
+    "html": null,
+    "text": "Classroom: 21*\nU-shape: 21\nRounds: 21\nTheater: 21\nConference: 21*\nReception: 21"
+   }
+  },
+  {
+   "propertyId": "8ed6e9a4-9e5b-1cc8-4b4e-87aac1cb43f9",
+   "type": "Plain Text",
+   "label": "Extras/Extras link label",
+   "text": {
+    "html": null,
+    "text": "floorplan"
+   }
+  },
+  {
+   "propertyId": "9155a464-1b09-c36c-e59f-54f8019602c2",
+   "type": "Plain Text",
+   "label": "Extras/Note",
+   "text": {
+    "html": null,
+    "text": "*requires furniture removal, charges may apply"
+   }
+  },
+  {
+   "propertyId": "fa672abe-c6b3-2171-97c5-e047fcc748c1",
+   "type": "Plain Text",
+   "label": "Button/Button label",
+   "text": {
+    "html": null,
+    "text": "submit your request"
+   }
+  },
+  {
+   "propertyId": "5955a3e6-91bb-96f5-1ea6-537e6c04bdee",
+   "type": "Plain Text",
+   "label": "Item 1/Item 1 title",
+   "text": {
+    "html": null,
+    "text": "510 SQ FT"
+   }
+  },
+  {
+   "propertyId": "4a2997af-a88a-82cf-7548-4863fdae218c",
+   "type": "Plain Text",
+   "label": "Item 1/Item 1 text",
+   "text": {
+    "html": null,
+    "text": "Contemporary Japanese dining."
+   }
+  },
+  {
+   "propertyId": "46ca1ef4-3b85-ba2a-d5b7-0f0944a420ab",
+   "type": "Plain Text",
+   "label": "Item 1/Item 1 button label",
+   "text": {
+    "html": null,
+    "text": "reserve"
+   }
+  },
+  {
+   "propertyId": "6c5110ed-383b-533b-7274-d0ab9a5ccc89",
+   "type": "Plain Text",
+   "label": "Item 2/Item 2 title",
+   "text": {
+    "html": null,
+    "text": "Modern executive seating for 12"
+   }
+  },
+  {
+   "propertyId": "a36f91d1-4d70-02d1-563a-a6cf23d9f6e6",
+   "type": "Plain Text",
+   "label": "Item 2/Item 2 text",
+   "text": {
+    "html": null,
+    "text": "Cocktails, light bites and an intimate atmosphere."
+   }
+  },
+  {
+   "propertyId": "2c0e6fb0-ed0c-af61-6a1c-c0287a5e201e",
+   "type": "Plain Text",
+   "label": "Item 2/Item 2 button label",
+   "text": {
+    "html": null,
+    "text": "reserve"
+   }
+  },
+  {
+   "propertyId": "12aa8bc9-178a-ec92-1394-2aea377bf309",
+   "type": "Plain Text",
+   "label": "Item 3/Item 3 title",
+   "text": {
+    "html": null,
+    "text": "Premium conference table with ultra connectivity"
+   }
+  },
+  {
+   "propertyId": "2e949c11-ddde-6110-7c1b-bab3490b4b0b",
+   "type": "Plain Text",
+   "label": "Item 3/Item 3 text",
+   "text": {
+    "html": null,
+    "text": "Flexible spaces for meetings, celebrations, and everything worth gathering for."
+   }
+  },
+  {
+   "propertyId": "304badac-6624-e2bc-efda-0ee464689c0e",
+   "type": "Plain Text",
+   "label": "Item 3/Item 3 button label",
+   "text": {
+    "html": null,
+    "text": "reserve"
+   }
+  },
+  {
+   "propertyId": "ff15f7bf-e640-a214-60e1-838f4776be35",
+   "type": "Plain Text",
+   "label": "Item 4/Item 4 title",
+   "text": {
+    "html": null,
+    "text": "Oversized, built-in hi-res TV"
+   }
+  },
+  {
+   "propertyId": "aed90142-a269-f3ef-65a4-3fe99530f28f",
+   "type": "Plain Text",
+   "label": "Item 4/Item 4 text",
+   "text": {
+    "html": null,
+    "text": "Flexible spaces for meetings, celebrations, and everything worth gathering for."
+   }
+  },
+  {
+   "propertyId": "3bd5396e-ba3c-d511-2d2d-d8d8a005282c",
+   "type": "Plain Text",
+   "label": "Item 4/Item 4 button label",
+   "text": {
+    "html": null,
+    "text": "reserve"
+   }
+  },
+  {
+   "propertyId": "27a74652-0013-3c7d-5325-417ec5781389",
+   "type": "Plain Text",
+   "label": "Item 5/Item 5 title",
+   "text": {
+    "html": null,
+    "text": "Capacity: 50+"
+   }
+  },
+  {
+   "propertyId": "f99805f0-ad5a-6ef3-99c4-1f24d46b049a",
+   "type": "Plain Text",
+   "label": "Item 5/Item 5 text",
+   "text": {
+    "html": null,
+    "text": "Flexible spaces for meetings, celebrations, and everything worth gathering for."
+   }
+  },
+  {
+   "propertyId": "94c0b3ed-3c91-d7e6-77fa-11c381d8699a",
+   "type": "Plain Text",
+   "label": "Item 5/Item 5 button label",
+   "text": {
+    "html": null,
+    "text": "reserve"
+   }
+  }
+ ]
+}

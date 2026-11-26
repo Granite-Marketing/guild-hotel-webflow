@@ -1,0 +1,34 @@
+{
+ "page": {
+  "id": "6ae08d40ba5f0d2f0a4a2726",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6ae08d40ba5f0d2f0a4a2720",
+  "title": "🧭 Quiz Options Template",
+  "slug": "detail_quiz-options",
+  "createdOn": "2026-10-27T11:38:40.634Z",
+  "lastUpdated": "2026-11-18T17:24:08.405Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/quiz-options",
+  "localeId": null
+ },
+ "nodes": [],
+ "lastUpdated": "2026-10-27T11:38:40.655Z"
+}

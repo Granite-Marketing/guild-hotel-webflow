@@ -1,0 +1,583 @@
+{
+ "page": {
+  "id": "6ad66fdb02cc199b55b926ba",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Neighborhood",
+  "slug": "neighborhood",
+  "createdOn": "2026-10-19T19:30:35.644Z",
+  "lastUpdated": "2026-11-21T00:25:12.254Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Downtown San Diego Neighborhood Guide | The Guild Hotel",
+   "description": "Walk from The Guild Hotel to Seaport Village, the Gaslamp Quarter, Little Italy and the Museum of Contemporary Art, with Coronado Beach beyond downtown."
+  },
+  "openGraph": {
+   "title": "Downtown San Diego Neighborhood Guide | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Walk from The Guild Hotel to Seaport Village, the Gaslamp Quarter, Little Italy and the Museum of Contemporary Art, with Coronado Beach beyond downtown.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/neighborhood",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "e112c675-550d-773b-3bbc-9c1d4e6641cc",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "45c666f1-1a05-5d50-1b09-55a604257f50",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "57b7e684-0c95-ca21-52d4-e91a0015c652",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "c789159e-15bc-af82-a16d-23d3980bbb44",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "a city at your fingertips"
+     }
+    },
+    {
+     "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "In hac habitasse platea dictumst. Etiam dapibus augue tortor"
+     }
+    },
+    {
+     "propertyId": "2c401db1-96d5-7fbc-68c2-7ea0e151ac56",
+     "type": "Plain Text",
+     "label": "Content/Heading (Night)",
+     "text": {
+      "html": null,
+      "text": "a city that comes alive after dark"
+     }
+    }
+   ]
+  },
+  {
+   "id": "1ef1d38f-c658-4106-317c-fcbe729251c1",
+   "type": "component-instance",
+   "componentId": "bdff66b3-92d9-e1e3-dbc0-86a28e384c9b",
+   "propertyOverrides": [
+    {
+     "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+     "type": "Plain Text",
+     "label": "Content/heading",
+     "text": {
+      "html": null,
+      "text": "The best of\nSan Diego is right here"
+     }
+    },
+    {
+     "propertyId": "0df84d45-603f-3795-7593-9010ebf7c540",
+     "type": "Plain Text",
+     "label": "Content/paragraph",
+     "text": {
+      "html": null,
+      "text": "The San Diego on our doorstep includes the city’s favorite neighborhoods and attractions – and best of all, you can walk to them. From the harbor and Seaport Village to the Museum of Contemporary Art, Little Italy and the Gaslamp, the past, future and excitement of the city are yours to discover."
+     }
+    }
+   ]
+  },
+  {
+   "id": "7beae137-d05e-b30d-6126-373af489e6db",
+   "type": "component-instance",
+   "componentId": "663131a8-3362-867e-25ef-28b6d3d209a2",
+   "propertyOverrides": []
+  },
+  {
+   "id": "d1a05b2f-7ee8-cb39-21a3-34b0c8b95b77",
+   "type": "component-instance",
+   "componentId": "58a0955b-a9bf-26d0-20b4-0b05cd68cb38",
+   "propertyOverrides": [
+    {
+     "propertyId": "8cb8fc44-2bf1-ef44-01ba-38d1b52f5d6b",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "gaslamp quarter"
+     }
+    },
+    {
+     "propertyId": "3f50e93d-a968-f004-4199-cfd4d1bccba7",
+     "type": "Plain Text",
+     "label": "Content/Body",
+     "text": {
+      "html": null,
+      "text": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo."
+     }
+    }
+   ]
+  },
+  {
+   "id": "9ff7cd1d-14b1-b02b-ad23-119ec0c50771",
+   "type": "component-instance",
+   "componentId": "a48dd3f0-bfb7-118f-393d-35b9b7172598",
+   "propertyOverrides": [
+    {
+     "propertyId": "8cb8fc44-2bf1-ef44-01ba-38d1b52f5d6b",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "little italy"
+     }
+    },
+    {
+     "propertyId": "3f50e93d-a968-f004-4199-cfd4d1bccba7",
+     "type": "Plain Text",
+     "label": "Content/Body",
+     "text": {
+      "html": null,
+      "text": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo."
+     }
+    }
+   ]
+  },
+  {
+   "id": "b18c3101-b992-aaf2-ef7a-8dcd792144c6",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps is-active\" href=\"#dining\">dining</a>",
+    "text": "dining"
+   },
+   "attributes": {
+    "aria-current": "true"
+   }
+  },
+  {
+   "id": "3e45c158-e323-d66f-d8e3-0cae227f2707",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#arts\">arts</a>",
+    "text": "arts"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "abc5407c-9563-222e-1fce-a4f032743634",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#beyond-downtown\">beyond downtown</a>",
+    "text": "beyond downtown"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "1c9d9ffe-66ce-17ac-30d0-747d69b39305",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#services\">services</a>",
+    "text": "services"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "540a49c8-c2a2-78be-5b58-c69779ecc6e6",
+   "type": "component-instance",
+   "componentId": "540a49c8-c2a2-78be-5b58-c69779ecc6e7",
+   "propertyOverrides": []
+  },
+  {
+   "id": "f1f5eab6-08c2-21af-2287-b6ab5724e512",
+   "type": "html-embed",
+   "html": "<style data-beyond-downtown>.timeline-scatter-images_list.is-tall .timeline-scatter-images_item:nth-child(even){margin-left:auto}</style>",
+   "attributes": {}
+  },
+  {
+   "id": "36cdc741-82cf-dd07-31fd-ff1b395c73b7",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"timeline-scatter-images_heading is-tall heading-style-h3 text-weight-normal stagger-5\">beyond downtown san diego</h2>",
+    "text": "beyond downtown san diego"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "36cdc741-82cf-dd07-31fd-ff1b395c73bc",
+   "type": "image",
+   "image": {
+    "alt": "A martini held up against sparkling ocean water",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "36cdc741-82cf-dd07-31fd-ff1b395c73be",
+   "type": "html-embed",
+   "html": "<svg width=\"30\" height=\"14\" viewBox=\"0 0 30 14\" fill=\"none\" aria-hidden=\"true\" style=\"display:block\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M29.25 6.75H0.75M29.25 6.75L23.25 0.75M29.25 6.75L23.25 12.75\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "1b2762bc-468e-297a-13c3-8a946427a41a",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "327a6f34-e59b-e99f-40fb-31eb3c615846",
+   "type": "component-instance",
+   "componentId": "aa184bec-1546-99d0-45ba-1eda6f3bbde9",
+   "propertyOverrides": []
+  },
+  {
+   "id": "d2092627-881b-d171-7d52-2bad55d9336d",
+   "type": "component-instance",
+   "componentId": "9ced70f0-b656-37f9-427f-1d27978c0981",
+   "propertyOverrides": [
+    {
+     "propertyId": "f8a8e0cc-46de-4e94-bfa7-479ec4b54e80",
+     "type": "Alt Text",
+     "label": "Image Alt",
+     "text": {
+      "html": null,
+      "text": "Conference room at The Guild"
+     }
+    }
+   ]
+  },
+  {
+   "id": "5a46e889-2491-d9e5-963d-49c254def064",
+   "type": "component-instance",
+   "componentId": "9ced70f0-b656-37f9-427f-1d27978c0981",
+   "propertyOverrides": [
+    {
+     "propertyId": "f8a8e0cc-46de-4e94-bfa7-479ec4b54e80",
+     "type": "Alt Text",
+     "label": "Image Alt",
+     "text": {
+      "html": null,
+      "text": "Suite with a large work table at The Guild"
+     }
+    },
+    {
+     "propertyId": "50c41ceb-41ed-41f3-628c-42868f48543a",
+     "type": "Plain Text",
+     "label": "Title",
+     "text": {
+      "html": null,
+      "text": "san diego superior court"
+     }
+    }
+   ]
+  },
+  {
+   "id": "6f1a0b25-7493-5449-2219-1c55c07b7666",
+   "type": "component-instance",
+   "componentId": "9ced70f0-b656-37f9-427f-1d27978c0981",
+   "propertyOverrides": [
+    {
+     "propertyId": "f8a8e0cc-46de-4e94-bfa7-479ec4b54e80",
+     "type": "Alt Text",
+     "label": "Image Alt",
+     "text": {
+      "html": null,
+      "text": "Large conference room at The Guild"
+     }
+    }
+   ]
+  },
+  {
+   "id": "d90881fa-4f11-e2f3-9476-e0a7e36e0294",
+   "type": "component-instance",
+   "componentId": "9ced70f0-b656-37f9-427f-1d27978c0981",
+   "propertyOverrides": [
+    {
+     "propertyId": "f8a8e0cc-46de-4e94-bfa7-479ec4b54e80",
+     "type": "Alt Text",
+     "label": "Image Alt",
+     "text": {
+      "html": null,
+      "text": "Meeting space at The Guild"
+     }
+    },
+    {
+     "propertyId": "50c41ceb-41ed-41f3-628c-42868f48543a",
+     "type": "Plain Text",
+     "label": "Title",
+     "text": {
+      "html": null,
+      "text": "san diego superior court"
+     }
+    }
+   ]
+  },
+  {
+   "id": "81ccf045-59c6-11a6-486f-47b0cb3a75e9",
+   "type": "component-instance",
+   "componentId": "658f6b02-60da-4e60-799a-540b8a036180",
+   "propertyOverrides": []
+  },
+  {
+   "id": "410d724f-fea3-fda9-6ae2-3ccf066d8522",
+   "type": "component-instance",
+   "componentId": "e1b3f20f-32ae-6a0e-152e-8f6755746b38",
+   "propertyOverrides": [
+    {
+     "propertyId": "43488e1d-d3af-2bc8-63be-a90945c187b0",
+     "type": "Plain Text",
+     "label": "Heading",
+     "text": {
+      "html": null,
+      "text": "dining 1"
+     }
+    },
+    {
+     "propertyId": "f5bc36db-23ff-40e8-2b02-29303c1b7997",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis morbi ullamcorper rutrum varius"
+     }
+    }
+   ]
+  },
+  {
+   "id": "2d083d74-52da-c1a5-2967-53c5910beefc",
+   "type": "component-instance",
+   "componentId": "e1b3f20f-32ae-6a0e-152e-8f6755746b38",
+   "propertyOverrides": [
+    {
+     "propertyId": "43488e1d-d3af-2bc8-63be-a90945c187b0",
+     "type": "Plain Text",
+     "label": "Heading",
+     "text": {
+      "html": null,
+      "text": "dining 2"
+     }
+    },
+    {
+     "propertyId": "f5bc36db-23ff-40e8-2b02-29303c1b7997",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis morbi ullamcorper rutrum varius"
+     }
+    }
+   ]
+  },
+  {
+   "id": "2ae43853-f78e-5af2-17d0-346e2058962b",
+   "type": "component-instance",
+   "componentId": "e1b3f20f-32ae-6a0e-152e-8f6755746b38",
+   "propertyOverrides": [
+    {
+     "propertyId": "43488e1d-d3af-2bc8-63be-a90945c187b0",
+     "type": "Plain Text",
+     "label": "Heading",
+     "text": {
+      "html": null,
+      "text": "dining 3"
+     }
+    },
+    {
+     "propertyId": "f5bc36db-23ff-40e8-2b02-29303c1b7997",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis morbi ullamcorper rutrum varius"
+     }
+    }
+   ]
+  },
+  {
+   "id": "c40253a1-eb58-02fb-eb4c-40974203441e",
+   "type": "component-instance",
+   "componentId": "5d830b69-6507-7d04-4828-069b2539cffb",
+   "propertyOverrides": [
+    {
+     "propertyId": "cb9c481f-b5dc-1c74-716f-3d3606e28333",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "Steps from key legal addresses"
+     }
+    },
+    {
+     "propertyId": "b8f3c5b9-efe9-e6a4-5af7-6ab68b883833",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+     }
+    },
+    {
+     "propertyId": "d8b278ad-b9fa-a7bf-d679-42cae05a0989",
+     "type": "Alt Text",
+     "label": "Image/Image Alt",
+     "text": {
+      "html": null,
+      "text": "Map of downtown San Diego marking the courthouses near the hotel"
+     }
+    }
+   ]
+  },
+  {
+   "id": "f7f67522-9d9b-cabf-d552-4a7a18ca2785",
+   "type": "component-instance",
+   "componentId": "560e1b31-d612-0921-8773-8f9de2e2b06f",
+   "propertyOverrides": [
+    {
+     "propertyId": "3aab8783-f8f3-e498-0599-7ddbcbf5d1e9",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "neighborhood gallery"
+     }
+    }
+   ]
+  },
+  {
+   "id": "f6ae4c66-9342-4f54-39ad-7a323c1cd178",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus."
+     }
+    }
+   ]
+  },
+  {
+   "id": "5cf6451f-e5f8-4fb9-70a2-38bb580ad6c0",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta."
+     }
+    }
+   ]
+  },
+  {
+   "id": "46035837-7b67-43f2-4168-978d6acfb80d",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem."
+     }
+    }
+   ]
+  },
+  {
+   "id": "6c98726c-9b48-2c9d-0819-f70764216f64",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+     }
+    }
+   ]
+  },
+  {
+   "id": "c852c4c9-9201-4b17-b18f-d82d20278ae4",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "bb59fed3-64d4-b390-2674-769af3d8de77",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "6011c1a8-e5cb-aa76-0865-5eb1e1b3eed4",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "a9634aaa-afec-4562-e1a4-7cd479560b18",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "33ca2dff-0f67-ceed-01db-f7bbc7464c5a",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  },
+  {
+   "id": "d46bdb62-823d-2684-f5df-69fcae78a98b",
+   "type": "component-instance",
+   "componentId": "bc4e93ef-32a2-4b37-1d8d-dd918cbef423",
+   "propertyOverrides": [
+    {
+     "propertyId": "fa672abe-c6b3-2171-97c5-e047fcc748c1",
+     "type": "Plain Text",
+     "label": "Button/Button label",
+     "text": {
+      "html": null,
+      "text": "learn more"
+     }
+    }
+   ]
+  },
+  {
+   "id": "c4ac5dcc-141e-a874-54e0-38c06fe1a192",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  }
+ ],
+ "lastUpdated": "2026-11-21T00:25:12.360Z"
+}

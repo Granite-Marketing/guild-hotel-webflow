@@ -1,0 +1,44 @@
+{
+ "component": {
+  "id": "f8d2c379-fdf7-4264-4080-6fae138c9250",
+  "name": "Key Features",
+  "description": "Key Features of Our Spaces (Meetings): heading, text, button and a Cards slot of Key Features Card.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "962ef633-bb13-8763-569d-ba3b1ac28aff",
+   "type": "html-embed",
+   "html": "<style data-key-features-slot>.meetings-collection-features_list>div:not([class]),.meetings-collection-features_items>div:not([class]){display:contents}</style>",
+   "attributes": {}
+  },
+  {
+   "id": "f8d2c379-fdf7-4264-4080-6fae138c9254",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"meetings-collection-features_heading\">key features of our spaces</h2>",
+    "text": "key features of our spaces"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f8d2c379-fdf7-4264-4080-6fae138c9256",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"meetings-collection-features_text\">Vestibulum id justo eget erat porta consequat. Donec et massa congue, aliquet sem non, consectetur sem proin et.</p>",
+    "text": "Vestibulum id justo eget erat porta consequat. Donec et massa congue, aliquet sem non, consectetur sem proin et."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f8d2c379-fdf7-4264-4080-6fae138c9259",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer is-dark\" href=\"#request-for-proposal\">book your space</a>",
+    "text": "book your space"
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": []
+}

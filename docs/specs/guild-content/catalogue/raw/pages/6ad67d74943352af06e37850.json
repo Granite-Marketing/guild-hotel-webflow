@@ -1,0 +1,658 @@
+{
+ "page": {
+  "id": "6ad67d74943352af06e37850",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6ad67d74943352af06e37843",
+  "title": "🧑‍⚖️ Legal Corporates Template",
+  "slug": "detail_legal-corporate",
+  "createdOn": "2026-10-19T20:28:36.690Z",
+  "lastUpdated": "2026-11-26T15:47:28.568Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "{{wf {\"path\":\"name\",\"type\":\"PlainText\"\\} }} | The Guild Hotel",
+   "description": "{{wf {\"path\":\"hero-text\",\"type\":\"PlainText\"\\} }}"
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/legal-corporate",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "40cfd406-5bb7-375f-f975-a684fc48e66a",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "2e097eeb-5d8c-516b-ed17-b2eead299103",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "de3674bd-e3a6-880b-b87c-68dc17e286b2",
+   "type": "html-embed",
+   "html": "<style data-divider-list>\n/* M40: package lists on Corporate use the divider-line list style (line between items only). Source: docs/reference/site-head/divider-list.css */\n.image-trio-text_item-content.is-list .w-richtext ul{list-style:none;margin:0;padding-left:0}\n.image-trio-text_item-content.is-list .w-richtext li{margin:0;padding:.75rem 0}\n.image-trio-text_item-content.is-list .w-richtext li:first-child{padding-top:0}\n.image-trio-text_item-content.is-list .w-richtext li:last-child{padding-bottom:0}\n.image-trio-text_item-content.is-list .w-richtext li+li{border-top:1px solid rgba(41,49,12,.25)}\n</style>",
+   "attributes": {}
+  },
+  {
+   "id": "c5436033-bd61-c713-d904-bd85dc1a3045",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": []
+  },
+  {
+   "id": "94f86a25-6f47-5f22-887a-b4562c503401",
+   "type": "component-instance",
+   "componentId": "bdff66b3-92d9-e1e3-dbc0-86a28e384c9b",
+   "propertyOverrides": []
+  },
+  {
+   "id": "8d6ed2de-4492-327f-2236-20b3f19afb0e",
+   "type": "component-instance",
+   "componentId": "46897c76-730a-1978-c362-54be3e026510",
+   "propertyOverrides": [
+    {
+     "propertyId": "ebeb1a92-d766-3614-254d-19c94cdb7b4f",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "key features"
+     }
+    },
+    {
+     "propertyId": "f79f92db-cfe5-c3f4-bec2-ca3718e9faed",
+     "type": "Plain Text",
+     "label": "Items/Item 1 Heading",
+     "text": {
+      "html": null,
+      "text": "High-Speed, Encrypted Wi-Fi"
+     }
+    },
+    {
+     "propertyId": "c70696b1-fd21-ac07-98a4-dc5d7c2a3d8a",
+     "type": "Plain Text",
+     "label": "Items/Item 2 Heading",
+     "text": {
+      "html": null,
+      "text": "24/7 Controlled Security"
+     }
+    },
+    {
+     "propertyId": "d18381ee-348a-4dd0-1bdd-845d3a7c8bd7",
+     "type": "Plain Text",
+     "label": "Items/Item 3 Heading",
+     "text": {
+      "html": null,
+      "text": "Quiet, Professional Workspaces"
+     }
+    },
+    {
+     "propertyId": "6641f4cd-e0a1-50a4-7c21-0c2924814323",
+     "type": "Rich Text",
+     "label": "Items/Item 1 Text",
+     "text": {
+      "html": "<div><p data-w-id=\"afc0d5cd-9011-87ee-2176-0d24b0ab10e6\">Fast, secure internet throughout the hotel, ideal for managing sensitive documents and conducting virtual proceedings.</p></div>",
+      "text": null
+     }
+    },
+    {
+     "propertyId": "af838336-9b52-2e13-c029-42ce918a8efd",
+     "type": "Rich Text",
+     "label": "Items/Item 2 Text",
+     "text": {
+      "html": "<div><p data-w-id=\"a22e0ca4-59f2-9b7c-f467-66ee11d2e20a\">Professional security protocols maintaining attorney-client privilege standards.</p></div>",
+      "text": null
+     }
+    },
+    {
+     "propertyId": "7f61040c-583e-d94e-aefd-7c95d13e6849",
+     "type": "Rich Text",
+     "label": "Items/Item 3 Text",
+     "text": {
+      "html": "<div><p data-w-id=\"37e39fe1-0f2c-15d1-25f1-be2e73d143a8\">Comfortable, dedicated areas designed for quiet focus and productivity, ideal for reviewing case files, preparing witnesses, and conducting confidential team discussions.</p></div>",
+      "text": null
+     }
+    }
+   ]
+  },
+  {
+   "id": "26fa6671-ddad-65a3-b4e6-613555e7e837",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"feature-grid-dark-eyebrow_heading\">Why teams choose The Guild</h2>",
+    "text": "Why teams choose The Guild"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "3201ef88-2cb1-b66f-6bb0-4a1de3ab3f8b",
+   "type": "image",
+   "image": {
+    "alt": "The Guild Hotel's historic stone facade and entrance",
+    "assetId": "6ad66fed15beaf9a7285e5c8"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "e26f2441-26f3-db04-f704-7624332846ba",
+   "type": "image",
+   "image": {
+    "alt": "Garden terrace with umbrellas and cafe seating",
+    "assetId": "6ad66fee735773f253407335"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "fd570a13-a41d-83b8-35c1-daaf301b710e",
+   "type": "image",
+   "image": {
+    "alt": "Elegant guest suite with deep green panelling",
+    "assetId": "6ad66ff96684c3e22ea4e1af"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "893b9904-4312-dc24-c7df-acfdf34f5668",
+   "type": "image",
+   "image": {
+    "alt": "Iced coffee being poured at Solana",
+    "assetId": "6ad6701b6684c3e22ea4f00f"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "209aea2d-5116-92d6-aa7a-75fe1e9652fb",
+   "type": "image",
+   "image": {
+    "alt": "Bright meeting room with screens and flexible seating",
+    "assetId": "6ad66ffe58367429abb48c84"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "4b038ee8-2f01-7edf-4eb0-115578066fca",
+   "type": "image",
+   "image": {
+    "alt": "Friends sharing drinks in the hotel pool",
+    "assetId": "6ad67015134731ad1b928187"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d95e8b31-7fe1-a73d-1f51-24f6c38012b6",
+   "type": "image",
+   "image": {
+    "alt": "Private booth in the dimly lit lounge",
+    "assetId": "6ad66fef6684c3e22ea4dc76"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "54057c62-6d70-5fc7-5069-7a512c0a2ace",
+   "type": "image",
+   "image": {
+    "alt": "Guest relaxing in a robe with a breakfast tray",
+    "assetId": "6ad66feb58367429abb4835f"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "336093a5-7ca4-3256-125c-568030793e10",
+   "type": "image",
+   "image": {
+    "alt": "Marriott Bonvoy",
+    "assetId": "6ad744318e4b52f5c4d49ec6"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "c1152b3b-4210-ce92-aa43-9f4fbcfc5d27",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": "6ad66ff2de86688556051da2"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "22e05a7d-77f9-c57e-81e4-1b066e991e85",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer is-dark\" data-wf-link-page-id=\"6ad66fd8e0b7968459e18f22\">book your space</a>",
+    "text": "book your space"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "782ca404-6261-7876-a9fe-f36b9d7ac64b",
+   "type": "image",
+   "image": {
+    "alt": "A private suite ready for a team working session",
+    "assetId": "6ad67019735773f25340899e"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "b1e21fb1-1fdb-96c6-518c-84af6b2b20af",
+   "type": "image",
+   "image": {
+    "alt": "The hotel wellness space",
+    "assetId": "6ad6700eb28c9b39f95d814d"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "3e736039-80f1-b5fb-42cb-723f0155eb1b",
+   "type": "image",
+   "image": {
+    "alt": "A quiet guest room at The Guild Hotel",
+    "assetId": "6ad67017fb3a14e0db41143b"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "09fea83e-79c4-7615-bab2-c437c018b35a",
+   "type": "image",
+   "image": {
+    "alt": "A calm event space at The Guild Hotel",
+    "assetId": "6ad66ffdba96f2e53726bd55"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "2ede1ada-e575-15ea-7276-8d3d1ec14a15",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {
+    "data-scroll-enlarge-snap-image": "true",
+    "data-eager": "true"
+   }
+  },
+  {
+   "id": "03a9c003-ef1d-111b-b863-187c7ca0f048",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer\" href=\"#\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {
+    "aria-haspopup": "dialog",
+    "aria-expanded": "false"
+   }
+  },
+  {
+   "id": "7ead32bb-b0af-cf18-0c1c-10bdba33bc29",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "26f0427d-4041-08c2-347c-d59ed4ce7cbb",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bf57849a-2fe5-81bb-2554-37d96487c842",
+   "type": "component-instance",
+   "componentId": "5d830b69-6507-7d04-4828-069b2539cffb",
+   "propertyOverrides": [
+    {
+     "propertyId": "cb9c481f-b5dc-1c74-716f-3d3606e28333",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "Steps from key legal addresses"
+     }
+    },
+    {
+     "propertyId": "b8f3c5b9-efe9-e6a4-5af7-6ab68b883833",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Four courthouses sit within a short walk of The Guild, so your team can move between hearings, prep sessions and the hotel in minutes."
+     }
+    },
+    {
+     "propertyId": "d8b278ad-b9fa-a7bf-d679-42cae05a0989",
+     "type": "Alt Text",
+     "label": "Image/Image Alt",
+     "text": {
+      "html": null,
+      "text": "Map of downtown San Diego marking the courthouses near the hotel"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ac90d2ee-dd2a-f59c-f73a-b7813177d476",
+   "type": "component-instance",
+   "componentId": "f6f42b26-759f-d2b6-03de-516393880a37",
+   "propertyOverrides": [
+    {
+     "propertyId": "ebeb1a92-d766-3614-254d-19c94cdb7b4f",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "tailored corporate packages"
+     }
+    },
+    {
+     "propertyId": "f79f92db-cfe5-c3f4-bec2-ca3718e9faed",
+     "type": "Plain Text",
+     "label": "Items/Item 1 Heading",
+     "text": {
+      "html": null,
+      "text": "Executive Floor Buyout"
+     }
+    },
+    {
+     "propertyId": "c70696b1-fd21-ac07-98a4-dc5d7c2a3d8a",
+     "type": "Plain Text",
+     "label": "Items/Item 2 Heading",
+     "text": {
+      "html": null,
+      "text": "War Room Setup"
+     }
+    },
+    {
+     "propertyId": "d18381ee-348a-4dd0-1bdd-845d3a7c8bd7",
+     "type": "Plain Text",
+     "label": "Items/Item 3 Heading",
+     "text": {
+      "html": null,
+      "text": "Extended Stay Legal Comfort Package"
+     }
+    },
+    {
+     "propertyId": "6641f4cd-e0a1-50a4-7c21-0c2924814323",
+     "type": "Rich Text",
+     "label": "Items/Item 1 Text",
+     "text": {
+      "html": "<div><div data-w-id=\"f9b48c4e-be9c-0dca-e1a9-9ddf59632462\"><div data-w-id=\"1371c28d-0f57-b827-8faf-9ba4406ea8c0\">Entire floor reservation for full confidentiality</div><div data-w-id=\"a42e9774-77f0-ed14-22c3-193f78786c4b\">Optional private outdoor terrace</div><div data-w-id=\"5555e5ee-f3a2-4196-9627-dfbeed006bbf\">Enhanced security and exclusive guest access</div><div data-w-id=\"d068ea4b-e5af-77d1-2fb8-1342c09d7378\">Custom space layout and meeting room allocation</div></div><p data-w-id=\"afad5a51-8aa8-3fa3-9995-2b311e4c1822\"></p></div>",
+      "text": null
+     }
+    },
+    {
+     "propertyId": "af838336-9b52-2e13-c029-42ce918a8efd",
+     "type": "Rich Text",
+     "label": "Items/Item 2 Text",
+     "text": {
+      "html": "<div><div data-w-id=\"cdb3f0ed-a87d-6b19-414a-32cc88d5f15b\"><div data-w-id=\"435b63b5-4a4d-be34-1bf6-f87c3e084232\">Dedicated meeting rooms or suites for legal teams</div><div data-w-id=\"a3bfabfe-aee4-75d3-e3ee-a84b7fb45c07\">High-speed internet and full AV capabilities</div><div data-w-id=\"eb756a06-6ea5-e182-797f-d85389512294\">On-demand printing, copying, and secure storage</div><div data-w-id=\"d3c1244a-3547-d221-2350-ba7b293e5e38\">Round-the-clock access to working areas</div></div><p data-w-id=\"7d73a520-9137-8820-8edf-bee4446558ad\"></p></div>",
+      "text": null
+     }
+    },
+    {
+     "propertyId": "7f61040c-583e-d94e-aefd-7c95d13e6849",
+     "type": "Rich Text",
+     "label": "Items/Item 3 Text",
+     "text": {
+      "html": "<div><div data-w-id=\"4ea4927c-7298-e2df-3184-612cf63d8bc9\"><div data-w-id=\"b5080387-ef04-1b55-e99b-4b3be29a84be\">Custom in-room amenities for long trials</div><div data-w-id=\"ab93d939-a276-1ccf-ac77-f427cd13ab34\">Daily housekeeping or modified schedules</div><div data-w-id=\"8488b5b9-1a73-b9af-1cf9-d99d7dfde158\">Wellness options to support mental clarity and team morale</div><div data-w-id=\"4b88fd0e-9dde-7ff5-6e6a-dc09b45b5ad6\">Discounted dining packages and meal coordination</div></div><p data-w-id=\"cb7a91e4-9962-237f-9011-d7e20ab0d13f\"></p></div>",
+      "text": null
+     }
+    }
+   ]
+  },
+  {
+   "id": "c29b6bfa-964a-7935-6603-7198d47a1d82",
+   "type": "component-instance",
+   "componentId": "ac4f1278-12f1-0748-8e90-ad316983a2a1",
+   "propertyOverrides": []
+  },
+  {
+   "id": "446835c1-2325-c5f3-20e2-655d5e6507b6",
+   "type": "component-instance",
+   "componentId": "560e1b31-d612-0921-8773-8f9de2e2b06f",
+   "propertyOverrides": [
+    {
+     "propertyId": "3aab8783-f8f3-e498-0599-7ddbcbf5d1e9",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "corporate gallery"
+     }
+    }
+   ]
+  },
+  {
+   "id": "31c1cce1-52fa-d80a-cbdc-9fb5a3812182",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus."
+     }
+    }
+   ]
+  },
+  {
+   "id": "89333811-58ad-b108-d691-83973b519d85",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta."
+     }
+    }
+   ]
+  },
+  {
+   "id": "cb52e3aa-cebf-8d6b-731f-12237f6eb49c",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem."
+     }
+    }
+   ]
+  },
+  {
+   "id": "c623587c-9a54-2a93-653b-e636d80ffcc7",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+     }
+    }
+   ]
+  },
+  {
+   "id": "61118ef3-2ab8-3565-862d-6ab5b1fb7510",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "00522129-e984-d17c-d18c-209d3946e6da",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "a801d156-90c7-64a8-7607-c16886341a7c",
+   "type": "component-instance",
+   "componentId": "f5403de4-dabb-14c3-ecf8-c945d0a8e22e",
+   "propertyOverrides": []
+  },
+  {
+   "id": "c4d237b6-66ab-b8b1-d8a3-ee5005c43fb4",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "rooms"
+     }
+    }
+   ]
+  },
+  {
+   "id": "50012471-01ef-90ad-bb45-a830319c651d",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "dining"
+     }
+    }
+   ]
+  },
+  {
+   "id": "fc7032cb-8032-fcca-0d3e-ed6c7e8ae304",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "wellness"
+     }
+    }
+   ]
+  },
+  {
+   "id": "819860ab-07bc-403c-5786-ef0756d4ee20",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "meetings & events"
+     }
+    }
+   ]
+  },
+  {
+   "id": "fd4f0ea6-4ed6-94c2-dea7-148325a81d92",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "arts"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ec04872f-606c-a099-c44b-73c78d70295e",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "history"
+     }
+    }
+   ]
+  },
+  {
+   "id": "713caf69-e087-f5d5-a21e-c49e0fa8aabc",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "6c0be525-c98a-e3c1-8fe7-f78cbd941d30",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "a2eb465e-3f72-87b5-4cf8-0030ff12c98d",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  },
+  {
+   "id": "707f801f-f221-feec-8316-719db9f97197",
+   "type": "component-instance",
+   "componentId": "bf7623e5-058f-ec80-12e2-20bb187eaf9c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "3418b6fc-e0d2-6959-6294-027530852152",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  }
+ ],
+ "lastUpdated": "2026-11-26T15:47:28.641Z"
+}

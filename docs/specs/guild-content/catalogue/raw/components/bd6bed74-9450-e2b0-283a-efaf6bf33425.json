@@ -1,0 +1,50 @@
+{
+ "component": {
+  "id": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+  "name": "Gallery Mosaic Item",
+  "description": "One tile for the Items slot of Gallery Mosaic Captioned: image (or video), alt, caption. Photos sit in pairs, half width; a last photo with no partner goes full width. Numbers count automatically.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "bd6bed74-9450-e2b0-283a-efaf6bf33426",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {
+    "data-reveal": "image-fade"
+   }
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "1b26142d-ae4a-fe0e-1454-1de7b0ea13fc",
+   "type": "Alt Text",
+   "label": "Image Alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+   "type": "Plain Text",
+   "label": "Caption",
+   "text": {
+    "html": null,
+    "text": "Caption"
+   }
+  },
+  {
+   "propertyId": "4301866b-8aea-0230-bb89-72922318f6c7",
+   "type": "Plain Text",
+   "label": "Video Link",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  }
+ ]
+}

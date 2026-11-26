@@ -1,0 +1,322 @@
+[
+ {
+  "path": "/packages",
+  "kind": "static",
+  "pageId": "6afc5759981249dd386c4008",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 46
+ },
+ {
+  "path": "/accessibility",
+  "kind": "static",
+  "pageId": "6ad85678cff550a80a3287b0",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 27
+ },
+ {
+  "path": "/happenings",
+  "kind": "static",
+  "pageId": "6adf8565c9208d434c321a85",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 44
+ },
+ {
+  "path": "/blog",
+  "kind": "static",
+  "pageId": "6adf856512eff9c0216feca8",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 45
+ },
+ {
+  "path": "/neighborhood",
+  "kind": "static",
+  "pageId": "6ad66fdb02cc199b55b926ba",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 60
+ },
+ {
+  "path": "/privacy-policy",
+  "kind": "static",
+  "pageId": "6ad66fd802cc199b55b924be",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 27
+ },
+ {
+  "path": "/meetings",
+  "kind": "static",
+  "pageId": "6ad66fd96684c3e22ea4d417",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 74
+ },
+ {
+  "path": "/wellness",
+  "kind": "static",
+  "pageId": "6ad66fd7735773f253406791",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 42
+ },
+ {
+  "path": "/gallery",
+  "kind": "static",
+  "pageId": "6ad66fd65794075272b95584",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 38
+ },
+ {
+  "path": "/arts",
+  "kind": "static",
+  "pageId": "6ad66fd7ba96f2e53726a2eb",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 85
+ },
+ {
+  "path": "/contact",
+  "kind": "static",
+  "pageId": "6ad66fd8e0b7968459e18f22",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 35
+ },
+ {
+  "path": "/press",
+  "kind": "static",
+  "pageId": "6ad66fd5735773f253406642",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 65
+ },
+ {
+  "path": "/rooms",
+  "kind": "static",
+  "pageId": "6ad66fd5f8bf4846e809dbee",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 72
+ },
+ {
+  "path": "/guidelines",
+  "kind": "static",
+  "pageId": "6ad66fd44c7f57894534ada5",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 38
+ },
+ {
+  "path": "/dining",
+  "kind": "static",
+  "pageId": "6ad66fd476d24ed37ac4c5cb",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 41
+ },
+ {
+  "path": "/404",
+  "kind": "static",
+  "pageId": "6ad64060ae8eac6d7b7c4243",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 1
+ },
+ {
+  "path": null,
+  "templatePath": "/offers",
+  "kind": "cms-sample",
+  "pageId": "6b0056f9a2110448c9442217",
+  "title": "🏷️ Offers Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": null,
+  "templatePath": "/gallery-categories",
+  "kind": "cms-sample",
+  "pageId": "6b004aa45539170e389006bb",
+  "title": "🏷️ Gallery Categories Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": null,
+  "templatePath": "/art-categories",
+  "kind": "cms-sample",
+  "pageId": "6b004aa0a6412b2e1b0da18e",
+  "title": "🏷️ Art Categories Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": null,
+  "templatePath": "/topics",
+  "kind": "cms-sample",
+  "pageId": "6b004916ae933f3d6c917f3d",
+  "title": "🔖 Topics Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": null,
+  "templatePath": "/media",
+  "kind": "cms-sample",
+  "pageId": "6b0044204488d60a1aa2756b",
+  "title": "🖼️ Media Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": null,
+  "templatePath": "/amenities",
+  "kind": "cms-sample",
+  "pageId": "6b0041e06d88d6d2996cc77e",
+  "title": "🛎️ Amenities Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": null,
+  "templatePath": "/beyond-downtown-places",
+  "kind": "cms-sample",
+  "pageId": "6b003ce85ffdb768a6e73949",
+  "title": "🏖️ Beyond Downtown Places Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": null,
+  "templatePath": "/meeting-venues",
+  "kind": "cms-sample",
+  "pageId": "6b0036f73a65bcfa50f49231",
+  "title": "🏛️ Meeting Venues Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": null,
+  "templatePath": "/faqs",
+  "kind": "cms-sample",
+  "pageId": "6b00284ecf7ddb2b615e8be9",
+  "title": "❓ FAQs Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": "/401",
+  "kind": "static",
+  "pageId": "6ad64060ae8eac6d7b7c4242",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 1
+ },
+ {
+  "path": null,
+  "templatePath": "/press-category",
+  "kind": "cms-sample",
+  "pageId": "6afb3561e46519364ff54c4c",
+  "title": "🏷️ Press Categories Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": null,
+  "templatePath": "/press-item",
+  "kind": "cms-sample",
+  "pageId": "6afb2abf0f4d8650f677485b",
+  "title": "📰 Press Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": null,
+  "templatePath": "/gallery-photo",
+  "kind": "cms-sample",
+  "pageId": "6af3531acf4b88863f651dee",
+  "title": "📸 Gallery Photos Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": null,
+  "templatePath": "/art",
+  "kind": "cms-sample",
+  "pageId": "6aea1e6d64c7d7b0d10c4018",
+  "title": "🖼️ Art Collection Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": null,
+  "templatePath": "/quiz-options",
+  "kind": "cms-sample",
+  "pageId": "6ae08d40ba5f0d2f0a4a2726",
+  "title": "🧭 Quiz Options Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": "/history",
+  "kind": "static",
+  "pageId": "6ad66fd276d24ed37ac4c52f",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 53
+ },
+ {
+  "path": null,
+  "templatePath": "/map-place",
+  "kind": "cms-sample",
+  "pageId": "6adf73e1711cfc5e16f51c01",
+  "title": "📍 Map Places Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": "/packages/romance-at-the-guild",
+  "kind": "cms-sample",
+  "pageId": "6afc5ac0f547318572484bda",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 35
+ },
+ {
+  "path": null,
+  "templatePath": "/post-categories",
+  "kind": "cms-sample",
+  "pageId": "6ad67d75485ab8562b6e34e0",
+  "title": "🏷️ Post Categories Template",
+  "status": "no-live-sample"
+ },
+ {
+  "path": "/",
+  "kind": "static",
+  "pageId": "6ad64060ae8eac6d7b7c4241",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 57
+ },
+ {
+  "path": "/rooms/cozy-queen",
+  "kind": "cms-sample",
+  "pageId": "6adf8f780ea92c0983eddac0",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 43
+ },
+ {
+  "path": "/happenings-stories/locals-night-at-rodeo-bar",
+  "kind": "cms-sample",
+  "pageId": "6ad67d759914af41be21de84",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 35
+ },
+ {
+  "path": "/dining/dining-zuma",
+  "kind": "cms-sample",
+  "pageId": "6ad67d7416e13e66c2b76107",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 40
+ },
+ {
+  "path": "/legal-corporate/corporate",
+  "kind": "cms-sample",
+  "pageId": "6ad67d74943352af06e37850",
+  "status": "ok",
+  "httpStatus": 200,
+  "elements": 89
+ }
+]

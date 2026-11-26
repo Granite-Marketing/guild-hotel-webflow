@@ -1,0 +1,1292 @@
+[
+ {
+  "id": "6b0056f9a2110448c9442217",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b0056f7a2110448c9442119",
+  "title": "🏷️ Offers Template",
+  "slug": "detail_offers",
+  "createdOn": "2026-11-20T14:19:37.749Z",
+  "lastUpdated": "2026-11-24T17:33:44.481Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/offers",
+  "localeId": null
+ },
+ {
+  "id": "6b004aa45539170e389006bb",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b004aa45539170e389006b5",
+  "title": "🏷️ Gallery Categories Template",
+  "slug": "detail_gallery-categories",
+  "createdOn": "2026-11-20T13:27:00.918Z",
+  "lastUpdated": "2026-11-24T17:33:38.170Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/gallery-categories",
+  "localeId": null
+ },
+ {
+  "id": "6b004aa0a6412b2e1b0da18e",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b004a9fa6412b2e1b0da166",
+  "title": "🏷️ Art Categories Template",
+  "slug": "detail_art-categories",
+  "createdOn": "2026-11-20T13:26:56.243Z",
+  "lastUpdated": "2026-11-24T17:33:34.356Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/art-categories",
+  "localeId": null
+ },
+ {
+  "id": "6b004916ae933f3d6c917f3d",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b004916ae933f3d6c917f37",
+  "title": "🔖 Topics Template",
+  "slug": "detail_topics",
+  "createdOn": "2026-11-20T13:20:22.580Z",
+  "lastUpdated": "2026-11-24T17:33:55.846Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/topics",
+  "localeId": null
+ },
+ {
+  "id": "6b0044204488d60a1aa2756b",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b00441f4488d60a1aa27565",
+  "title": "🖼️ Media Template",
+  "slug": "detail_media",
+  "createdOn": "2026-11-20T12:59:12.109Z",
+  "lastUpdated": "2026-11-24T17:33:21.389Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/media",
+  "localeId": null
+ },
+ {
+  "id": "6b0041e06d88d6d2996cc77e",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b0041e06d88d6d2996cc777",
+  "title": "🛎️ Amenities Template",
+  "slug": "detail_amenities",
+  "createdOn": "2026-11-20T12:49:36.414Z",
+  "lastUpdated": "2026-11-24T17:34:05.938Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/amenities",
+  "localeId": null
+ },
+ {
+  "id": "6b003ce85ffdb768a6e73949",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b003ce85ffdb768a6e73915",
+  "title": "🏖️ Beyond Downtown Places Template",
+  "slug": "detail_beyond-downtown-places",
+  "createdOn": "2026-11-20T12:28:24.625Z",
+  "lastUpdated": "2026-11-24T17:34:17.844Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/beyond-downtown-places",
+  "localeId": null
+ },
+ {
+  "id": "6b0036f73a65bcfa50f49231",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b0036f73a65bcfa50f491e9",
+  "title": "🏛️ Meeting Venues Template",
+  "slug": "detail_meeting-venues",
+  "createdOn": "2026-11-20T12:03:03.625Z",
+  "lastUpdated": "2026-11-24T17:34:24.990Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/meeting-venues",
+  "localeId": null
+ },
+ {
+  "id": "6b00284ecf7ddb2b615e8be9",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b00284dcf7ddb2b615e8b7c",
+  "title": "❓ FAQs Template",
+  "slug": "detail_faqs",
+  "createdOn": "2026-11-20T11:00:30.593Z",
+  "lastUpdated": "2026-11-24T17:33:27.995Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/faqs",
+  "localeId": null
+ },
+ {
+  "id": "6afc5ac0f547318572484bda",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6afc5ac0f547318572484bb6",
+  "title": "🎁 Packages Template",
+  "slug": "detail_packages",
+  "createdOn": "2026-11-17T13:46:40.779Z",
+  "lastUpdated": "2026-11-25T21:51:17.422Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "{{wf {\"path\":\"name\",\"type\":\"PlainText\"\\} }} | The Guild Hotel",
+   "description": "{{wf {\"path\":\"excerpt\",\"type\":\"PlainText\"\\} }}"
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/packages",
+  "localeId": null
+ },
+ {
+  "id": "6afc5759981249dd386c4008",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Packages",
+  "slug": "packages",
+  "createdOn": "2026-11-17T13:32:09.901Z",
+  "lastUpdated": "2026-11-25T21:43:49.586Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Packages | The Guild Hotel",
+   "description": "Packages for your stay at The Guild Hotel in downtown San Diego, covering dining, culture, conferences and more."
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/packages",
+  "localeId": null
+ },
+ {
+  "id": "6afb3561e46519364ff54c4c",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6afb3561e46519364ff54c39",
+  "title": "🏷️ Press Categories Template",
+  "slug": "detail_press-category",
+  "createdOn": "2026-11-16T16:54:57.826Z",
+  "lastUpdated": "2026-11-18T17:24:17.862Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/press-category",
+  "localeId": null
+ },
+ {
+  "id": "6afb2abf0f4d8650f677485b",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6afb2abe0f4d8650f6774820",
+  "title": "📰 Press Template",
+  "slug": "detail_press-item",
+  "createdOn": "2026-11-16T16:09:35.351Z",
+  "lastUpdated": "2026-11-20T10:45:08.155Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/press-item",
+  "localeId": null
+ },
+ {
+  "id": "6af3531acf4b88863f651dee",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6af3531acf4b88863f651db9",
+  "title": "📸 Gallery Photos Template",
+  "slug": "detail_gallery-photo",
+  "createdOn": "2026-11-10T17:23:38.453Z",
+  "lastUpdated": "2026-11-18T17:23:56.008Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/gallery-photo",
+  "localeId": null
+ },
+ {
+  "id": "6aea1e6d64c7d7b0d10c4018",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6aea1e6d64c7d7b0d10c4012",
+  "title": "🖼️ Art Collection Template",
+  "slug": "detail_art",
+  "createdOn": "2026-11-03T17:48:29.868Z",
+  "lastUpdated": "2026-11-18T17:24:01.080Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/art",
+  "localeId": null
+ },
+ {
+  "id": "6ae08d40ba5f0d2f0a4a2726",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6ae08d40ba5f0d2f0a4a2720",
+  "title": "🧭 Quiz Options Template",
+  "slug": "detail_quiz-options",
+  "createdOn": "2026-10-27T11:38:40.634Z",
+  "lastUpdated": "2026-11-18T17:24:08.405Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/quiz-options",
+  "localeId": null
+ },
+ {
+  "id": "6adf8f780ea92c0983eddac0",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6adf8f780ea92c0983eddaac",
+  "title": "🛏️ Rooms Template",
+  "slug": "detail_rooms",
+  "createdOn": "2026-10-26T17:35:52.439Z",
+  "lastUpdated": "2026-11-25T21:48:17.909Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "{{wf {\"path\":\"name\",\"type\":\"PlainText\"\\} }} | The Guild Hotel",
+   "description": "{{wf {\"path\":\"hero-intro\",\"type\":\"PlainText\"\\} }}"
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/rooms",
+  "localeId": null
+ },
+ {
+  "id": "6adf856512eff9c0216feca8",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Blog",
+  "slug": "blog",
+  "createdOn": "2026-10-26T16:52:53.991Z",
+  "lastUpdated": "2026-11-26T15:48:23.635Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Blog | The Guild Hotel",
+   "description": "Stories, guides and local tips from The Guild Hotel in downtown San Diego."
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": null,
+   "description": null,
+   "descriptionCopied": null,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/blog",
+  "localeId": null
+ },
+ {
+  "id": "6adf8565c9208d434c321a85",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Happenings",
+  "slug": "happenings",
+  "createdOn": "2026-10-26T16:52:53.569Z",
+  "lastUpdated": "2026-11-26T15:48:44.907Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Happenings | The Guild Hotel",
+   "description": "Events, evenings and seasonal happenings at The Guild Hotel in downtown San Diego."
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": null,
+   "description": null,
+   "descriptionCopied": null,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/happenings",
+  "localeId": null
+ },
+ {
+  "id": "6adf73e1711cfc5e16f51c01",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6adf73e0711cfc5e16f51bb5",
+  "title": "📍 Map Places Template",
+  "slug": "detail_map-place",
+  "createdOn": "2026-10-26T15:38:09.100Z",
+  "lastUpdated": "2026-11-18T17:24:33.294Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/map-place",
+  "localeId": null
+ },
+ {
+  "id": "6ad85678cff550a80a3287b0",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Accessibility",
+  "slug": "accessibility",
+  "createdOn": "2026-10-21T06:06:48.928Z",
+  "lastUpdated": "2026-11-20T11:49:54.326Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Accessibility | The Guild Hotel",
+   "description": "Our commitment to making The Guild Hotel website accessible to every guest, and how to tell us about any barriers you find."
+  },
+  "openGraph": {
+   "title": "Accessibility | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Our commitment to making The Guild Hotel website accessible to every guest, and how to tell us about any barriers you find.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/accessibility",
+  "localeId": null
+ },
+ {
+  "id": "6ad67d759914af41be21de84",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6ad67d759914af41be21de7e",
+  "title": "📰 Happenings & Stories Template",
+  "slug": "detail_happenings-stories",
+  "createdOn": "2026-10-19T20:28:37.692Z",
+  "lastUpdated": "2026-11-26T15:47:39.761Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "{{wf {\"path\":\"name\",\"type\":\"PlainText\"\\} }} | The Guild Hotel",
+   "description": "{{wf {\"path\":\"excerpt\",\"type\":\"PlainText\"\\} }}"
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/happenings-stories",
+  "localeId": null
+ },
+ {
+  "id": "6ad67d75485ab8562b6e34e0",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6ad67d74485ab8562b6e34da",
+  "title": "🏷️ Post Categories Template",
+  "slug": "detail_post-categories",
+  "createdOn": "2026-10-19T20:28:37.207Z",
+  "lastUpdated": "2026-11-20T21:17:50.494Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "{{wf {\"path\":\"name\",\"type\":\"PlainText\"\\} }} | The Guild Hotel",
+   "description": "{{wf {\"path\":\"name\",\"type\":\"PlainText\"\\} }} stories and happenings from The Guild Hotel in downtown San Diego."
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/post-categories",
+  "localeId": null
+ },
+ {
+  "id": "6ad67d74943352af06e37850",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6ad67d74943352af06e37843",
+  "title": "🧑‍⚖️ Legal Corporates Template",
+  "slug": "detail_legal-corporate",
+  "createdOn": "2026-10-19T20:28:36.690Z",
+  "lastUpdated": "2026-11-26T15:47:28.568Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "{{wf {\"path\":\"name\",\"type\":\"PlainText\"\\} }} | The Guild Hotel",
+   "description": "{{wf {\"path\":\"hero-text\",\"type\":\"PlainText\"\\} }}"
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/legal-corporate",
+  "localeId": null
+ },
+ {
+  "id": "6ad67d7416e13e66c2b76107",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6ad67d7316e13e66c2b760d7",
+  "title": "🍴 Dinings Template",
+  "slug": "detail_dining",
+  "createdOn": "2026-10-19T20:28:36.066Z",
+  "lastUpdated": "2026-11-26T16:44:56.220Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "{{wf {\"path\":\"name\",\"type\":\"PlainText\"\\} }} | The Guild Hotel",
+   "description": "{{wf {\"path\":\"hero-intro\",\"type\":\"PlainText\"\\} }}"
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/dining",
+  "localeId": null
+ },
+ {
+  "id": "6ad66fdb02cc199b55b926ba",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Neighborhood",
+  "slug": "neighborhood",
+  "createdOn": "2026-10-19T19:30:35.644Z",
+  "lastUpdated": "2026-11-21T00:25:12.254Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Downtown San Diego Neighborhood Guide | The Guild Hotel",
+   "description": "Walk from The Guild Hotel to Seaport Village, the Gaslamp Quarter, Little Italy and the Museum of Contemporary Art, with Coronado Beach beyond downtown."
+  },
+  "openGraph": {
+   "title": "Downtown San Diego Neighborhood Guide | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Walk from The Guild Hotel to Seaport Village, the Gaslamp Quarter, Little Italy and the Museum of Contemporary Art, with Coronado Beach beyond downtown.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/neighborhood",
+  "localeId": null
+ },
+ {
+  "id": "6ad66fd96684c3e22ea4d417",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Meetings",
+  "slug": "meetings",
+  "createdOn": "2026-10-19T19:30:33.079Z",
+  "lastUpdated": "2026-11-26T16:57:08.722Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Meetings and Events in San Diego | The Guild Hotel",
+   "description": "Plan meetings, celebrations and events at The Guild Hotel in San Diego, with spaces including the Council Boardroom and Lobby Terrace. Request a proposal."
+  },
+  "openGraph": {
+   "title": "Meetings and Events in San Diego | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Plan meetings, celebrations and events at The Guild Hotel in San Diego, with spaces including the Council Boardroom and Lobby Terrace. Request a proposal.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/meetings",
+  "localeId": null
+ },
+ {
+  "id": "6ad66fd8e0b7968459e18f22",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Contact",
+  "slug": "contact",
+  "createdOn": "2026-10-19T19:30:32.749Z",
+  "lastUpdated": "2026-11-25T21:38:55.859Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Contact Us | The Guild Hotel",
+   "description": "Contact The Guild Hotel at 500 W. Broadway, San Diego. Call (619) 795-6000 or email us about reservations, groups, meetings, events and billing."
+  },
+  "openGraph": {
+   "title": "Contact Us | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Contact The Guild Hotel at 500 W. Broadway, San Diego. Call (619) 795-6000 or email us about reservations, groups, meetings, events and billing.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/contact",
+  "localeId": null
+ },
+ {
+  "id": "6ad66fd802cc199b55b924be",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Privacy Policy",
+  "slug": "privacy-policy",
+  "createdOn": "2026-10-19T19:30:32.384Z",
+  "lastUpdated": "2026-11-20T11:10:55.923Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Privacy Policy | The Guild Hotel",
+   "description": "How The Guild Hotel collects, uses and protects the personal information you share with us online and during your stay."
+  },
+  "openGraph": {
+   "title": "Privacy Policy | The Guild Hotel",
+   "titleCopied": true,
+   "description": "How The Guild Hotel collects, uses and protects the personal information you share with us online and during your stay.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/privacy-policy",
+  "localeId": null
+ },
+ {
+  "id": "6ad66fd7735773f253406791",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Wellness",
+  "slug": "wellness",
+  "createdOn": "2026-10-19T19:30:31.929Z",
+  "lastUpdated": "2026-11-26T15:46:55.610Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Wellness and Fitness | The Guild Hotel",
+   "description": "Wellness at The Guild Hotel in San Diego: in-room wellness, a fitness center, mindful dining and wellness events, from movement to deep rest."
+  },
+  "openGraph": {
+   "title": "Wellness and Fitness | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Wellness at The Guild Hotel in San Diego: in-room wellness, a fitness center, mindful dining and wellness events, from movement to deep rest.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/wellness",
+  "localeId": null
+ },
+ {
+  "id": "6ad66fd7ba96f2e53726a2eb",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Arts",
+  "slug": "arts",
+  "createdOn": "2026-10-19T19:30:31.192Z",
+  "lastUpdated": "2026-11-25T21:49:20.925Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Art Collection | The Guild Hotel",
+   "description": "Explore The Guild Collection of painting, photography and sculpture through a curator's eyes, featuring San Diego artists such as Eva Struble."
+  },
+  "openGraph": {
+   "title": "Art Collection | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Explore The Guild Collection of painting, photography and sculpture through a curator's eyes, featuring San Diego artists such as Eva Struble.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/arts",
+  "localeId": null
+ },
+ {
+  "id": "6ad66fd65794075272b95584",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Gallery",
+  "slug": "gallery",
+  "createdOn": "2026-10-19T19:30:30.384Z",
+  "lastUpdated": "2026-11-25T21:49:20.962Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Photo Gallery | The Guild Hotel",
+   "description": "Browse photos of The Guild Hotel in San Diego, from its design and spaces to the guests who bring them to life."
+  },
+  "openGraph": {
+   "title": "Photo Gallery | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Browse photos of The Guild Hotel in San Diego, from its design and spaces to the guests who bring them to life.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/gallery",
+  "localeId": null
+ },
+ {
+  "id": "6ad66fd5735773f253406642",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Press",
+  "slug": "press",
+  "createdOn": "2026-10-19T19:30:29.690Z",
+  "lastUpdated": "2026-11-26T15:53:16.366Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Press and Media | The Guild Hotel",
+   "description": "The Guild Hotel as featured in National Geographic, Forbes, Architectural Digest and more. For press enquiries, email press@theguildhotel.com."
+  },
+  "openGraph": {
+   "title": "Press and Media | The Guild Hotel",
+   "titleCopied": true,
+   "description": "The Guild Hotel as featured in National Geographic, Forbes, Architectural Digest and more. For press enquiries, email press@theguildhotel.com.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/press",
+  "localeId": null
+ },
+ {
+  "id": "6ad66fd5f8bf4846e809dc45",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Room Detail (static, superseded)",
+  "slug": "room-detail-static",
+  "createdOn": "2026-10-19T19:30:29.359Z",
+  "lastUpdated": "2026-11-20T22:47:58.923Z",
+  "archived": false,
+  "draft": true,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Deluxe King Suite | The Guild Hotel",
+   "description": "The Deluxe King Suite at The Guild Hotel in San Diego pairs historic character with modern comfort, Le Labo Santal 33 bath amenities and high speed wifi."
+  },
+  "openGraph": {
+   "title": "Deluxe King Suite | The Guild Hotel",
+   "titleCopied": true,
+   "description": "The Deluxe King Suite at The Guild Hotel in San Diego pairs historic character with modern comfort, Le Labo Santal 33 bath amenities and high speed wifi.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/room-detail-static",
+  "localeId": null
+ },
+ {
+  "id": "6ad66fd5f8bf4846e809dbee",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Rooms",
+  "slug": "rooms",
+  "createdOn": "2026-10-19T19:30:29.004Z",
+  "lastUpdated": "2026-11-26T15:39:41.711Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Rooms and Suites in Downtown San Diego | The Guild Hotel",
+   "description": "From intimate rooms to expansive loft suites, each space pairs The Guild's historic character with thoughtful design and modern comfort. Find your room."
+  },
+  "openGraph": {
+   "title": "Rooms and Suites in Downtown San Diego | The Guild Hotel",
+   "titleCopied": true,
+   "description": "From intimate rooms to expansive loft suites, each space pairs The Guild's historic character with thoughtful design and modern comfort. Find your room.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/rooms",
+  "localeId": null
+ },
+ {
+  "id": "6ad66fd44c7f57894534ada5",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Guidelines",
+  "slug": "guidelines",
+  "createdOn": "2026-10-19T19:30:28.553Z",
+  "lastUpdated": "2026-11-26T15:48:02.468Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Photo and Film Shoot Guidelines | The Guild Hotel",
+   "description": "Planning a professional photo or film shoot at The Guild Hotel? Read our process, the $500 location fee and how to request your shoot in San Diego."
+  },
+  "openGraph": {
+   "title": "Photo and Film Shoot Guidelines | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Planning a professional photo or film shoot at The Guild Hotel? Read our process, the $500 location fee and how to request your shoot in San Diego.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/guidelines",
+  "localeId": null
+ },
+ {
+  "id": "6ad66fd476d24ed37ac4c5cb",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Dining",
+  "slug": "dining",
+  "createdOn": "2026-10-19T19:30:28.177Z",
+  "lastUpdated": "2026-11-25T21:28:29.823Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Dining, Zuma and Cocktails in San Diego | The Guild Hotel",
+   "description": "California's first Zuma, classic cocktails at the Lobby Bar, poolside drinks, Garden Terrace and Solana Coffee. Dining at The Guild in downtown San Diego."
+  },
+  "openGraph": {
+   "title": "Dining, Zuma and Cocktails in San Diego | The Guild Hotel",
+   "titleCopied": true,
+   "description": "California's first Zuma, classic cocktails at the Lobby Bar, poolside drinks, Garden Terrace and Solana Coffee. Dining at The Guild in downtown San Diego.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/dining",
+  "localeId": null
+ },
+ {
+  "id": "6ad66fd276d24ed37ac4c52f",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "History",
+  "slug": "history",
+  "createdOn": "2026-10-19T19:30:26.946Z",
+  "lastUpdated": "2026-11-26T17:00:44.566Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Our History Since 1924 | The Guild Hotel",
+   "description": "Built in 1924 as the Army and Navy YMCA, this Italian Renaissance landmark at 500 W. Broadway has been the social heart of San Diego for a century."
+  },
+  "openGraph": {
+   "title": "Our History Since 1924 | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Built in 1924 as the Army and Navy YMCA, this Italian Renaissance landmark at 500 W. Broadway has been the social heart of San Diego for a century.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/history",
+  "localeId": null
+ },
+ {
+  "id": "6ad64060ae8eac6d7b7c4245",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Starter Components",
+  "slug": "starter-components",
+  "createdOn": "2026-10-13T21:03:04.329Z",
+  "lastUpdated": "2026-10-26T16:50:46.452Z",
+  "archived": false,
+  "draft": true,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Starter Components",
+   "description": "Used to help the AI Skill since the Webflow MCP doesn't have the tooling to create navbars or native form elements reliably. Sometimes struggles with FAQ/Accordions and Footers as well."
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/starter-components",
+  "localeId": null
+ },
+ {
+  "id": "6ad64060ae8eac6d7b7c4243",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "404",
+  "slug": "404",
+  "createdOn": "2021-06-24T03:39:57.294Z",
+  "lastUpdated": "2026-10-26T16:05:26.894Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Not Found",
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/404",
+  "localeId": null
+ },
+ {
+  "id": "6ad64060ae8eac6d7b7c4242",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Password",
+  "slug": "401",
+  "createdOn": "2021-06-24T03:21:30.834Z",
+  "lastUpdated": "2026-10-26T16:49:03.932Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Protected page",
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/401",
+  "localeId": null
+ },
+ {
+  "id": "6ad64060ae8eac6d7b7c4244",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Style Guide",
+  "slug": "style-guide",
+  "createdOn": "2021-06-24T03:14:04.452Z",
+  "lastUpdated": "2026-10-26T16:50:40.846Z",
+  "archived": false,
+  "draft": true,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Style Guide",
+   "description": "Relume Style Guide v3.0"
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/style-guide",
+  "localeId": null
+ },
+ {
+  "id": "6ad64060ae8eac6d7b7c4241",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Home",
+  "slug": null,
+  "createdOn": "2021-06-24T03:10:48.542Z",
+  "lastUpdated": "2026-11-26T16:44:56.222Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Historic Urban Resort in San Diego | The Guild Hotel",
+   "description": "A 1924 landmark reimagined as an urban resort in the heart of San Diego, with Zuma, a new pool and rooms and suites at 500 W. Broadway. Book your stay."
+  },
+  "openGraph": {
+   "title": "Historic Urban Resort in San Diego | The Guild Hotel",
+   "titleCopied": true,
+   "description": "A 1924 landmark reimagined as an urban resort in the heart of San Diego, with Zuma, a new pool and rooms and suites at 500 W. Broadway. Book your stay.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/",
+  "localeId": null
+ }
+]

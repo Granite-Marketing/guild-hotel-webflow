@@ -1,0 +1,147 @@
+{
+ "component": {
+  "id": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+  "name": "Hero Fullbleed Centered",
+  "description": "Shared page hero: full-bleed section, optional background image, logo, eyebrow, heading, text and chamfer button. Pick the look with the Variant prop. Content and visibility are props.",
+  "group": null
+ },
+ "nodes": [
+  {
+   "id": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfc",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "26d0e02c-5366-d771-0f5b-30fd9b89f5b3",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfe",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "1f04865b-02e3-a2e5-7f9a-8f6563d7bfa9",
+   "type": "Alt Text",
+   "label": "Background/Image Alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "75d42a84-dcfa-181f-f117-8fe20dea11d6",
+   "type": "Plain Text",
+   "label": "Background/Video Link",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "97c44009-a084-4f44-6102-e721f79d0785",
+   "type": "Plain Text",
+   "label": "Background/Video Link (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "b726e925-0c70-7ef8-38f4-bdd21f74036b",
+   "type": "Alt Text",
+   "label": "Logo/Logo Alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "ea4346d7-9eb6-7786-7b78-307824025840",
+   "type": "Plain Text",
+   "label": "Content/Eyebrow",
+   "text": {
+    "html": null,
+    "text": "Eyebrow text"
+   }
+  },
+  {
+   "propertyId": "c789159e-15bc-af82-a16d-23d3980bbb44",
+   "type": "Plain Text",
+   "label": "Content/Heading",
+   "text": {
+    "html": null,
+    "text": "press"
+   }
+  },
+  {
+   "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+   "type": "Plain Text",
+   "label": "Content/Text",
+   "text": {
+    "html": null,
+    "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non."
+   }
+  },
+  {
+   "propertyId": "2c401db1-96d5-7fbc-68c2-7ea0e151ac56",
+   "type": "Plain Text",
+   "label": "Content/Heading (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "86753272-8614-a075-f9e4-f37b9b151c1a",
+   "type": "Plain Text",
+   "label": "Content/Text (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "bd5db012-c4b0-6a4e-a0e1-41ffdf3e7bc2",
+   "type": "Plain Text",
+   "label": "Button/Button Text",
+   "text": {
+    "html": null,
+    "text": "book your stay"
+   }
+  },
+  {
+   "propertyId": "32288b4b-153b-10c9-5dd3-899cd39ec703",
+   "type": "Plain Text",
+   "label": "Button/Button Text (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "2ed09e14-1566-f905-edf9-168537ceca08",
+   "type": "Plain Text",
+   "label": "Button/Button Link (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  }
+ ]
+}

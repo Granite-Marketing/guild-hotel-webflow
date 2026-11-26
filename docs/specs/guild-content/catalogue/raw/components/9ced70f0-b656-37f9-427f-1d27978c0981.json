@@ -1,0 +1,48 @@
+{
+ "component": {
+  "id": "9ced70f0-b656-37f9-427f-1d27978c0981",
+  "name": "Corporate Services Card",
+  "description": "One card for the Cards slot of Corporate & Services: image, title, text.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "9ced70f0-b656-37f9-427f-1d27978c0983",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "f8a8e0cc-46de-4e94-bfa7-479ec4b54e80",
+   "type": "Alt Text",
+   "label": "Image Alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "50c41ceb-41ed-41f3-628c-42868f48543a",
+   "type": "Plain Text",
+   "label": "Title",
+   "text": {
+    "html": null,
+    "text": "san diego convention center"
+   }
+  },
+  {
+   "propertyId": "a0497df0-1856-c25b-6589-2709393cc613",
+   "type": "Plain Text",
+   "label": "Text",
+   "text": {
+    "html": null,
+    "text": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,"
+   }
+  }
+ ]
+}

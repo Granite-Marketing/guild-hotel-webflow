@@ -1,0 +1,30 @@
+{
+ "component": {
+  "id": "6a125807-1495-0489-0f51-f2b79a0014e3",
+  "name": "Split Image Slide",
+  "description": "One photo for the Slides slot of Split image text slider (History). Add as many as you like; the slider loops when there are 3 or more.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "92ec7dec-3542-6bb6-45a6-62f8f4a749af",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "f9536f32-8e13-f6d7-4bb4-273f04a487eb",
+   "type": "Alt Text",
+   "label": "Image Alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "component": {
+  "id": "bc4e93ef-32a2-4b37-1d8d-dd918cbef423",
+  "name": "Place Detail Modal",
+  "description": "Neighborhood place pop-up: centred heading, image, text, learn more button, night image and text. CMS-bound.",
+  "group": "Modals"
+ },
+ "nodes": [
+  {
+   "id": "bc4e93ef-32a2-4b37-1d8d-dd918cbef429",
+   "type": "html-embed",
+   "html": "<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M20 12H4M10 6l-6 6 6 6\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "bc4e93ef-32a2-4b37-1d8d-dd918cbef42d",
+   "type": "html-embed",
+   "html": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 3l18 18M21 3L3 21\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "bc4e93ef-32a2-4b37-1d8d-dd918cbef430",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bc4e93ef-32a2-4b37-1d8d-dd918cbef431",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bc4e93ef-32a2-4b37-1d8d-dd918cbef434",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": "6ad74da46b56ff1d7223e4d7"
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+   "type": "Plain Text",
+   "label": "Header/Heading",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+   "type": "Alt Text",
+   "label": "Media/Image alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+   "type": "Plain Text",
+   "label": "Body/Text",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "66c06093-dcad-41b3-24df-7a536e5e1d77",
+   "type": "Plain Text",
+   "label": "Body/Text (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "fa672abe-c6b3-2171-97c5-e047fcc748c1",
+   "type": "Plain Text",
+   "label": "Button/Button label",
+   "text": {
+    "html": null,
+    "text": "submit your request"
+   }
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "page": {
+  "id": "6ad64060ae8eac6d7b7c4242",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Password",
+  "slug": "401",
+  "createdOn": "2021-06-24T03:21:30.834Z",
+  "lastUpdated": "2026-10-26T16:49:03.932Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Protected page",
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/401",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "60d3fa3a5a19c1169cd58c4100000000000d",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_decorative"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "60d3fa3a5a19c1169cd58c4100000000000e",
+   "type": "text",
+   "text": {
+    "html": "<h3>Protected Page</h3>",
+    "text": "Protected Page"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "60d3fa3a5a19c1169cd58c41000000000012",
+   "type": "text-input",
+   "placeholder": "Enter your password",
+   "attributes": {}
+  },
+  {
+   "id": "60d3fa3a5a19c1169cd58c41000000000013",
+   "type": "submit-button",
+   "waitingText": "Please wait...",
+   "value": "Submit",
+   "attributes": {}
+  },
+  {
+   "id": "7456f22b-a2cb-3f70-53d8-7a481a7c7efc",
+   "type": "text",
+   "text": {
+    "html": "<div>Incorrect password. Please try again.</div>",
+    "text": "Incorrect password. Please try again."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "60d3fa3a5a19c1169cd58c41000000000017",
+   "type": "html-embed",
+   "html": "<input type=\"hidden\" name=\"path\" value=\"<%WF_FORM_VALUE_PATH%>\" /><input type=\"hidden\" name=\"page\" value=\"<%WF_FORM_VALUE_PAGE%>\" />",
+   "attributes": {}
+  },
+  {
+   "id": "60d3fa3a5a19c1169cd58c41000000000018",
+   "type": "html-embed",
+   "html": "<script type=\"application/javascript\">(function _handlePasswordPageOnload() {\n\t  if (/[?&]e=1(&|$)/.test(document.location.search)) {\n\t    document.querySelector('.w-password-page.w-form-fail').style.display = 'block';\n\t  }\n\t})()</script>",
+   "attributes": {}
+  }
+ ],
+ "lastUpdated": "2026-10-26T16:49:03.949Z"
+}

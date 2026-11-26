@@ -1,0 +1,34 @@
+{
+ "page": {
+  "id": "6b0044204488d60a1aa2756b",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b00441f4488d60a1aa27565",
+  "title": "🖼️ Media Template",
+  "slug": "detail_media",
+  "createdOn": "2026-11-20T12:59:12.109Z",
+  "lastUpdated": "2026-11-24T17:33:21.389Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/media",
+  "localeId": null
+ },
+ "nodes": [],
+ "lastUpdated": "2026-11-20T12:59:12.124Z"
+}
