@@ -207,6 +207,9 @@ const adoptNightImages = () => {
   })
 }
 
+/** P-F5: the pressed state from the cookie, run as soon as the bundle loads (the nav is already parsed) rather than in Webflow.push, about 1s later. */
+export const dayNightPressed = () => syncControls(readMode())
+
 export const dayNight = () => {
   adoptNightImages()
   let mode = readMode()
