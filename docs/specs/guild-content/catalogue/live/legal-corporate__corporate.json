@@ -1,0 +1,2033 @@
+{
+ "path": "/legal-corporate/corporate",
+ "kind": "cms-sample",
+ "pageId": "6ad67d74943352af06e37850",
+ "title": "🧑‍⚖️ Legal Corporates Template",
+ "templatePath": "/legal-corporate",
+ "itemsInSitemap": 0,
+ "url": "https://the-guild-hotel-c34e71.webflow.io/legal-corporate/corporate",
+ "file": "legal-corporate__corporate.json",
+ "httpStatus": 200,
+ "documentTitle": "Corporate | The Guild Hotel",
+ "metaDescription": "Meetings, offsites and team stays in the heart of downtown San Diego.",
+ "elements": [
+  {
+   "order": 0,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "stay",
+   "rawTextContent": "stay",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 1,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "dine",
+   "rawTextContent": "dine",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 2,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "wellness",
+   "rawTextContent": "wellness",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 3,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "happenings",
+   "rawTextContent": "happenings",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 4,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "our history",
+   "rawTextContent": "our history",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 5,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "meetings & events",
+   "rawTextContent": "meetings & events",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 6,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "neighborhood",
+   "rawTextContent": "neighborhood",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 7,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "art",
+   "rawTextContent": "art",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 8,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "gallery",
+   "rawTextContent": "gallery",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 9,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "blog",
+   "rawTextContent": "blog",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 10,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "packages",
+   "rawTextContent": "packages",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 11,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "contact",
+   "rawTextContent": "contact",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 12,
+   "tag": "h1",
+   "id": null,
+   "innerText": "retreat for corporate teams",
+   "textContent": "retreat for corporate teams",
+   "rawTextContent": "retreat for corporate teams",
+   "fontSize": "40px",
+   "textTransform": "lowercase",
+   "classes": [
+    "hero-fullbleed-centered_heading",
+    "heading-style-h2",
+    "w-variant-54ea4c9c-7c59-c93a-98e3-4eb98a1b7ff2"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_hero-fullbleed-centered",
+   "sectionClasses": [
+    "section_hero-fullbleed-centered",
+    "w-variant-54ea4c9c-7c59-c93a-98e3-4eb98a1b7ff2"
+   ],
+   "variantIds": [
+    "w-variant-54ea4c9c-7c59-c93a-98e3-4eb98a1b7ff2"
+   ],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 13,
+   "tag": "h2",
+   "id": null,
+   "innerText": "Refined focus, unmatched convenience.",
+   "textContent": "Refined focus, unmatched convenience.",
+   "rawTextContent": "Refined focus, unmatched convenience.",
+   "fontSize": "80px",
+   "textTransform": "none",
+   "classes": [
+    "script-intro-centered_heading",
+    "w-variant-53add6a3-3c55-e4ed-2f36-460edae2cb76",
+    "text-style-script",
+    "is-large"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_script-intro-centered",
+   "sectionClasses": [
+    "section_script-intro-centered"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 14,
+   "tag": "h2",
+   "id": null,
+   "innerText": "key features",
+   "textContent": "key features",
+   "rawTextContent": "key features",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "image-trio-text_heading",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_image-trio-text",
+   "sectionClasses": [
+    "section_image-trio-text",
+    "is-left"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 15,
+   "tag": "h3",
+   "id": null,
+   "innerText": "high-speed, encrypted wi-fi",
+   "textContent": "High-Speed, Encrypted Wi-Fi",
+   "rawTextContent": "High-Speed, Encrypted Wi-Fi",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "image-trio-text_item-heading"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_image-trio-text",
+   "sectionClasses": [
+    "section_image-trio-text",
+    "is-left"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 16,
+   "tag": "h3",
+   "id": null,
+   "innerText": "24/7 controlled security",
+   "textContent": "24/7 Controlled Security",
+   "rawTextContent": "24/7 Controlled Security",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "image-trio-text_item-heading"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_image-trio-text",
+   "sectionClasses": [
+    "section_image-trio-text",
+    "is-left"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 17,
+   "tag": "h3",
+   "id": null,
+   "innerText": "quiet, professional workspaces",
+   "textContent": "Quiet, Professional Workspaces",
+   "rawTextContent": "Quiet, Professional Workspaces",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "image-trio-text_item-heading"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_image-trio-text",
+   "sectionClasses": [
+    "section_image-trio-text",
+    "is-left"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 18,
+   "tag": "h2",
+   "id": null,
+   "innerText": "why teams choose the guild",
+   "textContent": "Why teams choose The Guild",
+   "rawTextContent": "Why teams choose The Guild",
+   "fontSize": "32px",
+   "textTransform": "lowercase",
+   "classes": [
+    "feature-grid-dark-eyebrow_heading"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_feature-grid-dark-eyebrow",
+   "sectionClasses": [
+    "section_feature-grid-dark-eyebrow"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 19,
+   "tag": "h2",
+   "id": null,
+   "innerText": "designed for focused work & productive teams",
+   "textContent": "Designed for Focused Work & Productive Teams",
+   "rawTextContent": "Designed for Focused Work & Productive Teams",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "split-sticky-text-stacked-images_heading"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_split-sticky-text-stacked-images",
+   "sectionClasses": [
+    "section_split-sticky-text-stacked-images"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 20,
+   "tag": "h3",
+   "id": null,
+   "innerText": "council boardroom",
+   "textContent": "council boardroom",
+   "rawTextContent": "council boardroom",
+   "fontSize": "80px",
+   "textTransform": "lowercase",
+   "classes": [
+    "heading-style-display"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_venue-card-fullbleed",
+   "sectionClasses": [
+    "section_venue-card-fullbleed"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 21,
+   "tag": "h3",
+   "id": null,
+   "innerText": "",
+   "textContent": "small conference center",
+   "rawTextContent": "small conference center",
+   "fontSize": "80px",
+   "textTransform": "lowercase",
+   "classes": [
+    "heading-style-display"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": "section_venue-card-fullbleed",
+   "sectionClasses": [
+    "section_venue-card-fullbleed"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 22,
+   "tag": "h3",
+   "id": null,
+   "innerText": "",
+   "textContent": "large conference center",
+   "rawTextContent": "large conference center",
+   "fontSize": "80px",
+   "textTransform": "lowercase",
+   "classes": [
+    "heading-style-display"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": "section_venue-card-fullbleed",
+   "sectionClasses": [
+    "section_venue-card-fullbleed"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 23,
+   "tag": "h3",
+   "id": null,
+   "innerText": "",
+   "textContent": "one columbia place",
+   "rawTextContent": "one columbia place",
+   "fontSize": "80px",
+   "textTransform": "lowercase",
+   "classes": [
+    "heading-style-display"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": "section_venue-card-fullbleed",
+   "sectionClasses": [
+    "section_venue-card-fullbleed"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 24,
+   "tag": "h2",
+   "id": null,
+   "innerText": "steps from key legal addresses",
+   "textContent": "Steps from key legal addresses",
+   "rawTextContent": "Steps from key legal addresses",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_map-feature",
+   "sectionClasses": [
+    "section_map-feature",
+    "is-image-bg"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 25,
+   "tag": "h2",
+   "id": null,
+   "innerText": "tailored corporate packages",
+   "textContent": "tailored corporate packages",
+   "rawTextContent": "tailored corporate packages",
+   "fontSize": "30px",
+   "textTransform": "none",
+   "classes": [
+    "image-trio-text_heading",
+    "heading-style-h3",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_image-trio-text",
+   "sectionClasses": [
+    "section_image-trio-text",
+    "is-left"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 26,
+   "tag": "h3",
+   "id": null,
+   "innerText": "executive floor buyout",
+   "textContent": "Executive Floor Buyout",
+   "rawTextContent": "Executive Floor Buyout",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "image-trio-text_item-heading"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_image-trio-text",
+   "sectionClasses": [
+    "section_image-trio-text",
+    "is-left"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 27,
+   "tag": "h3",
+   "id": null,
+   "innerText": "war room setup",
+   "textContent": "War Room Setup",
+   "rawTextContent": "War Room Setup",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "image-trio-text_item-heading"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_image-trio-text",
+   "sectionClasses": [
+    "section_image-trio-text",
+    "is-left"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 28,
+   "tag": "h3",
+   "id": null,
+   "innerText": "extended stay legal comfort package",
+   "textContent": "Extended Stay Legal Comfort Package",
+   "rawTextContent": "Extended Stay Legal Comfort Package",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "image-trio-text_item-heading"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_image-trio-text",
+   "sectionClasses": [
+    "section_image-trio-text",
+    "is-left"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 29,
+   "tag": "h2",
+   "id": null,
+   "innerText": "Request for Proposal",
+   "textContent": "Request for Proposal",
+   "rawTextContent": "Request for Proposal",
+   "fontSize": "60px",
+   "textTransform": "none",
+   "classes": [
+    "text-style-script",
+    "is-corporate"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_form-split-script-contact",
+   "sectionClasses": [
+    "section_form-split-script-contact"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 30,
+   "tag": "h3",
+   "id": "photoshoot-contact-heading",
+   "innerText": "contact information",
+   "textContent": "contact information",
+   "rawTextContent": "contact information",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "form-split-script-contact_fieldset-heading",
+    "heading-style-h4"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_form-split-script-contact",
+   "sectionClasses": [
+    "section_form-split-script-contact"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 31,
+   "tag": "h2",
+   "id": null,
+   "innerText": "corporate gallery",
+   "textContent": "corporate gallery",
+   "rawTextContent": "corporate gallery",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "gallery-mosaic-captioned_heading",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_gallery-mosaic-captioned",
+   "sectionClasses": [
+    "section_gallery-mosaic-captioned"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 32,
+   "tag": "h2",
+   "id": null,
+   "innerText": "save on 5+ nights",
+   "textContent": "save on 5+ nights",
+   "rawTextContent": "save on 5+ nights",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "offers-slider-split_heading",
+    "home-press-48"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_offers-slider-split",
+   "sectionClasses": [
+    "section_offers-slider-split",
+    "swiper_slider",
+    "home-press"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 33,
+   "tag": "h2",
+   "id": null,
+   "innerText": "wellness staycation",
+   "textContent": "wellness staycation",
+   "rawTextContent": "wellness staycation",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "offers-slider-split_heading",
+    "home-press-48"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_offers-slider-split",
+   "sectionClasses": [
+    "section_offers-slider-split",
+    "swiper_slider",
+    "home-press"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 34,
+   "tag": "h2",
+   "id": null,
+   "innerText": "save on 5+ nights",
+   "textContent": "save on 5+ nights",
+   "rawTextContent": "save on 5+ nights",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "offers-slider-split_heading",
+    "home-press-48"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_offers-slider-split",
+   "sectionClasses": [
+    "section_offers-slider-split",
+    "swiper_slider",
+    "home-press"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 35,
+   "tag": "h2",
+   "id": null,
+   "innerText": "wellness staycation",
+   "textContent": "wellness staycation",
+   "rawTextContent": "wellness staycation",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "offers-slider-split_heading",
+    "home-press-48"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_offers-slider-split",
+   "sectionClasses": [
+    "section_offers-slider-split",
+    "swiper_slider",
+    "home-press"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 36,
+   "tag": "h2",
+   "id": null,
+   "innerText": "save on 5+ nights",
+   "textContent": "save on 5+ nights",
+   "rawTextContent": "save on 5+ nights",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "offers-slider-split_heading",
+    "home-press-48"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_offers-slider-split",
+   "sectionClasses": [
+    "section_offers-slider-split",
+    "swiper_slider",
+    "home-press"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 37,
+   "tag": "h2",
+   "id": null,
+   "innerText": "your questions, answered",
+   "textContent": "your questions, answered",
+   "rawTextContent": "your questions, answered",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "heading-style-h2",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 38,
+   "tag": "div",
+   "id": null,
+   "innerText": "how many guests can stay in this room?",
+   "textContent": "How many guests can stay in this room?",
+   "rawTextContent": "How many guests can stay in this room?",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "accordion_question",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 39,
+   "tag": "div",
+   "id": null,
+   "innerText": "can i request a crib or an extra bed?",
+   "textContent": "Can I request a crib or an extra bed?",
+   "rawTextContent": "Can I request a crib or an extra bed?",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "accordion_question",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 40,
+   "tag": "div",
+   "id": null,
+   "innerText": "are connecting rooms available?",
+   "textContent": "Are connecting rooms available?",
+   "rawTextContent": "Are connecting rooms available?",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "accordion_question",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 41,
+   "tag": "div",
+   "id": null,
+   "innerText": "is an accessible version of this room available?",
+   "textContent": "Is an accessible version of this room available?",
+   "rawTextContent": "Is an accessible version of this room available?",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "accordion_question",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 42,
+   "tag": "div",
+   "id": null,
+   "innerText": "will my room look exactly like the photos?",
+   "textContent": "Will my room look exactly like the photos?",
+   "rawTextContent": "Will my room look exactly like the photos?",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "accordion_question",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 43,
+   "tag": "div",
+   "id": null,
+   "innerText": "what amenities are included with my stay?",
+   "textContent": "What amenities are included with my stay?",
+   "rawTextContent": "What amenities are included with my stay?",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "accordion_question",
+    "heading-style-h4",
+    "text-weight-normal"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_faq-accordion",
+   "sectionClasses": [
+    "section_faq-accordion"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 44,
+   "tag": "h2",
+   "id": null,
+   "innerText": "more of the guild",
+   "textContent": "more of the guild",
+   "rawTextContent": "more of the guild",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "card-carousel-header-left_heading"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_card-carousel-header-left",
+   "sectionClasses": [
+    "section_card-carousel-header-left",
+    "w-variant-69ec3688-574e-61b2-83e0-6c45e105cc09",
+    "swiper_slider"
+   ],
+   "variantIds": [
+    "w-variant-69ec3688-574e-61b2-83e0-6c45e105cc09"
+   ],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 45,
+   "tag": "h2",
+   "id": null,
+   "innerText": "Book your escape",
+   "textContent": "Book your escape",
+   "rawTextContent": "Book your escape",
+   "fontSize": "60px",
+   "textTransform": "none",
+   "classes": [
+    "text-style-script"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_cta-booking-newsletter",
+   "sectionClasses": [
+    "section_cta-booking-newsletter"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 46,
+   "tag": "h2",
+   "id": null,
+   "innerText": "Stay in the loop",
+   "textContent": "Stay in the loop",
+   "rawTextContent": "Stay in the loop",
+   "fontSize": "60px",
+   "textTransform": "none",
+   "classes": [
+    "text-style-script"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_cta-booking-newsletter",
+   "sectionClasses": [
+    "section_cta-booking-newsletter"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 47,
+   "tag": "h2",
+   "id": null,
+   "innerText": "the hotel",
+   "textContent": "the hotel",
+   "rawTextContent": "the hotel",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 48,
+   "tag": "h2",
+   "id": null,
+   "innerText": "experience",
+   "textContent": "experience",
+   "rawTextContent": "experience",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 49,
+   "tag": "h2",
+   "id": null,
+   "innerText": "dining",
+   "textContent": "dining",
+   "rawTextContent": "dining",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 50,
+   "tag": "h2",
+   "id": null,
+   "innerText": "social",
+   "textContent": "social",
+   "rawTextContent": "social",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 51,
+   "tag": "h2",
+   "id": null,
+   "innerText": "links",
+   "textContent": "links",
+   "rawTextContent": "links",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 52,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Solana Coffee",
+   "rawTextContent": "Solana Coffee",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 53,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Pool Lounge",
+   "rawTextContent": "Pool Lounge",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 54,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Lobby Bar",
+   "rawTextContent": "Lobby Bar",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 55,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Garden Terrace",
+   "rawTextContent": "Garden Terrace",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 56,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Zuma San Diego",
+   "rawTextContent": "Zuma San Diego",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 57,
+   "tag": "h2",
+   "id": "council-boardroom-title",
+   "innerText": "",
+   "textContent": "council boardroom",
+   "rawTextContent": "council boardroom",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 58,
+   "tag": "h3",
+   "id": null,
+   "innerText": "",
+   "textContent": "details",
+   "rawTextContent": "details",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "overlay-detail-panel-modal_subheading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 59,
+   "tag": "h3",
+   "id": null,
+   "innerText": "",
+   "textContent": "layout options",
+   "rawTextContent": "layout options",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "overlay-detail-panel-modal_subheading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 60,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "1510 SQ FT",
+   "rawTextContent": "1510 SQ FT",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 61,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "2Modern executive seating for 12",
+   "rawTextContent": "2Modern executive seating for 12",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 62,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "3Premium conference table with ultra connectivity",
+   "rawTextContent": "3Premium conference table with ultra connectivity",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 63,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "4Oversized, built-in hi-res TV",
+   "rawTextContent": "4Oversized, built-in hi-res TV",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 64,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "5Capacity: 50+",
+   "rawTextContent": "5Capacity: 50+",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 65,
+   "tag": "h2",
+   "id": "small-conference-center-title",
+   "innerText": "",
+   "textContent": "small conference center",
+   "rawTextContent": "small conference center",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 66,
+   "tag": "h3",
+   "id": null,
+   "innerText": "",
+   "textContent": "details",
+   "rawTextContent": "details",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "overlay-detail-panel-modal_subheading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 67,
+   "tag": "h3",
+   "id": null,
+   "innerText": "",
+   "textContent": "layout options",
+   "rawTextContent": "layout options",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "overlay-detail-panel-modal_subheading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 68,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "1510 SQ FT",
+   "rawTextContent": "1510 SQ FT",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 69,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "2Modern executive seating for 12",
+   "rawTextContent": "2Modern executive seating for 12",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 70,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "3Premium conference table with ultra connectivity",
+   "rawTextContent": "3Premium conference table with ultra connectivity",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 71,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "4Oversized, built-in hi-res TV",
+   "rawTextContent": "4Oversized, built-in hi-res TV",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 72,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "5Capacity: 50+",
+   "rawTextContent": "5Capacity: 50+",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 73,
+   "tag": "h2",
+   "id": "large-conference-center-title",
+   "innerText": "",
+   "textContent": "large conference center",
+   "rawTextContent": "large conference center",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 74,
+   "tag": "h3",
+   "id": null,
+   "innerText": "",
+   "textContent": "details",
+   "rawTextContent": "details",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "overlay-detail-panel-modal_subheading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 75,
+   "tag": "h3",
+   "id": null,
+   "innerText": "",
+   "textContent": "layout options",
+   "rawTextContent": "layout options",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "overlay-detail-panel-modal_subheading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 76,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "1510 SQ FT",
+   "rawTextContent": "1510 SQ FT",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 77,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "2Modern executive seating for 12",
+   "rawTextContent": "2Modern executive seating for 12",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 78,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "3Premium conference table with ultra connectivity",
+   "rawTextContent": "3Premium conference table with ultra connectivity",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 79,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "4Oversized, built-in hi-res TV",
+   "rawTextContent": "4Oversized, built-in hi-res TV",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 80,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "5Capacity: 50+",
+   "rawTextContent": "5Capacity: 50+",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 81,
+   "tag": "h2",
+   "id": "one-columbia-place-title",
+   "innerText": "",
+   "textContent": "one columbia place",
+   "rawTextContent": "one columbia place",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 82,
+   "tag": "h3",
+   "id": null,
+   "innerText": "",
+   "textContent": "details",
+   "rawTextContent": "details",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "overlay-detail-panel-modal_subheading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 83,
+   "tag": "h3",
+   "id": null,
+   "innerText": "",
+   "textContent": "layout options",
+   "rawTextContent": "layout options",
+   "fontSize": "24px",
+   "textTransform": "lowercase",
+   "classes": [
+    "overlay-detail-panel-modal_subheading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 84,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "1510 SQ FT",
+   "rawTextContent": "1510 SQ FT",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 85,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "2Modern executive seating for 12",
+   "rawTextContent": "2Modern executive seating for 12",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 86,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "3Premium conference table with ultra connectivity",
+   "rawTextContent": "3Premium conference table with ultra connectivity",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 87,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "4Oversized, built-in hi-res TV",
+   "rawTextContent": "4Oversized, built-in hi-res TV",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 88,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "5Capacity: 50+",
+   "rawTextContent": "5Capacity: 50+",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  }
+ ],
+ "status": "ok"
+}

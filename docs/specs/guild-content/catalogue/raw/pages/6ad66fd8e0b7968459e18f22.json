@@ -1,0 +1,374 @@
+{
+ "page": {
+  "id": "6ad66fd8e0b7968459e18f22",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Contact",
+  "slug": "contact",
+  "createdOn": "2026-10-19T19:30:32.749Z",
+  "lastUpdated": "2026-11-25T21:38:55.859Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Contact Us | The Guild Hotel",
+   "description": "Contact The Guild Hotel at 500 W. Broadway, San Diego. Call (619) 795-6000 or email us about reservations, groups, meetings, events and billing."
+  },
+  "openGraph": {
+   "title": "Contact Us | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Contact The Guild Hotel at 500 W. Broadway, San Diego. Call (619) 795-6000 or email us about reservations, groups, meetings, events and billing.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/contact",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "f8af5b15-3e32-d32e-4e44-da7da33e8afd",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "8b00fece-19fb-795d-638a-717f8a79e3cc",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "9b9f25b9-498c-bb3d-7f2b-eac0e03748aa",
+   "type": "component-instance",
+   "componentId": "dcfc7720-8c7b-8825-2cfe-e1f230373a34",
+   "propertyOverrides": []
+  },
+  {
+   "id": "07a35c59-be98-d419-110c-e66052bd7c2f",
+   "type": "text",
+   "text": {
+    "html": "<h3 id=\"contact-request-heading\" class=\"form-split-script-contact_fieldset-heading heading-style-h4\">your request</h3>",
+    "text": "your request"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "9eeac449-3cf8-acae-ce35-44e8915d4c1f",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"contact-first-name\" class=\"text-style-eyebrow-caps\">first name</label>",
+    "text": "first name"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "faeb922f-c605-7f9b-7f72-1f348747f594",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "first name"
+   }
+  },
+  {
+   "id": "0556e911-de6b-ec50-a272-63eb15b1d91d",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"contact-last-name\" class=\"text-style-eyebrow-caps\">last name</label>",
+    "text": "last name"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "74ae3fb9-36c0-5774-3379-ddcbabdac9a0",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "last name"
+   }
+  },
+  {
+   "id": "6e7ae517-a2dd-fbd1-663a-0339f057f31a",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"contact-email\" class=\"text-style-eyebrow-caps\">email address</label>",
+    "text": "email address"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "980da145-a6d0-70d2-1ea7-e7583a546fcb",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "email address"
+   }
+  },
+  {
+   "id": "c31991be-a37b-055f-cb6d-196ff2b646b2",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"contact-phone\" class=\"text-style-eyebrow-caps\">phone number</label>",
+    "text": "phone number"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "8143d380-250d-a6b2-face-42dd5dbf80cc",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "phone number"
+   }
+  },
+  {
+   "id": "aca3ee61-b4d9-27e1-a58f-aa1114b0d647",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"contact-organization\" class=\"text-style-eyebrow-caps\">organization</label>",
+    "text": "organization"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "e87b98ea-ff5f-00b6-50f7-6f5e75269c55",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "organization"
+   }
+  },
+  {
+   "id": "45be4b1b-8567-1314-694a-bea160b0d353",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"contact-assist\" class=\"text-style-eyebrow-caps\">how can we assist you?</label>",
+    "text": "how can we assist you?"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "946e8628-0011-d0f9-9735-8779e1cd3b22",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"contact-special-requirements\" class=\"text-style-eyebrow-caps\">special requirements</label>",
+    "text": "special requirements"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "26743cf5-8bbc-c0c6-0b58-f06ce9a6bdea",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "special requirements"
+   }
+  },
+  {
+   "id": "5eb5530c-2525-edf6-e26b-6ff884f6f883",
+   "type": "text",
+   "text": {
+    "html": "<label class=\"form-contact-fields_label text-style-caption\">i have read and accept the</label>",
+    "text": "i have read and accept the"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "0827754e-127c-c0cf-4b72-d4095f5947f3",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"form-contact-fields_link\" data-wf-link-page-id=\"6ad66fd802cc199b55b924be\">privacy policy</a>",
+    "text": "privacy policy"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "739b9642-e074-ad40-c4d2-d411ba6ba57d",
+   "type": "submit-button",
+   "waitingText": "sending...",
+   "value": "send your message",
+   "attributes": {}
+  },
+  {
+   "id": "739b9642-e074-ad40-c4d2-d411ba6ba57f",
+   "type": "text",
+   "text": {
+    "html": "<div>Thank you! Your submission has been received!</div>",
+    "text": "Thank you! Your submission has been received!"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "739b9642-e074-ad40-c4d2-d411ba6ba582",
+   "type": "text",
+   "text": {
+    "html": "<div>Oops! Something went wrong while submitting the form.</div>",
+    "text": "Oops! Something went wrong while submitting the form."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "1ceade4d-76fd-2175-5bc6-0d6534125317",
+   "type": "component-instance",
+   "componentId": "f5403de4-dabb-14c3-ecf8-c945d0a8e22e",
+   "propertyOverrides": []
+  },
+  {
+   "id": "510f918c-7f72-1e30-5c9a-c113afa231b0",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "rooms"
+     }
+    }
+   ]
+  },
+  {
+   "id": "d27ff458-4cd7-cbf5-e10e-f6ecb728b4a9",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "dining"
+     }
+    }
+   ]
+  },
+  {
+   "id": "efaa67cb-6958-4ad7-aae7-f962faa82842",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "wellness"
+     }
+    }
+   ]
+  },
+  {
+   "id": "8f053375-5470-3f75-6565-a80e9052f814",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "meetings & events"
+     }
+    }
+   ]
+  },
+  {
+   "id": "d2ba6793-5dfd-efea-6a31-a171b47e5de9",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "arts"
+     }
+    }
+   ]
+  },
+  {
+   "id": "323a7c79-9349-35b5-fff1-7c68e23f13e5",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "history"
+     }
+    }
+   ]
+  },
+  {
+   "id": "8032c797-8350-7a52-ce02-d8c4dc7b9dd4",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "76a8567f-8f92-1329-f6b6-4329d90d7b7d",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"cta-script-centered-dark_heading\">Can’t find what\nyou’re looking for?</h2>",
+    "text": "Can’t find what\nyou’re looking for?"
+   },
+   "attributes": {
+    "aria-label": "Can’t find what you’re looking for?",
+    "data-animation-order": "0"
+   }
+  },
+  {
+   "id": "acf02172-a958-c5ab-d8c1-32dfc3d8a813",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"text-size-medium\">Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.</p>",
+    "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non."
+   },
+   "attributes": {
+    "data-animation-order": "1"
+   }
+  },
+  {
+   "id": "237f07bc-a453-e766-4fa2-2410a37744aa",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer is-wide\" href=\"#faqs\">read our faqs</a>",
+    "text": "read our faqs"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "8213da0f-83fd-d50c-e2fa-2ed654d96843",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "3d81bc8e-a8fc-4d38-9800-6dc4ba289198",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "da3b4e68-a877-7966-e7e6-11e8fd7c40e1",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-25T21:38:55.932Z"
+}

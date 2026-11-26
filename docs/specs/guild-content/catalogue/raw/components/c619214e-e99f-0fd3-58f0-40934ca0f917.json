@@ -1,0 +1,75 @@
+{
+ "component": {
+  "id": "c619214e-e99f-0fd3-58f0-40934ca0f917",
+  "name": "Split Image Text Compact",
+  "description": "Text left, image right, tight spacing. Used on package and story pages.",
+  "group": null
+ },
+ "nodes": [
+  {
+   "id": "c619214e-e99f-0fd3-58f0-40934ca0f920",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "c619214e-e99f-0fd3-58f0-40934ca0f921",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "8cb8fc44-2bf1-ef44-01ba-38d1b52f5d6b",
+   "type": "Plain Text",
+   "label": "Content/Heading",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "3f50e93d-a968-f004-4199-cfd4d1bccba7",
+   "type": "Plain Text",
+   "label": "Content/Body",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "000e7667-74c5-858a-16c3-0d2698038cb0",
+   "type": "Plain Text",
+   "label": "Content/Heading (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "858c6171-3e04-be31-36e1-15b742ca1404",
+   "type": "Plain Text",
+   "label": "Content/Body (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "54038270-27b7-6232-ae84-437b289ac64d",
+   "type": "Plain Text",
+   "label": "Images/Video (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  }
+ ]
+}

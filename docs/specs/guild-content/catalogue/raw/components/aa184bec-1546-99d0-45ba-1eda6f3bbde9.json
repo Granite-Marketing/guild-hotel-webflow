@@ -1,0 +1,44 @@
+{
+ "component": {
+  "id": "aa184bec-1546-99d0-45ba-1eda6f3bbde9",
+  "name": "Corporate & Services",
+  "description": "Corporate & Services (Neighborhood): heading, a Cards slot of Corporate Services Card, caption and button.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "781fb58c-1086-0ed0-5ed9-eae2dea9c093",
+   "type": "html-embed",
+   "html": "<style data-corporate-slot>.neighborhood-corporate_list>div:not([class]){display:contents}</style>",
+   "attributes": {}
+  },
+  {
+   "id": "aa184bec-1546-99d0-45ba-1eda6f3bbded",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"neighborhood-corporate_heading\">corporate &amp; services</h2>",
+    "text": "corporate & services"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "aa184bec-1546-99d0-45ba-1eda6f3bbdf1",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"neighborhood-corporate_caption\">Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,</p>",
+    "text": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "aa184bec-1546-99d0-45ba-1eda6f3bbdf3",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer is-text-burgundy\" href=\"#\">corporate &amp; legal packages</a>",
+    "text": "corporate & legal packages"
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": []
+}

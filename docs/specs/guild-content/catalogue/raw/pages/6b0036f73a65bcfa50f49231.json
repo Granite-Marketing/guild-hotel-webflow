@@ -1,0 +1,34 @@
+{
+ "page": {
+  "id": "6b0036f73a65bcfa50f49231",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b0036f73a65bcfa50f491e9",
+  "title": "🏛️ Meeting Venues Template",
+  "slug": "detail_meeting-venues",
+  "createdOn": "2026-11-20T12:03:03.625Z",
+  "lastUpdated": "2026-11-24T17:34:24.990Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/meeting-venues",
+  "localeId": null
+ },
+ "nodes": [],
+ "lastUpdated": "2026-11-20T12:03:03.652Z"
+}

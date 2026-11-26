@@ -1,0 +1,396 @@
+{
+ "page": {
+  "id": "6ad66fd476d24ed37ac4c5cb",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Dining",
+  "slug": "dining",
+  "createdOn": "2026-10-19T19:30:28.177Z",
+  "lastUpdated": "2026-11-25T21:28:29.823Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Dining, Zuma and Cocktails in San Diego | The Guild Hotel",
+   "description": "California's first Zuma, classic cocktails at the Lobby Bar, poolside drinks, Garden Terrace and Solana Coffee. Dining at The Guild in downtown San Diego."
+  },
+  "openGraph": {
+   "title": "Dining, Zuma and Cocktails in San Diego | The Guild Hotel",
+   "titleCopied": true,
+   "description": "California's first Zuma, classic cocktails at the Lobby Bar, poolside drinks, Garden Terrace and Solana Coffee. Dining at The Guild in downtown San Diego.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/dining",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "e255fa70-22ee-606f-76ab-b1f20c55fb40",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "a6595130-907d-9afe-1e44-1b5080f2b678",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "29267093-71d0-9eb4-2aa9-bae9ed679930",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "1f04865b-02e3-a2e5-7f9a-8f6563d7bfa9",
+     "type": "Alt Text",
+     "label": "Background/Image Alt",
+     "text": {
+      "html": null,
+      "text": "Bartender mixing a drink behind a softly lit bar"
+     }
+    },
+    {
+     "propertyId": "c789159e-15bc-af82-a16d-23d3980bbb44",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "a taste of the guild"
+     }
+    },
+    {
+     "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "A world of invention, craft and sophisticated pleasures"
+     }
+    }
+   ]
+  },
+  {
+   "id": "0eb649ed-7511-a106-dee2-58bcdf31b6f0",
+   "type": "component-instance",
+   "componentId": "bdff66b3-92d9-e1e3-dbc0-86a28e384c9b",
+   "propertyOverrides": [
+    {
+     "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+     "type": "Plain Text",
+     "label": "Content/heading",
+     "text": {
+      "html": null,
+      "text": "First sips, small bites\n& big nights out."
+     }
+    },
+    {
+     "propertyId": "0df84d45-603f-3795-7593-9010ebf7c540",
+     "type": "Plain Text",
+     "label": "Content/paragraph",
+     "text": {
+      "html": null,
+      "text": "For visitors and locals, Guild dining is a journey, an invitation to to savor our worlds. The Lobby Bar knows its classics from its off-menu surprises. California’s first Zuma serves up the sushi and robata that have made it an international standard-setter from London to Miami, Vail to Abu Dhabi. Poolside, there’s always fresh, easy West Coast goodness, and the Mediterranean influences daytime offerings in The Courtyard."
+     }
+    }
+   ]
+  },
+  {
+   "id": "592398b2-3360-5868-9136-cf70a9db132e",
+   "type": "image",
+   "image": {
+    "alt": "Zuma sign cut into warm wooden slats at the restaurant entrance",
+    "assetId": "6ad6701fde86688556052e83"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "2cc4a01f-99cc-c845-c160-2de948eae78e",
+   "type": "image",
+   "image": {
+    "alt": "Zuma",
+    "assetId": "6ad74d2ed0e5a6a8fc1be09e"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bc47227e-9d74-450e-8c2c-4c793ea59808",
+   "type": "text",
+   "text": {
+    "html": "<p>Dress up for the rich, worldly sophistication of California’s first Zuma.</p>",
+    "text": "Dress up for the rich, worldly sophistication of California’s first Zuma."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d224b5a7-b903-787d-37c5-09c7a30adab5",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer\" href=\"#\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "8a6e6aad-fb22-55c3-3540-42fcbf945be8",
+   "type": "image",
+   "image": {
+    "alt": "Bartender mixing a drink behind a softly lit bar",
+    "assetId": "6ad66ffa6684c3e22ea4e2ca"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "0593f856-9153-8093-4b7e-49e286dd126b",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": ""
+   },
+   "attributes": {}
+  },
+  {
+   "id": "c70122e1-5d46-88fa-ca5b-6a78b34ab73d",
+   "type": "image",
+   "image": {
+    "alt": "The Lobby Bar",
+    "assetId": "6ad74d2f5fbf02cd56e2df7e"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "05dc32c1-a2ce-2fff-6838-2402047ae561",
+   "type": "text",
+   "text": {
+    "html": "<p>Cocktail classics and drinks for connaisseurs.</p>",
+    "text": "Cocktail classics and drinks for connaisseurs."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "efa4aaa7-e080-8eac-bce4-24647b664722",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer\" href=\"#\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "eef4dcca-393d-e07f-e925-2d48dec43187",
+   "type": "image",
+   "image": {
+    "alt": "Guest in the pool holding a cocktail at the pool lounge",
+    "assetId": "6ad67015134731ad1b928187"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "4a21160a-7e7d-b713-0fe1-1b9b2b4bab86",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": ""
+   },
+   "attributes": {}
+  },
+  {
+   "id": "5a9eec59-e3ca-f942-88b3-80dbba52933d",
+   "type": "image",
+   "image": {
+    "alt": "Pool Lounge",
+    "assetId": "6ad74d3052f189f238b78a70"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "2d3cbc0d-75b6-ba7a-f3c7-ed5e6cd6175c",
+   "type": "text",
+   "text": {
+    "html": "<p>Our new pool serves up San Diego’s bright sunshine, cool drinks and warm people.</p>",
+    "text": "Our new pool serves up San Diego’s bright sunshine, cool drinks and warm people."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d7165b43-5fdc-3369-3fed-b7faddf217f9",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer\" href=\"#\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "1a2d44f3-a9d1-0d2f-4a25-3e87e9db3b03",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": "6ad66fee735773f253407335"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "461421b1-5af2-2f96-d509-b6c3804e5adf",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": ""
+   },
+   "attributes": {}
+  },
+  {
+   "id": "175d81a3-ae5a-99e2-0ce9-2a963eb644d3",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"heading-style-display\">garden terrace</h3>",
+    "text": "garden terrace"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "5b80c65d-06a5-718d-b4eb-861a0da6c345",
+   "type": "text",
+   "text": {
+    "html": "<p>Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus.</p>",
+    "text": "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus."
+   },
+   "attributes": {
+    "data-night-text": "Candlelit evenings under the string lights, with small plates and late cocktails."
+   }
+  },
+  {
+   "id": "d16afb82-7d8f-2bb6-3dce-b5773549012c",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer\" href=\"#\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "deff8859-5d10-d6b5-8861-0b2dca7d994f",
+   "type": "image",
+   "image": {
+    "alt": "Milk poured into an iced coffee beside a Solana card",
+    "assetId": "6ad6701b6684c3e22ea4f00f"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d3977c13-0cc1-5740-d347-fe0a03d184f8",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"heading-style-display\">solana coffee</h3>",
+    "text": "solana coffee"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "036b27ad-44c0-a447-54b5-1a3ff617a51a",
+   "type": "text",
+   "text": {
+    "html": "<p>Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus.</p>",
+    "text": "Mediterranean inspiration meets the Pacific in fresh, healthy daytime menus."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ec96c66b-26a6-aced-1d12-e3db45001556",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer\" href=\"/dining/solana-coffee\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "10d13ed2-b29e-c510-61d2-a6580fb47515",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"venue-card-fullbleed_tab text-style-eyebrow-caps\" href=\"#\">Zuma</a>",
+    "text": "Zuma"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "9dc1ec8d-ae6e-411c-5a9c-948fdcfb92e8",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"venue-card-fullbleed_tab text-style-eyebrow-caps\" href=\"#\">the lobby bar</a>",
+    "text": "the lobby bar"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "5ee4982c-36ad-a256-7427-2cf1a855d09a",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"venue-card-fullbleed_tab text-style-eyebrow-caps\" href=\"#\">pool lounge</a>",
+    "text": "pool lounge"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "446d5d6c-0b7a-69c0-489c-9c94dfeb15c6",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"venue-card-fullbleed_tab text-style-eyebrow-caps\" href=\"#\">garden terrace</a>",
+    "text": "garden terrace"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "c8c1cc37-0203-021c-b071-7ff5dd027733",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"venue-card-fullbleed_tab text-style-eyebrow-caps\" href=\"#\">solana coffee</a>",
+    "text": "solana coffee"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "afb2623e-14c5-c312-4886-1066ab5e3f8f",
+   "type": "component-instance",
+   "componentId": "8e90ff20-1ed1-43a7-edce-89b7ea10c487",
+   "propertyOverrides": []
+  },
+  {
+   "id": "19cb47b7-d196-3ee8-2c56-8d8a7919c590",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "adab6a56-0bbc-1ae3-de5f-7f3da899e99d",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "b4f4584e-ce36-6850-ccce-971f8f8712e0",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "a18e0838-14a2-59b5-5838-34d47ad9b456",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "6aa9e796-749d-0ef7-71b0-25f2f6dfa6d0",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-25T21:28:29.996Z"
+}

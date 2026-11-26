@@ -1,0 +1,304 @@
+{
+ "page": {
+  "id": "6ad66fd65794075272b95584",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Gallery",
+  "slug": "gallery",
+  "createdOn": "2026-10-19T19:30:30.384Z",
+  "lastUpdated": "2026-11-25T21:49:20.962Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Photo Gallery | The Guild Hotel",
+   "description": "Browse photos of The Guild Hotel in San Diego, from its design and spaces to the guests who bring them to life."
+  },
+  "openGraph": {
+   "title": "Photo Gallery | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Browse photos of The Guild Hotel in San Diego, from its design and spaces to the guests who bring them to life.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/gallery",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "233baadc-6692-6bfb-7a8f-ab9c5987ab69",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "9725cafe-cca1-187e-42c6-574801b37402",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "2ade1380-0549-18f6-596b-a7824aa4ec80",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "c789159e-15bc-af82-a16d-23d3980bbb44",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "gallery"
+     }
+    },
+    {
+     "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non."
+     }
+    }
+   ]
+  },
+  {
+   "id": "545003a2-87d0-5e2b-4841-3c5694e8e5d3",
+   "type": "component-instance",
+   "componentId": "51c17234-82ff-8a78-73f9-94810497ec9a",
+   "propertyOverrides": []
+  },
+  {
+   "id": "22189d96-1fbc-b628-b302-344db6a922b1",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "7c2aed59-770f-d223-45a1-3475154461be",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "fcf66eb9-4b97-bc04-3a80-783bfba08897",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps is-active\" href=\"#\">all</a>",
+    "text": "all"
+   },
+   "attributes": {
+    "data-gallery-filter-tag": "all",
+    "role": "button",
+    "aria-pressed": "true"
+   }
+  },
+  {
+   "id": "4a292a0f-a278-2cba-af58-35d855453de9",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "5f164d13-4b66-efb7-0b33-5909ba98c86c",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#\">zoom out</a>",
+    "text": "zoom out"
+   },
+   "attributes": {
+    "data-gallery-canvas-zoom": "out",
+    "role": "button"
+   }
+  },
+  {
+   "id": "c55c9b93-08f4-f3a9-0ea7-80f2c5594ccb",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#\">zoom</a>",
+    "text": "zoom"
+   },
+   "attributes": {
+    "data-gallery-canvas-zoom": "reset",
+    "role": "button"
+   }
+  },
+  {
+   "id": "01537319-9fa3-d150-af0c-0d7b4ece18a0",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#\">zoom in</a>",
+    "text": "zoom in"
+   },
+   "attributes": {
+    "data-gallery-canvas-zoom": "in",
+    "role": "button"
+   }
+  },
+  {
+   "id": "b0610574-f8c1-39fc-360f-5f7de6c03b4b",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#\">exit</a>",
+    "text": "exit"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "8e24ce31-832a-3cb1-b800-6d695d05f489",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#\">tap to enter gallery</a>",
+    "text": "tap to enter gallery"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "33e9bc07-d270-ae6e-f47d-edabbc08e7f8",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "b25f0f77-8f68-ab47-c317-7bfe510fe70d",
+   "type": "component-instance",
+   "componentId": "f5403de4-dabb-14c3-ecf8-c945d0a8e22e",
+   "propertyOverrides": []
+  },
+  {
+   "id": "f747b541-2156-fd16-4a55-9c44c4581ba3",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "rooms"
+     }
+    }
+   ]
+  },
+  {
+   "id": "d1a763c7-def9-9794-47e4-5e8ab65f6ba1",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "dining"
+     }
+    }
+   ]
+  },
+  {
+   "id": "f680a1f1-1aa5-73cf-c41c-1a8343e63c01",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "wellness"
+     }
+    }
+   ]
+  },
+  {
+   "id": "5e2e0c2c-fcec-eea4-49ad-0a8a31ed7c41",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "meetings & events"
+     }
+    }
+   ]
+  },
+  {
+   "id": "e840bc81-b73e-24bc-7385-0163ea9806dd",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "arts"
+     }
+    }
+   ]
+  },
+  {
+   "id": "8a83f31a-ad17-c6c6-5fa2-5710919e6547",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "history"
+     }
+    }
+   ]
+  },
+  {
+   "id": "b1bdecbb-dcc8-4523-3264-a3c8ec50bbb4",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "721d43aa-beaa-c13c-9762-c551d5570350",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "d2d92095-2770-d2c1-a2d9-c3e88ba66803",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "d6698e38-7d2e-db34-5588-94d538c52fa1",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-25T21:49:21.102Z"
+}

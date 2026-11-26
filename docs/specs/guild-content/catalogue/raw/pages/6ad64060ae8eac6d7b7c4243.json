@@ -1,0 +1,76 @@
+{
+ "page": {
+  "id": "6ad64060ae8eac6d7b7c4243",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "404",
+  "slug": "404",
+  "createdOn": "2021-06-24T03:39:57.294Z",
+  "lastUpdated": "2026-10-26T16:05:26.894Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Not Found",
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/404",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "697dfef5-a5cf-1526-d22b-b80df7ef0436",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "60d3fe8d16a07670a7e520bf00000000000c",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_decorative"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "60d3fe8d16a07670a7e520bf00000000000d",
+   "type": "text",
+   "text": {
+    "html": "<h3>Page Not Found</h3>",
+    "text": "Page Not Found"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "a65a1401-941b-812d-6837-8fc27c9f4db5",
+   "type": "text",
+   "text": {
+    "html": "<div>The page you are looking for doesn't exist or has been moved</div>",
+    "text": "The page you are looking for doesn't exist or has been moved"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f7e51fb9-2444-74ed-f2a4-3e5338dc3f4d",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button\" data-wf-link-page-id=\"6ad64060ae8eac6d7b7c4241\">Go Home</a>",
+    "text": "Go Home"
+   },
+   "attributes": {}
+  }
+ ],
+ "lastUpdated": "2026-10-26T16:05:26.912Z"
+}

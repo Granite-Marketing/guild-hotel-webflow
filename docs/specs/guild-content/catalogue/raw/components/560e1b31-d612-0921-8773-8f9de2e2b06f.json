@@ -1,0 +1,27 @@
+{
+ "component": {
+  "id": "560e1b31-d612-0921-8773-8f9de2e2b06f",
+  "name": "Gallery Mosaic Captioned",
+  "description": "Full-bleed gallery mosaic with a heading and an Items slot of Gallery Mosaic Item tiles.",
+  "group": null
+ },
+ "nodes": [
+  {
+   "id": "e602e6ad-1169-42cf-d45b-2974a502394f",
+   "type": "html-embed",
+   "html": "<style data-gallery-mosaic-layout>.gallery-mosaic-captioned_grid>div:not([class]),.gallery-mosaic-captioned_grid .w-dyn-list,.gallery-mosaic-captioned_grid .w-dyn-items,.gallery-mosaic-captioned_grid .w-dyn-item{display:contents}.gallery-mosaic-captioned_grid{counter-reset:gallery-item}.gallery-mosaic-captioned_grid .gallery-mosaic-captioned_figure{counter-increment:gallery-item}.gallery-mosaic-captioned_grid .gallery-mosaic-captioned_caption-index:empty::before{content:counter(gallery-item)}.gallery-mosaic-captioned_grid .gallery-mosaic-captioned_figure:last-child:nth-child(odd){aspect-ratio:1600/995;grid-column:span 2/span 2}.gallery-mosaic-captioned_grid .w-dyn-item>.gallery-mosaic-captioned_figure:nth-child(n){aspect-ratio:8/9;grid-column:auto}.gallery-mosaic-captioned_grid .w-dyn-item:last-child:nth-child(odd)>.gallery-mosaic-captioned_figure:nth-child(n){aspect-ratio:1600/995;grid-column:span 2/span 2}@media (max-width:767px){.gallery-mosaic-captioned_grid .gallery-mosaic-captioned_figure:last-child:nth-child(odd){aspect-ratio:13/16;grid-column:span 1/span 1}.gallery-mosaic-captioned_grid .w-dyn-item>.gallery-mosaic-captioned_figure:nth-child(n),.gallery-mosaic-captioned_grid .w-dyn-item:last-child:nth-child(odd)>.gallery-mosaic-captioned_figure:nth-child(n){aspect-ratio:13/16;grid-column:span 1/span 1;min-height:0}.gallery-mosaic-captioned_grid .w-dyn-item:first-child>.gallery-mosaic-captioned_figure:nth-child(n){min-height:156.9vw;aspect-ratio:auto}}</style>",
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "3aab8783-f8f3-e498-0599-7ddbcbf5d1e9",
+   "type": "Plain Text",
+   "label": "Header/Heading",
+   "text": {
+    "html": null,
+    "text": "MEETINGS & EVENTS gallery"
+   }
+  }
+ ]
+}

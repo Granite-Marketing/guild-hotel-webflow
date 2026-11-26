@@ -1,0 +1,20 @@
+{
+ "component": {
+  "id": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+  "name": "Key Features Item",
+  "description": "One bullet for the Features slot of Key Features Card.",
+  "group": "Sections"
+ },
+ "nodes": [],
+ "properties": [
+  {
+   "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+   "type": "Plain Text",
+   "label": "Text",
+   "text": {
+    "html": null,
+    "text": "Feature"
+   }
+  }
+ ]
+}

@@ -1,0 +1,328 @@
+{
+ "component": {
+  "id": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+  "name": "Footer Links",
+  "description": "Shared site footer: five link columns (the dining venues come from the CMS), copyright, Tribute Portfolio logo and studio credit over a background image. No props; all instances identical.",
+  "group": null
+ },
+ "nodes": [
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792ed75",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": "6ad66fef6684c3e22ea4dc76"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792ed7c",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"footer-links_column-heading text-style-eyebrow-caps\">the hotel</h2>",
+    "text": "the hotel"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792ed83",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6ad66fd5f8bf4846e809dbee\">rooms</a>",
+    "text": "rooms"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792ed86",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6ad66fd276d24ed37ac4c52f\">history</a>",
+    "text": "history"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792ed89",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" href=\"#\">amenities</a>",
+    "text": "amenities"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792ed8c",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" href=\"#\">services</a>",
+    "text": "services"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792ed8f",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" href=\"#\">corporate</a>",
+    "text": "corporate"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792ed92",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6ad66fd65794075272b95584\">gallery</a>",
+    "text": "gallery"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792ed95",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6ad66fd5735773f253406642\">press</a>",
+    "text": "press"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d8698602-9f97-6754-20d7-9272d3390bcd",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6adf856512eff9c0216feca8\">blog</a>",
+    "text": "blog"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792ed98",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6ad66fd8e0b7968459e18f22\">contact</a>",
+    "text": "contact"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792ed9c",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"footer-links_column-heading text-style-eyebrow-caps\">experience</h2>",
+    "text": "experience"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792eda3",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6ad66fd7735773f253406791\">wellness</a>",
+    "text": "wellness"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792eda6",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6ad66fd476d24ed37ac4c5cb\">dining</a>",
+    "text": "dining"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792eda9",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6ad66fdb02cc199b55b926ba\">neighborhood</a>",
+    "text": "neighborhood"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edac",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6ad66fd96684c3e22ea4d417\">meetings &amp; events</a>",
+    "text": "meetings & events"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "c6843ab0-4191-cf48-4d0d-b7db79fde223",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6adf8565c9208d434c321a85\">happenings</a>",
+    "text": "happenings"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edaf",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" href=\"#\">services</a>",
+    "text": "services"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edb2",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" href=\"#\">resortpass</a>",
+    "text": "resortpass"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edb5",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6afc5759981249dd386c4008\">packages</a>",
+    "text": "packages"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edb9",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"footer-links_column-heading text-style-eyebrow-caps\">dining</h2>",
+    "text": "dining"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "6d849dd0-bd96-3cdd-c3ba-77644e482bfc",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edc6",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" href=\"#\">the lobby terrace</a>",
+    "text": "the lobby terrace"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edcc",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" href=\"#\">in-room dining</a>",
+    "text": "in-room dining"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edd0",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"footer-links_column-heading text-style-eyebrow-caps\">social</h2>",
+    "text": "social"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edd7",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" href=\"#\">instagram</a>",
+    "text": "instagram"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edda",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" href=\"#\">facebook</a>",
+    "text": "facebook"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792eddd",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" href=\"#\">tiktok</a>",
+    "text": "tiktok"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792ede1",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"footer-links_column-heading text-style-eyebrow-caps\">links</h2>",
+    "text": "links"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792ede8",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6ad66fd802cc199b55b924be\">privacy policy</a>",
+    "text": "privacy policy"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edeb",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6ad85678cff550a80a3287b0\">accessibility</a>",
+    "text": "accessibility"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edee",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"footer-links_link text-style-caption-tracked\" data-wf-link-page-id=\"6ad66fd44c7f57894534ada5\">photoshoot guidelines</a>",
+    "text": "photoshoot guidelines"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edf2",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"footer-links_text text-style-caption\">copyright © <div data-w-id=\"14efd120-8e4c-efe3-75b9-396e4792edf4\">2026</div><div data-w-id=\"14efd120-8e4c-efe3-75b9-396e4792edf6\"> the guild hotel</div></p>",
+    "text": "copyright © 2026 the guild hotel"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edf9",
+   "type": "image",
+   "image": {
+    "alt": "Tribute Portfolio",
+    "assetId": "6ad744312406f6ae5126bc5f"
+   },
+   "attributes": {
+    "data-eager": "true"
+   }
+  },
+  {
+   "id": "14efd120-8e4c-efe3-75b9-396e4792edfb",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"footer-links_text text-style-caption\">brand &amp; website by <a class=\"footer-links_credit-link\" href=\"#\" data-w-id=\"14efd120-8e4c-efe3-75b9-396e4792edfd\">Studio circa</a></p>",
+    "text": "brand & website by Studio circa"
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": []
+}

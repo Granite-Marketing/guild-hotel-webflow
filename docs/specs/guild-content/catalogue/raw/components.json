@@ -1,0 +1,338 @@
+[
+ {
+  "id": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+  "name": "Global Styles",
+  "description": null,
+  "group": null
+ },
+ {
+  "id": "916e4ffc-007b-3572-a686-946c6645b2e8",
+  "name": "CTA Booking Newsletter",
+  "description": "Shared band above the footer: book now and newsletter sign-up with Bonvoy caption. No props; all instances identical.",
+  "group": null
+ },
+ {
+  "id": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+  "name": "Hero Fullbleed Centered",
+  "description": "Shared page hero: full-bleed section, optional background image, logo, eyebrow, heading, text and chamfer button. Pick the look with the Variant prop. Content and visibility are props.",
+  "group": null
+ },
+ {
+  "id": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+  "name": "Footer Links",
+  "description": "Shared site footer: five link columns (the dining venues come from the CMS), copyright, Tribute Portfolio logo and studio credit over a background image. No props; all instances identical.",
+  "group": null
+ },
+ {
+  "id": "560e1b31-d612-0921-8773-8f9de2e2b06f",
+  "name": "Gallery Mosaic Captioned",
+  "description": "Full-bleed gallery mosaic with a heading and an Items slot of Gallery Mosaic Item tiles.",
+  "group": null
+ },
+ {
+  "id": "8e90ff20-1ed1-43a7-edce-89b7ea10c487",
+  "name": "Map Feature",
+  "description": "Script heading tilted over a hand-drawn map, text and outline button. Set Image on each instance. Map Feature Image Bg and Map Feature Centered are separate components.",
+  "group": null
+ },
+ {
+  "id": "663131a8-3362-867e-25ef-28b6d3d209a2",
+  "name": "Split image text light",
+  "description": "Split image text section: image on one side, heading, text and optional button on the other. Pick the look with the Variant prop. Second image, Caption, Header and Footer can be shown or hidden. Compact, Edge, Stagger and Wide layouts are separate components.",
+  "group": null
+ },
+ {
+  "id": "eae1d08c-c012-be1b-bafe-4ca88d995c14",
+  "name": "Image Trio Text",
+  "description": "Full-bleed trio of portrait images with centred heading, paragraph and button. The card layouts are separate components: Image Trio Text Left and Image Trio Text Left Offset.",
+  "group": "Image Trio Text"
+ },
+ {
+  "id": "bdff66b3-92d9-e1e3-dbc0-86a28e384c9b",
+  "name": "script-intro-centered",
+  "description": "Centered script-heading intro. Pick the look with the Variant prop. Content and Show image, Show paragraph, Show back link are props.",
+  "group": "Sections"
+ },
+ {
+  "id": "3eeb97fa-6550-7845-31ee-e997e4b8f2f1",
+  "name": "image-inset-single",
+  "description": "Inset image on a cream section. Props: Variant (Base, Small), image, image alt. Small narrows the image for posts.",
+  "group": "Sections"
+ },
+ {
+  "id": "144b7315-3604-2419-b046-c09d180f1163",
+  "name": "timeline-scatter-images",
+  "description": "Centred heading over a scattered list of images with captions. Items slot: add one Scatter Image Item per image.",
+  "group": "Sections"
+ },
+ {
+  "id": "30192280-e01e-6f0a-638c-42d4686bee29",
+  "name": "tab-pills-intro",
+  "description": "Script heading, paragraph and a burgundy tab pill. Tabs slot: put a Collection List of categories in it. Pick the look with the Variant prop.",
+  "group": "Sections"
+ },
+ {
+  "id": "f8269db7-7b82-27f1-dd64-8dd069d633f6",
+  "name": "Venue Card Fullbleed Tall",
+  "description": "Edge-to-edge venue card, about square: large heading, text and outline button. Optional logo, night image, video and text.",
+  "group": "Venue Card Fullbleed"
+ },
+ {
+  "id": "100e1eab-d304-3568-6d93-6fa936f8c0af",
+  "name": "Venue Card Fullbleed Left",
+  "description": "Edge-to-edge 16:9 card (Home): content bottom left, button on the right, and three fixed tabs. The props set the first tab only.",
+  "group": "Venue Card Fullbleed"
+ },
+ {
+  "id": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+  "name": "Site Nav",
+  "description": "Shared navbar and full-screen menu with the day and night buttons. Base is light text over a hero; Dark is for light pages.",
+  "group": "Global"
+ },
+ {
+  "id": "5d830b69-6507-7d04-4828-069b2539cffb",
+  "name": "Map Feature Image Bg",
+  "description": "Map fills the section with a tan card bottom left: heading, text and the Map Places list from the CMS. Set Image on each instance.",
+  "group": null
+ },
+ {
+  "id": "d6e2f6bc-b2b0-8951-1f0a-59832380519b",
+  "name": "Map Feature Centered",
+  "description": "Centred heading and text with a wide illustration below. Set Image on each instance.",
+  "group": null
+ },
+ {
+  "id": "46897c76-730a-1978-c362-54be3e026510",
+  "name": "Image Trio Text Left",
+  "description": "Heading on top with three contained cards: image, eyebrow title and rich text.",
+  "group": "Image Trio Text"
+ },
+ {
+  "id": "f6f42b26-759f-d2b6-03de-516393880a37",
+  "name": "Image Trio Text Left Offset",
+  "description": "Image Trio Text Left with staggered cards: the first and third sit lower on desktop and tablet.",
+  "group": "Image Trio Text"
+ },
+ {
+  "id": "658f6b02-60da-4e60-799a-540b8a036180",
+  "name": "Article Card Staggered Tall",
+  "description": "Two columns: heading and intro left, square cards right. Cards slot: add one Article Card Tall Item per card.",
+  "group": "Shared"
+ },
+ {
+  "id": "f5403de4-dabb-14c3-ecf8-c945d0a8e22e",
+  "name": "Card Carousel Header Left",
+  "description": "Cream card carousel: heading, text and arrows left, staggered link cards right. Cards slot: add one Card Carousel Card per card or a Collection List. Pick the look with the Variant prop.",
+  "group": "Sliders"
+ },
+ {
+  "id": "44cccc51-37cb-2526-e426-133987071983",
+  "name": "Overlay Detail Panel Modal",
+  "description": "Pop-up dialog with image, details and up to five items. Pick the look with the Variant prop. Used only by the old Arts pop-ups.",
+  "group": "Modals"
+ },
+ {
+  "id": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+  "name": "Booking Menu",
+  "description": "Book Now panel (dialog id book) and the Reserve a table venue list (dialog id book-table). Place once per page after the footer; every #book link opens it.",
+  "group": "Modals"
+ },
+ {
+  "id": "4e402659-32e2-fddb-7dd9-6c1d17f58318",
+  "name": "Art Detail Modal",
+  "description": "Arts page CMS dialog. Copy of Overlay Detail Panel Modal without the venues Collection List, so it can sit inside the art Collection Lists.",
+  "group": "Modals"
+ },
+ {
+  "id": "51c17234-82ff-8a78-73f9-94810497ec9a",
+  "name": "Gallery Canvas Styles",
+  "description": "Gallery canvas layout CSS for /gallery and /arts. Source: docs/reference/site-head/gallery-canvas.css (paste minified).",
+  "group": "Embeds"
+ },
+ {
+  "id": "7078c6ea-16c9-d700-35be-37d4efe7f1ef",
+  "name": "Legal Rich Text Styles",
+  "description": "Rich text child styles (headings, spacing, lists) for legal pages on the static-template layout. Source: docs/reference/site-head/legal-rich-text.css (paste minified). Place first in main on every legal page.",
+  "group": "Embeds"
+ },
+ {
+  "id": "95fd2679-0bdb-80ea-f808-0a8a4bdc261d",
+  "name": "Split image text slider",
+  "description": "Split image text with an image slider (History). Add one Split Image Slide per photo in the Slides slot; any number.",
+  "group": null
+ },
+ {
+  "id": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+  "name": "Card Carousel Card",
+  "description": "One card for the Cards slot of Card Carousel Header Left (More of the Guild): image, label, page link. Heights stagger automatically by position.",
+  "group": "Sliders"
+ },
+ {
+  "id": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+  "name": "Gallery Mosaic Item",
+  "description": "One tile for the Items slot of Gallery Mosaic Captioned: image (or video), alt, caption. Photos sit in pairs, half width; a last photo with no partner goes full width. Numbers count automatically.",
+  "group": "Sections"
+ },
+ {
+  "id": "5d1646a5-9b19-12e7-99a1-ccf03bc50f6d",
+  "name": "Scatter Image Item",
+  "description": "One item for the Items slot of timeline-scatter-images: image, alt, caption. Size and position follow the item's place in the list (small, large right, xsmall inset, medium centre, repeating).",
+  "group": "Sections"
+ },
+ {
+  "id": "e1b3f20f-32ae-6a0e-152e-8f6755746b38",
+  "name": "Article Card Tall Item",
+  "description": "One card for the Cards slot of Article Card Staggered Tall: image, heading, text.",
+  "group": "Shared"
+ },
+ {
+  "id": "9ced70f0-b656-37f9-427f-1d27978c0981",
+  "name": "Corporate Services Card",
+  "description": "One card for the Cards slot of Corporate & Services: image, title, text.",
+  "group": "Sections"
+ },
+ {
+  "id": "aa184bec-1546-99d0-45ba-1eda6f3bbde9",
+  "name": "Corporate & Services",
+  "description": "Corporate & Services (Neighborhood): heading, a Cards slot of Corporate Services Card, caption and button.",
+  "group": "Sections"
+ },
+ {
+  "id": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+  "name": "Key Features Item",
+  "description": "One bullet for the Features slot of Key Features Card.",
+  "group": "Sections"
+ },
+ {
+  "id": "2e6a3d5b-7f61-0a65-4e52-0a425c1672db",
+  "name": "Key Features Card",
+  "description": "One card for the Cards slot of Key Features: image, heading and a Features slot of Key Features Item.",
+  "group": "Sections"
+ },
+ {
+  "id": "f8d2c379-fdf7-4264-4080-6fae138c9250",
+  "name": "Key Features",
+  "description": "Key Features of Our Spaces (Meetings): heading, text, button and a Cards slot of Key Features Card.",
+  "group": "Sections"
+ },
+ {
+  "id": "77695709-bc70-2a66-8f8d-f8a27baaa513",
+  "name": "Room Template Styles",
+  "description": "Numbered room detail rows (rich text) and amenities grid dividers for the CMS lists on the Room template.",
+  "group": "Styles"
+ },
+ {
+  "id": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+  "name": "FAQ Accordion",
+  "description": "FAQ section listing every FAQ from the CMS by sort order.",
+  "group": "Sections"
+ },
+ {
+  "id": "d5df6734-af17-07ac-88ae-84551d59f46c",
+  "name": "Offers Slider",
+  "description": null,
+  "group": "Sliders"
+ },
+ {
+  "id": "dbfd6149-bf61-5a13-e51a-6f1aa2bdc675",
+  "name": "Retail Slider",
+  "description": null,
+  "group": "Sliders"
+ },
+ {
+  "id": "540a49c8-c2a2-78be-5b58-c69779ecc6e7",
+  "name": "Arts & Culture Slider",
+  "description": null,
+  "group": "Sliders"
+ },
+ {
+  "id": "82aba62a-5075-5840-0ddc-ad171238ba74",
+  "name": "Split Image Text Edge",
+  "description": "Image at the left edge, text bottom right, optional second image. Used on room pages.",
+  "group": null
+ },
+ {
+  "id": "cf4debe5-17ee-5d74-1d63-85f7a7d28e2d",
+  "name": "Split Image Text Edge Large",
+  "description": "Edge layout with a larger heading and a bigger mobile image, optional second image. Used on Arts.",
+  "group": null
+ },
+ {
+  "id": "a48dd3f0-bfb7-118f-393d-35b9b7172598",
+  "name": "Split Image Text Wide",
+  "description": "Large square image left, text right, optional second image. Used on Neighborhood.",
+  "group": null
+ },
+ {
+  "id": "3aa55379-f563-3fcc-0ac1-238e5e97daea",
+  "name": "Split Image Text Stagger Left",
+  "description": "Wide image right, text below it on the left. Used on dining pages.",
+  "group": null
+ },
+ {
+  "id": "58a0955b-a9bf-26d0-20b4-0b05cd68cb38",
+  "name": "Split Image Text Stagger Mid",
+  "description": "Wide image right, text below it in the middle. Used on Neighborhood.",
+  "group": null
+ },
+ {
+  "id": "c619214e-e99f-0fd3-58f0-40934ca0f917",
+  "name": "Split Image Text Compact",
+  "description": "Text left, image right, tight spacing. Used on package and story pages.",
+  "group": null
+ },
+ {
+  "id": "ae6ed4a3-2655-8c61-7d36-a87b4dd8d607",
+  "name": "Form Photoshoot Request",
+  "description": "Guidelines photoshoot request: script heading and the photoshoot form.",
+  "group": "Sections"
+ },
+ {
+  "id": "07b1c49f-a979-a3d8-a93a-820f2f02b379",
+  "name": "Form Request for Proposal",
+  "description": "Meetings request for proposal: tall section with the event form.",
+  "group": "Sections"
+ },
+ {
+  "id": "ac4f1278-12f1-0748-8e90-ad316983a2a1",
+  "name": "Form Legal Corporate Proposal",
+  "description": "Legal and corporate pages: proposal form with contact details.",
+  "group": "Sections"
+ },
+ {
+  "id": "06c49a08-f7ed-6064-538f-ea093f14b321",
+  "name": "Form Press Enquiries",
+  "description": "Press page: intro, press email and the press form.",
+  "group": "Sections"
+ },
+ {
+  "id": "dcfc7720-8c7b-8825-2cfe-e1f230373a34",
+  "name": "Contact Details Map",
+  "description": "Contact page: heading, contact details, social links and the map.",
+  "group": "Sections"
+ },
+ {
+  "id": "2fbda863-9fc6-56a5-3f2d-8bb94ef82de3",
+  "name": "Booking Menu Panel",
+  "description": "The Book menu dialog (id book): image and four booking links. Lives inside Booking Menu.",
+  "group": "Modals"
+ },
+ {
+  "id": "bf7623e5-058f-ec80-12e2-20bb187eaf9c",
+  "name": "Venue Detail Modal",
+  "description": "Meeting venue pop-up (Meetings, Legal and Corporate): image, details, layout options, floorplan link, five features and the request button. CMS-bound.",
+  "group": "Modals"
+ },
+ {
+  "id": "bc4e93ef-32a2-4b37-1d8d-dd918cbef423",
+  "name": "Place Detail Modal",
+  "description": "Neighborhood place pop-up: centred heading, image, text, learn more button, night image and text. CMS-bound.",
+  "group": "Modals"
+ },
+ {
+  "id": "6a125807-1495-0489-0f51-f2b79a0014e3",
+  "name": "Split Image Slide",
+  "description": "One photo for the Slides slot of Split image text slider (History). Add as many as you like; the slider loops when there are 3 or more.",
+  "group": "Sections"
+ }
+]

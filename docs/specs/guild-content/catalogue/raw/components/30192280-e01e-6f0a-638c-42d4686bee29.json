@@ -1,0 +1,54 @@
+{
+ "component": {
+  "id": "30192280-e01e-6f0a-638c-42d4686bee29",
+  "name": "tab-pills-intro",
+  "description": "Script heading, paragraph and a burgundy tab pill. Tabs slot: put a Collection List of categories in it. Pick the look with the Variant prop.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "dc689a59-9bf2-33be-7a81-aad0e8ea4d73",
+   "type": "html-embed",
+   "html": "<style>.tab-pills-intro_tabs>div:not([class]):not([id]){display:contents}</style>",
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "f2f5e9fd-b2b2-ede5-2d94-15f81377e6e1",
+   "type": "Plain Text",
+   "label": "Content/Heading",
+   "text": {
+    "html": null,
+    "text": "Section heading"
+   }
+  },
+  {
+   "propertyId": "201b39ab-c1e5-2b88-2d64-115d2eaccec1",
+   "type": "Plain Text",
+   "label": "Content/Text",
+   "text": {
+    "html": null,
+    "text": "Short intro for this page."
+   }
+  },
+  {
+   "propertyId": "3e1c8f3d-8d61-487e-6dc0-08ef7920490e",
+   "type": "Plain Text",
+   "label": "Tabs/Tabs label",
+   "text": {
+    "html": null,
+    "text": "Categories"
+   }
+  },
+  {
+   "propertyId": "1d51ffaa-b237-52c1-951e-bb304412e000",
+   "type": "Plain Text",
+   "label": "Tabs/Sticky tabs",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  }
+ ]
+}

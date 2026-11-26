@@ -1,0 +1,276 @@
+{
+ "page": {
+  "id": "6adf856512eff9c0216feca8",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Blog",
+  "slug": "blog",
+  "createdOn": "2026-10-26T16:52:53.991Z",
+  "lastUpdated": "2026-11-26T15:48:23.635Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Blog | The Guild Hotel",
+   "description": "Stories, guides and local tips from The Guild Hotel in downtown San Diego."
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": null,
+   "description": null,
+   "descriptionCopied": null,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/blog",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "a0bd1537-003b-0e74-9517-515e8817d8c9",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "b6c661aa-02d9-4b45-0ecf-66886346f54c",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "954ba09c-c585-377c-a4e3-a643bbd37f21",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "c789159e-15bc-af82-a16d-23d3980bbb44",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "blog"
+     }
+    },
+    {
+     "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a0cf1b8c-6599-1aeb-0aad-3babaa7eef51",
+   "type": "component-instance",
+   "componentId": "30192280-e01e-6f0a-638c-42d4686bee29",
+   "propertyOverrides": [
+    {
+     "propertyId": "f2f5e9fd-b2b2-ede5-2d94-15f81377e6e1",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "What’s on\nin San Diego"
+     }
+    },
+    {
+     "propertyId": "201b39ab-c1e5-2b88-2d64-115d2eaccec1",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Stories from The Guild on where to eat, what to see and the people who make downtown San Diego worth the trip."
+     }
+    },
+    {
+     "propertyId": "3e1c8f3d-8d61-487e-6dc0-08ef7920490e",
+     "type": "Plain Text",
+     "label": "Tabs/Tabs label",
+     "text": {
+      "html": null,
+      "text": "Post topics"
+     }
+    },
+    {
+     "propertyId": "1d51ffaa-b237-52c1-951e-bb304412e000",
+     "type": "Plain Text",
+     "label": "Tabs/Sticky tabs",
+     "text": {
+      "html": null,
+      "text": "true"
+     }
+    }
+   ]
+  },
+  {
+   "id": "215abaca-feef-d400-04c3-37d1d813c9e4",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "6b3cde53-f7b3-9f5b-e40c-6dee81077ae5",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {
+    "data-eager": "true"
+   }
+  },
+  {
+   "id": "bee9c2ca-2288-5ed8-aa78-38d08bc4a5e9",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "824afb6c-59d6-96af-5510-877603ea0bab",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "38b333ce-daa8-1aed-489f-f7a62cd23b21",
+   "type": "component-instance",
+   "componentId": "f5403de4-dabb-14c3-ecf8-c945d0a8e22e",
+   "propertyOverrides": []
+  },
+  {
+   "id": "9343a213-50da-91b3-35ef-f62cdc8ee09f",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "rooms"
+     }
+    }
+   ]
+  },
+  {
+   "id": "9797f362-1d6f-99bd-b099-ac76222f757b",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "dining"
+     }
+    }
+   ]
+  },
+  {
+   "id": "d9a6fcb0-4b1f-8b6e-c7f9-38bdc3215d35",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "wellness"
+     }
+    }
+   ]
+  },
+  {
+   "id": "69b6d8b2-f6d8-d1e9-e992-de898d128d13",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "meetings & events"
+     }
+    }
+   ]
+  },
+  {
+   "id": "666cd66d-9cdf-f55a-c25b-b72f1bc32115",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "arts"
+     }
+    }
+   ]
+  },
+  {
+   "id": "07036dc7-6728-01b0-010a-bbe42fa28fc2",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "happenings"
+     }
+    }
+   ]
+  },
+  {
+   "id": "a4c05a0d-38dd-df62-64db-f33a0ce2cbe3",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "52c8df75-7bf3-a29f-bdce-158fef2bd370",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "64ef670f-ec28-a2e3-1928-29026e69ac73",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "13df46b0-90d2-78e7-464a-ec0d0801613b",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-26T15:48:23.867Z"
+}

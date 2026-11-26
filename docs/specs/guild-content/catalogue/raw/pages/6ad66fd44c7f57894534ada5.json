@@ -1,0 +1,342 @@
+{
+ "page": {
+  "id": "6ad66fd44c7f57894534ada5",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Guidelines",
+  "slug": "guidelines",
+  "createdOn": "2026-10-19T19:30:28.553Z",
+  "lastUpdated": "2026-11-26T15:48:02.468Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Photo and Film Shoot Guidelines | The Guild Hotel",
+   "description": "Planning a professional photo or film shoot at The Guild Hotel? Read our process, the $500 location fee and how to request your shoot in San Diego."
+  },
+  "openGraph": {
+   "title": "Photo and Film Shoot Guidelines | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Planning a professional photo or film shoot at The Guild Hotel? Read our process, the $500 location fee and how to request your shoot in San Diego.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/guidelines",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "79234008-43d1-5007-51c8-956421b99572",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "9d87721a-f8f6-1ab9-bbe8-7f7261356d19",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "90928849-354b-cb74-9c7e-0d5b8393e30c",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "c789159e-15bc-af82-a16d-23d3980bbb44",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "photoshoot guidelines"
+     }
+    },
+    {
+     "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non."
+     }
+    }
+   ]
+  },
+  {
+   "id": "56baa9f8-3a44-90fb-6a7a-e3382e3b3644",
+   "type": "component-instance",
+   "componentId": "bdff66b3-92d9-e1e3-dbc0-86a28e384c9b",
+   "propertyOverrides": [
+    {
+     "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+     "type": "Plain Text",
+     "label": "Content/heading",
+     "text": {
+      "html": null,
+      "text": "Thank you for choosing\nthe Guild Hotel for your shoot!"
+     }
+    },
+    {
+     "propertyId": "0df84d45-603f-3795-7593-9010ebf7c540",
+     "type": "Plain Text",
+     "label": "Content/paragraph",
+     "text": {
+      "html": null,
+      "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+     }
+    }
+   ]
+  },
+  {
+   "id": "9b262389-8271-653a-4743-d483c518dee7",
+   "type": "image",
+   "image": {
+    "alt": "Courtyard terrace with umbrellas and palms at The Guild",
+    "assetId": "6ad66fee735773f253407335"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "7d608716-5b57-5b95-3fd3-4493dc97100c",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"guidelines-process_heading\">our process</h2>",
+    "text": "our process"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "a859a135-000f-82f1-ee99-a23813d4fbeb",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"guidelines-process_intro\">To ensure the best experience during your shoot, and to optimize Hotel guest experience, the following guidelines apply for professional shoots:</p>",
+    "text": "To ensure the best experience during your shoot, and to optimize Hotel guest experience, the following guidelines apply for professional shoots:"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "64c804e8-1dc0-0d86-baa5-a2b532b685ca",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"guidelines-process_text\">Upon receiving the requirements of your shoot (including the day/date/time), the Hotel will check availability and provide a list of available spaces where the photographer can shoot/film.</p>",
+    "text": "Upon receiving the requirements of your shoot (including the day/date/time), the Hotel will check availability and provide a list of available spaces where the photographer can shoot/film."
+   },
+   "attributes": {
+    "data-reveal": "text-mask"
+   }
+  },
+  {
+   "id": "1d349584-d4e3-a20a-49b5-4f563a6ed4c6",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"guidelines-process_text\">Room rental charges may apply (in addition to the location fee) to reserve spaces to shoot in.</p>",
+    "text": "Room rental charges may apply (in addition to the location fee) to reserve spaces to shoot in."
+   },
+   "attributes": {
+    "data-reveal": "text-mask"
+   }
+  },
+  {
+   "id": "19b952ad-e039-5acf-c709-95ef325e25e8",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"guidelines-process_text\">A Hotel team member will be available to you throughout the shoot and will provide entrance to the pre-determined available areas of the Hotel. As a result, a location flat fee of $500 will apply.</p>",
+    "text": "A Hotel team member will be available to you throughout the shoot and will provide entrance to the pre-determined available areas of the Hotel. As a result, a location flat fee of $500 will apply."
+   },
+   "attributes": {
+    "data-reveal": "text-mask"
+   }
+  },
+  {
+   "id": "a749a845-a753-7d77-b38e-e9a16bbe4d10",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"guidelines-process_text\">Shooting in public areas of the Hotel (including, but not limited to front steps, The Lobby Bar, The Lobby Terrace, Pool Lounge, Zuma) are not guaranteed, and may be limited.</p>",
+    "text": "Shooting in public areas of the Hotel (including, but not limited to front steps, The Lobby Bar, The Lobby Terrace, Pool Lounge, Zuma) are not guaranteed, and may be limited."
+   },
+   "attributes": {
+    "data-reveal": "text-mask"
+   }
+  },
+  {
+   "id": "dadc3c89-9206-4e0e-fad7-84e3ec8a70cf",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"guidelines-process_text\">The content of the shoot will need to be approved by the Hotel with a signed Letter of Agreement, and Event Order.</p>",
+    "text": "The content of the shoot will need to be approved by the Hotel with a signed Letter of Agreement, and Event Order."
+   },
+   "attributes": {
+    "data-reveal": "text-mask"
+   }
+  },
+  {
+   "id": "d6b6835d-b0ed-0871-1d8a-9588bcb168c5",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"guidelines-process_link\" href=\"#\">sales@theguildhotel.com</a>",
+    "text": "sales@theguildhotel.com"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "188b864a-4e84-e0ce-e775-85a933e288ba",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"guidelines-process_link\" href=\"#photoshoot-request\">form</a>",
+    "text": "form"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "863b7871-f19e-4de0-ae50-51b43d808d35",
+   "type": "component-instance",
+   "componentId": "144b7315-3604-2419-b046-c09d180f1163",
+   "propertyOverrides": []
+  },
+  {
+   "id": "64f3d24e-58be-1df3-fdc2-654f721ecd8d",
+   "type": "component-instance",
+   "componentId": "5d1646a5-9b19-12e7-99a1-ccf03bc50f6d",
+   "propertyOverrides": [
+    {
+     "propertyId": "c3143877-f5a4-1365-c345-8a7b08ac21c7",
+     "type": "Alt Text",
+     "label": "Image Alt",
+     "text": {
+      "html": null,
+      "text": "Courtyard terrace with umbrellas and greenery"
+     }
+    },
+    {
+     "propertyId": "45bf8076-280c-c889-ebc4-f851f027b32c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "@username"
+     }
+    }
+   ]
+  },
+  {
+   "id": "642a6c11-9113-3c71-4bed-88c72cbf51b3",
+   "type": "component-instance",
+   "componentId": "5d1646a5-9b19-12e7-99a1-ccf03bc50f6d",
+   "propertyOverrides": [
+    {
+     "propertyId": "c3143877-f5a4-1365-c345-8a7b08ac21c7",
+     "type": "Alt Text",
+     "label": "Image Alt",
+     "text": {
+      "html": null,
+      "text": "Boutique shelves lit in warm light"
+     }
+    },
+    {
+     "propertyId": "45bf8076-280c-c889-ebc4-f851f027b32c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "@username"
+     }
+    }
+   ]
+  },
+  {
+   "id": "c3909bfd-6ae0-db2c-8616-3792f68993fb",
+   "type": "component-instance",
+   "componentId": "5d1646a5-9b19-12e7-99a1-ccf03bc50f6d",
+   "propertyOverrides": [
+    {
+     "propertyId": "c3143877-f5a4-1365-c345-8a7b08ac21c7",
+     "type": "Alt Text",
+     "label": "Image Alt",
+     "text": {
+      "html": null,
+      "text": "Bright suite with a dining table and sofa"
+     }
+    },
+    {
+     "propertyId": "45bf8076-280c-c889-ebc4-f851f027b32c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "@username"
+     }
+    }
+   ]
+  },
+  {
+   "id": "f69d2352-5056-3f45-15e0-e8d398b77f67",
+   "type": "component-instance",
+   "componentId": "5d1646a5-9b19-12e7-99a1-ccf03bc50f6d",
+   "propertyOverrides": [
+    {
+     "propertyId": "c3143877-f5a4-1365-c345-8a7b08ac21c7",
+     "type": "Alt Text",
+     "label": "Image Alt",
+     "text": {
+      "html": null,
+      "text": "Lounge with a large painting and low lamps"
+     }
+    },
+    {
+     "propertyId": "45bf8076-280c-c889-ebc4-f851f027b32c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "@username"
+     }
+    }
+   ]
+  },
+  {
+   "id": "fb348537-ec6c-7600-98ed-e874709a2f54",
+   "type": "image",
+   "image": {
+    "alt": "Art collection at The Guild",
+    "assetId": "6ad670147e3d6550932e0fac"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "63afbeba-7b83-26b8-4f12-924e4e36fb03",
+   "type": "component-instance",
+   "componentId": "ae6ed4a3-2655-8c61-7d36-a87b4dd8d607",
+   "propertyOverrides": []
+  },
+  {
+   "id": "6499fe4c-0901-36d7-65c5-1a50769ce5a0",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "a5736ffe-cf36-d412-9636-a69eab1309ab",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "c70b461e-6018-8dde-bd85-a1617696e3c6",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "c0ea796a-1561-c90e-2dc0-234ed7314b92",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-26T15:48:02.545Z"
+}

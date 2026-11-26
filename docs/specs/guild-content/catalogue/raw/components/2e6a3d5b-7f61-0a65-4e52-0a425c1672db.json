@@ -1,0 +1,39 @@
+{
+ "component": {
+  "id": "2e6a3d5b-7f61-0a65-4e52-0a425c1672db",
+  "name": "Key Features Card",
+  "description": "One card for the Cards slot of Key Features: image, heading and a Features slot of Key Features Item.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "2e6a3d5b-7f61-0a65-4e52-0a425c1672dd",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "1afcfb74-472f-3b88-74b2-f0ce80f1ae7b",
+   "type": "Alt Text",
+   "label": "Image Alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "3d936657-10de-6580-d017-b42b0aee917d",
+   "type": "Plain Text",
+   "label": "Heading",
+   "text": {
+    "html": null,
+    "text": "Event Services"
+   }
+  }
+ ]
+}

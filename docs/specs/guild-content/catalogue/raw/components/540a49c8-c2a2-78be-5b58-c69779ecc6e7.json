@@ -1,0 +1,59 @@
+{
+ "component": {
+  "id": "540a49c8-c2a2-78be-5b58-c69779ecc6e7",
+  "name": "Arts & Culture Slider",
+  "description": null,
+  "group": "Sliders"
+ },
+ "nodes": [
+  {
+   "id": "540a49c8-c2a2-78be-5b58-c69779ecc6f2",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer is-text-burgundy tan-51\" href=\"#\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "540a49c8-c2a2-78be-5b58-c69779ecc6f5",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "540a49c8-c2a2-78be-5b58-c69779ecc6f7",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "540a49c8-c2a2-78be-5b58-c69779ecc6fa",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"offers-slider-split_eyebrow tan-55\">arts &amp; culture downtown san diego</p>",
+    "text": "arts & culture downtown san diego"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "540a49c8-c2a2-78be-5b58-c69779ecc6fe",
+   "type": "html-embed",
+   "html": "<svg width=\"30\" height=\"14\" viewBox=\"0 0 30 14\" fill=\"none\" aria-hidden=\"true\" style=\"display:block\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.75 6.75H29.25M0.75 6.75L6.75 12.75M0.75 6.75L6.75 0.75\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "540a49c8-c2a2-78be-5b58-c69779ecc707",
+   "type": "html-embed",
+   "html": "<svg width=\"30\" height=\"14\" viewBox=\"0 0 30 14\" fill=\"none\" aria-hidden=\"true\" style=\"display:block\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M29.25 6.75H0.75M29.25 6.75L23.25 0.75M29.25 6.75L23.25 12.75\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+   "attributes": {}
+  }
+ ],
+ "properties": []
+}

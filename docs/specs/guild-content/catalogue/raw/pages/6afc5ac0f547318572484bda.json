@@ -1,0 +1,221 @@
+{
+ "page": {
+  "id": "6afc5ac0f547318572484bda",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6afc5ac0f547318572484bb6",
+  "title": "🎁 Packages Template",
+  "slug": "detail_packages",
+  "createdOn": "2026-11-17T13:46:40.779Z",
+  "lastUpdated": "2026-11-25T21:51:17.422Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "{{wf {\"path\":\"name\",\"type\":\"PlainText\"\\} }} | The Guild Hotel",
+   "description": "{{wf {\"path\":\"excerpt\",\"type\":\"PlainText\"\\} }}"
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/packages",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "8476dd44-551b-48e6-2792-e2cce27d1a91",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "63152fb6-94e9-9004-a6c6-02f02a67c583",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "4735e491-d0f4-6634-0367-1c464057d916",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": []
+  },
+  {
+   "id": "0b004f52-3554-c5cd-4f39-c3ca96bbb98a",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"heading-style-h5\">the guild, a tribute portfolio hotel</h2>",
+    "text": "the guild, a tribute portfolio hotel"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "dc8e5553-3942-798c-5642-40ff9eb10f5d",
+   "type": "component-instance",
+   "componentId": "3eeb97fa-6550-7845-31ee-e997e4b8f2f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "74b6d39f-054a-e3b2-e321-5cfb6f0663e9",
+     "type": "Alt Text",
+     "label": "Image/image alt",
+     "text": {
+      "html": null,
+      "text": "__wf_reserved_inherit"
+     }
+    }
+   ]
+  },
+  {
+   "id": "381c4d11-331d-b94e-841d-735b1b96fcc1",
+   "type": "component-instance",
+   "componentId": "c619214e-e99f-0fd3-58f0-40934ca0f917",
+   "propertyOverrides": []
+  },
+  {
+   "id": "0d04287d-1031-56a7-8541-38057c5820fc",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"heading-style-h2\">more packages</h2>",
+    "text": "more packages"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "95c81067-3534-990d-60fe-67f48ccbd8af",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bc87bd65-93d5-d320-2958-abbbf036c992",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "167a434b-332c-3971-614c-b6c8c8313b49",
+   "type": "component-instance",
+   "componentId": "f5403de4-dabb-14c3-ecf8-c945d0a8e22e",
+   "propertyOverrides": []
+  },
+  {
+   "id": "09fa0e63-bae9-5ac1-1653-afa853df4fee",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "rooms"
+     }
+    }
+   ]
+  },
+  {
+   "id": "f4c0bbf9-e831-2b36-b398-dbac14a51eb8",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "dining"
+     }
+    }
+   ]
+  },
+  {
+   "id": "9ff8f350-2586-aab4-d8bd-9967a70ff74f",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "wellness"
+     }
+    }
+   ]
+  },
+  {
+   "id": "99663888-3716-3ade-6815-f35796959b60",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "happenings"
+     }
+    }
+   ]
+  },
+  {
+   "id": "6cf4167e-6516-a654-8be1-539607c2b5eb",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "blog"
+     }
+    }
+   ]
+  },
+  {
+   "id": "c716cc16-f92a-277f-e649-8bd724f1d325",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "fb1c8b44-b7d2-1a85-f0a9-11afaa85d4b7",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "8fee9ac8-7da5-5f47-a16f-8e858e03c9fe",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "01ccc450-5739-b149-a377-66092572366f",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-25T21:51:17.511Z"
+}

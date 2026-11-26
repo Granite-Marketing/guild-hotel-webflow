@@ -1,0 +1,662 @@
+{
+ "page": {
+  "id": "6ad66fd96684c3e22ea4d417",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Meetings",
+  "slug": "meetings",
+  "createdOn": "2026-10-19T19:30:33.079Z",
+  "lastUpdated": "2026-11-26T16:57:08.722Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Meetings and Events in San Diego | The Guild Hotel",
+   "description": "Plan meetings, celebrations and events at The Guild Hotel in San Diego, with spaces including the Council Boardroom and Lobby Terrace. Request a proposal."
+  },
+  "openGraph": {
+   "title": "Meetings and Events in San Diego | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Plan meetings, celebrations and events at The Guild Hotel in San Diego, with spaces including the Council Boardroom and Lobby Terrace. Request a proposal.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/meetings",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "9e6df89d-bcd4-34fc-77d7-54336de8849a",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "ee7972a8-c158-e38c-6fdf-be89cc1e9794",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "8c8972a9-62cb-24d1-7e3f-8b9e1749dd49",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "1f04865b-02e3-a2e5-7f9a-8f6563d7bfa9",
+     "type": "Alt Text",
+     "label": "Background/Image Alt",
+     "text": {
+      "html": null,
+      "text": "Candlelit booths with wooden tables and curtained alcoves under warm wall lights"
+     }
+    },
+    {
+     "propertyId": "c789159e-15bc-af82-a16d-23d3980bbb44",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "meetings & events at the guild"
+     }
+    },
+    {
+     "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "In hac habitasse platea dictumst. Etiam dapibus augue tortor"
+     }
+    }
+   ]
+  },
+  {
+   "id": "fa2a6627-3e92-281f-5bc5-ae800667d026",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"meetings-collection-venues_heading\">Intimate spaces\nfor celebration &amp; collaboration</h2>",
+    "text": "Intimate spaces\nfor celebration & collaboration"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "b772a541-2a65-04f3-2ef1-ceb8f11d6d61",
+   "type": "text",
+   "text": {
+    "html": "<p>Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.</p>",
+    "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d3c26e33-66a9-79ea-f9f5-405b1cec6250",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "08e3f6e5-c092-f45a-30e4-874f136ebc5f",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "c2e8b37b-04ea-84bf-724b-2c48ac6548db",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer\" href=\"#\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {
+    "aria-haspopup": "dialog",
+    "aria-expanded": "false"
+   }
+  },
+  {
+   "id": "f6e1448a-3508-42cc-cdb5-8fd511c27867",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "5a27ec27-2dbe-c995-48b3-8c54a0ba4d96",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "e11d6d47-01b3-9352-8de0-b00e8109f765",
+   "type": "component-instance",
+   "componentId": "07b1c49f-a979-a3d8-a93a-820f2f02b379",
+   "propertyOverrides": []
+  },
+  {
+   "id": "4e3db501-831b-1b5b-afc1-4940b78cd846",
+   "type": "component-instance",
+   "componentId": "5d830b69-6507-7d04-4828-069b2539cffb",
+   "propertyOverrides": [
+    {
+     "propertyId": "cb9c481f-b5dc-1c74-716f-3d3606e28333",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "Steps from key legal addresses"
+     }
+    },
+    {
+     "propertyId": "b8f3c5b9-efe9-e6a4-5af7-6ab68b883833",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+     }
+    },
+    {
+     "propertyId": "d8b278ad-b9fa-a7bf-d679-42cae05a0989",
+     "type": "Alt Text",
+     "label": "Image/Image Alt",
+     "text": {
+      "html": null,
+      "text": "Map of downtown San Diego marking the courthouses near the hotel"
+     }
+    }
+   ]
+  },
+  {
+   "id": "e1af0259-ff5b-078f-d23b-4edac20df0fc",
+   "type": "component-instance",
+   "componentId": "f8d2c379-fdf7-4264-4080-6fae138c9250",
+   "propertyOverrides": []
+  },
+  {
+   "id": "040cbb41-e2cb-a501-1fe6-23b249af589d",
+   "type": "component-instance",
+   "componentId": "2e6a3d5b-7f61-0a65-4e52-0a425c1672db",
+   "propertyOverrides": [
+    {
+     "propertyId": "1afcfb74-472f-3b88-74b2-f0ce80f1ae7b",
+     "type": "Alt Text",
+     "label": "Image Alt",
+     "text": {
+      "html": null,
+      "text": "Event space at The Guild Hotel"
+     }
+    }
+   ]
+  },
+  {
+   "id": "38863b79-217d-d8e0-877b-b1a9f9ad1cd5",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Our innovative & experienced team creates your vision"
+     }
+    }
+   ]
+  },
+  {
+   "id": "288d9d47-911c-d97b-b17d-0e804e382939",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Chef Collaboration and Menu Design"
+     }
+    }
+   ]
+  },
+  {
+   "id": "884aaa87-9628-8519-8f13-592ebafce2b9",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Mixologist Consultation"
+     }
+    }
+   ]
+  },
+  {
+   "id": "5a81b63f-7371-7019-c0d4-030d0bab9bab",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Branded Event Menus"
+     }
+    }
+   ]
+  },
+  {
+   "id": "93878e53-817d-61b8-09f6-cb66b2a27012",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Menu tastings available"
+     }
+    }
+   ]
+  },
+  {
+   "id": "90e219bc-857e-e543-257e-ecbc749700f2",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Branding Opportunities with Video Projection Wall"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ce75a141-1e4f-1977-81ac-5dd9a452a594",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Full Hotel Buyouts Available - Guild Take Over"
+     }
+    }
+   ]
+  },
+  {
+   "id": "aae04256-5b5d-4369-3187-de493d5b72e0",
+   "type": "component-instance",
+   "componentId": "2e6a3d5b-7f61-0a65-4e52-0a425c1672db",
+   "propertyOverrides": [
+    {
+     "propertyId": "1afcfb74-472f-3b88-74b2-f0ce80f1ae7b",
+     "type": "Alt Text",
+     "label": "Image Alt",
+     "text": {
+      "html": null,
+      "text": "Meeting room at The Guild Hotel"
+     }
+    },
+    {
+     "propertyId": "3d936657-10de-6580-d017-b42b0aee917d",
+     "type": "Plain Text",
+     "label": "Heading",
+     "text": {
+      "html": null,
+      "text": "AV Capabilities"
+     }
+    }
+   ]
+  },
+  {
+   "id": "96c12823-1f7d-f595-05e2-8828c4e2ae36",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Video-texture mapping"
+     }
+    }
+   ]
+  },
+  {
+   "id": "6ebcf685-fae1-0546-30c7-86ceffe9e10d",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Surround sound/ LED lighting"
+     }
+    }
+   ]
+  },
+  {
+   "id": "40c5c195-651d-0705-c1b9-ffb91cb76eed",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Latest tech"
+     }
+    }
+   ]
+  },
+  {
+   "id": "138ed897-62ee-c4b2-7d31-19854ef3841d",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Pre- & post-event support"
+     }
+    }
+   ]
+  },
+  {
+   "id": "03553829-7dac-ca43-5a65-5fc5661f5886",
+   "type": "component-instance",
+   "componentId": "2e6a3d5b-7f61-0a65-4e52-0a425c1672db",
+   "propertyOverrides": [
+    {
+     "propertyId": "1afcfb74-472f-3b88-74b2-f0ce80f1ae7b",
+     "type": "Alt Text",
+     "label": "Image Alt",
+     "text": {
+      "html": null,
+      "text": "Hotel amenities at The Guild Hotel"
+     }
+    },
+    {
+     "propertyId": "3d936657-10de-6580-d017-b42b0aee917d",
+     "type": "Plain Text",
+     "label": "Heading",
+     "text": {
+      "html": null,
+      "text": "Hotel Amenities"
+     }
+    }
+   ]
+  },
+  {
+   "id": "7c52c96b-7149-e23e-adae-e343e4b860d1",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Dedicated event planners"
+     }
+    }
+   ]
+  },
+  {
+   "id": "337d25bc-8ecb-287b-0ff6-f96ab59a7ba9",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Professional audio visual services"
+     }
+    }
+   ]
+  },
+  {
+   "id": "defaa402-d4aa-7c9c-f557-c4a8269d5b23",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Meeting sets with clean, sophisticated designs"
+     }
+    }
+   ]
+  },
+  {
+   "id": "648b29f6-9781-aba0-deaa-16d71e2c4e51",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Restaurant-style banquet menus"
+     }
+    }
+   ]
+  },
+  {
+   "id": "6b53448c-252f-f5bf-886d-78b33092b192",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Black or Grey banquet style chairs, Black & White floor-length linens & napkins"
+     }
+    }
+   ]
+  },
+  {
+   "id": "de520d69-571f-f822-b486-af537965eedf",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Seasonal heaters & umbrellas"
+     }
+    }
+   ]
+  },
+  {
+   "id": "0f15e81a-32ce-d63e-c33e-88047aaf8d1f",
+   "type": "component-instance",
+   "componentId": "a15947f0-ba83-110b-efc2-2b4af185e8d3",
+   "propertyOverrides": [
+    {
+     "propertyId": "fb980053-8e11-8c4e-f860-f5e007b7c89e",
+     "type": "Plain Text",
+     "label": "Text",
+     "text": {
+      "html": null,
+      "text": "Marriott Rewards Program"
+     }
+    }
+   ]
+  },
+  {
+   "id": "b0782e5f-4cbe-5a06-83e4-4fec128d2185",
+   "type": "component-instance",
+   "componentId": "560e1b31-d612-0921-8773-8f9de2e2b06f",
+   "propertyOverrides": []
+  },
+  {
+   "id": "949b60be-e0dc-cec4-8e98-7b9a75990ec8",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus."
+     }
+    }
+   ]
+  },
+  {
+   "id": "c9db2af1-56d6-749c-e440-4f82907f64f0",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta."
+     }
+    }
+   ]
+  },
+  {
+   "id": "1b473f68-908e-c571-1d26-de5afa30e678",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem."
+     }
+    }
+   ]
+  },
+  {
+   "id": "238ee778-5d65-a3da-552c-ba4f2b270368",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+     }
+    }
+   ]
+  },
+  {
+   "id": "371907d9-c329-2015-3746-9fdf761fc79f",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "03a1d62b-3b07-e37b-4a20-b302d45ca8b1",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "ade29635-4e34-db55-e6e0-a22278706595",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "f1efe0ec-e274-a68e-6de7-6ebf40ba86d1",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "95f265b6-2da7-0398-8d83-00659101d06b",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  },
+  {
+   "id": "ed76bffa-830f-341f-6c58-b7ad76dcf64b",
+   "type": "component-instance",
+   "componentId": "bf7623e5-058f-ec80-12e2-20bb187eaf9c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "d8e7be81-88f3-09a2-f770-ad74bcc0433a",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  }
+ ],
+ "lastUpdated": "2026-11-26T16:57:08.797Z"
+}

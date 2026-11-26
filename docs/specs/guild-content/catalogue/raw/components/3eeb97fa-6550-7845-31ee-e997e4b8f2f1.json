@@ -1,0 +1,32 @@
+{
+ "component": {
+  "id": "3eeb97fa-6550-7845-31ee-e997e4b8f2f1",
+  "name": "image-inset-single",
+  "description": "Inset image on a cream section. Props: Variant (Base, Small), image, image alt. Small narrows the image for posts.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "3eeb97fa-6550-7845-31ee-e997e4b8f2f5",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {
+    "loading": "lazy"
+   }
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "74b6d39f-054a-e3b2-e321-5cfb6f0663e9",
+   "type": "Alt Text",
+   "label": "Image/image alt",
+   "text": {
+    "html": null,
+    "text": "A hand writing 'Welcome to the Guild Hotel' in pencil on a card"
+   }
+  }
+ ]
+}

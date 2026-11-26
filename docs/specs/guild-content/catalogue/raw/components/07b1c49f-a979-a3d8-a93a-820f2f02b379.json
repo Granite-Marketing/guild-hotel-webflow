@@ -1,0 +1,235 @@
+{
+ "component": {
+  "id": "07b1c49f-a979-a3d8-a93a-820f2f02b379",
+  "name": "Form Request for Proposal",
+  "description": "Meetings request for proposal: tall section with the event form.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b37f",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"text-style-script is-proposal\">Request for Proposal</h2>",
+    "text": "Request for Proposal"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b39e",
+   "type": "text",
+   "text": {
+    "html": "<h3 id=\"photoshoot-contact-heading\" class=\"form-split-script-contact_fieldset-heading heading-style-h4\">contact information</h3>",
+    "text": "contact information"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3a1",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">First Name</label>",
+    "text": "First Name"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3a2",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "First Name"
+   }
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3a4",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Last Name</label>",
+    "text": "Last Name"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3a5",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Last Name"
+   }
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3a7",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Email Address</label>",
+    "text": "Email Address"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3a8",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Email Address"
+   }
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3aa",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Phone Number</label>",
+    "text": "Phone Number"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3ab",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Phone Number"
+   }
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3ad",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Company or Organization</label>",
+    "text": "Company or Organization"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3ae",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Company or Organization"
+   }
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3b1",
+   "type": "text",
+   "text": {
+    "html": "<h3 id=\"photoshoot-shoot-heading\" class=\"form-split-script-contact_fieldset-heading heading-style-h4\">event details</h3>",
+    "text": "event details"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3b7",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Event Date</label>",
+    "text": "Event Date"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3b8",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Event Date"
+   }
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3ba",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Number of people</label>",
+    "text": "Number of people"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3bb",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Number of people"
+   }
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3bd",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Start Time</label>",
+    "text": "Start Time"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3be",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Start Time"
+   }
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3c0",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">End Time</label>",
+    "text": "End Time"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3c1",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "End Time"
+   }
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3c3",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Additional Details</label>",
+    "text": "Additional Details"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3c4",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Additional Details"
+   }
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3c6",
+   "type": "submit-button",
+   "waitingText": "sending",
+   "value": "submit your request",
+   "attributes": {
+    "data-reveal": "fade-only"
+   }
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3c8",
+   "type": "text",
+   "text": {
+    "html": "<div>Thank you! Your submission has been received!</div>",
+    "text": "Thank you! Your submission has been received!"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07b1c49f-a979-a3d8-a93a-820f2f02b3cb",
+   "type": "text",
+   "text": {
+    "html": "<div>Oops! Something went wrong while submitting the form.</div>",
+    "text": "Oops! Something went wrong while submitting the form."
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": []
+}

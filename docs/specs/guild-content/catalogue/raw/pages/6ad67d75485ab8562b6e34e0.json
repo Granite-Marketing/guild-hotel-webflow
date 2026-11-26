@@ -1,0 +1,137 @@
+{
+ "page": {
+  "id": "6ad67d75485ab8562b6e34e0",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6ad67d74485ab8562b6e34da",
+  "title": "🏷️ Post Categories Template",
+  "slug": "detail_post-categories",
+  "createdOn": "2026-10-19T20:28:37.207Z",
+  "lastUpdated": "2026-11-20T21:17:50.494Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "{{wf {\"path\":\"name\",\"type\":\"PlainText\"\\} }} | The Guild Hotel",
+   "description": "{{wf {\"path\":\"name\",\"type\":\"PlainText\"\\} }} stories and happenings from The Guild Hotel in downtown San Diego."
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/post-categories",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "20a97c5a-282b-1de8-3701-ec248c4b6802",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "0a0e368b-e1d7-aaf3-28fd-f5ec3f04da54",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "3fb5d2a2-11cd-7297-5e4a-498ef2758467",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": []
+  },
+  {
+   "id": "36b29199-9a85-71bc-9627-6238de533732",
+   "type": "component-instance",
+   "componentId": "30192280-e01e-6f0a-638c-42d4686bee29",
+   "propertyOverrides": [
+    {
+     "propertyId": "f2f5e9fd-b2b2-ede5-2d94-15f81377e6e1",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "What’s on\nin San Diego"
+     }
+    },
+    {
+     "propertyId": "201b39ab-c1e5-2b88-2d64-115d2eaccec1",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Stories, events and news from The Guild and around downtown San Diego."
+     }
+    },
+    {
+     "propertyId": "3e1c8f3d-8d61-487e-6dc0-08ef7920490e",
+     "type": "Plain Text",
+     "label": "Tabs/Tabs label",
+     "text": {
+      "html": null,
+      "text": "Post topics"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ed7e5b7d-dd02-5e86-26f1-d0fdd8f0554e",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {
+    "data-eager": "true"
+   }
+  },
+  {
+   "id": "a5c0e5b3-38b1-7fef-1453-daeccc3d1572",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d3a58eba-f937-01fd-3c2d-b24f671200b7",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "c979bc7d-bf1e-62eb-0fd3-956f9efadf17",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "9e3aef17-0539-1972-e07f-6b89547d143f",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "d85c8df9-e117-ce71-678b-8fced343463e",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "18fbda13-c92f-9102-b3c0-81d94a8dc211",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-20T21:17:50.572Z"
+}

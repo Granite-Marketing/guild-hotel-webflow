@@ -1,0 +1,177 @@
+{
+ "component": {
+  "id": "100e1eab-d304-3568-6d93-6fa936f8c0af",
+  "name": "Venue Card Fullbleed Left",
+  "description": "Edge-to-edge 16:9 card (Home): content bottom left, button on the right, and three fixed tabs. The props set the first tab only.",
+  "group": "Venue Card Fullbleed"
+ },
+ "nodes": [
+  {
+   "id": "100e1eab-d304-3568-6d93-6fa936f8c0b6",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {
+    "data-eager": "true",
+    "loading": "eager"
+   }
+  },
+  {
+   "id": "72ae950d-8934-bd78-183c-d2d3345472e5",
+   "type": "image",
+   "image": {
+    "alt": "Courtyard terrace with umbrellas, bistro tables and plants under string lights",
+    "assetId": "6ad66fee735773f253407335"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "a3580fe3-54a7-4dc4-9b84-d3879690bebe",
+   "type": "image",
+   "image": {
+    "alt": "Dimly lit lounge with armchairs, a fireplace and artwork",
+    "assetId": "6ad670147e3d6550932e0fac"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "100e1eab-d304-3568-6d93-6fa936f8c0ba",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "5e16d259-e122-d511-452f-e39bbd9b9a8f",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"venue-card-fullbleed_heading heading-style-h2\">meetings &amp; events</h2>",
+    "text": "meetings & events"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "34a609eb-aa40-d9e2-9cea-5f0223d8a5d6",
+   "type": "text",
+   "text": {
+    "html": "<p>Inspired spaces breed bright ideas</p>",
+    "text": "Inspired spaces breed bright ideas"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "eeb977c9-e7ab-8664-a2a6-1a4c79413663",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer is-outline\" data-wf-link-page-id=\"6ad66fd96684c3e22ea4d417\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "cca04b40-c208-48ce-9225-d4ddb91781b6",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"venue-card-fullbleed_heading heading-style-h2\">meetings &amp; events</h2>",
+    "text": "meetings & events"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "18dd258c-5550-9e0e-f8f1-55871208d306",
+   "type": "text",
+   "text": {
+    "html": "<p>Inspired spaces breed bright ideas</p>",
+    "text": "Inspired spaces breed bright ideas"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "62174037-0013-531e-d6b0-2e5ca59336d4",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer is-outline\" data-wf-link-page-id=\"6ad66fd96684c3e22ea4d417\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "19d8205e-9da8-525d-f49b-a0cb8a362c65",
+   "type": "text",
+   "text": {
+    "html": "<div class=\"venue-card-fullbleed_list-label heading-style-h3\">council boardroom</div>",
+    "text": "council boardroom"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "fd1a5de6-66eb-d93b-b48a-f3b6251b7e77",
+   "type": "text",
+   "text": {
+    "html": "<div class=\"venue-card-fullbleed_list-label heading-style-h3\">courtyard</div>",
+    "text": "courtyard"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "21993fd3-055e-1b32-22ab-199bb9a4d28d",
+   "type": "text",
+   "text": {
+    "html": "<div class=\"venue-card-fullbleed_list-label heading-style-h3\">conference center</div>",
+    "text": "conference center"
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "1eb617a1-26ff-6916-fd05-7eddfa607258",
+   "type": "Plain Text",
+   "label": "Content/Heading",
+   "text": {
+    "html": null,
+    "text": "small conference center"
+   }
+  },
+  {
+   "propertyId": "37504da3-38ce-3238-2f23-44693fb79d3e",
+   "type": "Plain Text",
+   "label": "Content/Text",
+   "text": {
+    "html": null,
+    "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"
+   }
+  },
+  {
+   "propertyId": "0453ce75-d3f9-6b3a-1081-4e9bde64870d",
+   "type": "Plain Text",
+   "label": "Button/Button Label",
+   "text": {
+    "html": null,
+    "text": "discover more"
+   }
+  },
+  {
+   "propertyId": "34f5bc70-f127-0ab1-46e0-893576ef4c6f",
+   "type": "Alt Text",
+   "label": "Image/Image Alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "b86d0fae-add2-e233-7efc-1c55d6d1868f",
+   "type": "Alt Text",
+   "label": "Image/Logo Alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  }
+ ]
+}

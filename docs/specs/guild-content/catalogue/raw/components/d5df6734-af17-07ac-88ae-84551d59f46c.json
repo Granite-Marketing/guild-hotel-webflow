@@ -1,0 +1,60 @@
+{
+ "component": {
+  "id": "d5df6734-af17-07ac-88ae-84551d59f46c",
+  "name": "Offers Slider",
+  "description": null,
+  "group": "Sliders"
+ },
+ "nodes": [
+  {
+   "id": "d5df6734-af17-07ac-88ae-84551d59f477",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer is-text-burgundy home-press-51\" href=\"#\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d5df6734-af17-07ac-88ae-84551d59f47a",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d5df6734-af17-07ac-88ae-84551d59f47c",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d5df6734-af17-07ac-88ae-84551d59f483",
+   "type": "html-embed",
+   "html": "<svg width=\"30\" height=\"14\" viewBox=\"0 0 30 14\" fill=\"none\" aria-hidden=\"true\" style=\"display:block\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.75 6.75H29.25M0.75 6.75L6.75 12.75M0.75 6.75L6.75 0.75\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "d5df6734-af17-07ac-88ae-84551d59f48c",
+   "type": "html-embed",
+   "html": "<svg width=\"30\" height=\"14\" viewBox=\"0 0 30 14\" fill=\"none\" aria-hidden=\"true\" style=\"display:block\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M29.25 6.75H0.75M29.25 6.75L23.25 0.75M29.25 6.75L23.25 12.75\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "ef9e1ec6-1d6a-da32-ba77-1fc4f01bc244",
+   "type": "Plain Text",
+   "label": "Tag",
+   "text": {
+    "html": null,
+    "text": "offers & packages"
+   }
+  }
+ ]
+}

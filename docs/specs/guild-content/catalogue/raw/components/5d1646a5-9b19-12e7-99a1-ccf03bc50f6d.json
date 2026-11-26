@@ -1,0 +1,39 @@
+{
+ "component": {
+  "id": "5d1646a5-9b19-12e7-99a1-ccf03bc50f6d",
+  "name": "Scatter Image Item",
+  "description": "One item for the Items slot of timeline-scatter-images: image, alt, caption. Size and position follow the item's place in the list (small, large right, xsmall inset, medium centre, repeating).",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "5d1646a5-9b19-12e7-99a1-ccf03bc50f6f",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "c3143877-f5a4-1365-c345-8a7b08ac21c7",
+   "type": "Alt Text",
+   "label": "Image Alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "45bf8076-280c-c889-ebc4-f851f027b32c",
+   "type": "Plain Text",
+   "label": "Caption",
+   "text": {
+    "html": null,
+    "text": "Caption"
+   }
+  }
+ ]
+}

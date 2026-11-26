@@ -1,0 +1,290 @@
+{
+ "page": {
+  "id": "6ad67d7416e13e66c2b76107",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6ad67d7316e13e66c2b760d7",
+  "title": "🍴 Dinings Template",
+  "slug": "detail_dining",
+  "createdOn": "2026-10-19T20:28:36.066Z",
+  "lastUpdated": "2026-11-26T16:44:56.220Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "{{wf {\"path\":\"name\",\"type\":\"PlainText\"\\} }} | The Guild Hotel",
+   "description": "{{wf {\"path\":\"hero-intro\",\"type\":\"PlainText\"\\} }}"
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": true,
+   "description": null,
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/dining",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "f8cbdfba-9844-bc56-4c18-4675d35c9641",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "35013336-581c-9e90-af44-dbd1e87fe4cb",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "98f5b6bf-a866-2fe1-7766-749f61bd2129",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "bd5db012-c4b0-6a4e-a0e1-41ffdf3e7bc2",
+     "type": "Plain Text",
+     "label": "Button/Button Text",
+     "text": {
+      "html": null,
+      "text": "reserve a table"
+     }
+    }
+   ]
+  },
+  {
+   "id": "e0471a1c-0f53-a890-8460-fbddb329850e",
+   "type": "component-instance",
+   "componentId": "663131a8-3362-867e-25ef-28b6d3d209a2",
+   "propertyOverrides": []
+  },
+  {
+   "id": "84ef6103-2a18-23a7-b68a-590133c3932b",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "726f3724-5fec-e4c7-caa6-8f1195d5abdd",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "bd5db012-c4b0-6a4e-a0e1-41ffdf3e7bc2",
+     "type": "Plain Text",
+     "label": "Button/Button Text",
+     "text": {
+      "html": null,
+      "text": "reserve a table"
+     }
+    }
+   ]
+  },
+  {
+   "id": "0f87c04b-e622-8542-b5b9-e63fcb77ed4b",
+   "type": "component-instance",
+   "componentId": "663131a8-3362-867e-25ef-28b6d3d209a2",
+   "propertyOverrides": []
+  },
+  {
+   "id": "01c882e3-2331-2a0c-03f6-d8fc4182e934",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "0e4e930a-4e95-d631-c189-a64afb526d7a",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"text-style-eyebrow-caps is-info-title\">dress code</h3>",
+    "text": "dress code"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "7618b73c-1559-f2ba-49d3-d4f185f34d90",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"text-style-eyebrow-caps is-info-title\">Hours of Operation</h3>",
+    "text": "Hours of Operation"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "52aa9b80-c93e-4cba-93d4-a8b9a21a9bc0",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"text-columns-info_link\" href=\"#\">browse the menu</a>",
+    "text": "browse the menu"
+   },
+   "attributes": {
+    "data-reveal": "fade-only"
+   }
+  },
+  {
+   "id": "40860f7f-87ef-97df-94ef-b7a5261cd5b6",
+   "type": "component-instance",
+   "componentId": "3aa55379-f563-3fcc-0ac1-238e5e97daea",
+   "propertyOverrides": [
+    {
+     "propertyId": "8cb8fc44-2bf1-ef44-01ba-38d1b52f5d6b",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "explore the space"
+     }
+    }
+   ]
+  },
+  {
+   "id": "0a3a8279-5ded-4a8e-9575-234182389269",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "62efa24a-e660-b29d-f591-9d0e4b8067bc",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "3905544c-38a3-8243-8266-1e2612a90944",
+   "type": "image",
+   "image": {
+    "alt": "British Vogue",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "58d5c5a8-7e22-04a2-886d-09b8d27c59b1",
+   "type": "component-instance",
+   "componentId": "eae1d08c-c012-be1b-bafe-4ca88d995c14",
+   "propertyOverrides": [
+    {
+     "propertyId": "ebeb1a92-d766-3614-254d-19c94cdb7b4f",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "group dining & events"
+     }
+    },
+    {
+     "propertyId": "d323685b-9532-0899-8770-7c03c325631a",
+     "type": "Plain Text",
+     "label": "Header/Paragraph",
+     "text": {
+      "html": null,
+      "text": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo."
+     }
+    },
+    {
+     "propertyId": "fcf7826c-f83e-523c-5ba8-b97a71cd74f7",
+     "type": "Plain Text",
+     "label": "CTA/CTA Text",
+     "text": {
+      "html": null,
+      "text": "enquire"
+     }
+    }
+   ]
+  },
+  {
+   "id": "42e6505b-83c4-c38b-82a8-e3aeecc0e1db",
+   "type": "component-instance",
+   "componentId": "560e1b31-d612-0921-8773-8f9de2e2b06f",
+   "propertyOverrides": []
+  },
+  {
+   "id": "40c8bf04-1882-668d-3f0d-d102b049d4eb",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": []
+  },
+  {
+   "id": "068354fe-130c-db37-03fd-26518a8669a0",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "9b17753c-b3c5-e31e-b02c-5443cc2c84fd",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "52d456f5-7fad-fd85-ca88-77f06759a91c",
+   "type": "html-embed",
+   "html": "<svg width=\"30\" height=\"14\" viewBox=\"0 0 30 14\" fill=\"none\" aria-hidden=\"true\" style=\"display:block\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.75 6.75H29.25M0.75 6.75L6.75 12.75M0.75 6.75L6.75 0.75\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "8fd3c364-33f4-c2b3-0f44-d2177cd46813",
+   "type": "html-embed",
+   "html": "<svg width=\"30\" height=\"14\" viewBox=\"0 0 30 14\" fill=\"none\" aria-hidden=\"true\" style=\"display:block\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M29.25 6.75H0.75M29.25 6.75L23.25 0.75M29.25 6.75L23.25 12.75\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "43236953-0bc6-88b0-2524-193dd4aeaae4",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "48676f29-a2c6-f5d8-4b9e-6fb2db7fe73a",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ce35b1a4-354e-eb34-3eea-404aa24ce152",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "ee2f5942-bd9e-9131-52f5-c656c6e42e49",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "64c4880e-dcff-9db9-0db8-5e617a5d15df",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-26T16:44:56.292Z"
+}

@@ -1,0 +1,780 @@
+{
+ "page": {
+  "id": "6ad66fd276d24ed37ac4c52f",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "History",
+  "slug": "history",
+  "createdOn": "2026-10-19T19:30:26.946Z",
+  "lastUpdated": "2026-11-26T17:00:44.566Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Our History Since 1924 | The Guild Hotel",
+   "description": "Built in 1924 as the Army and Navy YMCA, this Italian Renaissance landmark at 500 W. Broadway has been the social heart of San Diego for a century."
+  },
+  "openGraph": {
+   "title": "Our History Since 1924 | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Built in 1924 as the Army and Navy YMCA, this Italian Renaissance landmark at 500 W. Broadway has been the social heart of San Diego for a century.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/history",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "5d794602-f94b-7b6d-311b-2811dc62e2ea",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "86f77bc1-ac9c-e405-b1e6-a1586a0fec79",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "39f63008-e245-a805-3e0b-fd98f3dd4087",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "75d42a84-dcfa-181f-f117-8fe20dea11d6",
+     "type": "Plain Text",
+     "label": "Background/Video Link",
+     "text": {
+      "html": null,
+      "text": ""
+     }
+    },
+    {
+     "propertyId": "c789159e-15bc-af82-a16d-23d3980bbb44",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "Bold Promise, Bright Future"
+     }
+    },
+    {
+     "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "As a historic YMCA and now The Guild, our destination has been the social heart of San Diego since 1924."
+     }
+    }
+   ]
+  },
+  {
+   "id": "cc9311a6-d1ee-54b3-cca9-a27ae81325fc",
+   "type": "component-instance",
+   "componentId": "bdff66b3-92d9-e1e3-dbc0-86a28e384c9b",
+   "propertyOverrides": [
+    {
+     "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+     "type": "Plain Text",
+     "label": "Content/heading",
+     "text": {
+      "html": null,
+      "text": "Proud stewards\nof city spirit "
+     }
+    }
+   ]
+  },
+  {
+   "id": "0533d0b9-5d5e-64cd-aee3-2ffb15d693b2",
+   "type": "image",
+   "image": {
+    "alt": "Vintage cars parked outside the building's carved stone entrance",
+    "assetId": "6aff4d2fba2c12b6ec7e260d"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "cd76cae3-1294-38ae-f781-838bc70e4503",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"history-oasis_heading heading-style-h4 text-weight-normal\"><strong data-w-id=\"d1b401d1-fb29-72b3-3942-9c038f14768d\">A Great Escape for the Services</strong></h2>",
+    "text": "A Great Escape for the Services"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "1b04d290-437c-e480-2918-2b2f0321eed4",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-oasis_text\">500 West Broadway was built when San Diego’s identity was tightly bound to its waterfront and naval presence. As a YMCA, it became a destination of welcome and belonging for a growing military community, offering lodging, recreation, education and fellowship. Today, we’re proud stewards of that generous spirit of service, camaraderie and hospitality.</p>",
+    "text": "500 West Broadway was built when San Diego’s identity was tightly bound to its waterfront and naval presence. As a YMCA, it became a destination of welcome and belonging for a growing military community, offering lodging, recreation, education and fellowship. Today, we’re proud stewards of that generous spirit of service, camaraderie and hospitality."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "2b234118-d291-89d2-d0a8-89e4deb2caaa",
+   "type": "component-instance",
+   "componentId": "95fd2679-0bdb-80ea-f808-0a8a4bdc261d",
+   "propertyOverrides": [
+    {
+     "propertyId": "8cb8fc44-2bf1-ef44-01ba-38d1b52f5d6b",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "George Marston"
+     }
+    },
+    {
+     "propertyId": "3f50e93d-a968-f004-4199-cfd4d1bccba7",
+     "type": "Plain Text",
+     "label": "Content/Body",
+     "text": {
+      "html": null,
+      "text": "In 1924, George Marston saw more than a building. He imagined a grand center of city life, a gathering place to elevate hospitality and raise a downtown. The landmark he built became a magnet, welcoming and entertaining some eight million Army and Navy men and women over five decades."
+     }
+    },
+    {
+     "propertyId": "bb0b0ead-6ba6-f4ac-38af-64f07c56770a",
+     "type": "Plain Text",
+     "label": "Content/Body 2",
+     "text": {
+      "html": null,
+      "text": "‍"
+     }
+    }
+   ]
+  },
+  {
+   "id": "77f2a0fc-af62-044c-36e8-9ea24c7e2b83",
+   "type": "component-instance",
+   "componentId": "6a125807-1495-0489-0f51-f2b79a0014e3",
+   "propertyOverrides": []
+  },
+  {
+   "id": "10fcd21d-d605-407c-1e64-701838caa7dc",
+   "type": "component-instance",
+   "componentId": "6a125807-1495-0489-0f51-f2b79a0014e3",
+   "propertyOverrides": []
+  },
+  {
+   "id": "8065be8e-6d3b-8c0d-cc6e-c5e04698a461",
+   "type": "component-instance",
+   "componentId": "6a125807-1495-0489-0f51-f2b79a0014e3",
+   "propertyOverrides": []
+  },
+  {
+   "id": "6e0880e8-fd17-0a46-afb5-86c74bc162b3",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_range-text text-style-eyebrow\">1924</p>",
+    "text": "1924"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "23545b40-76b5-3ba3-1493-c1469eee6efb",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"history-timeline_title heading-style-h2 text-weight-normal\">“Once Opened, Never Closed”.</h2>",
+    "text": "“Once Opened, Never Closed”."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "47e12060-114f-54c3-6244-849e3ee1b87e",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_subtitle\">The key to the YMCA was ceremoniously tossed into the Pacific on opening day in November 1924</p>",
+    "text": "The key to the YMCA was ceremoniously tossed into the Pacific on opening day in November 1924"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "37556a51-783a-1650-7780-f67d6ab7d7a5",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_range-text text-style-eyebrow\">2026</p>",
+    "text": "2026"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d57bc78c-51aa-ea11-87e0-3ea9509c7ca7",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_label-text\">1924</p>",
+    "text": "1924"
+   },
+   "attributes": {
+    "data-history-sticky-year-text": "true"
+   }
+  },
+  {
+   "id": "a84dbb55-8a3a-367b-e49a-b89a09d9b0f3",
+   "type": "image",
+   "image": {
+    "alt": "Officers, a sailor and a man in a suit with a large ceremonial key behind a starred banner",
+    "assetId": "6aff51495bd793315db55946"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "dace0db9-928d-b604-4a6a-b11e2e227afd",
+   "type": "image",
+   "image": {
+    "alt": "Two men, one in a naval cap, reading a paper across the street from the building",
+    "assetId": "6aff5355554dcd73142eb966"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ae2e0c33-c47e-670d-c6f5-ccb14fe4834c",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_label-text\">1924</p>",
+    "text": "1924"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "eaa56c61-66a7-6c47-6d43-c72044102523",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_year\">1924</p>",
+    "text": "1924"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f49db973-38e9-3c4a-c0e4-262ecd455704",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"history-timeline_heading heading-style-h4 text-weight-normal\"><strong data-w-id=\"8a73d2be-e9a3-5fbf-7db7-b948e20d7b1b\">A Landmark YMCA is Born</strong></h3>",
+    "text": "A Landmark YMCA is Born"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "96f906bc-f7f2-31ca-2442-7af0765af14f",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_text\">In 1924, following San Diego’s 1915 Panama-California Exhibition, George Marston commissioned architects Lincoln Rogers and Frank Stevenson to design a building that would become a turning point in the city’s architectural history.</p>",
+    "text": "In 1924, following San Diego’s 1915 Panama-California Exhibition, George Marston commissioned architects Lincoln Rogers and Frank Stevenson to design a building that would become a turning point in the city’s architectural history."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f8b2a1dc-152b-9d1e-45db-75e3208bc96b",
+   "type": "image",
+   "image": {
+    "alt": "Military parade filling the street beside the building, seen from above",
+    "assetId": "6aff536c10234a1f140e3eb4"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "2d931741-edff-e2f2-6387-619e868e3426",
+   "type": "image",
+   "image": {
+    "alt": "Boxing match in a ring surrounded by a packed gymnasium crowd",
+    "assetId": "6aff540467eebc2e89e92b7e"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "4c5eb565-13ae-ef5d-c8d5-3e537f5a992c",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_text is-founding\">The Italian Renaissance Revival structure they created had a symmetrical composition, richly articulated masonry, and generously proportioned public spaces. The message? Here is permanence, dignity, and civic generosity. Some things never change.</p>",
+    "text": "The Italian Renaissance Revival structure they created had a symmetrical composition, richly articulated masonry, and generously proportioned public spaces. The message? Here is permanence, dignity, and civic generosity. Some things never change."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "eedaed97-281a-1235-0816-5701d4a21bed",
+   "type": "image",
+   "image": {
+    "alt": "Group of sailors in uniform crowded together",
+    "assetId": "6aff576389c8d28392745e09"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ab04d831-8d58-7880-8f7b-d69312ed3132",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_label-text\">1924-1970</p>",
+    "text": "1924-1970"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "68f63c55-e336-038e-cb3f-d342c35f213c",
+   "type": "image",
+   "image": {
+    "alt": "Army and Navy YMCA letterhead with a drawing of the building",
+    "assetId": "6aff56b8e631d8e097b6e2d8"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "52cc5729-2c5f-c566-0fca-41836cf6d693",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_year\">1924-1970</p>",
+    "text": "1924-1970"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "4dd6f51c-0e6c-6481-52b0-f6089ab1b80f",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"history-timeline_heading heading-style-h4 text-weight-normal\"><strong data-w-id=\"bdfbec65-918e-2123-b34b-5b28150427fa\">Home to the Services </strong></h3>",
+    "text": "Home to the Services "
+   },
+   "attributes": {}
+  },
+  {
+   "id": "356600c2-c9e0-31aa-a584-de35627bb456",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_text\">A postcard from the YMCA dated April 1945 bears the tagline “The Home Away From Home”. In nearly five decades as a YMCA, some eight million Army and Navy servicemen and women called it home, playground, living room, bowling alley, restaurant, boxing ring, checkers table, and much, much more. If you listen carefully, the walls of The Guild will tell a half-century of stories of joyous community, intimacy and connection.</p>",
+    "text": "A postcard from the YMCA dated April 1945 bears the tagline “The Home Away From Home”. In nearly five decades as a YMCA, some eight million Army and Navy servicemen and women called it home, playground, living room, bowling alley, restaurant, boxing ring, checkers table, and much, much more. If you listen carefully, the walls of The Guild will tell a half-century of stories of joyous community, intimacy and connection."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "0e4e1c55-cb97-e482-0d8b-3332ef218f21",
+   "type": "image",
+   "image": {
+    "alt": "Sailors and women gathered around a piano, singing",
+    "assetId": "6aff57d189c8d28392747c4a"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "c9cc1680-f8cb-c261-b313-610370b81314",
+   "type": "image",
+   "image": {
+    "alt": "The hotel building at dusk beside downtown towers",
+    "assetId": "6aff59468631d1b34cf27b1a"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "73b0fe6a-a899-6bb2-f30a-39f526d67815",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_label-text\">2019</p>",
+    "text": "2019"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ee95dcd9-c8fb-81bf-a3f9-253ef5c2aa20",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_year\">2019</p>",
+    "text": "2019"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "e7dff238-f00f-34bb-a7c5-bb2dae4facb3",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"history-timeline_heading heading-style-h4 text-weight-normal\">THE GUILD OPENS ITS DOORS</h3>",
+    "text": "THE GUILD OPENS ITS DOORS"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ce9b5816-1933-c262-6ff3-312faf64b492",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_text\">After the YMCA closed its doors, the downtown landmark slumbered until it was reborn as The Guild, part of Marriott’s Tribute Portfolio. As a luxury hotel, it provided an oasis for the ever-growing number of visitors to “America’s Finest City.”</p>",
+    "text": "After the YMCA closed its doors, the downtown landmark slumbered until it was reborn as The Guild, part of Marriott’s Tribute Portfolio. As a luxury hotel, it provided an oasis for the ever-growing number of visitors to “America’s Finest City.”"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ff0f13f7-8a45-645b-d738-b7bb6f862a47",
+   "type": "image",
+   "image": {
+    "alt": "Courtyard terrace with striped umbrellas, lounge seating and a stone fireplace",
+    "assetId": "6aff596268e346412aa23ca0"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "442b6108-b305-6c0b-51ba-01521f27ec25",
+   "type": "image",
+   "image": {
+    "alt": "Bright guest room with a white bed, wall lights and robes on a rail",
+    "assetId": "6aff596ed7a76d79dee0a4c1"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "699037b4-972a-e49d-e051-401876a1efff",
+   "type": "image",
+   "image": {
+    "alt": "Garden terrace at The Guild",
+    "assetId": "6ad66fee735773f253407335"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "e26f6e9c-42f1-3bff-0bb7-376ce7d40e93",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_label-text\">2026</p>",
+    "text": "2026"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "99af6a24-547b-99ac-1f24-c9df5916cf13",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_year\">2026</p>",
+    "text": "2026"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "5e922977-528a-3a1d-5a2e-80ba49bbe603",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"history-timeline_heading heading-style-h4 text-weight-normal\"><strong data-w-id=\"0f5e954f-0687-dd15-22c7-069543b70c3f\">A Radical Reimagining</strong></h3>",
+    "text": "A Radical Reimagining"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "9d6c1432-bc1c-f743-d015-9c860383fe74",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-timeline_text is-end\">With a transformative makeover, The Guild takes its rightful place as the heart of city hospitality — a destination hotel, resort and oasis in one. The beauty of the exterior architecture remains intact, while a new pool invites lounging by the water, and a one-of-a-kind art collection elevates public spaces. Exciting new restaurant offerings include California’s first Zuma, and rejuvenated rooms and meeting spaces offer refined, comfortable retreats. New wellness events, menus and fitness spaces make West Coast wellbeing an essential part of every visit.</p>",
+    "text": "With a transformative makeover, The Guild takes its rightful place as the heart of city hospitality — a destination hotel, resort and oasis in one. The beauty of the exterior architecture remains intact, while a new pool invites lounging by the water, and a one-of-a-kind art collection elevates public spaces. Exciting new restaurant offerings include California’s first Zuma, and rejuvenated rooms and meeting spaces offer refined, comfortable retreats. New wellness events, menus and fitness spaces make West Coast wellbeing an essential part of every visit."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "840434be-464c-5f14-412d-150947cc59cf",
+   "type": "image",
+   "image": {
+    "alt": "Courtyard terrace umbrellas glowing at night, seen from above",
+    "assetId": "6aff5a779f20675f3436029b"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "95557a65-bbce-21b8-a848-b8062a247fc9",
+   "type": "image",
+   "image": {
+    "alt": "Zuma entrance lit up at night under its sign",
+    "assetId": "6aff5adc6386d77028047f81"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d232343f-430f-6f00-df64-f3de92fadd11",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"heading-style-h2 text-weight-normal\">A Landmark Reimagined</h2>",
+    "text": "A Landmark Reimagined"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "3ef9a39e-de20-3580-942d-76515eab48dd",
+   "type": "image",
+   "image": {
+    "alt": "Dimly lit bar and lounge with a checkered floor",
+    "assetId": "6aff5b7296bd0c7db6a86702"
+   },
+   "attributes": {
+    "data-eager": "true"
+   }
+  },
+  {
+   "id": "c73a6076-9465-122a-092d-cb68c9f9d79e",
+   "type": "image",
+   "image": {
+    "alt": "Booth seating and wooden tables in the dim lobby bar",
+    "assetId": "6aff5b7de3946ce095dec9c3"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d4f0a5c7-86f6-a1a0-0d62-0dff0ad69075",
+   "type": "image",
+   "image": {
+    "alt": "Lounge with armchairs, a fireplace and a large painting",
+    "assetId": "6aff5af0fc2bf308341c7953"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "b26846ca-c610-66ad-5b17-45d6208a931b",
+   "type": "image",
+   "image": {
+    "alt": "Courtyard tables under umbrellas and string lights at night",
+    "assetId": "6aff5b9f26f074f51981c67b"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ac3a016e-039e-e4aa-3ff9-8529f3c4678b",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"history-landmark_text\">INC Architecture interpreted rather than replicated historical references in the hotel, bringing depth, material richness, and careful attention to craft to the rejuvenation of The Guild. The result is a destination that feels inseparable from its neighborhood, its history, and its future.</p>",
+    "text": "INC Architecture interpreted rather than replicated historical references in the hotel, bringing depth, material richness, and careful attention to craft to the rejuvenation of The Guild. The result is a destination that feels inseparable from its neighborhood, its history, and its future."
+   },
+   "attributes": {
+    "data-history-collapse-fade": "true"
+   }
+  },
+  {
+   "id": "52f28a89-ecc8-606e-0a16-c341dda479e1",
+   "type": "component-instance",
+   "componentId": "560e1b31-d612-0921-8773-8f9de2e2b06f",
+   "propertyOverrides": []
+  },
+  {
+   "id": "a992c4e8-eab3-ba71-66d2-f0e4b546f440",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Sed maximus venenatis viverra. Vivamus placerat lorem ut euismod porta."
+     }
+    },
+    {
+     "propertyId": "4301866b-8aea-0230-bb89-72922318f6c7",
+     "type": "Plain Text",
+     "label": "Video Link",
+     "text": {
+      "html": null,
+      "text": ""
+     }
+    }
+   ]
+  },
+  {
+   "id": "79cb2019-b5e7-af04-ab91-55fddb77396a",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Nam sit amet velit quis lorem ultrices condimentum. Ut sit amet arcu interdum, iaculis mi sollicitudin, scelerisque sem."
+     }
+    }
+   ]
+  },
+  {
+   "id": "72fc8c2a-b1a0-cf5f-e84f-de0b26974e58",
+   "type": "component-instance",
+   "componentId": "bd6bed74-9450-e2b0-283a-efaf6bf33425",
+   "propertyOverrides": [
+    {
+     "propertyId": "178535ff-e79e-11c6-b372-ba18b4b0b08c",
+     "type": "Plain Text",
+     "label": "Caption",
+     "text": {
+      "html": null,
+      "text": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+     }
+    }
+   ]
+  },
+  {
+   "id": "4d6c6fa5-4455-646e-d2d0-4db289c1476d",
+   "type": "component-instance",
+   "componentId": "d6e2f6bc-b2b0-8951-1f0a-59832380519b",
+   "propertyOverrides": [
+    {
+     "propertyId": "cb9c481f-b5dc-1c74-716f-3d3606e28333",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "Discover the Property"
+     }
+    },
+    {
+     "propertyId": "b8f3c5b9-efe9-e6a4-5af7-6ab68b883833",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+     }
+    },
+    {
+     "propertyId": "d8b278ad-b9fa-a7bf-d679-42cae05a0989",
+     "type": "Alt Text",
+     "label": "Image/Image Alt",
+     "text": {
+      "html": null,
+      "text": "Illustrated map of the hotel grounds, guest room wings and cottages"
+     }
+    }
+   ]
+  },
+  {
+   "id": "1d8e9af5-d4ac-dcff-bd4f-79d0619e921f",
+   "type": "component-instance",
+   "componentId": "f5403de4-dabb-14c3-ecf8-c945d0a8e22e",
+   "propertyOverrides": []
+  },
+  {
+   "id": "aa0713d8-0084-b40c-9dc6-454e3d36f20b",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "rooms"
+     }
+    }
+   ]
+  },
+  {
+   "id": "7597bab3-fbac-3154-7f9c-8f1961f2a83b",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "dining"
+     }
+    }
+   ]
+  },
+  {
+   "id": "91574e11-d8e9-22a6-e1f7-1b695f7b6aec",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "wellness"
+     }
+    }
+   ]
+  },
+  {
+   "id": "990405b7-dc8c-d76e-d3b8-cdc226af4c24",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "meetings & events"
+     }
+    }
+   ]
+  },
+  {
+   "id": "699f0197-bf87-3e36-76da-667fc7b962a8",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "arts"
+     }
+    }
+   ]
+  },
+  {
+   "id": "d098cc48-c522-61ed-d0b8-52240b73862a",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "gallery"
+     }
+    }
+   ]
+  },
+  {
+   "id": "8c8be19b-e67e-6549-4c90-582e294a77f3",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "0ad66eaf-52ff-1f9a-8207-ebe6aa1e8fce",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "6f24be72-90ef-6c41-acf9-799f50ff0758",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "597605b2-7b52-2be3-4723-1f33a45e3f27",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "dc1619b4-198b-6cfb-f845-27adf57a76a4",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-26T17:00:44.656Z"
+}

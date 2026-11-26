@@ -1,0 +1,369 @@
+{
+ "component": {
+  "id": "44cccc51-37cb-2526-e426-133987071983",
+  "name": "Overlay Detail Panel Modal",
+  "description": "Pop-up dialog with image, details and up to five items. Pick the look with the Variant prop. Used only by the old Arts pop-ups.",
+  "group": "Modals"
+ },
+ "nodes": [
+  {
+   "id": "44cccc51-37cb-2526-e426-133987071989",
+   "type": "html-embed",
+   "html": "<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M20 12H4M10 6l-6 6 6 6\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "fa68ef71-3fc3-4d7b-ed7f-b255fc909bf1",
+   "type": "html-embed",
+   "html": "<svg width=\"100%\" height=\"100%\" aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 429 28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7.92838 27.4564V26.1828C12.0373 26.0667 12.4614 25.8547 12.4614 24.1197V2.01088H7.60031C3.60745 2.01088 2.62323 3.57389 1.543 12.0624H0L0.366746 0.449211H29.5931L29.9598 12.0624H28.4155C27.2779 3.5152 26.3324 2.01088 22.3582 2.01088H17.4771V24.1197C17.4771 25.8547 17.9025 26.0667 22.0114 26.1828V27.4564H7.92838Z\" fill=\"currentColor\"/><path d=\"M33.1009 27.4564V26.1828C36.1109 26.0667 36.4003 25.836 36.4003 24.1197V3.78593C36.4003 2.06956 36.1109 1.83751 33.1009 1.72148V0.449211H44.7141V1.72148C41.7241 1.83751 41.416 2.06956 41.416 3.78593V12.1971H58.3144V3.78593C58.3144 2.06956 58.025 1.83751 55.0163 1.72148V0.449211H66.6295V1.72148C63.6395 1.83751 63.3301 2.06956 63.3301 3.78593V24.1197C63.3301 25.836 63.6395 26.0667 66.6295 26.1828V27.4564H55.0163V26.1828C58.025 26.0667 58.3144 25.836 58.3144 24.1197V13.7988H41.416V24.1197C41.416 25.836 41.7241 26.0667 44.7141 26.1828V27.4564H33.1009Z\" fill=\"currentColor\"/><path d=\"M69.4994 27.4564V26.1828C72.4894 26.0667 72.7988 25.836 72.7988 24.1197V3.78593C72.7988 2.06956 72.4894 1.83751 69.4994 1.72148V0.449211H96.0438L96.3919 9.41915H94.8676C93.826 3.18847 92.6297 2.01088 88.1354 2.01088H77.8145V12.8332H83.7371C86.5538 12.8332 87.1512 12.0997 87.634 7.77879H88.7529V19.1426H87.634C87.1512 14.8203 86.5538 14.1068 83.7371 14.1068H77.8145V25.8934H88.3475C92.8618 25.8934 94.058 24.6211 95.1183 17.9263H96.6613L96.3145 27.4564H69.4994Z\" fill=\"currentColor\"/><path d=\"M112.231 13.9764V13.8991C112.231 4.75444 117.459 0.0094148 127.432 0.0094148C136.558 0.0094148 137.734 4.4277 139.085 0.453509H140.917V9.7902H138.698C137.638 4.54373 133.721 1.57242 127.857 1.57242C120.68 1.57242 117.42 5.23721 117.42 13.571V14.7673C117.42 22.2329 120.622 26.1884 127.703 26.1884C133.605 26.1884 136.962 22.9664 136.962 18.5294C136.962 15.5968 136.114 15.3274 127.568 15.23V14.0538H143.541V15.3274C141.823 15.4434 141.631 15.6355 141.631 17.3132V27.4607H139.779C139.452 26.1497 138.776 24.2587 138.101 22.561H137.695C135.786 26.0337 131.908 27.8661 126.178 27.8861C116.707 27.9048 112.231 23.0624 112.231 13.9764Z\" fill=\"currentColor\"/><path d=\"M149.171 16.7901V3.78724C149.171 2.07087 148.881 1.84016 145.871 1.72413V0.450524H157.466V1.72413C154.496 1.84016 154.187 2.07087 154.187 3.78724V16.5593C154.187 22.654 156.907 25.3946 163.234 25.3946C169.542 25.3946 172.242 22.654 172.242 16.5593V7.16397C172.242 3.98062 171.298 2.39894 167.864 1.72413V0.450524H177.896V1.72413C175.079 2.24424 174.596 3.34448 174.596 6.31579V16.7901C174.596 24.6424 170.777 27.9018 161.903 27.9018C153.009 27.9018 149.171 24.6424 149.171 16.7901Z\" fill=\"currentColor\"/><path d=\"M180.688 27.4564V26.1828C183.697 26.0667 183.987 25.836 183.987 24.1197V3.78593C183.987 2.06956 183.697 1.83751 180.688 1.72148V0.449211H192.301V1.72148C189.311 1.83751 189.003 2.06956 189.003 3.78593V24.1197C189.003 25.836 189.311 26.0667 192.301 26.1828V27.4564H180.688Z\" fill=\"currentColor\"/><path d=\"M195.167 27.4564V26.1828C198.177 26.0667 198.467 25.836 198.467 24.1197V3.78593C198.467 2.06956 198.177 1.83751 195.167 1.72148V0.449211H208.054V1.72148C203.906 1.83751 203.482 2.04956 203.482 3.78593V25.8747H212.472C217.024 25.8747 218.202 24.1383 219.166 14.975H220.767L220.419 27.4564H195.167Z\" fill=\"currentColor\"/><path d=\"M232.239 25.7974H239.898C246.243 25.7974 249.234 22.3059 249.234 14.7243V13.2C249.234 5.59965 246.243 2.10823 239.898 2.10823H232.239V25.7974ZM223.923 27.4564V26.1841C226.933 26.0681 227.223 25.836 227.223 24.1197V3.78593C227.223 2.06956 226.933 1.83751 223.923 1.72149V0.449211H240.379C249.485 0.449211 254.442 5.21291 254.442 13.9335V14.0108C254.442 22.6913 249.485 27.4564 240.379 27.4564H223.923Z\" fill=\"currentColor\"/><path d=\"M268.335 27.4486V26.175C271.345 26.0589 271.635 25.8282 271.635 24.1118V3.77812C271.635 2.06174 271.345 1.82969 268.335 1.71367V0.441397H279.949V1.71367C276.959 1.82969 276.651 2.06174 276.651 3.77812V12.1893H293.549V3.77812C293.549 2.06174 293.259 1.82969 290.251 1.71367V0.441397H301.864V1.71367C298.874 1.82969 298.565 2.06174 298.565 3.77812V24.1118C298.565 25.8282 298.874 26.0589 301.864 26.175V27.4486H290.251V26.175C293.259 26.0589 293.549 25.8282 293.549 24.1118V13.7909H276.651V24.1118C276.651 25.8282 276.959 26.0589 279.949 26.175V27.4486H268.335Z\" fill=\"currentColor\"/><path d=\"M330.798 14.9885V12.9054C330.798 5.24641 327.48 1.60029 320.593 1.60029C313.706 1.60029 310.407 5.24641 310.407 12.9054V14.9885C310.407 22.6475 313.706 26.2936 320.593 26.2936C327.48 26.2936 330.798 22.6475 330.798 14.9885ZM305.179 13.9856V13.9083C305.179 4.80232 310.484 -5.53251e-05 320.593 -5.53251e-05C330.702 -5.53251e-05 336.006 4.80232 336.006 13.9083V13.9856C336.006 23.0916 330.702 27.894 320.593 27.894C310.484 27.894 305.179 23.0916 305.179 13.9856Z\" fill=\"currentColor\"/><path d=\"M347.521 27.4486V26.175C351.63 26.0589 352.054 25.8469 352.054 24.1118V2.00307H347.193C343.2 2.00307 342.216 3.56607 341.136 12.0546H339.593L339.96 0.441397H369.186L369.553 12.0546H368.008C366.871 3.50739 365.925 2.00307 361.951 2.00307H357.07V24.1118C357.07 25.8469 357.496 26.0589 361.604 26.175V27.4486H347.521Z\" fill=\"currentColor\"/><path d=\"M372.69 27.4486V26.175C375.68 26.0589 375.989 25.8282 375.989 24.1118V3.77812C375.989 2.06174 375.68 1.82969 372.69 1.71367V0.441397H399.234L399.582 9.41133H398.058C397.017 3.18065 395.82 2.00307 391.326 2.00307H381.005V12.8254H386.926C389.744 12.8254 390.342 12.0919 390.825 7.77098H391.943V19.1348H390.825C390.342 14.8125 389.744 14.099 386.926 14.099H381.005V25.8856H391.538C396.052 25.8856 397.249 24.6133 398.309 17.9185H399.852L399.505 27.4486H372.69Z\" fill=\"currentColor\"/><path d=\"M403.4 27.4486V26.175C406.41 26.0589 406.699 25.8282 406.699 24.1118V3.77812C406.699 2.06174 406.41 1.82969 403.4 1.71367V0.441397H416.287V1.71367C412.139 1.82969 411.715 2.04174 411.715 3.77812V25.8669H420.705C425.256 25.8669 426.433 24.1305 427.398 14.9672H429L428.652 27.4486H403.4Z\" fill=\"currentColor\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "44cccc51-37cb-2526-e426-13398707198d",
+   "type": "html-embed",
+   "html": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 3l18 18M21 3L3 21\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "44cccc51-37cb-2526-e426-133987071990",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "d0548cfc-0e29-9c8b-2304-a2938b492c01",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": "6ad74da46b56ff1d7223e4d7"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ca44b692-74f1-7653-c0f3-177b5ac06e47",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"overlay-detail-panel-modal_eyebrow\"><a class=\"overlay-detail-panel-modal_eyebrow-link\" href=\"#\" data-w-id=\"bb88abf4-55e4-4a94-067f-7131c5c6bd06\"></a></p>",
+    "text": ""
+   },
+   "attributes": {}
+  },
+  {
+   "id": "44cccc51-37cb-2526-e426-1339870719ab",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "44cccc51-37cb-2526-e426-1339870719b8",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "7db7c2d6-1db6-69d4-c57a-a0deaa632c7d",
+   "type": "html-embed",
+   "html": "<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 18 18\" fill=\"none\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M7 4l5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.25\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "44cccc51-37cb-2526-e426-1339870719c5",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "44cccc51-37cb-2526-e426-1339870719d2",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "44cccc51-37cb-2526-e426-1339870719df",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "34a13abd-c79f-2de5-4cf8-a742962bdc8c",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "5cc287c7-f1f6-3f39-d6e2-516e425407d1",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"overlay-detail-panel-modal_item-button\" href=\"#\">reserve</a>",
+    "text": "reserve"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "c4082697-d6e2-06ad-844b-26c351ecc6e2",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "e2471100-edbc-c38a-5506-2a5e31f55180",
+   "type": "Plain Text",
+   "label": "Header/Heading",
+   "text": {
+    "html": null,
+    "text": "council boardroom"
+   }
+  },
+  {
+   "propertyId": "7319d118-d240-ca86-36e8-071c77d6ce26",
+   "type": "Plain Text",
+   "label": "Header/Eyebrow",
+   "text": {
+    "html": null,
+    "text": "by eva struble"
+   }
+  },
+  {
+   "propertyId": "ceef8a78-7413-ed6a-f295-6383f720ad1a",
+   "type": "Plain Text",
+   "label": "Header/Caption",
+   "text": {
+    "html": null,
+    "text": "2024 | 48 x 60 in\nOil and acrylic on canvas"
+   }
+  },
+  {
+   "propertyId": "4628f6b7-785d-3e83-9538-04533d608150",
+   "type": "Alt Text",
+   "label": "Media/Image alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "e5b4574f-6bdb-6bce-7286-ed3379124e68",
+   "type": "Plain Text",
+   "label": "Body/Subheading",
+   "text": {
+    "html": null,
+    "text": "details"
+   }
+  },
+  {
+   "propertyId": "ed8263d8-512d-01db-9908-80de849cc926",
+   "type": "Plain Text",
+   "label": "Body/Text",
+   "text": {
+    "html": null,
+    "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+   }
+  },
+  {
+   "propertyId": "ec4e1ee7-5094-9fdb-1324-d20350044895",
+   "type": "Plain Text",
+   "label": "Extras/Extras heading",
+   "text": {
+    "html": null,
+    "text": "layout options"
+   }
+  },
+  {
+   "propertyId": "a42a4374-955d-db93-af52-0dab121b2145",
+   "type": "Plain Text",
+   "label": "Extras/Options",
+   "text": {
+    "html": null,
+    "text": "Classroom: 21*\nU-shape: 21\nRounds: 21\nTheater: 21\nConference: 21*\nReception: 21"
+   }
+  },
+  {
+   "propertyId": "8ed6e9a4-9e5b-1cc8-4b4e-87aac1cb43f9",
+   "type": "Plain Text",
+   "label": "Extras/Extras link label",
+   "text": {
+    "html": null,
+    "text": "floorplan"
+   }
+  },
+  {
+   "propertyId": "9155a464-1b09-c36c-e59f-54f8019602c2",
+   "type": "Plain Text",
+   "label": "Extras/Note",
+   "text": {
+    "html": null,
+    "text": "*requires furniture removal, charges may apply"
+   }
+  },
+  {
+   "propertyId": "fa672abe-c6b3-2171-97c5-e047fcc748c1",
+   "type": "Plain Text",
+   "label": "Button/Button label",
+   "text": {
+    "html": null,
+    "text": "submit your request"
+   }
+  },
+  {
+   "propertyId": "5955a3e6-91bb-96f5-1ea6-537e6c04bdee",
+   "type": "Plain Text",
+   "label": "Item 1/Item 1 title",
+   "text": {
+    "html": null,
+    "text": "510 SQ FT"
+   }
+  },
+  {
+   "propertyId": "4a2997af-a88a-82cf-7548-4863fdae218c",
+   "type": "Plain Text",
+   "label": "Item 1/Item 1 text",
+   "text": {
+    "html": null,
+    "text": "Contemporary Japanese dining."
+   }
+  },
+  {
+   "propertyId": "46ca1ef4-3b85-ba2a-d5b7-0f0944a420ab",
+   "type": "Plain Text",
+   "label": "Item 1/Item 1 button label",
+   "text": {
+    "html": null,
+    "text": "reserve"
+   }
+  },
+  {
+   "propertyId": "6c5110ed-383b-533b-7274-d0ab9a5ccc89",
+   "type": "Plain Text",
+   "label": "Item 2/Item 2 title",
+   "text": {
+    "html": null,
+    "text": "Modern executive seating for 12"
+   }
+  },
+  {
+   "propertyId": "a36f91d1-4d70-02d1-563a-a6cf23d9f6e6",
+   "type": "Plain Text",
+   "label": "Item 2/Item 2 text",
+   "text": {
+    "html": null,
+    "text": "Cocktails, light bites and an intimate atmosphere."
+   }
+  },
+  {
+   "propertyId": "2c0e6fb0-ed0c-af61-6a1c-c0287a5e201e",
+   "type": "Plain Text",
+   "label": "Item 2/Item 2 button label",
+   "text": {
+    "html": null,
+    "text": "reserve"
+   }
+  },
+  {
+   "propertyId": "12aa8bc9-178a-ec92-1394-2aea377bf309",
+   "type": "Plain Text",
+   "label": "Item 3/Item 3 title",
+   "text": {
+    "html": null,
+    "text": "Premium conference table with ultra connectivity"
+   }
+  },
+  {
+   "propertyId": "2e949c11-ddde-6110-7c1b-bab3490b4b0b",
+   "type": "Plain Text",
+   "label": "Item 3/Item 3 text",
+   "text": {
+    "html": null,
+    "text": "Flexible spaces for meetings, celebrations, and everything worth gathering for."
+   }
+  },
+  {
+   "propertyId": "304badac-6624-e2bc-efda-0ee464689c0e",
+   "type": "Plain Text",
+   "label": "Item 3/Item 3 button label",
+   "text": {
+    "html": null,
+    "text": "reserve"
+   }
+  },
+  {
+   "propertyId": "ff15f7bf-e640-a214-60e1-838f4776be35",
+   "type": "Plain Text",
+   "label": "Item 4/Item 4 title",
+   "text": {
+    "html": null,
+    "text": "Oversized, built-in hi-res TV"
+   }
+  },
+  {
+   "propertyId": "aed90142-a269-f3ef-65a4-3fe99530f28f",
+   "type": "Plain Text",
+   "label": "Item 4/Item 4 text",
+   "text": {
+    "html": null,
+    "text": "Flexible spaces for meetings, celebrations, and everything worth gathering for."
+   }
+  },
+  {
+   "propertyId": "3bd5396e-ba3c-d511-2d2d-d8d8a005282c",
+   "type": "Plain Text",
+   "label": "Item 4/Item 4 button label",
+   "text": {
+    "html": null,
+    "text": "reserve"
+   }
+  },
+  {
+   "propertyId": "27a74652-0013-3c7d-5325-417ec5781389",
+   "type": "Plain Text",
+   "label": "Item 5/Item 5 title",
+   "text": {
+    "html": null,
+    "text": "Capacity: 50+"
+   }
+  },
+  {
+   "propertyId": "f99805f0-ad5a-6ef3-99c4-1f24d46b049a",
+   "type": "Plain Text",
+   "label": "Item 5/Item 5 text",
+   "text": {
+    "html": null,
+    "text": "Flexible spaces for meetings, celebrations, and everything worth gathering for."
+   }
+  },
+  {
+   "propertyId": "94c0b3ed-3c91-d7e6-77fa-11c381d8699a",
+   "type": "Plain Text",
+   "label": "Item 5/Item 5 button label",
+   "text": {
+    "html": null,
+    "text": "reserve"
+   }
+  }
+ ]
+}

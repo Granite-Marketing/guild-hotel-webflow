@@ -1,0 +1,50 @@
+{
+ "component": {
+  "id": "d6e2f6bc-b2b0-8951-1f0a-59832380519b",
+  "name": "Map Feature Centered",
+  "description": "Centred heading and text with a wide illustration below. Set Image on each instance.",
+  "group": null
+ },
+ "nodes": [
+  {
+   "id": "d6e2f6bc-b2b0-8951-1f0a-5983238051c0",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {
+    "loading": "lazy"
+   }
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "cb9c481f-b5dc-1c74-716f-3d3606e28333",
+   "type": "Plain Text",
+   "label": "Content/Heading",
+   "text": {
+    "html": null,
+    "text": "The Neighborhood"
+   }
+  },
+  {
+   "propertyId": "b8f3c5b9-efe9-e6a4-5af7-6ab68b883833",
+   "type": "Plain Text",
+   "label": "Content/Text",
+   "text": {
+    "html": null,
+    "text": "We’ve lived here for a century; let us show you around."
+   }
+  },
+  {
+   "propertyId": "d8b278ad-b9fa-a7bf-d679-42cae05a0989",
+   "type": "Alt Text",
+   "label": "Image/Image Alt",
+   "text": {
+    "html": null,
+    "text": "Hand-drawn map of the streets and landmarks around the hotel"
+   }
+  }
+ ]
+}

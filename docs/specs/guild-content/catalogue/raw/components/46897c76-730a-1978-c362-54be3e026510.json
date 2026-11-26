@@ -1,0 +1,102 @@
+{
+ "component": {
+  "id": "46897c76-730a-1978-c362-54be3e026510",
+  "name": "Image Trio Text Left",
+  "description": "Heading on top with three contained cards: image, eyebrow title and rich text.",
+  "group": "Image Trio Text"
+ },
+ "nodes": [
+  {
+   "id": "46897c76-730a-1978-c362-54be3e026519",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "46897c76-730a-1978-c362-54be3e026520",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "46897c76-730a-1978-c362-54be3e026527",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "ebeb1a92-d766-3614-254d-19c94cdb7b4f",
+   "type": "Plain Text",
+   "label": "Header/Heading",
+   "text": {
+    "html": null,
+    "text": "key features"
+   }
+  },
+  {
+   "propertyId": "f79f92db-cfe5-c3f4-bec2-ca3718e9faed",
+   "type": "Plain Text",
+   "label": "Items/Item 1 Heading",
+   "text": {
+    "html": null,
+    "text": "Item heading"
+   }
+  },
+  {
+   "propertyId": "c70696b1-fd21-ac07-98a4-dc5d7c2a3d8a",
+   "type": "Plain Text",
+   "label": "Items/Item 2 Heading",
+   "text": {
+    "html": null,
+    "text": "Item heading"
+   }
+  },
+  {
+   "propertyId": "d18381ee-348a-4dd0-1bdd-845d3a7c8bd7",
+   "type": "Plain Text",
+   "label": "Items/Item 3 Heading",
+   "text": {
+    "html": null,
+    "text": "Item heading"
+   }
+  },
+  {
+   "propertyId": "6641f4cd-e0a1-50a4-7c21-0c2924814323",
+   "type": "Rich Text",
+   "label": "Items/Item 1 Text",
+   "text": {
+    "html": "<div><p data-w-id=\"69305be6-98fe-0868-8625-1a3e9d7014c3\">Item text</p></div>",
+    "text": null
+   }
+  },
+  {
+   "propertyId": "af838336-9b52-2e13-c029-42ce918a8efd",
+   "type": "Rich Text",
+   "label": "Items/Item 2 Text",
+   "text": {
+    "html": "<div><p data-w-id=\"da6ff21f-4db1-f41f-152e-f6ef8100c4a2\">Item text</p></div>",
+    "text": null
+   }
+  },
+  {
+   "propertyId": "7f61040c-583e-d94e-aefd-7c95d13e6849",
+   "type": "Rich Text",
+   "label": "Items/Item 3 Text",
+   "text": {
+    "html": "<div><p data-w-id=\"9ac79a75-3d48-2e58-dc5c-9855925246eb\">Item text</p></div>",
+    "text": null
+   }
+  }
+ ]
+}

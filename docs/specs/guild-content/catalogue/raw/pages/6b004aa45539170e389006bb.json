@@ -1,0 +1,34 @@
+{
+ "page": {
+  "id": "6b004aa45539170e389006bb",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b004aa45539170e389006b5",
+  "title": "🏷️ Gallery Categories Template",
+  "slug": "detail_gallery-categories",
+  "createdOn": "2026-11-20T13:27:00.918Z",
+  "lastUpdated": "2026-11-24T17:33:38.170Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/gallery-categories",
+  "localeId": null
+ },
+ "nodes": [],
+ "lastUpdated": "2026-11-20T13:27:00.930Z"
+}

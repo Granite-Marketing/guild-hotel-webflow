@@ -1,0 +1,204 @@
+{
+ "component": {
+  "id": "06c49a08-f7ed-6064-538f-ea093f14b321",
+  "name": "Form Press Enquiries",
+  "description": "Press page: intro, press email and the press form.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b327",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"text-style-script is-press\">Press Enquiries</h2>",
+    "text": "Press Enquiries"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b32a",
+   "type": "text",
+   "text": {
+    "html": "<p>Proin sed nisl nisi. Quisque porttitor, nisl sed eleifend mattis, risus tellus pulvinar metus, a lacinia lacus neque sit amet purus. Donec efficitur leo sed urna tempus, eu congue ex convallis.</p>",
+    "text": "Proin sed nisl nisi. Quisque porttitor, nisl sed eleifend mattis, risus tellus pulvinar metus, a lacinia lacus neque sit amet purus. Donec efficitur leo sed urna tempus, eu congue ex convallis."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b32d",
+   "type": "text",
+   "text": {
+    "html": "<div class=\"form-split-script-contact_detail-label text-style-caps-caption-16\">email</div>",
+    "text": "email"
+   },
+   "attributes": {
+    "data-line-mask": "text"
+   }
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b32f",
+   "type": "text",
+   "text": {
+    "html": "<p>press@theguildhotel.com</p>",
+    "text": "press@theguildhotel.com"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b346",
+   "type": "text",
+   "text": {
+    "html": "<h3 id=\"photoshoot-contact-heading\" class=\"form-split-script-contact_fieldset-heading heading-style-h4\">contact information</h3>",
+    "text": "contact information"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b349",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">First Name</label>",
+    "text": "First Name"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b34a",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "First Name"
+   }
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b34c",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Last Name</label>",
+    "text": "Last Name"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b34d",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Last Name"
+   }
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b34f",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Email Address</label>",
+    "text": "Email Address"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b350",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Email Address"
+   }
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b352",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Phone Number</label>",
+    "text": "Phone Number"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b353",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Phone Number"
+   }
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b35f",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Organization</label>",
+    "text": "Organization"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b360",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Organization"
+   }
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b365",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Expected publish date</label>",
+    "text": "Expected publish date"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b366",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Expected publish date"
+   }
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b36b",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"text-style-eyebrow-caps\">Details</label>",
+    "text": "Details"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b36c",
+   "type": "text-input",
+   "placeholder": "Example Text",
+   "attributes": {
+    "aria-label": "Details"
+   }
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b36e",
+   "type": "submit-button",
+   "waitingText": "sending",
+   "value": "submit your request",
+   "attributes": {
+    "data-reveal": "fade-only"
+   }
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b370",
+   "type": "text",
+   "text": {
+    "html": "<div>Thank you! Your submission has been received!</div>",
+    "text": "Thank you! Your submission has been received!"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "06c49a08-f7ed-6064-538f-ea093f14b373",
+   "type": "text",
+   "text": {
+    "html": "<div>Oops! Something went wrong while submitting the form.</div>",
+    "text": "Oops! Something went wrong while submitting the form."
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": []
+}

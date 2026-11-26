@@ -1,0 +1,276 @@
+{
+ "page": {
+  "id": "6afc5759981249dd386c4008",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Packages",
+  "slug": "packages",
+  "createdOn": "2026-11-17T13:32:09.901Z",
+  "lastUpdated": "2026-11-25T21:43:49.586Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Packages | The Guild Hotel",
+   "description": "Packages for your stay at The Guild Hotel in downtown San Diego, covering dining, culture, conferences and more."
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/packages",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "a0bd1537-003b-0e74-9517-515e8817d8c9",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "b6c661aa-02d9-4b45-0ecf-66886346f54c",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "954ba09c-c585-377c-a4e3-a643bbd37f21",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "c789159e-15bc-af82-a16d-23d3980bbb44",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "Packages"
+     }
+    },
+    {
+     "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a0cf1b8c-6599-1aeb-0aad-3babaa7eef51",
+   "type": "component-instance",
+   "componentId": "30192280-e01e-6f0a-638c-42d4686bee29",
+   "propertyOverrides": [
+    {
+     "propertyId": "f2f5e9fd-b2b2-ede5-2d94-15f81377e6e1",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "Stay a little\nlonger"
+     }
+    },
+    {
+     "propertyId": "201b39ab-c1e5-2b88-2d64-115d2eaccec1",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Pair your stay with dining, culture and time to slow down. Each package brings the best of The Guild together in one booking."
+     }
+    },
+    {
+     "propertyId": "3e1c8f3d-8d61-487e-6dc0-08ef7920490e",
+     "type": "Plain Text",
+     "label": "Tabs/Tabs label",
+     "text": {
+      "html": null,
+      "text": "Package types"
+     }
+    },
+    {
+     "propertyId": "1d51ffaa-b237-52c1-951e-bb304412e000",
+     "type": "Plain Text",
+     "label": "Tabs/Sticky tabs",
+     "text": {
+      "html": null,
+      "text": "true"
+     }
+    }
+   ]
+  },
+  {
+   "id": "2d7f8141-429d-028c-9f02-fa7f1d6183c9",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "e627cb1d-e22b-eaaf-64f9-633b5d12e235",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {
+    "data-eager": "true"
+   }
+  },
+  {
+   "id": "bee9c2ca-2288-5ed8-aa78-38d08bc4a5e9",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "1b0563aa-870d-e73a-1b05-188ca4be9c8c",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "38b333ce-daa8-1aed-489f-f7a62cd23b21",
+   "type": "component-instance",
+   "componentId": "f5403de4-dabb-14c3-ecf8-c945d0a8e22e",
+   "propertyOverrides": []
+  },
+  {
+   "id": "c701a2f3-456b-b82a-7fa4-1606c5ec0785",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "rooms"
+     }
+    }
+   ]
+  },
+  {
+   "id": "d8429416-fa82-a256-8181-2497519d19e8",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "dining"
+     }
+    }
+   ]
+  },
+  {
+   "id": "b7b5d0cf-c44b-b21b-ea64-1d278c96c259",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "wellness"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ad02219d-6d9a-2bd7-d2f5-e14eeeaf1688",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "meetings & events"
+     }
+    }
+   ]
+  },
+  {
+   "id": "4ea8bb5e-5806-fa67-3cfe-07864cbf890e",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "arts"
+     }
+    }
+   ]
+  },
+  {
+   "id": "9e23a605-65cc-772a-7e3f-827c4ab678e2",
+   "type": "component-instance",
+   "componentId": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+   "propertyOverrides": [
+    {
+     "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+     "type": "Plain Text",
+     "label": "Label",
+     "text": {
+      "html": null,
+      "text": "happenings"
+     }
+    }
+   ]
+  },
+  {
+   "id": "b80ef606-cec7-7fb8-4bfa-058f77cb4a5e",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "52c8df75-7bf3-a29f-bdce-158fef2bd370",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "64ef670f-ec28-a2e3-1928-29026e69ac73",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "13df46b0-90d2-78e7-464a-ec0d0801613b",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-20T21:17:28.977Z"
+}

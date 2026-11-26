@@ -1,0 +1,34 @@
+{
+ "page": {
+  "id": "6b00284ecf7ddb2b615e8be9",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b00284dcf7ddb2b615e8b7c",
+  "title": "❓ FAQs Template",
+  "slug": "detail_faqs",
+  "createdOn": "2026-11-20T11:00:30.593Z",
+  "lastUpdated": "2026-11-24T17:33:27.995Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/faqs",
+  "localeId": null
+ },
+ "nodes": [],
+ "lastUpdated": "2026-11-20T11:00:30.639Z"
+}

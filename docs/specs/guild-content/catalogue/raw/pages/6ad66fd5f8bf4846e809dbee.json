@@ -1,0 +1,787 @@
+{
+ "page": {
+  "id": "6ad66fd5f8bf4846e809dbee",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Rooms",
+  "slug": "rooms",
+  "createdOn": "2026-10-19T19:30:29.004Z",
+  "lastUpdated": "2026-11-26T15:39:41.711Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Rooms and Suites in Downtown San Diego | The Guild Hotel",
+   "description": "From intimate rooms to expansive loft suites, each space pairs The Guild's historic character with thoughtful design and modern comfort. Find your room."
+  },
+  "openGraph": {
+   "title": "Rooms and Suites in Downtown San Diego | The Guild Hotel",
+   "titleCopied": true,
+   "description": "From intimate rooms to expansive loft suites, each space pairs The Guild's historic character with thoughtful design and modern comfort. Find your room.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/rooms",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "8ec3e07a-61a8-c9d7-373e-39d22f606a43",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "a64b4bb7-8f04-663f-2edb-b950a05b4847",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "bc0c1393-1d0f-8b55-c877-9b1e69e1ce9e",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "1f04865b-02e3-a2e5-7f9a-8f6563d7bfa9",
+     "type": "Alt Text",
+     "label": "Background/Image Alt",
+     "text": {
+      "html": null,
+      "text": "Suite with a large white bed, green walls and brass wall lights"
+     }
+    },
+    {
+     "propertyId": "c789159e-15bc-af82-a16d-23d3980bbb44",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "rooms & suites"
+     }
+    },
+    {
+     "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Our rooms and suites pair historic character with generous, modern comfort throughout."
+     }
+    }
+   ]
+  },
+  {
+   "id": "9c8cfe26-daae-2315-9c76-9bc687bd7e39",
+   "type": "component-instance",
+   "componentId": "bdff66b3-92d9-e1e3-dbc0-86a28e384c9b",
+   "propertyOverrides": [
+    {
+     "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+     "type": "Plain Text",
+     "label": "Content/heading",
+     "text": {
+      "html": null,
+      "text": "A room for every stay"
+     }
+    },
+    {
+     "propertyId": "4847f1eb-e957-0144-e10e-92569ab9c48a",
+     "type": "Alt Text",
+     "label": "Image/image alt",
+     "text": {
+      "html": null,
+      "text": "The Guild Hotel postmark stamp, San Diego, Nov 3 1924"
+     }
+    }
+   ]
+  },
+  {
+   "id": "6d6708c8-25f8-9c45-7f7e-c8e4509d1bb3",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-quiz_counter text-style-caption\">01 / 03</p>",
+    "text": "01 / 03"
+   },
+   "attributes": {
+    "aria-label": "Step 1 of 3"
+   }
+  },
+  {
+   "id": "231e48de-d9ff-6bb4-c9b5-94ab39076014",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"rooms-collection-quiz_heading heading-style-h4\">who’s checking in?</h2>",
+    "text": "who’s checking in?"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "52cda1e6-190d-8601-34ef-93adccfb0291",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "2d94c64b-e36a-a44b-b4b1-21dfc28abfa1",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"rooms-collection-quiz_link text-style-caps-caption-16\" href=\"#\">see all the rooms</a>",
+    "text": "see all the rooms"
+   },
+   "attributes": {
+    "data-modal-open": "all-rooms",
+    "aria-haspopup": "dialog",
+    "aria-expanded": "false"
+   }
+  },
+  {
+   "id": "d2b97da6-6145-c06f-5f19-b1be18e3169d",
+   "type": "image",
+   "image": {
+    "alt": "The Guild Hotel entrance, a carved stone arch under the Young Men's Christian Association frieze",
+    "assetId": "6ad66fed15beaf9a7285e5c8"
+   },
+   "attributes": {
+    "data-hover-swap-media": "default"
+   }
+  },
+  {
+   "id": "aacff0bb-b6e3-1452-38c5-331f1d69dc32",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "3062ebe5-eed9-fde5-ab10-3c6440854c95",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "41e54919-9270-fa52-06cf-365094d52ed8",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-quiz_counter text-style-caption\">02 / 03</p>",
+    "text": "02 / 03"
+   },
+   "attributes": {
+    "aria-label": "Step 2 of 3"
+   }
+  },
+  {
+   "id": "868313c8-f41f-c85f-495a-dc0161b46491",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"rooms-collection-quiz_heading heading-style-h4\">what type of stay are you planning?</h2>",
+    "text": "what type of stay are you planning?"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "40969629-c5ba-426b-2bb5-0f07831525dc",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "b7f4e4d8-b93a-c90a-76d3-afc4341bad81",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"rooms-collection-quiz_link text-style-caps-caption-16\" href=\"#rooms-quiz\">back</a>",
+    "text": "back"
+   },
+   "attributes": {
+    "data-rooms-quiz-back": "true"
+   }
+  },
+  {
+   "id": "ef667276-5ed5-610e-848e-6d73a5521b81",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"rooms-collection-quiz_link text-style-caps-caption-16\" href=\"#\">see all the rooms</a>",
+    "text": "see all the rooms"
+   },
+   "attributes": {
+    "data-modal-open": "all-rooms",
+    "aria-haspopup": "dialog",
+    "aria-expanded": "false"
+   }
+  },
+  {
+   "id": "26678e9a-9127-5add-a0b7-508caf263a3c",
+   "type": "image",
+   "image": {
+    "alt": "Newlywed couple laughing on a hotel bed beside a small white cake",
+    "assetId": "6ad6701a28c5dc695c82c539"
+   },
+   "attributes": {
+    "data-hover-swap-media": "default"
+   }
+  },
+  {
+   "id": "ce1179dc-86be-bd6b-3259-97950aead25d",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "94f5c85b-fa09-0e4e-600a-562e7391db65",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "8d10b522-f9b7-aa2c-47c0-3e8efae457b6",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-quiz_counter text-style-caption\">03 / 03</p>",
+    "text": "03 / 03"
+   },
+   "attributes": {
+    "aria-label": "Step 3 of 3"
+   }
+  },
+  {
+   "id": "c1a1b751-43ba-7f04-e801-7f8c3d457c09",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"rooms-collection-quiz_heading heading-style-h4\">what matters most to you?</h2>",
+    "text": "what matters most to you?"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "cf2de1f5-2082-71d9-97aa-741c3b4c46ab",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "b88113b9-73bf-8a70-97f6-6144b96bbcfb",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"rooms-collection-quiz_link text-style-caps-caption-16\" href=\"#rooms-quiz\">back</a>",
+    "text": "back"
+   },
+   "attributes": {
+    "data-rooms-quiz-back": "true"
+   }
+  },
+  {
+   "id": "e1ee711a-3eec-8fef-6364-5d76a31f28aa",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"rooms-collection-quiz_link text-style-caps-caption-16\" href=\"#\">see all the rooms</a>",
+    "text": "see all the rooms"
+   },
+   "attributes": {
+    "data-modal-open": "all-rooms",
+    "aria-haspopup": "dialog",
+    "aria-expanded": "false"
+   }
+  },
+  {
+   "id": "1e534516-9292-8d7d-349c-1f62227bec9b",
+   "type": "image",
+   "image": {
+    "alt": "Guest in a robe reading a magazine in bed with a breakfast tray",
+    "assetId": "6ad66feb58367429abb4835f"
+   },
+   "attributes": {
+    "data-hover-swap-media": "default"
+   }
+  },
+  {
+   "id": "4d8ccb7c-531a-801b-056c-b41f62ed33e1",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "88a507a7-0185-f7c2-a44e-f11ddd91a0d7",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "b46a236f-eef9-ee6b-ed9b-bb272dd1d3db",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"rooms-collection-recommendations_heading heading-style-h2\">our recommendations\nfor your stay</h2>",
+    "text": "our recommendations\nfor your stay"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "4d232678-8457-b829-7807-f29ac833d1f1",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-recommendations_text text-size-medium\">From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort.</p>",
+    "text": "From intimate rooms to expansive loft suites, each space brings together The Guild’s historic character, thoughtful design and modern comfort."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "9c0c9fac-ca89-17c0-abcb-99fd2bfbe694",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-recommendations_text text-size-medium is-hidden\">No room matches all three answers, so here are the closest matches.</p>",
+    "text": "No room matches all three answers, so here are the closest matches."
+   },
+   "attributes": {
+    "data-rooms-quiz-closest": "true"
+   }
+  },
+  {
+   "id": "6574fa50-244d-5d62-49a0-35c815d55a25",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-recommendations_text text-size-medium is-hidden\">We could not find a room for those answers. See all the rooms, or go back to the quiz and try different answers.</p>",
+    "text": "We could not find a room for those answers. See all the rooms, or go back to the quiz and try different answers."
+   },
+   "attributes": {
+    "data-rooms-quiz-empty": "true"
+   }
+  },
+  {
+   "id": "be456d7d-6457-d7e3-3226-ab7f7208df2b",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-recommendations_text text-size-medium is-hidden\">Finding your rooms...</p>",
+    "text": "Finding your rooms..."
+   },
+   "attributes": {
+    "data-rooms-quiz-loading": "true",
+    "role": "status"
+   }
+  },
+  {
+   "id": "b83e9bd8-a13f-92ff-c04e-14f4d9e8f67e",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"rooms-collection-recommendations_link text-style-eyebrow-caps\" href=\"#rooms-quiz\">back to the quiz</a>",
+    "text": "back to the quiz"
+   },
+   "attributes": {
+    "data-rooms-quiz-restart": "true"
+   }
+  },
+  {
+   "id": "d3290fd2-fc33-e57e-eb9e-d99585007c7e",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"rooms-collection-recommendations_link text-style-eyebrow-caps\" href=\"#\">see all rooms</a>",
+    "text": "see all rooms"
+   },
+   "attributes": {
+    "data-modal-open": "all-rooms",
+    "aria-haspopup": "dialog",
+    "aria-expanded": "false"
+   }
+  },
+  {
+   "id": "017cca63-1f29-e4b8-7c5a-07592a8bc2a3",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": "6ad67001f08ff78c37d85427"
+   },
+   "attributes": {
+    "data-hover-scale": "1.05",
+    "data-hover-scale-duration": "0.8"
+   }
+  },
+  {
+   "id": "6296914b-cd3f-bf98-f9f9-589cce05d449",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"rooms-collection-room-grid_heading heading-style-h3\">deluxe king suite</h3>",
+    "text": "deluxe king suite"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "4f7c41e3-ca0c-a9db-fde1-65bde686e1cc",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-room-grid_detail text-style-eyebrow\">4 guests</p>",
+    "text": "4 guests"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "e4fd9fea-a241-0ae9-2615-d9d4e774eb95",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-room-grid_detail text-style-eyebrow\">52 m² size</p>",
+    "text": "52 m² size"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "af176b22-8e24-e971-3457-0b3907a46d01",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"button is-chamfer\">view more</p>",
+    "text": "view more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "752b53d1-05b9-4627-f19d-e738254b1dc9",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": "6ad67004134731ad1b927d6c"
+   },
+   "attributes": {
+    "data-hover-scale": "1.05",
+    "data-hover-scale-duration": "0.8"
+   }
+  },
+  {
+   "id": "1d4e6327-0924-08fb-5256-8a5f9a8eafa6",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"rooms-collection-room-grid_heading heading-style-h3\">deluxe king suite</h3>",
+    "text": "deluxe king suite"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "0b8c2138-80bd-3d25-f6ae-d7747ad689eb",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-room-grid_detail text-style-eyebrow\">4 guests</p>",
+    "text": "4 guests"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "4e04336b-c57f-0ef5-fe03-179e98fa9a66",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-room-grid_detail text-style-eyebrow\">52 m² size</p>",
+    "text": "52 m² size"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "eb388d65-a08c-5176-fb95-9bb221fe6aca",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"button is-chamfer\">view more</p>",
+    "text": "view more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "93975351-7608-b291-5f57-66e768b81dc8",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": "6ad66ff0f8bf4846e809ead6"
+   },
+   "attributes": {
+    "data-hover-scale": "1.05",
+    "data-hover-scale-duration": "0.8"
+   }
+  },
+  {
+   "id": "0022788f-0e3e-dfd1-a7e4-16016bff12e5",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"rooms-collection-room-grid_heading heading-style-h3\">premium twin room</h3>",
+    "text": "premium twin room"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "9ef53e00-93fc-c0d9-718c-a338fd04bf58",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-room-grid_detail text-style-eyebrow\">4 guests</p>",
+    "text": "4 guests"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "631c80f8-e41b-3d77-bc23-8cb571a94cfa",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-room-grid_detail text-style-eyebrow\">52 m² size</p>",
+    "text": "52 m² size"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "1c6e62cf-4c91-c01a-1cb9-8d8cb1768976",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"button is-chamfer\">view more</p>",
+    "text": "view more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "a1949b86-6e94-ca81-fa29-de2dd4c9fe7f",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": "6ad67019735773f25340899e"
+   },
+   "attributes": {
+    "data-hover-scale": "1.05",
+    "data-hover-scale-duration": "0.8"
+   }
+  },
+  {
+   "id": "4287695d-d022-d76b-02f4-a33dcd4fe53a",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"rooms-collection-room-grid_heading heading-style-h3\">guild corner loft suite</h3>",
+    "text": "guild corner loft suite"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "6c3fa1f1-3314-e351-69c8-d4e8fba5d398",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-room-grid_detail text-style-eyebrow\">4 guests</p>",
+    "text": "4 guests"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "9640601d-97e2-fd9c-c5a2-88d295aa99a9",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"rooms-collection-room-grid_detail text-style-eyebrow\">52 m² size</p>",
+    "text": "52 m² size"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "2995da8d-dd60-fc96-ec63-ce9536708179",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"button is-chamfer\">view more</p>",
+    "text": "view more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "3c380f70-824e-00d2-b778-10d4f7f3c173",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {
+    "data-hover-scale": "1.05",
+    "data-hover-scale-duration": "0.8"
+   }
+  },
+  {
+   "id": "2f002229-651a-7634-8133-b27eadd1c6e8",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "409a591c-6d42-f6f5-3905-2b230703d3bf",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"button is-chamfer\">view more</p>",
+    "text": "view more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "725bdff0-11b3-1c54-dcc9-99db1369bb4e",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "6f0594eb-00fc-cffd-2ced-da4108663fb8",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "1f100d47-23d3-23de-41b1-38832580269d",
+   "type": "component-instance",
+   "componentId": "8e90ff20-1ed1-43a7-edce-89b7ea10c487",
+   "propertyOverrides": []
+  },
+  {
+   "id": "56d548f9-1183-60df-b60d-1f81d87bbb0e",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "5203eddb-bcea-7aea-80a3-1e6ce8cd572e",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "e21dcc38-c709-3e9d-8c9b-787a6e4307ad",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "f58ef24a-8ca7-f871-52b4-e7de8726b11c",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "bfb26ce6-3e7c-960b-4148-50ca88a257af",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"room-list-hover-preview_close\" href=\"#\">close</a>",
+    "text": "close"
+   },
+   "attributes": {
+    "data-modal-close": "true",
+    "aria-label": "Close all rooms"
+   }
+  },
+  {
+   "id": "bfb26ce6-3e7c-960b-4148-50ca88a257b3",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"room-list-hover-preview_tab is-active\" href=\"#\">all</a>",
+    "text": "all"
+   },
+   "attributes": {
+    "data-gallery-filter-tag": "all"
+   }
+  },
+  {
+   "id": "bfb26ce6-3e7c-960b-4148-50ca88a257b5",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"room-list-hover-preview_tab\" href=\"#\">rooms</a>",
+    "text": "rooms"
+   },
+   "attributes": {
+    "data-gallery-filter-tag": "room"
+   }
+  },
+  {
+   "id": "bfb26ce6-3e7c-960b-4148-50ca88a257b7",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"room-list-hover-preview_tab\" href=\"#\">suites</a>",
+    "text": "suites"
+   },
+   "attributes": {
+    "data-gallery-filter-tag": "suite"
+   }
+  },
+  {
+   "id": "7d1dd11c-292f-8a6d-5af1-d82e0db24083",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bfb26ce6-3e7c-960b-4148-50ca88a257d9",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"room-list-hover-preview_back\" href=\"#rooms-quiz\">back to the quiz</a>",
+    "text": "back to the quiz"
+   },
+   "attributes": {
+    "data-modal-close": "true"
+   }
+  },
+  {
+   "id": "bfb26ce6-3e7c-960b-4148-50ca88a257de",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "bfb26ce6-3e7c-960b-4148-50ca88a257e9",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer\" data-wf-link-page-id=\"6ad66fd5f8bf4846e809dbee\">view more</a>",
+    "text": "view more"
+   },
+   "attributes": {
+    "data-cms-link-path": "rooms"
+   }
+  },
+  {
+   "id": "952ee685-ca8d-d43c-1679-43bf51b9eda1",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "8771eeee-c0b0-7ff5-2a68-829174a5cb59",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-26T15:39:41.789Z"
+}

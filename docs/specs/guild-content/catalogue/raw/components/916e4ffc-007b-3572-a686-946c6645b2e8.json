@@ -1,0 +1,125 @@
+{
+ "component": {
+  "id": "916e4ffc-007b-3572-a686-946c6645b2e8",
+  "name": "CTA Booking Newsletter",
+  "description": "Shared band above the footer: book now and newsletter sign-up with Bonvoy caption. No props; all instances identical.",
+  "group": null
+ },
+ "nodes": [
+  {
+   "id": "916e4ffc-007b-3572-a686-946c6645b2ea",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": "6ad66fef6684c3e22ea4dc76"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "916e4ffc-007b-3572-a686-946c6645b2f1",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"text-style-script\">Book your escape</h2>",
+    "text": "Book your escape"
+   },
+   "attributes": {
+    "data-reveal": "text-mask"
+   }
+  },
+  {
+   "id": "916e4ffc-007b-3572-a686-946c6645b2f4",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer is-text-burgundy is-wide is-small\" href=\"#\">book now</a>",
+    "text": "book now"
+   },
+   "attributes": {
+    "data-reveal": "fade-only"
+   }
+  },
+  {
+   "id": "916e4ffc-007b-3572-a686-946c6645b2f9",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"text-style-script\">Stay in the loop</h2>",
+    "text": "Stay in the loop"
+   },
+   "attributes": {
+    "data-reveal": "text-mask",
+    "data-reveal-delay": "0.15"
+   }
+  },
+  {
+   "id": "7951ea5c-aadd-f181-593e-0be9f150996c",
+   "type": "text",
+   "text": {
+    "html": "<label for=\"\" class=\"cta-booking-newsletter_label\">*Email</label>",
+    "text": "*Email"
+   },
+   "attributes": {
+    "for": "newsletter-email"
+   }
+  },
+  {
+   "id": "916e4ffc-007b-3572-a686-946c6645b2fe",
+   "type": "text-input",
+   "placeholder": "",
+   "attributes": {
+    "aria-label": "Email",
+    "autocomplete": "email",
+    "maxlength": "256"
+   }
+  },
+  {
+   "id": "916e4ffc-007b-3572-a686-946c6645b2ff",
+   "type": "submit-button",
+   "waitingText": "Please wait...",
+   "value": "join us",
+   "attributes": {}
+  },
+  {
+   "id": "916e4ffc-007b-3572-a686-946c6645b301",
+   "type": "text",
+   "text": {
+    "html": "<div>Thank you! Your submission has been received!</div>",
+    "text": "Thank you! Your submission has been received!"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "916e4ffc-007b-3572-a686-946c6645b304",
+   "type": "text",
+   "text": {
+    "html": "<div>Oops! Something went wrong while submitting the form.</div>",
+    "text": "Oops! Something went wrong while submitting the form."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "916e4ffc-007b-3572-a686-946c6645b308",
+   "type": "image",
+   "image": {
+    "alt": "Marriott Bonvoy",
+    "assetId": "6ad744318e4b52f5c4d49ec6"
+   },
+   "attributes": {
+    "data-eager": "true",
+    "data-reveal": "fade-only",
+    "data-reveal-delay": "0.3"
+   }
+  },
+  {
+   "id": "916e4ffc-007b-3572-a686-946c6645b30a",
+   "type": "text",
+   "text": {
+    "html": "<p>Earn Marriott Bonvoy® Points on Every Stay</p>",
+    "text": "Earn Marriott Bonvoy® Points on Every Stay"
+   },
+   "attributes": {
+    "data-reveal": "text-mask",
+    "data-reveal-delay": "0.3"
+   }
+  }
+ ],
+ "properties": []
+}

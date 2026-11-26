@@ -1,0 +1,98 @@
+{
+ "component": {
+  "id": "dcfc7720-8c7b-8825-2cfe-e1f230373a34",
+  "name": "Contact Details Map",
+  "description": "Contact page: heading, contact details, social links and the map.",
+  "group": "Sections"
+ },
+ "nodes": [
+  {
+   "id": "dcfc7720-8c7b-8825-2cfe-e1f230373a3b",
+   "type": "text",
+   "text": {
+    "html": "<h1 class=\"text-style-script is-contact\">contact us</h1>",
+    "text": "contact us"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "dcfc7720-8c7b-8825-2cfe-e1f230373a40",
+   "type": "text",
+   "text": {
+    "html": "<div class=\"form-split-script-contact_detail-label text-style-caps-caption-16\">address</div>",
+    "text": "address"
+   },
+   "attributes": {
+    "data-line-mask": "text"
+   }
+  },
+  {
+   "id": "ccf57e65-54d5-efdb-28f3-6aded36f5b18",
+   "type": "text",
+   "text": {
+    "html": "<p><a class=\"text-style-link\" href=\"https://www.google.com/maps/dir/?api=1&destination=500+W.+Broadway+San+Diego%2C+CA+92101\" data-w-id=\"ccf57e65-54d5-efdb-28f3-6aded36f5b17\">500 W. Broadway San Diego, CA 92101</a></p>",
+    "text": "500 W. Broadway San Diego, CA 92101"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ec978391-5397-c667-29a0-83de7fe7b6d1",
+   "type": "text",
+   "text": {
+    "html": "<p>Phone: <a class=\"text-style-link\" href=\"tel:+16197956000\" data-w-id=\"ec978391-5397-c667-29a0-83de7fe7b6cc\">(619) 795-6000</a><br data-w-id=\"ec978391-5397-c667-29a0-83de7fe7b6cd\">Email: <a class=\"text-style-link\" href=\"mailto:info@theguildhotel.com\" data-w-id=\"ec978391-5397-c667-29a0-83de7fe7b6d0\">info@theguildhotel.com</a></p>",
+    "text": "Phone: (619) 795-6000\nEmail: info@theguildhotel.com"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "55f792b7-582f-eecf-bff0-86b8c0550931",
+   "type": "text",
+   "text": {
+    "html": "<p>Email: <a class=\"text-style-link\" href=\"mailto:sales@theguildhotel.com\" data-w-id=\"55f792b7-582f-eecf-bff0-86b8c0550930\">sales@theguildhotel.com</a></p>",
+    "text": "Email: sales@theguildhotel.com"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "0c7c1481-b356-b75d-8c15-3c6cf2a20ba7",
+   "type": "text",
+   "text": {
+    "html": "<p>Email: <a class=\"text-style-link\" href=\"mailto:billing@theguildhotel.com\" data-w-id=\"0c7c1481-b356-b75d-8c15-3c6cf2a20ba6\">billing@theguildhotel.com</a></p>",
+    "text": "Email: billing@theguildhotel.com"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "dcfc7720-8c7b-8825-2cfe-e1f230373a50",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"form-split-script-contact_link text-style-caps-caption-16 is-contact\" href=\"#\">instagram</a>",
+    "text": "instagram"
+   },
+   "attributes": {
+    "rel": "noopener",
+    "data-reveal": "fade-only"
+   }
+  },
+  {
+   "id": "dcfc7720-8c7b-8825-2cfe-e1f230373a52",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"form-split-script-contact_link text-style-caps-caption-16 is-contact\" href=\"#\">facebook</a>",
+    "text": "facebook"
+   },
+   "attributes": {
+    "rel": "noopener",
+    "data-reveal": "fade-only",
+    "data-reveal-delay": "0.1"
+   }
+  },
+  {
+   "id": "dcfc7720-8c7b-8825-2cfe-e1f230373a8a",
+   "type": "html-embed",
+   "html": "<iframe src=\"https://maps.google.com/maps?q=32.7160045,-117.1677154&z=16&output=embed\" title=\"Map showing The Guild Hotel in downtown San Diego\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" allowfullscreen style=\"display:block;width:100%;height:100%;border:0\"></iframe>",
+   "attributes": {}
+  }
+ ],
+ "properties": []
+}

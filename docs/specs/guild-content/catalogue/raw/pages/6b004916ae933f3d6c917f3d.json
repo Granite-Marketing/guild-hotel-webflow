@@ -1,0 +1,34 @@
+{
+ "page": {
+  "id": "6b004916ae933f3d6c917f3d",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6b004916ae933f3d6c917f37",
+  "title": "🔖 Topics Template",
+  "slug": "detail_topics",
+  "createdOn": "2026-11-20T13:20:22.580Z",
+  "lastUpdated": "2026-11-24T17:33:55.846Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/topics",
+  "localeId": null
+ },
+ "nodes": [],
+ "lastUpdated": "2026-11-20T13:20:22.599Z"
+}

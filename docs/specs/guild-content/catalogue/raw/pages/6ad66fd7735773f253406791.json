@@ -1,0 +1,302 @@
+{
+ "page": {
+  "id": "6ad66fd7735773f253406791",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Wellness",
+  "slug": "wellness",
+  "createdOn": "2026-10-19T19:30:31.929Z",
+  "lastUpdated": "2026-11-26T15:46:55.610Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Wellness and Fitness | The Guild Hotel",
+   "description": "Wellness at The Guild Hotel in San Diego: in-room wellness, a fitness center, mindful dining and wellness events, from movement to deep rest."
+  },
+  "openGraph": {
+   "title": "Wellness and Fitness | The Guild Hotel",
+   "titleCopied": true,
+   "description": "Wellness at The Guild Hotel in San Diego: in-room wellness, a fitness center, mindful dining and wellness events, from movement to deep rest.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/wellness",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "f5839724-f105-8ec4-18d3-b1250c58e1e5",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "81392e0a-d8a3-9748-ae4b-c8c2e3bf2755",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "3e956e4d-d614-d864-aba1-1215e9dfa212",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "c789159e-15bc-af82-a16d-23d3980bbb44",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "wellness at the guild"
+     }
+    },
+    {
+     "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "In hac habitasse platea dictumst. Etiam dapibus augue tortor"
+     }
+    }
+   ]
+  },
+  {
+   "id": "8cd35422-1e1b-a5ed-d03f-0c111fdd7f9a",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"tab-pills-intro_heading text-style-script is-large\">From movement and&nbsp;produce to deep rest.</h2>",
+    "text": "From movement and produce to deep rest."
+   },
+   "attributes": {
+    "aria-label": "From movement and produce to deep rest."
+   }
+  },
+  {
+   "id": "a6db06b0-40eb-394b-2eab-2580f93c11f9",
+   "type": "text",
+   "text": {
+    "html": "<p>Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.</p>",
+    "text": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "7137f8d0-63d9-5592-c059-8c38a3500da6",
+   "type": "image",
+   "image": {
+    "alt": "Therapist giving a guest a facial treatment",
+    "assetId": "6ad67000240d911fb18d77af"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "68e61bf0-27eb-5aa2-fb71-1a164975ad15",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"heading-style-display\">in-room wellness</h3>",
+    "text": "in-room wellness"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f2004575-f533-402d-bde0-a88266ef732a",
+   "type": "text",
+   "text": {
+    "html": "<p>Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa</p>",
+    "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "19ae3491-560b-7f9e-3e3e-b6ea985dc86f",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer\" href=\"#\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "16cb7576-8d6c-bb13-9539-65e0209881ad",
+   "type": "image",
+   "image": {
+    "alt": "Woman training on the floor of the fitness center",
+    "assetId": "6ad6700eb28c9b39f95d814d"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "68e43827-347f-8f78-2c75-ca678dba3311",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"heading-style-display\">fitness center</h3>",
+    "text": "fitness center"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "5a878256-f8cd-699f-91ce-f2f1bda7e465",
+   "type": "text",
+   "text": {
+    "html": "<p>Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa</p>",
+    "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "7d51c565-c5f2-d2ab-cd2a-dd95e81a030a",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer\" href=\"#\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f1cae244-e595-beb4-4b3e-783087c6a622",
+   "type": "image",
+   "image": {
+    "alt": "Close-up of fresh artichokes",
+    "assetId": "6ad66fe91ce40a5a6239b8ad"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "0a7ca173-0ab9-e33b-9e20-0313e3a8d07a",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"heading-style-display\">mindful dining</h3>",
+    "text": "mindful dining"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f808fec8-3d29-a1f2-3971-742c89a844ff",
+   "type": "text",
+   "text": {
+    "html": "<p>Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa</p>",
+    "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "3a4f0434-868e-ca26-d8e9-389df17072a3",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer\" href=\"#\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "2c6a5ff3-b770-b9cb-bf2e-7a08218526e9",
+   "type": "image",
+   "image": {
+    "alt": "Woman relaxing in a pool at night",
+    "assetId": "6ad66ffdba96f2e53726bd55"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "36b7fc62-782d-c996-a730-52f123b00ff5",
+   "type": "text",
+   "text": {
+    "html": "<h3 class=\"heading-style-display\">wellness events</h3>",
+    "text": "wellness events"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "058b5eb0-b63a-147b-8c5e-ce034c861ed3",
+   "type": "text",
+   "text": {
+    "html": "<p>Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa</p>",
+    "text": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f02748d5-fb27-3691-ac95-b054ec71e5b1",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer\" href=\"#\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ff020ee7-d335-61f2-ca35-c4d2ebcdff1b",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps is-active\" href=\"#\">in-room wellness</a>",
+    "text": "in-room wellness"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "29a1a190-e7e5-8642-4f5a-bf8b2363931e",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#\">fitness center</a>",
+    "text": "fitness center"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "6b817db0-ba9b-0c41-02b4-456576cad488",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#\">mindful dining</a>",
+    "text": "mindful dining"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "ae8e6850-5099-d157-e21e-8624ad47b7ba",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"tab-pills-intro_tab text-style-eyebrow-caps\" href=\"#\">wellness events</a>",
+    "text": "wellness events"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "be32371a-9c27-5367-5d11-72c4e61e2a96",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "f279ab18-a17c-f1ed-6e4e-2ab83b6fb210",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "93056cc4-7f09-395c-9099-760ea69aeb10",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "47e5c9cc-2c97-668f-9f23-97b7a1a77c6e",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "12063b00-0e46-065b-1400-660bcbc4a5e9",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-26T15:46:55.687Z"
+}

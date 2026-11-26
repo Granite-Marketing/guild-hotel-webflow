@@ -1,0 +1,39 @@
+{
+ "component": {
+  "id": "b922fe43-151c-9949-7a57-00b9cadaf0f1",
+  "name": "Card Carousel Card",
+  "description": "One card for the Cards slot of Card Carousel Header Left (More of the Guild): image, label, page link. Heights stagger automatically by position.",
+  "group": "Sliders"
+ },
+ "nodes": [
+  {
+   "id": "b922fe43-151c-9949-7a57-00b9cadaf0f4",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "f5a9d899-b27e-52b5-1610-ea969292317c",
+   "type": "Alt Text",
+   "label": "Image Alt",
+   "text": {
+    "html": null,
+    "text": "__wf_reserved_inherit"
+   }
+  },
+  {
+   "propertyId": "b550ca88-5559-7f65-9f41-bf84cdf75780",
+   "type": "Plain Text",
+   "label": "Label",
+   "text": {
+    "html": null,
+    "text": "rooms"
+   }
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "page": {
+  "id": "6ad66fd802cc199b55b924be",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Privacy Policy",
+  "slug": "privacy-policy",
+  "createdOn": "2026-10-19T19:30:32.384Z",
+  "lastUpdated": "2026-11-20T11:10:55.923Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Privacy Policy | The Guild Hotel",
+   "description": "How The Guild Hotel collects, uses and protects the personal information you share with us online and during your stay."
+  },
+  "openGraph": {
+   "title": "Privacy Policy | The Guild Hotel",
+   "titleCopied": true,
+   "description": "How The Guild Hotel collects, uses and protects the personal information you share with us online and during your stay.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/privacy-policy",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "f2c60fa7-f332-8496-09de-76e192997757",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "f93dc9cc-db42-5bd8-873c-d1a37e63b4ec",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "d75c8945-f7b9-9f76-185a-81c3088e13db",
+   "type": "component-instance",
+   "componentId": "7078c6ea-16c9-d700-35be-37d4efe7f1ef",
+   "propertyOverrides": []
+  },
+  {
+   "id": "9ef4b1e5-2a03-b2d2-d7dc-17e482a2f82f",
+   "type": "text",
+   "text": {
+    "html": "<h1 class=\"static-template-privacy-policy_heading heading-style-h2\">privacy policy</h1>",
+    "text": "privacy policy"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "8f7c8ff8-cfa2-2f88-03c5-51f52050881f",
+   "type": "text",
+   "text": {
+    "html": "<div class=\"static-template-privacy-policy_rich-text\"><h2 data-w-id=\"8f7c8ff8-cfa2-2f88-03c5-51f520508822\">The Guild, a Tribute Portfolio Hotel</h2><p data-w-id=\"462ea9e4-2faa-2965-5aa0-2682fba87a3c\">The Guild, a Tribute Portfolio Hotel\nThis Privacy Notice describes our practices in connection with information that we collect through websites operated by us from which you are accessing this Privacy Notice (the “Websites”), through the software applications made available by us for use on or through computers and mobile devices (the “Apps”), and through our social media pages that we control from which you are accessing this Privacy Notice (collectively, our “Social Media Pages”), (collectively, including the Websites, the Apps and our Social Media Pages, the “Services”). This Privacy Notice also applies to our offline collection of information. The information you provide helps us to operate effectively and continually provide you with the best hospitality products, services and experiences.</p><p data-w-id=\"ba1d6839-3038-fc84-3327-b9375efa1a39\">Our privacy practices may vary among the countries in which we operate to reflect local practices and legal requirements. Please read the following to learn more about our privacy practices.</p><p data-w-id=\"97bb62e9-358b-32ea-66dd-1ccd9fd3ee7b\">Your Acceptance of Our Privacy Notice: By using the Services, you accept the terms of this Privacy Notice and the ways we may use your information. If you do not accept the terms of this Notice, please do not continue to use the Services.</p><h2 data-w-id=\"6be1c0de-dfc6-ac41-e88c-fef3b3896015\">What Information Is Collected and How Is It Collected?</h2><p data-w-id=\"118c7355-3f53-3216-84ab-6480a5225613\">We may collect personal information (which is information that identifies you or relates to you as an identifiable person) about you such as your:</p><ul data-w-id=\"1c170f06-3119-83b0-309a-4e00f351fdf9\"><li data-w-id=\"4d9b4f19-be48-1e82-651c-0b062abd85e8\">Name</li><li data-w-id=\"d9ff3322-e94e-599c-4ec9-024b8db4f1a3\">Postal address (including billing and shipping addresses)</li><li data-w-id=\"150aca0c-4a48-8bef-0eea-b65b4058c567\">Telephone number</li><li data-w-id=\"616b2e6c-06e0-ab24-9056-495065997712\">Email address</li><li data-w-id=\"c7b1042a-66f2-c431-25bd-80c78a0d0339\">Credit and debit card number</li><li data-w-id=\"b3201c34-2239-27ec-8d81-2f687c7b5619\">Financial information</li><li data-w-id=\"ecc240bb-de06-b53e-d4f3-1d6fa1eeffb5\">Profile picture</li><li data-w-id=\"9c5f8d23-a612-a8cb-ae81-6559548f2089\">Social media account ID</li><li data-w-id=\"10dfddbb-82ea-c706-b812-c5c5f78ec0e3\">Stay information</li><li data-w-id=\"f1f2a3cc-b79a-18c2-368a-dc9063508352\">Communication preferences</li></ul></div>",
+    "text": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "93b1e49f-59df-43fe-835d-8c94a3fbe157",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "7960c68b-c923-6c1d-8347-4ae3a403645f",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "77289c70-ab78-7695-68c9-4157c0b5a5b7",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-20T11:10:55.949Z"
+}

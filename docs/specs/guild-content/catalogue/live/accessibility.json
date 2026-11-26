@@ -1,0 +1,608 @@
+{
+ "path": "/accessibility",
+ "kind": "static",
+ "pageId": "6ad85678cff550a80a3287b0",
+ "title": "Accessibility",
+ "url": "https://the-guild-hotel-c34e71.webflow.io/accessibility",
+ "file": "accessibility.json",
+ "httpStatus": 200,
+ "documentTitle": "Accessibility | The Guild Hotel",
+ "metaDescription": "Our commitment to making The Guild Hotel website accessible to every guest, and how to tell us about any barriers you find.",
+ "elements": [
+  {
+   "order": 0,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "stay",
+   "rawTextContent": "stay",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 1,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "dine",
+   "rawTextContent": "dine",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 2,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "wellness",
+   "rawTextContent": "wellness",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 3,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "happenings",
+   "rawTextContent": "happenings",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 4,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "our history",
+   "rawTextContent": "our history",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 5,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "meetings & events",
+   "rawTextContent": "meetings & events",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 6,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "neighborhood",
+   "rawTextContent": "neighborhood",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 7,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "art",
+   "rawTextContent": "art",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 8,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "gallery",
+   "rawTextContent": "gallery",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 9,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "blog",
+   "rawTextContent": "blog",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 10,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "packages",
+   "rawTextContent": "packages",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 11,
+   "tag": "a",
+   "id": null,
+   "innerText": "",
+   "textContent": "contact",
+   "rawTextContent": "contact",
+   "fontSize": "34px",
+   "textTransform": "lowercase",
+   "classes": [
+    "site-nav_menu-link"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": false,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 12,
+   "tag": "h1",
+   "id": null,
+   "innerText": "accessibility",
+   "textContent": "accessibility",
+   "rawTextContent": "accessibility",
+   "fontSize": "40px",
+   "textTransform": "none",
+   "classes": [
+    "static-template-privacy-policy_heading",
+    "heading-style-h2"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_static-template-privacy-policy",
+   "sectionClasses": [
+    "section_static-template-privacy-policy"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 13,
+   "tag": "h2",
+   "id": null,
+   "innerText": "our commitment to accessibility",
+   "textContent": "Our commitment to accessibility",
+   "rawTextContent": "Our commitment to accessibility",
+   "fontSize": "20px",
+   "textTransform": "lowercase",
+   "classes": [],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_static-template-privacy-policy",
+   "sectionClasses": [
+    "section_static-template-privacy-policy"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 14,
+   "tag": "h2",
+   "id": null,
+   "innerText": "measures we take",
+   "textContent": "Measures We Take",
+   "rawTextContent": "Measures We Take",
+   "fontSize": "20px",
+   "textTransform": "lowercase",
+   "classes": [],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_static-template-privacy-policy",
+   "sectionClasses": [
+    "section_static-template-privacy-policy"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 15,
+   "tag": "h2",
+   "id": null,
+   "innerText": "Book your escape",
+   "textContent": "Book your escape",
+   "rawTextContent": "Book your escape",
+   "fontSize": "60px",
+   "textTransform": "none",
+   "classes": [
+    "text-style-script"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_cta-booking-newsletter",
+   "sectionClasses": [
+    "section_cta-booking-newsletter"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 16,
+   "tag": "h2",
+   "id": null,
+   "innerText": "Stay in the loop",
+   "textContent": "Stay in the loop",
+   "rawTextContent": "Stay in the loop",
+   "fontSize": "60px",
+   "textTransform": "none",
+   "classes": [
+    "text-style-script"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_cta-booking-newsletter",
+   "sectionClasses": [
+    "section_cta-booking-newsletter"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 17,
+   "tag": "h2",
+   "id": null,
+   "innerText": "the hotel",
+   "textContent": "the hotel",
+   "rawTextContent": "the hotel",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 18,
+   "tag": "h2",
+   "id": null,
+   "innerText": "experience",
+   "textContent": "experience",
+   "rawTextContent": "experience",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 19,
+   "tag": "h2",
+   "id": null,
+   "innerText": "dining",
+   "textContent": "dining",
+   "rawTextContent": "dining",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 20,
+   "tag": "h2",
+   "id": null,
+   "innerText": "social",
+   "textContent": "social",
+   "rawTextContent": "social",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 21,
+   "tag": "h2",
+   "id": null,
+   "innerText": "links",
+   "textContent": "links",
+   "rawTextContent": "links",
+   "fontSize": "18px",
+   "textTransform": "lowercase",
+   "classes": [
+    "footer-links_column-heading",
+    "text-style-eyebrow-caps"
+   ],
+   "visible": true,
+   "hiddenBy": null,
+   "ariaHidden": false,
+   "section": "section_footer-links",
+   "sectionClasses": [
+    "section_footer-links"
+   ],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": false
+  },
+  {
+   "order": 22,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Solana Coffee",
+   "rawTextContent": "Solana Coffee",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 23,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Pool Lounge",
+   "rawTextContent": "Pool Lounge",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 24,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Lobby Bar",
+   "rawTextContent": "Lobby Bar",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 25,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Garden Terrace",
+   "rawTextContent": "Garden Terrace",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  },
+  {
+   "order": 26,
+   "tag": "div",
+   "id": null,
+   "innerText": "",
+   "textContent": "Zuma San Diego",
+   "rawTextContent": "Zuma San Diego",
+   "fontSize": "16px",
+   "textTransform": "none",
+   "classes": [
+    "overlay-detail-panel-modal_item-heading",
+    "image-bg-83"
+   ],
+   "visible": false,
+   "hiddenBy": "visibility:hidden",
+   "ariaHidden": true,
+   "section": null,
+   "sectionClasses": [],
+   "variantIds": [],
+   "swiperClone": false,
+   "inCmsList": true
+  }
+ ],
+ "status": "ok"
+}

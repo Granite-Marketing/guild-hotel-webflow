@@ -1,0 +1,34 @@
+{
+ "page": {
+  "id": "6adf73e1711cfc5e16f51c01",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": "6adf73e0711cfc5e16f51bb5",
+  "title": "📍 Map Places Template",
+  "slug": "detail_map-place",
+  "createdOn": "2026-10-26T15:38:09.100Z",
+  "lastUpdated": "2026-11-18T17:24:33.294Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": false,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": null,
+   "description": null
+  },
+  "openGraph": {
+   "title": null,
+   "titleCopied": false,
+   "description": null,
+   "descriptionCopied": false,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/map-place",
+  "localeId": null
+ },
+ "nodes": [],
+ "lastUpdated": "2026-10-26T15:38:09.188Z"
+}

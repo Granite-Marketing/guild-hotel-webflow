@@ -1,0 +1,57 @@
+{
+ "component": {
+  "id": "f5403de4-dabb-14c3-ecf8-c945d0a8e22e",
+  "name": "Card Carousel Header Left",
+  "description": "Cream card carousel: heading, text and arrows left, staggered link cards right. Cards slot: add one Card Carousel Card per card or a Collection List. Pick the look with the Variant prop.",
+  "group": "Sliders"
+ },
+ "nodes": [
+  {
+   "id": "601322fd-cb9a-43f3-cf54-d66c0e653768",
+   "type": "html-embed",
+   "html": "<style data-card-carousel-stagger>.card-carousel-header-left_slides>div:not([class]){display:contents}.card-carousel-header-left_slide:nth-child(3n+1) .card-carousel-header-left_figure,.w-dyn-item:nth-child(3n+1)>.card-carousel-header-left_slide .card-carousel-header-left_figure{height:31.375rem}.card-carousel-header-left_slide:nth-child(3n) .card-carousel-header-left_figure,.w-dyn-item:nth-child(3n)>.card-carousel-header-left_slide .card-carousel-header-left_figure{height:28.9375rem}@media (max-width:767px){.card-carousel-header-left_slide:nth-child(3n+1) .card-carousel-header-left_figure,.w-dyn-item:nth-child(3n+1)>.card-carousel-header-left_slide .card-carousel-header-left_figure{height:27.3125rem}.card-carousel-header-left_slide:nth-child(3n) .card-carousel-header-left_figure,.w-dyn-item:nth-child(3n)>.card-carousel-header-left_slide .card-carousel-header-left_figure{height:25.1875rem}}</style>",
+   "attributes": {}
+  },
+  {
+   "id": "f5403de4-dabb-14c3-ecf8-c945d0a8e238",
+   "type": "html-embed",
+   "html": "<svg width=\"30\" height=\"14\" viewBox=\"0 0 30 14\" fill=\"none\" aria-hidden=\"true\" style=\"display:block\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.75 6.75H29.25M0.75 6.75L6.75 12.75M0.75 6.75L6.75 0.75\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+   "attributes": {}
+  },
+  {
+   "id": "f5403de4-dabb-14c3-ecf8-c945d0a8e23a",
+   "type": "html-embed",
+   "html": "<svg width=\"30\" height=\"14\" viewBox=\"0 0 30 14\" fill=\"none\" aria-hidden=\"true\" style=\"display:block\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M29.25 6.75H0.75M29.25 6.75L23.25 0.75M29.25 6.75L23.25 12.75\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "904cb47f-1b96-e29c-fad1-dc7ea9ccccef",
+   "type": "Plain Text",
+   "label": "Content/Heading",
+   "text": {
+    "html": null,
+    "text": "more of the guild"
+   }
+  },
+  {
+   "propertyId": "264ee76e-e780-9d34-e502-01b5f2288b4f",
+   "type": "Plain Text",
+   "label": "Content/Text",
+   "text": {
+    "html": null,
+    "text": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus."
+   }
+  },
+  {
+   "propertyId": "92f67272-7dd9-19b0-cb11-d2a41b7a2adb",
+   "type": "Plain Text",
+   "label": "Content/Section label",
+   "text": {
+    "html": null,
+    "text": "more of the guild"
+   }
+  }
+ ]
+}

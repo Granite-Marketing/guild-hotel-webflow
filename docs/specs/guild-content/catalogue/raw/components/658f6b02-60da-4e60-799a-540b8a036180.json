@@ -1,0 +1,36 @@
+{
+ "component": {
+  "id": "658f6b02-60da-4e60-799a-540b8a036180",
+  "name": "Article Card Staggered Tall",
+  "description": "Two columns: heading and intro left, square cards right. Cards slot: add one Article Card Tall Item per card.",
+  "group": "Shared"
+ },
+ "nodes": [
+  {
+   "id": "0a98b1a3-c444-9ea0-3fc2-9440cdbc5430",
+   "type": "html-embed",
+   "html": "<style data-article-card-slot>.article-card-staggered_list>div:not([class]){display:contents}</style>",
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "04a1aa15-7e91-a261-61e7-57f8c3346fe0",
+   "type": "Plain Text",
+   "label": "Header/Heading",
+   "text": {
+    "html": null,
+    "text": "dining around the guild"
+   }
+  },
+  {
+   "propertyId": "64a8bada-84d3-88fd-f3f3-4da091c4f87a",
+   "type": "Plain Text",
+   "label": "Header/Intro",
+   "text": {
+    "html": null,
+    "text": "In hac habitasse platea dictumst. Etiam dapibus augue tortor. In hac habitasse platea dictumst. Etiam dapibus augue tortor"
+   }
+  }
+ ]
+}

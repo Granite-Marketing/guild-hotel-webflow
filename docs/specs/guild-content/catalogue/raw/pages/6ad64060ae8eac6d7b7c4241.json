@@ -1,0 +1,403 @@
+{
+ "page": {
+  "id": "6ad64060ae8eac6d7b7c4241",
+  "siteId": "6ad6405eae8eac6d7b7c41a3",
+  "parentId": null,
+  "collectionId": null,
+  "title": "Home",
+  "slug": null,
+  "createdOn": "2021-06-24T03:10:48.542Z",
+  "lastUpdated": "2026-11-26T16:44:56.222Z",
+  "archived": false,
+  "draft": false,
+  "shouldPublish": true,
+  "canBranch": true,
+  "isBranch": false,
+  "branchId": null,
+  "seo": {
+   "title": "Historic Urban Resort in San Diego | The Guild Hotel",
+   "description": "A 1924 landmark reimagined as an urban resort in the heart of San Diego, with Zuma, a new pool and rooms and suites at 500 W. Broadway. Book your stay."
+  },
+  "openGraph": {
+   "title": "Historic Urban Resort in San Diego | The Guild Hotel",
+   "titleCopied": true,
+   "description": "A 1924 landmark reimagined as an urban resort in the heart of San Diego, with Zuma, a new pool and rooms and suites at 500 W. Broadway. Book your stay.",
+   "descriptionCopied": true,
+   "imageUrl": null,
+   "imageAssetId": null
+  },
+  "publishedPath": "/",
+  "localeId": null
+ },
+ "nodes": [
+  {
+   "id": "3ba98bea-6614-0262-5796-6402e75682d5",
+   "type": "component-instance",
+   "componentId": "fc94d1a2-3399-4de0-e836-0233a6c86cdf",
+   "propertyOverrides": []
+  },
+  {
+   "id": "9897f18f-d111-7c21-d0bb-515570da516d",
+   "type": "component-instance",
+   "componentId": "ab488b17-f25a-fbf8-5f54-4a3955eb57e5",
+   "propertyOverrides": []
+  },
+  {
+   "id": "da3f4079-5f27-aa23-aac1-78021605338d",
+   "type": "component-instance",
+   "componentId": "f91dcf8c-5c66-6cf4-32b6-a2f2427f7bfa",
+   "propertyOverrides": [
+    {
+     "propertyId": "75d42a84-dcfa-181f-f117-8fe20dea11d6",
+     "type": "Plain Text",
+     "label": "Background/Video Link",
+     "text": {
+      "html": null,
+      "text": ""
+     }
+    },
+    {
+     "propertyId": "c789159e-15bc-af82-a16d-23d3980bbb44",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "the bold, handsome heart of san diego"
+     }
+    },
+    {
+     "propertyId": "9fc1aa15-9d65-217e-cbe5-313e53188214",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "The Guild is quintessential San Diego, a storied landmark reimagined as a sophisticated playground for locals and visitors alike. Grand and casual, elegant and unexpected, The Guild is an urban resort and destination unlike anything else in the city."
+     }
+    },
+    {
+     "propertyId": "2c401db1-96d5-7fbc-68c2-7ea0e151ac56",
+     "type": "Plain Text",
+     "label": "Content/Heading (Night)",
+     "text": {
+      "html": null,
+      "text": "the bold, handsome heart of san diego after dark"
+     }
+    },
+    {
+     "propertyId": "bd5db012-c4b0-6a4e-a0e1-41ffdf3e7bc2",
+     "type": "Plain Text",
+     "label": "Button/Button Text",
+     "text": {
+      "html": null,
+      "text": "book your stay"
+     }
+    }
+   ]
+  },
+  {
+   "id": "87352ce5-fd3a-7afe-ee2c-97a1b8236605",
+   "type": "component-instance",
+   "componentId": "bdff66b3-92d9-e1e3-dbc0-86a28e384c9b",
+   "propertyOverrides": [
+    {
+     "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+     "type": "Plain Text",
+     "label": "Content/heading",
+     "text": {
+      "html": null,
+      "text": "A century of stories meets a new hospitality"
+     }
+    },
+    {
+     "propertyId": "0df84d45-603f-3795-7593-9010ebf7c540",
+     "type": "Plain Text",
+     "label": "Content/paragraph",
+     "text": {
+      "html": null,
+      "text": "Behind this mannered Italian Renaissance facade is a century of glamorous mischief. Today, it’s an icon with open arms, a high-spirited destination that welcomes you to the heart of contemporary San Diego."
+     }
+    },
+    {
+     "propertyId": "4847f1eb-e957-0144-e10e-92569ab9c48a",
+     "type": "Alt Text",
+     "label": "Image/image alt",
+     "text": {
+      "html": null,
+      "text": "Line drawing of the Guild Hotel building"
+     }
+    }
+   ]
+  },
+  {
+   "id": "90b79982-e297-c0b3-51ca-2126deb935d0",
+   "type": "component-instance",
+   "componentId": "663131a8-3362-867e-25ef-28b6d3d209a2",
+   "propertyOverrides": [
+    {
+     "propertyId": "8cb8fc44-2bf1-ef44-01ba-38d1b52f5d6b",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "West Coast Hospitality since 1924"
+     }
+    },
+    {
+     "propertyId": "3f50e93d-a968-f004-4199-cfd4d1bccba7",
+     "type": "Plain Text",
+     "label": "Content/Body",
+     "text": {
+      "html": null,
+      "text": "As the YMCA that welcomed Army and Navy men and women, The Guild was the city’s premier gathering place. The experience has been curated, elevated and refined – but at heart, we’re still a sailor on shore leave."
+     }
+    },
+    {
+     "propertyId": "2987f69a-50fb-8c63-5d47-1528a05a93b3",
+     "type": "Plain Text",
+     "label": "Content/CTA label",
+     "text": {
+      "html": null,
+      "text": "uncover our history"
+     }
+    }
+   ]
+  },
+  {
+   "id": "6dfc4e8d-4a53-708f-cccb-98c338a03d85",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"venue-card-fullbleed_intro-heading heading-style-h4\">an unexpected resort dining experience</h2>",
+    "text": "an unexpected resort dining experience"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "f152b4eb-3d6c-0ff7-462a-af2d7a65c4ba",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "1cd047e6-a350-83bf-0582-f355d01a9d39",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "07673065-760f-5a87-ebbb-831e67bbb0f6",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "176a1756-4e98-7fef-e880-5d86f84de991",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer\" href=\"#\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {
+    "data-cms-link-path": "dining"
+   }
+  },
+  {
+   "id": "77a63678-1591-7ff3-17ff-5d7a15d75b85",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "198035b5-531d-6c8f-eb55-96c98cf978e4",
+   "type": "component-instance",
+   "componentId": "eae1d08c-c012-be1b-bafe-4ca88d995c14",
+   "propertyOverrides": [
+    {
+     "propertyId": "ebeb1a92-d766-3614-254d-19c94cdb7b4f",
+     "type": "Plain Text",
+     "label": "Header/Heading",
+     "text": {
+      "html": null,
+      "text": "wellness"
+     }
+    }
+   ]
+  },
+  {
+   "id": "39e7c9d9-15d4-79cb-6afd-d7ffa879c070",
+   "type": "component-instance",
+   "componentId": "f8269db7-7b82-27f1-dd64-8dd069d633f6",
+   "propertyOverrides": [
+    {
+     "propertyId": "1eb617a1-26ff-6916-fd05-7eddfa607258",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "rooms & suites"
+     }
+    },
+    {
+     "propertyId": "37504da3-38ce-3238-2f23-44693fb79d3e",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Generous layouts, thoughtful details, and room to make yourself at home."
+     }
+    },
+    {
+     "propertyId": "0453ce75-d3f9-6b3a-1081-4e9bde64870d",
+     "type": "Plain Text",
+     "label": "Button/Button Label",
+     "text": {
+      "html": null,
+      "text": "explore more"
+     }
+    }
+   ]
+  },
+  {
+   "id": "16944622-4a22-7395-90d8-90b9e812eb65",
+   "type": "component-instance",
+   "componentId": "8e90ff20-1ed1-43a7-edce-89b7ea10c487",
+   "propertyOverrides": []
+  },
+  {
+   "id": "dbfd6149-bf61-5a13-e51a-6f1aa2bdc674",
+   "type": "component-instance",
+   "componentId": "dbfd6149-bf61-5a13-e51a-6f1aa2bdc675",
+   "propertyOverrides": []
+  },
+  {
+   "id": "206d9ea0-8ed8-0506-707d-da5d2346bb17",
+   "type": "text",
+   "text": {
+    "html": "<h2 class=\"home-art-stories_heading heading-style-h1\">art &amp; stories</h2>",
+    "text": "art & stories"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "b590761b-8ffa-0796-e160-717febe32e87",
+   "type": "text",
+   "text": {
+    "html": "<p class=\"home-art-stories_text text-style-eyebrow\">we’ve lived here for a century; let us show you around.</p>",
+    "text": "we’ve lived here for a century; let us show you around."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "c646bb3c-5d24-a68c-9c40-b1bfae796408",
+   "type": "text",
+   "text": {
+    "html": "<a class=\"button is-chamfer is-dark is-outline is-dark-mobile\" data-wf-link-page-id=\"6ad66fd7ba96f2e53726a2eb\">discover more</a>",
+    "text": "discover more"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "28cd19ab-653d-4fa7-0304-382eead365a6",
+   "type": "image",
+   "image": {
+    "alt": "Hotel lounge with a glass block wall, amber glass ceiling and a wall of art books",
+    "assetId": "6ad6701cf08ff78c37d862e1"
+   },
+   "attributes": {}
+  },
+  {
+   "id": "31ce028f-780f-fabd-80c2-7e100860d6ff",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "fb3de0d7-4fc4-f208-ee77-41404293a56a",
+   "type": "text",
+   "text": {
+    "html": "<div>No items found.</div>",
+    "text": "No items found."
+   },
+   "attributes": {}
+  },
+  {
+   "id": "960a6a94-af0f-4d37-2b17-d580606eec45",
+   "type": "component-instance",
+   "componentId": "100e1eab-d304-3568-6d93-6fa936f8c0af",
+   "propertyOverrides": [
+    {
+     "propertyId": "1eb617a1-26ff-6916-fd05-7eddfa607258",
+     "type": "Plain Text",
+     "label": "Content/Heading",
+     "text": {
+      "html": null,
+      "text": "meetings & events"
+     }
+    },
+    {
+     "propertyId": "37504da3-38ce-3238-2f23-44693fb79d3e",
+     "type": "Plain Text",
+     "label": "Content/Text",
+     "text": {
+      "html": null,
+      "text": "Inspired spaces breed bright ideas"
+     }
+    },
+    {
+     "propertyId": "0453ce75-d3f9-6b3a-1081-4e9bde64870d",
+     "type": "Plain Text",
+     "label": "Button/Button Label",
+     "text": {
+      "html": null,
+      "text": "discover more"
+     }
+    }
+   ]
+  },
+  {
+   "id": "d5df6734-af17-07ac-88ae-84551d59f46b",
+   "type": "component-instance",
+   "componentId": "d5df6734-af17-07ac-88ae-84551d59f46c",
+   "propertyOverrides": []
+  },
+  {
+   "id": "3a5f8147-3133-e200-3968-9ef6aac9f0b5",
+   "type": "component-instance",
+   "componentId": "3a5f8147-3133-e200-3968-9ef6aac9f0b6",
+   "propertyOverrides": []
+  },
+  {
+   "id": "269b5935-34d2-b183-1fea-e96ccdab3777",
+   "type": "component-instance",
+   "componentId": "916e4ffc-007b-3572-a686-946c6645b2e8",
+   "propertyOverrides": []
+  },
+  {
+   "id": "27ebef28-e5d4-e999-ebdc-f78809f2b6a5",
+   "type": "component-instance",
+   "componentId": "14efd120-8e4c-efe3-75b9-396e4792ed73",
+   "propertyOverrides": []
+  },
+  {
+   "id": "7ec537b5-dcc4-642e-3a7c-8dbe17b29ff0",
+   "type": "component-instance",
+   "componentId": "6c8187bb-b662-164c-29a2-e084f027a1a1",
+   "propertyOverrides": []
+  }
+ ],
+ "lastUpdated": "2026-11-26T16:44:56.323Z"
+}

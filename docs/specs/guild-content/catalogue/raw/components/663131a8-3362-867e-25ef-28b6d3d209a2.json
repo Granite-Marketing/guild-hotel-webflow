@@ -1,0 +1,120 @@
+{
+ "component": {
+  "id": "663131a8-3362-867e-25ef-28b6d3d209a2",
+  "name": "Split image text light",
+  "description": "Split image text section: image on one side, heading, text and optional button on the other. Pick the look with the Variant prop. Second image, Caption, Header and Footer can be shown or hidden. Compact, Edge, Stagger and Wide layouts are separate components.",
+  "group": null
+ },
+ "nodes": [
+  {
+   "id": "663131a8-3362-867e-25ef-28b6d3d209a7",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "5ced9f2a-7406-348c-b4fe-2903818176c9",
+   "type": "image",
+   "image": {
+    "alt": "",
+    "assetId": null
+   },
+   "attributes": {}
+  },
+  {
+   "id": "663131a8-3362-867e-25ef-28b6d3d209a9",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": null
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "8cb8fc44-2bf1-ef44-01ba-38d1b52f5d6b",
+   "type": "Plain Text",
+   "label": "Content/Heading",
+   "text": {
+    "html": null,
+    "text": "downtown san diego"
+   }
+  },
+  {
+   "propertyId": "3f50e93d-a968-f004-4199-cfd4d1bccba7",
+   "type": "Plain Text",
+   "label": "Content/Body",
+   "text": {
+    "html": null,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum quam eu est facilisis gravida. Nulla ultrices aliquam ante, at elementum ex tincidunt at. Vestibulum vitae nunc eu felis maximus semper. Curabitur eget molestie dui. Vestibulum quis elit ac libero tempus condimentum eget eget tellus."
+   }
+  },
+  {
+   "propertyId": "2987f69a-50fb-8c63-5d47-1528a05a93b3",
+   "type": "Plain Text",
+   "label": "Content/CTA label",
+   "text": {
+    "html": null,
+    "text": "Learn more"
+   }
+  },
+  {
+   "propertyId": "891f2fc2-be64-c2f5-d887-cb43ce61a131",
+   "type": "Plain Text",
+   "label": "Content/Caption",
+   "text": {
+    "html": null,
+    "text": "Nam in massa ut enim cursus sagittis ut vel ex. Aenean tincidunt sollicitudin sem, vitae molestie odio. Cras eget ullamcorper nisl. Nullam lorem eros, varius vel nulla sed, molestie efficitur sapien. Suspendisse vel ante cursus, lobortis ligula nec, varius erat."
+   }
+  },
+  {
+   "propertyId": "000e7667-74c5-858a-16c3-0d2698038cb0",
+   "type": "Plain Text",
+   "label": "Content/Heading (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "78558e6b-1567-5f43-15bd-3b714afa4d7c",
+   "type": "Plain Text",
+   "label": "Content/CTA label (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "e982fcea-d4f2-0b76-93e5-c907566942a7",
+   "type": "Plain Text",
+   "label": "Content/CTA (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "858c6171-3e04-be31-36e1-15b742ca1404",
+   "type": "Plain Text",
+   "label": "Content/Body (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  },
+  {
+   "propertyId": "54038270-27b7-6232-ae84-437b289ac64d",
+   "type": "Plain Text",
+   "label": "Images/Video (Night)",
+   "text": {
+    "html": null,
+    "text": ""
+   }
+  }
+ ]
+}

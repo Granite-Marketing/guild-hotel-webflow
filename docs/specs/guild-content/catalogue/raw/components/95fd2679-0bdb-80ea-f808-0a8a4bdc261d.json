@@ -1,0 +1,48 @@
+{
+ "component": {
+  "id": "95fd2679-0bdb-80ea-f808-0a8a4bdc261d",
+  "name": "Split image text slider",
+  "description": "Split image text with an image slider (History). Add one Split Image Slide per photo in the Slides slot; any number.",
+  "group": null
+ },
+ "nodes": [
+  {
+   "id": "95fd2679-0bdb-80ea-f808-0a8a4bdc2639",
+   "type": "image",
+   "image": {
+    "alt": "__wf_reserved_inherit",
+    "assetId": "6ad7e14297b901c25753709d"
+   },
+   "attributes": {}
+  }
+ ],
+ "properties": [
+  {
+   "propertyId": "8cb8fc44-2bf1-ef44-01ba-38d1b52f5d6b",
+   "type": "Plain Text",
+   "label": "Content/Heading",
+   "text": {
+    "html": null,
+    "text": "downtown san diego"
+   }
+  },
+  {
+   "propertyId": "3f50e93d-a968-f004-4199-cfd4d1bccba7",
+   "type": "Plain Text",
+   "label": "Content/Body",
+   "text": {
+    "html": null,
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum quam eu est facilisis gravida. Nulla ultrices aliquam ante, at elementum ex tincidunt at. Vestibulum vitae nunc eu felis maximus semper. Curabitur eget molestie dui. Vestibulum quis elit ac libero tempus condimentum eget eget tellus."
+   }
+  },
+  {
+   "propertyId": "bb0b0ead-6ba6-f4ac-38af-64f07c56770a",
+   "type": "Plain Text",
+   "label": "Content/Body 2",
+   "text": {
+    "html": null,
+    "text": "Body 2"
+   }
+  }
+ ]
+}
