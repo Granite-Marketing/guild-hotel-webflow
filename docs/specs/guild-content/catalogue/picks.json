@@ -336,7 +336,7 @@
   {
    "id": "Guild-Corporate:79",
    "pick": "retarget",
-   "note": "C6: per-item CMS field \"Map - Text\" on Corporate (template text is bound in the Designer)",
+   "note": "C6: per-item CMS field \"Map - Text\" on Corporate (template text is bound in the Designer); the doc wraps this sentence onto the next line, joined into one",
    "set": {
     "targetKind": "cms-field",
     "cmsItem": {
@@ -370,7 +370,8 @@
     "needsDecision": false,
     "duplicateOf": null,
     "conflictsWith": [],
-    "status": "change"
+    "status": "change",
+    "newText": "The Guild offers privacy for meetings on the doorstep of every important attraction and city business."
    }
   },
   {
@@ -648,7 +649,7 @@
   {
    "id": "Guild-Legal:68",
    "pick": "retarget",
-   "note": "C6: per-item CMS field \"Map - Text\" on Legal (template text is bound in the Designer)",
+   "note": "C6: per-item CMS field \"Map - Text\" on Legal (template text is bound in the Designer); the doc wraps this sentence onto the next line, joined into one",
    "set": {
     "targetKind": "cms-field",
     "cmsItem": {
@@ -682,7 +683,8 @@
     "needsDecision": false,
     "duplicateOf": null,
     "conflictsWith": [],
-    "status": "change"
+    "status": "change",
+    "newText": "The Guild is the right place to prepare, and it puts your team minutes from everywhere you need to be during trials."
    }
   },
   {
@@ -2124,7 +2126,8 @@
     "needsDecision": false,
     "duplicateOf": null,
     "conflictsWith": [],
-    "status": "not on site"
+    "status": "change",
+    "reason": null
    }
   },
   {
@@ -2214,7 +2217,8 @@
     "needsDecision": false,
     "duplicateOf": null,
     "conflictsWith": [],
-    "status": "not on site"
+    "status": "change",
+    "reason": null
    }
   },
   {
@@ -2304,7 +2308,8 @@
     "needsDecision": false,
     "duplicateOf": null,
     "conflictsWith": [],
-    "status": "not on site"
+    "status": "change",
+    "reason": null
    }
   },
   {
@@ -2394,7 +2399,8 @@
     "needsDecision": false,
     "duplicateOf": null,
     "conflictsWith": [],
-    "status": "not on site"
+    "status": "change",
+    "reason": null
    }
   },
   {
@@ -2484,7 +2490,8 @@
     "needsDecision": false,
     "duplicateOf": null,
     "conflictsWith": [],
-    "status": "not on site"
+    "status": "change",
+    "reason": null
    }
   },
   {
@@ -2598,7 +2605,8 @@
     "needsDecision": false,
     "duplicateOf": null,
     "conflictsWith": [],
-    "status": "not on site"
+    "status": "change",
+    "reason": null
    }
   },
   {
@@ -2688,7 +2696,8 @@
     "needsDecision": false,
     "duplicateOf": null,
     "conflictsWith": [],
-    "status": "not on site"
+    "status": "change",
+    "reason": null
    }
   },
   {
@@ -2826,7 +2835,8 @@
     "needsDecision": false,
     "duplicateOf": null,
     "conflictsWith": [],
-    "status": "not on site"
+    "status": "change",
+    "reason": null
    }
   },
   {
@@ -2964,7 +2974,8 @@
     "needsDecision": false,
     "duplicateOf": null,
     "conflictsWith": [],
-    "status": "not on site"
+    "status": "change",
+    "reason": null
    }
   },
   {
@@ -3054,7 +3065,8 @@
     "needsDecision": false,
     "duplicateOf": null,
     "conflictsWith": [],
-    "status": "not on site"
+    "status": "change",
+    "reason": null
    }
   },
   {
@@ -3800,6 +3812,26 @@
    "id": "Guild-Wellness-Collection:19",
    "pick": "accept",
    "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Corporate:80",
+   "pick": "retarget",
+   "note": "second half of the sentence in Guild-Corporate:79, joined",
+   "set": {
+    "status": "change",
+    "joinedInto": 79,
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Legal:69",
+   "pick": "retarget",
+   "note": "second half of the sentence in Guild-Legal:68, joined",
+   "set": {
+    "status": "change",
+    "joinedInto": 68,
+    "reason": null
+   }
   }
  ]
 }

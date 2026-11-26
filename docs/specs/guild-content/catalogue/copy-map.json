@@ -30,10 +30,10 @@
  "summary": {
   "rows": 815,
   "rowsByStatus": {
-   "change": 324,
+   "change": 336,
    "same": 55,
    "second version listed": 13,
-   "not on site": 300,
+   "not on site": 288,
    "no copy yet": 118,
    "held": 5
   },
@@ -3241,7 +3241,7 @@
    },
    "docRole": "body",
    "scriptHeading": false,
-   "newText": "The Guild offers privacy for meetings on the doorstep of every important attraction",
+   "newText": "The Guild offers privacy for meetings on the doorstep of every important attraction and city business.",
    "status": "change",
    "targetKind": "cms-field",
    "target": {
@@ -3279,7 +3279,7 @@
    "conflictsWith": [],
    "pick": {
     "decision": "retarget",
-    "note": "C6: per-item CMS field \"Map - Text\" on Corporate (template text is bound in the Designer)"
+    "note": "C6: per-item CMS field \"Map - Text\" on Corporate (template text is bound in the Designer); the doc wraps this sentence onto the next line, joined into one"
    }
   },
   {
@@ -3291,24 +3291,28 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "and city business.",
-   "status": "not on site",
+   "status": "change",
    "targetKind": "not-on-site",
    "target": null,
    "currentText": null,
    "confidence": 0,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": "no element on the template page is left to hold this line",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": null,
+   "joinedInto": 79,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "second half of the sentence in Guild-Corporate:79, joined"
+   }
   },
   {
    "id": "Guild-Dining-Collection:2",
@@ -9696,7 +9700,7 @@
    },
    "docRole": "body",
    "scriptHeading": false,
-   "newText": "The Guild is the right place to prepare, and it puts your team",
+   "newText": "The Guild is the right place to prepare, and it puts your team minutes from everywhere you need to be during trials.",
    "status": "change",
    "targetKind": "cms-field",
    "target": {
@@ -9734,7 +9738,7 @@
    "conflictsWith": [],
    "pick": {
     "decision": "retarget",
-    "note": "C6: per-item CMS field \"Map - Text\" on Legal (template text is bound in the Designer)"
+    "note": "C6: per-item CMS field \"Map - Text\" on Legal (template text is bound in the Designer); the doc wraps this sentence onto the next line, joined into one"
    }
   },
   {
@@ -9746,24 +9750,28 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "minutes from everywhere you need to be during trials.",
-   "status": "not on site",
+   "status": "change",
    "targetKind": "not-on-site",
    "target": null,
    "currentText": null,
    "confidence": 0,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": "no element on the template page is left to hold this line",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": null,
+   "joinedInto": 68,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "second half of the sentence in Guild-Legal:68, joined"
+   }
   },
   {
    "id": "Guild-Meeting-Collection:13",
@@ -15864,7 +15872,7 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "After a night out, the Cozy Queen offers privacy and room to breathe.",
-   "status": "not on site",
+   "status": "change",
    "targetKind": "cms-field",
    "target": {
     "fieldName": "Photo - Caption",
@@ -15875,7 +15883,7 @@
    "confidence": 0,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": "photo cutline: the room page has no cutline field",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
    "joinedInto": null,
@@ -16958,7 +16966,7 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "After a night out, the Courtyard Queen offers room to breathe.",
-   "status": "not on site",
+   "status": "change",
    "targetKind": "cms-field",
    "target": {
     "fieldName": "Photo - Caption",
@@ -16969,7 +16977,7 @@
    "confidence": 0,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": "photo cutline: the room page has no cutline field",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
    "joinedInto": null,
@@ -18009,7 +18017,7 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "After a night out, the Cozy King is a sanctuary.",
-   "status": "not on site",
+   "status": "change",
    "targetKind": "cms-field",
    "target": {
     "fieldName": "Photo - Caption",
@@ -18020,7 +18028,7 @@
    "confidence": 0,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": "photo cutline: the room page has no cutline field",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
    "joinedInto": null,
@@ -19060,7 +19068,7 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "After a night out, the Courtyard King offers room to breathe.",
-   "status": "not on site",
+   "status": "change",
    "targetKind": "cms-field",
    "target": {
     "fieldName": "Photo - Caption",
@@ -19071,7 +19079,7 @@
    "confidence": 0,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": "photo cutline: the room page has no cutline field",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
    "joinedInto": null,
@@ -20154,7 +20162,7 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "After a day downtown, the City Level Below Ground offers room to breathe.",
-   "status": "not on site",
+   "status": "change",
    "targetKind": "cms-field",
    "target": {
     "fieldName": "Photo - Caption",
@@ -20165,7 +20173,7 @@
    "confidence": 0,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": "photo cutline: the room page has no cutline field",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
    "joinedInto": null,
@@ -21205,7 +21213,7 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "After a night out, the City Level Loft offers room to breathe.",
-   "status": "not on site",
+   "status": "change",
    "targetKind": "cms-field",
    "target": {
     "fieldName": "Photo - Caption",
@@ -21216,7 +21224,7 @@
    "confidence": 0,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": "photo cutline: the room page has no cutline field",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
    "joinedInto": null,
@@ -22342,7 +22350,7 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "After a night in San Diego, the City Level Loft offers room to breathe.",
-   "status": "not on site",
+   "status": "change",
    "targetKind": "cms-field",
    "target": {
     "fieldName": "Photo - Caption",
@@ -22353,7 +22361,7 @@
    "confidence": 0,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": "photo cutline: the room page has no cutline field",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
    "joinedInto": null,
@@ -23422,7 +23430,7 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "Room to get ready. Space to stretch out. The Guild Corner Loft Suite is a premier choice.",
-   "status": "not on site",
+   "status": "change",
    "targetKind": "cms-field",
    "target": {
     "fieldName": "Photo - Caption",
@@ -23433,7 +23441,7 @@
    "confidence": 0,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": "photo cutline: the room page has no cutline field",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
    "joinedInto": null,
@@ -24455,7 +24463,7 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "Going out is grand. Coming home is better. The Guild Double is San Diego de luxe.",
-   "status": "not on site",
+   "status": "change",
    "targetKind": "cms-field",
    "target": {
     "fieldName": "Photo - Caption",
@@ -24466,7 +24474,7 @@
    "confidence": 0,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": "photo cutline: the room page has no cutline field",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
    "joinedInto": null,
@@ -25605,7 +25613,7 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "Going out is grand. Coming home to the Two-Bedroom Loft Suite is even better.",
-   "status": "not on site",
+   "status": "change",
    "targetKind": "cms-field",
    "target": {
     "fieldName": "Photo - Caption",
@@ -25616,7 +25624,7 @@
    "confidence": 0,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": "photo cutline: the room page has no cutline field",
+   "reason": null,
    "alternates": [],
    "alternateOf": null,
    "joinedInto": null,
