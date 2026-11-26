@@ -3880,6 +3880,352 @@
     "joinedInto": 68,
     "reason": null
    }
+  },
+  {
+   "id": "Guild-Meetings-Modals:18",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: a feature line, shown as feature 1 (the doc lists it under \"Features\")",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "features---1-title"
+    },
+    "reason": null,
+    "newText": "510 SQ FT"
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:19",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: the layout lines go to Layout options; the size line is feature 1 and the furniture note is printed by the pop-up",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "pop-up---layout-options"
+    },
+    "newText": "Classroom: 21*\nTheater: 57*\nU-shape: 15\nConference: 12\nRounds: 40*\nReception: 51*",
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:20",
+   "pick": "retarget",
+   "note": "joined into the layout list",
+   "set": {
+    "status": "change",
+    "joinedInto": 19,
+    "target": {
+     "fieldSlug": "pop-up---layout-options"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:21",
+   "pick": "retarget",
+   "note": "joined into the layout list",
+   "set": {
+    "status": "change",
+    "joinedInto": 19,
+    "target": {
+     "fieldSlug": "pop-up---layout-options"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:22",
+   "pick": "retarget",
+   "note": "joined into the layout list",
+   "set": {
+    "status": "change",
+    "joinedInto": 19,
+    "target": {
+     "fieldSlug": "pop-up---layout-options"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:23",
+   "pick": "retarget",
+   "note": "joined into the layout list",
+   "set": {
+    "status": "change",
+    "joinedInto": 19,
+    "target": {
+     "fieldSlug": "pop-up---layout-options"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:24",
+   "pick": "retarget",
+   "note": "joined into the layout list",
+   "set": {
+    "status": "change",
+    "joinedInto": 19,
+    "target": {
+     "fieldSlug": "pop-up---layout-options"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:25",
+   "pick": "reject",
+   "note": "the pop-up prints \"*requires furniture removal, charges may apply\" under the layouts already"
+  },
+  {
+   "id": "Guild-Meetings-Modals:72",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: a feature line, shown as feature 1 (the doc lists it under \"Features\")",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "features---1-title"
+    },
+    "reason": null,
+    "newText": "1396 SQ FT"
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:73",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: the layout lines go to Layout options; the size line is feature 1 and the furniture note is printed by the pop-up",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "pop-up---layout-options"
+    },
+    "newText": "Existing Seating: 68\nClassroom: 58*\nTheater: 155*\nU-shape: 40*\nConference: 34*\nRounds: 116*\nReception: 140*",
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:74",
+   "pick": "retarget",
+   "note": "joined into the layout list",
+   "set": {
+    "status": "change",
+    "joinedInto": 73,
+    "target": {
+     "fieldSlug": "pop-up---layout-options"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:75",
+   "pick": "retarget",
+   "note": "joined into the layout list",
+   "set": {
+    "status": "change",
+    "joinedInto": 73,
+    "target": {
+     "fieldSlug": "pop-up---layout-options"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:76",
+   "pick": "retarget",
+   "note": "joined into the layout list",
+   "set": {
+    "status": "change",
+    "joinedInto": 73,
+    "target": {
+     "fieldSlug": "pop-up---layout-options"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:77",
+   "pick": "retarget",
+   "note": "joined into the layout list",
+   "set": {
+    "status": "change",
+    "joinedInto": 73,
+    "target": {
+     "fieldSlug": "pop-up---layout-options"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:78",
+   "pick": "retarget",
+   "note": "joined into the layout list",
+   "set": {
+    "status": "change",
+    "joinedInto": 73,
+    "target": {
+     "fieldSlug": "pop-up---layout-options"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:79",
+   "pick": "retarget",
+   "note": "joined into the layout list",
+   "set": {
+    "status": "change",
+    "joinedInto": 73,
+    "target": {
+     "fieldSlug": "pop-up---layout-options"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:80",
+   "pick": "reject",
+   "note": "the pop-up prints \"*requires furniture removal, charges may apply\" under the layouts already"
+  },
+  {
+   "id": "Guild-Meetings-Modals:103",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: a feature line, shown as feature 1 (the doc lists it under \"Features\")",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "features---1-title"
+    },
+    "reason": null,
+    "newText": "1000 SQ FT"
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:104",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: a feature line, shown as feature 2 (the doc lists it under \"Features\")",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "features---2-title"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:105",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: a feature line, shown as feature 3 (the doc lists it under \"Features\")",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "features---3-title"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:106",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: a feature line, shown as feature 4 (the doc lists it under \"Features\")",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "features---4-title"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:107",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: a feature line, shown as feature 5 (the doc lists it under \"Features\")",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "features---5-title"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:108",
+   "pick": "reject",
+   "note": "sixth feature line: the pop-up has five feature slots"
+  },
+  {
+   "id": "Guild-Meetings-Modals:113",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: a feature line, shown as feature 1 (the doc lists it under \"Features\")",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "features---1-title"
+    },
+    "reason": null,
+    "newText": "2227 SQ FT"
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:114",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: a feature line, shown as feature 2 (the doc lists it under \"Features\")",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "features---2-title"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:115",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: a feature line, shown as feature 3 (the doc lists it under \"Features\")",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "features---3-title"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:116",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: a feature line, shown as feature 4 (the doc lists it under \"Features\")",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "features---4-title"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Meetings-Modals:117",
+   "pick": "retarget",
+   "note": "checked in the open pop-up: a feature line, shown as feature 5 (the doc lists it under \"Features\")",
+   "set": {
+    "status": "change",
+    "joinedInto": null,
+    "target": {
+     "fieldSlug": "features---5-title"
+    },
+    "reason": null
+   }
   }
  ]
 }

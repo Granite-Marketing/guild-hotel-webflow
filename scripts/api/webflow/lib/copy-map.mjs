@@ -648,7 +648,8 @@ function diningVenueRows(docName, config, parsed, index, model) {
 // ---------------------------------------------------------------- legal and corporate docs
 function legalCorporateRows(docName, config, parsed, index, model) {
   const collection = model.collections[config.collection]
-  const item = itemByName(collection, config.itemName) || { name: config.itemName, slug: null, itemPath: null, observed: false }
+  const found = itemByName(collection, config.itemName) || { name: config.itemName, slug: null, itemPath: null, observed: false }
+  const item = !found.itemPath && config.slug ? { ...found, slug: config.slug, itemPath: `/${config.collection}/${config.slug}` } : found
   const page = index.pages.get(config.templatePage)
   const entries = parsed.entries
   const ctx = { collectionKey: config.collection, collection, item }

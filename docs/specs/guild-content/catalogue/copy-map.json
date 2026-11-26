@@ -30,10 +30,10 @@
  "summary": {
   "rows": 815,
   "rowsByStatus": {
-   "change": 338,
+   "change": 335,
    "same": 55,
    "second version listed": 13,
-   "not on site": 286,
+   "not on site": 289,
    "no copy yet": 118,
    "held": 5
   },
@@ -8385,13 +8385,13 @@
    "id": "Guild-Legal:2",
    "doc": "Guild-Legal",
    "line": 2,
-   "page": "/legal-corporate/*",
+   "page": "/legal-corporate/legal",
    "cmsItem": {
     "collection": "legal-corporate",
     "collectionName": "🧑‍⚖️ Legal Corporates",
     "name": "Legal",
-    "slug": null,
-    "itemPath": null,
+    "slug": "legal",
+    "itemPath": "/legal-corporate/legal",
     "itemPathDerived": false,
     "listingPaths": [],
     "observed": false
@@ -8432,13 +8432,13 @@
    "id": "Guild-Legal:3",
    "doc": "Guild-Legal",
    "line": 3,
-   "page": "/legal-corporate/*",
+   "page": "/legal-corporate/legal",
    "cmsItem": {
     "collection": "legal-corporate",
     "collectionName": "🧑‍⚖️ Legal Corporates",
     "name": "Legal",
-    "slug": null,
-    "itemPath": null,
+    "slug": "legal",
+    "itemPath": "/legal-corporate/legal",
     "itemPathDerived": false,
     "listingPaths": [],
     "observed": false
@@ -8479,13 +8479,13 @@
    "id": "Guild-Legal:5",
    "doc": "Guild-Legal",
    "line": 5,
-   "page": "/legal-corporate/*",
+   "page": "/legal-corporate/legal",
    "cmsItem": {
     "collection": "legal-corporate",
     "collectionName": "🧑‍⚖️ Legal Corporates",
     "name": "Legal",
-    "slug": null,
-    "itemPath": null,
+    "slug": "legal",
+    "itemPath": "/legal-corporate/legal",
     "itemPathDerived": false,
     "listingPaths": [],
     "observed": false
@@ -8532,13 +8532,13 @@
    "id": "Guild-Legal:7",
    "doc": "Guild-Legal",
    "line": 7,
-   "page": "/legal-corporate/*",
+   "page": "/legal-corporate/legal",
    "cmsItem": {
     "collection": "legal-corporate",
     "collectionName": "🧑‍⚖️ Legal Corporates",
     "name": "Legal",
-    "slug": null,
-    "itemPath": null,
+    "slug": "legal",
+    "itemPath": "/legal-corporate/legal",
     "itemPathDerived": false,
     "listingPaths": [],
     "observed": false
@@ -8963,13 +8963,13 @@
    "id": "Guild-Legal:39",
    "doc": "Guild-Legal",
    "line": 39,
-   "page": "/legal-corporate/*",
+   "page": "/legal-corporate/legal",
    "cmsItem": {
     "collection": "legal-corporate",
     "collectionName": "🧑‍⚖️ Legal Corporates",
     "name": "Legal",
-    "slug": null,
-    "itemPath": null,
+    "slug": "legal",
+    "itemPath": "/legal-corporate/legal",
     "itemPathDerived": false,
     "listingPaths": [],
     "observed": false
@@ -9016,13 +9016,13 @@
    "id": "Guild-Legal:40",
    "doc": "Guild-Legal",
    "line": 40,
-   "page": "/legal-corporate/*",
+   "page": "/legal-corporate/legal",
    "cmsItem": {
     "collection": "legal-corporate",
     "collectionName": "🧑‍⚖️ Legal Corporates",
     "name": "Legal",
-    "slug": null,
-    "itemPath": null,
+    "slug": "legal",
+    "itemPath": "/legal-corporate/legal",
     "itemPathDerived": false,
     "listingPaths": [],
     "observed": false
@@ -10674,13 +10674,11 @@
    },
    "docRole": "body",
    "scriptHeading": false,
-   "newText": "510 SQ FT\nClassroom: 21*\nTheater: 57*\nU-shape: 15\nConference: 12\nRounds: 40*\nReception: 51*\n*requires furniture removal; charges may apply",
+   "newText": "510 SQ FT",
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "features---1-title"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -10696,7 +10694,11 @@
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: a feature line, shown as feature 1 (the doc lists it under \"Features\")"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:19",
@@ -10718,13 +10720,11 @@
    },
    "docRole": "body",
    "scriptHeading": false,
-   "newText": "Classroom: 21*",
+   "newText": "Classroom: 21*\nTheater: 57*\nU-shape: 15\nConference: 12\nRounds: 40*\nReception: 51*",
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "pop-up---layout-options"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -10733,14 +10733,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 18,
+   "joinedInto": null,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: the layout lines go to Layout options; the size line is feature 1 and the furniture note is printed by the pop-up"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:20",
@@ -10766,9 +10770,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "pop-up---layout-options"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -10777,14 +10779,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 18,
+   "joinedInto": 19,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "joined into the layout list"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:21",
@@ -10810,9 +10816,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "pop-up---layout-options"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -10821,14 +10825,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 18,
+   "joinedInto": 19,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "joined into the layout list"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:22",
@@ -10854,9 +10862,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "pop-up---layout-options"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -10865,14 +10871,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 18,
+   "joinedInto": 19,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "joined into the layout list"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:23",
@@ -10898,9 +10908,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "pop-up---layout-options"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -10909,14 +10917,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 18,
+   "joinedInto": 19,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "joined into the layout list"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:24",
@@ -10942,9 +10954,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "pop-up---layout-options"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -10953,14 +10963,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 18,
+   "joinedInto": 19,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "joined into the layout list"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:25",
@@ -10983,18 +10997,14 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "*requires furniture removal; charges may apply",
-   "status": "change",
-   "targetKind": "cms-field",
-   "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
-   },
+   "status": "not on site",
+   "targetKind": "not-on-site",
+   "target": null,
    "currentText": null,
    "confidence": 0.75,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": null,
+   "reason": "the pop-up prints \"*requires furniture removal, charges may apply\" under the layouts already",
    "alternates": [],
    "alternateOf": null,
    "joinedInto": 18,
@@ -11004,7 +11014,11 @@
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "reject",
+    "note": "the pop-up prints \"*requires furniture removal, charges may apply\" under the layouts already"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:27",
@@ -12092,13 +12106,11 @@
    },
    "docRole": "body",
    "scriptHeading": false,
-   "newText": "1396 SQ FT\nExisting Seating: 68\nClassroom: 58*\nTheater: 155*\nU-shape: 40*\nConference: 34*\nRounds: 116*\nReception: 140*\n*requires furniture removal, charges may apply",
+   "newText": "1396 SQ FT",
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "features---1-title"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -12114,7 +12126,11 @@
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: a feature line, shown as feature 1 (the doc lists it under \"Features\")"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:73",
@@ -12136,13 +12152,11 @@
    },
    "docRole": "body",
    "scriptHeading": false,
-   "newText": "Existing Seating: 68",
+   "newText": "Existing Seating: 68\nClassroom: 58*\nTheater: 155*\nU-shape: 40*\nConference: 34*\nRounds: 116*\nReception: 140*",
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "pop-up---layout-options"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -12151,14 +12165,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 72,
+   "joinedInto": null,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: the layout lines go to Layout options; the size line is feature 1 and the furniture note is printed by the pop-up"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:74",
@@ -12184,9 +12202,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "pop-up---layout-options"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -12195,14 +12211,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 72,
+   "joinedInto": 73,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "joined into the layout list"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:75",
@@ -12228,9 +12248,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "pop-up---layout-options"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -12239,14 +12257,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 72,
+   "joinedInto": 73,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "joined into the layout list"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:76",
@@ -12272,9 +12294,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "pop-up---layout-options"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -12283,14 +12303,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 72,
+   "joinedInto": 73,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "joined into the layout list"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:77",
@@ -12316,9 +12340,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "pop-up---layout-options"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -12327,14 +12349,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 72,
+   "joinedInto": 73,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "joined into the layout list"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:78",
@@ -12360,9 +12386,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "pop-up---layout-options"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -12371,14 +12395,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 72,
+   "joinedInto": 73,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "joined into the layout list"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:79",
@@ -12404,9 +12432,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "pop-up---layout-options"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -12415,14 +12441,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 72,
+   "joinedInto": 73,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "joined into the layout list"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:80",
@@ -12445,18 +12475,14 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "*requires furniture removal, charges may apply",
-   "status": "change",
-   "targetKind": "cms-field",
-   "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
-   },
+   "status": "not on site",
+   "targetKind": "not-on-site",
+   "target": null,
    "currentText": null,
    "confidence": 0.75,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": null,
+   "reason": "the pop-up prints \"*requires furniture removal, charges may apply\" under the layouts already",
    "alternates": [],
    "alternateOf": null,
    "joinedInto": 72,
@@ -12466,7 +12492,11 @@
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "reject",
+    "note": "the pop-up prints \"*requires furniture removal, charges may apply\" under the layouts already"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:81",
@@ -13007,13 +13037,11 @@
    },
    "docRole": "body",
    "scriptHeading": false,
-   "newText": "1000 SQ FT\nFlexible seating configurations (boardroom, classroom, U-shape)\nModern audiovisual system\nIdeal for focused, interactive sessions\nCapacity: 70\nCatering services are available",
+   "newText": "1000 SQ FT",
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "features---1-title"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -13029,7 +13057,11 @@
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: a feature line, shown as feature 1 (the doc lists it under \"Features\")"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:104",
@@ -13055,9 +13087,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "features---2-title"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -13066,14 +13096,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 103,
+   "joinedInto": null,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: a feature line, shown as feature 2 (the doc lists it under \"Features\")"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:105",
@@ -13099,9 +13133,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "features---3-title"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -13110,14 +13142,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 103,
+   "joinedInto": null,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: a feature line, shown as feature 3 (the doc lists it under \"Features\")"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:106",
@@ -13143,9 +13179,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "features---4-title"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -13154,14 +13188,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 103,
+   "joinedInto": null,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: a feature line, shown as feature 4 (the doc lists it under \"Features\")"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:107",
@@ -13187,9 +13225,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "features---5-title"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -13198,14 +13234,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 103,
+   "joinedInto": null,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: a feature line, shown as feature 5 (the doc lists it under \"Features\")"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:108",
@@ -13228,18 +13268,14 @@
    "docRole": "body",
    "scriptHeading": false,
    "newText": "Catering services are available",
-   "status": "change",
-   "targetKind": "cms-field",
-   "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
-   },
+   "status": "not on site",
+   "targetKind": "not-on-site",
+   "target": null,
    "currentText": null,
    "confidence": 0.75,
    "needsConfirm": false,
    "confirmReasons": [],
-   "reason": null,
+   "reason": "sixth feature line: the pop-up has five feature slots",
    "alternates": [],
    "alternateOf": null,
    "joinedInto": 103,
@@ -13249,7 +13285,11 @@
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "reject",
+    "note": "sixth feature line: the pop-up has five feature slots"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:110",
@@ -13359,13 +13399,11 @@
    },
    "docRole": "body",
    "scriptHeading": false,
-   "newText": "2227 SQ FT\nSpacious layout with adaptable seating\nCatering services available\nProfessional environment for impactful presentations\nCapacity: 150",
+   "newText": "2227 SQ FT",
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "features---1-title"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -13381,7 +13419,11 @@
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: a feature line, shown as feature 1 (the doc lists it under \"Features\")"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:114",
@@ -13407,9 +13449,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "features---2-title"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -13418,14 +13458,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 113,
+   "joinedInto": null,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: a feature line, shown as feature 2 (the doc lists it under \"Features\")"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:115",
@@ -13451,9 +13495,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "features---3-title"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -13462,14 +13504,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 113,
+   "joinedInto": null,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: a feature line, shown as feature 3 (the doc lists it under \"Features\")"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:116",
@@ -13495,9 +13541,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "features---4-title"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -13506,14 +13550,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 113,
+   "joinedInto": null,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: a feature line, shown as feature 4 (the doc lists it under \"Features\")"
+   }
   },
   {
    "id": "Guild-Meetings-Modals:117",
@@ -13539,9 +13587,7 @@
    "status": "change",
    "targetKind": "cms-field",
    "target": {
-    "fieldSlug": "pop-up---layout-options",
-    "currentKnown": false,
-    "tag": null
+    "fieldSlug": "features---5-title"
    },
    "currentText": null,
    "confidence": 0.75,
@@ -13550,14 +13596,18 @@
    "reason": null,
    "alternates": [],
    "alternateOf": null,
-   "joinedInto": 113,
+   "joinedInto": null,
    "notes": [],
    "shared": false,
    "sharedPages": [],
    "sharedReason": null,
    "needsDecision": false,
    "duplicateOf": null,
-   "conflictsWith": []
+   "conflictsWith": [],
+   "pick": {
+    "decision": "retarget",
+    "note": "checked in the open pop-up: a feature line, shown as feature 5 (the doc lists it under \"Features\")"
+   }
   },
   {
    "id": "Guild-Neighborhood:28",

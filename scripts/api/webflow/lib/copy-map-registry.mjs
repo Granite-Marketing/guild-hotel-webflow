@@ -26,7 +26,7 @@ export const REGISTRY = {
   'Guild-Dining-GardenTerrace': diningVenue('Garden Terrace', 'dining-gardenterrace'),
   'Guild-Rooms-SubPages': { type: 'rooms', collection: 'rooms', templatePage: '/rooms/cozy-queen' },
   'Guild-Corporate': { type: 'cms-plan', plan: 'legal-corporate', collection: 'legal-corporate', itemName: 'Corporate', templatePage: '/legal-corporate/corporate', cards: MEETING_CARDS },
-  'Guild-Legal': { type: 'cms-plan', plan: 'legal-corporate', collection: 'legal-corporate', itemName: 'Legal', templatePage: '/legal-corporate/corporate', cards: MEETING_CARDS },
+  'Guild-Legal': { type: 'cms-plan', plan: 'legal-corporate', collection: 'legal-corporate', itemName: 'Legal', slug: 'legal', templatePage: '/legal-corporate/corporate', cards: MEETING_CARDS },
 }
 
 // A doc name that means a differently named CMS item, per collection (keys are lowercase doc names).

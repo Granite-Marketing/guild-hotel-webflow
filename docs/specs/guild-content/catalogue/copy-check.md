@@ -1,6 +1,6 @@
 # Copy check
 
-Generated 2026-11-26T19:55:06.954Z by `pnpm copy-check` from `copy-map.json` against https://the-guild-hotel-c34e71.webflow.io (headless, 1440 wide). Read only: nothing is written to Webflow.
+Generated 2026-11-26T20:11:25.905Z by `pnpm copy-check` from `copy-map.json` against https://the-guild-hotel-c34e71.webflow.io (headless, 1440 wide). Read only: nothing is written to Webflow.
 
 done: the new text is on the page (case and whitespace ignored). differs: the target is there but reads differently. missing: neither is there. unchecked: not checked, reason given.
 
@@ -8,10 +8,10 @@ done: the new text is on the page (case and whitespace ignored). differs: the ta
 
 | status | rows |
 |---|---|
-| done | 243 |
-| differs | 49 |
+| done | 259 |
+| differs | 51 |
 | missing | 26 |
-| unchecked | 497 |
+| unchecked | 479 |
 | total | 815 |
 
 | page | done | differs | missing | unchecked |
@@ -30,11 +30,11 @@ done: the new text is on the page (case and whitespace ignored). differs: the ta
 | /gallery | 2 | 0 | 0 | 3 |
 | /happenings | 3 | 1 | 0 | 4 |
 | /history | 24 | 0 | 0 | 8 |
-| /legal-corporate/* | 0 | 0 | 0 | 6 |
 | /legal-corporate/corporate | 14 | 5 | 0 | 42 |
-| /meeting-venues/* | 22 | 0 | 1 | 42 |
+| /legal-corporate/legal | 6 | 0 | 0 | 0 |
+| /meeting-venues/* | 32 | 0 | 1 | 32 |
 | /meetings | 5 | 0 | 0 | 50 |
-| /neighborhood | 10 | 6 | 0 | 29 |
+| /neighborhood | 10 | 8 | 0 | 27 |
 | /press | 3 | 1 | 0 | 8 |
 | /rooms | 5 | 1 | 0 | 19 |
 | /rooms/city-level-below-ground | 6 | 0 | 2 | 12 |
@@ -330,19 +330,6 @@ done 24, differs 0, missing 0, unchecked 8
 | `no-copy:/history:prop|1d8e9af5-d4ac-dcff-bd4f-79d0619e921f|264ee76e-e780-9d34-e502-01b5f2288b4f` | unchecked |  | no copy yet: staging text is a placeholder |
 | `no-copy:/history:prop|7597bab3-fbac-3154-7f9c-8f1961f2a83b|b550ca88-5559-7f65-9f41-bf84cdf75780` | unchecked |  | no copy yet: staging text is a placeholder |
 
-## /legal-corporate/*
-
-done 0, differs 0, missing 0, unchecked 6
-
-| row | status | new text | found or reason |
-|---|---|---|---|
-| `Guild-Legal:2` | unchecked | Secure Comfort for Legal Teams | CMS item has no item page and no listing page to check |
-| `Guild-Legal:3` | unchecked | Space and privacy minutes from San Diego’s Superior and Federal Courthouses | CMS item has no item page and no listing page to check |
-| `Guild-Legal:5` | unchecked | Tailored Solutions for Firms | CMS item has no item page and no listing page to check |
-| `Guild-Legal:7` | unchecked | When your law firm needs a calm, focused environment for productivity, The Gu... | CMS item has no item page and no listing page to check |
-| `Guild-Legal:39` | unchecked | DESIGNED FOR FOCUSED, CONFIDENTIAL WORK | CMS item has no item page and no listing page to check |
-| `Guild-Legal:40` | unchecked | Discreet, high-performance spaces tailored to the demands of legal professionals | CMS item has no item page and no listing page to check |
-
 ## /legal-corporate/corporate
 
 done 14, differs 5, missing 0, unchecked 42
@@ -411,9 +398,22 @@ done 14, differs 5, missing 0, unchecked 42
 | `no-copy:/legal-corporate/corporate:prop|a801d156-90c7-64a8-7607-c16886341a7c|264ee76e-e780-9d34-e502-01b5f2288b4f` | unchecked |  | no copy yet: staging text is a placeholder |
 | `no-copy:/legal-corporate/corporate:prop|50012471-01ef-90ad-bb45-a830319c651d|b550ca88-5559-7f65-9f41-bf84cdf75780` | unchecked |  | no copy yet: staging text is a placeholder |
 
+## /legal-corporate/legal
+
+done 6, differs 0, missing 0, unchecked 0
+
+| row | status | new text | found or reason |
+|---|---|---|---|
+| `Guild-Legal:2` | done | Secure Comfort for Legal Teams |  |
+| `Guild-Legal:3` | done | Space and privacy minutes from San Diego’s Superior and Federal Courthouses |  |
+| `Guild-Legal:5` | done | Tailored Solutions for Firms |  |
+| `Guild-Legal:7` | done | When your law firm needs a calm, focused environment for productivity, The Gu... |  |
+| `Guild-Legal:39` | done | DESIGNED FOR FOCUSED, CONFIDENTIAL WORK |  |
+| `Guild-Legal:40` | done | Discreet, high-performance spaces tailored to the demands of legal professionals |  |
+
 ## /meeting-venues/*
 
-done 22, differs 0, missing 1, unchecked 42
+done 32, differs 0, missing 1, unchecked 32
 
 | row | status | new text | found or reason |
 |---|---|---|---|
@@ -441,26 +441,26 @@ done 22, differs 0, missing 1, unchecked 42
 | `Guild-Meeting-Collection:20` | done | After work, space for refined al fresco dinners or intimate cocktail receptions | on /meetings |
 | `Guild-Meetings-Modals:12` | unchecked | COUNCIL BOARDROOM | duplicate of Guild-Corporate:72 |
 | `Guild-Meetings-Modals:15` | done | Council Boardrooms offer all the ingredients for a successful small meeting –... | on /meetings |
-| `Guild-Meetings-Modals:18` | done | 510 SQ FT Classroom: 21* Theater: 57* U-shape: 15 Conference: 12 Rounds: 40* ... | on /meetings |
-| `Guild-Meetings-Modals:19` | unchecked | Classroom: 21* | joined into 18: the head row carries the composed text |
-| `Guild-Meetings-Modals:20` | unchecked | Theater: 57* | joined into 18: the head row carries the composed text |
-| `Guild-Meetings-Modals:21` | unchecked | U-shape: 15 | joined into 18: the head row carries the composed text |
-| `Guild-Meetings-Modals:22` | unchecked | Conference: 12 | joined into 18: the head row carries the composed text |
-| `Guild-Meetings-Modals:23` | unchecked | Rounds: 40* | joined into 18: the head row carries the composed text |
-| `Guild-Meetings-Modals:24` | unchecked | Reception: 51* | joined into 18: the head row carries the composed text |
+| `Guild-Meetings-Modals:18` | done | 510 SQ FT | on /meetings |
+| `Guild-Meetings-Modals:19` | done | Classroom: 21* Theater: 57* U-shape: 15 Conference: 12 Rounds: 40* Reception:... | on /meetings |
+| `Guild-Meetings-Modals:20` | unchecked | Theater: 57* | joined into 19: the head row carries the composed text |
+| `Guild-Meetings-Modals:21` | unchecked | U-shape: 15 | joined into 19: the head row carries the composed text |
+| `Guild-Meetings-Modals:22` | unchecked | Conference: 12 | joined into 19: the head row carries the composed text |
+| `Guild-Meetings-Modals:23` | unchecked | Rounds: 40* | joined into 19: the head row carries the composed text |
+| `Guild-Meetings-Modals:24` | unchecked | Reception: 51* | joined into 19: the head row carries the composed text |
 | `Guild-Meetings-Modals:25` | unchecked | *requires furniture removal; charges may apply | joined into 18: the head row carries the composed text |
 | `Guild-Meetings-Modals:55` | done | GARDEN TERRACE | on /meetings |
 | `Guild-Meetings-Modals:65` | unchecked | GARDEN TERRACE | duplicate of Guild-Meetings-Modals:55 |
 | `Guild-Meetings-Modals:66` | unchecked | The Guild’s superb al fresco venue | not on site: no element to check |
 | `Guild-Meetings-Modals:69` | done | With its lush landscaping and Mediterranean atmosphere, the Garden Terrace is... | on /meetings |
-| `Guild-Meetings-Modals:72` | done | 1396 SQ FT Existing Seating: 68 Classroom: 58* Theater: 155* U-shape: 40* Con... | on /meetings |
-| `Guild-Meetings-Modals:73` | unchecked | Existing Seating: 68 | joined into 72: the head row carries the composed text |
-| `Guild-Meetings-Modals:74` | unchecked | Classroom: 58* | joined into 72: the head row carries the composed text |
-| `Guild-Meetings-Modals:75` | unchecked | Theater: 155* | joined into 72: the head row carries the composed text |
-| `Guild-Meetings-Modals:76` | unchecked | U-shape: 40* | joined into 72: the head row carries the composed text |
-| `Guild-Meetings-Modals:77` | unchecked | Conference: 34* | joined into 72: the head row carries the composed text |
-| `Guild-Meetings-Modals:78` | unchecked | Rounds: 116* | joined into 72: the head row carries the composed text |
-| `Guild-Meetings-Modals:79` | unchecked | Reception: 140* | joined into 72: the head row carries the composed text |
+| `Guild-Meetings-Modals:72` | done | 1396 SQ FT | on /meetings |
+| `Guild-Meetings-Modals:73` | done | Existing Seating: 68 Classroom: 58* Theater: 155* U-shape: 40* Conference: 34... | on /meetings |
+| `Guild-Meetings-Modals:74` | unchecked | Classroom: 58* | joined into 73: the head row carries the composed text |
+| `Guild-Meetings-Modals:75` | unchecked | Theater: 155* | joined into 73: the head row carries the composed text |
+| `Guild-Meetings-Modals:76` | unchecked | U-shape: 40* | joined into 73: the head row carries the composed text |
+| `Guild-Meetings-Modals:77` | unchecked | Conference: 34* | joined into 73: the head row carries the composed text |
+| `Guild-Meetings-Modals:78` | unchecked | Rounds: 116* | joined into 73: the head row carries the composed text |
+| `Guild-Meetings-Modals:79` | unchecked | Reception: 140* | joined into 73: the head row carries the composed text |
 | `Guild-Meetings-Modals:80` | unchecked | *requires furniture removal, charges may apply | joined into 72: the head row carries the composed text |
 | `Guild-Meetings-Modals:81` | done | 1 AMERICA PLAZA | on /meetings |
 | `Guild-Meetings-Modals:91` | unchecked | 1 AMERICA PLAZA | duplicate of Guild-Meetings-Modals:81 |
@@ -469,19 +469,19 @@ done 22, differs 0, missing 1, unchecked 42
 | `Guild-Meetings-Modals:97` | unchecked | The Guild’s shared portfolio partnership with 1 America Plaza gives groups th... | joined into 94: the head row carries the composed text |
 | `Guild-Meetings-Modals:100` | unchecked | Small Conference Center | duplicate of Guild-Corporate:65 |
 | `Guild-Meetings-Modals:101` | done | Designed for workshops, team meetings and breakout sessions. | on /legal-corporate/corporate |
-| `Guild-Meetings-Modals:103` | done | 1000 SQ FT Flexible seating configurations (boardroom, classroom, U-shape) Mo... | on /legal-corporate/corporate |
-| `Guild-Meetings-Modals:104` | unchecked | Flexible seating configurations (boardroom, classroom, U-shape) | joined into 103: the head row carries the composed text |
-| `Guild-Meetings-Modals:105` | unchecked | Modern audiovisual system | joined into 103: the head row carries the composed text |
-| `Guild-Meetings-Modals:106` | unchecked | Ideal for focused, interactive sessions | joined into 103: the head row carries the composed text |
-| `Guild-Meetings-Modals:107` | unchecked | Capacity: 70 | joined into 103: the head row carries the composed text |
+| `Guild-Meetings-Modals:103` | done | 1000 SQ FT | on /legal-corporate/corporate |
+| `Guild-Meetings-Modals:104` | done | Flexible seating configurations (boardroom, classroom, U-shape) | on /legal-corporate/corporate |
+| `Guild-Meetings-Modals:105` | done | Modern audiovisual system | on /legal-corporate/corporate |
+| `Guild-Meetings-Modals:106` | done | Ideal for focused, interactive sessions | on /legal-corporate/corporate |
+| `Guild-Meetings-Modals:107` | done | Capacity: 70 | on /legal-corporate/corporate |
 | `Guild-Meetings-Modals:108` | unchecked | Catering services are available | joined into 103: the head row carries the composed text |
 | `Guild-Meetings-Modals:110` | unchecked | Large Conference Center | duplicate of Guild-Corporate:69 |
 | `Guild-Meetings-Modals:111` | done | Designed for up to 150 attendees, this venue works well for presentations, co... | on /legal-corporate/corporate |
-| `Guild-Meetings-Modals:113` | done | 2227 SQ FT Spacious layout with adaptable seating Catering services available... | on /legal-corporate/corporate |
-| `Guild-Meetings-Modals:114` | unchecked | Spacious layout with adaptable seating | joined into 113: the head row carries the composed text |
-| `Guild-Meetings-Modals:115` | unchecked | Catering services available | joined into 113: the head row carries the composed text |
-| `Guild-Meetings-Modals:116` | unchecked | Professional environment for impactful presentations | joined into 113: the head row carries the composed text |
-| `Guild-Meetings-Modals:117` | unchecked | Capacity: 150 | joined into 113: the head row carries the composed text |
+| `Guild-Meetings-Modals:113` | done | 2227 SQ FT | on /legal-corporate/corporate |
+| `Guild-Meetings-Modals:114` | done | Spacious layout with adaptable seating | on /legal-corporate/corporate |
+| `Guild-Meetings-Modals:115` | done | Catering services available | on /legal-corporate/corporate |
+| `Guild-Meetings-Modals:116` | done | Professional environment for impactful presentations | on /legal-corporate/corporate |
+| `Guild-Meetings-Modals:117` | done | Capacity: 150 | on /legal-corporate/corporate |
 
 ## /meetings
 
@@ -547,7 +547,7 @@ done 5, differs 0, missing 0, unchecked 50
 
 ## /neighborhood
 
-done 10, differs 6, missing 0, unchecked 29
+done 10, differs 8, missing 0, unchecked 27
 
 | row | status | new text | found or reason |
 |---|---|---|---|
@@ -580,8 +580,8 @@ done 10, differs 6, missing 0, unchecked 29
 | `Guild-Neighborhood:50` | differs | The Guild regularly and securely hosts many firms researching cases that are ... | found: Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobo... |
 | `Guild-Neighborhood:52` | differs | U.S. DISTRICT COURT FOR THE SOUTHERN DISTRICT OF CALIFORNIA | found: San Diego Superior Court |
 | `Guild-Neighborhood:53` | differs | The Guild is just two blocks away from this court, and securely hosts firms r... | found: Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobo... |
-| `Guild-Neighborhood:55` | unchecked | HALL OF JUSTICE | not on site: no element to check |
-| `Guild-Neighborhood:56` | unchecked | The Guild is a three-minute walk from the Hall of Justice, and the hotel has ... | not on site: no element to check |
+| `Guild-Neighborhood:55` | differs | HALL OF JUSTICE | found: SAN DIEGO CONVENTION CENTER |
+| `Guild-Neighborhood:56` | differs | The Guild is a three-minute walk from the Hall of Justice, and the hotel has ... | found: Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobo... |
 | `no-copy:/neighborhood:page|b18c3101-b992-aaf2-ef7a-8dcd792144c6` | unchecked |  | no copy yet: staging text is a placeholder |
 | `no-copy:/neighborhood:fixed|540a49c8-c2a2-78be-5b58-c69779ecc6e6|540a49c8-c2a2-78be-5b58-c69779ecc6fa` | unchecked |  | no copy yet: staging text is a placeholder |
 | `no-copy:/neighborhood:fixed|327a6f34-e59b-e99f-40fb-31eb3c615846|aa184bec-1546-99d0-45ba-1eda6f3bbded` | unchecked |  | no copy yet: staging text is a placeholder |

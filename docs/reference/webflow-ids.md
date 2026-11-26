@@ -814,3 +814,24 @@ Split image text light `50d0d660-fa88-c432-96fa-679fbe31a938` (Olive Home) and `
 - Form Legal Corporate Proposal root has DOM id `request-for-proposal`; Venue Detail Modal button `bf7623e5-058f-ec80-12e2-20bb187eaff2` has `data-modal-close`.
 - Removed: Arts `0e92d885-...` (second Gallery Canvas Styles), Gallery `3d0bee30-...` (second Global Styles), Booking Menu empty header `f2b614be-...e07`, three hidden Footer Links items (`...edbf`, `...edc2`, `...edc8`).
 - Form names: Photoshoot Request, Meetings Proposal Request, Legal and Corporate Proposal Request, Press Enquiry.
+
+## CMS fields for template text (copy upload #418, 2026-11-26)
+
+Plain text fields added so text that was fixed on a CMS template can differ per item (decision C6 in `docs/specs/guild-content/notes.md`). Filled per item; not yet bound in the Designer (bind list in `docs/specs/guild-content/report.md`).
+
+| Collection | Field | Slug | ID |
+|---|---|---|---|
+| Rooms | Intro - Script Heading | `intro---script-heading` | `5604d89c502e4ebcafdadabd2588b366` |
+| Rooms | Description - Floorplan Button Text | `description---floorplan-button-text` | `9f1ea24ef9b61181a4716f1427b97928` |
+| Rooms | Photo - Caption | `photo---caption` | `8cfb8d6ff63ad4c6e402e6cab39ab354` |
+| Rooms | Feature - Text | `feature---text` | `541f1da3addc5367fc577fd2eb349ed2` |
+| Rooms | Amenities - Heading | `amenities---heading` | `1bb414b5da53a9e1b2aa65dbc3a59c73` |
+| Rooms | Amenities - Text | `amenities---text` | `321ca9d9af54b2d9f14e97809a99d11d` |
+| Dinings | Group Dining - Heading | `group-dining---heading` | `f64a029791af73fed54cf52630963d91` |
+| Legal Corporates | Features - Heading | `features---heading` | `0fd41c8dd1b6d45926511e455576c0c4` |
+| Legal Corporates | Features - Item 1 Heading | `features---item-1-heading` | `dfc91669f7a1a1d6d907268d819c42d7` |
+| Legal Corporates | Features - Item 3 Heading | `features---item-3-heading` | `61ebd1935836d72ab20bba28511b9d3a` |
+| Legal Corporates | Why Choose - Eyebrow | `why-choose---eyebrow` | `b03aa745a8717e11773af9a311285eab` |
+| Legal Corporates | Why Choose - Link Text | `why-choose---link-text` | `8b88a23019b28e1351e1b02296d6ccd2` |
+| Legal Corporates | Map - Heading | `map---heading` | `4e942e514c43f72041312de97086aa16` |
+| Legal Corporates | Map - Text | `map---text` | `77c5f7b7125446d23efcc89c438cd089` |

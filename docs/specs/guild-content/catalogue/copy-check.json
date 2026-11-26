@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-26T19:55:06.954Z",
+ "generated": "2026-11-26T20:11:25.905Z",
  "staging": "https://the-guild-hotel-c34e71.webflow.io",
  "summary": {
-  "done": 243,
-  "differs": 49,
+  "done": 259,
+  "differs": 51,
   "missing": 26,
-  "unchecked": 497,
+  "unchecked": 479,
   "total": 815
  },
  "pages": [
@@ -1950,77 +1950,6 @@
    ]
   },
   {
-   "page": "/legal-corporate/*",
-   "counts": {
-    "done": 0,
-    "differs": 0,
-    "missing": 0,
-    "unchecked": 6
-   },
-   "rows": [
-    {
-     "id": "Guild-Legal:2",
-     "doc": "Guild-Legal",
-     "line": 2,
-     "page": "/legal-corporate/*",
-     "newText": "Secure Comfort for Legal Teams",
-     "reason": "CMS item has no item page and no listing page to check",
-     "mapStatus": "change",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Legal:3",
-     "doc": "Guild-Legal",
-     "line": 3,
-     "page": "/legal-corporate/*",
-     "newText": "Space and privacy minutes from San Diego’s Superior and Federal Courthouses",
-     "reason": "CMS item has no item page and no listing page to check",
-     "mapStatus": "change",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Legal:5",
-     "doc": "Guild-Legal",
-     "line": 5,
-     "page": "/legal-corporate/*",
-     "newText": "Tailored Solutions for Firms",
-     "reason": "CMS item has no item page and no listing page to check",
-     "mapStatus": "change",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Legal:7",
-     "doc": "Guild-Legal",
-     "line": 7,
-     "page": "/legal-corporate/*",
-     "newText": "When your law firm needs a calm, focused environment for productivity, The Guild provides premium service, discreet accommodations, secure meeting spaces and full-floor buyouts – all within walking distance of every major downtown courthouse.",
-     "reason": "CMS item has no item page and no listing page to check",
-     "mapStatus": "change",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Legal:39",
-     "doc": "Guild-Legal",
-     "line": 39,
-     "page": "/legal-corporate/*",
-     "newText": "DESIGNED FOR FOCUSED, CONFIDENTIAL WORK",
-     "reason": "CMS item has no item page and no listing page to check",
-     "mapStatus": "change",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Legal:40",
-     "doc": "Guild-Legal",
-     "line": 40,
-     "page": "/legal-corporate/*",
-     "newText": "Discreet, high-performance spaces tailored to the demands of legal professionals",
-     "reason": "CMS item has no item page and no listing page to check",
-     "mapStatus": "change",
-     "status": "unchecked"
-    }
-   ]
-  },
-  {
    "page": "/legal-corporate/corporate",
    "counts": {
     "done": 14,
@@ -2647,12 +2576,83 @@
    ]
   },
   {
+   "page": "/legal-corporate/legal",
+   "counts": {
+    "done": 6,
+    "differs": 0,
+    "missing": 0,
+    "unchecked": 0
+   },
+   "rows": [
+    {
+     "id": "Guild-Legal:2",
+     "doc": "Guild-Legal",
+     "line": 2,
+     "page": "/legal-corporate/legal",
+     "newText": "Secure Comfort for Legal Teams",
+     "checkedOn": "/legal-corporate/legal",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Legal:3",
+     "doc": "Guild-Legal",
+     "line": 3,
+     "page": "/legal-corporate/legal",
+     "newText": "Space and privacy minutes from San Diego’s Superior and Federal Courthouses",
+     "checkedOn": "/legal-corporate/legal",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Legal:5",
+     "doc": "Guild-Legal",
+     "line": 5,
+     "page": "/legal-corporate/legal",
+     "newText": "Tailored Solutions for Firms",
+     "checkedOn": "/legal-corporate/legal",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Legal:7",
+     "doc": "Guild-Legal",
+     "line": 7,
+     "page": "/legal-corporate/legal",
+     "newText": "When your law firm needs a calm, focused environment for productivity, The Guild provides premium service, discreet accommodations, secure meeting spaces and full-floor buyouts – all within walking distance of every major downtown courthouse.",
+     "checkedOn": "/legal-corporate/legal",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Legal:39",
+     "doc": "Guild-Legal",
+     "line": 39,
+     "page": "/legal-corporate/legal",
+     "newText": "DESIGNED FOR FOCUSED, CONFIDENTIAL WORK",
+     "checkedOn": "/legal-corporate/legal",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Legal:40",
+     "doc": "Guild-Legal",
+     "line": 40,
+     "page": "/legal-corporate/legal",
+     "newText": "Discreet, high-performance spaces tailored to the demands of legal professionals",
+     "checkedOn": "/legal-corporate/legal",
+     "mapStatus": "change",
+     "status": "done"
+    }
+   ]
+  },
+  {
    "page": "/meeting-venues/*",
    "counts": {
-    "done": 22,
+    "done": 32,
     "differs": 0,
     "missing": 1,
-    "unchecked": 42
+    "unchecked": 32
    },
    "rows": [
     {
@@ -2900,7 +2900,7 @@
      "doc": "Guild-Meetings-Modals",
      "line": 18,
      "page": "/meeting-venues/*",
-     "newText": "510 SQ FT\nClassroom: 21*\nTheater: 57*\nU-shape: 15\nConference: 12\nRounds: 40*\nReception: 51*\n*requires furniture removal; charges may apply",
+     "newText": "510 SQ FT",
      "checkedOn": "/meetings",
      "mapStatus": "change",
      "status": "done"
@@ -2910,10 +2910,10 @@
      "doc": "Guild-Meetings-Modals",
      "line": 19,
      "page": "/meeting-venues/*",
-     "newText": "Classroom: 21*",
-     "reason": "joined into 18: the head row carries the composed text",
+     "newText": "Classroom: 21*\nTheater: 57*\nU-shape: 15\nConference: 12\nRounds: 40*\nReception: 51*",
+     "checkedOn": "/meetings",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:20",
@@ -2921,7 +2921,7 @@
      "line": 20,
      "page": "/meeting-venues/*",
      "newText": "Theater: 57*",
-     "reason": "joined into 18: the head row carries the composed text",
+     "reason": "joined into 19: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -2931,7 +2931,7 @@
      "line": 21,
      "page": "/meeting-venues/*",
      "newText": "U-shape: 15",
-     "reason": "joined into 18: the head row carries the composed text",
+     "reason": "joined into 19: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -2941,7 +2941,7 @@
      "line": 22,
      "page": "/meeting-venues/*",
      "newText": "Conference: 12",
-     "reason": "joined into 18: the head row carries the composed text",
+     "reason": "joined into 19: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -2951,7 +2951,7 @@
      "line": 23,
      "page": "/meeting-venues/*",
      "newText": "Rounds: 40*",
-     "reason": "joined into 18: the head row carries the composed text",
+     "reason": "joined into 19: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -2961,7 +2961,7 @@
      "line": 24,
      "page": "/meeting-venues/*",
      "newText": "Reception: 51*",
-     "reason": "joined into 18: the head row carries the composed text",
+     "reason": "joined into 19: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -2972,7 +2972,7 @@
      "page": "/meeting-venues/*",
      "newText": "*requires furniture removal; charges may apply",
      "reason": "joined into 18: the head row carries the composed text",
-     "mapStatus": "change",
+     "mapStatus": "not on site",
      "status": "unchecked"
     },
     {
@@ -3020,7 +3020,7 @@
      "doc": "Guild-Meetings-Modals",
      "line": 72,
      "page": "/meeting-venues/*",
-     "newText": "1396 SQ FT\nExisting Seating: 68\nClassroom: 58*\nTheater: 155*\nU-shape: 40*\nConference: 34*\nRounds: 116*\nReception: 140*\n*requires furniture removal, charges may apply",
+     "newText": "1396 SQ FT",
      "checkedOn": "/meetings",
      "mapStatus": "change",
      "status": "done"
@@ -3030,10 +3030,10 @@
      "doc": "Guild-Meetings-Modals",
      "line": 73,
      "page": "/meeting-venues/*",
-     "newText": "Existing Seating: 68",
-     "reason": "joined into 72: the head row carries the composed text",
+     "newText": "Existing Seating: 68\nClassroom: 58*\nTheater: 155*\nU-shape: 40*\nConference: 34*\nRounds: 116*\nReception: 140*",
+     "checkedOn": "/meetings",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:74",
@@ -3041,7 +3041,7 @@
      "line": 74,
      "page": "/meeting-venues/*",
      "newText": "Classroom: 58*",
-     "reason": "joined into 72: the head row carries the composed text",
+     "reason": "joined into 73: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -3051,7 +3051,7 @@
      "line": 75,
      "page": "/meeting-venues/*",
      "newText": "Theater: 155*",
-     "reason": "joined into 72: the head row carries the composed text",
+     "reason": "joined into 73: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -3061,7 +3061,7 @@
      "line": 76,
      "page": "/meeting-venues/*",
      "newText": "U-shape: 40*",
-     "reason": "joined into 72: the head row carries the composed text",
+     "reason": "joined into 73: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -3071,7 +3071,7 @@
      "line": 77,
      "page": "/meeting-venues/*",
      "newText": "Conference: 34*",
-     "reason": "joined into 72: the head row carries the composed text",
+     "reason": "joined into 73: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -3081,7 +3081,7 @@
      "line": 78,
      "page": "/meeting-venues/*",
      "newText": "Rounds: 116*",
-     "reason": "joined into 72: the head row carries the composed text",
+     "reason": "joined into 73: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -3091,7 +3091,7 @@
      "line": 79,
      "page": "/meeting-venues/*",
      "newText": "Reception: 140*",
-     "reason": "joined into 72: the head row carries the composed text",
+     "reason": "joined into 73: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -3102,7 +3102,7 @@
      "page": "/meeting-venues/*",
      "newText": "*requires furniture removal, charges may apply",
      "reason": "joined into 72: the head row carries the composed text",
-     "mapStatus": "change",
+     "mapStatus": "not on site",
      "status": "unchecked"
     },
     {
@@ -3180,7 +3180,7 @@
      "doc": "Guild-Meetings-Modals",
      "line": 103,
      "page": "/meeting-venues/*",
-     "newText": "1000 SQ FT\nFlexible seating configurations (boardroom, classroom, U-shape)\nModern audiovisual system\nIdeal for focused, interactive sessions\nCapacity: 70\nCatering services are available",
+     "newText": "1000 SQ FT",
      "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
      "status": "done"
@@ -3191,9 +3191,9 @@
      "line": 104,
      "page": "/meeting-venues/*",
      "newText": "Flexible seating configurations (boardroom, classroom, U-shape)",
-     "reason": "joined into 103: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:105",
@@ -3201,9 +3201,9 @@
      "line": 105,
      "page": "/meeting-venues/*",
      "newText": "Modern audiovisual system",
-     "reason": "joined into 103: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:106",
@@ -3211,9 +3211,9 @@
      "line": 106,
      "page": "/meeting-venues/*",
      "newText": "Ideal for focused, interactive sessions",
-     "reason": "joined into 103: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:107",
@@ -3221,9 +3221,9 @@
      "line": 107,
      "page": "/meeting-venues/*",
      "newText": "Capacity: 70",
-     "reason": "joined into 103: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:108",
@@ -3232,7 +3232,7 @@
      "page": "/meeting-venues/*",
      "newText": "Catering services are available",
      "reason": "joined into 103: the head row carries the composed text",
-     "mapStatus": "change",
+     "mapStatus": "not on site",
      "status": "unchecked"
     },
     {
@@ -3260,7 +3260,7 @@
      "doc": "Guild-Meetings-Modals",
      "line": 113,
      "page": "/meeting-venues/*",
-     "newText": "2227 SQ FT\nSpacious layout with adaptable seating\nCatering services available\nProfessional environment for impactful presentations\nCapacity: 150",
+     "newText": "2227 SQ FT",
      "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
      "status": "done"
@@ -3271,9 +3271,9 @@
      "line": 114,
      "page": "/meeting-venues/*",
      "newText": "Spacious layout with adaptable seating",
-     "reason": "joined into 113: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:115",
@@ -3281,9 +3281,9 @@
      "line": 115,
      "page": "/meeting-venues/*",
      "newText": "Catering services available",
-     "reason": "joined into 113: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:116",
@@ -3291,9 +3291,9 @@
      "line": 116,
      "page": "/meeting-venues/*",
      "newText": "Professional environment for impactful presentations",
-     "reason": "joined into 113: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:117",
@@ -3301,9 +3301,9 @@
      "line": 117,
      "page": "/meeting-venues/*",
      "newText": "Capacity: 150",
-     "reason": "joined into 113: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     }
    ]
   },
@@ -3872,9 +3872,9 @@
    "page": "/neighborhood",
    "counts": {
     "done": 10,
-    "differs": 6,
+    "differs": 8,
     "missing": 0,
-    "unchecked": 29
+    "unchecked": 27
    },
    "rows": [
     {
@@ -4179,9 +4179,10 @@
      "line": 55,
      "page": "/neighborhood",
      "newText": "HALL OF JUSTICE",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "checkedOn": "/neighborhood",
+     "foundText": "SAN DIEGO CONVENTION CENTER",
+     "mapStatus": "change",
+     "status": "differs"
     },
     {
      "id": "Guild-Neighborhood:56",
@@ -4189,9 +4190,10 @@
      "line": 56,
      "page": "/neighborhood",
      "newText": "The Guild is a three-minute walk from the Hall of Justice, and the hotel has become a trusted host for firms working on cases to be tried there. The Hall of Justice contains courtrooms for the Superior Court of California - County of San Diego, the San Diego County District Attorney’s Office, the Sheriff’s Court Services Bureau, Probation, Adult Forensic Services, the Public Defender, and the U.S. Attorney.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "checkedOn": "/neighborhood",
+     "foundText": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,",
+     "mapStatus": "change",
+     "status": "differs"
     },
     {
      "id": "no-copy:/neighborhood:page|b18c3101-b992-aaf2-ef7a-8dcd792144c6",
