@@ -80,8 +80,10 @@ const FOCUSABLE_SELECTOR = [
   '[tabindex]:not([tabindex="-1"])',
 ].join(',')
 
-// The dialog title is found by role (data attribute, or the pop-up's own title class), so the SEO tag can change under it; any heading is the fallback.
-const TITLE_SELECTOR = '[data-modal-title], .overlay-detail-panel-modal_heading, h1, h2, h3, h4, h5, h6'
+// The dialog title is found by role (data attribute, or the pop-up's own title class), so the SEO tag can change under it;
+// any heading is the fallback, looked up only when no marked title exists (one comma selector would let an earlier heading win).
+const TITLE_SELECTOR = '[data-modal-title], .overlay-detail-panel-modal_heading'
+const TITLE_FALLBACK_SELECTOR = 'h1, h2, h3, h4, h5, h6'
 const HASH_SCROLL_TIMEOUT = 5000
 const SCROLLABLE_OVERFLOW = ['auto', 'scroll']
 const NATIVE_ACTIVATION_SELECTOR = 'a[href], button, input, select, textarea, summary'
@@ -111,7 +113,8 @@ export const modals = () => {
   modalElements.forEach((modal) => {
     if (!modal.id) return
 
-    const titleElement = modal.querySelector<HTMLElement>(TITLE_SELECTOR)
+    const titleElement =
+      modal.querySelector<HTMLElement>(TITLE_SELECTOR) ?? modal.querySelector<HTMLElement>(TITLE_FALLBACK_SELECTOR)
     if (titleElement) {
       if (!titleElement.id) titleElement.id = `${modal.id}-title`
       modal.setAttribute('aria-labelledby', titleElement.id)

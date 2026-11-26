@@ -39,7 +39,8 @@ test('a dialog whose title is a paragraph gets its accessible name from that tit
   await expect(page.getByRole('dialog', { name: 'The paragraph title' })).toBeVisible()
 })
 
-test('a title marked data-modal-title wins over an earlier paragraph and a later heading', async ({ page }) => {
+test('a title marked data-modal-title wins over an earlier heading, an earlier paragraph and a later heading', async ({ page }) => {
+  // MUTATION: one comma selector (marked title, then h1 to h6) returns the earlier h2 in document order.
   await page.goto(`${origin}${FIXTURE_PATH}`)
   await expect(page.locator('#heading-dialog')).toHaveAttribute('aria-labelledby', 'marked-title')
 })
@@ -50,6 +51,7 @@ test('the room grid card name can be a paragraph: details are hidden at rest and
   await expect(details).toHaveCSS('opacity', '0')
   const header = page.locator('.rooms-collection-room-grid_header')
   // At rest the name is shifted down toward the card's bottom inset; that shift needs the name element.
+  // MUTATION: one comma selector would take the h3 in the figure, whose parent is not the header, so the header never shifts.
   await expect.poll(() => header.evaluate((element) => Number(gsap.getProperty(element, 'y')))).toBeGreaterThan(0)
   await page.locator('#grid-card').hover()
   await expect(details).toHaveCSS('opacity', '1')
@@ -58,7 +60,9 @@ test('the room grid card name can be a paragraph: details are hidden at rest and
 
 test('the rooms quiz focuses the heading of the next step when it is a paragraph', async ({ page }) => {
   await page.goto(`${origin}${FIXTURE_PATH}`)
+  // MUTATION: one comma selector (class, then h2 and h3) would take the h2 placed before step 2's marked heading.
   await expect(page.locator('#quiz-heading-2')).toHaveAttribute('tabindex', '-1')
+  await expect(page.locator('#quiz-earlier-heading')).not.toHaveAttribute('tabindex', '-1')
   await page.locator('#quiz-option').click()
   await expect(page.locator('#quiz-heading-2')).toBeFocused()
 })
