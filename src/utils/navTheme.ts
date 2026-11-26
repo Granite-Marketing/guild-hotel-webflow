@@ -23,8 +23,11 @@
  *     (a photo keeps the cream nav), using its visible clip-path area.
  *     Map artwork (any class containing "map") is not a photo;
  *   - a narrower photo (half of a split section, a card) counts as dark only
- *     across its own width and only if it is clearly dark all over, so the
- *     nav stays dark over the light half and over mixed or bright photos (P-E3);
+ *     behind each nav group (menu and day/night, logo, Book now), and only
+ *     while the photo strip right behind that group is dark (P-E3, round 2):
+ *     the strip is read every frame from a small tone grid of the picture, so
+ *     a dark photo with a pale sky strip keeps the dark nav over the sky and
+ *     turns it cream once the dark part reaches the bar;
  *   - `[data-header-theme="dark"]` forces the dark nav over an element and
  *     `[data-header-theme="white"]` forces the cream nav (NGA contract).
  * Darker areas are subtracted from lighter ones.
@@ -44,9 +47,14 @@ const OPEN_CLASS = 'is-nav-open'
 const LIGHT_LUMINANCE = 0.5
 const PHOTO_MIN_WIDTH = 0.6
 const PHOTO_SELECTOR = 'figure, video'
-/** Clearly dark: 70% of the pixels are below 0.2 luminance (where cream text starts to read better than dark) and 90% below 0.4. */
-const DARK_PHOTO_LIMITS = [[0.7, 0.2], [0.9, 0.4]]
-const SAMPLE_SIZE = 16
+/** Cream text reads better than dark below about 0.19 luminance; the gap between the two limits stops the colour flickering at the edge. */
+const DARK_STRIP_ENTER = 0.16
+const DARK_STRIP_LEAVE = 0.23
+const GRID_COLUMNS = 48
+const GRID_MAX_ROWS = 160
+const SAMPLE_STEP = 6
+/** The strip judged behind a nav group reaches this far above and below its text, so one detail in the photo never flips it for a few frames. */
+const STRIP_PADDING = 24
 const NOT_PHOTO_SELECTOR = '[class*="map"], [class*="map"] *'
 
 interface Interval {
@@ -136,6 +144,12 @@ export const navTheme = () => {
 
   let navHeight = bar.offsetHeight
   let lastGradient = ''
+  // The bar's groups (menu and day/night controls, logo, Book now); each turns colour as one, so small icons never flicker on their own. Fixed, so measured once (and on resize).
+  let targets: DOMRect[] = []
+  const measureTargets = () => {
+    targets = Array.from(bar.children, (element) => element.getBoundingClientRect()).filter((rect) => rect.width > 0)
+  }
+  measureTargets()
 
   const bandInterval = (top: number, bottom: number): Interval | null => {
     const start = Math.max(0, Math.min(top, navHeight))
@@ -165,8 +179,8 @@ export const navTheme = () => {
     photos.forEach(({ element, clipHost }) => {
       const rect = element.getBoundingClientRect()
       const wide = rect.width >= minPhotoWidth
-      // Judged as soon as it is on screen, so its tone is known before it reaches the bar.
-      if (!wide && (rect.top > window.innerHeight || rect.bottom < 0 || !isDarkPhoto(element))) return
+      // Read as soon as it is on screen, so its tones are known before it reaches the bar.
+      if (!wide && (rect.top > window.innerHeight || rect.bottom < 0 || !photoTones(element))) return
       if (rect.top > navHeight || rect.bottom < 0) return
       let top = rect.top
       let bottom = rect.bottom
@@ -185,7 +199,16 @@ export const navTheme = () => {
       // Whole pixels, so neighbouring columns never leave a seam.
       const left = Math.max(0, Math.round(rect.left))
       const right = Math.min(barWidth, Math.round(rect.right))
-      if (right > left && isShown(element)) darkBlocks.push({ left, right, interval })
+      if (right <= left || !isShown(element)) return
+      // Each nav group over the photo is judged by the photo strip right behind it, so one bright corner does not decide for the others.
+      targets.forEach((target, index) => {
+        const columns = { start: Math.max(left, Math.round(target.left)), end: Math.min(right, Math.round(target.right)) }
+        const covered = interval.start <= target.top + 1 && interval.end >= target.bottom - 1
+        const rows = { start: Math.max(interval.start, target.top - STRIP_PADDING), end: Math.min(interval.end, target.bottom + STRIP_PADDING) }
+        if (columns.end > columns.start && isDarkBehindNav(element, index, columns, rows, covered)) {
+          darkBlocks.push({ left: columns.start, right: columns.end, interval })
+        }
+      })
     })
 
     // One column per stretch between photo edges; a single full-width column when no narrow photo is under the bar.
@@ -240,6 +263,7 @@ export const navTheme = () => {
     () => {
       navHeight = bar.offsetHeight
       classifyAreas()
+      measureTargets()
       lastGradient = ''
     },
     { passive: true },
@@ -262,41 +286,103 @@ const clearMask = (element: HTMLElement) => {
 const isShown = (element: HTMLElement) =>
   element.checkVisibility?.({ checkOpacity: true, checkVisibilityCSS: true }) ?? true
 
-const darkPhotos = new Map<string, boolean>()
-
-/** Whether a narrow photo is dark. A photo not sampled yet counts as light (the nav's own colour for the section). */
-const isDarkPhoto = (element: HTMLElement) => {
-  const image = element.querySelector('img')
-  if (!image) return element.matches('video') || !!element.querySelector('video')
-  // The smallest srcset file is enough to read a tone.
-  const source = image.srcset.split(/\s+[\d.]+[wx]/)[0].trim() || image.currentSrc || image.src
-  if (!source) return false
-  if (!darkPhotos.has(source)) samplePhoto(source)
-  return darkPhotos.get(source) ?? false
+/** A picture's luminance on a small grid, row by row; NaN where it is see-through. */
+interface ToneGrid {
+  columns: number
+  rows: number
+  tones: Float32Array
 }
 
-// shortcut: one tone for the whole photo, caption gradients not counted; sample the strip under the bar if a half-dark photo ever reads wrong.
-const samplePhoto = (source: string) => {
-  darkPhotos.set(source, false)
+const toneGrids = new Map<string, ToneGrid | null>()
+const darkStrips = new WeakMap<HTMLElement, boolean[]>()
+
+/** A video counts as dark (its pixels are not readable); a picture's tone grid once loaded, else null (the nav keeps its colour). */
+const photoTones = (element: HTMLElement): ToneGrid | 'video' | null => {
+  const image = element.querySelector('img')
+  if (!image) return element.matches('video') || element.querySelector('video') ? 'video' : null
+  // The smallest srcset file is enough to read tones.
+  const source = image.srcset.split(/\s+[\d.]+[wx]/)[0].trim() || image.currentSrc || image.src
+  if (!source) return null
+  if (!toneGrids.has(source)) sampleTones(source)
+  return toneGrids.get(source) ?? null
+}
+
+const sampleTones = (source: string) => {
+  toneGrids.set(source, null)
   const image = new Image()
   image.crossOrigin = 'anonymous' // the pixels are only readable over CORS, which Webflow's CDN allows
   image.onload = () => {
+    const columns = GRID_COLUMNS
+    const rows = Math.max(1, Math.min(GRID_MAX_ROWS, Math.round((columns * image.naturalHeight) / image.naturalWidth)))
     const canvas = document.createElement('canvas')
-    canvas.width = canvas.height = SAMPLE_SIZE
+    canvas.width = columns
+    canvas.height = rows
     const context = canvas.getContext('2d', { willReadFrequently: true })
     if (!context) return
-    context.drawImage(image, 0, 0, SAMPLE_SIZE, SAMPLE_SIZE)
-    const { data } = context.getImageData(0, 0, SAMPLE_SIZE, SAMPLE_SIZE)
-    const tones: number[] = []
-    for (let pixel = 0; pixel < data.length; pixel += 4) {
-      if (data[pixel + 3] >= 128) tones.push(luminance({ red: data[pixel], green: data[pixel + 1], blue: data[pixel + 2], alpha: 1 }))
+    context.drawImage(image, 0, 0, columns, rows)
+    const { data } = context.getImageData(0, 0, columns, rows)
+    const tones = new Float32Array(columns * rows)
+    let opaque = 0
+    for (let cell = 0; cell < tones.length; cell++) {
+      const pixel = cell * 4
+      const solid = data[pixel + 3] >= 128
+      if (solid) opaque++
+      tones[cell] = solid ? luminance({ red: data[pixel], green: data[pixel + 1], blue: data[pixel + 2], alpha: 1 }) : NaN
     }
     // A mostly see-through picture (a logo) is not a photo.
-    if (tones.length * 2 < SAMPLE_SIZE * SAMPLE_SIZE) return
-    tones.sort((first, second) => first - second)
-    darkPhotos.set(source, DARK_PHOTO_LIMITS.every(([share, limit]) => tones[Math.floor(tones.length * share)] < limit))
+    if (opaque * 2 >= tones.length) toneGrids.set(source, { columns, rows, tones })
   }
   image.src = source
+}
+
+/**
+ * Whether a narrow photo is dark in the strip behind one nav group (columns
+ * and rows already narrowed to the photo; covered when the photo spans the
+ * group's full height). Reads the photo's tone grid through its object-fit,
+ * so it follows the strip under the bar as the page scrolls.
+ */
+const isDarkBehindNav = (element: HTMLElement, key: number, columns: Interval, rows: Interval, covered: boolean) => {
+  const grid = photoTones(element)
+  if (grid === 'video') return true
+  const image = element.querySelector('img')
+  if (!grid || !image) return false
+  const states = darkStrips.get(element) ?? []
+  darkStrips.set(element, states)
+  // A group changes colour only while the photo covers it fully; at a photo edge it keeps the last one, so passing edges never flash the nav.
+  if (!covered) return states[key] ?? false
+
+  const rect = image.getBoundingClientRect()
+  const style = getComputedStyle(image)
+  const naturalWidth = image.naturalWidth || grid.columns
+  const naturalHeight = image.naturalHeight || grid.rows
+  let scaleX = rect.width / naturalWidth
+  let scaleY = rect.height / naturalHeight
+  if (style.objectFit === 'cover') scaleX = scaleY = Math.max(scaleX, scaleY)
+  else if (style.objectFit === 'contain') scaleX = scaleY = Math.min(scaleX, scaleY)
+  else if (style.objectFit === 'none') scaleX = scaleY = 1
+  const drawnWidth = naturalWidth * scaleX
+  const drawnHeight = naturalHeight * scaleY
+  const [positionX, positionY = positionX] = style.objectPosition.split(/\s+(?![^(]*\))/)
+  const originX = rect.left + resolveLength(positionX, rect.width - drawnWidth)
+  const originY = rect.top + resolveLength(positionY, rect.height - drawnHeight)
+
+  const tones: number[] = []
+  for (let y = rows.start + SAMPLE_STEP / 2; y < rows.end; y += SAMPLE_STEP) {
+    const row = Math.floor(((y - originY) / drawnHeight) * grid.rows)
+    if (row < 0 || row >= grid.rows) continue
+    for (let x = columns.start + SAMPLE_STEP / 2; x < columns.end; x += SAMPLE_STEP) {
+      const column = Math.floor(((x - originX) / drawnWidth) * grid.columns)
+      if (column < 0 || column >= grid.columns) continue
+      const tone = grid.tones[row * grid.columns + column]
+      if (!Number.isNaN(tone)) tones.push(tone)
+    }
+  }
+  // The strip is outside the drawn picture: keep the last colour.
+  if (!tones.length) return states[key] ?? false
+  tones.sort((first, second) => first - second)
+  const median = tones[Math.floor(tones.length / 2)]
+  states[key] = median < (states[key] ? DARK_STRIP_LEAVE : DARK_STRIP_ENTER)
+  return states[key]
 }
 
 /** The first opaque background colour on the element or its ancestors. */

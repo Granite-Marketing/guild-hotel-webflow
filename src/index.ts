@@ -23,7 +23,7 @@ import { focusRing } from '$utils/focusRing'
 import { cardCarouselHeaderLeft } from '$utils/cardCarouselHeaderLeft'
 import { cmsItemLinks } from '$utils/cmsItemLinks'
 import { contactStickyColumn } from '$utils/contactStickyColumn'
-import { dayNight } from '$utils/dayNight'
+import { dayNight, dayNightPressed } from '$utils/dayNight'
 import { currentYear } from '$utils/currentYear'
 import { eagerImages } from '$utils/eagerImages'
 import { emailLinks } from '$utils/emailLinks'
@@ -87,6 +87,9 @@ import { underlineHover } from '$utils/underlineHover'
  */
 
 const DININGS_TEMPLATE_PAGE_ID = '6ad67d7416e13e66c2b76107'
+
+// P-F5: before Webflow.push so screen readers never hear Day pressed on a night load; it only sets ARIA and classes, no CDN globals.
+dayNightPressed()
 
 window.Webflow ||= [] as unknown as WebflowQueue
 window.Webflow.push(() => {
