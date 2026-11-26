@@ -28,7 +28,7 @@ The script does all of the heavy lifting:
 - Finds the matching dialog via `getElementById(modalId)`
 - Adds the `is-open` **class** to the dialog (and overlay, if present)
 - Flips `aria-hidden` and `aria-expanded`
-- Generates `aria-labelledby` from the first heading inside the dialog
+- Generates `aria-labelledby` from the dialog's title: the first element marked `data-modal-title` (or carrying the pop-up title class `overlay-detail-panel-modal_heading`), else the first h1 to h6. Mark the title with `data-modal-title` when its tag is a paragraph or div, so the SEO tag can change without losing the dialog's name
 - Generates `aria-describedby` from the first rich-text / paragraph
 - Traps focus within the dialog while open
 - Closes on ESC, close button, or overlay click

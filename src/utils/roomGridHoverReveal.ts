@@ -24,6 +24,8 @@ import { type EmbeddedVideo, embedVideo } from '$utils/embedVideo'
 
 const CARD_SELECTOR = '.rooms-collection-room-grid_card'
 const TARGET_SELECTOR = '.rooms-collection-room-grid_details, footer'
+// The card name is found by its class first, so the SEO tag (h2, h3 or p) can change under it.
+const NAME_SELECTOR = '.rooms-collection-room-grid_heading, h2, h3'
 const DURATION = 0.45
 // Optical nudge (px): the name's line box keeps descender room below the caps, so an
 // exact 40px bottom inset reads as higher than the 40px left one.
@@ -40,7 +42,7 @@ export const roomGridHoverReveal = () => {
 
     gsap.set(targets, { autoAlpha: 0, yPercent: 30 })
 
-    const heading = card.querySelector<HTMLElement>('h2, h3')
+    const heading = card.querySelector<HTMLElement>(NAME_SELECTOR)
     const header = heading?.parentElement
     const content = header?.parentElement
     // Distance from the name to the content bottom, ignoring the current shift.
