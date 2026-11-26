@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.24
+
+### Patch Changes
+
+- Final review fixes (25 Nov): Retail and Arts & Culture slider buttons get their colours back; the George Marston heading tilts 5 degrees on phones again; the menu turns cream over narrow dark photos and the dark half of split sections; gallery pills no longer cover an open artwork pop-up on phones; no invisible area blocks taps above the venue images on phones; Night shows as pressed from the first moment of a night visit; console warnings about missing animation targets and empty paragraphs are gone; the gallery filter keeps its width with a mouse in a narrow window.
+
 ## 1.3.23
 
 ### Patch Changes
