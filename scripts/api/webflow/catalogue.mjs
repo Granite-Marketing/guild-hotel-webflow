@@ -6,6 +6,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { readJson, slugify, normText, squash, tagOf, instancesOf } from './lib/catalogue-helpers.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..')
 const OUT = path.join(ROOT, 'docs/specs/guild-content/catalogue')
@@ -21,9 +22,7 @@ const writeJson = (file, data) => {
   fs.mkdirSync(path.dirname(file), { recursive: true })
   fs.writeFileSync(file, JSON.stringify(data, null, 1))
 }
-const readJson = (file) => JSON.parse(fs.readFileSync(file, 'utf8'))
 const exists = (file) => fs.existsSync(file)
-const slugify = (s) => (s.replace(/^\/|\/$/g, '').replace(/\//g, '__') || 'home')
 
 // ---------------------------------------------------------------- Data API (GET only)
 let lastCall = 0
@@ -271,9 +270,6 @@ async function crawl() {
 }
 
 // ---------------------------------------------------------------- join
-const normText = (s) => (s || '').toLowerCase().replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/[^\p{L}\p{N}\s]/gu, ' ').replace(/\s+/g, ' ').trim()
-const squash = (s) => normText(s).replace(/ /g, '')
-const tagOf = (html) => (html && /^\s*<(\w+)/.exec(html)?.[1]?.toLowerCase()) || null
 
 function loadModel() {
   const pages = readJson(path.join(RAW, 'pages.json'))
@@ -292,21 +288,6 @@ function loadModel() {
     if (exists(f)) pageDoms[p.id] = readJson(f)
   }
   return { pages, comps, pageDoms }
-}
-
-// components reachable from a node list, with instance counts and overrides
-function instancesOf(nodes, comps) {
-  const out = []
-  const walk = (list, via) => {
-    for (const n of list) {
-      if (n.type !== 'component-instance') continue
-      out.push({ nodeId: n.id, componentId: n.componentId, overrides: n.propertyOverrides || [], via })
-      const c = comps[n.componentId]
-      if (c) walk(c.nested, [...via, c.name])
-    }
-  }
-  walk(nodes, [])
-  return out
 }
 
 function join(model) {
