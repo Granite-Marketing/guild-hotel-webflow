@@ -1,0 +1,212 @@
+{
+ "status": "complete",
+ "verdict": "Ready with fixes",
+ "scope": {
+  "base": "8900bfdd101d400547cd4ec1439597d0517a0572",
+  "branch": "build/415-spec-copy-upload-from-the-client-s-conte",
+  "head_sha": "07e76320addcd9c9f963b8ac641939618ab45d93",
+  "pr_url": null,
+  "files_changed": 21
+ },
+ "intent": "Build #415 (two tickets). #416 adds a rerunnable, offline \"copy map\" (scripts/api/webflow/copy-map.mjs + lib/copy-map*.mjs) that parses 20 client content docs (docs/specs/guild-content/source/Guild-*.md) and matches every doc line to a staging Webflow element from the committed catalogue (page text, component prop, text fixed in a component, CMS item field, not on site), handling \"or\" second versions (first wins), writer's notes, rooms by name, shared fixed text, held pages (Contact, 4 Wellness sub-pages), low-confidence confirm flags. #417 adds a read-only headless \"copy check\" (copy-check.mjs + lib/copy-check*.mjs) that loads mapped staging pages at 1440 and marks each row done/differs/missing/unchecked, case/whitespace-insensitive, with a per-page report. Must never write to Webflow. Tests in tests/factory/ run in the factory test command.",
+ "intent_confidence": "explicit",
+ "reviewers": [
+  "correctness",
+  "project-standards",
+  "testing",
+  "maintainability",
+  "adversarial",
+  "learnings-researcher"
+ ],
+ "findings": [
+  {
+   "#": 1,
+   "autofix_class": "manual",
+   "confidence": 100,
+   "evidence": [
+    "scripts/api/webflow/lib/copy-check.mjs:64 -- if (elements.some((candidate) => sameText(candidate.textContent, row.newText))) return { status: 'done' }",
+    "copy-check.json: Guild-Neighborhood:55 status done; copy-map.json same row target.h2 currentText 'dining around the guild', confidence 0.46, needsConfirm true",
+    "curl https://the-guild-hotel-c34e71.webflow.io/neighborhood: <h2 ...>dining around the guild</h2> still present, and <p class=\"map-feature_text text-style-eyebrow-caps\">Hall of Justice</p> elsewhere",
+    "copy-map.json Guild-Dining-LobbyBar:2 target {fieldSlug: hero-heading, currentKnown: false}; copy-check checkedOn /dining -> done"
+   ],
+   "file": "scripts/api/webflow/lib/copy-check.mjs",
+   "first_evidence": "scripts/api/webflow/lib/copy-check.mjs:64 -- if (elements.some((candidate) => sameText(candidate.textContent, row.newText))) return { status: 'done' }",
+   "independent_reviewers": [
+    "adversarial"
+   ],
+   "line": 64,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "adversarial"
+   ],
+   "severity": "P1",
+   "suggested_fix": "In locateOnPage, resolve the target first (byText then byPosition). Return done only if the resolved element's text equals newText; if the text exists only on non-target elements, return a distinct status (e.g. 'elsewhere') or 'differs' with the found target text. For CMS field rows with currentKnown false, report unconfirmed rather than done.",
+   "title": "Check reports done when the same text sits in any other element on the page",
+   "why_it_matters": "The done test ignores the row's target and accepts any element on the page whose text equals the new text. A row can read done while its own element still shows the old copy, so the live loop (write until every changeable row is done) would stop early and report the page as uploaded. In the committed output, Guild-Neighborhood:55 (new text HALL OF JUSTICE, target h2 'dining around the guild') is done only because a map eyebrow reads 'Hall of Justice'; staging still shows the old h2 (confirmed by fetching /neighborhood). Same mechanism for the CMS rows Guild-Dining-{GardenTerrace,LobbyBar,PoolLounge}:2 (target field hero-heading, checked on /dining, where the card shows the item name) and the '2 Guests'/'4 Guests' room rows (target guests-label, matched by any chip on the page). Short lines like 'Discover More' are the documented case but the failure is broader. Fix: when the row has a located target (currentText, textHint or liveOrder), require the done match to be that element, or at least downgrade a done found only elsewhere to a separate status (for example 'present elsewhere') that the loop does not count as done; CMS rows with no sample page should stay unconfirmed.",
+   "validation_status": "confirmed",
+   "validation_reason": "Validator confirmed the code path and the committed output; incidence on live staging was taken from the finding's curl evidence, not re-measured."
+  },
+  {
+   "#": 2,
+   "autofix_class": "gated_auto",
+   "confidence": 100,
+   "evidence": [
+    "scripts/api/webflow/copy-check.mjs:18 -- export const STAGING = 'https://the-guild-hotel-c34e71.webflow.io' // same as STAGING in catalogue.mjs",
+    "scripts/api/webflow/catalogue.mjs:15 -- const STAGING = 'https://the-guild-hotel-c34e71.webflow.io'"
+   ],
+   "file": "scripts/api/webflow/copy-check.mjs",
+   "first_evidence": "scripts/api/webflow/copy-check.mjs:18 -- export const STAGING = 'https://the-guild-hotel-c34e71.webflow.io' // same as STAGING in catalogue.mjs",
+   "independent_reviewers": [
+    "maintainability"
+   ],
+   "line": 18,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": false,
+   "reviewers": [
+    "maintainability"
+   ],
+   "severity": "P2",
+   "suggested_fix": "Export STAGING from lib/catalogue-helpers.mjs, import it in catalogue.mjs and copy-check.mjs, and drop the 'same as STAGING in catalogue.mjs' comment.",
+   "title": "Staging URL duplicated; only a comment keeps copies in sync",
+   "why_it_matters": "If the staging site is renamed or moved, catalogue.mjs gets updated and copy-check.mjs keeps loading the old host, so the copy check reports every row missing or unloadable. The diff already extracted shared helpers into catalogue-helpers.mjs, so the constant belongs there too."
+  }
+ ],
+ "actionable_findings": [
+  {
+   "#": 1,
+   "autofix_class": "manual",
+   "confidence": 100,
+   "evidence": [
+    "scripts/api/webflow/lib/copy-check.mjs:64 -- if (elements.some((candidate) => sameText(candidate.textContent, row.newText))) return { status: 'done' }",
+    "copy-check.json: Guild-Neighborhood:55 status done; copy-map.json same row target.h2 currentText 'dining around the guild', confidence 0.46, needsConfirm true",
+    "curl https://the-guild-hotel-c34e71.webflow.io/neighborhood: <h2 ...>dining around the guild</h2> still present, and <p class=\"map-feature_text text-style-eyebrow-caps\">Hall of Justice</p> elsewhere",
+    "copy-map.json Guild-Dining-LobbyBar:2 target {fieldSlug: hero-heading, currentKnown: false}; copy-check checkedOn /dining -> done"
+   ],
+   "file": "scripts/api/webflow/lib/copy-check.mjs",
+   "first_evidence": "scripts/api/webflow/lib/copy-check.mjs:64 -- if (elements.some((candidate) => sameText(candidate.textContent, row.newText))) return { status: 'done' }",
+   "independent_reviewers": [
+    "adversarial"
+   ],
+   "line": 64,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": true,
+   "reviewers": [
+    "adversarial"
+   ],
+   "severity": "P1",
+   "suggested_fix": "In locateOnPage, resolve the target first (byText then byPosition). Return done only if the resolved element's text equals newText; if the text exists only on non-target elements, return a distinct status (e.g. 'elsewhere') or 'differs' with the found target text. For CMS field rows with currentKnown false, report unconfirmed rather than done.",
+   "title": "Check reports done when the same text sits in any other element on the page",
+   "why_it_matters": "The done test ignores the row's target and accepts any element on the page whose text equals the new text. A row can read done while its own element still shows the old copy, so the live loop (write until every changeable row is done) would stop early and report the page as uploaded. In the committed output, Guild-Neighborhood:55 (new text HALL OF JUSTICE, target h2 'dining around the guild') is done only because a map eyebrow reads 'Hall of Justice'; staging still shows the old h2 (confirmed by fetching /neighborhood). Same mechanism for the CMS rows Guild-Dining-{GardenTerrace,LobbyBar,PoolLounge}:2 (target field hero-heading, checked on /dining, where the card shows the item name) and the '2 Guests'/'4 Guests' room rows (target guests-label, matched by any chip on the page). Short lines like 'Discover More' are the documented case but the failure is broader. Fix: when the row has a located target (currentText, textHint or liveOrder), require the done match to be that element, or at least downgrade a done found only elsewhere to a separate status (for example 'present elsewhere') that the loop does not count as done; CMS rows with no sample page should stay unconfirmed.",
+   "validation_status": "confirmed",
+   "validation_reason": "Validator confirmed the code path and the committed output; incidence on live staging was taken from the finding's curl evidence, not re-measured."
+  },
+  {
+   "#": 2,
+   "autofix_class": "gated_auto",
+   "confidence": 100,
+   "evidence": [
+    "scripts/api/webflow/copy-check.mjs:18 -- export const STAGING = 'https://the-guild-hotel-c34e71.webflow.io' // same as STAGING in catalogue.mjs",
+    "scripts/api/webflow/catalogue.mjs:15 -- const STAGING = 'https://the-guild-hotel-c34e71.webflow.io'"
+   ],
+   "file": "scripts/api/webflow/copy-check.mjs",
+   "first_evidence": "scripts/api/webflow/copy-check.mjs:18 -- export const STAGING = 'https://the-guild-hotel-c34e71.webflow.io' // same as STAGING in catalogue.mjs",
+   "independent_reviewers": [
+    "maintainability"
+   ],
+   "line": 18,
+   "owner": "downstream-resolver",
+   "pre_existing": false,
+   "requires_verification": false,
+   "reviewers": [
+    "maintainability"
+   ],
+   "severity": "P2",
+   "suggested_fix": "Export STAGING from lib/catalogue-helpers.mjs, import it in catalogue.mjs and copy-check.mjs, and drop the 'same as STAGING in catalogue.mjs' comment.",
+   "title": "Staging URL duplicated; only a comment keeps copies in sync",
+   "why_it_matters": "If the staging site is renamed or moved, catalogue.mjs gets updated and copy-check.mjs keeps loading the old host, so the copy check reports every row missing or unloadable. The diff already extracted shared helpers into catalogue-helpers.mjs, so the constant belongs there too."
+  }
+ ],
+ "triage_groups": [],
+ "pre_existing_findings": [],
+ "requirements_completeness": null,
+ "learnings": [
+  {
+   "type": "known_pattern",
+   "title": "Copy ingestion parsing",
+   "citation": "docs/solutions/integration-issues/copy-ingestion-multi-format-parsing.md",
+   "note": "Input-hardening practices matter only if the copy-map source dir becomes a CLI argument; it reads a fixed committed dir."
+  },
+  {
+   "type": "known_pattern",
+   "title": "Assertion-free visual tests",
+   "citation": "docs/solutions/test-failures/assertion-free-visual-tests.md",
+   "note": "New tests assert each status against fixtures; the live browser path has no automated test beyond fixture loading."
+  },
+  {
+   "type": "known_pattern",
+   "title": "CMS image emission",
+   "citation": "docs/solutions/conventions/webflow-cms-image-emission.md",
+   "note": "Diff is read-only (no write calls found), so no conflict; constrains only the later live upload ticket."
+  },
+  {
+   "type": "known_pattern",
+   "title": "CSS attribute selector case sensitivity",
+   "citation": "docs/solutions/ui-bugs/css-attribute-selector-case-sensitivity-data-alignment.md",
+   "note": "copy-check lowercases but does no Unicode, quote or dash folding."
+  }
+ ],
+ "agent_native_gaps": [],
+ "deployment_notes": [],
+ "residual_risks": [
+  "copy-check: 18 CMS rows whose new text is several doc lines joined with newlines (e.g. Guild-Dining-Zuma:8, Guild-Meetings-Modals:94) are all reported 'missing' on the current staging. If those fields are rich text, Webflow renders one <p> per paragraph and collectTextElementsInPage never emits the container, so no single element equals the joined text; these rows would stay 'missing' even after upload. Not verified against a real rich-text field.",
+  "copy-check 'done' step 1 counts any element with equal text, including a short generic line elsewhere on the page (documented limit).",
+  "Rooms docs with derived item paths (slug from name) may 404 on staging; handled as unchecked, not as a defect.",
+  "Callsite completeness: grep-only; config-dependent crashes (empty doc entries in diningVenueRows/legalCorporateRows, templatePage absent from catalogue) not reachable with the current 20 docs.",
+  "Only mechanical checks run (em dashes, short identifiers, write calls); no semantic walk of every module.",
+  "Browser-based copy-check tests need Playwright chromium installed; test:factory passed here (87/87) but a machine without the browser would fail those two tests rather than skip.",
+  "lib/copy-map.mjs is 875 lines (under the 1000 limit) and holds the doc parser, scorer, five row planners and conflict flagging; adding another doc plan type will approach the limit and is a natural split point (parseDoc/foldRepeated into their own module).",
+  "Not inspected: test files and fixtures for maintainability; generated copy-map/copy-check outputs.",
+  "Done also matches hidden or display:none elements (collectTextElementsInPage reads every element regardless of visibility), so a text present only in a hidden variant or tab counts as done.",
+  "The multi-line CMS row Guild-Meetings-Modals:103 (newline-joined layout options) is reported missing; element-by-element textContent comparison may never reach done, stalling a loop that waits for every changeable row.",
+  "Copy map line accounting held: every non-blank doc line in the 20 sources is a row or a note, and no row text looks like a writer's note; the unmatched risk is limited to low-confidence targets (160 needsConfirm rows) that the check treats like confirmed ones.",
+  "Check compares only published staging; unpublished Designer writes read as missing until published (expected, but a loop must publish before rechecking).",
+  "#3 Case-insensitive compare marks case-only fixes done though staging text is unchanged (scripts/api/webflow/lib/copy-check.mjs:25): collapse lowercases both sides, and the browser reads textContent (raw, not CSS-transformed). About 40 map rows are changes where only the case differs (e.g. current 'discover more' vs doc 'Discover More', 'the bold, handsome heart of san diego' vs 'The Bold, Handsome Heart of San Diego'). They all report done with nothing written, so the live ticket would skip them and staging would keep the lowercase source text. This matches the written acceptance wording (case ignored since CSS lowercases), so it may be accepted, but it conflicts with the 'headings keep the doc's normal case' criterion, and a Title Case doc line on an element whose CSS is not lowercase would be wrongly passed. Needs a conscious decision.",
+  "#4 Page load and scroll routine copied from catalogue crawl (scripts/api/webflow/lib/copy-check-browser.mjs:46): The networkidle wait, 0.8-viewport scroll step, 80 ms pause and second networkidle wait are re-implemented here as the catalogue crawl does inline (header says 'Same load approach'). If lazy-load handling is tuned in one place the copy check will see different DOM from the catalogue it is compared against, giving spurious differs/missing. Mild: catalogue.mjs's loop is inline in a larger function.",
+  "#5 Two different sameText helpers with the same name (scripts/api/webflow/lib/copy-check.mjs:27): lib/copy-map.mjs has a private sameText (whitespace-collapse, case-sensitive, decides row status 'same') and lib/copy-check.mjs exports a sameText (case-insensitive, space-insensitive, decides 'done'). A maintainer importing or editing one can assume the other's rules. The divergence is intentional (CSS lowercases headings) but not signalled by the names.",
+  "#6 Bare usedFor() call used only for a hidden side effect (scripts/api/webflow/lib/copy-map.mjs:771): usedFor(...) lazily creates the page's used-slot set and the return value is discarded, so a reader sees a no-op. Its real purpose is to register the page so the 'no copy yet' sweep covers it. A one-line comment or an explicit registerPage name prevents someone deleting it as dead code and silently dropping 'no copy yet' rows for room/dining/legal template pages."
+ ],
+ "testing_gaps": [
+  "copy-check locateOnPage: the 'done' branch scans all elements including swiper clones (usable filter is applied only afterwards), so a line shown only in a slider clone counts as done; no test covers it.",
+  "copy-check: a short new text such as 'Discover More' counts as done when any other element shows it (documented limit); no test pins this, and sameText also treats strings equal after removing all spaces, which is untested.",
+  "No test for the copy-check CLI exiting without writing when the map file is missing or a fixture is absent for a mapped page beyond the single failed-page unit case.",
+  "No test where the new text exists on a non-target element while the target still shows old text (the done false-pass).",
+  "#7 Real-data copy map tests hardcode counts tied to the live catalogue (tests/factory/copy-map.test.mjs:565): The room and held-page tests assert exact numbers and item names taken from the committed catalogue (9 of 14 rooms, three named items without a doc, 5 held rows). When the catalogue is refreshed or Omar adds a room item, the factory test command fails although the map code is correct, so a red suite stops meaning a code regression. The fixture-based tests already cover room matching by name and held pages, so these assertions add brittleness more than coverage."
+ ],
+ "peer": {
+  "outcome": "in-process-fallback",
+  "coverage": "Adversarial lens ran in-process (no different-provider peer CLI installed: codex, grok, antigravity, acpx all missing); no cross-model corroboration."
+ },
+ "coverage": {
+  "depth": "full",
+  "notes": [
+   "Cross-model: Adversarial lens ran in-process (no different-provider peer CLI installed: codex, grok, antigravity, acpx all missing); no cross-model corroboration.",
+   "Validator: one batch of 2 findings (#1, #2); 2 confirmed, 0 rejected, 0 unresolved, 0 malformed, 0 failed, 0 shortcut-skipped. #1 confirmed with incidence on live staging not re-measured.",
+   "Merge: 8 raw candidates (incl. fast-pass) -> 7 after mechanics; fast-pass P1 at anchor 50 (copy-check.mjs:64 done-anywhere) was suppressed by confidence and is a duplicate of #1; fast-pass never counts toward agreement.",
+   "Soft-bucket demotion before validation: 5 single-reviewer P2/P3 findings demoted (#3, #4, #5, #6 to residual risks; #7 to testing gaps). #3 case-insensitive compare is the stated acceptance wording; kept as a residual risk.",
+   "No review policy, no plan (settlement not evaluated), no pack rules; learnings-researcher found no contradictions.",
+   "first_evidence_backfilled: 0; quote-the-line demotions: 0.",
+   "Project standards: root CLAUDE.md used as instruction-file fallback (no CODING_STANDARDS.md).",
+   "Untracked docs/builds/415/ and .claude/build/ excluded.",
+   "Generated outputs copy-map.{json,md} and copy-check.{json,md} excluded from full.diff; reviewers inspected them in the tree where needed.",
+   "All reviewers ran on Sonnet per the build guard, including correctness and adversarial.",
+   "Suppressed by confidence: 1 at anchor 50 (duplicate of #1). Soft-bucket demotions: 5 (#3-#7).",
+   "Local apply not authorized (mode:agent); nothing applied. Constraints honored: report only, no repo edits."
+  ]
+ },
+ "artifact_path": "/tmp/compound-engineering-1000/ce-code-review/20261126-182942-633bd6dc",
+ "run_id": "20261126-182942-633bd6dc"
+}
