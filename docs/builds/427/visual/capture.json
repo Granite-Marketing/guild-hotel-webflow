@@ -1,0 +1,207 @@
+{
+  "run": "run-1",
+  "base": "https://the-guild-hotel-c34e71.webflow.io",
+  "required_routes": [],
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "path": "/",
+      "sign_in": false,
+      "shots": [
+        {
+          "viewport": "phone",
+          "width": 390,
+          "status": "captured",
+          "image": "home-phone.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": "[data-scroll-enlarge-snap]",
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "home-phone-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": "[data-scroll-enlarge-snap] [data-video-link]",
+                      "found": false
+                    },
+                    {
+                      "selector": "[data-scroll-enlarge-snap] img",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 390,
+                      "height": 844,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "home-phone-frames-1-500ms.png",
+                  "measures": [
+                    {
+                      "selector": "[data-scroll-enlarge-snap] [data-video-link]",
+                      "found": false
+                    },
+                    {
+                      "selector": "[data-scroll-enlarge-snap] img",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 390,
+                      "height": 844,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "home-phone-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": "[data-scroll-enlarge-snap] [data-video-link]",
+                      "found": false
+                    },
+                    {
+                      "selector": "[data-scroll-enlarge-snap] img",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 390,
+                      "height": 844,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "status": "captured",
+          "image": "home-desktop.png",
+          "overflow_px": 0,
+          "blank": false,
+          "console_errors": [],
+          "focus": [],
+          "frames": [
+            {
+              "scrollTo": "[data-scroll-enlarge-snap]",
+              "shots": [
+                {
+                  "ms": 0,
+                  "image": "home-desktop-frames-1-0ms.png",
+                  "measures": [
+                    {
+                      "selector": "[data-scroll-enlarge-snap] [data-video-link]",
+                      "found": false
+                    },
+                    {
+                      "selector": "[data-scroll-enlarge-snap] img",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 1440,
+                      "height": 900,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 500,
+                  "image": "home-desktop-frames-1-500ms.png",
+                  "measures": [
+                    {
+                      "selector": "[data-scroll-enlarge-snap] [data-video-link]",
+                      "found": false
+                    },
+                    {
+                      "selector": "[data-scroll-enlarge-snap] img",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 1440,
+                      "height": 900,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                },
+                {
+                  "ms": 1500,
+                  "image": "home-desktop-frames-1-1500ms.png",
+                  "measures": [
+                    {
+                      "selector": "[data-scroll-enlarge-snap] [data-video-link]",
+                      "found": false
+                    },
+                    {
+                      "selector": "[data-scroll-enlarge-snap] img",
+                      "found": true,
+                      "x": 0,
+                      "y": 0,
+                      "width": 1440,
+                      "height": 900,
+                      "opacity": "1",
+                      "transform": "none",
+                      "visibility": "visible",
+                      "outsideViewportPx": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "captured"
+    }
+  ],
+  "blocked_hosts": [
+    "challenges.cloudflare.com",
+    "webflow-files-prod.global.ssl.fastly.net"
+  ],
+  "auth": "not configured",
+  "replaced": [
+    "https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.3.28/dist/index.js",
+    "https://cdn.jsdelivr.net/gh/Granite-Marketing/guild-hotel-webflow@v1.3.28/dist/site.css"
+  ],
+  "status": "captured",
+  "captured": 1,
+  "total": 1,
+  "problems": [],
+  "marker": "Visual capture: 1 of 1 pages captured"
+}
