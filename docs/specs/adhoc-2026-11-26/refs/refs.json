@@ -1,0 +1,6 @@
+{"refs": [
+  {"id": "V1", "image": "v1-hexagon-panel-zuma-1440.webp", "role": "sketch", "page": "/", "width": 1440, "note": "Which section is meant: a hexagon scroll mask panel (Zuma). Each panel must be able to show a looping video instead of its image when a link is pasted. Ignore the nav and the browser chrome."},
+  {"id": "V1", "image": "v1-stephen-video-checklist.png", "role": "sketch", "note": "Stephen's checklist: Hero and Gallery/Arts already take a video link; Hexagonal shapes is the one this spec adds."},
+  {"id": "F1", "image": "f1-footer-hotel-column.png", "role": "bug", "page": "/", "width": 1440, "note": "The Hotel column today. Services and Amenities must be gone."},
+  {"id": "F2", "image": "f1-footer-full-1440.webp", "role": "bug", "page": "/", "width": 1440, "note": "Footer today. Corporate is highlighted: a Legal link goes directly below it. In-room Dining (Dining column) must be gone."}
+]}
