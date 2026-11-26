@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.25
+
+### Patch Changes
+
+- Final review fixes round 2 (26 Nov): the menu bar now reads the part of each photo right behind the logo, menu and Book now, so it stays readable over dark photos; on a night visit the Day button stops being announced as selected much sooner.
+
 ## 1.3.24
 
 ### Patch Changes
