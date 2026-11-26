@@ -55,6 +55,6 @@ These have no equivalent page on the new site. Each has a fallback so nothing re
 9. **Solana Coffee copy.** Its hero text is a copy of the Garden Terrace line. What should it say?
 10. **Is The Guild Bar now the Lobby Bar,** and is the Pool Lounge the right home for the old Pool page?
 
-## Note for Stephen
+## Language
 
-- **US or UK English.** The brief asked for UK English, so the 8 drafted metas use it (for example "fitness centre" in the schema). But the hotel is in San Diego, the existing site copy and staging meta use US spelling ("Neighborhood", "fitness center"), and the agency's room meta is US English, kept verbatim. Launching with both mixes spellings on one site. Recommend switching the drafts to US English; it is a few words.
+Drafted meta and schema text use US English to match the site copy and the agency's room meta (Stephen, 2026-11-26).
