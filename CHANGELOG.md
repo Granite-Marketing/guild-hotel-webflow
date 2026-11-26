@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.27
+
+### Patch Changes
+
+- The menu bar also stays white over the scattered timeline photos.
+
 ## 1.3.26
 
 ### Patch Changes
