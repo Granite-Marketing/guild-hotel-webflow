@@ -72,3 +72,27 @@ test('narrow photos, dark or pale, turn the nav cream across their own width onl
   await page.evaluate(() => window.scrollTo(0, 500))
   await expect.poll(async () => (await masks()).clone).toEqual([{ left: 0, width: 1000, hidden: false }])
 })
+
+test('a loose photo outside a figure keeps the nav cream; a small icon does not', async ({ page }) => {
+  await page.setViewportSize({ width: 1000, height: 600 })
+  await page.setContent(
+    page_(`<img style="position:absolute;left:100px;top:0;width:300px;height:400px" src="${picture('#f8f8f8')}">
+      <img style="position:absolute;left:600px;top:0;width:40px;height:40px" src="${picture('#181008')}">`),
+  )
+  await page.addScriptTag({ content: await bundle() })
+  await expect
+    .poll(() =>
+      page.evaluate(() => {
+        const style = getComputedStyle(document.querySelector<HTMLElement>('body > [inert]')!)
+        return style.maskPosition.split(', ').map((position, index) => ({
+          left: parseFloat(position),
+          hidden: style.maskImage.split(/,\s*(?=linear-gradient)/)[index].includes('rgb(0, 0, 0)') === false,
+        }))
+      }),
+    )
+    .toEqual([
+      { left: 0, hidden: false },
+      { left: 100, hidden: true },
+      { left: 400, hidden: false },
+    ])
+})

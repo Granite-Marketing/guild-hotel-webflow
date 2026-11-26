@@ -19,7 +19,8 @@
  *     counts as light; one with a dark background counts as dark. A
  *     transparent section takes the colour of its nearest opaque ancestor
  *     (in the end the body);
- *   - a figure or video at least 60% of the viewport wide counts as dark
+ *   - a figure, video or loose image (not inside a figure, at least 120px,
+ *     not an SVG) at least 60% of the viewport wide counts as dark
  *     (a photo keeps the cream nav), using its visible clip-path area.
  *     Map artwork (any class containing "map") is not a photo;
  *   - a narrower photo (half of a split section, a card) also keeps the
@@ -43,7 +44,9 @@ const LIGHT_COLOR = 'var(--_primitives---colors--neutral-lightest, #f4efdf)'
 const OPEN_CLASS = 'is-nav-open'
 const LIGHT_LUMINANCE = 0.5
 const PHOTO_MIN_WIDTH = 0.6
-const PHOTO_SELECTOR = 'figure, video'
+// Loose images (the scattered timeline photos) count too; icons are filtered by size and SVG.
+const PHOTO_SELECTOR = 'figure, video, img:not(figure img)'
+const LOOSE_IMAGE_MIN_SIZE = 120
 const NOT_PHOTO_SELECTOR = '[class*="map"], [class*="map"] *'
 
 interface Interval {
@@ -125,7 +128,8 @@ export const navTheme = () => {
         (element) =>
           !header.contains(element) &&
           !overlay.contains(element) &&
-          !element.matches(NOT_PHOTO_SELECTOR),
+          !element.matches(NOT_PHOTO_SELECTOR) &&
+          !(element instanceof HTMLImageElement && /\.svg(\?|$)/i.test(element.currentSrc || element.src)),
       )
       .map((element) => ({ element, clipHost: findClipHost(element) }))
   }
@@ -160,6 +164,7 @@ export const navTheme = () => {
     const minPhotoWidth = window.innerWidth * PHOTO_MIN_WIDTH
     photos.forEach(({ element, clipHost }) => {
       const rect = element.getBoundingClientRect()
+      if (element instanceof HTMLImageElement && Math.min(rect.width, rect.height) < LOOSE_IMAGE_MIN_SIZE) return
       const wide = rect.width >= minPhotoWidth
       if (rect.top > navHeight || rect.bottom < 0) return
       let top = rect.top
