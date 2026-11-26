@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-26T20:11:25.905Z",
+ "generated": "2026-11-26T21:28:56.027Z",
  "staging": "https://the-guild-hotel-c34e71.webflow.io",
  "summary": {
-  "done": 259,
-  "differs": 51,
-  "missing": 26,
+  "done": 314,
+  "differs": 14,
+  "missing": 8,
   "unchecked": 479,
   "total": 815
  },
@@ -1255,8 +1255,8 @@
   {
    "page": "/dining/dining-zuma",
    "counts": {
-    "done": 9,
-    "differs": 2,
+    "done": 11,
+    "differs": 0,
     "missing": 0,
     "unchecked": 9
    },
@@ -1278,9 +1278,8 @@
      "page": "/dining/dining-zuma",
      "newText": "GROUP DINING AND EVENTS",
      "checkedOn": "/dining/dining-lobbybar",
-     "foundText": "group dining & events",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Dining-PoolLounge:13",
@@ -1289,9 +1288,8 @@
      "page": "/dining/dining-zuma",
      "newText": "GROUP DINING AND EVENTS",
      "checkedOn": "/dining/dining-poollounge",
-     "foundText": "group dining & events",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Dining-Zuma:2",
@@ -1952,8 +1950,8 @@
   {
    "page": "/legal-corporate/corporate",
    "counts": {
-    "done": 14,
-    "differs": 5,
+    "done": 19,
+    "differs": 0,
     "missing": 0,
     "unchecked": 42
    },
@@ -2025,9 +2023,8 @@
      "page": "/legal-corporate/corporate",
      "newText": "High-Speed Encrypted Wi-Fi",
      "checkedOn": "/legal-corporate/corporate",
-     "foundText": "High-Speed, Encrypted Wi-Fi",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Corporate:15",
@@ -2066,9 +2063,8 @@
      "page": "/legal-corporate/corporate",
      "newText": "Elevated Work Spaces",
      "checkedOn": "/legal-corporate/corporate",
-     "foundText": "Quiet, Professional Workspaces",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Corporate:21",
@@ -2287,9 +2283,8 @@
      "page": "/legal-corporate/corporate",
      "newText": "Steps From Downtown",
      "checkedOn": "/legal-corporate/corporate",
-     "foundText": "Steps from key legal addresses",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Corporate:79",
@@ -2298,9 +2293,8 @@
      "page": "/legal-corporate/corporate",
      "newText": "The Guild offers privacy for meetings on the doorstep of every important attraction and city business.",
      "checkedOn": "/legal-corporate/corporate",
-     "foundText": "Four courthouses sit within a short walk of The Guild, so your team can move between hearings, prep sessions and the hotel in minutes.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Corporate:80",
@@ -2479,9 +2473,8 @@
      "page": "/legal-corporate/corporate",
      "newText": "The Guild is the right place to prepare, and it puts your team minutes from everywhere you need to be during trials.",
      "checkedOn": "/legal-corporate/legal",
-     "foundText": "Four courthouses sit within a short walk of The Guild, so your team can move between hearings, prep sessions and the hotel in minutes.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Legal:69",
@@ -4734,9 +4727,9 @@
   {
    "page": "/rooms/city-level-below-ground",
    "counts": {
-    "done": 6,
+    "done": 8,
     "differs": 0,
-    "missing": 2,
+    "missing": 0,
     "unchecked": 12
    },
    "rows": [
@@ -4838,7 +4831,7 @@
      "newText": "After a day downtown, the City Level Below Ground offers room to breathe.",
      "checkedOn": "/rooms/city-level-below-ground",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:185",
@@ -4848,7 +4841,7 @@
      "newText": "The City Level Below Ground has it all. Colors and textures designed to soothe, luxury linens that welcome deep sleep, and custom furnishings that offer every comfort.",
      "checkedOn": "/rooms/city-level-below-ground",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:190",
@@ -4945,9 +4938,9 @@
   {
    "page": "/rooms/cozy-courtyard-king",
    "counts": {
-    "done": 6,
+    "done": 8,
     "differs": 0,
-    "missing": 2,
+    "missing": 0,
     "unchecked": 11
    },
    "rows": [
@@ -5039,7 +5032,7 @@
      "newText": "After a night out, the Courtyard King offers room to breathe.",
      "checkedOn": "/rooms/cozy-courtyard-king",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:144",
@@ -5049,7 +5042,7 @@
      "newText": "The Courtyard King offers a soothing space with cool neutral colors and luxury linens that welcome deep sleep. Custom furnishings mean that you and everything else in your room fit perfectly.",
      "checkedOn": "/rooms/cozy-courtyard-king",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:149",
@@ -5146,9 +5139,9 @@
   {
    "page": "/rooms/cozy-courtyard-queen",
    "counts": {
-    "done": 6,
+    "done": 8,
     "differs": 0,
-    "missing": 2,
+    "missing": 0,
     "unchecked": 12
    },
    "rows": [
@@ -5250,7 +5243,7 @@
      "newText": "After a night out, the Courtyard Queen offers room to breathe.",
      "checkedOn": "/rooms/cozy-courtyard-queen",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:64",
@@ -5260,7 +5253,7 @@
      "newText": "The Courtyard Queen feels expansive and restful. Colors are soothing, and luxury linens invite deep sleep. Custom furnishings mean that there’s room for everything and everyone in the group.",
      "checkedOn": "/rooms/cozy-courtyard-queen",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:69",
@@ -5357,9 +5350,9 @@
   {
    "page": "/rooms/cozy-king",
    "counts": {
-    "done": 6,
+    "done": 8,
     "differs": 0,
-    "missing": 2,
+    "missing": 0,
     "unchecked": 11
    },
    "rows": [
@@ -5451,7 +5444,7 @@
      "newText": "After a night out, the Cozy King is a sanctuary.",
      "checkedOn": "/rooms/cozy-king",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:104",
@@ -5461,7 +5454,7 @@
      "newText": "The Cozy King thinks big. Cool interior colors are restful, and luxury linens are designed for deep sleep. Custom furnishings mean there’s room for the people and possessions you love.",
      "checkedOn": "/rooms/cozy-king",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:109",
@@ -5558,9 +5551,9 @@
   {
    "page": "/rooms/cozy-queen",
    "counts": {
-    "done": 13,
-    "differs": 30,
-    "missing": 2,
+    "done": 45,
+    "differs": 0,
+    "missing": 0,
     "unchecked": 21
    },
    "rows": [
@@ -5591,9 +5584,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "The Art of Solo Travel",
      "checkedOn": "/rooms/cozy-queen",
-     "foundText": "A room for every stay",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:7",
@@ -5673,7 +5665,7 @@
      "newText": "After a night out, the Cozy Queen offers privacy and room to breathe.",
      "checkedOn": "/rooms/cozy-queen",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:24",
@@ -5683,7 +5675,7 @@
      "newText": "The Cozy Queen is an intimate room with big ideas. Colors are soothing and luxury linens welcome deep sleep. Custom furnishings invite comfortable lounging.",
      "checkedOn": "/rooms/cozy-queen",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:26",
@@ -5692,9 +5684,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
      "checkedOn": "/rooms/cozy-queen",
-     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:27",
@@ -5703,9 +5694,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "The little things make all the difference. The scent of the room upon arrival. The artwork, original and intriguing. And practical luxuries, like free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
      "checkedOn": "/rooms/cozy-queen",
-     "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:29",
@@ -5804,9 +5794,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "Intimacy with a Point of View",
      "checkedOn": "/rooms/cozy-courtyard-queen",
-     "foundText": "A room for every stay",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:52",
@@ -5825,9 +5814,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
      "checkedOn": "/rooms/cozy-courtyard-queen",
-     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:67",
@@ -5836,9 +5824,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "The little things make all the difference. The scent of the room as the door opens. The artwork, original and intriguing. And practical luxuries, like free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
      "checkedOn": "/rooms/cozy-courtyard-queen",
-     "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:84",
@@ -5847,9 +5834,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "King-Sized Comfort",
      "checkedOn": "/rooms/cozy-king",
-     "foundText": "A room for every stay",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:91",
@@ -5868,9 +5854,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
      "checkedOn": "/rooms/cozy-king",
-     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:107",
@@ -5879,9 +5864,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "Details deliver in the Cozy King. The scent of the room sets the tone. The artwork is as original as it is intriguing. Practical luxuries abound, including free, high-speed Wi-Fi, a safe for the laptop, and an all-important steamer, of course.",
      "checkedOn": "/rooms/cozy-king",
-     "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:124",
@@ -5890,9 +5874,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "Intimacy with a Point of View",
      "checkedOn": "/rooms/cozy-courtyard-king",
-     "foundText": "A room for every stay",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:132",
@@ -5911,9 +5894,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
      "checkedOn": "/rooms/cozy-courtyard-king",
-     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:147",
@@ -5922,9 +5904,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "Take a deep breath; the scent of the room sets the luxurious tone. Artwork is original and intriguing. There are practical perks, like free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course. Little things make all the difference.",
      "checkedOn": "/rooms/cozy-courtyard-king",
-     "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:164",
@@ -5933,9 +5914,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "Space meets privacy",
      "checkedOn": "/rooms/city-level-below-ground",
-     "foundText": "A room for every stay",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:171",
@@ -5954,9 +5934,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
      "checkedOn": "/rooms/city-level-below-ground",
-     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:188",
@@ -5965,9 +5944,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "This is a room for all the senses: a luxurious scent sets the tone and the artwork is original and intriguing. All the musts are here: free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
      "checkedOn": "/rooms/city-level-below-ground",
-     "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:205",
@@ -5976,9 +5954,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "Street Smart City Space.",
      "checkedOn": "/rooms/guild-city-level-loft",
-     "foundText": "A room for every stay",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:212",
@@ -5997,9 +5974,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
      "checkedOn": "/rooms/guild-city-level-loft",
-     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:227",
@@ -6008,9 +5984,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "Every detail is intentional: the room scent is luxurious and inviting; the artwork and the furnishings are original and intriguing. The essentials are all here, including free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
      "checkedOn": "/rooms/guild-city-level-loft",
-     "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:244",
@@ -6019,9 +5994,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "Loft Space For All.",
      "checkedOn": "/rooms/guild-loft-suite",
-     "foundText": "A room for every stay",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:251",
@@ -6040,9 +6014,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
      "checkedOn": "/rooms/guild-loft-suite",
-     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:269",
@@ -6051,9 +6024,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "The pleasing scent of the room sets a luxurious, welcoming tone. The artwork is original and intriguing. Last, and certainly not least, there are thoughtful essentials, like free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
      "checkedOn": "/rooms/guild-loft-suite",
-     "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:286",
@@ -6062,9 +6034,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "The view from here",
      "checkedOn": "/rooms/guild-corner-loft-suite",
-     "foundText": "A room for every stay",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:306",
@@ -6073,9 +6044,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
      "checkedOn": "/rooms/guild-corner-loft-suite",
-     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:307",
@@ -6084,9 +6054,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "Every detail delights in the Guild Corner Loft Suite: the pleasing scent of the room; the artwork, original and intriguing, and the practical luxuries, like free, high-speed Wi-Fi, a safe for a laptop, and an all-important steamer, of course.",
      "checkedOn": "/rooms/guild-corner-loft-suite",
-     "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:325",
@@ -6095,9 +6064,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "Perfect Proportions",
      "checkedOn": "/rooms/guild-double",
-     "foundText": "A room for every stay",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:344",
@@ -6106,9 +6074,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
      "checkedOn": "/rooms/guild-double",
-     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:345",
@@ -6117,9 +6084,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "The Guild Double is full of luxurious details, like the pleasing scent of the room and the original and intriguing artwork. Essentials are state of the art, including free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
      "checkedOn": "/rooms/guild-double",
-     "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:362",
@@ -6128,9 +6094,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "You Belong at the Top",
      "checkedOn": "/rooms/two-bedroom-loft-suite",
-     "foundText": "A room for every stay",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:384",
@@ -6139,9 +6104,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
      "checkedOn": "/rooms/two-bedroom-loft-suite",
-     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:385",
@@ -6150,9 +6114,8 @@
      "page": "/rooms/cozy-queen",
      "newText": "Two Bedroom Loft Suites offer details designed to please: a scent that defines the space, original and intriguing artwork, and practical luxuries, like free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
      "checkedOn": "/rooms/two-bedroom-loft-suite",
-     "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "no-copy:/rooms/cozy-queen:prop|67e58af5-a074-f1f6-457a-54bc8ecd98eb|0df84d45-603f-3795-7593-9010ebf7c540",
@@ -6259,9 +6222,9 @@
   {
    "page": "/rooms/guild-city-level-loft",
    "counts": {
-    "done": 5,
+    "done": 7,
     "differs": 0,
-    "missing": 3,
+    "missing": 1,
     "unchecked": 11
    },
    "rows": [
@@ -6353,7 +6316,7 @@
      "newText": "After a night out, the City Level Loft offers room to breathe.",
      "checkedOn": "/rooms/guild-city-level-loft",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:224",
@@ -6363,7 +6326,7 @@
      "newText": "The City Level Loft is as generously proportioned as it is restful, with luxury linens that invite deep sleeps and custom furnishings that offer every comfort.",
      "checkedOn": "/rooms/guild-city-level-loft",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:229",
@@ -6460,9 +6423,9 @@
   {
    "page": "/rooms/guild-corner-loft-suite",
    "counts": {
-    "done": 6,
+    "done": 8,
     "differs": 0,
-    "missing": 2,
+    "missing": 0,
     "unchecked": 13
    },
    "rows": [
@@ -6574,7 +6537,7 @@
      "newText": "Room to get ready. Space to stretch out. The Guild Corner Loft Suite is a premier choice.",
      "checkedOn": "/rooms/guild-corner-loft-suite",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:304",
@@ -6584,7 +6547,7 @@
      "newText": "Guild Corner Loft Suites offer thoughtful interiors, custom furniture as stylish as it is comfortable, luxury linens and cool, neutral shades that welcome deep sleep.",
      "checkedOn": "/rooms/guild-corner-loft-suite",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:309",
@@ -6681,9 +6644,9 @@
   {
    "page": "/rooms/guild-double",
    "counts": {
-    "done": 6,
+    "done": 8,
     "differs": 0,
-    "missing": 2,
+    "missing": 0,
     "unchecked": 12
    },
    "rows": [
@@ -6785,7 +6748,7 @@
      "newText": "Going out is grand. Coming home is better. The Guild Double is San Diego de luxe.",
      "checkedOn": "/rooms/guild-double",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:342",
@@ -6795,7 +6758,7 @@
      "newText": "Guild Doubles offer custom interiors and tailored furniture as stylish as it is comfortable, luxury linens and cool, neutral shades that welcome deep sleep.",
      "checkedOn": "/rooms/guild-double",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:347",
@@ -7113,9 +7076,9 @@
   {
    "page": "/rooms/two-bedroom-loft-suite",
    "counts": {
-    "done": 5,
+    "done": 7,
     "differs": 0,
-    "missing": 3,
+    "missing": 1,
     "unchecked": 15
    },
    "rows": [
@@ -7247,7 +7210,7 @@
      "newText": "Going out is grand. Coming home to the Two-Bedroom Loft Suite is even better.",
      "checkedOn": "/rooms/two-bedroom-loft-suite",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:382",
@@ -7257,7 +7220,7 @@
      "newText": "More than a mere home away from home, the Two-Bedroom Loft Suite is the best of the city, with room to entertain, stylishly comfortable furniture and bathroom, and luxury linens that welcome deep sleep.",
      "checkedOn": "/rooms/two-bedroom-loft-suite",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:387",
