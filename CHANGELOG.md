@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.29
+
+### Patch Changes
+
+- Hexagon scroll mask panels can play a video. A Dropbox share link pasted into a panel's video field now plays directly (the link is turned into a direct file link), and the panel video covers the frame as it opens and fills the screen when fully open (#428).
+
 ## 1.3.28
 
 ### Patch Changes
