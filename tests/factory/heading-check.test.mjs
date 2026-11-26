@@ -6,7 +6,9 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import {
   parseCsv, parseSheetTab, matchRows, headingSet, countHeadings, checkPage, rowsForPage, sharedPartTags, diffSharedParts,
+  missingBaselines, templatePath, checkedPaths,
 } from '../../scripts/api/webflow/lib/heading-check.mjs'
+import { renderReport, summarise } from '../../scripts/api/webflow/lib/heading-check-report.mjs'
 
 const HERE = path.dirname(fileURLToPath(import.meta.url))
 const FIXTURES = path.join(HERE, 'fixtures/heading-check')
@@ -14,6 +16,7 @@ const ROOT = path.resolve(HERE, '../..')
 const homepageSheet = () => parseSheetTab(fs.readFileSync(path.join(FIXTURES, 'sheets/homepage.csv'), 'utf8'))
 
 const element = (order, tag, text, extra = {}) => ({ order, tag, text, hasImage: false, classes: [], section: null, swiperClone: false, ...extra })
+const fakeReport = (pages, sharedParts = {}) => ({ generated: 'now', source: 'test', tabs: [{ name: 'tab', pages }], sharedParts: { checked: 0, baselineMissing: [], differing: [], notLoaded: [], noPage: [], ...sharedParts } })
 const row = (overrides) => ({ number: 1, section: 'Hero', text: 'x', kind: 'text', proposedTag: 'h2', nowTag: 'h2', action: 'Keep', ...overrides })
 
 test('parseCsv keeps commas and doubled quotes inside quoted cells', () => {
@@ -87,6 +90,45 @@ test('a section label the page classes do not name is learned from its rows with
   assert.deepEqual(results.map((result) => result.element.order), [0, 2])
 })
 
+test('a row whose text is only in another section is not found, naming the section the text is in', () => {
+  // MUTATION: accepting a fit-0 candidate would pass the "Rooms" row against the footer's "Book now" h3.
+  const elements = [
+    element(0, 'h2', 'Our rooms', { section: 'section_rooms-grid' }),
+    element(1, 'h3', 'Book now', { section: 'section_footer-links' }),
+  ]
+  const { results } = matchRows([row({ section: 'Rooms', text: 'Book now', proposedTag: 'h3' })], elements)
+  assert.equal(results[0].status, 'not-found')
+  assert.equal(results[0].otherSection, 'section_footer-links')
+  assert.match(renderReport(fakeReport([{ path: '/', ...checkPage([row({ section: 'Rooms', text: 'Book now', proposedTag: 'h3' })], elements) }])), /not found in its section \(text found in section_footer-links\)/)
+})
+
+test('a unique stray text in another section cannot teach a label its section when a page section names the label', () => {
+  // MUTATION: learning "Rooms" from its one unique text would set it to the footer and pass the row (fit 2).
+  const elements = [
+    element(0, 'h2', 'Rest easy', { section: 'section_rooms-grid' }),
+    element(1, 'h3', 'Only in the footer', { section: 'section_footer-links' }),
+  ]
+  const rows = [row({ number: 1, section: 'Rooms', text: 'Only in the footer', proposedTag: 'h3' }), row({ number: 2, section: 'Rooms', text: 'Rest easy', proposedTag: 'h2' })]
+  const { results } = matchRows(rows, elements)
+  assert.deepEqual(results.map((result) => result.status), ['not-found', 'passed'])
+})
+
+test('with no page section fitting the label, the match falls back to text and page order', () => {
+  // The untaken branch of the section guard: nothing on the page fits "Reservations" (no shared word, nothing learned
+  // because the text repeats), so the first same-text element is used.
+  const elements = [element(0, 'p', 'Book now', { section: 'section_home-hero' }), element(1, 'h3', 'Book now', { section: 'section_footer-links' })]
+  const { results } = matchRows([row({ section: 'Reservations', text: 'Book now', proposedTag: 'p' })], elements)
+  assert.deepEqual([results[0].status, results[0].element.order], ['passed', 0])
+})
+
+test('label words of two letters or fewer do not make a section fit', () => {
+  // Adversarial: a two-letter label word like "of" must not tie the row to section_cta-of; the text fallback keeps page order.
+  const elements = [element(0, 'h2', 'Hi', { section: 'section_home-hero' }), element(1, 'h2', 'Hi', { section: 'section_cta-of' })]
+  const { results } = matchRows([row({ section: 'Of', text: 'Hi', proposedTag: 'h2' })], elements)
+  assert.equal(results[0].status, 'passed')
+  assert.equal(results[0].element.order, 0)
+})
+
 test('a wrapped logo passes only as an h3 that contains the image, found by its alt text', () => {
   const logoRow = row({ text: 'Zuma San Diego', kind: 'logo', proposedTag: 'h3' })
   const wrapped = matchRows([logoRow], [element(0, 'h3', 'Zuma San Diego', { hasImage: true })])
@@ -133,6 +175,59 @@ test('shared parts diff reports a part whose tags differ from the homepage', () 
 test('a page that lacks a shared part the homepage has is reported as absent', () => {
   const home = sharedPartTags([element(0, 'h2', 'x', { section: 'section_faq-accordion', classes: ['q'] })])
   assert.deepEqual(diffSharedParts(home, sharedPartTags([])).map((entry) => [entry.part, entry.page]), [['faq', 'absent']])
+})
+
+test('shared parts diff lists a class found only on the page and one found only on the homepage', () => {
+  // MUTATION: comparing only the classes both sides have would report nothing for either case.
+  const footer = (classes, tag) => element(0, tag, 'x', { section: 'section_footer-links', classes })
+  const home = sharedPartTags([footer(['footer-links_column-heading'], 'p'), footer(['footer-links_legal'], 'p')])
+  const page = sharedPartTags([footer(['footer-links_column-heading'], 'p'), footer(['footer-links_extra-heading'], 'h2')])
+  assert.deepEqual(diffSharedParts(home, page).map((entry) => [entry.classKey, entry.homepage, entry.page]), [
+    ['footer-links_extra-heading', [], ['h2']],
+    ['footer-links_legal', ['p'], []],
+  ])
+  const report = fakeReport([], { differing: [{ path: '/about', differences: diffSharedParts(home, page) }] })
+  assert.match(renderReport(report), /footer-links_extra-heading`: homepage none, here H2/)
+})
+
+test('a missing homepage baseline is reported per part and counted, never as "no page differs"', async () => {
+  // MUTATION: treating a missing baseline as no differences prints "No page differs." with nothing compared.
+  assert.deepEqual(missingBaselines(null), ['footer', 'booking and newsletter band', 'offers slider', 'faq'])
+  const homeWithoutFaq = sharedPartTags([element(0, 'p', 'x', { section: 'section_footer-links', classes: ['a'] })])
+  assert.deepEqual(missingBaselines(homeWithoutFaq), ['booking and newsletter band', 'offers slider', 'faq'])
+  assert.deepEqual(diffSharedParts(null, sharedPartTags([element(0, 'h2', 'x', { section: 'section_faq-accordion', classes: ['q'] })])), [])
+  const { buildReport } = await import('../../scripts/api/webflow/heading-check.mjs')
+  const pages = { '/about': { status: 'ok', elements: [element(0, 'h2', 'x', { section: 'section_faq-accordion', classes: ['q'] })] }, '/': { status: 'error', error: 'timeout' } }
+  const report = buildReport([], pages, ['/', '/about'], { generated: 'now', source: 'test' })
+  assert.deepEqual(report.sharedParts.baselineMissing, ['footer', 'booking and newsletter band', 'offers slider', 'faq'])
+  assert.equal(summarise(report).sharedPartsBaselineMissing, 4)
+  const markdown = renderReport(report)
+  assert.match(markdown, /- faq: baseline missing, comparison not done/)
+  assert.doesNotMatch(markdown, /No page differs\./)
+})
+
+test('a template tab is checked on the page whose slug matches its example, else the closest, else the first', () => {
+  const roomTab = { templateVariants: true, paths: ['/rooms/guild-city-level-loft', '/rooms/cozy-courtyard-queen', '/rooms/cozy-queen'], rows: [row({ kind: 'template', text: 'Cozy Queen' })] }
+  // MUTATION: taking paths[0] checks the loft page, where the "Cozy Queen" H1 row can never pass.
+  assert.equal(templatePath(roomTab), '/rooms/cozy-queen')
+  const venueTab = { templateVariants: true, paths: ['/dining/dining-lobbybar', '/dining/dining-zuma'], rows: [row({ kind: 'template', text: 'zuma san diego' })] }
+  assert.equal(templatePath(venueTab), '/dining/dining-zuma')
+  // Adversarial: equal word overlap ("cozy queen" in both) goes to the path with fewer extra words.
+  assert.equal(templatePath({ ...roomTab, paths: ['/rooms/cozy-courtyard-queen', '/rooms/queen-cozy'] }), '/rooms/queen-cozy')
+  assert.equal(templatePath({ ...roomTab, paths: ['/rooms/loft', '/rooms/double'] }), '/rooms/loft')
+  assert.equal(templatePath({ ...roomTab, rows: [row({ text: 'Not a template row' })] }), '/rooms/guild-city-level-loft')
+  assert.deepEqual(checkedPaths(roomTab), ['/rooms/cozy-queen'])
+  assert.deepEqual(checkedPaths({ templateVariants: false, paths: ['/a', '/b'], rows: [] }), ['/a', '/b'])
+})
+
+test('buildReport checks a template tab on its matched page and sends the other template pages to the shared-part check', async () => {
+  const { buildReport } = await import('../../scripts/api/webflow/heading-check.mjs')
+  const tab = { name: 'rooms', templateVariants: true, paths: ['/rooms/guild-city-level-loft', '/rooms/cozy-queen'], rows: [row({ kind: 'template', section: 'Hero', text: 'Cozy Queen', proposedTag: 'h1' })] }
+  const ok = (elements) => ({ status: 'ok', elements })
+  const pages = { '/': ok([]), '/rooms/guild-city-level-loft': ok([element(0, 'h1', 'Guild City Level Loft')]), '/rooms/cozy-queen': ok([element(0, 'h1', 'Cozy Queen')]) }
+  const report = buildReport([tab], pages, ['/', ...tab.paths], { generated: 'now', source: 'test' })
+  assert.deepEqual(report.tabs[0].pages.map((page) => [page.path, page.results[0].status]), [['/rooms/cozy-queen', 'passed']])
+  assert.equal(report.sharedParts.checked, 1)
 })
 
 test('the check has no way to write to Webflow: no API host, token, write verb or webflow-write script in its sources', () => {

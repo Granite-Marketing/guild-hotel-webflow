@@ -12,7 +12,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 import { slugify } from './lib/catalogue-helpers.mjs'
 import { openBrowser } from './lib/copy-check-browser.mjs'
 import { loadHeadingElements } from './lib/heading-check-browser.mjs'
-import { parseSheetTab, rowsForPage, checkPage, sharedPartTags, diffSharedParts } from './lib/heading-check.mjs'
+import { parseSheetTab, rowsForPage, checkPage, sharedPartTags, diffSharedParts, missingBaselines, checkedPaths } from './lib/heading-check.mjs'
 import { renderReport, summarise } from './lib/heading-check-report.mjs'
 import { linksOf } from './where-used.mjs'
 import { STAGING, pageUrl } from './copy-check.mjs'
@@ -74,19 +74,19 @@ async function loadPages(pagePaths, options) {
 
 export function buildReport(tabs, pages, allPaths, meta) {
   const tabReports = tabs.map((tab) => {
-    const checkedPaths = tab.templateVariants ? tab.paths.slice(0, 1) : tab.paths
     return {
       name: tab.name,
-      pages: checkedPaths.map((pagePath) => {
+      pages: checkedPaths(tab).map((pagePath) => {
         const loaded = pages[pagePath]
         if (loaded?.status !== 'ok') return { path: pagePath, error: loaded?.error ?? 'not loaded' }
         return { path: pagePath, ...checkPage(rowsForPage(tab, pagePath), loaded.elements) }
       }),
     }
   })
-  const tabPaths = new Set(tabs.flatMap((tab) => (tab.templateVariants ? tab.paths.slice(0, 1) : tab.paths)))
+  const tabPaths = new Set(tabs.flatMap(checkedPaths))
   const otherPaths = allPaths.filter((pagePath) => pagePath !== '/' && !tabPaths.has(pagePath))
   const home = pages['/']?.status === 'ok' ? sharedPartTags(pages['/'].elements) : null
+  const baselineMissing = missingBaselines(home)
   const differing = []
   const notLoaded = []
   const noPage = []
@@ -94,10 +94,10 @@ export function buildReport(tabs, pages, allPaths, meta) {
     const loaded = pages[pagePath]
     if (loaded?.httpStatus === 404 && pagePath !== '/404') { noPage.push(pagePath); continue } // linked CMS items with no published page
     if (loaded?.status !== 'ok') { notLoaded.push({ path: pagePath, error: loaded?.error ?? 'not loaded' }); continue }
-    const differences = home ? diffSharedParts(home, sharedPartTags(loaded.elements)) : []
+    const differences = diffSharedParts(home, sharedPartTags(loaded.elements))
     if (differences.length > 0) differing.push({ path: pagePath, differences })
   }
-  return { ...meta, tabs: tabReports, sharedParts: { checked: otherPaths.length - noPage.length, differing, notLoaded, noPage } }
+  return { ...meta, tabs: tabReports, sharedParts: { checked: otherPaths.length - noPage.length, baselineMissing, differing, notLoaded, noPage } }
 }
 
 export async function main(argv) {
