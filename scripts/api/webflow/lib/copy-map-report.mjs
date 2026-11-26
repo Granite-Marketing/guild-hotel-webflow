@@ -34,7 +34,7 @@ function targetLabel(row) {
   if (row.targetKind === 'not-on-site') return 'not on site'
   if (row.status === 'held') return 'held'
   if (!target) return row.targetKind
-  if (row.targetKind === 'cms-field') return `CMS ${row.cmsItem.collection} / ${row.cmsItem.name} / ${target.fieldSlug}`
+  if (row.targetKind === 'cms-field') return `CMS ${row.cmsItem.collection} / ${row.cmsItem.name} / ${target.fieldSlug || `${target.fieldName} (new field)`}`
   if (row.targetKind === 'component-prop') return `prop ${target.component} / ${target.property}${target.overridden === false ? ' (default)' : ''}`
   if (row.targetKind === 'component-fixed') return `fixed in ${target.component}${target.tag ? ` (${target.tag})` : ''}`
   return `page text${target.tag ? ` (${target.tag})` : ''}${target.section ? ` ${target.section.replace('section_', '')}` : ''}`
@@ -47,6 +47,7 @@ const flags = (row) => [
   row.duplicateOf ? `duplicate of ${row.duplicateOf}` : '',
   row.joinedInto ? `joined into line ${row.joinedInto}` : '',
   row.scriptHeading ? 'script heading' : '',
+  row.pick ? `PICK ${row.pick.decision}: ${row.pick.note}` : '',
 ].filter(Boolean).join('; ')
 
 export function renderCopyMapMarkdown(output) {
@@ -64,6 +65,12 @@ export function renderCopyMapMarkdown(output) {
   }
   for (const { row, count } of sharedByElement.values()) out.push(`- ${targetLabel(row)} on ${row.page}, now "${cell(row.currentText, 50)}", new "${cell(row.newText, 50)}" (${count} doc line${count > 1 ? 's' : ''}); also shown on: ${row.sharedPages.join(', ')}`)
   out.push('')
+
+  if (output.fieldPlan?.length) {
+    out.push('## New CMS fields for template text (C6)', '', 'Plain text fields filled per item by the upload. Each must be bound to its template element in the Designer; items with no doc copy keep today\'s template text.', '', '| collection | field | bind to |', '|---|---|---|')
+    for (const field of output.fieldPlan) out.push(`| ${field.collection} | ${field.displayName} | ${cell(field.bindTo, 120)} |`)
+    out.push('')
+  }
 
   out.push('## Second versions (deviations list for Omar)', '')
   for (const row of rows.filter((candidate) => candidate.alternates.length)) {

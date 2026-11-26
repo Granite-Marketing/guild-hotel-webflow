@@ -10,18 +10,23 @@ import { buildCopyMap, CONFIDENCE_MATCH_MINIMUM, CONFIDENCE_CONFIRM_BELOW, IMPLI
 import { loadCopyMapInputs } from './lib/copy-map-io.mjs'
 import { REGISTRY } from './lib/copy-map-registry.mjs'
 import { renderCopyMapMarkdown, summarise } from './lib/copy-map-report.mjs'
+import { applyPicks } from './lib/copy-map-picks.mjs'
+import { readJson } from './lib/catalogue-helpers.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..')
 
 function main() {
   const { docs, model, catalogueDir } = loadCopyMapInputs(path.join(ROOT, 'docs/specs/guild-content'))
   const map = buildCopyMap({ docs, model, registry: REGISTRY })
+  const picks = readJson(path.join(catalogueDir, 'picks.json'))
+  applyPicks(map.rows, picks.picks)
   const output = {
     settings: { defaultSlotPenalty: DEFAULT_SLOT_PENALTY, confidenceMatchMinimum: CONFIDENCE_MATCH_MINIMUM, confidenceConfirmBelow: CONFIDENCE_CONFIRM_BELOW, implicitAlternateSimilarity: IMPLICIT_ALTERNATE_SIMILARITY },
     docs: docs.map((doc) => doc.name),
     summary: summarise(map),
     rooms: map.rooms,
     notes: map.notes,
+    fieldPlan: picks.fieldPlan,
     rows: map.rows,
   }
   // U+2014 is written as a JSON escape so the file holds no literal em dash; it parses back to the exact doc text.

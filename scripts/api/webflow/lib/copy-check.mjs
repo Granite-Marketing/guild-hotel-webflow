@@ -1,4 +1,5 @@
 // Copy check: decides, for each copy map row, whether staging already shows the row's new text.
+// A whole list (UL) is collected too, so a rich text stats list written as one row can be found.
 // Pure functions only: no I/O, no network. The crawl lives in copy-check-browser.mjs.
 //
 // Statuses

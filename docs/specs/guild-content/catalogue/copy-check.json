@@ -1,21 +1,21 @@
 {
- "generated": "2026-11-26T18:23:35.959Z",
+ "generated": "2026-11-26T20:11:25.905Z",
  "staging": "https://the-guild-hotel-c34e71.webflow.io",
  "summary": {
-  "done": 91,
-  "differs": 92,
-  "missing": 87,
-  "unchecked": 545,
+  "done": 259,
+  "differs": 51,
+  "missing": 26,
+  "unchecked": 479,
   "total": 815
  },
  "pages": [
   {
    "page": "/",
    "counts": {
-    "done": 21,
-    "differs": 9,
+    "done": 29,
+    "differs": 1,
     "missing": 0,
-    "unchecked": 12
+    "unchecked": 10
    },
    "rows": [
     {
@@ -75,9 +75,8 @@
      "page": "/",
      "newText": "Behind this mannered Italian Renaissance facade is a century of glamorous mischief. Today, The Guild is an icon with open arms welcoming you to the heart of contemporary San Diego.",
      "checkedOn": "/",
-     "foundText": "Behind this mannered Italian Renaissance facade is a century of glamorous mischief. Today, it’s an icon with open arms, a high-spirited destination that welcomes you to the heart of contemporary San Diego.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Homepage:13",
@@ -86,9 +85,8 @@
      "page": "/",
      "newText": "Pacific Coast Hospitality since 1924",
      "checkedOn": "/",
-     "foundText": "West Coast Hospitality since 1924",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Homepage:15",
@@ -97,9 +95,8 @@
      "page": "/",
      "newText": "As the YMCA that welcomed Army and Navy men and women, our site was San Diego’s premier gathering place. As a luxury hotel, The Guild has curated, elevated and refined the experience – but at heart, we’re still a sailor on shore leave.",
      "checkedOn": "/",
-     "foundText": "As the YMCA that welcomed Army and Navy men and women, The Guild was the city’s premier gathering place. The experience has been curated, elevated and refined – but at heart, we’re still a sailor on shore leave.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Homepage:17",
@@ -108,9 +105,8 @@
      "page": "/",
      "newText": "Dining Choices to Savor",
      "checkedOn": "/",
-     "foundText": "an unexpected resort dining experience",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Homepage:21",
@@ -141,26 +137,6 @@
      "checkedOn": "/",
      "mapStatus": "change",
      "status": "done"
-    },
-    {
-     "id": "Guild-Homepage:31",
-     "doc": "Guild-Homepage",
-     "line": 31,
-     "page": "/",
-     "newText": "Lobby Terrace",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Homepage:32",
-     "doc": "Guild-Homepage",
-     "line": 32,
-     "page": "/",
-     "newText": "Fresh Mediterranean inspiration meets the Pacific.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
     },
     {
      "id": "Guild-Homepage:33",
@@ -199,9 +175,8 @@
      "page": "/",
      "newText": "The Guild lives and breathes wellbeing, with a calendar of special events, state-of-the-art fitness club and mindful dining as inspired as it is healthy.",
      "checkedOn": "/",
-     "foundText": "Vivamus consequat tempus dolor, sed ullamcorper quam scelerisque eget. In hac habitasse platea dictumst. Etiam dapibus augue tortor, eget pharetra ex aliquam ut. Integer vel mi leo.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Homepage:41",
@@ -230,9 +205,8 @@
      "page": "/",
      "newText": "Generous comfort and stylish details.",
      "checkedOn": "/",
-     "foundText": "Generous layouts, thoughtful details, and room to make yourself at home.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Homepage:45",
@@ -281,9 +255,8 @@
      "page": "/",
      "newText": "We’ve lived here for a century. Let us show you around.",
      "checkedOn": "/",
-     "foundText": "We’ve lived here for a century; let us show you around.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Homepage:52",
@@ -342,9 +315,8 @@
      "page": "/",
      "newText": "A sharp collector’s eye brings eclectic beauty to The Guild.",
      "checkedOn": "/",
-     "foundText": "We’ve lived here for a century; let us show you around.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Homepage:60",
@@ -452,8 +424,8 @@
   {
    "page": "/arts",
    "counts": {
-    "done": 1,
-    "differs": 6,
+    "done": 5,
+    "differs": 2,
     "missing": 0,
     "unchecked": 5
    },
@@ -465,9 +437,8 @@
      "page": "/arts",
      "newText": "ART & STORIES",
      "checkedOn": "/arts",
-     "foundText": "art collection",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Arts:3",
@@ -476,9 +447,8 @@
      "page": "/arts",
      "newText": "Contemporary perspective from a landmark art collection",
      "checkedOn": "/arts",
-     "foundText": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Arts:5",
@@ -487,9 +457,8 @@
      "page": "/arts",
      "newText": "A Collector’s Eye on the City",
      "checkedOn": "/arts",
-     "foundText": "An art collectionthrough a curator’s eyes",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Arts:6",
@@ -508,9 +477,8 @@
      "page": "/arts",
      "newText": "Our curated collection of sculpture, painting and objects by local and international artists brings the stories, materials and textures of San Diego to vivid life.",
      "checkedOn": "/arts",
-     "foundText": "Paintings, photography and sculpture by San Diego artists, chosen for The Guild and shown in its halls, rooms and public spaces.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Arts:11",
@@ -519,7 +487,7 @@
      "page": "/arts",
      "newText": "Openings, events, music and tours – our art is alive, and you’re invited to be part of it.",
      "checkedOn": "/arts",
-     "foundText": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+     "foundText": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehiculalacus.",
      "mapStatus": "change",
      "status": "differs"
     },
@@ -589,9 +557,9 @@
   {
    "page": "/beyond-downtown-places/*",
    "counts": {
-    "done": 2,
+    "done": 4,
     "differs": 0,
-    "missing": 2,
+    "missing": 0,
     "unchecked": 0
    },
    "rows": [
@@ -613,7 +581,7 @@
      "newText": "The Coronado beaches and town are a postcard destination, with sparkling mica sands – the mica does that – and endless possibilities, from touring the canals to surfing and bodysurfing, soaking in tide pools, swimming in calm waters, or wandering for miles along the Pacific.",
      "checkedOn": "/neighborhood",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Neighborhood:31",
@@ -633,15 +601,15 @@
      "newText": "Just 38 miles north of San Diego, Oceanside is the quintessential California beach town, with a 2,000-foot-long wooden pier where you can fish, enjoy the sunset or watch surfers. There’s a surf museum, a Thursday Sunset Market, and landmarks like the Mission San Luis Rey de Francia. Of course, you’ll also find the perfect spot to sunbathe or go for a swim.",
      "checkedOn": "/neighborhood",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     }
    ]
   },
   {
    "page": "/blog",
    "counts": {
-    "done": 0,
-    "differs": 4,
+    "done": 4,
+    "differs": 0,
     "missing": 0,
     "unchecked": 4
    },
@@ -653,9 +621,8 @@
      "page": "/blog",
      "newText": "THE GUILD BLOG",
      "checkedOn": "/blog",
-     "foundText": "blog",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-BlogCollection:4",
@@ -664,9 +631,8 @@
      "page": "/blog",
      "newText": "Dive deep into the ever-evolving worlds of San Diego.",
      "checkedOn": "/blog",
-     "foundText": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-BlogCollection:6",
@@ -675,9 +641,8 @@
      "page": "/blog",
      "newText": "City secrets for better stays",
      "checkedOn": "/blog",
-     "foundText": "What’s onin San Diego",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-BlogCollection:8",
@@ -686,9 +651,8 @@
      "page": "/blog",
      "newText": "Our blog makes you a Guild insider, taking you into our kitchens, behind our bars and deep into San Diego city life. Come explore with us.",
      "checkedOn": "/blog",
-     "foundText": "Stories from The Guild on where to eat, what to see and the people who make downtown San Diego worth the trip.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "no-copy:/blog:prop|a0cf1b8c-6599-1aeb-0aad-3babaa7eef51|1d51ffaa-b237-52c1-951e-bb304412e000",
@@ -756,8 +720,8 @@
   {
    "page": "/dining",
    "counts": {
-    "done": 0,
-    "differs": 4,
+    "done": 4,
+    "differs": 0,
     "missing": 0,
     "unchecked": 10
    },
@@ -769,9 +733,8 @@
      "page": "/dining",
      "newText": "The Many Pleasures of Guild Dining",
      "checkedOn": "/dining",
-     "foundText": "a taste of the guild",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Dining-Collection:4",
@@ -790,9 +753,8 @@
      "page": "/dining",
      "newText": "A world of invention, craft and sophisticated menus.",
      "checkedOn": "/dining",
-     "foundText": "A world of invention, craft and sophisticated pleasures",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Dining-Collection:7",
@@ -821,9 +783,8 @@
      "page": "/dining",
      "newText": "First Sips, Small Bites, and Big Nights Out",
      "checkedOn": "/dining",
-     "foundText": "First sips, small bites& big nights out.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Dining-Collection:13",
@@ -832,9 +793,8 @@
      "page": "/dining",
      "newText": "Dining at The Guild is an invitation to slow down and savor the experience. The Lobby Bar knows both classics and off-menu elixirs. California’s first Zuma serves up the sushi and robata that have made it a destination from London to Miami, Vail to Abu Dhabi. Poolside is the place for West Coast goodness, and the Mediterranean influences daytime offerings at The Garden Terrace.",
      "checkedOn": "/dining",
-     "foundText": "For visitors and locals, Guild dining is a journey, an invitation to to savor our worlds. The Lobby Bar knows its classics from its off-menu surprises. California’s first Zuma serves up the sushi and robata that have made it an international standard-setter from London to Miami, Vail to Abu Dhabi. Poolside, there’s always fresh, easy West Coast goodness, and the Mediterranean influences daytime offerings in The Courtyard.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "no-copy:/dining:page|bc47227e-9d74-450e-8c2c-4c793ea59808",
@@ -913,270 +873,10 @@
    "counts": {
     "done": 6,
     "differs": 0,
-    "missing": 18,
-    "unchecked": 8
+    "missing": 2,
+    "unchecked": 0
    },
    "rows": [
-    {
-     "id": "Guild-Dining-GardenTerrace:2",
-     "doc": "Guild-Dining-GardenTerrace",
-     "line": 2,
-     "page": "/dining/*",
-     "newText": "GARDEN TERRACE",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "done"
-    },
-    {
-     "id": "Guild-Dining-GardenTerrace:3",
-     "doc": "Guild-Dining-GardenTerrace",
-     "line": 3,
-     "page": "/dining/*",
-     "newText": "A leafy shelter for all-day alfresco dining.",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-GardenTerrace:5",
-     "doc": "Guild-Dining-GardenTerrace",
-     "line": 5,
-     "page": "/dining/*",
-     "newText": "FRESH AIR MEETS INSPIRED FLAVOR",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-GardenTerrace:6",
-     "doc": "Guild-Dining-GardenTerrace",
-     "line": 6,
-     "page": "/dining/*",
-     "newText": "The Garden Terrace brings the carefully prepared menu of the Lobby Bar into the breezy, shaded quiet of the courtyard. Generous breakfasts, from Buttermilk Pancakes and smoothies to Grand Slams, the king of morning offerings. Lunches, sharables and bites of all kinds nourish throughout the day.\n\nPeruse the drinks menu and start with a latte: Rose, Cardamom and Sesame would start the day on a creative footing. Société Brewing’s Pupil IPA cools the afternoon, and a proper Mezcal margarita kickstarts the night.",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-GardenTerrace:8",
-     "doc": "Guild-Dining-GardenTerrace",
-     "line": 8,
-     "page": "/dining/*",
-     "newText": "Peruse the drinks menu and start with a latte: Rose, Cardamom and Sesame would start the day on a creative footing. Société Brewing’s Pupil IPA cools the afternoon, and a proper Mezcal margarita kickstarts the night.",
-     "reason": "joined into 6: the head row carries the composed text",
-     "mapStatus": "change",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Dining-GardenTerrace:11",
-     "doc": "Guild-Dining-GardenTerrace",
-     "line": 11,
-     "page": "/dining/*",
-     "newText": "About the Space",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Dining-GardenTerrace:12",
-     "doc": "Guild-Dining-GardenTerrace",
-     "line": 12,
-     "page": "/dining/*",
-     "newText": "Lush plantings, textured materials and carefully composed lighting make the Garden Terrace a calm retreat in which to start the day.\n\nAs in the original YMCA, the terrace offers a balance between community and sanctuary. Have it your way.",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-GardenTerrace:14",
-     "doc": "Guild-Dining-GardenTerrace",
-     "line": 14,
-     "page": "/dining/*",
-     "newText": "As in the original YMCA, the terrace offers a balance between community and sanctuary. Have it your way.",
-     "reason": "joined into 12: the head row carries the composed text",
-     "mapStatus": "change",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Dining-GardenTerrace:17",
-     "doc": "Guild-Dining-GardenTerrace",
-     "line": 17,
-     "page": "/dining/*",
-     "newText": "Bring friends, colleagues and networking opportunities to the Garden Terrace. You, your friends and company can reserve part of the space for yourselves, or organize a full buyout.",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-LobbyBar:2",
-     "doc": "Guild-Dining-LobbyBar",
-     "line": 2,
-     "page": "/dining/*",
-     "newText": "LOBBY BAR",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "done"
-    },
-    {
-     "id": "Guild-Dining-LobbyBar:3",
-     "doc": "Guild-Dining-LobbyBar",
-     "line": 3,
-     "page": "/dining/*",
-     "newText": "From breakfast ‘til late, you’ll find eats, drinks and comfortable conviviality",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-LobbyBar:5",
-     "doc": "Guild-Dining-LobbyBar",
-     "line": 5,
-     "page": "/dining/*",
-     "newText": "HEART OF THE GUILD",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-LobbyBar:6",
-     "doc": "Guild-Dining-LobbyBar",
-     "line": 6,
-     "page": "/dining/*",
-     "newText": "From early evening til nightcaps and all the Pandan Lattes, Wagyu Smash Burgers and Carajillos in between, the Lobby Bar is The Guild’s premier gathering place. The bar program, mentored by Dushan Zaric – founder of the acclaimed Employees Only – celebrates craftsmanship, quality and creativity. The all-day dining runs the gamut of healthy choices and temptations.",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-LobbyBar:8",
-     "doc": "Guild-Dining-LobbyBar",
-     "line": 8,
-     "page": "/dining/*",
-     "newText": "CHOICE BITS",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Dining-LobbyBar:9",
-     "doc": "Guild-Dining-LobbyBar",
-     "line": 9,
-     "page": "/dining/*",
-     "newText": "Late night? You might need a Bloody Bull and a Brûléed French Toast. If comfort food calls at lunch, the Fried Chicken Sandwich or Grilled Cheese come to mind. Sharables will get the evening going, and if you like to get lost in a vast menu of Bourbon, Tequila or Scotch, you’re in the right place.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Dining-LobbyBar:11",
-     "doc": "Guild-Dining-LobbyBar",
-     "line": 11,
-     "page": "/dining/*",
-     "newText": "EXPLORE THE SPACE",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Dining-LobbyBar:12",
-     "doc": "Guild-Dining-LobbyBar",
-     "line": 12,
-     "page": "/dining/*",
-     "newText": "When Inc. Architects designed the Lobby Bar, they moved from the bright welcome of the reception toward darker finishes and materials that define the bar as the social heart of the hotel. The Lobby Bar is an intimate, comfortably social setting – a space with a distinct, unmistakable identity.",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-LobbyBar:15",
-     "doc": "Guild-Dining-LobbyBar",
-     "line": 15,
-     "page": "/dining/*",
-     "newText": "Bring friends, colleagues and networking opportunities to the Lobby Bar. You, your friends and company can reserve part of the space for yourselves, or organize a full buyout.",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-PoolLounge:2",
-     "doc": "Guild-Dining-PoolLounge",
-     "line": 2,
-     "page": "/dining/*",
-     "newText": "POOL LOUNGE",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "done"
-    },
-    {
-     "id": "Guild-Dining-PoolLounge:3",
-     "doc": "Guild-Dining-PoolLounge",
-     "line": 3,
-     "page": "/dining/*",
-     "newText": "Hotel becomes resort at the sunny center of Guild life.",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-PoolLounge:5",
-     "doc": "Guild-Dining-PoolLounge",
-     "line": 5,
-     "page": "/dining/*",
-     "newText": "THE WATER’S FINE",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-PoolLounge:6",
-     "doc": "Guild-Dining-PoolLounge",
-     "line": 6,
-     "page": "/dining/*",
-     "newText": "Poolside life is best enjoyed with good friends and fabulous snacks. Our pool menu is hot, cold and satisfying, ranging from Watermelon Salad to Tacos de Jamaica, soft serve and beyond. Pull up a lounger and spend the afternoon.\n\nThe Guild’s new Pool Lounge offers the best of many worlds – a buzzy social scene and a retreat from the city beyond our walls. Dip into cool calm in the morning. Wade into the action in the afternoon.",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-PoolLounge:8",
-     "doc": "Guild-Dining-PoolLounge",
-     "line": 8,
-     "page": "/dining/*",
-     "newText": "The Guild’s new Pool Lounge offers the best of many worlds – a buzzy social scene and a retreat from the city beyond our walls. Dip into cool calm in the morning. Wade into the action in the afternoon.",
-     "reason": "joined into 6: the head row carries the composed text",
-     "mapStatus": "change",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Dining-PoolLounge:10",
-     "doc": "Guild-Dining-PoolLounge",
-     "line": 10,
-     "page": "/dining/*",
-     "newText": "ABOUT THE SPACE",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Dining-PoolLounge:11",
-     "doc": "Guild-Dining-PoolLounge",
-     "line": 11,
-     "page": "/dining/*",
-     "newText": "The Pool lounge is an urban haven and a comfortably chic gathering place from sunup until moonlight. The pool’s turquoise waters are framed by luxurious loungers, and high design wooden walls provide privacy. San Diego’s on your doorstep, but you’re a world away.",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
-    {
-     "id": "Guild-Dining-PoolLounge:14",
-     "doc": "Guild-Dining-PoolLounge",
-     "line": 14,
-     "page": "/dining/*",
-     "newText": "Bring friends, colleagues and networking opportunities to the Pool Lounge. You, your friends and company can reserve part of the space for yourselves, or organize a full buyout.",
-     "checkedOn": "/dining",
-     "mapStatus": "change",
-     "status": "missing"
-    },
     {
      "id": "Guild-Homepage:23",
      "doc": "Guild-Homepage",
@@ -1185,7 +885,7 @@
      "newText": "The Lobby Bar",
      "checkedOn": "/dining",
      "mapStatus": "same",
-     "status": "done"
+     "status": "missing"
     },
     {
      "id": "Guild-Homepage:24",
@@ -1195,7 +895,7 @@
      "newText": "Cocktail classics and surprises for connoisseurs",
      "checkedOn": "/dining",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Homepage:27",
@@ -1215,7 +915,27 @@
      "newText": "Our new pool serves up cool drinks and sunny socializing.",
      "checkedOn": "/dining",
      "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Homepage:31",
+     "doc": "Guild-Homepage",
+     "line": 31,
+     "page": "/dining/*",
+     "newText": "Lobby Terrace",
+     "checkedOn": "/dining",
+     "mapStatus": "same",
      "status": "missing"
+    },
+    {
+     "id": "Guild-Homepage:32",
+     "doc": "Guild-Homepage",
+     "line": 32,
+     "page": "/dining/*",
+     "newText": "Fresh Mediterranean inspiration meets the Pacific.",
+     "checkedOn": "/dining",
+     "mapStatus": "change",
+     "status": "done"
     },
     {
      "id": "Guild-Homepage:35",
@@ -1235,17 +955,310 @@
      "newText": "Artful brews the way you love them. Exclusive local roasts.",
      "checkedOn": "/dining",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
+    }
+   ]
+  },
+  {
+   "page": "/dining/dining-gardenterrace",
+   "counts": {
+    "done": 6,
+    "differs": 0,
+    "missing": 0,
+    "unchecked": 3
+   },
+   "rows": [
+    {
+     "id": "Guild-Dining-GardenTerrace:2",
+     "doc": "Guild-Dining-GardenTerrace",
+     "line": 2,
+     "page": "/dining/dining-gardenterrace",
+     "newText": "GARDEN TERRACE",
+     "checkedOn": "/dining/dining-gardenterrace",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-GardenTerrace:3",
+     "doc": "Guild-Dining-GardenTerrace",
+     "line": 3,
+     "page": "/dining/dining-gardenterrace",
+     "newText": "A leafy shelter for all-day alfresco dining.",
+     "checkedOn": "/dining/dining-gardenterrace",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-GardenTerrace:5",
+     "doc": "Guild-Dining-GardenTerrace",
+     "line": 5,
+     "page": "/dining/dining-gardenterrace",
+     "newText": "FRESH AIR MEETS INSPIRED FLAVOR",
+     "checkedOn": "/dining/dining-gardenterrace",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-GardenTerrace:6",
+     "doc": "Guild-Dining-GardenTerrace",
+     "line": 6,
+     "page": "/dining/dining-gardenterrace",
+     "newText": "The Garden Terrace brings the carefully prepared menu of the Lobby Bar into the breezy, shaded quiet of the courtyard. Generous breakfasts, from Buttermilk Pancakes and smoothies to Grand Slams, the king of morning offerings. Lunches, sharables and bites of all kinds nourish throughout the day.\n\nPeruse the drinks menu and start with a latte: Rose, Cardamom and Sesame would start the day on a creative footing. Société Brewing’s Pupil IPA cools the afternoon, and a proper Mezcal margarita kickstarts the night.",
+     "checkedOn": "/dining/dining-gardenterrace",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-GardenTerrace:8",
+     "doc": "Guild-Dining-GardenTerrace",
+     "line": 8,
+     "page": "/dining/dining-gardenterrace",
+     "newText": "Peruse the drinks menu and start with a latte: Rose, Cardamom and Sesame would start the day on a creative footing. Société Brewing’s Pupil IPA cools the afternoon, and a proper Mezcal margarita kickstarts the night.",
+     "reason": "joined into 6: the head row carries the composed text",
+     "mapStatus": "change",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Dining-GardenTerrace:11",
+     "doc": "Guild-Dining-GardenTerrace",
+     "line": 11,
+     "page": "/dining/dining-gardenterrace",
+     "newText": "About the Space",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Dining-GardenTerrace:12",
+     "doc": "Guild-Dining-GardenTerrace",
+     "line": 12,
+     "page": "/dining/dining-gardenterrace",
+     "newText": "Lush plantings, textured materials and carefully composed lighting make the Garden Terrace a calm retreat in which to start the day.\n\nAs in the original YMCA, the terrace offers a balance between community and sanctuary. Have it your way.",
+     "checkedOn": "/dining/dining-gardenterrace",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-GardenTerrace:14",
+     "doc": "Guild-Dining-GardenTerrace",
+     "line": 14,
+     "page": "/dining/dining-gardenterrace",
+     "newText": "As in the original YMCA, the terrace offers a balance between community and sanctuary. Have it your way.",
+     "reason": "joined into 12: the head row carries the composed text",
+     "mapStatus": "change",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Dining-GardenTerrace:17",
+     "doc": "Guild-Dining-GardenTerrace",
+     "line": 17,
+     "page": "/dining/dining-gardenterrace",
+     "newText": "Bring friends, colleagues and networking opportunities to the Garden Terrace. You, your friends and company can reserve part of the space for yourselves, or organize a full buyout.",
+     "checkedOn": "/dining/dining-gardenterrace",
+     "mapStatus": "change",
+     "status": "done"
+    }
+   ]
+  },
+  {
+   "page": "/dining/dining-lobbybar",
+   "counts": {
+    "done": 6,
+    "differs": 0,
+    "missing": 0,
+    "unchecked": 3
+   },
+   "rows": [
+    {
+     "id": "Guild-Dining-LobbyBar:2",
+     "doc": "Guild-Dining-LobbyBar",
+     "line": 2,
+     "page": "/dining/dining-lobbybar",
+     "newText": "LOBBY BAR",
+     "checkedOn": "/dining/dining-lobbybar",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-LobbyBar:3",
+     "doc": "Guild-Dining-LobbyBar",
+     "line": 3,
+     "page": "/dining/dining-lobbybar",
+     "newText": "From breakfast ‘til late, you’ll find eats, drinks and comfortable conviviality",
+     "checkedOn": "/dining/dining-lobbybar",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-LobbyBar:5",
+     "doc": "Guild-Dining-LobbyBar",
+     "line": 5,
+     "page": "/dining/dining-lobbybar",
+     "newText": "HEART OF THE GUILD",
+     "checkedOn": "/dining/dining-lobbybar",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-LobbyBar:6",
+     "doc": "Guild-Dining-LobbyBar",
+     "line": 6,
+     "page": "/dining/dining-lobbybar",
+     "newText": "From early evening til nightcaps and all the Pandan Lattes, Wagyu Smash Burgers and Carajillos in between, the Lobby Bar is The Guild’s premier gathering place. The bar program, mentored by Dushan Zaric – founder of the acclaimed Employees Only – celebrates craftsmanship, quality and creativity. The all-day dining runs the gamut of healthy choices and temptations.",
+     "checkedOn": "/dining/dining-lobbybar",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-LobbyBar:8",
+     "doc": "Guild-Dining-LobbyBar",
+     "line": 8,
+     "page": "/dining/dining-lobbybar",
+     "newText": "CHOICE BITS",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Dining-LobbyBar:9",
+     "doc": "Guild-Dining-LobbyBar",
+     "line": 9,
+     "page": "/dining/dining-lobbybar",
+     "newText": "Late night? You might need a Bloody Bull and a Brûléed French Toast. If comfort food calls at lunch, the Fried Chicken Sandwich or Grilled Cheese come to mind. Sharables will get the evening going, and if you like to get lost in a vast menu of Bourbon, Tequila or Scotch, you’re in the right place.",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Dining-LobbyBar:11",
+     "doc": "Guild-Dining-LobbyBar",
+     "line": 11,
+     "page": "/dining/dining-lobbybar",
+     "newText": "EXPLORE THE SPACE",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Dining-LobbyBar:12",
+     "doc": "Guild-Dining-LobbyBar",
+     "line": 12,
+     "page": "/dining/dining-lobbybar",
+     "newText": "When Inc. Architects designed the Lobby Bar, they moved from the bright welcome of the reception toward darker finishes and materials that define the bar as the social heart of the hotel. The Lobby Bar is an intimate, comfortably social setting – a space with a distinct, unmistakable identity.",
+     "checkedOn": "/dining/dining-lobbybar",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-LobbyBar:15",
+     "doc": "Guild-Dining-LobbyBar",
+     "line": 15,
+     "page": "/dining/dining-lobbybar",
+     "newText": "Bring friends, colleagues and networking opportunities to the Lobby Bar. You, your friends and company can reserve part of the space for yourselves, or organize a full buyout.",
+     "checkedOn": "/dining/dining-lobbybar",
+     "mapStatus": "change",
+     "status": "done"
+    }
+   ]
+  },
+  {
+   "page": "/dining/dining-poollounge",
+   "counts": {
+    "done": 6,
+    "differs": 0,
+    "missing": 0,
+    "unchecked": 2
+   },
+   "rows": [
+    {
+     "id": "Guild-Dining-PoolLounge:2",
+     "doc": "Guild-Dining-PoolLounge",
+     "line": 2,
+     "page": "/dining/dining-poollounge",
+     "newText": "POOL LOUNGE",
+     "checkedOn": "/dining/dining-poollounge",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-PoolLounge:3",
+     "doc": "Guild-Dining-PoolLounge",
+     "line": 3,
+     "page": "/dining/dining-poollounge",
+     "newText": "Hotel becomes resort at the sunny center of Guild life.",
+     "checkedOn": "/dining/dining-poollounge",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-PoolLounge:5",
+     "doc": "Guild-Dining-PoolLounge",
+     "line": 5,
+     "page": "/dining/dining-poollounge",
+     "newText": "THE WATER’S FINE",
+     "checkedOn": "/dining/dining-poollounge",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-PoolLounge:6",
+     "doc": "Guild-Dining-PoolLounge",
+     "line": 6,
+     "page": "/dining/dining-poollounge",
+     "newText": "Poolside life is best enjoyed with good friends and fabulous snacks. Our pool menu is hot, cold and satisfying, ranging from Watermelon Salad to Tacos de Jamaica, soft serve and beyond. Pull up a lounger and spend the afternoon.\n\nThe Guild’s new Pool Lounge offers the best of many worlds – a buzzy social scene and a retreat from the city beyond our walls. Dip into cool calm in the morning. Wade into the action in the afternoon.",
+     "checkedOn": "/dining/dining-poollounge",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-PoolLounge:8",
+     "doc": "Guild-Dining-PoolLounge",
+     "line": 8,
+     "page": "/dining/dining-poollounge",
+     "newText": "The Guild’s new Pool Lounge offers the best of many worlds – a buzzy social scene and a retreat from the city beyond our walls. Dip into cool calm in the morning. Wade into the action in the afternoon.",
+     "reason": "joined into 6: the head row carries the composed text",
+     "mapStatus": "change",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Dining-PoolLounge:10",
+     "doc": "Guild-Dining-PoolLounge",
+     "line": 10,
+     "page": "/dining/dining-poollounge",
+     "newText": "ABOUT THE SPACE",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Dining-PoolLounge:11",
+     "doc": "Guild-Dining-PoolLounge",
+     "line": 11,
+     "page": "/dining/dining-poollounge",
+     "newText": "The Pool lounge is an urban haven and a comfortably chic gathering place from sunup until moonlight. The pool’s turquoise waters are framed by luxurious loungers, and high design wooden walls provide privacy. San Diego’s on your doorstep, but you’re a world away.",
+     "checkedOn": "/dining/dining-poollounge",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Dining-PoolLounge:14",
+     "doc": "Guild-Dining-PoolLounge",
+     "line": 14,
+     "page": "/dining/dining-poollounge",
+     "newText": "Bring friends, colleagues and networking opportunities to the Pool Lounge. You, your friends and company can reserve part of the space for yourselves, or organize a full buyout.",
+     "checkedOn": "/dining/dining-poollounge",
+     "mapStatus": "change",
+     "status": "done"
     }
    ]
   },
   {
    "page": "/dining/dining-zuma",
    "counts": {
-    "done": 3,
-    "differs": 1,
-    "missing": 6,
-    "unchecked": 10
+    "done": 9,
+    "differs": 2,
+    "missing": 0,
+    "unchecked": 9
    },
    "rows": [
     {
@@ -1254,7 +1267,7 @@
      "line": 16,
      "page": "/dining/dining-zuma",
      "newText": "Group Dining & Events",
-     "checkedOn": "/dining/dining-zuma",
+     "checkedOn": "/dining/dining-gardenterrace",
      "mapStatus": "change",
      "status": "done"
     },
@@ -1264,7 +1277,7 @@
      "line": 14,
      "page": "/dining/dining-zuma",
      "newText": "GROUP DINING AND EVENTS",
-     "checkedOn": "/dining/dining-zuma",
+     "checkedOn": "/dining/dining-lobbybar",
      "foundText": "group dining & events",
      "mapStatus": "change",
      "status": "differs"
@@ -1275,9 +1288,10 @@
      "line": 13,
      "page": "/dining/dining-zuma",
      "newText": "GROUP DINING AND EVENTS",
-     "reason": "duplicate of Guild-Dining-LobbyBar:14",
+     "checkedOn": "/dining/dining-poollounge",
+     "foundText": "group dining & events",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "differs"
     },
     {
      "id": "Guild-Dining-Zuma:2",
@@ -1297,7 +1311,7 @@
      "newText": "Welcome to the deliciously glamorous energy of California’s first Zuma",
      "checkedOn": "/dining/dining-zuma",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Dining-Zuma:6",
@@ -1307,7 +1321,7 @@
      "newText": "CONTEMPORARY JAPANESE IZAKAYA",
      "checkedOn": "/dining/dining-zuma",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Dining-Zuma:8",
@@ -1317,7 +1331,7 @@
      "newText": "Zuma is a feast for the senses: the open kitchen, sushi counter and robata grill turn out showstopping black cod, pork belly skewers, sea bass sashimi with yuzu, salmon roe and truffle. Try a signature dish – Condé Nast Traveler suggests the “rice hotpot with wild mushrooms and Japanese vegetables, or roasted lobster with shiso-ponzu butter”. Peruse the menu of imaginative craft cocktails, too; your new favorite drink is there.\n\nZuma has become a destination for sophisticated Japanese dining around the globe, a high-energy gathering place that celebrates the joys of sharing, tasting and conversation. From its origins in Knightsbridge, London, Zuma has conquered the world with a mix of polished glamor and spectacular flavors.",
      "checkedOn": "/dining/dining-zuma",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Dining-Zuma:10",
@@ -1347,7 +1361,7 @@
      "newText": "You’ve been waiting to get dressed up. Please leave flip-flops, activewear and sweats in your room.",
      "checkedOn": "/dining/dining-zuma",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Dining-Zuma:15",
@@ -1377,7 +1391,7 @@
      "newText": "Your arrival at Zuma, through an airy, sculptural walkway framed in monkey pod wood from Thailand, is a one-of-a-kind taste of things to come. Our iconic illuminated sign and a textured boulder wall welcome you to a garden terrace framed by a wooden pergola and sheltered from the street. Everywhere, coastal influences and the rich hues of the San Diego sunset. There is only one Zuma. In California, it’s at The Guild.",
      "checkedOn": "/dining/dining-zuma",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Homepage:19",
@@ -1397,7 +1411,7 @@
      "newText": "The worldly sophistication of California’s first Zuma",
      "checkedOn": "/dining/dining-zuma",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "no-copy:/dining/dining-zuma:page|0e4e930a-4e95-d631-c189-a64afb526d7a",
@@ -1454,8 +1468,8 @@
   {
    "page": "/gallery",
    "counts": {
-    "done": 0,
-    "differs": 2,
+    "done": 2,
+    "differs": 0,
     "missing": 0,
     "unchecked": 3
    },
@@ -1467,9 +1481,8 @@
      "page": "/gallery",
      "newText": "THE GUILD GALLERY",
      "checkedOn": "/gallery",
-     "foundText": "gallery",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Gallery:3",
@@ -1478,9 +1491,8 @@
      "page": "/gallery",
      "newText": "The Guild is beautiful from every angle. Come in and look around.",
      "checkedOn": "/gallery",
-     "foundText": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "no-copy:/gallery:prop|b25f0f77-8f68-ab47-c317-7bfe510fe70d|904cb47f-1b96-e29c-fad1-dc7ea9ccccef",
@@ -1517,8 +1529,8 @@
   {
    "page": "/happenings",
    "counts": {
-    "done": 1,
-    "differs": 3,
+    "done": 3,
+    "differs": 1,
     "missing": 0,
     "unchecked": 4
    },
@@ -1551,9 +1563,8 @@
      "page": "/happenings",
      "newText": "Unmissable and Unforgettable",
      "checkedOn": "/happenings",
-     "foundText": "What’s onin San Diego",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-HappeningsCollection:8",
@@ -1562,9 +1573,8 @@
      "page": "/happenings",
      "newText": "The Guild is the social hub and heart of downtown, and we’re cheerleaders and supporters of our dining, partying and cultural communities.",
      "checkedOn": "/happenings",
-     "foundText": "Events, tastings and tours at The Guild and around downtown San Diego, updated as each season changes.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "no-copy:/happenings:prop|a0cf1b8c-6599-1aeb-0aad-3babaa7eef51|1d51ffaa-b237-52c1-951e-bb304412e000",
@@ -1611,8 +1621,8 @@
   {
    "page": "/history",
    "counts": {
-    "done": 20,
-    "differs": 4,
+    "done": 24,
+    "differs": 0,
     "missing": 0,
     "unchecked": 8
    },
@@ -1634,9 +1644,8 @@
      "page": "/history",
      "newText": "As a historic YMCA and now The Guild, our destination has been the social heart of San Diego since 1924",
      "checkedOn": "/history",
-     "foundText": "As a historic YMCA and now The Guild, our destination has been the social heart of San Diego since 1924.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-History:5",
@@ -1675,9 +1684,8 @@
      "page": "/history",
      "newText": "George Marston, The Founder",
      "checkedOn": "/history",
-     "foundText": "George Marston",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-History:11",
@@ -1696,9 +1704,8 @@
      "page": "/history",
      "newText": "“Once Opened, Never Closed”",
      "checkedOn": "/history",
-     "foundText": "“Once Opened, Never Closed”.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-History:14",
@@ -1867,9 +1874,8 @@
      "page": "/history",
      "newText": "INC Architecture brought depth, material richness, and careful attention to craft to the rejuvenation of The Guild. The result is a destination that feels inseparable from its neighborhood, its history, and its future.",
      "checkedOn": "/history",
-     "foundText": "INC Architecture interpreted rather than replicated historical references in the hotel, bringing depth, material richness, and careful attention to craft to the rejuvenation of The Guild. The result is a destination that feels inseparable from its neighborhood, its history, and its future.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-History:38",
@@ -1944,83 +1950,12 @@
    ]
   },
   {
-   "page": "/legal-corporate/*",
-   "counts": {
-    "done": 0,
-    "differs": 0,
-    "missing": 0,
-    "unchecked": 6
-   },
-   "rows": [
-    {
-     "id": "Guild-Legal:2",
-     "doc": "Guild-Legal",
-     "line": 2,
-     "page": "/legal-corporate/*",
-     "newText": "Secure Comfort for Legal Teams",
-     "reason": "CMS item has no item page and no listing page to check",
-     "mapStatus": "change",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Legal:3",
-     "doc": "Guild-Legal",
-     "line": 3,
-     "page": "/legal-corporate/*",
-     "newText": "Space and privacy minutes from San Diego’s Superior and Federal Courthouses",
-     "reason": "CMS item has no item page and no listing page to check",
-     "mapStatus": "change",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Legal:5",
-     "doc": "Guild-Legal",
-     "line": 5,
-     "page": "/legal-corporate/*",
-     "newText": "Tailored Solutions for Firms",
-     "reason": "CMS item has no item page and no listing page to check",
-     "mapStatus": "change",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Legal:7",
-     "doc": "Guild-Legal",
-     "line": 7,
-     "page": "/legal-corporate/*",
-     "newText": "When your law firm needs a calm, focused environment for productivity, The Guild provides premium service, discreet accommodations, secure meeting spaces and full-floor buyouts – all within walking distance of every major downtown courthouse.",
-     "reason": "CMS item has no item page and no listing page to check",
-     "mapStatus": "change",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Legal:39",
-     "doc": "Guild-Legal",
-     "line": 39,
-     "page": "/legal-corporate/*",
-     "newText": "DESIGNED FOR FOCUSED, CONFIDENTIAL WORK",
-     "reason": "CMS item has no item page and no listing page to check",
-     "mapStatus": "change",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Legal:40",
-     "doc": "Guild-Legal",
-     "line": 40,
-     "page": "/legal-corporate/*",
-     "newText": "Discreet, high-performance spaces tailored to the demands of legal professionals",
-     "reason": "CMS item has no item page and no listing page to check",
-     "mapStatus": "change",
-     "status": "unchecked"
-    }
-   ]
-  },
-  {
    "page": "/legal-corporate/corporate",
    "counts": {
-    "done": 5,
-    "differs": 7,
-    "missing": 4,
-    "unchecked": 45
+    "done": 14,
+    "differs": 5,
+    "missing": 0,
+    "unchecked": 42
    },
    "rows": [
     {
@@ -2030,9 +1965,8 @@
      "page": "/legal-corporate/corporate",
      "newText": "Offsites for Corporate Teams",
      "checkedOn": "/legal-corporate/corporate",
-     "foundText": "retreat for corporate teams",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Corporate:3",
@@ -2042,7 +1976,7 @@
      "newText": "Inspiring spaces for optimum productivity",
      "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Corporate:5",
@@ -2051,9 +1985,8 @@
      "page": "/legal-corporate/corporate",
      "newText": "Upgrade Your Offsite",
      "checkedOn": "/legal-corporate/corporate",
-     "foundText": "Refined focus, unmatched convenience.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Corporate:7",
@@ -2063,7 +1996,7 @@
      "newText": "The Guild has mastered the art and science of helping corporate teams work comfortably and efficiently during long days of meetings. After hours, you’ll adjourn to the Lobby Bar, The Courtyard or Pool Lounge. And because your team’s worth it, have dinner at California’s only Zuma.",
      "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Corporate:9",
@@ -2245,7 +2178,7 @@
      "newText": "DESIGNED FOR FOCUSED WORK",
      "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Corporate:51",
@@ -2255,7 +2188,7 @@
      "newText": "Smart, high-performance spaces tailored to the demands of corporate professionals",
      "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Corporate:53",
@@ -2363,7 +2296,7 @@
      "doc": "Guild-Corporate",
      "line": 79,
      "page": "/legal-corporate/corporate",
-     "newText": "The Guild offers privacy for meetings on the doorstep of every important attraction",
+     "newText": "The Guild offers privacy for meetings on the doorstep of every important attraction and city business.",
      "checkedOn": "/legal-corporate/corporate",
      "foundText": "Four courthouses sit within a short walk of The Guild, so your team can move between hearings, prep sessions and the hotel in minutes.",
      "mapStatus": "change",
@@ -2375,8 +2308,8 @@
      "line": 80,
      "page": "/legal-corporate/corporate",
      "newText": "and city business.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
+     "reason": "joined into 79: the head row carries the composed text",
+     "mapStatus": "change",
      "status": "unchecked"
     },
     {
@@ -2385,9 +2318,9 @@
      "line": 9,
      "page": "/legal-corporate/corporate",
      "newText": "KEY FEATURES",
-     "reason": "duplicate of Guild-Corporate:12",
+     "checkedOn": "/legal-corporate/legal",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Legal:12",
@@ -2395,9 +2328,9 @@
      "line": 12,
      "page": "/legal-corporate/corporate",
      "newText": "WHY TEAMS CHOOSE THE GUILD",
-     "reason": "duplicate of Guild-Corporate:23",
+     "checkedOn": "/legal-corporate/legal",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Legal:15",
@@ -2525,9 +2458,9 @@
      "line": 56,
      "page": "/legal-corporate/corporate",
      "newText": "Discover More",
-     "reason": "duplicate of Guild-Corporate:67",
+     "checkedOn": "/legal-corporate/legal",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Legal:67",
@@ -2535,7 +2468,7 @@
      "line": 67,
      "page": "/legal-corporate/corporate",
      "newText": "Steps From Key Legal Addresses",
-     "checkedOn": "/legal-corporate/corporate",
+     "checkedOn": "/legal-corporate/legal",
      "mapStatus": "change",
      "status": "done"
     },
@@ -2544,8 +2477,8 @@
      "doc": "Guild-Legal",
      "line": 68,
      "page": "/legal-corporate/corporate",
-     "newText": "The Guild is the right place to prepare, and it puts your team",
-     "checkedOn": "/legal-corporate/corporate",
+     "newText": "The Guild is the right place to prepare, and it puts your team minutes from everywhere you need to be during trials.",
+     "checkedOn": "/legal-corporate/legal",
      "foundText": "Four courthouses sit within a short walk of The Guild, so your team can move between hearings, prep sessions and the hotel in minutes.",
      "mapStatus": "change",
      "status": "differs"
@@ -2556,8 +2489,8 @@
      "line": 69,
      "page": "/legal-corporate/corporate",
      "newText": "minutes from everywhere you need to be during trials.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
+     "reason": "joined into 68: the head row carries the composed text",
+     "mapStatus": "change",
      "status": "unchecked"
     },
     {
@@ -2643,12 +2576,83 @@
    ]
   },
   {
-   "page": "/meeting-venues/*",
+   "page": "/legal-corporate/legal",
    "counts": {
     "done": 6,
     "differs": 0,
-    "missing": 16,
-    "unchecked": 30
+    "missing": 0,
+    "unchecked": 0
+   },
+   "rows": [
+    {
+     "id": "Guild-Legal:2",
+     "doc": "Guild-Legal",
+     "line": 2,
+     "page": "/legal-corporate/legal",
+     "newText": "Secure Comfort for Legal Teams",
+     "checkedOn": "/legal-corporate/legal",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Legal:3",
+     "doc": "Guild-Legal",
+     "line": 3,
+     "page": "/legal-corporate/legal",
+     "newText": "Space and privacy minutes from San Diego’s Superior and Federal Courthouses",
+     "checkedOn": "/legal-corporate/legal",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Legal:5",
+     "doc": "Guild-Legal",
+     "line": 5,
+     "page": "/legal-corporate/legal",
+     "newText": "Tailored Solutions for Firms",
+     "checkedOn": "/legal-corporate/legal",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Legal:7",
+     "doc": "Guild-Legal",
+     "line": 7,
+     "page": "/legal-corporate/legal",
+     "newText": "When your law firm needs a calm, focused environment for productivity, The Guild provides premium service, discreet accommodations, secure meeting spaces and full-floor buyouts – all within walking distance of every major downtown courthouse.",
+     "checkedOn": "/legal-corporate/legal",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Legal:39",
+     "doc": "Guild-Legal",
+     "line": 39,
+     "page": "/legal-corporate/legal",
+     "newText": "DESIGNED FOR FOCUSED, CONFIDENTIAL WORK",
+     "checkedOn": "/legal-corporate/legal",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Legal:40",
+     "doc": "Guild-Legal",
+     "line": 40,
+     "page": "/legal-corporate/legal",
+     "newText": "Discreet, high-performance spaces tailored to the demands of legal professionals",
+     "checkedOn": "/legal-corporate/legal",
+     "mapStatus": "change",
+     "status": "done"
+    }
+   ]
+  },
+  {
+   "page": "/meeting-venues/*",
+   "counts": {
+    "done": 32,
+    "differs": 0,
+    "missing": 1,
+    "unchecked": 32
    },
    "rows": [
     {
@@ -2667,9 +2671,9 @@
      "line": 66,
      "page": "/meeting-venues/*",
      "newText": "Smart, flexible meeting space for up to 70 people",
-     "checkedOn": "/meetings",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Corporate:69",
@@ -2687,9 +2691,9 @@
      "line": 70,
      "page": "/meeting-venues/*",
      "newText": "Adaptable meeting and presentation space for up to 150",
-     "checkedOn": "/meetings",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Corporate:72",
@@ -2707,9 +2711,9 @@
      "line": 73,
      "page": "/meeting-venues/*",
      "newText": "Refined space for small boards and gatherings",
-     "checkedOn": "/meetings",
-     "mapStatus": "change",
-     "status": "missing"
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
     },
     {
      "id": "Guild-Corporate:75",
@@ -2727,9 +2731,9 @@
      "line": 76,
      "page": "/meeting-venues/*",
      "newText": "Dedicated next-door conference center with terraces",
-     "checkedOn": "/meetings",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Legal:54",
@@ -2788,7 +2792,7 @@
      "page": "/meeting-venues/*",
      "newText": "Refined space for small boards and gatherings",
      "reason": "duplicate of Guild-Corporate:73",
-     "mapStatus": "change",
+     "mapStatus": "not on site",
      "status": "unchecked"
     },
     {
@@ -2829,7 +2833,7 @@
      "newText": "Impeccably appointed space for intimate executive and board meetings",
      "checkedOn": "/meetings",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Meeting-Collection:16",
@@ -2849,7 +2853,7 @@
      "newText": "The landmark next door offers polished, contemporary spaces for gatherings",
      "checkedOn": "/meetings",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Meeting-Collection:19",
@@ -2869,7 +2873,7 @@
      "newText": "After work, space for refined al fresco dinners or intimate cocktail receptions",
      "checkedOn": "/meetings",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:12",
@@ -2889,27 +2893,27 @@
      "newText": "Council Boardrooms offer all the ingredients for a successful small meeting – state-of-the-art audiovisual capabilities, a handsome ash wood table and stylishly comfortable executive chairs.",
      "checkedOn": "/meetings",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:18",
      "doc": "Guild-Meetings-Modals",
      "line": 18,
      "page": "/meeting-venues/*",
-     "newText": "510 SQ FT\nClassroom: 21*\nTheater: 57*\nU-shape: 15\nConference: 12\nRounds: 40*\nReception: 51*\n*requires furniture removal; charges may apply",
+     "newText": "510 SQ FT",
      "checkedOn": "/meetings",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:19",
      "doc": "Guild-Meetings-Modals",
      "line": 19,
      "page": "/meeting-venues/*",
-     "newText": "Classroom: 21*",
-     "reason": "joined into 18: the head row carries the composed text",
+     "newText": "Classroom: 21*\nTheater: 57*\nU-shape: 15\nConference: 12\nRounds: 40*\nReception: 51*",
+     "checkedOn": "/meetings",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:20",
@@ -2917,7 +2921,7 @@
      "line": 20,
      "page": "/meeting-venues/*",
      "newText": "Theater: 57*",
-     "reason": "joined into 18: the head row carries the composed text",
+     "reason": "joined into 19: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -2927,7 +2931,7 @@
      "line": 21,
      "page": "/meeting-venues/*",
      "newText": "U-shape: 15",
-     "reason": "joined into 18: the head row carries the composed text",
+     "reason": "joined into 19: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -2937,7 +2941,7 @@
      "line": 22,
      "page": "/meeting-venues/*",
      "newText": "Conference: 12",
-     "reason": "joined into 18: the head row carries the composed text",
+     "reason": "joined into 19: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -2947,7 +2951,7 @@
      "line": 23,
      "page": "/meeting-venues/*",
      "newText": "Rounds: 40*",
-     "reason": "joined into 18: the head row carries the composed text",
+     "reason": "joined into 19: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -2957,7 +2961,7 @@
      "line": 24,
      "page": "/meeting-venues/*",
      "newText": "Reception: 51*",
-     "reason": "joined into 18: the head row carries the composed text",
+     "reason": "joined into 19: the head row carries the composed text",
      "mapStatus": "change",
      "status": "unchecked"
     },
@@ -2968,7 +2972,137 @@
      "page": "/meeting-venues/*",
      "newText": "*requires furniture removal; charges may apply",
      "reason": "joined into 18: the head row carries the composed text",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Meetings-Modals:55",
+     "doc": "Guild-Meetings-Modals",
+     "line": 55,
+     "page": "/meeting-venues/*",
+     "newText": "GARDEN TERRACE",
+     "checkedOn": "/meetings",
+     "mapStatus": "same",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Meetings-Modals:65",
+     "doc": "Guild-Meetings-Modals",
+     "line": 65,
+     "page": "/meeting-venues/*",
+     "newText": "GARDEN TERRACE",
+     "reason": "duplicate of Guild-Meetings-Modals:55",
+     "mapStatus": "same",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Meetings-Modals:66",
+     "doc": "Guild-Meetings-Modals",
+     "line": 66,
+     "page": "/meeting-venues/*",
+     "newText": "The Guild’s superb al fresco venue",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Meetings-Modals:69",
+     "doc": "Guild-Meetings-Modals",
+     "line": 69,
+     "page": "/meeting-venues/*",
+     "newText": "With its lush landscaping and Mediterranean atmosphere, the Garden Terrace is a venue for unforgettable outdoor experiences, from dinners to cocktails to networking events.",
+     "checkedOn": "/meetings",
      "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Meetings-Modals:72",
+     "doc": "Guild-Meetings-Modals",
+     "line": 72,
+     "page": "/meeting-venues/*",
+     "newText": "1396 SQ FT",
+     "checkedOn": "/meetings",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Meetings-Modals:73",
+     "doc": "Guild-Meetings-Modals",
+     "line": 73,
+     "page": "/meeting-venues/*",
+     "newText": "Existing Seating: 68\nClassroom: 58*\nTheater: 155*\nU-shape: 40*\nConference: 34*\nRounds: 116*\nReception: 140*",
+     "checkedOn": "/meetings",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Meetings-Modals:74",
+     "doc": "Guild-Meetings-Modals",
+     "line": 74,
+     "page": "/meeting-venues/*",
+     "newText": "Classroom: 58*",
+     "reason": "joined into 73: the head row carries the composed text",
+     "mapStatus": "change",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Meetings-Modals:75",
+     "doc": "Guild-Meetings-Modals",
+     "line": 75,
+     "page": "/meeting-venues/*",
+     "newText": "Theater: 155*",
+     "reason": "joined into 73: the head row carries the composed text",
+     "mapStatus": "change",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Meetings-Modals:76",
+     "doc": "Guild-Meetings-Modals",
+     "line": 76,
+     "page": "/meeting-venues/*",
+     "newText": "U-shape: 40*",
+     "reason": "joined into 73: the head row carries the composed text",
+     "mapStatus": "change",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Meetings-Modals:77",
+     "doc": "Guild-Meetings-Modals",
+     "line": 77,
+     "page": "/meeting-venues/*",
+     "newText": "Conference: 34*",
+     "reason": "joined into 73: the head row carries the composed text",
+     "mapStatus": "change",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Meetings-Modals:78",
+     "doc": "Guild-Meetings-Modals",
+     "line": 78,
+     "page": "/meeting-venues/*",
+     "newText": "Rounds: 116*",
+     "reason": "joined into 73: the head row carries the composed text",
+     "mapStatus": "change",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Meetings-Modals:79",
+     "doc": "Guild-Meetings-Modals",
+     "line": 79,
+     "page": "/meeting-venues/*",
+     "newText": "Reception: 140*",
+     "reason": "joined into 73: the head row carries the composed text",
+     "mapStatus": "change",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Meetings-Modals:80",
+     "doc": "Guild-Meetings-Modals",
+     "line": 80,
+     "page": "/meeting-venues/*",
+     "newText": "*requires furniture removal, charges may apply",
+     "reason": "joined into 72: the head row carries the composed text",
+     "mapStatus": "not on site",
      "status": "unchecked"
     },
     {
@@ -2997,9 +3131,9 @@
      "line": 92,
      "page": "/meeting-venues/*",
      "newText": "Dedicated Corporate Spaces",
-     "checkedOn": "/meetings",
-     "mapStatus": "change",
-     "status": "missing"
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
     },
     {
      "id": "Guild-Meetings-Modals:94",
@@ -3009,7 +3143,7 @@
      "newText": "One America Plaza Conference Center, located within easy walking distance of the hotel, offers a seamless extension of the Guild experience. Every group and size of meeting benefits from a polished, professional setting and service at 1 America Plaza.\n\nThe Guild’s shared portfolio partnership with 1 America Plaza gives groups the choice of a small or large conference center next to the hotel.",
      "checkedOn": "/meetings",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:97",
@@ -3037,19 +3171,19 @@
      "line": 101,
      "page": "/meeting-venues/*",
      "newText": "Designed for workshops, team meetings and breakout sessions.",
-     "checkedOn": "/meetings",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:103",
      "doc": "Guild-Meetings-Modals",
      "line": 103,
      "page": "/meeting-venues/*",
-     "newText": "1000 SQ FT\nFlexible seating configurations (boardroom, classroom, U-shape)\nModern audiovisual system\nIdeal for focused, interactive sessions\nCapacity: 70\nCatering services are available",
-     "checkedOn": "/meetings",
+     "newText": "1000 SQ FT",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:104",
@@ -3057,9 +3191,9 @@
      "line": 104,
      "page": "/meeting-venues/*",
      "newText": "Flexible seating configurations (boardroom, classroom, U-shape)",
-     "reason": "joined into 103: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:105",
@@ -3067,9 +3201,9 @@
      "line": 105,
      "page": "/meeting-venues/*",
      "newText": "Modern audiovisual system",
-     "reason": "joined into 103: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:106",
@@ -3077,9 +3211,9 @@
      "line": 106,
      "page": "/meeting-venues/*",
      "newText": "Ideal for focused, interactive sessions",
-     "reason": "joined into 103: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:107",
@@ -3087,9 +3221,9 @@
      "line": 107,
      "page": "/meeting-venues/*",
      "newText": "Capacity: 70",
-     "reason": "joined into 103: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:108",
@@ -3098,7 +3232,7 @@
      "page": "/meeting-venues/*",
      "newText": "Catering services are available",
      "reason": "joined into 103: the head row carries the composed text",
-     "mapStatus": "change",
+     "mapStatus": "not on site",
      "status": "unchecked"
     },
     {
@@ -3117,19 +3251,19 @@
      "line": 111,
      "page": "/meeting-venues/*",
      "newText": "Designed for up to 150 attendees, this venue works well for presentations, conferences and group meetings.",
-     "checkedOn": "/meetings",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:113",
      "doc": "Guild-Meetings-Modals",
      "line": 113,
      "page": "/meeting-venues/*",
-     "newText": "2227 SQ FT\nSpacious layout with adaptable seating\nCatering services available\nProfessional environment for impactful presentations\nCapacity: 150",
-     "checkedOn": "/meetings",
+     "newText": "2227 SQ FT",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:114",
@@ -3137,9 +3271,9 @@
      "line": 114,
      "page": "/meeting-venues/*",
      "newText": "Spacious layout with adaptable seating",
-     "reason": "joined into 113: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:115",
@@ -3147,9 +3281,9 @@
      "line": 115,
      "page": "/meeting-venues/*",
      "newText": "Catering services available",
-     "reason": "joined into 113: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:116",
@@ -3157,9 +3291,9 @@
      "line": 116,
      "page": "/meeting-venues/*",
      "newText": "Professional environment for impactful presentations",
-     "reason": "joined into 113: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:117",
@@ -3167,19 +3301,19 @@
      "line": 117,
      "page": "/meeting-venues/*",
      "newText": "Capacity: 150",
-     "reason": "joined into 113: the head row carries the composed text",
+     "checkedOn": "/legal-corporate/corporate",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     }
    ]
   },
   {
    "page": "/meetings",
    "counts": {
-    "done": 1,
-    "differs": 4,
+    "done": 5,
+    "differs": 0,
     "missing": 0,
-    "unchecked": 48
+    "unchecked": 50
    },
    "rows": [
     {
@@ -3189,9 +3323,8 @@
      "page": "/meetings",
      "newText": "MEETINGS AND EVENTS AT THE GUILD",
      "checkedOn": "/meetings",
-     "foundText": "meetings & events at the guild",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Meeting-Collection:3",
@@ -3200,9 +3333,8 @@
      "page": "/meetings",
      "newText": "Comfort, function and style for all your teams",
      "checkedOn": "/meetings",
-     "foundText": "In hac habitasse platea dictumst. Etiam dapibus augue tortor",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Meeting-Collection:5",
@@ -3211,9 +3343,8 @@
      "page": "/meetings",
      "newText": "Spaces for celebration and collaboration",
      "checkedOn": "/meetings",
-     "foundText": "Intimate spaces for celebration & collaboration",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Meeting-Collection:8",
@@ -3252,9 +3383,8 @@
      "page": "/meetings",
      "newText": "Newly refurbished meeting spaces inspire better ideas and more productive gatherings for groups of all kinds, from small boards to large divisions. And we always have room for your teams to unwind at the end of the meeting.",
      "checkedOn": "/meetings",
-     "foundText": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa. Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Meetings-Modals:5",
@@ -3392,6 +3522,26 @@
      "line": 63,
      "page": "/meetings",
      "newText": "The Guild has hosted efficient, comfortable meetings for decades, ensuring that teams have the right space, furnishings and equipment for their needs – along with the best dining options and a choice of places to unwind when the work is done.",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Meetings-Modals:68",
+     "doc": "Guild-Meetings-Modals",
+     "line": 68,
+     "page": "/meetings",
+     "newText": "Details",
+     "reason": "duplicate of Guild-Meetings-Modals:14",
+     "mapStatus": "change",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Meetings-Modals:71",
+     "doc": "Guild-Meetings-Modals",
+     "line": 71,
+     "page": "/meetings",
+     "newText": "Features",
      "reason": "not on site: no element to check",
      "mapStatus": "not on site",
      "status": "unchecked"
@@ -3721,10 +3871,10 @@
   {
    "page": "/neighborhood",
    "counts": {
-    "done": 5,
-    "differs": 14,
+    "done": 10,
+    "differs": 8,
     "missing": 0,
-    "unchecked": 26
+    "unchecked": 27
    },
    "rows": [
     {
@@ -3734,9 +3884,8 @@
      "page": "/neighborhood",
      "newText": "EXCITEMENT AT YOUR DOORSTEP",
      "checkedOn": "/neighborhood",
-     "foundText": "a city at your fingertips",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Neighborhood:5",
@@ -3745,9 +3894,8 @@
      "page": "/neighborhood",
      "newText": "Step out for day and night dining, strolling, dancing, art, music and shows.",
      "checkedOn": "/neighborhood",
-     "foundText": "In hac habitasse platea dictumst. Etiam dapibus augue tortor",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Neighborhood:7",
@@ -3756,9 +3904,8 @@
      "page": "/neighborhood",
      "newText": "THE BEST OF SAN DIEGO",
      "checkedOn": "/neighborhood",
-     "foundText": "The best ofSan Diego is right here",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Neighborhood:8",
@@ -3767,9 +3914,8 @@
      "page": "/neighborhood",
      "newText": "From The Guild, the city’s favorite neighborhoods and attractions are just a stroll away. The history, waterfront, culture, dining and nightlife of San Diego are yours to experience and savor from morning til late.",
      "checkedOn": "/neighborhood",
-     "foundText": "The San Diego on our doorstep includes the city’s favorite neighborhoods and attractions – and best of all, you can walk to them. From the harbor and Seaport Village to the Museum of Contemporary Art, Little Italy and the Gaslamp, the past, future and excitement of the city are yours to discover.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Neighborhood:10",
@@ -3788,9 +3934,8 @@
      "page": "/neighborhood",
      "newText": "It’s all here: the harbor and the Seaport Village; the Midway, America’s most famous ship; the Gaslamp Quarter, the epicenter of downtown entertainment and the soul of city nightlife; the surprising Petco Park, home of the beloved Padres; and boisterous, welcoming Little Italy. And many more places and experiences you don’t want to miss.",
      "checkedOn": "/neighborhood",
-     "foundText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum quam eu est facilisis gravida. Nulla ultrices aliquam ante, at elementum ex tincidunt at. Vestibulum vitae nunc eu felis maximus semper. Curabitur eget molestie dui. Vestibulum quis elit ac libero tempus condimentum eget eget tellus.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Neighborhood:13",
@@ -3930,10 +4075,9 @@
      "line": 40,
      "page": "/neighborhood",
      "newText": "SAN DIEGO MUSEUM OF ART",
-     "checkedOn": "/neighborhood",
-     "foundText": "beyond downtown san diego",
-     "mapStatus": "change",
-     "status": "differs"
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
     },
     {
      "id": "Guild-Neighborhood:41",
@@ -3993,9 +4137,8 @@
      "page": "/neighborhood",
      "newText": "SUPERIOR COURT OF CALIFORNIA, COUNTY OF SAN DIEGO",
      "checkedOn": "/neighborhood",
-     "foundText": "san diego superior court",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Neighborhood:50",
@@ -4015,7 +4158,7 @@
      "page": "/neighborhood",
      "newText": "U.S. DISTRICT COURT FOR THE SOUTHERN DISTRICT OF CALIFORNIA",
      "checkedOn": "/neighborhood",
-     "foundText": "san diego superior court",
+     "foundText": "San Diego Superior Court",
      "mapStatus": "change",
      "status": "differs"
     },
@@ -4037,8 +4180,9 @@
      "page": "/neighborhood",
      "newText": "HALL OF JUSTICE",
      "checkedOn": "/neighborhood",
+     "foundText": "SAN DIEGO CONVENTION CENTER",
      "mapStatus": "change",
-     "status": "done"
+     "status": "differs"
     },
     {
      "id": "Guild-Neighborhood:56",
@@ -4047,7 +4191,7 @@
      "page": "/neighborhood",
      "newText": "The Guild is a three-minute walk from the Hall of Justice, and the hotel has become a trusted host for firms working on cases to be tried there. The Hall of Justice contains courtrooms for the Superior Court of California - County of San Diego, the San Diego County District Attorney’s Office, the Sheriff’s Court Services Bureau, Probation, Adult Forensic Services, the Public Defender, and the U.S. Attorney.",
      "checkedOn": "/neighborhood",
-     "foundText": "In hac habitasse platea dictumst. Etiam dapibus augue tortor. In hac habitasse platea dictumst. Etiam dapibus augue tortor",
+     "foundText": "Pellentesque dui metus, tempus vel sodales sit amet, lobortis ac arcu. Proin varius semper tempor. Nam ac lobortis orci. Morbi ullamcorper rutrum varius. Integer nunc odio,",
      "mapStatus": "change",
      "status": "differs"
     },
@@ -4196,8 +4340,8 @@
   {
    "page": "/press",
    "counts": {
-    "done": 0,
-    "differs": 4,
+    "done": 3,
+    "differs": 1,
     "missing": 0,
     "unchecked": 8
    },
@@ -4209,7 +4353,7 @@
      "page": "/press",
      "newText": "GUILD PRESS ROOM",
      "checkedOn": "/press",
-     "foundText": "press",
+     "foundText": "PRESS",
      "mapStatus": "change",
      "status": "differs"
     },
@@ -4220,9 +4364,8 @@
      "page": "/press",
      "newText": "The experts are here. And they like what they see.",
      "checkedOn": "/press",
-     "foundText": "Reviews, lists and features about The Guild, from the writers and editors who have stayed with us.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Press:5",
@@ -4231,9 +4374,8 @@
      "page": "/press",
      "newText": "WE’RE THE TALK OF THE TOWN",
      "checkedOn": "/press",
-     "foundText": "more of the guild",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Press:6",
@@ -4252,9 +4394,8 @@
      "page": "/press",
      "newText": "We’ve worked hard to make The Guild the most desirable destination in America’s Finest City. Today, some of the most influential press in the world are taking notice.",
      "checkedOn": "/press",
-     "foundText": "Duis posuere lorem lacinia justo commodo, id lobortis augue eleifend. Nunc molestie arcu vel tempor maximus.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Press:10",
@@ -4331,8 +4472,8 @@
   {
    "page": "/rooms",
    "counts": {
-    "done": 2,
-    "differs": 4,
+    "done": 5,
+    "differs": 1,
     "missing": 0,
     "unchecked": 19
    },
@@ -4354,9 +4495,8 @@
      "page": "/rooms",
      "newText": "Historic character beds down with modern comforts",
      "checkedOn": "/rooms",
-     "foundText": "Our rooms and suites pair historic character with generous, modern comfort throughout.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-Collection:5",
@@ -4386,9 +4526,8 @@
      "page": "/rooms",
      "newText": "OUR RECOMMENDATIONS",
      "checkedOn": "/rooms",
-     "foundText": "our recommendations for your stay",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-Collection:9",
@@ -4397,9 +4536,8 @@
      "page": "/rooms",
      "newText": "You asked, we found. Here are the spaces that suit you best of all.",
      "checkedOn": "/rooms",
-     "foundText": "No room matches all three answers, so here are the closest matches.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "no-copy:/rooms:page|231e48de-d9ff-6bb4-c9b5-94ab39076014",
@@ -4596,10 +4734,10 @@
   {
    "page": "/rooms/city-level-below-ground",
    "counts": {
-    "done": 1,
+    "done": 6,
     "differs": 0,
-    "missing": 5,
-    "unchecked": 14
+    "missing": 2,
+    "unchecked": 12
    },
    "rows": [
     {
@@ -4620,7 +4758,7 @@
      "newText": "Welcome to the hideaway",
      "checkedOn": "/rooms/city-level-below-ground",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:167",
@@ -4640,17 +4778,17 @@
      "newText": "Room for 2 to 4 people in spacious rooms with one King or two Queen beds, custom furnishings and a tiled, industrial-chic bathroom in sharp black and white. So much comfort, our guests are on top of the world.",
      "checkedOn": "/rooms/city-level-below-ground",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:175",
      "doc": "Guild-Rooms-SubPages",
      "line": 175,
      "page": "/rooms/city-level-below-ground",
-     "newText": "1 King or 2 Queen Beds",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "newText": "1 King or 2 Queen Beds\n2 to 4 Guests\n310sqft / 28sqm | 340sqft / 31sqm.\nNo View.",
+     "checkedOn": "/rooms/city-level-below-ground",
+     "mapStatus": "change",
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:176",
@@ -4660,7 +4798,7 @@
      "newText": "2 to 4 Guests",
      "checkedOn": "/rooms/city-level-below-ground",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:177",
@@ -4670,7 +4808,7 @@
      "newText": "310sqft / 28sqm | 340sqft / 31sqm.",
      "checkedOn": "/rooms/city-level-below-ground",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:178",
@@ -4688,8 +4826,8 @@
      "line": 179,
      "page": "/rooms/city-level-below-ground",
      "newText": "No View.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
+     "reason": "joined into 175: the head row carries the composed text",
+     "mapStatus": "change",
      "status": "unchecked"
     },
     {
@@ -4698,9 +4836,9 @@
      "line": 182,
      "page": "/rooms/city-level-below-ground",
      "newText": "After a day downtown, the City Level Below Ground offers room to breathe.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "checkedOn": "/rooms/city-level-below-ground",
+     "mapStatus": "change",
+     "status": "missing"
     },
     {
      "id": "Guild-Rooms-SubPages:185",
@@ -4807,10 +4945,10 @@
   {
    "page": "/rooms/cozy-courtyard-king",
    "counts": {
-    "done": 2,
+    "done": 6,
     "differs": 0,
-    "missing": 4,
-    "unchecked": 13
+    "missing": 2,
+    "unchecked": 11
    },
    "rows": [
     {
@@ -4831,7 +4969,7 @@
      "newText": "King Bed. Grand View.",
      "checkedOn": "/rooms/cozy-courtyard-king",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:127",
@@ -4851,17 +4989,17 @@
      "newText": "A view changes everything, and the Courtyard King opens up as it overlooks the Garden Terrace, making it ideal for both solo travelers and couples. Add a design-forward layout, custom furnishings, an upholstered bed and an industrial-chic bathroom, and the Cozy Courtyard King is a premier choice.",
      "checkedOn": "/rooms/cozy-courtyard-king",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:135",
      "doc": "Guild-Rooms-SubPages",
      "line": 135,
      "page": "/rooms/cozy-courtyard-king",
-     "newText": "1 King Bed",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "newText": "1 King Bed\n2 Guests\n200sqft / 18sqm | 225sqft / 20sqm.",
+     "checkedOn": "/rooms/cozy-courtyard-king",
+     "mapStatus": "change",
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:136",
@@ -4881,7 +5019,7 @@
      "newText": "200sqft / 18sqm | 225sqft / 20sqm.",
      "checkedOn": "/rooms/cozy-courtyard-king",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:138",
@@ -4899,9 +5037,9 @@
      "line": 141,
      "page": "/rooms/cozy-courtyard-king",
      "newText": "After a night out, the Courtyard King offers room to breathe.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "checkedOn": "/rooms/cozy-courtyard-king",
+     "mapStatus": "change",
+     "status": "missing"
     },
     {
      "id": "Guild-Rooms-SubPages:144",
@@ -5008,10 +5146,10 @@
   {
    "page": "/rooms/cozy-courtyard-queen",
    "counts": {
-    "done": 1,
+    "done": 6,
     "differs": 0,
-    "missing": 5,
-    "unchecked": 14
+    "missing": 2,
+    "unchecked": 12
    },
    "rows": [
     {
@@ -5032,7 +5170,7 @@
      "newText": "A Queen with a view",
      "checkedOn": "/rooms/cozy-courtyard-queen",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:47",
@@ -5052,7 +5190,7 @@
      "newText": "A point of view over the leafy Garden Terrace opens up the intimate Courtyard Queen.\n\nIt’s a favorite of both solo travelers and couples, who love the Courtyard Queen for its upholstered Queen bed, custom furnishings, luxurious industrial-chic bathroom and grand view.",
      "checkedOn": "/rooms/cozy-courtyard-queen",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:50",
@@ -5069,10 +5207,10 @@
      "doc": "Guild-Rooms-SubPages",
      "line": 55,
      "page": "/rooms/cozy-courtyard-queen",
-     "newText": "1 Queen Bed",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "newText": "1 Queen Bed\n2 Guests\n180sqft / 16sqm | 206sqft / 19sqm.",
+     "checkedOn": "/rooms/cozy-courtyard-queen",
+     "mapStatus": "change",
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:56",
@@ -5082,7 +5220,7 @@
      "newText": "2 Guests",
      "checkedOn": "/rooms/cozy-courtyard-queen",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:57",
@@ -5092,7 +5230,7 @@
      "newText": "180sqft / 16sqm | 206sqft / 19sqm.",
      "checkedOn": "/rooms/cozy-courtyard-queen",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:58",
@@ -5110,9 +5248,9 @@
      "line": 61,
      "page": "/rooms/cozy-courtyard-queen",
      "newText": "After a night out, the Courtyard Queen offers room to breathe.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "checkedOn": "/rooms/cozy-courtyard-queen",
+     "mapStatus": "change",
+     "status": "missing"
     },
     {
      "id": "Guild-Rooms-SubPages:64",
@@ -5219,10 +5357,10 @@
   {
    "page": "/rooms/cozy-king",
    "counts": {
-    "done": 2,
+    "done": 6,
     "differs": 0,
-    "missing": 4,
-    "unchecked": 13
+    "missing": 2,
+    "unchecked": 11
    },
    "rows": [
     {
@@ -5243,7 +5381,7 @@
      "newText": "Intimate never felt so big",
      "checkedOn": "/rooms/cozy-king",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:87",
@@ -5263,17 +5401,17 @@
      "newText": "An upholstered King bed makes the world bigger and brighter, and turns every night into an experience. Custom contemporary furnishings and sleek, industrial-style bathrooms are comfortable, luxurious details. Cozy Kings give solo travelers all the space in the world, and let couples stretch out to their heart’s content.",
      "checkedOn": "/rooms/cozy-king",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:95",
      "doc": "Guild-Rooms-SubPages",
      "line": 95,
      "page": "/rooms/cozy-king",
-     "newText": "1 King Bed",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "newText": "1 King Bed\n2 Guests\n180sqft / 16sqm | 206sqft / 19sqm.",
+     "checkedOn": "/rooms/cozy-king",
+     "mapStatus": "change",
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:96",
@@ -5293,7 +5431,7 @@
      "newText": "180sqft / 16sqm | 206sqft / 19sqm.",
      "checkedOn": "/rooms/cozy-king",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:98",
@@ -5311,9 +5449,9 @@
      "line": 101,
      "page": "/rooms/cozy-king",
      "newText": "After a night out, the Cozy King is a sanctuary.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "checkedOn": "/rooms/cozy-king",
+     "mapStatus": "change",
+     "status": "missing"
     },
     {
      "id": "Guild-Rooms-SubPages:104",
@@ -5420,10 +5558,10 @@
   {
    "page": "/rooms/cozy-queen",
    "counts": {
-    "done": 3,
-    "differs": 18,
-    "missing": 4,
-    "unchecked": 37
+    "done": 13,
+    "differs": 30,
+    "missing": 2,
+    "unchecked": 21
    },
    "rows": [
     {
@@ -5444,7 +5582,7 @@
      "newText": "Perfectly Intimate",
      "checkedOn": "/rooms/cozy-queen",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:5",
@@ -5485,7 +5623,7 @@
      "newText": "Snuggle up in our most intimate room. Cozy Queens are perfect for solo travelers and romantic couples who also love smart design and luxurious appointments, like custom furnishings and an inviting, industrial-chic bathroom.",
      "checkedOn": "/rooms/cozy-queen",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:13",
@@ -5502,10 +5640,10 @@
      "doc": "Guild-Rooms-SubPages",
      "line": 16,
      "page": "/rooms/cozy-queen",
-     "newText": "1 Queen Bed",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "newText": "1 Queen Bed\n2 Guests\n180sqft / 16sqm | 200sqft / 18sqm",
+     "checkedOn": "/rooms/cozy-queen",
+     "mapStatus": "change",
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:17",
@@ -5525,7 +5663,7 @@
      "newText": "180sqft / 16sqm | 200sqft / 18sqm",
      "checkedOn": "/rooms/cozy-queen",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:21",
@@ -5533,9 +5671,9 @@
      "line": 21,
      "page": "/rooms/cozy-queen",
      "newText": "After a night out, the Cozy Queen offers privacy and room to breathe.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "checkedOn": "/rooms/cozy-queen",
+     "mapStatus": "change",
+     "status": "missing"
     },
     {
      "id": "Guild-Rooms-SubPages:24",
@@ -5665,7 +5803,7 @@
      "line": 44,
      "page": "/rooms/cozy-queen",
      "newText": "Intimacy with a Point of View",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/cozy-courtyard-queen",
      "foundText": "A room for every stay",
      "mapStatus": "change",
      "status": "differs"
@@ -5676,9 +5814,9 @@
      "line": 52,
      "page": "/rooms/cozy-queen",
      "newText": "View Floorplan",
-     "reason": "duplicate of Guild-Rooms-SubPages:13",
+     "checkedOn": "/rooms/cozy-courtyard-queen",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:66",
@@ -5686,9 +5824,10 @@
      "line": 66,
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
-     "reason": "duplicate of Guild-Rooms-SubPages:26",
+     "checkedOn": "/rooms/cozy-courtyard-queen",
+     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "differs"
     },
     {
      "id": "Guild-Rooms-SubPages:67",
@@ -5696,7 +5835,7 @@
      "line": 67,
      "page": "/rooms/cozy-queen",
      "newText": "The little things make all the difference. The scent of the room as the door opens. The artwork, original and intriguing. And practical luxuries, like free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/cozy-courtyard-queen",
      "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
      "status": "differs"
@@ -5707,7 +5846,7 @@
      "line": 84,
      "page": "/rooms/cozy-queen",
      "newText": "King-Sized Comfort",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/cozy-king",
      "foundText": "A room for every stay",
      "mapStatus": "change",
      "status": "differs"
@@ -5718,9 +5857,9 @@
      "line": 91,
      "page": "/rooms/cozy-queen",
      "newText": "View Floorplan",
-     "reason": "duplicate of Guild-Rooms-SubPages:13",
+     "checkedOn": "/rooms/cozy-king",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:106",
@@ -5728,9 +5867,10 @@
      "line": 106,
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
-     "reason": "duplicate of Guild-Rooms-SubPages:26",
+     "checkedOn": "/rooms/cozy-king",
+     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "differs"
     },
     {
      "id": "Guild-Rooms-SubPages:107",
@@ -5738,7 +5878,7 @@
      "line": 107,
      "page": "/rooms/cozy-queen",
      "newText": "Details deliver in the Cozy King. The scent of the room sets the tone. The artwork is as original as it is intriguing. Practical luxuries abound, including free, high-speed Wi-Fi, a safe for the laptop, and an all-important steamer, of course.",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/cozy-king",
      "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
      "status": "differs"
@@ -5749,9 +5889,10 @@
      "line": 124,
      "page": "/rooms/cozy-queen",
      "newText": "Intimacy with a Point of View",
-     "reason": "duplicate of Guild-Rooms-SubPages:44",
+     "checkedOn": "/rooms/cozy-courtyard-king",
+     "foundText": "A room for every stay",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "differs"
     },
     {
      "id": "Guild-Rooms-SubPages:132",
@@ -5759,9 +5900,9 @@
      "line": 132,
      "page": "/rooms/cozy-queen",
      "newText": "View Floorplan",
-     "reason": "duplicate of Guild-Rooms-SubPages:13",
+     "checkedOn": "/rooms/cozy-courtyard-king",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:146",
@@ -5769,9 +5910,10 @@
      "line": 146,
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
-     "reason": "duplicate of Guild-Rooms-SubPages:26",
+     "checkedOn": "/rooms/cozy-courtyard-king",
+     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "differs"
     },
     {
      "id": "Guild-Rooms-SubPages:147",
@@ -5779,7 +5921,7 @@
      "line": 147,
      "page": "/rooms/cozy-queen",
      "newText": "Take a deep breath; the scent of the room sets the luxurious tone. Artwork is original and intriguing. There are practical perks, like free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course. Little things make all the difference.",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/cozy-courtyard-king",
      "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
      "status": "differs"
@@ -5790,7 +5932,7 @@
      "line": 164,
      "page": "/rooms/cozy-queen",
      "newText": "Space meets privacy",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/city-level-below-ground",
      "foundText": "A room for every stay",
      "mapStatus": "change",
      "status": "differs"
@@ -5801,9 +5943,9 @@
      "line": 171,
      "page": "/rooms/cozy-queen",
      "newText": "View Floorplan",
-     "reason": "duplicate of Guild-Rooms-SubPages:13",
+     "checkedOn": "/rooms/city-level-below-ground",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:187",
@@ -5811,9 +5953,10 @@
      "line": 187,
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
-     "reason": "duplicate of Guild-Rooms-SubPages:26",
+     "checkedOn": "/rooms/city-level-below-ground",
+     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "differs"
     },
     {
      "id": "Guild-Rooms-SubPages:188",
@@ -5821,7 +5964,50 @@
      "line": 188,
      "page": "/rooms/cozy-queen",
      "newText": "This is a room for all the senses: a luxurious scent sets the tone and the artwork is original and intriguing. All the musts are here: free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/city-level-below-ground",
+     "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
+     "mapStatus": "change",
+     "status": "differs"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:205",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 205,
+     "page": "/rooms/cozy-queen",
+     "newText": "Street Smart City Space.",
+     "checkedOn": "/rooms/guild-city-level-loft",
+     "foundText": "A room for every stay",
+     "mapStatus": "change",
+     "status": "differs"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:212",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 212,
+     "page": "/rooms/cozy-queen",
+     "newText": "View Floorplan",
+     "checkedOn": "/rooms/guild-city-level-loft",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:226",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 226,
+     "page": "/rooms/cozy-queen",
+     "newText": "In-Room Amenities",
+     "checkedOn": "/rooms/guild-city-level-loft",
+     "foundText": "in room amenities",
+     "mapStatus": "change",
+     "status": "differs"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:227",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 227,
+     "page": "/rooms/cozy-queen",
+     "newText": "Every detail is intentional: the room scent is luxurious and inviting; the artwork and the furnishings are original and intriguing. The essentials are all here, including free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
+     "checkedOn": "/rooms/guild-city-level-loft",
      "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
      "status": "differs"
@@ -5832,7 +6018,7 @@
      "line": 244,
      "page": "/rooms/cozy-queen",
      "newText": "Loft Space For All.",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/guild-loft-suite",
      "foundText": "A room for every stay",
      "mapStatus": "change",
      "status": "differs"
@@ -5843,9 +6029,9 @@
      "line": 251,
      "page": "/rooms/cozy-queen",
      "newText": "View Floorplan",
-     "reason": "duplicate of Guild-Rooms-SubPages:13",
+     "checkedOn": "/rooms/guild-loft-suite",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:268",
@@ -5853,9 +6039,10 @@
      "line": 268,
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
-     "reason": "duplicate of Guild-Rooms-SubPages:26",
+     "checkedOn": "/rooms/guild-loft-suite",
+     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "differs"
     },
     {
      "id": "Guild-Rooms-SubPages:269",
@@ -5863,7 +6050,7 @@
      "line": 269,
      "page": "/rooms/cozy-queen",
      "newText": "The pleasing scent of the room sets a luxurious, welcoming tone. The artwork is original and intriguing. Last, and certainly not least, there are thoughtful essentials, like free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/guild-loft-suite",
      "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
      "status": "differs"
@@ -5874,7 +6061,7 @@
      "line": 286,
      "page": "/rooms/cozy-queen",
      "newText": "The view from here",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/guild-corner-loft-suite",
      "foundText": "A room for every stay",
      "mapStatus": "change",
      "status": "differs"
@@ -5885,9 +6072,10 @@
      "line": 306,
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
-     "reason": "duplicate of Guild-Rooms-SubPages:26",
+     "checkedOn": "/rooms/guild-corner-loft-suite",
+     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "differs"
     },
     {
      "id": "Guild-Rooms-SubPages:307",
@@ -5895,7 +6083,7 @@
      "line": 307,
      "page": "/rooms/cozy-queen",
      "newText": "Every detail delights in the Guild Corner Loft Suite: the pleasing scent of the room; the artwork, original and intriguing, and the practical luxuries, like free, high-speed Wi-Fi, a safe for a laptop, and an all-important steamer, of course.",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/guild-corner-loft-suite",
      "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
      "status": "differs"
@@ -5906,7 +6094,7 @@
      "line": 325,
      "page": "/rooms/cozy-queen",
      "newText": "Perfect Proportions",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/guild-double",
      "foundText": "A room for every stay",
      "mapStatus": "change",
      "status": "differs"
@@ -5917,9 +6105,10 @@
      "line": 344,
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
-     "reason": "duplicate of Guild-Rooms-SubPages:26",
+     "checkedOn": "/rooms/guild-double",
+     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "differs"
     },
     {
      "id": "Guild-Rooms-SubPages:345",
@@ -5927,7 +6116,7 @@
      "line": 345,
      "page": "/rooms/cozy-queen",
      "newText": "The Guild Double is full of luxurious details, like the pleasing scent of the room and the original and intriguing artwork. Essentials are state of the art, including free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/guild-double",
      "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
      "status": "differs"
@@ -5938,7 +6127,7 @@
      "line": 362,
      "page": "/rooms/cozy-queen",
      "newText": "You Belong at the Top",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/two-bedroom-loft-suite",
      "foundText": "A room for every stay",
      "mapStatus": "change",
      "status": "differs"
@@ -5949,9 +6138,10 @@
      "line": 384,
      "page": "/rooms/cozy-queen",
      "newText": "In-Room Amenities",
-     "reason": "duplicate of Guild-Rooms-SubPages:26",
+     "checkedOn": "/rooms/two-bedroom-loft-suite",
+     "foundText": "in room amenities",
      "mapStatus": "change",
-     "status": "unchecked"
+     "status": "differs"
     },
     {
      "id": "Guild-Rooms-SubPages:385",
@@ -5959,7 +6149,7 @@
      "line": 385,
      "page": "/rooms/cozy-queen",
      "newText": "Two Bedroom Loft Suites offer details designed to please: a scent that defines the space, original and intriguing artwork, and practical luxuries, like free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
-     "checkedOn": "/rooms/cozy-queen",
+     "checkedOn": "/rooms/two-bedroom-loft-suite",
      "foundText": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
      "mapStatus": "change",
      "status": "differs"
@@ -6067,12 +6257,213 @@
    ]
   },
   {
+   "page": "/rooms/guild-city-level-loft",
+   "counts": {
+    "done": 5,
+    "differs": 0,
+    "missing": 3,
+    "unchecked": 11
+   },
+   "rows": [
+    {
+     "id": "Guild-Rooms-SubPages:202",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 202,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "CITY LEVEL LOFT",
+     "checkedOn": "/rooms/guild-city-level-loft",
+     "mapStatus": "same",
+     "status": "missing"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:203",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 203,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "Come to the loft life.",
+     "checkedOn": "/rooms/guild-city-level-loft",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:208",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 208,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "City Level Loft. Street View.",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:210",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 210,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "Everyone loves a loft. Ours has lots of natural light, a plush King bed, and stylishly refined contemporary touches, including custom furnishings and a sleek, industrial-chic tiled bathroom.",
+     "checkedOn": "/rooms/guild-city-level-loft",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:215",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 215,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "1 King Bed\n2 Guests\n280sqft 25sqm | 300sqft / 27sqm.",
+     "checkedOn": "/rooms/guild-city-level-loft",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:216",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 216,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "2 Guests",
+     "checkedOn": "/rooms/guild-city-level-loft",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:217",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 217,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "280sqft 25sqm | 300sqft / 27sqm.",
+     "checkedOn": "/rooms/guild-city-level-loft",
+     "mapStatus": "change",
+     "status": "done"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:218",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 218,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "300sqft / 27sqm.",
+     "reason": "joined into 217: the head row carries the composed text",
+     "mapStatus": "change",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:221",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 221,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "After a night out, the City Level Loft offers room to breathe.",
+     "checkedOn": "/rooms/guild-city-level-loft",
+     "mapStatus": "change",
+     "status": "missing"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:224",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 224,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "The City Level Loft is as generously proportioned as it is restful, with luxury linens that invite deep sleeps and custom furnishings that offer every comfort.",
+     "checkedOn": "/rooms/guild-city-level-loft",
+     "mapStatus": "change",
+     "status": "missing"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:229",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 229,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "le labo santal 33 bath amenities",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:230",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 230,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "iron & board (steamer upon request)",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:231",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 231,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "curated local art",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:232",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 232,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "laptop safe",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:233",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 233,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "hair dryer (flat iron upon request)",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:234",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 234,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "Keurig coffee machine (upon request)",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:235",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 235,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "music player (via bluetooth tv)",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:236",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 236,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "high-speed Wi-fi",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    },
+    {
+     "id": "Guild-Rooms-SubPages:239",
+     "doc": "Guild-Rooms-SubPages",
+     "line": 239,
+     "page": "/rooms/guild-city-level-loft",
+     "newText": "The Guild’s accessible accommodations have lowered features throughout and modern bathrooms with roll-in shower and grab bar. Accessible rooms are available upon request and guaranteed only if inventory is available at time of booking on Marriott.com.",
+     "reason": "not on site: no element to check",
+     "mapStatus": "not on site",
+     "status": "unchecked"
+    }
+   ]
+  },
+  {
    "page": "/rooms/guild-corner-loft-suite",
    "counts": {
-    "done": 2,
+    "done": 6,
     "differs": 0,
-    "missing": 4,
-    "unchecked": 15
+    "missing": 2,
+    "unchecked": 13
    },
    "rows": [
     {
@@ -6093,7 +6484,7 @@
      "newText": "Loft deluxe, with a view on the city",
      "checkedOn": "/rooms/guild-corner-loft-suite",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:289",
@@ -6113,17 +6504,17 @@
      "newText": "Elevated loft living is offered in this spacious contemporary corner suite with city and street views from the corner window. The Corner Loft offers a seating area, King bed, sofa bed, and a sleek, industrial-design bathroom. A roomy, luxurious sanctuary in the heart of it all.",
      "checkedOn": "/rooms/guild-corner-loft-suite",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:293",
      "doc": "Guild-Rooms-SubPages",
      "line": 293,
      "page": "/rooms/guild-corner-loft-suite",
-     "newText": "1 King Bed",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "newText": "1 King Bed\n1 Sofa Bed\n4 Guests\nCity View\n446sqft / 40sqm | 463sqft / 42sqm",
+     "checkedOn": "/rooms/guild-corner-loft-suite",
+     "mapStatus": "change",
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:294",
@@ -6131,8 +6522,8 @@
      "line": 294,
      "page": "/rooms/guild-corner-loft-suite",
      "newText": "1 Sofa Bed",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
+     "reason": "joined into 293: the head row carries the composed text",
+     "mapStatus": "change",
      "status": "unchecked"
     },
     {
@@ -6151,8 +6542,8 @@
      "line": 296,
      "page": "/rooms/guild-corner-loft-suite",
      "newText": "City View",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
+     "reason": "joined into 293: the head row carries the composed text",
+     "mapStatus": "change",
      "status": "unchecked"
     },
     {
@@ -6163,7 +6554,7 @@
      "newText": "446sqft / 40sqm | 463sqft / 42sqm",
      "checkedOn": "/rooms/guild-corner-loft-suite",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:298",
@@ -6181,9 +6572,9 @@
      "line": 301,
      "page": "/rooms/guild-corner-loft-suite",
      "newText": "Room to get ready. Space to stretch out. The Guild Corner Loft Suite is a premier choice.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "checkedOn": "/rooms/guild-corner-loft-suite",
+     "mapStatus": "change",
+     "status": "missing"
     },
     {
      "id": "Guild-Rooms-SubPages:304",
@@ -6290,10 +6681,10 @@
   {
    "page": "/rooms/guild-double",
    "counts": {
-    "done": 1,
+    "done": 6,
     "differs": 0,
-    "missing": 5,
-    "unchecked": 14
+    "missing": 2,
+    "unchecked": 12
    },
    "rows": [
     {
@@ -6314,7 +6705,7 @@
      "newText": "Two Queens. Double the Comfort.",
      "checkedOn": "/rooms/guild-double",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:328",
@@ -6334,7 +6725,7 @@
      "newText": "Sleep like royalty in the Guild Double, a sunlit room with a choice of design-forward, patterned and textured seating, custom finishes, and a sharp, industrial-chic bathroom.",
      "checkedOn": "/rooms/guild-double",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:332",
@@ -6351,10 +6742,10 @@
      "doc": "Guild-Rooms-SubPages",
      "line": 333,
      "page": "/rooms/guild-double",
-     "newText": "2 Queen Beds",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "newText": "2 Queen Beds\n2-4 Guests\n275sqft /25sqm | 294sqft /26sqm.",
+     "checkedOn": "/rooms/guild-double",
+     "mapStatus": "change",
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:334",
@@ -6364,7 +6755,7 @@
      "newText": "2-4 Guests",
      "checkedOn": "/rooms/guild-double",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:335",
@@ -6374,7 +6765,7 @@
      "newText": "275sqft /25sqm | 294sqft /26sqm.",
      "checkedOn": "/rooms/guild-double",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:336",
@@ -6392,9 +6783,9 @@
      "line": 339,
      "page": "/rooms/guild-double",
      "newText": "Going out is grand. Coming home is better. The Guild Double is San Diego de luxe.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "checkedOn": "/rooms/guild-double",
+     "mapStatus": "change",
+     "status": "missing"
     },
     {
      "id": "Guild-Rooms-SubPages:342",
@@ -6501,10 +6892,10 @@
   {
    "page": "/rooms/guild-loft-suite",
    "counts": {
-    "done": 2,
+    "done": 5,
     "differs": 0,
-    "missing": 4,
-    "unchecked": 15
+    "missing": 3,
+    "unchecked": 13
    },
    "rows": [
     {
@@ -6525,7 +6916,7 @@
      "newText": "Smart, spacious loft living.",
      "checkedOn": "/rooms/guild-loft-suite",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:247",
@@ -6545,17 +6936,17 @@
      "newText": "A contemporary studio loft for modern city stays and comfort for friends and family. The Guild Loft Suite offers a sitting area with custom furnishings and a sleeper sofa, a spa-inspired, industrial-chic bathroom, walk-in shower and plush robes. Wellbeing is effortless.",
      "checkedOn": "/rooms/guild-loft-suite",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:255",
      "doc": "Guild-Rooms-SubPages",
      "line": 255,
      "page": "/rooms/guild-loft-suite",
-     "newText": "1 King Bed.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "newText": "1 King Bed.\nSofa Bed\n4 Guests\nStreet View\n463sqft | 42sqm.",
+     "checkedOn": "/rooms/guild-loft-suite",
+     "mapStatus": "change",
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:256",
@@ -6563,8 +6954,8 @@
      "line": 256,
      "page": "/rooms/guild-loft-suite",
      "newText": "Sofa Bed",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
+     "reason": "joined into 255: the head row carries the composed text",
+     "mapStatus": "change",
      "status": "unchecked"
     },
     {
@@ -6583,8 +6974,8 @@
      "line": 258,
      "page": "/rooms/guild-loft-suite",
      "newText": "Street View",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
+     "reason": "joined into 255: the head row carries the composed text",
+     "mapStatus": "change",
      "status": "unchecked"
     },
     {
@@ -6592,7 +6983,7 @@
      "doc": "Guild-Rooms-SubPages",
      "line": 259,
      "page": "/rooms/guild-loft-suite",
-     "newText": "463sqft | 42sqm.",
+     "newText": "463sqft / 42sqm.",
      "checkedOn": "/rooms/guild-loft-suite",
      "mapStatus": "change",
      "status": "missing"
@@ -6613,9 +7004,9 @@
      "line": 263,
      "page": "/rooms/guild-loft-suite",
      "newText": "After a night in San Diego, the City Level Loft offers room to breathe.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "checkedOn": "/rooms/guild-loft-suite",
+     "mapStatus": "change",
+     "status": "missing"
     },
     {
      "id": "Guild-Rooms-SubPages:266",
@@ -6722,10 +7113,10 @@
   {
    "page": "/rooms/two-bedroom-loft-suite",
    "counts": {
-    "done": 0,
+    "done": 5,
     "differs": 0,
-    "missing": 6,
-    "unchecked": 17
+    "missing": 3,
+    "unchecked": 15
    },
    "rows": [
     {
@@ -6746,7 +7137,7 @@
      "newText": "Say Hello to the Penthouse",
      "checkedOn": "/rooms/two-bedroom-loft-suite",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:365",
@@ -6766,7 +7157,7 @@
      "newText": "Outside, a terrace for morning coffee, for an afternoon cocktail with friends, or to celebrate the sunset. Inside, a generous, glamorous living, dining, and lounging space, along with an industrial-style tiled bathroom. Every custom-designed comfort comes home to the Two-Bedroom Loft Suite.",
      "checkedOn": "/rooms/two-bedroom-loft-suite",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:369",
@@ -6783,10 +7174,10 @@
      "doc": "Guild-Rooms-SubPages",
      "line": 370,
      "page": "/rooms/two-bedroom-loft-suite",
-     "newText": "Penthouse",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "newText": "Penthouse\n1 King\n1 Queen\n2-4 Guests\nTerrace\nBathrooms: 2.5\n1809sqft | 163sqm.",
+     "checkedOn": "/rooms/two-bedroom-loft-suite",
+     "mapStatus": "change",
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:371",
@@ -6794,8 +7185,8 @@
      "line": 371,
      "page": "/rooms/two-bedroom-loft-suite",
      "newText": "1 King",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
+     "reason": "joined into 370: the head row carries the composed text",
+     "mapStatus": "change",
      "status": "unchecked"
     },
     {
@@ -6804,8 +7195,8 @@
      "line": 372,
      "page": "/rooms/two-bedroom-loft-suite",
      "newText": "1 Queen",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
+     "reason": "joined into 370: the head row carries the composed text",
+     "mapStatus": "change",
      "status": "unchecked"
     },
     {
@@ -6816,7 +7207,7 @@
      "newText": "2-4 Guests",
      "checkedOn": "/rooms/two-bedroom-loft-suite",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:374",
@@ -6824,8 +7215,8 @@
      "line": 374,
      "page": "/rooms/two-bedroom-loft-suite",
      "newText": "Terrace",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
+     "reason": "joined into 370: the head row carries the composed text",
+     "mapStatus": "change",
      "status": "unchecked"
     },
     {
@@ -6834,8 +7225,8 @@
      "line": 375,
      "page": "/rooms/two-bedroom-loft-suite",
      "newText": "Bathrooms: 2.5",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
+     "reason": "joined into 370: the head row carries the composed text",
+     "mapStatus": "change",
      "status": "unchecked"
     },
     {
@@ -6846,7 +7237,7 @@
      "newText": "1809sqft | 163sqm.",
      "checkedOn": "/rooms/two-bedroom-loft-suite",
      "mapStatus": "change",
-     "status": "missing"
+     "status": "done"
     },
     {
      "id": "Guild-Rooms-SubPages:379",
@@ -6854,9 +7245,9 @@
      "line": 379,
      "page": "/rooms/two-bedroom-loft-suite",
      "newText": "Going out is grand. Coming home to the Two-Bedroom Loft Suite is even better.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
+     "checkedOn": "/rooms/two-bedroom-loft-suite",
+     "mapStatus": "change",
+     "status": "missing"
     },
     {
      "id": "Guild-Rooms-SubPages:382",
@@ -6963,8 +7354,8 @@
   {
    "page": "/wellness",
    "counts": {
-    "done": 4,
-    "differs": 8,
+    "done": 12,
+    "differs": 0,
     "missing": 0,
     "unchecked": 0
    },
@@ -6986,9 +7377,8 @@
      "page": "/wellness",
      "newText": "More ways to feel good every day of your stay.",
      "checkedOn": "/wellness",
-     "foundText": "In hac habitasse platea dictumst. Etiam dapibus augue tortor",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Wellness-Collection:6",
@@ -6997,9 +7387,8 @@
      "page": "/wellness",
      "newText": "Come Gather Your Strength",
      "checkedOn": "/wellness",
-     "foundText": "From movement and produce to deep rest.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Wellness-Collection:7",
@@ -7008,9 +7397,8 @@
      "page": "/wellness",
      "newText": "The Guild makes wellness a celebration with active meetups, pure California dining options, innovative fitness and in-room indulgence.",
      "checkedOn": "/wellness",
-     "foundText": "Suspendisse viverra interdum elit, vitae vestibulum lectus iaculis non. Proin tortor felis, fringilla eu tincidunt a, facilisis ultrices massa.",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Wellness-Collection:9",
@@ -7029,9 +7417,8 @@
      "page": "/wellness",
      "newText": "Pure enjoyment or private workouts when you need them.",
      "checkedOn": "/wellness",
-     "foundText": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Wellness-Collection:12",
@@ -7040,9 +7427,8 @@
      "page": "/wellness",
      "newText": "Fitness Centre",
      "checkedOn": "/wellness",
-     "foundText": "fitness center",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Wellness-Collection:13",
@@ -7051,9 +7437,8 @@
      "page": "/wellness",
      "newText": "State-of-the-art gear for better routines at our guests-only gym.",
      "checkedOn": "/wellness",
-     "foundText": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Wellness-Collection:15",
@@ -7072,9 +7457,8 @@
      "page": "/wellness",
      "newText": "Clean, lean, flavorful and satisfying: intentional dining at its best.",
      "checkedOn": "/wellness",
-     "foundText": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     },
     {
      "id": "Guild-Wellness-Collection:18",
@@ -7093,9 +7477,8 @@
      "page": "/wellness",
      "newText": "Adventures in wellbeing at The Guild and around our neighborhood.",
      "checkedOn": "/wellness",
-     "foundText": "Nullam scelerisque mollis ex sed aliquam, mauris ultrices tempus massa",
      "mapStatus": "change",
-     "status": "differs"
+     "status": "done"
     }
    ]
   },
@@ -7189,7 +7572,7 @@
     "done": 0,
     "differs": 0,
     "missing": 0,
-    "unchecked": 142
+    "unchecked": 104
    },
    "rows": [
     {
@@ -7338,386 +7721,6 @@
      "line": 53,
      "page": null,
      "newText": "*requires furniture removal; charges may apply",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:55",
-     "doc": "Guild-Meetings-Modals",
-     "line": 55,
-     "page": null,
-     "newText": "GARDEN TERRACE",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:65",
-     "doc": "Guild-Meetings-Modals",
-     "line": 65,
-     "page": null,
-     "newText": "GARDEN TERRACE",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:66",
-     "doc": "Guild-Meetings-Modals",
-     "line": 66,
-     "page": null,
-     "newText": "The Guild’s superb al fresco venue",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:68",
-     "doc": "Guild-Meetings-Modals",
-     "line": 68,
-     "page": null,
-     "newText": "Details",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:69",
-     "doc": "Guild-Meetings-Modals",
-     "line": 69,
-     "page": null,
-     "newText": "With its lush landscaping and Mediterranean atmosphere, the Garden Terrace is a venue for unforgettable outdoor experiences, from dinners to cocktails to networking events.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:71",
-     "doc": "Guild-Meetings-Modals",
-     "line": 71,
-     "page": null,
-     "newText": "Features",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:72",
-     "doc": "Guild-Meetings-Modals",
-     "line": 72,
-     "page": null,
-     "newText": "1396 SQ FT",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:73",
-     "doc": "Guild-Meetings-Modals",
-     "line": 73,
-     "page": null,
-     "newText": "Existing Seating: 68",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:74",
-     "doc": "Guild-Meetings-Modals",
-     "line": 74,
-     "page": null,
-     "newText": "Classroom: 58*",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:75",
-     "doc": "Guild-Meetings-Modals",
-     "line": 75,
-     "page": null,
-     "newText": "Theater: 155*",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:76",
-     "doc": "Guild-Meetings-Modals",
-     "line": 76,
-     "page": null,
-     "newText": "U-shape: 40*",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:77",
-     "doc": "Guild-Meetings-Modals",
-     "line": 77,
-     "page": null,
-     "newText": "Conference: 34*",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:78",
-     "doc": "Guild-Meetings-Modals",
-     "line": 78,
-     "page": null,
-     "newText": "Rounds: 116*",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:79",
-     "doc": "Guild-Meetings-Modals",
-     "line": 79,
-     "page": null,
-     "newText": "Reception: 140*",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Meetings-Modals:80",
-     "doc": "Guild-Meetings-Modals",
-     "line": 80,
-     "page": null,
-     "newText": "*requires furniture removal, charges may apply",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:202",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 202,
-     "page": null,
-     "newText": "CITY LEVEL LOFT",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:203",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 203,
-     "page": null,
-     "newText": "Come to the loft life.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:205",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 205,
-     "page": null,
-     "newText": "Street Smart City Space.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:208",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 208,
-     "page": null,
-     "newText": "City Level Loft. Street View.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:210",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 210,
-     "page": null,
-     "newText": "Everyone loves a loft. Ours has lots of natural light, a plush King bed, and stylishly refined contemporary touches, including custom furnishings and a sleek, industrial-chic tiled bathroom.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:212",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 212,
-     "page": null,
-     "newText": "View Floorplan",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:215",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 215,
-     "page": null,
-     "newText": "1 King Bed",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:216",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 216,
-     "page": null,
-     "newText": "2 Guests",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:217",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 217,
-     "page": null,
-     "newText": "280sqft 25sqm",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:218",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 218,
-     "page": null,
-     "newText": "300sqft / 27sqm.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:221",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 221,
-     "page": null,
-     "newText": "After a night out, the City Level Loft offers room to breathe.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:224",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 224,
-     "page": null,
-     "newText": "The City Level Loft is as generously proportioned as it is restful, with luxury linens that invite deep sleeps and custom furnishings that offer every comfort.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:226",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 226,
-     "page": null,
-     "newText": "In-Room Amenities",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:227",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 227,
-     "page": null,
-     "newText": "Every detail is intentional: the room scent is luxurious and inviting; the artwork and the furnishings are original and intriguing. The essentials are all here, including free, high-speed Wi-Fi, a safe for a laptop, and the all-important steamer, of course.",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:229",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 229,
-     "page": null,
-     "newText": "le labo santal 33 bath amenities",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:230",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 230,
-     "page": null,
-     "newText": "iron & board (steamer upon request)",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:231",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 231,
-     "page": null,
-     "newText": "curated local art",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:232",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 232,
-     "page": null,
-     "newText": "laptop safe",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:233",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 233,
-     "page": null,
-     "newText": "hair dryer (flat iron upon request)",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:234",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 234,
-     "page": null,
-     "newText": "Keurig coffee machine (upon request)",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:235",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 235,
-     "page": null,
-     "newText": "music player (via bluetooth tv)",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:236",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 236,
-     "page": null,
-     "newText": "high-speed Wi-fi",
-     "reason": "not on site: no element to check",
-     "mapStatus": "not on site",
-     "status": "unchecked"
-    },
-    {
-     "id": "Guild-Rooms-SubPages:239",
-     "doc": "Guild-Rooms-SubPages",
-     "line": 239,
-     "page": null,
-     "newText": "The Guild’s accessible accommodations have lowered features throughout and modern bathrooms with roll-in shower and grab bar. Accessible rooms are available upon request and guaranteed only if inventory is available at time of booking on Marriott.com.",
      "reason": "not on site: no element to check",
      "mapStatus": "not on site",
      "status": "unchecked"

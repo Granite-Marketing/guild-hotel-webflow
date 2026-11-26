@@ -15,7 +15,7 @@ export async function openBrowser() {
 export function collectTextElementsInPage() {
   const collapse = (text) => (text || '').replace(/\s+/g, ' ').trim()
   const skipTags = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE', 'SVG', 'PATH', 'HEAD'])
-  const textTags = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'A', 'LI', 'BUTTON', 'SPAN', 'LABEL', 'BLOCKQUOTE', 'FIGCAPTION', 'DT', 'DD'])
+  const textTags = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'A', 'LI', 'UL', 'BUTTON', 'SPAN', 'LABEL', 'BLOCKQUOTE', 'FIGCAPTION', 'DT', 'DD'])
   const hasOwnText = (element) => [...element.childNodes].some((node) => node.nodeType === 3 && node.textContent.trim() !== '')
   const found = []
   for (const element of document.body.querySelectorAll('*')) {

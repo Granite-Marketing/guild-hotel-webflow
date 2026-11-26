@@ -562,12 +562,12 @@ test('the real run covers all 20 docs, one row per copy line, with unique row id
   assert.ok(map.rows.every((row) => !row.needsConfirm || row.confirmReasons.length), 'every row to confirm says why')
 })
 
-test('the real rooms doc matches 9 of its 14 rooms by name and lists the rest without creating any', () => {
+test('the real rooms doc matches 10 of its 14 rooms (City Level Loft by the C7 alias) and lists the rest without creating any', () => {
   const { docs, model } = loadCopyMapInputs(contentDir)
   const map = buildCopyMap({ docs, model, registry: REGISTRY })
   assert.equal(map.rooms.matched.length + map.rooms.docRoomsWithoutItem.length, 14)
-  assert.deepEqual(map.rooms.itemsWithoutDoc.map((entry) => entry.item).sort(), ['Guild City Level Loft', 'Placeholder Single 1', 'Placeholder Single 2'])
-  assert.ok(map.rooms.docRoomsWithoutItem.some((entry) => /city level loft/i.test(entry.docRoom) && entry.possibleItems.includes('Guild City Level Loft')))
+  assert.deepEqual(map.rooms.itemsWithoutDoc.map((entry) => entry.item).sort(), ['Placeholder Single 1', 'Placeholder Single 2'])
+  assert.ok(map.rooms.matched.some((entry) => entry.docRoom === 'CITY LEVEL LOFT' && entry.item === 'Guild City Level Loft'))
   const cozyQueen = map.rows.find((row) => row.cmsItem?.slug === 'cozy-queen' && row.target?.fieldSlug === 'hero-intro')
   assert.equal(cozyQueen.newText, 'Perfectly Intimate')
   assert.equal(cozyQueen.cmsItem.itemPath, '/rooms/cozy-queen')

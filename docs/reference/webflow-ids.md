@@ -825,3 +825,24 @@ Split image text light `50d0d660-fa88-c432-96fa-679fbe31a938` (Olive Home) and `
   - No component holds a hexagon panel, so no Video Link prop was needed.
   - MCP gotcha: page-wide `query_elements` filters fail on Dining, Arts and the Legal template ("Element does not have a configurable visibility setting"); read the tree at depth 3 and scope the query to the section instead.
 - Sample video (#429): Dinings item Zuma San Diego `6ad67dd4bf36da0c182e52b3` (sort 1, first home panel) has the Dropbox sora-video-comp.mp4 link in `home-card---video-link`; bundle v1.3.29 live on staging (2026-11-26).
+
+## CMS fields for template text (copy upload #418, 2026-11-26)
+
+Plain text fields added so text that was fixed on a CMS template can differ per item (decision C6 in `docs/specs/guild-content/notes.md`). Filled per item; not yet bound in the Designer (bind list in `docs/specs/guild-content/report.md`).
+
+| Collection | Field | Slug | ID |
+|---|---|---|---|
+| Rooms | Intro - Script Heading | `intro---script-heading` | `5604d89c502e4ebcafdadabd2588b366` |
+| Rooms | Description - Floorplan Button Text | `description---floorplan-button-text` | `9f1ea24ef9b61181a4716f1427b97928` |
+| Rooms | Photo - Caption | `photo---caption` | `8cfb8d6ff63ad4c6e402e6cab39ab354` |
+| Rooms | Feature - Text | `feature---text` | `541f1da3addc5367fc577fd2eb349ed2` |
+| Rooms | Amenities - Heading | `amenities---heading` | `1bb414b5da53a9e1b2aa65dbc3a59c73` |
+| Rooms | Amenities - Text | `amenities---text` | `321ca9d9af54b2d9f14e97809a99d11d` |
+| Dinings | Group Dining - Heading | `group-dining---heading` | `f64a029791af73fed54cf52630963d91` |
+| Legal Corporates | Features - Heading | `features---heading` | `0fd41c8dd1b6d45926511e455576c0c4` |
+| Legal Corporates | Features - Item 1 Heading | `features---item-1-heading` | `dfc91669f7a1a1d6d907268d819c42d7` |
+| Legal Corporates | Features - Item 3 Heading | `features---item-3-heading` | `61ebd1935836d72ab20bba28511b9d3a` |
+| Legal Corporates | Why Choose - Eyebrow | `why-choose---eyebrow` | `b03aa745a8717e11773af9a311285eab` |
+| Legal Corporates | Why Choose - Link Text | `why-choose---link-text` | `8b88a23019b28e1351e1b02296d6ccd2` |
+| Legal Corporates | Map - Heading | `map---heading` | `4e942e514c43f72041312de97086aa16` |
+| Legal Corporates | Map - Text | `map---text` | `77c5f7b7125446d23efcc89c438cd089` |
