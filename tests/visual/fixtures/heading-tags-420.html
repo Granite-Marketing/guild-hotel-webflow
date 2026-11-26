@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fixture: scripts that must not depend on the heading tag (#420)</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; font-size: 1.25rem; }
+      [role="dialog"] { position: fixed; inset: 0; opacity: 0; visibility: hidden; pointer-events: none; z-index: 20; }
+      [role="dialog"].is-open { opacity: 1; visibility: visible; }
+      .dialog_panel { pointer-events: auto; position: absolute; top: 100px; left: 100px; width: 600px; height: 300px; background: #eee; }
+      .rooms-collection-room-grid_card { display: block; position: relative; width: 400px; height: 300px; background: #444; color: #fff; }
+      .rooms-collection-room-grid_content { position: absolute; inset: auto 0 0 0; }
+      /* Mirrors docs/reference/site-head/rooms-quiz-crossfade.css: steps stack, the idle ones are hidden. */
+      .rooms-collection-quiz_component:not(.is-active):not(.is-entering) { position: absolute; visibility: hidden; pointer-events: none; }
+      .script-text { font-family: 'Morello Pen', cursive; }
+      .line-mask-box p, .line-mask-box h2, .line-mask-box h3, .line-mask-box div { max-width: 28rem; margin: 0 0 1rem; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <button type="button" id="open-dialog" data-modal-open="paragraph-dialog">open</button>
+      <button type="button" id="open-heading-dialog" data-modal-open="heading-dialog">open heading dialog</button>
+
+      <section id="line-mask-box" class="line-mask-box">
+        <h2 data-case="h2">A heading level two that wraps over a couple of lines at this width</h2>
+        <h3 data-case="h3">A heading level three that wraps over a couple of lines at this width</h3>
+        <p data-case="p">A paragraph that wraps over a couple of lines at this width, again and again.</p>
+        <div data-case="div-marked" data-line-mask="text">A marked div that wraps over a couple of lines at this width, again.</div>
+        <div data-case="div-plain">A plain div that wraps over a couple of lines at this width, again and again.</div>
+      </section>
+
+      <section id="script-box">
+        <h2 data-script-case="h2" class="script-text">Script h2</h2>
+        <h3 data-script-case="h3" class="script-text">Script h3</h3>
+        <p data-script-case="p" class="script-text">Script p</p>
+        <div data-script-case="div" class="script-text">Script div</div>
+      </section>
+
+      <a href="#" class="rooms-collection-room-grid_card" id="grid-card">
+        <figure></figure>
+        <div class="rooms-collection-room-grid_content">
+          <header class="rooms-collection-room-grid_header"><p class="rooms-collection-room-grid_heading" id="grid-name">cozy queen</p></header>
+          <div class="rooms-collection-room-grid_details" id="grid-details">2 guests</div>
+          <footer id="grid-footer">view more</footer>
+        </div>
+      </a>
+
+      <section id="rooms-quiz" data-rooms-quiz="true">
+        <div data-rooms-quiz-step="1" class="rooms-collection-quiz_component is-active">
+          <header><p class="rooms-collection-quiz_counter">01 / 03</p><p class="rooms-collection-quiz_heading" id="quiz-heading-1">who is checking in?</p></header>
+          <a href="#" role="button" aria-pressed="false" data-rooms-quiz-option="just-me" id="quiz-option">Just me</a>
+        </div>
+        <div data-rooms-quiz-step="2" class="rooms-collection-quiz_component">
+          <header><p class="rooms-collection-quiz_counter">02 / 03</p><p class="rooms-collection-quiz_heading" id="quiz-heading-2">what type of stay?</p></header>
+          <a href="#" role="button" aria-pressed="false" data-rooms-quiz-option="couples-getaway">Couples</a>
+        </div>
+        <div data-rooms-quiz-step="3" class="rooms-collection-quiz_component">
+          <header><p class="rooms-collection-quiz_counter">03 / 03</p><p class="rooms-collection-quiz_heading">what matters?</p></header>
+          <a href="#" role="button" aria-pressed="false" data-rooms-quiz-option="quiet">Quiet</a>
+        </div>
+      </section>
+    </main>
+
+    <div id="paragraph-dialog" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+      <div class="dialog_panel">
+        <button type="button" data-modal-close>close</button>
+        <p class="overlay-detail-panel-modal_heading" id="paragraph-title">The paragraph title</p>
+        <div class="w-richtext"><p>body</p></div>
+      </div>
+    </div>
+    <div id="heading-dialog" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+      <div class="dialog_panel">
+        <button type="button" data-modal-close>close</button>
+        <p>an earlier paragraph</p>
+        <p data-modal-title id="marked-title">Marked title</p>
+        <h2>An h2 later in the dialog</h2>
+      </div>
+    </div>
+    <script src="./heading-tags-420.js"></script>
+  </body>
+</html>
