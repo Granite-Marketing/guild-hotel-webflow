@@ -18,6 +18,10 @@ Source: the client's content tracker (Guild-WebsiteContent sheet) and its linked
 - **C2. H1 wording.** Stephen: "We'll go with the content doc here because that's the actual copy. The SEO is purely for changing the tags." The SEO sheet's suggested H1 wording (8 pages, "to agree with Kevin") is not used; it is listed in the report for Kevin.
 - **C3. Missing copy.** Contact's doc is empty and the four Wellness sub-pages are on hold: leave those pages' copy as it is and flag them.
 - **C4. Order.** Two specs, copy first, then headings (spec in `docs/specs/heading-structure/`), so the two never edit the same page at once. Copy can run on the T14 through the Webflow Data API; the Designer is not needed for copy.
+- **C5. Rows to confirm (26 Nov, before merging #445).** The copy map left 160 rows as best guesses. Stephen: "Use browser driving to help make your best guess and if things are incorrectly placed then we can come back to it." So the upload decides each one itself by looking at the live staging page in a headless browser, writes its pick into the map, and lists the picks in the report; misplaced lines get fixed in a later round.
+- **C6. Text fixed on CMS templates (26 Nov).** 12 spots on the room, dining and legal templates show the same text on every item, but the docs give each item its own line. Stephen: "Yes, use CMS, we didn't know which content was dynamic and not during setting this up." So each spot gets its own CMS text field, filled per item from the docs, and the template text is bound to it in the Designer. This overrides the "shared rows are not written" line in #418's plan.
+- **C7. City Level Loft (26 Nov).** The doc's "City Level Loft" is the "Guild City Level Loft" room item. Stephen: "Match them yes".
+- **C8. Accepted as built (26 Nov).** Site-wide parts (nav, footer, FAQ, offers), pop-ups, forms, empty-list text and timeline years stay out of the "no copy yet" list; a short repeated line such as "Discover More" may read done from another spot on the page; the check ignores heading tags; writer's notes and second versions are notes, not rows.
 
 ## What the docs contain (26 Nov)
 
