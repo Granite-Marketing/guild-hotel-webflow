@@ -1,6 +1,7 @@
 // Copy map library: parses the client's content docs and matches every line to a staging target.
 // Pure functions only (no file or network access); the CLI in ../copy-map.mjs does the reading and writing.
 import { normText } from './catalogue-helpers.mjs'
+import { ITEM_ALIASES } from './copy-map-registry.mjs'
 
 // ---------------------------------------------------------------- tuning values (product assumptions, see the CLI report)
 export const CONFIDENCE_MATCH_MINIMUM = 0.45 // below this a line is listed as not on site
@@ -360,7 +361,8 @@ function expandEntryRows(docName, entry, headRow) {
 const hasField = (collection, fieldSlug) => (collection.fields || []).includes(fieldSlug)
 
 function itemByName(collection, name) {
-  const key = nameKey(name)
+  const alias = ITEM_ALIASES[(collection.templatePath || '').slice(1)]?.[nameKey(name)]
+  const key = nameKey(alias || name)
   return (collection.items || []).find((item) => nameKey(item.name) === key) || null
 }
 
@@ -572,7 +574,7 @@ function cardPairs(entries, collections, cards) {
       const collection = collections[card.collection]
       if (!collection) continue
       const key = nameKey(entry.text)
-      const exact = (collection.items || []).find((item) => nameKey(item.name) === key)
+      const exact = itemByName(collection, entry.text)
       const shortForm = exact ? null : (collection.items || []).filter((item) => {
         const itemTokens = nameKey(item.name).split(' ')
         const keyTokens = key.split(' ')

@@ -1,0 +1,3805 @@
+{
+ "about": "Upload picks for #418 (C5 to C7 in docs/specs/guild-content/notes.md). Applied by pnpm copy-map after the map is built: accept keeps the row, reject makes it \"not on site\" with the note, retarget overrides the listed row fields. fieldPlan lists the new CMS fields for the template text (C6) with the template element each must be bound to in the Designer and the value for items without doc copy (today's template text).",
+ "fieldPlan": [
+  {
+   "collection": "rooms",
+   "displayName": "Intro - Script Heading",
+   "bindTo": "script-intro-centered heading (component prop Content/heading) on the Rooms template",
+   "fallback": "A room for every stay",
+   "extra": false
+  },
+  {
+   "collection": "rooms",
+   "displayName": "Description - Floorplan Button Text",
+   "bindTo": "\"view floorplan\" link text in the room description section",
+   "fallback": "view floorplan",
+   "extra": false
+  },
+  {
+   "collection": "rooms",
+   "displayName": "Photo - Caption",
+   "bindTo": "paragraph over the full-bleed room photo (venue-card-fullbleed), the doc's \"Cutline on photo\"",
+   "fallback": "Etiam imperdiet sodales dui a vestibulum. Duis neque metus, vulputate sit amet libero at, aliquet vehicula lacus.",
+   "extra": true
+  },
+  {
+   "collection": "rooms",
+   "displayName": "Feature - Text",
+   "bindTo": "Split Image Text Edge body text (component prop Content/Body, both instances), the doc's \"(Next text block)\"",
+   "fallback": "Morbi gravida augue at ipsum ultricies aliquet. Nam sed felis a mi porttitor tincidunt ac nec dui. Nulla maximus sem mauris, eget dapibus mauris blandit eget. Fusce volutpat egestas augue, a tempor nibh sollicitudin ac. Etiam consectetur mi non justo volutpat interdum.",
+   "extra": true
+  },
+  {
+   "collection": "rooms",
+   "displayName": "Amenities - Heading",
+   "bindTo": "\"in room amenities\" heading",
+   "fallback": "in room amenities",
+   "extra": false
+  },
+  {
+   "collection": "rooms",
+   "displayName": "Amenities - Text",
+   "bindTo": "paragraph under the amenities heading",
+   "fallback": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper odio, sed tempor nulla, Integer eu facilisis mi. Maecenas sit amet diam orci",
+   "extra": false
+  },
+  {
+   "collection": "dining",
+   "displayName": "Group Dining - Heading",
+   "bindTo": "Image Trio Text heading (component prop Header/Heading) on the Dinings template",
+   "fallback": "group dining & events",
+   "extra": false
+  },
+  {
+   "collection": "legal-corporate",
+   "displayName": "Features - Heading",
+   "bindTo": "Image Trio Text Left heading (Header/Heading)",
+   "fallback": "key features",
+   "extra": false
+  },
+  {
+   "collection": "legal-corporate",
+   "displayName": "Features - Item 1 Heading",
+   "bindTo": "Image Trio Text Left first item heading (Items/Item 1 Heading)",
+   "fallback": "High-Speed, Encrypted Wi-Fi",
+   "extra": false
+  },
+  {
+   "collection": "legal-corporate",
+   "displayName": "Features - Item 3 Heading",
+   "bindTo": "Image Trio Text Left third item heading (Items/Item 3 Heading)",
+   "fallback": "Quiet, Professional Workspaces",
+   "extra": false
+  },
+  {
+   "collection": "legal-corporate",
+   "displayName": "Why Choose - Eyebrow",
+   "bindTo": "eyebrow heading in the dark feature grid (section_feature-grid-dark-eyebrow)",
+   "fallback": "Why teams choose The Guild",
+   "extra": false
+  },
+  {
+   "collection": "legal-corporate",
+   "displayName": "Why Choose - Link Text",
+   "bindTo": "\"discover more\" link in the dark feature grid",
+   "fallback": "discover more",
+   "extra": false
+  },
+  {
+   "collection": "legal-corporate",
+   "displayName": "Map - Heading",
+   "bindTo": "Map Feature Image Bg heading (Content/Heading)",
+   "fallback": "Steps from key legal addresses",
+   "extra": false
+  },
+  {
+   "collection": "legal-corporate",
+   "displayName": "Map - Text",
+   "bindTo": "Map Feature Image Bg text (Content/Text)",
+   "fallback": "Four courthouses sit within a short walk of The Guild, so your team can move between hearings, prep sessions and the hotel in minutes.",
+   "extra": false
+  }
+ ],
+ "picks": [
+  {
+   "id": "Guild-Corporate:12",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Features - Heading\" on Corporate (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "legal-corporate",
+     "collectionName": "🧑‍⚖️ Legal Corporates",
+     "name": "Corporate",
+     "slug": "corporate",
+     "itemPath": "/legal-corporate/corporate",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Features - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_image-trio-text",
+      "liveOrder": 14,
+      "textHint": "key features",
+      "component": "Image Trio Text Left",
+      "property": "Header/Heading",
+      "propertyId": "ebeb1a92-d766-3614-254d-19c94cdb7b4f",
+      "instance": "8d6ed2de-4492-327f-2236-20b3f19afb0e",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Corporate:14",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Features - Item 1 Heading\" on Corporate (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "legal-corporate",
+     "collectionName": "🧑‍⚖️ Legal Corporates",
+     "name": "Corporate",
+     "slug": "corporate",
+     "itemPath": "/legal-corporate/corporate",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Features - Item 1 Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h3",
+      "section": "section_image-trio-text",
+      "liveOrder": 15,
+      "textHint": "High-Speed, Encrypted Wi-Fi",
+      "component": "Image Trio Text Left",
+      "property": "Items/Item 1 Heading",
+      "propertyId": "f79f92db-cfe5-c3f4-bec2-ca3718e9faed",
+      "instance": "8d6ed2de-4492-327f-2236-20b3f19afb0e",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Corporate:20",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Features - Item 3 Heading\" on Corporate (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "legal-corporate",
+     "collectionName": "🧑‍⚖️ Legal Corporates",
+     "name": "Corporate",
+     "slug": "corporate",
+     "itemPath": "/legal-corporate/corporate",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Features - Item 3 Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h3",
+      "section": "section_image-trio-text",
+      "liveOrder": 17,
+      "textHint": "Quiet, Professional Workspaces",
+      "component": "Image Trio Text Left",
+      "property": "Items/Item 3 Heading",
+      "propertyId": "d18381ee-348a-4dd0-1bdd-845d3a7c8bd7",
+      "instance": "8d6ed2de-4492-327f-2236-20b3f19afb0e",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Corporate:23",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Why Choose - Eyebrow\" on Corporate (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "legal-corporate",
+     "collectionName": "🧑‍⚖️ Legal Corporates",
+     "name": "Corporate",
+     "slug": "corporate",
+     "itemPath": "/legal-corporate/corporate",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Why Choose - Eyebrow",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_feature-grid-dark-eyebrow",
+      "liveOrder": 18,
+      "textHint": "Why teams choose The Guild",
+      "nodeId": "26fa6671-ddad-65a3-b4e6-613555e7e837"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Corporate:67",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Why Choose - Link Text\" on Corporate (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "legal-corporate",
+     "collectionName": "🧑‍⚖️ Legal Corporates",
+     "name": "Corporate",
+     "slug": "corporate",
+     "itemPath": "/legal-corporate/corporate",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Why Choose - Link Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "a",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "discover more",
+      "nodeId": "03a9c003-ef1d-111b-b863-187c7ca0f048"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Corporate:78",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Map - Heading\" on Corporate (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "legal-corporate",
+     "collectionName": "🧑‍⚖️ Legal Corporates",
+     "name": "Corporate",
+     "slug": "corporate",
+     "itemPath": "/legal-corporate/corporate",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Map - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_map-feature",
+      "liveOrder": 24,
+      "textHint": "Steps from key legal addresses",
+      "component": "Map Feature Image Bg",
+      "property": "Content/Heading",
+      "propertyId": "cb9c481f-b5dc-1c74-716f-3d3606e28333",
+      "instance": "bf57849a-2fe5-81bb-2554-37d96487c842",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Corporate:79",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Map - Text\" on Corporate (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "legal-corporate",
+     "collectionName": "🧑‍⚖️ Legal Corporates",
+     "name": "Corporate",
+     "slug": "corporate",
+     "itemPath": "/legal-corporate/corporate",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Map - Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": null,
+      "section": null,
+      "liveOrder": null,
+      "textHint": "Four courthouses sit within a short walk of The Guild, so your team can move bet",
+      "component": "Map Feature Image Bg",
+      "property": "Content/Text",
+      "propertyId": "b8f3c5b9-efe9-e6a4-5af7-6ab68b883833",
+      "instance": "bf57849a-2fe5-81bb-2554-37d96487c842",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Dining-GardenTerrace:16",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Group Dining - Heading\" on Garden Terrace (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "dining",
+     "collectionName": "🍴 Dinings",
+     "name": "Garden Terrace",
+     "slug": "dining-gardenterrace",
+     "itemPath": "/dining/dining-gardenterrace",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Group Dining - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_image-trio-text",
+      "liveOrder": 18,
+      "textHint": "group dining & events",
+      "component": "Image Trio Text",
+      "property": "Header/Heading",
+      "propertyId": "ebeb1a92-d766-3614-254d-19c94cdb7b4f",
+      "instance": "58d5c5a8-7e22-04a2-886d-09b8d27c59b1",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Dining-LobbyBar:14",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Group Dining - Heading\" on Lobby Bar (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "dining",
+     "collectionName": "🍴 Dinings",
+     "name": "Lobby Bar",
+     "slug": "dining-lobbybar",
+     "itemPath": "/dining/dining-lobbybar",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Group Dining - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_image-trio-text",
+      "liveOrder": 18,
+      "textHint": "group dining & events",
+      "component": "Image Trio Text",
+      "property": "Header/Heading",
+      "propertyId": "ebeb1a92-d766-3614-254d-19c94cdb7b4f",
+      "instance": "58d5c5a8-7e22-04a2-886d-09b8d27c59b1",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Dining-PoolLounge:13",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Group Dining - Heading\" on Pool Lounge (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "dining",
+     "collectionName": "🍴 Dinings",
+     "name": "Pool Lounge",
+     "slug": "dining-poollounge",
+     "itemPath": "/dining/dining-poollounge",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Group Dining - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_image-trio-text",
+      "liveOrder": 18,
+      "textHint": "group dining & events",
+      "component": "Image Trio Text",
+      "property": "Header/Heading",
+      "propertyId": "ebeb1a92-d766-3614-254d-19c94cdb7b4f",
+      "instance": "58d5c5a8-7e22-04a2-886d-09b8d27c59b1",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Legal:9",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Features - Heading\" on Legal (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "legal-corporate",
+     "collectionName": "🧑‍⚖️ Legal Corporates",
+     "name": "Legal",
+     "slug": "legal",
+     "itemPath": "/legal-corporate/legal",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Features - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_image-trio-text",
+      "liveOrder": 14,
+      "textHint": "key features",
+      "component": "Image Trio Text Left",
+      "property": "Header/Heading",
+      "propertyId": "ebeb1a92-d766-3614-254d-19c94cdb7b4f",
+      "instance": "8d6ed2de-4492-327f-2236-20b3f19afb0e",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Legal:12",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Why Choose - Eyebrow\" on Legal (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "legal-corporate",
+     "collectionName": "🧑‍⚖️ Legal Corporates",
+     "name": "Legal",
+     "slug": "legal",
+     "itemPath": "/legal-corporate/legal",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Why Choose - Eyebrow",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_feature-grid-dark-eyebrow",
+      "liveOrder": 18,
+      "textHint": "Why teams choose The Guild",
+      "nodeId": "26fa6671-ddad-65a3-b4e6-613555e7e837"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Legal:56",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Why Choose - Link Text\" on Legal (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "legal-corporate",
+     "collectionName": "🧑‍⚖️ Legal Corporates",
+     "name": "Legal",
+     "slug": "legal",
+     "itemPath": "/legal-corporate/legal",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Why Choose - Link Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "a",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "discover more",
+      "nodeId": "03a9c003-ef1d-111b-b863-187c7ca0f048"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Legal:67",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Map - Heading\" on Legal (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "legal-corporate",
+     "collectionName": "🧑‍⚖️ Legal Corporates",
+     "name": "Legal",
+     "slug": "legal",
+     "itemPath": "/legal-corporate/legal",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Map - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_map-feature",
+      "liveOrder": 24,
+      "textHint": "Steps from key legal addresses",
+      "component": "Map Feature Image Bg",
+      "property": "Content/Heading",
+      "propertyId": "cb9c481f-b5dc-1c74-716f-3d3606e28333",
+      "instance": "bf57849a-2fe5-81bb-2554-37d96487c842",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Legal:68",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Map - Text\" on Legal (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "legal-corporate",
+     "collectionName": "🧑‍⚖️ Legal Corporates",
+     "name": "Legal",
+     "slug": "legal",
+     "itemPath": "/legal-corporate/legal",
+     "itemPathDerived": false,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Map - Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": null,
+      "section": null,
+      "liveOrder": null,
+      "textHint": "Four courthouses sit within a short walk of The Guild, so your team can move bet",
+      "component": "Map Feature Image Bg",
+      "property": "Content/Text",
+      "propertyId": "b8f3c5b9-efe9-e6a4-5af7-6ab68b883833",
+      "instance": "bf57849a-2fe5-81bb-2554-37d96487c842",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:5",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Intro - Script Heading\" on Cozy Queen (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Queen",
+     "slug": "cozy-queen",
+     "itemPath": "/rooms/cozy-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Intro - Script Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_script-intro-centered",
+      "liveOrder": 13,
+      "textHint": "A room for every stay",
+      "component": "script-intro-centered",
+      "property": "Content/heading",
+      "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+      "instance": "67e58af5-a074-f1f6-457a-54bc8ecd98eb",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:7",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Intro - Script Heading\" on Cozy Queen (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Queen",
+     "slug": "cozy-queen",
+     "itemPath": "/rooms/cozy-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Intro - Script Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_script-intro-centered",
+      "liveOrder": 13,
+      "textHint": "A room for every stay",
+      "component": "script-intro-centered",
+      "property": "Content/heading",
+      "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+      "instance": "67e58af5-a074-f1f6-457a-54bc8ecd98eb",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "second version listed"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:13",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Description - Floorplan Button Text\" on Cozy Queen (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Queen",
+     "slug": "cozy-queen",
+     "itemPath": "/rooms/cozy-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Description - Floorplan Button Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "a",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "view floorplan",
+      "nodeId": "69ec8908-accd-8089-82fd-c3a0d22dfb5c"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:26",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Heading\" on Cozy Queen (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Queen",
+     "slug": "cozy-queen",
+     "itemPath": "/rooms/cozy-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_rooms-individual-amenities",
+      "liveOrder": 15,
+      "textHint": "in room amenities",
+      "nodeId": "0e19698c-7821-d499-fcda-bece759aa552"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:27",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Text\" on Cozy Queen (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Queen",
+     "slug": "cozy-queen",
+     "itemPath": "/rooms/cozy-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "p",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper ",
+      "nodeId": "37fae948-f3a7-2144-06d3-2a6e59c2bcf6"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:44",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Intro - Script Heading\" on Cozy Courtyard Queen (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard Queen",
+     "slug": "cozy-courtyard-queen",
+     "itemPath": "/rooms/cozy-courtyard-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Intro - Script Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_script-intro-centered",
+      "liveOrder": 13,
+      "textHint": "A room for every stay",
+      "component": "script-intro-centered",
+      "property": "Content/heading",
+      "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+      "instance": "67e58af5-a074-f1f6-457a-54bc8ecd98eb",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:52",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Description - Floorplan Button Text\" on Cozy Courtyard Queen (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard Queen",
+     "slug": "cozy-courtyard-queen",
+     "itemPath": "/rooms/cozy-courtyard-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Description - Floorplan Button Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "a",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "view floorplan",
+      "nodeId": "69ec8908-accd-8089-82fd-c3a0d22dfb5c"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:66",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Heading\" on Cozy Courtyard Queen (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard Queen",
+     "slug": "cozy-courtyard-queen",
+     "itemPath": "/rooms/cozy-courtyard-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_rooms-individual-amenities",
+      "liveOrder": 15,
+      "textHint": "in room amenities",
+      "nodeId": "0e19698c-7821-d499-fcda-bece759aa552"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:67",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Text\" on Cozy Courtyard Queen (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard Queen",
+     "slug": "cozy-courtyard-queen",
+     "itemPath": "/rooms/cozy-courtyard-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "p",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper ",
+      "nodeId": "37fae948-f3a7-2144-06d3-2a6e59c2bcf6"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:84",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Intro - Script Heading\" on Cozy King (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy King",
+     "slug": "cozy-king",
+     "itemPath": "/rooms/cozy-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Intro - Script Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_script-intro-centered",
+      "liveOrder": 13,
+      "textHint": "A room for every stay",
+      "component": "script-intro-centered",
+      "property": "Content/heading",
+      "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+      "instance": "67e58af5-a074-f1f6-457a-54bc8ecd98eb",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:91",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Description - Floorplan Button Text\" on Cozy King (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy King",
+     "slug": "cozy-king",
+     "itemPath": "/rooms/cozy-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Description - Floorplan Button Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "a",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "view floorplan",
+      "nodeId": "69ec8908-accd-8089-82fd-c3a0d22dfb5c"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:106",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Heading\" on Cozy King (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy King",
+     "slug": "cozy-king",
+     "itemPath": "/rooms/cozy-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_rooms-individual-amenities",
+      "liveOrder": 15,
+      "textHint": "in room amenities",
+      "nodeId": "0e19698c-7821-d499-fcda-bece759aa552"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:107",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Text\" on Cozy King (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy King",
+     "slug": "cozy-king",
+     "itemPath": "/rooms/cozy-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "p",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper ",
+      "nodeId": "37fae948-f3a7-2144-06d3-2a6e59c2bcf6"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:124",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Intro - Script Heading\" on Cozy Courtyard King (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard King",
+     "slug": "cozy-courtyard-king",
+     "itemPath": "/rooms/cozy-courtyard-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Intro - Script Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_script-intro-centered",
+      "liveOrder": 13,
+      "textHint": "A room for every stay",
+      "component": "script-intro-centered",
+      "property": "Content/heading",
+      "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+      "instance": "67e58af5-a074-f1f6-457a-54bc8ecd98eb",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:132",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Description - Floorplan Button Text\" on Cozy Courtyard King (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard King",
+     "slug": "cozy-courtyard-king",
+     "itemPath": "/rooms/cozy-courtyard-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Description - Floorplan Button Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "a",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "view floorplan",
+      "nodeId": "69ec8908-accd-8089-82fd-c3a0d22dfb5c"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:146",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Heading\" on Cozy Courtyard King (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard King",
+     "slug": "cozy-courtyard-king",
+     "itemPath": "/rooms/cozy-courtyard-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_rooms-individual-amenities",
+      "liveOrder": 15,
+      "textHint": "in room amenities",
+      "nodeId": "0e19698c-7821-d499-fcda-bece759aa552"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:147",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Text\" on Cozy Courtyard King (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard King",
+     "slug": "cozy-courtyard-king",
+     "itemPath": "/rooms/cozy-courtyard-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "p",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper ",
+      "nodeId": "37fae948-f3a7-2144-06d3-2a6e59c2bcf6"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:164",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Intro - Script Heading\" on City Level Below Ground (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "City Level Below Ground",
+     "slug": "city-level-below-ground",
+     "itemPath": "/rooms/city-level-below-ground",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Intro - Script Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_script-intro-centered",
+      "liveOrder": 13,
+      "textHint": "A room for every stay",
+      "component": "script-intro-centered",
+      "property": "Content/heading",
+      "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+      "instance": "67e58af5-a074-f1f6-457a-54bc8ecd98eb",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:171",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Description - Floorplan Button Text\" on City Level Below Ground (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "City Level Below Ground",
+     "slug": "city-level-below-ground",
+     "itemPath": "/rooms/city-level-below-ground",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Description - Floorplan Button Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "a",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "view floorplan",
+      "nodeId": "69ec8908-accd-8089-82fd-c3a0d22dfb5c"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:187",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Heading\" on City Level Below Ground (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "City Level Below Ground",
+     "slug": "city-level-below-ground",
+     "itemPath": "/rooms/city-level-below-ground",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_rooms-individual-amenities",
+      "liveOrder": 15,
+      "textHint": "in room amenities",
+      "nodeId": "0e19698c-7821-d499-fcda-bece759aa552"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:188",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Text\" on City Level Below Ground (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "City Level Below Ground",
+     "slug": "city-level-below-ground",
+     "itemPath": "/rooms/city-level-below-ground",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "p",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper ",
+      "nodeId": "37fae948-f3a7-2144-06d3-2a6e59c2bcf6"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:205",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Intro - Script Heading\" on Guild City Level Loft (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild City Level Loft",
+     "slug": "guild-city-level-loft",
+     "itemPath": "/rooms/guild-city-level-loft",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Intro - Script Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_script-intro-centered",
+      "liveOrder": 13,
+      "textHint": "A room for every stay",
+      "component": "script-intro-centered",
+      "property": "Content/heading",
+      "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+      "instance": "67e58af5-a074-f1f6-457a-54bc8ecd98eb",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:212",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Description - Floorplan Button Text\" on Guild City Level Loft (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild City Level Loft",
+     "slug": "guild-city-level-loft",
+     "itemPath": "/rooms/guild-city-level-loft",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Description - Floorplan Button Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "a",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "view floorplan",
+      "nodeId": "69ec8908-accd-8089-82fd-c3a0d22dfb5c"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:226",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Heading\" on Guild City Level Loft (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild City Level Loft",
+     "slug": "guild-city-level-loft",
+     "itemPath": "/rooms/guild-city-level-loft",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_rooms-individual-amenities",
+      "liveOrder": 15,
+      "textHint": "in room amenities",
+      "nodeId": "0e19698c-7821-d499-fcda-bece759aa552"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:227",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Text\" on Guild City Level Loft (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild City Level Loft",
+     "slug": "guild-city-level-loft",
+     "itemPath": "/rooms/guild-city-level-loft",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "p",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper ",
+      "nodeId": "37fae948-f3a7-2144-06d3-2a6e59c2bcf6"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:244",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Intro - Script Heading\" on Guild Loft Suite (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Loft Suite",
+     "slug": "guild-loft-suite",
+     "itemPath": "/rooms/guild-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Intro - Script Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_script-intro-centered",
+      "liveOrder": 13,
+      "textHint": "A room for every stay",
+      "component": "script-intro-centered",
+      "property": "Content/heading",
+      "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+      "instance": "67e58af5-a074-f1f6-457a-54bc8ecd98eb",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:251",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Description - Floorplan Button Text\" on Guild Loft Suite (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Loft Suite",
+     "slug": "guild-loft-suite",
+     "itemPath": "/rooms/guild-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Description - Floorplan Button Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "a",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "view floorplan",
+      "nodeId": "69ec8908-accd-8089-82fd-c3a0d22dfb5c"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:268",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Heading\" on Guild Loft Suite (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Loft Suite",
+     "slug": "guild-loft-suite",
+     "itemPath": "/rooms/guild-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_rooms-individual-amenities",
+      "liveOrder": 15,
+      "textHint": "in room amenities",
+      "nodeId": "0e19698c-7821-d499-fcda-bece759aa552"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:269",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Text\" on Guild Loft Suite (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Loft Suite",
+     "slug": "guild-loft-suite",
+     "itemPath": "/rooms/guild-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "p",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper ",
+      "nodeId": "37fae948-f3a7-2144-06d3-2a6e59c2bcf6"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:286",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Intro - Script Heading\" on Guild Corner Loft Suite (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Corner Loft Suite",
+     "slug": "guild-corner-loft-suite",
+     "itemPath": "/rooms/guild-corner-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Intro - Script Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_script-intro-centered",
+      "liveOrder": 13,
+      "textHint": "A room for every stay",
+      "component": "script-intro-centered",
+      "property": "Content/heading",
+      "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+      "instance": "67e58af5-a074-f1f6-457a-54bc8ecd98eb",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:306",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Heading\" on Guild Corner Loft Suite (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Corner Loft Suite",
+     "slug": "guild-corner-loft-suite",
+     "itemPath": "/rooms/guild-corner-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_rooms-individual-amenities",
+      "liveOrder": 15,
+      "textHint": "in room amenities",
+      "nodeId": "0e19698c-7821-d499-fcda-bece759aa552"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:307",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Text\" on Guild Corner Loft Suite (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Corner Loft Suite",
+     "slug": "guild-corner-loft-suite",
+     "itemPath": "/rooms/guild-corner-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "p",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper ",
+      "nodeId": "37fae948-f3a7-2144-06d3-2a6e59c2bcf6"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:325",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Intro - Script Heading\" on Guild Double (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Double",
+     "slug": "guild-double",
+     "itemPath": "/rooms/guild-double",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Intro - Script Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_script-intro-centered",
+      "liveOrder": 13,
+      "textHint": "A room for every stay",
+      "component": "script-intro-centered",
+      "property": "Content/heading",
+      "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+      "instance": "67e58af5-a074-f1f6-457a-54bc8ecd98eb",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:344",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Heading\" on Guild Double (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Double",
+     "slug": "guild-double",
+     "itemPath": "/rooms/guild-double",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_rooms-individual-amenities",
+      "liveOrder": 15,
+      "textHint": "in room amenities",
+      "nodeId": "0e19698c-7821-d499-fcda-bece759aa552"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:345",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Text\" on Guild Double (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Double",
+     "slug": "guild-double",
+     "itemPath": "/rooms/guild-double",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "p",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper ",
+      "nodeId": "37fae948-f3a7-2144-06d3-2a6e59c2bcf6"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:362",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Intro - Script Heading\" on Two Bedroom Loft Suite (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Two Bedroom Loft Suite",
+     "slug": "two-bedroom-loft-suite",
+     "itemPath": "/rooms/two-bedroom-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Intro - Script Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_script-intro-centered",
+      "liveOrder": 13,
+      "textHint": "A room for every stay",
+      "component": "script-intro-centered",
+      "property": "Content/heading",
+      "propertyId": "96f53ca3-a098-939b-0103-107df27bb4b8",
+      "instance": "67e58af5-a074-f1f6-457a-54bc8ecd98eb",
+      "overridden": true
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:384",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Heading\" on Two Bedroom Loft Suite (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Two Bedroom Loft Suite",
+     "slug": "two-bedroom-loft-suite",
+     "itemPath": "/rooms/two-bedroom-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Heading",
+     "newField": true,
+     "templateTarget": {
+      "tag": "h2",
+      "section": "section_rooms-individual-amenities",
+      "liveOrder": 15,
+      "textHint": "in room amenities",
+      "nodeId": "0e19698c-7821-d499-fcda-bece759aa552"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:385",
+   "pick": "retarget",
+   "note": "C6: per-item CMS field \"Amenities - Text\" on Two Bedroom Loft Suite (template text is bound in the Designer)",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Two Bedroom Loft Suite",
+     "slug": "two-bedroom-loft-suite",
+     "itemPath": "/rooms/two-bedroom-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Amenities - Text",
+     "newField": true,
+     "templateTarget": {
+      "tag": "p",
+      "section": null,
+      "liveOrder": null,
+      "textHint": "Nullam ac ultricies tortor. Suspendisse viverra congue convallis. Sed at semper ",
+      "nodeId": "37fae948-f3a7-2144-06d3-2a6e59c2bcf6"
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:21",
+   "pick": "retarget",
+   "note": "cutline over the room photo: new per-item field \"Photo - Caption\" on Cozy Queen",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Queen",
+     "slug": "cozy-queen",
+     "itemPath": "/rooms/cozy-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Photo - Caption",
+     "newField": true,
+     "templateTarget": null
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "not on site"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:24",
+   "pick": "retarget",
+   "note": "checked on staging: the details field is the stats list, so this \"(Next text block)\" paragraph goes to the block under the photo, new field \"Feature - Text\" on Cozy Queen",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Queen",
+     "slug": "cozy-queen",
+     "itemPath": "/rooms/cozy-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Feature - Text",
+     "newField": true,
+     "templateTarget": {
+      "fieldSlug": "room-description---details",
+      "currentKnown": false,
+      "tag": null
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:16",
+   "pick": "retarget",
+   "note": "checked on staging: the room page shows the doc's stats as the bullet list in the description (rich text field Room Description - Details); the list is written from the stats lines, replacing the sample bullets",
+   "set": {
+    "status": "change",
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Queen",
+     "slug": "cozy-queen",
+     "itemPath": "/rooms/cozy-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details",
+     "format": "list",
+     "tag": "ul"
+    },
+    "newText": "1 Queen Bed\n2 Guests\n180sqft / 16sqm | 200sqft / 18sqm",
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:61",
+   "pick": "retarget",
+   "note": "cutline over the room photo: new per-item field \"Photo - Caption\" on Cozy Courtyard Queen",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard Queen",
+     "slug": "cozy-courtyard-queen",
+     "itemPath": "/rooms/cozy-courtyard-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Photo - Caption",
+     "newField": true,
+     "templateTarget": null
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "not on site"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:64",
+   "pick": "retarget",
+   "note": "checked on staging: the details field is the stats list, so this \"(Next text block)\" paragraph goes to the block under the photo, new field \"Feature - Text\" on Cozy Courtyard Queen",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard Queen",
+     "slug": "cozy-courtyard-queen",
+     "itemPath": "/rooms/cozy-courtyard-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Feature - Text",
+     "newField": true,
+     "templateTarget": {
+      "fieldSlug": "room-description---details",
+      "currentKnown": false,
+      "tag": null
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:55",
+   "pick": "retarget",
+   "note": "checked on staging: the room page shows the doc's stats as the bullet list in the description (rich text field Room Description - Details); the list is written from the stats lines, replacing the sample bullets",
+   "set": {
+    "status": "change",
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard Queen",
+     "slug": "cozy-courtyard-queen",
+     "itemPath": "/rooms/cozy-courtyard-queen",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details",
+     "format": "list",
+     "tag": "ul"
+    },
+    "newText": "1 Queen Bed\n2 Guests\n180sqft / 16sqm | 206sqft / 19sqm.",
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:101",
+   "pick": "retarget",
+   "note": "cutline over the room photo: new per-item field \"Photo - Caption\" on Cozy King",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy King",
+     "slug": "cozy-king",
+     "itemPath": "/rooms/cozy-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Photo - Caption",
+     "newField": true,
+     "templateTarget": null
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "not on site"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:104",
+   "pick": "retarget",
+   "note": "checked on staging: the details field is the stats list, so this \"(Next text block)\" paragraph goes to the block under the photo, new field \"Feature - Text\" on Cozy King",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy King",
+     "slug": "cozy-king",
+     "itemPath": "/rooms/cozy-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Feature - Text",
+     "newField": true,
+     "templateTarget": {
+      "fieldSlug": "room-description---details",
+      "currentKnown": false,
+      "tag": null
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:95",
+   "pick": "retarget",
+   "note": "checked on staging: the room page shows the doc's stats as the bullet list in the description (rich text field Room Description - Details); the list is written from the stats lines, replacing the sample bullets",
+   "set": {
+    "status": "change",
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy King",
+     "slug": "cozy-king",
+     "itemPath": "/rooms/cozy-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details",
+     "format": "list",
+     "tag": "ul"
+    },
+    "newText": "1 King Bed\n2 Guests\n180sqft / 16sqm | 206sqft / 19sqm.",
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:141",
+   "pick": "retarget",
+   "note": "cutline over the room photo: new per-item field \"Photo - Caption\" on Cozy Courtyard King",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard King",
+     "slug": "cozy-courtyard-king",
+     "itemPath": "/rooms/cozy-courtyard-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Photo - Caption",
+     "newField": true,
+     "templateTarget": null
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "not on site"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:144",
+   "pick": "retarget",
+   "note": "checked on staging: the details field is the stats list, so this \"(Next text block)\" paragraph goes to the block under the photo, new field \"Feature - Text\" on Cozy Courtyard King",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard King",
+     "slug": "cozy-courtyard-king",
+     "itemPath": "/rooms/cozy-courtyard-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Feature - Text",
+     "newField": true,
+     "templateTarget": {
+      "fieldSlug": "room-description---details",
+      "currentKnown": false,
+      "tag": null
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:135",
+   "pick": "retarget",
+   "note": "checked on staging: the room page shows the doc's stats as the bullet list in the description (rich text field Room Description - Details); the list is written from the stats lines, replacing the sample bullets",
+   "set": {
+    "status": "change",
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Cozy Courtyard King",
+     "slug": "cozy-courtyard-king",
+     "itemPath": "/rooms/cozy-courtyard-king",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details",
+     "format": "list",
+     "tag": "ul"
+    },
+    "newText": "1 King Bed\n2 Guests\n200sqft / 18sqm | 225sqft / 20sqm.",
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:182",
+   "pick": "retarget",
+   "note": "cutline over the room photo: new per-item field \"Photo - Caption\" on City Level Below Ground",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "City Level Below Ground",
+     "slug": "city-level-below-ground",
+     "itemPath": "/rooms/city-level-below-ground",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Photo - Caption",
+     "newField": true,
+     "templateTarget": null
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "not on site"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:185",
+   "pick": "retarget",
+   "note": "checked on staging: the details field is the stats list, so this \"(Next text block)\" paragraph goes to the block under the photo, new field \"Feature - Text\" on City Level Below Ground",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "City Level Below Ground",
+     "slug": "city-level-below-ground",
+     "itemPath": "/rooms/city-level-below-ground",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Feature - Text",
+     "newField": true,
+     "templateTarget": {
+      "fieldSlug": "room-description---details",
+      "currentKnown": false,
+      "tag": null
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:175",
+   "pick": "retarget",
+   "note": "checked on staging: the room page shows the doc's stats as the bullet list in the description (rich text field Room Description - Details); the list is written from the stats lines, replacing the sample bullets",
+   "set": {
+    "status": "change",
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "City Level Below Ground",
+     "slug": "city-level-below-ground",
+     "itemPath": "/rooms/city-level-below-ground",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details",
+     "format": "list",
+     "tag": "ul"
+    },
+    "newText": "1 King or 2 Queen Beds\n2 to 4 Guests\n310sqft / 28sqm | 340sqft / 31sqm.\nNo View.",
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:179",
+   "pick": "retarget",
+   "note": "joined into the stats list",
+   "set": {
+    "status": "change",
+    "joinedInto": 175,
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "City Level Below Ground",
+     "slug": "city-level-below-ground",
+     "itemPath": "/rooms/city-level-below-ground",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:221",
+   "pick": "retarget",
+   "note": "cutline over the room photo: new per-item field \"Photo - Caption\" on Guild City Level Loft",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild City Level Loft",
+     "slug": "guild-city-level-loft",
+     "itemPath": "/rooms/guild-city-level-loft",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Photo - Caption",
+     "newField": true,
+     "templateTarget": null
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "not on site"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:224",
+   "pick": "retarget",
+   "note": "checked on staging: the details field is the stats list, so this \"(Next text block)\" paragraph goes to the block under the photo, new field \"Feature - Text\" on Guild City Level Loft",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild City Level Loft",
+     "slug": "guild-city-level-loft",
+     "itemPath": "/rooms/guild-city-level-loft",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Feature - Text",
+     "newField": true,
+     "templateTarget": {
+      "fieldSlug": "room-description---details",
+      "currentKnown": false,
+      "tag": null
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:215",
+   "pick": "retarget",
+   "note": "checked on staging: the room page shows the doc's stats as the bullet list in the description (rich text field Room Description - Details); the list is written from the stats lines, replacing the sample bullets",
+   "set": {
+    "status": "change",
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild City Level Loft",
+     "slug": "guild-city-level-loft",
+     "itemPath": "/rooms/guild-city-level-loft",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details",
+     "format": "list",
+     "tag": "ul"
+    },
+    "newText": "1 King Bed\n2 Guests\n280sqft 25sqm | 300sqft / 27sqm.",
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:263",
+   "pick": "retarget",
+   "note": "cutline over the room photo: new per-item field \"Photo - Caption\" on Guild Loft Suite",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Loft Suite",
+     "slug": "guild-loft-suite",
+     "itemPath": "/rooms/guild-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Photo - Caption",
+     "newField": true,
+     "templateTarget": null
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "not on site"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:266",
+   "pick": "retarget",
+   "note": "checked on staging: the details field is the stats list, so this \"(Next text block)\" paragraph goes to the block under the photo, new field \"Feature - Text\" on Guild Loft Suite",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Loft Suite",
+     "slug": "guild-loft-suite",
+     "itemPath": "/rooms/guild-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Feature - Text",
+     "newField": true,
+     "templateTarget": {
+      "fieldSlug": "room-description---details",
+      "currentKnown": false,
+      "tag": null
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:255",
+   "pick": "retarget",
+   "note": "checked on staging: the room page shows the doc's stats as the bullet list in the description (rich text field Room Description - Details); the list is written from the stats lines, replacing the sample bullets",
+   "set": {
+    "status": "change",
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Loft Suite",
+     "slug": "guild-loft-suite",
+     "itemPath": "/rooms/guild-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details",
+     "format": "list",
+     "tag": "ul"
+    },
+    "newText": "1 King Bed.\nSofa Bed\n4 Guests\nStreet View\n463sqft | 42sqm.",
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:256",
+   "pick": "retarget",
+   "note": "joined into the stats list",
+   "set": {
+    "status": "change",
+    "joinedInto": 255,
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Loft Suite",
+     "slug": "guild-loft-suite",
+     "itemPath": "/rooms/guild-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:258",
+   "pick": "retarget",
+   "note": "joined into the stats list",
+   "set": {
+    "status": "change",
+    "joinedInto": 255,
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Loft Suite",
+     "slug": "guild-loft-suite",
+     "itemPath": "/rooms/guild-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:301",
+   "pick": "retarget",
+   "note": "cutline over the room photo: new per-item field \"Photo - Caption\" on Guild Corner Loft Suite",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Corner Loft Suite",
+     "slug": "guild-corner-loft-suite",
+     "itemPath": "/rooms/guild-corner-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Photo - Caption",
+     "newField": true,
+     "templateTarget": null
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "not on site"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:304",
+   "pick": "retarget",
+   "note": "checked on staging: the details field is the stats list, so this \"(Next text block)\" paragraph goes to the block under the photo, new field \"Feature - Text\" on Guild Corner Loft Suite",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Corner Loft Suite",
+     "slug": "guild-corner-loft-suite",
+     "itemPath": "/rooms/guild-corner-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Feature - Text",
+     "newField": true,
+     "templateTarget": {
+      "fieldSlug": "room-description---details",
+      "currentKnown": false,
+      "tag": null
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:293",
+   "pick": "retarget",
+   "note": "checked on staging: the room page shows the doc's stats as the bullet list in the description (rich text field Room Description - Details); the list is written from the stats lines, replacing the sample bullets",
+   "set": {
+    "status": "change",
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Corner Loft Suite",
+     "slug": "guild-corner-loft-suite",
+     "itemPath": "/rooms/guild-corner-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details",
+     "format": "list",
+     "tag": "ul"
+    },
+    "newText": "1 King Bed\n1 Sofa Bed\n4 Guests\nCity View\n446sqft / 40sqm | 463sqft / 42sqm",
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:294",
+   "pick": "retarget",
+   "note": "joined into the stats list",
+   "set": {
+    "status": "change",
+    "joinedInto": 293,
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Corner Loft Suite",
+     "slug": "guild-corner-loft-suite",
+     "itemPath": "/rooms/guild-corner-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:296",
+   "pick": "retarget",
+   "note": "joined into the stats list",
+   "set": {
+    "status": "change",
+    "joinedInto": 293,
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Corner Loft Suite",
+     "slug": "guild-corner-loft-suite",
+     "itemPath": "/rooms/guild-corner-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:339",
+   "pick": "retarget",
+   "note": "cutline over the room photo: new per-item field \"Photo - Caption\" on Guild Double",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Double",
+     "slug": "guild-double",
+     "itemPath": "/rooms/guild-double",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Photo - Caption",
+     "newField": true,
+     "templateTarget": null
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "not on site"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:342",
+   "pick": "retarget",
+   "note": "checked on staging: the details field is the stats list, so this \"(Next text block)\" paragraph goes to the block under the photo, new field \"Feature - Text\" on Guild Double",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Double",
+     "slug": "guild-double",
+     "itemPath": "/rooms/guild-double",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Feature - Text",
+     "newField": true,
+     "templateTarget": {
+      "fieldSlug": "room-description---details",
+      "currentKnown": false,
+      "tag": null
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:333",
+   "pick": "retarget",
+   "note": "checked on staging: the room page shows the doc's stats as the bullet list in the description (rich text field Room Description - Details); the list is written from the stats lines, replacing the sample bullets",
+   "set": {
+    "status": "change",
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Guild Double",
+     "slug": "guild-double",
+     "itemPath": "/rooms/guild-double",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details",
+     "format": "list",
+     "tag": "ul"
+    },
+    "newText": "2 Queen Beds\n2-4 Guests\n275sqft /25sqm | 294sqft /26sqm.",
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:379",
+   "pick": "retarget",
+   "note": "cutline over the room photo: new per-item field \"Photo - Caption\" on Two Bedroom Loft Suite",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Two Bedroom Loft Suite",
+     "slug": "two-bedroom-loft-suite",
+     "itemPath": "/rooms/two-bedroom-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Photo - Caption",
+     "newField": true,
+     "templateTarget": null
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "not on site"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:382",
+   "pick": "retarget",
+   "note": "checked on staging: the details field is the stats list, so this \"(Next text block)\" paragraph goes to the block under the photo, new field \"Feature - Text\" on Two Bedroom Loft Suite",
+   "set": {
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Two Bedroom Loft Suite",
+     "slug": "two-bedroom-loft-suite",
+     "itemPath": "/rooms/two-bedroom-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldName": "Feature - Text",
+     "newField": true,
+     "templateTarget": {
+      "fieldSlug": "room-description---details",
+      "currentKnown": false,
+      "tag": null
+     }
+    },
+    "shared": false,
+    "sharedPages": [],
+    "sharedReason": null,
+    "needsDecision": false,
+    "duplicateOf": null,
+    "conflictsWith": [],
+    "status": "change"
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:370",
+   "pick": "retarget",
+   "note": "checked on staging: the room page shows the doc's stats as the bullet list in the description (rich text field Room Description - Details); the list is written from the stats lines, replacing the sample bullets",
+   "set": {
+    "status": "change",
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Two Bedroom Loft Suite",
+     "slug": "two-bedroom-loft-suite",
+     "itemPath": "/rooms/two-bedroom-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details",
+     "format": "list",
+     "tag": "ul"
+    },
+    "newText": "Penthouse\n1 King\n1 Queen\n2-4 Guests\nTerrace\nBathrooms: 2.5\n1809sqft | 163sqm.",
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:371",
+   "pick": "retarget",
+   "note": "joined into the stats list",
+   "set": {
+    "status": "change",
+    "joinedInto": 370,
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Two Bedroom Loft Suite",
+     "slug": "two-bedroom-loft-suite",
+     "itemPath": "/rooms/two-bedroom-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:372",
+   "pick": "retarget",
+   "note": "joined into the stats list",
+   "set": {
+    "status": "change",
+    "joinedInto": 370,
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Two Bedroom Loft Suite",
+     "slug": "two-bedroom-loft-suite",
+     "itemPath": "/rooms/two-bedroom-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:374",
+   "pick": "retarget",
+   "note": "joined into the stats list",
+   "set": {
+    "status": "change",
+    "joinedInto": 370,
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Two Bedroom Loft Suite",
+     "slug": "two-bedroom-loft-suite",
+     "itemPath": "/rooms/two-bedroom-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Rooms-SubPages:375",
+   "pick": "retarget",
+   "note": "joined into the stats list",
+   "set": {
+    "status": "change",
+    "joinedInto": 370,
+    "targetKind": "cms-field",
+    "cmsItem": {
+     "collection": "rooms",
+     "collectionName": "🛏️ Rooms",
+     "name": "Two Bedroom Loft Suite",
+     "slug": "two-bedroom-loft-suite",
+     "itemPath": "/rooms/two-bedroom-loft-suite",
+     "itemPathDerived": true,
+     "listingPaths": [],
+     "observed": true
+    },
+    "target": {
+     "fieldSlug": "room-description---details"
+    },
+    "reason": null
+   }
+  },
+  {
+   "id": "Guild-Neighborhood:40",
+   "pick": "reject",
+   "note": "checked on staging: the slot is the \"beyond downtown\" section heading, not a place; the SDMA has no place card on staging"
+  },
+  {
+   "id": "Guild-Neighborhood:55",
+   "pick": "reject",
+   "note": "checked on staging: the slot is the \"dining around the guild\" heading; Hall of Justice has no card on staging"
+  },
+  {
+   "id": "Guild-Neighborhood:56",
+   "pick": "reject",
+   "note": "checked on staging: the slot is the dining articles intro; Hall of Justice has no card on staging"
+  },
+  {
+   "id": "Guild-Corporate:73",
+   "pick": "reject",
+   "note": "Council Boardroom has one card intro on every page; the Meetings doc line (Guild-Meeting-Collection:14) is used, this one is listed as differs"
+  },
+  {
+   "id": "Guild-Legal:62",
+   "pick": "reject",
+   "note": "Council Boardroom has one card intro on every page; the Meetings doc line (Guild-Meeting-Collection:14) is used, this one is listed as differs"
+  },
+  {
+   "id": "Guild-Meetings-Modals:92",
+   "pick": "reject",
+   "note": "pop-up tagline: the pop-up has no tagline slot and the card intro takes the Meetings doc line (Guild-Meeting-Collection:17)"
+  },
+  {
+   "id": "Guild-Meetings-Modals:66",
+   "pick": "reject",
+   "note": "pop-up tagline: the pop-up has no tagline slot and the card intro takes the Meetings doc line (Guild-Meeting-Collection:20)"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:259",
+   "pick": "accept",
+   "note": "sizes are one size in two units: joined with \" / \"",
+   "set": {
+    "newText": "463sqft / 42sqm."
+   }
+  },
+  {
+   "id": "Guild-Homepage:31",
+   "pick": "accept",
+   "note": "checked on staging: the doc's Lobby Terrace card is the Garden Terrace dining card (Mediterranean); the card keeps the item name Garden Terrace, listed as differs"
+  },
+  {
+   "id": "Guild-Arts:2",
+   "pick": "accept",
+   "note": "checked on staging: same slot, doc wording"
+  },
+  {
+   "id": "Guild-Arts:3",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Arts:5",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Arts:6",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Arts:8",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Arts:11",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Arts:14",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-BlogCollection:2",
+   "pick": "accept",
+   "note": "checked on staging: same slot, doc wording"
+  },
+  {
+   "id": "Guild-BlogCollection:4",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-BlogCollection:6",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-BlogCollection:8",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Dining-Collection:2",
+   "pick": "accept",
+   "note": "checked on staging: same slot, doc wording"
+  },
+  {
+   "id": "Guild-Dining-GardenTerrace:2",
+   "pick": "accept",
+   "note": "checked on staging: the Zuma page h1 shows the Hero Heading field, so this item's h1 is the same field"
+  },
+  {
+   "id": "Guild-Dining-LobbyBar:2",
+   "pick": "accept",
+   "note": "checked on staging: the Zuma page h1 shows the Hero Heading field, so this item's h1 is the same field"
+  },
+  {
+   "id": "Guild-Dining-PoolLounge:2",
+   "pick": "accept",
+   "note": "checked on staging: the Zuma page h1 shows the Hero Heading field, so this item's h1 is the same field"
+  },
+  {
+   "id": "Guild-Gallery:2",
+   "pick": "accept",
+   "note": "checked on staging: same slot, doc wording"
+  },
+  {
+   "id": "Guild-Gallery:3",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-HappeningsCollection:4",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-HappeningsCollection:6",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-HappeningsCollection:8",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-History:37",
+   "pick": "accept",
+   "note": "checked: repeated variant, listed for Omar"
+  },
+  {
+   "id": "Guild-History:38",
+   "pick": "accept",
+   "note": "checked: repeated variant, listed for Omar"
+  },
+  {
+   "id": "Guild-Homepage:19",
+   "pick": "accept",
+   "note": "checked: Zuma is the Zuma San Diego item"
+  },
+  {
+   "id": "Guild-Homepage:20",
+   "pick": "accept",
+   "note": "checked: Zuma is the Zuma San Diego item"
+  },
+  {
+   "id": "Guild-Homepage:17",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Homepage:40",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Homepage:44",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Homepage:45",
+   "pick": "accept",
+   "note": "checked: repeated variant, listed for Omar"
+  },
+  {
+   "id": "Guild-Homepage:46",
+   "pick": "accept",
+   "note": "checked: repeated variant, listed for Omar"
+  },
+  {
+   "id": "Guild-Homepage:59",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Homepage:63",
+   "pick": "accept",
+   "note": "checked on staging: same slot, doc wording"
+  },
+  {
+   "id": "Guild-Legal:2",
+   "pick": "accept",
+   "note": "checked: the Legal item exists in the CMS"
+  },
+  {
+   "id": "Guild-Legal:3",
+   "pick": "accept",
+   "note": "checked: the Legal item exists in the CMS"
+  },
+  {
+   "id": "Guild-Legal:5",
+   "pick": "accept",
+   "note": "checked: the Legal item exists in the CMS"
+  },
+  {
+   "id": "Guild-Legal:7",
+   "pick": "accept",
+   "note": "checked: the Legal item exists in the CMS"
+  },
+  {
+   "id": "Guild-Legal:39",
+   "pick": "accept",
+   "note": "checked: the Legal item exists in the CMS"
+  },
+  {
+   "id": "Guild-Legal:40",
+   "pick": "accept",
+   "note": "checked: the Legal item exists in the CMS"
+  },
+  {
+   "id": "Guild-Meeting-Collection:14",
+   "pick": "accept",
+   "note": "checked: no conflict left after the picks"
+  },
+  {
+   "id": "Guild-Meeting-Collection:16",
+   "pick": "accept",
+   "note": "checked: no conflict left after the picks"
+  },
+  {
+   "id": "Guild-Meeting-Collection:17",
+   "pick": "accept",
+   "note": "checked: no conflict left after the picks"
+  },
+  {
+   "id": "Guild-Meeting-Collection:19",
+   "pick": "accept",
+   "note": "checked: no conflict left after the picks"
+  },
+  {
+   "id": "Guild-Meeting-Collection:20",
+   "pick": "accept",
+   "note": "checked: no conflict left after the picks"
+  },
+  {
+   "id": "Guild-Meeting-Collection:3",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Meeting-Collection:5",
+   "pick": "accept",
+   "note": "checked on staging: same slot, doc wording"
+  },
+  {
+   "id": "Guild-Meeting-Collection:6",
+   "pick": "accept",
+   "note": "checked on staging: same slot, doc wording"
+  },
+  {
+   "id": "Guild-Meeting-Collection:9",
+   "pick": "accept",
+   "note": "checked on staging: same slot, doc wording"
+  },
+  {
+   "id": "Guild-Meeting-Collection:11",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Meetings-Modals:27",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:37",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:38",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:40",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:41",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:43",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:45",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:46",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:47",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:48",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:49",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:50",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:51",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:52",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:53",
+   "pick": "reject",
+   "note": "no Lobby Bar meeting venue on staging (only Council Boardroom, lobby terrace and 1 America Plaza show on Meetings); not created"
+  },
+  {
+   "id": "Guild-Meetings-Modals:55",
+   "pick": "accept",
+   "note": "checked: no conflict left after the picks"
+  },
+  {
+   "id": "Guild-Meetings-Modals:65",
+   "pick": "accept",
+   "note": "checked: no conflict left after the picks"
+  },
+  {
+   "id": "Guild-Meetings-Modals:81",
+   "pick": "accept",
+   "note": "checked: no conflict left after the picks"
+  },
+  {
+   "id": "Guild-Meetings-Modals:91",
+   "pick": "accept",
+   "note": "checked: no conflict left after the picks"
+  },
+  {
+   "id": "Guild-Neighborhood:4",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Neighborhood:5",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Neighborhood:8",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Neighborhood:11",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Neighborhood:17",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Neighborhood:20",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Neighborhood:47",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Neighborhood:50",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Neighborhood:52",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Neighborhood:53",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Press:2",
+   "pick": "accept",
+   "note": "checked on staging: same slot, doc wording"
+  },
+  {
+   "id": "Guild-Press:3",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Press:5",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Press:6",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Press:8",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Rooms-Collection:3",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Rooms-Collection:6",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Rooms-Collection:8",
+   "pick": "accept",
+   "note": "checked on staging: same slot, doc wording"
+  },
+  {
+   "id": "Guild-Rooms-Collection:9",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:57",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:58",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:97",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:98",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:137",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:138",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:177",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:178",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:217",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:218",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:260",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:297",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:298",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:335",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Rooms-SubPages:336",
+   "pick": "accept",
+   "note": "sizes joined with \" | \" as two room sizes"
+  },
+  {
+   "id": "Guild-Wellness-Collection:4",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Wellness-Collection:6",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Wellness-Collection:7",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Wellness-Collection:10",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Wellness-Collection:12",
+   "pick": "accept",
+   "note": "checked on staging: same slot, doc wording"
+  },
+  {
+   "id": "Guild-Wellness-Collection:13",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Wellness-Collection:16",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  },
+  {
+   "id": "Guild-Wellness-Collection:19",
+   "pick": "accept",
+   "note": "checked on staging: the slot holds placeholder text in the section this doc line describes"
+  }
+ ]
+}

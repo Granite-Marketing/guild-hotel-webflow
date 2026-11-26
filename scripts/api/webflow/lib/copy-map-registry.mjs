@@ -28,3 +28,13 @@ export const REGISTRY = {
   'Guild-Corporate': { type: 'cms-plan', plan: 'legal-corporate', collection: 'legal-corporate', itemName: 'Corporate', templatePage: '/legal-corporate/corporate', cards: MEETING_CARDS },
   'Guild-Legal': { type: 'cms-plan', plan: 'legal-corporate', collection: 'legal-corporate', itemName: 'Legal', templatePage: '/legal-corporate/corporate', cards: MEETING_CARDS },
 }
+
+// A doc name that means a differently named CMS item, per collection (keys are lowercase doc names).
+// rooms: C7 in docs/specs/guild-content/notes.md. meeting-venues and dining: the upload's picks (#418), checked on
+// staging: the meetings page's "lobby terrace" venue is the al fresco space the Garden Terrace pop-up describes, and
+// the homepage's "Lobby Terrace" dining card ("Fresh Mediterranean inspiration") is the Garden Terrace card.
+export const ITEM_ALIASES = {
+  rooms: { 'city level loft': 'Guild City Level Loft' },
+  'meeting-venues': { 'garden terrace': 'lobby terrace' },
+  dining: { 'lobby terrace': 'Garden Terrace' },
+}
