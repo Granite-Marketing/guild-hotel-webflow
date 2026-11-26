@@ -83,3 +83,11 @@ A separate Sonnet session checked 19 claims at the five widths with animations o
 - The CMS editor and props panel as an editor sees them (folder order, prop order inside groups).
 - Figma: no row pointed at a design.
 - Split-sticky photos on Legal and Corporate have alt text that does not match the photo (a note being written is called "a private suite"). Found while looking, not in the brief, unchanged.
+
+## Round 2 (2026-11-26), from the independent check
+
+| Item | Result |
+|---|---|
+| P-D10, Meetings hero alt | Done. Image Alt on the /meetings Hero instance `8c8972a9-62cb-24d1-7e3f-8b9e1749dd49` set to "Candlelit booths with wooden tables and curtained alcoves under warm wall lights" (written from the photo). Published to staging and read in the live page at 1440 and 390; no page errors. Nothing else changed. |
+| P-D10, Offers slider alt | **Not possible with the tools.** Binding the slider image (`d5df6734-...f47a` in Offers Slider `d5df6734-af17-07ac-88ae-84551d59f46c`) to Slide - Text is refused: "Element is not inside a CMS context", the same limit as W-M13. Live alt is still empty on all five slides. By hand in the Designer: open Offers Slider, select the slide image, Alt text, bind to Slide - Text. The CMS image field was not touched. |
+| W-M13, list sorts | Still not possible: no component exposes a sort or filter prop, and the lists inside components have no source the tools can reach. Three hand clicks remain (Booking Menu, Footer Links, Map Feature Image Bg: sort by Sort Order, smallest first). |
