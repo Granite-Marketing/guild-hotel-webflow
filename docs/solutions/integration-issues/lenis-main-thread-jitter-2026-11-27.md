@@ -30,7 +30,7 @@ Fix pattern:
 
 A GSAP `scale` tween gives the media its own compositor layer (force3D auto). At the end GSAP drops to a 2D matrix and `clearProps: 'transform'` removes it, so the layer is torn down and the whole photo is repainted into its parent mid-scroll: a hitch right as the reveal ends.
 
-Fix pattern: set `will-change: transform` before the tween (and `force3D: true`), keep it through `clearProps` (so the CSS hover zoom still applies), and remove it only when the element is next out of view (an `IntersectionObserver`), where the repaint cannot be seen. `clipPath` tweens repaint on every frame anyway, so their `clearProps` adds no spike.
+Fix pattern: set `will-change: transform` when the reveal starts (timeline `onStart`, never at load: one full-size layer per waiting photo costs phone memory; keep the waiting start state 2D with `force3D: false` too) and tween with `force3D: true`, keep it through `clearProps` (so the CSS hover zoom still applies), and remove it only when the element is next out of view (an `IntersectionObserver`), where the repaint cannot be seen. `clipPath` tweens repaint on every frame anyway, so their `clearProps` adds no spike.
 
 ## Gotcha 3: splits that land mid-scroll
 

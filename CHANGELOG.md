@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.32
+
+### Patch Changes
+
+- Image fade photos get their GPU layer when their reveal starts, not at page load.
+
 ## 1.3.31
 
 ### Patch Changes

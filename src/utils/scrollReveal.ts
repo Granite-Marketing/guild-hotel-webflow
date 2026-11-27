@@ -199,14 +199,17 @@ const tagStaggeredRows = () => {
 
 const playImageFade = (element: HTMLElement, delay: number, start: string) => {
   const media = element.matches('img, video, iframe') ? element : element.querySelector<HTMLElement>('img, video, iframe')
-  const timeline = gsap.timeline({ delay, scrollTrigger: { trigger: element, start, once: true } })
+  // The media gets its own layer only when its reveal starts (not at load: one GPU layer per photo is heavy on
+  // phones) and keeps it well after the tween: dropping it the moment the zoom ends repainted the whole photo
+  // mid-scroll (a visible hitch). The layer is released once it is off screen.
+  const onStart = media ? () => (media.style.willChange = 'transform') : undefined
+  const timeline = gsap.timeline({ delay, onStart, scrollTrigger: { trigger: element, start, once: true } })
   // Round 3: quick, clear fade with only a slight settle.
   timeline.fromTo(element, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.7, ease: 'power1.out' })
   if (!media) return
-  // The media keeps its own layer from the first frame to well after the tween: dropping it the moment the
-  // zoom ends repainted the whole photo mid-scroll (a visible hitch). The layer is released once it is off screen.
-  media.style.willChange = 'transform'
-  timeline.fromTo(media, { scale: 1.04 }, { scale: 1, duration: 0.9, ease: 'power2.out', force3D: true }, 0)
+  // 2D start state, so the waiting photo is not promoted by a 3D transform either.
+  gsap.set(media, { scale: 1.04, force3D: false })
+  timeline.to(media, { scale: 1, duration: 0.9, ease: 'power2.out', force3D: true }, 0)
   // Hand the media's transform back to CSS so hover zooms (#185) apply.
   timeline.set(media, { clearProps: 'transform', onComplete: () => releaseLayerOffScreen(media) })
 }
