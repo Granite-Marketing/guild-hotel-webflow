@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.30
+
+### Patch Changes
+
+- 9262c81: Scripts find headings by their class or data attribute instead of their tag (pop-up title for screen readers, room grid hover name, rooms quiz heading), so the SEO heading tag changes (#419) cannot break them.
+
 ## 1.3.29
 
 ### Patch Changes
