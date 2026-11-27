@@ -1,34 +1,34 @@
 # Heading check
 
-Generated 2026-11-27T10:42:19.555Z from https://the-guild-hotel-c34e71.webflow.io. Read only: page loads only, nothing is written to Webflow.
+Generated 2026-11-27T11:24:03.600Z from https://the-guild-hotel-c34e71.webflow.io. Read only: page loads only, nothing is written to Webflow.
 
 ## Summary
 
-- 19 tabs, 688 rows: 490 passed, 109 failed, 89 not found
+- 19 tabs, 688 rows: 563 passed, 36 failed, 89 not found
 - 17 other pages differ from the homepage on a shared part, 0 could not be loaded
 
 | Tab | Page | Passed | Failed | Not found | H1 found/proposed | H2 found/proposed | H3 found/proposed | Uncovered h1-h3 |
 |---|---|---|---|---|---|---|---|---|
-| arts | /arts | 61 | 5 | 3 | 1/1 | 10/5 | 6/6 | 3 |
-| blog | /blog | 21 | 6 | 2 | 1/1 | 12/7 | 9/9 | 2 |
+| arts | /arts | 65 | 1 | 3 | 1/1 | 5/5 | 6/6 | 2 |
+| blog | /blog | 26 | 1 | 2 | 1/1 | 7/7 | 9/9 | 2 |
 | contact | /contact | 17 | 1 | 0 | 1/1 | 2/2 | 6/6 | 0 |
-| corporate | /legal-corporate/corporate | 32 | 12 | 13 | 1/1 | 16/11 | 20/20 | 5 |
+| corporate | /legal-corporate/corporate | 37 | 7 | 13 | 1/1 | 11/11 | 20/20 | 5 |
 | dining-venue-pages-5 | /dining/dining-zuma | 22 | 1 | 3 | 1/1 | 6/6 | 12/11 | 3 |
-| dining | /dining | 16 | 8 | 4 | 1/1 | 9/4 | 11/11 | 6 |
-| gallery | /gallery | 15 | 6 | 1 | 1/1 | 8/3 | 6/6 | 1 |
+| dining | /dining | 21 | 3 | 4 | 1/1 | 4/4 | 11/11 | 6 |
+| gallery | /gallery | 20 | 1 | 1 | 1/1 | 3/3 | 6/6 | 1 |
 | guidelines | /guidelines | 19 | 1 | 1 | 1/1 | 5/5 | 6/6 | 1 |
-| happenings | /happenings | 21 | 6 | 2 | 1/1 | 11/7 | 9/9 | 1 |
-| history | /history | 24 | 6 | 2 | 1/1 | 14/9 | 10/10 | 2 |
-| homepage | / | 33 | 11 | 3 | 1/1 | 16/11 | 15/15 | 6 |
-| meetings | /meetings | 26 | 9 | 8 | 1/1 | 12/7 | 12/12 | 2 |
-| neighborhood | /neighborhood | 28 | 11 | 5 | 1/1 | 22/12 | 13/11 | 5 |
-| packages | /packages | 23 | 6 | 1 | 1/1 | 12/7 | 10/10 | 1 |
+| happenings | /happenings | 26 | 1 | 2 | 1/1 | 6/7 | 9/9 | 1 |
+| history | /history | 29 | 1 | 2 | 1/1 | 9/9 | 10/10 | 2 |
+| homepage | / | 38 | 6 | 3 | 1/1 | 11/11 | 15/15 | 6 |
+| meetings | /meetings | 31 | 4 | 8 | 1/1 | 7/7 | 12/12 | 2 |
+| neighborhood | /neighborhood | 38 | 1 | 5 | 1/1 | 12/12 | 13/11 | 5 |
+| packages | /packages | 28 | 1 | 1 | 1/1 | 7/7 | 10/10 | 1 |
 | press | /press | 41 | 1 | 25 | 1/1 | 4/4 | 30/30 | 6 |
 | privacy-accessibility | /privacy-policy | 9 | 1 | 0 | 1/1 | 2/2 | 0/0 | 0 |
 | privacy-accessibility | /accessibility | 9 | 1 | 0 | 1/1 | 2/2 | 0/0 | 0 |
-| room-pages-12 | /rooms/cozy-queen | 19 | 6 | 2 | 1/1 | 13/7 | 6/6 | 2 |
-| rooms | /rooms | 36 | 6 | 11 | 1/1 | 10/5 | 22/22 | 1 |
-| wellness | /wellness | 18 | 5 | 3 | 1/1 | 8/3 | 10/10 | 3 |
+| room-pages-12 | /rooms/cozy-queen | 24 | 1 | 2 | 1/1 | 7/7 | 6/6 | 1 |
+| rooms | /rooms | 41 | 1 | 11 | 1/1 | 5/5 | 22/22 | 1 |
+| wellness | /wellness | 22 | 1 | 3 | 1/1 | 3/3 | 10/10 | 2 |
 
 ## arts: /arts
 
@@ -36,18 +36,13 @@ Generated 2026-11-27T10:42:19.555Z from https://the-guild-hotel-c34e71.webflow.i
 |---|---|---|---|---|
 | 1 | Hero | art collection | H1 | not found |
 | 2 | Intro | An art collection through a curator's eyes | H2 | not found |
-| 6 | Offers slider | wellness staycation | P | failed, found H2 |
-| 7 | Offers slider | wellness staycation | P | failed, found H2 |
-| 8 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 9 | Offers slider | wellness staycation | P | not found |
-| 10 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 67 | Footer | dining | P | failed, found A |
 
 Headings on the page that no row covers:
 
 - H1 "ART & STORIES" (section_hero-fullbleed-centered)
 - H2 "A Collector’s Eye on the City" (section_script-intro-centered)
-- H2 "save on 5+ nights" (section_offers-slider-split)
 
 ## blog: /blog
 
@@ -55,11 +50,6 @@ Headings on the page that no row covers:
 |---|---|---|---|---|
 | 1 | Hero | blog | H1 | not found in its section (text found in (no section)) |
 | 2 | Intro | What's on in San Diego | H2 | not found |
-| 10 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 11 | Offers slider | wellness staycation | P | failed, found H2 |
-| 12 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 13 | Offers slider | wellness staycation | P | failed, found H2 |
-| 14 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 27 | Footer | dining | P | failed, found A |
 
 Headings on the page that no row covers:
@@ -84,11 +74,6 @@ Headings on the page that no row covers:
 | 15 | Meeting spaces | council boardroom | H3 | failed, found A |
 | 16 | Meeting spaces | one columbia place | H3 | failed, found A |
 | 17 | Location | Steps from key legal addresses | H2 | not found |
-| 26 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 27 | Offers slider | wellness staycation | P | failed, found H2 |
-| 28 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 29 | Offers slider | wellness staycation | P | failed, found H2 |
-| 30 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 39 | Venue pop-up | council boardroom | P | failed, found H3 |
 | 40 | Venue pop-up | details | P | not found in its section (text found in (no section)) |
 | 41 | Venue pop-up | layout options | P | not found in its section (text found in (no section)) |
@@ -136,11 +121,6 @@ Headings on the page that no row covers:
 | 4 | Venue slideshow | The Lobby Bar | H3 around logo | not found |
 | 6 | Venue slideshow | garden terrace | H3 | failed, found A |
 | 7 | Venue slideshow | solana coffee | H3 | failed, found A |
-| 17 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 18 | Offers slider | wellness staycation | P | failed, found H2 |
-| 19 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 20 | Offers slider | wellness staycation | P | failed, found H2 |
-| 21 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 26 | Footer | dining | P | failed, found A |
 
 Headings on the page that no row covers:
@@ -157,11 +137,6 @@ Headings on the page that no row covers:
 | Row | Section | Text | Proposed | Result |
 |---|---|---|---|---|
 | 1 | Hero | gallery | H1 | not found in its section (text found in (no section)) |
-| 3 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 4 | Offers slider | wellness staycation | P | failed, found H2 |
-| 5 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 6 | Offers slider | wellness staycation | P | failed, found H2 |
-| 7 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 20 | Footer | dining | P | failed, found A |
 
 Headings on the page that no row covers:
@@ -185,11 +160,6 @@ Headings on the page that no row covers:
 |---|---|---|---|---|
 | 2 | Intro | What's on in San Diego | H2 | not found |
 | 8 | Category: conferences | conferences | H2 | not found |
-| 10 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 11 | Offers slider | wellness staycation | P | failed, found H2 |
-| 12 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 13 | Offers slider | wellness staycation | P | failed, found H2 |
-| 14 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 27 | Footer | dining | P | failed, found A |
 
 Headings on the page that no row covers:
@@ -202,11 +172,6 @@ Headings on the page that no row covers:
 |---|---|---|---|---|
 | 2 | Intro | Proud stewards of city spirit | H2 | not found |
 | 4 | History | George Marston | H2 | not found |
-| 21 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 22 | Offers slider | wellness staycation | P | failed, found H2 |
-| 23 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 24 | Offers slider | wellness staycation | P | failed, found H2 |
-| 25 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 30 | Footer | dining | P | failed, found A |
 
 Headings on the page that no row covers:
@@ -226,11 +191,6 @@ Headings on the page that no row covers:
 | 10 | Dining slideshow (second copy in the code) | lobby terrace | P | not found |
 | 11 | Dining slideshow (second copy in the code) | solana coffee | P | failed, found A |
 | 12 | Wellness | wellness | H2 | failed, found A |
-| 29 | Offers slider 2 | save on 5+ nights | P | failed, found H2 |
-| 30 | Offers slider 2 | wellness staycation | P | failed, found H2 |
-| 31 | Offers slider 2 | save on 5+ nights | P | failed, found H2 |
-| 32 | Offers slider 2 | wellness staycation | P | failed, found H2 |
-| 33 | Offers slider 2 | save on 5+ nights | P | failed, found H2 |
 | 45 | Footer | dining | P | failed, found A |
 
 Headings on the page that no row covers:
@@ -248,11 +208,6 @@ Headings on the page that no row covers:
 |---|---|---|---|---|
 | 1 | Hero | meetings & events at the guild | H1 | not found |
 | 2 | Venues | Intimate spaces for celebration & collaboration | H2 | not found |
-| 16 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 17 | Offers slider | wellness staycation | P | failed, found H2 |
-| 18 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 19 | Offers slider | wellness staycation | P | failed, found H2 |
-| 20 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 28 | Venue pop-up | council boardroom | P | failed, found A |
 | 29 | Venue pop-up | details | P | not found in its section (text found in (no section)) |
 | 30 | Venue pop-up | layout options | P | not found in its section (text found in (no section)) |
@@ -275,19 +230,9 @@ Headings on the page that no row covers:
 |---|---|---|---|---|
 | 1 | Hero | a city at your fingertips | H1 | not found |
 | 2 | Intro | The best of San Diego is right here | H2 | not found |
-| 7 | Arts & culture slider | the midway museum | P | failed, found H2 |
-| 8 | Arts & culture slider | wellness staycation | P | failed, found H2 |
-| 9 | Arts & culture slider | save on 5+ nights | P | failed, found H2 |
-| 10 | Arts & culture slider | wellness staycation | P | failed, found H2 |
-| 11 | Arts & culture slider | save on 5+ nights | P | failed, found H2 |
 | 15 | Corporate & services | san diego superior court | H3 | not found in its section (text found in section_map-feature) |
 | 16 | Corporate & services | san diego convention center | P | not found |
 | 17 | Corporate & services | san diego superior court | P | not found in its section (text found in section_map-feature) |
-| 25 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 26 | Offers slider | wellness staycation | P | failed, found H2 |
-| 27 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 28 | Offers slider | wellness staycation | P | failed, found H2 |
-| 29 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 42 | Footer | dining | P | failed, found A |
 
 Headings on the page that no row covers:
@@ -303,11 +248,6 @@ Headings on the page that no row covers:
 | Row | Section | Text | Proposed | Result |
 |---|---|---|---|---|
 | 2 | Intro | Stay a little longer | H2 | not found |
-| 11 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 12 | Offers slider | wellness staycation | P | failed, found H2 |
-| 13 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 14 | Offers slider | wellness staycation | P | failed, found H2 |
-| 15 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 28 | Footer | dining | P | failed, found A |
 
 Headings on the page that no row covers:
@@ -372,16 +312,10 @@ Headings on the page that no row covers:
 |---|---|---|---|---|
 | 2 | Intro | A room for every stay | P | not found |
 | 6 | Other rooms | discover other rooms | H2 | not found in its section (text found in section_card-carousel-header-left) |
-| 9 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 10 | Offers slider | wellness staycation | P | failed, found H2 |
-| 11 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 12 | Offers slider | wellness staycation | P | failed, found H2 |
-| 13 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 25 | Footer | dining | P | failed, found A |
 
 Headings on the page that no row covers:
 
-- H2 "The Art of Solo Travel" (section_script-intro-centered)
 - H2 "discover other rooms" (section_card-carousel-header-left)
 
 ## rooms: /rooms
@@ -389,11 +323,6 @@ Headings on the page that no row covers:
 | Row | Section | Text | Proposed | Result |
 |---|---|---|---|---|
 | 6 | Room list | our recommendations for your stay | H2 | not found |
-| 25 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 26 | Offers slider | wellness staycation | P | failed, found H2 |
-| 27 | Offers slider | save on 5+ nights | P | failed, found H2 |
-| 28 | Offers slider | wellness staycation | P | failed, found H2 |
-| 29 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 37 | Room list with hover preview | cozy queen | P | not found in its section (text found in (no section)) |
 | 38 | Room list with hover preview | cozy king | P | not found in its section (text found in (no section)) |
 | 39 | Room list with hover preview | cozy courtyard queen | P | not found in its section (text found in (no section)) |
@@ -416,18 +345,13 @@ Headings on the page that no row covers:
 |---|---|---|---|---|
 | 2 | Intro | From movement and produce to deep rest. | H2 | not found |
 | 4 | Wellness tabs | fitness center | H3 | not found |
-| 8 | Offers slider | wellness staycation | P | failed, found H2 |
-| 9 | Offers slider | wellness staycation | P | failed, found H2 |
-| 10 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 11 | Offers slider | wellness staycation | P | not found |
-| 12 | Offers slider | save on 5+ nights | P | failed, found H2 |
 | 24 | Footer | dining | P | failed, found A |
 
 Headings on the page that no row covers:
 
 - H2 "Come Gather Your Strength" (section_tab-pills-intro)
 - H3 "Fitness Centre" (section_tab-pills-intro)
-- H2 "save on 5+ nights" (section_offers-slider-split)
 
 ## Shared parts against the homepage
 
