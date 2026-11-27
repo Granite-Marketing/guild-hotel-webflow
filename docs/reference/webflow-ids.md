@@ -857,3 +857,8 @@ Bound template elements (26 Nov, copy round C6): Rooms template `6adf8f780ea92c0
 - 🛏️ Rooms: new field "Photo - Video Link" `e8eed08b6d57855cab2bc9d87c57bc17` (Room page group). Rooms template (`6adf8f780ea92c0983eddac0`) panel frame `761e97e3-1ac6-c591-13a0-814dea88b529` binds it as `data-video-link`, beside `data-night-video`.
 - Media "Media - Video Link" help text now names Dropbox. Gallery Mosaic Item tiles already bind their Video Link prop to it, so gallery tiles play video too.
 - Floating Reserve a table (stickyCta `.is-stuck`): no outline at rest; the ring takes the fill colour, and the ground shows on hover only. Source `docs/reference/site-head/button-system.css`, live in Site Nav embed `3639f68c-0d1e-0355-fd6d-d61a7593a03d`. It also applies to the floating story "Learn more" button.
+
+## Heading structure #419 (2026-11-27)
+
+- Offers fields: `Settings - Title as heading` `a7dcb32b86ae5575eee3e23fc1f1730c` (`settings---title-as-heading`), `Settings - Title as text` `16bcd7c9013c9861c068e9df9ed59f0e` (`settings---title-as-text`). Keep opposite; retail-1 "shops at the guild" heading on, every other offer text on. Pattern: `docs/solutions/conventions/per-item-heading-tag.md`.
+- Home retail slider unlinked (#422): section `dbfd6149-bf61-5a13-e51a-6f1aa2bdc674` on Home is now plain elements; title H3 `278071e6-0d93-05d2-21cc-74e34da9d964` (visible on Title as heading), title p `1ca47760-e030-19b2-e6ab-6d8a4c1715f7` (visible on Title as text), eyebrow `278071e6-0d93-05d2-21cc-74e34da9d96f`. Old component `dbfd6149-bf61-5a13-e51a-6f1aa2bdc675` renamed "Retail Slider (old, unused)", 0 instances. Making the section a component again is a Designer click (the MCP refuses CMS lists).
