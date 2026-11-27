@@ -1,0 +1,318 @@
+{
+ "status": "complete",
+ "verdict": "Ready with fixes",
+ "verdict_reasoning": "Two confirmed P1 findings (#1 shared-part comparison can report 'No page differs' against a missing baseline; #2 a row can pass against a same-text element in the wrong section) mean the heading check can go green while staging is wrong. Fix order: #2, #1, #3, #4. #4 is a docs-versus-code decision: two-step lookup (recommended) or reword the docs.",
+ "scope": {
+  "base": "69c1992fc45a5ba4a64556788684fc14b88122d8",
+  "branch": "build/419-spec-heading-structure-for-seo-from-the-",
+  "head_sha": "167d068c9df4914d1a0659cc9ebbd0ae4e36853e",
+  "pr_url": null,
+  "files_changed": 20
+ },
+ "intent": "Spec #419 ticket #420 makes three runtime modules (modal title for aria-labelledby, room grid hover reveal card name, rooms quiz panel focus heading) find their heading by class or data attribute first, with the old heading-tag lookup as fallback, so SEO tag changes (h2 to p, div to h3) cannot break them; adds Playwright fixture tests. Ticket #421 adds a read-only \"heading check\" CLI that parses the SEO team's sheet CSV export (19 tabs), loads staging pages headless, matches each sheet row to a page element by section and text (case/punctuation-insensitive, repeated texts in page order, logo rows by alt text), reports passed/failed/not found, H1-H3 counts vs proposed, uncovered headings, and compares shared parts' tags on every other page with the homepage. It must never write to Webflow. Tests run under the factory test command.",
+ "intent_confidence": "explicit",
+ "reviewers": [
+  "correctness",
+  "project-standards",
+  "testing",
+  "maintainability",
+  "adversarial",
+  "learnings-researcher"
+ ],
+ "findings": [
+  {
+   "#": 1,
+   "title": "Shared-part comparison reports 'No page differs' when homepage baseline is missing or empty",
+   "severity": "P1",
+   "file": "scripts/api/webflow/heading-check.mjs",
+   "line": 97,
+   "confidence": 75,
+   "autofix_class": "manual",
+   "owner": "downstream-resolver",
+   "requires_verification": true,
+   "pre_existing": false,
+   "suggested_fix": "When home is null or a part has no keys on the homepage, put that in the report (baseline missing, comparison not done) and count it in summarise; in diffSharedParts also flag class keys that appear only on the page or only on the homepage.",
+   "first_evidence": "heading-check.mjs:97 -- const differences = home ? diffSharedParts(home, sharedPartTags(loaded.elements)) : []",
+   "why_it_matters": "If the homepage fails to load, or its footer, band, offers slider or FAQ is not found (for example because a section_ class is renamed, since SHARED_PARTS hardcodes four class names), every other page is compared against an empty baseline and the report says 'No page differs'. diffSharedParts also only compares class keys present on both sides, so a page that adds a class with a different tag (h2 where the home has p on another class) is not flagged either. The shared-part requirement can therefore go green while pages differ.",
+   "evidence": [
+    "heading-check.mjs:97 -- const differences = home ? diffSharedParts(home, sharedPartTags(loaded.elements)) : []",
+    "lib/heading-check.mjs:315 -- for (const classKey of homeKeys.filter((key) => pageKeys.includes(key))) {",
+    "Probe: diffSharedParts(emptyHome, pageWithFooterH2) -> []; diffSharedParts(home{a:p}, page{a:p,b:h2}) -> []."
+   ],
+   "reviewers": [
+    "adversarial"
+   ],
+   "independent_reviewers": [
+    "adversarial"
+   ],
+   "validation_status": "confirmed",
+   "validation_reason": "Validator confirmed the code permits it; incidence on real pages not measured."
+  },
+  {
+   "#": 2,
+   "title": "Row passes against same-text element in the wrong section",
+   "severity": "P1",
+   "file": "scripts/api/webflow/lib/heading-check.mjs",
+   "line": 131,
+   "confidence": 75,
+   "autofix_class": "manual",
+   "owner": "downstream-resolver",
+   "requires_verification": true,
+   "pre_existing": false,
+   "suggested_fix": "In matchRows, when the row has a section label and the page has any element with a learned or word-overlap fit, reject candidates with fit 0 (status not-found, or failed with note 'found in other section'); keep the fit-0 fallback only when no element on the page has any section.",
+   "first_evidence": "lib/heading-check.mjs:252 -- const fitting = candidates.filter((entry) => sectionFit(row, entry, learned) === bestFit)  (bestFit may be 0, nothing rejects it)",
+   "why_it_matters": "A row can report passed when the element in its section is wrong or missing, as long as any element elsewhere on the page has the same text and the proposed tag. Section fit only ranks candidates; a fit of 0 is still accepted, so the check never says not found for a section mismatch. Repeated labels such as Book now or View all are common on this site, so staging can be wrong while the report shows green. Require fit above 0 whenever the row's section label is known, or report a section mismatch.",
+   "evidence": [
+    "lib/heading-check.mjs:252 -- const fitting = candidates.filter((entry) => sectionFit(row, entry, learned) === bestFit)  (bestFit may be 0, nothing rejects it)",
+    "Probe: row {section:'Rooms', text:'Book now', proposedTag:'h3'} against one element {tag:'h3', text:'Book now', section:'section_footer-links'} returns status 'passed'."
+   ],
+   "reviewers": [
+    "adversarial"
+   ],
+   "independent_reviewers": [
+    "adversarial"
+   ],
+   "validation_status": "confirmed",
+   "validation_reason": "Validator confirmed the code permits it; incidence on real pages not measured."
+  },
+  {
+   "#": 3,
+   "title": "Room tab H1 row looks for 'Cozy Queen' on the Guild City Level Loft page",
+   "severity": "P2",
+   "file": "scripts/api/webflow/heading-check.mjs",
+   "line": 77,
+   "confidence": 75,
+   "autofix_class": "gated_auto",
+   "owner": "downstream-resolver",
+   "requires_verification": true,
+   "pre_existing": false,
+   "suggested_fix": "In buildReport, for template tabs pick the path whose last segment equals slugified example text of the first template row (e.g. 'cozy queen' -> /rooms/cozy-queen, 'zuma san diego' -> /dining/dining-zuma via contains-match), falling back to paths[0]; use the same pick in tabPaths and docs/reference/heading-check.md.",
+   "first_evidence": "scripts/api/webflow/heading-check.mjs:65 -- const checkedPaths = tab.templateVariants ? tab.paths.slice(0, 1) : tab.paths",
+   "why_it_matters": "The room tab's hero row (\"[room name], e.g. Cozy Queen\") is matched on the example text, but template tabs are only loaded for their first path, /rooms/guild-city-level-loft, whose H1 is that room's name. The row therefore matches some other 'Cozy Queen' element (the saved first run shows 'failed, found P') or reports not found, so the room H1 can never pass and the Designer loop on room pages never reaches all-green. Loading the path whose slug matches the example (/rooms/cozy-queen, already listed in the tab) makes the row check the real H1.",
+   "evidence": [
+    "scripts/api/webflow/heading-check.mjs:65 -- const checkedPaths = tab.templateVariants ? tab.paths.slice(0, 1) : tab.paths",
+    "docs/specs/heading-structure/source/room-pages-12.csv:12 -- Hero,\"[room name], e.g. Cozy Queen\",H1,H1,Keep",
+    "docs/builds/419/heading-check-first-run.md:681 -- | 1 | Hero | Cozy Queen | H1 | failed, found P |"
+   ],
+   "reviewers": [
+    "correctness"
+   ],
+   "independent_reviewers": [
+    "correctness"
+   ]
+  },
+  {
+   "#": 4,
+   "title": "Class-first lookup is document order, docs promise priority",
+   "severity": "P2",
+   "file": "src/utils/modals.ts",
+   "line": 84,
+   "confidence": 75,
+   "autofix_class": "manual",
+   "owner": "downstream-resolver",
+   "requires_verification": true,
+   "pre_existing": false,
+   "suggested_fix": "Use `modal.querySelector('[data-modal-title], .overlay-detail-panel-modal_heading') ?? modal.querySelector('h1, h2, h3, h4, h5, h6')`, and the same two-step lookup for the room grid and quiz selectors. Alternatively reword the docs to say 'first match in document order'.",
+   "first_evidence": "src/utils/modals.ts:85 -- const TITLE_SELECTOR = '[data-modal-title], .overlay-detail-panel-modal_heading, h1, h2, h3, h4, h5, h6'",
+   "why_it_matters": "docs/reference/modal-setup.md and runtime-modules.md say the title is the first marked element, 'else' the first h1 to h6, and the ticket says class/data attribute first with the tag lookup as fallback. A single comma selector list returns the first match in document order, so a dialog with any h1-h6 before the marked title (for example a heading-tag eyebrow) labels itself with that heading instead of the marked title. The same applies to NAME_SELECTOR and HEADING_SELECTOR. Two querySelector calls (marked first, tag second) give the documented behavior. Learnings researcher also found the changed docs (runtime-modules.md, modal-setup.md) promise class-first priority; same in roomGridHoverReveal.ts NAME_SELECTOR and roomsQuiz.ts HEADING_SELECTOR.",
+   "evidence": [
+    "src/utils/modals.ts:85 -- const TITLE_SELECTOR = '[data-modal-title], .overlay-detail-panel-modal_heading, h1, h2, h3, h4, h5, h6'",
+    "docs/reference/modal-setup.md -- 'the first element marked `data-modal-title` (or carrying the pop-up title class ...), else the first h1 to h6'",
+    "Spec #420 constraint: 'find it by its class or a data attribute instead' with the heading lookup as fallback",
+    "src/utils/modals.ts:84 -- const TITLE_SELECTOR = '[data-modal-title], .overlay-detail-panel-modal_heading, h1, h2, h3, h4, h5, h6'",
+    "tests/visual/fixtures/heading-tags-420.html:71,80 -- paragraph title precedes 'An h2 later in the dialog', so the reverse order is untested"
+   ],
+   "reviewers": [
+    "project-standards",
+    "adversarial"
+   ],
+   "independent_reviewers": [
+    "project-standards",
+    "adversarial"
+   ]
+  }
+ ],
+ "actionable_findings": [
+  {
+   "#": 1,
+   "title": "Shared-part comparison reports 'No page differs' when homepage baseline is missing or empty",
+   "severity": "P1",
+   "file": "scripts/api/webflow/heading-check.mjs",
+   "line": 97,
+   "confidence": 75,
+   "autofix_class": "manual",
+   "owner": "downstream-resolver",
+   "requires_verification": true,
+   "pre_existing": false,
+   "suggested_fix": "When home is null or a part has no keys on the homepage, put that in the report (baseline missing, comparison not done) and count it in summarise; in diffSharedParts also flag class keys that appear only on the page or only on the homepage.",
+   "first_evidence": "heading-check.mjs:97 -- const differences = home ? diffSharedParts(home, sharedPartTags(loaded.elements)) : []",
+   "why_it_matters": "If the homepage fails to load, or its footer, band, offers slider or FAQ is not found (for example because a section_ class is renamed, since SHARED_PARTS hardcodes four class names), every other page is compared against an empty baseline and the report says 'No page differs'. diffSharedParts also only compares class keys present on both sides, so a page that adds a class with a different tag (h2 where the home has p on another class) is not flagged either. The shared-part requirement can therefore go green while pages differ.",
+   "evidence": [
+    "heading-check.mjs:97 -- const differences = home ? diffSharedParts(home, sharedPartTags(loaded.elements)) : []",
+    "lib/heading-check.mjs:315 -- for (const classKey of homeKeys.filter((key) => pageKeys.includes(key))) {",
+    "Probe: diffSharedParts(emptyHome, pageWithFooterH2) -> []; diffSharedParts(home{a:p}, page{a:p,b:h2}) -> []."
+   ],
+   "reviewers": [
+    "adversarial"
+   ],
+   "independent_reviewers": [
+    "adversarial"
+   ],
+   "validation_status": "confirmed",
+   "validation_reason": "Validator confirmed the code permits it; incidence on real pages not measured."
+  },
+  {
+   "#": 2,
+   "title": "Row passes against same-text element in the wrong section",
+   "severity": "P1",
+   "file": "scripts/api/webflow/lib/heading-check.mjs",
+   "line": 131,
+   "confidence": 75,
+   "autofix_class": "manual",
+   "owner": "downstream-resolver",
+   "requires_verification": true,
+   "pre_existing": false,
+   "suggested_fix": "In matchRows, when the row has a section label and the page has any element with a learned or word-overlap fit, reject candidates with fit 0 (status not-found, or failed with note 'found in other section'); keep the fit-0 fallback only when no element on the page has any section.",
+   "first_evidence": "lib/heading-check.mjs:252 -- const fitting = candidates.filter((entry) => sectionFit(row, entry, learned) === bestFit)  (bestFit may be 0, nothing rejects it)",
+   "why_it_matters": "A row can report passed when the element in its section is wrong or missing, as long as any element elsewhere on the page has the same text and the proposed tag. Section fit only ranks candidates; a fit of 0 is still accepted, so the check never says not found for a section mismatch. Repeated labels such as Book now or View all are common on this site, so staging can be wrong while the report shows green. Require fit above 0 whenever the row's section label is known, or report a section mismatch.",
+   "evidence": [
+    "lib/heading-check.mjs:252 -- const fitting = candidates.filter((entry) => sectionFit(row, entry, learned) === bestFit)  (bestFit may be 0, nothing rejects it)",
+    "Probe: row {section:'Rooms', text:'Book now', proposedTag:'h3'} against one element {tag:'h3', text:'Book now', section:'section_footer-links'} returns status 'passed'."
+   ],
+   "reviewers": [
+    "adversarial"
+   ],
+   "independent_reviewers": [
+    "adversarial"
+   ],
+   "validation_status": "confirmed",
+   "validation_reason": "Validator confirmed the code permits it; incidence on real pages not measured."
+  },
+  {
+   "#": 3,
+   "title": "Room tab H1 row looks for 'Cozy Queen' on the Guild City Level Loft page",
+   "severity": "P2",
+   "file": "scripts/api/webflow/heading-check.mjs",
+   "line": 77,
+   "confidence": 75,
+   "autofix_class": "gated_auto",
+   "owner": "downstream-resolver",
+   "requires_verification": true,
+   "pre_existing": false,
+   "suggested_fix": "In buildReport, for template tabs pick the path whose last segment equals slugified example text of the first template row (e.g. 'cozy queen' -> /rooms/cozy-queen, 'zuma san diego' -> /dining/dining-zuma via contains-match), falling back to paths[0]; use the same pick in tabPaths and docs/reference/heading-check.md.",
+   "first_evidence": "scripts/api/webflow/heading-check.mjs:65 -- const checkedPaths = tab.templateVariants ? tab.paths.slice(0, 1) : tab.paths",
+   "why_it_matters": "The room tab's hero row (\"[room name], e.g. Cozy Queen\") is matched on the example text, but template tabs are only loaded for their first path, /rooms/guild-city-level-loft, whose H1 is that room's name. The row therefore matches some other 'Cozy Queen' element (the saved first run shows 'failed, found P') or reports not found, so the room H1 can never pass and the Designer loop on room pages never reaches all-green. Loading the path whose slug matches the example (/rooms/cozy-queen, already listed in the tab) makes the row check the real H1.",
+   "evidence": [
+    "scripts/api/webflow/heading-check.mjs:65 -- const checkedPaths = tab.templateVariants ? tab.paths.slice(0, 1) : tab.paths",
+    "docs/specs/heading-structure/source/room-pages-12.csv:12 -- Hero,\"[room name], e.g. Cozy Queen\",H1,H1,Keep",
+    "docs/builds/419/heading-check-first-run.md:681 -- | 1 | Hero | Cozy Queen | H1 | failed, found P |"
+   ],
+   "reviewers": [
+    "correctness"
+   ],
+   "independent_reviewers": [
+    "correctness"
+   ]
+  },
+  {
+   "#": 4,
+   "title": "Class-first lookup is document order, docs promise priority",
+   "severity": "P2",
+   "file": "src/utils/modals.ts",
+   "line": 84,
+   "confidence": 75,
+   "autofix_class": "manual",
+   "owner": "downstream-resolver",
+   "requires_verification": true,
+   "pre_existing": false,
+   "suggested_fix": "Use `modal.querySelector('[data-modal-title], .overlay-detail-panel-modal_heading') ?? modal.querySelector('h1, h2, h3, h4, h5, h6')`, and the same two-step lookup for the room grid and quiz selectors. Alternatively reword the docs to say 'first match in document order'.",
+   "first_evidence": "src/utils/modals.ts:85 -- const TITLE_SELECTOR = '[data-modal-title], .overlay-detail-panel-modal_heading, h1, h2, h3, h4, h5, h6'",
+   "why_it_matters": "docs/reference/modal-setup.md and runtime-modules.md say the title is the first marked element, 'else' the first h1 to h6, and the ticket says class/data attribute first with the tag lookup as fallback. A single comma selector list returns the first match in document order, so a dialog with any h1-h6 before the marked title (for example a heading-tag eyebrow) labels itself with that heading instead of the marked title. The same applies to NAME_SELECTOR and HEADING_SELECTOR. Two querySelector calls (marked first, tag second) give the documented behavior. Learnings researcher also found the changed docs (runtime-modules.md, modal-setup.md) promise class-first priority; same in roomGridHoverReveal.ts NAME_SELECTOR and roomsQuiz.ts HEADING_SELECTOR.",
+   "evidence": [
+    "src/utils/modals.ts:85 -- const TITLE_SELECTOR = '[data-modal-title], .overlay-detail-panel-modal_heading, h1, h2, h3, h4, h5, h6'",
+    "docs/reference/modal-setup.md -- 'the first element marked `data-modal-title` (or carrying the pop-up title class ...), else the first h1 to h6'",
+    "Spec #420 constraint: 'find it by its class or a data attribute instead' with the heading lookup as fallback",
+    "src/utils/modals.ts:84 -- const TITLE_SELECTOR = '[data-modal-title], .overlay-detail-panel-modal_heading, h1, h2, h3, h4, h5, h6'",
+    "tests/visual/fixtures/heading-tags-420.html:71,80 -- paragraph title precedes 'An h2 later in the dialog', so the reverse order is untested"
+   ],
+   "reviewers": [
+    "project-standards",
+    "adversarial"
+   ],
+   "independent_reviewers": [
+    "project-standards",
+    "adversarial"
+   ]
+  }
+ ],
+ "triage_groups": [],
+ "pre_existing_findings": [],
+ "requirements_completeness": null,
+ "learnings": [
+  {
+   "type": "known_pattern",
+   "title": "Assertion-free visual tests",
+   "citation": "docs/solutions/test-failures/assertion-free-visual-tests.md",
+   "note": "Honored: heading-tags-420.spec.ts asserts in every test."
+  },
+  {
+   "type": "known_pattern",
+   "title": "GSAP module conventions and modal scroll lock",
+   "citation": "docs/solutions/conventions/gsap-module-conventions.md",
+   "note": "Honored: only the title selector changed; scroll pause/resume and autoAlpha/yPercent untouched."
+  },
+  {
+   "type": "known_pattern",
+   "title": "Bundle migration and release gotchas",
+   "citation": "docs/solutions/workflow-issues/bundle-migration-and-release-gotchas.md",
+   "note": "No .changeset file in the diff, so the three src/utils edits need a bundle release to reach the live site."
+  },
+  {
+   "type": "known_pattern",
+   "title": "Shared changes reach every page",
+   "citation": "docs/reference/where-used.md",
+   "note": "New shared attribute data-modal-title is not yet listed; regenerate after shipping."
+  }
+ ],
+ "agent_native_gaps": [],
+ "deployment_notes": [],
+ "residual_risks": [
+  "Dialog title, room grid name and quiz heading selectors use one comma selector with querySelector, so the match is the first in document order among the class and the fallback tags, not class-first as the docs say; an h2/h3 earlier in the same dialog, card or panel than the class element would win. Same as before the diff for headings alone, so no regression seen, but not tested.",
+  "heading-check shared-part diff ignores classes present only on one side and compares tag sets per class, so a per-item mix (h3 and p) that moves between items is not distinguished.",
+  "Footer row 'dining' matched an anchor (first run 'failed, found A'); not verified whether staging has a separate footer label with that text.",
+  "Swiper duplicate slides (swiperClone is collected but never used in matching or counts) can inflate H counts and the uncovered list on slider pages; not verified against live pages.",
+  "The heading-check end-to-end test returns context.skip when chromium is missing, so the in-page collector (collectHeadingElementsInPage) is only exercised where a browser is installed. A factory run without it reports green without covering that code.",
+  "swiperClone is collected by heading-check-browser.mjs but never read by lib/heading-check.mjs (copy-check filters it out); slider duplicate slides may inflate H2/H3 found counts and the uncovered list. Correctness reviewer's area; not verified against real staging.",
+  "Maintainability (single reviewer, P2): heading-check.mjs:38 reimplements the link crawl that where-used.mjs already has (linksOf) and :57 copies copy-check's page-loading worker pool; reuse by giving loadPages a loader argument.",
+  "Maintainability (single reviewer, P3): the checked-paths ternary appears twice in buildReport (heading-check.mjs:77 and :87).",
+  "Adversarial (single reviewer, P3): link crawl stops at 400 pages without warning and the CLI exits 0 whatever the result, so a script gate cannot fail on it (heading-check.mjs:47).",
+  "Changeset: no .changeset file in the diff, so the three src/utils edits need a bundle release to reach the live site; where-used.md does not yet list the new data-modal-title attribute (regenerate after shipping)."
+ ],
+ "testing_gaps": [
+  "No test covers a template tab whose example text belongs to a path other than the first listed.",
+  "No test for the quiz/modal where an earlier heading precedes the class-marked title.",
+  "No heading-check test where a same-text element exists only in another section, or where the homepage baseline is missing.",
+  "buildReport branches with no test: template tabs (templateVariants checks only paths[0]), linked paths returning 404 (noPage), pages that fail to load (notLoaded and the 'page not loaded' report row). The fixture has one tab and every page loads.",
+  "No fixture exercises the fallback path of the new selectors (a dialog, room card or quiz panel with a bare h2/h3 and no class). Only the new class/data-attribute path is covered by heading-tags-420.spec.ts; existing specs may cover the fallback but were not checked.",
+  "Testing (single reviewer, P2): tests/visual/heading-tags-420.spec.ts:42 'a title marked data-modal-title wins' cannot detect a heading placed before the marked title; add a dialog with an h2 before the data-modal-title paragraph."
+ ],
+ "coverage": {
+  "depth": "full",
+  "notes": [
+   "Depth: full. Peer: Adversarial lens ran in-process (no different-provider peer CLI installed: codex, grok and antigravity absent); not cross-model.",
+   "Validator: one batch of 4 selected findings, 4 confirmed, 0 rejected, 0 unresolved, 0 malformed, 0 failed, 0 shortcut-skipped (same-model corroboration never licenses the skip). No protected-subject reclassification.",
+   "#1 and #2 carry validation_reason: incidence not measured.",
+   "Suppressed by confidence: none at final pass (3 anchor-50 candidates merged or demoted earlier). Demotions: 5 to soft buckets.",
+   "Failed reviewers: none. first_evidence backfilled 0, demoted 0.",
+   "Plan discovery skipped (build stage forbids reading plans); settlement suppression not evaluated.",
+   "Project standards: CLAUDE.md used as fallback. All reviewers ran on Sonnet. Untracked .claude/build/ and docs/builds/419/ excluded.",
+   "Removable surface: none."
+  ]
+ },
+ "peer": {
+  "outcome": "in-process-fallback",
+  "coverage": "Adversarial lens ran in-process (no different-provider peer CLI installed: codex, grok and antigravity absent); not cross-model."
+ },
+ "artifact_path": "/tmp/compound-engineering-1000/ce-code-review/20261126-203304-eff3e997",
+ "run_id": "20261126-203304-eff3e997"
+}

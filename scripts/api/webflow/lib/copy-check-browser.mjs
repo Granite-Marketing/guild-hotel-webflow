@@ -34,7 +34,7 @@ export function collectTextElementsInPage() {
   return found
 }
 
-export async function loadPageElements(browser, url) {
+export async function loadPageElements(browser, url, collect = collectTextElementsInPage) {
   const context = await browser.newContext({ viewport: VIEWPORT })
   try {
     const page = await context.newPage()
@@ -52,7 +52,7 @@ export async function loadPageElements(browser, url) {
     })
     await page.waitForLoadState('networkidle', { timeout: 8000 }).catch(() => {})
     await page.waitForTimeout(500)
-    return { status: 'ok', httpStatus, elements: await page.evaluate(collectTextElementsInPage) }
+    return { status: 'ok', httpStatus, elements: await page.evaluate(collect) }
   } catch (error) {
     return { status: 'failed', error: String(error.message).split('\n')[0].slice(0, 200) }
   } finally {

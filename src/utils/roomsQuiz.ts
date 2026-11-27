@@ -37,6 +37,12 @@
 
 import { smoothScroll } from '$utils/smoothScroll'
 
+// Found by class first, so the SEO tag (h2, h3 or p) can change under it; h2 or h3 is the fallback,
+// looked up only when no element has the class.
+const HEADING_SELECTOR = '.rooms-collection-quiz_heading'
+const HEADING_FALLBACK_SELECTOR = 'h2, h3'
+const panelHeading = (panel: HTMLElement | undefined) =>
+  panel?.querySelector<HTMLElement>(HEADING_SELECTOR) ?? panel?.querySelector<HTMLElement>(HEADING_FALLBACK_SELECTOR) ?? null
 const ACTIVE_CLASS = 'is-active'
 const WIDE_CLASS = 'is-wide'
 const HIDDEN_CLASS = 'is-hidden'
@@ -98,7 +104,7 @@ export const roomsQuiz = () => {
     Array.from(panels.get(step)?.querySelectorAll<HTMLElement>('[data-rooms-quiz-option]') ?? [])
 
   panels.forEach((panel) => {
-    const heading = panel.querySelector<HTMLElement>('h2, h3')
+    const heading = panelHeading(panel)
     if (heading && !heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1')
   })
 
@@ -123,7 +129,7 @@ export const roomsQuiz = () => {
     const next = panels.get(step)
     const current = Array.from(panels.values()).find((panel) => panel.classList.contains(ACTIVE_CLASS))
     const focusHeading = () => {
-      if (moveFocus) next?.querySelector<HTMLElement>('h2, h3')?.focus({ preventScroll: true })
+      if (moveFocus) panelHeading(next)?.focus({ preventScroll: true })
     }
     gsap.killTweensOf(Array.from(panels.values()))
     panels.forEach((panel) => panel.classList.remove(ENTERING_CLASS))
@@ -277,7 +283,7 @@ export const roomsQuiz = () => {
         if (Math.abs(root.getBoundingClientRect().top) > 2) smoothScroll.scrollTo(root)
       }
       ScrollTrigger.addEventListener('scrollEnd', settle)
-      panels.get(1)?.querySelector<HTMLElement>('h2, h3')?.focus({ preventScroll: true })
+      panelHeading(panels.get(1))?.focus({ preventScroll: true })
     })
   })
 }

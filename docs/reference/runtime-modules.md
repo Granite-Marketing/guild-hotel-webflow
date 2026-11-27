@@ -879,13 +879,25 @@ Hover reveal on the `/rooms` room grid (Q033): the guests and size line
 inside each `.rooms-collection-room-grid_card` stay hidden until the card is
 hovered or focused.
 
-- Class contract only; no attributes. Webflow shows the details, so touch
+- Class contract only; no attributes. The card name is found by its class
+  `.rooms-collection-room-grid_heading` (any tag, so an h3 turned into a p still
+  works), with h2 or h3 as the fallback. Webflow shows the details, so touch
   devices and a failed bundle keep them visible.
 - Skipped unless `(hover: hover) and (pointer: fine)` matches.
 - F27: the /rooms grid is now a Collection List of 🛏️ Rooms. The card Link
   inside each Collection Item keeps the class `rooms-collection-room-grid_card`
   and the same children, so the contract is unchanged. Collection items render
   server-side, so binding once at init still covers every card.
+
+### Heading tags and scripts (#420)
+
+Scripts must not depend on a heading's tag, because the SEO tag changes (h2 to p, div to h3) leave the class alone.
+
+- Dialog title: `data-modal-title` or `.overlay-detail-panel-modal_heading`, else the first h1 to h6.
+- Room grid card name: `.rooms-collection-room-grid_heading`, else h2 or h3.
+- Rooms quiz panel heading (focus target): `.rooms-collection-quiz_heading`, else h2 or h3.
+- `scriptReveal` picks up h1 to h6 and p set in the script font; a div is not picked up until it becomes one of those tags.
+- `lineMaskReveal` targets h1 to h6, p, figure, `.button` and any `[data-line-mask]`; a div needs `data-line-mask` (it is picked up as a text block only with `data-line-mask="text"`).
 
 ### hoverImageSwap
 
