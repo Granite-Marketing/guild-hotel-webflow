@@ -4,48 +4,45 @@ Tickets #422 (per-item pattern), #423 (shared parts) and #424 (pages) applied on
 
 ## Result
 
-- 688 sheet rows: **490 pass** in the heading check (164 before this round). Of the rest, 68 are still to do (the two slider card titles below), and the others are correct on the page but the checker cannot match them, or the page changed since the sheet was written (listed below).
+- 688 sheet rows: **563 pass** in the heading check (164 before this round). Every other row is correct on the page but the checker cannot match it, or the page changed since the sheet was written (both listed below). No row is left to do.
 - Every page has exactly one H1. The checked pages keep their text and look: before and after screenshots at 390 and 1440 are pixel-identical for every changed block. The only differences were the live Google map tiles on Contact and the moving background behind the Zuma logo.
 - Console clean on 15 pages, plus 404 and accessibility (the only console lines are Cloudflare's form captcha, not site code). Pop-ups open with their titles still announced, the FAQ opens and closes, and the rooms quiz and grid load.
 - The scripts that used heading tags were released first (v1.3.30) and staging loads that version.
 
 | Page | Pass | H1 | H2 found / sheet | H3 found / sheet |
 |---|---|---|---|---|
-| Arts | 61 of 69 | 1 | 10 / 5 | 6 / 6 |
-| Blog | 21 of 29 | 1 | 12 / 7 | 9 / 9 |
+| Arts | 65 of 69 | 1 | 5 / 5 | 6 / 6 |
+| Blog | 26 of 29 | 1 | 7 / 7 | 9 / 9 |
 | Contact | 17 of 18 | 1 | 2 / 2 | 6 / 6 |
-| Corporate | 32 of 57 | 1 | 16 / 11 | 20 / 20 |
+| Corporate | 37 of 57 | 1 | 11 / 11 | 20 / 20 |
 | Dining venue pages | 22 of 26 | 1 | 6 / 6 | 12 / 11 |
-| Dining | 16 of 28 | 1 | 9 / 4 | 11 / 11 |
-| Gallery | 15 of 22 | 1 | 8 / 3 | 6 / 6 |
+| Dining | 21 of 28 | 1 | 4 / 4 | 11 / 11 |
+| Gallery | 20 of 22 | 1 | 3 / 3 | 6 / 6 |
 | Guidelines | 19 of 21 | 1 | 5 / 5 | 6 / 6 |
-| Happenings | 21 of 29 | 1 | 11 / 7 | 9 / 9 |
-| History | 24 of 32 | 1 | 14 / 9 | 10 / 10 |
-| Homepage | 33 of 47 | 1 | 16 / 11 | 15 / 15 |
-| Meetings | 26 of 43 | 1 | 12 / 7 | 12 / 12 |
-| Neighborhood | 28 of 44 | 1 | 22 / 12 | 13 / 11 |
-| Packages | 23 of 30 | 1 | 12 / 7 | 10 / 10 |
+| Happenings | 26 of 29 | 1 | 6 / 7 | 9 / 9 |
+| History | 29 of 32 | 1 | 9 / 9 | 10 / 10 |
+| Homepage | 38 of 47 | 1 | 11 / 11 | 15 / 15 |
+| Meetings | 31 of 43 | 1 | 7 / 7 | 12 / 12 |
+| Neighborhood | 38 of 44 | 1 | 12 / 12 | 13 / 11 |
+| Packages | 28 of 30 | 1 | 7 / 7 | 10 / 10 |
 | Press | 41 of 67 | 1 | 4 / 4 | 30 / 30 |
 | Privacy, Accessibility | 9 of 10 each | 1 | 2 / 2 | 0 / 0 |
-| Room pages | 19 of 27 | 1 | 13 / 7 | 6 / 6 |
-| Rooms | 36 of 53 | 1 | 10 / 5 | 22 / 22 |
-| Wellness | 18 of 26 | 1 | 8 / 3 | 10 / 10 |
+| Room pages | 24 of 27 | 1 | 7 / 7 | 6 / 6 |
+| Rooms | 41 of 53 | 1 | 5 / 5 | 22 / 22 |
+| Wellness | 22 of 26 | 1 | 3 / 3 | 10 / 10 |
 
-The extra H2s on most pages are the five offer card titles. They drop to the sheet's count once the Designer step below is done.
+Counts that differ: Happenings has one H2 fewer (the empty "conferences" category is not shown), the venue pages have one more H3 (Solana Coffee's fourth venue card), and Neighborhood has two more H3s (Corporate & services now lists four places, all H3).
 
-## Not done yet: needs one Designer step
+## Designer steps (done by Stephen, 27 Nov)
 
-Webflow's tools cannot bind a CMS field to an element inside a component, so these CMS-fed titles cannot be swapped from here:
-
-1. **Offers Slider card titles** (H2 to p, 63 rows on 18 pages). In the Offers Slider component, the card title needs to become a paragraph with the same classes, bound to the offer's Name.
-2. **Arts & Culture Slider card titles** (H2 to p, 5 rows, Neighborhood). Same change in that component.
-3. **Retail slider back into a component.** For #422 the homepage retail slider was turned into plain elements so its titles could follow the offer switches. It works and looks the same. Making it a component again takes one Designer click (Create component). The empty old copy is named "Retail Slider (old, unused)" and can then be deleted.
+Webflow's tools cannot bind a CMS field to an element inside a component. Stephen added the paragraph titles in the Offers Slider and the Arts & Culture Slider, and made the homepage retail slider a component again. Claude then removed the old H2s, deleted the empty "Retail Slider (old, unused)" component, published and checked: one H3 and four p on the retail slider, p for every offer and arts card title, and pixel-identical screenshots.
 
 ## How the tags were changed
 
 - Webflow can only switch a heading between H1 and H6, so each "change to p" or "change p to H2" swapped in a new element with the same classes, text or binding, attributes and IDs, and removed the old one.
 - Webflow cannot turn a box into a heading, so "change div to H3" rows (FAQ questions, homepage meeting tab names) and "wrap logo in H3" rows put the element inside an H3 that adds no layout of its own (`u-display-contents`).
 - Per-item switch (offer cards): two opposite switches on Offers, "Title as heading" and "Title as text". See `docs/solutions/conventions/per-item-heading-tag.md`.
+- Per-page switch (script-intro-centered): two opposite props, "Heading as heading" (default on) and "Heading as text". The Rooms template sets text, so the room pages' intro line is a p (row 2) while every other page keeps its H2.
 
 ## Rows that differ from the sheet
 
