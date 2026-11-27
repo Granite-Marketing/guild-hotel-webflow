@@ -100,11 +100,56 @@ let splitObserver: IntersectionObserver | null = null
 const splitWhenNear = (entries: IntersectionObserverEntry[]) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return
-    splitObserver?.unobserve(entry.target)
-    splitCallbacks.get(entry.target)?.()
+    splitNow(entry.target)
   })
 }
 const splitCallbacks = new WeakMap<Element, () => void>()
+
+const splitNow = (element: Element) => {
+  splitObserver?.unobserve(element)
+  const split = splitCallbacks.get(element)
+  splitCallbacks.delete(element)
+  split?.()
+}
+
+/**
+ * Text still waiting on the observer is split ahead of time while the page is
+ * idle after load, one block per idle moment and never while scrolling, so
+ * no split lands mid-scroll (the gallery mosaic captions did). One block at a
+ * time keeps the load-time freeze from coming back
+ * (docs/solutions/integration-issues/page-load-scroll-freeze-2026-11-16.md).
+ * The observer stays as the fallback for anything not reached yet.
+ */
+const IDLE_MIN_MS = 10
+const SCROLL_QUIET_MS = 250
+const idleQueue: Element[] = []
+let idleStarted = false
+let lastScroll = 0
+
+const whenIdle = (callback: (deadline?: IdleDeadline) => void) =>
+  'requestIdleCallback' in window ? requestIdleCallback(callback, { timeout: 2000 }) : setTimeout(callback, 200)
+
+const splitNextWhenIdle = (deadline?: IdleDeadline) => {
+  const quiet = performance.now() - lastScroll > SCROLL_QUIET_MS
+  const roomy = !deadline || deadline.didTimeout || deadline.timeRemaining() >= IDLE_MIN_MS
+  if (quiet && roomy) {
+    // Skip anything already split, and anything not rendered (a closed dialog), which splits on first show or play.
+    let next = idleQueue.shift()
+    while (next && (!splitCallbacks.has(next) || !next.getClientRects().length)) next = idleQueue.shift()
+    if (next) splitNow(next)
+  }
+  if (idleQueue.length) whenIdle(splitNextWhenIdle)
+}
+
+const queueIdleSplit = (element: Element) => {
+  idleQueue.push(element)
+  if (idleStarted) return
+  idleStarted = true
+  window.addEventListener('scroll', () => (lastScroll = performance.now()), { passive: true })
+  const start = () => whenIdle(splitNextWhenIdle)
+  if (document.readyState === 'complete') start()
+  else window.addEventListener('load', start, { once: true })
+}
 
 /**
  * Splits the queued text that is in or near the first screen, all in one
@@ -131,6 +176,7 @@ const flushSplitQueue = () => {
     splitObserver ||= new IntersectionObserver(splitWhenNear, { rootMargin: `${SPLIT_AHEAD * 100}% 0px` })
     splitCallbacks.set(element, split)
     splitObserver.observe(element)
+    queueIdleSplit(element)
   })
 }
 

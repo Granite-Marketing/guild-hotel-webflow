@@ -1143,8 +1143,13 @@ Feedback F01, ported from NGA. The fixed Site Nav (`[data-nav="header"]`,
 bar `.site-nav_bar`) turns dark over light backgrounds and stays cream over
 photos and dark sections, splitting exactly at section edges. A fixed,
 aria-hidden, inert clone of the bar in the dark colour sits over the real
-bar; a `mask-image` gradient, recomputed every frame, shows it only where
-the bar overlaps a light area.
+bar; a `mask-image` gradient shows it only where the bar overlaps a light
+area. The mask is recomputed each frame only while something can move
+(scroll, wheel, touch, key, pointer, resize, load, ScrollTrigger refresh),
+and for 3.5s after, then the loop stops: idle pages do no work. Areas whose
+document band (cached on each refresh) is more than a viewport from the bar
+are skipped; anything pinned, sticky or fixed is always read live
+(`docs/solutions/integration-issues/lenis-main-thread-jitter-2026-11-27.md`).
 
 - Light and dark come from each `section`'s background colour (transparent
   sections inherit the nearest opaque ancestor's). Figures and videos at

@@ -48,6 +48,15 @@ const PHOTO_MIN_WIDTH = 0.6
 const PHOTO_SELECTOR = 'figure, video, img:not(figure img)'
 const LOOSE_IMAGE_MIN_SIZE = 120
 const NOT_PHOTO_SELECTOR = '[class*="map"], [class*="map"] *'
+/** How long the mask keeps updating after the last scroll, input or animation start (ms); covers the 3s tab move. */
+const ACTIVE_TAIL_MS = 3500
+const WAKE_EVENTS = ['scroll', 'wheel', 'touchmove', 'keydown', 'pointerover', 'pointerdown', 'click'] as const
+/**
+ * An area whose cached band is further than this from the bar (in viewport
+ * heights) is skipped without reading its rect. The margin covers reveal
+ * transforms; anything pinned, sticky or fixed is always read live.
+ */
+const BAND_MARGIN = 1
 
 interface Interval {
   start: number
@@ -104,6 +113,7 @@ export const navTheme = () => {
   new MutationObserver(() => {
     buildClone()
     lastGradient = ''
+    wake()
   }).observe(bar, { attributes: true, attributeFilter: ['class'], subtree: true })
 
   let lightAreas: HTMLElement[] = []
@@ -132,7 +142,40 @@ export const navTheme = () => {
           !(element instanceof HTMLImageElement && /\.svg(\?|$)/i.test(element.currentSrc || element.src)),
       )
       .map((element) => ({ element, clipHost: findClipHost(element) }))
+    measureBands()
   }
+  // Each area's document band at the last measure; null means it moves with the viewport (pinned, sticky, fixed).
+  const bands = new Map<HTMLElement, Interval | null>()
+  const measureBands = () => {
+    bands.clear()
+    const liveCache = new Map<Element, boolean>()
+    const movesWithViewport = (element: Element | null): boolean => {
+      if (!element || element === document.body) return false
+      const cached = liveCache.get(element)
+      if (cached !== undefined) return cached
+      const position = getComputedStyle(element).position
+      const live =
+        position === 'fixed' || position === 'sticky' || element.classList.contains('pin-spacer') || movesWithViewport(element.parentElement)
+      liveCache.set(element, live)
+      return live
+    }
+    const scrollY = window.scrollY
+    ;[...lightAreas, ...darkAreas, ...photos.map(({ element }) => element)].forEach((element) => {
+      if (movesWithViewport(element)) return void bands.set(element, null)
+      const rect = element.getBoundingClientRect()
+      // Not laid out yet (a closed tab, a hidden slide): it could appear anywhere, so keep reading it live.
+      bands.set(element, rect.height ? { start: rect.top + scrollY, end: rect.bottom + scrollY } : null)
+    })
+  }
+  /** False only for an area whose cached band is well clear of the bar, so its rect is not read this frame. */
+  const mayBeUnderBar = (element: HTMLElement) => {
+    const band = bands.get(element)
+    if (!band) return true
+    const margin = window.innerHeight * BAND_MARGIN
+    const scrollY = window.scrollY
+    return band.end > scrollY - margin && band.start < scrollY + navHeight + margin
+  }
+
   classifyAreas()
 
   let navHeight = bar.offsetHeight
@@ -148,6 +191,7 @@ export const navTheme = () => {
 
     const light: Interval[] = []
     lightAreas.forEach((element) => {
+      if (!mayBeUnderBar(element)) return
       const rect = element.getBoundingClientRect()
       const interval = bandInterval(rect.top, rect.bottom)
       if (interval) light.push(interval)
@@ -155,6 +199,7 @@ export const navTheme = () => {
 
     const dark: Interval[] = []
     darkAreas.forEach((element) => {
+      if (!mayBeUnderBar(element)) return
       const rect = element.getBoundingClientRect()
       const interval = bandInterval(rect.top, rect.bottom)
       if (interval) dark.push(interval)
@@ -163,6 +208,7 @@ export const navTheme = () => {
     const darkBlocks: DarkBlock[] = []
     const minPhotoWidth = window.innerWidth * PHOTO_MIN_WIDTH
     photos.forEach(({ element, clipHost }) => {
+      if (!mayBeUnderBar(element)) return
       const rect = element.getBoundingClientRect()
       if (element instanceof HTMLImageElement && Math.min(rect.width, rect.height) < LOOSE_IMAGE_MIN_SIZE) return
       const wide = rect.width >= minPhotoWidth
@@ -228,11 +274,32 @@ export const navTheme = () => {
 
   updateMask()
 
+  // Only while something can move under the bar: a perpetual rAF loop that reads layout fights Lenis for the main
+  // thread (docs/solutions/integration-issues/lenis-main-thread-jitter-2026-11-27.md). Every scroll, input or
+  // animation start wakes it; it runs on for ACTIVE_TAIL_MS so eased reveals and tab moves (up to 3s) finish
+  // with a correct mask, then stops until the next wake.
+  let activeUntil = 0
+  let running = false
   const tick = () => {
     updateMask()
+    if (performance.now() < activeUntil) requestAnimationFrame(tick)
+    else running = false
+  }
+  const wake = () => {
+    activeUntil = performance.now() + ACTIVE_TAIL_MS
+    if (running) return
+    running = true
     requestAnimationFrame(tick)
   }
-  requestAnimationFrame(tick)
+  wake()
+  WAKE_EVENTS.forEach((type) => window.addEventListener(type, wake, { passive: true, capture: true }))
+
+  // Cached document bands, refreshed whenever ScrollTrigger re-measures the page.
+  ScrollTrigger.addEventListener('refresh', () => {
+    measureBands()
+    lastGradient = ''
+    wake()
+  })
 
   window.addEventListener(
     'resize',
@@ -240,11 +307,19 @@ export const navTheme = () => {
       navHeight = bar.offsetHeight
       classifyAreas()
       lastGradient = ''
+      wake()
     },
     { passive: true },
   )
   // Content can change size or appear after load (CMS, Finsweet).
-  window.addEventListener('load', classifyAreas, { once: true })
+  window.addEventListener(
+    'load',
+    () => {
+      classifyAreas()
+      wake()
+    },
+    { once: true },
+  )
 }
 
 const setMask = (element: HTMLElement, mask: string) => {
