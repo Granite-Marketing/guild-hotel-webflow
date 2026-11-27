@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.31
+
+### Patch Changes
+
+- b0fee01: Smoother scrolling: the nav colour mask only updates while the page is moving (no idle work), image fades keep their layer until off screen so the end of the zoom no longer repaints the photo mid-scroll, and line-mask text is split ahead of time while the browser is idle.
+
 ## 1.3.30
 
 ### Patch Changes

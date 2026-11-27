@@ -202,9 +202,26 @@ const playImageFade = (element: HTMLElement, delay: number, start: string) => {
   const timeline = gsap.timeline({ delay, scrollTrigger: { trigger: element, start, once: true } })
   // Round 3: quick, clear fade with only a slight settle.
   timeline.fromTo(element, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.7, ease: 'power1.out' })
-  if (media) timeline.fromTo(media, { scale: 1.04 }, { scale: 1, duration: 0.9, ease: 'power2.out' }, 0)
+  if (!media) return
+  // The media keeps its own layer from the first frame to well after the tween: dropping it the moment the
+  // zoom ends repainted the whole photo mid-scroll (a visible hitch). The layer is released once it is off screen.
+  media.style.willChange = 'transform'
+  timeline.fromTo(media, { scale: 1.04 }, { scale: 1, duration: 0.9, ease: 'power2.out', force3D: true }, 0)
   // Hand the media's transform back to CSS so hover zooms (#185) apply.
-  if (media) timeline.set(media, { clearProps: 'transform' })
+  timeline.set(media, { clearProps: 'transform', onComplete: () => releaseLayerOffScreen(media) })
+}
+
+let layerRelease: IntersectionObserver | null = null
+/** Drops `will-change` the first time the element is out of view, where the repaint cannot be seen. */
+const releaseLayerOffScreen = (element: HTMLElement) => {
+  layerRelease ||= new IntersectionObserver((entries) =>
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) return
+      ;(entry.target as HTMLElement).style.willChange = ''
+      layerRelease?.unobserve(entry.target)
+    }),
+  )
+  layerRelease.observe(element)
 }
 
 const playFadeOnly = (element: HTMLElement, delay: number, start: string) => {
