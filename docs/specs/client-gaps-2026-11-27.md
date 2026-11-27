@@ -38,13 +38,23 @@ Part A goes to the client. Part B is ours to fix, not theirs.
 2. **Before launch:** canonical tags, share images (og:image) and schema are missing on every page; the redirects, meta and schema drafts are waiting for review in the SEO launch pack ([PR 408](https://github.com/Granite-Marketing/guild-hotel-webflow/pull/408)).
 3. **Heading questions:** the open designer-note question is in the heading report.
 
-## B. Ours to fix (not for the client)
+### Found while fixing part B (27 Nov)
 
-1. **Corporate page shows Legal wording** in its key features ("virtual proceedings", "attorney-client privilege"). The feature text is fixed in the template, so both pages show Legal's lines. Fix: give each item its own fields, as for the earlier template texts (C6).
-2. **Every room page has the heading "deluxe king suite gallery"** with a filler paragraph. Fix: use each room's name and copy, or remove the paragraph.
-3. **Rooms page leftovers:** hidden "deluxe king suite" and "premium twin room" labels.
-4. **Room FAQ** sits hidden on about 40 pages, including Contact and Press, as six H3s.
-5. **Run-together words:** "littlelonger", "stewardsof", "choosingthe".
-6. **Empty alt text** on content photos: 24 on Press, 15 on Neighborhood, the 10 shared photos on most pages, and a few on Home, the dining venues and packages.
-7. **Placeholder rooms** "Placeholder Single 1 and 2" are still published (to remove before launch, per the SEO pack).
-8. **SEO field limits:** the API could not set the 75 and 150 character limits on the new fields; set "Max length" in each field's settings in the Designer.
+1. **Corporate page still carries Legal wording the docs don't cover:** the "tailored corporate packages" section ("War Room Setup", "Extended Stay Legal Comfort Package"), the proposal form ("Law firm / Company", "trial team concierge", legalteams@ email) and the map of courthouses. Neither doc gives Corporate versions. Should we write Corporate ones, or hide these on Corporate?
+2. **FAQ:** the same six room questions show on every page, including Contact, Press and Dining. Should each page get its own questions?
+3. **Guidelines page:** its hero line and intro paragraph are still sample text, and the page is not in the content tracker.
+4. **Gallery captions:** the photo captions under the room, venue and Corporate galleries are sample text.
+5. **Offer "offer-1"** is marked as a draft but still live, so its photo description and text can't go live until someone publishes or removes it.
+
+## B. Ours to fix: done 27 Nov, checked on staging
+
+1. **Corporate key features and focus list:** each now reads its own CMS fields (three rich text "Features - Item N Body", "Focus - Item 1 to 4 Text", "Focus - Item 3 Title"), filled from the Corporate doc; Legal keeps its wording. Checked live: Corporate shows the doc's lines, Legal unchanged.
+2. **Room gallery heading:** bound to a new per-room field "Gallery - Heading" ("cozy queen gallery" and so on). The filler captions under it come from the shared Media items (part A, item 4 above).
+3. **Rooms page leftovers:** the hidden block of four old sample room cards was removed.
+4. **Room FAQ on every page:** this is how the FAQ section was built, not a hidden leftover, so it moved to part A as a question.
+5. **Run-together words:** the three script headings (History, Packages, Guidelines) now have a space before their line break, so they read "Proud stewards of city spirit" and so on; the look is unchanged (still two lines at 390 and 1440). The same fix went into 51 CMS texts with line breaks: art captions, dining hours, meeting venue layouts and amenity names.
+6. **Photo descriptions (alt text):** 69 CMS photos and 3 library photos now have descriptions. Press, packages, wellness and dining images read new alt fields; offers, meeting venue and dining explore/intro photos had no responsive sizes to lose, so their descriptions were written onto the images; the Arts & Culture slider now uses each photo's own description. Left on purpose: the nav menu hover pictures and the footer and newsletter background photos are decorative, and offer-1 (part A, item 5).
+7. **Placeholder rooms:** unpublished (reversible). The quiz answer "Just me" only matched those two, so Cozy Queen, Cozy King, Cozy Courtyard Queen and Cozy Courtyard King (the docs' solo-traveller rooms) now carry it; checked on /rooms.
+8. **SEO field limits:** not done. The API cannot set "Max length"; it takes a click per field in the CMS settings.
+
+Fields no longer used, safe to delete once Stephen agrees: Legal Corporates "Features - Item 1 Text", "Item 2 Text", "Item 3 Text" (grouped as "Unused (safe to delete)"; rich text versions replaced them) and Offers "Slide - Image Alt" (the slider is inside a component, so the description went onto the image instead).
