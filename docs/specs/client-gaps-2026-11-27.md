@@ -57,4 +57,4 @@ Part A goes to the client. Part B is ours to fix, not theirs.
 7. **Placeholder rooms:** unpublished (reversible). The quiz answer "Just me" only matched those two, so Cozy Queen, Cozy King, Cozy Courtyard Queen and Cozy Courtyard King (the docs' solo-traveller rooms) now carry it; checked on /rooms.
 8. **SEO field limits:** not done. The API cannot set "Max length"; it takes a click per field in the CMS settings.
 
-Fields no longer used, safe to delete once Stephen agrees: Legal Corporates "Features - Item 1 Text", "Item 2 Text", "Item 3 Text" (grouped as "Unused (safe to delete)"; rich text versions replaced them) and Offers "Slide - Image Alt" (the slider is inside a component, so the description went onto the image instead).
+Unused fields deleted 27 Nov on Stephen's yes: Legal Corporates "Features - Item 1/2/3 Text" (replaced by the rich text versions) and Offers "Slide - Image Alt".
