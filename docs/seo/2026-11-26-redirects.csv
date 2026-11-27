@@ -38,10 +38,10 @@ source,target
 /rooms/guild-loft-suites,/rooms/guild-loft-suite
 /rooms/two-bedroom-penthouse,/rooms/two-bedroom-loft-suite
 /accessible,/rooms
-/accessible/society-king-ada,/rooms
-/accessible/artisan-king-ada,/rooms
-/accessible/apprentice-king-ada,/rooms
-/accessible/apprentice-queen-ada,/rooms
+/accessible/society-king-ada,/rooms/society-king-ada
+/accessible/artisan-king-ada,/rooms/artisan-king-ada
+/accessible/apprentice-king-ada,/rooms/apprentice-king-ada
+/accessible/apprentice-queen-ada,/rooms/apprentice-queen-ada
 /pet-policy,/contact
 /the-guild-boutique,/
 /barbershop-at-the-guild,/wellness

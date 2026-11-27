@@ -1,6 +1,6 @@
 # SEO launch pack (launch Tue 1 Dec 2026)
 
-Drafts for Stephen to check, then Omar. Nothing here has been applied in Webflow or on the old site.
+Status (27 Nov): the redirects are ready to import (the four accessible rooms now go to their new room pages); the agency's meta is applied (rooms and the Rooms page; CMS item meta lives in the SEO fields, see `cms-meta-2026-11-27.md`). Schema is not used: neither the content docs nor the SEO team asked for it (Stephen, 27 Nov). Webflow's redirect API needs an Enterprise plan, so the CSV is imported in Site settings > Publishing > 301 redirects.
 
 | File | What it is |
 |---|---|
