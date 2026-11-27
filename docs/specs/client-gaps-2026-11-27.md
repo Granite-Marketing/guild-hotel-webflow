@@ -13,7 +13,7 @@ Part A goes to the client. Part B is ours to fix, not theirs.
 3. **Solana Coffee:** no doc, and its page is all sample text. It is linked from the homepage and Dining.
 4. **Homepage below Meetings, and Dining below the intro:** both docs stop part way ("stopping here").
 5. **Dining hours and dress codes:** all five venues show the same evening hours and dress code. We need each venue's own. Garden Terrace, Pool Lounge and Solana are daytime venues.
-6. **"Why teams choose The Guild"** (Corporate and Legal): the docs give the five headings with notes in brackets, such as "(prime location story)", not the sentences.
+6. **"Why teams choose The Guild"** (Corporate and Legal, flagged for the client to write): the docs give eight headings with notes in brackets, such as "(prime location story)", not the sentences.
 7. **Meeting venue pop-ups:** the feature lines and room counts the docs don't cover still show sample text on every pop-up, and the One Columbia Place pop-up is sample text.
 8. **Packages (4), blog and happenings posts (6), and the offers slider on every page:** sample content. These need real items, or the sample items get removed before launch.
 9. **Lower page text with filler paragraphs** on History, Meetings, Neighborhood, Arts, Gallery, Contact, Press ("Press Inquiries" paragraph) and the dining venue pages: these sections are not in the docs.
@@ -24,13 +24,13 @@ Part A goes to the client. Part B is ours to fix, not theirs.
 
 ### Decisions only the client can make
 
-1. **Accessible rooms:** the doc has full copy for four ADA rooms (Society King, Artisan King, Apprentice Queen, Apprentice King), but the site has no rooms for them. Should we create them? Apprentice Queen ADA's size reads "XX sq.m." in the doc.
-2. **Lobby Bar as a meeting venue:** the doc has a pop-up for it, but Meetings has no Lobby Bar venue. Should we add one?
-3. **Venue names:** "Lobby Terrace", "Garden Terrace" and "The Courtyard" are all used for the outdoor space. Which is right where? Are "One America Plaza" and "One Columbia Place" different venues?
-4. **Homepage retail card:** the doc says "FashionPhile"; the site says "Shops at the Guild".
-5. **Corporate line 9** ("After hours, you'll adjourn to the Lobby Bar...") is marked as a second version, but it reads like a second paragraph.
-6. **Second versions** (Omar) and **suggested H1 wording** (Kevin): the lists are in the two round reports.
-7. **"Fitness Centre"** on Wellness follows the doc; the rest of the site uses US spelling.
+1. **Accessible rooms:** created 27 Nov on Stephen's yes (Society King, Artisan King, Apprentice Queen and Apprentice King ADA), with the doc copy and stand-in photos, gallery and quiz answers from Cozy King and Cozy Queen. Open for the client: real photos, and Apprentice Queen ADA's size in square metres (the doc says "XX sq.m.", so only "200 sq. ft" is shown).
+2. **Lobby Bar meeting venue:** created 27 Nov on Stephen's yes from the pop-ups doc (description, 510 sq ft, six layouts, dedicated amenities), shown on Meetings with stand-in Lobby Bar photos. Open for the client: real photos, and feature lines 3 to 5 of the pop-up (the doc gives two).
+3. **Outdoor venue name:** the docs call the same space two names. The Homepage and Meetings docs say "Lobby Terrace"; the Meetings pop-ups doc says "Garden Terrace"; the Corporate doc says "The Courtyard". Which name is right? (Flagged for the client, Stephen 27 Nov.)
+4. **Homepage retail card (open):** the doc says "FashionPhile"; the site says "Shops at the Guild".
+5. **Corporate line 9:** the doc gives the intro's last two sentences twice, joined by "Or". The first version is live, as for every other "or" in the docs (C1); the second ("...Pool Lounge to unwind. Your last, essential order of business is dinner at California's only Zuma.") is in Omar's list.
+6. **Second versions** (Omar) and the **SEO sheet's suggested H1 wording** (marked in the sheet "to agree with Kevin"; not applied, the content docs' wording is live): both lists are in the round reports, left for the client to agree.
+7. **Spelling:** US throughout (Stephen, 27 Nov); "Fitness Centre" is now "Fitness Center".
 
 ### SEO items for the SEO team
 
@@ -40,8 +40,8 @@ Part A goes to the client. Part B is ours to fix, not theirs.
 
 ### Found while fixing part B (27 Nov)
 
-1. **Corporate page still carries Legal wording the docs don't cover:** the "tailored corporate packages" section ("War Room Setup", "Extended Stay Legal Comfort Package"), the proposal form ("Law firm / Company", "trial team concierge", legalteams@ email) and the map of courthouses. Neither doc gives Corporate versions. Should we write Corporate ones, or hide these on Corporate?
-2. **FAQ:** the same six room questions show on every page, including Contact, Press and Dining. Should each page get its own questions?
+1. **Corporate page still carries Legal wording the docs don't cover:** the "tailored corporate packages" section ("War Room Setup", "Extended Stay Legal Comfort Package"), the proposal form ("Law firm / Company", "trial team concierge", legalteams@ email) and the map of courthouses. Neither doc gives Corporate versions. Open question for the client (left as is).
+2. **FAQ:** the same six room questions show on every page, including Contact, Press and Dining. Flagged for the client: should each page get its own questions?
 3. **Guidelines page:** its hero line and intro paragraph are still sample text, and the page is not in the content tracker.
 4. **Gallery captions:** the photo captions under the room, venue and Corporate galleries are sample text.
 5. **Offer "offer-1"** is marked as a draft but still live, so its photo description and text can't go live until someone publishes or removes it.
