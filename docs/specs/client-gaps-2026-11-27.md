@@ -24,12 +24,12 @@ Part A goes to the client. Part B is ours to fix, not theirs.
 
 ### Decisions only the client can make
 
-1. **Accessible rooms:** Stephen (27 Nov): create them from the doc. Open: Apprentice Queen ADA's size reads "XX sq.m." in the doc, and no photos were supplied.
-2. **Lobby Bar as a meeting venue:** the Meetings pop-ups doc gives it full pop-up copy (description, 510 sq ft, six layouts); Meetings has no Lobby Bar venue yet. Waiting on Stephen to add it.
-3. **Outdoor venue name:** the docs call the same space two names. The Homepage and Meetings docs say "Lobby Terrace"; the Meetings pop-ups doc says "Garden Terrace"; the Corporate doc says "The Courtyard". Which name is right?
+1. **Accessible rooms:** created 27 Nov on Stephen's yes (Society King, Artisan King, Apprentice Queen and Apprentice King ADA), with the doc copy and stand-in photos, gallery and quiz answers from Cozy King and Cozy Queen. Open for the client: real photos, and Apprentice Queen ADA's size in square metres (the doc says "XX sq.m.", so only "200 sq. ft" is shown).
+2. **Lobby Bar meeting venue:** created 27 Nov on Stephen's yes from the pop-ups doc (description, 510 sq ft, six layouts, dedicated amenities), shown on Meetings with stand-in Lobby Bar photos. Open for the client: real photos, and feature lines 3 to 5 of the pop-up (the doc gives two).
+3. **Outdoor venue name:** the docs call the same space two names. The Homepage and Meetings docs say "Lobby Terrace"; the Meetings pop-ups doc says "Garden Terrace"; the Corporate doc says "The Courtyard". Which name is right? (Flagged for the client, Stephen 27 Nov.)
 4. **Homepage retail card (open):** the doc says "FashionPhile"; the site says "Shops at the Guild".
-5. **Corporate line 9** ("After hours, you'll adjourn to the Lobby Bar...") is marked as a second version, but it reads like a second paragraph.
-6. **Second versions** (Omar): the list is in the copy round report. The SEO sheet's own H1 suggestions are not used: the content docs' wording is live (Stephen, 27 Nov: "do what we're told").
+5. **Corporate line 9:** the doc gives the intro's last two sentences twice, joined by "Or". The first version is live, as for every other "or" in the docs (C1); the second ("...Pool Lounge to unwind. Your last, essential order of business is dinner at California's only Zuma.") is in Omar's list.
+6. **Second versions** (Omar) and the **SEO sheet's suggested H1 wording** (marked in the sheet "to agree with Kevin"; not applied, the content docs' wording is live): both lists are in the round reports, left for the client to agree.
 7. **Spelling:** US throughout (Stephen, 27 Nov); "Fitness Centre" is now "Fitness Center".
 
 ### SEO items for the SEO team
